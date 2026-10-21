@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches actions to the situation.
 new_slug: classroom-belonging-planner
 name: Classroom belonging planner
-summary: Describe a class dynamic like cliques or new students. Get actions that help everyone feel part of the group.
+summary: Describe a class dynamic like cliques or new students. Get actions that
+  help everyone feel part of the group.
 job: teach-and-train
 headline: Classroom belonging planner
-subhead: Describe a class dynamic like cliques or new students. Get actions that help everyone feel part of the group.
+subhead: Practical steps to make every student feel part of your class, aimed at
+  the exact problem you face. Describe the group, such as cliques, an isolated
+  child or new arrivals, and you get actions you can start this week.
 explain: |
   Practical steps to make every student feel part of your class, aimed at the exact problem you face. Describe the group, such as cliques, an isolated child or new arrivals, and you get actions you can start this week.
 
@@ -27,5 +30,6 @@ you_get:
   - A welcome plan for new students
   - Signs to watch for progress
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

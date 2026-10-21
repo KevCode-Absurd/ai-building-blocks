@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It picks a small setup and fills a set register.
 new_slug: company-wiki-planner
 name: Company wiki planner
-summary: Describe your business. Get the smallest useful process wiki set-up, with a register of each process.
+summary: Describe your business. Get the smallest useful process wiki set-up,
+  with a register of each process.
 job: document-work
 headline: Company wiki planner
-subhead: Describe your business. Get the smallest useful process wiki set-up, with a register of each process.
+subhead: The smallest process wiki that will actually get used, with one
+  register listing every process, its owner and how it runs. It avoids a giant
+  document project that nobody finishes.
 explain: |
   The smallest process wiki that will actually get used, with one register listing every process, its owner and how it runs. It avoids a giant document project that nobody finishes.
 
@@ -26,5 +29,6 @@ you_get:
   - Blank step-by-step guide templates
   - Export files if you ask
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

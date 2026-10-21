@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It sums up a chat in a set format.
 new_slug: spec-writer
 name: Spec writer
-summary: Talk through your idea. Get the conversation turned into a spec and posted to your issue tracker.
+summary: Talk through your idea. Get the conversation turned into a spec and
+  posted to your issue tracker.
 job: build-software
 headline: Spec writer
-subhead: Talk through your idea. Get the conversation turned into a spec and posted to your issue tracker.
+subhead: Talk through your idea. Get the conversation turned into a spec and
+  posted to your issue tracker. Bring the conversation about the feature. Use
+  the result to plan your next step.
 explain: |
   A feature spec written from the conversation you already had, then posted to your issue tracker and marked ready for an agent to pick up. It does not interview you. It uses what the chat and codebase have already shown.
 
@@ -25,6 +28,7 @@ you_get:
   - A testing plan with chosen test points
   - The spec posted to your tracker with a ready label
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can reach your issue tracker.

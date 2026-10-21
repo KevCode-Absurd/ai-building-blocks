@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It reads code closely and builds one mental model.
 new_slug: code-deep-reader
 name: Code deep reader
-summary: Point it at code you need to understand. Get a line-by-line map of how it works before you hunt bugs.
+summary: Point it at code you need to understand. Get a line-by-line map of how
+  it works before you hunt bugs.
 job: secure-code
 headline: Code deep reader
-subhead: Point it at code you need to understand. Get a line-by-line map of how it works before you hunt bugs.
+subhead: Before you hunt for bugs, you get a slow, line-by-line understanding of
+  what the code does. That cuts guessing, mixed-up facts and lost context in the
+  later audit.
 explain: |
   Before you hunt for bugs, you get a slow, line-by-line understanding of what the code does. That cuts guessing, mixed-up facts and lost context in the later audit.
 
@@ -25,6 +28,7 @@ you_get:
   - A map of how functions and modules connect
   - A list of spots that look risky to read
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

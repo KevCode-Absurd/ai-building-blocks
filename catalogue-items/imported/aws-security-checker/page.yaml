@@ -5,7 +5,9 @@ name: AWS security checker
 summary: Point it at your AWS account. Get a ranked list of security gaps with fixes.
 job: secure-code
 headline: AWS security checker
-subhead: Point it at your AWS account. Get a ranked list of security gaps with fixes.
+subhead: "A ranked list of security gaps in your AWS account, each with a fix.
+  The AI runs read-only AWS command line checks across four areas: identity and
+  access, network, data protection and logging."
 explain: |
   A ranked list of security gaps in your AWS account, each with a fix. The AI runs read-only AWS command line checks across four areas: identity and access, network, data protection and logging.
 
@@ -25,6 +27,7 @@ you_get:
   - A ranked fix list with commands
   - Compliance mapping
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

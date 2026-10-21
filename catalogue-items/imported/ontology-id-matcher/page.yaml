@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches terms by lookup and checks each match, so little judgment is needed.
 new_slug: ontology-id-matcher
 name: Science label to ontology ID matcher
-summary: Give it lab terms like tissue or disease names. Get the matching ontology IDs, checked against the public lookup service.
+summary: Give it lab terms like tissue or disease names. Get the matching
+  ontology IDs, checked against the public lookup service.
 job: research-topics
 headline: Science label to ontology ID matcher
-subhead: Give it lab terms like tissue or disease names. Get the matching ontology IDs, checked against the public lookup service.
+subhead: Correct ontology IDs for the lab terms in your data, each one checked
+  against the public lookup service, not written from memory. A well-formed ID
+  can point to the wrong thing and nobody will notice.
 explain: |
   Correct ontology IDs for the lab terms in your data, each one checked against the public lookup service, not written from memory. A well-formed ID can point to the wrong thing and nobody will notice. For example, one real code is the small intestine, not the liver.
 
@@ -26,6 +29,7 @@ you_get:
   - Flags for wrong or obsolete IDs
   - Ontology prefix lookups
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can call public web APIs and run code.

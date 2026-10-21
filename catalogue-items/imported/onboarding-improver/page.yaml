@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It maps steps to the first win.
 new_slug: onboarding-improver
 name: Onboarding improver
-summary: Describe your product. Get a faster path to first value with a checklist, empty states and emails.
+summary: Describe your product. Get a faster path to first value with a
+  checklist, empty states and emails.
 job: build-product
 headline: Onboarding improver
-subhead: Describe your product. Get a faster path to first value with a checklist, empty states and emails.
+subhead: A faster route from signup to the moment a new user thinks, this works.
+  You describe your product and get a plan to shorten that route and keep people
+  coming back.
 explain: |
   A faster route from signup to the moment a new user thinks, this works. You describe your product and get a plan to shorten that route and keep people coming back.
 
@@ -26,5 +29,6 @@ you_get:
   - Empty-state copy
   - Onboarding email ideas and metrics to track
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

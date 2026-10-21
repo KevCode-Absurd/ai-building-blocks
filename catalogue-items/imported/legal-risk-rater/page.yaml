@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It weighs severity against likelihood.
 new_slug: legal-risk-rater
 name: Legal risk rater
-summary: Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
+summary: Describe a deal or issue. Get each risk rated by how bad and how
+  likely. Not legal advice.
 job: check-contracts
 headline: Legal risk rater
-subhead: Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
+subhead: A rating for each legal risk in a deal or issue, scored on two scales
+  so you can tell which ones need attention now. Describe the situation.
 explain: |
   A rating for each legal risk in a deal or issue, scored on two scales so you can tell which ones need attention now. Describe the situation. The skill scores severity from 1 (negligible) to 5 (critical) and likelihood from 1 (remote) to 5 (almost certain), then multiplies them for a risk score.
 
@@ -26,5 +28,6 @@ you_get:
   - Risks ordered by priority
   - A written record of the reasoning
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

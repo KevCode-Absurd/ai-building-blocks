@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It links design choices to a goal, which takes some judgement.
 new_slug: emotion-led-design-brief-writer
 name: Emotion-led design brief writer
-summary: Name the feeling you want. Get colour, type, imagery and layout choices that support it.
+summary: Name the feeling you want. Get colour, type, imagery and layout choices
+  that support it.
 job: design-work
 headline: Emotion-led design brief writer
-subhead: Name the feeling you want. Get colour, type, imagery and layout choices that support it.
+subhead: A design brief that starts with the feeling you want people to have,
+  then picks colour, type, imagery and layout to support it. Name the feeling,
+  such as calm, trust or urgency, and get specific choices you can hand to a
+  designer.
 explain: |
   A design brief that starts with the feeling you want people to have, then picks colour, type, imagery and layout to support it. Name the feeling, such as calm, trust or urgency, and get specific choices you can hand to a designer.
 
@@ -26,5 +30,6 @@ you_get:
   - Image style guidance
   - A layout approach in a short brief
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

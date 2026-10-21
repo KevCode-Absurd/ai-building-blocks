@@ -2,10 +2,13 @@ thinking: low
 thinking_why: PDF jobs follow fixed steps.
 new_slug: pdf-toolkit
 name: PDF toolkit
-summary: Give it a PDF. Get text pulled out, pages merged, split, filled, redacted or checked, with the original kept safe.
+summary: Give it a PDF. Get text pulled out, pages merged, split, filled,
+  redacted or checked, with the original kept safe.
 job: work-with-files
 headline: PDF toolkit
-subhead: Give it a PDF. Get text pulled out, pages merged, split, filled, redacted or checked, with the original kept safe.
+subhead: Do what you need to a PDF, such as pull text, merge, split, fill forms,
+  redact or check it, while the original stays untouched. Each run gives you
+  proof, not a promise.
 explain: |
   Do what you need to a PDF, such as pull text, merge, split, fill forms, redact or check it, while the original stays untouched. Each run gives you proof, not a promise.
 
@@ -27,6 +30,7 @@ you_get:
   - An operation log
   - Checks for structure and appearance, with limits noted
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

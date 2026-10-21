@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It profiles the data and judges what looks off.
 new_slug: new-dataset-explorer
 name: New dataset explorer
-summary: Give it a new dataset. Get its structure, spread, links and odd spots mapped before you use it.
+summary: Give it a new dataset. Get its structure, spread, links and odd spots
+  mapped before you use it.
 job: track-numbers
 headline: New dataset explorer
-subhead: Give it a new dataset. Get its structure, spread, links and odd spots mapped before you use it.
+subhead: A first look at a dataset you have not worked with, so surprises show
+  up before they wreck a report or a model. You get a plain picture of what is
+  really in the file.
 explain: |
   A first look at a dataset you have not worked with, so surprises show up before they wreck a report or a model. You get a plain picture of what is really in the file.
 
@@ -26,6 +29,7 @@ you_get:
   - Strong links between columns
   - Outliers and a short findings summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open spreadsheets.

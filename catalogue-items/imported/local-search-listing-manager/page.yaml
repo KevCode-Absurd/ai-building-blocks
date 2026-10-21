@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks many set items, then ranks the fixes.
 new_slug: local-search-listing-manager
 name: Local search listing manager
-summary: Describe your service business and area. Get a local search audit, listing fixes and a plan for more reviews.
+summary: Describe your service business and area. Get a local search audit,
+  listing fixes and a plan for more reviews.
 job: get-found-in-search
 headline: Local search listing manager
-subhead: Describe your service business and area. Get a local search audit, listing fixes and a plan for more reviews.
+subhead: A local search plan for a business that serves customers at their
+  location, like repair, heating, plumbing or cleaning. Describe your business
+  and area and get an audit, fixes and a review plan.
 explain: |
   A local search plan for a business that serves customers at their location, like repair, heating, plumbing or cleaning. Describe your business and area and get an audit, fixes and a review plan.
 
@@ -28,5 +31,6 @@ you_get:
   - Schema markup
   - Review reply templates
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

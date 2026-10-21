@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a strict loop of change, test and undo.
 new_slug: slow-code-speeder
 name: Slow code speeder
-summary: Give it slow code. Get a faster version, one change at a time, with tests run before and after.
+summary: Give it slow code. Get a faster version, one change at a time, with
+  tests run before and after.
 job: test-and-fix-code
 headline: Slow code speeder
-subhead: Give it slow code. Get a faster version, one change at a time, with tests run before and after.
+subhead: Faster code that still gives the same answers. You hand over code that
+  works but is too slow on big inputs, and the skill cuts its time or memory
+  cost one change at a time.
 explain: |
   Faster code that still gives the same answers. You hand over code that works but is too slow on big inputs, and the skill cuts its time or memory cost one change at a time.
 
@@ -25,6 +28,7 @@ you_get:
   - One change at a time, each tested
   - A note on the time or memory saved
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

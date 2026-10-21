@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a repeatable pipeline with a few tuning choices.
 new_slug: microscopy-cell-counter
 name: Microscopy cell counter
-summary: Give it microscope images. Get cell counts, outlines and per-cell brightness, run the same way every time.
+summary: Give it microscope images. Get cell counts, outlines and per-cell
+  brightness, run the same way every time.
 job: research-topics
 headline: Microscopy cell counter
-subhead: Give it microscope images. Get cell counts, outlines and per-cell brightness, run the same way every time.
+subhead: Give it microscope images. Get cell counts, outlines and per-cell
+  brightness, run the same way every time. Bring grayscale TIFF images of the
+  nuclear channel. Use the result to plan your next step.
 explain: |
   Cell counts, outlines and per-cell brightness from your microscope images, produced the same way every run so conditions can be compared fairly. It builds a CellProfiler pipeline for nuclei in a single grayscale channel.
 
@@ -27,6 +30,7 @@ you_get:
   - Outline overlays to check results
   - A pilot checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run command line tools and save files.

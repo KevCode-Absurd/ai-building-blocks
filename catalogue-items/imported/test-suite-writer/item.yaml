@@ -1,6 +1,7 @@
 slug: test-suite-writer
 name: Test suite writer
-summary: Point it at your code. Get unit, integration and end-to-end tests, run with a coverage report.
+summary: Share your code. Get tests for units, linked parts and full user tasks,
+  plus a coverage report.
 category: general
 boards: []
 type: skill

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It adapts standard wording to your data practices.
 new_slug: privacy-policy-drafter
 name: Privacy policy drafter
-summary: Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it.
+summary: Describe your business and data use. Get privacy policy wording and a
+  review checklist. Have a lawyer check it.
 job: check-contracts
 headline: Privacy policy drafter
-subhead: Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it.
+subhead: Describe your business and data use. Get privacy policy wording and a
+  review checklist. Have a lawyer check it. Bring business and product
+  description. Use the result to plan your next step.
 explain: |
   Privacy policy wording written for how your business really handles data, with a checklist for review. Have a lawyer check it before you publish.
 
@@ -26,5 +29,6 @@ you_get:
   - Compliance gap list
   - Review checklist for your lawyer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

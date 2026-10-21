@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies known management ideas to your team and week.
 new_slug: manager-output-coach
 name: Manager output coach
-summary: Describe your team and role. Get meeting rhythms, one-on-ones and the tasks that most raise your team's output.
+summary: Describe your team and role. Get meeting rhythms, one-on-ones and the
+  tasks that most raise your team's output.
 job: lead-people
 headline: Manager output coach
-subhead: Describe your team and role. Get meeting rhythms, one-on-ones and the tasks that most raise your team's output.
+subhead: "A tuned management routine for your team, built on Andy Grove's High
+  Output Management. It judges every habit by one test: does it raise what your
+  team produces?"
 explain: |
   A tuned management routine for your team, built on Andy Grove's High Output Management. It judges every habit by one test: does it raise what your team produces?
 
@@ -26,5 +29,6 @@ you_get:
   - A meeting and one-on-one rhythm
   - A ranked list of high-impact tasks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

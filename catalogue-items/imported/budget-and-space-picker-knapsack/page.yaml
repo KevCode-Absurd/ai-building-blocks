@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares many item combinations.
 new_slug: budget-and-space-picker-knapsack
 name: Budget and space picker (knapsack)
-summary: Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
+summary: Give it items with values and costs. Get the best set to pick within
+  your budget, weight or space limit.
 job: plan-supply-chain
 headline: Budget and space picker (knapsack)
-subhead: Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
+subhead: Give it items with values and costs. Get the best set to pick within
+  your budget, weight or space limit. Bring a list of items with value and cost
+  or weight. Use the result to plan your next step.
 explain: |
   Out of many options, pick the set that gives the most value without going over your budget, weight, time or space limit.
 
@@ -26,6 +29,7 @@ you_get:
   - Total value against the limit
   - A note on the method used
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows the robot's rules and checks the protocol in a simulator.
 new_slug: lab-robot-protocol-writer
 name: Lab robot protocol writer
-summary: Describe the liquid handling you need. Get an Opentrons protocol that is simulated, reviewed and ready to run.
+summary: Describe the liquid handling you need. Get an Opentrons protocol that
+  is simulated, reviewed and ready to run.
 job: build-software
 headline: Lab robot protocol writer
-subhead: Describe the liquid handling you need. Get an Opentrons protocol that is simulated, reviewed and ready to run.
+subhead: A liquid handling protocol for an Opentrons robot that has been
+  simulated and checked before it touches real reagents. Describe the transfers,
+  plates, tips and modules you need.
 explain: |
   A liquid handling protocol for an Opentrons robot that has been simulated and checked before it touches real reagents. Describe the transfers, plates, tips and modules you need. The skill writes Python Protocol API code for a Flex or OT-2, sets up the deck layout, and chooses an API level the robot actually supports.
 
@@ -26,6 +29,7 @@ you_get:
   - A deck and labware list
   - A pre-run safety check list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

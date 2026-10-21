@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It picks one strong idea, then writes it for the platform.
 new_slug: long-form-post-repurposer
 name: Long-form post repurposer
-summary: Give it an article, newsletter or transcript. Get an X or LinkedIn post that works even if nobody clicks.
+summary: Give it an article, newsletter or transcript. Get an X or LinkedIn post
+  that works even if nobody clicks.
 job: grow-social
 headline: Long-form post repurposer
-subhead: Give it an article, newsletter or transcript. Get an X or LinkedIn post that works even if nobody clicks.
+subhead: A post for X or LinkedIn that is worth reading even if nobody clicks
+  your link. The usual summary plus link performs badly because all the value
+  sits somewhere else.
 explain: |
   A post for X or LinkedIn that is worth reading even if nobody clicks your link. The usual summary plus link performs badly because all the value sits somewhere else.
 
   Give it an article, newsletter, transcript, video or draft. It first lists the two or three ideas that could each carry a post and lets you choose one, since a post can hold only a single idea. Then it writes the post so that idea stands alone: a strong first line, the point made in full, and a reason to care. The link, if any, is an extra rather than the payoff. It works for promoting something you published or for mining a recording for something postable.
 when:
-  - You published an article and want a post that does not just say "new article, link below".
+  - You published an article and want a post that does not just say "new
+    article, link below".
   - You have a podcast transcript and want a LinkedIn post from it.
   - You wrote a long newsletter and want one idea pulled out for X.
   - You have a rough draft and want to know which idea is strongest.
@@ -26,5 +30,6 @@ you_get:
   - A strong opening line
   - A natural place for the link
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It needs a web page plus the Photopea scripting rules.
 new_slug: photopea-editor-embedder
 name: Photopea editor embedder
-summary: Say what image editing your app needs. Get Photopea embedded and scripted to open, edit and export files.
+summary: Say what image editing your app needs. Get Photopea embedded and
+  scripted to open, edit and export files.
 job: build-websites
 headline: Photopea editor embedder
-subhead: Say what image editing your app needs. Get Photopea embedded and scripted to open, edit and export files.
+subhead: A working image editor inside your web page, controlled by your own
+  code. Photopea runs in a frame, and your page can open files, run edits and
+  export results without the user leaving your app.
 explain: |
   A working image editor inside your web page, controlled by your own code. Photopea runs in a frame, and your page can open files, run edits and export results without the user leaving your app.
 
@@ -26,6 +29,7 @@ you_get:
   - Open, edit and export flow
   - Checks that the editor responds
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

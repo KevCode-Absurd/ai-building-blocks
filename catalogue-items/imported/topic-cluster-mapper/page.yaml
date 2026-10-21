@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans how many pages fit together.
 new_slug: topic-cluster-mapper
 name: Topic cluster mapper
-summary: Name your business goal. Get a main page and supporting articles, ranked by what to write first.
+summary: Name your business goal. Get a main page and supporting articles,
+  ranked by what to write first.
 job: get-found-in-search
 headline: Topic cluster mapper
-subhead: Name your business goal. Get a main page and supporting articles, ranked by what to write first.
+subhead: Name your business goal. Get a main page and supporting articles,
+  ranked by what to write first. Bring main topic and keyword. Use the result to
+  plan your next step.
 explain: |
   A content plan built around one main page and a set of supporting articles that link to it, so search engines see you as an authority on the subject. It also tells you what to write first.
 
@@ -28,5 +31,6 @@ you_get:
   - An internal linking plan
   - A publish order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

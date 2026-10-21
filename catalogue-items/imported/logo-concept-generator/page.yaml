@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It explores set logo types and explains the choices.
 new_slug: logo-concept-generator
 name: Logo concept generator
-summary: Describe your brand. Get several logo directions, from wordmarks to symbols, each with the reasoning and how to use it.
+summary: Describe your brand. Get several logo directions, from wordmarks to
+  symbols, each with the reasoning and how to use it.
 job: design-work
 headline: Logo concept generator
-subhead: Describe your brand. Get several logo directions, from wordmarks to symbols, each with the reasoning and how to use it.
+subhead: Describe your brand. Get several logo directions, from wordmarks to
+  symbols, each with the reasoning and how to use it. Bring your brand name and
+  tone of voice. Use the result to plan your next step.
 explain: |
   Six to twelve logo options for one brand, each built a different way, so you can pick a direction instead of staring at one idea. The output is material for a decision, not a finished logo.
 
@@ -26,5 +29,6 @@ you_get:
   - Use notes for small, large and motion cases
   - A refined version of your chosen pick
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

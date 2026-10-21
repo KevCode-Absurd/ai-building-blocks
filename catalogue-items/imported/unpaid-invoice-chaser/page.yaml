@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It follows a clear pattern and matches tone to payment history.
 new_slug: unpaid-invoice-chaser
 name: Unpaid invoice chaser
-summary: Give it your unpaid invoices. Get a reminder for each, gentle or firm to suit the customer. Nothing sends alone.
+summary: Give it your unpaid invoices. Get a reminder for each, gentle or firm
+  to suit the customer. Nothing sends alone.
 job: track-numbers
 headline: Unpaid invoice chaser
-subhead: Give it your unpaid invoices. Get a reminder for each, gentle or firm to suit the customer. Nothing sends alone.
+subhead: A reminder for every overdue invoice, written to suit the customer, and
+  nothing is sent until you say so. Good payers get a gentle nudge.
 explain: |
   A reminder for every overdue invoice, written to suit the customer, and nothing is sent until you say so. Good payers get a gentle nudge. Repeat late payers get a firm one.
 
@@ -13,7 +15,8 @@ explain: |
 when:
   - You want to know who owes you money right now.
   - You dread writing the same reminder email again.
-  - You want firm wording for a repeat late payer and soft wording for a good client.
+  - You want firm wording for a repeat late payer and soft wording for a good
+    client.
   - You need to avoid chasing invoices that were just paid.
 you_give:
   - Access to your accounting tool
@@ -26,7 +29,9 @@ you_get:
   - Tone-matched reminder drafts
   - Drafts queued for your approval
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

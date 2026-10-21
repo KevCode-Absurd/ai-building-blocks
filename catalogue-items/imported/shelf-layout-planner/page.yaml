@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It ranks products by sales and fits them to shelves.
 new_slug: shelf-layout-planner
 name: Shelf layout planner
-summary: Give it your products and shelf sizes. Get a shelf layout that gives your best sellers the best space.
+summary: Give it your products and shelf sizes. Get a shelf layout that gives
+  your best sellers the best space.
 job: plan-supply-chain
 headline: Shelf layout planner
-subhead: Give it your products and shelf sizes. Get a shelf layout that gives your best sellers the best space.
+subhead: A shelf layout that puts your best sellers in the best spots and gives
+  each product the right amount of space. You list your products with sizes,
+  sales rates and margins, plus your shelf or fixture sizes.
 explain: |
   A shelf layout that puts your best sellers in the best spots and gives each product the right amount of space. You list your products with sizes, sales rates and margins, plus your shelf or fixture sizes.
 
@@ -27,5 +30,6 @@ you_get:
   - Cross merchandising groups
   - Reasons for each placement
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

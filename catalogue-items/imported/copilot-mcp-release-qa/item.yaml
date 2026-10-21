@@ -1,0 +1,32 @@
+slug: copilot-mcp-release-qa
+name: MCP protocol release tester
+summary: Share your MCP server. Get a real session check of its tools, errors and advertised features.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/mcp-release-qa
+  url: https://github.com/github/awesome-copilot/tree/main/skills/mcp-release-qa
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: mcp-release-qa
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: mcp-release-qa skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/mcp-release-qa
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

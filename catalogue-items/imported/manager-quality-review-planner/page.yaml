@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It judges how people lead, which needs care.
 new_slug: manager-quality-review-planner
 name: Manager quality review planner
-summary: Give it your management team. Get skill standards, a 360 feedback form and a plan to support managers who struggle.
+summary: Give it your management team. Get skill standards, a 360 feedback form
+  and a plan to support managers who struggle.
 job: hire-people
 headline: Manager quality review planner
-subhead: Give it your management team. Get skill standards, a 360 feedback form and a plan to support managers who struggle.
+subhead: A plan to measure how well your managers manage, and to help the ones
+  who struggle. It links management quality to team health and people leaving.
 explain: |
   A plan to measure how well your managers manage, and to help the ones who struggle. It links management quality to team health and people leaving.
 
@@ -27,5 +29,6 @@ you_get:
   - A manager onboarding outline
   - A leadership report layout
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

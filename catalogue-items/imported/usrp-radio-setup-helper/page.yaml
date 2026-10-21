@@ -5,7 +5,9 @@ name: USRP radio setup helper
 summary: Name your USRP model. Get it connected, set up and verified for use in MATLAB.
 job: build-software
 headline: USRP radio setup helper
-subhead: Name your USRP model. Get it connected, set up and verified for use in MATLAB.
+subhead: A USRP radio that is connected, configured and proven to work in
+  MATLAB, so you can start sending and capturing signals. It covers the models
+  E320, N300, N310, N320, N321, X300, X310 and X410.
 explain: |
   A USRP radio that is connected, configured and proven to work in MATLAB, so you can start sending and capturing signals. It covers the models E320, N300, N310, N320, N321, X300, X310 and X410.
 
@@ -26,6 +28,8 @@ you_get:
   - A test that proves the connection works
   - Fixes for the most common failures
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP radio.
+  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP
+    radio.

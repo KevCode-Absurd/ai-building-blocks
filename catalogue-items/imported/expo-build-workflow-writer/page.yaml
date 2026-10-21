@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It checks the schema, then writes the file.
 new_slug: expo-build-workflow-writer
 name: Expo build workflow writer
-summary: Say how you want your app built and released. Get a working EAS workflow file that does it.
+summary: Say how you want your app built and released. Get a working EAS
+  workflow file that does it.
 job: ship-and-host
 headline: Expo build workflow writer
-subhead: Say how you want your app built and released. Get a working EAS workflow file that does it.
+subhead: A working EAS workflow file that builds, tests and releases your Expo
+  app the way you ask, written in the right format the first time.
 explain: |
   A working EAS workflow file that builds, tests and releases your Expo app the way you ask, written in the right format the first time.
 
@@ -26,6 +28,7 @@ you_get:
   - Edits to existing workflow files
   - Short notes on each job
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

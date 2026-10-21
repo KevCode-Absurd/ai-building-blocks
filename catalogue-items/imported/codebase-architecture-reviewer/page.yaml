@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It scans a whole codebase and weighs design options.
 new_slug: codebase-architecture-reviewer
 name: Codebase architecture reviewer
-summary: Point it at your code. Get an HTML report of design improvements, then work through the one you pick.
+summary: Point it at your code. Get an HTML report of design improvements, then
+  work through the one you pick.
 job: build-software
 headline: Codebase architecture reviewer
-subhead: Point it at your code. Get an HTML report of design improvements, then work through the one you pick.
+subhead: An HTML report of design improvements for your codebase, then a guided
+  session on the one you pick. The focus is turning shallow, tangled modules
+  into deep ones that are easier to test and easier for an AI to navigate.
 explain: |
   An HTML report of design improvements for your codebase, then a guided session on the one you pick. The focus is turning shallow, tangled modules into deep ones that are easier to test and easier for an AI to navigate.
 
@@ -25,6 +28,7 @@ you_get:
   - A short list ranked by payoff
   - A guided walkthrough of the one you choose
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It adapts standard terms to your product.
 new_slug: terms-of-service-drafter
 name: Terms of service drafter
-summary: Describe your web app or marketplace. Get a Terms of Service draft to review with a lawyer.
+summary: Describe your web app or marketplace. Get a Terms of Service draft to
+  review with a lawyer.
 job: check-contracts
 headline: Terms of service drafter
-subhead: Describe your web app or marketplace. Get a Terms of Service draft to review with a lawyer.
+subhead: A full Terms of Service draft for your web app, SaaS or marketplace,
+  written around how your business really works. It gives you something specific
+  to take to a lawyer, in place of a generic template.
 explain: |
   A full Terms of Service draft for your web app, SaaS or marketplace, written around how your business really works. It gives you something specific to take to a lawyer, in place of a generic template.
 
@@ -27,5 +30,6 @@ you_get:
   - Dispute and cancellation wording
   - Notes on clauses that may not hold up
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

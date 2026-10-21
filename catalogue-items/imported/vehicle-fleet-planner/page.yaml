@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares running cost against replacement cost.
 new_slug: vehicle-fleet-planner
 name: Vehicle fleet planner
-summary: Give it your vehicles and costs. Get how many you need and when to replace each one.
+summary: Give it your vehicles and costs. Get how many you need and when to
+  replace each one.
 job: plan-supply-chain
 headline: Vehicle fleet planner
-subhead: Give it your vehicles and costs. Get how many you need and when to replace each one.
+subhead: The right number of vehicles for your demand, and a plan for when to
+  replace each one. You stop paying for idle vans and stop running old ones past
+  the point they cost more than they are worth.
 explain: |
   The right number of vehicles for your demand, and a plan for when to replace each one. You stop paying for idle vans and stop running old ones past the point they cost more than they are worth.
 
@@ -26,5 +29,6 @@ you_get:
   - A cost of ownership comparison
   - A utilization review and maintenance plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

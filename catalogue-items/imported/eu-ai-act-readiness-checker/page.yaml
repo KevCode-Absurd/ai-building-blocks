@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Rules depend on role, scope and risk class, so it reasons through each.
 new_slug: eu-ai-act-readiness-checker
 name: EU AI Act readiness checker
-summary: Describe your AI systems. Get a first read of your risk level, duties and gaps under the EU AI Act.
+summary: Describe your AI systems. Get a first read of your risk level, duties
+  and gaps under the EU AI Act.
 job: secure-code
 headline: EU AI Act readiness checker
-subhead: Describe your AI systems. Get a first read of your risk level, duties and gaps under the EU AI Act.
+subhead: Describe your AI systems. Get a first read of your risk level, duties
+  and gaps under the EU AI Act. Bring list of AI systems and what each is used
+  for. Use the result to plan your next step.
 explain: |
   A first-pass readiness review of your AI systems against the EU AI Act: what you run, your role for each, which duties may apply and where evidence is missing. It is triage, not a legal opinion.
 
@@ -27,5 +30,6 @@ you_get:
   - 30, 60 and 90 day plan
   - Questions for counsel
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

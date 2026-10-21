@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It estimates extra sales, which needs judgment.
 new_slug: discount-payoff-calculator
 name: Discount payoff calculator
-summary: "Run it on your discounts. Get the real return of each code: extra revenue against what the discount cost."
+summary: "Run it on your discounts. Get the real return of each code: extra
+  revenue against what the discount cost."
 job: run-your-store
 headline: Discount payoff calculator
-subhead: "Run it on your discounts. Get the real return of each code: extra revenue against what the discount cost."
+subhead: "The true return on every discount you run: the revenue it brought in
+  set against what the discount cost you. Some codes pay for themselves, and
+  others only give margin away."
 explain: |
   The true return on every discount you run: the revenue it brought in set against what the discount cost you. Some codes pay for themselves, and others only give margin away.
 
@@ -26,6 +29,7 @@ you_get:
   - The cost of each discount
   - A ranking of which ones paid off
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

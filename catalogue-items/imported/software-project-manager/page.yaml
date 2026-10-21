@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It breaks work down and tracks it over time.
 new_slug: software-project-manager
 name: Software project manager
-summary: Describe your project. Get work split into tasks, sprints tracked and status reports written.
+summary: Describe your project. Get work split into tasks, sprints tracked and
+  status reports written.
 job: organise-work
 headline: Software project manager
-subhead: Describe your project. Get work split into tasks, sprints tracked and status reports written.
+subhead: A software project broken into clear tasks, with sprints tracked and
+  status reports written for you. You describe the project, team and deadlines,
+  and the skill acts as a project manager.
 explain: |
   A software project broken into clear tasks, with sprints tracked and status reports written for you. You describe the project, team and deadlines, and the skill acts as a project manager.
 
@@ -26,5 +29,6 @@ you_get:
   - A sprint plan
   - Status reports with risks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

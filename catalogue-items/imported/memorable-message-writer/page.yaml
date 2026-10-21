@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks a message against six traits and rewrites it.
 new_slug: memorable-message-writer
 name: Memorable message writer
-summary: Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist.
+summary: Give it a message. Get a rewrite that is simple, surprising, concrete,
+  believable and emotional. Uses the SUCCESs checklist.
 job: write-and-tell-stories
 headline: Memorable message writer
-subhead: Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist.
+subhead: Give it a message. Get a rewrite that is simple, surprising, concrete,
+  believable and emotional. Uses the SUCCESs checklist. Bring the message, copy
+  or slide to improve. Use the result to plan your next step.
 explain: |
   A message that people understand fast and still remember next week. Paste your copy, slide or pitch and get it scored and rewritten with the six traits behind ideas that stick: simple, unexpected, concrete, credible, emotional and told as a story.
 
@@ -25,5 +28,6 @@ you_get:
   - A rewrite with a clear core message
   - Before and after examples
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

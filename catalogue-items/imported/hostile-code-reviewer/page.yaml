@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It must argue against code it may have helped write.
 new_slug: hostile-code-reviewer
 name: Hostile code reviewer
-summary: Point it at recent changes. Get a tough review from three hostile reviewers, with each finding ranked.
+summary: Point it at recent changes. Get a tough review from three hostile
+  reviewers, with each finding ranked.
 job: test-and-fix-code
 headline: Hostile code reviewer
-subhead: Point it at recent changes. Get a tough review from three hostile reviewers, with each finding ranked.
+subhead: Code review from people who want to find fault, not approve. Point it
+  at staged changes, recent commits or one file, and get a ranked list of real
+  problems with a clear merge verdict.
 explain: |
   Code review from people who want to find fault, not approve. Point it at staged changes, recent commits or one file, and get a ranked list of real problems with a clear merge verdict.
 
   An AI that read the code shares its blind spots and tends to say it looks fine. This skill breaks that habit with three hostile reviewers. The Saboteur looks for what will break in production. The New Hire asks what will confuse the next person. The Security Auditor hunts for common attack holes. Each must find something. A problem spotted by two reviewers moves up a severity level. The report ends in BLOCK, CONCERNS or CLEAN.
 when:
-  - You wrote a change yourself and need a review that will not just agree with you.
+  - You wrote a change yourself and need a review that will not just agree with
+    you.
   - You are about to merge a pull request and want a final tough pass.
   - You want to know whether new code is easy for a teammate to maintain.
   - You need a quick security check on a file before it ships.
@@ -25,6 +29,7 @@ you_get:
   - A BLOCK, CONCERNS or CLEAN verdict
   - Suggested fixes for each finding
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

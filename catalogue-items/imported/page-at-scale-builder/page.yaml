@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Quality at scale needs careful design.
 new_slug: page-at-scale-builder
 name: Page-at-scale builder
-summary: Give it a keyword pattern and data. Get a page template and plan for many useful search pages.
+summary: Give it a keyword pattern and data. Get a page template and plan for
+  many useful search pages.
 job: get-found-in-search
 headline: Page-at-scale builder
-subhead: Give it a keyword pattern and data. Get a page template and plan for many useful search pages.
+subhead: A page template and a rollout plan for hundreds of search pages, built
+  so none of them read as thin or copied. You give it a keyword pattern, such as
+  service plus city, and the data you have to fill it.
 explain: |
   A page template and a rollout plan for hundreds of search pages, built so none of them read as thin or copied. You give it a keyword pattern, such as service plus city, and the data you have to fill it.
 
@@ -27,5 +30,6 @@ you_get:
   - Quality checks before publishing
   - Small first-batch launch plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

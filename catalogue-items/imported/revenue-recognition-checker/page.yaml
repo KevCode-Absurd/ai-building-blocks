@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It applies a five step standard to varied contracts.
 new_slug: revenue-recognition-checker
 name: Revenue recognition checker
-summary: Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606.
+summary: Give it a customer contract. Get its promises, price split and timing
+  of revenue under IFRS 15 or ASC 606.
 job: money-and-investing
 headline: Revenue recognition checker
-subhead: Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606.
+subhead: Give it a customer contract. Get its promises, price split and timing
+  of revenue under IFRS 15 or ASC 606. Bring the customer contract or its key
+  terms. Use the result to plan your next step.
 explain: |
   A memo showing what a customer contract promises, how the price is split between those promises, and when you can count each part as revenue. It follows the IFRS 15 and ASC 606 five-step model.
 
@@ -27,5 +30,6 @@ you_get:
   - Journal entries for the start, deferral and monthly release
   - Timing of revenue
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

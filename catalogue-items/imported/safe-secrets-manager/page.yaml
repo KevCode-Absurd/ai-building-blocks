@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows strict rules around secrets.
 new_slug: safe-secrets-manager
 name: Safe secrets manager
-summary: Get API keys and env variables checked and loaded without ever showing the values in logs or chat.
+summary: Get API keys and env variables checked and loaded without ever showing
+  the values in logs or chat.
 job: secure-code
 headline: Safe secrets manager
-subhead: Get API keys and env variables checked and loaded without ever showing the values in logs or chat.
+subhead: Check that your API keys and environment variables are set, valid and
+  loaded, without any secret ever appearing in chat, logs or command history.
+  The point is that Claude never sees the values.
 explain: |
   Check that your API keys and environment variables are set, valid and loaded, without any secret ever appearing in chat, logs or command history. The point is that Claude never sees the values.
 
@@ -25,6 +28,7 @@ you_get:
   - Commands that keep keys hidden
   - Fixes for missing or invalid variables
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

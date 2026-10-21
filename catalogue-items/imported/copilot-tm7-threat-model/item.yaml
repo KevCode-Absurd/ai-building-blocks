@@ -1,0 +1,32 @@
+slug: copilot-tm7-threat-model
+name: Microsoft threat model file builder
+summary: Describe your system and data paths. Get a threat model file for Microsoft's modeling tool.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/tm7-threat-model
+  url: https://github.com/github/awesome-copilot/tree/main/skills/tm7-threat-model
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: tm7-threat-model
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: tm7-threat-model skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/tm7-threat-model
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

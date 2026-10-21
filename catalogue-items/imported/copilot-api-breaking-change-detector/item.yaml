@@ -1,0 +1,32 @@
+slug: copilot-api-breaking-change-detector
+name: C# API consumer drift checker
+summary: Share your C# API and web client. Get mismatched fields and breaking changes traced to their consumers.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/api-breaking-change-detector
+  url: https://github.com/github/awesome-copilot/tree/main/skills/api-breaking-change-detector
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: api-breaking-change-detector
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: api-breaking-change-detector skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/api-breaking-change-detector
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It sends one recording to a set tool and saves the result.
 new_slug: voice-swap-editor
 name: Voice swap editor
-summary: Give it a recording. Get the same performance in a different voice, with your timing and emotion kept.
+summary: Give it a recording. Get the same performance in a different voice,
+  with your timing and emotion kept.
 job: work-with-audio
 headline: Voice swap editor
-subhead: Give it a recording. Get the same performance in a different voice, with your timing and emotion kept.
+subhead: The same recording, spoken by a different voice, with your timing,
+  emotion, breaths and pauses kept. It is useful when the performance is right
+  but the voice is not.
 explain: |
   The same recording, spoken by a different voice, with your timing, emotion, breaths and pauses kept. It is useful when the performance is right but the voice is not.
 
@@ -26,6 +29,7 @@ you_get:
   - A plan for splitting long recordings
   - Notes on cleaning noisy input
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your own ElevenLabs API key.

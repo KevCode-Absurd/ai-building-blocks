@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must link claims to real evidence.
 new_slug: wellbeing-learning-link
 name: Wellbeing and learning link mapper
-summary: Give it a wellbeing programme. Get the evidence linking it to academic results, for reports and funding cases. Not medical advice.
+summary: Give it a wellbeing programme. Get the evidence linking it to academic
+  results, for reports and funding cases. Not medical advice.
 job: teach-and-train
 headline: Wellbeing and learning link mapper
-subhead: Give it a wellbeing programme. Get the evidence linking it to academic results, for reports and funding cases. Not medical advice.
+subhead: The case, in evidence, for how a wellbeing programme helps academic
+  results. It gives you wording for governors, leaders, parents or inspectors
+  who ask why you spend time and money on it.
 explain: |
   The case, in evidence, for how a wellbeing programme helps academic results. It gives you wording for governors, leaders, parents or inspectors who ask why you spend time and money on it.
 
@@ -27,5 +30,6 @@ you_get:
   - Expected outcomes with timeframes
   - Short statement for school leaders
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

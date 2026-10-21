@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Data mistakes are subtle, so it checks each step.
 new_slug: data-warehouse-query-reviewer
 name: Data warehouse query reviewer
-summary: Share your business question or SQL. Get a safe, read-only analysis plan and a check for join and privacy errors.
+summary: Share your business question or SQL. Get a safe, read-only analysis
+  plan and a check for join and privacy errors.
 job: read-ad-results
 headline: Data warehouse query reviewer
-subhead: Share your business question or SQL. Get a safe, read-only analysis plan and a check for join and privacy errors.
+subhead: A careful, read-only plan for answering a business question from your
+  warehouse, or a review of SQL you already wrote. It catches wrong joins and
+  privacy slips before they reach a report.
 explain: |
   A careful, read-only plan for answering a business question from your warehouse, or a review of SQL you already wrote. It catches wrong joins and privacy slips before they reach a report.
 
@@ -26,5 +29,6 @@ you_get:
   - Privacy check
   - Record of scope and assumptions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It groups terms by intent and spots gaps.
 new_slug: keyword-researcher
 name: Keyword researcher
-summary: Name your topic. Get high-value search terms, search intent and content gaps to target.
+summary: Name your topic. Get high-value search terms, search intent and content
+  gaps to target.
 job: get-found-in-search
 headline: Keyword researcher
-subhead: Name your topic. Get high-value search terms, search intent and content gaps to target.
+subhead: A search plan for your topic that shows which terms are worth writing
+  for. Name your topic, and add your site and audience if you can.
 explain: |
   A search plan for your topic that shows which terms are worth writing for. Name your topic, and add your site and audience if you can. The skill starts from seed words, then grows the list with long-tail variations, related questions and natural phrasing.
 
@@ -27,5 +29,6 @@ you_get:
   - Keyword groups by theme
   - Priorities for content
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: The product must stay exact, so each version needs a check.
 new_slug: model-and-scene-swapper
 name: Model and scene swapper
-summary: Give it a model photo. Get versions with other models and backgrounds, same clothes. Your image model draws them.
+summary: Give it a model photo. Get versions with other models and backgrounds,
+  same clothes. Your image model draws them.
 job: product-photos
 headline: Model and scene swapper
-subhead: Give it a model photo. Get versions with other models and backgrounds, same clothes. Your image model draws them.
+subhead: "One photo of a clothed model turns into many: new models, new
+  backgrounds, same clothes. A single shoot can then cover different ages, skin
+  tones and settings for different markets."
 explain: |
   One photo of a clothed model turns into many: new models, new backgrounds, same clothes. A single shoot can then cover different ages, skin tones and settings for different markets.
 
@@ -26,6 +29,8 @@ you_get:
   - Pose and framing instructions
   - Notes on how to check the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).
+  - It works best when your AI can run code and use your own image model key
+    (OpenAI, Gemini, fal or Replicate).

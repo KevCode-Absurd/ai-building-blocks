@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Finding truly new ideas needs deep reasoning.
 new_slug: original-research-idea-generator
 name: Original research idea generator
-summary: Describe your problem. Get new directions from eight creative methods, such as borrowing ideas from other fields.
+summary: Describe your problem. Get new directions from eight creative methods,
+  such as borrowing ideas from other fields.
 job: research-topics
 headline: Original research idea generator
-subhead: Describe your problem. Get new directions from eight creative methods, such as borrowing ideas from other fields.
+subhead: Fresh research directions that are not a small tweak of last year's
+  paper. You get ideas from eight proven creative methods, each fitted to your
+  own problem.
 explain: |
   Fresh research directions that are not a small tweak of last year's paper. You get ideas from eight proven creative methods, each fitted to your own problem.
 
@@ -26,5 +29,6 @@ you_get:
   - Reframed versions of your problem
   - A short list worth testing
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

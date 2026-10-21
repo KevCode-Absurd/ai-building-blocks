@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts your setup, then checks set controls.
 new_slug: bank-messaging-security-checker
 name: Bank messaging security checker
-summary: Describe how you connect to SWIFT. Get your architecture type, control gaps and what your yearly attestation needs.
+summary: Describe how you connect to SWIFT. Get your architecture type, control
+  gaps and what your yearly attestation needs.
 job: check-contracts
 headline: Bank messaging security checker
-subhead: Describe how you connect to SWIFT. Get your architecture type, control gaps and what your yearly attestation needs.
+subhead: Describe how you connect to SWIFT. Get your architecture type, control
+  gaps and what your yearly attestation needs. Bring how you connect to SWIFT.
+  Use the result to plan your next step.
 explain: |
   A clear read on your SWIFT security obligations. Describe how you connect to the SWIFT network, and the AI works out your architecture type and which of the 32 controls in the Customer Security Controls Framework v2026 apply, 26 mandatory and 6 advisory.
 
@@ -26,5 +29,6 @@ you_get:
   - A control gap list
   - What your attestation needs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: Schema choices last, so it weighs trade-offs.
 new_slug: database-schema-planner
 name: Database schema planner
-summary: Describe your data. Get a clean schema, migration plan and query advice, with SQL or NoSQL guidance.
+summary: Describe your data. Get a clean schema, migration plan and query
+  advice, with SQL or NoSQL guidance.
 job: build-software
 headline: Database schema planner
-subhead: Describe your data. Get a clean schema, migration plan and query advice, with SQL or NoSQL guidance.
+subhead: "A review and plan for your database design: what to fix in the tables,
+  which indexes to add, and how to roll out changes safely."
 explain: |
   A review and plan for your database design: what to fix in the tables, which indexes to add, and how to roll out changes safely. It also helps you decide between SQL and NoSQL.
 
@@ -26,5 +28,6 @@ you_get:
   - Index recommendations
   - Step by step migration plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

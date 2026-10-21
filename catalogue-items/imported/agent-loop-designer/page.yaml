@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It must set safe stop rules for an agent that repeats work.
 new_slug: agent-loop-designer
 name: Agent loop designer
-summary: Say the job you want repeated. Get a bounded AI loop with checks, stop rules and handoffs.
+summary: Say the job you want repeated. Get a bounded AI loop with checks, stop
+  rules and handoffs.
 job: set-up-ai
 headline: Agent loop designer
-subhead: Say the job you want repeated. Get a bounded AI loop with checks, stop rules and handoffs.
+subhead: A repeating job for an AI agent with clear checks, a point where it
+  must stop, and a handoff to you when it is stuck.
 explain: |
   A repeating job for an AI agent with clear checks, a point where it must stop, and a handoff to you when it is stuck. Without those, a loop either quits too soon or runs all night.
 
@@ -26,5 +28,6 @@ you_get:
   - Checks and stop rules for each round
   - A handoff step for when it gets stuck
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

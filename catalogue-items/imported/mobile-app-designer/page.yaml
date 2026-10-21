@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scores risk first, then designs within clear rules.
 new_slug: mobile-app-designer
 name: Mobile app designer
-summary: Describe the app screen. Get a touch-first design that fits iOS or Android, with a risk score before you build.
+summary: Describe the app screen. Get a touch-first design that fits iOS or
+  Android, with a risk score before you build.
 job: design-work
 headline: Mobile app designer
-subhead: Describe the app screen. Get a touch-first design that fits iOS or Android, with a risk score before you build.
+subhead: A phone screen design that fits the platform and has been checked for
+  risk before anyone builds it. It treats the phone as a phone, not a small
+  desktop.
 explain: |
   A phone screen design that fits the platform and has been checked for risk before anyone builds it. It treats the phone as a phone, not a small desktop.
 
@@ -27,5 +30,6 @@ you_get:
   - Offline and loading states
   - Changes to make if the score is low
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

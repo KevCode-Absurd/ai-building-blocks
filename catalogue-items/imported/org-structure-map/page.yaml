@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Structure choices affect many people.
 new_slug: org-structure-map
 name: Org structure and role map builder
-summary: Give it your goals and team. Get an org structure plan, a spans check and a chart of who decides what.
+summary: Give it your goals and team. Get an org structure plan, a spans check
+  and a chart of who decides what.
 job: hire-people
 headline: Org structure and role map builder
-subhead: Give it your goals and team. Get an org structure plan, a spans check and a chart of who decides what.
+subhead: Give it your goals and team. Get an org structure plan, a spans check
+  and a chart of who decides what. Bring company goals and strategy. Use the
+  result to plan your next step.
 explain: |
   A clear plan for how your company or team should be organised, with a check on how many people each manager leads and a chart of who decides what.
 
@@ -28,5 +31,6 @@ you_get:
   - Decision rights and governance notes
   - A change plan outline
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

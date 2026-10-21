@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs report commands and reads back the numbers.
 new_slug: google-analytics-reader
 name: Google Analytics reader
-summary: Ask about your traffic, sign-ups or top pages. Get a clear Google Analytics report, pulled live and read only.
+summary: Ask about your traffic, sign-ups or top pages. Get a clear Google
+  Analytics report, pulled live and read only.
 job: track-numbers
 headline: Google Analytics reader
-subhead: Ask about your traffic, sign-ups or top pages. Get a clear Google Analytics report, pulled live and read only.
+subhead: Ask about your traffic in plain words and get a Google Analytics 4
+  report built from live data. Ask for sessions by source, top pages, sign-ups
+  last week or how a campaign did, and it runs the query and reads it back.
 explain: |
   Ask about your traffic in plain words and get a Google Analytics 4 report built from live data. Ask for sessions by source, top pages, sign-ups last week or how a campaign did, and it runs the query and reads it back.
 
@@ -26,6 +29,8 @@ you_get:
   - The query that produced them
   - Notes if sign-in fails
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run commands, with the Google Analytics CLI installed and your own Google Analytics access.
+  - It works best when your AI can run commands, with the Google Analytics CLI
+    installed and your own Google Analytics access.

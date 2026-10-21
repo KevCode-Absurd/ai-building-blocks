@@ -2,10 +2,14 @@ thinking: high
 thinking_why: Jurisdiction and licence calls need careful reasoning.
 new_slug: defense-export-rules-checker
 name: Defense export rules checker
-summary: Describe your defense product or data. Get whether it is controlled, which licences apply and how to stay compliant.
+summary: Describe your defense product or data. Get whether it is controlled,
+  which licences apply and how to stay compliant.
 job: check-contracts
 headline: Defense export rules checker
-subhead: Describe your defense product or data. Get whether it is controlled, which licences apply and how to stay compliant.
+subhead: Find out whether your product or data is controlled under US arms
+  export rules, and what you must do about it. Describe the item and who will
+  receive it, and you get a classification, the licences that apply and the
+  steps to stay compliant.
 explain: |
   Find out whether your product or data is controlled under US arms export rules, and what you must do about it. Describe the item and who will receive it, and you get a classification, the licences that apply and the steps to stay compliant.
 
@@ -26,5 +30,6 @@ you_get:
   - Compliance checklist
   - Disclosure steps if relevant
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

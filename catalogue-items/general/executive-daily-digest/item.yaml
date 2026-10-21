@@ -1,0 +1,27 @@
+slug: executive-daily-digest
+name: Executive daily briefing writer
+summary: Share your calendar, action list and updates. Get a dated brief of
+  priorities, decisions, conflicts and work waiting on others.
+category: general
+boards:
+  - business
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Executive assistant job ideas
+    by: mgonto
+    url: https://github.com/mgonto/executive-assistant-skills
+    used: Inspiration for meeting preparation, action tracking, email drafting and
+      daily briefings. These are original portable instructions, not copies of
+      the unlicensed source.
+example_pending: true

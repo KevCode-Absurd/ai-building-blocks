@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows monitoring patterns, tuned to your setup.
 new_slug: cloud-monitoring-setter
 name: Cloud monitoring setter
-summary: Name your app and cloud. Get metrics, logs, traces and alerts set up to see health in real time.
+summary: Name your app and cloud. Get metrics, logs, traces and alerts set up to
+  see health in real time.
 job: ship-and-host
 headline: Cloud monitoring setter
-subhead: Name your app and cloud. Get metrics, logs, traces and alerts set up to see health in real time.
+subhead: "Know when your app is slow or broken before your users tell you. You
+  end up with a monitoring plan and the config to run it: metrics, logs, traces,
+  dashboards and alert rules for your cloud."
 explain: |
   Know when your app is slow or broken before your users tell you. You end up with a monitoring plan and the config to run it: metrics, logs, traces, dashboards and alert rules for your cloud.
 
@@ -26,5 +29,6 @@ you_get:
   - Dashboards by service
   - Alert rules with fewer false alarms
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

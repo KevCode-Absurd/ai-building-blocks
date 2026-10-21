@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It follows migration tool rules and plans a safe rollback.
 new_slug: database-migration-writer
 name: Database migration writer
-summary: Describe the schema change. Get a versioned migration that runs forward and rolls back safely.
+summary: Describe the schema change. Get a versioned migration that runs forward
+  and rolls back safely.
 job: build-software
 headline: Database migration writer
-subhead: Describe the schema change. Get a versioned migration that runs forward and rolls back safely.
+subhead: A tested schema change that moves your database forward and can roll
+  back cleanly if it goes wrong. It aims for no downtime on production.
 explain: |
   A tested schema change that moves your database forward and can roll back cleanly if it goes wrong. It aims for no downtime on production.
 
@@ -26,6 +28,7 @@ you_get:
   - Backfill steps
   - Staged rollout plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

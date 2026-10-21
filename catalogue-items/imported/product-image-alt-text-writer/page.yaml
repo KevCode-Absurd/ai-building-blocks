@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It writes a short line per image.
 new_slug: product-image-alt-text-writer
 name: Product image alt text writer
-summary: Point it at your product images. Get alt text set on each, so AI knows what they show. Changes live files.
+summary: Point it at your product images. Get alt text set on each, so AI knows
+  what they show. Changes live files.
 job: build-websites
 headline: Product image alt text writer
-subhead: Point it at your product images. Get alt text set on each, so AI knows what they show. Changes live files.
+subhead: Clear alt text on every product image, so AI tools know what each one
+  shows. Shopping agents cannot see pixels. They read the alt text to judge
+  color, material and style, and a file name like IMG2931 tells them nothing.
 explain: |
   Clear alt text on every product image, so AI tools know what each one shows. Shopping agents cannot see pixels. They read the alt text to judge color, material and style, and a file name like IMG_2931 tells them nothing.
 
@@ -26,6 +29,7 @@ you_get:
   - Alt text saved to your store after approval
   - A summary of how many were updated
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

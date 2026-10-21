@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It spots gaps and asks a short list of questions.
 new_slug: requirements-question-asker
 name: Requirements question asker
-summary: Give it a vague request. Get the few questions that matter, with default answers, before any work starts.
+summary: Give it a vague request. Get the few questions that matter, with
+  default answers, before any work starts.
 job: think-and-decide
 headline: Requirements question asker
-subhead: Give it a vague request. Get the few questions that matter, with default answers, before any work starts.
+subhead: The handful of questions that matter before work begins, each with a
+  default answer so you can reply with one word. It stops wrong work before it
+  starts.
 explain: |
   The handful of questions that matter before work begins, each with a default answer so you can reply with one word. It stops wrong work before it starts.
 
@@ -25,5 +28,6 @@ you_get:
   - Clear list of confirmed requirements
   - Work that starts only when the picture is clear
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

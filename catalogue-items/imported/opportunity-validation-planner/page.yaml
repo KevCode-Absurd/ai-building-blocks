@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs which doubts matter most.
 new_slug: opportunity-validation-planner
 name: Opportunity validation planner
-summary: Give it a product bet. Get your riskiest assumptions mapped and a short plan to test them before you build.
+summary: Give it a product bet. Get your riskiest assumptions mapped and a short
+  plan to test them before you build.
 job: test-an-idea
 headline: Opportunity validation planner
-subhead: Give it a product bet. Get your riskiest assumptions mapped and a short plan to test them before you build.
+subhead: Before you spend months building, you get a short plan that tests the
+  parts most likely to be wrong. The riskiest guesses come first, with a cheap
+  way to check each.
 explain: |
   Before you spend months building, you get a short plan that tests the parts most likely to be wrong. The riskiest guesses come first, with a cheap way to check each.
 
@@ -26,5 +29,6 @@ you_get:
   - Prototype and value tests
   - A discovery sprint plan with a go, change or stop rule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

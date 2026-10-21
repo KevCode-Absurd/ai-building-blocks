@@ -2,17 +2,23 @@ thinking: high
 thinking_why: Classing items and buyers takes careful step by step logic.
 new_slug: us-export-rules-checker
 name: US export rules checker
-summary: Describe your product and buyer. Get its export class, whether you need a licence and which exceptions fit.
+summary: Describe your product and buyer. Get its export class, whether you need
+  a licence and which exceptions fit.
 job: check-contracts
 headline: US export rules checker
-subhead: Describe your product and buyer. Get its export class, whether you need a licence and which exceptions fit.
+subhead: "Before you ship a product, share code or send a technical file abroad,
+  you need to know if US export rules apply. This skill walks you to an answer:
+  the product's export class, whether you need a licence, and which exceptions
+  might cover you."
 explain: |
   Before you ship a product, share code or send a technical file abroad, you need to know if US export rules apply. This skill walks you to an answer: the product's export class, whether you need a licence, and which exceptions might cover you.
   Then it searches the Commerce Control List for a matching code, or lands on EAR99 if none fits. Next it checks the destination against the country chart and screens the buyer against restricted party lists. It tests the available licence exceptions one by one and flags rules such as deemed exports and the foreign direct product rule. It is guidance, not legal advice, so confirm with counsel.
 when:
-  - You plan to sell hardware, software or encryption products to a buyer outside the US.
+  - You plan to sell hardware, software or encryption products to a buyer
+    outside the US.
   - A foreign engineer joins your team and will see controlled technology.
-  - A distributor wants to resell your product in a country you have not shipped to.
+  - A distributor wants to resell your product in a country you have not shipped
+    to.
   - You need to write or review your export compliance program.
 you_give:
   - A description of the product, software or technology
@@ -25,5 +31,6 @@ you_get:
   - Licence exceptions that may apply
   - Red flags about the buyer or use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

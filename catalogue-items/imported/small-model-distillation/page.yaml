@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Matching a teacher model needs careful tuning.
 new_slug: small-model-distillation
 name: Small model trainer from a big one
-summary: Name your large model. Get a plan and code to teach a smaller, cheaper model to match it.
+summary: Name your large model. Get a plan and code to teach a smaller, cheaper
+  model to match it.
 job: build-software
 headline: Small model trainer from a big one
-subhead: Name your large model. Get a plan and code to teach a smaller, cheaper model to match it.
+subhead: A plan and working code to teach a small, cheap model to copy a big
+  one. You name the large teacher model and the small student, and you get a
+  path to keep most of the quality at a fraction of the running cost.
 explain: |
   A plan and working code to teach a small, cheap model to copy a big one. You name the large teacher model and the small student, and you get a path to keep most of the quality at a fraction of the running cost.
 
@@ -26,6 +29,7 @@ you_get:
   - Settings like temperature and loss weights
   - A way to compare student and teacher
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

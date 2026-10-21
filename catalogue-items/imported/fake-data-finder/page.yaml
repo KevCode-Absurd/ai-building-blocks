@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It clicks through the page and traces each value to its source.
 new_slug: fake-data-finder
 name: Fake data finder
-summary: Give it a live page. Get a report of which numbers are real, mocked, hardcoded or broken.
+summary: Give it a live page. Get a report of which numbers are real, mocked,
+  hardcoded or broken.
 job: test-and-fix-code
 headline: Fake data finder
-subhead: Give it a live page. Get a report of which numbers are real, mocked, hardcoded or broken.
+subhead: A page audit that tells you which numbers on screen come from a real
+  source and which are made up. It matters before you show an app built with AI
+  to a customer or investor.
 explain: |
   A page audit that tells you which numbers on screen come from a real source and which are made up. It matters before you show an app built with AI to a customer or investor.
 
@@ -26,6 +29,7 @@ you_get:
   - Notes on network and console problems
   - A short fix list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

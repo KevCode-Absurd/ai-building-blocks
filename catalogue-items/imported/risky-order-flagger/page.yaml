@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Holding the wrong order delays a real customer.
 new_slug: risky-order-flagger
 name: Risky order flagger
-summary: Get orders Shopify marks as risky tagged for review, and held from shipping if you choose. Changes live orders.
+summary: Get orders Shopify marks as risky tagged for review, and held from
+  shipping if you choose. Changes live orders.
 job: run-your-store
 headline: Risky order flagger
-subhead: Get orders Shopify marks as risky tagged for review, and held from shipping if you choose. Changes live orders.
+subhead: Orders Shopify rates high risk are tagged for review and, if you
+  choose, held so they cannot ship until you check them. It changes live orders,
+  so it starts as a preview.
 explain: |
   Orders Shopify rates high risk are tagged for review and, if you choose, held so they cannot ship until you check them. It changes live orders, so it starts as a preview.
 
@@ -27,6 +30,8 @@ you_get:
   - Fulfilment holds if you chose them
   - A dry-run preview before any change
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

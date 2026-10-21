@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set rules and picks edits per page.
 new_slug: ai-search-visibility-optimiser
 name: AI search visibility optimiser
-summary: Give it a page or topic. Get edits that help ChatGPT, Perplexity and Google AI answers cite you.
+summary: Give it a page or topic. Get edits that help ChatGPT, Perplexity and
+  Google AI answers cite you.
 job: get-found-in-search
 headline: AI search visibility optimiser
-subhead: Give it a page or topic. Get edits that help ChatGPT, Perplexity and Google AI answers cite you.
+subhead: Edits to a page or topic that make AI search tools more likely to pull
+  it into answers and name you as the source. The target is Google AI Overviews,
+  ChatGPT, Perplexity and similar tools.
 explain: |
   Edits to a page or topic that make AI search tools more likely to pull it into answers and name you as the source. The target is Google AI Overviews, ChatGPT, Perplexity and similar tools.
 
@@ -26,6 +29,7 @@ you_get:
   - Schema markup suggestions
   - A tracking list of prompts to monitor
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can browse the web.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It looks up facts and lists them clearly.
 new_slug: ownership-short-interest
 name: Ownership and short interest lookup
-summary: Ask about a stock. Get short interest, big fund owners, insider filings, analyst targets and dividend dates from Fintel.
+summary: Ask about a stock. Get short interest, big fund owners, insider
+  filings, analyst targets and dividend dates from Fintel.
 job: money-and-investing
 headline: Ownership and short interest lookup
-subhead: Ask about a stock. Get short interest, big fund owners, insider filings, analyst targets and dividend dates from Fintel.
+subhead: Facts on who owns a stock and who is betting against it, from Fintel
+  data in one answer. You see short interest, big fund holders, insider filings,
+  analyst targets and dividend dates.
 explain: |
   Facts on who owns a stock and who is betting against it, from Fintel data in one answer. You see short interest, big fund holders, insider filings, analyst targets and dividend dates.
 
@@ -26,6 +29,7 @@ you_get:
   - Analyst price targets
   - Dividend dates
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can use your Fintel API key or MCP connection.

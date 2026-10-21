@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set build pattern with exact geometry.
 new_slug: custom-pcb-shape-builder
 name: Custom PCB shape builder
-summary: Describe a PCB shape. Get a custom layout with shapes, feeds and layers built from code.
+summary: Describe a PCB shape. Get a custom layout with shapes, feeds and layers
+  built from code.
 job: build-software
 headline: Custom PCB shape builder
-subhead: Describe a PCB shape. Get a custom layout with shapes, feeds and layers built from code.
+subhead: Some RF structures are not in any catalog, so you have to build them
+  from shapes. Describe the board shape you want and you get MATLAB code that
+  builds it as a pcbComponent, with metal layers, feeds and cut-outs in place.
 explain: |
   Some RF structures are not in any catalog, so you have to build them from shapes. Describe the board shape you want and you get MATLAB code that builds it as a pcbComponent, with metal layers, feeds and cut-outs in place.
 
@@ -26,6 +29,7 @@ you_get:
   - Feed and via placement
   - A note on the next steps, such as EM analysis
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with PCB Toolbox.

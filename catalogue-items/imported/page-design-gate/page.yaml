@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans the look, builds it, then tests it.
 new_slug: page-design-gate
 name: Page design gate
-summary: Describe your page. Get one that looks designed, checked in a real browser at phone and desktop width.
+summary: Describe your page. Get one that looks designed, checked in a real
+  browser at phone and desktop width.
 job: build-websites
 headline: Page design gate
-subhead: Describe your page. Get one that looks designed, checked in a real browser at phone and desktop width.
+subhead: Describe your page. Get one that looks designed, checked in a real
+  browser at phone and desktop width. Bring what the page is for and who visits.
+  Use the result to plan your next step.
 explain: |
   A page that looks designed instead of generic, and that has been opened in a real browser at phone and desktop width before it is called done.
 
@@ -26,6 +29,7 @@ you_get:
   - List of problems found and fixed
   - Sign-off only when hard issues are closed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

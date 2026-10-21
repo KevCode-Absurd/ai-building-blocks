@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds from set steps but needs sensible assumptions.
 new_slug: budget-and-forecast-builder
 name: Budget and forecast builder
-summary: Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+summary: Give it your past numbers and plans. Get a budget, a forecast and a
+  note on gaps against actuals.
 job: money-and-investing
 headline: Budget and forecast builder
-subhead: Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+subhead: Give it your past numbers and plans. Get a budget, a forecast and a
+  note on gaps against actuals. Bring past revenue and cost numbers. Use the
+  result to plan your next step.
 explain: |
   A budget and forecast for the next year or the next few, built from your history and the things that actually drive your numbers, with a plan to track the gaps.
 
@@ -27,5 +30,6 @@ you_get:
   - What-if results
   - A budget against actuals tracker
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

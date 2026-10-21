@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set patterns for modules and tests.
 new_slug: terraform-best-practice-guide
 name: Terraform best-practice guide
-summary: Describe the cloud setup you need. Get Terraform or OpenTofu code with tested modules and CI steps.
+summary: Describe the cloud setup you need. Get Terraform or OpenTofu code with
+  tested modules and CI steps.
 job: ship-and-host
 headline: Terraform best-practice guide
-subhead: Describe the cloud setup you need. Get Terraform or OpenTofu code with tested modules and CI steps.
+subhead: Describe the cloud setup you need. Get Terraform or OpenTofu code with
+  tested modules and CI steps. Bring the cloud setup you need. Use the result to
+  plan your next step.
 explain: |
   Terraform or OpenTofu code that is organised, tested and ready for a pipeline, built from your description of the cloud setup. You avoid the usual traps, like fragile modules and changes nobody tested.
 
@@ -27,6 +30,7 @@ you_get:
   - CI steps
   - Notes on structure and state
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks code against a known list of patterns.
 new_slug: fixed-point-code-reviewer
 name: Fixed-point code reviewer
-summary: Give it MATLAB fixed-point code. Get slow or risky patterns found, with cleaner replacements.
+summary: Give it MATLAB fixed-point code. Get slow or risky patterns found, with
+  cleaner replacements.
 job: test-and-fix-code
 headline: Fixed-point code reviewer
-subhead: Give it MATLAB fixed-point code. Get slow or risky patterns found, with cleaner replacements.
+subhead: MATLAB fixed-point code is checked for slow habits and risky patterns,
+  and each one gets a cleaner replacement. Your simulations run faster and your
+  code is ready for C or hardware conversion.
 explain: |
   MATLAB fixed-point code is checked for slow habits and risky patterns, and each one gets a cleaner replacement. Your simulations run faster and your code is ready for C or hardware conversion.
 
@@ -25,6 +28,7 @@ you_get:
   - Types table pulled out of your algorithm
   - Notes on code generation readiness
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Fixed-Point Designer.

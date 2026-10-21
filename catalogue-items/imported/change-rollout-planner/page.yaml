@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It adapts a set change model to your situation.
 new_slug: change-rollout-planner
 name: Change rollout planner
-summary: Describe a re-org or tool switch. Get a rollout plan, message templates and a plan for pushback.
+summary: Describe a re-org or tool switch. Get a rollout plan, message templates
+  and a plan for pushback.
 job: lead-people
 headline: Change rollout planner
-subhead: Describe a re-org or tool switch. Get a rollout plan, message templates and a plan for pushback.
+subhead: A re-org or tool switch gets a rollout plan, message templates and a
+  plan for pushback, so people actually adopt it. Most changes fail in the
+  rollout, not the design, and this plan is built around the stages people go
+  through.
 explain: |
   A re-org or tool switch gets a rollout plan, message templates and a plan for pushback, so people actually adopt it. Most changes fail in the rollout, not the design, and this plan is built around the stages people go through.
 
@@ -26,5 +30,6 @@ you_get:
   - Answers to likely pushback
   - Ways to keep the change in place
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

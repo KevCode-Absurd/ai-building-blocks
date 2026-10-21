@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a short, known set of steps.
 new_slug: tiny-gpt-trainer
 name: Tiny GPT trainer
-summary: Give it any text file. Get a small GPT trained from scratch that writes in that style, plus how it works.
+summary: Give it any text file. Get a small GPT trained from scratch that writes
+  in that style, plus how it works.
 job: build-software
 headline: Tiny GPT trainer
-subhead: Give it any text file. Get a small GPT trained from scratch that writes in that style, plus how it works.
+subhead: Train your own small GPT from scratch on any text file and watch it
+  learn to write in that style. It is built for learning how language models
+  work, and it runs on a normal laptop for the small version.
 explain: |
   Train your own small GPT from scratch on any text file and watch it learn to write in that style. It is built for learning how language models work, and it runs on a normal laptop for the small version.
 
@@ -27,6 +30,7 @@ you_get:
   - Notes on how training works
   - Settings to scale up
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

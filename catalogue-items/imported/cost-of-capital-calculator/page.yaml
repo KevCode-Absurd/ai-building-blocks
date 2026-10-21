@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs the standard WACC formula steps.
 new_slug: cost-of-capital-calculator
 name: Cost of capital calculator
-summary: Give it a company's debt, equity and market inputs. Get its WACC with cost of equity and debt shown.
+summary: Give it a company's debt, equity and market inputs. Get its WACC with
+  cost of equity and debt shown.
 job: money-and-investing
 headline: Cost of capital calculator
-subhead: Give it a company's debt, equity and market inputs. Get its WACC with cost of equity and debt shown.
+subhead: Give it a company's debt, equity and market inputs. Get its WACC with
+  cost of equity and debt shown. Bring debt and equity values. Use the result to
+  plan your next step.
 explain: |
   A company's weighted average cost of capital with every input shown, so you can use it in a valuation or a capital budget and defend it. You see the cost of equity, cost of debt and the weights that produce the final rate.
 
@@ -26,5 +29,6 @@ you_get:
   - Beta adjustment steps
   - Computation memo
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

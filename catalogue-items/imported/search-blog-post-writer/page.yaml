@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a set structure but needs sound writing.
 new_slug: search-blog-post-writer
 name: Search blog post writer
-summary: Give a topic and target keyword. Get a long post with an answer first, FAQs and internal links.
+summary: Give a topic and target keyword. Get a long post with an answer first,
+  FAQs and internal links.
 job: get-found-in-search
 headline: Search blog post writer
-subhead: Give a topic and target keyword. Get a long post with an answer first, FAQs and internal links.
+subhead: A finished long post of 800 to 3,000 words built to rank in search and
+  to be quoted by AI answer tools. It opens with a two or three sentence direct
+  answer, then an introduction that names your keyword early, then a fixed set
+  of sections.
 explain: |
   A finished long post of 800 to 3,000 words built to rank in search and to be quoted by AI answer tools. It opens with a two or three sentence direct answer, then an introduction that names your keyword early, then a fixed set of sections.
 
@@ -26,5 +30,6 @@ you_get:
   - FAQ section
   - Internal links in the text
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

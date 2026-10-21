@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It maps cases to tests, then reports results back.
 new_slug: testrail-test-syncer
 name: TestRail test syncer
-summary: Give it your TestRail project. Get its test cases turned into Playwright tests, and results sent back.
+summary: Give it your TestRail project. Get its test cases turned into
+  Playwright tests, and results sent back.
 job: test-and-fix-code
 headline: TestRail test syncer
-subhead: Give it your TestRail project. Get its test cases turned into Playwright tests, and results sent back.
+subhead: Your test cases live in TestRail, your automated tests live in
+  Playwright, and keeping them in step by hand is slow. This skill moves work
+  both ways.
 explain: |
   Your test cases live in TestRail, your automated tests live in Playwright, and keeping them in step by hand is slow. This skill moves work both ways. It pulls cases from a TestRail project and writes Playwright tests from their steps and expected results. It can also run your tests and push pass or fail results back to a test run.
 
@@ -26,6 +29,8 @@ you_get:
   - Results sent to a TestRail run
   - A count of imported cases and written tests
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use a TestRail tool you set up yourself.
+  - It works best when your AI can run code and use a TestRail tool you set up
+    yourself.

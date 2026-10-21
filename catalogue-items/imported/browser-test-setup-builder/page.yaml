@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set setup path for your framework.
 new_slug: browser-test-setup-builder
 name: Browser test setup builder
-summary: Point it at your project. Get Playwright installed with a config, a sample test and a CI file.
+summary: Point it at your project. Get Playwright installed with a config, a
+  sample test and a CI file.
 job: test-and-fix-code
 headline: Browser test setup builder
-subhead: Point it at your project. Get Playwright installed with a config, a sample test and a CI file.
+subhead: Point it at your project. Get Playwright installed with a config, a
+  sample test and a CI file. Bring your project folder. Use the result to plan
+  your next step.
 explain: |
   Playwright installed and ready to run in your project in one pass: a config, a folder layout, a sample test and a CI file that runs it on every change.
 
@@ -26,6 +29,7 @@ you_get:
   - A working sample test
   - A CI workflow file
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

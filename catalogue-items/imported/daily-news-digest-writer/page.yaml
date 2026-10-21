@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It gathers pages, then picks the items worth your time.
 new_slug: daily-news-digest-writer
 name: Daily news digest writer
-summary: Give it a list of news sites. Get a daily report of the best items. Collects data from websites.
+summary: Give it a list of news sites. Get a daily report of the best items.
+  Collects data from websites.
 job: think-and-decide
 headline: Daily news digest writer
-subhead: Give it a list of news sites. Get a daily report of the best items. Collects data from websites.
+subhead: Open one Markdown report each day with the best 20 or so items from the
+  sites you follow, with the weak ones filtered out. You skip the tab hopping.
 explain: |
   Open one Markdown report each day with the best 20 or so items from the sites you follow, with the weak ones filtered out. You skip the tab hopping.
 
@@ -26,6 +28,7 @@ you_get:
   - Short note on each item
   - Cache of already seen links
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

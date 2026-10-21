@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It sorts your notes into set groups.
 new_slug: brain-dump-organizer
 name: Brain dump organizer
-summary: Dump everything on your mind. Get it sorted into tasks, ideas and notes with nothing lost.
+summary: Dump everything on your mind. Get it sorted into tasks, ideas and notes
+  with nothing lost.
 job: organise-work
 headline: Brain dump organizer
-subhead: Dump everything on your mind. Get it sorted into tasks, ideas and notes with nothing lost.
+subhead: Paste a messy stream of thoughts and get it sorted into a clean, usable
+  list with nothing lost. Tasks, ideas and notes each land in their place, still
+  in your own words.
 explain: |
   Paste a messy stream of thoughts and get it sorted into a clean, usable list with nothing lost. Tasks, ideas and notes each land in their place, still in your own words.
 
@@ -25,5 +28,6 @@ you_get:
   - Nothing dropped
   - Output sized to match your input
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

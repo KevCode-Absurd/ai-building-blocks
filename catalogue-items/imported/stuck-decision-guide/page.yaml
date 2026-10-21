@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It adapts each question to your last answer.
 new_slug: stuck-decision-guide
 name: Stuck decision guide
-summary: Tell it what feels stuck. Get a few branching questions, then a clear next step you can take today.
+summary: Tell it what feels stuck. Get a few branching questions, then a clear
+  next step you can take today.
 job: think-and-decide
 headline: Stuck decision guide
-subhead: Tell it what feels stuck. Get a few branching questions, then a clear next step you can take today.
+subhead: When you feel stuck or overwhelmed, a wall of options does not help.
+  You need one small step you can take today. This skill talks you there.
 explain: |
   When you feel stuck or overwhelmed, a wall of options does not help. You need one small step you can take today. This skill talks you there.
 
@@ -25,5 +27,6 @@ you_get:
   - A short list of follow-up steps
   - A calm summary of where you stand
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks many items and ranks fixes.
 new_slug: seo-site-auditor
 name: SEO site auditor
-summary: Give it your site. Get a ranked list of SEO problems and fixes, from technical to content.
+summary: Give it your site. Get a ranked list of SEO problems and fixes, from
+  technical to content.
 job: get-found-in-search
 headline: SEO site auditor
-subhead: Give it your site. Get a ranked list of SEO problems and fixes, from technical to content.
+subhead: Give it your site. Get a ranked list of SEO problems and fixes, from
+  technical to content. Bring your site address. Use the result to plan your
+  next step.
 explain: |
   A ranked list of what is holding your search traffic back, from site-level technical faults to thin content, with the fix for each. It audits in a set order: can Google crawl and index the site, is it fast and sound, are pages well set up, is the content worth ranking, and does the site have authority.
 
@@ -26,6 +29,7 @@ you_get:
   - Technical, on-page and content findings
   - A correct schema check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can browse the web.

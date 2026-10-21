@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs likelihood against harm for new issues.
 new_slug: feature-legal-risk-assessor
 name: Feature legal risk assessor
-summary: Name a risky feature. Get what could go wrong, how likely, how bad and fixes. First check, not legal advice.
+summary: Name a risky feature. Get what could go wrong, how likely, how bad and
+  fixes. First check, not legal advice.
 job: check-contracts
 headline: Feature legal risk assessor
-subhead: Name a risky feature. Get what could go wrong, how likely, how bad and fixes. First check, not legal advice.
+subhead: A short, structured look at what could go wrong with a risky feature,
+  written so a lawyer or leader can act on it. It is a first check, not legal
+  advice.
 explain: |
   A short, structured look at what could go wrong with a risky feature, written so a lawyer or leader can act on it. It is a first check, not legal advice.
 
@@ -26,7 +29,10 @@ you_get:
   - Suggested fixes
   - Open questions for a lawyer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your saved product legal setup notes.
-  - Where the skill points to /product-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /product-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

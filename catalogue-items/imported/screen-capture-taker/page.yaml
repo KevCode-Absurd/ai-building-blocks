@@ -5,7 +5,9 @@ name: Screen capture taker
 summary: Ask for a screen, a window or a part of one. Get a saved screenshot.
 job: work-with-files
 headline: Screen capture taker
-subhead: Ask for a screen, a window or a part of one. Get a saved screenshot.
+subhead: "A saved screenshot of exactly what you asked for: the whole desktop,
+  one app window, or a region of the screen. Say where to save it, or leave it
+  out and the file goes to your system's default screenshot folder."
 explain: |
   A saved screenshot of exactly what you asked for: the whole desktop, one app window, or a region of the screen. Say where to save it, or leave it out and the file goes to your system's default screenshot folder. If Claude only needs the image to look at, it goes in a temporary folder instead.
 
@@ -25,6 +27,7 @@ you_get:
   - A temporary copy when Claude only needs to look
   - Mac permission set up once
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can capture your screen.

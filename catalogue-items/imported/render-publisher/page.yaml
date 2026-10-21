@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set deploy path.
 new_slug: render-publisher
 name: Render publisher
-summary: Point it at your project. Get it deployed on Render, with a setup file and the link.
+summary: Point it at your project. Get it deployed on Render, with a setup file
+  and the link.
 job: ship-and-host
 headline: Render publisher
-subhead: Point it at your project. Get it deployed on Render, with a setup file and the link.
+subhead: Your project live on Render, with the setup file written and the
+  dashboard link in your hand. You do not need to learn the hosting settings
+  first.
 explain: |
   Your project live on Render, with the setup file written and the dashboard link in your hand. You do not need to learn the hosting settings first.
 
@@ -26,6 +29,7 @@ you_get:
   - Link to the Render dashboard
   - List of settings still to fill in
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands and reach your Render account.

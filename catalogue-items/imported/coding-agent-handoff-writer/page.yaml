@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes strict instructions an agent can run alone.
 new_slug: coding-agent-handoff-writer
 name: Coding agent handoff writer
-summary: Describe the change you want. Get a handoff note with scope, checks and stop rules for a coding agent.
+summary: Describe the change you want. Get a handoff note with scope, checks and
+  stop rules for a coding agent.
 job: build-software
 headline: Coding agent handoff writer
-subhead: Describe the change you want. Get a handoff note with scope, checks and stop rules for a coding agent.
+subhead: A handoff note that lets a coding agent run on its own and come back
+  with work a person can review. It is made for overnight or background jobs
+  where you will not be watching.
 explain: |
   A handoff note that lets a coding agent run on its own and come back with work a person can review. It is made for overnight or background jobs where you will not be watching.
 
@@ -26,5 +29,6 @@ you_get:
   - Checks the agent must pass
   - A review path for the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

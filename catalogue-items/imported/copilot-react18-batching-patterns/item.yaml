@@ -1,0 +1,32 @@
+slug: copilot-react18-batching-patterns
+name: React batching regression fixer
+summary: Share a React class component. Get fixes for state updates that break under automatic batching.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/react18-batching-patterns
+  url: https://github.com/github/awesome-copilot/tree/main/skills/react18-batching-patterns
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: react18-batching-patterns
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: react18-batching-patterns skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/react18-batching-patterns
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

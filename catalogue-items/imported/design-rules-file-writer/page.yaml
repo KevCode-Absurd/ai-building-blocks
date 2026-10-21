@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads real code and summarises the style.
 new_slug: design-rules-file-writer
 name: Design rules file writer
-summary: Point it at your project. Get a DESIGN.md that lists the colours, type, spacing and parts your product really uses.
+summary: Point it at your project. Get a DESIGN.md that lists the colours, type,
+  spacing and parts your product really uses.
 job: design-work
 headline: Design rules file writer
-subhead: Point it at your project. Get a DESIGN.md that lists the colours, type, spacing and parts your product really uses.
+subhead: A DESIGN.md that tells people and AI agents which colours, type sizes,
+  spacing and parts your product really uses. With one in place, each new screen
+  matches the last instead of inventing styles.
 explain: |
   A DESIGN.md that tells people and AI agents which colours, type sizes, spacing and parts your product really uses. With one in place, each new screen matches the last instead of inventing styles.
 
@@ -25,6 +28,7 @@ you_get:
   - Component rules
   - Things to avoid
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It balances freedom and structure in a time block.
 new_slug: choice-work-block-planner
 name: Choice work block planner
-summary: Describe your time block. Get a plan for a long stretch of independent, choice-based work.
+summary: Describe your time block. Get a plan for a long stretch of independent,
+  choice-based work.
 job: teach-and-train
 headline: Choice work block planner
-subhead: Describe your time block. Get a plan for a long stretch of independent, choice-based work.
+subhead: A plan for a long, uninterrupted stretch where students pick their own
+  work and stay focused. You tell it how much time you really have and what is
+  on offer, and you get a block that works in a real timetable.
 explain: |
   A plan for a long, uninterrupted stretch where students pick their own work and stay focused. You tell it how much time you really have and what is on offer, and you get a block that works in a real timetable.
 
@@ -26,5 +29,6 @@ you_get:
   - Notes on how to open and close the session
   - Ways to support students who struggle to choose
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads for tone and cites the lines.
 new_slug: earnings-call-tone-reader
 name: Earnings call tone reader
-summary: Give it an earnings call transcript. Get shifts in management tone and confidence flagged, with quotes.
+summary: Give it an earnings call transcript. Get shifts in management tone and
+  confidence flagged, with quotes.
 job: money-and-investing
 headline: Earnings call tone reader
-subhead: Give it an earnings call transcript. Get shifts in management tone and confidence flagged, with quotes.
+subhead: A report on how management sounded on the call, not just what they
+  said. Give it a transcript and you get shifts in tone and confidence flagged,
+  each backed by a quote.
 explain: |
   A report on how management sounded on the call, not just what they said. Give it a transcript and you get shifts in tone and confidence flagged, each backed by a quote.
 
@@ -26,5 +29,6 @@ you_get:
   - Quotes that support each flag
   - A sentiment report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

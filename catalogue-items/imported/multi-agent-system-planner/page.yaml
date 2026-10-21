@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs several architectures against your needs.
 new_slug: multi-agent-system-planner
 name: Multi-agent system planner
-summary: Describe the job. Get a choice of supervisor, swarm or handoff design for several agents, with the trade-offs.
+summary: Describe the job. Get a choice of supervisor, swarm or handoff design
+  for several agents, with the trade-offs.
 job: build-software
 headline: Multi-agent system planner
-subhead: Describe the job. Get a choice of supervisor, swarm or handoff design for several agents, with the trade-offs.
+subhead: A choice of design for a team of AI agents, with the trade-offs laid
+  out so you pick the one that fits your job. It also tells you when one agent
+  is enough.
 explain: |
   A choice of design for a team of AI agents, with the trade-offs laid out so you pick the one that fits your job. It also tells you when one agent is enough.
 
@@ -26,5 +29,6 @@ you_get:
   - A handoff design
   - Failure risks and fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

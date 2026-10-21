@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It confirms a brief first, then writes within set rules.
 new_slug: honest-conversion-copywriter
 name: Honest conversion copywriter
-summary: Give it your offer and reader. Get landing page or email copy with clear next steps and no made-up claims.
+summary: Give it your offer and reader. Get landing page or email copy with
+  clear next steps and no made-up claims.
 job: write-landing-page
 headline: Honest conversion copywriter
-subhead: Give it your offer and reader. Get landing page or email copy with clear next steps and no made-up claims.
+subhead: "Landing page or email copy that gets a click and does not invent
+  anything. Before writing, the skill makes you confirm a brief: the page's one
+  job, the audience, the offer and the context."
 explain: |
   Landing page or email copy that gets a click and does not invent anything. Before writing, the skill makes you confirm a brief: the page's one job, the audience, the offer and the context. It will not start until you agree. That stops guessing.
 
@@ -27,5 +30,6 @@ you_get:
   - Alternative headlines and calls to action
   - Notes and ideas to test
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

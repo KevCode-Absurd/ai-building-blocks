@@ -1,0 +1,7 @@
+# Retained for review and provenance. Excluded from site data, pages and downloadable packs.
+stable-diffusion-image-maker:
+  reason: Recommends disabling an image safety checker. Withheld pending a reviewed replacement.
+  evidence: references/troubleshooting.md:129
+secrets-hygiene-checker:
+  reason: Suggests git commit --no-verify to bypass checks. Withheld pending a reviewed replacement.
+  evidence: SKILL.md:186

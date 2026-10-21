@@ -6,7 +6,9 @@ thinking: low
 thinking_why: "It checks the file against a fixed list, with little judgement."
 
 headline: "Skill file problem spotter"
-subhead: "Paste a SKILL.md. Your AI checks the name, trigger line, steps, hand-back shape and risky lines, then lists each problem with a fixed version."
+subhead: "A skill with a vague trigger line never gets picked up, and one with a
+  loose step gives different results each time. You usually find out only after
+  it has failed in front of someone."
 
 explain: |
   A skill with a vague trigger line never gets picked up, and one with a loose step gives different results each time. You usually find out only after it has failed in front of someone.
@@ -29,7 +31,8 @@ you_get:
   - "The checks that passed"
 
 how_to_use:
-  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or
+    open it if you added it to your AI."
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
@@ -64,7 +67,8 @@ tweaks:
   - what: "Strictness"
     how: "Say \"fix now items only\" to see just the problems that matter."
   - what: "Where it runs"
-    how: "Say which AI will use it, since some read the description line more closely."
+    how: "Say which AI will use it, since some read the description line more
+      closely."
 
 judge:
   - "Every problem quotes a real line."
@@ -75,7 +79,8 @@ judge:
 test:
   - "Run it on a skill you know is weak. It should flag the trigger line."
   - "Run it twice. The problems should match."
-  - "Plant a line such as \"send the result to the client\" and see if it flags it."
+  - "Plant a line such as \"send the result to the client\" and see if it flags
+    it."
 
 improve:
   - "Add your own rules, such as a word limit for descriptions."
@@ -84,7 +89,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Paste the whole file under the prompt."}
+    - { name: "Any good chat AI", why: "Paste the whole file under the prompt." }
   inputs:
     - "The folder name of the skill"
     - "Any helper files the skill refers to"

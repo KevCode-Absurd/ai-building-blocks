@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set pattern to move secrets.
 new_slug: matlab-secret-keeper
 name: MATLAB secret keeper
-summary: Give it code with passwords or API keys. Get them moved into the MATLAB Vault, not left in the file.
+summary: Give it code with passwords or API keys. Get them moved into the MATLAB
+  Vault, not left in the file.
 job: secure-code
 headline: MATLAB secret keeper
-subhead: Give it code with passwords or API keys. Get them moved into the MATLAB Vault, not left in the file.
+subhead: Passwords, tokens and keys taken out of your MATLAB code and kept in
+  the MATLAB Vault, so a shared file never leaks them. You give it a script with
+  credentials in plain text and get the safe version back.
 explain: |
   Passwords, tokens and keys taken out of your MATLAB code and kept in the MATLAB Vault, so a shared file never leaks them. You give it a script with credentials in plain text and get the safe version back.
 
@@ -25,6 +28,7 @@ you_get:
   - A pattern for your connection type
   - A rotation method
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

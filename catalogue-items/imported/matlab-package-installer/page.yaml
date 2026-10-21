@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It runs a few package commands.
 new_slug: matlab-package-installer
 name: MATLAB package installer
-summary: Name the package. Get it installed, updated or removed, with dependency errors sorted.
+summary: Name the package. Get it installed, updated or removed, with dependency
+  errors sorted.
 job: build-software
 headline: MATLAB package installer
-subhead: Name the package. Get it installed, updated or removed, with dependency errors sorted.
+subhead: Name the package. Get it installed, updated or removed, with dependency
+  errors sorted. Bring the package name. Use the result to plan your next step.
 explain: |
   MATLAB packages installed, updated or removed from the command line, with dependency errors sorted out. Name the package and say what you want done.
 
@@ -26,6 +28,7 @@ you_get:
   - Dependency fixes
   - A project file entry (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB R2026b or later.

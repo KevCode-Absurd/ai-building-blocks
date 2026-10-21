@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set steps but needs judgement about people.
 new_slug: customer-job-mapper
 name: Customer job mapper
-summary: Describe your product and buyer. Get the functional, emotional and social jobs they hire it for.
+summary: Describe your product and buyer. Get the functional, emotional and
+  social jobs they hire it for.
 job: understand-customers
 headline: Customer job mapper
-subhead: Describe your product and buyer. Get the functional, emotional and social jobs they hire it for.
+subhead: "People do not buy a product, they hire it to make progress. Describe
+  your product and buyer and you get a jobs-to-be-done map showing what job they
+  are hiring it for: the practical, the emotional and the social."
 explain: |
   People do not buy a product, they hire it to make progress. Describe your product and buyer and you get a jobs-to-be-done map showing what job they are hiring it for: the practical, the emotional and the social.
 
@@ -26,5 +29,6 @@ you_get:
   - A list of alternatives
   - Success criteria in the buyer's terms
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

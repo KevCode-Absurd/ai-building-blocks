@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It summarises one session against a simple rubric.
 new_slug: session-credit-reviewer
 name: Session credit reviewer
-summary: Finish a work session. Get a record of what you drove, what Claude did and where you steered.
+summary: Finish a work session. Get a record of what you drove, what Claude did
+  and where you steered.
 job: think-and-decide
 headline: Session credit reviewer
-subhead: Finish a work session. Get a record of what you drove, what Claude did and where you steered.
+subhead: A record of a work session that shows what you drove, what Claude did
+  and where you steered it. Much of your thinking never gets written down, such
+  as why you picked one option over another.
 explain: |
   A record of a work session that shows what you drove, what Claude did and where you steered it. Much of your thinking never gets written down, such as why you picked one option over another.
 
@@ -26,5 +29,6 @@ you_get:
   - A session history
   - An HTML summary (for high signal sessions)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

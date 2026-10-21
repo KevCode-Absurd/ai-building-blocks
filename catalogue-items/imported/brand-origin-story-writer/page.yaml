@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It finds the human truth first, then writes the story.
 new_slug: brand-origin-story-writer
 name: Brand origin story writer
-summary: Tell it how you started and why. Get an origin story and an About page that sound human.
+summary: Tell it how you started and why. Get an origin story and an About page
+  that sound human.
 job: write-and-tell-stories
 headline: Brand origin story writer
-subhead: Tell it how you started and why. Get an origin story and an About page that sound human.
+subhead: An origin story and About page that read like a person wrote them. It
+  finds the real reason you started and builds a story people connect with,
+  instead of opening with "We were founded in...".
 explain: |
   An origin story and About page that read like a person wrote them. It finds the real reason you started and builds a story people connect with, instead of opening with "We were founded in...".
 
@@ -26,5 +29,6 @@ you_get:
   - An opening that pulls readers in
   - Language that sounds human
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

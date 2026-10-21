@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It picks a chart and draws it.
 new_slug: data-chart-drawer
 name: Data chart drawer
-summary: Give it your data. Get a clean chart with the right chart type, as an image or an interactive plot.
+summary: Give it your data. Get a clean chart with the right chart type, as an
+  image or an interactive plot.
 job: track-numbers
 headline: Data chart drawer
-subhead: Give it your data. Get a clean chart with the right chart type, as an image or an interactive plot.
+subhead: A clear chart that fits your data and your reader, saved as an image or
+  an interactive plot. It picks the chart type for you if you are not sure which
+  fits.
 explain: |
   A clear chart that fits your data and your reader, saved as an image or an interactive plot. It picks the chart type for you if you are not sure which fits.
 
@@ -26,6 +29,7 @@ you_get:
   - The code that made it
   - Edits on request
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

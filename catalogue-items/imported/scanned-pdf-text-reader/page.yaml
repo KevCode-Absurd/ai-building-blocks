@@ -2,17 +2,21 @@ thinking: low
 thinking_why: It runs a parser and returns text with little judgement.
 new_slug: scanned-pdf-text-reader
 name: Scanned PDF text reader
-summary: Give it PDFs, Office files or scans. Get text with page positions, read with OCR when needed, all on your computer.
+summary: Give it PDFs, Office files or scans. Get text with page positions, read
+  with OCR when needed, all on your computer.
 job: work-with-files
 headline: Scanned PDF text reader
-subhead: Give it PDFs, Office files or scans. Get text with page positions, read with OCR when needed, all on your computer.
+subhead: Text out of PDFs, Office files and scanned images, with the position of
+  every line on the page, all processed on your own computer. Nothing goes to a
+  cloud service.
 explain: |
   Text out of PDFs, Office files and scanned images, with the position of every line on the page, all processed on your own computer. Nothing goes to a cloud service.
 
   A tool called LiteParse reads the file and returns layout-aware text, structured JSON or rough markdown. For scans it runs OCR with a bundled engine, so pages with no real text still come out. Each piece of text carries a bounding box, so you can cite exactly where something was found. It can also save page images so another model can look at charts or handwriting, and it runs on whole folders. You need Python, and LibreOffice for Office formats.
 when:
   - You have scanned contracts and need searchable text.
-  - You want to feed a folder of papers into a search tool and keep page locations.
+  - You want to feed a folder of papers into a search tool and keep page
+    locations.
   - Your documents are private and must not leave your machine.
   - You need to cite the exact spot on a page.
 you_give:
@@ -26,6 +30,7 @@ you_get:
   - OCR text for scanned pages
   - Page images (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and save files.

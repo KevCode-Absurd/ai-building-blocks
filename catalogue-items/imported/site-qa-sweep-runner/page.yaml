@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set test steps but judges what counts as a problem.
 new_slug: site-qa-sweep-runner
 name: Site QA sweep runner
-summary: Name a page or site and a depth. Get a smoke, standard or full test pass with a list of problems found.
+summary: Name a page or site and a depth. Get a smoke, standard or full test
+  pass with a list of problems found.
 job: test-and-fix-code
 headline: Site QA sweep runner
-subhead: Name a page or site and a depth. Get a smoke, standard or full test pass with a list of problems found.
+subhead: A test pass on your page, feature or site at the depth you pick, with a
+  list of problems found. You can confirm something works before you call it
+  shipped.
 explain: |
   A test pass on your page, feature or site at the depth you pick, with a list of problems found. You can confirm something works before you call it shipped.
 
@@ -26,6 +29,7 @@ you_get:
   - A list of problems found
   - Notes on what to test deeper
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open a browser.

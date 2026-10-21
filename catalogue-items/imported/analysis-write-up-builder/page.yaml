@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It fills a set structure, but needs a clear read of your audience.
 new_slug: analysis-write-up-builder
 name: Analysis write-up builder
-summary: Give it your finished analysis. Get a write-up with the question, data, method, results and steps to rerun it.
+summary: Give it your finished analysis. Get a write-up with the question, data,
+  method, results and steps to rerun it.
 job: document-work
 headline: Analysis write-up builder
-subhead: Give it your finished analysis. Get a write-up with the question, data, method, results and steps to rerun it.
+subhead: A finished analysis turned into a write-up that someone else can read,
+  trust and rerun. It covers the question, the data, the method, the results and
+  the steps to repeat it, so your future self will not have to guess.
 explain: |
   A finished analysis turned into a write-up that someone else can read, trust and rerun. It covers the question, the data, the method, the results and the steps to repeat it, so your future self will not have to guess.
 
@@ -26,5 +29,6 @@ you_get:
   - Results with captioned charts
   - Recommendations and rerun steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

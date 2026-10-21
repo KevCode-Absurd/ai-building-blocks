@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It recomputes figures and compares them.
 new_slug: investor-statement-nav-checker
 name: Investor statement NAV checker
-summary: Give it an investor statement and the fund's NAV pack. Get the capital account recomputed and any mismatch flagged.
+summary: Give it an investor statement and the fund's NAV pack. Get the capital
+  account recomputed and any mismatch flagged.
 job: money-and-investing
 headline: Investor statement NAV checker
-subhead: Give it an investor statement and the fund's NAV pack. Get the capital account recomputed and any mismatch flagged.
+subhead: Proof that an investor's capital statement matches the fund's books.
+  Give it the generated statement and the period's NAV pack from the fund admin
+  system.
 explain: |
   Proof that an investor's capital statement matches the fund's books. Give it the generated statement and the period's NAV pack from the fund admin system. The statement is the thing under test and the pack is the source of truth.
 
@@ -26,5 +29,6 @@ you_get:
   - The input behind each mismatch
   - A list of flags for review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

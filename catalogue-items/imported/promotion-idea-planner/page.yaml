@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches a promotion type to your goal and words it well.
 new_slug: promotion-idea-planner
 name: Promotion idea planner
-summary: Say what you want to launch or clear. Get a gift, bundle or pre-order promotion that avoids plain price cuts.
+summary: Say what you want to launch or clear. Get a gift, bundle or pre-order
+  promotion that avoids plain price cuts.
 job: make-offer
 headline: Promotion idea planner
-subhead: Say what you want to launch or clear. Get a gift, bundle or pre-order promotion that avoids plain price cuts.
+subhead: A promotion that gets sales without teaching customers to wait for a
+  markdown. You get a clear pick between a gift, bundle, pre-order incentive or
+  limited offer, with the wording to match.
 explain: |
   A promotion that gets sales without teaching customers to wait for a markdown. You get a clear pick between a gift, bundle, pre-order incentive or limited offer, with the wording to match.
 
@@ -27,5 +30,6 @@ you_get:
   - Urgency and cap suggestions
   - Mistakes to avoid
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

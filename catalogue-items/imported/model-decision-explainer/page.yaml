@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Explaining a model needs several methods and careful reading of results.
 new_slug: model-decision-explainer
 name: Model decision explainer
-summary: Give it a trained model. Get which inputs matter, why it made each call, and where it goes wrong.
+summary: Give it a trained model. Get which inputs matter, why it made each
+  call, and where it goes wrong.
 job: build-software
 headline: Model decision explainer
-subhead: Give it a trained model. Get which inputs matter, why it made each call, and where it goes wrong.
+subhead: A clear answer to why your trained model says what it says. You see
+  which inputs matter most, why it gave one case a certain score, and where it
+  keeps getting things wrong.
 explain: |
   A clear answer to why your trained model says what it says. You see which inputs matter most, why it gave one case a certain score, and where it keeps getting things wrong.
 
@@ -28,6 +31,8 @@ you_get:
   - A review of the cases it got wrong
   - A comparison across groups
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with the Statistics and Machine Learning Toolbox.
+  - It works best when your AI can run MATLAB with the Statistics and Machine
+    Learning Toolbox.

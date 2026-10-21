@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It writes prompts from one clear situation.
 new_slug: teaching-reflection-prompts
 name: Teaching reflection prompt writer
-summary: Give it a lesson or a challenge. Get questions that help you reflect on it and decide what to change.
+summary: Give it a lesson or a challenge. Get questions that help you reflect on
+  it and decide what to change.
 job: teach-and-train
 headline: Teaching reflection prompt writer
-subhead: Give it a lesson or a challenge. Get questions that help you reflect on it and decide what to change.
+subhead: Questions written for the exact lesson you taught, that take you from
+  what happened to why it happened and what to change. Generic prompts like "how
+  did it go?" get a shrug.
 explain: |
   Questions written for the exact lesson you taught, that take you from what happened to why it happened and what to change. Generic prompts like "how did it go?" get a shrug. These get insight you can use next week.
 
@@ -27,5 +30,6 @@ you_get:
   - A small action to try next
   - A short version for limited time
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

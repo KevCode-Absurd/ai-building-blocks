@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It plans many linked experiments and keeps the trail.
 new_slug: hypothesis-tree-optimizer
 name: Hypothesis tree optimizer
-summary: Give it a result you want to improve. Get ranked hypotheses tested one by one, with a record of what worked.
+summary: Give it a result you want to improve. Get ranked hypotheses tested one
+  by one, with a record of what worked.
 job: research-topics
 headline: Hypothesis tree optimizer
-subhead: Give it a result you want to improve. Get ranked hypotheses tested one by one, with a record of what worked.
+subhead: Give it a result you want to improve. Get ranked hypotheses tested one
+  by one, with a record of what worked. Bring the project or file to improve,
+  under Git. Use the result to plan your next step.
 explain: |
   A steady way to improve a piece of work by testing many ideas and remembering every result. Give it something you can change, a goal and a way to score it, and it runs experiments one after another while keeping a ranked tree of ideas.
 
   It first pins down four things: the starting material, the goal, a fast scoring command for the search, and a separate held-out test used only before accepting a change. It writes each idea as a node, tests it in a fresh copy so files stay clean, records the evidence and prunes dead ends. A bundled Python tool does the bookkeeping. You need Python 3.10 and Git. It suits model training, agent tuning and prompt improvement.
 when:
-  - Your agent or prompt passes only some tests and you want it to improve step by step.
+  - Your agent or prompt passes only some tests and you want it to improve step
+    by step.
   - You are tuning a training recipe and have lost track of what you tried.
   - You have a script that scores results and want many experiments run for you.
   - You need an honest record of what worked and what failed.
@@ -26,6 +30,7 @@ you_get:
   - A log of what worked and what failed
   - A tested version of your project
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and keep files between steps.

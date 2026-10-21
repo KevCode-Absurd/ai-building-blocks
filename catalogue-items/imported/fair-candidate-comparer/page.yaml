@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs mixed feedback and must not let bias creep in.
 new_slug: fair-candidate-comparer
 name: Fair candidate comparer
-summary: Paste interview notes or transcripts. Get candidates compared on evidence, with bias checks. You make the hiring call.
+summary: Paste interview notes or transcripts. Get candidates compared on
+  evidence, with bias checks. You make the hiring call.
 job: hire-people
 headline: Fair candidate comparer
-subhead: Paste interview notes or transcripts. Get candidates compared on evidence, with bias checks. You make the hiring call.
+subhead: Interview notes turned into a side-by-side comparison that points to
+  what each candidate actually said. It flags weak spots in the evidence, and
+  you make the hiring call.
 explain: |
   Interview notes turned into a side-by-side comparison that points to what each candidate actually said. It flags weak spots in the evidence, and you make the hiring call.
 
@@ -26,5 +29,6 @@ you_get:
   - A side-by-side comparison of candidates
   - A list of evidence gaps and bias flags
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Control choice and write-ups need careful detail.
 new_slug: federal-security-controls
 name: Federal security controls planner
-summary: Describe your system. Get the right control baseline, tailoring choices and draft control write-ups.
+summary: Describe your system. Get the right control baseline, tailoring choices
+  and draft control write-ups.
 job: secure-code
 headline: Federal security controls planner
-subhead: Describe your system. Get the right control baseline, tailoring choices and draft control write-ups.
+subhead: The right set of NIST 800-53 controls for your system, with notes on
+  what to adjust and draft wording for how you meet each one.
 explain: |
   The right set of NIST 800-53 controls for your system, with notes on what to adjust and draft wording for how you meet each one. You start your security plan with real text, not a blank page.
 
@@ -26,5 +28,6 @@ you_get:
   - Draft control narratives
   - A gap table with fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

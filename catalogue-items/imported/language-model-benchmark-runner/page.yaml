@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It runs set tests and reports the numbers.
 new_slug: language-model-benchmark-runner
 name: Language model benchmark runner
-summary: Give it a model. Get scores on 60 or more standard tests, so you can compare it with others.
+summary: Give it a model. Get scores on 60 or more standard tests, so you can
+  compare it with others.
 job: build-software
 headline: Language model benchmark runner
-subhead: Give it a model. Get scores on 60 or more standard tests, so you can compare it with others.
+subhead: Scores for your model on the same tests everyone else uses, so you can
+  compare it with other models fairly. Point the skill at a model, such as one
+  from Hugging Face, and pick tasks from the 60 or more in EleutherAI's open
+  test suite.
 explain: |
   Scores for your model on the same tests everyone else uses, so you can compare it with other models fairly. Point the skill at a model, such as one from Hugging Face, and pick tasks from the 60 or more in EleutherAI's open test suite. These include MMLU for knowledge, GSM8K for maths and HumanEval for code.
 
@@ -26,6 +30,7 @@ you_get:
   - A results table
   - Notes on how to compare across models
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

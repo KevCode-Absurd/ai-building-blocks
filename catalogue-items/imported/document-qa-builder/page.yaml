@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sets up reading, indexing and answering.
 new_slug: document-qa-builder
 name: Document question answerer builder
-summary: Point it at your documents. Get code that answers questions from them and shows which pages it used.
+summary: Point it at your documents. Get code that answers questions from them
+  and shows which pages it used.
 job: build-software
 headline: Document question answerer builder
-subhead: Point it at your documents. Get code that answers questions from them and shows which pages it used.
+subhead: Working code that lets you ask questions about your own documents and
+  get answers that show which pages they came from. This is the common
+  retrieval-augmented generation setup.
 explain: |
   Working code that lets you ask questions about your own documents and get answers that show which pages they came from. This is the common retrieval-augmented generation setup.
 
@@ -26,6 +29,7 @@ you_get:
   - Answers with source passages
   - Setup instructions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and call an AI model.

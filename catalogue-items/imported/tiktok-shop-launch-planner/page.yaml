@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds a phased plan from your situation.
 new_slug: tiktok-shop-launch-planner
 name: TikTok Shop launch planner
-summary: Tell it where you are starting. Get a week-by-week plan to set up, list, create content and scale.
+summary: Tell it where you are starting. Get a week-by-week plan to set up,
+  list, create content and scale.
 job: run-your-store
 headline: TikTok Shop launch planner
-subhead: Tell it where you are starting. Get a week-by-week plan to set up, list, create content and scale.
+subhead: A week-by-week plan to take a TikTok Shop from nothing to steady sales,
+  starting from wherever you are today. From no account to your first few sales,
+  it tells you what to do this week.
 explain: |
   A week-by-week plan to take a TikTok Shop from nothing to steady sales, starting from wherever you are today. From no account to your first few sales, it tells you what to do this week.
 
@@ -27,5 +30,6 @@ you_get:
   - A content and ads start plan
   - Checks for each phase
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

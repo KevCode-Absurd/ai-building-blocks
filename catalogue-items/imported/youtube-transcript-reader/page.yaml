@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It fetches public data and lists it.
 new_slug: youtube-transcript-reader
 name: YouTube transcript and channel reader
-summary: Give it a video or channel. Get transcripts, video lists and new uploads. Collects data from websites.
+summary: Give it a video or channel. Get transcripts, video lists and new
+  uploads. Collects data from websites.
 job: grow-social
 headline: YouTube transcript and channel reader
-subhead: Give it a video or channel. Get transcripts, video lists and new uploads. Collects data from websites.
+subhead: Give it a YouTube video or a channel and get transcripts, video lists
+  and a check for new uploads, all as text you can read, search and quote.
 explain: |
   Give it a YouTube video or a channel and get transcripts, video lists and a check for new uploads, all as text you can read, search and quote.
 
@@ -25,6 +27,7 @@ you_get:
   - The latest uploads with views and dates
   - Search hits inside a channel
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your TranscriptAPI key.

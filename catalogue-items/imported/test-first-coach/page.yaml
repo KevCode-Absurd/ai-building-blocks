@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set loop of test, code and tidy.
 new_slug: test-first-coach
 name: Test-first coach
-summary: Say what to build or fix. Get it done test first, in small steps from failing test to clean code.
+summary: Say what to build or fix. Get it done test first, in small steps from
+  failing test to clean code.
 job: test-and-fix-code
 headline: Test-first coach
-subhead: Say what to build or fix. Get it done test first, in small steps from failing test to clean code.
+subhead: Say what to build or fix. Get it done test first, in small steps from
+  failing test to clean code. Bring the feature or bug in plain words. Use the
+  result to plan your next step.
 explain: |
   A feature or bug fix built test first, in small steps from a failing test to clean code, so each test you keep describes real behaviour and survives refactoring. You avoid piles of tests that break whenever you change a variable name.
 
@@ -27,6 +30,7 @@ you_get:
   - Clean code after each step
   - Tests that describe behaviour
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and tests.

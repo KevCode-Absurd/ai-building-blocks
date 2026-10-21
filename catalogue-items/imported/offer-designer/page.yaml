@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It builds an offer in set parts.
 new_slug: offer-designer
 name: Offer designer
-summary: Say what you sell. Get an offer with value framing, bonuses, guarantee, name and payment terms.
+summary: Say what you sell. Get an offer with value framing, bonuses, guarantee,
+  name and payment terms.
 job: make-offer
 headline: Offer designer
-subhead: Say what you sell. Get an offer with value framing, bonuses, guarantee, name and payment terms.
+subhead: A stronger offer for the thing you sell, so people say yes before you
+  touch the sales page. Better copy on a weak offer helps slowly.
 explain: |
   A stronger offer for the thing you sell, so people say yes before you touch the sales page. Better copy on a weak offer helps slowly. A better offer works at once.
 
@@ -13,7 +15,8 @@ explain: |
 when:
   - Your sales page is fine but people still do not buy.
   - You are launching a course and need to decide what to bundle.
-  - You offer a service and want a guarantee that builds trust without risking your margin.
+  - You offer a service and want a guarantee that builds trust without risking
+    your margin.
   - Your offer has no clear name and sounds like everyone else's.
 you_give:
   - What you sell and who buys it
@@ -26,5 +29,6 @@ you_get:
   - A clear offer name
   - Payment term choices
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

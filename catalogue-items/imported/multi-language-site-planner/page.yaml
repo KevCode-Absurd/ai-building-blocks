@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares several set-up options and picks one for your case.
 new_slug: multi-language-site-planner
 name: Multi-language site planner
-summary: Tell it your site and target markets. Get a plan for language URLs, hreflang, translation steps, currencies and right-to-left layouts.
+summary: Tell it your site and target markets. Get a plan for language URLs,
+  hreflang, translation steps, currencies and right-to-left layouts.
 job: build-websites
 headline: Multi-language site planner
-subhead: Tell it your site and target markets. Get a plan for language URLs, hreflang, translation steps, currencies and right-to-left layouts.
+subhead: A plan to launch your site in new languages and regions that people and
+  search engines can both follow. You decide URLs, translation steps, formats
+  and layout before building.
 explain: |
   A plan to launch your site in new languages and regions that people and search engines can both follow. You decide URLs, translation steps, formats and layout before building.
 
@@ -27,5 +30,6 @@ you_get:
   - Currency, date and number rules
   - Right-to-left layout notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It builds a long model with many linked assumptions.
 new_slug: dcf-model-builder-for-india
 name: DCF model builder for India
-summary: Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
+summary: Name a listed Indian company. Get a discounted cash flow Excel model
+  with WACC, sensitivities and a summary.
 job: money-and-investing
 headline: DCF model builder for India
-subhead: Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
+subhead: Name a listed Indian company. Get a discounted cash flow Excel model
+  with WACC, sensitivities and a summary. Bring company name or ticker. Use the
+  result to plan your next step.
 explain: |
   An Excel valuation model for a listed Indian company, with projected cash flows, a worked out discount rate, sensitivity tables and a summary. Indian reporting quirks are handled so numbers do not end up wrong.
 
@@ -26,6 +29,7 @@ you_get:
   - Sensitivity tables
   - Summary of valuation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read files.

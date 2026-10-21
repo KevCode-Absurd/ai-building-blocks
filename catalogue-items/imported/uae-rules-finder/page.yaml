@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Location picks the law first, then steps follow.
 new_slug: uae-rules-finder
 name: UAE rules finder
-summary: Describe where your business sits in the UAE. Get which data and cyber rules apply, then the steps for each.
+summary: Describe where your business sits in the UAE. Get which data and cyber
+  rules apply, then the steps for each.
 job: check-contracts
 headline: UAE rules finder
-subhead: Describe where your business sits in the UAE. Get which data and cyber rules apply, then the steps for each.
+subhead: In the UAE, where your company sits decides which law covers you. This
+  skill tells you which data and cyber rules apply to your setup and what to do
+  for each.
 explain: |
   In the UAE, where your company sits decides which law covers you. This skill tells you which data and cyber rules apply to your setup and what to do for each.
 
@@ -26,5 +29,6 @@ you_get:
   - Steps for each requirement
   - A mapping to ISO 27001 or similar
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

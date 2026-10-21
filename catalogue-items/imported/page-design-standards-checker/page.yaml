@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It runs a fixed list of design checks.
 new_slug: page-design-standards-checker
 name: Page design standards checker
-summary: Give it a page or component. Get checks on colour contrast, spacing, hierarchy and mobile, with fixes.
+summary: Give it a page or component. Get checks on colour contrast, spacing,
+  hierarchy and mobile, with fixes.
 job: design-work
 headline: Page design standards checker
-subhead: Give it a page or component. Get checks on colour contrast, spacing, hierarchy and mobile, with fixes.
+subhead: "A review of your page or component against six design standards, with
+  a fix for each problem found. It catches the usual causes of a page that feels
+  off: low contrast, uneven spacing, weak hierarchy and layouts that break on a
+  phone."
 explain: |
   A review of your page or component against six design standards, with a fix for each problem found. It catches the usual causes of a page that feels off: low contrast, uneven spacing, weak hierarchy and layouts that break on a phone.
 
@@ -25,5 +29,6 @@ you_get:
   - A starter set of design tokens if you had none
   - Pre-ship checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

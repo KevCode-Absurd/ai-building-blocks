@@ -2,10 +2,14 @@ thinking: high
 thinking_why: Judging which links harm you takes careful weighing of the data.
 new_slug: backlink-profile-auditor
 name: Backlink profile auditor
-summary: Connect Ahrefs. Get a backlink health report with anchor text spread, toxic links, lost links to win back and rival gaps.
+summary: Connect Ahrefs. Get a backlink health report with anchor text spread,
+  toxic links, lost links to win back and rival gaps.
 job: get-found-in-search
 headline: Backlink profile auditor
-subhead: Connect Ahrefs. Get a backlink health report with anchor text spread, toxic links, lost links to win back and rival gaps.
+subhead: "A health check of the sites linking to you, built from live Ahrefs
+  data. Connect Ahrefs to your AI, name your domain and rivals, and the AI looks
+  at five things: link quality, how fast links are arriving, anchor text mix,
+  link types and gaps against competitors."
 explain: |
   A health check of the sites linking to you, built from live Ahrefs data. Connect Ahrefs to your AI, name your domain and rivals, and the AI looks at five things: link quality, how fast links are arriving, anchor text mix, link types and gaps against competitors.
 
@@ -26,6 +30,7 @@ you_get:
   - Lost links to reclaim
   - A competitor gap list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can connect to Ahrefs.

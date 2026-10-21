@@ -2,19 +2,24 @@ thinking: medium
 thinking_why: It fits cover and staff rules together.
 new_slug: shift-schedule-builder
 name: Shift schedule builder
-summary: Give it your busy hours and staff limits. Get a shift plan that covers demand and respects time-off rules.
+summary: Give it your busy hours and staff limits. Get a shift plan that covers
+  demand and respects time-off rules.
 job: plan-supply-chain
 headline: Shift schedule builder
-subhead: Give it your busy hours and staff limits. Get a shift plan that covers demand and respects time-off rules.
+subhead: A shift plan that puts the right number of people on the floor at the
+  right hours, without breaking your time-off and overtime rules. That means
+  fewer short-staffed peaks and less money spent on idle labour.
 explain: |
   A shift plan that puts the right number of people on the floor at the right hours, without breaking your time-off and overtime rules. That means fewer short-staffed peaks and less money spent on idle labour.
 
   It starts by asking about demand (order volume, peak days, tasks, skills needed) and supply (headcount, part-timers, availability, shift lengths). Then it lists your limits: opening hours, minimum staffing, maximum days in a row, break rules and overtime costs. It matches labour to demand hour by hour, checks every rule, and shows the cost and coverage of the plan so you can compare options before you publish it.
 when:
-  - Your warehouse or shop has busy and quiet hours and the rota no longer fits them.
+  - Your warehouse or shop has busy and quiet hours and the rota no longer fits
+    them.
   - You are paying too much overtime and want to see where the gaps really are.
   - You need a plan for peak season that still respects days off and break rules.
-  - You are switching from 8-hour to 10-hour shifts and want to test the effect first.
+  - You are switching from 8-hour to 10-hour shifts and want to test the effect
+    first.
 you_give:
   - Demand by day and hour, or a rough pattern
   - Headcount by role and contract type
@@ -27,6 +32,7 @@ you_get:
   - Rule-compliance notes
   - A cost comparison of schedule options
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

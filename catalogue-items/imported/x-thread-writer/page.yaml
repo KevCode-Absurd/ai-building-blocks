@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set thread shape.
 new_slug: x-thread-writer
 name: X thread writer
-summary: Give it a long idea, transcript or draft. Get an X thread where every post stands on its own.
+summary: Give it a long idea, transcript or draft. Get an X thread where every
+  post stands on its own.
 job: grow-social
 headline: X thread writer
-subhead: Give it a long idea, transcript or draft. Get an X thread where every post stands on its own.
+subhead: Give it a long idea, transcript or draft. Get an X thread where every
+  post stands on its own. Bring the idea, article, transcript or draft. Use the
+  result to plan your next step.
 explain: |
   Turn a long idea, transcript or rough draft into an X thread where every post still makes sense if someone lands on it alone.
 
@@ -26,5 +29,6 @@ you_get:
   - The thread with posts separated by dashes
   - A single closing call to action
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

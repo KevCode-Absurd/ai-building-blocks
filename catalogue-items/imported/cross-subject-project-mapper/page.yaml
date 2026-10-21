@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It maps curriculum links across several subjects.
 new_slug: cross-subject-project-mapper
 name: Cross-subject project mapper
-summary: Name a real-world problem. Get which subjects connect to it and what each one can teach.
+summary: Name a real-world problem. Get which subjects connect to it and what
+  each one can teach.
 job: teach-and-train
 headline: Cross-subject project mapper
-subhead: Name a real-world problem. Get which subjects connect to it and what each one can teach.
+subhead: A real-world problem makes a good reason for teachers in different
+  subjects to plan together. Name the problem and your own subject, and you get
+  a map of which other subjects connect to it and what each can teach.
 explain: |
   A real-world problem makes a good reason for teachers in different subjects to plan together. Name the problem and your own subject, and you get a map of which other subjects connect to it and what each can teach.
 
@@ -27,5 +30,6 @@ you_get:
   - Links to required content
   - Ideas for fitting it into your timetable
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -44,6 +44,8 @@ export type Block = {
   outputs: Port[];
   uses: string[];
   steps: { uses: string; note: string }[];
+  /** Keep the workflow's governing instructions when exporting it or opening it in the builder. */
+  execution?: "coordinator";
   origin: "own" | "rebuilt" | "imported";
   /** For an imported skill: who made it, where it came from and its licence (item.yaml `source`). */
   source?: Source;
@@ -63,6 +65,8 @@ export type Block = {
   look?: { src: string; alt: string };
 };
 export type PlanLink = { slug: string; name: string; url: string };
+/** Preserve governing branch/resume rules; fixed legacy sequences can still be edited step by step. */
+export const workflowEntries = (b: Block): string[] => b.type === "agent" || b.execution === "coordinator" ? [b.slug] : b.steps.map(s => s.uses);
 export type PlanItem = { key: string; label: string; what: string; parts: string[]; required: boolean; maker?: PlanLink };
 export type Plan = {
   needed: PlanItem[];

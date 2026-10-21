@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Scope and materiality calls need careful reasoning.
 new_slug: eu-sustainability-report-checker
 name: EU sustainability report checker
-summary: Describe your company. Get whether EU sustainability reporting applies, what to disclose and the gaps to close.
+summary: Describe your company. Get whether EU sustainability reporting applies,
+  what to disclose and the gaps to close.
 job: check-contracts
 headline: EU sustainability report checker
-subhead: Describe your company. Get whether EU sustainability reporting applies, what to disclose and the gaps to close.
+subhead: Describe your company. Get whether EU sustainability reporting applies,
+  what to disclose and the gaps to close. Bring company size, sector and
+  countries. Use the result to plan your next step.
 explain: |
   A straight answer on whether EU sustainability reporting rules apply to you, which topics you must disclose and where your current data falls short.
 
@@ -27,5 +30,6 @@ you_get:
   - Draft disclosures
   - Comparison with GRI, TCFD and SASB
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

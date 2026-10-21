@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs where help helps and where it just gets in the way.
 new_slug: in-app-tour-designer
 name: In-app tour designer
-summary: Describe your product and what new users must learn. Get a short tour plan with triggers, tips and completion tracking.
+summary: Describe your product and what new users must learn. Get a short tour
+  plan with triggers, tips and completion tracking.
 job: build-product
 headline: In-app tour designer
-subhead: Describe your product and what new users must learn. Get a short tour plan with triggers, tips and completion tracking.
+subhead: A short tour plan for your product that teaches new users at the moment
+  they need help, instead of burying them in pop-ups. It also tells you plainly
+  when a tour is the wrong tool and a help page would do.
 explain: |
   A short tour plan for your product that teaches new users at the moment they need help, instead of burying them in pop-ups. It also tells you plainly when a tour is the wrong tool and a help page would do.
 
@@ -27,5 +30,6 @@ you_get:
   - Placement and wording guidance
   - Completion and adoption tracking plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

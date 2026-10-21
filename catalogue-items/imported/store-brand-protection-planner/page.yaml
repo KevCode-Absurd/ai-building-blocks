@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set checks and fills in takedown templates.
 new_slug: store-brand-protection-planner
 name: Store brand protection planner
-summary: Give it your brand and store. Get a check for fake stores and misuse, plus takedown and legal letters.
+summary: Give it your brand and store. Get a check for fake stores and misuse,
+  plus takedown and legal letters.
 job: run-your-store
 headline: Store brand protection planner
-subhead: Give it your brand and store. Get a check for fake stores and misuse, plus takedown and legal letters.
+subhead: Give it your brand and store. Get a check for fake stores and misuse,
+  plus takedown and legal letters. Bring brand name and official domain. Use the
+  result to plan your next step.
 explain: |
   A way to find people copying your online store or selling your products without permission, and a ready set of letters to act on it. You give your brand name, domain and trademark number, and it sets up what to look for.
 
@@ -27,5 +30,6 @@ you_get:
   - A cease and desist letter template
   - A suggested action for each case
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

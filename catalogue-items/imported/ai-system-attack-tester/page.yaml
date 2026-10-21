@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It must think like an attacker across many paths.
 new_slug: ai-system-attack-tester
 name: AI system attack tester
-summary: Point it at an AI app. Get prompt injection, jailbreak and tool abuse risks found, ranked and mapped to known attacks.
+summary: Point it at an AI app. Get prompt injection, jailbreak and tool abuse
+  risks found, ranked and mapped to known attacks.
 job: secure-code
 headline: AI system attack tester
-subhead: Point it at an AI app. Get prompt injection, jailbreak and tool abuse risks found, ranked and mapped to known attacks.
+subhead: A ranked list of the ways someone could abuse your AI app, each tied to
+  a known attack type. Test it before real users or attackers do.
 explain: |
   A ranked list of the ways someone could abuse your AI app, each tied to a known attack type. Test it before real users or attackers do.
 
@@ -25,6 +27,7 @@ you_get:
   - Tool misuse risks
   - Guardrail fixes ranked by severity
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -56,4 +56,4 @@ Alongside, two file-count changes from the free-plan work run at the same time:
 
 - 341 new e-commerce skills and 61 workflows from the sources (`reports/2026-10-21-ecom-sources-sprint.md`). Two sample judges scored them; the 12 problems they found were fixed (unsourced figures cut or labelled, safety rules moved into the steps, two workflows given re-check pauses).
 - Then a second round across the whole library: 19 Sonnet builders made 116 more workflows for jobs that had few or none (software, contracts, hiring, teaching, research, audio, design and more), and 10 made the first 44 **agents** (`catalogue-items/agents/`, format in `docs/PAGE-FORMAT.md`). `tools/intake.mjs` now also reads imported skills.
-- The site moved to Cloudflare Workers Paid ($5 a month): the file guard is 95,000 (`CF_PLAN=free` checks against 19,000).
+- Correction after the local handoff: the build does not establish the account's billing plan. Pages Free allows 20,000 files; the guard defaults to 19,000 with headroom. A $5 Workers subscription alone does not upgrade Pages file capacity. See `docs/CLOUDFLARE-CAPACITY.md`.

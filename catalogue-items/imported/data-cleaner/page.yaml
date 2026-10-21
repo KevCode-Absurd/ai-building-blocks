@@ -2,10 +2,12 @@ thinking: low
 thinking_why: Cleaning follows clear rules.
 new_slug: data-cleaner
 name: Data cleaner
-summary: Give it a messy dataset. Get missing values, duplicates, wrong types and outliers fixed.
+summary: Give it a messy dataset. Get missing values, duplicates, wrong types
+  and outliers fixed.
 job: work-with-files
 headline: Data cleaner
-subhead: Give it a messy dataset. Get missing values, duplicates, wrong types and outliers fixed.
+subhead: A messy file becomes analysis ready, with a log of every change made.
+  You see exactly what was fixed and can undo or adjust it.
 explain: |
   A messy file becomes analysis ready, with a log of every change made. You see exactly what was fixed and can undo or adjust it.
 
@@ -25,6 +27,7 @@ you_get:
   - Data quality report
   - List of remaining issues
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open spreadsheets.

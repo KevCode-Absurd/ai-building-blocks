@@ -2,16 +2,21 @@ thinking: low
 thinking_why: It averages dates by carrier.
 new_slug: delivery-time-analyzer
 name: Delivery time analyzer
-summary: Run it on your shipments. Get average days from shipment to delivery for each carrier.
+summary: Run it on your shipments. Get average days from shipment to delivery
+  for each carrier.
 job: run-your-store
 headline: Delivery time analyzer
-subhead: Run it on your shipments. Get average days from shipment to delivery for each carrier.
+subhead: Average days from shipment to delivery, split by carrier, so you can
+  see which carriers are slow. It reads your fulfilled Shopify orders and
+  measures the time from when the fulfilment was created to when it was
+  delivered.
 explain: |
   Average days from shipment to delivery, split by carrier, so you can see which carriers are slow. It reads your fulfilled Shopify orders and measures the time from when the fulfilment was created to when it was delivered.
 
   You set the store, the look-back window (30 days by default), a minimum number of orders per carrier so tiny samples do not mislead, and optionally a single fulfilment location. Output is a readable table or JSON. It needs a signed-in Shopify command line session with permission to read orders. It only reads data and changes nothing in the store.
 when:
-  - Customers complain about late parcels and you do not know which carrier is at fault.
+  - Customers complain about late parcels and you do not know which carrier is
+    at fault.
   - You are deciding whether to switch carriers.
   - You want to check delivery promises on your product pages against real data.
   - One warehouse seems slower than another.
@@ -27,6 +32,7 @@ you_get:
   - Slowest and fastest carriers
   - Table or JSON output
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

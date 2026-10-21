@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Tracking links are often incomplete.
 new_slug: utm-revenue-reader
 name: UTM revenue reader
-summary: Get revenue, order count and average order value split by campaign, source and medium from your order links.
+summary: Get revenue, order count and average order value split by campaign,
+  source and medium from your order links.
 job: read-ad-results
 headline: UTM revenue reader
-subhead: Get revenue, order count and average order value split by campaign, source and medium from your order links.
+subhead: Get revenue, order count and average order value split by campaign,
+  source and medium from your order links. Bring your store domain. Use the
+  result to plan your next step.
 explain: |
   You get revenue, orders and average order value split by source, medium and campaign, taken from your own Shopify orders with no extra analytics tool.
 
@@ -26,6 +29,7 @@ you_get:
   - Untagged orders shown separately
   - A JSON export (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

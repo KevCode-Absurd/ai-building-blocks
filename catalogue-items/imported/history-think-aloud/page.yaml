@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It needs to show real reasoning, not steps.
 new_slug: history-think-aloud
 name: History think-aloud script writer
-summary: Give it a source. Get a script for talking through your thinking so learners see how a historian reads.
+summary: Give it a source. Get a script for talking through your thinking so
+  learners see how a historian reads.
 job: teach-and-train
 headline: History think-aloud script writer
-subhead: Give it a source. Get a script for talking through your thinking so learners see how a historian reads.
+subhead: A script for saying your thinking out loud as you read a history
+  source, so learners can see how a historian reads. Students often copy a
+  checklist without knowing why each step matters.
 explain: |
   A script for saying your thinking out loud as you read a history source, so learners can see how a historian reads. Students often copy a checklist without knowing why each step matters. A good think-aloud shows the reasoning behind it.
 
@@ -26,5 +29,6 @@ you_get:
   - Common pitfalls
   - A step to move students into practice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

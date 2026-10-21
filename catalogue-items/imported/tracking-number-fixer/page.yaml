@@ -2,17 +2,21 @@ thinking: low
 thinking_why: It swaps values in a set pattern.
 new_slug: tracking-number-fixer
 name: Tracking number fixer
-summary: Give it new tracking numbers. Get them updated on shipments already sent. Changes live orders; customers may get emails.
+summary: Give it new tracking numbers. Get them updated on shipments already
+  sent. Changes live orders; customers may get emails.
 job: run-your-store
 headline: Tracking number fixer
-subhead: Give it new tracking numbers. Get them updated on shipments already sent. Changes live orders; customers may get emails.
+subhead: Give it new tracking numbers. Get them updated on shipments already
+  sent. Changes live orders; customers may get emails. Bring your store domain.
+  Use the result to plan your next step.
 explain: |
   When a carrier reissues tracking IDs after a label reprint, you can fix many shipped orders in one pass instead of editing each by hand. This skill updates tracking numbers, carriers and links on fulfillments that already exist in your Shopify store.
 
   It looks up each order first and checks that the fulfillment ID you gave really belongs to it. Then it writes the new tracking details. By default it runs as a dry run, showing what would change without touching anything. Customer emails are off unless you switch them on, because each update can send a new shipping email. It needs a signed-in Shopify command line session with order and fulfillment write access.
 when:
   - A carrier gave you new tracking IDs after reprinting labels.
-  - Your warehouse partner uploaded corrected tracking numbers for a batch of shipments.
+  - Your warehouse partner uploaded corrected tracking numbers for a batch of
+    shipments.
   - Dozens of orders show the wrong tracking link and you want one clean fix.
   - You want to preview a bulk tracking change before it goes live.
 you_give:
@@ -26,6 +30,8 @@ you_get:
   - A per-order result with any errors
   - A short summary of what changed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

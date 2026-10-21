@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Code generation settings and model limits need careful choices.
 new_slug: ai-model-code-generator
 name: AI model code generator
-summary: Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it inside your app.
+summary: Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it
+  inside your app.
 job: build-software
 headline: AI model code generator
-subhead: Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it inside your app.
+subhead: Turn a trained AI model into C, C++ or CUDA code that runs inside your
+  own product or on hardware. The model stays the same.
 explain: |
   Turn a trained AI model into C, C++ or CUDA code that runs inside your own product or on hardware. The model stays the same. You just stop needing the original framework to run it.
 
@@ -26,6 +28,7 @@ you_get:
   - A numbers check against the source framework
   - Production C, C++ or CUDA code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with MATLAB Coder.

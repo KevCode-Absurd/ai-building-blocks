@@ -5,14 +5,18 @@ name: Notion research writer
 summary: Ask a question. Get a cited brief or comparison built from your Notion pages.
 job: organise-work
 headline: Notion research writer
-subhead: Ask a question. Get a cited brief or comparison built from your Notion pages.
+subhead: A research brief written inside Notion, with every claim tied back to
+  the page it came from. You ask a question, and the skill finds the right pages
+  in your workspace instead of guessing from memory.
 explain: |
   A research brief written inside Notion, with every claim tied back to the page it came from. You ask a question, and the skill finds the right pages in your workspace instead of guessing from memory.
 
   It starts with targeted searches and asks you to confirm scope if several pages match. Then it reads each page and notes the facts, numbers, dates and limits, keeping the link for every source. Next it picks a format that fits the question: a quick brief, a one-topic summary, a side-by-side comparison, or a full report. It drafts the page in Notion and ends with a references section you can click through. It needs your Notion workspace connected.
 when:
-  - You need a short brief for a meeting and the facts are scattered across ten Notion pages.
-  - You are comparing two options and want the evidence from your own notes side by side.
+  - You need a short brief for a meeting and the facts are scattered across ten
+    Notion pages.
+  - You are comparing two options and want the evidence from your own notes side
+    by side.
   - A manager asks where a number came from and you need the source link.
   - You want a one-topic summary that updates when new pages are added.
 you_give:
@@ -26,6 +30,7 @@ you_get:
   - A references section
   - A comparison table when options are involved
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can reach your Notion workspace.

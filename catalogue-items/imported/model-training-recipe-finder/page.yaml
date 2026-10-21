@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Picking settings and finding silent faults takes judgment.
 new_slug: model-training-recipe-finder
 name: Model training recipe finder
-summary: Say what you are training. Get the right settings, a safe training loop and a checklist for when the loss goes wrong.
+summary: Say what you are training. Get the right settings, a safe training loop
+  and a checklist for when the loss goes wrong.
 job: build-software
 headline: Model training recipe finder
-subhead: Say what you are training. Get the right settings, a safe training loop and a checklist for when the loss goes wrong.
+subhead: The right training settings for what you are building, plus a safe loop
+  and a checklist for when the loss misbehaves. It saves the weeks that usually
+  go to trial and error.
 explain: |
   The right training settings for what you are building, plus a safe loop and a checklist for when the loss misbehaves. It saves the weeks that usually go to trial and error.
 
@@ -27,6 +30,7 @@ you_get:
   - A loss troubleshooting checklist
   - Scaling advice for your budget
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

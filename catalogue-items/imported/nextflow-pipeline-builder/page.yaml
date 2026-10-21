@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes and debugs code with set conventions.
 new_slug: nextflow-pipeline-builder
 name: Nextflow pipeline builder
-summary: Describe your data steps. Get a Nextflow or nf-core pipeline built, run and fixed when it fails.
+summary: Describe your data steps. Get a Nextflow or nf-core pipeline built, run
+  and fixed when it fails.
 job: build-software
 headline: Nextflow pipeline builder
-subhead: Describe your data steps. Get a Nextflow or nf-core pipeline built, run and fixed when it fails.
+subhead: A Nextflow data pipeline that runs the same on your laptop, a computing
+  cluster or the cloud. You describe the steps, and the skill writes the
+  pipeline, runs it and fixes it when it fails.
 explain: |
   A Nextflow data pipeline that runs the same on your laptop, a computing cluster or the cloud. You describe the steps, and the skill writes the pipeline, runs it and fixes it when it fails.
 
@@ -26,6 +29,7 @@ you_get:
   - Tests for your modules
   - A diagnosis for failed runs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Nextflow and containers.

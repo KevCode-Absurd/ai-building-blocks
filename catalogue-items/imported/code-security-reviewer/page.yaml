@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks code against a known list and ranks what it finds.
 new_slug: code-security-reviewer
 name: Code security reviewer
-summary: Point it at your Python, JavaScript, TypeScript or Go code. Get a ranked list of security gaps, each with a fix.
+summary: Point it at your Python, JavaScript, TypeScript or Go code. Get a
+  ranked list of security gaps, each with a fix.
 job: secure-code
 headline: Code security reviewer
-subhead: Point it at your Python, JavaScript, TypeScript or Go code. Get a ranked list of security gaps, each with a fix.
+subhead: A ranked list of security gaps in your Python, JavaScript, TypeScript
+  or Go code, each with a fix. You can also use it to write new code that is
+  safe from the start.
 explain: |
   A ranked list of security gaps in your Python, JavaScript, TypeScript or Go code, each with a fix. You can also use it to write new code that is safe from the start.
 
@@ -25,6 +28,7 @@ you_get:
   - A fix for each gap
   - Safer code for new work
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

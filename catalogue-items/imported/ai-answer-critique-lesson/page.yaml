@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It turns critical thinking standards into plain questions.
 new_slug: ai-answer-critique-lesson
 name: AI answer critique activity builder
-summary: Give it a subject. Get a worksheet that has students judge an AI answer on clarity, evidence and fairness.
+summary: Give it a subject. Get a worksheet that has students judge an AI answer
+  on clarity, evidence and fairness.
 job: teach-and-train
 headline: AI answer critique activity builder
-subhead: Give it a subject. Get a worksheet that has students judge an AI answer on clarity, evidence and fairness.
+subhead: "A class worksheet set that teaches students to read an AI answer
+  closely instead of trusting how smooth it sounds. It is built around six
+  standards for judging claims: clear, accurate, precise, relevant, deep and
+  broad."
 explain: |
   A class worksheet set that teaches students to read an AI answer closely instead of trusting how smooth it sounds. It is built around six standards for judging claims: clear, accurate, precise, relevant, deep and broad.
 
@@ -26,5 +30,6 @@ you_get:
   - Sentence starters for pushing back
   - A teacher modelling script
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

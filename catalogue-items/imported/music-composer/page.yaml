@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It follows a set recipe to turn a description into a track.
 new_slug: music-composer
 name: Music composer
-summary: Describe the track you want. Get background music, a jingle or a song with lyrics, as an audio file.
+summary: Describe the track you want. Get background music, a jingle or a song
+  with lyrics, as an audio file.
 job: work-with-audio
 headline: Music composer
-subhead: Describe the track you want. Get background music, a jingle or a song with lyrics, as an audio file.
+subhead: A finished audio file of original music, made from a plain description.
+  It can be a calm background loop, a short jingle or a full song with lyrics.
 explain: |
   A finished audio file of original music, made from a plain description. It can be a calm background loop, a short jingle or a full song with lyrics. You choose the length, from a few seconds to a few minutes.
 
@@ -14,7 +16,8 @@ when:
   - You need background music for a video and have no licence budget.
   - You want a short jingle for a podcast intro or an ad.
   - You have lyrics and want to hear them sung as a rough demo.
-  - You want a track with a set structure, such as a calm intro that builds to a loud finish.
+  - You want a track with a set structure, such as a calm intro that builds to a
+    loud finish.
 you_give:
   - A description of the mood, genre and instruments
   - The length you want
@@ -26,6 +29,7 @@ you_get:
   - A composition plan you can edit and rerun
   - Setup steps in Python, JavaScript or the command line
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your own ElevenLabs API key.

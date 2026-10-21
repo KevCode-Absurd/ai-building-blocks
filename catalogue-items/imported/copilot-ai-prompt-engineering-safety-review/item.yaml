@@ -1,0 +1,32 @@
+slug: copilot-ai-prompt-engineering-safety-review
+name: Prompt safety and bias reviewer
+summary: Paste your prompt. Get risks in its wording, likely failure cases and a safer draft.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/ai-prompt-engineering-safety-review
+  url: https://github.com/github/awesome-copilot/tree/main/skills/ai-prompt-engineering-safety-review
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: ai-prompt-engineering-safety-review
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: ai-prompt-engineering-safety-review skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/ai-prompt-engineering-safety-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It follows set import routes and fixes input format errors.
 new_slug: outside-ai-model-importer
 name: Outside AI model importer
-summary: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and ready to run.
+summary: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and
+  ready to run.
 job: build-software
 headline: Outside AI model importer
-subhead: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and ready to run.
+subhead: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and
+  ready to run. Bring the model file. Use the result to plan your next step.
 explain: |
   A trained model from PyTorch, ONNX or Keras, loaded into MATLAB as a network you can run, and checked against the original so you know the results match.
 
@@ -26,6 +28,7 @@ you_get:
   - A match check against the source model
   - Notes on unsupported parts
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB and Python.

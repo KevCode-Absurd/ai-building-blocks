@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks measures and reads patterns in your data.
 new_slug: hr-metrics-and-report-builder
 name: HR metrics and report builder
-summary: Share your people data and questions. Get the right metrics, a dashboard layout and a leadership report that tells the story.
+summary: Share your people data and questions. Get the right metrics, a
+  dashboard layout and a leadership report that tells the story.
 job: hire-people
 headline: HR metrics and report builder
-subhead: Share your people data and questions. Get the right metrics, a dashboard layout and a leadership report that tells the story.
+subhead: A people report that leadership will read and act on. Share your HR
+  data and the questions you face, and get the right metrics, a dashboard layout
+  and a monthly report that tells a clear story.
 explain: |
   A people report that leadership will read and act on. Share your HR data and the questions you face, and get the right metrics, a dashboard layout and a monthly report that tells a clear story.
 
@@ -26,5 +29,6 @@ you_get:
   - A leadership report template
   - Turnover findings and priorities
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

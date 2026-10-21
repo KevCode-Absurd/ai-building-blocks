@@ -1,6 +1,6 @@
 # Make images and art: AI Blocks
 
-> 20 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 19 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [App screenshot maker](https://useaiblocks.com/skills/app-screenshot-maker): Point it at your running app. Get sharp, high-resolution screenshots ready for Product Hunt, social or your site.
 - [Article cover maker](https://useaiblocks.com/skills/article-cover-maker): Give it an article. Get a cover image with a type, colours and mood that fit the piece.
@@ -21,4 +21,3 @@
 - [Product demo video maker](https://useaiblocks.com/skills/product-demo-video-maker): Give it screenshots or a page. Get a short demo video or GIF that walks through the product.
 - [Science diagram drafter](https://useaiblocks.com/skills/science-diagram-drafter): Describe a diagram. Get a draft of a network, pathway or flowchart, reviewed and refined once or twice.
 - [Slack GIF maker](https://useaiblocks.com/skills/slack-gif-maker): Describe the animation. Get a GIF sized and checked to work in Slack.
-- [Stable Diffusion image maker](https://useaiblocks.com/skills/stable-diffusion-image-maker): Describe a picture. Get generated images, edits to your own photos or code for a custom image pipeline.

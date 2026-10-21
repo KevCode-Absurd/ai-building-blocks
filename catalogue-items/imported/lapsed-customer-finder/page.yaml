@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It filters by one date rule.
 new_slug: lapsed-customer-finder
 name: Lapsed customer finder
-summary: Get a list of customers who stopped ordering, tagged for your win-back campaign. Adds tags to live customer records.
+summary: Get a list of customers who stopped ordering, tagged for your win-back
+  campaign. Adds tags to live customer records.
 job: run-your-store
 headline: Lapsed customer finder
-subhead: Get a list of customers who stopped ordering, tagged for your win-back campaign. Adds tags to live customer records.
+subhead: A list of customers who bought once and then went quiet, already tagged
+  so you can send a win-back campaign. The skill reads your Shopify store and
+  finds customers whose last order is older than your cutoff, 90 days by
+  default.
 explain: |
   A list of customers who bought once and then went quiet, already tagged so you can send a win-back campaign. The skill reads your Shopify store and finds customers whose last order is older than your cutoff, 90 days by default. You can also require a minimum number of past orders.
 
@@ -27,6 +31,8 @@ you_get:
   - A dry run preview
   - A count and summary of who was tagged
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

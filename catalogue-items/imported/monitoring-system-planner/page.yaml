@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It designs several linked systems for a real service.
 new_slug: monitoring-system-planner
 name: Monitoring system planner
-summary: Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts that you can build step by step.
+summary: Describe your service. Get a plan for metrics, logs, traces, SLOs and
+  alerts that you can build step by step.
 job: ship-and-host
 headline: Monitoring system planner
-subhead: Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts that you can build step by step.
+subhead: "A step-by-step plan for watching your production system: what to
+  measure, what to log, how to trace requests and when to alert. You can build
+  it in small pieces."
 explain: |
   A step-by-step plan for watching your production system: what to measure, what to log, how to trace requests and when to alert. You can build it in small pieces.
 
@@ -27,5 +30,6 @@ you_get:
   - Runbook outlines
   - A log privacy list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

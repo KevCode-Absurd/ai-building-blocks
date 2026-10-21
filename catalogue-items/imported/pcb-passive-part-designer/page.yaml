@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Each part needs its own tuning.
 new_slug: pcb-passive-part-designer
 name: PCB passive part designer
-summary: Say which part you need, such as an inductor or balun. Get it designed and checked.
+summary: Say which part you need, such as an inductor or balun. Get it designed
+  and checked.
 job: build-software
 headline: PCB passive part designer
-subhead: Say which part you need, such as an inductor or balun. Get it designed and checked.
+subhead: Say which part you need, such as an inductor or balun. Get it designed
+  and checked. Bring the part type. Use the result to plan your next step.
 explain: |
   Tell it the part, such as a spiral inductor, interdigital capacitor, ring resonator or balun, and get a design you can measure instead of guess at. It pulls out the numbers that matter: inductance, capacitance and self-resonant frequency.
 
@@ -26,6 +28,7 @@ you_get:
   - Quick behavioural S-parameters
   - A memory and mesh estimate before the full solve
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with PCB Toolbox.

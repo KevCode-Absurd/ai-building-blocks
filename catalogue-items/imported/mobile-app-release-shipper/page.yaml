@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It follows a set release path with a few choices.
 new_slug: mobile-app-release-shipper
 name: Mobile app release shipper
-summary: Point it at your Expo app. Get iOS and Android builds made and sent to the app stores.
+summary: Point it at your Expo app. Get iOS and Android builds made and sent to
+  the app stores.
 job: ship-and-host
 headline: Mobile app release shipper
-subhead: Point it at your Expo app. Get iOS and Android builds made and sent to the app stores.
+subhead: Your Expo app built for iOS and Android and sent to the app stores,
+  with the settings written down so the next release is one command.
 explain: |
   Your Expo app built for iOS and Android and sent to the app stores, with the settings written down so the next release is one command.
 
@@ -27,6 +29,7 @@ you_get:
   - A rule for version and build numbers
   - An automated release setup
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands and sign in to Expo.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It finds the pattern across many sources and rates how sure it is.
 new_slug: brand-voice-guide-builder
 name: Brand voice guide builder
-summary: Give it your documents or call transcripts. Get a brand voice guide with rules, examples and open questions.
+summary: Give it your documents or call transcripts. Get a brand voice guide
+  with rules, examples and open questions.
 job: brand-file
 headline: Brand voice guide builder
-subhead: Give it your documents or call transcripts. Get a brand voice guide with rules, examples and open questions.
+subhead: Turn the way your company already talks into a voice guide anyone can
+  follow. The raw material is your own documents and call recordings, so the
+  guide sounds like you, not like a template.
 explain: |
   Turn the way your company already talks into a voice guide anyone can follow. The raw material is your own documents and call recordings, so the guide sounds like you, not like a template.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - You have sales calls and brand decks but no written voice rules.
   - New writers keep producing copy that does not sound like the company.
-  - You want to check what customers and your team actually say before you decide your tone.
+  - You want to check what customers and your team actually say before you
+    decide your tone.
   - Your brand documents disagree and need one consistent summary.
 you_give:
   - Brand documents such as PDFs, decks or notes
@@ -27,6 +31,7 @@ you_get:
   - Confidence scores on each finding
   - A list of open questions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your documents and call transcripts.

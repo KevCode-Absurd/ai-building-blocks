@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must judge how people phrase requests.
 new_slug: skill-trigger-auditor
 name: Skill trigger auditor
-summary: Give it your skills. Get a grade for each on when it fires, and which skills block each other.
+summary: Give it your skills. Get a grade for each on when it fires, and which
+  skills block each other.
 job: make-skills
 headline: Skill trigger auditor
-subhead: Give it your skills. Get a grade for each on when it fires, and which skills block each other.
+subhead: A graded report card for your AI skills that shows which ones will
+  actually run when someone asks. A skill can be written well and still never
+  fire, because its short description is vague or a sibling skill wins first.
 explain: |
   A graded report card for your AI skills that shows which ones will actually run when someone asks. A skill can be written well and still never fire, because its short description is vague or a sibling skill wins first. This tool catches that.
 
@@ -25,6 +28,7 @@ you_get:
   - A list of skills that block each other
   - Suggested clearer descriptions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your skill files.

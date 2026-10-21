@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Finding real causes takes honest reflection.
 new_slug: analysis-lessons-review-writer
 name: Analysis lessons review writer
-summary: Tell it how a data project went. Get what worked, what slipped, the causes and actions for next time.
+summary: Tell it how a data project went. Get what worked, what slipped, the
+  causes and actions for next time.
 job: track-numbers
 headline: Analysis lessons review writer
-subhead: Tell it how a data project went. Get what worked, what slipped, the causes and actions for next time.
+subhead: A short written review after a data project that records what worked,
+  what slipped and why, and who does what next time. Do it within a week, while
+  the details are fresh.
 explain: |
   A short written review after a data project that records what worked, what slipped and why, and who does what next time. Do it within a week, while the details are fresh.
 
@@ -26,5 +29,6 @@ you_get:
   - Action items with owners and dates
   - Entries for a learnings log
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

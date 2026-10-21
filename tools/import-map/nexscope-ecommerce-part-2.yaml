@@ -247,6 +247,7 @@
   outputs: [ { type: plan }, { type: hooks } ]
   author: Nexscope AI
   author_url: https://github.com/nexscope-ai/eCommerce-Skills
+  subhead: "Share your products and brand. Get a TikTok Shop content plan with video formats, opening hooks, hashtags and a posting calendar. It matches ideas to your products and suggests tests when views fail to turn into sales."
 "nexscope-ai/eCommerce-Skills:tiktok-shop-conversion":
   skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
 "nexscope-ai/eCommerce-Skills:tiktok-shop-creator-management":

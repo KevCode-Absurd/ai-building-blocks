@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills nine boxes from your description.
 new_slug: lean-canvas-builder
 name: Lean canvas builder
-summary: Describe your idea. Get a one-page lean canvas with problem, solution, channels, costs and revenue.
+summary: Describe your idea. Get a one-page lean canvas with problem, solution,
+  channels, costs and revenue.
 job: test-an-idea
 headline: Lean canvas builder
-subhead: Describe your idea. Get a one-page lean canvas with problem, solution, channels, costs and revenue.
+subhead: Your business idea on a single page, with every box filled in and the
+  riskiest guesses visible. Describe the product, the customer and what you know
+  about the market.
 explain: |
   Your business idea on a single page, with every box filled in and the riskiest guesses visible. Describe the product, the customer and what you know about the market. The skill fills the nine lean canvas sections: problem, customer segments, unique value proposition, solution, channels, revenue streams, cost structure, key metrics and unfair advantage.
 
@@ -26,5 +29,6 @@ you_get:
   - A value proposition
   - Assumptions to test first
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

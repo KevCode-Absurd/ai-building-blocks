@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans the story and panels, then follows set steps to draw them.
 new_slug: knowledge-comic-maker
 name: Knowledge comic maker
-summary: Give it a topic or story. Get a finished comic with panel layouts, a chosen art style and drawn pages.
+summary: Give it a topic or story. Get a finished comic with panel layouts, a
+  chosen art style and drawn pages.
 job: make-images
 headline: Knowledge comic maker
-subhead: Give it a topic or story. Get a finished comic with panel layouts, a chosen art style and drawn pages.
+subhead: A finished comic that teaches a topic or tells a story, planned panel
+  by panel and drawn page by page. Give it the subject. The skill asks you to
+  choose an art style and a tone, then writes a script and lays out each page.
 explain: |
   A finished comic that teaches a topic or tells a story, planned panel by panel and drawn page by page. Give it the subject. The skill asks you to choose an art style and a tone, then writes a script and lays out each page.
 
@@ -26,6 +29,7 @@ you_get:
   - Saved image prompts
   - Drawn comic pages
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can draw images with an image tool.

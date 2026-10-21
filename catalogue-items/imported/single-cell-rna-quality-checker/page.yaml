@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies set filter rules and shows plots.
 new_slug: single-cell-rna-quality-checker
 name: Single-cell RNA quality checker
-summary: Give it an h5ad or h5 file. Get low-quality cells filtered and plots showing data quality.
+summary: Give it an h5ad or h5 file. Get low-quality cells filtered and plots
+  showing data quality.
 job: test-and-fix-code
 headline: Single-cell RNA quality checker
-subhead: Give it an h5ad or h5 file. Get low-quality cells filtered and plots showing data quality.
+subhead: Low-quality cells filtered out of your single-cell file, plus plots
+  that show how good the data is. It sets thresholds from your own data instead
+  of a fixed number.
 explain: |
   Low-quality cells filtered out of your single-cell file, plus plots that show how good the data is. It sets thresholds from your own data instead of a fixed number.
 
@@ -25,6 +28,7 @@ you_get:
   - Per-cell quality metrics
   - A summary of cells removed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

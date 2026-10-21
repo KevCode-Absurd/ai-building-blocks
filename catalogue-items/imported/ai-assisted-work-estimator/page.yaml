@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sizes each task, then applies set formulas.
 new_slug: ai-assisted-work-estimator
 name: AI-assisted work estimator
-summary: Give it your tasks and how your team uses AI agents. Get time estimates with likely ranges you can plan on.
+summary: Give it your tasks and how your team uses AI agents. Get time estimates
+  with likely ranges you can plan on.
 job: build-software
 headline: AI-assisted work estimator
-subhead: Give it your tasks and how your team uses AI agents. Get time estimates with likely ranges you can plan on.
+subhead: Time estimates for work done with AI agents, shown as a likely range
+  you can plan on instead of one hopeful number. It works for a single task or a
+  backlog of hundreds.
 explain: |
   Time estimates for work done with AI agents, shown as a likely range you can plan on instead of one hopeful number. It works for a single task or a backlog of hundreds.
 
@@ -27,5 +30,6 @@ you_get:
   - Output ready for your tracker
   - Notes on how to improve with actuals
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

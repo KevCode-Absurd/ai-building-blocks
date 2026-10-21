@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows schema rules but judges each side effect.
 new_slug: ai-tool-definition-writer
 name: AI tool definition writer
-summary: Describe what a tool does. Get a clear, safe definition your AI can call without guessing.
+summary: Describe what a tool does. Get a clear, safe definition your AI can
+  call without guessing.
 job: connect-tools
 headline: AI tool definition writer
-subhead: Describe what a tool does. Get a clear, safe definition your AI can call without guessing.
+subhead: A tool definition that your AI can call correctly the first time, with
+  fewer wrong picks and invented inputs. The goal is to make the safe, intended
+  call easier to choose than a risky one.
 explain: |
   A tool definition that your AI can call correctly the first time, with fewer wrong picks and invented inputs. The goal is to make the safe, intended call easier to choose than a risky one.
 
@@ -26,5 +29,6 @@ you_get:
   - Confirmation, retry and error rules
   - Test cases for tool choice and inputs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

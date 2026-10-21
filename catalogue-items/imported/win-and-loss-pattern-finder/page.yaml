@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must find patterns across many deals.
 new_slug: win-and-loss-pattern-finder
 name: Win and loss pattern finder
-summary: "Ask why you win and lose. Get patterns from closed deals: loss stage, common objections and deal traits."
+summary: "Ask why you win and lose. Get patterns from closed deals: loss stage,
+  common objections and deal traits."
 job: sell-and-negotiate
 headline: Win and loss pattern finder
-subhead: "Ask why you win and lose. Get patterns from closed deals: loss stage, common objections and deal traits."
+subhead: "The patterns behind your closed deals: where you lose, what buyers
+  object to and what wins have in common. A leader can act on this instead of
+  trusting hunches from the last painful loss."
 explain: |
   The patterns behind your closed deals: where you lose, what buyers object to and what wins have in common. A leader can act on this instead of trusting hunches from the last painful loss.
 
@@ -28,6 +31,7 @@ you_get:
   - Notes on biggest deals
   - Actions for leaders
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your CRM, email and calendar.

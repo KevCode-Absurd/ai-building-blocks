@@ -1,0 +1,39 @@
+slug: executive-work-keeper
+name: Executive work follow up agent
+summary: Share new notes and your saved action list. Get changed commitments,
+  due follow-up drafts and an updated work brief.
+category: agent
+boards:
+  - business
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+uses:
+  - executive-action-register
+  - executive-due-task-drafts
+  - executive-daily-digest
+steps:
+  - uses: executive-action-register
+    note: Run only when the saved state and decision rules require it.
+  - uses: executive-due-task-drafts
+    note: Run only when the saved state and decision rules require it.
+  - uses: executive-daily-digest
+    note: Run only when the saved state and decision rules require it.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Executive assistant job ideas
+    by: mgonto
+    url: https://github.com/mgonto/executive-assistant-skills
+    used: Inspiration for meeting preparation, action tracking, email drafting and
+      daily briefings. These are original portable instructions, not copies of
+      the unlicensed source.
+example_pending: true

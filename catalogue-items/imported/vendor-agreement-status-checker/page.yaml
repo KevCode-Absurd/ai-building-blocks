@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It combines facts from several places.
 new_slug: vendor-agreement-status-checker
 name: Vendor agreement status checker
-summary: Name a vendor. Get what you signed, what is missing and what expires soon. Verify against the originals.
+summary: Name a vendor. Get what you signed, what is missing and what expires
+  soon. Verify against the originals.
 job: check-contracts
 headline: Vendor agreement status checker
-subhead: Name a vendor. Get what you signed, what is missing and what expires soon. Verify against the originals.
+subhead: Name a vendor and get one page of what you have signed with them, what
+  is missing and what ends soon. The skill takes the vendor's name and handles
+  variations such as a trade name versus a legal name or a parent company.
 explain: |
   Name a vendor and get one page of what you have signed with them, what is missing and what ends soon. 
   The skill takes the vendor's name and handles variations such as a trade name versus a legal name or a parent company. It searches your connected contract system, CRM, email and document storage, in that order. It collects active, expired and pending agreements plus amendments, and notes the account owner and recent contract emails. Then it compares what it found against what a vendor like this should have, such as a master agreement, a data processing agreement and work orders, and lists the gaps with upcoming expiry dates. Check the original documents, since it is not legal advice.
@@ -25,6 +28,7 @@ you_get:
   - Upcoming expiry and renewal dates
   - The sources each item came from
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your contract files, email and CRM.

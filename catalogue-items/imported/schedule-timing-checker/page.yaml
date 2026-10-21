@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs a set check and reports what it finds.
 new_slug: schedule-timing-checker
 name: Schedule timing checker
-summary: Give it a cron schedule. Get a plain-English meaning, the next run times, and any silent mistakes that stop or repeat it.
+summary: Give it a cron schedule. Get a plain-English meaning, the next run
+  times, and any silent mistakes that stop or repeat it.
 job: test-and-fix-code
 headline: Schedule timing checker
-subhead: Give it a cron schedule. Get a plain-English meaning, the next run times, and any silent mistakes that stop or repeat it.
+subhead: Find out what your cron schedule will really do before it ships. Paste
+  the expression and get a plain English meaning, the next run times and any
+  silent mistakes that stop it or make it run too often.
 explain: |
   Find out what your cron schedule will really do before it ships. Paste the expression and get a plain English meaning, the next run times and any silent mistakes that stop it or make it run too often.
 
@@ -25,6 +28,7 @@ you_get:
   - A list of silent mistakes found
   - A corrected expression
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

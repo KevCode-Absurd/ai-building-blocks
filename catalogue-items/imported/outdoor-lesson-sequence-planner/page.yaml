@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It fits curriculum goals to the space you have.
 new_slug: outdoor-lesson-sequence-planner
 name: Outdoor lesson sequence planner
-summary: Describe your outdoor space and goals. Get a run of outdoor lessons that cover your curriculum.
+summary: Describe your outdoor space and goals. Get a run of outdoor lessons
+  that cover your curriculum.
 job: teach-and-train
 headline: Outdoor lesson sequence planner
-subhead: Describe your outdoor space and goals. Get a run of outdoor lessons that cover your curriculum.
+subhead: A short run of lessons where going outside teaches something that a
+  classroom cannot. Each sequence has prep before, the outdoor activity and
+  follow-up after, so the trip is never just a treat.
 explain: |
   A short run of lessons where going outside teaches something that a classroom cannot. Each sequence has prep before, the outdoor activity and follow-up after, so the trip is never just a treat.
 
@@ -27,5 +30,6 @@ you_get:
   - A safety plan
   - Indoor-outdoor links
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

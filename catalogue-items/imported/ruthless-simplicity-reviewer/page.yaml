@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies one strong point of view and you decide what to keep.
 new_slug: ruthless-simplicity-reviewer
 name: Ruthless simplicity reviewer
-summary: Give it a product or feature. Get a blunt review on focus, simplicity and end-to-end quality, with what to cut.
+summary: Share your product or feature. Get a focus and simplicity review, with
+  weak points and features to cut.
 job: design-work
 headline: Ruthless simplicity reviewer
-subhead: Give it a product or feature. Get a blunt review on focus, simplicity and end-to-end quality, with what to cut.
+subhead: "A blunt review of your product or feature that says what to cut and
+  what to fix, with a score out of ten. It judges your work the way Steve Jobs
+  ran product reviews: start with the customer, then subtract."
 explain: |
   A blunt review of your product or feature that says what to cut and what to fix, with a score out of ten. It judges your work the way Steve Jobs ran product reviews: start with the customer, then subtract.
 
@@ -25,5 +28,6 @@ you_get:
   - A list of what to cut
   - Specific fixes to reach ten
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

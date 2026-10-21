@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: Each question depends on your last answer.
 new_slug: intent-interviewer
 name: Intent interviewer
-summary: Give it a vague request. Get asked one question at a time until what you really want is clear.
+summary: Give it a vague request. Get asked one question at a time until what
+  you really want is clear.
 job: think-and-decide
 headline: Intent interviewer
-subhead: Give it a vague request. Get asked one question at a time until what you really want is clear.
+subhead: A clear statement of what you really want, reached by being asked one
+  question at a time before any plan or code exists. People ask for "a
+  dashboard" because that is what one asks for, when what they need is something
+  else.
 explain: |
   A clear statement of what you really want, reached by being asked one question at a time before any plan or code exists. People ask for "a dashboard" because that is what one asks for, when what they need is something else.
 
@@ -26,5 +30,6 @@ you_get:
   - Success measures
   - A summary to confirm before work starts
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

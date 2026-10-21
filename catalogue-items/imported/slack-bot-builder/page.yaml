@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows the Bolt setup but needs design choices.
 new_slug: slack-bot-builder
 name: Slack bot builder
-summary: Say what the bot should do. Get a Slack app with commands, events and rich messages.
+summary: Say what the bot should do. Get a Slack app with commands, events and
+  rich messages.
 job: build-software
 headline: Slack bot builder
-subhead: Say what the bot should do. Get a Slack app with commands, events and rich messages.
+subhead: A working Slack app that responds to commands, events and button
+  clicks, built on Slack's Bolt framework in Python, JavaScript or Java. You say
+  what the bot should do, and the skill sets up the pieces to do it.
 explain: |
   A working Slack app that responds to commands, events and button clicks, built on Slack's Bolt framework in Python, JavaScript or Java. You say what the bot should do, and the skill sets up the pieces to do it.
 
@@ -26,6 +29,7 @@ you_get:
   - Interactive button and menu handling
   - Setup notes for installation and sign-in
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

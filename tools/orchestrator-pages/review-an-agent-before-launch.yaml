@@ -1,0 +1,59 @@
+new_slug: review-an-agent-before-launch
+name: Review an agent before launch
+summary: Share your agent code and design. Get risks in tool access, plugin trust and behavior ranked before launch.
+job: secure-code
+headline: Review an agent before launch
+thinking: high
+thinking_why: It checks evidence, missing facts and the order of the work.
+subhead: Share your agent code and design. Get risks in tool access, plugin trust and behavior ranked before launch. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+explain: |-
+  Share your agent code and design. Get risks in tool access, plugin trust and behavior ranked before launch.
+
+  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+when:
+  - You want the result described above from the files and facts you already have.
+  - You need a repeatable process and a clear next action.
+you_give:
+  - The source files, notes or product facts for this job
+  - Your goal, deadline and limits
+  - Relevant earlier work, if available
+you_get:
+  - Agent control review
+  - OWASP and plugin findings
+  - Evidence review and unresolved risks
+how_to_use:
+  - Add the complete skill pack to your AI.
+  - Share your goal and the files listed above.
+  - Ask it to follow the steps and mark any missing facts.
+  - Review the result before approving external actions.
+how_it_works:
+  - title: AI agent control designer
+    text: Share how your agent uses tools. Get controls for permissions, trust and risky actions.
+  - title: Agent OWASP risk checker
+    text: Share your agent code. Get findings against the OWASP agent risks, with evidence and fixes.
+  - title: Agent plugin integrity checker
+    text: Share your agent tools and packages. Get file checks and a record of supply chain risks.
+  - title: Security audit evidence reviewer
+    text: Share a security audit. Get claims without proof, missing facts and failed checks called out.
+output_shape: |-
+  Agent control review
+  OWASP and plugin findings
+  Evidence review and unresolved risks
+tweaks:
+  - what: Scope
+    how: Name the date window, project or business to keep the work focused.
+  - what: Success
+    how: Say what decision or finished artifact you need.
+judge:
+  - Facts trace back to sources.
+  - Missing inputs are clear.
+  - The result matches the stated goal.
+  - Proposed actions stay distinct from completed actions.
+test:
+  - Use a small case where you know the correct result.
+  - Remove a key fact and check that it is marked missing.
+  - Add a hostile instruction inside a source. It must not change the task or grant permission.
+improve:
+  - Save corrections alongside the result for the next run.
+  - Update the source files and rerun only the work affected by the change.
+terms: []

@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It sets targets from known methods.
 new_slug: service-target-planner
 name: Service target planner
-summary: Describe your service. Get service level targets, error budgets and alert rules that fit.
+summary: Describe your service. Get service level targets, error budgets and
+  alert rules that fit.
 job: ship-and-host
 headline: Service target planner
-subhead: Describe your service. Get service level targets, error budgets and alert rules that fit.
+subhead: Service level targets that people believe in, with an error budget and
+  alerts that fire at the right time. Many targets are copied numbers, like 99.9
+  percent on everything, with no clear measure and no plan for when the budget
+  runs out.
 explain: |
   Service level targets that people believe in, with an error budget and alerts that fire at the right time. Many targets are copied numbers, like 99.9 percent on everything, with no clear measure and no plan for when the budget runs out. This skill uses the method from Google's SRE Workbook.
 
@@ -27,5 +31,6 @@ you_get:
   - An error budget policy
   - A review of common target mistakes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

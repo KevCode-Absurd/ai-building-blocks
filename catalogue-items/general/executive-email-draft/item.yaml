@@ -1,0 +1,27 @@
+slug: executive-email-draft
+name: Executive reply draft writer
+summary: Share an email thread and your goal. Get a reply draft with clear
+  recipients, supported facts and a specific next step.
+category: general
+boards:
+  - business
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Executive assistant job ideas
+    by: mgonto
+    url: https://github.com/mgonto/executive-assistant-skills
+    used: Inspiration for meeting preparation, action tracking, email drafting and
+      daily briefings. These are original portable instructions, not copies of
+      the unlicensed source.
+example_pending: true

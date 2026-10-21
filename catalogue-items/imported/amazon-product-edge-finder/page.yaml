@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads reviews for patterns and turns them into choices.
 new_slug: amazon-product-edge-finder
 name: Amazon product edge finder
-summary: Give it rival listings and reviews. Get their weak spots, your best selling points, and a ranked fix list.
+summary: Give it rival listings and reviews. Get their weak spots, your best
+  selling points, and a ranked fix list.
 job: run-your-store
 headline: Amazon product edge finder
-subhead: Give it rival listings and reviews. Get their weak spots, your best selling points, and a ranked fix list.
+subhead: "A clear view of where rival Amazon listings fall short and what to say
+  about your own product to win. Reviews are the source: complaints show gaps,
+  and praise shows what buyers value."
 explain: |
   A clear view of where rival Amazon listings fall short and what to say about your own product to win. Reviews are the source: complaints show gaps, and praise shows what buyers value.
 
@@ -28,5 +31,6 @@ you_get:
   - A positioning view
   - A ranked improvement plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

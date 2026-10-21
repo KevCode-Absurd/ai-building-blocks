@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It compares prose to a fact list, then judges each hit.
 new_slug: story-continuity-checker
 name: Story continuity checker
-summary: Give it your manuscript and story facts. Get a list of name slips, age errors, anachronisms and loose plot threads.
+summary: Give it your manuscript and story facts. Get a list of name slips, age
+  errors, anachronisms and loose plot threads.
 job: write-and-tell-stories
 headline: Story continuity checker
-subhead: Give it your manuscript and story facts. Get a list of name slips, age errors, anachronisms and loose plot threads.
+subhead: Give it your manuscript and story facts. Get a list of name slips, age
+  errors, anachronisms and loose plot threads. Bring your manuscript or
+  chapters. Use the result to plan your next step.
 explain: |
   A list of continuity slips in your novel or long story: names that drift, ages that do not add up, objects from the wrong era and clues that are planted but never paid off. Re-reading will not catch these, because the memory that wrote the draft is the same memory that reads it.
 
   The fix is a story bible, which is the facts of your story as a list, plus a mechanical check of the prose against it. For each hit, the skill asks one question: is the manuscript wrong, or is the bible out of date? It does not write, outline or polish. It checks and reports. It works on long manuscripts and comes with a small script.
 when:
-  - Your character is 18 in chapter one and 23 in chapter twelve with no time passing.
+  - Your character is 18 in chapter one and 23 in chapter twelve with no time
+    passing.
   - A name changed spelling somewhere in the middle of the book.
   - You wrote a historical story and fear modern objects crept in.
   - You planted a key or secret and cannot remember if it was resolved.
@@ -27,6 +31,7 @@ you_get:
   - Unresolved plot threads
   - "A verdict on each: fix the text or the notes"
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your files.

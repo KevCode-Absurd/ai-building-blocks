@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It maps paths and edge cases from your description.
 new_slug: user-flow-mapper
 name: User flow mapper
-summary: Describe what users do. Get a flow diagram with choices, error states and drop-off points.
+summary: Describe what users do. Get a flow diagram with choices, error states
+  and drop-off points.
 job: build-product
 headline: User flow mapper
-subhead: Describe what users do. Get a flow diagram with choices, error states and drop-off points.
+subhead: A diagram of everything a person can do while finishing a task,
+  including the paths where it goes wrong. You see where they might leave, and
+  what to change first.
 explain: |
   A diagram of everything a person can do while finishing a task, including the paths where it goes wrong. You see where they might leave, and what to change first.
 
@@ -26,5 +29,6 @@ you_get:
   - Drop-off risk notes on each step
   - A list of fixes ranked by effect
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

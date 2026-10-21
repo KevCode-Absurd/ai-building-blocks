@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It lays out a dated sequence from a set method.
 new_slug: brand-launch-planner
 name: Brand launch planner
-summary: Say when and where you launch. Get a rollout plan with the message and steps for each stage.
+summary: Say when and where you launch. Get a rollout plan with the message and
+  steps for each stage.
 job: plan-strategy
 headline: Brand launch planner
-subhead: Say when and where you launch. Get a rollout plan with the message and steps for each stage.
+subhead: A launch plan with dates, channels and the message for each stage, so
+  your brand lands with momentum instead of a quiet whimper. It works for a new
+  brand or a rebrand.
 explain: |
   A launch plan with dates, channels and the message for each stage, so your brand lands with momentum instead of a quiet whimper. It works for a new brand or a rebrand.
 
@@ -26,5 +29,6 @@ you_get:
   - Channel plan with key messages
   - Success measures
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

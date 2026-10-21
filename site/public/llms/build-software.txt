@@ -1,6 +1,6 @@
 # Build and ship software: AI Blocks
 
-> 316 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 331 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D image viewer builder](https://useaiblocks.com/skills/3d-image-viewer-builder): Give it a 3D scan or mesh. Get MATLAB viewer code with slices, overlays and marked regions.
 - [5G waveform generator](https://useaiblocks.com/skills/5g-waveform-generator): Pick a 5G test model or your own settings. Get MATLAB code that builds a standard 5G waveform.
@@ -44,6 +44,7 @@
 - [Bug report writer](https://useaiblocks.com/skills/bug-report-writer): Paste error logs, notes or a screenshot. Get a clear GitHub issue with steps to repeat, impact and proof.
 - [Build a paid app with billing, emails, alerts and tests](https://useaiblocks.com/workflows/build-a-paid-app-with-billing-emails-alerts-and-tests): Give it your app idea. Get a starter with sign-in, billing, emails, alerts and tests.
 - [Business model code designer](https://useaiblocks.com/skills/business-model-code-designer): Describe your business rules. Get a glossary, a map of business areas and the data that belongs together.
+- [C# timezone handling reviewer](https://useaiblocks.com/skills/copilot-dotnet-timezone): Share your scheduling code. Get safer time conversions and fixes for daylight saving and timezone errors.
 - [C++ network code helper](https://useaiblocks.com/skills/c-network-code-helper): Describe the networking job. Get C++ Boost.Asio code that compiles on your version of Boost.
 - [Camera image fixer](https://useaiblocks.com/skills/camera-image-fixer): Say what looks wrong in your camera picture. Get the cause, camera settings and processing steps.
 - [Car safety test scenario maker](https://useaiblocks.com/skills/car-safety-test-scenario-maker): Name the Euro NCAP test. Get its scenario and variants made, plotted and exported with scores.
@@ -80,6 +81,7 @@
 - [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder): Describe your data sources and goal. Get a working pipeline with checks, scheduling and fixes for common faults.
 - [Data system designer](https://useaiblocks.com/skills/data-system-designer): Describe what your app stores and serves. Get picks for storage, copies, splitting data and consistency, with trade-offs.
 - [Database design guide](https://useaiblocks.com/skills/database-design-guide): Describe your app. Get a database pick, a schema, indexes and a safe migration plan.
+- [Database migration bug report writer](https://useaiblocks.com/skills/copilot-creating-oracle-to-postgres-migration-bug-report): Share a migration defect and evidence. Get a reproducible report with expected behavior and the affected code.
 - [Database migration writer](https://useaiblocks.com/skills/database-migration-writer): Describe the schema change. Get a versioned migration that runs forward and rolls back safely.
 - [Database schema designer](https://useaiblocks.com/skills/database-schema-designer): Describe your app. Get tables, links, indexes and rules in a clean, normalized schema.
 - [Database schema planner](https://useaiblocks.com/skills/database-schema-planner): Describe your data. Get a clean schema, migration plan and query advice, with SQL or NoSQL guidance.
@@ -101,6 +103,7 @@
 - [DSPy prompt optimizer](https://useaiblocks.com/skills/dspy-prompt-optimizer): Describe your AI task and a few examples. Get a program that tunes its own prompts to score better.
 - [DuckDB big file query helper](https://useaiblocks.com/skills/duckdb-big-file-query-helper): Point it at large CSV, Parquet or JSON files. Get fast queries run from MATLAB with DuckDB.
 - [Edge case list maker](https://useaiblocks.com/prompts/edge-case-list-maker): Paste a change you plan to make. Get the cases to check, smallest first, before you write any code.
+- [Edge Redis cache and limit builder](https://useaiblocks.com/skills/copilot-upstash-redis): Share your serverless app. Get Redis caching or rate limits over HTTP with the required setup explained.
 - [Embedding model trainer](https://useaiblocks.com/skills/embedding-model-trainer): Say what your search or matching must do. Get an embedding or reranker model trained from a ready template.
 - [Error warning and recovery designer](https://useaiblocks.com/skills/error-message-designer): Describe a system and its operators. Get what the alarm says, what the person decides and how it recovers.
 - [Expo API route builder](https://useaiblocks.com/skills/expo-api-route-builder): Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host.
@@ -196,6 +199,13 @@
 - [OpenAI docs guide](https://useaiblocks.com/skills/openai-docs-guide): Ask how to build with OpenAI. Get current answers with citations and the right model for the job.
 - [Optical system designer](https://useaiblocks.com/skills/optical-system-designer): Describe the lens setup. Get an optical system built, traced, toleranced and tuned in MATLAB.
 - [Optimization problem solver](https://useaiblocks.com/skills/optimization-problem-solver): Describe what to minimise and your limits. Get the problem set up, solved and the result checked.
+- [Oracle behavior baseline test writer](https://useaiblocks.com/skills/copilot-creating-oracle-to-postgres-migration-integration-tests): Share your Oracle data access code. Get tests that record what the code does before you change databases.
+- [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration): Share your migrated code. Get Oracle and PostgreSQL behavior gaps checked before release.
+- [Oracle migration test planner](https://useaiblocks.com/skills/copilot-planning-oracle-to-postgres-migration-integration-testing): Share your data access code. Get test scope and parity checks for an Oracle to Postgres migration.
+- [Oracle migration test project builder](https://useaiblocks.com/skills/copilot-scaffolding-oracle-to-postgres-migration-test-project): Share your .NET solution. Get an xUnit test project with database rollback and migration test setup.
+- [Oracle stored procedure migrator](https://useaiblocks.com/skills/copilot-migrating-oracle-to-postgres-stored-procedures): Share your Oracle procedures. Get PostgreSQL code with changed behavior and checks called out.
+- [Oracle to Npgsql code migrator](https://useaiblocks.com/skills/copilot-migrating-oracle-to-postgres-data-access-code): Share your .NET data access code. Get PostgreSQL changes for drivers, queries and database calls.
+- [Oracle to Postgres program planner](https://useaiblocks.com/skills/copilot-creating-oracle-to-postgres-master-migration-plan): Share your .NET solution. Get a project inventory, migration scope and a master plan to track the work.
 - [Outside AI model importer](https://useaiblocks.com/skills/outside-ai-model-importer): Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and ready to run.
 - [Parallel branch manager](https://useaiblocks.com/skills/parallel-branch-manager): Start several tasks at once. Get a separate git worktree for each, with its own ports and clean-up.
 - [Parallel cluster finder](https://useaiblocks.com/skills/parallel-cluster-finder): Ask what parallel clusters you can use. Get a list, with profiles checked and set as default.
@@ -216,6 +226,7 @@
 - [Physics simulation builder](https://useaiblocks.com/skills/physics-simulation-builder): Describe the part and its loads. Get a finite element model built, solved and plotted.
 - [PI asset finder](https://useaiblocks.com/skills/pi-asset-finder): Give it a tag name or description. Get the matching PI data points found from MATLAB.
 - [Picture chat assistant builder](https://useaiblocks.com/skills/picture-chat-assistant-builder): Give it images and questions. Get a chat that describes pictures and answers questions about them.
+- [Plan Oracle to Postgres with proof](https://useaiblocks.com/workflows/plan-oracle-to-postgres-with-proof): Share your .NET data access code. Get migration scope, baseline tests and a review of database behavior risks.
 - [PLL circuit modeler](https://useaiblocks.com/skills/pll-circuit-modeler): Give it a PLL datasheet. Get a working phase-locked loop model with the right solver set.
 - [Point cloud aligner](https://useaiblocks.com/skills/point-cloud-aligner): Give it two 3D scans. Get them lined up and merged, with the right method chosen and tuned.
 - [Point cloud file handler](https://useaiblocks.com/skills/point-cloud-file-handler): Give it a lidar file. Get it read or saved in the right format, with its point details kept.
@@ -228,6 +239,7 @@
 - [Project glossary writer](https://useaiblocks.com/skills/project-glossary-writer): Talk through your project's terms. Get a glossary and decision records so everyone uses the same words.
 - [Project memory keeper](https://useaiblocks.com/skills/project-memory-keeper): Work on a codebase. Get a notes folder of decisions, design and rules that any AI can read later.
 - [Prompt attack detector](https://useaiblocks.com/skills/prompt-attack-detector): Point it at your AI app's inputs. Get a small filter that flags tricks and hidden instructions before they land.
+- [Protobuf compatibility reviewer](https://useaiblocks.com/skills/copilot-protobuf-grpc-api-review): Share your schema change. Get wire compatibility risks, rollout hazards and safe field changes.
 - [Pull request description writer](https://useaiblocks.com/skills/pull-request-description-writer): Commit your branch. Get a clear pull request that says what changed, why, and what reviewers should check.
 - [Pull request writer](https://useaiblocks.com/skills/pull-request-writer): Give it your changes. Get a clear pull request description a reviewer can follow.
 - [Radar detection simulator](https://useaiblocks.com/skills/radar-detection-simulator): Give it a radar datasheet. Get a simulated scene, fixes for missed detections and result plots.
@@ -239,6 +251,7 @@
 - [Release notes writer](https://useaiblocks.com/skills/release-notes-writer): Point it at your commits. Get tidy release notes and the right version bump from Conventional Commits.
 - [Rented GPU server setup helper](https://useaiblocks.com/skills/rented-gpu-server-setup-helper): Say what you need to train. Get a rented GPU server chosen, set up, loaded with your files and shut down after.
 - [REST API designer](https://useaiblocks.com/skills/rest-api-designer): Describe what your service does. Get a clean REST API plan with routes, status codes, paging and docs.
+- [RESX generated code migration helper](https://useaiblocks.com/skills/copilot-resx-source-generator-migration): Share your resource files and project. Get a move from checked-in designer files to a source generator.
 - [RF system modeler](https://useaiblocks.com/skills/rf-system-modeler): Give it S-parameter files or a spec. Get RF chains modeled, with gain, noise and stability checked.
 - [Road map author](https://useaiblocks.com/skills/road-map-author): Describe the road layout. Get lanes, junctions, signs and signals built as a RoadRunner HD map.
 - [Road map converter](https://useaiblocks.com/skills/road-map-converter): Give it a Lanelet2 map. Get a RoadRunner HD map built from it, ready for simulation.
@@ -246,6 +259,7 @@
 - [Robot arm modeler](https://useaiblocks.com/skills/robot-arm-modeler): Name your robot arm. Get a MATLAB model ready for moves, reach checks and drawing.
 - [Robot arm motion planner](https://useaiblocks.com/skills/robot-arm-motion-planner): Give it a start and goal pose. Get a smooth path and timed moves for the arm.
 - [Robot model fine-tuner](https://useaiblocks.com/skills/robot-model-fine-tuner): Give it your robot data. Get a pi0 robot model fine-tuned on it, and a server that runs it.
+- [Roslyn analyzer and fix builder](https://useaiblocks.com/skills/copilot-roslyn-analyzers): Describe a C# code rule. Get an analyzer, code fix and tests for the cases it should catch.
 - [SaaS starter builder](https://useaiblocks.com/skills/saas-starter-builder): Describe your app. Get a Next.js project with sign-in, database, billing, API routes and a dashboard.
 - [Safe shutdown code writer](https://useaiblocks.com/skills/safe-shutdown-code-writer): Point it at your server or worker. Get code that finishes live work and exits cleanly when stopped.
 - [Sequencing pipeline runner](https://useaiblocks.com/skills/sequencing-pipeline-runner): Point it at sequencing data or a public set. Get an nf-core pipeline run for RNA-seq, variants or ATAC-seq.
@@ -275,6 +289,7 @@
 - [Spec to starter repo builder](https://useaiblocks.com/skills/spec-to-starter-repo-builder): Give it a written spec. Get a new project folder with the structure, setup and first working code.
 - [Spec writer](https://useaiblocks.com/skills/spec-writer): Talk through your idea. Get the conversation turned into a spec and posted to your issue tracker.
 - [Spectral image analyst](https://useaiblocks.com/skills/spectral-image-analyst): Give it a hyperspectral or satellite image. Get it cleaned, unmixed and checked for targets or anomalies.
+- [SQL change impact investigator](https://useaiblocks.com/skills/copilot-sql-object-impact-analysis): Name the SQL object you plan to change. Get its callers and downstream dependencies before editing.
 - [SQL query helper](https://useaiblocks.com/skills/sql-query-helper): Describe the data you need. Get a tested SQL query, a faster version, or a migration.
 - [Store rules builder](https://useaiblocks.com/skills/store-rules-builder): Say the discount, shipping or payment rule you want. Get a working Shopify Function that runs it.
 - [Stripe payments builder](https://useaiblocks.com/skills/stripe-payments-builder): Say how you charge. Get Stripe checkout, subscriptions and webhooks built safely, with test steps.

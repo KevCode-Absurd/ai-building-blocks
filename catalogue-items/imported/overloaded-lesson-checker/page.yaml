@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must judge where working memory runs out.
 new_slug: overloaded-lesson-checker
 name: Overloaded lesson checker
-summary: Paste a task or handout. Get the places that overload learners, with changes that lighten it.
+summary: Paste a task or handout. Get the places that overload learners, with
+  changes that lighten it.
 job: teach-and-train
 headline: Overloaded lesson checker
-subhead: Paste a task or handout. Get the places that overload learners, with changes that lighten it.
+subhead: Paste a task or handout. Get the places that overload learners, with
+  changes that lighten it. Bring the task, handout or instructions. Use the
+  result to plan your next step.
 explain: |
   A diagnosis of where a task or handout asks too much of learners at once, with specific changes that lighten it without dumbing it down.
 
@@ -26,5 +29,6 @@ you_get:
   - Specific edits to try
   - A lighter version of the task
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

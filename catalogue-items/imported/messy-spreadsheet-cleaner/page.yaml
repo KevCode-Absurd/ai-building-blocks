@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies set cleaning rules.
 new_slug: messy-spreadsheet-cleaner
 name: Messy spreadsheet cleaner
-summary: Give it messy data. Get spacing, text numbers, dates and duplicates fixed, with mixed columns flagged.
+summary: Give it messy data. Get spacing, text numbers, dates and duplicates
+  fixed, with mixed columns flagged.
 job: work-with-files
 headline: Messy spreadsheet cleaner
-subhead: Give it messy data. Get spacing, text numbers, dates and duplicates fixed, with mixed columns flagged.
+subhead: A spreadsheet where the spaces, text-numbers, dates and duplicate rows
+  are fixed, and any column that mixes types is flagged for you to decide. Point
+  it at a sheet or a range and it does the sweep.
 explain: |
   A spreadsheet where the spaces, text-numbers, dates and duplicate rows are fixed, and any column that mixes types is flagged for you to decide. Point it at a sheet or a range and it does the sweep.
 
@@ -25,6 +28,7 @@ you_get:
   - Duplicates marked or removed
   - A list of columns with mixed types to review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and save spreadsheet files.

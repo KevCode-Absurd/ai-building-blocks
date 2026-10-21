@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs risk across several projects at once.
 new_slug: project-risk-portfolio
 name: Project risk and portfolio manager
-summary: Give it your projects. Get risks scored, resources balanced and a clear status for stakeholders.
+summary: Give it your projects. Get risks scored, resources balanced and a clear
+  status for stakeholders.
 job: plan-strategy
 headline: Project risk and portfolio manager
-subhead: Give it your projects. Get risks scored, resources balanced and a clear status for stakeholders.
+subhead: "A clear picture across all your projects: which risks cost the most,
+  where people are overloaded and which projects need attention first. You end
+  with a status report leaders can read in two minutes."
 explain: |
   A clear picture across all your projects: which risks cost the most, where people are overloaded and which projects need attention first. You end with a status report leaders can read in two minutes.
 
@@ -27,6 +30,7 @@ you_get:
   - Health scores and status colours
   - Executive summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scores against set rules and rewrites to fit the job.
 new_slug: product-manager-resume-reviewer
 name: Product manager resume reviewer
-summary: Give it your resume and a target job. Get a review against ten best practices and a version tailored to the role.
+summary: Share your resume and target job. Get ten resume checks, specific fixes
+  and a draft suited to the role.
 job: hire-people
 headline: Product manager resume reviewer
-subhead: Give it your resume and a target job. Get a review against ten best practices and a version tailored to the role.
+subhead: A PM resume reviewed line by line against ten best practices, with
+  suggestions taken straight from your own bullet points. If you add a job
+  posting, the feedback and rewrite are tuned to that role.
 explain: |
   A PM resume reviewed line by line against ten best practices, with suggestions taken straight from your own bullet points. If you add a job posting, the feedback and rewrite are tuned to that role.
 
@@ -25,5 +28,6 @@ you_get:
   - Keyword gaps against the posting
   - A tailored resume version
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

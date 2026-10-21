@@ -2,10 +2,13 @@ thinking: low
 thinking_why: A script finds the problems and the AI explains the fixes.
 new_slug: skill-portability-checker
 name: Skill portability checker
-summary: Point it at your skill folder. Get a list of mistakes that stop it loading in other AI tools, with fixes.
+summary: Point it at your skill folder. Get a list of mistakes that stop it
+  loading in other AI tools, with fixes.
 job: make-skills
 headline: Skill portability checker
-subhead: Point it at your skill folder. Get a list of mistakes that stop it loading in other AI tools, with fixes.
+subhead: A list of mistakes in your skill folder that stop it from loading in
+  other AI tools, with a fix for each one. Your skill then works beyond the one
+  app you built it in.
 explain: |
   A list of mistakes in your skill folder that stop it from loading in other AI tools, with a fix for each one. Your skill then works beyond the one app you built it in.
 
@@ -25,6 +28,7 @@ you_get:
   - Fixes to apply
   - Machine-readable output if you ask
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your files.

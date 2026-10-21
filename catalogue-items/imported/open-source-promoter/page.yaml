@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches advice to the project and its audience.
 new_slug: open-source-promoter
 name: Open source promoter
-summary: Give it your open source project. Get a plan to win stars, users and contributors without sounding pushy.
+summary: Give it your open source project. Get a plan to win stars, users and
+  contributors without sounding pushy.
 job: grow-social
 headline: Open source promoter
-subhead: Give it your open source project. Get a plan to win stars, users and contributors without sounding pushy.
+subhead: A plan to get your open source project noticed, used and contributed
+  to, without coming across as pushy. Developers can smell hype, so the plan is
+  built on being useful.
 explain: |
   A plan to get your open source project noticed, used and contributed to, without coming across as pushy. Developers can smell hype, so the plan is built on being useful.
 
@@ -26,5 +29,6 @@ you_get:
   - Contributor-friendly issue ideas
   - A launch and follow-up schedule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

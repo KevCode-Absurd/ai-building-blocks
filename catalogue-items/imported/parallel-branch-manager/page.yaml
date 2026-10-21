@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs fixed git steps.
 new_slug: parallel-branch-manager
 name: Parallel branch manager
-summary: Start several tasks at once. Get a separate git worktree for each, with its own ports and clean-up.
+summary: Start several tasks at once. Get a separate git worktree for each, with
+  its own ports and clean-up.
 job: build-software
 headline: Parallel branch manager
-subhead: Start several tasks at once. Get a separate git worktree for each, with its own ports and clean-up.
+subhead: A separate working copy of your code for each task, so several features
+  or fixes can run at once without stepping on each other. Each copy gets its
+  own folder, branch and ports.
 explain: |
   A separate working copy of your code for each task, so several features or fixes can run at once without stepping on each other. Each copy gets its own folder, branch and ports.
 
@@ -25,6 +28,7 @@ you_get:
   - Copied settings and installed dependencies
   - Safe cleanup of stale copies
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run git commands.

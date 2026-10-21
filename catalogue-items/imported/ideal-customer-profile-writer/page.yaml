@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds specific people from what you tell it.
 new_slug: ideal-customer-profile-writer
 name: Ideal customer profile writer
-summary: Describe what you sell. Get detailed buyer personas with motivations, doubts and habits.
+summary: Describe what you sell. Get detailed buyer personas with motivations,
+  doubts and habits.
 job: understand-customers
 headline: Ideal customer profile writer
-subhead: Describe what you sell. Get detailed buyer personas with motivations, doubts and habits.
+subhead: Buyer personas built on how people think and decide, not just age and
+  income. Describe what you sell and get detailed profiles with motivations,
+  doubts and habits that you can write ads and pages against.
 explain: |
   Buyer personas built on how people think and decide, not just age and income. Describe what you sell and get detailed profiles with motivations, doubts and habits that you can write ads and pages against.
 
@@ -26,5 +29,6 @@ you_get:
   - The jobs your buyers hire you for
   - Customer language to reuse in copy
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

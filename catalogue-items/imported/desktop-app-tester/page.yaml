@@ -2,18 +2,23 @@ thinking: medium
 thinking_why: It runs the app and decides what to try next.
 new_slug: desktop-app-tester
 name: Desktop app tester
-summary: Point it at your Electron app. Get it launched and driven by clicks and typing, with screenshots and logs.
+summary: Point it at your Electron app. Get it launched and driven by clicks and
+  typing, with screenshots and logs.
 job: test-and-fix-code
 headline: Desktop app tester
-subhead: Point it at your Electron app. Get it launched and driven by clicks and typing, with screenshots and logs.
+subhead: Your Electron app, opened and used by the AI the way a person would,
+  with screenshots and logs to show what happened. You can confirm a UI change
+  works in the real app, not just in unit tests.
 explain: |
   Your Electron app, opened and used by the AI the way a person would, with screenshots and logs to show what happened. You can confirm a UI change works in the real app, not just in unit tests.
 
   A script launches the app under Playwright in the background and keeps it running between commands. The AI reads an accessibility snapshot to find buttons and fields by name, then clicks, types, waits for text, and takes screenshots it can look at. Each run uses a fresh profile. It suits first-run screens and bugs that only show in a built app. It needs Electron and Playwright installed, and it handles one window at a time.
 when:
-  - You changed a screen in your Electron app and want proof it works before you ship.
+  - You changed a screen in your Electron app and want proof it works before you
+    ship.
   - A bug only shows up in the built app, not in development.
-  - You need to check the first-run or onboarding flow without clicking through it yourself.
+  - You need to check the first-run or onboarding flow without clicking through
+    it yourself.
   - You want to confirm a feature works end to end, including the main process.
 you_give:
   - Your Electron project folder
@@ -26,6 +31,7 @@ you_get:
   - Console and app logs
   - A plain report of what worked and what broke
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and take screenshots.

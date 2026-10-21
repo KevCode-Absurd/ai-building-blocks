@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It must tell apart updates, site changes and market shifts from the same data.
 new_slug: organic-traffic-drop-detective
 name: Organic traffic drop detective
-summary: Connect Ahrefs and Search Console. Get the likely cause of a traffic drop or stall and an action plan.
+summary: Connect Ahrefs and Search Console. Get the likely cause of a traffic
+  drop or stall and an action plan.
 job: read-ad-results
 headline: Organic traffic drop detective
-subhead: Connect Ahrefs and Search Console. Get the likely cause of a traffic drop or stall and an action plan.
+subhead: The likely cause of a search traffic drop or stall, found in a set
+  order instead of guessing, with an action plan to fix it.
 explain: |
   The likely cause of a search traffic drop or stall, found in a set order instead of guessing, with an action plan to fix it.
 
@@ -26,6 +28,7 @@ you_get:
   - Pages and keywords hit hardest
   - An action plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can connect to Ahrefs and Search Console.

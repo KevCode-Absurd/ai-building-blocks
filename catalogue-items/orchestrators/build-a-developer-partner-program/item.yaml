@@ -1,0 +1,46 @@
+slug: build-a-developer-partner-program
+name: Build a developer partner program
+summary: Share your platform and partner goals. Get an adoption program, partner
+  incentives and tests for shared growth.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-gtm-developer-ecosystem
+  - copilot-gtm-partnership-architecture
+steps:
+  - uses: copilot-gtm-developer-ecosystem
+    note: 1. Read skills/copilot-gtm-developer-ecosystem/SKILL.md. Share your
+      developer product. Get a plan for app links, outside coders and wider use,
+      with ways to track results. Save the result with source references. Carry
+      the user's goal and all earlier findings into this step. If required
+      evidence or tool access is missing, mark this step blocked; do not
+      fabricate a result.
+  - uses: copilot-gtm-partnership-architecture
+    note: 2. Read skills/copilot-gtm-partnership-architecture/SKILL.md. Share your
+      product and potential partners. Get partner types, incentives and a plan
+      to test shared revenue. Save the result with source references. Carry the
+      user's goal and all earlier findings into this step. If required evidence
+      or tool access is missing, mark this step blocked; do not fabricate a
+      result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It uses set processing steps with checks on timing and quality.
 new_slug: body-signal-analysis-builder
 name: Body signal analysis builder
-summary: Give it heart, skin or breathing signals. Get a cleaned, checked analysis of events and variability.
+summary: Give it heart, skin or breathing signals. Get a cleaned, checked
+  analysis of events and variability.
 job: research-topics
 headline: Body signal analysis builder
-subhead: Give it heart, skin or breathing signals. Get a cleaned, checked analysis of events and variability.
+subhead: Turn raw heart, skin or breathing recordings into a cleaned, checked
+  analysis of events and variability. The code is repeatable, so another person
+  can rerun it and get the same result.
 explain: |
   Turn raw heart, skin or breathing recordings into a cleaned, checked analysis of events and variability. The code is repeatable, so another person can rerun it and get the same result.
 
@@ -26,6 +29,7 @@ you_get:
   - Variability and complexity measures
   - Plots and a rerunnable script
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

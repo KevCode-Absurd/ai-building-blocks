@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It matches stock levels to order dates.
 new_slug: dead-stock-finder
 name: Dead stock finder
-summary: Get products with stock on the shelf but no sales in your chosen number of days.
+summary: Get products with stock on the shelf but no sales in your chosen number
+  of days.
 job: run-your-store
 headline: Dead stock finder
-subhead: Get products with stock on the shelf but no sales in your chosen number of days.
+subhead: A list of products you hold stock of that have not sold in a window you
+  choose, so you can see which money is sitting on shelves.
 explain: |
   A list of products you hold stock of that have not sold in a window you choose, so you can see which money is sitting on shelves. This is the first step before a clearance sale or a return to supplier.
 
@@ -26,6 +28,7 @@ you_get:
   - Vendor grouping
   - Data for clearance decisions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

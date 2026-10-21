@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies a fixed checklist to the code.
 new_slug: woocommerce-code-checker
 name: WooCommerce code checker
-summary: Give it new WooCommerce code. Get common AI mistakes caught, like broken order storage and missed checkout checks.
+summary: Give it new WooCommerce code. Get common AI mistakes caught, like
+  broken order storage and missed checkout checks.
 job: test-and-fix-code
 headline: WooCommerce code checker
-subhead: Give it new WooCommerce code. Get common AI mistakes caught, like broken order storage and missed checkout checks.
+subhead: A review pass that catches the mistakes AI makes in WooCommerce code
+  before they reach a live store. These errors can lose orders or open a
+  security hole where money is involved.
 explain: |
   A review pass that catches the mistakes AI makes in WooCommerce code before they reach a live store. These errors can lose orders or open a security hole where money is involved.
 
@@ -27,6 +30,7 @@ you_get:
   - Corrected code suggestions
   - Self-check before shipping
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

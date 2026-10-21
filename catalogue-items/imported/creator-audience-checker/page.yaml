@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs public signals to judge fit.
 new_slug: creator-audience-checker
 name: Creator audience checker
-summary: Give it a creator. Get who their audience is, where they live and if they fit a sponsorship. Collects data from websites.
+summary: Give it a creator. Get who their audience is, where they live and if
+  they fit a sponsorship. Collects data from websites.
 job: understand-customers
 headline: Creator audience checker
-subhead: Give it a creator. Get who their audience is, where they live and if they fit a sponsorship. Collects data from websites.
+subhead: "A fit check on a creator: who their audience is, where they live, what
+  language they use and whether a sponsorship makes sense. You decide before you
+  spend, using evidence from public pages."
 explain: |
   A fit check on a creator: who their audience is, where they live, what language they use and whether a sponsorship makes sense. You decide before you spend, using evidence from public pages.
 
@@ -27,6 +30,7 @@ you_get:
   - Sponsorship recommendation
   - What is still unknown
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your ScrapeCreators key.

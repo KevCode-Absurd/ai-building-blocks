@@ -1,0 +1,32 @@
+slug: copilot-react18-enzyme-to-rtl
+name: Enzyme test migration helper
+summary: Share your Enzyme tests. Get React Testing Library replacements suited to a React 18 upgrade.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/react18-enzyme-to-rtl
+  url: https://github.com/github/awesome-copilot/tree/main/skills/react18-enzyme-to-rtl
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: react18-enzyme-to-rtl
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: react18-enzyme-to-rtl skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/react18-enzyme-to-rtl
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

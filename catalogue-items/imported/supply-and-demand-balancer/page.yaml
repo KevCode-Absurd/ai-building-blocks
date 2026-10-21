@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It ranks orders against limited stock.
 new_slug: supply-and-demand-balancer
 name: Supply and demand balancer
-summary: Give it your stock and open orders. Get a plan to fill the right orders first when you cannot fill them all.
+summary: Give it your stock and open orders. Get a plan to fill the right orders
+  first when you cannot fill them all.
 job: plan-supply-chain
 headline: Supply and demand balancer
-subhead: Give it your stock and open orders. Get a plan to fill the right orders first when you cannot fill them all.
+subhead: Give it your stock and open orders. Get a plan to fill the right orders
+  first when you cannot fill them all. Bring stock on hand. Use the result to
+  plan your next step.
 explain: |
   When you cannot fill every order, a plan for who gets stock first. It makes the allocation fair, fast and easy to defend.
 
@@ -26,5 +29,6 @@ you_get:
   - A shortage report
   - Optimised allocation (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

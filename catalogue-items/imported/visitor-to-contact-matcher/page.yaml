@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Wrong matches mislead you, so it weighs each link with care.
 new_slug: visitor-to-contact-matcher
 name: Visitor to contact matcher
-summary: Give it your site visit records and contact list. Get anonymous visits linked to known contacts, with unclear links flagged.
+summary: Give it your site visit records and contact list. Get anonymous visits
+  linked to known contacts, with unclear links flagged.
 job: track-numbers
 headline: Visitor to contact matcher
-subhead: Give it your site visit records and contact list. Get anonymous visits linked to known contacts, with unclear links flagged.
+subhead: Anonymous website visits tied to the real contacts they belong to, with
+  doubtful matches flagged instead of guessed. You can then see which channels
+  brought in people you already know.
 explain: |
   Anonymous website visits tied to the real contacts they belong to, with doubtful matches flagged instead of guessed. You can then see which channels brought in people you already know.
 
@@ -26,6 +29,8 @@ you_get:
   - Cleaned and hashed identities
   - Notes on what the data cannot prove
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run Node code and read your own visit and contact data.
+  - It works best when your AI can run Node code and read your own visit and
+    contact data.

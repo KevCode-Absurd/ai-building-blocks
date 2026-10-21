@@ -1,0 +1,17 @@
+thinking: high
+thinking_why: It compares evidence and checks changes against the goal.
+new_slug: copilot-react18-batching-patterns
+name: React batching regression fixer
+summary: Share a React class component. Get fixes for state updates that break
+  under automatic batching.
+job: test-and-fix-code
+headline: React batching regression fixer
+subhead: Share a React class component. Get fixes for state updates that break
+  under automatic batching. Share your goal and the files you already have. The
+  skill file sets out the steps and the tools needed for this job.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read the files you provide and use the named
+    tools when the job requires them.

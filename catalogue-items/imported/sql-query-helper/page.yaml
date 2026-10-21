@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It writes and checks SQL against your schema.
 new_slug: sql-query-helper
 name: SQL query helper
-summary: Describe the data you need. Get a tested SQL query, a faster version, or a migration.
+summary: Describe the data you need. Get a tested SQL query, a faster version,
+  or a migration.
 job: build-software
 headline: SQL query helper
-subhead: Describe the data you need. Get a tested SQL query, a faster version, or a migration.
+subhead: A SQL query that has been written, tested or sped up, or a database
+  migration ready to run. Describe the data you need in plain words.
 explain: |
   A SQL query that has been written, tested or sped up, or a database migration ready to run. Describe the data you need in plain words. The skill turns nouns into tables, verbs into joins, conditions into filters, and words like total or latest into grouping and ordering.
 
@@ -27,6 +29,7 @@ you_get:
   - Schema documentation
   - ORM-friendly equivalents
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

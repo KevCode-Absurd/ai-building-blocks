@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It generates data from your schema by clear rules.
 new_slug: test-data-seeder
 name: Test data seeder
-summary: Describe your tables. Get realistic, repeatable test data loaded for development and staging.
+summary: Describe your tables. Get realistic, repeatable test data loaded for
+  development and staging.
 job: test-and-fix-code
 headline: Test data seeder
-subhead: Describe your tables. Get realistic, repeatable test data loaded for development and staging.
+subhead: Describe your tables. Get realistic, repeatable test data loaded for
+  development and staging. Bring your schema or migration files. Use the result
+  to plan your next step.
 explain: |
   Realistic test data loaded into your database, the same every time you run it, so development and staging stop depending on empty tables or a copy of real customers. Everything fits your schema and keeps its links intact.
 
@@ -27,6 +30,7 @@ you_get:
   - Data that respects your constraints
   - A check of row counts and links
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

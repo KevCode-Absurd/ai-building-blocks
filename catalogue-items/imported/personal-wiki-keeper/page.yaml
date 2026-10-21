@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads sources and updates linked notes.
 new_slug: personal-wiki-keeper
 name: Personal wiki keeper
-summary: Feed it sources. Get an Obsidian wiki that updates pages, links ideas and flags where sources disagree.
+summary: Feed it sources. Get an Obsidian wiki that updates pages, links ideas
+  and flags where sources disagree.
 job: organise-work
 headline: Personal wiki keeper
-subhead: Feed it sources. Get an Obsidian wiki that updates pages, links ideas and flags where sources disagree.
+subhead: A personal knowledge base that grows each time you feed it a source,
+  instead of starting over with every question. You end up with linked notes in
+  an Obsidian vault where connections and conflicts are already marked.
 explain: |
   A personal knowledge base that grows each time you feed it a source, instead of starting over with every question. You end up with linked notes in an Obsidian vault where connections and conflicts are already marked.
 
@@ -26,6 +29,7 @@ you_get:
   - Flags where sources disagree
   - Answers drawn from the wiki
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and write files in your vault.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs choices against what your project needs.
 new_slug: node-js-code-advisor
 name: Node.js code advisor
-summary: Describe your Node.js project. Get picks for framework, async style and structure, with the reasons.
+summary: Describe your Node.js project. Get picks for framework, async style and
+  structure, with the reasons.
 job: build-software
 headline: Node.js code advisor
-subhead: Describe your Node.js project. Get picks for framework, async style and structure, with the reasons.
+subhead: Choices for your Node.js project that fit your situation, with the
+  reasons, instead of one default for everyone. It teaches how to think about
+  the choice, so you can make the next one yourself.
 explain: |
   Choices for your Node.js project that fit your situation, with the reasons, instead of one default for everyone. It teaches how to think about the choice, so you can make the next one yourself.
 
@@ -26,5 +29,6 @@ you_get:
   - A comparison on speed and library support
   - Security and deployment points
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It reorders a plan while keeping coverage.
 new_slug: mixed-practice-unit-planner
 name: Mixed practice unit planner
-summary: Paste a topic order. Get a plan that mixes related topics through the unit for stronger recall.
+summary: Paste a topic order. Get a plan that mixes related topics through the
+  unit for stronger recall.
 job: teach-and-train
 headline: Mixed practice unit planner
-subhead: Paste a topic order. Get a plan that mixes related topics through the unit for stronger recall.
+subhead: A unit plan that mixes related topics through the weeks instead of
+  teaching each one in a block, so pupils remember more later. Paste your topic
+  order, subject and length, and get the reshuffled plan.
 explain: |
   A unit plan that mixes related topics through the weeks instead of teaching each one in a block, so pupils remember more later. Paste your topic order, subject and length, and get the reshuffled plan.
 
   Research shows that practising different but related kinds of problems together improves later recall, even though it feels harder in the moment. The plan keeps a short focused block of one or two lessons to teach each topic first. Mixing then starts with two topics and adds more as pupils cope. Hard prerequisites stay in order, and any set sequence from your school is respected, with deviations explained. Weaker groups can get gentler mixing.
 when:
-  - Your fractions unit goes addition, then subtraction, then multiplication, one block each.
+  - Your fractions unit goes addition, then subtraction, then multiplication,
+    one block each.
   - Pupils do well on the unit test and forget by the exam.
   - You are planning a 12-lesson unit over four weeks.
   - You need to keep a mandated order but still add mixing.
@@ -27,5 +31,6 @@ you_get:
   - How mixing builds up
   - Notes explaining any change to your order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

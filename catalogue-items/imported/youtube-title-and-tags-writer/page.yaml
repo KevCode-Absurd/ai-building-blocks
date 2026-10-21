@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a standard package from the topic.
 new_slug: youtube-title-and-tags-writer
 name: YouTube title and tags writer
-summary: Give it a video or podcast topic. Get title, description, tags and timestamps, or an audit of one that is stuck.
+summary: Give it a video or podcast topic. Get title, description, tags and
+  timestamps, or an audit of one that is stuck.
 job: get-found-in-search
 headline: YouTube title and tags writer
-subhead: Give it a video or podcast topic. Get title, description, tags and timestamps, or an audit of one that is stuck.
+subhead: Give it a video or podcast topic. Get title, description, tags and
+  timestamps, or an audit of one that is stuck. Bring the topic, transcript or
+  episode link. Use the result to plan your next step.
 explain: |
   A complete upload package for a video or podcast episode, or an audit of one that is stuck: title, description, tags, hashtags and timestamps.
 
@@ -26,5 +29,6 @@ you_get:
   - Timestamps or show notes
   - An audit scorecard for a stuck video
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

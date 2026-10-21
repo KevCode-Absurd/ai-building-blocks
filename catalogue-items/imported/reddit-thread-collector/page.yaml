@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fetches public posts and lists them.
 new_slug: reddit-thread-collector
 name: Reddit thread collector
-summary: Give it a topic or subreddit. Get posts and comments in a table you can study. Collects data from websites.
+summary: Give it a topic or subreddit. Get posts and comments in a table you can
+  study. Collects data from websites.
 job: understand-customers
 headline: Reddit thread collector
-subhead: Give it a topic or subreddit. Get posts and comments in a table you can study. Collects data from websites.
+subhead: Reddit posts and comments in a table you can sort and study, without
+  needing a Reddit API key. Ask for a topic, a subreddit or a user, and get
+  structured rows back.
 explain: |
   Reddit posts and comments in a table you can sort and study, without needing a Reddit API key. Ask for a topic, a subreddit or a user, and get structured rows back.
 
@@ -26,6 +29,7 @@ you_get:
   - Subreddit or user details
   - Export you can sort and filter
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Apify token.

@@ -2,18 +2,23 @@ thinking: low
 thinking_why: It maps accounts into standard statements.
 new_slug: financial-statement-preparer
 name: Financial statement preparer
-summary: Give it a trial balance. Get a balance sheet, income statement and cash flow statement.
+summary: Give it a trial balance. Get a balance sheet, income statement and cash
+  flow statement.
 job: money-and-investing
 headline: Financial statement preparer
-subhead: Give it a trial balance. Get a balance sheet, income statement and cash flow statement.
+subhead: A trial balance turns into a balance sheet, an income statement and a
+  cash flow statement that agree with each other. That matters at month end,
+  when the books must close and the numbers must tie.
 explain: |
   A trial balance turns into a balance sheet, an income statement and a cash flow statement that agree with each other. That matters at month end, when the books must close and the numbers must tie.
 
   It starts by checking that debits equal credits and that every account sits in the right class. Then it asks which reporting framework you use, such as IFRS or GAAP, and whether accruals and deferrals are booked. It maps each account to a statement line, builds the income statement, then the balance sheet, then the cash flow using the indirect method. Last, it confirms net income lands in retained earnings.
 when:
-  - You are closing the books and need financial statements from a raw trial balance.
+  - You are closing the books and need financial statements from a raw trial
+    balance.
   - Your trial balance may not balance and you want the errors found first.
-  - You need a cash flow statement and do not know how to build one from the other two.
+  - You need a cash flow statement and do not know how to build one from the
+    other two.
   - You must report under IFRS, GAAP or a tax basis and want the right layout.
 you_give:
   - Full trial balance
@@ -28,5 +33,6 @@ you_get:
   - List of balance and classification errors
   - Adjusting entries still needed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

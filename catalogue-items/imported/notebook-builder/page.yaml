@@ -5,7 +5,9 @@ name: Notebook builder
 summary: Say what to explore or teach. Get a clean Jupyter notebook, ready to run.
 job: work-with-files
 headline: Notebook builder
-subhead: Say what to explore or teach. Get a clean Jupyter notebook, ready to run.
+subhead: A clean Jupyter notebook, ready to run, for either an experiment or a
+  tutorial. It gives you a good starting structure so you spend time on the
+  work, not the layout.
 explain: |
   A clean Jupyter notebook, ready to run, for either an experiment or a tutorial. It gives you a good starting structure so you spend time on the work, not the layout.
 
@@ -26,6 +28,7 @@ you_get:
   - A reproducible, top to bottom flow
   - A tidied version of an old notebook (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

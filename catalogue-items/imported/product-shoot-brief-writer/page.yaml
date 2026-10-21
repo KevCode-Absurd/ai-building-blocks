@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It chooses shots by what research says helps sales.
 new_slug: product-shoot-brief-writer
 name: Product shoot brief writer
-summary: Tell it your product. Get a shot list for photos and video, with a reason for each shot.
+summary: Tell it your product. Get a shot list for photos and video, with a
+  reason for each shot.
 job: product-photos
 headline: Product shoot brief writer
-subhead: Tell it your product. Get a shot list for photos and video, with a reason for each shot.
+subhead: A shot list for photos and video where every shot has a reason behind
+  it. Instead of taste, the brief follows findings on what moves sales and
+  willingness to pay.
 explain: |
   A shot list for photos and video where every shot has a reason behind it. Instead of taste, the brief follows findings on what moves sales and willingness to pay.
 
@@ -26,5 +29,6 @@ you_get:
   - Pose and composition notes
   - A pick between candidate images
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

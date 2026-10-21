@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It reviews your design against known privacy rules.
 new_slug: privacy-first-app-designer
 name: Privacy-first app designer
-summary: "Describe the data your app collects. Get privacy controls designed in: less data kept, clear consent, safe storage."
+summary: "Describe the data your app collects. Get privacy controls designed in:
+  less data kept, clear consent, safe storage."
 job: secure-code
 headline: Privacy-first app designer
-subhead: "Describe the data your app collects. Get privacy controls designed in: less data kept, clear consent, safe storage."
+subhead: "Build privacy in from day one. Describe the data your app collects and
+  get a design that keeps less, asks for clear consent and stores data safely."
 explain: |
   Build privacy in from day one. Describe the data your app collects and get a design that keeps less, asks for clear consent and stores data safely.
 
@@ -26,5 +28,6 @@ you_get:
   - Storage and security measures
   - Pre-launch privacy checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

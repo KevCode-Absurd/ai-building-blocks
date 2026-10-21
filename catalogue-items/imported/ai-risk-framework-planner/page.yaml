@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows four fixed steps across your system.
 new_slug: ai-risk-framework-planner
 name: AI risk framework planner
-summary: Describe your AI system. Get risks mapped, measured and managed under the NIST AI framework, with a plan.
+summary: Describe your AI system. Get risks mapped, measured and managed under
+  the NIST AI framework, with a plan.
 job: check-contracts
 headline: AI risk framework planner
-subhead: Describe your AI system. Get risks mapped, measured and managed under the NIST AI framework, with a plan.
+subhead: Your AI system's risks, laid out under the NIST AI Risk Management
+  Framework, with owners and next steps. NIST is the US standards body, and the
+  framework is voluntary, so this is a way to organise your thinking, not a
+  compliance badge.
 explain: |
   Your AI system's risks, laid out under the NIST AI Risk Management Framework, with owners and next steps. NIST is the US standards body, and the framework is voluntary, so this is a way to organise your thinking, not a compliance badge.
 
@@ -26,5 +30,6 @@ you_get:
   - A prioritised action plan
   - Policy text you can paste and edit
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It fits a known model of roles and steps to your business.
 new_slug: outbound-sales-team-planner
 name: Outbound sales team planner
-summary: Describe your sales. Get roles, a lead flow and a repeatable outreach process for outbound B2B sales.
+summary: Describe your sales. Get roles, a lead flow and a repeatable outreach
+  process for outbound B2B sales.
 job: sell-and-negotiate
 headline: Outbound sales team planner
-subhead: Describe your sales. Get roles, a lead flow and a repeatable outreach process for outbound B2B sales.
+subhead: A setup where some people find leads and others close them, with an
+  outreach routine that makes next quarter's pipeline easier to predict. It
+  follows the Predictable Revenue method.
 explain: |
   A setup where some people find leads and others close them, with an outreach routine that makes next quarter's pipeline easier to predict. It follows the Predictable Revenue method.
 
@@ -26,5 +29,6 @@ you_get:
   - A lead flow and handoff plan
   - An outreach routine to repeat
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

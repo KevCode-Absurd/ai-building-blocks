@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs standard checks and lists the results.
 new_slug: dataset-profiler
 name: Dataset profiler
-summary: Give it a table or file. Get its shape, missing values, odd entries and which columns are worth analyzing.
+summary: Give it a table or file. Get its shape, missing values, odd entries and
+  which columns are worth analyzing.
 job: track-numbers
 headline: Dataset profiler
-subhead: Give it a table or file. Get its shape, missing values, odd entries and which columns are worth analyzing.
+subhead: "Know what is inside a table or file before you analyse it: its size,
+  its gaps and which columns are worth your time. This catches surprises that
+  would otherwise appear in your final numbers."
 explain: |
   Know what is inside a table or file before you analyse it: its size, its gaps and which columns are worth your time. This catches surprises that would otherwise appear in your final numbers.
 
@@ -26,6 +29,7 @@ you_get:
   - Duplicates and odd value list
   - Columns worth analysing
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

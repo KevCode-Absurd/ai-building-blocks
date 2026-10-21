@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs several searches and narrows them down.
 new_slug: slack-message-finder
 name: Slack message finder
-summary: Ask what was said and where. Get the right messages, files and people from your Slack, found with smart searches. Needs Slack.
+summary: Ask what was said and where. Get the right messages, files and people
+  from your Slack, found with smart searches. Needs Slack.
 job: organise-work
 headline: Slack message finder
-subhead: Ask what was said and where. Get the right messages, files and people from your Slack, found with smart searches. Needs Slack.
+subhead: The right Slack message, file or person, found without scrolling for an
+  hour. You ask in plain words, like "what was decided about the launch date?",
+  and the skill runs several searches and puts the answer together.
 explain: |
   The right Slack message, file or person, found without scrolling for an hour. You ask in plain words, like "what was decided about the launch date?", and the skill runs several searches and puts the answer together.
 
@@ -26,6 +29,7 @@ you_get:
   - Channels or people tied to the topic
   - A short summary of what was said
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can connect to your Slack account.

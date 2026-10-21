@@ -2,16 +2,21 @@ thinking: medium
 thinking_why: It scopes your size, then checks set safeguards.
 new_slug: security-safeguards-planner
 name: Security safeguards planner
-summary: Describe your setup and size. Get which CIS safeguards you need first, your gaps and a fix order.
+summary: Describe your setup and size. Get which CIS safeguards you need first,
+  your gaps and a fix order.
 job: secure-code
 headline: Security safeguards planner
-subhead: Describe your setup and size. Get which CIS safeguards you need first, your gaps and a fix order.
+subhead: "A short list of CIS safeguards your organisation should do first, the
+  gaps you have today, and the order to close them. It starts with the one
+  decision that matters most: which of three Implementation Groups you belong
+  to."
 explain: |
   A short list of CIS safeguards your organisation should do first, the gaps you have today, and the order to close them. It starts with the one decision that matters most: which of three Implementation Groups you belong to. Most small teams begin with IG1, 56 basic safeguards covering essential cyber hygiene.
 
   You describe your size, staff, data sensitivity and tools. The skill places you in a group, then produces a table with control, safeguard, current state, gap, priority and action. It cites the exact control and safeguard number each time. It can also map CIS controls to NIST, ISO or CMMC, and draft policies and procedures for a safeguard.
 when:
-  - You run a small company with little IT staff and need a clear security starting point.
+  - You run a small company with little IT staff and need a clear security
+    starting point.
   - You want to see which controls you lack before an audit.
   - Your client asks how you align with NIST and you use CIS.
   - You need a written policy for one safeguard, like software inventory.
@@ -27,5 +32,6 @@ you_get:
   - Policy drafts for chosen safeguards
   - Mappings to other frameworks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

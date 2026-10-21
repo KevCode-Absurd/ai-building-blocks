@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares your identity, voice and position, then ranks what to fix first.
 new_slug: brand-health-auditor
 name: Brand health auditor
-summary: Describe your brand as it is today. Get a clear diagnosis of what works and what is off, with ranked fixes.
+summary: Describe your brand as it is today. Get a clear diagnosis of what works
+  and what is off, with ranked fixes.
 job: brand-file
 headline: Brand health auditor
-subhead: Describe your brand as it is today. Get a clear diagnosis of what works and what is off, with ranked fixes.
+subhead: A clear read on how well your brand is working, with a score on each
+  area and fixes ranked by importance. You see what is solid, what is off and
+  what to repair first.
 explain: |
   A clear read on how well your brand is working, with a score on each area and fixes ranked by importance. You see what is solid, what is off and what to repair first.
 
@@ -26,5 +29,6 @@ you_get:
   - Ranked fixes
   - A short list of quick wins
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

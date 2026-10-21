@@ -2,17 +2,21 @@ thinking: medium
 thinking_why: It builds many linked parts from a clear description.
 new_slug: biology-model-builder
 name: Biology model builder
-summary: Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram.
+summary: Describe the reactions and species. Get a SimBiology model built in
+  code, with a clear diagram.
 job: build-software
 headline: Biology model builder
-subhead: Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram.
+subhead: Describe the reactions and species. Get a SimBiology model built in
+  code, with a clear diagram. Bring the species and reactions to model. Use the
+  result to plan your next step.
 explain: |
   Describe the species and reactions in your biological system, and get a working SimBiology model written as MATLAB code, with a diagram if you want one. You no longer need to click through the Model Builder by hand or guess function names.
 
   The skill covers compartments, species, reactions, parameters, rules, events, doses and variants. It loads helper scripts first, then builds the model in steps. It only opens the Model Builder app when you ask for a visual, or when you hand it a project file whose layout must be kept. Modifying an existing model works the same way. It needs MATLAB with SimBiology.
 when:
   - You have a set of reactions on paper and need them as a SimBiology model.
-  - You want to add a compartment, species or reaction to an existing model in code.
+  - You want to add a compartment, species or reaction to an existing model in
+    code.
   - You need a clean diagram of a model for a paper or a talk.
   - You are loading a saved project and must keep its diagram layout.
 you_give:
@@ -26,6 +30,7 @@ you_get:
   - A laid-out model diagram (optional)
   - A saved model file you can reopen
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with SimBiology.

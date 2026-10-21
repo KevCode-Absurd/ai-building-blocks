@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Numbers must tie and the notes must be right.
 new_slug: p-l-and-balance-sheet-writer
 name: P&L and balance sheet writer
-summary: Give it your books. Get an income statement, balance sheet or cash flow with big swings flagged. Review with an accountant.
+summary: Give it your books. Get an income statement, balance sheet or cash flow
+  with big swings flagged. Review with an accountant.
 job: track-numbers
 headline: P&L and balance sheet writer
-subhead: Give it your books. Get an income statement, balance sheet or cash flow with big swings flagged. Review with an accountant.
+subhead: Your income statement, balance sheet or cash flow built from your
+  books, with the prior period beside it and the big swings explained. It is
+  ready for review by your accountant.
 explain: |
   Your income statement, balance sheet or cash flow built from your books, with the prior period beside it and the big swings explained. It is ready for review by your accountant.
 
@@ -26,6 +29,7 @@ you_get:
   - Flagged large variances
   - Notes on adjustments to check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your accounting file.

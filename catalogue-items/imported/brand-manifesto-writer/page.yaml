@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It needs a strong point of view and careful word choice.
 new_slug: brand-manifesto-writer
 name: Brand manifesto writer
-summary: Say what your brand believes and fights for. Get a bold manifesto that rallies your team and customers.
+summary: Say what your brand believes and fights for. Get a bold manifesto that
+  rallies your team and customers.
 job: write-and-tell-stories
 headline: Brand manifesto writer
-subhead: Say what your brand believes and fights for. Get a bold manifesto that rallies your team and customers.
+subhead: A manifesto that says what your brand believes, what it fights against
+  and what it wants the world to look like. It gives your team and customers
+  something to rally around.
 explain: |
   A manifesto that says what your brand believes, what it fights against and what it wants the world to look like. It gives your team and customers something to rally around.
 
@@ -26,5 +29,6 @@ you_get:
   - An opening declaration
   - Tone matched to your choice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

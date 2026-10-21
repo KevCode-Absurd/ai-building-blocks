@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It looks up documents, then writes code that follows them.
 new_slug: docs-backed-coder
 name: Docs-backed coder
-summary: Name the framework you use. Get code checked against its official docs, with sources cited.
+summary: Name the framework you use. Get code checked against its official docs,
+  with sources cited.
 job: build-software
 headline: Docs-backed coder
-subhead: Name the framework you use. Get code checked against its official docs, with sources cited.
+subhead: Name the framework you use. Get code checked against its official docs,
+  with sources cited. Bring your framework and version. Use the result to plan
+  your next step.
 explain: |
   Code that follows your framework's official documentation, with the sources shown, so you are not relying on what the AI remembers about an old version.
 
@@ -26,6 +29,7 @@ you_get:
   - A note where several approaches exist
   - A check that the version matches
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web and read your project files.

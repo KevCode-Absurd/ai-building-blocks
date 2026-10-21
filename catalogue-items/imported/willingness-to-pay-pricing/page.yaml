@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Pricing depends on buyer value and many linked choices.
 new_slug: willingness-to-pay-pricing
 name: Willingness to pay pricing planner
-summary: Describe your product. Get a pricing survey, plan tiers and a price built on what buyers will actually pay.
+summary: Describe your product. Get a pricing survey, plan tiers and a price
+  built on what buyers will actually pay.
 job: set-prices
 headline: Willingness to pay pricing planner
-subhead: Describe your product. Get a pricing survey, plan tiers and a price built on what buyers will actually pay.
+subhead: A price and plan structure built on what buyers say they will pay, set
+  while your product is still changeable. Most new products miss revenue targets
+  because price came last.
 explain: |
   A price and plan structure built on what buyers say they will pay, set while your product is still changeable. Most new products miss revenue targets because price came last.
 
@@ -28,5 +31,6 @@ you_get:
   - Suggested price metric
   - Pricing score with next fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

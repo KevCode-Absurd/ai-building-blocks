@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It must trace real use of the code, then prove one claim.
 new_slug: change-impact-checker
 name: Change impact checker
-summary: Describe a code change. Get what it could break outside its own diff, and one proof it is safe.
+summary: Describe a code change. Get what it could break outside its own diff,
+  and one proof it is safe.
 job: test-and-fix-code
 headline: Change impact checker
-subhead: Describe a code change. Get what it could break outside its own diff, and one proof it is safe.
+subhead: Before you ship a change, you learn what it could break outside its own
+  diff, and you get one piece of proof that it is safe.
 explain: |
   Before you ship a change, you learn what it could break outside its own diff, and you get one piece of proof that it is safe. Describe the change and the skill goes past listing callers, which a search does in a second.
 
@@ -25,6 +27,7 @@ you_get:
   - One proof that the change is safe
   - A note on where checking stopped
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

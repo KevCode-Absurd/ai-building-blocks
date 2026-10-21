@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It spots known code smells and applies set fixes.
 new_slug: code-cleanup-planner
 name: Code cleanup planner
-summary: Point it at messy code. Get the problem spots named and cleaned up with proven patterns.
+summary: Point it at messy code. Get the problem spots named and cleaned up with
+  proven patterns.
 job: test-and-fix-code
 headline: Code cleanup planner
-subhead: Point it at messy code. Get the problem spots named and cleaned up with proven patterns.
+subhead: Messy code gets a short list of named problems and a safe order for
+  fixing them. The code ends up easier to read and change, and it still does the
+  same thing.
 explain: |
   Messy code gets a short list of named problems and a safe order for fixing them. The code ends up easier to read and change, and it still does the same thing.
 
@@ -25,6 +28,7 @@ you_get:
   - A safe order of steps
   - Tests run after each change
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

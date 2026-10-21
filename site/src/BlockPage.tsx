@@ -169,7 +169,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const isFlow = (kindOf(b) === "workflow" || isAgent) && b.steps.length > 0;
   // These coordinators choose branches and resume from saved state. Preserve
   // their governing skill when exporting or opening them in the canvas.
-  const keepCoordinator = ["find-your-saas-growth-channel", "find-your-business-growth-channel", "traction-research-agent", "traction-experiment-keeper"].includes(b.slug);
+  const keepCoordinator = b.type === "agent" || b.execution === "coordinator";
   const p = page ?? null;
   const give = p?.you_give?.length ? p.you_give : b.inputs.map((x) => x.type.replace(/_/g, " "));
   const get = p?.you_get?.length ? p.you_get : b.outputs.map((x) => x.type.replace(/_/g, " "));
@@ -190,7 +190,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const copySkill = async () => {
     if (!skill) return;
     await navigator.clipboard.writeText(withBusiness(skill, getBusiness())).catch(() => {});
-    toast(biz ? "Skill copied with your about-me file. Paste it into your AI." : "Skill copied. Paste it into your AI.");
+    toast(biz ? "Skill copied with your saved context. Paste it into your AI." : "Skill copied. Paste it into your AI.");
   };
 
   const has = (x?: unknown[]) => !!x && x.length > 0;
@@ -224,7 +224,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     <main className="bp" data-testid="block-page" data-slug={b.slug}>
       <Comments key={b.slug} slug={b.slug} name={b.name} also={oldNames} toast={toast} />
       {adding && <AddToFlow c={c} slug={b.slug} onClose={() => setAdding(false)} toast={toast} />}
-      {dl && dlOrder && <DownloadDialog name={dl.name} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} />}
+      {dl && dlOrder && <DownloadDialog name={dl.name} zip={zipName(dl.name)} needs={needsOf(c, dlOrder)} finals={finalOutputs(c, dl, dlOrder)} onDownload={getPack} onClose={() => setDl(null)} kind={isAgent ? "agent" : "workflow"} />}
       <header className="wrap bp-hero">
         <div className="bp-top">
           <Link to="/#library" className="back"><span aria-hidden="true">←</span> Library</Link>
@@ -256,9 +256,9 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         )}
         {renders && <MakeNote kind={renders} />}
         <div className="bp-actions">
-          {isFlow && !isAgent ? (
+          {isFlow ? (
             <>
-              <button className="btn btn-primary" onClick={handoff} data-testid="download-handoff">Download the workflow</button>
+              <button className="btn btn-primary" onClick={handoff} data-testid="download-handoff">{isAgent ? "Download the agent pack" : "Download the workflow"}</button>
               <button className="btn btn-dark" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map((s) => s.uses), b.name)}>Open in the builder</button>
             </>
           ) : (
@@ -377,7 +377,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
 
           {isFlow && (
-            <Section id="steps" title={isAgent ? "What it runs" : "The steps"} lead={isAgent ? "It runs these in order, reads each result, and decides what to do next. It stops and asks you before anything that spends, sends or goes live." : "Each step is a skill. It saves its result, and the next step picks it up."}>
+            <Section id="steps" title={isAgent ? "What it runs" : "The steps"} lead={isAgent ? "It chooses the skills needed for your goal and current state. The agent file sets the conditions, checks and action limits." : "Each step is a skill. It saves its result, and the next step picks it up."}>
               <ol className="flow-steps">
                 {b.steps.map((s, i) => {
                   const sb = c.bySlug[s.uses];
@@ -399,7 +399,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
           {(!isFlow || isAgent) && (
             <Section id="install" title="Add it to your AI once, then start it by name" lead="It takes about two minutes, once. Pick the AI you use.">
-              <Install b={b} skill={skill} toast={toast} />
+              {isAgent && isFlow ? <><p>The pack includes the agent, the skills it calls and your saved context. Unzip it, give the files to your AI and ask it to follow HANDOFF.md. It chooses the work needed for this run and keeps a record for the next one.</p><button className="btn btn-primary" onClick={handoff}>Get the complete agent pack</button></> : <Install b={b} skill={skill} toast={toast} />}
             </Section>
           )}
 

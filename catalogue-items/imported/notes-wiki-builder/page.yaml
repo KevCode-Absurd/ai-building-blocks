@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It decides what is worth keeping and where each fact goes.
 new_slug: notes-wiki-builder
 name: Notes wiki builder
-summary: Give it what you learned. Get small linked notes and an index, so your AI remembers it next time.
+summary: Give it what you learned. Get small linked notes and an index, so your
+  AI remembers it next time.
 job: organise-work
 headline: Notes wiki builder
-subhead: Give it what you learned. Get small linked notes and an index, so your AI remembers it next time.
+subhead: Your AI remembers what it learned. Instead of one giant notes file that
+  rots, you get small linked files and an index, so the next session finds the
+  fact without redoing the work.
 explain: |
   Your AI remembers what it learned. Instead of one giant notes file that rots, you get small linked files and an index, so the next session finds the fact without redoing the work.
 
@@ -25,6 +28,7 @@ you_get:
   - An updated index
   - Fewer duplicates
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and save files.

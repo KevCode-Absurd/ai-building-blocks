@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It tailors questions to the situation.
 new_slug: diligence-meeting-prep-writer
 name: Diligence meeting prep writer
-summary: Name the meeting and company. Get sharp questions, benchmarks and red flags to probe.
+summary: Name the meeting and company. Get sharp questions, benchmarks and red
+  flags to probe.
 job: money-and-investing
 headline: Diligence meeting prep writer
-subhead: Name the meeting and company. Get sharp questions, benchmarks and red flags to probe.
+subhead: A question list for a diligence meeting, ordered by priority, with the
+  red flags to probe. You walk in knowing what to ask and what a weak answer
+  sounds like.
 explain: |
   A question list for a diligence meeting, ordered by priority, with the red flags to probe. You walk in knowing what to ask and what a weak answer sounds like.
 
@@ -27,5 +30,6 @@ you_get:
   - Red flags to listen for
   - Follow-up probes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,45 @@
+slug: prepare-an-enterprise-account-plan
+name: Prepare an enterprise account plan
+summary: Share a target account and product. Get buyer roles, deal risks and a
+  customer onboarding plan.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-gtm-enterprise-account-planning
+  - copilot-gtm-enterprise-onboarding
+steps:
+  - uses: copilot-gtm-enterprise-account-planning
+    note: 1. Read skills/copilot-gtm-enterprise-account-planning/SKILL.md. Share an
+      account and deal context. Get buyer roles, deal risks and next steps for a
+      complex sale. Save the result with source references. Carry the user's
+      goal and all earlier findings into this step. If required evidence or tool
+      access is missing, mark this step blocked; do not fabricate a result.
+  - uses: copilot-gtm-enterprise-onboarding
+    note: 2. Read skills/copilot-gtm-enterprise-onboarding/SKILL.md. Share a signed
+      customer and success goals. Get onboarding stages, owners and checks for
+      reaching first value. Save the result with source references. Carry the
+      user's goal and all earlier findings into this step. If required evidence
+      or tool access is missing, mark this step blocked; do not fabricate a
+      result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

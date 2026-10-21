@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes and runs code, then fixes what breaks.
 new_slug: browser-automation-scripter
 name: Browser automation scripter
-summary: Say what to do in a web browser. Get Playwright code written and run for it, with results and screenshots.
+summary: Say what to do in a web browser. Get Playwright code written and run
+  for it, with results and screenshots.
 job: test-and-fix-code
 headline: Browser automation scripter
-subhead: Say what to do in a web browser. Get Playwright code written and run for it, with results and screenshots.
+subhead: Say what you want done in a web browser and get working Playwright
+  code, run for you, with the results and screenshots. Good for checking a site,
+  filling forms or testing a page.
 explain: |
   Say what you want done in a web browser and get working Playwright code, run for you, with the results and screenshots. Good for checking a site, filling forms or testing a page.
 
@@ -25,6 +28,7 @@ you_get:
   - A report of what happened
   - Screenshots of the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

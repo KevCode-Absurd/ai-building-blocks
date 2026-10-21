@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It looks up the official page and reports it.
 new_slug: matlab-docs-lookup-helper
 name: MATLAB docs lookup helper
-summary: Ask how a MATLAB function works. Get the right syntax from the official docs, with fewer wrong guesses.
+summary: Ask how a MATLAB function works. Get the right syntax from the official
+  docs, with fewer wrong guesses.
 job: build-software
 headline: MATLAB docs lookup helper
-subhead: Ask how a MATLAB function works. Get the right syntax from the official docs, with fewer wrong guesses.
+subhead: The right MATLAB syntax, taken from the official MathWorks pages,
+  instead of a function call that is almost right. Ask how a function works and
+  it finds the page that answers it.
 explain: |
   The right MATLAB syntax, taken from the official MathWorks pages, instead of a function call that is almost right. Ask how a function works and it finds the page that answers it.
 
@@ -25,6 +28,7 @@ you_get:
   - Links to the pages used
   - Notes on release changes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB and read web pages.

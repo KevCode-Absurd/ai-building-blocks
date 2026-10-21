@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It uses a few set viewer functions.
 new_slug: image-viewer-builder
 name: Image viewer builder
-summary: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB.
+summary: Give it images and regions to mark. Get a viewer with overlays and
+  masks in MATLAB.
 job: build-software
 headline: Image viewer builder
-subhead: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB.
+subhead: Give it images and regions to mark. Get a viewer with overlays and
+  masks in MATLAB. Bring your images or label data. Use the result to plan your
+  next step.
 explain: |
   A MATLAB viewer where you can zoom into an image, draw regions on it and lay coloured masks over it, without building the plumbing yourself. It needs MATLAB with the Image Processing Toolbox.
 
@@ -26,6 +29,7 @@ you_get:
   - Drawing tools for regions
   - Linked views for comparing images
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the Image Processing Toolbox.

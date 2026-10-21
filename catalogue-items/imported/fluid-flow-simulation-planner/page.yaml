@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Numerical settings can silently give wrong physics.
 new_slug: fluid-flow-simulation-planner
 name: Fluid flow simulation planner
-summary: Describe a flow to model. Get a checked solver setup, run plan and analysis of the results.
+summary: Describe a flow to model. Get a checked solver setup, run plan and
+  analysis of the results.
 job: research-topics
 headline: Fluid flow simulation planner
-subhead: Describe a flow to model. Get a checked solver setup, run plan and analysis of the results.
+subhead: A checked setup for a fluid flow simulation, a run plan with strict
+  limits, and a review of the results. It stops a finished run from being
+  mistaken for a correct one.
 explain: |
   A checked setup for a fluid flow simulation, a run plan with strict limits, and a review of the results. It stops a finished run from being mistaken for a correct one.
 
@@ -28,6 +31,7 @@ you_get:
   - Grid and time step study
   - Record of versions, settings and outputs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and use computing power.

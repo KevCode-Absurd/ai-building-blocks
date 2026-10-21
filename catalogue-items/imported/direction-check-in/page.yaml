@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It questions its own thinking in the middle of work.
 new_slug: direction-check-in
 name: Direction check-in
-summary: Ask it to pause. Get an honest look at your direction, assumptions and bias before you go on.
+summary: Ask it to pause. Get an honest look at your direction, assumptions and
+  bias before you go on.
 job: think-and-decide
 headline: Direction check-in
-subhead: Ask it to pause. Get an honest look at your direction, assumptions and bias before you go on.
+subhead: A pause in the middle of a long chat, when you want an honest look at
+  whether you are heading the right way. It tells you what the conversation has
+  actually been building and what you may have missed.
 explain: |
   A pause in the middle of a long chat, when you want an honest look at whether you are heading the right way. It tells you what the conversation has actually been building and what you may have missed.
 
@@ -25,5 +28,6 @@ you_get:
   - Possible bias or tunnel vision
   - Options for what to do next
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

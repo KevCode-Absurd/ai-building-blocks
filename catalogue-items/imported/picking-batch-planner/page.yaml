@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Grouping orders well needs careful math.
 new_slug: picking-batch-planner
 name: Picking batch planner
-summary: Give it a day of orders. Get groups to pick together so pickers walk less, with the expected distance saved.
+summary: Give it a day of orders. Get groups to pick together so pickers walk
+  less, with the expected distance saved.
 job: plan-supply-chain
 headline: Picking batch planner
-subhead: Give it a day of orders. Get groups to pick together so pickers walk less, with the expected distance saved.
+subhead: Group a day of orders so pickers pick them together and walk less, with
+  the expected distance saved. Fewer trips mean faster orders and lower labour
+  cost.
 explain: |
   Group a day of orders so pickers pick them together and walk less, with the expected distance saved. Fewer trips mean faster orders and lower labour cost.
 
@@ -26,6 +29,7 @@ you_get:
   - Sort steps after picking
   - Risks such as mispicks flagged
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

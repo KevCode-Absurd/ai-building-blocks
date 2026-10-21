@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It joins several sensor sources into one scene.
 new_slug: driving-scenario-builder
 name: Driving scenario builder
-summary: Give it recorded sensor data. Get a virtual driving scene with roads, vehicles and paths built from it.
+summary: Give it recorded sensor data. Get a virtual driving scene with roads,
+  vehicles and paths built from it.
 job: build-software
 headline: Driving scenario builder
-subhead: Give it recorded sensor data. Get a virtual driving scene with roads, vehicles and paths built from it.
+subhead: A simulation-ready driving scene, built from real drives instead of
+  drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and
+  you get roads, other vehicles and their paths that a simulator can replay.
 explain: |
   A simulation-ready driving scene, built from real drives instead of drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and you get roads, other vehicles and their paths that a simulator can replay.
 
@@ -26,6 +29,7 @@ you_get:
   - Extracted critical events from the drive
   - Road surface or map additions (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Scenario Builder.

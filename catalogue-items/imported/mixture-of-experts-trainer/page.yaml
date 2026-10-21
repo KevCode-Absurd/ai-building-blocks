@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Routing and balancing experts is hard to get right.
 new_slug: mixture-of-experts-trainer
 name: Mixture of experts trainer
-summary: Name your compute budget and goal. Get code to train a large model that only uses part of itself per word.
+summary: Name your compute budget and goal. Get code to train a large model that
+  only uses part of itself per word.
 job: build-software
 headline: Mixture of experts trainer
-subhead: Name your compute budget and goal. Get code to train a large model that only uses part of itself per word.
+subhead: Name your compute budget and goal. Get code to train a large model that
+  only uses part of itself per word. Bring your compute budget and GPUs. Use the
+  result to plan your next step.
 explain: |
   Code to train a large language model that uses only part of itself for each token, so you get more capacity for the same compute. Give your compute budget and goal and you get a working setup, not just theory.
 
@@ -26,6 +29,7 @@ you_get:
   - Install steps
   - Guidance on expert and router settings
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on several GPUs.

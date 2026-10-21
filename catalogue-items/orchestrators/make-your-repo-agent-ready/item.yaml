@@ -1,0 +1,52 @@
+slug: make-your-repo-agent-ready
+name: Make your repo agent ready
+summary: Share your repo. Get a readiness dashboard, agreed scoring rules and
+  project instructions for coding agents.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-acreadiness-assess
+  - copilot-acreadiness-policy
+  - copilot-acreadiness-generate-instructions
+steps:
+  - uses: copilot-acreadiness-assess
+    note: 1. Read skills/copilot-acreadiness-assess/SKILL.md. Point it at your repo.
+      Get a dashboard showing what stops coding agents from working well. Save
+      the result with source references. Carry the user's goal and all earlier
+      findings into this step. If required evidence or tool access is missing,
+      mark this step blocked; do not fabricate a result.
+  - uses: copilot-acreadiness-policy
+    note: 2. Read skills/copilot-acreadiness-policy/SKILL.md. Share your repo's
+      needs. Get scoring rules that fit the project and show which checks
+      matter. Save the result with source references. Carry the user's goal and
+      all earlier findings into this step. If required evidence or tool access
+      is missing, mark this step blocked; do not fabricate a result.
+  - uses: copilot-acreadiness-generate-instructions
+    note: 3. Read skills/copilot-acreadiness-generate-instructions/SKILL.md. Point
+      it at your repo. Get project rules for coding agents, with a preview
+      before files change. Save the result with source references. Carry the
+      user's goal and all earlier findings into this step. If required evidence
+      or tool access is missing, mark this step blocked; do not fabricate a
+      result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

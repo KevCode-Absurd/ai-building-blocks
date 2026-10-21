@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs risk signs against dates and value.
 new_slug: renewal-watch-planner
 name: Renewal watch planner
-summary: Ask what is renewing. Get upcoming renewals with timing, risk and room to raise the price.
+summary: Ask what is renewing. Get upcoming renewals with timing, risk and room
+  to raise the price.
 job: sell-and-negotiate
 headline: Renewal watch planner
-subhead: Ask what is renewing. Get upcoming renewals with timing, risk and room to raise the price.
+subhead: A list of renewals coming up, sorted by timing and risk, with a read on
+  how much room you have to raise the price. A renewal you plan at ninety days
+  out is a conversation.
 explain: |
   A list of renewals coming up, sorted by timing and risk, with a read on how much room you have to raise the price. A renewal you plan at ninety days out is a conversation. One you notice at two weeks is a discount.
 
@@ -26,6 +29,7 @@ you_get:
   - Price uplift estimates
   - Prep actions for each renewal
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your CRM, email and calendar.

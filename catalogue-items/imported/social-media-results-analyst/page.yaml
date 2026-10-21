@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs set calculations on your numbers.
 new_slug: social-media-results-analyst
 name: Social media results analyst
-summary: Give it your post numbers. Get engagement rates, ROI and platform benchmarks, plus what to post next.
+summary: Give it your post numbers. Get engagement rates, ROI and platform
+  benchmarks, plus what to post next.
 job: grow-social
 headline: Social media results analyst
-subhead: Give it your post numbers. Get engagement rates, ROI and platform benchmarks, plus what to post next.
+subhead: Your post numbers turned into engagement rates, return on spend and a
+  comparison with platform norms, plus ideas on what to post next. You give your
+  figures, and the skill does the maths.
 explain: |
   Your post numbers turned into engagement rates, return on spend and a comparison with platform norms, plus ideas on what to post next. You give your figures, and the skill does the maths.
 
@@ -26,6 +29,7 @@ you_get:
   - Comparison with platform benchmarks
   - Top and bottom posts and what to do next
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your files.

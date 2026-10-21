@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It asks a few questions, then fills a strict format.
 new_slug: api-spec-writer
 name: API spec writer
-summary: Describe your API or paste its code. Get a complete OpenAPI or Swagger spec ready for docs and SDKs.
+summary: Describe your API or paste its code. Get a complete OpenAPI or Swagger
+  spec ready for docs and SDKs.
 job: build-software
 headline: API spec writer
-subhead: Describe your API or paste its code. Get a complete OpenAPI or Swagger spec ready for docs and SDKs.
+subhead: A full, valid OpenAPI or Swagger file for your API, ready to feed your
+  docs and client libraries. Describe the API in words, or paste your route
+  code, and the file is written for you with no placeholders left.
 explain: |
   A full, valid OpenAPI or Swagger file for your API, ready to feed your docs and client libraries. Describe the API in words, or paste your route code, and the file is written for you with no placeholders left.
 
@@ -26,5 +29,6 @@ you_get:
   - Security setup
   - Reusable data schemas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

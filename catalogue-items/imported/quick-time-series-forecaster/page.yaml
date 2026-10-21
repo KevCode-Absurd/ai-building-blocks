@@ -2,10 +2,13 @@ thinking: low
 thinking_why: A pre-trained model does the forecast, so little judgment is needed.
 new_slug: quick-time-series-forecaster
 name: Quick time series forecaster
-summary: Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
+summary: Give it a CSV of past values. Get a forecast with ranges and a test on
+  held-back data, with no model training.
 job: track-numbers
 headline: Quick time series forecaster
-subhead: Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
+subhead: A forecast of your numbers with ranges around it, tested against data
+  you held back, and no model training. You give it a CSV of past values and see
+  how well it would have predicted what you already know.
 explain: |
   A forecast of your numbers with ranges around it, tested against data you held back, and no model training. You give it a CSV of past values and see how well it would have predicted what you already know.
 
@@ -26,6 +29,7 @@ you_get:
   - Cleaned time series
   - Chart of past and predicted values
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and download a model.

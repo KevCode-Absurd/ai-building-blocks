@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It sorts your setup, then applies set rules.
 new_slug: card-payment-security-checker
 name: Card payment security checker
-summary: Describe how you take card payments. Get your PCI level, the right self-check form and gaps to fix.
+summary: Describe how you take card payments. Get your PCI level, the right
+  self-check form and gaps to fix.
 job: check-contracts
 headline: Card payment security checker
-subhead: Describe how you take card payments. Get your PCI level, the right self-check form and gaps to fix.
+subhead: Your card payment setup is checked against the PCI standard so you know
+  your level, the right self-assessment form, and the gaps to fix. Describe how
+  you take cards, such as online checkout, in person or by phone, and you get a
+  clear route.
 explain: |
   Your card payment setup is checked against the PCI standard so you know your level, the right self-assessment form, and the gaps to fix. Describe how you take cards, such as online checkout, in person or by phone, and you get a clear route.
 
@@ -27,5 +31,6 @@ you_get:
   - A scope of in-scope systems
   - A fix plan with owners and dates
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

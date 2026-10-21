@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set copy method and fits each site's limits.
 new_slug: product-listing-writer
 name: Product listing writer
-summary: Give it your product facts. Get a title, bullets and description built for the marketplace you sell on.
+summary: Give it your product facts. Get a title, bullets and description built
+  for the marketplace you sell on.
 job: write-landing-page
 headline: Product listing writer
-subhead: Give it your product facts. Get a title, bullets and description built for the marketplace you sell on.
+subhead: Give it your product facts. Get a title, bullets and description built
+  for the marketplace you sell on. Bring product specs and features. Use the
+  result to plan your next step.
 explain: |
   A marketplace-ready listing: title, bullet points, description and hidden search keywords, written for the platform you sell on. It avoids guessing by scoring keywords and checking what competitors do.
 
@@ -27,6 +30,7 @@ you_get:
   - Backend search keywords
   - A keyword gap report when optimising
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open web pages.

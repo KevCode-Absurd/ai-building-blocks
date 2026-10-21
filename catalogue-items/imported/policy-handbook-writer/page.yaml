@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Policies need care and local checks by a lawyer.
 new_slug: policy-handbook-writer
 name: Workplace policy and handbook writer
-summary: Name your country and company size. Get handbook sections, a harassment policy and a privacy policy. Not legal advice.
+summary: Name your country and company size. Get handbook sections, a harassment
+  policy and a privacy policy. Not legal advice.
 job: hire-people
 headline: Workplace policy and handbook writer
-subhead: Name your country and company size. Get handbook sections, a harassment policy and a privacy policy. Not legal advice.
+subhead: Name your country and company size. Get handbook sections, a harassment
+  policy and a privacy policy. Not legal advice. Bring country or region. Use
+  the result to plan your next step.
 explain: |
   Draft workplace policies that fit your country and company size, ready for a lawyer to check. You get handbook sections, a harassment prevention policy, a privacy policy and similar documents, written in plain language.
 
@@ -26,5 +29,6 @@ you_get:
   - Privacy policy for staff data
   - List of points to check with a lawyer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

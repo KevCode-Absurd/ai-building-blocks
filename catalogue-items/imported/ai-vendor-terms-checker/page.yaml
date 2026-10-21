@@ -2,16 +2,20 @@ thinking: high
 thinking_why: The risky wording is easy to miss.
 new_slug: ai-vendor-terms-checker
 name: AI vendor terms checker
-summary: Give it an AI tool's terms or addendum. Get data-training, liability and model-change risks flagged. A first check, not legal advice.
+summary: Give it an AI tool's terms or addendum. Get data-training, liability
+  and model-change risks flagged. A first check, not legal advice.
 job: check-contracts
 headline: AI vendor terms checker
-subhead: Give it an AI tool's terms or addendum. Get data-training, liability and model-change risks flagged. A first check, not legal advice.
+subhead: Spot the risky clauses in an AI vendor's contract before you sign. You
+  get the key issues first, then a clause by clause review and suggested wording
+  changes.
 explain: |
   Spot the risky clauses in an AI vendor's contract before you sign. You get the key issues first, then a clause by clause review and suggested wording changes. It is a first pass and is not legal advice.
 
   You supply the AI addendum, the main agreement or the terms of service. It checks whether your inputs can be used to train the vendor's models, how confidential your data stays, what happens when the vendor changes the model, who owns outputs, liability limits, incident notice, your right to human review, and use limits. It also compares the terms with your own AI policy and notes where they disagree. A missing AI addendum is flagged.
 when:
-  - You are about to sign with an AI tool and want to know what you are agreeing to.
+  - You are about to sign with an AI tool and want to know what you are agreeing
+    to.
   - A vendor's terms bury the data-training rules and you cannot find them.
   - You want to see where their terms break your own AI policy.
   - You need redline suggestions to send to the vendor.
@@ -25,6 +29,9 @@ you_get:
   - Suggested redlines
   - What to do if the vendor will not change the terms
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - Where the skill points to /ai-governance-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /ai-governance-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

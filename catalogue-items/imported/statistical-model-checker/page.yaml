@@ -2,17 +2,22 @@ thinking: high
 thinking_why: Reading model warning signs correctly takes real statistical judgement.
 new_slug: statistical-model-checker
 name: Statistical model checker
-summary: Give it a fitted Bayesian model. Learn if you can trust its results, and where it breaks, in plain words.
+summary: Give it a fitted Bayesian model. Learn if you can trust its results,
+  and where it breaks, in plain words.
 job: track-numbers
 headline: Statistical model checker
-subhead: Give it a fitted Bayesian model. Learn if you can trust its results, and where it breaks, in plain words.
+subhead: "Before you quote a Bayesian model's results, you learn whether they
+  deserve trust. The check covers three separate questions: did the sampling run
+  properly, does the model predict data like yours, and do its conclusions make
+  sense for the claim you want to make."
 explain: |
   Before you quote a Bayesian model's results, you learn whether they deserve trust. The check covers three separate questions: did the sampling run properly, does the model predict data like yours, and do its conclusions make sense for the claim you want to make.
 
   It counts divergences, reads R-hat and effective sample size, and looks at trace and rank plots for stuck chains. It then compares simulated data to real data, runs leave-one-out checks and flags unreliable points. It warns against common slips, such as treating comparison weights as probabilities. It works with ArviZ output, so you need Python and a fitted model.
 when:
   - Your sampler reported divergences and you do not know if they matter.
-  - You must pick between two models and want a fair comparison with honest uncertainty.
+  - You must pick between two models and want a fair comparison with honest
+    uncertainty.
   - A reviewer asks whether your posterior results are reliable.
   - Your model fits the data it saw but you doubt it predicts new groups.
 you_give:
@@ -27,6 +32,8 @@ you_get:
   - Likely causes of problems and what to try
   - A plain-words verdict on what you can claim
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run Python code and read your saved model results.
+  - It works best when your AI can run Python code and read your saved model
+    results.

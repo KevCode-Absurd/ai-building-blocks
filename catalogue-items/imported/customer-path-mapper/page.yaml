@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a standard journey layout from your description.
 new_slug: customer-path-mapper
 name: Customer path mapper
-summary: Describe your product and customer. Get a stage by stage map with feelings, pain points and fixes.
+summary: Describe your product and customer. Get a stage by stage map with
+  feelings, pain points and fixes.
 job: understand-customers
 headline: Customer path mapper
-subhead: Describe your product and customer. Get a stage by stage map with feelings, pain points and fixes.
+subhead: See your product through the buyer's eyes, from first hearing about it
+  to telling a friend. Describe your product and customer and you get a stage by
+  stage map with what they feel, where they get stuck and what to fix.
 explain: |
   See your product through the buyer's eyes, from first hearing about it to telling a friend. Describe your product and customer and you get a stage by stage map with what they feel, where they get stuck and what to fix.
 
@@ -25,5 +28,6 @@ you_get:
   - Pain points
   - Improvement ideas for each stage
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

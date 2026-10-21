@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It uses set statistics and a fixed plan format.
 new_slug: product-experiment-designer
 name: Product experiment designer
-summary: Give it an idea to test. Get a clear hypothesis, sample size, test plan and how to read the result.
+summary: Give it an idea to test. Get a clear hypothesis, sample size, test plan
+  and how to read the result.
 job: test-an-idea
 headline: Product experiment designer
-subhead: Give it an idea to test. Get a clear hypothesis, sample size, test plan and how to read the result.
+subhead: "A test plan you can run and trust: a clear hypothesis, the right
+  sample size, and rules for when to stop and how to read the result."
 explain: |
   A test plan you can run and trust: a clear hypothesis, the right sample size, and rules for when to stop and how to read the result. It keeps you from calling a winner too early.
 
@@ -27,6 +29,7 @@ you_get:
   - ICE ranking of test ideas
   - A plain reading of the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

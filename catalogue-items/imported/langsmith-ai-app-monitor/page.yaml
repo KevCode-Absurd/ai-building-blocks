@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads traces and finds what went wrong.
 new_slug: langsmith-ai-app-monitor
 name: LangSmith AI app monitor
-summary: Give it your AI app. Get traces, test sets and scores so you can find bad answers before users do.
+summary: Give it your AI app. Get traces, test sets and scores so you can find
+  bad answers before users do.
 job: build-software
 headline: LangSmith AI app monitor
-subhead: Give it your AI app. Get traces, test sets and scores so you can find bad answers before users do.
+subhead: A way to see what your AI app really did, so bad answers show up in a
+  report before a user complains. Add LangSmith tracing to your app and every
+  model call is recorded with its input, output, delay and token cost.
 explain: |
   A way to see what your AI app really did, so bad answers show up in a report before a user complains. Add LangSmith tracing to your app and every model call is recorded with its input, output, delay and token cost. You can then turn good and bad traces into a test set.
 
@@ -26,6 +29,8 @@ you_get:
   - Scoring checks you can rerun
   - Monitoring for errors, speed and cost
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run Python code and use a LangSmith account (paid beyond the free plan).
+  - It works best when your AI can run Python code and use a LangSmith account
+    (paid beyond the free plan).

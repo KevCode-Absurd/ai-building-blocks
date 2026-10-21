@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies a long rule set but each rule is checkable.
 new_slug: agent-friendly-cli-designer
 name: Agent-friendly CLI designer
-summary: Describe your command-line tool. Get rules and a check so AI agents can run it safely with clean output.
+summary: Describe your command-line tool. Get rules and a check so AI agents can
+  run it safely with clean output.
 job: build-software
 headline: Agent-friendly CLI designer
-subhead: Describe your command-line tool. Get rules and a check so AI agents can run it safely with clean output.
+subhead: Your command-line tool, reshaped so an AI agent can run it without
+  breaking things. You get a clear rule set and a way to check each rule, so you
+  know what is already safe and what still needs work.
 explain: |
   Your command-line tool, reshaped so an AI agent can run it without breaking things. You get a clear rule set and a way to check each rule, so you know what is already safe and what still needs work.
 
@@ -14,7 +17,8 @@ when:
   - You are building a command-line tool that scripts or AI agents will call.
   - An agent keeps misreading your tool's messy text output.
   - You want to check an existing tool against a clear list of safety rules.
-  - You need agents to be blocked from destructive commands unless a person confirms.
+  - You need agents to be blocked from destructive commands unless a person
+    confirms.
 you_give:
   - A description or the help text of your command-line tool
   - The commands that change or delete things
@@ -26,5 +30,6 @@ you_get:
   - Examples of clean JSON output and error messages
   - A pass or fail check you can run again later
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

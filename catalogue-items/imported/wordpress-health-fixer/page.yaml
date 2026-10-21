@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts issues by risk and writes steps.
 new_slug: wordpress-health-fixer
 name: WordPress health fixer
-summary: Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.
+summary: Paste your WordPress Site Health report. Get a ranked, backup-first fix
+  plan with exact commands.
 job: build-websites
 headline: WordPress health fixer
-subhead: Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.
+subhead: A ranked fix plan for your WordPress Site Health screen, with backups
+  first and exact commands for each step. You stop staring at a long list of
+  warnings and start closing them in a safe order.
 explain: |
   A ranked fix plan for your WordPress Site Health screen, with backups first and exact commands for each step. You stop staring at a long list of warnings and start closing them in a safe order.
 
@@ -27,5 +30,6 @@ you_get:
   - Code changes to make
   - Handoff list for risky fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It converts text into a page with set parts.
 new_slug: code-review-page-maker
 name: Code review page maker
-summary: Give it a markdown code review. Get one HTML page with severity tags and diffs that are easy to read.
+summary: Give it a markdown code review. Get one HTML page with severity tags
+  and diffs that are easy to read.
 job: work-with-files
 headline: Code review page maker
-subhead: Give it a markdown code review. Get one HTML page with severity tags and diffs that are easy to read.
+subhead: A markdown code review becomes one HTML page that is easy to scan. You
+  get a jump menu, diffs on one side, comments on the other, severity tags such
+  as blocker and major, and the reviewer named at the bottom.
 explain: |
   A markdown code review becomes one HTML page that is easy to scan. You get a jump menu, diffs on one side, comments on the other, severity tags such as blocker and major, and the reviewer named at the bottom.
 
@@ -25,6 +28,7 @@ you_get:
   - Severity tags
   - A jump menu
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

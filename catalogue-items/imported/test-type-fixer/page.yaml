@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It repeats one clear change across files.
 new_slug: test-type-fixer
 name: Test type fixer
-summary: Point it at your tests. Get unsafe type casts swapped for shoehorn so test data stays typed.
+summary: Point it at your tests. Get unsafe type casts swapped for shoehorn so
+  test data stays typed.
 job: test-and-fix-code
 headline: Test type fixer
-subhead: Point it at your tests. Get unsafe type casts swapped for shoehorn so test data stays typed.
+subhead: Test files full of "as" casts hide type mistakes and force you to fake
+  every field of a big object. This skill swaps those casts for the shoehorn
+  library, so your tests pass only the data they care about and TypeScript still
+  checks it.
 explain: |
   Test files full of "as" casts hide type mistakes and force you to fake every field of a big object. This skill swaps those casts for the shoehorn library, so your tests pass only the data they care about and TypeScript still checks it.
 
@@ -25,6 +29,7 @@ you_get:
   - A passing type check
   - A note on any case left as is
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

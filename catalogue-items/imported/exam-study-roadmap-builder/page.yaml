@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It ranks topics by weight and likelihood.
 new_slug: exam-study-roadmap-builder
 name: Exam study roadmap builder
-summary: Give it your syllabus, past papers or notes. Get a ranked roadmap of what to study first for the best score.
+summary: Give it your syllabus, past papers or notes. Get a ranked roadmap of
+  what to study first for the best score.
 job: think-and-decide
 headline: Exam study roadmap builder
-subhead: Give it your syllabus, past papers or notes. Get a ranked roadmap of what to study first for the best score.
+subhead: Give it your syllabus, past papers or notes. Get a ranked roadmap of
+  what to study first for the best score. Bring syllabus, past papers or notes.
+  Use the result to plan your next step.
 explain: |
   A ranked plan of what to study first for the most marks, built from your own syllabus, past papers or notes.
 
@@ -14,7 +17,8 @@ when:
   - Your exam is close and you do not know where to start.
   - You have several years of past papers and want to see what repeats.
   - You need a plan for a set number of hours, from two to many days.
-  - You want flashcards or practice for one question type, such as MCQs or numericals.
+  - You want flashcards or practice for one question type, such as MCQs or
+    numericals.
 you_give:
   - Syllabus, past papers or notes
   - Subject and course code
@@ -27,5 +31,6 @@ you_get:
   - Flashcards or practice questions
   - Flags for out-of-syllabus items
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

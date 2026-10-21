@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It designs tools, a server and a widget that must work together.
 new_slug: chatgpt-app-builder
 name: ChatGPT app builder
-summary: Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
+summary: Describe the tool you want inside ChatGPT. Get a working Apps SDK
+  project with its server and screen.
 job: connect-tools
 headline: ChatGPT app builder
-subhead: Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
+subhead: A working starter project for a tool that runs inside ChatGPT, with its
+  server and its on-screen panel. You describe what the app should do, and you
+  get code that follows the current Apps SDK instead of guesses from old
+  examples.
 explain: |
   A working starter project for a tool that runs inside ChatGPT, with its server and its on-screen panel. You describe what the app should do, and you get code that follows the current Apps SDK instead of guesses from old examples.
 
@@ -27,6 +31,7 @@ you_get:
   - Setup steps for local testing
   - A validation report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

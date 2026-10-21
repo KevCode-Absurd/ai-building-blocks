@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It loops through trying, looking and fixing.
 new_slug: live-screen-debugger
 name: Live screen debugger
-summary: Describe the screen bug. Get your web or Electron app opened, tried out and fixed step by step.
+summary: Describe the screen bug. Get your web or Electron app opened, tried out
+  and fixed step by step.
 job: test-and-fix-code
 headline: Live screen debugger
-subhead: Describe the screen bug. Get your web or Electron app opened, tried out and fixed step by step.
+subhead: Describe the screen bug and your web or Electron app is opened, clicked
+  through and fixed in a loop, until it works. You watch the problem disappear.
 explain: |
   Describe the screen bug and your web or Electron app is opened, clicked through and fixed in a loop, until it works. You watch the problem disappear.
 
@@ -27,6 +29,7 @@ you_get:
   - Code fixes
   - Checks that the fix works on desktop and mobile
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

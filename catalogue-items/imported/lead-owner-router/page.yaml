@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies your written routing rules.
 new_slug: lead-owner-router
 name: Lead owner router
-summary: Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note.
+summary: Give it a new lead. Get who should own it by your rules, a routing card
+  to accept and a handoff note.
 job: sell-and-negotiate
 headline: Lead owner router
-subhead: Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note.
+subhead: Give it a new lead. Get who should own it by your rules, a routing card
+  to accept and a handoff note. Bring the lead or the unrouted queue. Use the
+  result to plan your next step.
 explain: |
   For each new lead, a named owner chosen by your own routing rules, plus a card you can accept or override. The skill reads your CRM, checks which rep already owns the account or open deals, and applies your territory and assignment rules the same way every time. You stay the decider. Every override feeds back into the rules.
 
@@ -26,6 +29,7 @@ you_get:
   - A handoff note for the new owner
   - An info request draft for thin records
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your CRM.

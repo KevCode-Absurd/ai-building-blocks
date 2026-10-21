@@ -1,0 +1,32 @@
+slug: copilot-acreadiness-policy
+name: Agent readiness rule setter
+summary: Share your repo's needs. Get scoring rules that fit the project and show which checks matter.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/acreadiness-policy
+  url: https://github.com/github/awesome-copilot/tree/main/skills/acreadiness-policy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: acreadiness-policy
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: acreadiness-policy skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/acreadiness-policy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

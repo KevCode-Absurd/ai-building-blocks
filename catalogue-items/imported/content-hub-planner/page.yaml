@@ -2,19 +2,25 @@ thinking: medium
 thinking_why: It follows a set hub pattern but must pick topics that fit you.
 new_slug: content-hub-planner
 name: Content hub planner
-summary: Give it your topic area. Get pillar pages, supporting cluster pages, URL structure and an internal link map.
+summary: Give it your topic area. Get pillar pages, supporting cluster pages,
+  URL structure and an internal link map.
 job: get-found-in-search
 headline: Content hub planner
-subhead: Give it your topic area. Get pillar pages, supporting cluster pages, URL structure and an internal link map.
+subhead: Give it your topic area. Get pillar pages, supporting cluster pages,
+  URL structure and an internal link map. Bring your main topic area. Use the
+  result to plan your next step.
 explain: |
   A plan for a content hub where every page has a job: one pillar page on your main topic, a set of cluster pages that go deep on its parts, and a clear map of which page links to which. Hubs built page by page end up as a pile of overlapping posts. This one is planned first.
 
   It starts by choosing pillar topics you can actually own, then splits each into cluster pages with no overlap. It sets the URL pattern, describes what a pillar page and a cluster page should contain, and draws the internal links in both directions. It also flags orphan pages and sets a schedule for refreshing old pieces so the hub keeps its authority.
 when:
-  - You have a topic you want to be known for and no plan for the pages that prove it.
+  - You have a topic you want to be known for and no plan for the pages that
+    prove it.
   - Your blog has many posts on similar themes that compete with each other.
-  - You want search engines and AI answer tools to treat your site as an expert on one subject.
-  - You are about to commission a batch of articles and need them to fit together.
+  - You want search engines and AI answer tools to treat your site as an expert
+    on one subject.
+  - You are about to commission a batch of articles and need them to fit
+    together.
 you_give:
   - Your main topic area
   - Your audience and what they ask
@@ -27,5 +33,6 @@ you_get:
   - Page outlines for pillar and cluster
   - Refresh schedule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

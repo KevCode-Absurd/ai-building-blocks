@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It blends three models and the answer depends on careful assumptions.
 new_slug: company-fair-value-modeler
 name: Company fair value modeler
-summary: Give it a stock ticker. Get a fair value range from three methods, with a sensitivity grid. Collects data from websites.
+summary: Give it a stock ticker. Get a fair value range from three methods, with
+  a sensitivity grid. Collects data from websites.
 job: money-and-investing
 headline: Company fair value modeler
-subhead: Give it a stock ticker. Get a fair value range from three methods, with a sensitivity grid. Collects data from websites.
+subhead: A fair value range for a listed company, built three ways so you can
+  see where the methods agree and where they do not. You also get a bull, base
+  and bear case and a grid that shows how the price moves when growth and
+  discount rate change.
 explain: |
   A fair value range for a listed company, built three ways so you can see where the methods agree and where they do not. You also get a bull, base and bear case and a grid that shows how the price moves when growth and discount rate change.
 
@@ -25,6 +29,7 @@ you_get:
   - A discount rate and growth sensitivity grid
   - Bull, base and bear scenarios
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

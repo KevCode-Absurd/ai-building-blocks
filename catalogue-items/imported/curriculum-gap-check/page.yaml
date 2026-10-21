@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It matches each requirement to content across long documents.
 new_slug: curriculum-gap-check
 name: Curriculum requirements gap checker
-summary: Give it your curriculum and a list of requirements. Get a table showing what is covered, what is missing and a CSV.
+summary: Give it your curriculum and a list of requirements. Get a table showing
+  what is covered, what is missing and a CSV.
 job: teach-and-train
 headline: Curriculum requirements gap checker
-subhead: Give it your curriculum and a list of requirements. Get a table showing what is covered, what is missing and a CSV.
+subhead: Give it your curriculum and a list of requirements. Get a table showing
+  what is covered, what is missing and a CSV. Bring your curriculum or
+  framework. Use the result to plan your next step.
 explain: |
   Before an inspection or accreditation, you need to know which requirements your curriculum actually meets. Give it your curriculum and the requirement list, and you get a table showing what is covered, what is only partly covered and what is missing, plus a CSV.
 
@@ -26,5 +29,6 @@ you_get:
   - A gap list
   - A CSV you can open in a spreadsheet
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

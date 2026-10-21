@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks features suited to each fault type.
 new_slug: machine-fault-feature-extractor
 name: Machine fault feature extractor
-summary: Give it vibration or sensor signals from a motor or pump. Get features ready for fault detection.
+summary: Give it vibration or sensor signals from a motor or pump. Get features
+  ready for fault detection.
 job: build-software
 headline: Machine fault feature extractor
-subhead: Give it vibration or sensor signals from a motor or pump. Get features ready for fault detection.
+subhead: Give it vibration or sensor signals from a motor or pump. Get features
+  ready for fault detection. Bring evenly sampled sensor data. Use the result to
+  plan your next step.
 explain: |
   A set of useful numbers pulled from the vibration or sensor signals of a motor, pump or other rotating machine, ready for spotting faults early. It runs in MATLAB.
 
@@ -26,6 +29,8 @@ you_get:
   - A health indicator
   - MATLAB code for the workflow
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with the Predictive Maintenance Toolbox.
+  - It works best when your AI can run MATLAB with the Predictive Maintenance
+    Toolbox.

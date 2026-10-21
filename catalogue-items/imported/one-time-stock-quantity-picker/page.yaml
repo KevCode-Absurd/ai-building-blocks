@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs one standard formula and explains the result.
 new_slug: one-time-stock-quantity-picker
 name: One-time stock quantity picker
-summary: Give it cost, price and demand range for a short-life item. Get the best order amount and the risk of each choice.
+summary: Give it cost, price and demand range for a short-life item. Get the
+  best order amount and the risk of each choice.
 job: plan-supply-chain
 headline: One-time stock quantity picker
-subhead: Give it cost, price and demand range for a short-life item. Get the best order amount and the risk of each choice.
+subhead: The best quantity to order when you only get one shot, such as seasonal
+  clothing, event merchandise or food that spoils. Order too few and you lose
+  sales.
 explain: |
   The best quantity to order when you only get one shot, such as seasonal clothing, event merchandise or food that spoils. Order too few and you lose sales. Order too many and you eat the leftovers.
 
@@ -14,7 +17,8 @@ when:
   - You must place one order for a holiday item and cannot reorder.
   - A food product spoils in a week and you need to decide how much to make.
   - You sell event shirts and unsold ones go to a discount bin.
-  - You want to see how much profit you give up if you order less than the best amount.
+  - You want to see how much profit you give up if you order less than the best
+    amount.
 you_give:
   - Cost per unit
   - Selling price
@@ -26,6 +30,7 @@ you_get:
   - The chance of running out
   - Profit and risk at other order sizes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

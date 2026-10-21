@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It compares many sites and finds patterns.
 new_slug: competitor-site-audit
 name: Competitor site experience auditor
-summary: Name your market. Get what leading sites do well and badly, and the bar your own site must meet.
+summary: Name your market. Get what leading sites do well and badly, and the bar
+  your own site must meet.
 job: study-competitors
 headline: Competitor site experience auditor
-subhead: Name your market. Get what leading sites do well and badly, and the bar your own site must meet.
+subhead: Name your market. Get what leading sites do well and badly, and the bar
+  your own site must meet. Bring the market or vertical. Use the result to plan
+  your next step.
 explain: |
   A picture of what the best websites in a field do well, where they fall short, and the experience level your own site must reach to be taken seriously. It also shows a gap that even the leaders share, which could become your edge.
 
@@ -26,6 +29,7 @@ you_get:
   - Common weaknesses
   - A shared gap you could own
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open web pages in a browser.

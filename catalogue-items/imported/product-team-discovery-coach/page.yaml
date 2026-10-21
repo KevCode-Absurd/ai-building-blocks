@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It needs judgment about how your team and product fit the method.
 new_slug: product-team-discovery-coach
 name: Product team discovery coach
-summary: Describe your product team. Get a plan for finding what to build, testing ideas first and working with empowered teams.
+summary: Describe your product team. Get a plan for finding what to build,
+  testing ideas first and working with empowered teams.
 job: build-product
 headline: Product team discovery coach
-subhead: Describe your product team. Get a plan for finding what to build, testing ideas first and working with empowered teams.
+subhead: A plan to move your product team from building a roadmap of features to
+  finding what customers actually want. It helps teams own problems rather than
+  just ship a list.
 explain: |
   A plan to move your product team from building a roadmap of features to finding what customers actually want. It helps teams own problems rather than just ship a list.
 
@@ -26,5 +29,6 @@ you_get:
   - Ways to test ideas early
   - Steps to move to empowered teams
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

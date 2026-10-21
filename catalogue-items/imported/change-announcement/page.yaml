@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It sizes the change, then drafts each message to match.
 new_slug: change-announcement
 name: Internal change announcement writer
-summary: Describe a re-org, tool change or layoff. Get the announcement, FAQ, manager talking points and a send plan.
+summary: Describe a re-org, tool change or layoff. Get the announcement, FAQ,
+  manager talking points and a send plan.
 job: lead-people
 headline: Internal change announcement writer
-subhead: Describe a re-org, tool change or layoff. Get the announcement, FAQ, manager talking points and a send plan.
+subhead: "The full message package for a re-org, tool change or layoff: the
+  announcement, an FAQ, talking points for managers and a calendar of
+  follow-ups. It is written for staff, not customers, and settles when to speak,
+  in what order and what to leave unsaid."
 explain: |
   The full message package for a re-org, tool change or layoff: the announcement, an FAQ, talking points for managers and a calendar of follow-ups. It is written for staff, not customers, and settles when to speak, in what order and what to leave unsaid.
 
@@ -26,5 +30,6 @@ you_get:
   - Talking points for managers
   - A calendar of follow-up messages
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

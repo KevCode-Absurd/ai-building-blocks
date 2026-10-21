@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It turns loose observations into a workable plan.
 new_slug: child-led-project-planner
 name: Child-led project planner
-summary: Describe what young children keep asking about. Get a project plan that follows their interests into deeper inquiry.
+summary: Describe what young children keep asking about. Get a project plan that
+  follows their interests into deeper inquiry.
 job: teach-and-train
 headline: Child-led project planner
-subhead: Describe what young children keep asking about. Get a project plan that follows their interests into deeper inquiry.
+subhead: When young children keep asking about the same thing, like worms,
+  shadows or bridges, you get a project plan that grows from their questions.
+  Instead of a fixed unit, it starts from what you saw and heard and moves
+  toward deeper inquiry.
 explain: |
   When young children keep asking about the same thing, like worms, shadows or bridges, you get a project plan that grows from their questions. Instead of a fixed unit, it starts from what you saw and heard and moves toward deeper inquiry.
 
@@ -27,5 +31,6 @@ you_get:
   - A plan for recording their work
   - Ways to involve families
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

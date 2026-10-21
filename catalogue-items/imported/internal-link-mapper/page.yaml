@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It compares many pages to find links.
 new_slug: internal-link-mapper
 name: Internal link mapper
-summary: Give it your pages. Get which pages should link to which, with anchor text and orphan pages to fix.
+summary: Give it your pages. Get which pages should link to which, with anchor
+  text and orphan pages to fix.
 job: get-found-in-search
 headline: Internal link mapper
-subhead: Give it your pages. Get which pages should link to which, with anchor text and orphan pages to fix.
+subhead: A map of which pages should link to which, with the anchor text to use
+  and a list of orphan pages that nothing links to.
 explain: |
   A map of which pages should link to which, with the anchor text to use and a list of orphan pages that nothing links to. Good internal links help readers and help search engines find your best pages.
 
@@ -27,5 +29,6 @@ you_get:
   - A list of orphan pages
   - Pages that need more links in
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

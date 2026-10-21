@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It turns known facts into a standard article format.
 new_slug: help-article-writer
 name: Help article writer
-summary: Give it support questions and product docs. Get clear, searchable help center articles and FAQs.
+summary: Give it support questions and product docs. Get clear, searchable help
+  center articles and FAQs.
 job: write-and-tell-stories
 headline: Help article writer
-subhead: Give it support questions and product docs. Get clear, searchable help center articles and FAQs.
+subhead: Help center articles written so customers can solve a problem without
+  opening a ticket. Start with your support data and product notes. The skill
+  finds which questions come up most, then writes an article for each one that
+  matches the words customers actually search for.
 explain: |
   Help center articles written so customers can solve a problem without opening a ticket. Start with your support data and product notes. The skill finds which questions come up most, then writes an article for each one that matches the words customers actually search for.
 
@@ -26,5 +30,6 @@ you_get:
   - Troubleshooting sections for common errors
   - Search-friendly titles and related links
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

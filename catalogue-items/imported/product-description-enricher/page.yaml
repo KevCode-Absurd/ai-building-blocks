@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It rewrites from product facts and needs judgment on tone.
 new_slug: product-description-enricher
 name: Product description enricher
-summary: Point it at thin product descriptions. Get fact-rich rewrites with materials, uses and shopper words. Updates live product pages.
+summary: Point it at thin product descriptions. Get fact-rich rewrites with
+  materials, uses and shopper words. Updates live product pages.
 job: build-websites
 headline: Product description enricher
-subhead: Point it at thin product descriptions. Get fact-rich rewrites with materials, uses and shopper words. Updates live product pages.
+subhead: Thin product descriptions turned into copy with real facts in it. An AI
+  shopping tool quotes your description to explain why a product fits. A
+  one-liner gives it nothing to quote, so it moves on.
 explain: |
   Thin product descriptions turned into copy with real facts in it. An AI shopping tool quotes your description to explain why a product fits. A one-liner gives it nothing to quote, so it moves on.
 
@@ -26,6 +29,7 @@ you_get:
   - Consistent structure across products
   - Updated live pages after approval
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

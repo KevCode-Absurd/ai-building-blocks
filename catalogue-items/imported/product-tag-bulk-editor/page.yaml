@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It repeats one tag change.
 new_slug: product-tag-bulk-editor
 name: Product tag bulk editor
-summary: Pick products and a tag. Get it added or removed on all of them. Changes your live catalog; preview first.
+summary: Pick products and a tag. Get it added or removed on all of them.
+  Changes your live catalog; preview first.
 job: run-your-store
 headline: Product tag bulk editor
-subhead: Pick products and a tag. Get it added or removed on all of them. Changes your live catalog; preview first.
+subhead: A tag added or removed on every product in a collection, tag group or
+  search result, in one run. Campaign setup and teardown no longer mean editing
+  products one at a time.
 explain: |
   A tag added or removed on every product in a collection, tag group or search result, in one run. Campaign setup and teardown no longer mean editing products one at a time.
 
@@ -26,6 +29,8 @@ you_get:
   - A count of changes made
   - A list of failures
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

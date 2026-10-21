@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It fills a fixed nine-box plan from your answers.
 new_slug: one-page-marketing-plan-builder
 name: One-page marketing plan builder
-summary: Describe your business. Get a one-page plan that takes people from stranger to loyal fan.
+summary: Describe your business. Get a one-page plan that takes people from
+  stranger to loyal fan.
 job: plan-strategy
 headline: One-page marketing plan builder
-subhead: Describe your business. Get a one-page plan that takes people from stranger to loyal fan.
+subhead: Your whole marketing plan on one page, from a stranger who has never
+  heard of you to a customer who tells friends. It is a grid of nine squares,
+  and each square has one job.
 explain: |
   Your whole marketing plan on one page, from a stranger who has never heard of you to a customer who tells friends. It is a grid of nine squares, and each square has one job.
 
@@ -26,5 +29,6 @@ you_get:
   - The weakest squares named
   - Next actions for each gap
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

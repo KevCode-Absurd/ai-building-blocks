@@ -1,0 +1,839 @@
+{
+  "skills": 104,
+  "files": 287,
+  "problems": [],
+  "entries": [
+    {
+      "slug": "copilot-acreadiness-assess",
+      "source": "skills/acreadiness-assess",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "e632ae0d57b87accd0ca1488dba27bd842c6e6c4c28670f2da101f1322ba5f8d"
+    },
+    {
+      "slug": "copilot-acreadiness-policy",
+      "source": "skills/acreadiness-policy",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "e563c5e334e1dac21a7d6a43ae43abb96721395e7af7b97f49ef764ad8325550"
+    },
+    {
+      "slug": "copilot-acreadiness-generate-instructions",
+      "source": "skills/acreadiness-generate-instructions",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "b0f4f82099fbfdcd2a45d54b8db9392d6ebe26cd396843453e9dcae14de513e8"
+    },
+    {
+      "slug": "copilot-agent-architecture",
+      "source": "skills/agent-architecture",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 16,
+      "skillSha256": "914b3d476f06017a43d2f616f034d34df40bdea7d6656d0e01db32eab57ef5ca"
+    },
+    {
+      "slug": "copilot-agent-governance",
+      "source": "skills/agent-governance",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "efc0abaa0dff7d5567a27e1a5b9126ef70410e0a213225dab1b109f3f129db68"
+    },
+    {
+      "slug": "copilot-agent-owasp-compliance",
+      "source": "skills/agent-owasp-compliance",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "5c1f92c48888beb811d2435e58aa02b2619422a921d6f70e3cc15e5c5be8e7da"
+    },
+    {
+      "slug": "copilot-agent-supply-chain",
+      "source": "skills/agent-supply-chain",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "5b678338dca40c92051ff46da592e6be13ffc2f843a2238cbf1c91368fe75fa7"
+    },
+    {
+      "slug": "copilot-agentic-eval",
+      "source": "skills/agentic-eval",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "fb198a5c9b12e746d01a43c9ff3368598fdc1134bb458766f580186f31001573"
+    },
+    {
+      "slug": "copilot-ai-prompt-engineering-safety-review",
+      "source": "skills/ai-prompt-engineering-safety-review",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "8ff9d227e96fb3364b9b2e0bd28d73ef0e49cc33fa832dfe8c87d79ddef9a7a7"
+    },
+    {
+      "slug": "copilot-eval-driven-dev",
+      "source": "skills/eval-driven-dev",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 19,
+      "skillSha256": "dbaac08a46bdd0ae865363b53265f2e5a4ae4e95d8ccd11f7fa38e8dc87c40ba"
+    },
+    {
+      "slug": "copilot-diagnose",
+      "source": "skills/diagnose",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "48e2d7e9b9123dc0b9a82e1165b2d8879a43cb5cfd0460b55edfd820d5cb11a2"
+    },
+    {
+      "slug": "copilot-mcp-security-audit",
+      "source": "skills/mcp-security-audit",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "7bcc014d001f57ed4d96fcad2e75bdfa9004a33d65e9cecd598305a84427c700"
+    },
+    {
+      "slug": "copilot-mcp-implementation-security-review",
+      "source": "skills/mcp-implementation-security-review",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "8974ffc89746dd2bf947069d6a162120df8f81fdf0a1ca31b3bb1781cf8bb31f"
+    },
+    {
+      "slug": "copilot-mcp-release-qa",
+      "source": "skills/mcp-release-qa",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "36b5a18d8dde6e3e02300d986853d7a953e6d712357191bbb571ce179d70113e"
+    },
+    {
+      "slug": "copilot-verify-agent-action",
+      "source": "skills/verify-agent-action",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "13138bebda37fea1fdc235db035a3b43b12545311c20962fe28188b2b8514bb2"
+    },
+    {
+      "slug": "copilot-api-breaking-change-detector",
+      "source": "skills/api-breaking-change-detector",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "1fcd27dcb533c23baaeef7a70089a8095fa0cc21425457b9a653535034d71a80"
+    },
+    {
+      "slug": "copilot-bug-reproduction-brief",
+      "source": "skills/bug-reproduction-brief",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "522ad2948c498f6dcee6d48773387058d2cba3c45ba9e093ed35210601d141b6"
+    },
+    {
+      "slug": "copilot-bug-receipt",
+      "source": "skills/bug-receipt",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 5,
+      "skillSha256": "8d3803c8b10504a11b279ca5872b108cb09f549adf4bf8898ed3cceac5a3b991"
+    },
+    {
+      "slug": "copilot-cypress-flake-fixer",
+      "source": "skills/cypress-flake-fixer",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 4,
+      "skillSha256": "bbcc3720a59fcb3b9be0658c8b705e1e3c4aacabb81dd34d72913c1720924663"
+    },
+    {
+      "slug": "copilot-docs-sync-audit",
+      "source": "skills/docs-sync-audit",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "c21b20dcc59ac43449ef02ed7f69bfa222a241cdf46b870675ac10aac736a203"
+    },
+    {
+      "slug": "copilot-test-gap-audit",
+      "source": "skills/test-gap-audit",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "a7747ac0b60d33ec6a44b9703ae11e8f6bf7aede251f117cc46599d182bfef21"
+    },
+    {
+      "slug": "copilot-protobuf-grpc-api-review",
+      "source": "skills/protobuf-grpc-api-review",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "0897f9b79c4aaa4842e4b6b3aff48ddddee97d88fed25376eb5f9f24749c1747"
+    },
+    {
+      "slug": "copilot-react18-batching-patterns",
+      "source": "skills/react18-batching-patterns",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "f4bdb6d5b817c19b00062392ff51965d42fe185facbb5724653dd9aa39c3140e"
+    },
+    {
+      "slug": "copilot-react18-enzyme-to-rtl",
+      "source": "skills/react18-enzyme-to-rtl",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "948b578f25740476a29074902cfd6c0886bee07cdbe99fcfe76dd58072f422a4"
+    },
+    {
+      "slug": "copilot-react18-legacy-context",
+      "source": "skills/react18-legacy-context",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 4,
+      "skillSha256": "688905b5520f59b3e1c3990391dd8a6bcdb75b59dd80ec6414c6fea70fd51f2f"
+    },
+    {
+      "slug": "copilot-react18-lifecycle-patterns",
+      "source": "skills/react18-lifecycle-patterns",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 4,
+      "skillSha256": "5d2a1220ef18d5344f18de537877ff2a192260142ae3e40810967d5047745470"
+    },
+    {
+      "slug": "copilot-react18-string-refs",
+      "source": "skills/react18-string-refs",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "c876a43c2aaaac6746c48364ebadf050787922d259ef6f021b51d36f2db9fc67"
+    },
+    {
+      "slug": "copilot-react19-source-patterns",
+      "source": "skills/react19-source-patterns",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "cbbf1227b3f46f9b91c948c3846611a539496b363e4dc1bbd3faff2e913dff86"
+    },
+    {
+      "slug": "copilot-react19-test-patterns",
+      "source": "skills/react19-test-patterns",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "c3eac6a63114127eacc0562b98514e80d415e194bac9d59e0d72dded7824c94d"
+    },
+    {
+      "slug": "copilot-quarkus-dev-services-and-testing",
+      "source": "skills/quarkus-dev-services-and-testing",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "a7ba8792ac02ac3e2bd7779bc162b9aaa1cdf67b3b56958e847260018f12d5a9"
+    },
+    {
+      "slug": "copilot-unit-test-vue-pinia",
+      "source": "skills/unit-test-vue-pinia",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "4239e4c27c148bf4bbafd338bf8aeeb7993eda9e544eb80f0f15c68d5536e167"
+    },
+    {
+      "slug": "copilot-pester-migration",
+      "source": "skills/pester-migration",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 4,
+      "skillSha256": "eeb7c170eb8e547b951725e2a4202ac7bdfacca411f3e369f4c2ef7dd44d1c8c"
+    },
+    {
+      "slug": "copilot-sql-server-table-reconciliation",
+      "source": "skills/sql-server-table-reconciliation",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "f09e45ab5e9df130b9109cc7f88510680153ee6c33c14d519cc33d6dcd1fdeda"
+    },
+    {
+      "slug": "copilot-audit-integrity",
+      "source": "skills/audit-integrity",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 8,
+      "skillSha256": "f2aa1a0cce91cfcaca860eee69a3140f0c012e3cc714fac38b883d550c2a2b49"
+    },
+    {
+      "slug": "copilot-data-breach-blast-radius",
+      "source": "skills/data-breach-blast-radius",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 7,
+      "skillSha256": "d61d7e6036a67fa25afa016b61d4130448f3e74896dfafef1847f1f01fc86bbe"
+    },
+    {
+      "slug": "copilot-github-actions-hardening",
+      "source": "skills/github-actions-hardening",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 6,
+      "skillSha256": "31a8e7483d978e6267941edefebbe42aaa946bb3d43c9095aa3db343d4a8ff06"
+    },
+    {
+      "slug": "copilot-secret-scanning",
+      "source": "skills/secret-scanning",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 4,
+      "skillSha256": "ebbaf8a49777e8be6d8c220b91bbee935b2aaab81b3ee976562484a339d750db"
+    },
+    {
+      "slug": "copilot-codeql",
+      "source": "skills/codeql",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 7,
+      "skillSha256": "81503394c7c0595756d18a47e0b626dfd1dc6cf4673d40e9be23349a66fa5d27"
+    },
+    {
+      "slug": "copilot-threat-model-analyst",
+      "source": "skills/threat-model-analyst",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 17,
+      "skillSha256": "cdd72b75b224b20f006cb31602b0b68d0ea27c22a25c9a6458a2cf0b90a25fb3"
+    },
+    {
+      "slug": "copilot-tm7-threat-model",
+      "source": "skills/tm7-threat-model",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "6f0613a2b3343f5f86b37b78c856a718df92507600ce8f4543e4e9ffe4e18fc0"
+    },
+    {
+      "slug": "copilot-gdpr-compliant",
+      "source": "skills/gdpr-compliant",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "e1f33a817a1d0f7165f4f6652cfeb52632ba124067c3f46c37f867cde730242e"
+    },
+    {
+      "slug": "copilot-aws-cloudwatch-investigation",
+      "source": "skills/aws-cloudwatch-investigation",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "e278e755854bb81bcce39e41395aaae189f49aa6f4397d8723dd1a01518b1526"
+    },
+    {
+      "slug": "copilot-aws-cost-optimize",
+      "source": "skills/aws-cost-optimize",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "e289482d227558774a220b79cf00c03340d1d35b3ffc2a4703659dd67a719e4d"
+    },
+    {
+      "slug": "copilot-aws-resource-health-diagnose",
+      "source": "skills/aws-resource-health-diagnose",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "80bb83b79e74c7f4b97994f89e4feb821bb68868e4809dcffbdbc9d2dc3f00cc"
+    },
+    {
+      "slug": "copilot-aws-well-architected-review",
+      "source": "skills/aws-well-architected-review",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "bc37c276c66c3305cdbafb766cbdadc153deb69e45e5eb009e2aca904f6359b2"
+    },
+    {
+      "slug": "copilot-az-cost-optimize",
+      "source": "skills/az-cost-optimize",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "d27f8311b57d02dedd48a0d563be0964dc458578e4de51b4730516b4e8083829"
+    },
+    {
+      "slug": "copilot-azure-deployment-preflight",
+      "source": "skills/azure-deployment-preflight",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 4,
+      "skillSha256": "dab815a49ff9fda7d48631c40df7e2540bb3fa7ba1cce63ce219aaa0a830b6a1"
+    },
+    {
+      "slug": "copilot-azure-pricing",
+      "source": "skills/azure-pricing",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 5,
+      "skillSha256": "905bd90f658435e9812dca1aa613675fce948ad878e29c9f1bbe19b237edc3ee"
+    },
+    {
+      "slug": "copilot-azure-resource-health-diagnose",
+      "source": "skills/azure-resource-health-diagnose",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "b23ce684d839475f5ae397ce6d1973106f481d4a73d40bc1bebb45012a6ff436"
+    },
+    {
+      "slug": "copilot-azure-resource-visualizer",
+      "source": "skills/azure-resource-visualizer",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "c22324fcf556d4441320a49360fafe4707440b0c376d7f15ce97f12dd233fe04"
+    },
+    {
+      "slug": "copilot-azure-role-selector",
+      "source": "skills/azure-role-selector",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "b4de898de0d72f258606efff41841bd31145db5ac18a57a7bd416450eaabe670"
+    },
+    {
+      "slug": "copilot-azure-well-architected-review",
+      "source": "skills/azure-well-architected-review",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "bac39e11c6f91cba8c65227986e27bd8f1c25c43680f24a737cb92cc1ac51a0a"
+    },
+    {
+      "slug": "copilot-github-actions-efficiency",
+      "source": "skills/github-actions-efficiency",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 5,
+      "skillSha256": "9c41e860468e5c88d83ab6eec70c585b0f122facec2632ea65497b3389139e43"
+    },
+    {
+      "slug": "copilot-github-actions-runtime-upgrade-conventions",
+      "source": "skills/github-actions-runtime-upgrade-conventions",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "b964b4609e9b7ca8bbe394d4232e4f8bff122813e09433ccda1c4356f79c98eb"
+    },
+    {
+      "slug": "copilot-github-codespaces-efficiency",
+      "source": "skills/github-codespaces-efficiency",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "933339dc228208ba51428186d31407e186604ddaa8611bc307c9de1ad712e5b1"
+    },
+    {
+      "slug": "copilot-devops-rollout-plan",
+      "source": "skills/devops-rollout-plan",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "4895d403e08e9ea4cf59ef06ef843745aa5dd574a1faad83d4140c1f2554b7d4"
+    },
+    {
+      "slug": "copilot-incident-postmortem",
+      "source": "skills/incident-postmortem",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "0492b8e05eba16cf045041b519536f906b06b278c77a0a33b4b947ed0b79176b"
+    },
+    {
+      "slug": "copilot-bigquery-pipeline-audit",
+      "source": "skills/bigquery-pipeline-audit",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "9dca6a922c1fc7599ba12ebaa38cf7336dbd09b064245f57c33f4f5b72ed3b5a"
+    },
+    {
+      "slug": "copilot-qdrant-deployment-options",
+      "source": "skills/qdrant-deployment-options",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "31afa639420a3434cc8c48039b38820e8248e1ba47074b3f58a724e73af20516"
+    },
+    {
+      "slug": "copilot-qdrant-model-migration",
+      "source": "skills/qdrant-model-migration",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "811cc59e1b1f421449e898f4e2e3f6d4b43fd220af2d544aaed0e7e134639b07"
+    },
+    {
+      "slug": "copilot-qdrant-monitoring",
+      "source": "skills/qdrant-monitoring",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "5264e89c01d4e02fb3db9ad9bebd0132c7de951a249c1ebc93d863a834529af2"
+    },
+    {
+      "slug": "copilot-qdrant-performance-optimization",
+      "source": "skills/qdrant-performance-optimization",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 4,
+      "skillSha256": "5323301ea670baa98623e53f8c363845f6edde59a2f0f88e0c6e948d61438a3f"
+    },
+    {
+      "slug": "copilot-qdrant-scaling",
+      "source": "skills/qdrant-scaling",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 9,
+      "skillSha256": "6dee402516b353fec38f39eeb8aacf9aa96b504bdd9d3fa5977f96163c642bcf"
+    },
+    {
+      "slug": "copilot-qdrant-search-quality",
+      "source": "skills/qdrant-search-quality",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "3af84e9019065cd90cc79210c5833153fc62acdcf55bda359ab7876809be0803"
+    },
+    {
+      "slug": "copilot-qdrant-version-upgrade",
+      "source": "skills/qdrant-version-upgrade",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "1a6722e67b24970d52ef94386e162e97f4b4c10eb1599d6d0165050df2ba4993"
+    },
+    {
+      "slug": "copilot-gtm-0-to-1-launch",
+      "source": "skills/gtm-0-to-1-launch",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "3a919ad65a5537d81dcc245dec8062eb747d08e0f22991f25f87e6bee9f3230e"
+    },
+    {
+      "slug": "copilot-gtm-ai-gtm",
+      "source": "skills/gtm-ai-gtm",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "eddccd76f45054b529962ca7f2db6076211db431b7185f63ee205736e8a2d914"
+    },
+    {
+      "slug": "copilot-gtm-board-and-investor-communication",
+      "source": "skills/gtm-board-and-investor-communication",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "6db3e16149c2c08fc30e452309714e693d0a6210d1183952a6a9b7c8deb27c71"
+    },
+    {
+      "slug": "copilot-gtm-developer-ecosystem",
+      "source": "skills/gtm-developer-ecosystem",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "52dfe739ae185d89c19639876e0cb884d5fd2851ea986b7b1ca4fa44b362907b"
+    },
+    {
+      "slug": "copilot-gtm-enterprise-account-planning",
+      "source": "skills/gtm-enterprise-account-planning",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "92441114f77b1dd72d2edf1d55e369a00e0dce0bf8b4a749fbbc5198de4ddf78"
+    },
+    {
+      "slug": "copilot-gtm-enterprise-onboarding",
+      "source": "skills/gtm-enterprise-onboarding",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "d70746655ff049c6600cd7e7e3ba8aeb5bc318f4a8996979b8db2be096f003de"
+    },
+    {
+      "slug": "copilot-gtm-operating-cadence",
+      "source": "skills/gtm-operating-cadence",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "59deb368b2474c810c6b2607f10575d3e1ad65a0edc1159c259bf387d33f27b8"
+    },
+    {
+      "slug": "copilot-gtm-partnership-architecture",
+      "source": "skills/gtm-partnership-architecture",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "d7dab398f7ce5c16cb5a7026f7e9465a6cb077a7b16caf024b3b120502d924b4"
+    },
+    {
+      "slug": "copilot-gtm-positioning-strategy",
+      "source": "skills/gtm-positioning-strategy",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "332c1426936c92ffba2173b00d92fcb388991d88f25f9e0f4531aed55de7f27f"
+    },
+    {
+      "slug": "copilot-gtm-product-led-growth",
+      "source": "skills/gtm-product-led-growth",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "c938e886e38cd6d6ad89da3ec005053bc1adb37db4ccfd473b242a4f0aad33de"
+    },
+    {
+      "slug": "copilot-gtm-technical-product-pricing",
+      "source": "skills/gtm-technical-product-pricing",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "afb71bdbcbc0bfe8ec1ba210b0184e9b03466f3db9c3e9805fb898d76bb90460"
+    },
+    {
+      "slug": "copilot-build-evidence-map",
+      "source": "skills/build-evidence-map",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 5,
+      "skillSha256": "fb104196d94a0530eb5b86c56edfdaac0954a842f7cc71dfd4dcf87b20675fc9"
+    },
+    {
+      "slug": "copilot-impediment-prioritization",
+      "source": "skills/impediment-prioritization",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "dd6c9adda40b97375f9a72537d536ef9c9e98a1f43827d9f84bea4e699bece43"
+    },
+    {
+      "slug": "copilot-meeting-minutes",
+      "source": "skills/meeting-minutes",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "69420bbe78b2f6c81f9689672360dd97e71e9fc83045a70e3d6924f24973a789"
+    },
+    {
+      "slug": "copilot-daily-prep",
+      "source": "skills/daily-prep",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "ea2800856b936cb83aed9b43f9c5e431ac2de436f8f00df546db4253ab4076f3"
+    },
+    {
+      "slug": "copilot-brag-sheet",
+      "source": "skills/brag-sheet",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "b7c9b04c81fdedbbd5d9dfcd09235e3122523be52c2bc4482590dd7b2945b4a4"
+    },
+    {
+      "slug": "copilot-performance-review-writer",
+      "source": "skills/performance-review-writer",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "0bec62e91b3698d3fb2089fd853d3ada8e07b6cbd4c355ae85e09bfd6ea34bc6"
+    },
+    {
+      "slug": "copilot-email-drafter",
+      "source": "skills/email-drafter",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "c3324d26f899149e5b664a02cad9fa4b1a615d9b2ce5bb7f6dfd908c17c622e8"
+    },
+    {
+      "slug": "copilot-roundup",
+      "source": "skills/roundup",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "a430c45fba6dac39f2325ee17d9a01e460b4c2f0fc6ff63eba76b688fd12384f"
+    },
+    {
+      "slug": "copilot-roundup-setup",
+      "source": "skills/roundup-setup",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "c5f936c3e8a5b0884cbe89e8cdd9d93b16b359ff5510cfa3f9b0539165a5ce20"
+    },
+    {
+      "slug": "copilot-dotnet-timezone",
+      "source": "skills/dotnet-timezone",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "9514bd6f6e227171ae762460697e19ac545d88be6400171bfd085819717c093c"
+    },
+    {
+      "slug": "copilot-roslyn-analyzers",
+      "source": "skills/roslyn-analyzers",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 3,
+      "skillSha256": "48e96b0d8e7e3fdbdd244153a12735d550ad8ba9622133eb9ec92f228f28646b"
+    },
+    {
+      "slug": "copilot-resx-source-generator-migration",
+      "source": "skills/resx-source-generator-migration",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "9d2cc68ff4cfaf923a4ffdf4cd45896bc2bfba2a3a1dd16680c606efde482409"
+    },
+    {
+      "slug": "copilot-upstash-redis",
+      "source": "skills/upstash-redis",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "6a51da36588cdfad16b8ced54d7a3f8cb01aa3a9b07e16982dedd990bf7bcee3"
+    },
+    {
+      "slug": "copilot-sql-object-impact-analysis",
+      "source": "skills/sql-object-impact-analysis",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "9cb296c92e45ebdfbdfe2e6452d5e73fc6ef7bc23dd70a1bfbbdfd3d3e3fb393"
+    },
+    {
+      "slug": "copilot-creating-oracle-to-postgres-master-migration-plan",
+      "source": "skills/creating-oracle-to-postgres-master-migration-plan",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "9823f18ce72deb57d50ce63ae0e8928ab9a9da4c10ba726974e705ca8efdc444"
+    },
+    {
+      "slug": "copilot-planning-oracle-to-postgres-migration-integration-testing",
+      "source": "skills/planning-oracle-to-postgres-migration-integration-testing",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "9462c7d627ab958a8c55b7b972b3e187dea779c000350453b6ad04d2260c7696"
+    },
+    {
+      "slug": "copilot-scaffolding-oracle-to-postgres-migration-test-project",
+      "source": "skills/scaffolding-oracle-to-postgres-migration-test-project",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "e0c48d45b172678fdd46b4fd28c4cf7e8c11cbb11f0dc22a708d01867d35bd08"
+    },
+    {
+      "slug": "copilot-creating-oracle-to-postgres-migration-integration-tests",
+      "source": "skills/creating-oracle-to-postgres-migration-integration-tests",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "4bb8ae9ca9d6742646f3bd51c81d2a47137762922bf800e965ba6540aadc6ec5"
+    },
+    {
+      "slug": "copilot-migrating-oracle-to-postgres-data-access-code",
+      "source": "skills/migrating-oracle-to-postgres-data-access-code",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "c748c08f3c665b811545671463220492662cfeb4c8a30c1ddd946066e1c914c5"
+    },
+    {
+      "slug": "copilot-migrating-oracle-to-postgres-stored-procedures",
+      "source": "skills/migrating-oracle-to-postgres-stored-procedures",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "9e4b7233a4ec43e0581d5511ce07a3d6607cdfb8a36b22f884e72c7b7e69f1a5"
+    },
+    {
+      "slug": "copilot-reviewing-oracle-to-postgres-migration",
+      "source": "skills/reviewing-oracle-to-postgres-migration",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 16,
+      "skillSha256": "54a4c6b3a31797c3fb9bd2c3fa684bbc5e80751d37585bd20784f9b75af2dbae"
+    },
+    {
+      "slug": "copilot-creating-oracle-to-postgres-migration-bug-report",
+      "source": "skills/creating-oracle-to-postgres-migration-bug-report",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "993ffe2426a60038b6917068d52a8784eda3aa90d9894e3e840b3c7f289cbb41"
+    },
+    {
+      "slug": "copilot-copilot-sdk",
+      "source": "skills/copilot-sdk",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "5b432db55670223935a19215850f0e1e094db2026f1aa880f7d7b978fc48a42f"
+    },
+    {
+      "slug": "copilot-copilot-usage-metrics",
+      "source": "skills/copilot-usage-metrics",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 5,
+      "skillSha256": "5ebe9cf0fd07a9be9dacb36c0dfd00c00bd30328ef086928be6d850bda9cebe6"
+    },
+    {
+      "slug": "copilot-dotnet-mcp-builder",
+      "source": "skills/dotnet-mcp-builder",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 14,
+      "skillSha256": "7860696a124e61fc1fa6bb38f9c79f6be6eda130e245a814e41f0e7030d09619"
+    },
+    {
+      "slug": "copilot-go-mcp-server-generator",
+      "source": "skills/go-mcp-server-generator",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "70d1f1f45ab175da155c5d1109394a8eab074bdd85fa01e452d68347cf132ccb"
+    },
+    {
+      "slug": "copilot-python-mcp-server-generator",
+      "source": "skills/python-mcp-server-generator",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 2,
+      "skillSha256": "d12cecc1c39ef7fb3e580b7965bb1a8bf46daf1b0d5d04f09d0b858283c5ae2a"
+    },
+    {
+      "slug": "copilot-typescript-mcp-server-generator",
+      "source": "skills/typescript-mcp-server-generator",
+      "commit": "613efc8",
+      "license": "MIT",
+      "sourceFiles": 1,
+      "skillSha256": "e409edb78ed746e7a335c35063dea5c2d462e0498740014a58a9c250891cba19"
+    }
+  ]
+}

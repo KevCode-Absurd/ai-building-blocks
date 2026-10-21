@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It scans for secrets and plans fixes.
 new_slug: secrets-hygiene-checker
 name: Secrets hygiene checker
-summary: Point it at your project. Get leaked keys found, env files tidied and a plan to rotate secrets.
+summary: Point it at your project. Get leaked keys found, env files tidied and a
+  plan to rotate secrets.
 job: secure-code
 headline: Secrets hygiene checker
-subhead: Point it at your project. Get leaked keys found, env files tidied and a plan to rotate secrets.
+subhead: A scan of your project for leaked keys and passwords, plus a clear
+  order for fixing them. It finds likely credentials in the working files and
+  ranks each one critical, high or lower, so you start with what could hurt
+  most.
 explain: |
   A scan of your project for leaked keys and passwords, plus a clear order for fixing them. It finds likely credentials in the working files and ranks each one critical, high or lower, so you start with what could hurt most.
 
@@ -26,6 +30,7 @@ you_get:
   - A tidied env file layout
   - A pre-merge secret scan setup
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

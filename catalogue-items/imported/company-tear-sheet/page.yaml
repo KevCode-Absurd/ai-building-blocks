@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It collects facts and lays out one page.
 new_slug: company-tear-sheet
 name: Company one-page tear sheet maker
-summary: Name a company. Get a dense one-page Word profile with numbers, ratios and a business summary. It collects data from websites.
+summary: Name a company. Get a dense one-page Word profile with numbers, ratios
+  and a business summary. It collects data from websites.
 job: money-and-investing
 headline: Company one-page tear sheet maker
-subhead: Name a company. Get a dense one-page Word profile with numbers, ratios and a business summary. It collects data from websites.
+subhead: Name a company. Get a dense one-page Word profile with numbers, ratios
+  and a business summary. It collects data from websites. Bring the company name
+  or ticker. Use the result to plan your next step.
 explain: |
   A dense one-page Word profile of a listed company with the numbers, ratios and a short business summary, ready to hand to a client or manager. Built for Indian companies, so it follows the April to March fiscal year and shows amounts in lakh and crore.
 
@@ -26,6 +29,7 @@ you_get:
   - A short business summary
   - Not disclosed marks where data is missing
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the web.

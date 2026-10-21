@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Discounts change demand in ways you must model.
 new_slug: clearance-discount-planner
 name: Clearance discount planner
-summary: Give it your slow stock and past sales. Get when and how much to cut prices to sell out.
+summary: Give it your slow stock and past sales. Get when and how much to cut
+  prices to sell out.
 job: set-prices
 headline: Clearance discount planner
-subhead: Give it your slow stock and past sales. Get when and how much to cut prices to sell out.
+subhead: Give it your slow stock and past sales. Get when and how much to cut
+  prices to sell out. Bring stock list with quantities and age. Use the result
+  to plan your next step.
 explain: |
   A markdown plan for slow stock that tells you when to cut prices and by how much, so you clear inventory without giving away more margin than needed. You give your stock and sales history, and you get steps by week.
 
@@ -27,6 +30,7 @@ you_get:
   - Expected sell-through
   - Cash recovered compared with other paths
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

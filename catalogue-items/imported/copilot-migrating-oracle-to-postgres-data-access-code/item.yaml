@@ -1,0 +1,32 @@
+slug: copilot-migrating-oracle-to-postgres-data-access-code
+name: Oracle to Npgsql code migrator
+summary: Share your .NET data access code. Get PostgreSQL changes for drivers, queries and database calls.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/migrating-oracle-to-postgres-data-access-code
+  url: https://github.com/github/awesome-copilot/tree/main/skills/migrating-oracle-to-postgres-data-access-code
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: migrating-oracle-to-postgres-data-access-code
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: migrating-oracle-to-postgres-data-access-code skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/migrating-oracle-to-postgres-data-access-code
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

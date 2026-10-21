@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks the format and writes to it.
 new_slug: sales-collateral-writer
 name: Sales collateral writer
-summary: Name the deal or buyer. Get a pitch deck outline, one-pager, objection sheet or demo script.
+summary: Name the deal or buyer. Get a pitch deck outline, one-pager, objection
+  sheet or demo script.
 job: sell-and-negotiate
 headline: Sales collateral writer
-subhead: Name the deal or buyer. Get a pitch deck outline, one-pager, objection sheet or demo script.
+subhead: The sales material your reps will actually open and use. Name the deal
+  or buyer and get a pitch deck outline, a one-pager, an objection sheet or a
+  demo script.
 explain: |
   The sales material your reps will actually open and use. Name the deal or buyer and get a pitch deck outline, a one-pager, an objection sheet or a demo script.
 
@@ -26,5 +29,6 @@ you_get:
   - An objection handling sheet
   - A demo script
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

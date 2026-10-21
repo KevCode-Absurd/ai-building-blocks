@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must foresee drift and write guard rules.
 new_slug: agent-goal-writer
 name: Agent goal writer
-summary: Give it a vague job. Get a goal an AI agent can finish, with proof of done, limits and stop rules.
+summary: Give it a vague job. Get a goal an AI agent can finish, with proof of
+  done, limits and stop rules.
 job: set-up-ai
 headline: Agent goal writer
-subhead: Give it a vague job. Get a goal an AI agent can finish, with proof of done, limits and stop rules.
+subhead: A vague job turned into a goal an AI agent can actually finish. The
+  goal says what done looks like, what proof counts, what is off limits, and
+  when the agent must stop and ask you.
 explain: |
   A vague job turned into a goal an AI agent can actually finish. The goal says what done looks like, what proof counts, what is off limits, and when the agent must stop and ask you.
 
@@ -26,5 +29,6 @@ you_get:
   - Stop rules and limits
   - A list of holes found in an existing goal
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

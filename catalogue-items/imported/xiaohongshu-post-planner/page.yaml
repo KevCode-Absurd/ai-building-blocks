@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It adapts content to one platform.
 new_slug: xiaohongshu-post-planner
 name: Xiaohongshu post planner
-summary: Name your topic. Get a Xiaohongshu post plan with cover, title and layout aimed at saves and sales.
+summary: Name your topic. Get a Xiaohongshu post plan with cover, title and
+  layout aimed at saves and sales.
 job: grow-social
 headline: Xiaohongshu post planner
-subhead: Name your topic. Get a Xiaohongshu post plan with cover, title and layout aimed at saves and sales.
+subhead: Name your topic. Get a Xiaohongshu post plan with cover, title and
+  layout aimed at saves and sales. Bring your topic, product or message. Use the
+  result to plan your next step.
 explain: |
   A full Xiaohongshu post plan for one topic, built to win saves and, in time, sales on China's biggest lifestyle app.
 
@@ -27,5 +30,6 @@ you_get:
   - Seed comments and likely questions
   - A format recommendation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It gathers public facts and sorts them into clear gaps.
 new_slug: rival-store-comparer
 name: Rival store comparer
-summary: Name your top rivals. Get a side-by-side of their channels, prices and messages, plus the gaps you can win.
+summary: Name your top rivals. Get a side-by-side of their channels, prices and
+  messages, plus the gaps you can win.
 job: study-competitors
 headline: Rival store comparer
-subhead: Name your top rivals. Get a side-by-side of their channels, prices and messages, plus the gaps you can win.
+subhead: "A side-by-side look at your top rivals: where they sell, what they
+  charge and how they pitch their products, with the gaps you can step into."
 explain: |
   A side-by-side look at your top rivals: where they sell, what they charge and how they pitch their products, with the gaps you can step into. You can see where each rival is strong and where it is thin.
 
@@ -26,6 +28,7 @@ you_get:
   - Strengths and weak spots
   - Gaps you can win
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web and open pages.

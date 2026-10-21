@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It balances pushing upgrades against annoying users.
 new_slug: free-to-paid-flow-designer
 name: Free-to-paid flow designer
-summary: Describe your SaaS plans. Get upgrade moments, paywall design, win-back flows and churn prevention steps.
+summary: Describe your SaaS plans. Get upgrade moments, paywall design, win-back
+  flows and churn prevention steps.
 job: set-prices
 headline: Free-to-paid flow designer
-subhead: Describe your SaaS plans. Get upgrade moments, paywall design, win-back flows and churn prevention steps.
+subhead: Describe your SaaS plans. Get upgrade moments, paywall design, win-back
+  flows and churn prevention steps. Bring your plans and prices. Use the result
+  to plan your next step.
 explain: |
   A plan for turning free SaaS users into paying ones at the right moment, including paywalls, upgrade messages, win-back emails and steps to reduce cancellations.
 
@@ -27,5 +30,6 @@ you_get:
   - Win-back flow
   - Churn prevention steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

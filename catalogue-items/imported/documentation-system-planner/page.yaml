@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a doc system from your needs.
 new_slug: documentation-system-planner
 name: Documentation system planner
-summary: Describe your team and product. Get what to write down, where it lives and how to keep it fresh.
+summary: Describe your team and product. Get what to write down, where it lives
+  and how to keep it fresh.
 job: document-work
 headline: Documentation system planner
-subhead: Describe your team and product. Get what to write down, where it lives and how to keep it fresh.
+subhead: "A documentation plan for your team: what to write down, where it
+  should live, who owns it and how it stays up to date. It covers internal docs,
+  product docs and runbooks."
 explain: |
   A documentation plan for your team: what to write down, where it should live, who owns it and how it stays up to date. It covers internal docs, product docs and runbooks.
 
@@ -27,5 +30,6 @@ you_get:
   - A tool recommendation
   - First steps for cleanup
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It calculates standard day counts.
 new_slug: cash-tied-up-finder
 name: Cash tied-up finder
-summary: Give it your receivables, payables and stock. Get days outstanding, the cash cycle and where cash is stuck.
+summary: Give it your receivables, payables and stock. Get days outstanding, the
+  cash cycle and where cash is stuck.
 job: money-and-investing
 headline: Cash tied-up finder
-subhead: Give it your receivables, payables and stock. Get days outstanding, the cash cycle and where cash is stuck.
+subhead: You find out how much cash is locked in customers who owe you, stock on
+  shelves and bills you pay early, and where to free it.
 explain: |
   You find out how much cash is locked in customers who owe you, stock on shelves and bills you pay early, and where to free it. Give receivables, payables and stock figures, and you get days outstanding for each and the full cash cycle.
 
@@ -27,5 +29,6 @@ you_get:
   - Where cash is stuck and why
   - Actions to free it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

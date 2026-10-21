@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set job post shape from your facts.
 new_slug: inclusive-job-post-writer
 name: Inclusive job post writer
-summary: Name the role. Get a clear job post with real requirements, plus a fix for biased or bloated wording.
+summary: Name the role. Get a clear job post with real requirements, plus a fix
+  for biased or bloated wording.
 job: hire-people
 headline: Inclusive job post writer
-subhead: Name the role. Get a clear job post with real requirements, plus a fix for biased or bloated wording.
+subhead: A job post that candidates can read in a minute and trust, with real
+  requirements and no wording that quietly pushes good people away. Give it a
+  role, or paste an old post to be fixed.
 explain: |
   A job post that candidates can read in a minute and trust, with real requirements and no wording that quietly pushes good people away. Give it a role, or paste an old post to be fixed.
 
@@ -27,5 +30,6 @@ you_get:
   - Flagged wording with replacements
   - 30, 60 and 90 day goals
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

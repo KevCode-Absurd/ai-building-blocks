@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It proves the logic step by step before coding.
 new_slug: code-correctness-planner
 name: Code correctness planner
-summary: Give it a tricky function. It writes the rules and edge cases first, then code that keeps them.
+summary: Give it a tricky function. It writes the rules and edge cases first,
+  then code that keeps them.
 job: test-and-fix-code
 headline: Code correctness planner
-subhead: Give it a tricky function. It writes the rules and edge cases first, then code that keeps them.
+subhead: A tricky function gets its rules written down before any code, so
+  off-by-one and empty-input bugs get caught early. Tests alone often miss
+  these, because the bug lives in the contract, not the loop body.
 explain: |
   A tricky function gets its rules written down before any code, so off-by-one and empty-input bugs get caught early. Tests alone often miss these, because the bug lives in the contract, not the loop body.
 
@@ -25,5 +28,6 @@ you_get:
   - An edge case list
   - Code that matches those rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

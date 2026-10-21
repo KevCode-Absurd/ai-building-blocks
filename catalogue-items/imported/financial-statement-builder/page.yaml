@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It assembles linked statements that must agree.
 new_slug: financial-statement-builder
 name: Financial statement builder
-summary: Give it your books. Get a balance sheet, cash flow statement, P&L and executive summary.
+summary: Give it your books. Get a balance sheet, cash flow statement, P&L and
+  executive summary.
 job: money-and-investing
 headline: Financial statement builder
-subhead: Give it your books. Get a balance sheet, cash flow statement, P&L and executive summary.
+subhead: The three main statements and a short summary, produced from a trial
+  balance or ledger export. You get an income statement, balance sheet and cash
+  flow statement ready to hand to a reader.
 explain: |
   The three main statements and a short summary, produced from a trial balance or ledger export. You get an income statement, balance sheet and cash flow statement ready to hand to a reader.
 
@@ -27,5 +30,6 @@ you_get:
   - Key ratios
   - An executive summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,37 @@
+slug: copilot-gtm-0-to-1-launch
+name: First customer launch planner
+summary: Describe your new product. Get early buyer targets, a launch sequence and tests for reaching first customers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/gtm-0-to-1-launch
+  url: https://github.com/github/awesome-copilot/tree/main/skills/gtm-0-to-1-launch
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: gtm-0-to-1-launch
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: gtm-0-to-1-launch skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/gtm-0-to-1-launch
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Smit Patel (https://linkedin.com/in/smitkpatel)
+    url: ""
+    used: Wrote the skill; GitHub Copilot community shared it in their collection.

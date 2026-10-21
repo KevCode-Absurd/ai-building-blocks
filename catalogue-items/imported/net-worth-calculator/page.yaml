@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It adds and subtracts your numbers.
 new_slug: net-worth-calculator
 name: Net worth calculator
-summary: List your assets and debts. Get your net worth, how it splits, and a monthly view to track.
+summary: List your assets and debts. Get your net worth, how it splits, and a
+  monthly view to track.
 job: money-and-investing
 headline: Net worth calculator
-subhead: List your assets and debts. Get your net worth, how it splits, and a monthly view to track.
+subhead: Your net worth on one page, with a view you can repeat each month. You
+  list what you own and what you owe, and the skill does the sums and shows
+  where the money sits.
 explain: |
   Your net worth on one page, with a view you can repeat each month. You list what you own and what you owe, and the skill does the sums and shows where the money sits.
 
@@ -25,5 +28,6 @@ you_get:
   - Three health ratios
   - A change summary since last time
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

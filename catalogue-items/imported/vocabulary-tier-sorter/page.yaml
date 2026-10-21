@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It sorts words by type and ranks them for teaching.
 new_slug: vocabulary-tier-sorter
 name: Vocabulary tier sorter
-summary: Paste a text or topic. Get its words sorted into everyday, school and subject words, with what to teach first.
+summary: Paste a text or topic. Get its words sorted into everyday, school and
+  subject words, with what to teach first.
 job: teach-and-train
 headline: Vocabulary tier sorter
-subhead: Paste a text or topic. Get its words sorted into everyday, school and subject words, with what to teach first.
+subhead: The words in your text, sorted into everyday words, school words and
+  subject words, so you know what to teach first. It saves you from pre-teaching
+  the whole page.
 explain: |
   The words in your text, sorted into everyday words, school words and subject words, so you know what to teach first. It saves you from pre-teaching the whole page.
 
@@ -27,5 +30,6 @@ you_get:
   - A suggested teaching order
   - Support notes for language learners
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

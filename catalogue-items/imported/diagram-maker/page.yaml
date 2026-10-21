@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It chooses a diagram type, then lays it out with set rules.
 new_slug: diagram-maker
 name: Diagram maker
-summary: Describe a system, process or idea. Get a clean dark-themed SVG diagram you can open and reuse.
+summary: Describe a system, process or idea. Get a clean dark-themed SVG diagram
+  you can open and reuse.
 job: design-work
 headline: Diagram maker
-subhead: Describe a system, process or idea. Get a clean dark-themed SVG diagram you can open and reuse.
+subhead: A clean SVG diagram in a dark theme, saved as one file you can open in
+  any browser, drop into slides or edit later. Fonts and styles are built in, so
+  it looks the same everywhere.
 explain: |
   A clean SVG diagram in a dark theme, saved as one file you can open in any browser, drop into slides or edit later. Fonts and styles are built in, so it looks the same everywhere.
 
@@ -26,6 +29,7 @@ you_get:
   - Colour-coded boxes, arrows and labels
   - A file you can edit or embed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

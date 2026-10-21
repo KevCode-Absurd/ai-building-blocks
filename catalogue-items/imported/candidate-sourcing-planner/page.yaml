@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It ranks channels for one role using a set method.
 new_slug: candidate-sourcing-planner
 name: Candidate sourcing planner
-summary: Give it a role and candidate profile. Get the best places to look, target companies and a week-by-week plan.
+summary: Give it a role and candidate profile. Get the best places to look,
+  target companies and a week-by-week plan.
 job: hire-people
 headline: Candidate sourcing planner
-subhead: Give it a role and candidate profile. Get the best places to look, target companies and a week-by-week plan.
+subhead: A plan for where to find the right people and how to spend your time
+  looking. Give a role and a candidate profile, and you get ranked places to
+  search, target companies and communities, and a week-by-week schedule.
 explain: |
   A plan for where to find the right people and how to spend your time looking. Give a role and a candidate profile, and you get ranked places to search, target companies and communities, and a week-by-week schedule.
 
@@ -26,5 +29,6 @@ you_get:
   - A week-by-week action plan
   - Notes on what to do first
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

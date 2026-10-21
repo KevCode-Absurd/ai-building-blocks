@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Legal tiers need careful reading of each article.
 new_slug: eu-ai-act-risk-classifier
 name: EU AI Act risk classifier
-summary: Describe your AI system. Get its risk tier under the EU AI Act and the duties that follow.
+summary: Describe your AI system. Get its risk tier under the EU AI Act and the
+  duties that follow.
 job: secure-code
 headline: EU AI Act risk classifier
-subhead: Describe your AI system. Get its risk tier under the EU AI Act and the duties that follow.
+subhead: The risk tier of your AI system under the EU AI Act, with the duties
+  that come with it. You learn whether it is banned, high-risk, needs a
+  transparency notice, or is minimal.
 explain: |
   The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned, high-risk, needs a transparency notice, or is minimal.
 
@@ -26,5 +29,6 @@ you_get:
   - Documentation checklist
   - Duties by role
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

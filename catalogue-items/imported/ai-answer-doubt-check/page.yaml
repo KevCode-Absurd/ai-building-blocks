@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It asks short questions after each answer.
 new_slug: ai-answer-doubt-check
 name: AI answer doubt check
-summary: After any AI explanation, you name one place it could be wrong, one thing to check and one source to try.
+summary: After any AI explanation, you name one place it could be wrong, one
+  thing to check and one source to try.
 job: research-topics
 headline: AI answer doubt check
-subhead: After any AI explanation, you name one place it could be wrong, one thing to check and one source to try.
+subhead: A three-question habit that turns any AI answer into a claim to test,
+  not a fact to accept. After the AI explains something, the learner must say
+  where it could be wrong, what they would check, and which source they would
+  use.
 explain: |
   A three-question habit that turns any AI answer into a claim to test, not a fact to accept. After the AI explains something, the learner must say where it could be wrong, what they would check, and which source they would use.
 
@@ -25,5 +29,6 @@ you_get:
   - Tips for choosing a better source
   - A routine that can run after every AI answer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

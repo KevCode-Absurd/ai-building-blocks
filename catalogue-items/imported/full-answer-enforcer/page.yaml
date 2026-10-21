@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It is a short rule set, not a method.
 new_slug: full-answer-enforcer
 name: Full answer enforcer
-summary: Ask for a full file or list. Get every line, with no placeholders, skipped parts or half answers.
+summary: Ask for a full file or list. Get every line, with no placeholders,
+  skipped parts or half answers.
 job: set-up-ai
 headline: Full answer enforcer
-subhead: Ask for a full file or list. Get every line, with no placeholders, skipped parts or half answers.
+subhead: When you ask for a full file or list, you get every line. No "rest of
+  code here", no stubs and no "let me know if you want more".
 explain: |
   When you ask for a full file or list, you get every line. No "rest of code here", no stubs and no "let me know if you want more".
 
@@ -25,5 +27,6 @@ you_get:
   - Clean continuation chunks for long answers
   - Final check against what you asked for
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It tests many layouts.
 new_slug: sheet-cutting-planner
 name: Sheet cutting planner
-summary: Give it your sheet size and the panels you need. Get cutting layouts that waste the least material.
+summary: Give it your sheet size and the panels you need. Get cutting layouts
+  that waste the least material.
 job: plan-supply-chain
 headline: Sheet cutting planner
-subhead: Give it your sheet size and the panels you need. Get cutting layouts that waste the least material.
+subhead: Cutting layouts that use the least material when you cut panels from
+  large sheets of steel, glass, wood, fabric or paper. You list sheet size and
+  every panel you need, with sizes and quantities.
 explain: |
   Cutting layouts that use the least material when you cut panels from large sheets of steel, glass, wood, fabric or paper. You list sheet size and every panel you need, with sizes and quantities.
 
@@ -28,6 +31,7 @@ you_get:
   - Cost comparison
   - A layout that fits your saw
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

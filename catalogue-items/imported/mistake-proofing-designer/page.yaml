@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must find a design fix, not just a reminder.
 new_slug: mistake-proofing-designer
 name: Mistake-proofing designer
-summary: Point it at code, a form or a process. Get changes that make the wrong move impossible or loud.
+summary: Point it at code, a form or a process. Get changes that make the wrong
+  move impossible or loud.
 job: test-and-fix-code
 headline: Mistake-proofing designer
-subhead: Point it at code, a form or a process. Get changes that make the wrong move impossible or loud.
+subhead: Changes to your code, form or process that make the wrong move
+  impossible, or make it loud the moment it happens. Point it at something that
+  keeps going wrong and you get fixes that do not rely on anyone remembering.
 explain: |
   Changes to your code, form or process that make the wrong move impossible, or make it loud the moment it happens. Point it at something that keeps going wrong and you get fixes that do not rely on anyone remembering.
 
@@ -25,5 +28,6 @@ you_get:
   - Concrete changes such as types or constraints
   - A note on which fixes rely only on memory
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

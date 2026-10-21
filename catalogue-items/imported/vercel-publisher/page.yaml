@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It follows a set deploy path.
 new_slug: vercel-publisher
 name: Vercel publisher
-summary: Say "deploy my app". Get it live on Vercel as a preview or production site, with the link.
+summary: Say "deploy my app". Get it live on Vercel as a preview or production
+  site, with the link.
 job: ship-and-host
 headline: Vercel publisher
-subhead: Say "deploy my app". Get it live on Vercel as a preview or production site, with the link.
+subhead: Say deploy my app and get a live address back. It uses the Vercel
+  command line tool if you have it, and a no-login fallback if you do not.
 explain: |
   Say deploy my app and get a live address back. It uses the Vercel command line tool if you have it, and a no-login fallback if you do not.
 
@@ -26,6 +28,7 @@ you_get:
   - A production deploy on request
   - Troubleshooting for network errors
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands and reach your Vercel account.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: The polished mode adds analysis and review passes.
 new_slug: article-translator
 name: Article translator
-summary: Give it an article. Get a translation in your language, quick or polished with review, using consistent terms.
+summary: Give it an article. Get a translation in your language, quick or
+  polished with review, using consistent terms.
 job: write-and-tell-stories
 headline: Article translator
-subhead: Give it an article. Get a translation in your language, quick or polished with review, using consistent terms.
+subhead: Your article in another language, at the care level you choose. Quick
+  mode translates straight through. Normal mode studies the piece first, so
+  names, tone and tricky phrases are settled before any sentence is written.
 explain: |
   Your article in another language, at the care level you choose. Quick mode translates straight through. Normal mode studies the piece first, so names, tone and tricky phrases are settled before any sentence is written. Refined mode goes further: it drafts, reviews the draft against the original, and polishes the wording until it reads like it was written in that language.
 
@@ -26,5 +29,6 @@ you_get:
   - A consistent term list
   - A reviewed, polished final version (refined mode)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

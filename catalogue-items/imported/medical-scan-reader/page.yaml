@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows set read and write calls.
 new_slug: medical-scan-reader
 name: Medical scan reader
-summary: Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to use in MATLAB.
+summary: Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to
+  use in MATLAB.
 job: build-software
 headline: Medical scan reader
-subhead: Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to use in MATLAB.
+subhead: Scan files from DICOM, NIfTI or NRRD loaded into MATLAB as clean
+  volumes with the right voxel size, orientation and patient coordinates. It
+  saves you from hand-rolling the reading code and getting the geometry wrong.
 explain: |
   Scan files from DICOM, NIfTI or NRRD loaded into MATLAB as clean volumes with the right voxel size, orientation and patient coordinates. It saves you from hand-rolling the reading code and getting the geometry wrong.
 
@@ -25,6 +28,7 @@ you_get:
   - A list of DICOM series
   - Anonymised DICOM files when asked
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the Medical Imaging Toolbox.

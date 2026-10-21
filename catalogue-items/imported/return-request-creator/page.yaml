@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a fixed set of steps.
 new_slug: return-request-creator
 name: Return request creator
-summary: Name the order, items and reason. Get a formal return record opened in Shopify. Creates a live return.
+summary: Name the order, items and reason. Get a formal return record opened in
+  Shopify. Creates a live return.
 job: run-your-store
 headline: Return request creator
-subhead: Name the order, items and reason. Get a formal return record opened in Shopify. Creates a live return.
+subhead: Name the order, items and reason. Get a formal return record opened in
+  Shopify. Creates a live return. Bring the order ID. Use the result to plan
+  your next step.
 explain: |
   A formal return opened in Shopify for a delivered order, with the right items, amounts and reason, so the warehouse and refund steps can follow. This one changes your live store, so check the details with the customer first.
 
@@ -27,6 +30,7 @@ you_get:
   - A dry-run preview if you ask for one
   - A report of what was created
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

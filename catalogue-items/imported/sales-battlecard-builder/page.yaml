@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares products and drafts replies.
 new_slug: sales-battlecard-builder
 name: Sales battlecard builder
-summary: Name your rival. Get a battlecard with comparisons, reply scripts, positioning and win themes.
+summary: Name your rival. Get a battlecard with comparisons, reply scripts,
+  positioning and win themes.
 job: sell-and-negotiate
 headline: Sales battlecard builder
-subhead: Name your rival. Get a battlecard with comparisons, reply scripts, positioning and win themes.
+subhead: A one-page guide your sales team can use in a live deal against a named
+  rival. Give it the competitor and get comparisons, reply scripts and the
+  points that win deals.
 explain: |
   A one-page guide your sales team can use in a live deal against a named rival. Give it the competitor and get comparisons, reply scripts and the points that win deals.
 
@@ -26,5 +29,6 @@ you_get:
   - A positioning statement
   - Win themes with talk tracks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

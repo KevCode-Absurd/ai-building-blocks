@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It calls a public API and returns the figures.
 new_slug: us-treasury-data-puller
 name: US Treasury data puller
-summary: Ask about US debt, spending or interest rates. Get the latest official numbers from Treasury, no key needed.
+summary: Ask about US debt, spending or interest rates. Get the latest official
+  numbers from Treasury, no key needed.
 job: track-numbers
 headline: US Treasury data puller
-subhead: Ask about US debt, spending or interest rates. Get the latest official numbers from Treasury, no key needed.
+subhead: Ask about US debt, spending or interest rates. Get the latest official
+  numbers from Treasury, no key needed. Bring the question you want answered.
+  Use the result to plan your next step.
 explain: |
   Ask a plain question about US debt, government spending or interest rates and get the latest official figure back, with the date it was published. 
   The skill uses the Treasury's open Fiscal Data service. It picks the right data set for your question, such as total public debt to the penny, daily cash statements, monthly spending and revenue, bond auction results, interest rates, exchange rates or savings bonds. It then writes a short Python script that requests only the columns you need, filters by date, sorts newest first and loads the rows into a table. It tells you to check the data set's guide for the current address, because paths change. It needs Python with two common libraries.
@@ -25,6 +28,7 @@ you_get:
   - A table of rows ready for a spreadsheet
   - The name of the data set used
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can call public web APIs.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must spot which code makes the screen redraw.
 new_slug: animation-speed-fixer
 name: Animation speed fixer
-summary: Point it at stuttering animations. Get each slow spot found and a small fix that smooths it.
+summary: Point it at stuttering animations. Get each slow spot found and a small
+  fix that smooths it.
 job: build-websites
 headline: Animation speed fixer
-subhead: Point it at stuttering animations. Get each slow spot found and a small fix that smooths it.
+subhead: Animations that stutter make a good product feel cheap. Point this
+  skill at the troubled code and it finds each slow spot, explains the cause in
+  one sentence, and gives a small fix.
 explain: |
   Animations that stutter make a good product feel cheap. Point this skill at the troubled code and it finds each slow spot, explains the cause in one sentence, and gives a small fix.
 
@@ -25,6 +28,7 @@ you_get:
   - A concrete code fix
   - A list of safer properties to animate
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

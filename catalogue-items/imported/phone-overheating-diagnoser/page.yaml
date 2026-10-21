@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads device data and reasons about causes.
 new_slug: phone-overheating-diagnoser
 name: Phone overheating diagnoser
-summary: Describe the heat or battery drain. Get safe, read-only checks run and the likely cause named.
+summary: Describe the heat or battery drain. Get safe, read-only checks run and
+  the likely cause named.
 job: think-and-decide
 headline: Phone overheating diagnoser
-subhead: Describe the heat or battery drain. Get safe, read-only checks run and the likely cause named.
+subhead: Find why an Android phone runs hot or drains fast, with checks that
+  only read and never change anything. You get the likely cause named, plus what
+  the evidence shows and what is only a guess.
 explain: |
   Find why an Android phone runs hot or drains fast, with checks that only read and never change anything. You get the likely cause named, plus what the evidence shows and what is only a guess.
 
@@ -26,6 +29,7 @@ you_get:
   - Evidence kept apart from inference
   - One small reversible fix to approve
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands on your phone link.

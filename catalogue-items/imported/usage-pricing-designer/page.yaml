@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs trade-offs between price models.
 new_slug: usage-pricing-designer
 name: Usage pricing designer
-summary: Describe your product. Get a pay-as-you-go pricing model users understand, accept and can predict, with no surprise bills.
+summary: Describe your product. Get a pay-as-you-go pricing model users
+  understand, accept and can predict, with no surprise bills.
 job: set-prices
 headline: Usage pricing designer
-subhead: Describe your product. Get a pay-as-you-go pricing model users understand, accept and can predict, with no surprise bills.
+subhead: A pay-as-you-go price that customers can read, guess and trust, so
+  nobody opens a bill and gets a shock. You get the thing to charge for, the
+  tiers, and a pricing page that explains it.
 explain: |
   A pay-as-you-go price that customers can read, guess and trust, so nobody opens a bill and gets a shock. You get the thing to charge for, the tiers, and a pricing page that explains it.
 
@@ -26,5 +29,6 @@ you_get:
   - Pricing page copy with worked examples
   - A cost calculator outline
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies a short set of pricing rules to your event.
 new_slug: event-ticket-pricer
 name: Event ticket pricer
-summary: Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates.
+summary: Tell it about your class, workshop or event. Get ticket prices,
+  early-bird terms and how to show seats and dates.
 job: set-prices
 headline: Event ticket pricer
-subhead: Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates.
+subhead: Tell it about your class, workshop or event. Get ticket prices,
+  early-bird terms and how to show seats and dates. Bring event type and planned
+  ticket price. Use the result to plan your next step.
 explain: |
   Ticket prices and offer rules for a class, workshop or dated event, so you sell more seats without making the people who miss out resent you.
 
@@ -27,5 +30,6 @@ you_get:
   - Early offer terms with deadline
   - Wording ideas for scarcity and proof
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It chains many code methods and the risks grow with the size of the code.
 new_slug: old-code-paydown-guide
 name: Old code paydown guide
-summary: Give it a large old codebase. Get a safe plan to make it legible, bounded and resilient, step by step.
+summary: Give it a large old codebase. Get a safe plan to make it legible,
+  bounded and resilient, step by step.
 job: test-and-fix-code
 headline: Old code paydown guide
-subhead: Give it a large old codebase. Get a safe plan to make it legible, bounded and resilient, step by step.
+subhead: A safe plan for fixing an old codebase that everyone is afraid to
+  touch, without a rewrite. The old system keeps shipping while you improve it
+  in place.
 explain: |
   A safe plan for fixing an old codebase that everyone is afraid to touch, without a rewrite. The old system keeps shipping while you improve it in place.
 
@@ -26,5 +29,6 @@ you_get:
   - A tracker you can resume
   - Architecture notes with suggested boundaries
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

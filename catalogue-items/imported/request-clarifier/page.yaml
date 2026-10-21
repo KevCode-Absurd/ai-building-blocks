@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It asks short questions and stops after three rounds.
 new_slug: request-clarifier
 name: Request clarifier
-summary: Give it a loose request. Get a few rounds of sharp questions first, so the first draft lands.
+summary: Give it a loose request. Get a few rounds of sharp questions first, so
+  the first draft lands.
 job: think-and-decide
 headline: Request clarifier
-subhead: Give it a loose request. Get a few rounds of sharp questions first, so the first draft lands.
+subhead: Better first drafts, because the AI asks sharp questions before it
+  starts. A loose request like "write me a plan" gets turned into clear choices
+  about scope, audience, tone and format.
 explain: |
   Better first drafts, because the AI asks sharp questions before it starts. A loose request like "write me a plan" gets turned into clear choices about scope, audience, tone and format.
 
@@ -25,5 +28,6 @@ you_get:
   - Stated assumptions for anything left open
   - A first draft that fits
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

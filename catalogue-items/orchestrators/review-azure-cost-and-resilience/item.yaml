@@ -1,0 +1,59 @@
+slug: review-azure-cost-and-resilience
+name: Review Azure cost and resilience
+summary: Share your Azure resources. Get a resource map, current price estimates
+  and a risk-aware savings plan.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-azure-resource-visualizer
+  - copilot-azure-pricing
+  - copilot-az-cost-optimize
+  - copilot-azure-well-architected-review
+steps:
+  - uses: copilot-azure-resource-visualizer
+    note: 1. Read skills/copilot-azure-resource-visualizer/SKILL.md. Share your
+      Azure resource group. Get a diagram of the resources and how they connect.
+      Save the result with source references. Carry the user's goal and all
+      earlier findings into this step. If required evidence or tool access is
+      missing, mark this step blocked; do not fabricate a result.
+  - uses: copilot-azure-pricing
+    note: 2. Read skills/copilot-azure-pricing/SKILL.md. Name the Azure services you
+      need. Get current retail prices and an estimate with its assumptions
+      shown. Save the result with source references. Carry the user's goal and
+      all earlier findings into this step. If required evidence or tool access
+      is missing, mark this step blocked; do not fabricate a result.
+  - uses: copilot-az-cost-optimize
+    note: 3. Read skills/copilot-az-cost-optimize/SKILL.md. Share your Azure setup.
+      Get waste findings and proposed fixes tied to your app's resources. Save
+      the result with source references. Carry the user's goal and all earlier
+      findings into this step. If required evidence or tool access is missing,
+      mark this step blocked; do not fabricate a result.
+  - uses: copilot-azure-well-architected-review
+    note: 4. Read skills/copilot-azure-well-architected-review/SKILL.md. Share your
+      Azure design. Get architecture gaps and proposed fixes against Azure
+      workload guidance. Save the result with source references. Carry the
+      user's goal and all earlier findings into this step. If required evidence
+      or tool access is missing, mark this step blocked; do not fabricate a
+      result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

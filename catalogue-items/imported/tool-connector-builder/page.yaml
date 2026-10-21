@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It plans the tools, builds a server and tests it.
 new_slug: tool-connector-builder
 name: Tool connector builder
-summary: Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.
+summary: Name the service. Get an MCP server that lets your AI use its tools,
+  built and ready to test.
 job: connect-tools
 headline: Tool connector builder
-subhead: Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.
+subhead: Give your AI access to a service by building an MCP server, a small
+  program that exposes the service's actions as tools the AI can call.
 explain: |
   Give your AI access to a service by building an MCP server, a small program that exposes the service's actions as tools the AI can call. Done well, the AI picks the right action and gets useful answers back.
 
@@ -27,6 +29,7 @@ you_get:
   - Test questions
   - Setup steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the service's API docs.

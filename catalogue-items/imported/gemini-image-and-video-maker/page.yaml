@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Gemini draws the picture; the skill picks the model and checks cost.
 new_slug: gemini-image-and-video-maker
 name: Gemini image and video maker
-summary: Give it a picture idea and reference images. Get images or short video drawn by Google Gemini.
+summary: Give it a picture idea and reference images. Get images or short video
+  drawn by Google Gemini.
 job: make-images
 headline: Gemini image and video maker
-subhead: Give it a picture idea and reference images. Get images or short video drawn by Google Gemini.
+subhead: Images and short videos from Google Gemini, started by a plain
+  description. Hand over a picture idea and, if you have them, reference images
+  such as a logo, a face or a product shot.
 explain: |
   Images and short videos from Google Gemini, started by a plain description. Hand over a picture idea and, if you have them, reference images such as a logo, a face or a product shot. It picks the right model for the job: a fast draft, a standard image, a high quality image, or video.
 
@@ -26,6 +29,7 @@ you_get:
   - A saved log of each run
   - Reusable reference sets for later
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Gemini API key.

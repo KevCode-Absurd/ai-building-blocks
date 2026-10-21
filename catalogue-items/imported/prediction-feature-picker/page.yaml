@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It builds, scores and chooses among many candidate features.
 new_slug: prediction-feature-picker
 name: Prediction feature picker
-summary: Give it a data table and a target. Get the best input columns chosen, tested and delivered as a clean table.
+summary: Give it a data table and a target. Get the best input columns chosen,
+  tested and delivered as a clean table.
 job: build-software
 headline: Prediction feature picker
-subhead: Give it a data table and a target. Get the best input columns chosen, tested and delivered as a clean table.
+subhead: Choose the columns that best predict your target, test the choice and
+  receive a clean table ready for training. This is for MATLAB and needs a
+  licence.
 explain: |
   Choose the columns that best predict your target, test the choice and receive a clean table ready for training. This is for MATLAB and needs a licence.
 
@@ -26,6 +29,8 @@ you_get:
   - Assessment results
   - Clean feature table and report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with the Statistics and Machine Learning Toolbox.
+  - It works best when your AI can run MATLAB with the Statistics and Machine
+    Learning Toolbox.

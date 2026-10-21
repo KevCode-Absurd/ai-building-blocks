@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Operators have subtle correctness traps.
 new_slug: kubernetes-operator-builder
 name: Kubernetes operator builder
-summary: Describe the resource you manage. Get a custom operator with its CRD design and reconcile loop.
+summary: Describe the resource you manage. Get a custom operator with its CRD
+  design and reconcile loop.
 job: build-software
 headline: Kubernetes operator builder
-subhead: Describe the resource you manage. Get a custom operator with its CRD design and reconcile loop.
+subhead: Describe the resource you manage. Get a custom operator with its CRD
+  design and reconcile loop. Bring the resource the operator should manage. Use
+  the result to plan your next step.
 explain: |
   Most operator bugs live in the reconcile loop, not in Kubernetes. This skill builds a custom operator and checks it against seven common mistakes. They are: step-by-step logic, no retry on short errors, missing finalizers, editing spec instead of status, skipping the status subresource, blocking calls and no leader election.
 
@@ -26,6 +29,7 @@ you_get:
   - CRD and reconcile lint results
   - A capability level score with gaps to close
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

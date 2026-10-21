@@ -2,17 +2,21 @@ thinking: high
 thinking_why: Wrong setup choices quietly ruin the final comparison.
 new_slug: rna-seq-comparison-preparer
 name: RNA-seq comparison preparer
-summary: Give it sequencing output. Get counts ready to compare gene activity between groups, with replicate and setup checks.
+summary: Give it sequencing output. Get counts ready to compare gene activity
+  between groups, with replicate and setup checks.
 job: research-topics
 headline: RNA-seq comparison preparer
-subhead: Give it sequencing output. Get counts ready to compare gene activity between groups, with replicate and setup checks.
+subhead: Sequencing output turned into a checked table of gene counts, ready to
+  compare gene activity between groups. Mistakes in set-up are caught before
+  they ruin the analysis.
 explain: |
   Sequencing output turned into a checked table of gene counts, ready to compare gene activity between groups. Mistakes in set-up are caught before they ruin the analysis.
 
   The skill takes FASTQ files or output from Salmon, STAR or featureCounts, and can set up the nf-core/rnaseq pipeline. It validates the sample list, checks you have real biological replicates, confirms strandedness and records which reference was used. Quality checks run before and after counting. It then assembles a counts matrix with the right sample and gene order and hands it to PyDESeq2. It needs Python with pandas and numpy, and often Nextflow with containers.
 when:
   - You have raw reads and need a counts table.
-  - You want to check your experiment has enough replicates before paying for compute.
+  - You want to check your experiment has enough replicates before paying for
+    compute.
   - Salmon output must become a matrix for DESeq2.
   - You are unsure about strandedness or reference settings.
 you_give:
@@ -28,6 +32,7 @@ you_get:
   - A record of settings and versions
   - A handoff ready for PyDESeq2
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python and command line tools.

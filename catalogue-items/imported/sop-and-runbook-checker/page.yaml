@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It checks each step against a fixed list, then writes fixes.
 new_slug: sop-and-runbook-checker
 name: SOP and runbook checker
-summary: Give it your SOPs or wiki export. Get missing owners, stale pages and gaps, plus new SOPs to fix them.
+summary: Give it your SOPs or wiki export. Get missing owners, stale pages and
+  gaps, plus new SOPs to fix them.
 job: document-work
 headline: SOP and runbook checker
-subhead: Give it your SOPs or wiki export. Get missing owners, stale pages and gaps, plus new SOPs to fix them.
+subhead: A list of the weak spots in your company procedures, with new SOPs
+  written to fill the gaps. Give it your SOPs or a wiki export.
 explain: |
   A list of the weak spots in your company procedures, with new SOPs written to fill the gaps. Give it your SOPs or a wiki export. It checks each one against the 5W2H questions: who, what, when, where, why, how and how much.
 
@@ -26,6 +28,7 @@ you_get:
   - A prioritised cleanup list
   - Draft SOPs for the gaps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

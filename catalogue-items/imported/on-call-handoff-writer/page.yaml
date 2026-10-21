@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It condenses facts into a set template.
 new_slug: on-call-handoff-writer
 name: On-call handoff writer
-summary: Give it your shift alerts and open issues. Get a handoff note the next person can act on at once.
+summary: Give it your shift alerts and open issues. Get a handoff note the next
+  person can act on at once.
 job: organise-work
 headline: On-call handoff writer
-subhead: Give it your shift alerts and open issues. Get a handoff note the next person can act on at once.
+subhead: A handoff note the next on-call person can read in two minutes and act
+  on. It stops the usual loss of context when one shift ends and another begins.
 explain: |
   A handoff note the next on-call person can read in two minutes and act on. It stops the usual loss of context when one shift ends and another begins.
 
@@ -26,5 +28,6 @@ you_get:
   - Things to watch in the next shift
   - A reusable handoff template
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -5,7 +5,8 @@ name: Error and log debugger
 summary: Give it an error, log or stack trace. Get the cause found and a fix that works.
 job: test-and-fix-code
 headline: Error and log debugger
-subhead: Give it an error, log or stack trace. Get the cause found and a fix that works.
+subhead: Paste an error, a log or a stack trace and get back the real cause of
+  the bug, plus the smallest fix that solves it.
 explain: |
   Paste an error, a log or a stack trace and get back the real cause of the bug, plus the smallest fix that solves it. No guessing at changes until something works.
 
@@ -27,6 +28,7 @@ you_get:
   - Test that covers the failing case
   - Steps to confirm the fix
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

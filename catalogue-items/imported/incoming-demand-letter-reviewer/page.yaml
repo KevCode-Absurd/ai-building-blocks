@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs the merit of a claim and the stakes are real.
 new_slug: incoming-demand-letter-reviewer
 name: Incoming demand letter reviewer
-summary: Give it a demand letter you got. Get the claims, how strong they look and your reply options. Not legal advice.
+summary: Give it a demand letter you got. Get the claims, how strong they look
+  and your reply options. Not legal advice.
 job: check-contracts
 headline: Incoming demand letter reviewer
-subhead: Give it a demand letter you got. Get the claims, how strong they look and your reply options. Not legal advice.
+subhead: "A first read of a demand letter you received: what they claim, how
+  strong it looks, and your options for answering. It is a starting point for
+  talking to a lawyer, not legal advice."
 explain: |
   A first read of a demand letter you received: what they claim, how strong it looks, and your options for answering. It is a starting point for talking to a lawyer, not legal advice.
 
@@ -27,7 +30,11 @@ you_get:
   - Response options with a recommendation
   - A saved triage note
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your saved legal setup notes and your files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can read your saved legal setup notes and your
+    files.
+  - Where the skill points to /litigation-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

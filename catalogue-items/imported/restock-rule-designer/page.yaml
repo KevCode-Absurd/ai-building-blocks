@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches a standard rule to each product type.
 new_slug: restock-rule-designer
 name: Restock rule designer
-summary: Give it your sales and lead times. Get a restock rule for each product group, like min-max or fixed cycle.
+summary: Give it your sales and lead times. Get a restock rule for each product
+  group, like min-max or fixed cycle.
 job: run-your-store
 headline: Restock rule designer
-subhead: Give it your sales and lead times. Get a restock rule for each product group, like min-max or fixed cycle.
+subhead: A restock rule for each group of products, so reordering stops being a
+  weekly guess. You get a clear trigger, an order size and a reason it fits that
+  group's sales pattern.
 explain: |
   A restock rule for each group of products, so reordering stops being a weekly guess. You get a clear trigger, an order size and a reason it fits that group's sales pattern.
 
@@ -27,5 +30,6 @@ you_get:
   - Notes on why each rule fits
   - Warnings about storage or supplier limits
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

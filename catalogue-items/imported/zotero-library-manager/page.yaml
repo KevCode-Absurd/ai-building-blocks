@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs simple library requests one after another.
 new_slug: zotero-library-manager
 name: Zotero library manager
-summary: Say what to find or tidy in your Zotero library. Get references searched, tagged, sorted or exported as citations.
+summary: Say what to find or tidy in your Zotero library. Get references
+  searched, tagged, sorted or exported as citations.
 job: research-topics
 headline: Zotero library manager
-subhead: Say what to find or tidy in your Zotero library. Get references searched, tagged, sorted or exported as citations.
+subhead: Say what to find or tidy in your Zotero library. Get references
+  searched, tagged, sorted or exported as citations. Bring what to find or
+  change in the library. Use the result to plan your next step.
 explain: |
   Tell it what to find or tidy in your Zotero library and get the references searched, tagged, sorted or exported as citations.
 
@@ -26,6 +29,7 @@ you_get:
   - Citation exports
   - A plan to review before any write
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Zotero key.

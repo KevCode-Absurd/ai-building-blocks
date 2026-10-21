@@ -1,0 +1,32 @@
+slug: copilot-acreadiness-generate-instructions
+name: AgentRC instruction file writer
+summary: Point it at your repo. Get project rules for coding agents, with a preview before files change.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/acreadiness-generate-instructions
+  url: https://github.com/github/awesome-copilot/tree/main/skills/acreadiness-generate-instructions
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: acreadiness-generate-instructions
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: acreadiness-generate-instructions skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/acreadiness-generate-instructions
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

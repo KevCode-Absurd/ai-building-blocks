@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It follows a short set of formatting and tone rules.
 new_slug: slack-message-writer
 name: Slack message writer
-summary: Give it your point. Get a short, well-formatted Slack message, thread reply or canvas that leads with the news. Needs Slack.
+summary: Give it your point. Get a short, well-formatted Slack message, thread
+  reply or canvas that leads with the news. Needs Slack.
 job: write-emails
 headline: Slack message writer
-subhead: Give it your point. Get a short, well-formatted Slack message, thread reply or canvas that leads with the news. Needs Slack.
+subhead: A Slack message that people read to the end. The first line carries the
+  news, because many people only see that line in a notification.
 explain: |
   A Slack message that people read to the end. The first line carries the news, because many people only see that line in a notification. You give your point, and the skill drafts a short message, a thread reply or a longer canvas.
 
@@ -26,6 +28,7 @@ you_get:
   - A thread reply or canvas when it fits better
   - A draft ready to send after you approve it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can connect to your Slack account.

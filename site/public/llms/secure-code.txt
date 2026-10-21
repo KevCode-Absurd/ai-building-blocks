@@ -1,6 +1,6 @@
 # Keep your code secure: AI Blocks
 
-> 76 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 83 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Advisory exposure checker](https://useaiblocks.com/skills/advisory-exposure-checker): Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
 - [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester): Give it your AI agent. Get a safe, authorized test plan and a report of where it can be tricked.
@@ -21,6 +21,7 @@
 - [Code security reviewer](https://useaiblocks.com/skills/code-security-reviewer): Point it at your Python, JavaScript, TypeScript or Go code. Get a ranked list of security gaps, each with a fix.
 - [Code security scanner](https://useaiblocks.com/skills/code-security-scanner): Point it at your source code. Get security flaws found with static tools and rules you can add to CI.
 - [Code vulnerability auditor](https://useaiblocks.com/skills/code-vulnerability-auditor): Point it at code you own. Get proven, exploitable bugs with steps to reproduce and fixes.
+- [CodeQL scan setup helper](https://useaiblocks.com/skills/copilot-codeql): Share your repo and languages. Get CodeQL scanning set up in Actions or the command line.
 - [Compliance readiness checklist builder](https://useaiblocks.com/skills/compliance-checklist): Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority.
 - [Connected product security checker](https://useaiblocks.com/skills/iot-security-check): Describe your product with software. Get its EU risk class, security duties, parts list needs and reporting steps.
 - [Cybersecurity profile builder](https://useaiblocks.com/skills/cybersecurity-profile-builder): Describe your security today and your goals. Get a NIST CSF profile, gaps and a step by step plan.
@@ -32,12 +33,13 @@
 - [EU AI Act risk classifier](https://useaiblocks.com/skills/eu-ai-act-risk-classifier): Describe your AI system. Get its risk tier under the EU AI Act and the duties that follow.
 - [Exposed secrets finder](https://useaiblocks.com/skills/exposed-secrets-finder): Give it a site you own. Get a report of keys and private files visitors can read, with fixes.
 - [Federal security controls planner](https://useaiblocks.com/skills/federal-security-controls): Describe your system. Get the right control baseline, tailoring choices and draft control write-ups.
-- [Find leaked keys, secure them and check your live site](https://useaiblocks.com/workflows/find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site): Give it your project. Get leaked keys found, replaced, stored safely and checked on your live site.
 - [Fix API security gaps with tests and a pull request](https://useaiblocks.com/workflows/fix-api-security-gaps-with-tests-and-a-clear-pull-request): Give it your API code. Get gaps fixed, tests for each fix and a reviewed pull request.
 - [Fraud review queue builder](https://useaiblocks.com/skills/fraud-review-queue-builder): Get orders listed by fraud risk level with the warning signs, as a queue for manual review.
 - [GDPR audit prep coach](https://useaiblocks.com/skills/gdpr-audit-prep-coach): Name your scope. Answer six article-based questions and get gaps to fix before a review or regulator visit.
 - [GDPR privacy checker](https://useaiblocks.com/skills/gdpr-privacy-checker): Point it at your code and data use. Get privacy risks, an impact assessment and a tracker for data requests.
 - [GitHub Actions attack finder](https://useaiblocks.com/skills/github-actions-attack-finder): Point it at your workflows. Get only the holes an outsider could use, each with the exact attack.
+- [GitHub Actions permission reviewer](https://useaiblocks.com/skills/copilot-github-actions-hardening): Share your build workflows. Get risky permissions, unsafe inputs and dependency trust problems with fixes.
+- [GitHub secret protection setter](https://useaiblocks.com/skills/copilot-secret-scanning): Share your repo setup. Get secret scanning and push protection configured, with an alert response plan.
 - [Harden an AI app against hijacked prompts and runaway bills](https://useaiblocks.com/workflows/harden-an-ai-app-against-hijacked-instructions-and-runaway-bills): Give it your AI app. Get layered defences, tests, spending caps and a fresh attack test.
 - [Insecure code catcher](https://useaiblocks.com/skills/insecure-code-catcher): Turn it on. Get a warning when your AI writes risky code, like injection, XSS or unsafe commands.
 - [ISO 27001 audit planner](https://useaiblocks.com/skills/iso-27001-audit-planner): Describe your security setup. Get an audit plan, control checks and a list of findings to fix.
@@ -49,19 +51,23 @@
 - [MCP attack defence reviewer](https://useaiblocks.com/skills/mcp-attack-defence-reviewer): Point it at an MCP server. Get a ranked list of attack risks, each with a fix.
 - [MCP config version checker](https://useaiblocks.com/skills/mcp-config-version-checker): Give it your MCP config files. Get a list of server packages that can change under you, before you approve them.
 - [MCP server hardener](https://useaiblocks.com/skills/mcp-server-hardener): Point it at an MCP server you run. Get a checklist of fixes for transport, auth, access and logging.
+- [Microsoft threat model file builder](https://useaiblocks.com/skills/copilot-tm7-threat-model): Describe your system and data paths. Get a threat model file for Microsoft's modeling tool.
 - [Open-source license checker](https://useaiblocks.com/skills/open-source-license-checker): Give it your project dependencies. Get license clashes, duties and risks flagged.
+- [Privacy engineering practice reviewer](https://useaiblocks.com/skills/copilot-gdpr-compliant): Share the way your app handles personal data. Get engineering gaps and changes to support privacy requirements.
 - [Privacy-first app designer](https://useaiblocks.com/skills/privacy-first-app-designer): Describe the data your app collects. Get privacy controls designed in: less data kept, clear consent, safe storage.
 - [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender): Describe your AI app. Get a threat map and fixes against hidden instructions in text it reads.
 - [Quarterly compliance readiness keeper](https://useaiblocks.com/agents/quarterly-compliance-readiness-keeper): Name your framework each quarter. Get gaps found, last quarter's fixes checked and what to close first.
+- [Review an agent before launch](https://useaiblocks.com/workflows/review-an-agent-before-launch): Share your agent code and design. Get risks in tool access, plugin trust and behavior ranked before launch.
 - [Risky design reviewer](https://useaiblocks.com/skills/risky-design-reviewer): Give it an API or config design. Get the easy-to-misuse parts that lead to security mistakes.
 - [Safe secrets manager](https://useaiblocks.com/skills/safe-secrets-manager): Get API keys and env variables checked and loaded without ever showing the values in logs or chat.
-- [Secrets hygiene checker](https://useaiblocks.com/skills/secrets-hygiene-checker): Point it at your project. Get leaked keys found, env files tidied and a plan to rotate secrets.
 - [Secrets setup helper](https://useaiblocks.com/skills/secrets-setup-helper): Name your pipeline and secret store. Get a safe plan for storing, reading and rotating secrets.
 - [Secure development checker](https://useaiblocks.com/skills/secure-development-checker): Give it your project. Get a scan for code flaws, weak packages and exposed secrets, with fixes ranked.
+- [Security audit evidence reviewer](https://useaiblocks.com/skills/copilot-audit-integrity): Share a security audit. Get claims without proof, missing facts and failed checks called out.
 - [Security incident triager](https://useaiblocks.com/skills/security-incident-triager): Give it a security alert. Get severity, who to tell, what to preserve and the next steps.
 - [Security posture auditor](https://useaiblocks.com/skills/security-posture-auditor): Describe your system. Get a scoped review of code, servers, sign-in and daily operations.
 - [Security safeguards planner](https://useaiblocks.com/skills/security-safeguards-planner): Describe your setup and size. Get which CIS safeguards you need first, your gaps and a fix order.
 - [Security-focused change reviewer](https://useaiblocks.com/skills/security-focused-change-reviewer): Give it a pull request or commit. Get a security review of only what changed, with risks ranked.
+- [Sensitive data exposure mapper](https://useaiblocks.com/skills/copilot-data-breach-blast-radius): Share your system design or code. Get sensitive data paths, likely exposure and fixes ranked by impact.
 - [Serial returner spotter](https://useaiblocks.com/skills/serial-returner-spotter): Get customers with unusual return habits listed for you to review. It never blocks anyone on its own.
 - [Shipped app gap finder](https://useaiblocks.com/skills/shipped-app-gap-finder): Point it at a shipped repo. Get gaps found in database rules, webhooks, secrets, payments and mobile use.
 - [Skill safety auditor](https://useaiblocks.com/skills/skill-safety-auditor): Give it a skill before you install it. Get risky code and hidden commands flagged.
@@ -69,12 +75,13 @@
 - [SOC 2 readiness checker](https://useaiblocks.com/skills/soc-2-readiness-checker): Name your scope. Answer six questions and get gaps to fix before the SOC 2 Type II watch period.
 - [SOC 2 readiness planner](https://useaiblocks.com/skills/soc-2-readiness-planner): Describe your systems. Get your controls mapped, gaps found and the evidence an auditor will ask for.
 - [Staff access reviewer](https://useaiblocks.com/skills/staff-access-reviewer): Get staff accounts with old logins, inactive status or too much access, so your store stays safe.
+- [STRIDE system threat analyst](https://useaiblocks.com/skills/copilot-threat-model-analyst): Share your system or change. Get threats, trust boundaries and safeguards, with a record of new risks.
 - [Threat list maker](https://useaiblocks.com/prompts/threat-list-maker): Paste how your app or service works. Get the likeliest attacks ranked, each with one way to reduce the risk.
 - [Threat model writer](https://useaiblocks.com/skills/threat-model-writer): Point it at your code. Get a short threat model of what attackers could reach, how, and how to stop them.
 - [Threat modeler](https://useaiblocks.com/skills/threat-modeler): Describe your system. Get threats found with STRIDE, rated by risk, each with a way to reduce it.
 - [Timing leak checker](https://useaiblocks.com/skills/timing-leak-checker): Point it at crypto code. Get a list of spots where run time could leak secret keys, with fixes.
 - [UK Cyber Essentials checker](https://useaiblocks.com/skills/uk-cyber-essentials-checker): Describe your devices and cloud services. Get gaps against Cyber Essentials and what to fix before you apply.
 - [Untrusted input checker](https://useaiblocks.com/skills/untrusted-input-checker): Point it at code. Get every place outside data enters found and checked before it reaches your logic.
+- [Verify an MCP server release](https://useaiblocks.com/workflows/verify-an-mcp-server-release): Share your MCP server and settings. Get code risks, access risks and a real protocol test report.
 - [Vulnerability scan planner](https://useaiblocks.com/skills/vulnerability-scan-planner): Point it at your own app. Get a check for common web flaws and a ranked list of fixes.
 - [Website security baseline checker](https://useaiblocks.com/skills/website-security-check): Point it at your site. Get a checklist covering HTTPS, security headers, secrets and content policy, with fixes ranked.
-- [Weekly dependency and security sweep](https://useaiblocks.com/agents/weekly-dependency-and-security-sweep): Run it weekly on your project. Get what is new, open or fixed since last week, plus an upgrade order.

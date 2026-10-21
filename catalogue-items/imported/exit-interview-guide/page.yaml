@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Fair handling of complaints needs careful steps.
 new_slug: exit-interview-guide
 name: Exit interview and grievance guide
-summary: Describe the case. Get a fair step-by-step way to handle it, plus exit interview questions. Not legal advice.
+summary: Describe the case. Get a fair step-by-step way to handle it, plus exit
+  interview questions. Not legal advice.
 job: hire-people
 headline: Exit interview and grievance guide
-subhead: Describe the case. Get a fair step-by-step way to handle it, plus exit interview questions. Not legal advice.
+subhead: A fair, documented way to handle an employee relations case, plus exit
+  interview questions that get honest answers. It is guidance for HR, not legal
+  advice.
 explain: |
   A fair, documented way to handle an employee relations case, plus exit interview questions that get honest answers. It is guidance for HR, not legal advice.
 
@@ -26,5 +29,6 @@ you_get:
   - Step-by-step case handling plan
   - Method to spot turnover trends
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

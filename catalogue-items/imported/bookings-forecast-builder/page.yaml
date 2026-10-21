@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs set funnel maths, then explains the forecast.
 new_slug: bookings-forecast-builder
 name: Bookings forecast builder
-summary: Give it your pipeline and cohorts. Get a commit, best case and pipe-only forecast with the maths shown.
+summary: Give it your pipeline and cohorts. Get a commit, best case and
+  pipe-only forecast with the maths shown.
 job: money-and-investing
 headline: Bookings forecast builder
-subhead: Give it your pipeline and cohorts. Get a commit, best case and pipe-only forecast with the maths shown.
+subhead: "Three forecast numbers with the maths shown: commit, best case and
+  pipe only. Leaders can present one figure while the board sees the assumptions
+  behind it."
 explain: |
   Three forecast numbers with the maths shown: commit, best case and pipe only. Leaders can present one figure while the board sees the assumptions behind it.
 
@@ -26,6 +29,7 @@ you_get:
   - Retention by cohort
   - A reliability rating for each funnel stage
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

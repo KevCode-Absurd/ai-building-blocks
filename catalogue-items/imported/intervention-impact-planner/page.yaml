@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It must test ideas for knock-on effects.
 new_slug: intervention-impact-planner
 name: Intervention impact planner
-summary: Give it a systems analysis and ideas for action. Get each ranked by impact, with side effects and better options.
+summary: Give it a systems analysis and ideas for action. Get each ranked by
+  impact, with side effects and better options.
 job: teach-and-train
 headline: Intervention impact planner
-subhead: Give it a systems analysis and ideas for action. Get each ranked by impact, with side effects and better options.
+subhead: Your plan to fix a problem gets tested before you act on it. Give it
+  the systems analysis you already have and the action you are leaning toward.
 explain: |
   Your plan to fix a problem gets tested before you act on it. Give it the systems analysis you already have and the action you are leaning toward. It places that action on the twelve places to intervene described by Donella Meadows, from tweaking numbers at the bottom to changing goals and beliefs at the top.
 
@@ -26,5 +28,6 @@ you_get:
   - Two or three better or refined options
   - A ranking by impact
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

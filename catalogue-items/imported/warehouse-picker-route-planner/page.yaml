@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It solves a route puzzle for every pick list.
 new_slug: warehouse-picker-route-planner
 name: Warehouse picker route planner
-summary: Give it your aisle layout and pick lists. Get the shortest walking order for each picker.
+summary: Give it your aisle layout and pick lists. Get the shortest walking
+  order for each picker.
 job: plan-supply-chain
 headline: Warehouse picker route planner
-subhead: Give it your aisle layout and pick lists. Get the shortest walking order for each picker.
+subhead: The shortest walking order for each picker, so orders get picked faster
+  with less travel. You get a route for every pick list, not a general rule.
 explain: |
   The shortest walking order for each picker, so orders get picked faster with less travel. You get a route for every pick list, not a general rule.
 
@@ -26,6 +28,7 @@ you_get:
   - Travel distance before and after
   - Rules your team can follow
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

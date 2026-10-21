@@ -1,0 +1,32 @@
+slug: copilot-incident-postmortem
+name: Incident learning report writer
+summary: Share an outage timeline and evidence. Get a blameless report with causes, follow-up owners and unresolved facts.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/incident-postmortem
+  url: https://github.com/github/awesome-copilot/tree/main/skills/incident-postmortem
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: incident-postmortem
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: incident-postmortem skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/incident-postmortem
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

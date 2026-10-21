@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It writes short posts to a set format.
 new_slug: social-post-writer
 name: Social post writer
-summary: Give a topic. Get clear posts for Instagram, LinkedIn and more that also help search.
+summary: Give a topic. Get clear posts for Instagram, LinkedIn and more that
+  also help search.
 job: get-found-in-search
 headline: Social post writer
-subhead: Give a topic. Get clear posts for Instagram, LinkedIn and more that also help search.
+subhead: A clear social post that reads well and also helps people find you in
+  search. You give a topic, a main keyword, your audience and the platform, and
+  get a post sized for that site.
 explain: |
   A clear social post that reads well and also helps people find you in search. You give a topic, a main keyword, your audience and the platform, and get a post sized for that site.
 
@@ -26,5 +29,6 @@ you_get:
   - Natural keyword use
   - Emoji and tone matched to the site
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

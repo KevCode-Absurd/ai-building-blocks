@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It maps goals to events by set steps.
 new_slug: tracking-plan-builder
 name: Tracking plan builder
-summary: Say what you need to measure. Get a tracking plan with events, names and tags for GA4, Mixpanel or similar tools.
+summary: Say what you need to measure. Get a tracking plan with events, names
+  and tags for GA4, Mixpanel or similar tools.
 job: plan-strategy
 headline: Tracking plan builder
-subhead: Say what you need to measure. Get a tracking plan with events, names and tags for GA4, Mixpanel or similar tools.
+subhead: A tracking plan that lists every event, its name, its properties and
+  the question it answers. That is what you get before anyone touches a tag, so
+  your numbers stay clean from day one.
 explain: |
   A tracking plan that lists every event, its name, its properties and the question it answers. That is what you get before anyone touches a tag, so your numbers stay clean from day one.
 
@@ -27,5 +30,6 @@ you_get:
   - UTM and conversion rules
   - A test checklist for launch
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -30,8 +30,7 @@ works_with:
   - canva
   - stable-diffusion
 runs_in: [web, mobile, api]
-blocks:
-  - stable-diffusion-image-maker
+blocks: []
 alternatives: [midjourney, ideogram, recraft, krea]
 last_checked: 2026-10-21
 sources:

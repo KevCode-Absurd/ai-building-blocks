@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reviews a draft against many fixed checks.
 new_slug: pre-publish-content-checker
 name: Pre-publish content checker
-summary: Give it a draft and its brief. Get checks on facts, voice, structure, AI sound and search readiness.
+summary: Give it a draft and its brief. Get checks on facts, voice, structure,
+  AI sound and search readiness.
 job: write-and-tell-stories
 headline: Pre-publish content checker
-subhead: Give it a draft and its brief. Get checks on facts, voice, structure, AI sound and search readiness.
+subhead: A final check on a draft before it goes live, so errors are caught
+  before readers see them. Give it the draft and the brief and get a marked list
+  of problems with fixes.
 explain: |
   A final check on a draft before it goes live, so errors are caught before readers see them. Give it the draft and the brief and get a marked list of problems with fixes.
 
@@ -26,5 +29,6 @@ you_get:
   - Voice and structure edits
   - Publish or hold verdict
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

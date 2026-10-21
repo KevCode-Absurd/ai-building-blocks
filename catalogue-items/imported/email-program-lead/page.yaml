@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It weighs list health, rules and send risk before it suggests anything.
 new_slug: email-program-lead
 name: Email program lead
-summary: Say your email goal. Get flows, copy, deliverability fixes and compliance checks, with a hard stop before any real send.
+summary: Say your email goal. Get flows, copy, deliverability fixes and
+  compliance checks, with a hard stop before any real send.
 job: write-emails
 headline: Email program lead
-subhead: Say your email goal. Get flows, copy, deliverability fixes and compliance checks, with a hard stop before any real send.
+subhead: A full email marketing plan, with the sending steps held back until you
+  say go. State your goal and you get flows, copy, deliverability fixes and
+  compliance checks, built on one author's playbook drawn from running a large
+  email platform.
 explain: |
   A full email marketing plan, with the sending steps held back until you say go. State your goal and you get flows, copy, deliverability fixes and compliance checks, built on one author's playbook drawn from running a large email platform.
 
@@ -26,6 +30,8 @@ you_get:
   - A deliverability fix list
   - Compliance checks before any send
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your email platform through a connector if you want drafts built there. It always asks you before any send.
+  - It works best when your AI can read your email platform through a connector
+    if you want drafts built there. It always asks you before any send.

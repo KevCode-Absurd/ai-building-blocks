@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It turns workshop answers into set outputs.
 new_slug: company-values-culture
 name: Company values and culture builder
-summary: Describe your team. Get values written as behaviours, a culture code and a simple health check.
+summary: Describe your team. Get values written as behaviours, a culture code
+  and a simple health check.
 job: lead-people
 headline: Company values and culture builder
-subhead: Describe your team. Get values written as behaviours, a culture code and a simple health check.
+subhead: Describe your team. Get values written as behaviours, a culture code
+  and a simple health check. Bring a description of your team and its size. Use
+  the result to plan your next step.
 explain: |
   Values your team can see in daily behaviour, a short culture code, and a simple way to check how healthy your culture is. A value like transparency means little until it says what people do, for example sharing bad news within a day.
 
@@ -26,5 +29,6 @@ you_get:
   - Rituals to try
   - A simple culture health check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

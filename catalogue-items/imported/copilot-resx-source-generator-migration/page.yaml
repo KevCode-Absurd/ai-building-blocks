@@ -1,0 +1,18 @@
+thinking: high
+thinking_why: It compares evidence and checks changes against the goal.
+new_slug: copilot-resx-source-generator-migration
+name: RESX generated code migration helper
+summary: Share your resource files and project. Get a move from checked-in
+  designer files to a source generator.
+job: build-software
+headline: RESX generated code migration helper
+subhead: Share your resource files and project. Get a move from checked-in
+  designer files to a source generator. Share your goal and the files you
+  already have. The skill file sets out the steps and the tools needed for this
+  job.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read the files you provide and use the named
+    tools when the job requires them.

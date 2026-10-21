@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It projects timing from history and flags risks.
 new_slug: cash-forecast-builder
 name: Cash forecast builder
-summary: Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day cash forecast with risks named.
+summary: Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day
+  cash forecast with risks named.
 job: track-numbers
 headline: Cash forecast builder
-subhead: Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day cash forecast with risks named.
+subhead: "A 30, 60 and 90 day cash forecast that answers the question: will I
+  make payroll next month? You get a short chat summary and an Excel workbook,
+  with named risks next to the numbers."
 explain: |
   A 30, 60 and 90 day cash forecast that answers the question: will I make payroll next month? You get a short chat summary and an Excel workbook, with named risks next to the numbers.
 
@@ -27,7 +30,9 @@ you_get:
   - An Excel workbook to keep
   - A short chat summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

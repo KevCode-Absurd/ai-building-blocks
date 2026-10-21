@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans the timeline, then writes the code.
 new_slug: web-animation-builder
 name: Web animation builder
-summary: Describe the motion. Get staggered, timed and SVG animations built with Anime.js.
+summary: Describe the motion. Get staggered, timed and SVG animations built with
+  Anime.js.
 job: build-websites
 headline: Web animation builder
-subhead: Describe the motion. Get staggered, timed and SVG animations built with Anime.js.
+subhead: Smooth, timed animations for your page, written with the Anime.js
+  library. Think headings that slide in one by one, cards that fade in as a
+  grid, or an SVG line that draws itself.
 explain: |
   Smooth, timed animations for your page, written with the Anime.js library. Think headings that slide in one by one, cards that fade in as a grid, or an SVG line that draws itself.
 
@@ -26,6 +29,7 @@ you_get:
   - Easing and stagger settings
   - Notes for getting it into your page
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

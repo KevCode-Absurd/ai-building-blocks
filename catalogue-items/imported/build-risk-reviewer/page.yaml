@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It weighs several risks and picks a first test.
 new_slug: build-risk-reviewer
 name: Build risk reviewer
-summary: Describe what you plan to build. Get the biggest risks on demand and switching, plus the smallest test to run first.
+summary: Describe what you plan to build. Get the biggest risks on demand and
+  switching, plus the smallest test to run first.
 job: test-an-idea
 headline: Build risk reviewer
-subhead: Describe what you plan to build. Get the biggest risks on demand and switching, plus the smallest test to run first.
+subhead: Find out if what you plan to build is worth building, before you write
+  any code. You get the biggest risks named and the smallest test to try first.
 explain: |
   Find out if what you plan to build is worth building, before you write any code. You get the biggest risks named and the smallest test to try first.
 
@@ -26,5 +28,6 @@ you_get:
   - The smallest validation test
   - A continue or stop call
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

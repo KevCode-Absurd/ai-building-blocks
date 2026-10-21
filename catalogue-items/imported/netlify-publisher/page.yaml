@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set deploy path.
 new_slug: netlify-publisher
 name: Netlify publisher
-summary: Point it at your site. Get it live on Netlify as a preview or production deploy, with the link.
+summary: Point it at your site. Get it live on Netlify as a preview or
+  production deploy, with the link.
 job: ship-and-host
 headline: Netlify publisher
-subhead: Point it at your site. Get it live on Netlify as a preview or production deploy, with the link.
+subhead: Your website on a live Netlify address, with the link handed back. You
+  can publish a private preview to check first or push straight to the public
+  site.
 explain: |
   Your website on a live Netlify address, with the link handed back. You can publish a private preview to check first or push straight to the public site.
 
@@ -26,6 +29,7 @@ you_get:
   - A deployed site
   - The preview or live link
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands and reach your Netlify account.

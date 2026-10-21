@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks methods that fit the question and the data.
 new_slug: data-analyst
 name: Data analyst
-summary: Give it a dataset and a question. Get evidence-based answers with trends, tests and correlations.
+summary: Give it a dataset and a question. Get evidence-based answers with
+  trends, tests and correlations.
 job: track-numbers
 headline: Data analyst
-subhead: Give it a dataset and a question. Get evidence-based answers with trends, tests and correlations.
+subhead: Hand over a dataset and a clear question and get an answer backed by
+  numbers, with the limits stated. It uses Python statistics, so results are
+  checkable rather than guesses.
 explain: |
   Hand over a dataset and a clear question and get an answer backed by numbers, with the limits stated. It uses Python statistics, so results are checkable rather than guesses.
 
@@ -26,6 +29,7 @@ you_get:
   - Hypothesis test outcomes
   - Ranked findings with caveats
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open spreadsheets.

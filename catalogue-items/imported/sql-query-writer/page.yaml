@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Turning a clear question into SQL is a standard task.
 new_slug: sql-query-writer
 name: SQL query writer
-summary: Describe what you want to know. Get a working SQL query, using joins, groups, windows and CTEs as needed.
+summary: Describe what you want to know. Get a working SQL query, using joins,
+  groups, windows and CTEs as needed.
 job: track-numbers
 headline: SQL query writer
-subhead: Describe what you want to know. Get a working SQL query, using joins, groups, windows and CTEs as needed.
+subhead: A working SQL query built from a question like which customers spent
+  the most last quarter. The skill first works out what you want measured, which
+  things are involved and how to group or sort the result.
 explain: |
   A working SQL query built from a question like which customers spent the most last quarter. The skill first works out what you want measured, which things are involved and how to group or sort the result. It then maps your words to the tables and columns in your schema and finds the right join path, avoiding extra joins that inflate the numbers.
 
@@ -26,5 +29,6 @@ you_get:
   - A plain explanation of how it works
   - Index or speed suggestions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

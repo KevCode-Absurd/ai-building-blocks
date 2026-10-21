@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It argues against the idea from several sides.
 new_slug: idea-stress-test-panel
 name: Idea stress-test panel
-summary: Give it your idea. Get a blunt panel review of what is weak, with what to fix before you build.
+summary: Give it your idea. Get a blunt panel review of what is weak, with what
+  to fix before you build.
 job: test-an-idea
 headline: Idea stress-test panel
-subhead: Give it your idea. Get a blunt panel review of what is weak, with what to fix before you build.
+subhead: A blunt review of your idea from five angles before you spend time or
+  money on it. Claude tends to agree with you, so this one is built to push
+  back, then a judge makes one call.
 explain: |
   A blunt review of your idea from five angles before you spend time or money on it. Claude tends to agree with you, so this one is built to push back, then a judge makes one call.
 
   You answer three or four questions: what it is, who pays and how, your edge and your limits. Five reviewers then go to work: the Critic, the Champion, the Analyst, the Investigator and the Customer. None may hedge or be polite. A judge weighs them and gives a single verdict with what to fix first. Small Python helper scripts build the brief and compute the verdict. They use no outside services. It works in Claude Code and on Claude.ai.
 when:
-  - You are about to build a product and want to hear what is wrong with it first.
+  - You are about to build a product and want to hear what is wrong with it
+    first.
   - Friends keep saying your idea is great and you do not trust it.
   - You need to know if customers would really pay.
   - You want a fast reality check before you quit a job or spend savings.
@@ -26,5 +30,6 @@ you_get:
   - A single judge's verdict
   - A short list of fixes before you build
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

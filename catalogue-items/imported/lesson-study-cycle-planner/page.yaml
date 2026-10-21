@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It sequences a long cycle with many linked steps.
 new_slug: lesson-study-cycle-planner
 name: Lesson study cycle planner
-summary: Give it a teaching question. Get a full lesson study plan, from shared planning to the research lesson.
+summary: Give it a teaching question. Get a full lesson study plan, from shared
+  planning to the research lesson.
 job: teach-and-train
 headline: Lesson study cycle planner
-subhead: Give it a teaching question. Get a full lesson study plan, from shared planning to the research lesson.
+subhead: A four-meeting plan for a teaching team to study one problem in their
+  own classrooms, from first question to shared findings. You skip the guesswork
+  about what each meeting should produce.
 explain: |
   A four-meeting plan for a teaching team to study one problem in their own classrooms, from first question to shared findings. You skip the guesswork about what each meeting should produce.
 
@@ -28,5 +31,6 @@ you_get:
   - Post-lesson discussion questions
   - A way to share what the team learned
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

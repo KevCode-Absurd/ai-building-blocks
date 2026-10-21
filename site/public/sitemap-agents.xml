@@ -18,6 +18,8 @@
   <url><loc>https://useaiblocks.com/agents/data-file-clean-up-loop</loc></url>
   <url><loc>https://useaiblocks.com/agents/decision-checklist-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/discount-and-price-change-checker</loc></url>
+  <url><loc>https://useaiblocks.com/agents/engineering-evidence-keeper</loc></url>
+  <url><loc>https://useaiblocks.com/agents/executive-work-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/experiment-readout-desk</loc></url>
   <url><loc>https://useaiblocks.com/agents/google-ads-weekly-account-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/handbook-change-desk</loc></url>
@@ -80,6 +82,7 @@
   <url><loc>https://useaiblocks.com/agents/release-manager</loc></url>
   <url><loc>https://useaiblocks.com/agents/research-topic-watcher</loc></url>
   <url><loc>https://useaiblocks.com/agents/rule-change-policy-keeper</loc></url>
+  <url><loc>https://useaiblocks.com/agents/saas-launch-review-agent</loc></url>
   <url><loc>https://useaiblocks.com/agents/sales-call-prep-assistant</loc></url>
   <url><loc>https://useaiblocks.com/agents/social-comment-and-reply-desk</loc></url>
   <url><loc>https://useaiblocks.com/agents/stalled-deal-revival-desk</loc></url>
@@ -93,7 +96,6 @@
   <url><loc>https://useaiblocks.com/agents/website-quality-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/weekly-community-keeper</loc></url>
   <url><loc>https://useaiblocks.com/agents/weekly-customer-health-watcher</loc></url>
-  <url><loc>https://useaiblocks.com/agents/weekly-dependency-and-security-sweep</loc></url>
   <url><loc>https://useaiblocks.com/agents/weekly-image-ad-batch-maker</loc></url>
   <url><loc>https://useaiblocks.com/agents/weekly-invoice-and-cash-chaser</loc></url>
   <url><loc>https://useaiblocks.com/agents/weekly-meeting-actions-keeper</loc></url>

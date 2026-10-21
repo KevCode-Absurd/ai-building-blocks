@@ -1,0 +1,35 @@
+slug: copilot-daily-prep
+name: Outlook day preparation helper
+summary: Connect your work calendar and task context. Get meeting preparation,
+  conflicts and a plan for tomorrow.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: meeting_notes
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/daily-prep
+  url: https://github.com/github/awesome-copilot/tree/main/skills/daily-prep
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: daily-prep
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: daily-prep skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/daily-prep
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+warnings:
+  - paid:Microsoft 365 Copilot

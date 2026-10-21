@@ -1,6 +1,6 @@
 # Write emails that get read: AI Blocks
 
-> 61 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Name a company or contact. Get an email, call script and LinkedIn message built from real signals.
 - [Browse abandonment flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Give it your best sellers and proof. Get a site-visit email and a browse flow that offers a discount last.
@@ -14,6 +14,8 @@
 - [CRM and email strategist](https://useaiblocks.com/skills/crm-and-email-strategist): Ask any email or CRM question. Get expert advice on audits, deliverability, flows, tests and measuring what email earns.
 - [Customer email reply drafter](https://useaiblocks.com/skills/customer-email-reply-drafter): Ask what needs a reply. Get unread customer emails sorted by priority, each with a draft reply. You send them.
 - [Customer stage flow mapper](https://useaiblocks.com/skills/customer-stage-flow-mapper): Describe your flows. Get each split into new, returning and loyal paths with their own goals.
+- [Draft your due task follow ups](https://useaiblocks.com/workflows/draft-your-due-task-followups): Share due tasks and their threads. Get checked follow-up drafts in your voice, ready for review.
+- [Due task follow up drafter](https://useaiblocks.com/skills/executive-due-task-drafts): Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear.
 - [Dull update email rewriter](https://useaiblocks.com/prompts/dull-update-email-rewriter): Paste a flat company update. Get an email people open, with the reader's gain first.
 - [Dynamic email block planner](https://useaiblocks.com/skills/dynamic-email-block-planner): Give it your customer data and apps. Get show-hide rules, product feeds and app-triggered flows.
 - [Email and SMS performance reader](https://useaiblocks.com/skills/email-and-sms-performance-reader): Paste last month's numbers. Get what broke, what to repeat and a score out of 100.
@@ -32,6 +34,7 @@
 - [Email test planner](https://useaiblocks.com/skills/email-test-planner): Give it your flows and send volumes. Get a ranked test queue with sample sizes and win rules.
 - [Email topic bank builder](https://useaiblocks.com/skills/email-topic-bank-builder): Give it your product and customer questions. Get 10 topics, 100 one-point email ideas and formats.
 - [Engaged list expander](https://useaiblocks.com/skills/engaged-list-expander): Give it your list and send results. Get a plan to bring quiet contacts back safely.
+- [Executive reply draft writer](https://useaiblocks.com/skills/executive-email-draft): Share an email thread and your goal. Get a reply draft with clear recipients, supported facts and a specific next step.
 - [Fix inbox placement and win back your opens](https://useaiblocks.com/workflows/fix-inbox-placement-and-win-back-your-opens): Give it your sending setup and results. Get a recovery plan, a wider engaged list and a sunset flow.
 - [Follow-up email sequence writer](https://useaiblocks.com/prompts/follow-up-email-sequence-writer): Paste one email you planned to send once. Get a four-step sequence with timing and one ask.
 - [Inbox delivery fixer](https://useaiblocks.com/skills/inbox-delivery-fixer): Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to stop emails landing in spam.
@@ -61,5 +64,6 @@
 - [Weekly newsletter keeper](https://useaiblocks.com/agents/weekly-newsletter-keeper): Give it your notes each week. Get this issue drafted, edited, checked against your voice and scored before it goes out.
 - [Welcome flow builder](https://useaiblocks.com/skills/welcome-flow-builder): Give it your offer, best sellers and brand story. Get a welcome flow with timing, filters, email outlines and tests.
 - [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder): Give it your order gaps and discount room. Get a win-back flow timed to how your buyers actually reorder.
+- [Write a clear executive reply](https://useaiblocks.com/workflows/write-a-clear-executive-reply): Share a thread and your goal. Get a fact-checked reply draft edited for your preferred voice.
 - [Write a personal story email and read how it did](https://useaiblocks.com/workflows/write-a-personal-story-email-and-read-how-it-did): Give it a true story. Get a clean email to send, then a read of results.
 - [Write a welcome email sequence that teaches, then sells](https://useaiblocks.com/workflows/write-a-welcome-email-sequence-that-teaches-then-sells): Give it your offer and reader. Get a five-email sequence, a Hopkins-style review, fixes and a send check.

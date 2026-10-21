@@ -1,0 +1,32 @@
+slug: copilot-threat-model-analyst
+name: STRIDE system threat analyst
+summary: Share your system or change. Get threats, trust boundaries and safeguards, with a record of new risks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/threat-model-analyst
+  url: https://github.com/github/awesome-copilot/tree/main/skills/threat-model-analyst
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: threat-model-analyst
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: threat-model-analyst skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/threat-model-analyst
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

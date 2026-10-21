@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads only the guide parts your request needs, then decides.
 new_slug: database-design-guide
 name: Database design guide
-summary: Describe your app. Get a database pick, a schema, indexes and a safe migration plan.
+summary: Describe your app. Get a database pick, a schema, indexes and a safe
+  migration plan.
 job: build-software
 headline: Database design guide
-subhead: Describe your app. Get a database pick, a schema, indexes and a safe migration plan.
+subhead: A database choice and design that fits your app, instead of a default
+  picked out of habit. You get the reasoning, not only the code, so you can
+  defend it later.
 explain: |
   A database choice and design that fits your app, instead of a default picked out of habit. You get the reasoning, not only the code, so you can defend it later.
 
@@ -26,6 +29,7 @@ you_get:
   - Index plan
   - Safe migration steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

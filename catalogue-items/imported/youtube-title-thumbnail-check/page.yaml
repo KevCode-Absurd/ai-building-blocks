@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes options, then picks between them.
 new_slug: youtube-title-thumbnail-check
 name: YouTube title and thumbnail checker
-summary: Give it your video idea. Get ten titles checked for length and repeats, plus a thumbnail brief for the best.
+summary: Give it your video idea. Get ten titles checked for length and repeats,
+  plus a thumbnail brief for the best.
 job: grow-social
 headline: YouTube title and thumbnail checker
-subhead: Give it your video idea. Get ten titles checked for length and repeats, plus a thumbnail brief for the best.
+subhead: Ten title ideas checked against hard limits, with a thumbnail brief for
+  the winner. The title and thumbnail are planned as one unit so they do not say
+  the same thing twice.
 explain: |
   Ten title ideas checked against hard limits, with a thumbnail brief for the winner. The title and thumbnail are planned as one unit so they do not say the same thing twice.
 
@@ -25,6 +28,7 @@ you_get:
   - A thumbnail brief with three words or fewer
   - "A closing question: ship it or change it"
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

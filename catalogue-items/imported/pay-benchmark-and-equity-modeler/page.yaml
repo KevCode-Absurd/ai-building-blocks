@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Pay numbers need careful math and honest caveats.
 new_slug: pay-benchmark-and-equity-modeler
 name: Pay benchmark and equity modeler
-summary: Give it a role or pay data. Get market ranges, outliers and equity grant models. Not pay or tax advice.
+summary: Give it a role or pay data. Get market ranges, outliers and equity
+  grant models. Not pay or tax advice.
 job: hire-people
 headline: Pay benchmark and equity modeler
-subhead: Give it a role or pay data. Get market ranges, outliers and equity grant models. Not pay or tax advice.
+subhead: A market pay check for a role, a scan of your pay data for outliers and
+  a model of stock grants. It helps you set offers and plan raises.
 explain: |
   A market pay check for a role, a scan of your pay data for outliers and a model of stock grants. It helps you set offers and plan raises. It is not pay or tax advice.
 
@@ -25,6 +27,7 @@ you_get:
   - Equity value schedule by year
   - Notes on assumptions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read a pay file you upload.

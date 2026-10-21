@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: Access judgments depend on each role.
 new_slug: staff-access-reviewer
 name: Staff access reviewer
-summary: Get staff accounts with old logins, inactive status or too much access, so your store stays safe.
+summary: Get staff accounts with old logins, inactive status or too much access,
+  so your store stays safe.
 job: secure-code
 headline: Staff access reviewer
-subhead: Get staff accounts with old logins, inactive status or too much access, so your store stays safe.
+subhead: A report on which Shopify staff accounts are a risk to your store. It
+  lists accounts with no login for a set number of days (90 by default),
+  accounts marked inactive but still set up, and accounts with full or
+  owner-level access.
 explain: |
   A report on which Shopify staff accounts are a risk to your store. It lists accounts with no login for a set number of days (90 by default), accounts marked inactive but still set up, and accounts with full or owner-level access.
 
@@ -25,6 +29,7 @@ you_get:
   - Accounts with full access
   - A readable or JSON report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

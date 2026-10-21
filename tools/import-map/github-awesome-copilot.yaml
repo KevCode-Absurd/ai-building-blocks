@@ -1,0 +1,2674 @@
+# Curated on 2026-10-21. Source files stay unchanged; these are catalogue names and job descriptions.
+github/awesome-copilot:skills/acreadiness-assess:
+  name: Agent readiness dashboard builder
+  slug: copilot-acreadiness-assess
+  summary: Point it at your repo. Get a dashboard showing what stops coding agents
+    from working well.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/acreadiness-policy:
+  name: Agent readiness rule setter
+  slug: copilot-acreadiness-policy
+  summary: Share your repo's needs. Get scoring rules that fit the project and
+    show which checks matter.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/acreadiness-generate-instructions:
+  name: AgentRC instruction file writer
+  slug: copilot-acreadiness-generate-instructions
+  summary: Point it at your repo. Get project rules for coding agents, with a
+    preview before files change.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/agent-architecture:
+  name: AI agent architecture planner
+  slug: copilot-agent-architecture
+  summary: Describe the agent you need. Get a system design and the trade-offs to
+    settle before building.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/agent-governance:
+  name: AI agent control designer
+  slug: copilot-agent-governance
+  summary: Share how your agent uses tools. Get controls for permissions, trust
+    and risky actions.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/agent-owasp-compliance:
+  name: Agent OWASP risk checker
+  slug: copilot-agent-owasp-compliance
+  summary: Share your agent code. Get findings against the OWASP agent risks, with
+    evidence and fixes.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/agent-supply-chain:
+  name: Agent plugin integrity checker
+  slug: copilot-agent-supply-chain
+  summary: Share your agent tools and packages. Get file checks and a record of
+    supply chain risks.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/agentic-eval:
+  name: Agent answer feedback designer
+  slug: copilot-agentic-eval
+  summary: Share an agent task. Get checks and feedback loops to improve the
+    quality of its answers.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/ai-prompt-engineering-safety-review:
+  name: Prompt safety and bias reviewer
+  slug: copilot-ai-prompt-engineering-safety-review
+  summary: Paste your prompt. Get risks in its wording, likely failure cases and a
+    safer draft.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/eval-driven-dev:
+  name: AI app evaluation planner
+  slug: copilot-eval-driven-dev
+  summary: Share your AI app and goal. Get test cases and a way to compare changes
+    with real results.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/diagnose:
+  name: AI workflow quality investigator
+  slug: copilot-diagnose
+  summary: Share a workflow that disappoints. Get its weak points ranked, with
+    causes and practical fixes.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/mcp-security-audit:
+  name: MCP settings risk checker
+  slug: copilot-mcp-security-audit
+  summary: Share your MCP settings. Get risks in permissions, trust and server
+    access, with fixes.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/mcp-implementation-security-review:
+  name: MCP handler security reviewer
+  slug: copilot-mcp-implementation-security-review
+  summary: Share your MCP code. Get risks traced through tool handlers, with
+    evidence and fixes.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/mcp-release-qa:
+  name: MCP protocol release tester
+  slug: copilot-mcp-release-qa
+  summary: Share your MCP server. Get a real session check of its tools, errors
+    and advertised features.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/verify-agent-action:
+  name: Agent action approval reviewer
+  slug: copilot-verify-agent-action
+  summary: Share a proposed agent action. Get its scope, risks and missing
+    evidence checked before execution.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: audit_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/api-breaking-change-detector:
+  name: C# API consumer drift checker
+  slug: copilot-api-breaking-change-detector
+  summary: Share your C# API and web client. Get mismatched fields and breaking
+    changes traced to their consumers.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/bug-reproduction-brief:
+  name: Bug reproduction evidence writer
+  slug: copilot-bug-reproduction-brief
+  summary: Share an unclear bug report. Get repeatable steps, a minimal case and
+    the evidence still needed.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/bug-receipt:
+  name: Bug fix evidence recorder
+  slug: copilot-bug-receipt
+  summary: Share a fix and its checks. Get a dated record of what is verified,
+    partial or blocked.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/cypress-flake-fixer:
+  name: Cypress flaky test fixer
+  slug: copilot-cypress-flake-fixer
+  summary: Share your Cypress suite. Get fragile waits and old APIs found, then
+    fixes for the affected tests.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/docs-sync-audit:
+  name: Code and docs drift checker
+  slug: copilot-docs-sync-audit
+  summary: Share a feature or code change. Get outdated docs and missing
+    instructions traced to the changed behavior.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/test-gap-audit:
+  name: Test coverage gap investigator
+  slug: copilot-test-gap-audit
+  summary: Share your repo or change. Get missing, weak and stale tests ranked by
+    the behavior at risk.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/protobuf-grpc-api-review:
+  name: Protobuf compatibility reviewer
+  slug: copilot-protobuf-grpc-api-review
+  summary: Share your schema change. Get wire compatibility risks, rollout hazards
+    and safe field changes.
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/react18-batching-patterns:
+  name: React batching regression fixer
+  slug: copilot-react18-batching-patterns
+  summary: Share a React class component. Get fixes for state updates that break
+    under automatic batching.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/react18-enzyme-to-rtl:
+  name: Enzyme test migration helper
+  slug: copilot-react18-enzyme-to-rtl
+  summary: Share your Enzyme tests. Get React Testing Library replacements suited
+    to a React 18 upgrade.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/react18-legacy-context:
+  name: React legacy context migrator
+  slug: copilot-react18-legacy-context
+  summary: Share old React context code. Get a migration to modern context with
+    the affected consumers checked.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/react18-lifecycle-patterns:
+  name: React unsafe lifecycle migrator
+  slug: copilot-react18-lifecycle-patterns
+  summary: Share your React class components. Get replacements for unsafe
+    lifecycle methods and notes on changed behavior.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/react18-string-refs:
+  name: React string ref migrator
+  slug: copilot-react18-string-refs
+  summary: Share components that use string refs. Get modern refs with their call
+    sites updated.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/react19-source-patterns:
+  name: React 19 source migration helper
+  slug: copilot-react19-source-patterns
+  summary: Share your React code. Get source changes for React 19 APIs, refs and
+    context.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/react19-test-patterns:
+  name: React 19 test migration helper
+  slug: copilot-react19-test-patterns
+  summary: Share your React tests. Get updates for React 19 test APIs and render
+    behavior.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/quarkus-dev-services-and-testing:
+  name: Quarkus integration test builder
+  slug: copilot-quarkus-dev-services-and-testing
+  summary: Share your Quarkus app. Get tests with local service containers and
+    checks for real API behavior.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/unit-test-vue-pinia:
+  name: Vue and Pinia test writer
+  slug: copilot-unit-test-vue-pinia
+  summary: Share your Vue components and stores. Get focused tests for user
+    behavior, state and failure cases.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/pester-migration:
+  name: Pester test upgrade helper
+  slug: copilot-pester-migration
+  summary: Share your PowerShell tests. Get changes for the next Pester version
+    and checks for lost test behavior.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/sql-server-table-reconciliation:
+  name: SQL Server migration data checker
+  slug: copilot-sql-server-table-reconciliation
+  summary: Share two SQL Server tables. Get schema and row differences to check a
+    data migration.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: test_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/audit-integrity:
+  name: Security audit evidence reviewer
+  slug: copilot-audit-integrity
+  summary: Share a security audit. Get claims without proof, missing facts and
+    failed checks called out.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: security_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/data-breach-blast-radius:
+  name: Sensitive data exposure mapper
+  slug: copilot-data-breach-blast-radius
+  summary: Share your system design or code. Get sensitive data paths, likely
+    exposure and fixes ranked by impact.
+  task: secure-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: security_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/github-actions-hardening:
+  name: GitHub Actions permission reviewer
+  slug: copilot-github-actions-hardening
+  summary: Share your build workflows. Get risky permissions, unsafe inputs and
+    dependency trust problems with fixes.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: security_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/secret-scanning:
+  name: GitHub secret protection setter
+  slug: copilot-secret-scanning
+  summary: Share your repo setup. Get secret scanning and push protection
+    configured, with an alert response plan.
+  task: secure-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: security_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/codeql:
+  name: CodeQL scan setup helper
+  slug: copilot-codeql
+  summary: Share your repo and languages. Get CodeQL scanning set up in Actions or
+    the command line.
+  task: secure-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: security_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/threat-model-analyst:
+  name: STRIDE system threat analyst
+  slug: copilot-threat-model-analyst
+  summary: Share your system or change. Get threats, trust boundaries and
+    safeguards, with a record of new risks.
+  task: secure-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: security_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/tm7-threat-model:
+  name: Microsoft threat model file builder
+  slug: copilot-tm7-threat-model
+  summary: Describe your system and data paths. Get a threat model file for
+    Microsoft's modeling tool.
+  task: secure-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: security_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/gdpr-compliant:
+  name: Privacy engineering practice reviewer
+  slug: copilot-gdpr-compliant
+  summary: Share the way your app handles personal data. Get engineering gaps and
+    changes to support privacy requirements.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: security_report
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/aws-cloudwatch-investigation:
+  name: CloudWatch incident evidence collector
+  slug: copilot-aws-cloudwatch-investigation
+  summary: Share an AWS incident and time window. Get useful log queries,
+    deployment links and the likely affected services.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/aws-cost-optimize:
+  name: AWS resource cost reviewer
+  slug: copilot-aws-cost-optimize
+  summary: Share your AWS setup. Get cost findings and proposed fixes tied to the
+    resources your app uses.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/aws-resource-health-diagnose:
+  name: AWS service health investigator
+  slug: copilot-aws-resource-health-diagnose
+  summary: Share your AWS resources and symptoms. Get health findings, log
+    evidence and a recovery plan.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/aws-well-architected-review:
+  name: AWS workload practice reviewer
+  slug: copilot-aws-well-architected-review
+  summary: Share your AWS design. Get architecture gaps and proposed fixes against
+    AWS workload guidance.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/az-cost-optimize:
+  name: Azure resource cost reviewer
+  slug: copilot-az-cost-optimize
+  summary: Share your Azure setup. Get waste findings and proposed fixes tied to
+    your app's resources.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/azure-deployment-preflight:
+  name: Bicep deployment preflight checker
+  slug: copilot-azure-deployment-preflight
+  summary: Share your Bicep deployment. Get syntax, permission and proposed-change
+    checks before it goes live.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/azure-pricing:
+  name: Azure price estimate researcher
+  slug: copilot-azure-pricing
+  summary: Name the Azure services you need. Get current retail prices and an
+    estimate with its assumptions shown.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: anthonychu
+github/awesome-copilot:skills/azure-resource-health-diagnose:
+  name: Azure service health investigator
+  slug: copilot-azure-resource-health-diagnose
+  summary: Share your Azure resources and symptoms. Get health findings, log
+    evidence and a recovery plan.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/azure-resource-visualizer:
+  name: Azure resource relationship mapper
+  slug: copilot-azure-resource-visualizer
+  summary: Share your Azure resource group. Get a diagram of the resources and how
+    they connect.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Tom Meschter (tom.meschter@microsoft.com)
+github/awesome-copilot:skills/azure-role-selector:
+  name: Azure least access role picker
+  slug: copilot-azure-role-selector
+  summary: Describe what an identity must do. Get the narrow Azure role that fits,
+    with reasons.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/azure-well-architected-review:
+  name: Azure workload practice reviewer
+  slug: copilot-azure-well-architected-review
+  summary: Share your Azure design. Get architecture gaps and proposed fixes
+    against Azure workload guidance.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/github-actions-efficiency:
+  name: GitHub build cost reviewer
+  slug: copilot-github-actions-efficiency
+  summary: Share your Actions workflows. Get wasted build minutes, slow jobs and
+    ways to cut repeat work.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/github-actions-runtime-upgrade-conventions:
+  name: GitHub Actions runtime upgrade helper
+  slug: copilot-github-actions-runtime-upgrade-conventions
+  summary: Share your Actions workflows. Get supported action versions while
+    keeping the build's behavior intact.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/github-codespaces-efficiency:
+  name: Codespaces startup and cost reviewer
+  slug: copilot-github-codespaces-efficiency
+  summary: Share your dev container setup. Get faster startup and ways to reduce
+    idle costs and repeated setup.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/devops-rollout-plan:
+  name: Service rollout and rollback planner
+  slug: copilot-devops-rollout-plan
+  summary: Share a release or infrastructure change. Get preflight checks, rollout
+    stages, health signals and a rollback plan.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/incident-postmortem:
+  name: Incident learning report writer
+  slug: copilot-incident-postmortem
+  summary: Share an outage timeline and evidence. Get a blameless report with
+    causes, follow-up owners and unresolved facts.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/bigquery-pipeline-audit:
+  name: BigQuery pipeline cost safety reviewer
+  slug: copilot-bigquery-pipeline-audit
+  summary: Share your Python data pipeline. Get costly queries, repeat-run risks
+    and failure cases with code references.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/qdrant-deployment-options:
+  name: Qdrant hosting option adviser
+  slug: copilot-qdrant-deployment-options
+  summary: Share your search workload. Get a comparison of local, Docker and cloud
+    hosting that fits your needs.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/qdrant-model-migration:
+  name: Qdrant embedding migration planner
+  slug: copilot-qdrant-model-migration
+  summary: Share your current and new models. Get a search migration plan with
+    validation and rollback steps.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/qdrant-monitoring:
+  name: Qdrant health monitoring planner
+  slug: copilot-qdrant-monitoring
+  summary: Share your Qdrant setup. Get useful health metrics, alerts and checks
+    for slow or unhealthy search.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/qdrant-performance-optimization:
+  name: Qdrant search speed tuner
+  slug: copilot-qdrant-performance-optimization
+  summary: Share your search workload. Get index, query and hardware changes to
+    test against a clear baseline.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/qdrant-scaling:
+  name: Qdrant cluster capacity planner
+  slug: copilot-qdrant-scaling
+  summary: Share your data size and traffic. Get a scaling plan and the evidence
+    needed before adding nodes.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/qdrant-search-quality:
+  name: Qdrant search relevance investigator
+  slug: copilot-qdrant-search-quality
+  summary: Share queries and weak results. Get likely relevance problems and tests
+    to compare proposed fixes.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/qdrant-version-upgrade:
+  name: Qdrant version upgrade planner
+  slug: copilot-qdrant-version-upgrade
+  summary: Share your Qdrant version and setup. Get upgrade, backup and validation
+    steps that protect availability.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/gtm-0-to-1-launch:
+  name: First customer launch planner
+  slug: copilot-gtm-0-to-1-launch
+  summary: Describe your new product. Get early buyer targets, a launch sequence
+    and tests for reaching first customers.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-ai-gtm:
+  name: AI product market entry planner
+  slug: copilot-gtm-ai-gtm
+  summary: Describe your AI product and buyer. Get positioning, trust questions
+    and a plan for reaching customers.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-board-and-investor-communication:
+  name: Board and investor update planner
+  slug: copilot-gtm-board-and-investor-communication
+  summary: Share company facts and decisions due. Get a board story, investor
+    update and questions to prepare for.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-developer-ecosystem:
+  name: Developer adoption program planner
+  slug: copilot-gtm-developer-ecosystem
+  summary: Share your developer product. Get a plan for app links, outside coders
+    and wider use, with ways to track results.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-enterprise-account-planning:
+  name: Enterprise account deal planner
+  slug: copilot-gtm-enterprise-account-planning
+  summary: Share an account and deal context. Get buyer roles, deal risks and next
+    steps for a complex sale.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-enterprise-onboarding:
+  name: Enterprise customer onboarding planner
+  slug: copilot-gtm-enterprise-onboarding
+  summary: Share a signed customer and success goals. Get onboarding stages,
+    owners and checks for reaching first value.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-operating-cadence:
+  name: Company meeting rhythm designer
+  slug: copilot-gtm-operating-cadence
+  summary: Share your team and goals. Get meeting rhythms, metric reviews and
+    decision rules that fit your stage.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-partnership-architecture:
+  name: Revenue partnership program planner
+  slug: copilot-gtm-partnership-architecture
+  summary: Share your product and potential partners. Get partner types,
+    incentives and a plan to test shared revenue.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-positioning-strategy:
+  name: SaaS market position adviser
+  slug: copilot-gtm-positioning-strategy
+  summary: Share your product and rivals. Get a distinct market position, buyer
+    reasons and messages to test.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-product-led-growth:
+  name: Self serve product growth planner
+  slug: copilot-gtm-product-led-growth
+  summary: Share your product funnel. Get activation and expansion changes, with
+    tests to see whether self serve growth fits.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/gtm-technical-product-pricing:
+  name: Technical SaaS pricing adviser
+  slug: copilot-gtm-technical-product-pricing
+  summary: Share your product costs and buyers. Get pricing units, free tier
+    limits and trade-offs to test.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+github/awesome-copilot:skills/build-evidence-map:
+  name: Technical decision evidence mapper
+  slug: copilot-build-evidence-map
+  summary: Share a disputed choice and sources. Get claims linked to evidence,
+    counterarguments and the facts still missing.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/impediment-prioritization:
+  name: Delivery blocker priority scorer
+  slug: copilot-impediment-prioritization
+  summary: Share your blockers and possible fixes. Get a ranked list based on
+    value, effort and delay costs.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: brief
+      required: true
+  outputs:
+    - type: plan
+  needs: read the files you provide and use the named tools when the job requires them
+  author: ajenns
+github/awesome-copilot:skills/meeting-minutes:
+  name: Internal meeting minutes writer
+  slug: copilot-meeting-minutes
+  summary: Share your meeting notes. Get decisions, action items, owners and open
+    questions in a concise record.
+  task: organise-work
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: meeting_notes
+      required: true
+  outputs:
+    - type: document
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/daily-prep:
+  name: Outlook day preparation helper
+  slug: copilot-daily-prep
+  summary: Connect your work calendar and task context. Get meeting preparation,
+    conflicts and a plan for tomorrow.
+  task: organise-work
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: meeting_notes
+      required: true
+  outputs:
+    - type: document
+  needs: read the files you provide and use the named tools when the job requires them
+  paid: Microsoft 365 Copilot
+github/awesome-copilot:skills/brag-sheet:
+  name: Work impact evidence collector
+  slug: copilot-brag-sheet
+  summary: Share your work notes. Get evidence-backed impact statements for a
+    review, promotion or weekly update.
+  task: organise-work
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: meeting_notes
+      required: true
+  outputs:
+    - type: document
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/performance-review-writer:
+  name: Personal performance review drafter
+  slug: copilot-performance-review-writer
+  summary: Share your work history and writing samples. Get a self review or
+    feedback draft grounded in evidence.
+  task: organise-work
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: meeting_notes
+      required: true
+  outputs:
+    - type: document
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/email-drafter:
+  name: Personal email style drafter
+  slug: copilot-email-drafter
+  summary: Share your email goal and style samples. Get a professional draft and a
+    check against your usual voice.
+  task: organise-work
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: meeting_notes
+      required: true
+  outputs:
+    - type: document
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/roundup:
+  name: Cross tool status briefing writer
+  slug: copilot-roundup
+  summary: Share your sources and audience. Get a dated status brief with
+    progress, blockers and source links.
+  task: organise-work
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: meeting_notes
+      required: true
+  outputs:
+    - type: document
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/roundup-setup:
+  name: Status briefing preference setter
+  slug: copilot-roundup-setup
+  summary: Describe your readers and work sources. Get saved briefing preferences
+    for future status updates.
+  task: organise-work
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: meeting_notes
+      required: true
+  outputs:
+    - type: document
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/dotnet-timezone:
+  name: C# timezone handling reviewer
+  slug: copilot-dotnet-timezone
+  summary: Share your scheduling code. Get safer time conversions and fixes for
+    daylight saving and timezone errors.
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/roslyn-analyzers:
+  name: Roslyn analyzer and fix builder
+  slug: copilot-roslyn-analyzers
+  summary: Describe a C# code rule. Get an analyzer, code fix and tests for the
+    cases it should catch.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/resx-source-generator-migration:
+  name: RESX generated code migration helper
+  slug: copilot-resx-source-generator-migration
+  summary: Share your resource files and project. Get a move from checked-in
+    designer files to a source generator.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/upstash-redis:
+  name: Edge Redis cache and limit builder
+  slug: copilot-upstash-redis
+  summary: Share your serverless app. Get Redis caching or rate limits over HTTP
+    with the required setup explained.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+  author: Upstash
+github/awesome-copilot:skills/sql-object-impact-analysis:
+  name: SQL change impact investigator
+  slug: copilot-sql-object-impact-analysis
+  summary: Name the SQL object you plan to change. Get its callers and downstream
+    dependencies before editing.
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/creating-oracle-to-postgres-master-migration-plan:
+  name: Oracle to Postgres program planner
+  slug: copilot-creating-oracle-to-postgres-master-migration-plan
+  summary: Share your .NET solution. Get a project inventory, migration scope and
+    a master plan to track the work.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/planning-oracle-to-postgres-migration-integration-testing:
+  name: Oracle migration test planner
+  slug: copilot-planning-oracle-to-postgres-migration-integration-testing
+  summary: Share your data access code. Get test scope and parity checks for an
+    Oracle to Postgres migration.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/scaffolding-oracle-to-postgres-migration-test-project:
+  name: Oracle migration test project builder
+  slug: copilot-scaffolding-oracle-to-postgres-migration-test-project
+  summary: Share your .NET solution. Get an xUnit test project with database
+    rollback and migration test setup.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/creating-oracle-to-postgres-migration-integration-tests:
+  name: Oracle behavior baseline test writer
+  slug: copilot-creating-oracle-to-postgres-migration-integration-tests
+  summary: Share your Oracle data access code. Get tests that record what the code
+    does before you change databases.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/migrating-oracle-to-postgres-data-access-code:
+  name: Oracle to Npgsql code migrator
+  slug: copilot-migrating-oracle-to-postgres-data-access-code
+  summary: Share your .NET data access code. Get PostgreSQL changes for drivers,
+    queries and database calls.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/migrating-oracle-to-postgres-stored-procedures:
+  name: Oracle stored procedure migrator
+  slug: copilot-migrating-oracle-to-postgres-stored-procedures
+  summary: Share your Oracle procedures. Get PostgreSQL code with changed behavior
+    and checks called out.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/reviewing-oracle-to-postgres-migration:
+  name: Oracle migration risk reviewer
+  slug: copilot-reviewing-oracle-to-postgres-migration
+  summary: Share your migrated code. Get Oracle and PostgreSQL behavior gaps
+    checked before release.
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/creating-oracle-to-postgres-migration-bug-report:
+  name: Database migration bug report writer
+  slug: copilot-creating-oracle-to-postgres-migration-bug-report
+  summary: Share a migration defect and evidence. Get a reproducible report with
+    expected behavior and the affected code.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/copilot-sdk:
+  name: Copilot SDK app builder
+  slug: copilot-copilot-sdk
+  summary: Describe the agent app you need. Get Copilot SDK sessions, tools and
+    streaming code suited to your project.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/copilot-usage-metrics:
+  name: Copilot team usage reporter
+  slug: copilot-copilot-usage-metrics
+  summary: Name your organization and date range. Get usage metrics from GitHub,
+    with access needs and limits explained.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+  paid: GitHub Enterprise Cloud
+github/awesome-copilot:skills/dotnet-mcp-builder:
+  name: C# MCP server implementation helper
+  slug: copilot-dotnet-mcp-builder
+  summary: Share your C# project and tools to expose. Get MCP server code using
+    current package patterns.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/go-mcp-server-generator:
+  name: Go MCP server starter builder
+  slug: copilot-go-mcp-server-generator
+  summary: Describe your tools and data. Get a Go MCP server project with working
+    structure and tests.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/python-mcp-server-generator:
+  name: Python MCP server starter builder
+  slug: copilot-python-mcp-server-generator
+  summary: Describe your tools and data. Get a Python MCP server project with
+    clear handlers and tests.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/typescript-mcp-server-generator:
+  name: TypeScript MCP server starter builder
+  slug: copilot-typescript-mcp-server-generator
+  summary: Describe your tools and data. Get a TypeScript MCP server project with
+    tools, resources and tests.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It compares evidence and checks changes against the goal.
+  inputs:
+    - type: codebase
+      required: true
+  outputs:
+    - type: code_change
+  needs: read the files you provide and use the named tools when the job requires them
+github/awesome-copilot:skills/acquire-codebase-knowledge:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/ad-campaign-analyzer:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/add-educational-comments:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/adobe-illustrator-scripting:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/agent-skill-stack:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/ai-ready:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/ai-team-orchestration:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/anti-ui-slop:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/appinsights-instrumentation:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/apple-appstore-reviewer:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arch-linux-triage:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/architecture-blueprint-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arduino-azure-iot-edge-integration:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-ai-provider-integration:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-annotation:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-dataset:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-evaluator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-experiment:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-instrumentation:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-link:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-prompt-optimization:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/arize-trace:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/aspire:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/aspnet-minimal-api-openapi:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/automate-this:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/autoresearch:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/aws-cdk-python-setup:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/aws-resource-query:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/azure-architecture-autopilot:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/azure-container-registry-cli:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/azure-developer-cli:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/azure-devops-cli:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/azure-smart-city-iot-solution-builder:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/azure-static-web-apps:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/batch-files:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/batch-script-progress:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/bench-read:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/boost-prompt:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/breakdown-epic-arch:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/breakdown-epic-pm:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/breakdown-feature-implementation:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/breakdown-feature-prd:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/breakdown-plan:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/breakdown-test:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/centos-linux-triage:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/chrome-devtools:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/cli-mastery:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/cloud-design-patterns:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/code-exemplars-blueprint-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/code-tour:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/codebase-memory-mcp:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/comment-code-generate-a-tutorial:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/commit-message-storyteller:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/competitor-ad-intelligence:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/containerize-aspnet-framework:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/containerize-aspnetcore:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/content-management-systems:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/context-map:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/conventional-branch:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/conventional-commit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/convert-excel-to-md:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/convert-pdf-to-md:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/convert-plaintext-to-md:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/convert-word-to-md:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/copilot-cli-quickstart:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/copilot-instructions-blueprint-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/copilot-pr-autopilot:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/copilot-spaces:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/cosmosdb-datamodeling:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-agentsmd:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-architectural-decision-record:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-github-action-workflow-specification:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-github-issue-feature-from-specification:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-github-issues-feature-from-implementation-plan:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-github-issues-for-unmet-specification-requirements:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-implementation-plan:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-llms:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-quarkus-project:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-readme:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-specification:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-spring-boot-java-project:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-spring-boot-kotlin-project:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-technical-spike:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/create-tldr-page:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/csharp-async:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/csharp-docs:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/csharp-mstest:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/csharp-nunit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/csharp-tunit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/csharp-xunit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/d365-solution-blueprint:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/daily-focus-board:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/datanalysis-credit-risk:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/dataverse-python-advanced-patterns:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/dataverse-python-production-code:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/dataverse-python-quickstart:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/dataverse-python-usecase-builder:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/debian-linux-triage:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/declarative-agents:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/dependabot:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/desk-journal:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/desk-open:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/doc-and-modernize:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/documentation-writer:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/dotnet-best-practices:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/dotnet-design-pattern-review:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/dotnet-upgrade:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/doublecheck:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/draw-io-diagram-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/drawio:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/editorconfig:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/ef-core:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/efcore-d2-db-diagram:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/em-dash:
+  skip: Does not fit the catalogue's plain-writing guidance.
+github/awesome-copilot:skills/entra-agent-user:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/exam-ready:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/excalidraw-diagram-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/eyeball:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/fabric-lakehouse:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/fedora-linux-triage:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/finalize-agent-prompt:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/finnish-humanizer:
+  skip: Existing copy editing skills cover this job; this pass does not import
+    instructions for hiding AI use.
+github/awesome-copilot:skills/first-ask:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/flowstudio-power-automate-build:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/flowstudio-power-automate-debug:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/flowstudio-power-automate-governance:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/flowstudio-power-automate-mcp:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/flowstudio-power-automate-monitoring:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/fluentui-blazor:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/folder-structure-blueprint-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/foundry-agent-sync:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/foundry-hosted-agent-copilotkit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/freecad-scripts:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/from-the-other-side-anitta:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/from-the-other-side-quinn:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/from-the-other-side-vega:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/from-the-other-side-wiggins:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/game-engine:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/gem-devops-guidelines:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/gen-specs-as-issues:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/generate-custom-instructions-from-codebase:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/generate-image:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/geofeed-tuner:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/gh-attach:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/git-commit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/git-flow-branch-creator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/github-copilot-starter:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/github-issues:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/github-release:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/gitmoji:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/gsap-framer-scroll-animation:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/harness-engineering:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/image-annotations:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/image-manipulation-image-magick:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/import-infrastructure-as-code:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/integrate-context-matic:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/issue-fields-migration:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-add-graalvm-native-image-support:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-docs:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-helidon:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-junit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-mcp-server-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-refactoring-extract-method:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-refactoring-remove-parameter:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-springboot:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/java-upgrade:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/javascript-typescript-jest:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/javax-to-jakarta-migration:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/kotlin-mcp-server-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/kotlin-springboot:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/landing-page-conversion-audit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/latchshot-page-capture:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/lean-comments:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/legacy-circuit-mockups:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/linkedin-post-formatter:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/lsp-setup:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/macos-golden-gate-design:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/make-blog-post:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/make-repo-contribution:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/markdown-to-html:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/markstream-install:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mcp-cli:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mcp-copilot-studio-server-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mcp-create-adaptive-cards:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mcp-create-declarative-agent:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mcp-deploy-manage-agents:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/md-to-docx:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/memory-merger:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mentoring-juniors:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/microsoft-agent-framework:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/microsoft-code-reference:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/microsoft-docs:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/microsoft-skill-creator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/microsoft-store-publisher:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/minecraft-plugin-development:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mini-context-graph:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mkdocs-translations:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/msgraph-sdk:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/msstore-cli:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/multi-stage-dockerfile:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mvvm-toolkit:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mvvm-toolkit-di:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/mvvm-toolkit-messenger:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/namecheap:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/nano-banana-pro-openrouter:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/napkin:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/next-intl-add-language:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/noob-mode:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/nuget-manager:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/onboard-context-matic:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/oo-component-documentation:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/openapi-to-application-code:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/optimize-simplicite-logs:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/pdftk-server:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/penpot-uiux-design:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/pester-should-migration:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/phoenix-cli:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/phoenix-evals:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/phoenix-tracing:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/php-mcp-server-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/pinecone-rag:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/plantuml-ascii:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/playwright-automation-fill-in-form:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/playwright-explore-website:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/playwright-generate-test:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/poka-yoke:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/postgresql-code-review:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/postgresql-optimization:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/power-apps-code-app-scaffold:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/power-bi-dax-optimization:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/power-bi-model-design-review:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/power-bi-performance-troubleshooting:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/power-bi-report-design-consultation:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/power-platform-architect:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/power-platform-mcp-connector-suite:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/powerbi-modeling:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/pr-dashboard:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/pr-screenshots:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/prd:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/premium-frontend-ui:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/project-workflow-analysis-blueprint-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/prompt-optimizer:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/publish-to-pages:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/pytest-coverage:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/python-azure-iot-edge-modules:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/python-pypi-package-builder:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/qdrant-clients-sdk:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/quality-playbook:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/quarkus-application-development:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/quarkus-native-and-container:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/quasi-coder:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/react-audit-grep-patterns:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/react-container-presentation-component:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/react18-dep-compatibility:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/react19-concurrent-patterns:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/readme-blueprint-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/rebase-current-branch:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/refactor:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/refactor-method-complexity-reduce:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/refactor-plan:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/remember:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/remember-interactive-programming:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/repo-standardizer:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/repo-story-time:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/resemble-detect:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/review-and-refactor:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/rhino3d-scripts:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/ruby-mcp-server-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/ruff-recursive-fix:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/rust-mcp-server-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/salesforce-apex-quality:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/salesforce-component-standards:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/salesforce-flow-design:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/sandbox-npm-install:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/scoutqa-test:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/screen-recording:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/security-review:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/semantic-kernel:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/server-side-conversion-tracking:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/setup-my-iq:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/shopify-review-triage:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/shuffle-json-data:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/signal-write:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/slang-shader-engineer:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/snowflake-semanticview:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/speak-summary:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/sponsor-finder:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/spring-boot-testing:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/sql-code-review:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/sql-optimization:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/ssma-console:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/steno-mode:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/structured-autonomy-generate:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/structured-autonomy-implement:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/structured-autonomy-plan:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/suggest-awesome-github-copilot-agents:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/suggest-awesome-github-copilot-instructions:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/suggest-awesome-github-copilot-skills:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/swift-mcp-server-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/system-commandline-cli:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/technical-job-search:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/technology-stack-blueprint-generator:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/terraform-azurerm-set-diff-analyzer:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/tiny-stepping:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/tldr-prompt:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/transloadit-media-processing:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/tugboat:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/typespec-api-operations:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/typespec-create-agent:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/typespec-create-api-plugin:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/ui-screenshots:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/update-avm-modules-in-bicep:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/update-implementation-plan:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/update-llms:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/update-markdown-file-index:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/update-specification:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/v-development:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/vardoger-analyze:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/vcpkg:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/vscode-ext-commands:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/vscode-ext-localization:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/web-design-reviewer:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/webapp-testing:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/webmcpify:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/what-context-needed:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/winmd-api-search:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/winui3-migration-guide:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/workiq-copilot:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/workshop-create:
+  skip: Requires the source author's workshop or personal collaboration
+    conventions; not a standalone catalogue job.
+github/awesome-copilot:skills/write-coding-standards-from-file:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.
+github/awesome-copilot:skills/x-twitter-scraper:
+  skip: Outside this curated executive, SaaS growth, security and engineering
+    expansion; not imported. The source remains linked in the review report.

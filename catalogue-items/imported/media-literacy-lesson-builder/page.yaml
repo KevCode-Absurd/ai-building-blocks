@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds questions around a specific media piece.
 new_slug: media-literacy-lesson-builder
 name: Media literacy lesson builder
-summary: Give it an ad, news item or post. Get a lesson that helps learners see persuasion, bias and who is shown.
+summary: Give it an ad, news item or post. Get a lesson that helps learners see
+  persuasion, bias and who is shown.
 job: teach-and-train
 headline: Media literacy lesson builder
-subhead: Give it an ad, news item or post. Get a lesson that helps learners see persuasion, bias and who is shown.
+subhead: A lesson that teaches learners to take apart an ad, news story, post or
+  video and ask why it was made that way. You pick the media type, what to
+  notice and the year group, and you get a ready-to-teach protocol.
 explain: |
   A lesson that teaches learners to take apart an ad, news story, post or video and ask why it was made that way. You pick the media type, what to notice and the year group, and you get a ready-to-teach protocol.
 
@@ -27,5 +30,6 @@ you_get:
   - Prompts about what is left out
   - A modelling script for the teacher
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

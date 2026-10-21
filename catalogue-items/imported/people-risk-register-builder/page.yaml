@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs likelihood and impact for each risk.
 new_slug: people-risk-register-builder
 name: People risk register builder
-summary: Give it your team and rules. Get a ranked list of people risks, owners and response steps. Not legal advice.
+summary: Give it your team and rules. Get a ranked list of people risks, owners
+  and response steps. Not legal advice.
 job: hire-people
 headline: People risk register builder
-subhead: Give it your team and rules. Get a ranked list of people risks, owners and response steps. Not legal advice.
+subhead: A ranked list of the people risks in your organisation, each with an
+  owner and a response step, so nothing important sits unseen. It is a planning
+  aid and not legal advice.
 explain: |
   A ranked list of the people risks in your organisation, each with an owner and a response step, so nothing important sits unseen. It is a planning aid and not legal advice.
 
@@ -27,5 +30,6 @@ you_get:
   - Key person dependency map
   - Escalation steps for incidents
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

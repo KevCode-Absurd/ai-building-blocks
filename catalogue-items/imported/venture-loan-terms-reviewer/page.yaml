@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It weighs loan terms against a startup's profile.
 new_slug: venture-loan-terms-reviewer
 name: Venture loan terms reviewer
-summary: Give it a startup loan offer. Get the cost, warrants and covenants explained, with points to question.
+summary: Give it a startup loan offer. Get the cost, warrants and covenants
+  explained, with points to question.
 job: money-and-investing
 headline: Venture loan terms reviewer
-subhead: Give it a startup loan offer. Get the cost, warrants and covenants explained, with points to question.
+subhead: "A startup loan offer explained in plain words: what it costs, what you
+  give up and where the lender can pull the plug. It checks the rate, usually
+  the prime rate plus a margin, and whether you pay interest only first or repay
+  from day one."
 explain: |
   A startup loan offer explained in plain words: what it costs, what you give up and where the lender can pull the plug. It checks the rate, usually the prime rate plus a margin, and whether you pay interest only first or repay from day one. It calculates warrant coverage, for example 10 percent of the loan, and how many shares that gives the lender at today's price. It tests whether the loan adds six to nine months of runway. It reads covenants such as minimum cash or revenue, and reviews the material adverse change clause that lets a lender freeze a credit line. Last, it flags refinance risk if your next round slips.
 when:
@@ -24,5 +28,6 @@ you_get:
   - Covenants and clauses explained
   - Risks and questions to ask the lender
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

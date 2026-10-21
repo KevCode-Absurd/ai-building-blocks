@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It turns user needs into numbers and alert rules.
 new_slug: error-budget-planner
 name: Error budget planner
-summary: Name your service. Get service level targets, error budgets and alert rules that match what users feel.
+summary: Name your service. Get service level targets, error budgets and alert
+  rules that match what users feel.
 job: ship-and-host
 headline: Error budget planner
-subhead: Name your service. Get service level targets, error budgets and alert rules that match what users feel.
+subhead: Name your service. Get service level targets, error budgets and alert
+  rules that match what users feel. Bring name and purpose of the service. Use
+  the result to plan your next step.
 explain: |
   Reliability targets for your service, written as numbers a team can act on: how much downtime users will put up with, how much of it you can spend, and when to raise an alarm.
 
@@ -27,5 +30,6 @@ you_get:
   - Dashboard outline
   - Reporting routine
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

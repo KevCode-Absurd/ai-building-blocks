@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must tell real progress from repeated guesses.
 new_slug: fix-loop-breaker
 name: Fix loop breaker
-summary: Give it a bug your AI keeps failing to fix. Get a three-try repair plan, proof it works and a way back.
+summary: Give it a bug your AI keeps failing to fix. Get a three-try repair
+  plan, proof it works and a way back.
 job: test-and-fix-code
 headline: Fix loop breaker
-subhead: Give it a bug your AI keeps failing to fix. Get a three-try repair plan, proof it works and a way back.
+subhead: When your AI keeps patching the same bug and nothing changes, this
+  gives it a strict way to stop guessing. You get a repair with proof that it
+  worked and a tested way back.
 explain: |
   When your AI keeps patching the same bug and nothing changes, this gives it a strict way to stop guessing. You get a repair with proof that it worked and a tested way back.
 
@@ -27,6 +30,7 @@ you_get:
   - Tested rollback
   - "Plain verdict: fixed, not fixed or inconclusive"
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

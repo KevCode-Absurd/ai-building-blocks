@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks the right setup, then follows reference docs.
 new_slug: claude-app-builder
 name: Claude app builder
-summary: Say what to build with Claude. Get working code that calls the Claude API the right way.
+summary: Say what to build with Claude. Get working code that calls the Claude
+  API the right way.
 job: build-software
 headline: Claude app builder
-subhead: Say what to build with Claude. Get working code that calls the Claude API the right way.
+subhead: Tell it what you want to build with Claude, and get working code that
+  talks to the Claude API correctly. It uses the official software kit for your
+  language, so function names and imports are real and not guessed.
 explain: |
   Tell it what you want to build with Claude, and get working code that talks to the Claude API correctly. It uses the official software kit for your language, so function names and imports are real and not guessed.
 
@@ -26,6 +29,7 @@ you_get:
   - Notes on settings that changed
   - Tips on cost and speed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

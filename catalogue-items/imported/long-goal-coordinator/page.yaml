@@ -5,7 +5,9 @@ name: Long-goal coordinator
 summary: Give it a goal that takes days. Get helpers and schedules set up to work on it.
 job: plan-strategy
 headline: Long-goal coordinator
-subhead: Give it a goal that takes days. Get helpers and schedules set up to work on it.
+subhead: "A set-up that lets your AI work toward a goal that takes days, without
+  losing what it learned along the way. It acts like a chief of staff: it plans,
+  hands out work, and keeps notes."
 explain: |
   A set-up that lets your AI work toward a goal that takes days, without losing what it learned along the way. It acts like a chief of staff: it plans, hands out work, and keeps notes.
 
@@ -26,6 +28,7 @@ you_get:
   - Tasks split across helpers
   - Suggested recurring schedules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run subagents and set schedules.

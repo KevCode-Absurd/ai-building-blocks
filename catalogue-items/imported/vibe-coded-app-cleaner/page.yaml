@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It works in small safe steps and checks as it goes.
 new_slug: vibe-coded-app-cleaner
 name: Vibe-coded app cleaner
-summary: Point it at a fast-built app. Get dead code and broken imports removed without breaking routes or APIs.
+summary: Point it at a fast-built app. Get dead code and broken imports removed
+  without breaking routes or APIs.
 job: test-and-fix-code
 headline: Vibe-coded app cleaner
-subhead: Point it at a fast-built app. Get dead code and broken imports removed without breaking routes or APIs.
+subhead: An app built fast with AI, tidied up without breaking it. Dead imports,
+  unused files and broken references are removed, while your routes, APIs, login
+  and database stay exactly as they were.
 explain: |
   An app built fast with AI, tidied up without breaking it. Dead imports, unused files and broken references are removed, while your routes, APIs, login and database stay exactly as they were.
 
@@ -26,6 +29,7 @@ you_get:
   - Small, reversible changes
   - A check after each batch
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and edit your project files.

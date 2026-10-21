@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It audits each step and ranks fixes.
 new_slug: developer-onboarding-improver
 name: Developer onboarding improver
-summary: Describe your API sign-up path. Get a plan that cuts the time to a developer's first working call.
+summary: Describe your API sign-up path. Get a plan that cuts the time to a
+  developer's first working call.
 job: build-product
 headline: Developer onboarding improver
-subhead: Describe your API sign-up path. Get a plan that cuts the time to a developer's first working call.
+subhead: A plan to cut the time between a developer finding your API and making
+  their first successful call. That one number predicts whether they keep using
+  you.
 explain: |
   A plan to cut the time between a developer finding your API and making their first successful call. That one number predicts whether they keep using you.
 
@@ -27,5 +30,6 @@ you_get:
   - Ideas for sandbox, keys and error messages
   - What to measure going forward
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

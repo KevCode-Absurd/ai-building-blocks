@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Legal terms need careful reading. It is not legal advice.
 new_slug: contract-and-term-sheet-reviewer
 name: Contract and term sheet reviewer
-summary: Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer.
+summary: Paste a contract or term sheet. Get the risky terms flagged,
+  plain-English meaning and when to call a lawyer.
 job: check-contracts
 headline: Contract and term sheet reviewer
-subhead: Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer.
+subhead: Paste a contract or term sheet. Get the risky terms flagged,
+  plain-English meaning and when to call a lawyer. Bring the contract or term
+  sheet text. Use the result to plan your next step.
 explain: |
   A read of your contract or investment term sheet with risky terms flagged, each explained in plain English, and a clear signal for when you should pay a lawyer. You know what you are agreeing to before you sign.
 
@@ -26,5 +29,6 @@ you_get:
   - Term sheet breakdown
   - When to call a lawyer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

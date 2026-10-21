@@ -2,18 +2,23 @@ thinking: medium
 thinking_why: It maps messy columns into a strict format.
 new_slug: tracking-data-importer
 name: Tracking data importer
-summary: Give it a CSV or Excel file of tracks or detections. Get data ready for MATLAB tracking tools.
+summary: Give it a CSV or Excel file of tracks or detections. Get data ready for
+  MATLAB tracking tools.
 job: build-software
 headline: Tracking data importer
-subhead: Give it a CSV or Excel file of tracks or detections. Get data ready for MATLAB tracking tools.
+subhead: Give it a CSV or Excel file of tracks or detections. Get data ready for
+  MATLAB tracking tools. Bring a CSV, Excel or text file of tracks or
+  detections. Use the result to plan your next step.
 explain: |
   Raw track logs from GPS, flight recorders, radar or cameras rarely load straight into MATLAB's tracking tools. This skill turns your CSV, Excel or text file into the exact format those tools expect, so you can replay trajectories, tune filters or feed a tracker.
 
   It first asks one thing: is this ground truth or sensor detections? Then it reads your real file, shows a summary of columns, units, object count and time span, and proposes a column mapping for you to confirm. It handles coordinate frames for geographic data, remaps IDs, sorts by time, writes plain MATLAB code, runs it and plots the result. You need MATLAB with the Sensor Fusion and Tracking Toolbox.
 when:
   - You have a GPS or flight log and want to replay it in a tracking tool.
-  - You have radar, lidar or camera detections in a spreadsheet and need to feed them to a tracker.
-  - Your trajectory data uses latitude and longitude and you need a local coordinate frame.
+  - You have radar, lidar or camera detections in a spreadsheet and need to feed
+    them to a tracker.
+  - Your trajectory data uses latitude and longitude and you need a local
+    coordinate frame.
   - You are not sure which MATLAB data format fits your recorded measurements.
 you_give:
   - A CSV, Excel or text file of tracks or detections
@@ -26,6 +31,8 @@ you_get:
   - Data in the right tracking format
   - A plot to check the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with Sensor Fusion and Tracking Toolbox.
+  - It works best when your AI can run MATLAB with Sensor Fusion and Tracking
+    Toolbox.

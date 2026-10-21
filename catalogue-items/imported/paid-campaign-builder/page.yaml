@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Budget and targeting choices depend on many linked numbers.
 new_slug: paid-campaign-builder
 name: Paid campaign builder
-summary: Name your goal and budget. Get campaign structure, targeting, bids and a plan to scale across Google, Meta and LinkedIn.
+summary: Name your goal and budget. Get campaign structure, targeting, bids and
+  a plan to scale across Google, Meta and LinkedIn.
 job: plan-ad-tests
 headline: Paid campaign builder
-subhead: Name your goal and budget. Get campaign structure, targeting, bids and a plan to scale across Google, Meta and LinkedIn.
+subhead: "A paid ads plan that tells you what to launch first: campaign
+  structure, audiences, bids, budget split and how to scale if it works. It
+  covers Google, Meta and LinkedIn."
 explain: |
   A paid ads plan that tells you what to launch first: campaign structure, audiences, bids, budget split and how to scale if it works. It covers Google, Meta and LinkedIn.
 
@@ -26,6 +29,7 @@ you_get:
   - Bid and budget plan
   - Test list and scaling rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your ad account exports.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies your rules to each order.
 new_slug: order-tagger
 name: Order tagger
-summary: Set your rules, such as region or order value. Get matching orders tagged. Changes live orders, so preview first.
+summary: Set your rules, such as region or order value. Get matching orders
+  tagged. Changes live orders, so preview first.
 job: run-your-store
 headline: Order tagger
-subhead: Set your rules, such as region or order value. Get matching orders tagged. Changes live orders, so preview first.
+subhead: Set your rules, such as region or order value. Get matching orders
+  tagged. Changes live orders, so preview first. Bring store domain. Use the
+  result to plan your next step.
 explain: |
   Orders tagged automatically by your own rules, so your team can filter, route and report without reading each one. Think high-value, international, first-time buyer or needs review.
 
@@ -26,6 +29,8 @@ you_get:
   - Skipped orders already tagged
   - A count per rule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

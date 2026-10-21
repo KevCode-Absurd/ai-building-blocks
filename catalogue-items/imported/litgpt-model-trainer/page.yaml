@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: The steps are set, but sizing the run to your computer takes care.
 new_slug: litgpt-model-trainer
 name: LitGPT model trainer
-summary: Pick a small open model and your data. Get it downloaded, trained on your examples and ready to chat with.
+summary: Pick a small open model and your data. Get it downloaded, trained on
+  your examples and ready to chat with.
 job: build-software
 headline: LitGPT model trainer
-subhead: Pick a small open model and your data. Get it downloaded, trained on your examples and ready to chat with.
+subhead: A small open model, downloaded, trained on your examples and ready to
+  chat with, without writing training code from scratch. You pick the model and
+  data and get working commands.
 explain: |
   A small open model, downloaded, trained on your examples and ready to chat with, without writing training code from scratch. You pick the model and data and get working commands.
 
@@ -27,6 +30,7 @@ you_get:
   - Steps to chat with the result
   - How to watch training logs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

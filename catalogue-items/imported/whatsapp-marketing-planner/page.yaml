@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans message flows from a set method and your customer habits.
 new_slug: whatsapp-marketing-planner
 name: WhatsApp marketing planner
-summary: Describe your business. Get a WhatsApp setup with broadcasts, automatic replies and support flows.
+summary: Describe your business. Get a WhatsApp setup with broadcasts, automatic
+  replies and support flows.
 job: help-customers
 headline: WhatsApp marketing planner
-subhead: Describe your business. Get a WhatsApp setup with broadcasts, automatic replies and support flows.
+subhead: A working WhatsApp channel plan that covers sales messages, automatic
+  replies and support, matched to your brand voice. It is built for the most
+  personal channel a customer has, where one spammy message gets you blocked.
 explain: |
   A working WhatsApp channel plan that covers sales messages, automatic replies and support, matched to your brand voice. It is built for the most personal channel a customer has, where one spammy message gets you blocked.
 
@@ -28,5 +31,6 @@ you_get:
   - Automatic reply and support flows
   - Sending rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

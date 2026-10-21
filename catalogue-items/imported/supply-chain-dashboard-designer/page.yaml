@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks which numbers deserve a place on screen.
 new_slug: supply-chain-dashboard-designer
 name: Supply chain dashboard designer
-summary: Tell it what you ship and from where. Get a one-screen design showing delays, low stock and orders at risk.
+summary: Tell it what you ship and from where. Get a one-screen design showing
+  delays, low stock and orders at risk.
 job: track-numbers
 headline: Supply chain dashboard designer
-subhead: Tell it what you ship and from where. Get a one-screen design showing delays, low stock and orders at risk.
+subhead: Tell it what you ship and from where. Get a one-screen design showing
+  delays, low stock and orders at risk. Bring what you ship and where from. Use
+  the result to plan your next step.
 explain: |
   A one-screen design that shows late shipments, low stock and orders at risk, so a planner sees problems in the morning, not at the customer's complaint.
 
@@ -27,5 +30,6 @@ you_get:
   - A rollout plan
   - Notes on adoption
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

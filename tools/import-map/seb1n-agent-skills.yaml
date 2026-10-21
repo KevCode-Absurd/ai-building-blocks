@@ -280,7 +280,7 @@
   author_url: https://github.com/seb1n
 "seb1n/awesome-ai-agent-skills:code-and-development/testing":
   name: Test suite writer
-  summary: "Point it at your code. Get unit, integration and end-to-end tests, run with a coverage report."
+  summary: "Share your code. Get tests for units, linked parts and full user tasks, plus a coverage report."
   task: test-and-fix-code
   role: make
   level: intermediate

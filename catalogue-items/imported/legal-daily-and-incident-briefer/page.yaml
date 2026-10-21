@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads many sources and picks what matters.
 new_slug: legal-daily-and-incident-briefer
 name: Legal daily and incident briefer
-summary: Pick a daily scan, a topic or an incident. Get a short briefing from your email, calendar and files. Not legal advice.
+summary: Pick a daily scan, a topic or an incident. Get a short briefing from
+  your email, calendar and files. Not legal advice.
 job: check-contracts
 headline: Legal daily and incident briefer
-subhead: Pick a daily scan, a topic or an incident. Get a short briefing from your email, calendar and files. Not legal advice.
+subhead: Pick a daily scan, a topic or an incident. Get a short briefing from
+  your email, calendar and files. Not legal advice. Bring the question or
+  situation (for topic or incident). Use the result to plan your next step.
 explain: |
   A short legal briefing built from your own email, calendar and files, in whichever of three forms you need. The daily brief scans for contract requests, compliance questions, counterparty replies and urgent items so you start the morning knowing what needs you. The topic brief researches one legal question.
 
@@ -26,6 +29,7 @@ you_get:
   - Sources the summary used
   - Open questions for a lawyer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your email, calendar and files.

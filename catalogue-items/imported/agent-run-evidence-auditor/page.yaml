@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs many records and must not trust the agent's own summary.
 new_slug: agent-run-evidence-auditor
 name: Agent run evidence auditor
-summary: Give it logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
+summary: Give it logs from an AI agent run. Get each success claim checked
+  against real proof, with gaps marked.
 job: test-and-fix-code
 headline: Agent run evidence auditor
-subhead: Give it logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
+subhead: A claim-by-claim check of whether an AI agent really did what it says
+  it did. A confident "all done" is not proof, so each success claim is matched
+  to records.
 explain: |
   A claim-by-claim check of whether an AI agent really did what it says it did. A confident "all done" is not proof, so each success claim is matched to records.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - An agent says a job is finished and you want proof before you trust it.
   - A run stopped halfway and you need to know what really happened.
-  - You must show a reviewer which steps were done by the agent and which by a person.
+  - You must show a reviewer which steps were done by the agent and which by a
+    person.
   - You suspect an agent skipped a check or retried more than it should.
 you_give:
   - Logs, traces or records from the run
@@ -26,5 +30,6 @@ you_get:
   - A list of gaps and missing evidence
   - Conflicts between what was claimed and what was logged
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

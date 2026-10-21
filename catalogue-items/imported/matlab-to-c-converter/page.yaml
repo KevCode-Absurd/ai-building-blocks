@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set rules for code that can be converted.
 new_slug: matlab-to-c-converter
 name: MATLAB to C converter
-summary: Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned for speed.
+summary: Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned
+  for speed.
 job: build-software
 headline: MATLAB to C converter
-subhead: Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned for speed.
+subhead: MATLAB code turned into C, C++ or CUDA that has been checked against
+  the original, and tuned for speed. Give it a function and say what you need it
+  to run on.
 explain: |
   MATLAB code turned into C, C++ or CUDA that has been checked against the original, and tuned for speed. Give it a function and say what you need it to run on.
 
@@ -26,6 +29,7 @@ you_get:
   - Speed settings
   - Notes on limits
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with MATLAB Coder.

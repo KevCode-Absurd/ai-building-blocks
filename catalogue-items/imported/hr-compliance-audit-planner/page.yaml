@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans checks and ranks gaps by risk.
 new_slug: hr-compliance-audit-planner
 name: HR compliance audit planner
-summary: Pick what to audit. Get a checklist, a file sampling plan, a findings report and a fix plan. Not legal advice.
+summary: Pick what to audit. Get a checklist, a file sampling plan, a findings
+  report and a fix plan. Not legal advice.
 job: hire-people
 headline: HR compliance audit planner
-subhead: Pick what to audit. Get a checklist, a file sampling plan, a findings report and a fix plan. Not legal advice.
+subhead: A full plan to check whether your HR practices meet the rules, from
+  first checklist to fix list. Choose what to audit and get the checklist, a
+  sampling plan, a findings report and a corrective plan.
 explain: |
   A full plan to check whether your HR practices meet the rules, from first checklist to fix list. Choose what to audit and get the checklist, a sampling plan, a findings report and a corrective plan. It is not legal advice.
 
@@ -26,5 +29,6 @@ you_get:
   - A findings report ranked by risk
   - A corrective action plan with a timeline
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

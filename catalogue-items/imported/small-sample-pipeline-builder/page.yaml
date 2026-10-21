@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It plans cost gates and tests each step before scaling.
 new_slug: small-sample-pipeline-builder
 name: Small-sample pipeline builder
-summary: Describe a data or AI workflow. Get it working end to end on a tiny sample, then scaled with cost checks.
+summary: Describe a data or AI workflow. Get it working end to end on a tiny
+  sample, then scaled with cost checks.
 job: build-software
 headline: Small-sample pipeline builder
-subhead: Describe a data or AI workflow. Get it working end to end on a tiny sample, then scaled with cost checks.
+subhead: A data or AI workflow that works from start to finish on a tiny sample
+  before you spend real money on the full run. This stops the common mistake of
+  building every stage at full size, then finding a wrong prompt ran over a
+  whole table.
 explain: |
   A data or AI workflow that works from start to finish on a tiny sample before you spend real money on the full run. This stops the common mistake of building every stage at full size, then finding a wrong prompt ran over a whole table.
 
@@ -26,6 +30,7 @@ you_get:
   - Cost projections for each scale-up step
   - A cost-gated plan to full size
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

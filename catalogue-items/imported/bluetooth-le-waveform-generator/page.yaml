@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set API.
 new_slug: bluetooth-le-waveform-generator
 name: Bluetooth LE waveform generator
-summary: Name the packet type. Get a Bluetooth Low Energy waveform built with correct functions.
+summary: Name the packet type. Get a Bluetooth Low Energy waveform built with
+  correct functions.
 job: build-software
 headline: Bluetooth LE waveform generator
-subhead: Name the packet type. Get a Bluetooth Low Energy waveform built with correct functions.
+subhead: Get Bluetooth Low Energy PHY waveforms built with the right MATLAB
+  functions, so you stop debugging invented API calls. You name the packet type
+  or test, and the skill picks a matching pattern.
 explain: |
   Get Bluetooth Low Energy PHY waveforms built with the right MATLAB functions, so you stop debugging invented API calls. You name the packet type or test, and the skill picks a matching pattern.
 
@@ -26,6 +29,7 @@ you_get:
   - Plots such as spectrum or error rate
   - Sensible defaults when your request is vague
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Bluetooth Toolbox.

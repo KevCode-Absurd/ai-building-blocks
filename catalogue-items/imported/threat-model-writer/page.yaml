@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It reasons about attackers across the whole codebase.
 new_slug: threat-model-writer
 name: Threat model writer
-summary: Point it at your code. Get a short threat model of what attackers could reach, how, and how to stop them.
+summary: Point it at your code. Get a short threat model of what attackers could
+  reach, how, and how to stop them.
 job: secure-code
 headline: Threat model writer
-subhead: Point it at your code. Get a short threat model of what attackers could reach, how, and how to stop them.
+subhead: Point it at your code. Get a short threat model of what attackers could
+  reach, how, and how to stop them. Bring your repository or folder path. Use
+  the result to plan your next step.
 explain: |
   A short, evidence-based threat model for your codebase: what is worth protecting, who might attack it, how they would get in, and what to do about it. It reads like an engineer's review, not a generic checklist.
 
@@ -27,6 +30,7 @@ you_get:
   - A Markdown threat model
   - A list of assumptions you confirmed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

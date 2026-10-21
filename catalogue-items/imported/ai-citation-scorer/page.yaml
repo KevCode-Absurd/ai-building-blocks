@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scores passages against a clear rubric.
 new_slug: ai-citation-scorer
 name: AI citation scorer
-summary: Give it a page. Get each passage scored on how easily AI tools can quote it, with rewrites to try.
+summary: Give it a page. Get each passage scored on how easily AI tools can
+  quote it, with rewrites to try.
 job: get-found-in-search
 headline: AI citation scorer
-subhead: Give it a page. Get each passage scored on how easily AI tools can quote it, with rewrites to try.
+subhead: Every passage on your page scored for how easily an AI tool can lift it
+  into an answer, with rewrites to try. Research found that AI picks passages
+  that stand alone, answer a question up front and carry real facts.
 explain: |
   Every passage on your page scored for how easily an AI tool can lift it into an answer, with rewrites to try. Research found that AI picks passages that stand alone, answer a question up front and carry real facts.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - You want AI assistants to quote your page in their answers.
   - Your article ranks but AI tools ignore it.
-  - You are rewriting product or help pages and need to know which parts to fix first.
+  - You are rewriting product or help pages and need to know which parts to fix
+    first.
   - You want a score to compare pages.
 you_give:
   - The page address or its text
@@ -25,6 +29,7 @@ you_get:
   - Reasons each block scored high or low
   - Rewrite suggestions you can paste in
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open web pages.

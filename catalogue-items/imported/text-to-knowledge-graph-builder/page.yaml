@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It extracts entities and links with a set method.
 new_slug: text-to-knowledge-graph-builder
 name: Text-to-knowledge-graph builder
-summary: Give it unstructured text. Get people, things and links pulled out and drawn as a graph.
+summary: Give it unstructured text. Get people, things and links pulled out and
+  drawn as a graph.
 job: think-and-decide
 headline: Text-to-knowledge-graph builder
-subhead: Give it unstructured text. Get people, things and links pulled out and drawn as a graph.
+subhead: Paste a long document and get a map of who and what is in it and how
+  they connect. Instead of rereading pages, you see a diagram of people,
+  companies, tools and ideas, with labelled links between them.
 explain: |
   Paste a long document and get a map of who and what is in it and how they connect. Instead of rereading pages, you see a diagram of people, companies, tools and ideas, with labelled links between them.
 
@@ -27,6 +30,7 @@ you_get:
   - A Mermaid diagram
   - A list of gaps found
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

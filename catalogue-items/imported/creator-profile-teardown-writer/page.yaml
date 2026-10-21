@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It samples posts, then reads what drives them.
 new_slug: creator-profile-teardown-writer
 name: Creator profile teardown writer
-summary: Give it a social account. Get its positioning, content themes, top posts and what to test. Collects data from websites.
+summary: Give it a social account. Get its positioning, content themes, top
+  posts and what to test. Collects data from websites.
 job: study-competitors
 headline: Creator profile teardown writer
-subhead: Give it a social account. Get its positioning, content themes, top posts and what to test. Collects data from websites.
+subhead: Give it a social account. Get its positioning, content themes, top
+  posts and what to test. Collects data from websites. Bring the account link.
+  Use the result to plan your next step.
 explain: |
   A breakdown of a social account: how it positions itself, which themes it returns to, which posts beat the average, and what you can test yourself. You learn from what works without copying it.
 
@@ -27,6 +30,7 @@ you_get:
   - Hooks and formats to try
   - Tests for your account
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your ScrapeCreators key.

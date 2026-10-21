@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes tests with checkable answers, then reads the results.
 new_slug: mcp-server-test-runner
 name: MCP server test runner
-summary: Point it at your MCP server. Get realistic task tests and a report on whether an AI picks the right tool.
+summary: Point it at your MCP server. Get realistic task tests and a report on
+  whether an AI picks the right tool.
 job: test-and-fix-code
 headline: MCP server test runner
-subhead: Point it at your MCP server. Get realistic task tests and a report on whether an AI picks the right tool.
+subhead: Tests for your MCP server that show if an AI picks the right tool for a
+  real task. Point it at the server and get a report on what passes, what fails
+  and why.
 explain: |
   Tests for your MCP server that show if an AI picks the right tool for a real task. Point it at the server and get a report on what passes, what fails and why.
 
@@ -27,6 +30,7 @@ you_get:
   - A tool selection accuracy report
   - CI test gates
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

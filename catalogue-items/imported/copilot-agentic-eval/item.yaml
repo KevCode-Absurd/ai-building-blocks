@@ -1,0 +1,32 @@
+slug: copilot-agentic-eval
+name: Agent answer feedback designer
+summary: Share an agent task. Get checks and feedback loops to improve the quality of its answers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/agentic-eval
+  url: https://github.com/github/awesome-copilot/tree/main/skills/agentic-eval
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: agentic-eval
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: agentic-eval skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/agentic-eval
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

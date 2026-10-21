@@ -1,0 +1,37 @@
+slug: copilot-impediment-prioritization
+name: Delivery blocker priority scorer
+summary: Share your blockers and possible fixes. Get a ranked list based on value, effort and delay costs.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/impediment-prioritization
+  url: https://github.com/github/awesome-copilot/tree/main/skills/impediment-prioritization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: impediment-prioritization
+  author: ajenns
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: impediment-prioritization skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/impediment-prioritization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: ajenns
+    url: ""
+    used: Wrote the skill; GitHub Copilot community shared it in their collection.

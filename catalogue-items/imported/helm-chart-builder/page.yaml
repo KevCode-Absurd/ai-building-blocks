@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows chart conventions with set checks.
 new_slug: helm-chart-builder
 name: Helm chart builder
-summary: Describe your service. Get a Helm chart for Kubernetes with sensible values, checks and safe defaults.
+summary: Describe your service. Get a Helm chart for Kubernetes with sensible
+  values, checks and safe defaults.
 job: ship-and-host
 headline: Helm chart builder
-subhead: Describe your service. Get a Helm chart for Kubernetes with sensible values, checks and safe defaults.
+subhead: "A Helm chart for your Kubernetes service that other people can trust
+  and use. Describe the service and the skill scaffolds a chart with the right
+  shape for it: a web service, a background worker, a scheduled job, a stateful
+  service or a shared library chart."
 explain: |
   A Helm chart for your Kubernetes service that other people can trust and use. Describe the service and the skill scaffolds a chart with the right shape for it: a web service, a background worker, a scheduled job, a stateful service or a shared library chart.
 
@@ -26,6 +30,7 @@ you_get:
   - A review of problems in an existing chart
   - Test and lint steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

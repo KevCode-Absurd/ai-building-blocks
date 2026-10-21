@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It maps many controls to your setup.
 new_slug: soc-2-readiness-planner
 name: SOC 2 readiness planner
-summary: Describe your systems. Get your controls mapped, gaps found and the evidence an auditor will ask for.
+summary: Describe your systems. Get your controls mapped, gaps found and the
+  evidence an auditor will ask for.
 job: secure-code
 headline: SOC 2 readiness planner
-subhead: Describe your systems. Get your controls mapped, gaps found and the evidence an auditor will ask for.
+subhead: Your controls mapped to SOC 2, the gaps listed, and the evidence an
+  auditor will ask for. You describe your systems, and the skill builds the plan
+  for a Type I or Type II report.
 explain: |
   Your controls mapped to SOC 2, the gaps listed, and the evidence an auditor will ask for. You describe your systems, and the skill builds the plan for a Type I or Type II report.
 
@@ -26,6 +29,7 @@ you_get:
   - An evidence collection checklist
   - A readiness summary and vendor tasks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

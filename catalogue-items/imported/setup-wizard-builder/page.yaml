@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scopes the steps, then builds a script.
 new_slug: setup-wizard-builder
 name: Setup wizard builder
-summary: Describe a manual setup job. Get a script that walks you through each step and saves what you enter.
+summary: Describe a manual setup job. Get a script that walks you through each
+  step and saves what you enter.
 job: build-software
 headline: Setup wizard builder
-subhead: Describe a manual setup job. Get a script that walks you through each step and saves what you enter.
+subhead: A bash script that walks you through a tedious manual job one stage at
+  a time. It opens each web page, tells you what to click and copy, and saves
+  what you enter in the right place.
 explain: |
   A bash script that walks you through a tedious manual job one stage at a time. It opens each web page, tells you what to click and copy, and saves what you enter in the right place. Use it for setting up outside services, a one-off migration, or moving a project to a new state.
 
@@ -26,6 +29,7 @@ you_get:
   - Values saved to .env or GitHub secrets
   - A closing summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

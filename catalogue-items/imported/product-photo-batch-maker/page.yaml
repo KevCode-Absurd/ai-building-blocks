@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It runs many jobs and watches cost, and you choose the shared style.
 new_slug: product-photo-batch-maker
 name: Product photo batch maker
-summary: Give it a spreadsheet of products. Get one matching photo per product, with a cost limit. Your image model draws them.
+summary: Give it a spreadsheet of products. Get one matching photo per product,
+  with a cost limit. Your image model draws them.
 job: product-photos
 headline: Product photo batch maker
-subhead: Give it a spreadsheet of products. Get one matching photo per product, with a cost limit. Your image model draws them.
+subhead: One matching product photo for every row in your product spreadsheet,
+  so a whole catalog looks like a single shoot. The hard part is keeping a big
+  set consistent, so the style rules never change and only the product details
+  do.
 explain: |
   One matching product photo for every row in your product spreadsheet, so a whole catalog looks like a single shoot. The hard part is keeping a big set consistent, so the style rules never change and only the product details do.
 
@@ -27,6 +31,8 @@ you_get:
   - A cost limit
   - A contact sheet to pick from
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).
+  - It works best when your AI can run code and use your own image model key
+    (OpenAI, Gemini, fal or Replicate).

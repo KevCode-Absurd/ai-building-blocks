@@ -201,6 +201,11 @@
   <url><loc>https://useaiblocks.com/skills/error-message-rewriter</loc></url>
   <url><loc>https://useaiblocks.com/skills/estimate-gap-auditor</loc></url>
   <url><loc>https://useaiblocks.com/skills/eulogy-values-finder</loc></url>
+  <url><loc>https://useaiblocks.com/skills/executive-action-register</loc></url>
+  <url><loc>https://useaiblocks.com/skills/executive-daily-digest</loc></url>
+  <url><loc>https://useaiblocks.com/skills/executive-due-task-drafts</loc></url>
+  <url><loc>https://useaiblocks.com/skills/executive-email-draft</loc></url>
+  <url><loc>https://useaiblocks.com/skills/executive-meeting-brief</loc></url>
   <url><loc>https://useaiblocks.com/skills/experience-drift-auditor</loc></url>
   <url><loc>https://useaiblocks.com/skills/expert-and-newcomer-test-planner</loc></url>
   <url><loc>https://useaiblocks.com/skills/fact-caption-image-ad-maker</loc></url>
@@ -1508,6 +1513,110 @@
   <url><loc>https://useaiblocks.com/skills/conversion-problem-finder</loc></url>
   <url><loc>https://useaiblocks.com/skills/conversion-reconciliation</loc></url>
   <url><loc>https://useaiblocks.com/skills/conversion-tracking-fixer</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-acreadiness-assess</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-acreadiness-generate-instructions</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-acreadiness-policy</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-agent-architecture</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-agent-governance</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-agent-owasp-compliance</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-agent-supply-chain</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-agentic-eval</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-ai-prompt-engineering-safety-review</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-api-breaking-change-detector</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-audit-integrity</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-aws-cloudwatch-investigation</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-aws-cost-optimize</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-aws-resource-health-diagnose</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-aws-well-architected-review</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-az-cost-optimize</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-azure-deployment-preflight</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-azure-pricing</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-azure-resource-health-diagnose</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-azure-resource-visualizer</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-azure-role-selector</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-azure-well-architected-review</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-bigquery-pipeline-audit</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-brag-sheet</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-bug-receipt</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-bug-reproduction-brief</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-build-evidence-map</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-codeql</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-copilot-sdk</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-copilot-usage-metrics</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-creating-oracle-to-postgres-master-migration-plan</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-creating-oracle-to-postgres-migration-bug-report</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-creating-oracle-to-postgres-migration-integration-tests</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-cypress-flake-fixer</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-daily-prep</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-data-breach-blast-radius</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-devops-rollout-plan</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-diagnose</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-docs-sync-audit</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-dotnet-mcp-builder</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-dotnet-timezone</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-email-drafter</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-eval-driven-dev</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gdpr-compliant</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-github-actions-efficiency</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-github-actions-hardening</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-github-actions-runtime-upgrade-conventions</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-github-codespaces-efficiency</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-go-mcp-server-generator</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-0-to-1-launch</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-ai-gtm</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-board-and-investor-communication</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-developer-ecosystem</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-enterprise-account-planning</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-enterprise-onboarding</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-operating-cadence</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-partnership-architecture</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-positioning-strategy</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-product-led-growth</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-gtm-technical-product-pricing</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-impediment-prioritization</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-incident-postmortem</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-mcp-implementation-security-review</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-mcp-release-qa</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-mcp-security-audit</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-meeting-minutes</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-migrating-oracle-to-postgres-data-access-code</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-migrating-oracle-to-postgres-stored-procedures</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-performance-review-writer</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-pester-migration</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-planning-oracle-to-postgres-migration-integration-testing</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-protobuf-grpc-api-review</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-python-mcp-server-generator</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-qdrant-deployment-options</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-qdrant-model-migration</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-qdrant-monitoring</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-qdrant-performance-optimization</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-qdrant-scaling</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-qdrant-search-quality</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-qdrant-version-upgrade</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-quarkus-dev-services-and-testing</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-react18-batching-patterns</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-react18-enzyme-to-rtl</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-react18-legacy-context</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-react18-lifecycle-patterns</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-react18-string-refs</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-react19-source-patterns</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-react19-test-patterns</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-resx-source-generator-migration</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-roslyn-analyzers</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-roundup</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-roundup-setup</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-scaffolding-oracle-to-postgres-migration-test-project</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-secret-scanning</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-sql-object-impact-analysis</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-sql-server-table-reconciliation</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-test-gap-audit</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-threat-model-analyst</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-tm7-threat-model</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-typescript-mcp-server-generator</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-unit-test-vue-pinia</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-upstash-redis</loc></url>
+  <url><loc>https://useaiblocks.com/skills/copilot-verify-agent-action</loc></url>
   <url><loc>https://useaiblocks.com/skills/copyright-takedown-notice-helper</loc></url>
   <url><loc>https://useaiblocks.com/skills/copywriting-framework-writer</loc></url>
   <url><loc>https://useaiblocks.com/skills/cost-of-capital-calculator</loc></url>
@@ -2780,7 +2889,6 @@
   <url><loc>https://useaiblocks.com/skills/seasonal-buy-planner</loc></url>
   <url><loc>https://useaiblocks.com/skills/seawater-carbonate-calculator</loc></url>
   <url><loc>https://useaiblocks.com/skills/second-opinion-reviewer</loc></url>
-  <url><loc>https://useaiblocks.com/skills/secrets-hygiene-checker</loc></url>
   <url><loc>https://useaiblocks.com/skills/secrets-setup-helper</loc></url>
   <url><loc>https://useaiblocks.com/skills/sector-landscape-report-writer</loc></url>
   <url><loc>https://useaiblocks.com/skills/secure-development-checker</loc></url>
@@ -2911,7 +3019,6 @@
   <url><loc>https://useaiblocks.com/skills/sql-query-helper</loc></url>
   <url><loc>https://useaiblocks.com/skills/sql-query-launch-reviewer</loc></url>
   <url><loc>https://useaiblocks.com/skills/sql-query-writer</loc></url>
-  <url><loc>https://useaiblocks.com/skills/stable-diffusion-image-maker</loc></url>
   <url><loc>https://useaiblocks.com/skills/staff-access-reviewer</loc></url>
   <url><loc>https://useaiblocks.com/skills/staff-announcement-writer</loc></url>
   <url><loc>https://useaiblocks.com/skills/staff-training-session-planner</loc></url>

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It lists and checks settings with simple commands.
 new_slug: parallel-cluster-finder
 name: Parallel cluster finder
-summary: Ask what parallel clusters you can use. Get a list, with profiles checked and set as default.
+summary: Ask what parallel clusters you can use. Get a list, with profiles
+  checked and set as default.
 job: build-software
 headline: Parallel cluster finder
-subhead: Ask what parallel clusters you can use. Get a list, with profiles checked and set as default.
+subhead: A list of the computing clusters your MATLAB can use, with each profile
+  checked and one set as the default. It answers the question of where you can
+  run big jobs.
 explain: |
   A list of the computing clusters your MATLAB can use, with each profile checked and one set as the default. It answers the question of where you can run big jobs.
 
@@ -25,6 +28,7 @@ you_get:
   - Imported profile
   - Default cluster set
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

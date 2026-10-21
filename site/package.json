@@ -11,7 +11,7 @@
     "crawl": "node scripts/crawl.mjs",
     "seo": "node scripts/check-seo.mjs",
     "test:e2e": "playwright test",
-    "test:unit": "node --test test/comments.test.mjs test/spaces.test.mjs test/traction.test.mjs"
+    "test:unit": "node --test test/comments.test.mjs test/spaces.test.mjs test/traction.test.mjs test/library-safety.test.mjs"
   },
   "dependencies": {
     "@xyflow/react": "12.3.6",

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Decoding needs the right signal database.
 new_slug: vehicle-log-data-converter
 name: Vehicle log data converter
-summary: Give it MDF, BLF or CAN log files. Get signals decoded and written to the format you need.
+summary: Give it MDF, BLF or CAN log files. Get signals decoded and written to
+  the format you need.
 job: build-software
 headline: Vehicle log data converter
-subhead: Give it MDF, BLF or CAN log files. Get signals decoded and written to the format you need.
+subhead: Raw vehicle bus recordings turned into named signals you can plot and
+  analyze, and your own data written back to a standard log file. The skill
+  covers MDF and MF4, BLF and ASC log files in MATLAB.
 explain: |
   Raw vehicle bus recordings turned into named signals you can plot and analyze, and your own data written back to a standard log file. 
   The skill covers MDF and MF4, BLF and ASC log files in MATLAB. It reads them and decodes CAN, CAN FD and LIN frames using your DBC, ARXML or LDF database. For writing, it converts a MATLAB timetable to MDF or CAN data to BLF, and it fixes column types that MDF cannot store, such as categories and dates. It also states what is not supported: no LIN to BLF, no ASC export. It needs MATLAB with Vehicle Network Toolbox, and it checks your release first.
@@ -25,6 +28,7 @@ you_get:
   - An exported MDF or BLF file
   - A note on what your format cannot do
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Vehicle Network Toolbox.

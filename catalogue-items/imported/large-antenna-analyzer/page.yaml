@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Large structures need careful solver choices.
 new_slug: large-antenna-analyzer
 name: Large antenna analyzer
-summary: Describe a dish or reflector antenna. Get a built model with patterns and performance checked.
+summary: Describe a dish or reflector antenna. Get a built model with patterns
+  and performance checked.
 job: build-software
 headline: Large antenna analyzer
-subhead: Describe a dish or reflector antenna. Get a built model with patterns and performance checked.
+subhead: Describe a dish or reflector antenna. Get a built model with patterns
+  and performance checked. Bring antenna type and frequency. Use the result to
+  plan your next step.
 explain: |
   A working model of a dish or reflector antenna, with the radiation pattern and performance checked. Describe what you need: a parabolic dish, a Cassegrain or Gregorian pair, an offset reflector, a reflectarray, or an antenna mounted on a vehicle, ship or satellite. It can also compute radar cross section.
 
@@ -26,6 +29,7 @@ you_get:
   - Solver choice with a reason
   - Performance numbers such as gain
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Antenna Toolbox.

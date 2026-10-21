@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It matches the dispute reason to a fixed evidence list.
 new_slug: chargeback-evidence-gatherer
 name: Chargeback evidence gatherer
-summary: Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead.
+summary: Tell it the dispute reason. Get what proof to collect, where to find it
+  in Shopify, and whether to accept instead.
 job: help-customers
 headline: Chargeback evidence gatherer
-subhead: Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead.
+subhead: Before you spend hours digging up files, you get a short checklist of
+  exactly what proof your dispute needs. Tell it the reason on the dispute, and
+  it sorts each item into have, get, check or not available, with the spot in
+  Shopify where you can find it.
 explain: |
   Before you spend hours digging up files, you get a short checklist of exactly what proof your dispute needs. Tell it the reason on the dispute, and it sorts each item into have, get, check or not available, with the spot in Shopify where you can find it.
 
@@ -28,5 +32,6 @@ you_get:
   - Items to leave out
   - What Shopify adds on its own
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

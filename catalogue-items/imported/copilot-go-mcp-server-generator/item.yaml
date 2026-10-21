@@ -1,0 +1,32 @@
+slug: copilot-go-mcp-server-generator
+name: Go MCP server starter builder
+summary: Describe your tools and data. Get a Go MCP server project with working structure and tests.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/go-mcp-server-generator
+  url: https://github.com/github/awesome-copilot/tree/main/skills/go-mcp-server-generator
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: go-mcp-server-generator
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: go-mcp-server-generator skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/go-mcp-server-generator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

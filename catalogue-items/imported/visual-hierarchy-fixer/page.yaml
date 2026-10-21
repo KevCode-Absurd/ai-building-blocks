@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks a design against clear visual rules and suggests changes.
 new_slug: visual-hierarchy-fixer
 name: Visual hierarchy fixer
-summary: Give it a web page or screen. Get fixes for spacing, color, type and depth so it looks professional.
+summary: Give it a web page or screen. Get fixes for spacing, color, type and
+  depth so it looks professional.
 job: design-work
 headline: Visual hierarchy fixer
-subhead: Give it a web page or screen. Get fixes for spacing, color, type and depth so it looks professional.
+subhead: A web page or app screen that looks professional because the eye knows
+  where to go first. You get a short list of fixes you can apply in code or in a
+  design tool.
 explain: |
   A web page or app screen that looks professional because the eye knows where to go first. You get a short list of fixes you can apply in code or in a design tool.
 
@@ -26,5 +29,6 @@ you_get:
   - A set of design tokens
   - Updated styles or code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set method with a few design choices.
 new_slug: skill-builder
 name: Skill builder
-summary: Describe what your AI should learn. Get a skill folder with clear instructions and helper files.
+summary: Describe what your AI should learn. Get a skill folder with clear
+  instructions and helper files.
 job: make-skills
 headline: Skill builder
-subhead: Describe what your AI should learn. Get a skill folder with clear instructions and helper files.
+subhead: A finished skill folder with clear instructions and helper files, built
+  from your description of what the AI should learn. The result loads into your
+  assistant and gives it know-how it did not have.
 explain: |
   A finished skill folder with clear instructions and helper files, built from your description of what the AI should learn. The result loads into your assistant and gives it know-how it did not have.
 
@@ -25,6 +28,7 @@ you_get:
   - A short description that triggers the skill
   - Notes on how to test it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

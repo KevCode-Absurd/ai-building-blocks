@@ -5,7 +5,8 @@ name: Skill quality tester
 summary: Give it a skill. Get its structure checked, scripts run and a score with fixes.
 job: make-skills
 headline: Skill quality tester
-subhead: Give it a skill. Get its structure checked, scripts run and a score with fixes.
+subhead: A score and a to-do list for a skill, after its structure is checked
+  and its scripts are run. You find weak spots before you ship it.
 explain: |
   A score and a to-do list for a skill, after its structure is checked and its scripts are run. You find weak spots before you ship it.
 
@@ -26,6 +27,7 @@ you_get:
   - An improvement road map
   - A security score
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read files.

@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It splits one goal into roles and tasks.
 new_slug: agent-team-builder
 name: Agent team builder
-summary: Describe the jobs your agents do. Get a team of AI agents with roles, tasks and shared memory.
+summary: Describe the jobs your agents do. Get a team of AI agents with roles,
+  tasks and shared memory.
 job: build-software
 headline: Agent team builder
-subhead: Describe the jobs your agents do. Get a team of AI agents with roles, tasks and shared memory.
+subhead: A team of AI agents, each with a role, a task and shared memory, ready
+  to run as a group. One agent might research, another might write, and a third
+  might check the draft.
 explain: |
   A team of AI agents, each with a role, a task and shared memory, ready to run as a group. One agent might research, another might write, and a third might check the draft.
 
   The skill sets up each agent with a role, a goal and a short backstory. It writes the tasks and sets what each task hands to the next. You choose how the team runs: in a fixed order, or with a manager agent who assigns the work. It adds memory so agents remember short-term context, long-term lessons and the people or things involved. This uses the CrewAI Python package, which you install first. It does not need LangChain.
 when:
-  - One AI prompt is not enough and you want specialists passing work to each other.
+  - One AI prompt is not enough and you want specialists passing work to each
+    other.
   - You want a researcher, writer and reviewer working in a chain.
   - You need a manager agent to hand tasks to the right specialist.
   - You want agents that remember earlier runs.
@@ -26,6 +30,7 @@ you_get:
   - A run set-up in code
   - Memory settings for the team
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and call an AI model.

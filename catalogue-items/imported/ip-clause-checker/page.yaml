@@ -2,16 +2,20 @@ thinking: high
 thinking_why: Who owns the work is easy to give away by accident.
 new_slug: ip-clause-checker
 name: IP clause checker
-summary: Give it a contract. Get ownership, assignment, licence and indemnity clauses checked and flagged. A first check, not legal advice.
+summary: Give it a contract. Get ownership, assignment, licence and indemnity
+  clauses checked and flagged. A first check, not legal advice.
 job: check-contracts
 headline: IP clause checker
-subhead: Give it a contract. Get ownership, assignment, licence and indemnity clauses checked and flagged. A first check, not legal advice.
+subhead: The intellectual property clauses in a contract read for you, ranked by
+  risk. Share the agreement as a file, link or pasted text. The skill first asks
+  which side you are on for IP, since it differs per document.
 explain: |
   The intellectual property clauses in a contract read for you, ranked by risk. Share the agreement as a file, link or pasted text. The skill first asks which side you are on for IP, since it differs per document. For employment, consulting and work-for-hire deals it runs an assignment gap check before anything else, because missing ownership transfers are hard to fix later.
 
   Each clause is explained, compared with market norms and with your preferred position, then rated. It also checks that clauses agree with each other and notes local rules on moral rights, work-for-hire and implied licences. Unclear wording is flagged for a lawyer. It is a first check, not legal advice.
 when:
-  - A contractor or vendor sent a contract and you want a first read on who owns the work.
+  - A contractor or vendor sent a contract and you want a first read on who owns
+    the work.
   - You are signing an employment agreement and want to check the IP terms.
   - You license your code or content and need to see what you grant.
   - You want a list of questions for your lawyer before the review.
@@ -27,6 +31,9 @@ you_get:
   - A note on local legal differences
   - Questions for a lawyer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - Where the skill points to /ip-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /ip-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a known frame with your topic.
 new_slug: argument-writing-scaffold-maker
 name: Argument writing scaffold maker
-summary: Give it a claim or question. Get a fill-in frame using Toulmin, PEEL or CER that helps learners build an argument.
+summary: Give it a claim or question. Get a fill-in frame using Toulmin, PEEL or
+  CER that helps learners build an argument.
 job: teach-and-train
 headline: Argument writing scaffold maker
-subhead: Give it a claim or question. Get a fill-in frame using Toulmin, PEEL or CER that helps learners build an argument.
+subhead: A fill-in frame that helps a learner build an argument from a claim or
+  question. Pick the framework and you get labelled sections, guiding prompts,
+  sentence starters and a worked model.
 explain: |
   A fill-in frame that helps a learner build an argument from a claim or question. Pick the framework and you get labelled sections, guiding prompts, sentence starters and a worked model.
 
@@ -26,5 +29,6 @@ you_get:
   - An annotated model answer
   - Adjusted support for the level
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

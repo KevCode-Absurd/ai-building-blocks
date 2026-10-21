@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies animation patterns to the existing code.
 new_slug: page-transition-animator
 name: Page transition animator
-summary: Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings.
+summary: Describe the motion you want. Get smooth React page and element
+  transitions that respect reduced-motion settings.
 job: build-websites
 headline: Page transition animator
-subhead: Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings.
+subhead: Describe the motion you want. Get smooth React page and element
+  transitions that respect reduced-motion settings. Bring your React or Next.js
+  code. Use the result to plan your next step.
 explain: |
   Smooth movement between screens in your React or Next.js app, such as a card that grows into a detail page, using the browser's built-in transition tool instead of a heavy library.
 
@@ -25,6 +28,7 @@ you_get:
   - Reduced-motion handling
   - Notes on which moments were left still
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can edit your project files.

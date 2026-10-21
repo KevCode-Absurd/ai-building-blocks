@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Honest returns can look like abuse.
 new_slug: serial-returner-spotter
 name: Serial returner spotter
-summary: Get customers with unusual return habits listed for you to review. It never blocks anyone on its own.
+summary: Get customers with unusual return habits listed for you to review. It
+  never blocks anyone on its own.
 job: secure-code
 headline: Serial returner spotter
-subhead: Get customers with unusual return habits listed for you to review. It never blocks anyone on its own.
+subhead: Get customers with unusual return habits listed for you to review. It
+  never blocks anyone on its own. Bring your Shopify store domain. Use the
+  result to plan your next step.
 explain: |
   A review list of Shopify customers whose return habits stand out, for your team to check before approving the next return. It never blocks, limits or flags anyone on its own, because honest customers often return things for good reasons like sizing.
 
@@ -26,6 +29,7 @@ you_get:
   - Return rates and counts per customer
   - A human or JSON output
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

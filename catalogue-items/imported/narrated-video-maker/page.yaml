@@ -5,7 +5,9 @@ name: Narrated video maker
 summary: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
 job: make-video-ads
 headline: Narrated video maker
-subhead: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+subhead: Turn a Markdown document into a narrated slide video, with no screen
+  recording and no editing. You keep your original file untouched and get an MP4
+  you can share.
 explain: |
   Turn a Markdown document into a narrated slide video, with no screen recording and no editing. You keep your original file untouched and get an MP4 you can share.
 
@@ -25,6 +27,7 @@ you_get:
   - A narration script matched to each slide
   - A narrated MP4 video
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

@@ -589,20 +589,20 @@ const fillBusiness = async (page: Page) => {
 test("about you: typed once, kept, and added to every copy and download", async ({ page, context }, info) => {
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.goto(`/prompts/${MODEL}`);
-  await expect(page.getByTestId("business-note")).toContainText("Add a short file about you and your work once");
+  await expect(page.getByTestId("business-note")).toContainText("Use the same facts across your work");
   await page.getByTestId("business-add").click();
   await expect(page.getByTestId("business-form")).toBeVisible();
   await page.keyboard.press("Escape");
   await fillBusiness(page);
   await expect(page.getByTestId("open-business").locator(".dot")).toBeVisible();
   await page.reload();
-  await expect(page.getByTestId("business-note")).toContainText("for Sprout");
+  await expect(page.getByTestId("business-note")).toContainText("Your saved context is included");
 
   // The skill copies with the details after it.
   await page.getByTestId("copy-skill").click();
   const copied = (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, "\n");
   expect(copied).toMatch(/^---\nname: /);
-  expect(copied).toContain("## About me and my work");
+  expect(copied).toContain("## Your saved context");
   expect(copied).toContain("- **Name:** Sprout");
   expect(copied).toContain("- **Who it's for:** Adults who gave up on greens powders");
   expect(copied, "anything else keeps its own lines").toContain("**Anything else:**\n\nWe ship to the US only.\nOur busy season is January.");
@@ -615,7 +615,7 @@ test("about you: typed once, kept, and added to every copy and download", async 
   // A workflow download carries them in about-me.md, and HANDOFF.md says to read it first.
   await page.goto(`/workflows/${WORKFLOW}`);
   await page.getByTestId("block-page").getByTestId("download-handoff").click();
-  await expect(page.getByTestId("needs")).toContainText("Your about-me file goes in the folder too");
+  await expect(page.getByTestId("needs")).toContainText("Your saved context goes in the folder too");
   const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
   const path = info.outputPath(dl.suggestedFilename());
   await dl.saveAs(path);
@@ -648,7 +648,7 @@ test("after the download: how to run it in your AI, the first message to paste, 
   const builder = await planGoal(page, "a landing page for my best ad");
   await builder.getByTestId("download-handoff").click();
   const dlg = page.getByTestId("needs");
-  await expect(dlg).toContainText("Add a short file about you first");
+  await expect(dlg).toContainText("Save your context once");
   await Promise.all([page.waitForEvent("download"), dlg.getByTestId("needs-download").click()]);
   const next = dlg.getByTestId("next-steps");
   await expect(next).toContainText("a-landing-page-for-my-best-ad-handoff.zip");

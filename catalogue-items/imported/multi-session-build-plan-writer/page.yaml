@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It must split work into tasks with proof of done.
 new_slug: multi-session-build-plan-writer
 name: Multi-session build plan writer
-summary: Give it a big build request. Get a plan in your repo that any fresh agent can pick up and finish.
+summary: Give it a big build request. Get a plan in your repo that any fresh
+  agent can pick up and finish.
 job: build-software
 headline: Multi-session build plan writer
-subhead: Give it a big build request. Get a plan in your repo that any fresh agent can pick up and finish.
+subhead: A plan stored in your repo that any fresh agent can pick up and finish,
+  so a big build does not die when a chat ends.
 explain: |
   A plan stored in your repo that any fresh agent can pick up and finish, so a big build does not die when a chat ends.
 
@@ -26,6 +28,7 @@ you_get:
   - A resume checkpoint
   - Evidence rules for completion
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and write your project files.

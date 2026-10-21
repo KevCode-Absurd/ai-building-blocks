@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows known pipeline patterns for your stack.
 new_slug: ci-cd-pipeline-setup
 name: Build and release pipeline setter
-summary: Describe your project. Get a CI/CD pipeline that builds, tests and ships across environments.
+summary: Describe your project. Get a CI/CD pipeline that builds, tests and
+  ships across environments.
 job: ship-and-host
 headline: Build and release pipeline setter
-subhead: Describe your project. Get a CI/CD pipeline that builds, tests and ships across environments.
+subhead: A build, test and release pipeline for your project, so code goes from
+  push to live without manual steps. You describe your language, host and
+  target, and you get ready-to-use config files.
 explain: |
   A build, test and release pipeline for your project, so code goes from push to live without manual steps. You describe your language, host and target, and you get ready-to-use config files.
 
@@ -28,6 +31,7 @@ you_get:
   - Caching to speed runs up
   - Failure alerts
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

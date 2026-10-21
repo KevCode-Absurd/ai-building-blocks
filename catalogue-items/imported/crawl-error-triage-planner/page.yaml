@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It ranks a long list by business effect using set rules.
 new_slug: crawl-error-triage-planner
 name: Crawl error triage planner
-summary: Give it your crawler's issue list. Get fixes ranked by effect on rankings and traffic, not by raw severity.
+summary: Give it your crawler's issue list. Get fixes ranked by effect on
+  rankings and traffic, not by raw severity.
 job: get-found-in-search
 headline: Crawl error triage planner
-subhead: Give it your crawler's issue list. Get fixes ranked by effect on rankings and traffic, not by raw severity.
+subhead: Your site audit issues ranked by how much they affect rankings and
+  traffic, not by the severity label the tool gave them. You fix the few things
+  that matter and leave the noise.
 explain: |
   Your site audit issues ranked by how much they affect rankings and traffic, not by the severity label the tool gave them. You fix the few things that matter and leave the noise.
 
@@ -26,5 +29,6 @@ you_get:
   - Grouped fixes
   - Sprint plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

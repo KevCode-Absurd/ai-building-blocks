@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks each command against the repo before writing it.
 new_slug: agent-instructions-auditor
 name: Agent instructions auditor
-summary: Point it at your repo. Get a short, checked AGENTS.md with real commands and no guesses.
+summary: Point it at your repo. Get a short, checked AGENTS.md with real
+  commands and no guesses.
 job: set-up-ai
 headline: Agent instructions auditor
-subhead: Point it at your repo. Get a short, checked AGENTS.md with real commands and no guesses.
+subhead: A short AGENTS.md for your code project where every command was checked
+  and nothing was guessed. Your AI coding tool reads this file first, so a wrong
+  line costs you on every task.
 explain: |
   A short AGENTS.md for your code project where every command was checked and nothing was guessed. Your AI coding tool reads this file first, so a wrong line costs you on every task.
 
@@ -26,6 +29,7 @@ you_get:
   - Notes on lines removed or fixed
   - Narrower files for sub-folders if needed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

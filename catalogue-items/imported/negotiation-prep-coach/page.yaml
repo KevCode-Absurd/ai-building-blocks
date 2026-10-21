@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It applies known tactics to your case and you choose the lines.
 new_slug: negotiation-prep-coach
 name: Negotiation prep coach
-summary: Describe a deal or salary talk. Get an opening, calibrated questions and a fallback plan. Uses tactical empathy.
+summary: Describe a deal or salary talk. Get an opening, calibrated questions
+  and a fallback plan. Uses tactical empathy.
 job: sell-and-negotiate
 headline: Negotiation prep coach
-subhead: Describe a deal or salary talk. Get an opening, calibrated questions and a fallback plan. Uses tactical empathy.
+subhead: A prepared plan for a hard conversation, whether it is a contract, a
+  supplier price or a pay rise. It follows the approach of former FBI negotiator
+  Chris Voss, which treats the other side's feelings and needs as the way to a
+  better deal.
 explain: |
   A prepared plan for a hard conversation, whether it is a contract, a supplier price or a pay rise. It follows the approach of former FBI negotiator Chris Voss, which treats the other side's feelings and needs as the way to a better deal.
 
@@ -27,5 +31,6 @@ you_get:
   - A fallback plan
   - A prep score with gaps to fix
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

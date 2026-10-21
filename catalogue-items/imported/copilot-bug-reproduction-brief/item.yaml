@@ -1,0 +1,32 @@
+slug: copilot-bug-reproduction-brief
+name: Bug reproduction evidence writer
+summary: Share an unclear bug report. Get repeatable steps, a minimal case and the evidence still needed.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/bug-reproduction-brief
+  url: https://github.com/github/awesome-copilot/tree/main/skills/bug-reproduction-brief
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: bug-reproduction-brief
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: bug-reproduction-brief skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/bug-reproduction-brief
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

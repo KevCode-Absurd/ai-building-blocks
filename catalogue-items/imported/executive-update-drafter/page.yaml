@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches tone and detail to the reader.
 new_slug: executive-update-drafter
 name: Executive update drafter
-summary: Give it the news and who reads it. Get a status update, exec review or bad-news note pitched to that audience.
+summary: Give it the news and who reads it. Get a status update, exec review or
+  bad-news note pitched to that audience.
 job: lead-people
 headline: Executive update drafter
-subhead: Give it the news and who reads it. Get a status update, exec review or bad-news note pitched to that audience.
+subhead: Give it the news and who reads it. Get a status update, exec review or
+  bad-news note pitched to that audience. Bring who the message is for. Use the
+  result to plan your next step.
 explain: |
   A message pitched at the right level for the person reading it, whether it is a weekly status, an executive review, a technical choice explained to non-technical people, or bad news about a delay.
 
@@ -27,5 +30,6 @@ you_get:
   - Bad-news framing when needed
   - Suggested update schedule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

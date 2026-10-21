@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It judges craft details against known principles.
 new_slug: interface-polish-reviewer
 name: Interface polish reviewer
-summary: Give it a screen or component. Get notes on animation, feel and small details that make it feel finished.
+summary: Give it a screen or component. Get notes on animation, feel and small
+  details that make it feel finished.
 job: design-work
 headline: Interface polish reviewer
-subhead: Give it a screen or component. Get notes on animation, feel and small details that make it feel finished.
+subhead: "Notes on the feel of your screen: how it moves, responds and handles
+  small details, so it reads as finished and cared for. Give it a screen or
+  component and get craft-level feedback."
 explain: |
   Notes on the feel of your screen: how it moves, responds and handles small details, so it reads as finished and cared for. Give it a screen or component and get craft-level feedback.
 
@@ -26,5 +29,6 @@ you_get:
   - Small detail fixes
   - A priority order for changes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

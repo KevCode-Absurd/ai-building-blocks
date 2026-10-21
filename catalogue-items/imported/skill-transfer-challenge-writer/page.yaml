@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must design tasks at two distances.
 new_slug: skill-transfer-challenge-writer
 name: Skill transfer challenge writer
-summary: Give it something a learner has mastered. Get near and far challenges that show if it carries to new tasks.
+summary: Give it something a learner has mastered. Get near and far challenges
+  that show if it carries to new tasks.
 job: teach-and-train
 headline: Skill transfer challenge writer
-subhead: Give it something a learner has mastered. Get near and far challenges that show if it carries to new tasks.
+subhead: Two challenges that show whether a learner truly understands an idea or
+  only knows the one example they practised. After someone shows they have
+  grasped a concept, you get a near challenge and a far challenge to test it.
 explain: |
   Two challenges that show whether a learner truly understands an idea or only knows the one example they practised. After someone shows they have grasped a concept, you get a near challenge and a far challenge to test it.
 
@@ -26,5 +29,6 @@ you_get:
   - A note on what a successful answer looks like
   - Guidance on what a miss tells you
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

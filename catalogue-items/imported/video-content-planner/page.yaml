@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It plans content and writes scripts in set formats.
 new_slug: video-content-planner
 name: Video content planner
-summary: Give it your channel goal. Get a video plan, scripts and ways to turn one long video into short clips.
+summary: Give it your channel goal. Get a video plan, scripts and ways to turn
+  one long video into short clips.
 job: grow-social
 headline: Video content planner
-subhead: Give it your channel goal. Get a video plan, scripts and ways to turn one long video into short clips.
+subhead: "A video plan you can start this week: what to make, for whom, and how
+  to get several clips out of each long video. The skill first asks about your
+  goal, audience, team size and what you already have, such as blog posts,
+  webinars or demos."
 explain: |
   A video plan you can start this week: what to make, for whom, and how to get several clips out of each long video. 
   The skill first asks about your goal, audience, team size and what you already have, such as blog posts, webinars or demos. It sets up a channel with a clear niche, content pillars and search keywords. It writes scripts with a strong opening and a clear structure. It plans a pipeline that cuts one long video into many short clips. It also gives ideas to improve YouTube titles, descriptions and thumbnails for search. If you have a brand voice file, it reads that first so the video sounds like you.
@@ -25,5 +29,6 @@ you_get:
   - A repurposing plan from long to short
   - Title and search tips
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

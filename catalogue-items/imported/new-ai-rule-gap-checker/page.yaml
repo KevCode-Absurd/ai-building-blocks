@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It compares dense rule text with your real practice.
 new_slug: new-ai-rule-gap-checker
 name: New AI rule gap checker
-summary: Give it a new AI law. Get gaps against what you do now and a fix plan. Not legal advice.
+summary: Give it a new AI law. Get gaps against what you do now and a fix plan.
+  Not legal advice.
 job: check-contracts
 headline: New AI rule gap checker
-subhead: Give it a new AI law. Get gaps against what you do now and a fix plan. Not legal advice.
+subhead: A list of what a new AI law or guidance means for your company, set
+  against what you already do. Instead of reading a hundred pages, you see the
+  gaps and a plan to close them.
 explain: |
   A list of what a new AI law or guidance means for your company, set against what you already do. Instead of reading a hundred pages, you see the gaps and a plan to close them.
 
@@ -26,7 +29,10 @@ you_get:
   - Gaps ranked by urgency
   - A dated remediation plan for your file
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web for the rule text.
-  - Where the skill points to /ai-governance-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /ai-governance-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

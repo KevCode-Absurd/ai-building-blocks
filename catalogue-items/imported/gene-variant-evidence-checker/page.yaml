@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs mixed evidence and must not overclaim.
 new_slug: gene-variant-evidence-checker
 name: Gene variant evidence checker
-summary: Name a gene variant. Get public evidence, expert gene-disease ratings and papers, each with its source.
+summary: Name a gene variant. Get public evidence, expert gene-disease ratings
+  and papers, each with its source.
 job: research-topics
 headline: Gene variant evidence checker
-subhead: Name a gene variant. Get public evidence, expert gene-disease ratings and papers, each with its source.
+subhead: Name a gene variant. Get public evidence, expert gene-disease ratings
+  and papers, each with its source. Bring a variant name or identifier. Use the
+  result to plan your next step.
 explain: |
   Name a gene variant and get back what public sources say about it, with a link for every claim. It looks up variant evidence, automated classification support under the ACMG/AMP rules, expert gene-disease ratings from ClinGen, and linked papers.
 
@@ -26,6 +29,7 @@ you_get:
   - Gene-disease validity ratings
   - Linked papers with sources
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can reach public web data services.

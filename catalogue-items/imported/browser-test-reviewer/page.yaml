@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks each file against a set list.
 new_slug: browser-test-reviewer
 name: Browser test reviewer
-summary: Point it at your Playwright tests. Get each one checked against 20 bad habits with fixes.
+summary: Point it at your Playwright tests. Get each one checked against 20 bad
+  habits with fixes.
 job: test-and-fix-code
 headline: Browser test reviewer
-subhead: Point it at your Playwright tests. Get each one checked against 20 bad habits with fixes.
+subhead: Point it at your Playwright tests. Get each one checked against 20 bad
+  habits with fixes. Bring a test file, a folder, or your whole project. Use the
+  result to plan your next step.
 explain: |
   A scored review of your Playwright tests that shows what is flaky or weak, with a fix beside each problem.
 
@@ -25,6 +28,7 @@ you_get:
   - A fix for each problem
   - A list of missing test cases
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set format but tailors each message.
 new_slug: cold-email-writer
 name: Cold email writer
-summary: Name your buyer and offer. Get cold emails, follow-ups and a sending setup that gets replies.
+summary: Name your buyer and offer. Get cold emails, follow-ups and a sending
+  setup that gets replies.
 job: write-emails
 headline: Cold email writer
-subhead: Name your buyer and offer. Get cold emails, follow-ups and a sending setup that gets replies.
+subhead: Cold emails that read like a sharp person wrote them, plus follow-ups
+  and a sending setup that keeps you out of spam. The goal is replies that turn
+  into meetings.
 explain: |
   Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings.
 
@@ -26,5 +29,6 @@ you_get:
   - Subject line options
   - Sending setup advice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

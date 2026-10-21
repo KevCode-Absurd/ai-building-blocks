@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows standard asset rules with some judgment.
 new_slug: fixed-asset-register-keeper
 name: Fixed asset register keeper
-summary: Give it your purchases and disposals. Get what to capitalise, yearly depreciation and impairment checks.
+summary: Give it your purchases and disposals. Get what to capitalise, yearly
+  depreciation and impairment checks.
 job: money-and-investing
 headline: Fixed asset register keeper
-subhead: Give it your purchases and disposals. Get what to capitalise, yearly depreciation and impairment checks.
+subhead: Give it your purchases and disposals. Get what to capitalise, yearly
+  depreciation and impairment checks. Bring list of purchases or disposals with
+  costs and dates. Use the result to plan your next step.
 explain: |
   A fixed asset register that stays accurate, with clear rulings on what to capitalise, how much to depreciate each year and when an asset has lost value.
 
@@ -27,5 +30,6 @@ you_get:
   - Journal entries
   - Register rollforward that ties to the ledger
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

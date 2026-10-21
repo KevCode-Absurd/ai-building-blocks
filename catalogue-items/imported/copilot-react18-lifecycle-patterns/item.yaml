@@ -1,0 +1,32 @@
+slug: copilot-react18-lifecycle-patterns
+name: React unsafe lifecycle migrator
+summary: Share your React class components. Get replacements for unsafe lifecycle methods and notes on changed behavior.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/react18-lifecycle-patterns
+  url: https://github.com/github/awesome-copilot/tree/main/skills/react18-lifecycle-patterns
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: react18-lifecycle-patterns
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: react18-lifecycle-patterns skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/react18-lifecycle-patterns
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It matches your case to a short list of known methods.
 new_slug: priority-method-picker
 name: Priority method picker
-summary: Describe your backlog and team. Get the best way to rank it from nine methods, with the steps to use it.
+summary: Describe your backlog and team. Get the best way to rank it from nine
+  methods, with the steps to use it.
 job: build-product
 headline: Priority method picker
-subhead: Describe your backlog and team. Get the best way to rank it from nine methods, with the steps to use it.
+subhead: Pick the right way to rank your backlog from nine proven methods, then
+  get the steps to use it. Describe your list and team and the skill matches a
+  method to your situation.
 explain: |
   Pick the right way to rank your backlog from nine proven methods, then get the steps to use it. Describe your list and team and the skill matches a method to your situation.
 
@@ -26,5 +29,6 @@ you_get:
   - Scoring template
   - Ranked list guide
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

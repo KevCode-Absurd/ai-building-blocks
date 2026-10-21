@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It weighs cost against risk.
 new_slug: vendor-comparison-writer
 name: Vendor comparison writer
-summary: Name a vendor or two proposals. Get the cost, risks and a clear pick, with points to negotiate.
+summary: Name a vendor or two proposals. Get the cost, risks and a clear pick,
+  with points to negotiate.
 job: think-and-decide
 headline: Vendor comparison writer
-subhead: Name a vendor or two proposals. Get the cost, risks and a clear pick, with points to negotiate.
+subhead: A clear call on whether to pick, keep or drop a vendor, with the real
+  cost, the risks and the points to raise in negotiation.
 explain: |
   A clear call on whether to pick, keep or drop a vendor, with the real cost, the risks and the points to raise in negotiation. You can show it to the person who signs the deal.
 
@@ -26,5 +28,6 @@ you_get:
   - A risk review
   - Negotiation points
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

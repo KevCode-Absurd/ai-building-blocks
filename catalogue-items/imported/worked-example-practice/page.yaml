@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It steps support down at the right pace.
 new_slug: worked-example-practice
 name: Worked example to practice sequence builder
-summary: Give it a procedure. Get a sequence from fully worked examples to solving it alone.
+summary: Give it a procedure. Get a sequence from fully worked examples to
+  solving it alone.
 job: teach-and-train
 headline: Worked example to practice sequence builder
-subhead: Give it a procedure. Get a sequence from fully worked examples to solving it alone.
+subhead: A learning sequence that moves students from fully solved examples to
+  solving the task alone, so they do not drown in the first problem. It follows
+  how beginners really learn a procedure.
 explain: |
   A learning sequence that moves students from fully solved examples to solving the task alone, so they do not drown in the first problem. It follows how beginners really learn a procedure.
 
@@ -27,5 +30,6 @@ you_get:
   - Self-explanation prompts
   - Guidance on pacing the fade
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

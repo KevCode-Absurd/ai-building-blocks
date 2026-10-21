@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scores a listing against set rules, then rewrites it.
 new_slug: app-store-listing-optimiser
 name: App store listing optimiser
-summary: Give it your app listing. Get a scored audit and a rewritten title, keywords, description and screenshots plan.
+summary: Give it your app listing. Get a scored audit and a rewritten title,
+  keywords, description and screenshots plan.
 job: audit-landing-page
 headline: App store listing optimiser
-subhead: Give it your app listing. Get a scored audit and a rewritten title, keywords, description and screenshots plan.
+subhead: A scored audit of your App Store or Google Play page, plus rewritten
+  text that helps more people find it and install it. Share the link and it does
+  the checking.
 explain: |
   A scored audit of your App Store or Google Play page, plus rewritten text that helps more people find it and install it. Share the link and it does the checking.
 
@@ -26,6 +29,7 @@ you_get:
   - Keyword suggestions
   - A screenshot plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can browse the web.

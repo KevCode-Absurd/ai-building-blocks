@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Spotting which assumptions matter most takes some judgment.
 new_slug: analysis-assumptions-logger
 name: Analysis assumptions logger
-summary: Tell it about your analysis. Get every assumption logged with its risk, so reviewers see what could change the answer.
+summary: Tell it about your analysis. Get every assumption logged with its risk,
+  so reviewers see what could change the answer.
 job: document-work
 headline: Analysis assumptions logger
-subhead: Tell it about your analysis. Get every assumption logged with its risk, so reviewers see what could change the answer.
+subhead: Every analysis rests on choices that could change the answer. A log of
+  them lets a reviewer see what you assumed, how sure you are, and what breaks
+  if you are wrong.
 explain: |
   Every analysis rests on choices that could change the answer. A log of them lets a reviewer see what you assumed, how sure you are, and what breaks if you are wrong.
 
@@ -27,5 +30,6 @@ you_get:
   - Validation plans for the risky ones
   - A sign-off sheet for reviewers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

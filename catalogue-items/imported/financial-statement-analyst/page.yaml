@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies standard methods to your data.
 new_slug: financial-statement-analyst
 name: Financial statement analyst
-summary: Give it your numbers. Get ratio analysis, a valuation, budget variances and a rolling forecast.
+summary: Give it your numbers. Get ratio analysis, a valuation, budget variances
+  and a rolling forecast.
 job: money-and-investing
 headline: Financial statement analyst
-subhead: Give it your numbers. Get ratio analysis, a valuation, budget variances and a rolling forecast.
+subhead: Give it your numbers. Get ratio analysis, a valuation, budget variances
+  and a rolling forecast. Bring income statement, balance sheet and cash flow.
+  Use the result to plan your next step.
 explain: |
   Your numbers read back to you: ratios that show how healthy the business is, a value estimate, how actuals compare with budget and a forecast that rolls forward.
 
@@ -26,5 +29,6 @@ you_get:
   - A budget variance report
   - A rolling forecast with scenarios
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

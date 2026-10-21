@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds a plan from your goals and team size.
 new_slug: inclusive-workplace-plan-builder
 name: Inclusive workplace plan builder
-summary: Describe your team. Get an inclusion plan, fair hiring steps, group ideas and measures to track.
+summary: Describe your team. Get an inclusion plan, fair hiring steps, group
+  ideas and measures to track.
 job: hire-people
 headline: Inclusive workplace plan builder
-subhead: Describe your team. Get an inclusion plan, fair hiring steps, group ideas and measures to track.
+subhead: A practical plan to make your workplace fairer, with hiring steps,
+  group ideas and numbers to track so you can see what changes. You describe
+  your team and get a plan sized to it, not a generic policy.
 explain: |
   A practical plan to make your workplace fairer, with hiring steps, group ideas and numbers to track so you can see what changes. You describe your team and get a plan sized to it, not a generic policy.
 
@@ -28,5 +31,6 @@ you_get:
   - A scorecard of measures
   - Talking points for leaders
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

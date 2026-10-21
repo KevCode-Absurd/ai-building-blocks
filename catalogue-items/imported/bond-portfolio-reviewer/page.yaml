@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It computes portfolio measures and stress tests.
 new_slug: bond-portfolio-reviewer
 name: Bond portfolio reviewer
-summary: Give it your bond holdings. Get yield, duration and mix by rating, plus a rate shock test. It collects data from websites.
+summary: Give it your bond holdings. Get yield, duration and mix by rating, plus
+  a rate shock test. It collects data from websites.
 job: money-and-investing
 headline: Bond portfolio reviewer
-subhead: Give it your bond holdings. Get yield, duration and mix by rating, plus a rate shock test. It collects data from websites.
+subhead: Give it your bond holdings. Get yield, duration and mix by rating, plus
+  a rate shock test. It collects data from websites. Bring a list of bond
+  holdings with amounts. Use the result to plan your next step.
 explain: |
   Give it your bond holdings and get a portfolio review: yield, duration and convexity weighted by market value, a mix by rating and sector, and a rate shock test. It is set up for Indian markets and fiscal year conventions.
 
@@ -26,6 +29,7 @@ you_get:
   - Cash flow projections
   - Rate shock results
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the web.

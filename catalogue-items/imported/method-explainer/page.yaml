@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: Pitching the depth to each reader takes judgment.
 new_slug: method-explainer
 name: Method explainer
-summary: Tell it how you did your analysis and who reads it. Get a plain how-we-did-this section with limits.
+summary: Tell it how you did your analysis and who reads it. Get a plain
+  how-we-did-this section with limits.
 job: document-work
 headline: Method explainer
-subhead: Tell it how you did your analysis and who reads it. Get a plain how-we-did-this section with limits.
+subhead: A plain write-up of how you got your answer, so readers trust it. Tell
+  it the method and who reads it, and you get a short section that says what was
+  asked, what data was used, what was done, what was assumed, and where it falls
+  short.
 explain: |
   A plain write-up of how you got your answer, so readers trust it. Tell it the method and who reads it, and you get a short section that says what was asked, what data was used, what was done, what was assumed, and where it falls short.
 
@@ -25,5 +29,6 @@ you_get:
   - A filled write-up or slide template
   - Business-word swaps for technical terms
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

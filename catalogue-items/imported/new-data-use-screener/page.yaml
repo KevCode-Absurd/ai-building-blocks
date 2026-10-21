@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts a case into a few clear outcomes.
 new_slug: new-data-use-screener
 name: New data use screener
-summary: Describe a new use of customer data. Get a quick call on whether it needs full privacy review. Not legal advice.
+summary: Describe a new use of customer data. Get a quick call on whether it
+  needs full privacy review. Not legal advice.
 job: check-contracts
 headline: New data use screener
-subhead: Describe a new use of customer data. Get a quick call on whether it needs full privacy review. Not legal advice.
+subhead: "A fast answer to the question: can we do this with customer data, or
+  does it need a full privacy review? You describe the new use, and the skill
+  sorts it into one of four outcomes."
 explain: |
   A fast answer to the question: can we do this with customer data, or does it need a full privacy review? You describe the new use, and the skill sorts it into one of four outcomes.
 
@@ -26,7 +29,10 @@ you_get:
   - Conditions to meet
   - A handoff into a full assessment
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your saved privacy setup notes.
-  - Where the skill points to /privacy-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /privacy-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

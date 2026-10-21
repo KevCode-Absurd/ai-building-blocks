@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It balances roles so each age group benefits.
 new_slug: mixed-age-group-task-designer
 name: Mixed-age group task designer
-summary: Describe the age groups. Get a shared task where older and younger learners both gain.
+summary: Describe the age groups. Get a shared task where older and younger
+  learners both gain.
 job: teach-and-train
 headline: Mixed-age group task designer
-subhead: Describe the age groups. Get a shared task where older and younger learners both gain.
+subhead: A shared task where older and younger pupils both learn something, not
+  one group helping the other. Give the learning goal and the age range and you
+  get a plan with roles, steps and tutor training.
 explain: |
   A shared task where older and younger pupils both learn something, not one group helping the other. Give the learning goal and the age range and you get a plan with roles, steps and tutor training.
 
@@ -26,5 +29,6 @@ you_get:
   - A short tutor training script
   - Signs to watch for during the session
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

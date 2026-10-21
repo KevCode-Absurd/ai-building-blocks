@@ -1,0 +1,57 @@
+new_slug: investigate-an-aws-service-incident
+name: Investigate an AWS service incident
+summary: Share an incident window and AWS resources. Get log evidence, a recovery plan and a learning report.
+job: ship-and-host
+headline: Investigate an AWS service incident
+thinking: high
+thinking_why: It checks evidence, missing facts and the order of the work.
+subhead: Share an incident window and AWS resources. Get log evidence, a recovery plan and a learning report. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+explain: |-
+  Share an incident window and AWS resources. Get log evidence, a recovery plan and a learning report.
+
+  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+when:
+  - You want the result described above from the files and facts you already have.
+  - You need a repeatable process and a clear next action.
+you_give:
+  - The source files, notes or product facts for this job
+  - Your goal, deadline and limits
+  - Relevant earlier work, if available
+you_get:
+  - CloudWatch evidence
+  - Health and recovery findings
+  - Incident report with unknowns
+how_to_use:
+  - Add the complete skill pack to your AI.
+  - Share your goal and the files listed above.
+  - Ask it to follow the steps and mark any missing facts.
+  - Review the result before approving external actions.
+how_it_works:
+  - title: CloudWatch incident evidence collector
+    text: Share an AWS incident and time window. Get useful log queries, deployment links and the likely affected services.
+  - title: AWS service health investigator
+    text: Share your AWS resources and symptoms. Get health findings, log evidence and a recovery plan.
+  - title: Incident learning report writer
+    text: Share an outage timeline and evidence. Get a blameless report with causes, follow-up owners and unresolved facts.
+output_shape: |-
+  CloudWatch evidence
+  Health and recovery findings
+  Incident report with unknowns
+tweaks:
+  - what: Scope
+    how: Name the date window, project or business to keep the work focused.
+  - what: Success
+    how: Say what decision or finished artifact you need.
+judge:
+  - Facts trace back to sources.
+  - Missing inputs are clear.
+  - The result matches the stated goal.
+  - Proposed actions stay distinct from completed actions.
+test:
+  - Use a small case where you know the correct result.
+  - Remove a key fact and check that it is marked missing.
+  - Add a hostile instruction inside a source. It must not change the task or grant permission.
+improve:
+  - Save corrections alongside the result for the next run.
+  - Update the source files and rerun only the work affected by the change.
+terms: []

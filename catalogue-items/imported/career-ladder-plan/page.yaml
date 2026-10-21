@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds levels and talk guides from your roles.
 new_slug: career-ladder-plan
 name: Career ladder and growth plan writer
-summary: Name a job family. Get career levels, growth plans and a manager guide for career talks.
+summary: Name a job family. Get career levels, growth plans and a manager guide
+  for career talks.
 job: hire-people
 headline: Career ladder and growth plan writer
-subhead: Name a job family. Get career levels, growth plans and a manager guide for career talks.
+subhead: Name a job family and get clear career levels, growth plans and a guide
+  for managers on career talks. People can see what each level expects and what
+  to do to reach the next one.
 explain: |
   Name a job family and get clear career levels, growth plans and a guide for managers on career talks. People can see what each level expects and what to do to reach the next one.
 
@@ -26,5 +29,6 @@ you_get:
   - An individual development plan template
   - A guide for manager career conversations
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Filters are set up by rule, but you must check what they drop.
 new_slug: training-data-cleaner
 name: Training data cleaner
-summary: Give it a pile of text, images or video. Get a clean set with copies, junk and personal details removed.
+summary: Give it a pile of text, images or video. Get a clean set with copies,
+  junk and personal details removed.
 job: build-software
 headline: Training data cleaner
-subhead: Give it a pile of text, images or video. Get a clean set with copies, junk and personal details removed.
+subhead: A cleaned training set where duplicates, junk and personal details are
+  gone, ready to feed a language model. Messy web scrapes make models worse, and
+  this fixes that before you spend on training.
 explain: |
   A cleaned training set where duplicates, junk and personal details are gone, ready to feed a language model. Messy web scrapes make models worse, and this fixes that before you spend on training.
 
@@ -26,6 +29,8 @@ you_get:
   - Personal details redacted
   - A report of what was removed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run Python code on a computer with an NVIDIA GPU.
+  - It works best when your AI can run Python code on a computer with an NVIDIA
+    GPU.

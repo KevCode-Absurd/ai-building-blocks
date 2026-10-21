@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Windows, counting rules and duplicates all change what the numbers mean.
 new_slug: conversion-reconciliation
 name: Cross-platform conversion reconciler
-summary: Give it your Meta and Google conversion reports. Get why the numbers differ and a plan to make them match.
+summary: Give it your Meta and Google conversion reports. Get why the numbers
+  differ and a plan to make them match.
 job: track-numbers
 headline: Cross-platform conversion reconciler
-subhead: Give it your Meta and Google conversion reports. Get why the numbers differ and a plan to make them match.
+subhead: An explanation of why your Meta, Google and analytics conversion
+  numbers disagree, and a plan to bring them to a form you can compare. It stops
+  you from adding numbers that should never be added.
 explain: |
   An explanation of why your Meta, Google and analytics conversion numbers disagree, and a plan to bring them to a form you can compare. It stops you from adding numbers that should never be added.
 
@@ -26,5 +29,6 @@ you_get:
   - Confidence rating
   - Measurement fix plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

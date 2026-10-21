@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It has to line up several versions and trace each clause.
 new_slug: contract-change-tracer
 name: Contract change tracer
-summary: Give it a contract and its amendments. Get what changed and each clause's latest wording. Not legal advice.
+summary: Give it a contract and its amendments. Get what changed and each
+  clause's latest wording. Not legal advice.
 job: check-contracts
 headline: Contract change tracer
-subhead: Give it a contract and its amendments. Get what changed and each clause's latest wording. Not legal advice.
+subhead: Give it a contract and its amendments. Get what changed and each
+  clause's latest wording. Not legal advice. Bring the base contract. Use the
+  result to plan your next step.
 explain: |
   A clear record of how a contract changed over time: what each amendment did, and the wording that rules today for any clause you ask about. You stop flipping between five PDFs to learn what the deal now says.
 
@@ -26,6 +29,9 @@ you_get:
   - Clause history with section cites
   - Watch items
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - Where the skill points to /commercial-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /commercial-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

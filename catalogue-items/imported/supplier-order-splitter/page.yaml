@@ -2,16 +2,19 @@ thinking: high
 thinking_why: It balances price, limits and risk across suppliers.
 new_slug: supplier-order-splitter
 name: Supplier order splitter
-summary: Give it quotes, limits and demand. Get how much to order from each supplier for the lowest total cost.
+summary: Give it quotes, limits and demand. Get how much to order from each
+  supplier for the lowest total cost.
 job: plan-supply-chain
 headline: Supplier order splitter
-subhead: Give it quotes, limits and demand. Get how much to order from each supplier for the lowest total cost.
+subhead: How much to buy from each supplier to get the lowest total cost, within
+  their limits and your demand. It replaces guessing with a worked allocation.
 explain: |
   How much to buy from each supplier to get the lowest total cost, within their limits and your demand. It replaces guessing with a worked allocation.
 
   Give it quotes, capacity limits and the quantity you need. The skill covers order sizing with economic order quantity, including price breaks at higher volumes, and splits orders across suppliers with an optimisation model. It handles harder cases too, such as ordering several items together, planning lot sizes over several periods, and balancing risk with a dual-sourcing split. Python code does the maths, and the supply risk measures keep you from relying on one source.
 when:
-  - Two suppliers offer different prices and limits and you must split a big order.
+  - Two suppliers offer different prices and limits and you must split a big
+    order.
   - A volume discount makes it unclear how much to order at once.
   - You order many items from the same supplier and want to combine them.
   - You want a second source without paying too much for it.
@@ -27,6 +30,7 @@ you_get:
   - A dual-sourcing split
   - The Python code used
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

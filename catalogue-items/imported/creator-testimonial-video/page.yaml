@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: The script must sound like a real person, and clips need a check.
 new_slug: creator-testimonial-video
 name: Creator-style testimonial video maker
-summary: Give it a product and a persona. Get a spoken recommendation script and a handheld, creator-style video. Your video model makes it.
+summary: Give it a product and a persona. Get a spoken recommendation script and
+  a handheld, creator-style video. Your video model makes it.
 job: make-video-ads
 headline: Creator-style testimonial video maker
-subhead: Give it a product and a persona. Get a spoken recommendation script and a handheld, creator-style video. Your video model makes it.
+subhead: A spoken recommendation script and a handheld, creator-style video for
+  a product, built around a persona you choose. It looks like a real person
+  filming themselves, which is the style that often gets watched on social
+  feeds.
 explain: |
   A spoken recommendation script and a handheld, creator-style video for a product, built around a persona you choose. It looks like a real person filming themselves, which is the style that often gets watched on social feeds.
 
@@ -27,6 +31,8 @@ you_get:
   - Video generation steps
   - Fixes for common problems
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own video model key (fal or Replicate). Add ffmpeg to join clips.
+  - It works best when your AI can run code and use your own video model key
+    (fal or Replicate). Add ffmpeg to join clips.

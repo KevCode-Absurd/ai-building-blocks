@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills in a fixed style file from your answers.
 new_slug: store-photo-style-locker
 name: Store photo style locker
-summary: Describe your store look once. Get a style file that keeps models, light and layout the same across every product photo.
+summary: Describe your store look once. Get a style file that keeps models,
+  light and layout the same across every product photo.
 job: brand-file
 headline: Store photo style locker
-subhead: Describe your store look once. Get a style file that keeps models, light and layout the same across every product photo.
+subhead: "One style file that makes the 200th product photo look like the first.
+  You describe your shop's look once: the model's face and body, the light, the
+  colour tone, the background and the mood."
 explain: |
   One style file that makes the 200th product photo look like the first. You describe your shop's look once: the model's face and body, the light, the colour tone, the background and the mood. After that, every photo prompt picks up the same rules.
 
@@ -26,6 +29,8 @@ you_get:
   - Lighting, tone and background rules
   - A way to add the style to any photo prompt
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).
+  - It works best when your AI can run code and use your own image model key
+    (OpenAI, Gemini, fal or Replicate).

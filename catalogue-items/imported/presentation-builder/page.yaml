@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans the story, then builds slides to a format.
 new_slug: presentation-builder
 name: Presentation builder
-summary: Give it an outline or document. Get a polished slide deck for your audience in Marp, reveal.js or PPTX.
+summary: Give it an outline or document. Get a polished slide deck for your
+  audience in Marp, reveal.js or PPTX.
 job: work-with-files
 headline: Presentation builder
-subhead: Give it an outline or document. Get a polished slide deck for your audience in Marp, reveal.js or PPTX.
+subhead: A finished slide deck made from your outline, document or meeting
+  notes, written for the people who will watch it. Output comes as Marp,
+  reveal.js or PPTX.
 explain: |
   A finished slide deck made from your outline, document or meeting notes, written for the people who will watch it. Output comes as Marp, reveal.js or PPTX.
 
@@ -26,6 +29,7 @@ you_get:
   - Visual suggestions per slide
   - Speaker notes (if asked)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

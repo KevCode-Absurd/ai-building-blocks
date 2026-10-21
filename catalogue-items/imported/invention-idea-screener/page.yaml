@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It tests the idea on several patent hurdles.
 new_slug: invention-idea-screener
 name: Invention idea screener
-summary: Describe your invention. Get a first screen on novelty, deadlines and value, and whether to see a patent lawyer. Not legal advice.
+summary: Describe your invention. Get a first screen on novelty, deadlines and
+  value, and whether to see a patent lawyer. Not legal advice.
 job: check-contracts
 headline: Invention idea screener
-subhead: Describe your invention. Get a first screen on novelty, deadlines and value, and whether to see a patent lawyer. Not legal advice.
+subhead: A quick first look at your invention that tells you whether it is worth
+  paying a patent professional. Describe what it is, the problem it solves, how
+  it differs from what exists, who invented it, and whether it has been shown in
+  public.
 explain: |
   A quick first look at your invention that tells you whether it is worth paying a patent professional. Describe what it is, the problem it solves, how it differs from what exists, who invented it, and whether it has been shown in public. The skill runs six checks: novelty, obviousness, whether the idea is the kind that can be patented at all, public disclosure deadlines, how easy infringement would be to spot, and business value.
 
@@ -27,6 +31,9 @@ you_get:
   - A deadline warning if one applies
   - Next steps, such as a prior-art search or attorney review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - Where the skill points to /ip-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /ip-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

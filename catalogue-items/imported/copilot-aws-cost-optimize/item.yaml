@@ -1,0 +1,32 @@
+slug: copilot-aws-cost-optimize
+name: AWS resource cost reviewer
+summary: Share your AWS setup. Get cost findings and proposed fixes tied to the resources your app uses.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/aws-cost-optimize
+  url: https://github.com/github/awesome-copilot/tree/main/skills/aws-cost-optimize
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: aws-cost-optimize
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: aws-cost-optimize skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/aws-cost-optimize
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

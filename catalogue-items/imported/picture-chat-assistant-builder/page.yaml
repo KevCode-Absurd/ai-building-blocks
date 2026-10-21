@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sets up a vision model and tunes it.
 new_slug: picture-chat-assistant-builder
 name: Picture chat assistant builder
-summary: Give it images and questions. Get a chat that describes pictures and answers questions about them.
+summary: Give it images and questions. Get a chat that describes pictures and
+  answers questions about them.
 job: build-software
 headline: Picture chat assistant builder
-subhead: Give it images and questions. Get a chat that describes pictures and answers questions about them.
+subhead: A chat assistant that looks at pictures and talks about them. Ask what
+  is in a photo, what a chart says or what a document image contains, and keep
+  asking follow-ups.
 explain: |
   A chat assistant that looks at pictures and talks about them. Ask what is in a photo, what a chart says or what a document image contains, and keep asking follow-ups.
 
@@ -26,6 +29,7 @@ you_get:
   - Answers to questions about each image
   - Multi-turn conversations
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

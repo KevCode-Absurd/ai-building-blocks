@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It turns what is in your head into steps.
 new_slug: process-and-sop-writer
 name: Process and SOP writer
-summary: Describe how work gets done. Get a flowchart, who does what, and a written procedure with the edge cases.
+summary: Describe how work gets done. Get a flowchart, who does what, and a
+  written procedure with the edge cases.
 job: document-work
 headline: Process and SOP writer
-subhead: Describe how work gets done. Get a flowchart, who does what, and a written procedure with the edge cases.
+subhead: A written procedure your team can follow without asking the person who
+  knows it. It covers why the process exists, what is in and out of scope, who
+  does each step, and what to do when things go wrong.
 explain: |
   A written procedure your team can follow without asking the person who knows it. It covers why the process exists, what is in and out of scope, who does each step, and what to do when things go wrong.
 
   You describe the process, paste old notes, or just give its name. Claude asks questions to fill the gaps, then builds a RACI table (who does it, who owns it, who to ask, who to tell), a flow of the steps, and a detailed entry for each step with its trigger, method and output. It ends with an exceptions table and the numbers used to check the process works.
 when:
-  - A process lives in one person's head and you need it written down before they leave.
+  - A process lives in one person's head and you need it written down before
+    they leave.
   - You are handing work to a new hire and need clear steps and owners.
   - An audit asks for a documented procedure.
   - People argue about who owns a step and you need a RACI.
@@ -27,5 +31,6 @@ you_get:
   - An exceptions and edge cases table
   - Metrics to track the process
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

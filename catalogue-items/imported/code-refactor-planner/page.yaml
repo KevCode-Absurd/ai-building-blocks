@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches code smells to known moves and you review the changes.
 new_slug: code-refactor-planner
 name: Code refactor planner
-summary: Give it messy code. Get named refactoring moves to apply in small safe steps, without changing what it does.
+summary: Give it messy code. Get named refactoring moves to apply in small safe
+  steps, without changing what it does.
 job: test-and-fix-code
 headline: Code refactor planner
-subhead: Give it messy code. Get named refactoring moves to apply in small safe steps, without changing what it does.
+subhead: Messy code turns into a list of named moves you can apply one at a
+  time, with tests passing after each. Nothing about what the code does should
+  change.
 explain: |
   Messy code turns into a list of named moves you can apply one at a time, with tests passing after each. Nothing about what the code does should change.
 
@@ -25,5 +28,6 @@ you_get:
   - A step-by-step order
   - A quality score out of ten
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

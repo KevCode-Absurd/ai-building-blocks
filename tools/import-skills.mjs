@@ -209,7 +209,7 @@ if (WRITE) for (const r of batch) {
   const page = {
     thinking: r.m.thinking ?? "medium", thinking_why: r.m.thinking_why ?? "It follows a set method with a few checks.",
     new_slug: r.slug, name: r.name, summary: r.summary, job: r.m.task ?? "set-up-ai",
-    headline: r.name, subhead: r.m.subhead ?? r.summary,
+    headline: r.name, subhead: r.m.subhead ?? oldPage.subhead ?? r.summary,
     ...kept,
     ...(r.m.when ? { when: r.m.when } : {}),
     how_to_use: [

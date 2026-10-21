@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set research method fitted to your question.
 new_slug: interview-and-research-planner
 name: Interview and research planner
-summary: Describe your research question. Get a plan with recruiting, interview guide, synthesis steps and next product decisions.
+summary: Describe your research question. Get a plan with recruiting, interview
+  guide, synthesis steps and next product decisions.
 job: understand-customers
 headline: Interview and research planner
-subhead: Describe your research question. Get a plan with recruiting, interview guide, synthesis steps and next product decisions.
+subhead: A research plan you can run next week, from the question to the
+  decision it should change. Describe what you need to learn and who you can
+  reach.
 explain: |
   A research plan you can run next week, from the question to the decision it should change. Describe what you need to learn and who you can reach. The skill works in six phases. It first rewrites weak questions into specific, open ones that a decision depends on. Then it picks a method that fits, such as interviews, field visits or diary studies, and plans who to recruit and how many.
 
@@ -27,5 +30,6 @@ you_get:
   - Steps for turning notes into findings
   - A list of product decisions the findings should inform
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

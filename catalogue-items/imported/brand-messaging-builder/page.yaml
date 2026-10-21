@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds a message ladder from your facts and audience.
 new_slug: brand-messaging-builder
 name: Brand messaging builder
-summary: Give it your brand facts. Get a tagline, key messages and proof points for each audience.
+summary: Give it your brand facts. Get a tagline, key messages and proof points
+  for each audience.
 job: brand-file
 headline: Brand messaging builder
-subhead: Give it your brand facts. Get a tagline, key messages and proof points for each audience.
+subhead: "A full set of messages for your brand: the one thing you must say, a
+  tagline, and proof points for each audience. Everyone who writes for you then
+  pulls from the same page."
 explain: |
   A full set of messages for your brand: the one thing you must say, a tagline, and proof points for each audience. Everyone who writes for you then pulls from the same page.
 
@@ -26,5 +29,6 @@ you_get:
   - Key messages by audience
   - Proof points for each claim
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

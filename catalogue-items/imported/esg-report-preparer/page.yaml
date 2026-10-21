@@ -2,16 +2,19 @@ thinking: medium
 thinking_why: It follows reporting frameworks but needs judgment on what counts.
 new_slug: esg-report-preparer
 name: ESG report preparer
-summary: Give it your environmental, social and governance data. Get a draft sustainability report or a check of an existing one.
+summary: Give it your environmental, social and governance data. Get a draft
+  sustainability report or a check of an existing one.
 job: money-and-investing
 headline: ESG report preparer
-subhead: Give it your environmental, social and governance data. Get a draft sustainability report or a check of an existing one.
+subhead: A draft sustainability report built from your own data, or a gap check
+  of one you already have. It shows what to disclose and where you fall short.
 explain: |
   A draft sustainability report built from your own data, or a gap check of one you already have. It shows what to disclose and where you fall short.
 
   The skill begins with the standard you report against, such as SASB, GRI or TCFD, then decides which topics matter most for your industry. It turns your numbers into the core measures: scope 1, 2 and 3 emissions, pay gaps, management diversity and staff turnover. It reviews board independence, pay links to sustainability goals and anti-corruption policy. You get a scorecard against targets, short findings for each area, and a list of goals to act on next.
 when:
-  - You have to publish a sustainability report and have raw data but no structure.
+  - You have to publish a sustainability report and have raw data but no
+    structure.
   - A customer or investor has asked for your ESG figures.
   - You want to know which topics matter most for your industry.
   - You have an existing report and want to find its gaps.
@@ -28,5 +31,6 @@ you_get:
   - Gap list versus the standard
   - Goals for next year
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

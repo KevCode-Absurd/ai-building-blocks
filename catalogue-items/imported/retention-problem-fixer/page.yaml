@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It diagnoses against a clear model and suggests fixes for you to pick.
 new_slug: retention-problem-fixer
 name: Retention problem fixer
-summary: Describe why users drop off. Get the cause found and fixes to onboarding and habits. Uses behavior design.
+summary: Describe why users drop off. Get the cause found and fixes to
+  onboarding and habits. Uses behavior design.
 job: understand-customers
 headline: Retention problem fixer
-subhead: Describe why users drop off. Get the cause found and fixes to onboarding and habits. Uses behavior design.
+subhead: A diagnosis of why people sign up and then drift away, plus specific
+  changes to your first-use experience. The skill treats this as a design
+  problem, not a motivation problem, and scores your product out of 10.
 explain: |
   A diagnosis of why people sign up and then drift away, plus specific changes to your first-use experience. The skill treats this as a design problem, not a motivation problem, and scores your product out of 10.
 
@@ -27,5 +30,6 @@ you_get:
   - Small first steps to try
   - A list of changes in priority order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

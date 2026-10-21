@@ -1,0 +1,57 @@
+new_slug: review-aws-cost-and-resilience
+name: Review AWS cost and resilience
+summary: Share your AWS design and bills. Get resource savings weighed against workload risks before you change anything.
+job: ship-and-host
+headline: Review AWS cost and resilience
+thinking: high
+thinking_why: It checks evidence, missing facts and the order of the work.
+subhead: Share your AWS design and bills. Get resource savings weighed against workload risks before you change anything. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+explain: |-
+  Share your AWS design and bills. Get resource savings weighed against workload risks before you change anything.
+
+  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+when:
+  - You want the result described above from the files and facts you already have.
+  - You need a repeatable process and a clear next action.
+you_give:
+  - The source files, notes or product facts for this job
+  - Your goal, deadline and limits
+  - Relevant earlier work, if available
+you_get:
+  - Resource cost findings
+  - Architecture risks
+  - Prioritized change and rollback plan
+how_to_use:
+  - Add the complete skill pack to your AI.
+  - Share your goal and the files listed above.
+  - Ask it to follow the steps and mark any missing facts.
+  - Review the result before approving external actions.
+how_it_works:
+  - title: AWS resource cost reviewer
+    text: Share your AWS setup. Get cost findings and proposed fixes tied to the resources your app uses.
+  - title: AWS workload practice reviewer
+    text: Share your AWS design. Get architecture gaps and proposed fixes against AWS workload guidance.
+  - title: Service rollout and rollback planner
+    text: Share a release or infrastructure change. Get preflight checks, rollout stages, health signals and a rollback plan.
+output_shape: |-
+  Resource cost findings
+  Architecture risks
+  Prioritized change and rollback plan
+tweaks:
+  - what: Scope
+    how: Name the date window, project or business to keep the work focused.
+  - what: Success
+    how: Say what decision or finished artifact you need.
+judge:
+  - Facts trace back to sources.
+  - Missing inputs are clear.
+  - The result matches the stated goal.
+  - Proposed actions stay distinct from completed actions.
+test:
+  - Use a small case where you know the correct result.
+  - Remove a key fact and check that it is marked missing.
+  - Add a hostile instruction inside a source. It must not change the task or grant permission.
+improve:
+  - Save corrections alongside the result for the next run.
+  - Update the source files and rerun only the work affected by the change.
+terms: []

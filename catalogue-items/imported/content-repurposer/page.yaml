@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It rewrites one source for many formats.
 new_slug: content-repurposer
 name: Content repurposer
-summary: Give it one strong piece. Get a blog series, emails, posts and clips, each adapted to its format.
+summary: Give it one strong piece. Get a blog series, emails, posts and clips,
+  each adapted to its format.
 job: grow-social
 headline: Content repurposer
-subhead: Give it one strong piece. Get a blog series, emails, posts and clips, each adapted to its format.
+subhead: Give it one strong piece. Get a blog series, emails, posts and clips,
+  each adapted to its format. Bring the source piece (article, transcript or
+  video notes). Use the result to plan your next step.
 explain: |
   One strong article, talk or video turned into a blog series, an email sequence, social posts, a webinar outline and short video scripts, each written for how that format works. Posting the same text everywhere gets ignored. Rewriting by format gets read.
 
@@ -27,5 +30,6 @@ you_get:
   - Short video scripts
   - Release order and cross links
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

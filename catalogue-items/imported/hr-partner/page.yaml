@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It drafts careful documents and flags legal limits.
 new_slug: hr-partner
 name: HR partner
-summary: Describe the people task. Get job posts, interview kits, onboarding lists, review plans or policy drafts to check with counsel.
+summary: Describe the people task. Get job posts, interview kits, onboarding
+  lists, review plans or policy drafts to check with counsel.
 job: lead-people
 headline: HR partner
-subhead: Describe the people task. Get job posts, interview kits, onboarding lists, review plans or policy drafts to check with counsel.
+subhead: "An HR helper that produces the actual documents: job posts, interview
+  kits, onboarding lists, review plans and policy drafts. Describe the people
+  task and get a single package you can use, with a clear note to check key
+  items with a lawyer."
 explain: |
   An HR helper that produces the actual documents: job posts, interview kits, onboarding lists, review plans and policy drafts. Describe the people task and get a single package you can use, with a clear note to check key items with a lawyer. It is not legal advice.
 
@@ -26,5 +30,6 @@ you_get:
   - Onboarding or review checklists
   - A rollout checklist with owners
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

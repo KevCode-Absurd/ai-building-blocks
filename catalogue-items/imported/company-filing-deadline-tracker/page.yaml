@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: Deadlines depend on company type and place.
 new_slug: company-filing-deadline-tracker
 name: Company filing deadline tracker
-summary: List your companies and where they are registered. Get annual filings and due dates. Not legal advice.
+summary: List your companies and where they are registered. Get annual filings
+  and due dates. Not legal advice.
 job: check-contracts
 headline: Company filing deadline tracker
-subhead: List your companies and where they are registered. Get annual filings and due dates. Not legal advice.
+subhead: One file that lists every company you run, where each is registered,
+  and what must be filed and when. Missed annual reports and franchise taxes
+  cost fees and can put a company out of good standing, so the dates are worth
+  having in one place.
 explain: |
   One file that lists every company you run, where each is registered, and what must be filed and when. Missed annual reports and franchise taxes cost fees and can put a company out of good standing, so the dates are worth having in one place.
 
@@ -26,7 +30,10 @@ you_get:
   - A health check of the whole list
   - A CSV or table export
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web to confirm current dates.
-  - Where the skill points to /corporate-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /corporate-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

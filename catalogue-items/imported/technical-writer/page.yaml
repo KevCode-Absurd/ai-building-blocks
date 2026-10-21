@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must understand the topic and the reader.
 new_slug: technical-writer
 name: Technical writer
-summary: Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers.
+summary: Give it a feature or API. Get clear docs, guides, tutorials or
+  changelogs for your readers.
 job: write-and-tell-stories
 headline: Technical writer
-subhead: Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers.
+subhead: Give it a feature or API. Get clear docs, guides, tutorials or
+  changelogs for your readers. Bring the feature, API or tool to document. Use
+  the result to plan your next step.
 explain: |
   Clear documentation your readers can follow: API references, user guides, tutorials, changelogs or decision records, written for the right audience. People get the answer and run the example without writing to you.
 
@@ -27,5 +30,6 @@ you_get:
   - Links and next steps
   - A list of facts to confirm
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

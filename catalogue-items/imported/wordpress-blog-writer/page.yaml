@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set structure and writes long copy.
 new_slug: wordpress-blog-writer
 name: WordPress blog writer
-summary: Give it a keyword. Get a full SEO blog post with tables, FAQ and optional Yoast fields, ready for WordPress.
+summary: Give it a keyword. Get a full SEO blog post with tables, FAQ and
+  optional Yoast fields, ready for WordPress.
 job: get-found-in-search
 headline: WordPress blog writer
-subhead: Give it a keyword. Get a full SEO blog post with tables, FAQ and optional Yoast fields, ready for WordPress.
+subhead: A full blog post built for search and ready to paste into WordPress.
+  You give a keyword and get a long, structured article with the extras that
+  usually take another hour.
 explain: |
   A full blog post built for search and ready to paste into WordPress. You give a keyword and get a long, structured article with the extras that usually take another hour.
 
@@ -28,5 +31,6 @@ you_get:
   - Yoast title, description and slug (optional)
   - JSON-LD schema (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

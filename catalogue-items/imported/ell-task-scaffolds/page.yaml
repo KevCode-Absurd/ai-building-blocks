@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It adds language support without making the task easier.
 new_slug: ell-task-scaffolds
 name: Task scaffold adder for language learners
-summary: Give it a task. Get a version with language help added that keeps the thinking just as hard.
+summary: Give it a task. Get a version with language help added that keeps the
+  thinking just as hard.
 job: teach-and-train
 headline: Task scaffold adder for language learners
-subhead: Give it a task. Get a version with language help added that keeps the thinking just as hard.
+subhead: Your task, changed so a student still learning English can do it,
+  without making the thinking easier. Give the task and the target level, and
+  you get a version with language support built in.
 explain: |
   Your task, changed so a student still learning English can do it, without making the thinking easier. Give the task and the target level, and you get a version with language support built in.
 
@@ -26,5 +29,6 @@ you_get:
   - Chunked steps
   - A note on what thinking is kept
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

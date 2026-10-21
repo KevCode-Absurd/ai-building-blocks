@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads many comments and groups the themes.
 new_slug: comment-mining-analyst
 name: Comment mining analyst
-summary: Give it social posts. Get what people ask, complain about and want, in their own words. Collects data from websites.
+summary: Give it social posts. Get what people ask, complain about and want, in
+  their own words. Collects data from websites.
 job: understand-customers
 headline: Comment mining analyst
-subhead: Give it social posts. Get what people ask, complain about and want, in their own words. Collects data from websites.
+subhead: What people ask, complain about and want, in their own words, pulled
+  from social comments. Use it for product research, content ideas, copy and
+  objection handling.
 explain: |
   What people ask, complain about and want, in their own words, pulled from social comments. Use it for product research, content ideas, copy and objection handling.
 
@@ -26,6 +29,7 @@ you_get:
   - Exact phrases people use
   - Content and copy ideas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your ScrapeCreators key.

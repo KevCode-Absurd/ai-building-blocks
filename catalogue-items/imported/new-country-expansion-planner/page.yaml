@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs many markets and routes before it recommends.
 new_slug: new-country-expansion-planner
 name: New country expansion planner
-summary: Name the markets you eye. Get a market pick, entry route, localisation list and rules to check.
+summary: Name the markets you eye. Get a market pick, entry route, localisation
+  list and rules to check.
 job: plan-strategy
 headline: New country expansion planner
-subhead: Name the markets you eye. Get a market pick, entry route, localisation list and rules to check.
+subhead: A clear pick of which country to enter next, and how to enter it. You
+  name the markets you are considering, and the skill scores each one so the
+  choice is not a gut call.
 explain: |
   A clear pick of which country to enter next, and how to enter it. You name the markets you are considering, and the skill scores each one so the choice is not a gut call.
 
@@ -26,5 +29,6 @@ you_get:
   - A localisation checklist
   - A list of legal rules to check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

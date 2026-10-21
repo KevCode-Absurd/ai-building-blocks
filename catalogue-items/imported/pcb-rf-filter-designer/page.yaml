@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Tuning needs careful technical reasoning.
 new_slug: pcb-rf-filter-designer
 name: PCB RF filter designer
-summary: Give it pass band and rejection needs. Get a PCB filter designed and its response plotted.
+summary: Give it pass band and rejection needs. Get a PCB filter designed and
+  its response plotted.
 job: build-software
 headline: PCB RF filter designer
-subhead: Give it pass band and rejection needs. Get a PCB filter designed and its response plotted.
+subhead: Say what band you need to pass and what you need to block, and get a
+  printed-circuit filter designed with its response plotted. You do not have to
+  know which filter type fits.
 explain: |
   Say what band you need to pass and what you need to block, and get a printed-circuit filter designed with its response plotted. You do not have to know which filter type fits.
 
@@ -27,6 +30,7 @@ you_get:
   - A plotted frequency response
   - A mesh and memory estimate
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with PCB Toolbox.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must match each clause to your real data practices.
 new_slug: policy-page-drafter
 name: Policy page drafter
-summary: Give your business facts and country. Get a draft privacy policy, terms or cookie notice to send to a lawyer.
+summary: Give your business facts and country. Get a draft privacy policy, terms
+  or cookie notice to send to a lawyer.
 job: check-contracts
 headline: Policy page drafter
-subhead: Give your business facts and country. Get a draft privacy policy, terms or cookie notice to send to a lawyer.
+subhead: Give your business facts and country. Get a draft privacy policy, terms
+  or cookie notice to send to a lawyer. Bring business description and country.
+  Use the result to plan your next step.
 explain: |
   A first draft of your privacy policy, terms of service or cookie notice, built from the facts of your actual business and ready to hand to a lawyer. The draft matches what you really collect, not a generic template.
 
@@ -25,5 +28,6 @@ you_get:
   - Draft terms of service or cookie notice
   - List of open questions for your lawyer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

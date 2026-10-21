@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It writes files with set commands.
 new_slug: pcb-gerber-exporter
 name: PCB Gerber exporter
-summary: Give it a finished PCB design. Get Gerber files with connectors, ready to send to a maker.
+summary: Give it a finished PCB design. Get Gerber files with connectors, ready
+  to send to a maker.
 job: build-software
 headline: PCB Gerber exporter
-subhead: Give it a finished PCB design. Get Gerber files with connectors, ready to send to a maker.
+subhead: Gerber files for a finished RF board, with the right connectors
+  attached and formatted for the company that will make it. It runs in MATLAB.
 explain: |
   Gerber files for a finished RF board, with the right connectors attached and formatted for the company that will make it. It runs in MATLAB.
 
@@ -26,6 +28,7 @@ you_get:
   - Fab-specific formatting
   - Ready package for ordering
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with PCB Toolbox.

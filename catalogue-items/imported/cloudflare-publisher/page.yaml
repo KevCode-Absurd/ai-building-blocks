@@ -5,7 +5,8 @@ name: Cloudflare publisher
 summary: Point it at your project. Get it live on Cloudflare, with the link to open.
 job: ship-and-host
 headline: Cloudflare publisher
-subhead: Point it at your project. Get it live on Cloudflare, with the link to open.
+subhead: Point it at your project. Get it live on Cloudflare, with the link to
+  open. Bring your project folder. Use the result to plan your next step.
 explain: |
   Your project goes live on Cloudflare, and you get the link to open. No guessing which product to use or which command to run.
 
@@ -25,6 +26,8 @@ you_get:
   - The link to open it
   - Fixes if the deploy fails
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run commands and reach your Cloudflare account.
+  - It works best when your AI can run commands and reach your Cloudflare
+    account.

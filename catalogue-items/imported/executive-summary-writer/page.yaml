@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Cutting to what matters takes judgment about your reader.
 new_slug: executive-summary-writer
 name: Executive summary writer
-summary: Give it a long analysis. Get a one-page summary with the answer first, the impact in numbers and the decision needed.
+summary: Give it a long analysis. Get a one-page summary with the answer first,
+  the impact in numbers and the decision needed.
 job: write-and-tell-stories
 headline: Executive summary writer
-subhead: Give it a long analysis. Get a one-page summary with the answer first, the impact in numbers and the decision needed.
+subhead: Give it a long analysis. Get a one-page summary with the answer first,
+  the impact in numbers and the decision needed. Bring full analysis or report.
+  Use the result to plan your next step.
 explain: |
   A one or two page summary a busy executive can read in ten minutes and act on, with the answer first, the impact in numbers and the exact decision needed.
 
@@ -27,5 +30,6 @@ you_get:
   - Decision block
   - Template to reuse
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a fixed template from what you know.
 new_slug: runbook-writer
 name: Runbook writer
-summary: Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
+summary: Name a service. Get runbooks for deploy, incidents, maintenance and
+  rollback, ready to edit.
 job: ship-and-host
 headline: Runbook writer
-subhead: Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
+subhead: On-call people need clear steps at 3 a.m., and this builds them before
+  launch. Name a service and get a runbook with sections for deploy, incidents,
+  maintenance and rollback, ready to fill in.
 explain: |
   On-call people need clear steps at 3 a.m., and this builds them before launch. Name a service and get a runbook with sections for deploy, incidents, maintenance and rollback, ready to fill in.
 
@@ -26,5 +29,6 @@ you_get:
   - Incident response steps
   - A checklist to test it in staging
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

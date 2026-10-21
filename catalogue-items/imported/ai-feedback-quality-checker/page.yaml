@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It judges feedback against learning research, then rewrites it.
 new_slug: ai-feedback-quality-checker
 name: AI feedback quality checker
-summary: Paste the feedback your tool gives students. Get a check of its timing and wording, plus a better version.
+summary: Paste the feedback your tool gives students. Get a check of its timing
+  and wording, plus a better version.
 job: teach-and-train
 headline: AI feedback quality checker
-subhead: Paste the feedback your tool gives students. Get a check of its timing and wording, plus a better version.
+subhead: A check of the feedback your AI tool gives students, with a better
+  version written for you. Vague feedback such as "good effort" changes nothing.
 explain: |
   A check of the feedback your AI tool gives students, with a better version written for you. Vague feedback such as "good effort" changes nothing. Feedback that does the thinking for the student teaches nothing.
 
@@ -26,5 +28,6 @@ you_get:
   - The reasons behind each change
   - Set-up tips for timing and tone
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

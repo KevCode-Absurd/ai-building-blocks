@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows standard training steps but picks designs per task.
 new_slug: model-training-builder
 name: Model training builder
-summary: Describe your data and goal. Get training code with data loading, checks and saved checkpoints.
+summary: Describe your data and goal. Get training code with data loading,
+  checks and saved checkpoints.
 job: build-software
 headline: Model training builder
-subhead: Describe your data and goal. Get training code with data loading, checks and saved checkpoints.
+subhead: Training code for your data and goal that loads the data, checks it,
+  trains and saves progress as it goes, so a crash does not cost you the whole
+  run.
 explain: |
   Training code for your data and goal that loads the data, checks it, trains and saves progress as it goes, so a crash does not cost you the whole run.
 
@@ -27,6 +30,7 @@ you_get:
   - Saved checkpoints
   - Training and test scores
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

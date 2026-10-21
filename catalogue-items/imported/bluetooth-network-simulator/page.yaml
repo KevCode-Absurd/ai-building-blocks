@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Network setups vary by topology.
 new_slug: bluetooth-network-simulator
 name: Bluetooth network simulator
-summary: Describe your devices and links. Get a system-level Bluetooth network run with results.
+summary: Describe your devices and links. Get a system-level Bluetooth network
+  run with results.
 job: build-software
 headline: Bluetooth network simulator
-subhead: Describe your devices and links. Get a system-level Bluetooth network run with results.
+subhead: Describe your Bluetooth devices and how they link, and get a network
+  simulation with results you can read. It handles one link, a star of devices
+  or a mix of Bluetooth types.
 explain: |
   Describe your Bluetooth devices and how they link, and get a network simulation with results you can read. It handles one link, a star of devices or a mix of Bluetooth types.
 
@@ -26,6 +29,7 @@ you_get:
   - Connection and link statistics
   - Plots of how the network behaves
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Bluetooth Toolbox.

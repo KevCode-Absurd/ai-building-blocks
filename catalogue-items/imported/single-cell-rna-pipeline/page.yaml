@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows the standard steps and checks each before moving on.
 new_slug: single-cell-rna-pipeline
 name: Single-cell RNA analysis pipeline
-summary: Give it single-cell counts. Get cleaned data, cell clusters, marker genes and plots from start to finish.
+summary: Give it single-cell counts. Get cleaned data, cell clusters, marker
+  genes and plots from start to finish.
 job: research-topics
 headline: Single-cell RNA analysis pipeline
-subhead: Give it single-cell counts. Get cleaned data, cell clusters, marker genes and plots from start to finish.
+subhead: Cleaned single-cell data, cell clusters, marker genes and plots, from
+  raw counts to a finished analysis. You run one chain instead of stitching
+  steps together.
 explain: |
   Cleaned single-cell data, cell clusters, marker genes and plots, from raw counts to a finished analysis. You run one chain instead of stitching steps together.
 
@@ -26,6 +29,7 @@ you_get:
   - Marker gene lists
   - Data prepared for condition comparison
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

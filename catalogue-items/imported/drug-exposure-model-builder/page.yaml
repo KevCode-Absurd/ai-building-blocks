@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Choosing and checking the model takes careful reasoning.
 new_slug: drug-exposure-model-builder
 name: Drug exposure model builder
-summary: Give it concentration-over-time data. Get fitted drug exposure models, dose estimates and a clear write-up of what holds.
+summary: Give it concentration-over-time data. Get fitted drug exposure models,
+  dose estimates and a clear write-up of what holds.
 job: research-topics
 headline: Drug exposure model builder
-subhead: Give it concentration-over-time data. Get fitted drug exposure models, dose estimates and a clear write-up of what holds.
+subhead: Give it concentration-over-time data. Get fitted drug exposure models,
+  dose estimates and a clear write-up of what holds. Bring concentration-time
+  data with units. Use the result to plan your next step.
 explain: |
   Concentration-over-time numbers turned into fitted drug models, exposure measures and a write-up that says what the data does and does not support. This is exploratory research work. It does not give a dose for a patient.
 
@@ -26,6 +29,7 @@ you_get:
   - Regimen simulations
   - A write-up of assumptions and limits
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

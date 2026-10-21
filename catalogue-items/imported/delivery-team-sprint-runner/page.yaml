@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows set team routines and adjusts to your numbers.
 new_slug: delivery-team-sprint-runner
 name: Delivery team sprint runner
-summary: Tell it your team and sprint. Get metrics, capacity plans, ceremony agendas and a sprint report for your PMO routine.
+summary: Tell it your team and sprint. Get metrics, capacity plans, ceremony
+  agendas and a sprint report for your PMO routine.
 job: organise-work
 headline: Delivery team sprint runner
-subhead: Tell it your team and sprint. Get metrics, capacity plans, ceremony agendas and a sprint report for your PMO routine.
+subhead: A steady rhythm for a delivery team, with numbers instead of
+  adjectives. It sets up the team's metrics, checks sprint plans against real
+  capacity, gives you templates for each meeting, and writes the sprint report
+  from your tracker.
 explain: |
   A steady rhythm for a delivery team, with numbers instead of adjectives. It sets up the team's metrics, checks sprint plans against real capacity, gives you templates for each meeting, and writes the sprint report from your tracker.
 
@@ -27,5 +31,6 @@ you_get:
   - Sprint report
   - Points-to-hours ratio
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

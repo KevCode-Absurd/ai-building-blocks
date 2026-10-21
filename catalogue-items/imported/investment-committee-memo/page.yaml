@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It organises many findings into a formal memo.
 new_slug: investment-committee-memo
 name: Investment committee memo drafter
-summary: Give it diligence findings and deal terms. Get a structured committee memo with facts, risks and open questions.
+summary: Give it diligence findings and deal terms. Get a structured committee
+  memo with facts, risks and open questions.
 job: money-and-investing
 headline: Investment committee memo drafter
-subhead: Give it diligence findings and deal terms. Get a structured committee memo with facts, risks and open questions.
+subhead: "A committee memo that puts the facts, the risks and the open questions
+  on one page flow. Give it what you know: the company, market, three to five
+  years of financials, deal terms, diligence findings and the returns cases."
 explain: |
   A committee memo that puts the facts, the risks and the open questions on one page flow. Give it what you know: the company, market, three to five years of financials, deal terms, diligence findings and the returns cases. The skill organizes them into the standard structure: executive summary, business and market, financials, management, deal terms, risks, value creation plan and returns.
 
@@ -28,5 +31,6 @@ you_get:
   - A returns section
   - A list of open questions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Tone matters when people worry about their jobs.
 new_slug: org-change-announcement-writer
 name: Org change announcement writer
-summary: Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers.
+summary: Describe the change. Get the leader announcement, manager talking
+  points, town hall script and hard-question answers.
 job: hire-people
 headline: Org change announcement writer
-subhead: Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers.
+subhead: Describe the change. Get the leader announcement, manager talking
+  points, town hall script and hard-question answers. Bring what is changing and
+  why. Use the result to plan your next step.
 explain: |
   All the words you need when a change hits your company: the leader announcement, manager talking points, a town hall script and answers to the hard questions. People hear the same clear story from everyone.
 
@@ -28,5 +31,6 @@ you_get:
   - FAQ and hard-question answers
   - Timing and channel plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

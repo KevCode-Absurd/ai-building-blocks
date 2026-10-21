@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It rolls up many deals and picks what needs help.
 new_slug: team-pipeline-roll-up-writer
 name: Team pipeline roll-up writer
-summary: Ask for your team's pipeline. Get a view by rep and stage, at-risk deals and coaching points.
+summary: Ask for your team's pipeline. Get a view by rep and stage, at-risk
+  deals and coaching points.
 job: lead-people
 headline: Team pipeline roll-up writer
-subhead: Ask for your team's pipeline. Get a view by rep and stage, at-risk deals and coaching points.
+subhead: One view of your team's sales pipeline by rep and stage, with at-risk
+  deals marked and a short list of where to spend coaching time.
 explain: |
   One view of your team's sales pipeline by rep and stage, with at-risk deals marked and a short list of where to spend coaching time. It is ready for a forecast call or a 1:1.
 
@@ -27,6 +29,7 @@ you_get:
   - Closed won against target
   - Coaching points per rep
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your CRM.

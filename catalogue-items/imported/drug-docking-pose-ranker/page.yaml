@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Reading docking confidence correctly takes expert judgement.
 new_slug: drug-docking-pose-ranker
 name: Drug docking pose ranker
-summary: Give it a protein and a molecule. Get predicted binding poses ranked by confidence, with checks on each.
+summary: Give it a protein and a molecule. Get predicted binding poses ranked by
+  confidence, with checks on each.
 job: research-topics
 headline: Drug docking pose ranker
-subhead: Give it a protein and a molecule. Get predicted binding poses ranked by confidence, with checks on each.
+subhead: Predicted ways a small molecule could sit in a protein, ranked and
+  labelled with how far to trust them. Give it a protein and a molecule, and you
+  get candidate binding poses with confidence scores and checks on each.
 explain: |
   Predicted ways a small molecule could sit in a protein, ranked and labelled with how far to trust them. Give it a protein and a molecule, and you get candidate binding poses with confidence scores and checks on each.
 
@@ -26,6 +29,8 @@ you_get:
   - Run commands for the DiffDock setup
   - Notes on what the scores can and cannot show
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run DiffDock on a computer with a strong graphics card.
+  - It works best when your AI can run DiffDock on a computer with a strong
+    graphics card.

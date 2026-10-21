@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It mines customer words and rival posts, then builds the calendar.
 new_slug: content-calendar-builder
 name: Content calendar builder
-summary: Give it your product and platforms. Get topics from real customer words, rival content gaps, and a ready calendar.
+summary: Give it your product and platforms. Get topics from real customer
+  words, rival content gaps, and a ready calendar.
 job: grow-social
 headline: Content calendar builder
-subhead: Give it your product and platforms. Get topics from real customer words, rival content gaps, and a ready calendar.
+subhead: Give it your product and platforms. Get topics from real customer
+  words, rival content gaps, and a ready calendar. Bring your product and target
+  market. Use the result to plan your next step.
 explain: |
   A ready content calendar for your online shop, with topics drawn from what your customers actually say and from gaps in what your rivals publish. You know what to post each week and on which platform.
 
@@ -26,6 +29,7 @@ you_get:
   - A week by week calendar
   - Format suggestions per platform
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web and open pages.

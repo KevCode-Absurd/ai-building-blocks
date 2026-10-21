@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans cases, then writes them in a set style.
 new_slug: matlab-unit-test-writer
 name: MATLAB unit test writer
-summary: Give it MATLAB code. Get class-based unit tests with fixtures, mocks and app tests that you can run.
+summary: Give it MATLAB code. Get class-based unit tests with fixtures, mocks
+  and app tests that you can run.
 job: test-and-fix-code
 headline: MATLAB unit test writer
-subhead: Give it MATLAB code. Get class-based unit tests with fixtures, mocks and app tests that you can run.
+subhead: A set of MATLAB unit tests you can run today, written as classes with
+  edge cases covered. Give it your code and get tests that check what it does,
+  not how it does it.
 explain: |
   A set of MATLAB unit tests you can run today, written as classes with edge cases covered. Give it your code and get tests that check what it does, not how it does it.
 
@@ -26,6 +29,7 @@ you_get:
   - Fixtures and mocks where needed
   - A passing test run
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

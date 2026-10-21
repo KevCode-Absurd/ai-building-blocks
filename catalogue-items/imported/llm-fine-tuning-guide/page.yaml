@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Training choices need careful reasoning about limits.
 new_slug: llm-fine-tuning-guide
 name: LLM fine-tuning guide
-summary: Say your model and GPU. Get a fine-tuning plan and code with Unsloth, sized to your memory, ready to export.
+summary: Say your model and GPU. Get a fine-tuning plan and code with Unsloth,
+  sized to your memory, ready to export.
 job: build-software
 headline: LLM fine-tuning guide
-subhead: Say your model and GPU. Get a fine-tuning plan and code with Unsloth, sized to your memory, ready to export.
+subhead: Say your model and GPU. Get a fine-tuning plan and code with Unsloth,
+  sized to your memory, ready to export. Bring base model. Use the result to
+  plan your next step.
 explain: |
   A fine-tuning plan and working code for your model and your graphics card, sized to the memory you have so it does not run out halfway through. Tell it the model, the GPU and the goal.
 
@@ -28,6 +31,7 @@ you_get:
   - A tuning run setup
   - Export steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

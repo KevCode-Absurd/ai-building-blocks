@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Tuning needs careful technical reasoning.
 new_slug: pcb-coupler-designer
 name: PCB coupler designer
-summary: Name the band and split. Get a power divider or coupler designed and its response plotted.
+summary: Name the band and split. Get a power divider or coupler designed and
+  its response plotted.
 job: build-software
 headline: PCB coupler designer
-subhead: Name the band and split. Get a power divider or coupler designed and its response plotted.
+subhead: A power splitter or coupler designed for your band and split ratio,
+  with its response plotted so you can see if it works. It runs in MATLAB.
 explain: |
   A power splitter or coupler designed for your band and split ratio, with its response plotted so you can see if it works. It runs in MATLAB.
 
@@ -26,6 +28,7 @@ you_get:
   - Mesh and memory estimate
   - Next steps for checking and tuning
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with PCB Toolbox.

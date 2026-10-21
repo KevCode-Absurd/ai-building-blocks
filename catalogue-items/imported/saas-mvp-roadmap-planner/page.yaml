@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It walks a fixed roadmap and makes a few stack choices.
 new_slug: saas-mvp-roadmap-planner
 name: SaaS MVP roadmap planner
-summary: Give it your SaaS idea. Get a stack choice, build order and launch checklist you can follow.
+summary: Give it your SaaS idea. Get a stack choice, build order and launch
+  checklist you can follow.
 job: build-product
 headline: SaaS MVP roadmap planner
-subhead: Give it your SaaS idea. Get a stack choice, build order and launch checklist you can follow.
+subhead: "A clear route from idea to first paying customers: which tools to use,
+  what to build in which order and what to check before going live."
 explain: |
   A clear route from idea to first paying customers: which tools to use, what to build in which order and what to check before going live. It is for building the first version of a software product.
 
@@ -26,5 +28,6 @@ you_get:
   - A project structure
   - A launch checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

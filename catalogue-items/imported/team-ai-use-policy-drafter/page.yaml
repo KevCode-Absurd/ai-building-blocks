@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It adapts published policies to your setting.
 new_slug: team-ai-use-policy-drafter
 name: Team AI use policy drafter
-summary: Describe how your team uses AI. Get a first-draft AI use policy based on public model policies. Have a lawyer review it.
+summary: Describe how your team uses AI. Get a first-draft AI use policy based
+  on public model policies. Have a lawyer review it.
 job: check-contracts
 headline: Team AI use policy drafter
-subhead: Describe how your team uses AI. Get a first-draft AI use policy based on public model policies. Have a lawyer review it.
+subhead: Describe how your team uses AI. Get a first-draft AI use policy based
+  on public model policies. Have a lawyer review it. Bring how your team uses AI
+  today. Use the result to plan your next step.
 explain: |
   A first draft of your team's AI use policy, built from published model policies and current guidance, ready to take to the person who decides.
 
@@ -27,7 +30,10 @@ you_get:
   - A list of sources used
   - An adoption checklist and next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web for current model policies.
-  - Where the skill points to /ai-governance-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /ai-governance-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

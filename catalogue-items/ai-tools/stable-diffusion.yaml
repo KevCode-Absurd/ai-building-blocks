@@ -32,7 +32,6 @@ works_with:
   - krea
 runs_in: [api, desktop]
 blocks:
-  - stable-diffusion-image-maker
   - marketing-image-maker
 alternatives: [flux, midjourney, leonardo, ideogram]
 last_checked: 2026-10-21

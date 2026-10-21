@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows fixed versioning rules.
 new_slug: version-and-changelog-automator
 name: Version and changelog automator
-summary: Point it at your repo. Get release numbers and a changelog worked out from your commits.
+summary: Point it at your repo. Get release numbers and a changelog worked out
+  from your commits.
 job: ship-and-host
 headline: Version and changelog automator
-subhead: Point it at your repo. Get release numbers and a changelog worked out from your commits.
+subhead: Point it at your repo. Get release numbers and a changelog worked out
+  from your commits. Bring a git repository with commit history. Use the result
+  to plan your next step.
 explain: |
   Your next version number and a readable changelog, worked out from the commit messages you already wrote. 0.
 
@@ -26,6 +29,7 @@ you_get:
   - A release tool configuration
   - A commit message guide for the team
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

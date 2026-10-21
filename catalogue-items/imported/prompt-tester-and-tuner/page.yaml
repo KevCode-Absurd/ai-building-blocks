@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs a test loop and compares results.
 new_slug: prompt-tester-and-tuner
 name: Prompt tester and tuner
-summary: Give it a prompt and test cases. Get scores for each version and a better prompt backed by results.
+summary: Give it a prompt and test cases. Get scores for each version and a
+  better prompt backed by results.
 job: set-up-ai
 headline: Prompt tester and tuner
-subhead: Give it a prompt and test cases. Get scores for each version and a better prompt backed by results.
+subhead: A prompt improved by results, not opinion. You get scores for each
+  version against your test cases, so you can see which edits helped and by how
+  much.
 explain: |
   A prompt improved by results, not opinion. You get scores for each version against your test cases, so you can see which edits helped and by how much.
 
@@ -26,6 +29,7 @@ you_get:
   - Improved prompt with proof
   - Token and cost estimate
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

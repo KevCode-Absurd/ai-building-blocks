@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set build method but must fit the API.
 new_slug: command-line-tool-builder
 name: Command-line tool builder
-summary: Give it an API doc or script. Get a command-line tool that returns clean JSON and handles sign-in.
+summary: Give it an API doc or script. Get a command-line tool that returns
+  clean JSON and handles sign-in.
 job: build-software
 headline: Command-line tool builder
-subhead: Give it an API doc or script. Get a command-line tool that returns clean JSON and handles sign-in.
+subhead: A real command-line tool you can run by name from any folder. Give it
+  an API doc, a script or a few curl examples, and get a tool that returns clean
+  JSON and handles sign-in.
 explain: |
   A real command-line tool you can run by name from any folder. Give it an API doc, a script or a few curl examples, and get a tool that returns clean JSON and handles sign-in.
 
@@ -26,6 +29,7 @@ you_get:
   - Sign-in handling
   - Install steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read API docs.

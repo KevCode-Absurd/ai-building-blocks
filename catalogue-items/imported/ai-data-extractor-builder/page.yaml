@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks one of a few known methods and writes code.
 new_slug: ai-data-extractor-builder
 name: AI data extractor builder
-summary: Say what data to pull from AI answers. Get code that returns checked, typed results instead of free text.
+summary: Say what data to pull from AI answers. Get code that returns checked,
+  typed results instead of free text.
 job: build-software
 headline: AI data extractor builder
-subhead: Say what data to pull from AI answers. Get code that returns checked, typed results instead of free text.
+subhead: Code that pulls specific facts out of an AI's reply and hands back
+  checked, typed data, not loose text. Your next step, like a database write or
+  a screen, can then rely on the shape.
 explain: |
   Code that pulls specific facts out of an AI's reply and hands back checked, typed data, not loose text. Your next step, like a database write or a screen, can then rely on the shape.
 
@@ -26,6 +29,7 @@ you_get:
   - Validation that catches bad output
   - Retry logic when a reply fails the check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

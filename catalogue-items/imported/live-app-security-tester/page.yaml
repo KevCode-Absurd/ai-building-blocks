@@ -5,7 +5,9 @@ name: Live app security tester
 summary: Give it a running web app or API you own. Get weaknesses found by safe probing.
 job: secure-code
 headline: Live app security tester
-subhead: Give it a running web app or API you own. Get weaknesses found by safe probing.
+subhead: A list of weaknesses found in a running web app or API that you own,
+  found by safe probing from the outside. You get a report with how to fix each
+  one.
 explain: |
   A list of weaknesses found in a running web app or API that you own, found by safe probing from the outside. You get a report with how to fix each one.
 
@@ -27,6 +29,7 @@ you_get:
   - A report you can share
   - A schedule for repeat scans
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

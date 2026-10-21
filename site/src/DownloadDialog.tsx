@@ -42,8 +42,9 @@ function steps(ai: Ai, zip: string, biz: boolean): ReactNode[] {
 }
 
 /** Opens on what you'll need. After the download, it shows how to run the folder in the AI you use. */
-export function DownloadDialog({ name, zip, needs, finals, onDownload, onClose }: {
+export function DownloadDialog({ name, zip, needs, finals, onDownload, onClose, kind = "workflow" }: {
   name: string; zip: string; needs: Need[]; finals: string[]; onDownload: () => Promise<boolean>; onClose: () => void;
+  kind?: "workflow" | "agent";
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   const [got, setGot] = useState<Set<string>>(new Set());
@@ -78,10 +79,10 @@ export function DownloadDialog({ name, zip, needs, finals, onDownload, onClose }
             : <p className="atf-lead">Gather these once, before you start. Your AI asks for each one at the step that uses it, and writes MISSING where something isn't there.</p>}
           {must.length > 0 && <><h3 className="atf-h">Have these ready</h3><ul className="needs-list" data-testid="needs-required">{must.map(item)}</ul></>}
           {may.length > 0 && <><h3 className="atf-h">These make it better, if you have them</h3><ul className="needs-list">{may.map(item)}</ul></>}
-          <p className="small biz-in">{biz ? "Your about-me file goes in the folder too, so your AI won't ask for it." : <>Add <button className="link-btn" onClick={() => { close(); openBusiness(); }} data-testid="needs-add-business">a short file about you</button> first, and it goes in the folder so your AI asks you less.</>}</p>
+          <p className="small biz-in">{biz ? "Your saved context goes in the folder too." : <>Save <button className="link-btn" onClick={() => { close(); openBusiness(); }} data-testid="needs-add-business">your context</button> once to include it in future packs.</>}</p>
           <div className="atf-foot">
             <span className="small">{needs.length ? `${got.size} of ${needs.length} ready` : "Ready to go"}</span>
-            <button className="btn btn-primary" onClick={go} data-testid="needs-download">Download the workflow</button>
+            <button className="btn btn-primary" onClick={go} data-testid="needs-download">{kind === "agent" ? "Download the agent pack" : "Download the workflow"}</button>
           </div>
         </div>
       ) : (

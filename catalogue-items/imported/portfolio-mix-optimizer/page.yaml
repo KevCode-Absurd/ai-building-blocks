@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sets up a standard method and checks the answer.
 new_slug: portfolio-mix-optimizer
 name: Portfolio mix optimizer
-summary: Give it asset returns. Get the best mix by risk and return, with an efficient frontier chart.
+summary: Give it asset returns. Get the best mix by risk and return, with an
+  efficient frontier chart.
 job: money-and-investing
 headline: Portfolio mix optimizer
-subhead: Give it asset returns. Get the best mix by risk and return, with an efficient frontier chart.
+subhead: Find the mix of assets that gives the most return for the risk you
+  accept, and see it on an efficient frontier chart. Works in MATLAB with the
+  Financial Toolbox, which is a paid product.
 explain: |
   Find the mix of assets that gives the most return for the risk you accept, and see it on an efficient frontier chart. Works in MATLAB with the Financial Toolbox, which is a paid product.
 
@@ -26,6 +29,7 @@ you_get:
   - Max Sharpe and minimum variance portfolios
   - Working MATLAB code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the Financial Toolbox.

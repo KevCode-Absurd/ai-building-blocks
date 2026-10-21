@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks the right explainer and checks the results hold up.
 new_slug: prediction-driver-explainer
 name: Prediction driver explainer
-summary: Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
+summary: Give it a trained model and data. Get which inputs drove each
+  prediction and overall, with checked plots.
 job: track-numbers
 headline: Prediction driver explainer
-subhead: Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
+subhead: "See why a trained model made its predictions: which inputs pushed each
+  result up or down, and which matter most overall. Every plot is checked
+  against the real model output so you can trust it."
 explain: |
   See why a trained model made its predictions: which inputs pushed each result up or down, and which matter most overall. Every plot is checked against the real model output so you can trust it.
 
@@ -26,6 +29,7 @@ you_get:
   - Additivity check results
   - Notes on limits of the explanation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

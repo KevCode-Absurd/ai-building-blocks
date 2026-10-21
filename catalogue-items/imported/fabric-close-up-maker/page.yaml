@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set prompt recipe for each close-up.
 new_slug: fabric-close-up-maker
 name: Fabric close-up maker
-summary: Give it a clothing photo. Get close-ups of fabric, stitching and weave for the product page. Your image model draws them.
+summary: Give it a clothing photo. Get close-ups of fabric, stitching and weave
+  for the product page. Your image model draws them.
 job: product-photos
 headline: Fabric close-up maker
-subhead: Give it a clothing photo. Get close-ups of fabric, stitching and weave for the product page. Your image model draws them.
+subhead: Close-up fabric shots for a clothing product page, made from the photo
+  you already have. Buyers see the weave, stitching and collar detail that
+  proves quality, without a macro lens or a photo studio.
 explain: |
   Close-up fabric shots for a clothing product page, made from the photo you already have. Buyers see the weave, stitching and collar detail that proves quality, without a macro lens or a photo studio.
 
@@ -25,6 +28,8 @@ you_get:
   - Prompt used, for repeat runs
   - Several area options per garment
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).
+  - It works best when your AI can run code and use your own image model key
+    (OpenAI, Gemini, fal or Replicate).

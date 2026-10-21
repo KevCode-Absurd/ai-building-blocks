@@ -5,7 +5,9 @@ name: Recording transcriber
 summary: Give it audio or video. Get the words written out, with each speaker labelled.
 job: work-with-audio
 headline: Recording transcriber
-subhead: Give it audio or video. Get the words written out, with each speaker labelled.
+subhead: Your audio or video turned into written words, with each speaker
+  labelled if you want. You get a clean text file or structured data you can
+  search, quote or summarise.
 explain: |
   Your audio or video turned into written words, with each speaker labelled if you want. You get a clean text file or structured data you can search, quote or summarise.
 
@@ -25,6 +27,7 @@ you_get:
   - Speaker labels (optional)
   - Output in a folder per job
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the OpenAI Audio API.

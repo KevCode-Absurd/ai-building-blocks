@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It checks many areas and ranks what could break live.
 new_slug: shipped-app-gap-finder
 name: Shipped app gap finder
-summary: Point it at a shipped repo. Get gaps found in database rules, webhooks, secrets, payments and mobile use.
+summary: Point it at a shipped repo. Get gaps found in database rules, webhooks,
+  secrets, payments and mobile use.
 job: secure-code
 headline: Shipped app gap finder
-subhead: Point it at a shipped repo. Get gaps found in database rules, webhooks, secrets, payments and mobile use.
+subhead: A list of the gaps in a live app that AI-built projects often miss,
+  found before a user or attacker finds them. It looks at the deployed product,
+  not just the code in your editor.
 explain: |
   A list of the gaps in a live app that AI-built projects often miss, found before a user or attacker finds them. It looks at the deployed product, not just the code in your editor.
 
@@ -26,6 +29,7 @@ you_get:
   - Fix suggestions
   - A saved report for later sessions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

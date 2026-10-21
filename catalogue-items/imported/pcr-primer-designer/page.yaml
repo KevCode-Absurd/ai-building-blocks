@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It runs a design tool, then checks each pair against set rules.
 new_slug: pcr-primer-designer
 name: PCR primer designer
-summary: Give it a target sequence. Get primer pairs checked for temperature, off-target matches and clear coordinates.
+summary: Give it a target sequence. Get primer pairs checked for temperature,
+  off-target matches and clear coordinates.
 job: research-topics
 headline: PCR primer designer
-subhead: Give it a target sequence. Get primer pairs checked for temperature, off-target matches and clear coordinates.
+subhead: Give it a target sequence. Get primer pairs checked for temperature,
+  off-target matches and clear coordinates. Bring target sequence or
+  coordinates. Use the result to plan your next step.
 explain: |
   Primer pairs you can trust, with the proof behind them. Give a target sequence and get candidate primers with melting temperature, secondary structure, off-target matches and exact product coordinates checked, not just a good-looking score.
 
   The skill first pins down the assay: template, chemistry, reference genome and intended products. It then designs primers with Primer3, calculates thermodynamics with supplied tools, and screens every possible product across your search scope. It handles exon junctions, tailed cloning primers, multiplex panels and checking pairs you already own. Degenerate, bisulfite and probe assays are flagged as needing a special route. Local tools and a reference database are needed.
 when:
-  - You need a primer pair for a gene and want to know it will not amplify anything else.
+  - You need a primer pair for a gene and want to know it will not amplify
+    anything else.
   - You have existing primers and want them checked against a genome.
   - You are designing an RT-qPCR assay that spans an exon junction.
   - You are adding cloning tails and need the final product rebuilt.
@@ -27,6 +31,7 @@ you_get:
   - Off-target product screen
   - Exact product coordinates and sequence
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

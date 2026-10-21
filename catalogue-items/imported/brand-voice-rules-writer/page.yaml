@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It turns your brand traits into clear rules and examples.
 new_slug: brand-voice-rules-writer
 name: Brand voice rules writer
-summary: Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow.
+summary: Describe your brand and who you write for. Get tone, word choices and
+  writing rules any writer can follow.
 job: brand-file
 headline: Brand voice rules writer
-subhead: Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow.
+subhead: Describe your brand and who you write for. Get tone, word choices and
+  writing rules any writer can follow. Bring brand name and what you sell. Use
+  the result to plan your next step.
 explain: |
   A voice guide short enough to use and clear enough that two different writers produce text that sounds alike.
 
@@ -27,5 +30,6 @@ you_get:
   - Five or six voice traits with do and don't lines
   - Preferred and avoided words
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

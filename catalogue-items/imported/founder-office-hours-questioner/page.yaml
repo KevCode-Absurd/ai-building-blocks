@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It asks set questions and reacts to each answer.
 new_slug: founder-office-hours-questioner
 name: Founder office hours questioner
-summary: Share a fuzzy idea. Answer six sharp questions on customer, reach and defence before you get advice.
+summary: Share a fuzzy idea. Answer six sharp questions on customer, reach and
+  defence before you get advice.
 job: test-an-idea
 headline: Founder office hours questioner
-subhead: Share a fuzzy idea. Answer six sharp questions on customer, reach and defence before you get advice.
+subhead: Six hard questions you must answer in writing before any advice is
+  given. They test whether your idea has a real problem, a named buyer and a way
+  to reach them.
 explain: |
   Six hard questions you must answer in writing before any advice is given. They test whether your idea has a real problem, a named buyer and a way to reach them.
 
@@ -26,5 +29,6 @@ you_get:
   - Gaps you must close
   - Short verdict once all six are done
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

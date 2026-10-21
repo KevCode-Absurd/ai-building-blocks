@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It keeps track of evidence and gaps over many steps.
 new_slug: workplace-investigation-guide
 name: Workplace investigation guide
-summary: Describe a workplace complaint. Get a plan, evidence log and draft memo. Not legal advice.
+summary: Describe a workplace complaint. Get a plan, evidence log and draft
+  memo. Not legal advice.
 job: hire-people
 headline: Workplace investigation guide
-subhead: Describe a workplace complaint. Get a plan, evidence log and draft memo. Not legal advice.
+subhead: A structured path through a workplace complaint, from the first intake
+  to a draft memo. You keep a clean evidence log and a record of which sources
+  you have covered.
 explain: |
   A structured path through a workplace complaint, from the first intake to a draft memo. You keep a clean evidence log and a record of which sources you have covered. Not legal advice.
 
@@ -27,6 +30,9 @@ you_get:
   - Answers from the log
   - Draft memo and audience summaries
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /employment-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

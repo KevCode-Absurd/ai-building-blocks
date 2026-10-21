@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It traces crawl and redirect problems across a whole site.
 new_slug: search-indexing-auditor
 name: Search indexing auditor
-summary: Give it your site, folder or Search Console export. Get why pages are not indexed and a fix list.
+summary: Give it your site, folder or Search Console export. Get why pages are
+  not indexed and a fix list.
 job: build-websites
 headline: Search indexing auditor
-subhead: Give it your site, folder or Search Console export. Get why pages are not indexed and a fix list.
+subhead: A diagnosis of why Google is skipping your pages, with a fix list and a
+  cleaner site plan. It finds what is behind messages like "Discovered but not
+  currently indexed" and says whether each cause is content, technical or
+  structure.
 explain: |
   A diagnosis of why Google is skipping your pages, with a fix list and a cleaner site plan. It finds what is behind messages like "Discovered but not currently indexed" and says whether each cause is content, technical or structure.
 
@@ -26,6 +30,7 @@ you_get:
   - Sitemap fixes
   - A redesigned structure and redirect plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your files or open your site.

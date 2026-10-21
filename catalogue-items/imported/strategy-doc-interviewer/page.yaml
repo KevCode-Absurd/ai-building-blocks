@@ -2,16 +2,20 @@ thinking: low
 thinking_why: It asks one question and adds your answer to the file.
 new_slug: strategy-doc-interviewer
 name: Strategy doc interviewer
-summary: Name the doc you want. Get it written from your own answers, one question at a time.
+summary: Name the doc you want. Get it written from your own answers, one
+  question at a time.
 job: think-and-decide
 headline: Strategy doc interviewer
-subhead: Name the doc you want. Get it written from your own answers, one question at a time.
+subhead: A strategy or planning document written in your own words, because you
+  answer and the AI only asks. You name the document, such as principles,
+  priorities, a vision or a ranked list.
 explain: |
   A strategy or planning document written in your own words, because you answer and the AI only asks. You name the document, such as principles, priorities, a vision or a ranked list. It makes a skeleton file and asks one question at a time.
 
   After each answer it patches your words into the right section, never rewriting the whole file, then asks the next question or a follow-up if the answer was thin. It will not suggest content for you. That keeps the document honest, because the thinking is yours. It is a good fit for quarterly reviews or notes you will return to for years. It is not for day planning or task lists.
 when:
-  - You need to write down your priorities but staring at a blank page stalls you.
+  - You need to write down your priorities but staring at a blank page stalls
+    you.
   - You want a quarterly review that reflects your real thinking.
   - You are defining your team's principles and want them in your voice.
   - You have tried AI drafts and found they sound like someone else.
@@ -25,6 +29,7 @@ you_get:
   - Your answers placed in the right sections
   - A finished document in your words
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can save and edit files.

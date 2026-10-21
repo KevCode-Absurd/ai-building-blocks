@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It collects ideas without shaping them.
 new_slug: idea-fragment-miner
 name: Idea fragment miner
-summary: Talk through a topic. Get raw fragments and ideas pulled out, with no structure yet.
+summary: Talk through a topic. Get raw fragments and ideas pulled out, with no
+  structure yet.
 job: write-and-tell-stories
 headline: Idea fragment miner
-subhead: Talk through a topic. Get raw fragments and ideas pulled out, with no structure yet.
+subhead: A file of raw material for a piece of writing, collected while you
+  talk. Chat about a topic and it saves every useful scrap to one document, with
+  no outline and no polish yet.
 explain: |
   A file of raw material for a piece of writing, collected while you talk. Chat about a topic and it saves every useful scrap to one document, with no outline and no polish yet.
 
@@ -25,5 +28,6 @@ you_get:
   - Possible leading words for the piece
   - Material ready to be shaped later
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

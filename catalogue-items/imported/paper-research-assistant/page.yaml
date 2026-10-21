@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It searches, reads and then pulls the findings together.
 new_slug: paper-research-assistant
 name: Paper research assistant
-summary: Name a topic or paper. Get a literature scan, a deep read or a reading list from Semantic Scholar and arXiv.
+summary: Name a topic or paper. Get a literature scan, a deep read or a reading
+  list from Semantic Scholar and arXiv.
 job: think-and-decide
 headline: Paper research assistant
-subhead: Name a topic or paper. Get a literature scan, a deep read or a reading list from Semantic Scholar and arXiv.
+subhead: A literature scan, a close read of one paper, an impact check or a
+  reading list, pulled from free academic sources. You name a topic or paper and
+  get organised results.
 explain: |
   A literature scan, a close read of one paper, an impact check or a reading list, pulled from free academic sources. You name a topic or paper and get organised results.
 
@@ -25,6 +28,7 @@ you_get:
   - Citation and impact summary
   - Ordered reading list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the internet.

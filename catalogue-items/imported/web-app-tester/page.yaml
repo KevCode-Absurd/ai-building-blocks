@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set test method and reads what the browser shows.
 new_slug: web-app-tester
 name: Web app tester
-summary: Point it at your local app. Get its screens tried in a real browser, with screenshots and error logs.
+summary: Point it at your local app. Get its screens tried in a real browser,
+  with screenshots and error logs.
 job: test-and-fix-code
 headline: Web app tester
-subhead: Point it at your local app. Get its screens tried in a real browser, with screenshots and error logs.
+subhead: Your local web app tried out in a real browser, with screenshots and
+  error logs so you can see what breaks. You find out about broken buttons and
+  console errors before users do.
 explain: |
   Your local web app tried out in a real browser, with screenshots and error logs so you can see what breaks. You find out about broken buttons and console errors before users do.
 
@@ -26,6 +29,7 @@ you_get:
   - Browser console and error logs
   - A list of what failed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

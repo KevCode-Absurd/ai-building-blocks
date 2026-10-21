@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches a new objection to past wins.
 new_slug: live-objection-responder
 name: Live objection responder
-summary: Paste what the buyer said. Get what it really means, a reply that has worked before and proof to use.
+summary: Paste what the buyer said. Get what it really means, a reply that has
+  worked before and proof to use.
 job: sell-and-negotiate
 headline: Live objection responder
-subhead: Paste what the buyer said. Get what it really means, a reply that has worked before and proof to use.
+subhead: When a buyer says "too expensive" or "we're talking to a rival", you
+  need an answer now. Paste what they said and get what they likely mean, a
+  reply that has worked before and proof to back it.
 explain: |
   When a buyer says "too expensive" or "we're talking to a rival", you need an answer now. Paste what they said and get what they likely mean, a reply that has worked before and proof to back it.
 
@@ -26,6 +29,7 @@ you_get:
   - Proof points to use
   - Evidence from your own history
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your CRM and call notes.

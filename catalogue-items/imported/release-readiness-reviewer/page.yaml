@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It traces many hidden risks across files and settings.
 new_slug: release-readiness-reviewer
 name: Release readiness reviewer
-summary: "Point it at a release. Get a read-only report of real deploy risks: migrations, config, order and rollback."
+summary: "Point it at a release. Get a read-only report of real deploy risks:
+  migrations, config, order and rollback."
 job: ship-and-host
 headline: Release readiness reviewer
-subhead: "Point it at a release. Get a read-only report of real deploy risks: migrations, config, order and rollback."
+subhead: "A short report listing the real reasons a release could fail on
+  deploy. You find the missing migration, the absent setting or the wrong
+  rollout order before users do."
 explain: |
   A short report listing the real reasons a release could fail on deploy. You find the missing migration, the absent setting or the wrong rollout order before users do.
 
@@ -26,6 +29,7 @@ you_get:
   - Recommended fix for each item
   - Questions to confirm before release
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds from set parts with choices about layout.
 new_slug: react-landing-page-builder
 name: React landing page builder
-summary: Describe your product. Get a landing page as React code with hero, pricing, FAQ and proof sections.
+summary: Describe your product. Get a landing page as React code with hero,
+  pricing, FAQ and proof sections.
 job: write-landing-page
 headline: React landing page builder
-subhead: Describe your product. Get a landing page as React code with hero, pricing, FAQ and proof sections.
+subhead: A full landing page as React code, built from your product description.
+  It has a hero, features, pricing, FAQ and proof sections, each with copy
+  written to a proven pattern.
 explain: |
   A full landing page as React code, built from your product description. It has a hero, features, pricing, FAQ and proof sections, each with copy written to a proven pattern.
 
@@ -26,6 +29,7 @@ you_get:
   - FAQ with search markup
   - SEO meta tags
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

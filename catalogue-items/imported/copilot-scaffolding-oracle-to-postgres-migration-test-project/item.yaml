@@ -1,0 +1,32 @@
+slug: copilot-scaffolding-oracle-to-postgres-migration-test-project
+name: Oracle migration test project builder
+summary: Share your .NET solution. Get an xUnit test project with database rollback and migration test setup.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/scaffolding-oracle-to-postgres-migration-test-project
+  url: https://github.com/github/awesome-copilot/tree/main/skills/scaffolding-oracle-to-postgres-migration-test-project
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: scaffolding-oracle-to-postgres-migration-test-project
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: scaffolding-oracle-to-postgres-migration-test-project skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/scaffolding-oracle-to-postgres-migration-test-project
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

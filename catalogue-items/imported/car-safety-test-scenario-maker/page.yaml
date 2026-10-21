@@ -2,17 +2,22 @@ thinking: medium
 thinking_why: It follows a defined test protocol with many variants.
 new_slug: car-safety-test-scenario-maker
 name: Car safety test scenario maker
-summary: Name the Euro NCAP test. Get its scenario and variants made, plotted and exported with scores.
+summary: Name the Euro NCAP test. Get its scenario and variants made, plotted
+  and exported with scores.
 job: build-software
 headline: Car safety test scenario maker
-subhead: Name the Euro NCAP test. Get its scenario and variants made, plotted and exported with scores.
+subhead: Name the Euro NCAP test you care about and get its driving scenario
+  built, varied, plotted and scored. The skill creates the starting scenario for
+  the test, makes variants from it, and moves the scenarios between two
+  simulators.
 explain: |
   Name the Euro NCAP test you care about and get its driving scenario built, varied, plotted and scored. The skill creates the starting scenario for the test, makes variants from it, and moves the scenarios between two simulators.
 
   It picks the right route by protocol year. For 2023 it uses the standalone scenario call with prefixes like SA AEB. For 2026 it sets up an assessment object, can set a custom vehicle under test, then builds the scenario. After that you can plot single or grouped scenarios, translate them between drivingScenario and RoadRunner, compute scores and export reports. You need MATLAB with the automated driving tools and the NCAP support package.
 when:
   - You need a Euro NCAP car-to-car braking test set up in simulation.
-  - You want many variants of one test to check how sturdy your braking system is.
+  - You want many variants of one test to check how sturdy your braking system
+    is.
   - You must move a scenario between two simulators.
   - You need NCAP scores and a report from your results.
 you_give:
@@ -27,6 +32,7 @@ you_get:
   - Translated scenarios for another simulator
   - NCAP scores and exported reports
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the Euro NCAP support package.

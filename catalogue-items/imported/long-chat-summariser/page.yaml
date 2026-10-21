@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set summary shape but must judge what matters.
 new_slug: long-chat-summariser
 name: Long chat summariser
-summary: Give it a long AI session. Get a structured summary that keeps files, decisions and next steps.
+summary: Give it a long AI session. Get a structured summary that keeps files,
+  decisions and next steps.
 job: set-up-ai
 headline: Long chat summariser
-subhead: Give it a long AI session. Get a structured summary that keeps files, decisions and next steps.
+subhead: Give it a long AI session. Get a structured summary that keeps files,
+  decisions and next steps. Bring the long chat or its log. Use the result to
+  plan your next step.
 explain: |
   A structured summary of a long AI session that keeps the file changes, decisions and next steps, so a fresh chat can pick up without losing the thread. The aim is fewer total tokens for the whole task, not the smallest summary.
 
@@ -27,5 +30,6 @@ you_get:
   - Clear next steps
   - A checklist to test the summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads data against metric benchmarks.
 new_slug: tiktok-shop-results-reader
 name: TikTok Shop results reader
-summary: Give it your shop numbers. Get what is working across video, live sales, affiliates and ads, and what to change.
+summary: Give it your shop numbers. Get what is working across video, live
+  sales, affiliates and ads, and what to change.
 job: read-ad-results
 headline: TikTok Shop results reader
-subhead: Give it your shop numbers. Get what is working across video, live sales, affiliates and ads, and what to change.
+subhead: Give it your shop numbers. Get what is working across video, live
+  sales, affiliates and ads, and what to change. Bring dashboard numbers or
+  exports. Use the result to plan your next step.
 explain: |
   Your TikTok Shop numbers read through for you: which products, videos, live shows, affiliates and ads actually make money, and what to change first.
 
@@ -26,5 +29,6 @@ you_get:
   - Live and affiliate scorecards
   - A list of changes and tests
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

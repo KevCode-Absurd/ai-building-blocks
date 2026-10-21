@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It groups and ranks by a set method.
 new_slug: search-intent-keyword-mapper
 name: Search intent keyword mapper
-summary: Give it your topic. Get keywords sorted by search intent, grouped into themes and ranked for what to write first.
+summary: Give it your topic. Get keywords sorted by search intent, grouped into
+  themes and ranked for what to write first.
 job: get-found-in-search
 headline: Search intent keyword mapper
-subhead: Give it your topic. Get keywords sorted by search intent, grouped into themes and ranked for what to write first.
+subhead: A keyword list sorted by what searchers want, grouped into topics and
+  ranked by what to write first. It works with any keyword tool, or with Search
+  Console data alone if you have none.
 explain: |
   A keyword list sorted by what searchers want, grouped into topics and ranked by what to write first. It works with any keyword tool, or with Search Console data alone if you have none.
 
@@ -26,5 +29,6 @@ you_get:
   - A ranked order of what to write first
   - Content gaps against competitors
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

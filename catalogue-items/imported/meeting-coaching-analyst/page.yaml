@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads a long transcript for patterns.
 new_slug: meeting-coaching-analyst
 name: Meeting coaching analyst
-summary: Give it a meeting transcript. Get speaking patterns, habits that hurt and coaching you can act on.
+summary: Give it a meeting transcript. Get speaking patterns, habits that hurt
+  and coaching you can act on.
 job: organise-work
 headline: Meeting coaching analyst
-subhead: Give it a meeting transcript. Get speaking patterns, habits that hurt and coaching you can act on.
+subhead: Honest feedback on how you come across in meetings, based on what you
+  actually said. Give it a folder of transcripts and you get numbers and
+  examples, not general advice.
 explain: |
   Honest feedback on how you come across in meetings, based on what you actually said. Give it a folder of transcripts and you get numbers and examples, not general advice.
 
@@ -25,5 +28,6 @@ you_get:
   - Examples of hedging and indirect phrasing
   - Coaching points tied to quotes from the call
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

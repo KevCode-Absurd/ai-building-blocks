@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set patterns but depends on the other service.
 new_slug: api-connector-builder
 name: API connector builder
-summary: Name the service you need to reach. Get working code with sign-in, error handling and retries.
+summary: Name the service you need to reach. Get working code with sign-in,
+  error handling and retries.
 job: connect-tools
 headline: API connector builder
-subhead: Name the service you need to reach. Get working code with sign-in, error handling and retries.
+subhead: Working code that talks to an outside service, with sign-in, error
+  handling and retries already in it. Name the service you want to reach and
+  describe what you need from it, and you get a connector you can run.
 explain: |
   Working code that talks to an outside service, with sign-in, error handling and retries already in it. Name the service you want to reach and describe what you need from it, and you get a connector you can run.
 
@@ -26,6 +29,7 @@ you_get:
   - Retry and backoff rules
   - Logging for troubleshooting
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the internet.

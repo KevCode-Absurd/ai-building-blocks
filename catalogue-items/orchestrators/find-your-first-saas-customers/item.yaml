@@ -1,0 +1,52 @@
+slug: find-your-first-saas-customers
+name: Find your first SaaS customers
+summary: Share your product and buyer facts. Get a market position, pricing
+  options and a first-customer launch plan.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-gtm-positioning-strategy
+  - copilot-gtm-technical-product-pricing
+  - copilot-gtm-0-to-1-launch
+steps:
+  - uses: copilot-gtm-positioning-strategy
+    note: 1. Read skills/copilot-gtm-positioning-strategy/SKILL.md. Share your
+      product and rivals. Get a distinct market position, buyer reasons and
+      messages to test. Save the result with source references. Carry the user's
+      goal and all earlier findings into this step. If required evidence or tool
+      access is missing, mark this step blocked; do not fabricate a result.
+  - uses: copilot-gtm-technical-product-pricing
+    note: 2. Read skills/copilot-gtm-technical-product-pricing/SKILL.md. Share your
+      product costs and buyers. Get pricing units, free tier limits and
+      trade-offs to test. Save the result with source references. Carry the
+      user's goal and all earlier findings into this step. If required evidence
+      or tool access is missing, mark this step blocked; do not fabricate a
+      result.
+  - uses: copilot-gtm-0-to-1-launch
+    note: 3. Read skills/copilot-gtm-0-to-1-launch/SKILL.md. Describe your new
+      product. Get early buyer targets, a launch sequence and tests for reaching
+      first customers. Save the result with source references. Carry the user's
+      goal and all earlier findings into this step. If required evidence or tool
+      access is missing, mark this step blocked; do not fabricate a result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

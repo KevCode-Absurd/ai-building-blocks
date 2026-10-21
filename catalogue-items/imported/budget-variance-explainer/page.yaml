@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It breaks changes into causes and writes them up.
 new_slug: budget-variance-explainer
 name: Budget variance explainer
-summary: Give it actual and budget numbers. Get what moved, why, and a short note for leadership.
+summary: Give it actual and budget numbers. Get what moved, why, and a short
+  note for leadership.
 job: track-numbers
 headline: Budget variance explainer
-subhead: Give it actual and budget numbers. Get what moved, why, and a short note for leadership.
+subhead: Know why the numbers moved, not just that they did. You get a short
+  written explanation of each gap between actual and budget, ready for a
+  leadership update.
 explain: |
   Know why the numbers moved, not just that they did. You get a short written explanation of each gap between actual and budget, ready for a leadership update.
 
@@ -27,6 +30,7 @@ you_get:
   - A waterfall chart outline
   - A list of gaps worth action
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your numbers file.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It runs a fixed process but needs judgment on severity.
 new_slug: outage-incident-leader
 name: Outage incident leader
-summary: Give it an outage. Get severity, a timeline, roles and a blame-free review once it is fixed.
+summary: Give it an outage. Get severity, a timeline, roles and a blame-free
+  review once it is fixed.
 job: ship-and-host
 headline: Outage incident leader
-subhead: Give it an outage. Get severity, a timeline, roles and a blame-free review once it is fixed.
+subhead: "A calm plan when your service is down: how bad it is, who does what, a
+  clear timeline and a blame-free review after the fix."
 explain: |
   A calm plan when your service is down: how bad it is, who does what, a clear timeline and a blame-free review after the fix.
 
@@ -27,5 +29,6 @@ you_get:
   - A blame-free incident review
   - Follow-up actions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

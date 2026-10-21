@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must give practical options, not generic ones.
 new_slug: learning-options-designer
 name: Learning options designer
-summary: Give it a learning goal. Get specific ways to engage learners, present content and let them show what they know.
+summary: Give it a learning goal. Get specific ways to engage learners, present
+  content and let them show what they know.
 job: teach-and-train
 headline: Learning options designer
-subhead: Give it a learning goal. Get specific ways to engage learners, present content and let them show what they know.
+subhead: A set of specific choices for how learners take part, take in content
+  and show what they know, all for one learning goal. Give the goal and how you
+  plan to teach it now.
 explain: |
   A set of specific choices for how learners take part, take in content and show what they know, all for one learning goal. Give the goal and how you plan to teach it now. The skill applies Universal Design for Learning from CAST and offers options in three groups: engagement, representation, and action and expression.
 
@@ -26,5 +29,6 @@ you_get:
   - Ways students can show learning
   - Notes on keeping the goal intact
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

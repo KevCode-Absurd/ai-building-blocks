@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a set plan and fits it to your product.
 new_slug: customer-content-planner
 name: Customer content planner
-summary: Say what you sell. Get ways to get customers posting, a creator brief and ideas to reuse their posts in ads.
+summary: Say what you sell. Get ways to get customers posting, a creator brief
+  and ideas to reuse their posts in ads.
 job: grow-social
 headline: Customer content planner
-subhead: Say what you sell. Get ways to get customers posting, a creator brief and ideas to reuse their posts in ads.
+subhead: Customer posts sell better than brand posts, and this shows you how to
+  get more of them. Say what you sell and who buys it, and you get a plan for
+  getting customers to post, plus a creator brief and ways to reuse their
+  content in ads.
 explain: |
   Customer posts sell better than brand posts, and this shows you how to get more of them. Say what you sell and who buys it, and you get a plan for getting customers to post, plus a creator brief and ways to reuse their content in ads.
 
@@ -27,5 +31,6 @@ you_get:
   - Rights and permission steps
   - A plan to reuse posts in ads
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks what to keep, then writes the skill files.
 new_slug: pattern-to-skill-extractor
 name: Pattern to skill extractor
-summary: Name a fix you keep repeating. Get it packaged as a reusable skill with notes and examples.
+summary: Name a fix you keep repeating. Get it packaged as a reusable skill with
+  notes and examples.
 job: make-skills
 headline: Pattern to skill extractor
-subhead: Name a fix you keep repeating. Get it packaged as a reusable skill with notes and examples.
+subhead: A fix you keep repeating, turned into a skill you can reuse in any
+  project. Describe the pattern and get a packaged folder with instructions,
+  notes and examples.
 explain: |
   A fix you keep repeating, turned into a skill you can reuse in any project. Describe the pattern and get a packaged folder with instructions, notes and examples.
 
@@ -26,6 +29,7 @@ you_get:
   - Step-by-step instructions
   - Example of the fix in use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can save files.

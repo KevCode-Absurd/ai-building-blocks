@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a calendar, then writes posts.
 new_slug: social-post-planner
 name: Social post planner
-summary: Name your platforms. Get a content calendar and ready posts for LinkedIn, X, Instagram and TikTok.
+summary: Name your platforms. Get a content calendar and ready posts for
+  LinkedIn, X, Instagram and TikTok.
 job: grow-social
 headline: Social post planner
-subhead: Name your platforms. Get a content calendar and ready posts for LinkedIn, X, Instagram and TikTok.
+subhead: A content calendar and ready-to-post drafts for LinkedIn, X, Instagram,
+  TikTok and Facebook. You name your platforms, and the skill plans what to post
+  and writes it.
 explain: |
   A content calendar and ready-to-post drafts for LinkedIn, X, Instagram, TikTok and Facebook. You name your platforms, and the skill plans what to post and writes it.
 
@@ -26,5 +29,6 @@ you_get:
   - A topic mix
   - A reply and comment triage routine
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

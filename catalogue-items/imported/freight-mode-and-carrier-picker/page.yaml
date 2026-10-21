@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares cost against transit time.
 new_slug: freight-mode-and-carrier-picker
 name: Freight mode and carrier picker
-summary: Give it your shipments. Get the cheapest mix of modes and carriers, and where to combine loads.
+summary: Give it your shipments. Get the cheapest mix of modes and carriers, and
+  where to combine loads.
 job: plan-supply-chain
 headline: Freight mode and carrier picker
-subhead: Give it your shipments. Get the cheapest mix of modes and carriers, and where to combine loads.
+subhead: Give it your shipments. Get the cheapest mix of modes and carriers, and
+  where to combine loads. Bring what you ship, with weight and size. Use the
+  result to plan your next step.
 explain: |
   The cheapest mix of shipping modes and carriers for your freight, plus where combining loads would save money without hurting delivery times.
 
@@ -28,5 +31,6 @@ you_get:
   - Estimated savings
   - Ordered list of changes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

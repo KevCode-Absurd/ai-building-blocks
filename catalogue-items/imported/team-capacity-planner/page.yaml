@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares load to capacity.
 new_slug: team-capacity-planner
 name: Team capacity planner
-summary: Give it your team and projects. Get workload against people, who is overloaded, and whether you can take on more.
+summary: Give it your team and projects. Get workload against people, who is
+  overloaded, and whether you can take on more.
 job: organise-work
 headline: Team capacity planner
-subhead: Give it your team and projects. Get workload against people, who is overloaded, and whether you can take on more.
+subhead: A clear picture of who has too much work, who has room, and whether you
+  can say yes to the next project. You can show your plan with numbers instead
+  of a feeling that the team is stretched.
 explain: |
   A clear picture of who has too much work, who has room, and whether you can say yes to the next project. You can show your plan with numbers instead of a feeling that the team is stretched.
 
@@ -27,6 +30,7 @@ you_get:
   - Skill gaps
   - Options with trade-offs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read a workload file you upload.

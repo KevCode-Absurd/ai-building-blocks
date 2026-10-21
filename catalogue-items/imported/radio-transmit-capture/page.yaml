@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Radio timing needs care.
 new_slug: radio-transmit-capture
 name: Radio transmit and capture helper
-summary: Give it a test signal. Get it sent over the air and the received IQ data captured.
+summary: Give it a test signal. Get it sent over the air and the received IQ
+  data captured.
 job: build-software
 headline: Radio transmit and capture helper
-subhead: Give it a test signal. Get it sent over the air and the received IQ data captured.
+subhead: A test signal sent over the air from a software defined radio, and the
+  received IQ data captured and ready to study. You can run a loopback test,
+  capture a band, or send for a long time.
 explain: |
   A test signal sent over the air from a software defined radio, and the received IQ data captured and ready to study. You can run a loopback test, capture a band, or send for a long time.
 
@@ -26,6 +29,8 @@ you_get:
   - Gain and sample-rate settings
   - Fixes for dropped samples
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP radio.
+  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP
+    radio.

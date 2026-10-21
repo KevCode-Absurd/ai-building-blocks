@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It needs open ideas and fair pushback.
 new_slug: product-idea-brainstorm-partner
 name: Product idea brainstorm partner
-summary: Describe a problem. Get ideas explored, assumptions challenged and the strongest options narrowed down.
+summary: Describe a problem. Get ideas explored, assumptions challenged and the
+  strongest options narrowed down.
 job: test-an-idea
 headline: Product idea brainstorm partner
-subhead: Describe a problem. Get ideas explored, assumptions challenged and the strongest options narrowed down.
+subhead: A sparring partner for the early stage of an idea, before you write a
+  spec. It pushes back, asks the hard questions and stops you settling on the
+  first answer.
 explain: |
   A sparring partner for the early stage of an idea, before you write a spec. It pushes back, asks the hard questions and stops you settling on the first answer.
 
@@ -26,5 +29,6 @@ you_get:
   - Your weak assumptions called out
   - A short list of the strongest options
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

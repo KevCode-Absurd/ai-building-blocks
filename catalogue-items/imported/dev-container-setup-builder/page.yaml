@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set recipe for each language.
 new_slug: dev-container-setup-builder
 name: Dev container setup builder
-summary: Name your project and language. Get a ready dev container with tools and saved volumes, so setup is the same each time.
+summary: Name your project and language. Get a ready dev container with tools
+  and saved volumes, so setup is the same each time.
 job: build-software
 headline: Dev container setup builder
-subhead: Name your project and language. Get a ready dev container with tools and saved volumes, so setup is the same each time.
+subhead: Name your project and language. Get a ready dev container with tools
+  and saved volumes, so setup is the same each time. Bring your project folder.
+  Use the result to plan your next step.
 explain: |
   A .devcontainer folder that opens your project in the same clean, sandboxed workspace every time, with Claude Code and the right language tools already installed. No more "works on my machine".
 
@@ -14,7 +17,8 @@ when:
   - You want a safe sandbox for running an AI coding agent on your code.
   - New teammates lose a day installing tools before they can run the project.
   - Your project uses more than one language and the setup is fiddly.
-  - You need your shell history and settings to survive when the container is rebuilt.
+  - You need your shell history and settings to survive when the container is
+    rebuilt.
 you_give:
   - Your project folder
   - The languages or tools you use (optional)
@@ -26,6 +30,7 @@ you_get:
   - Saved volumes for history and settings
   - A short note on how to open it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

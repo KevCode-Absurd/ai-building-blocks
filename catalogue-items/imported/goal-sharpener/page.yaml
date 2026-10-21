@@ -5,7 +5,9 @@ name: Goal sharpener
 summary: Give it a fuzzy aim. Get a clear goal with a number to hit and a finish line.
 job: plan-strategy
 headline: Goal sharpener
-subhead: Give it a fuzzy aim. Get a clear goal with a number to hit and a finish line.
+subhead: A vague aim becomes a goal you can actually finish. Tell it what you
+  want and you get back one clear goal with a number to hit, proof you will
+  accept, and a limit on scope.
 explain: |
   A vague aim becomes a goal you can actually finish. Tell it what you want and you get back one clear goal with a number to hit, proof you will accept, and a limit on scope.
 
@@ -26,5 +28,6 @@ you_get:
   - A finish line
   - Notes on what was weak and fixed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

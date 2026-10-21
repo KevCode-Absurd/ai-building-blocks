@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It must pick look-fors that match the goal.
 new_slug: lesson-observation-form-builder
 name: Lesson observation form builder
-summary: Give it what you want to learn from a visit. Get look-fors and a way to record evidence.
+summary: Give it what you want to learn from a visit. Get look-fors and a way to
+  record evidence.
 job: teach-and-train
 headline: Lesson observation form builder
-subhead: Give it what you want to learn from a visit. Get look-fors and a way to record evidence.
+subhead: "A focused observation form for classroom visits, with the specific
+  things to look for and a way to record what you see as evidence. Say what you
+  want to learn from the visit and why it is happening: coaching, peer learning,
+  quality checks or research."
 explain: |
   A focused observation form for classroom visits, with the specific things to look for and a way to record what you see as evidence. Say what you want to learn from the visit and why it is happening: coaching, peer learning, quality checks or research. The skill insists on one narrow lens, not everything.
 
@@ -26,5 +30,6 @@ you_get:
   - A way to separate facts from opinion
   - Questions for the follow-up talk
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

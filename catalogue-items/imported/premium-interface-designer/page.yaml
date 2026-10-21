@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a look then builds it with careful detail.
 new_slug: premium-interface-designer
 name: Premium interface designer
-summary: Describe the page or app. Get a polished design with premium type, depth and smooth motion, not a template look.
+summary: Describe the page or app. Get a polished design with premium type,
+  depth and smooth motion, not a template look.
 job: design-work
 headline: Premium interface designer
-subhead: Describe the page or app. Get a polished design with premium type, depth and smooth motion, not a template look.
+subhead: "A page or app that looks expensive: premium type, soft depth, careful
+  spacing and smooth motion, rather than a template look. Describe what you need
+  and get working code."
 explain: |
   A page or app that looks expensive: premium type, soft depth, careful spacing and smooth motion, rather than a template look. Describe what you need and get working code.
 
@@ -26,6 +29,7 @@ you_get:
   - Motion and hover details
   - Ranked design fixes for a review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

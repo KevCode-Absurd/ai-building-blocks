@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It adds tax lines into groups.
 new_slug: sales-tax-summary-builder
 name: Sales tax summary builder
-summary: Pick a filing period. Get tax collected by state, province and rate, ready for filing prep.
+summary: Pick a filing period. Get tax collected by state, province and rate,
+  ready for filing prep.
 job: run-your-store
 headline: Sales tax summary builder
-subhead: Pick a filing period. Get tax collected by state, province and rate, ready for filing prep.
+subhead: Tax collected, grouped the way you file it. Pick a period and get your
+  sales tax split by state, province or rate, ready for whoever prepares your
+  return.
 explain: |
   Tax collected, grouped the way you file it. Pick a period and get your sales tax split by state, province or rate, ready for whoever prepares your return. This is prep for a professional, not tax advice.
 
@@ -26,6 +29,7 @@ you_get:
   - A summary for filing prep
   - A reminder to check with a tax professional
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It lays out screens and notes how each part behaves.
 new_slug: wireframe-drafter
 name: Wireframe drafter
-summary: Describe the screens. Get text wireframes at three detail levels, with parts, behavior and screen sizes.
+summary: Describe the screens. Get text wireframes at three detail levels, with
+  parts, behavior and screen sizes.
 job: design-work
 headline: Wireframe drafter
-subhead: Describe the screens. Get text wireframes at three detail levels, with parts, behavior and screen sizes.
+subhead: Screen layouts you can read, share and build from, at three levels of
+  detail. You see where everything goes before anyone spends time on visual
+  design.
 explain: |
   Screen layouts you can read, share and build from, at three levels of detail. You see where everything goes before anyone spends time on visual design.
 
@@ -27,5 +30,6 @@ you_get:
   - High-fidelity specifications
   - Responsive behaviour notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

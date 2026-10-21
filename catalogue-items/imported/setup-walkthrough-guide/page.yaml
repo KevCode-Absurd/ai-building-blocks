@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It gives one plain step at a time.
 new_slug: setup-walkthrough-guide
 name: Setup walkthrough guide
-summary: Name what you want to set up. Get one small step at a time, with the steps left shown.
+summary: Name what you want to set up. Get one small step at a time, with the
+  steps left shown.
 job: organise-work
 headline: Setup walkthrough guide
-subhead: Name what you want to set up. Get one small step at a time, with the steps left shown.
+subhead: A guided setup where you see only one small step at a time, with the
+  steps left shown below. Setups feel long because the whole list lands at once.
 explain: |
   A guided setup where you see only one small step at a time, with the steps left shown below. Setups feel long because the whole list lands at once. Here each reply holds a single action, such as one click, field or command, then a divider and a numbered list of what remains.
 
@@ -25,5 +27,6 @@ you_get:
   - An updated list after each step
   - A completion message
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

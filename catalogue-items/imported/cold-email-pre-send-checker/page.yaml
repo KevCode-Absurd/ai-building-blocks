@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It checks a short draft against a fixed list.
 new_slug: cold-email-pre-send-checker
 name: Cold email pre-send checker
-summary: Paste a cold email and what you know of the prospect. Get claims tested, legal basics checked, and a tighter version.
+summary: Paste a cold email and what you know of the prospect. Get claims
+  tested, legal basics checked, and a tighter version.
 job: write-emails
 headline: Cold email pre-send checker
-subhead: Paste a cold email and what you know of the prospect. Get claims tested, legal basics checked, and a tighter version.
+subhead: A careful second opinion on a cold email before you hit send. It tests
+  every claim about the prospect against their real page, checks legal basics,
+  and returns a tighter version.
 explain: |
   A careful second opinion on a cold email before you hit send. It tests every claim about the prospect against their real page, checks legal basics, and returns a tighter version.
 
@@ -26,5 +29,6 @@ you_get:
   - Flags on unproven statements
   - A tighter rewrite
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

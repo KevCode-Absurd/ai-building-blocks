@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads a real page and checks each selector against it.
 new_slug: web-clipper-template-maker
 name: Web clipper template maker
-summary: Name the site you clip from. Get a tested Obsidian Web Clipper template that saves clean, well-labelled notes.
+summary: Name the site you clip from. Get a tested Obsidian Web Clipper template
+  that saves clean, well-labelled notes.
 job: organise-work
 headline: Web clipper template maker
-subhead: Name the site you clip from. Get a tested Obsidian Web Clipper template that saves clean, well-labelled notes.
+subhead: Name the site you clip from. Get a tested Obsidian Web Clipper template
+  that saves clean, well-labelled notes. Bring the site or content type. Use the
+  result to plan your next step.
 explain: |
   A tested template for the Obsidian Web Clipper that saves a clean, well-labelled note from one kind of site, such as recipes, videos or articles. Each clip then lands in your vault with the right fields filled in.
 
@@ -26,6 +29,7 @@ you_get:
   - Property mapping to your notes
   - Short notes on editing it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open web pages.

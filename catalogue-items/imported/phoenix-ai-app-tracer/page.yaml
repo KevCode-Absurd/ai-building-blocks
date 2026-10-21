@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads traces and finds what went wrong.
 new_slug: phoenix-ai-app-tracer
 name: Phoenix AI app tracer
-summary: Give it your AI app. Get traces of every step, plus tests that score answers and spot failures.
+summary: Give it your AI app. Get traces of every step, plus tests that score
+  answers and spot failures.
 job: build-software
 headline: Phoenix AI app tracer
-subhead: Give it your AI app. Get traces of every step, plus tests that score answers and spot failures.
+subhead: See every step your AI app takes, score its answers, and catch failures
+  before users do. Phoenix is an open-source tool you run yourself, with no
+  vendor lock-in.
 explain: |
   See every step your AI app takes, score its answers, and catch failures before users do. Phoenix is an open-source tool you run yourself, with no vendor lock-in.
 
@@ -26,6 +29,7 @@ you_get:
   - Versioned test sets
   - Experiment results comparing prompts or models
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and open a browser.

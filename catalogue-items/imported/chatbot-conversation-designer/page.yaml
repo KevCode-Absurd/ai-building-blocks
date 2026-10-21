@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It plans flows from a set method but needs good judgement.
 new_slug: chatbot-conversation-designer
 name: Chatbot conversation designer
-summary: Describe your chatbot job. Get conversation flows with questions, error recovery and graceful fallbacks.
+summary: Describe your chatbot job. Get conversation flows with questions, error
+  recovery and graceful fallbacks.
 job: build-product
 headline: Chatbot conversation designer
-subhead: Describe your chatbot job. Get conversation flows with questions, error recovery and graceful fallbacks.
+subhead: A full conversation plan for your chatbot, so users reach their goal
+  instead of hitting dead ends. You describe the bot's job, and you get its
+  personality, the things it handles, the questions it asks and what it says
+  when it gets confused.
 explain: |
   A full conversation plan for your chatbot, so users reach their goal instead of hitting dead ends. You describe the bot's job, and you get its personality, the things it handles, the questions it asks and what it says when it gets confused.
 
@@ -28,5 +32,6 @@ you_get:
   - A memory plan for each conversation
   - A test script
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

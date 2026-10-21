@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It merges sources and rewrites to fit the job.
 new_slug: cv-writer
 name: CV writer
-summary: Give it your background and a job post. Get a paste-ready CV that passes applicant filters, plus a flaw report.
+summary: Give it your background and a job post. Get a paste-ready CV that
+  passes applicant filters, plus a flaw report.
 job: work-with-files
 headline: CV writer
-subhead: Give it your background and a job post. Get a paste-ready CV that passes applicant filters, plus a flaw report.
+subhead: A CV you can paste straight into FlowCV, Canva, Google Docs or Word,
+  aimed at one specific job post. It comes with a report of anything that could
+  trip up applicant tracking filters.
 explain: |
   A CV you can paste straight into FlowCV, Canva, Google Docs or Word, aimed at one specific job post. It comes with a report of anything that could trip up applicant tracking filters.
 
@@ -26,5 +29,6 @@ you_get:
   - Missing information checklist
   - Notes on any reworded lines
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

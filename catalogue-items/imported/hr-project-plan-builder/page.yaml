@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Project plans follow a standard shape.
 new_slug: hr-project-plan-builder
 name: HR project plan builder
-summary: Give it an HR project idea. Get a charter, timeline, risk list and status report template.
+summary: Give it an HR project idea. Get a charter, timeline, risk list and
+  status report template.
 job: hire-people
 headline: HR project plan builder
-subhead: Give it an HR project idea. Get a charter, timeline, risk list and status report template.
+subhead: A project plan for an HR change that people can follow from kickoff to
+  review. Give it an idea such as a new HR system or a policy rollout and get a
+  charter, a timeline, a risk list and a status report template.
 explain: |
   A project plan for an HR change that people can follow from kickoff to review. Give it an idea such as a new HR system or a policy rollout and get a charter, a timeline, a risk list and a status report template.
 
@@ -26,5 +29,6 @@ you_get:
   - A responsibility chart and risk list
   - A status report template
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

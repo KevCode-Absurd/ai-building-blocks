@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Bad counts hurt sales, so it confirms each change.
 new_slug: stock-count-updater
 name: Stock count updater
-summary: Give it counts by product and location. Get live stock levels corrected. Wrong numbers can cause overselling.
+summary: Give it counts by product and location. Get live stock levels
+  corrected. Wrong numbers can cause overselling.
 job: run-your-store
 headline: Stock count updater
-subhead: Give it counts by product and location. Get live stock levels corrected. Wrong numbers can cause overselling.
+subhead: Counts from your shelf, entered straight into your Shopify store. You
+  list each product code, the location and the change, and the skill corrects
+  live stock levels to match, logging a reason such as cycle count or damaged.
 explain: |
   Counts from your shelf, entered straight into your Shopify store. You list each product code, the location and the change, and the skill corrects live stock levels to match, logging a reason such as cycle count or damaged.
 
@@ -26,6 +29,8 @@ you_get:
   - A reason logged for each adjustment
   - A list of codes that were not found
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

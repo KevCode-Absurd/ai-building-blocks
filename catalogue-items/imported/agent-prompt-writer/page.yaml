@@ -2,17 +2,21 @@ thinking: low
 thinking_why: It asks a round of questions, then writes one prompt.
 new_slug: agent-prompt-writer
 name: Agent prompt writer
-summary: Paste a rough request. Answer a few questions. Get one clear prompt to give an AI agent.
+summary: Paste a rough request. Answer a few questions. Get one clear prompt to
+  give an AI agent.
 job: set-up-ai
 headline: Agent prompt writer
-subhead: Paste a rough request. Answer a few questions. Get one clear prompt to give an AI agent.
+subhead: One clear prompt, ready to hand to an AI agent, written from your rough
+  request. The skill writes the instruction. It never does the work the prompt
+  describes.
 explain: |
   One clear prompt, ready to hand to an AI agent, written from your rough request. The skill writes the instruction. It never does the work the prompt describes.
 
   It starts with one round of questions, usually two to five. First it reads the files and notes you point to, so it only asks what you alone can decide: what better means, what is out of scope, what the agent may change, and what done looks like. Each question comes with a suggested answer you can accept. Then it returns only the prompt, with exact names and paths filled in. If you say no questions, it skips straight to writing.
 when:
   - You have a rough idea and need a prompt an agent will not misread.
-  - You want an agent to improve a file, but you want the instruction, not the edit.
+  - You want an agent to improve a file, but you want the instruction, not the
+    edit.
   - You keep getting off-target results and need to pin down what you want.
   - You want to hand a job to another AI and need a clean brief.
 you_give:
@@ -26,5 +30,6 @@ you_get:
   - Exact names and paths worked in
   - No extra work done for you
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

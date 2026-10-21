@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It combines many sources into one report.
 new_slug: india-earnings-preview
 name: Earnings preview report builder for India
-summary: Name an Indian stock. Get a short HTML earnings preview with consensus, past surprises and peers. It collects data from websites.
+summary: Name an Indian stock. Get a short HTML earnings preview with consensus,
+  past surprises and peers. It collects data from websites.
 job: money-and-investing
 headline: Earnings preview report builder for India
-subhead: Name an Indian stock. Get a short HTML earnings preview with consensus, past surprises and peers. It collects data from websites.
+subhead: Name an Indian stock. Get a short HTML earnings preview with consensus,
+  past surprises and peers. It collects data from websites. Bring the company
+  name or ticker. Use the result to plan your next step.
 explain: |
   A short HTML earnings preview for an Indian listed company, built from free web data, with consensus, past surprises, peers and a view on what could beat or miss. It prints to about four or five pages.
 
@@ -27,6 +30,7 @@ you_get:
   - Peer comparison
   - Beat or miss scenarios
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the web.

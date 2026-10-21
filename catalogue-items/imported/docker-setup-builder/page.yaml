@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows known container patterns.
 new_slug: docker-setup-builder
 name: Docker setup builder
-summary: Point it at your app. Get a lean, safe Dockerfile and compose file that run your project.
+summary: Point it at your app. Get a lean, safe Dockerfile and compose file that
+  run your project.
 job: ship-and-host
 headline: Docker setup builder
-subhead: Point it at your app. Get a lean, safe Dockerfile and compose file that run your project.
+subhead: Point it at your app. Get a lean, safe Dockerfile and compose file that
+  run your project. Bring your project or existing Dockerfile. Use the result to
+  plan your next step.
 explain: |
   A lean, safer Dockerfile and compose file for your project, which usually means smaller images, faster builds and fewer security holes.
 
@@ -26,6 +29,7 @@ you_get:
   - A security audit with fixes
   - Notes on what changed and why
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

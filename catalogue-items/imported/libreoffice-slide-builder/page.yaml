@@ -5,13 +5,15 @@ name: LibreOffice slide builder
 summary: Describe the slides. Get an ODP deck, or a conversion to PowerPoint or PDF.
 job: work-with-files
 headline: LibreOffice slide builder
-subhead: Describe the slides. Get an ODP deck, or a conversion to PowerPoint or PDF.
+subhead: Describe a presentation and get a finished deck file, then turn it into
+  PowerPoint or PDF for whoever needs it. No slide editor needed on your side.
 explain: |
   Describe a presentation and get a finished deck file, then turn it into PowerPoint or PDF for whoever needs it. No slide editor needed on your side.
 
   The skill uses LibreOffice Impress from the command line. It creates slides in ODP format, fills a deck from a template, and converts between ODP, PPTX and PDF. It can handle a whole folder of decks in one run, and Python scripts can adjust slide content. You must have LibreOffice installed. If a conversion refuses to start, it looks for a leftover background process first, since that is the usual cause.
 when:
-  - You want a deck built from an outline without clicking through a slide editor.
+  - You want a deck built from an outline without clicking through a slide
+    editor.
   - A colleague needs your slides as PowerPoint and you work in LibreOffice.
   - You must send a PDF of twenty decks by tonight.
   - You repeat the same deck with new numbers each month.
@@ -26,6 +28,7 @@ you_get:
   - Decks filled from a template
   - A batch conversion command
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

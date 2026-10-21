@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches content types to channels.
 new_slug: content-channel-planner
 name: Content channel planner
-summary: Give it your content and audience. Get where to share it, when, and which channels to skip.
+summary: Give it your content and audience. Get where to share it, when, and
+  which channels to skip.
 job: grow-social
 headline: Content channel planner
-subhead: Give it your content and audience. Get where to share it, when, and which channels to skip.
+subhead: A plan for where your content goes after it is published, matched to
+  your audience, with channels to drop. Most teams put nine tenths of their
+  effort into making content and almost none into getting it seen.
 explain: |
   A plan for where your content goes after it is published, matched to your audience, with channels to drop. Most teams put nine tenths of their effort into making content and almost none into getting it seen.
 
@@ -26,5 +29,6 @@ you_get:
   - Channels to drop
   - Notes on owned, earned and paid mix
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

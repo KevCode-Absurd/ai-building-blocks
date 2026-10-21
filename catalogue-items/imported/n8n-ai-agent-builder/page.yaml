@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set patterns but must fit your workflow.
 new_slug: n8n-ai-agent-builder
 name: n8n AI agent builder
-summary: Say what your n8n agent should do. Get the agent, tools, memory and review steps set up the right way.
+summary: Say what your n8n agent should do. Get the agent, tools, memory and
+  review steps set up the right way.
 job: connect-tools
 headline: n8n AI agent builder
-subhead: Say what your n8n agent should do. Get the agent, tools, memory and review steps set up the right way.
+subhead: An n8n AI agent that does one job well, instead of an over-built mess
+  of nodes. The skill starts by asking if you need an agent at all, since a
+  simple text chain or classifier is often easier to run and debug.
 explain: |
   An n8n AI agent that does one job well, instead of an over-built mess of nodes. The skill starts by asking if you need an agent at all, since a simple text chain or classifier is often easier to run and debug.
 
@@ -26,6 +29,7 @@ you_get:
   - Structured output settings
   - Approval steps for risky actions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can use the n8n MCP tools.

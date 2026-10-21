@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs each product end of life option.
 new_slug: reuse-and-returns-planner
 name: Reuse and returns planner
-summary: Tell it your products. Get a plan to reuse, refurbish or recycle them and take back returns.
+summary: Tell it your products. Get a plan to reuse, refurbish or recycle them
+  and take back returns.
 job: plan-supply-chain
 headline: Reuse and returns planner
-subhead: Tell it your products. Get a plan to reuse, refurbish or recycle them and take back returns.
+subhead: Tell it your products. Get a plan to reuse, refurbish or recycle them
+  and take back returns. Bring your products and their materials. Use the result
+  to plan your next step.
 explain: |
   A plan to keep your products and materials in use longer, through reuse, repair, refurbishing or recycling, plus a way to take products back from customers. It shows where your waste goes now and where value is being thrown away.
 
@@ -27,5 +30,6 @@ you_get:
   - A take-back and returns plan
   - Goals and measures to track
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

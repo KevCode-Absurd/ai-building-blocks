@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches symptoms to known failure patterns.
 new_slug: long-chat-failure-diagnoser
 name: Long chat failure diagnoser
-summary: Describe how your AI gets worse in long chats. Get the likely cause and a fix to try.
+summary: Describe how your AI gets worse in long chats. Get the likely cause and
+  a fix to try.
 job: set-up-ai
 headline: Long chat failure diagnoser
-subhead: Describe how your AI gets worse in long chats. Get the likely cause and a fix to try.
+subhead: A named cause for why your AI gets worse as a chat grows, and a fix you
+  can try today. Long chats fail in a few known ways, and each one needs a
+  different cure.
 explain: |
   A named cause for why your AI gets worse as a chat grows, and a fix you can try today. Long chats fail in a few known ways, and each one needs a different cure.
 
@@ -26,5 +29,6 @@ you_get:
   - A way to test that it worked
   - A note on how to prevent it next time
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

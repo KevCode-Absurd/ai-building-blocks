@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a copy format but picks angles.
 new_slug: page-copywriter
 name: Page copywriter
-summary: Describe the page and your buyer. Get clear page copy with headline, sections and calls to action.
+summary: Describe the page and your buyer. Get clear page copy with headline,
+  sections and calls to action.
 job: write-landing-page
 headline: Page copywriter
-subhead: Describe the page and your buyer. Get clear page copy with headline, sections and calls to action.
+subhead: Describe the page and your buyer. Get clear page copy with headline,
+  sections and calls to action. Bring page type and its one main action. Use the
+  result to plan your next step.
 explain: |
   Page copy you can paste in: a headline, section-by-section text and a clear call to action, all aimed at the one thing you want a visitor to do.
 
@@ -26,5 +29,6 @@ you_get:
   - Call to action text
   - Short note on the choices made
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

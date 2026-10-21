@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Safe changes in tangled code need careful reasoning about side effects.
 new_slug: untested-code-change-guide
 name: Untested code change guide
-summary: Give it code with no tests. Get safe steps to add tests and change it without breaking anything.
+summary: Give it code with no tests. Get safe steps to add tests and change it
+  without breaking anything.
 job: test-and-fix-code
 headline: Untested code change guide
-subhead: Give it code with no tests. Get safe steps to add tests and change it without breaking anything.
+subhead: A safe way to change code that has no tests, one step at a time. You
+  get tests around the part you will touch before you edit it, so you know right
+  away if you broke something.
 explain: |
   A safe way to change code that has no tests, one step at a time. You get tests around the part you will touch before you edit it, so you know right away if you broke something.
 
@@ -26,5 +29,6 @@ you_get:
   - Tests that record current behaviour
   - A safe order for the real change
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

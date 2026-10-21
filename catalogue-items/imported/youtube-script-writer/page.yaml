@@ -2,10 +2,13 @@ thinking: high
 thinking_why: A strong opening and clear beats take careful writing.
 new_slug: youtube-script-writer
 name: YouTube script writer
-summary: Give it a video idea. Get scored hook options and a full spoken script with what shows on screen.
+summary: Give it a video idea. Get scored hook options and a full spoken script
+  with what shows on screen.
 job: write-and-tell-stories
 headline: YouTube script writer
-subhead: Give it a video idea. Get scored hook options and a full spoken script with what shows on screen.
+subhead: Give it a video idea. Get scored hook options and a full spoken script
+  with what shows on screen. Bring your video idea. Use the result to plan your
+  next step.
 explain: |
   A full spoken script for one video idea, plus the hook chosen from five options that were actually scored.
 
@@ -26,6 +29,7 @@ you_get:
   - A runtime estimate
   - The formula the winning hook used
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

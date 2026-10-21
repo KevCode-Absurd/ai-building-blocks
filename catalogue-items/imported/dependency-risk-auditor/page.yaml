@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scans manifests and ranks what it finds.
 new_slug: dependency-risk-auditor
 name: Dependency risk auditor
-summary: Point it at your project. Get risky packages, licence clashes and a safe order to upgrade.
+summary: Point it at your project. Get risky packages, licence clashes and a
+  safe order to upgrade.
 job: secure-code
 headline: Dependency risk auditor
-subhead: Point it at your project. Get risky packages, licence clashes and a safe order to upgrade.
+subhead: A check of every package your project uses, with risky ones named,
+  licence clashes listed and a safe order to upgrade. It runs three small
+  scripts that read your manifest and lock files.
 explain: |
   A check of every package your project uses, with risky ones named, licence clashes listed and a safe order to upgrade. It runs three small scripts that read your manifest and lock files. They work offline and give the same result every time.
 
@@ -26,6 +29,7 @@ you_get:
   - Upgrade plan in safe order
   - Re-scan to confirm fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

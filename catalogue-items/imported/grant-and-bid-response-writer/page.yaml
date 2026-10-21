@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must judge fit and write a persuasive, accurate response.
 new_slug: grant-and-bid-response-writer
 name: Grant and bid response writer
-summary: Say who you are. Get grants and bids worth chasing, a go or no-go call, and a draft response. Scrapes sites.
+summary: Say who you are. Get grants and bids worth chasing, a go or no-go call,
+  and a draft response. Scrapes sites.
 job: sell-and-negotiate
 headline: Grant and bid response writer
-subhead: Say who you are. Get grants and bids worth chasing, a go or no-go call, and a draft response. Scrapes sites.
+subhead: Fewer bids chased, more of them won. Tell it who your organisation is
+  and it finds grants and government or formal bids worth your time, makes a go
+  or no-go call on each, and drafts a response from what you have really done.
 explain: |
   Fewer bids chased, more of them won. Tell it who your organisation is and it finds grants and government or formal bids worth your time, makes a go or no-go call on each, and drafts a response from what you have really done.
 
@@ -26,7 +29,9 @@ you_get:
   - A saved organisation profile
   - A draft response for each bid
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It calculates ratios and follows fixed rules.
 new_slug: colour-contrast-checker
 name: Colour contrast checker
-summary: Give it your colour tokens. Get light and dark theme pairs checked for readability, with the closest passing colours.
+summary: Give it your colour tokens. Get light and dark theme pairs checked for
+  readability, with the closest passing colours.
 job: design-work
 headline: Colour contrast checker
-subhead: Give it your colour tokens. Get light and dark theme pairs checked for readability, with the closest passing colours.
+subhead: Your colour tokens get checked for readability in both light and dark
+  themes, and each failure comes with the closest colour that passes. Fix a
+  token once and it is fixed everywhere it is used.
 explain: |
   Your colour tokens get checked for readability in both light and dark themes, and each failure comes with the closest colour that passes. Fix a token once and it is fixed everywhere it is used.
 
@@ -25,6 +28,7 @@ you_get:
   - Closest passing colours
   - One fix value per token
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

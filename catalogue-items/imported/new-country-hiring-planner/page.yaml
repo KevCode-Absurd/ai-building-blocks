@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs cost, risk and local law across options.
 new_slug: new-country-hiring-planner
 name: New country hiring planner
-summary: Name the country. Get an own-entity or employer-of-record choice, a local rules list and a hiring plan. Not legal advice.
+summary: Name the country. Get an own-entity or employer-of-record choice, a
+  local rules list and a hiring plan. Not legal advice.
 job: hire-people
 headline: New country hiring planner
-subhead: Name the country. Get an own-entity or employer-of-record choice, a local rules list and a hiring plan. Not legal advice.
+subhead: A plan for hiring your first people in a new country. The big early
+  choice is whether to set up your own local company or use an employer of
+  record, which hires on your behalf.
 explain: |
   A plan for hiring your first people in a new country. The big early choice is whether to set up your own local company or use an employer of record, which hires on your behalf. The skill lays out the cost, time and risk of each.
 
@@ -26,5 +29,6 @@ you_get:
   - A hiring and pay plan
   - A dated sequence for the first hires
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

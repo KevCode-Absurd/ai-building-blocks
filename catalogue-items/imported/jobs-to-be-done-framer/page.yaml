@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It has to separate what customers say from the job they are really hiring for.
 new_slug: jobs-to-be-done-framer
 name: Jobs-to-be-done framer
-summary: Give it a product or customer problem. Get job statements, struggling moments and hire and fire reasons that sharpen your choices.
+summary: Give it a product or customer problem. Get job statements, struggling
+  moments and hire and fire reasons that sharpen your choices.
 job: understand-customers
 headline: Jobs-to-be-done framer
-subhead: Give it a product or customer problem. Get job statements, struggling moments and hire and fire reasons that sharpen your choices.
+subhead: A way to stop guessing what customers want by asking what job they
+  hired your product to do. Give it a product or customer problem.
 explain: |
   A way to stop guessing what customers want by asking what job they hired your product to do. Give it a product or customer problem. The skill separates three things teams often mix up: a list of feature requests, a decorative persona, and a real job.
 
@@ -27,5 +29,6 @@ you_get:
   - A test of the framing against your decision
   - Notes on how to use the jobs in priorities and positioning
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

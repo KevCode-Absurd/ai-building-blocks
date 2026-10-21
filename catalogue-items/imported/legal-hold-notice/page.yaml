@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set notice format and fills in your facts.
 new_slug: legal-hold-notice
 name: Records preservation notice drafter
-summary: Tell it about a dispute. Get a notice telling staff which records to keep. A first draft, not legal advice.
+summary: Tell it about a dispute. Get a notice telling staff which records to
+  keep. A first draft, not legal advice.
 job: check-contracts
 headline: Records preservation notice drafter
-subhead: Tell it about a dispute. Get a notice telling staff which records to keep. A first draft, not legal advice.
+subhead: A notice telling staff which records they must keep when a dispute is
+  likely, written as a first draft for a lawyer to review. Tell it about the
+  matter.
 explain: |
   A notice telling staff which records they must keep when a dispute is likely, written as a first draft for a lawyer to review. Tell it about the matter. It captures the scope, the people who hold records, the date range and the systems involved, then drafts the notice in your house style.
 
@@ -26,7 +29,11 @@ you_get:
   - A release notice
   - A log entry for the matter
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your saved legal setup notes and make Word files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can read your saved legal setup notes and make
+    Word files.
+  - Where the skill points to /litigation-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

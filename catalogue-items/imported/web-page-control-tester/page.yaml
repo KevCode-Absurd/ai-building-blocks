@@ -2,10 +2,13 @@ thinking: low
 thinking_why: A tool does the testing and the AI reports one result.
 new_slug: web-page-control-tester
 name: Web page control tester
-summary: Point it at a page you just built. Get a report of buttons and controls that do not work.
+summary: Point it at a page you just built. Get a report of buttons and controls
+  that do not work.
 job: test-and-fix-code
 headline: Web page control tester
-subhead: Point it at a page you just built. Get a report of buttons and controls that do not work.
+subhead: A short report on which buttons, links and inputs on a page you just
+  built do not work. It catches the broken things you would only find by
+  clicking everything yourself.
 explain: |
   A short report on which buttons, links and inputs on a page you just built do not work. It catches the broken things you would only find by clicking everything yourself.
 
@@ -25,6 +28,7 @@ you_get:
   - What each control should have done
   - A clear rerun after your fix
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

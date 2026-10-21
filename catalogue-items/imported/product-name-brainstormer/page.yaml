@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It generates options from your brand values.
 new_slug: product-name-brainstormer
 name: Product name brainstormer
-summary: Describe your product and buyers. Get five memorable name ideas, each with the reason it fits.
+summary: Describe your product and buyers. Get five memorable name ideas, each
+  with the reason it fits.
 job: brand-file
 headline: Product name brainstormer
-subhead: Describe your product and buyers. Get five memorable name ideas, each with the reason it fits.
+subhead: Five product names that fit your brand and buyers, each with the reason
+  it works. You compare real options side by side instead of staring at a blank
+  page.
 explain: |
   Five product names that fit your brand and buyers, each with the reason it works. You compare real options side by side instead of staring at a blank page.
 
@@ -26,5 +29,6 @@ you_get:
   - How each fits your brand
   - Notes on memorability and checks to run
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

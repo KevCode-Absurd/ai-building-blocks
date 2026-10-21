@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans each stage of a partnership.
 new_slug: creator-partnership-planner
 name: Creator partnership planner
-summary: Say what you sell. Get a plan to find creators, set deals, brief them and track results.
+summary: Say what you sell. Get a plan to find creators, set deals, brief them
+  and track results.
 job: grow-social
 headline: Creator partnership planner
-subhead: Say what you sell. Get a plan to find creators, set deals, brief them and track results.
+subhead: A plan to find creators, agree deals, brief them and measure what the
+  partnership earns. You get a repeatable way to run influencer, ambassador and
+  sponsorship work.
 explain: |
   A plan to find creators, agree deals, brief them and measure what the partnership earns. You get a repeatable way to run influencer, ambassador and sponsorship work.
 
@@ -27,5 +30,6 @@ you_get:
   - Creative brief
   - Measurement plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

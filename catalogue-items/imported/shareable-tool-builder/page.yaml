@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It mixes sharing ideas with a build plan.
 new_slug: shareable-tool-builder
 name: Shareable tool builder
-summary: Say what to build. Get a quiz, name generator or calculator designed so people share it.
+summary: Say what to build. Get a quiz, name generator or calculator designed so
+  people share it.
 job: build-websites
 headline: Shareable tool builder
-subhead: Say what to build. Get a quiz, name generator or calculator designed so people share it.
+subhead: Say what to build. Get a quiz, name generator or calculator designed so
+  people share it. Bring the tool idea and audience. Use the result to plan your
+  next step.
 explain: |
   A quiz, name generator, avatar maker or calculator designed so people want to share the result. It follows one pattern: minimal input, a clever step in the middle, and a result worth showing off.
 
@@ -26,5 +29,6 @@ you_get:
   - A quiz structure with scoring
   - Screenshot and share button advice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

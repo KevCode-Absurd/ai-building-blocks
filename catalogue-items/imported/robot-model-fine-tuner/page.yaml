@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Robot model training has many fragile settings.
 new_slug: robot-model-fine-tuner
 name: Robot model fine-tuner
-summary: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a server that runs it.
+summary: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a
+  server that runs it.
 job: build-software
 headline: Robot model fine-tuner
-subhead: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a server that runs it.
+subhead: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a
+  server that runs it. Bring your robot dataset. Use the result to plan your
+  next step.
 explain: |
   A robot policy model trained on your own task data, plus a server that other code can call to get actions back. This covers the pi0 family from Physical Intelligence, using the open OpenPI project.
 
@@ -26,6 +29,8 @@ you_get:
   - A running policy inference server
   - Fixes for stats and memory errors
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run Python code on a computer with a strong GPU.
+  - It works best when your AI can run Python code on a computer with a strong
+    GPU.

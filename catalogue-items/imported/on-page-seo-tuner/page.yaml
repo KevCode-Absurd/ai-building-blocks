@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It runs a set checklist and rewrites what falls short.
 new_slug: on-page-seo-tuner
 name: On-page SEO tuner
-summary: Give it a page. Get fixes for titles, descriptions, headings, content, internal links, images, URLs and schema.
+summary: Give it a page. Get fixes for titles, descriptions, headings, content,
+  internal links, images, URLs and schema.
 job: get-found-in-search
 headline: On-page SEO tuner
-subhead: Give it a page. Get fixes for titles, descriptions, headings, content, internal links, images, URLs and schema.
+subhead: Concrete fixes for a single web page so it ranks better and gets more
+  clicks. You give it a page and it works through eight areas, one by one.
 explain: |
   Concrete fixes for a single web page so it ranks better and gets more clicks. You give it a page and it works through eight areas, one by one.
 
@@ -26,5 +28,6 @@ you_get:
   - Internal link suggestions
   - Image, URL and structured data fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

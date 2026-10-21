@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Access rules fail in subtle ways that need careful reading.
 new_slug: api-security-checker
 name: API security checker
-summary: Point it at your API routes. Get a check of sign-in, access rules and input, with fixes for each gap.
+summary: Point it at your API routes. Get a check of sign-in, access rules and
+  input, with fixes for each gap.
 job: secure-code
 headline: API security checker
-subhead: Point it at your API routes. Get a check of sign-in, access rules and input, with fixes for each gap.
+subhead: A check of your API routes from the moment a request arrives to the
+  data it returns, with a fix for every gap it finds.
 explain: |
   A check of your API routes from the moment a request arrives to the data it returns, with a fix for every gap it finds. It focuses on who the caller is, what they may touch and what they are allowed to send.
 
@@ -26,6 +28,7 @@ you_get:
   - Notes on rate limits and error leaks
   - A list of what to test next
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

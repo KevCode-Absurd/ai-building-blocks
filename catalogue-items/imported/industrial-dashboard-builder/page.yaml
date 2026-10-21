@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It applies strict design rules and safety choices.
 new_slug: industrial-dashboard-builder
 name: Industrial dashboard builder
-summary: Describe your plant data. Get a control-room dashboard with alarms, trends and safe controls.
+summary: Describe your plant data. Get a control-room dashboard with alarms,
+  trends and safe controls.
 job: build-software
 headline: Industrial dashboard builder
-subhead: Describe your plant data. Get a control-room dashboard with alarms, trends and safe controls.
+subhead: Describe your plant data. Get a control-room dashboard with alarms,
+  trends and safe controls. Bring the script or data source (OPC UA, Modbus,
+  MQTT, PI). Use the result to plan your next step.
 explain: |
   A plant-floor dashboard in MATLAB App Designer that an operator can read at a glance, with alarms that stand out, live trends and setpoint changes that need confirmation. It turns a data script into a proper screen.
 
@@ -28,6 +31,7 @@ you_get:
   - Confirmed setpoint writes
   - Grey-field screen styling
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

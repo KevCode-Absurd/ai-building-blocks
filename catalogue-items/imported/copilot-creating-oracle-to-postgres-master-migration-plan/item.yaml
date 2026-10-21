@@ -1,0 +1,32 @@
+slug: copilot-creating-oracle-to-postgres-master-migration-plan
+name: Oracle to Postgres program planner
+summary: Share your .NET solution. Get a project inventory, migration scope and a master plan to track the work.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/creating-oracle-to-postgres-master-migration-plan
+  url: https://github.com/github/awesome-copilot/tree/main/skills/creating-oracle-to-postgres-master-migration-plan
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: creating-oracle-to-postgres-master-migration-plan
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: creating-oracle-to-postgres-master-migration-plan skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/creating-oracle-to-postgres-master-migration-plan
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

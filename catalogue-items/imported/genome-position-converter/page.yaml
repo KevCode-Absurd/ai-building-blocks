@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: Off-by-one and naming errors need careful rule checks.
 new_slug: genome-position-converter
 name: Genome position converter
-summary: Give it gene positions or variants. Get them converted between conventions, with assembly and naming mismatches caught.
+summary: Give it gene positions or variants. Get them converted between
+  conventions, with assembly and naming mismatches caught.
 job: research-topics
 headline: Genome position converter
-subhead: Give it gene positions or variants. Get them converted between conventions, with assembly and naming mismatches caught.
+subhead: Stop genomics coordinates from silently going wrong. Give it gene
+  positions or variants, and it converts them between conventions, such as
+  1-based and 0-based, and flags when assemblies or chromosome names do not
+  match.
 explain: |
   Stop genomics coordinates from silently going wrong. Give it gene positions or variants, and it converts them between conventions, such as 1-based and 0-based, and flags when assemblies or chromosome names do not match.
 
@@ -26,6 +30,7 @@ you_get:
   - Normalised variant records
   - A note of what was checked
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It checks every kind of bug against the real code.
 new_slug: hidden-bug-hunter
 name: Hidden bug hunter
-summary: Point it at your code. Get a hard line-by-line hunt for logic errors and gaps, sorted by how bad they are.
+summary: Point it at your code. Get a hard line-by-line hunt for logic errors
+  and gaps, sorted by how bad they are.
 job: test-and-fix-code
 headline: Hidden bug hunter
-subhead: Point it at your code. Get a hard line-by-line hunt for logic errors and gaps, sorted by how bad they are.
+subhead: A hard, hostile review of your code that tries to break it. AI tools
+  write code that looks finished but may not be right. This skill assumes the
+  code is guilty until it proves otherwise, and works through every category of
+  fault rather than a quick skim.
 explain: |
   A hard, hostile review of your code that tries to break it. AI tools write code that looks finished but may not be right. This skill assumes the code is guilty until it proves otherwise, and works through every category of fault rather than a quick skim.
 
@@ -26,6 +30,7 @@ you_get:
   - Findings ranked by severity
   - Suggested fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

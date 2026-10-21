@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It matches known methods to the material.
 new_slug: study-strategy-picker
 name: Study strategy picker
-summary: Give it the material and the goal. Get study methods that fit, with steps for how to use them.
+summary: Give it the material and the goal. Get study methods that fit, with
+  steps for how to use them.
 job: teach-and-train
 headline: Study strategy picker
-subhead: Give it the material and the goal. Get study methods that fit, with steps for how to use them.
+subhead: Study methods chosen to fit your material and goal, with steps for
+  using them. It also names the habits to drop, such as rereading, that feel
+  useful but do little.
 explain: |
   Study methods chosen to fit your material and goal, with steps for using them. It also names the habits to drop, such as rereading, that feel useful but do little.
 
@@ -27,5 +30,6 @@ you_get:
   - A day-by-day study plan
   - A short guide the student can follow
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies a set of authoring rules.
 new_slug: skill-writer-and-reviewer
 name: Skill writer and reviewer
-summary: Describe a skill or paste one. Get a well-built version with clear triggers and safety notes.
+summary: Describe a skill or paste one. Get a well-built version with clear
+  triggers and safety notes.
 job: make-skills
 headline: Skill writer and reviewer
-subhead: Describe a skill or paste one. Get a well-built version with clear triggers and safety notes.
+subhead: A skill file that is easy to trigger, easy to trust and light to load.
+  You describe the job or paste a skill you already have, and you get back a
+  cleaner version plus notes on what changed.
 explain: |
   A skill file that is easy to trigger, easy to trust and light to load. You describe the job or paste a skill you already have, and you get back a cleaner version plus notes on what changed.
 
@@ -25,5 +28,6 @@ you_get:
   - Examples and limits written in
   - A short list of review notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

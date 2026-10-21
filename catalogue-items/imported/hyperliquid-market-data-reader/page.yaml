@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fetches market numbers and lays them out.
 new_slug: hyperliquid-market-data-reader
 name: Hyperliquid market data reader
-summary: Give it a coin. Get prices, funding rates, open interest and the order book. Collects data from websites.
+summary: Give it a coin. Get prices, funding rates, open interest and the order
+  book. Collects data from websites.
 job: money-and-investing
 headline: Hyperliquid market data reader
-subhead: Give it a coin. Get prices, funding rates, open interest and the order book. Collects data from websites.
+subhead: Live market numbers for any coin on Hyperliquid, pulled for you to
+  read. Name a coin and get its price, daily change, funding rate, open
+  interest, trading volume and order book.
 explain: |
   Live market numbers for any coin on Hyperliquid, pulled for you to read. Name a coin and get its price, daily change, funding rate, open interest, trading volume and order book. This is read-only, so it never touches an account, orders or transfers. It is not financial advice.
 
@@ -25,6 +28,7 @@ you_get:
   - Open interest and order book depth
   - Cross-exchange funding comparison
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands.

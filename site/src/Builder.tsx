@@ -6,7 +6,7 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/base.css";
 import { SearchIcon } from "./ui";
-import { type Block, type Catalogue, KINDS, TASKS, kindOf, loadPage, portLabel, taskOf, wireSteps } from "./lib/data";
+import { type Block, type Catalogue, KINDS, TASKS, kindOf, loadPage, portLabel, taskOf, wireSteps, workflowEntries } from "./lib/data";
 import PixelFace from "./PixelFace";
 import { suggestNext } from "./lib/suggest";
 import { type Flow, type Team, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
@@ -451,7 +451,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     const slug = e.dataTransfer.getData("application/abb-block");
     if (slug) setNodes((ns) => [...ns, { id: uid(), type: "block", position: screenToFlowPosition({ x: e.clientX - 120, y: e.clientY - 36 }), data: { slug } }]);
   };
-  const loadTemplate = (t: Block) => load(flowFrom(c, t.name, t.steps.map((s) => s.uses).filter((s) => c.bySlug[s])));
+  const loadTemplate = (t: Block) => load(flowFrom(c, t.name, workflowEntries(t).filter((s) => c.bySlug[s])));
   const planGoal = (goal: string) => {
     const p = planFromGoal(c, goal);
     if (!p) return false;

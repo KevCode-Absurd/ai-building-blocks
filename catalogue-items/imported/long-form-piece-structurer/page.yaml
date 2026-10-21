@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It picks a structure by piece type, then shapes your points to fit.
 new_slug: long-form-piece-structurer
 name: Long-form piece structurer
-summary: Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
+summary: Say what you are writing, such as a case study or whitepaper. Get a
+  clear outline and structure that avoids padding.
 job: write-and-tell-stories
 headline: Long-form piece structurer
-subhead: Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
+subhead: "A clear outline for one long piece, such as a case study, whitepaper,
+  research report or ebook, where every section earns its place. It aims to stop
+  the two common failures: stretching a short idea with filler, and piling on
+  facts with no spine."
 explain: |
   A clear outline for one long piece, such as a case study, whitepaper, research report or ebook, where every section earns its place. It aims to stop the two common failures: stretching a short idea with filler, and piling on facts with no spine.
 
@@ -27,5 +31,6 @@ you_get:
   - A list of sections to cut
   - An ending that lands
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

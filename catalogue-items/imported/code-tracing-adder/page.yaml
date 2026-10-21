@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It places spans and links them to each other.
 new_slug: code-tracing-adder
 name: Code tracing adder
-summary: Give it MATLAB code. Get tracing added so you can see where time goes and where errors start.
+summary: Give it MATLAB code. Get tracing added so you can see where time goes
+  and where errors start.
 job: build-software
 headline: Code tracing adder
-subhead: Give it MATLAB code. Get tracing added so you can see where time goes and where errors start.
+subhead: Your MATLAB code gains tracing, so you can see where time goes and
+  where errors start. Each function reports what it did, how long it took and
+  whether it failed.
 explain: |
   Your MATLAB code gains tracing, so you can see where time goes and where errors start. Each function reports what it did, how long it took and whether it failed.
 
@@ -26,6 +29,7 @@ you_get:
   - Recorded exceptions
   - Timed events inside slow steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

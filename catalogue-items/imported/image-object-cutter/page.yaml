@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It follows standard model calls.
 new_slug: image-object-cutter
 name: Image object cutter
-summary: Click a point or draw a box on a picture. Get the exact outline of that object, or of every object.
+summary: Click a point or draw a box on a picture. Get the exact outline of that
+  object, or of every object.
 job: build-software
 headline: Image object cutter
-subhead: Click a point or draw a box on a picture. Get the exact outline of that object, or of every object.
+subhead: The exact outline of any object in a picture, from one click or a drawn
+  box. Or let it find every object and cut them all out at once.
 explain: |
   The exact outline of any object in a picture, from one click or a drawn box. Or let it find every object and cut them all out at once. It uses Meta's Segment Anything Model, which works on new kinds of images with no extra training.
 
@@ -25,6 +27,7 @@ you_get:
   - Confidence scores for each mask
   - Code you can adapt for your own tool
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

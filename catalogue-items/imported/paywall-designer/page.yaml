@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks moments and writes short copy.
 new_slug: paywall-designer
 name: Paywall designer
-summary: Describe your plans. Get upgrade screens, trigger moments and copy that convert free users.
+summary: Describe your plans. Get upgrade screens, trigger moments and copy that
+  convert free users.
 job: build-product
 headline: Paywall designer
-subhead: Describe your plans. Get upgrade screens, trigger moments and copy that convert free users.
+subhead: Describe your plans. Get upgrade screens, trigger moments and copy that
+  convert free users. Bring your plans and what is free or paid. Use the result
+  to plan your next step.
 explain: |
   Upgrade screens, timing triggers and copy that move free users to paid. It places the ask after people have felt real value, not before.
 
@@ -26,5 +29,6 @@ you_get:
   - Upgrade copy
   - Test ideas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

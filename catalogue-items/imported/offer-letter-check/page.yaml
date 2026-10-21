@@ -2,16 +2,20 @@ thinking: high
 thinking_why: Rules differ by place and are easy to get wrong.
 new_slug: offer-letter-check
 name: Offer letter and non-compete checker
-summary: Give it an offer letter and work location. Get risky terms and non-compete limits flagged. Not legal advice.
+summary: Give it an offer letter and work location. Get risky terms and
+  non-compete limits flagged. Not legal advice.
 job: hire-people
 headline: Offer letter and non-compete checker
-subhead: Give it an offer letter and work location. Get risky terms and non-compete limits flagged. Not legal advice.
+subhead: Give it an offer letter and work location. Get risky terms and
+  non-compete limits flagged. Not legal advice. Bring the offer letter or a
+  description of the hire. Use the result to plan your next step.
 explain: |
   A review of an offer letter before it goes out, focused on the two places trouble hides: where the person will work, and any promise not to compete. The rules differ by place, so the skill researches them for each hire instead of relying on a fixed list.
 
   It starts by confirming the work location and how the role is classed. Then it checks the non-compete and similar limits for whether they can be enforced there, looks at pay transparency and salary history rules, and covers background check steps. Anything that hits your escalation list is flagged for a lawyer. It cites what it found. It is a first pass, not legal advice.
 when:
-  - You are about to send an offer to someone in a different state and need to know if the non-compete holds.
+  - You are about to send an offer to someone in a different state and need to
+    know if the non-compete holds.
   - A candidate sent back an offer letter and asked about the restrictions.
   - You hire in several places and want one repeatable check.
   - You want risky terms flagged before legal reviews the letter.
@@ -26,7 +30,10 @@ you_get:
   - Pay and background check issues
   - A list of items to escalate to counsel
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web for current local rules.
-  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /employment-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

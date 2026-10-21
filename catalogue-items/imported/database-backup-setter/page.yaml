@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It follows set steps but must match your database.
 new_slug: database-backup-setter
 name: Database backup setter
-summary: Name your database. Get full, incremental and point-in-time backups set up and tested.
+summary: Name your database. Get full, incremental and point-in-time backups set
+  up and tested.
 job: ship-and-host
 headline: Database backup setter
-subhead: Name your database. Get full, incremental and point-in-time backups set up and tested.
+subhead: Backups that run on a schedule, get verified, and actually restore. A
+  backup nobody has tested is a guess, so this skill builds in the test.
 explain: |
   Backups that run on a schedule, get verified, and actually restore. A backup nobody has tested is a guess, so this skill builds in the test.
 
@@ -26,6 +28,7 @@ you_get:
   - Integrity check and restore test
   - Failure alert setup
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach your database.

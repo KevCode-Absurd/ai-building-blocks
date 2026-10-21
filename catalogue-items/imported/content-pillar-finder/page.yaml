@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It looks for patterns in your own work.
 new_slug: content-pillar-finder
 name: Content pillar finder
-summary: Share what you have posted and know first-hand. Get three to five subjects you can post about again and again.
+summary: Share what you have posted and know first-hand. Get three to five
+  subjects you can post about again and again.
 job: grow-social
 headline: Content pillar finder
-subhead: Share what you have posted and know first-hand. Get three to five subjects you can post about again and again.
+subhead: Three to five subjects you can post about again and again, chosen from
+  what you have already published and what you know first-hand. That ends the
+  weekly question of what to post, and it keeps your feed from sounding like
+  everyone else's.
 explain: |
   Three to five subjects you can post about again and again, chosen from what you have already published and what you know first-hand. That ends the weekly question of what to post, and it keeps your feed from sounding like everyone else's.
 
@@ -26,5 +30,6 @@ you_get:
   - A list of themes to drop
   - Starter post ideas per pillar
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

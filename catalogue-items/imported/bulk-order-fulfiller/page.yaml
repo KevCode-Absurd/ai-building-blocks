@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It repeats a fixed step for each order.
 new_slug: bulk-order-fulfiller
 name: Bulk order fulfiller
-summary: Give it orders and tracking numbers. Get them fulfilled in one batch, with customer alerts if you choose. Changes live orders.
+summary: Give it orders and tracking numbers. Get them fulfilled in one batch,
+  with customer alerts if you choose. Changes live orders.
 job: run-your-store
 headline: Bulk order fulfiller
-subhead: Give it orders and tracking numbers. Get them fulfilled in one batch, with customer alerts if you choose. Changes live orders.
+subhead: Fulfil many open Shopify orders in one batch, adding tracking numbers
+  and, if you choose, sending shipping emails. It changes live orders, so always
+  preview first.
 explain: |
   Fulfil many open Shopify orders in one batch, adding tracking numbers and, if you choose, sending shipping emails. It changes live orders, so always preview first.
 
@@ -27,6 +30,7 @@ you_get:
   - Customer emails if turned on
   - A summary of results
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

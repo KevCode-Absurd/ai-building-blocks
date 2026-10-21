@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Speed and accuracy both matter in the first hours.
 new_slug: workforce-crisis-playbook-writer
 name: Workforce crisis playbook writer
-summary: Name the crisis type. Get roles, a first-hour staff message, a 24-hour action list and a review plan for your people.
+summary: Name the crisis type. Get roles, a first-hour staff message, a 24-hour
+  action list and a review plan for your people.
 job: hire-people
 headline: Workforce crisis playbook writer
-subhead: Name the crisis type. Get roles, a first-hour staff message, a 24-hour action list and a review plan for your people.
+subhead: A crisis playbook for your people, written before you need it or while
+  you are in it. You get who does what, what to tell staff in the first hour,
+  and what to do in the first day.
 explain: |
   A crisis playbook for your people, written before you need it or while you are in it. You get who does what, what to tell staff in the first hour, and what to do in the first day.
 
@@ -27,5 +30,6 @@ you_get:
   - Manager briefing points
   - Post-crisis review plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

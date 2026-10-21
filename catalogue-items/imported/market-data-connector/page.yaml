@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Each provider follows a set connection pattern.
 new_slug: market-data-connector
 name: Market data connector
-summary: Name the data source and series. Get MATLAB code that pulls Bloomberg, FRED, Haver or Datastream data.
+summary: Name the data source and series. Get MATLAB code that pulls Bloomberg,
+  FRED, Haver or Datastream data.
 job: connect-tools
 headline: Market data connector
-subhead: Name the data source and series. Get MATLAB code that pulls Bloomberg, FRED, Haver or Datastream data.
+subhead: Name the data source and series. Get MATLAB code that pulls Bloomberg,
+  FRED, Haver or Datastream data. Bring the provider. Use the result to plan
+  your next step.
 explain: |
   MATLAB code that pulls financial and economic data from Bloomberg, FRED, Haver Analytics or LSEG Datastream, using the right interface for each. It saves you from guessing which connection method fits.
 
@@ -26,6 +29,7 @@ you_get:
   - Example data pull code
   - Notes on provider limits
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with a data provider account.

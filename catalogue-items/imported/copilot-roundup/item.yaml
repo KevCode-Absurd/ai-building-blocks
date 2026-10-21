@@ -1,0 +1,32 @@
+slug: copilot-roundup
+name: Cross tool status briefing writer
+summary: Share your sources and audience. Get a dated status brief with progress, blockers and source links.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: meeting_notes
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/roundup
+  url: https://github.com/github/awesome-copilot/tree/main/skills/roundup
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: roundup
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: roundup skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/roundup
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

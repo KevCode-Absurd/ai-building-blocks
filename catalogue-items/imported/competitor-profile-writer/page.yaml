@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must read each site and judge how rivals position themselves.
 new_slug: competitor-profile-writer
 name: Competitor profile writer
-summary: Give it competitor links. Get a profile of each with site, pricing and positioning. Collects data from websites.
+summary: Give it competitor links. Get a profile of each with site, pricing and
+  positioning. Collects data from websites.
 job: study-competitors
 headline: Competitor profile writer
-subhead: Give it competitor links. Get a profile of each with site, pricing and positioning. Collects data from websites.
+subhead: A structured profile for each competitor, built from their own site and
+  public data, with facts kept separate from opinion. Every claim traces back to
+  a source page, a review or an SEO figure.
 explain: |
   A structured profile for each competitor, built from their own site and public data, with facts kept separate from opinion. Every claim traces back to a source page, a review or an SEO figure.
 
@@ -26,6 +29,7 @@ you_get:
   - Search and traffic data when available
   - Sources for every claim
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Firecrawl API key.

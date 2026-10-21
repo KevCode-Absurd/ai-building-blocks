@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows admin steps but must match your setup.
 new_slug: microsoft-365-admin-helper
 name: Microsoft 365 admin helper
-summary: Say what your company needs. Get Microsoft 365 setup scripts for users, mail, Teams and security.
+summary: Say what your company needs. Get Microsoft 365 setup scripts for users,
+  mail, Teams and security.
 job: connect-tools
 headline: Microsoft 365 admin helper
-subhead: Say what your company needs. Get Microsoft 365 setup scripts for users, mail, Teams and security.
+subhead: "PowerShell scripts for setting up and running your Microsoft 365
+  tenant: users, mail, Teams and security. Say what your company needs and get
+  scripts to run, instead of clicking through the admin centre."
 explain: |
   PowerShell scripts for setting up and running your Microsoft 365 tenant: users, mail, Teams and security. Say what your company needs and get scripts to run, instead of clicking through the admin centre.
 
@@ -25,6 +28,7 @@ you_get:
   - Bulk user creation steps
   - Safe, report-only security policies
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your admin account.

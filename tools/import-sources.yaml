@@ -63,3 +63,5 @@
 - {clone: Sushegaad_Claude-Skills-Governance-Risk-and-Compliance, by: Hemant Naik, repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance, path: plugins}
 - {clone: realkimbarrett_advertising-skills, by: Kim Barrett, repo: realkimbarrett/advertising-skills, path: skills}
 - {clone: K-Dense-AI_scientific-agent-skills, by: K-Dense, repo: K-Dense-AI/scientific-agent-skills, path: skills}
+- {clone: awesome-copilot, by: GitHub Copilot community, repo: github/awesome-copilot, path: skills}
+# mgonto/executive-assistant-skills has no redistribution license. Its jobs are rebuilt by build-work-expansion.mjs.

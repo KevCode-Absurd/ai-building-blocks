@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Fitting and judging flux models needs careful, many-step reasoning.
 new_slug: carbon-13-flux-estimator
 name: Carbon-13 flux estimator
-summary: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit checks and a profile you can trust.
+summary: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit
+  checks and a profile you can trust.
 job: research-topics
 headline: Carbon-13 flux estimator
-subhead: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit checks and a profile you can trust.
+subhead: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit
+  checks and a profile you can trust. Bring a carbon network with atom
+  assignments. Use the result to plan your next step.
 explain: |
   Carbon-13 labelling data turns into estimated reaction rates in a cell, with checks on how well the fit holds. You give a carbon map, tracer mixtures and corrected measurements, and the skill returns a fitted flux set and tells you which fluxes your experiment pins down.
 
@@ -27,6 +30,7 @@ you_get:
   - Which fluxes are well or poorly determined
   - A profile of the fit you can inspect
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and save files.

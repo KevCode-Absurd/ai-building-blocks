@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Wrong limits give wrong answers, so each one is checked.
 new_slug: optimization-model-builder
 name: Optimization model builder
-summary: Describe a choice with limits, like budget or capacity. Get a working model and the best answer it finds.
+summary: Describe a choice with limits, like budget or capacity. Get a working
+  model and the best answer it finds.
 job: plan-supply-chain
 headline: Optimization model builder
-subhead: Describe a choice with limits, like budget or capacity. Get a working model and the best answer it finds.
+subhead: Turn a decision with limits into a working model and the best answer it
+  can find. Think of picking production amounts, routes or stock levels within a
+  budget or capacity.
 explain: |
   Turn a decision with limits into a working model and the best answer it can find. Think of picking production amounts, routes or stock levels within a budget or capacity.
 
@@ -27,6 +30,7 @@ you_get:
   - The best solution found
   - Notes on which limits bind
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

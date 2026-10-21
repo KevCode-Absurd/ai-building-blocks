@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It follows a short recipe and fills in the script.
 new_slug: google-forms-automator
 name: Google Forms automator
-summary: Say what should happen on each form reply. Get a form plan and Apps Script that emails alerts or logs rows.
+summary: Say what should happen on each form reply. Get a form plan and Apps
+  Script that emails alerts or logs rows.
 job: organise-work
 headline: Google Forms automator
-subhead: Say what should happen on each form reply. Get a form plan and Apps Script that emails alerts or logs rows.
+subhead: A Google Form that does something the moment someone replies. Say what
+  should happen, such as an email alert, a row added to a sheet or a different
+  follow-up based on an answer, and you get a form plan plus the Apps Script to
+  do it.
 explain: |
   A Google Form that does something the moment someone replies. Say what should happen, such as an email alert, a row added to a sheet or a different follow-up based on an answer, and you get a form plan plus the Apps Script to do it.
 
@@ -26,5 +30,6 @@ you_get:
   - Steps to install the trigger
   - A test checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

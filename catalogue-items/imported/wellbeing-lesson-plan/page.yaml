@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It must weave content and wellbeing into one lesson.
 new_slug: wellbeing-lesson-plan
 name: Lesson plan with wellbeing built in
-summary: Give it a topic and goals. Get a lesson that teaches the content and builds student wellbeing. Not medical advice.
+summary: Give it a topic and goals. Get a lesson that teaches the content and
+  builds student wellbeing. Not medical advice.
 job: teach-and-train
 headline: Lesson plan with wellbeing built in
-subhead: Give it a topic and goals. Get a lesson that teaches the content and builds student wellbeing. Not medical advice.
+subhead: A lesson where the subject content and student wellbeing are taught
+  together, so you do not need a separate wellbeing slot. It teaches your topic
+  and builds habits like engagement and positive relationships as part of the
+  work.
 explain: |
   A lesson where the subject content and student wellbeing are taught together, so you do not need a separate wellbeing slot. It teaches your topic and builds habits like engagement and positive relationships as part of the work.
 
@@ -27,5 +31,6 @@ you_get:
   - Teacher moves for each element
   - Student reflection prompts
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

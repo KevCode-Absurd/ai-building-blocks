@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs risk to pick a safe path.
 new_slug: safe-release-planner
 name: Safe release planner
-summary: Describe your release. Get a deploy plan with checks, rollback steps and how to know it worked.
+summary: Describe your release. Get a deploy plan with checks, rollback steps
+  and how to know it worked.
 job: ship-and-host
 headline: Safe release planner
-subhead: Describe your release. Get a deploy plan with checks, rollback steps and how to know it worked.
+subhead: A deploy plan that tells you what to check before shipping, how to go
+  back if it fails, and how to tell it worked. Describe your release and it fits
+  the steps to where you host.
 explain: |
   A deploy plan that tells you what to check before shipping, how to go back if it fails, and how to tell it worked. Describe your release and it fits the steps to where you host.
 
@@ -26,5 +29,6 @@ you_get:
   - Rollback steps
   - Checks that show the release worked
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans steps for a new user and writes them.
 new_slug: developer-quickstart-writer
 name: Developer quickstart writer
-summary: Describe your product. Get a quickstart, tutorial and sample app plan that gets a developer to Hello World fast.
+summary: Describe your product. Get a quickstart, tutorial and sample app plan
+  that gets a developer to Hello World fast.
 job: build-product
 headline: Developer quickstart writer
-subhead: Describe your product. Get a quickstart, tutorial and sample app plan that gets a developer to Hello World fast.
+subhead: A quickstart, a tutorial and a sample app plan that take a new
+  developer from sign-up to working code in minutes. The first win matters most,
+  so everything is built around reaching it fast.
 explain: |
   A quickstart, a tutorial and a sample app plan that take a new developer from sign-up to working code in minutes. The first win matters most, so everything is built around reaching it fast.
 
@@ -26,5 +29,6 @@ you_get:
   - A sample app plan
   - A list of onboarding patterns to avoid
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

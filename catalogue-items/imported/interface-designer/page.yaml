@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a look first, then builds it with a few checks.
 new_slug: interface-designer
 name: Interface designer
-summary: Describe the page or app. Get a built interface with a clear look that does not feel like a template.
+summary: Describe the page or app. Get a built interface with a clear look that
+  does not feel like a template.
 job: build-websites
 headline: Interface designer
-subhead: Describe the page or app. Get a built interface with a clear look that does not feel like a template.
+subhead: A built page or app with its own clear look, rather than the same
+  template everyone ships. The skill works like a design lead whose clients each
+  get a distinct identity.
 explain: |
   A built page or app with its own clear look, rather than the same template everyone ships. The skill works like a design lead whose clients each get a distinct identity.
 
@@ -27,6 +30,7 @@ you_get:
   - Real placeholder copy
   - A distinct visual direction
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills set formats from the facts you give.
 new_slug: mentoring-program-builder
 name: Mentoring program builder
-summary: Say who the program is for. Get matching rules, a six-month plan and coaching talk guides for managers.
+summary: Say who the program is for. Get matching rules, a six-month plan and
+  coaching talk guides for managers.
 job: hire-people
 headline: Mentoring program builder
-subhead: Say who the program is for. Get matching rules, a six-month plan and coaching talk guides for managers.
+subhead: A mentoring or coaching program you can launch, with the rules, the
+  schedule and the guides your people need. Say who it is for and you get a plan
+  that runs six months.
 explain: |
   A mentoring or coaching program you can launch, with the rules, the schedule and the guides your people need. Say who it is for and you get a plan that runs six months.
 
@@ -27,5 +30,6 @@ you_get:
   - Coaching conversation guides for managers
   - Measures to track results
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

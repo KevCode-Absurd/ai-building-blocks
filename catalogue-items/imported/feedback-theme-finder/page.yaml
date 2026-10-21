@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads many comments and groups them into themes.
 new_slug: feedback-theme-finder
 name: Feedback theme finder
-summary: Give it NPS, CSAT or open comments. Get themes, trends and an insight report you can act on.
+summary: Give it NPS, CSAT or open comments. Get themes, trends and an insight
+  report you can act on.
 job: understand-customers
 headline: Feedback theme finder
-subhead: Give it NPS, CSAT or open comments. Get themes, trends and an insight report you can act on.
+subhead: Give it NPS, CSAT or open comments. Get themes, trends and an insight
+  report you can act on. Bring nPS or CSAT responses with comments. Use the
+  result to plan your next step.
 explain: |
   A report that shows why customers are happy or unhappy, with NPS and CSAT numbers, grouped themes and what changed since last period.
 
@@ -26,5 +29,6 @@ you_get:
   - Trends versus last period
   - Action points
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

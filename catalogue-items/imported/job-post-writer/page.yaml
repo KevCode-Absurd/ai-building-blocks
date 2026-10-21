@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must pick the real needs and choose words carefully.
 new_slug: job-post-writer
 name: Job post writer
-summary: Describe the role and your team. Get a clear job description that attracts the right people and avoids biased wording.
+summary: Describe the role and your team. Get a clear job description that
+  attracts the right people and avoids biased wording.
 job: hire-people
 headline: Job post writer
-subhead: Describe the role and your team. Get a clear job description that attracts the right people and avoids biased wording.
+subhead: A job description that candidates want to answer and that does not turn
+  good people away by accident. Describe the role, your team and what the hire
+  will accomplish.
 explain: |
   A job description that candidates want to answer and that does not turn good people away by accident. Describe the role, your team and what the hire will accomplish. If you give only a title, the skill asks short questions about the problem the person solves, what success looks like in six to twelve months, and the level and scope.
 
@@ -26,5 +29,6 @@ you_get:
   - Questions that fill any gaps
   - A rewrite of weak sections
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It balances scope against capacity.
 new_slug: sprint-plan-writer
 name: Sprint plan writer
-summary: Give it your backlog and team time off. Get sprint scope, goals and a stretch list sized to real capacity.
+summary: Give it your backlog and team time off. Get sprint scope, goals and a
+  stretch list sized to real capacity.
 job: build-product
 headline: Sprint plan writer
-subhead: Give it your backlog and team time off. Get sprint scope, goals and a stretch list sized to real capacity.
+subhead: A sprint plan sized to the time your team really has. Give it your
+  backlog and who is away. The skill works out capacity by taking off time off
+  and regular meetings, so you are not planning for a full-strength team that
+  does not exist.
 explain: |
   A sprint plan sized to the time your team really has. Give it your backlog and who is away. The skill works out capacity by taking off time off and regular meetings, so you are not planning for a full-strength team that does not exist.
 
@@ -27,5 +31,6 @@ you_get:
   - A list of dependencies and risks
   - A sprint plan document
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

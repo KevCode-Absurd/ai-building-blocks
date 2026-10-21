@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies several methods to thin data.
 new_slug: early-stage-valuation-estimator
 name: Early-stage valuation estimator
-summary: Give it a young company's facts. Get a value range from methods such as Berkus, scorecard and the VC method.
+summary: Give it a young company's facts. Get a value range from methods such as
+  Berkus, scorecard and the VC method.
 job: money-and-investing
 headline: Early-stage valuation estimator
-subhead: Give it a young company's facts. Get a value range from methods such as Berkus, scorecard and the VC method.
+subhead: A pre-money value range for a young company, with the working shown.
+  Give it the stage, traction, team and market, and you get a range built from
+  several methods, not a single guess.
 explain: |
   A pre-money value range for a young company, with the working shown. Give it the stage, traction, team and market, and you get a range built from several methods, not a single guess.
 
@@ -26,5 +29,6 @@ you_get:
   - A comparison with similar deals
   - A final valuation range with reasons
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

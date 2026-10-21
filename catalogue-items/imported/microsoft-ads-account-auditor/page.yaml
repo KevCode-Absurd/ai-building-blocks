@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs many settings at once and says where data is missing.
 new_slug: microsoft-ads-account-auditor
 name: Microsoft ads account auditor
-summary: Give it your Microsoft Ads exports. Get a checked audit of tracking, keywords, Google imports, audiences, bids and budgets.
+summary: Give it your Microsoft Ads exports. Get a checked audit of tracking,
+  keywords, Google imports, audiences, bids and budgets.
 job: read-ad-results
 headline: Microsoft ads account auditor
-subhead: Give it your Microsoft Ads exports. Get a checked audit of tracking, keywords, Google imports, audiences, bids and budgets.
+subhead: A checked audit of your Microsoft Ads account that separates what it
+  saw from what it thinks, and never changes your account. Give it your exports
+  and it reports on tracking, imports, keywords, audiences, bids and budgets.
 explain: |
   A checked audit of your Microsoft Ads account that separates what it saw from what it thinks, and never changes your account. Give it your exports and it reports on tracking, imports, keywords, audiences, bids and budgets.
 
@@ -26,7 +29,12 @@ you_get:
   - Draft changes held for your approval
   - A report built from checked results
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your ad exports, and optionally read your Microsoft Ads account with your own read-only access. Changes stay as drafts for your approval.
-  - Where the skill points to ads/references/, use the ads/references/microsoft-audit.md folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can read your ad exports, and optionally read
+    your Microsoft Ads account with your own read-only access. Changes stay as
+    drafts for your approval.
+  - Where the skill points to ads/references/, use the
+    ads/references/microsoft-audit.md folder inside it. We copied it in so the
+    skill works on its own.

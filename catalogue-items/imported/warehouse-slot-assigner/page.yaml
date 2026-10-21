@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It ranks items by pick rate, then maps them to spots.
 new_slug: warehouse-slot-assigner
 name: Warehouse slot assigner
-summary: Give it your products and their pick counts. Get which item goes in which spot so fast sellers sit closest.
+summary: Give it your products and their pick counts. Get which item goes in
+  which spot so fast sellers sit closest.
 job: plan-supply-chain
 headline: Warehouse slot assigner
-subhead: Give it your products and their pick counts. Get which item goes in which spot so fast sellers sit closest.
+subhead: A plan for which product goes in which storage spot, so fast sellers
+  sit close and slow ones sit far away. That cuts the distance pickers walk each
+  day.
 explain: |
   A plan for which product goes in which storage spot, so fast sellers sit close and slow ones sit far away. That cuts the distance pickers walk each day.
 
@@ -26,6 +29,7 @@ you_get:
   - Rules for heavy and special items
   - A schedule for reslotting
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads the code and explains it in order.
 new_slug: new-teammate-guide-writer
 name: New teammate guide writer
-summary: Point it at a codebase. Get an onboarding guide for new engineers, leads or contractors.
+summary: Point it at a codebase. Get an onboarding guide for new engineers,
+  leads or contractors.
 job: build-software
 headline: New teammate guide writer
-subhead: Point it at a codebase. Get an onboarding guide for new engineers, leads or contractors.
+subhead: A written guide that gets a new engineer, tech lead or contractor
+  working in your codebase without a week of questions. You point it at a
+  repository and it writes the guide from what the code shows.
 explain: |
   A written guide that gets a new engineer, tech lead or contractor working in your codebase without a week of questions. You point it at a repository and it writes the guide from what the code shows.
 
@@ -26,6 +29,7 @@ you_get:
   - Setup and common task steps
   - A debugging and contribution checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

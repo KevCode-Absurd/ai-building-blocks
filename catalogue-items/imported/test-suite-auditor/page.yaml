@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It runs many code variants and judges which results matter.
 new_slug: test-suite-auditor
 name: Test suite auditor
-summary: Point it at a Python project. Get a list of weak, flaky, slow and useless tests, checked by mutation.
+summary: Point it at a Python project. Get a list of weak, flaky, slow and
+  useless tests, checked by mutation.
 job: test-and-fix-code
 headline: Test suite auditor
-subhead: Point it at a Python project. Get a list of weak, flaky, slow and useless tests, checked by mutation.
+subhead: A verdict on whether your Python tests would actually catch broken
+  code, with the weak, flaky, slow and useless tests listed. A passing suite
+  stops being a comfort and becomes a number you can trust.
 explain: |
   A verdict on whether your Python tests would actually catch broken code, with the weak, flaky, slow and useless tests listed. A passing suite stops being a comfort and becomes a number you can trust.
 
@@ -27,6 +30,7 @@ you_get:
   - A list of slow tests
   - Tests that add no detection
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

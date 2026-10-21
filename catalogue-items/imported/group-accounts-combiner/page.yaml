@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows consolidation rules step by step.
 new_slug: group-accounts-combiner
 name: Group accounts combiner
-summary: Give it each company's accounts. Get one set of group statements with the cancelled internal items shown.
+summary: Give it each company's accounts. Get one set of group statements with
+  the cancelled internal items shown.
 job: money-and-investing
 headline: Group accounts combiner
-subhead: Give it each company's accounts. Get one set of group statements with the cancelled internal items shown.
+subhead: One set of group accounts that treats a parent and its subsidiaries as
+  a single business. Give it each company's accounts and it combines them, with
+  the cancelled internal items shown so you can see what was removed.
 explain: |
   One set of group accounts that treats a parent and its subsidiaries as a single business. Give it each company's accounts and it combines them, with the cancelled internal items shown so you can see what was removed.
 
@@ -26,5 +29,6 @@ you_get:
   - Currency translation workings
   - Minority interest calculation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

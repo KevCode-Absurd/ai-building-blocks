@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It ranks ideas and outlines the winner.
 new_slug: lead-magnet-planner
 name: Lead magnet planner
-summary: Describe your buyer. Get lead magnet ideas, the best pick and the page and emails to go with it.
+summary: Describe your buyer. Get lead magnet ideas, the best pick and the page
+  and emails to go with it.
 job: make-offer
 headline: Lead magnet planner
-subhead: Describe your buyer. Get lead magnet ideas, the best pick and the page and emails to go with it.
+subhead: A free offer your buyer wants enough to hand over their email, with the
+  page and emails to deliver it. Describe your business and the buyer.
 explain: |
   A free offer your buyer wants enough to hand over their email, with the page and emails to deliver it. Describe your business and the buyer. The skill first checks what content, data and expertise you already have, since the best lead magnet is often something you have written already.
 
@@ -26,5 +28,6 @@ you_get:
   - A signup page outline
   - A follow-up email plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

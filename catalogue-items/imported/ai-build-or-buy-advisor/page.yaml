@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs set decisions and cost maths for your plan.
 new_slug: ai-build-or-buy-advisor
 name: AI build-or-buy advisor
-summary: Describe an AI plan. Get an API vs fine-tune call, AI risk class under EU rules and cost break-even.
+summary: Describe an AI plan. Get an API vs fine-tune call, AI risk class under
+  EU rules and cost break-even.
 job: set-up-ai
 headline: AI build-or-buy advisor
-subhead: Describe an AI plan. Get an API vs fine-tune call, AI risk class under EU rules and cost break-even.
+subhead: Describe an AI plan. Get an API vs fine-tune call, AI risk class under
+  EU rules and cost break-even. Bring a description of your AI use case. Use the
+  result to plan your next step.
 explain: |
   Straight answers on four AI choices for a small company: use an API, fine-tune or build your own; whether your use is high risk under EU rules; when to move to your own hosting; and which AI role to hire next.
 
@@ -26,5 +29,6 @@ you_get:
   - A risk class and what it requires
   - A next-hire recommendation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

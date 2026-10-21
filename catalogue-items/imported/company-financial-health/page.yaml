@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It computes standard ratios, then interprets them.
 new_slug: company-financial-health
 name: Company financial health reviewer
-summary: Give it a company's filings. Get ratios, cash flow and balance sheet health explained in plain words.
+summary: Give it a company's filings. Get ratios, cash flow and balance sheet
+  health explained in plain words.
 job: money-and-investing
 headline: Company financial health reviewer
-subhead: Give it a company's filings. Get ratios, cash flow and balance sheet health explained in plain words.
+subhead: A plain reading of a company's financial health from its statements,
+  with the ratios worked out and the odd numbers flagged. You learn whether the
+  business makes money, can pay its bills and is using its assets well.
 explain: |
   A plain reading of a company's financial health from its statements, with the ratios worked out and the odd numbers flagged. You learn whether the business makes money, can pay its bills and is using its assets well.
 
@@ -26,5 +29,6 @@ you_get:
   - Flagged oddities and red flags
   - A plain-words summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

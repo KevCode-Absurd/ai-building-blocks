@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It rewrites one idea twice, each in its own platform style.
 new_slug: cross-platform-post-writer
 name: Cross-platform post writer
-summary: Give it one idea. Get an X post and a LinkedIn post that read as written separately.
+summary: Give it one idea. Get an X post and a LinkedIn post that read as
+  written separately.
 job: grow-social
 headline: Cross-platform post writer
-subhead: Give it one idea. Get an X post and a LinkedIn post that read as written separately.
+subhead: Pasting the same words onto X and LinkedIn makes one of the two posts
+  sound wrong. Here you give one idea and get two posts, each written from
+  scratch for its own audience.
 explain: |
   Pasting the same words onto X and LinkedIn makes one of the two posts sound wrong. Here you give one idea and get two posts, each written from scratch for its own audience.
 
@@ -25,5 +28,6 @@ you_get:
   - The one-sentence idea both are built on
   - A short note on what changed and why
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

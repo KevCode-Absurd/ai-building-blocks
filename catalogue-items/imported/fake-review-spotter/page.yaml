@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs several weak signals before it judges.
 new_slug: fake-review-spotter
 name: Fake review spotter
-summary: Give it a product's reviews. Get a trust rating and the red flags that point to fake or bought reviews.
+summary: Give it a product's reviews. Get a trust rating and the red flags that
+  point to fake or bought reviews.
 job: run-your-store
 headline: Fake review spotter
-subhead: Give it a product's reviews. Get a trust rating and the red flags that point to fake or bought reviews.
+subhead: A trust score from 0 to 100 for a product's reviews, with the exact
+  reviews that look bought or copied. Use it before you buy, or to see how clean
+  a rival's rating is.
 explain: |
   A trust score from 0 to 100 for a product's reviews, with the exact reviews that look bought or copied. Use it before you buy, or to see how clean a rival's rating is.
 
@@ -26,5 +29,6 @@ you_get:
   - A list of flagged reviews with reasons
   - Notes on timing and rating patterns
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

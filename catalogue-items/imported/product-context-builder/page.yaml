@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It gathers answers and writes one file.
 new_slug: product-context-builder
 name: Product context builder
-summary: Answer questions about your product. Get one context file every marketing skill reads first.
+summary: Answer questions about your product. Get one context file every
+  marketing skill reads first.
 job: brand-file
 headline: Product context builder
-subhead: Answer questions about your product. Get one context file every marketing skill reads first.
+subhead: One short file about your product that every other marketing task reads
+  first, so you stop repeating yourself. It holds what you sell, who buys it,
+  how you are positioned, and how your brand sounds.
 explain: |
   One short file about your product that every other marketing task reads first, so you stop repeating yourself. It holds what you sell, who buys it, how you are positioned, and how your brand sounds.
 
@@ -26,5 +29,6 @@ you_get:
   - A change log of updates
   - Gaps you still need to fill
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

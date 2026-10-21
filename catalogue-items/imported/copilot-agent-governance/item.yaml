@@ -1,0 +1,32 @@
+slug: copilot-agent-governance
+name: AI agent control designer
+summary: Share how your agent uses tools. Get controls for permissions, trust and risky actions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/agent-governance
+  url: https://github.com/github/awesome-copilot/tree/main/skills/agent-governance
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: agent-governance
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: agent-governance skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/agent-governance
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

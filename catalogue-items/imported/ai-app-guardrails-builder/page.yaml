@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Rules follow a set pattern, but each needs testing.
 new_slug: ai-app-guardrails-builder
 name: AI app guardrails builder
-summary: Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details.
+summary: Describe what your AI app must never do. Get rules that block
+  jailbreaks, made-up facts and leaked personal details.
 job: build-software
 headline: AI app guardrails builder
-subhead: Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details.
+subhead: Safety rules for your AI app that block jailbreaks, made-up facts and
+  leaked personal details before a reply goes out. You say what the app must
+  never do, and the rules enforce it at run time.
 explain: |
   Safety rules for your AI app that block jailbreaks, made-up facts and leaked personal details before a reply goes out. You say what the app must never do, and the rules enforce it at run time.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - Users try to talk your chatbot out of its rules.
   - Your bot sometimes states facts it cannot back up.
-  - You must stop the bot from repeating emails, phone numbers or other private data.
+  - You must stop the bot from repeating emails, phone numbers or other private
+    data.
   - You want rules that sit outside the prompt so they are harder to bypass.
 you_give:
   - What your app must never say or do
@@ -26,6 +30,7 @@ you_get:
   - Custom check functions
   - Test cases for each rule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

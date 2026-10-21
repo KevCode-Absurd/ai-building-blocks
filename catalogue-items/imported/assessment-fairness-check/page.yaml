@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It tests the assessment against its goals and marking.
 new_slug: assessment-fairness-check
 name: Assessment fit and fairness checker
-summary: Paste a quiz or task and its goals. Get a check that it tests the right things and marks fairly.
+summary: Paste a quiz or task and its goals. Get a check that it tests the right
+  things and marks fairly.
 job: teach-and-train
 headline: Assessment fit and fairness checker
-subhead: Paste a quiz or task and its goals. Get a check that it tests the right things and marks fairly.
+subhead: Paste a quiz or task and its goals. Get a check that it tests the right
+  things and marks fairly. Bring the assessment and how it is marked. Use the
+  result to plan your next step.
 explain: |
   A review of a quiz, essay task or test that tells you whether it measures what you meant it to measure and whether two markers would give the same grade. Paste the task, how it is marked and what students should have learned.
 
@@ -26,5 +29,6 @@ you_get:
   - Unfair or distracting features found
   - Ranked fixes and a verdict
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a structure, then sets it up.
 new_slug: confluence-space-builder
 name: Confluence space builder
-summary: Say what your team needs. Get a Confluence space set up with page templates, permissions and a clear layout.
+summary: Say what your team needs. Get a Confluence space set up with page
+  templates, permissions and a clear layout.
 job: organise-work
 headline: Confluence space builder
-subhead: Say what your team needs. Get a Confluence space set up with page templates, permissions and a clear layout.
+subhead: A well organised Confluence space for your team, with page templates,
+  access rules and a layout people can find their way around. It takes a blank
+  space and gives it structure.
 explain: |
   A well organised Confluence space for your team, with page templates, access rules and a layout people can find their way around. It takes a blank space and gives it structure.
 
@@ -26,6 +29,7 @@ you_get:
   - Permission suggestions
   - Pages created or updated in Confluence
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can connect to Confluence.

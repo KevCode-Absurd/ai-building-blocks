@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows one fixed report layout from work already done.
 new_slug: dev-work-report-writer
 name: Dev work report writer
-summary: Finish a coding task. Get a clear write-up of what changed, why, and proof that it works.
+summary: Finish a coding task. Get a clear write-up of what changed, why, and
+  proof that it works.
 job: build-software
 headline: Dev work report writer
-subhead: Finish a coding task. Get a clear write-up of what changed, why, and proof that it works.
+subhead: "A written record of a coding task that someone else can read cold:
+  what you changed, why, and proof that it works. It turns a finished piece of
+  work into something you can hand to a teammate, a client or your future self."
 explain: |
   A written record of a coding task that someone else can read cold: what you changed, why, and proof that it works. It turns a finished piece of work into something you can hand to a teammate, a client or your future self.
 
@@ -26,5 +29,6 @@ you_get:
   - Before and after code snippets
   - A verification section with build and test results
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

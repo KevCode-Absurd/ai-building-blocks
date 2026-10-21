@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It asks a set list of questions, then applies fixed layout and style rules.
 new_slug: conversion-landing-page-designer
 name: Conversion landing page designer
-summary: Tell it your offer and audience. Get a landing page plan, copy and strict design rules that turn visitors into buyers.
+summary: Tell it your offer and audience. Get a landing page plan, copy and
+  strict design rules that turn visitors into buyers.
 job: write-landing-page
 headline: Conversion landing page designer
-subhead: Tell it your offer and audience. Get a landing page plan, copy and strict design rules that turn visitors into buyers.
+subhead: Tell it your offer and audience. Get a landing page plan, copy and
+  strict design rules that turn visitors into buyers. Bring your offer and
+  price. Use the result to plan your next step.
 explain: |
   A complete landing page plan: the questions to ask, the section order, the layout, the copy, and strict visual rules so the page looks clean and sells. It handles both the words and the design, which usually get split and clash.
 
@@ -27,5 +30,6 @@ you_get:
   - Hero section design
   - Build order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

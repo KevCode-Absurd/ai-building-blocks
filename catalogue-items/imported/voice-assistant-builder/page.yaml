@@ -1,11 +1,15 @@
 thinking: high
-thinking_why: It sets up conversation flow, tools and testing, and mistakes show up in live calls.
+thinking_why: It sets up conversation flow, tools and testing, and mistakes show
+  up in live calls.
 new_slug: voice-assistant-builder
 name: Voice assistant builder
-summary: Say what your voice assistant should do. Get a working agent that talks with customers, with tools and a web embed.
+summary: Say what your voice assistant should do. Get a working agent that talks
+  with customers, with tools and a web embed.
 job: help-customers
 headline: Voice assistant builder
-subhead: Say what your voice assistant should do. Get a working agent that talks with customers, with tools and a web embed.
+subhead: Say what your voice assistant should do. Get a working agent that talks
+  with customers, with tools and a web embed. Bring what the assistant should do
+  and say. Use the result to plan your next step.
 explain: |
   A voice agent that talks with your customers, answers from your instructions and can run actions you define, plus a snippet to put it on your website. You can test it by speaking to it.
 
@@ -26,6 +30,8 @@ you_get:
   - Tool connections for actions
   - An embed snippet for your site
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and commands, and use your own ElevenLabs API key.
+  - It works best when your AI can run code and commands, and use your own
+    ElevenLabs API key.

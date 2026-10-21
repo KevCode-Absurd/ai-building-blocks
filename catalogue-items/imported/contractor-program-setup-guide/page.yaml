@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Worker status has legal risk, so it needs care.
 new_slug: contractor-program-setup-guide
 name: Contractor program setup guide
-summary: Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice.
+summary: Describe the work and workers. Get a classification risk check, an
+  onboarding checklist and a vendor plan. Not legal advice.
 job: hire-people
 headline: Contractor program setup guide
-subhead: Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice.
+subhead: Describe the work and workers. Get a classification risk check, an
+  onboarding checklist and a vendor plan. Not legal advice. Bring description of
+  the work. Use the result to plan your next step.
 explain: |
   A set up for working with contractors and freelancers: a check on whether each worker really counts as a contractor, an onboarding checklist, and a plan for vendors. It lowers the chance of misclassifying someone as a contractor when they are an employee.
 
@@ -26,5 +29,6 @@ you_get:
   - Vendor management plan
   - Statement of work outline
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

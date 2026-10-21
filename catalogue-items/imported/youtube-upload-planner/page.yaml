@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It fits ideas to the time you really have.
 new_slug: youtube-upload-planner
 name: YouTube upload planner
-summary: Tell it your free hours. Get a week of uploads with titles, formats and what to drop first.
+summary: Tell it your free hours. Get a week of uploads with titles, formats and
+  what to drop first.
 job: grow-social
 headline: YouTube upload planner
-subhead: Tell it your free hours. Get a week of uploads with titles, formats and what to drop first.
+subhead: A week of YouTube uploads that fits the hours you really have, with a
+  clear line on what to drop first if the week goes wrong.
 explain: |
   A week of YouTube uploads that fits the hours you really have, with a clear line on what to drop first if the week goes wrong.
 
@@ -26,5 +28,6 @@ you_get:
   - An hours cost estimate
   - What to drop first
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

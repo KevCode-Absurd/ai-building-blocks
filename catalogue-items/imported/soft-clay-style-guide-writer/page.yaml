@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: soft-clay-style-guide-writer
 name: Soft clay style guide writer
-summary: Describe your product. Get a style guide for a puffy, rounded look, with shapes, colour and states.
+summary: Describe your product. Get a style guide for a puffy, rounded look,
+  with shapes, colour and states.
 job: design-work
 headline: Soft clay style guide writer
-subhead: Describe your product. Get a style guide for a puffy, rounded look, with shapes, colour and states.
+subhead: A style guide for a puffy, rounded, clay-like interface that your
+  designers and developers can use directly. You describe your product, and the
+  skill writes the rules for shapes, colour, type and states.
 explain: |
   A style guide for a puffy, rounded, clay-like interface that your designers and developers can use directly. You describe your product, and the skill writes the rules for shapes, colour, type and states.
 
@@ -26,5 +29,6 @@ you_get:
   - Rules for component states
   - Accessibility and do and don't rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

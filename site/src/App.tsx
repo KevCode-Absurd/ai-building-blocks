@@ -186,7 +186,7 @@ function Header({ onKits }: { onKits: () => void }) {
           </span>
         </nav>
         <div className="header-end">
-          <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span>About me</span>{biz && <span className="dot" aria-label="filled in" />}</button>
+          <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span>Your context</span>{biz && <span className="dot" aria-label="filled in" />}</button>
           <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits"><span className="wide-only">My kits</span><span className="narrow-only">Kits</span>{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
           <ThemeToggle />
           <button className="btn btn-ghost btn-sm menu-btn" aria-expanded={menu} aria-controls="site-nav" onClick={() => setMenu((m) => !m)} data-testid="menu-btn">{menu ? "Close" : "Menu"}</button>
@@ -268,6 +268,7 @@ function Library({ c }: { c: Catalogue }) {
 
   return (
     <section className="section wrap" id="library" aria-label="Library">
+      <div className="library-search-head"><h2>What do you want to get done?</h2><Link to="/how-it-works">How it works <span aria-hidden="true">→</span></Link></div>
       <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="What do you want to get done?" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
 
       <div className="areas" role="group" aria-label="Pick an area" data-testid="areas">
@@ -316,6 +317,7 @@ function Library({ c }: { c: Catalogue }) {
           ))}
         </div>
         <div className="filters">
+          <label className="search filter-search"><SearchIcon /><span className="visually-hidden">Search these results</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="Search these results" data-testid="results-search" /></label>
           <Select label="Made by" value={f.by} onChange={(v) => set({ by: v })} testId="filter-by"
             options={[{ value: "", label: "All", count: count({ by: "" }) }, ...MAKERS.map((m) => ({ value: m.id, label: m.name, count: count({ by: m.id }) }))]} />
           <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"

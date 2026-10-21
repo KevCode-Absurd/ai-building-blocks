@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs several signals per account.
 new_slug: churn-risk-finder
 name: Churn risk finder
-summary: Give it usage, engagement and support data. Get at-risk accounts scored with ideas for how to step in.
+summary: Give it usage, engagement and support data. Get at-risk accounts scored
+  with ideas for how to step in.
 job: understand-customers
 headline: Churn risk finder
-subhead: Give it usage, engagement and support data. Get at-risk accounts scored with ideas for how to step in.
+subhead: A scored list of customer accounts most likely to leave, each with a
+  suggested next step. You share usage, engagement and support data, and every
+  account gets a score from 0 (healthy) to 100 (about to go).
 explain: |
   A scored list of customer accounts most likely to leave, each with a suggested next step. You share usage, engagement and support data, and every account gets a score from 0 (healthy) to 100 (about to go).
 
@@ -26,5 +29,6 @@ you_get:
   - Key signals for each account
   - A recommended action per tier
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

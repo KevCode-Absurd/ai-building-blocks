@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Migrations fail in subtle ways, so it plans for rollback.
 new_slug: zero-downtime-migration-planner
 name: Zero-downtime migration planner
-summary: Name what you are moving. Get a zero-downtime plan with checks and a rollback for each step.
+summary: Name what you are moving. Get a zero-downtime plan with checks and a
+  rollback for each step.
 job: ship-and-host
 headline: Zero-downtime migration planner
-subhead: Name what you are moving. Get a zero-downtime plan with checks and a rollback for each step.
+subhead: Name what you are moving. Get a zero-downtime plan with checks and a
+  rollback for each step. Bring a description of what you are migrating. Use the
+  result to plan your next step.
 explain: |
   A migration plan for moving a database, service or API with no downtime, where every step has a check and a way back.
 
@@ -26,6 +29,7 @@ you_get:
   - A rollback runbook per phase
   - Validation checkpoints with go and stop rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

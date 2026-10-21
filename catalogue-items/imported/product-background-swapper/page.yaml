@@ -2,16 +2,20 @@ thinking: low
 thinking_why: It follows a set prompt recipe for one photo at a time.
 new_slug: product-background-swapper
 name: Product background swapper
-summary: Give it a white-background product photo. Get it placed in a real-looking scene with matching light. Your image model draws it.
+summary: Give it a white-background product photo. Get it placed in a
+  real-looking scene with matching light. Your image model draws it.
 job: product-photos
 headline: Product background swapper
-subhead: Give it a white-background product photo. Get it placed in a real-looking scene with matching light. Your image model draws it.
+subhead: Your plain white-background product photo placed into a believable
+  room, desk or outdoor scene. The product stays exactly as it is. Only the
+  surroundings change.
 explain: |
   Your plain white-background product photo placed into a believable room, desk or outdoor scene. The product stays exactly as it is. Only the surroundings change.
 
   The method focuses on three things that make a swap look real: a contact shadow under the product, reflections from nearby surfaces, and light that comes from the same direction as in the scene. Without these the product looks like a sticker floating on a backdrop. Claude writes the scene prompt that keeps the product details fixed and describes the setting and light. Claude cannot draw the picture itself. An image model such as ChatGPT or Gemini, or an image API key, does that step.
 when:
-  - You have clean white-background shots and want lifestyle images for ads or listings.
+  - You have clean white-background shots and want lifestyle images for ads or
+    listings.
   - A product photo looks flat and you want it on a table, floor or shelf.
   - You need the same product shown in several seasons or settings.
   - A stock backdrop made your product look pasted on.
@@ -26,6 +30,8 @@ you_get:
   - Notes on keeping the product unchanged
   - Tips to fix a swap that looks fake
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).
+  - It works best when your AI can run code and use your own image model key
+    (OpenAI, Gemini, fal or Replicate).

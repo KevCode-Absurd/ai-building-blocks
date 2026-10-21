@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Fitting a large model into limited memory needs careful trade-offs.
 new_slug: low-memory-fine-tuning-guide
 name: Low-memory fine-tuning guide
-summary: Give it a big model and your GPU size. Get a fine-tune that trains under 1 percent of the model and fits.
+summary: Give it a big model and your GPU size. Get a fine-tune that trains
+  under 1 percent of the model and fits.
 job: build-software
 headline: Low-memory fine-tuning guide
-subhead: Give it a big model and your GPU size. Get a fine-tune that trains under 1 percent of the model and fits.
+subhead: A fine-tuning setup that trains less than one percent of a large model,
+  so it fits on a single GPU. It uses small add-on layers called adapters, which
+  can be around 6 MB instead of a 14 GB full copy.
 explain: |
   A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
 
@@ -26,6 +29,7 @@ you_get:
   - Settings tuned to your memory
   - Steps to save and swap adapters
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

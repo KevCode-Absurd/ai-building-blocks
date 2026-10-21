@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It pulls listed facts into a table without much judgment.
 new_slug: store-product-data-collector
 name: Store product data collector
-summary: Give it a product search or store link. Get prices, reviews and seller details in a table. Collects data from websites.
+summary: Give it a product search or store link. Get prices, reviews and seller
+  details in a table. Collects data from websites.
 job: study-competitors
 headline: Store product data collector
-subhead: Give it a product search or store link. Get prices, reviews and seller details in a table. Collects data from websites.
+subhead: "Prices, reviews and seller details from online shops, gathered into
+  one table you can sort. Give a product search or a store link, and pick from
+  three jobs: track products and prices, read reviews for patterns, or find
+  which sellers carry a product."
 explain: |
   Prices, reviews and seller details from online shops, gathered into one table you can sort. Give a product search or a store link, and pick from three jobs: track products and prices, read reviews for patterns, or find which sellers carry a product.
 
@@ -26,6 +30,7 @@ you_get:
   - A list of sellers for a product
   - A short written summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Apify token.

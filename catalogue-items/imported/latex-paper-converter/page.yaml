@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It moves content step by step and checks it builds.
 new_slug: latex-paper-converter
 name: LaTeX paper converter
-summary: Give it your paper and a new journal template. Get the paper rebuilt in that format.
+summary: Give it your paper and a new journal template. Get the paper rebuilt in
+  that format.
 job: work-with-files
 headline: LaTeX paper converter
-subhead: Give it your paper and a new journal template. Get the paper rebuilt in that format.
+subhead: Give it your paper and a new journal template. Get the paper rebuilt in
+  that format. Bring your source .tex file. Use the result to plan your next
+  step.
 explain: |
   Your paper, rebuilt in a different journal's template without retyping it. Give it your LaTeX file and the folder for the new template. The skill compares the layouts, such as single column against double, and writes a Python script that pulls out your sections and drops them into the new file.
 
@@ -26,6 +29,7 @@ you_get:
   - A compiled PDF
   - A list of fixes made
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

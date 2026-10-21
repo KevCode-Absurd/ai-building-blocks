@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It tests many cut combinations.
 new_slug: rod-and-pipe-cutting-planner
 name: Rod and pipe cutting planner
-summary: Give it your stock lengths and cut list. Get cutting patterns that use the fewest pieces and waste the least.
+summary: Give it your stock lengths and cut list. Get cutting patterns that use
+  the fewest pieces and waste the least.
 job: plan-supply-chain
 headline: Rod and pipe cutting planner
-subhead: Give it your stock lengths and cut list. Get cutting patterns that use the fewest pieces and waste the least.
+subhead: A cutting plan that tells you how to slice each rod, pipe or beam so
+  you buy fewer lengths and throw away less offcut. Give it your stock lengths
+  and the pieces you need.
 explain: |
   A cutting plan that tells you how to slice each rod, pipe or beam so you buy fewer lengths and throw away less offcut. Give it your stock lengths and the pieces you need.
 
@@ -27,6 +30,7 @@ you_get:
   - Waste per pattern and in total
   - A plan you can hand to the saw operator
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

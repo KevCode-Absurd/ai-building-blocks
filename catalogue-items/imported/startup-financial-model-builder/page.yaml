@@ -2,10 +2,14 @@ thinking: high
 thinking_why: The numbers must tie together across years.
 new_slug: startup-financial-model-builder
 name: Startup financial model builder
-summary: Give your numbers and plans. Get a 3 to 5 year model with revenue, costs, cash flow and scenarios.
+summary: Give your numbers and plans. Get a 3 to 5 year model with revenue,
+  costs, cash flow and scenarios.
 job: money-and-investing
 headline: Startup financial model builder
-subhead: Give your numbers and plans. Get a 3 to 5 year model with revenue, costs, cash flow and scenarios.
+subhead: A three to five year model for your startup, built so you can change
+  one assumption and watch cash, profit and runway move. It matters when you
+  pitch investors or plan hires, because every number traces back to a stated
+  input.
 explain: |
   A three to five year model for your startup, built so you can change one assumption and watch cash, profit and runway move. It matters when you pitch investors or plan hires, because every number traces back to a stated input.
 
@@ -28,5 +32,6 @@ you_get:
   - Three scenarios side by side
   - A list of the assumptions that move the result most
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

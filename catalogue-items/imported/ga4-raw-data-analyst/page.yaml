@@ -2,17 +2,22 @@ thinking: high
 thinking_why: Raw export tables are tricky, and a wrong query gives wrong numbers.
 new_slug: ga4-raw-data-analyst
 name: GA4 raw data analyst
-summary: Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen.
+summary: Point it at your GA4 export in BigQuery. Get sessions, channels and
+  sign-ups, plus why they differ from the GA4 screen.
 job: track-numbers
 headline: GA4 raw data analyst
-subhead: Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen.
+subhead: Your GA4 numbers finally match what you can trace. Sessions, channels
+  and sign-ups come straight from the raw daily export in BigQuery, with a clear
+  note on why they differ from the GA4 screen.
 explain: |
   Your GA4 numbers finally match what you can trace. Sessions, channels and sign-ups come straight from the raw daily export in BigQuery, with a clear note on why they differ from the GA4 screen.
 
   It starts by fixing the boundary: which dataset, which dates, which events count as a key event. Then it checks the table layout before it writes a single query. Ready-made SQL covers sessions, channels, landing pages, traffic source checks, ecommerce and a screen reconciliation. Every query is shown first, with a cost estimate and a byte cap. Late events are flagged, since daily tables can still change for a few days.
 when:
-  - Your GA4 report and your own sign-up count do not agree and you need to know why.
-  - You want sessions by channel from raw export tables instead of the GA4 screen.
+  - Your GA4 report and your own sign-up count do not agree and you need to know
+    why.
+  - You want sessions by channel from raw export tables instead of the GA4
+    screen.
   - You need landing page and UTM checks for a set of dates.
   - You want purchase or lead events counted the same way every month.
 you_give:
@@ -26,6 +31,7 @@ you_get:
   - Key event and ecommerce counts
   - A note explaining gaps against the GA4 screen
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run SQL on your own Google BigQuery data.

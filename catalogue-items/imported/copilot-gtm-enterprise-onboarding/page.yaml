@@ -1,0 +1,18 @@
+thinking: high
+thinking_why: It compares evidence and checks changes against the goal.
+new_slug: copilot-gtm-enterprise-onboarding
+name: Enterprise customer onboarding planner
+summary: Share a signed customer and success goals. Get onboarding stages,
+  owners and checks for reaching first value.
+job: plan-strategy
+headline: Enterprise customer onboarding planner
+subhead: Share a signed customer and success goals. Get onboarding stages,
+  owners and checks for reaching first value. Share your goal and the files you
+  already have. The skill file sets out the steps and the tools needed for this
+  job.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read the files you provide and use the named
+    tools when the job requires them.

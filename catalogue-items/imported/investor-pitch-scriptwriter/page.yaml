@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It shapes a story from facts you supply, in set formats.
 new_slug: investor-pitch-scriptwriter
 name: Investor pitch scriptwriter
-summary: Share your startup details. Get pitch scripts from one minute to ten, plus likely investor questions and answers.
+summary: Share your startup details. Get pitch scripts from one minute to ten,
+  plus likely investor questions and answers.
 job: speak-and-persuade
 headline: Investor pitch scriptwriter
-subhead: Share your startup details. Get pitch scripts from one minute to ten, plus likely investor questions and answers.
+subhead: Share your startup details. Get pitch scripts from one minute to ten,
+  plus likely investor questions and answers. Bring what your startup does and
+  who it serves. Use the result to plan your next step.
 explain: |
   Pitch scripts for every slot you might get, from a one-minute hook to a ten-minute walk-through. Share your startup details. The skill asks a short round of questions, checks for earlier work such as a business brief or lean canvas, then researches the investors you are targeting and how competitors present themselves.
 
@@ -26,6 +29,7 @@ you_get:
   - Likely investor questions with answers
   - A rehearsal guide
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can save files.

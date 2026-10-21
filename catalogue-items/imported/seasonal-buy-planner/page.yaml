@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It shapes a demand curve, then splits the buy.
 new_slug: seasonal-buy-planner
 name: Seasonal buy planner
-summary: Give it last season sales. Get how much to buy early, how much to hold back, and when to mark down.
+summary: Give it last season sales. Get how much to buy early, how much to hold
+  back, and when to mark down.
 job: plan-supply-chain
 headline: Seasonal buy planner
-subhead: Give it last season sales. Get how much to buy early, how much to hold back, and when to mark down.
+subhead: "A season buy plan that says how much to order up front, how much to
+  keep in reserve, and when to mark items down. It balances two costs: running
+  out of winners and being stuck with leftovers."
 explain: |
   A season buy plan that says how much to order up front, how much to keep in reserve, and when to mark items down. It balances two costs: running out of winners and being stuck with leftovers.
 
@@ -27,5 +30,6 @@ you_get:
   - Reorder and cut triggers
   - A markdown timing plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

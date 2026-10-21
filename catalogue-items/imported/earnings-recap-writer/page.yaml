@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares set figures, then explains the gap.
 new_slug: earnings-recap-writer
 name: Earnings recap writer
-summary: Give it a stock ticker. Get actual versus expected results, margin trends and how the share price reacted. Collects data from websites.
+summary: Give it a stock ticker. Get actual versus expected results, margin
+  trends and how the share price reacted. Collects data from websites.
 job: money-and-investing
 headline: Earnings recap writer
-subhead: Give it a stock ticker. Get actual versus expected results, margin trends and how the share price reacted. Collects data from websites.
+subhead: "A post-earnings summary for one stock: what was reported against what
+  was expected, how margins moved, and how the share price reacted. Give a
+  ticker and read the answer in minutes."
 explain: |
   A post-earnings summary for one stock: what was reported against what was expected, how margins moved, and how the share price reacted. Give a ticker and read the answer in minutes.
 
@@ -25,6 +28,7 @@ you_get:
   - Margin trends over recent quarters
   - Share price reaction to the report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

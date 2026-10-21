@@ -2,19 +2,26 @@ thinking: high
 thinking_why: It must stay true to the evidence while writing clearly.
 new_slug: scientific-manuscript-drafter
 name: Scientific manuscript drafter
-summary: Give it your results and notes. Get manuscript sections with sources tracked, guideline gaps flagged and references checked.
+summary: Give it your results and notes. Get manuscript sections with sources
+  tracked, guideline gaps flagged and references checked.
 job: research-topics
 headline: Scientific manuscript drafter
-subhead: Give it your results and notes. Get manuscript sections with sources tracked, guideline gaps flagged and references checked.
+subhead: Manuscript sections you can trust because every claim points back to
+  something you supplied. You hand over results, notes and sources, and get
+  Introduction, Methods, Results or Discussion drafts in clear scientific prose.
 explain: |
   Manuscript sections you can trust because every claim points back to something you supplied. You hand over results, notes and sources, and get Introduction, Methods, Results or Discussion drafts in clear scientific prose.
 
   The rules are strict. Nothing is invented: no references, numbers, sample sizes, approvals or funding lines. Where a detail is missing, the draft says so in plain view instead of filling it with boilerplate. Drafting, checking evidence and final sign-off are kept as separate stages, and you stay the author who approves the text. It checks your draft against reporting guidelines, flags gaps, and verifies references. Small offline helper tools are included, and nothing leaves your computer without your say.
 when:
-  - You have results and lab notes and need a first draft of the Methods and Results.
-  - You want to know which reporting checklist items your paper does not yet cover.
-  - You need to check that every reference in a draft is real and says what you claim.
-  - You are preparing a manuscript for submission and want missing details listed, not guessed.
+  - You have results and lab notes and need a first draft of the Methods and
+    Results.
+  - You want to know which reporting checklist items your paper does not yet
+    cover.
+  - You need to check that every reference in a draft is real and says what you
+    claim.
+  - You are preparing a manuscript for submission and want missing details
+    listed, not guessed.
 you_give:
   - Your results, tables and figures
   - Notes on methods and decisions
@@ -28,5 +35,6 @@ you_get:
   - A reference check
   - A trail from each claim to its source
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

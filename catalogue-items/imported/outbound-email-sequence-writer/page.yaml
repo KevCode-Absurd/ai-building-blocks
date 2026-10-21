@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a sequence from audience and goal.
 new_slug: outbound-email-sequence-writer
 name: Outbound email sequence writer
-summary: Describe your prospect. Get a multi-step email sequence with timing and personal touches.
+summary: Describe your prospect. Get a multi-step email sequence with timing and
+  personal touches.
 job: write-emails
 headline: Outbound email sequence writer
-subhead: Describe your prospect. Get a multi-step email sequence with timing and personal touches.
+subhead: Describe your prospect. Get a multi-step email sequence with timing and
+  personal touches. Bring target company type and person. Use the result to plan
+  your next step.
 explain: |
   A full cold email series that earns replies and ends with a booked meeting, each message short and different from the last.
 
@@ -26,5 +29,6 @@ you_get:
   - Personal fields to fill in
   - A send schedule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

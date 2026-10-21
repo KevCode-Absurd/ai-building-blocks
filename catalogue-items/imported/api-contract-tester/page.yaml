@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It maps both sides of the contract, then writes targeted tests.
 new_slug: api-contract-tester
 name: API contract tester
-summary: Give it an API and its users. Get tests that catch breaking changes between the two before they ship.
+summary: Give it an API and its users. Get tests that catch breaking changes
+  between the two before they ship.
 job: test-and-fix-code
 headline: API contract tester
-subhead: Give it an API and its users. Get tests that catch breaking changes between the two before they ship.
+subhead: Tests that catch the moment an API change would break the programs
+  using it, before it reaches anyone. Give it the API and a list of who calls
+  it, and you get a small test set that checks both sides.
 explain: |
   Tests that catch the moment an API change would break the programs using it, before it reaches anyone. Give it the API and a list of who calls it, and you get a small test set that checks both sides.
 
@@ -26,6 +29,7 @@ you_get:
   - Sample data for success and failure cases
   - A list of untested gaps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

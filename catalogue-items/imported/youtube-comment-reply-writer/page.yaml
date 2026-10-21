@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Replies are short and follow simple sorting rules.
 new_slug: youtube-comment-reply-writer
 name: YouTube comment reply writer
-summary: Paste your comments. Get them sorted by what to answer, short replies in your voice, and one comment to pin.
+summary: Paste your comments. Get them sorted by what to answer, short replies
+  in your voice, and one comment to pin.
 job: grow-social
 headline: YouTube comment reply writer
-subhead: Paste your comments. Get them sorted by what to answer, short replies in your voice, and one comment to pin.
+subhead: Paste your comments. Get them sorted by what to answer, short replies
+  in your voice, and one comment to pin. Bring the comments, pasted as text. Use
+  the result to plan your next step.
 explain: |
   Paste your latest comments and get them sorted, answered and ready to post, with one comment picked to pin.
 
@@ -25,5 +28,6 @@ you_get:
   - A list of repeated questions as video ideas
   - One comment to pin and why
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

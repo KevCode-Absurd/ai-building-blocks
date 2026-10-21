@@ -1,0 +1,32 @@
+slug: copilot-dotnet-mcp-builder
+name: C# MCP server implementation helper
+summary: Share your C# project and tools to expose. Get MCP server code using current package patterns.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/dotnet-mcp-builder
+  url: https://github.com/github/awesome-copilot/tree/main/skills/dotnet-mcp-builder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: dotnet-mcp-builder
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: dotnet-mcp-builder skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/dotnet-mcp-builder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds a structured process for the role.
 new_slug: hiring-interview-designer
 name: Hiring interview designer
-summary: Name the role. Get an interview plan with questions, scoring guides and a way to compare candidates.
+summary: Name the role. Get an interview plan with questions, scoring guides and
+  a way to compare candidates.
 job: hire-people
 headline: Hiring interview designer
-subhead: Name the role. Get an interview plan with questions, scoring guides and a way to compare candidates.
+subhead: An interview plan for one role that gives every candidate the same fair
+  test. It sets the rounds, what each round covers, how long it runs, and which
+  questions to ask so interviewers do not overlap or improvise.
 explain: |
   An interview plan for one role that gives every candidate the same fair test. It sets the rounds, what each round covers, how long it runs, and which questions to ask so interviewers do not overlap or improvise.
 
@@ -26,5 +29,6 @@ you_get:
   - Scoring guides with evidence rules
   - A bias checklist and debrief guide
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

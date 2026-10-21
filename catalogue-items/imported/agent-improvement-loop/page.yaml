@@ -2,16 +2,20 @@ thinking: high
 thinking_why: Self-improving loops need careful design and testing.
 new_slug: agent-improvement-loop
 name: Agent self-improvement loop builder
-summary: Give it an AI agent and a test set. Get a loop that rewrites its prompts and skills until scores rise.
+summary: Give it an AI agent and a test set. Get a loop that rewrites its
+  prompts and skills until scores rise.
 job: build-software
 headline: Agent self-improvement loop builder
-subhead: Give it an AI agent and a test set. Get a loop that rewrites its prompts and skills until scores rise.
+subhead: An AI agent that gets better on its own, because a loop keeps testing
+  it and rewriting its instructions until scores go up. Each round changes one
+  thing, and a change that makes results worse is rolled back.
 explain: |
   An AI agent that gets better on its own, because a loop keeps testing it and rewriting its instructions until scores go up. Each round changes one thing, and a change that makes results worse is rolled back.
 
   The agent's prompts, skills, memory and tools all live as plain files in one folder. The loop runs your agent on a set of test tasks, looks at where it failed, and asks a model to rewrite the files. It scores the new version, keeps it only if it wins, and saves every change in version history. This needs Python, a package install and model access, plus a test set that gives clear scores.
 when:
-  - You have an AI agent and a set of test tasks, and you want its score to climb.
+  - You have an AI agent and a set of test tasks, and you want its score to
+    climb.
   - You are tuning prompts by hand and keep breaking things that worked.
   - You want every change to the agent saved so you can undo a bad one.
   - You want to find which skills or notes help the agent most.
@@ -26,6 +30,7 @@ you_get:
   - Updated prompt, skill and memory files
   - A saved history you can roll back
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and call an AI model.

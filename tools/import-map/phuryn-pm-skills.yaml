@@ -382,7 +382,7 @@
   skip: "Same job as Privacy policy drafter."
 "phuryn/pm-skills:pm-toolkit/skills/review-resume":
   name: Product manager resume reviewer
-  summary: "Give it your resume and a target job. Get a review against ten best practices and a version tailored to the role."
+  summary: "Share your resume and target job. Get ten resume checks, specific fixes and a draft suited to the role."
   task: hire-people
   role: check
   level: beginner

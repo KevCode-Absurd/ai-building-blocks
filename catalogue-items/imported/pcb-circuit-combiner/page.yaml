@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It joins parts with a set method.
 new_slug: pcb-circuit-combiner
 name: PCB circuit combiner
-summary: Give it several RF PCB parts. Get them cascaded with extra parts added and S-parameters exported.
+summary: Give it several RF PCB parts. Get them cascaded with extra parts added
+  and S-parameters exported.
 job: build-software
 headline: PCB circuit combiner
-subhead: Give it several RF PCB parts. Get them cascaded with extra parts added and S-parameters exported.
+subhead: Several RF circuit board parts joined end to end into one circuit, with
+  extra components added and results saved as a standard Touchstone file. It
+  runs in MATLAB.
 explain: |
   Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
 
@@ -26,6 +29,7 @@ you_get:
   - Touchstone S-parameter file
   - Link to eye diagram analysis
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with PCB Toolbox.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It groups messy spend rows, then ranks the savings.
 new_slug: spend-savings-finder
 name: Spend savings finder
-summary: Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
+summary: Give it a list of what you paid suppliers. Get spend grouped by type,
+  the biggest savings chances and quick wins.
 job: track-numbers
 headline: Spend savings finder
-subhead: Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
+subhead: Your supplier payments sorted by type, with the biggest savings chances
+  and quick wins listed. Give it an export from your accounting, purchasing or
+  card data.
 explain: |
   Your supplier payments sorted by type, with the biggest savings chances and quick wins listed. Give it an export from your accounting, purchasing or card data. The skill first cleans it and groups each payment into a category, supplier and business unit, which is the spend cube view.
 
@@ -26,5 +29,6 @@ you_get:
   - Ranked savings chances
   - Quick wins list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

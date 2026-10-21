@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Training choices are costly and hard to undo.
 new_slug: language-model-trainer
 name: Language model trainer
-summary: Name your model and data. Get a fine-tuning run set up with TRL, using the right method for your goal.
+summary: Name your model and data. Get a fine-tuning run set up with TRL, using
+  the right method for your goal.
 job: build-software
 headline: Language model trainer
-subhead: Name your model and data. Get a fine-tuning run set up with TRL, using the right method for your goal.
+subhead: A fine-tuning run for your language model, set up with the method that
+  matches what you want. Tell it your base model, your data and your goal.
 explain: |
   A fine-tuning run for your language model, set up with the method that matches what you want. Tell it your base model, your data and your goal. The skill picks from TRL's training types: supervised fine-tuning for following instructions, DPO for learning from preferred versus rejected answers, GRPO and RLOO for reward-based training, and reward model training.
 
@@ -26,6 +28,7 @@ you_get:
   - Settings with a short reason for each
   - Next steps to check results
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

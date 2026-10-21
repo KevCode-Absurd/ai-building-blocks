@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It ties each thinking skill to the subject knowledge.
 new_slug: subject-thinking-task-writer
 name: Subject thinking task writer
-summary: Give it a subject topic. Get tasks that build thinking using that subject's own facts and methods.
+summary: Give it a subject topic. Get tasks that build thinking using that
+  subject's own facts and methods.
 job: teach-and-train
 headline: Subject thinking task writer
-subhead: Give it a subject topic. Get tasks that build thinking using that subject's own facts and methods.
+subhead: Give it a subject topic. Get tasks that build thinking using that
+  subject's own facts and methods. Bring the topic. Use the result to plan your
+  next step.
 explain: |
   A thinking task built from the facts and methods of your own subject, so students reason like a historian, a scientist or a mathematician, not in a vague 'critical thinking' way.
 
   You give the topic, the stage and the subject. The skill first checks what knowledge students need before they can think about it at all. It states how experts in that discipline judge good thinking, then sets the task, such as weighing causes of the First World War. It supplies the sources and tools students use, assessment guidance for what strong reasoning looks like, and notes to help you improve the task over time.
 when:
-  - You are asked to teach critical thinking but your subject is history or science.
+  - You are asked to teach critical thinking but your subject is history or
+    science.
   - Students can recall facts but cannot argue from them.
   - You want one strong task for a unit, not a general skills lesson.
   - You need to know how to mark thinking, not only answers.
@@ -28,5 +32,6 @@ you_get:
   - Sources and tools for students
   - Marking guidance
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

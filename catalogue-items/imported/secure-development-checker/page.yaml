@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs set scans and ranks what they find.
 new_slug: secure-development-checker
 name: Secure development checker
-summary: Give it your project. Get a scan for code flaws, weak packages and exposed secrets, with fixes ranked.
+summary: Give it your project. Get a scan for code flaws, weak packages and
+  exposed secrets, with fixes ranked.
 job: secure-code
 headline: Secure development checker
-subhead: Give it your project. Get a scan for code flaws, weak packages and exposed secrets, with fixes ranked.
+subhead: A security scan of your project that finds code flaws, risky packages
+  and exposed secrets, with fixes ranked by severity. Three bundled Python tools
+  do the work and can export JSON for your build pipeline.
 explain: |
   A security scan of your project that finds code flaws, risky packages and exposed secrets, with fixes ranked by severity. Three bundled Python tools do the work and can export JSON for your build pipeline.
 
@@ -27,6 +30,7 @@ you_get:
   - A compliance gap report
   - JSON output for builds
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

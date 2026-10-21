@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs searches and lists what it finds.
 new_slug: cross-tool-search-finder
 name: Cross-tool search finder
-summary: Ask where a decision or doc lives. Get one search across your chat, email and files, with sources.
+summary: Ask where a decision or doc lives. Get one search across your chat,
+  email and files, with sources.
 job: organise-work
 headline: Cross-tool search finder
-subhead: Ask where a decision or doc lives. Get one search across your chat, email and files, with sources.
+subhead: Finding where a decision was made usually means checking chat, email,
+  files and your tracker one by one. Ask once and this searches all your
+  connected tools and brings back one combined answer with sources.
 explain: |
   Finding where a decision was made usually means checking chat, email, files and your tracker one by one. Ask once and this searches all your connected tools and brings back one combined answer with sources.
 
@@ -25,6 +28,7 @@ you_get:
   - Results ranked by how well they match
   - A note on any tool that could not be searched
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search your chat, email and docs.

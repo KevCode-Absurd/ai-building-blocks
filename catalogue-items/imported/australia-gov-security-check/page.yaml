@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Control choice depends on classification and many notes.
 new_slug: australia-gov-security-check
 name: Australian government security checker
-summary: Describe your system and its data level. Get which ISM controls apply, your gaps and what assessors will ask.
+summary: Describe your system and its data level. Get which ISM controls apply,
+  your gaps and what assessors will ask.
 job: check-contracts
 headline: Australian government security checker
-subhead: Describe your system and its data level. Get which ISM controls apply, your gaps and what assessors will ask.
+subhead: "An answer to which Australian Government security rules apply to your
+  system, and where you fall short. Say what you run, where it is hosted and how
+  sensitive the data is, such as OFFICIAL: Sensitive."
 explain: |
   An answer to which Australian Government security rules apply to your system, and where you fall short. Say what you run, where it is hosted and how sensitive the data is, such as OFFICIAL: Sensitive. The AI maps this to the Information Security Manual (ISM) from the Australian Signals Directorate.
 
@@ -26,5 +29,6 @@ you_get:
   - An authorisation pathway
   - What assessors will ask for
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

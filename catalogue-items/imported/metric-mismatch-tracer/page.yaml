@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Finding the exact split point means reading two calculations closely.
 new_slug: metric-mismatch-tracer
 name: Metric mismatch tracer
-summary: Tell it which number differs between two reports. Get the gap, the step where they split and a fix.
+summary: Tell it which number differs between two reports. Get the gap, the step
+  where they split and a fix.
 job: track-numbers
 headline: Metric mismatch tracer
-subhead: Tell it which number differs between two reports. Get the gap, the step where they split and a fix.
+subhead: The reason two reports show different numbers for the same metric, and
+  the exact step where they split. Name the metric and the two sources, and it
+  finds the gap, the cause and a fix.
 explain: |
   The reason two reports show different numbers for the same metric, and the exact step where they split. Name the metric and the two sources, and it finds the gap, the cause and a fix.
 
@@ -27,5 +30,6 @@ you_get:
   - A corrected query or tolerance note
   - A completed reconciliation report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

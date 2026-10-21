@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It is a short set of rules your AI follows while it works.
 new_slug: small-change-keeper
 name: Small change keeper
-summary: Turn it on while you code. Your AI changes only what you asked for and picks the simplest fix.
+summary: Turn it on while you code. Your AI changes only what you asked for and
+  picks the simplest fix.
 job: build-software
 headline: Small change keeper
-subhead: Turn it on while you code. Your AI changes only what you asked for and picks the simplest fix.
+subhead: An AI coder that fixes what you asked and nothing more. It stops the
+  habit of adding extra layers, renaming files or tidying code nobody mentioned,
+  so your review stays small.
 explain: |
   An AI coder that fixes what you asked and nothing more. It stops the habit of adding extra layers, renaming files or tidying code nobody mentioned, so your review stays small.
 
@@ -25,6 +28,7 @@ you_get:
   - Questions when the request is unclear
   - Smaller changes that are easier to review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It chains several methods across research, copy and tests.
 new_slug: website-growth-guide
 name: Website growth guide
-summary: Give it your site and traffic. Get a plan to capture more leads and sales through research, message and tests.
+summary: Give it your site and traffic. Get a plan to capture more leads and
+  sales through research, message and tests.
 job: audit-landing-page
 headline: Website growth guide
-subhead: Give it your site and traffic. Get a plan to capture more leads and sales through research, message and tests.
+subhead: A growth plan for a site that already has visitors but turns too few
+  into leads and sales. The thinking is that most traffic problems are really
+  conversion problems, so you fix those before paying for more traffic.
 explain: |
   A growth plan for a site that already has visitors but turns too few into leads and sales. The thinking is that most traffic problems are really conversion problems, so you fix those before paying for more traffic.
 
@@ -26,5 +29,6 @@ you_get:
   - A clearer message and offer
   - A tracker file to resume later
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

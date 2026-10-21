@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It applies set costing formulas.
 new_slug: inventory-value-calculator
 name: Inventory value calculator
-summary: Give it your stock purchases and counts. Get inventory valued by FIFO or average cost, with write-downs flagged.
+summary: Give it your stock purchases and counts. Get inventory valued by FIFO
+  or average cost, with write-downs flagged.
 job: run-your-store
 headline: Inventory value calculator
-subhead: Give it your stock purchases and counts. Get inventory valued by FIFO or average cost, with write-downs flagged.
+subhead: Stock that is valued the way an auditor expects, with the maths shown.
+  Give it your purchases, counts and costs. You pick or confirm a cost method,
+  FIFO or weighted average, and it works out the cost of goods sold and the
+  closing stock.
 explain: |
   Stock that is valued the way an auditor expects, with the maths shown. Give it your purchases, counts and costs. You pick or confirm a cost method, FIFO or weighted average, and it works out the cost of goods sold and the closing stock. It adds freight, duties and a fair share of production overhead, and leaves out waste and selling costs.
 
@@ -27,5 +31,6 @@ you_get:
   - A slow-stock provision table
   - Adjusting journal entries
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It picks a chart type and fills in known code.
 new_slug: interactive-chart-maker
 name: Interactive chart maker
-summary: Give it your data. Get an interactive Plotly chart with hover, zoom and pan that you can embed in a page.
+summary: Give it your data. Get an interactive Plotly chart with hover, zoom and
+  pan that you can embed in a page.
 job: work-with-files
 headline: Interactive chart maker
-subhead: Give it your data. Get an interactive Plotly chart with hover, zoom and pan that you can embed in a page.
+subhead: A chart you can hover, zoom and pan, saved so you can drop it into a
+  web page, report or dashboard. Give it your data and get Plotly code for it.
 explain: |
   A chart you can hover, zoom and pan, saved so you can drop it into a web page, report or dashboard. Give it your data and get Plotly code for it. It needs Python and the Plotly package.
 
@@ -26,6 +28,7 @@ you_get:
   - An HTML file to embed
   - Install steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

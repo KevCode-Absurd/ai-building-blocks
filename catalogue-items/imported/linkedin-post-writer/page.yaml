@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It writes in set formats and checks the draft.
 new_slug: linkedin-post-writer
 name: LinkedIn post writer
-summary: Give it a story or idea. Get a LinkedIn post, carousel script or poll that you post yourself.
+summary: Give it a story or idea. Get a LinkedIn post, carousel script or poll
+  that you post yourself.
 job: grow-social
 headline: LinkedIn post writer
-subhead: Give it a story or idea. Get a LinkedIn post, carousel script or poll that you post yourself.
+subhead: A LinkedIn post, carousel script or poll you can post yourself, built
+  from your own story or idea. It also checks drafts you already wrote.
 explain: |
   A LinkedIn post, carousel script or poll you can post yourself, built from your own story or idea. It also checks drafts you already wrote.
 
@@ -27,5 +29,6 @@ you_get:
   - Picture and video text
   - A first comment for links
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

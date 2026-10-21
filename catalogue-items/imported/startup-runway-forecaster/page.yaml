@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It fits a forecast model to your data.
 new_slug: startup-runway-forecaster
 name: Startup runway forecaster
-summary: Give it your monthly cash data. Get a forecast of burn and the month cash runs out.
+summary: Give it your monthly cash data. Get a forecast of burn and the month
+  cash runs out.
 job: money-and-investing
 headline: Startup runway forecaster
-subhead: Give it your monthly cash data. Get a forecast of burn and the month cash runs out.
+subhead: Give it your monthly cash data. Get a forecast of burn and the month
+  cash runs out. Bring monthly net cash flow for 12 to 24 months. Use the result
+  to plan your next step.
 explain: |
   Instead of one rough guess, you get the month your cash is likely to run out, with odds attached, such as 70 percent for October and 20 percent for November. That gives you a fundraising start date you can plan around.
 
   It looks at 12 to 24 months of net cash flow and separates the long-term trend from seasonal spikes and one-off costs like annual software renewals. Burn is then adjusted for planned headcount and marketing growth. The result is a runway in months, a trend label such as accelerating burn, and a safety window for starting a raise. It uses forecasting methods in Python, so it works best where code can run.
 when:
-  - Your burn is uneven and a simple cash divided by average spend gives a wrong answer.
+  - Your burn is uneven and a simple cash divided by average spend gives a wrong
+    answer.
   - You need to know the latest date you can start fundraising.
   - You have big yearly costs that bunch up in certain months.
   - You plan to hire fast and want to see the effect on cash-out.
@@ -27,6 +31,7 @@ you_get:
   - A split of fixed and variable burn drivers
   - A fundraising trigger date
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your files.

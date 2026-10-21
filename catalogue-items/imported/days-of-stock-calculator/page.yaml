@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It divides stock by sales speed.
 new_slug: days-of-stock-calculator
 name: Days of stock calculator
-summary: Get how many days each product stock will last and how fast it sells, by location.
+summary: Get how many days each product stock will last and how fast it sells,
+  by location.
 job: run-your-store
 headline: Days of stock calculator
-subhead: Get how many days each product stock will last and how fast it sells, by location.
+subhead: Get how many days each product stock will last and how fast it sells,
+  by location. Bring your store address. Use the result to plan your next step.
 explain: |
   Per product and per location, you see how many days of stock remain at the current selling pace, and how much of what you received has sold. That tells you what to reorder and when.
 
@@ -26,6 +28,7 @@ you_get:
   - Flagged low stock items
   - Reorder planning list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

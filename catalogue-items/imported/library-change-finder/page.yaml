@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It runs a tool and then reads the results.
 new_slug: library-change-finder
 name: Library change finder
-summary: Point it at a Python project. Get which library changes came after the AI's training and where your code uses them.
+summary: Point it at a Python project. Get which library changes came after the
+  AI's training and where your code uses them.
 job: test-and-fix-code
 headline: Library change finder
-subhead: Point it at a Python project. Get which library changes came after the AI's training and where your code uses them.
+subhead: AI models write code from what they learned before a cutoff date. If
+  your project pins newer library versions, the model may use old methods.
 explain: |
   AI models write code from what they learned before a cutoff date. If your project pins newer library versions, the model may use old methods. This finds the gap in your Python project and shows where your code is affected.
 
@@ -26,6 +28,7 @@ you_get:
   - The files that use them
   - A previewed notes block for AGENTS.md or CLAUDE.md
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

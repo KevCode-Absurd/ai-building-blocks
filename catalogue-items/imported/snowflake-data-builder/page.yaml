@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies platform rules to your task.
 new_slug: snowflake-data-builder
 name: Snowflake data builder
-summary: Describe your data job. Get Snowflake SQL, pipelines and tuning that follow good practice.
+summary: Describe your data job. Get Snowflake SQL, pipelines and tuning that
+  follow good practice.
 job: build-software
 headline: Snowflake data builder
-subhead: Describe your data job. Get Snowflake SQL, pipelines and tuning that follow good practice.
+subhead: Snowflake SQL and data pipelines that follow the platform's own rules,
+  so they run the first time. You describe the data job, and the skill writes
+  the code and explains the choices.
 explain: |
   Snowflake SQL and data pipelines that follow the platform's own rules, so they run the first time. You describe the data job, and the skill writes the code and explains the choices.
 
@@ -26,6 +29,7 @@ you_get:
   - Cortex AI or Snowpark code when needed
   - Performance and security tips
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

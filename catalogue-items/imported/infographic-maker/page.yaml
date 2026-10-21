@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It analyses the content, suggests layouts and styles, then draws one.
 new_slug: infographic-maker
 name: Infographic maker
-summary: Give it your content. Get an infographic with a layout and style picked to fit the message.
+summary: Give it your content. Get an infographic with a layout and style picked
+  to fit the message.
 job: make-images
 headline: Infographic maker
-subhead: Give it your content. Get an infographic with a layout and style picked to fit the message.
+subhead: An infographic where the layout and look match the message, built from
+  your own content. You pick how the information is arranged and the visual
+  style separately, and any layout can pair with any style.
 explain: |
   An infographic where the layout and look match the message, built from your own content. You pick how the information is arranged and the visual style separately, and any layout can pair with any style.
 
@@ -27,6 +30,7 @@ you_get:
   - Options to change either one
   - A saved file
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can draw images with an image tool.

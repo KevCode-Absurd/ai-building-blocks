@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs set statistics and explains the pattern.
 new_slug: stock-co-movement-checker
 name: Stock co-movement checker
-summary: Give it a stock or group. Get which stocks move with it and how closely that link holds. Collects data from websites.
+summary: Give it a stock or group. Get which stocks move with it and how closely
+  that link holds. Collects data from websites.
 job: money-and-investing
 headline: Stock co-movement checker
-subhead: Give it a stock or group. Get which stocks move with it and how closely that link holds. Collects data from websites.
+subhead: Find which stocks rise and fall together with the one you care about,
+  and how strong that link is. Give it a single ticker and it lists its closest
+  peers; give it a pair or a group and it measures how tightly they move.
 explain: |
   Find which stocks rise and fall together with the one you care about, and how strong that link is. Give it a single ticker and it lists its closest peers; give it a pair or a group and it measures how tightly they move.
 
@@ -26,6 +29,7 @@ you_get:
   - A correlation grid for a group
   - Rolling correlation over time
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

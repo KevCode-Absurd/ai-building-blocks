@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Mistakes cost people money, so it checks carefully.
 new_slug: payroll-timesheet-checker
 name: Payroll timesheet checker
-summary: Give it your timesheets. Get hours totalled by person, every oddity flagged, and a run ready for your line by line approval.
+summary: Give it your timesheets. Get hours totalled by person, every oddity
+  flagged, and a run ready for your line by line approval.
 job: hire-people
 headline: Payroll timesheet checker
-subhead: Give it your timesheets. Get hours totalled by person, every oddity flagged, and a run ready for your line by line approval.
+subhead: Give it your timesheets. Get hours totalled by person, every oddity
+  flagged, and a run ready for your line by line approval. Bring pay period and
+  pay date. Use the result to plan your next step.
 explain: |
   Hours totalled by person for the pay period, every oddity flagged, and a payroll run staged for you to approve line by line before any money moves.
 
@@ -26,7 +29,9 @@ you_get:
   - Run staged for line-by-line approval
   - Journal entry for the books
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

@@ -1,0 +1,49 @@
+slug: prepare-your-weekly-executive-review
+name: Prepare your weekly executive review
+summary: Share this week's notes and tasks. Get a commitment review, decisions
+  due and priorities for next week.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+  - type: plan
+    required: false
+outputs:
+  - type: document
+uses:
+  - executive-action-register
+  - executive-daily-digest
+steps:
+  - uses: executive-action-register
+    note: 1. Read skills/executive-action-register/SKILL.md. Share meeting notes or
+      email threads. Get one action list with owners, deadlines, source links
+      and unresolved commitments. Save the result with source references. Carry
+      the user's goal and all earlier findings into this step. If required
+      evidence or tool access is missing, mark this step blocked; do not
+      fabricate a result.
+  - uses: executive-daily-digest
+    note: 2. Read skills/executive-daily-digest/SKILL.md. Share your calendar,
+      action list and updates. Get a dated brief of priorities, decisions,
+      conflicts and work waiting on others. Save the result with source
+      references. Carry the user's goal and all earlier findings into this step.
+      If required evidence or tool access is missing, mark this step blocked; do
+      not fabricate a result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Executive assistant job ideas
+    by: mgonto
+    url: https://github.com/mgonto/executive-assistant-skills
+    used: Inspiration for meeting preparation, action tracking, email drafting and
+      daily briefings. These are original portable instructions, not copies of
+      the unlicensed source.
+example_pending: true

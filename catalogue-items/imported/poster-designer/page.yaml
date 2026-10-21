@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a look first, then draws it with set steps.
 new_slug: poster-designer
 name: Poster designer
-summary: Describe the poster or artwork. Get a finished PNG or PDF design with its own clear look.
+summary: Describe the poster or artwork. Get a finished PNG or PDF design with
+  its own clear look.
 job: design-work
 headline: Poster designer
-subhead: Describe the poster or artwork. Get a finished PNG or PDF design with its own clear look.
+subhead: A finished poster or piece of art as a PNG or PDF, with a distinct look
+  rather than a template feel. Describe what you want and the skill makes the
+  image itself.
 explain: |
   A finished poster or piece of art as a PNG or PDF, with a distinct look rather than a template feel. Describe what you want and the skill makes the image itself.
 
@@ -25,6 +28,7 @@ you_get:
   - Short design philosophy file
   - A second round of edits if you ask
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

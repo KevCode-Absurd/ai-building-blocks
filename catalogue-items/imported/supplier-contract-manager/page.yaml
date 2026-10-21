@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads terms and flags what to act on.
 new_slug: supplier-contract-manager
 name: Supplier contract manager
-summary: Give it your supplier deals. Get a renewal calendar, terms to push for and a way to track broken promises.
+summary: Give it your supplier deals. Get a renewal calendar, terms to push for
+  and a way to track broken promises.
 job: check-contracts
 headline: Supplier contract manager
-subhead: Give it your supplier deals. Get a renewal calendar, terms to push for and a way to track broken promises.
+subhead: Your supplier deals tracked in one place, with the renewal dates, the
+  terms worth pushing for and a way to catch missed promises. You stop finding
+  out about an auto-renewal after it has happened.
 explain: |
   Your supplier deals tracked in one place, with the renewal dates, the terms worth pushing for and a way to catch missed promises. You stop finding out about an auto-renewal after it has happened.
 
@@ -27,5 +30,6 @@ you_get:
   - An obligation tracker with overdue flags
   - A renew or exit recommendation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

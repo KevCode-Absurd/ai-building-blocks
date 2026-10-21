@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a strict class pattern and a validator.
 new_slug: audio-plugin-writer
 name: Audio plugin writer
-summary: Describe the effect or sound. Get a tested audio plugin you can export as VST or AU.
+summary: Describe the effect or sound. Get a tested audio plugin you can export
+  as VST or AU.
 job: build-software
 headline: Audio plugin writer
-subhead: Describe the effect or sound. Get a tested audio plugin you can export as VST or AU.
+subhead: A working audio effect or sound generator that you can export as a VST
+  or AU plugin for use in music software. Describe the sound you want, such as a
+  warm compressor, a delay or a synth tone, and the AI writes the MATLAB class
+  that does it.
 explain: |
   A working audio effect or sound generator that you can export as a VST or AU plugin for use in music software. Describe the sound you want, such as a warm compressor, a delay or a synth tone, and the AI writes the MATLAB class that does it.
 
@@ -26,6 +30,7 @@ you_get:
   - Build steps for a VST or AU file
   - Notes on settings and state
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Audio Toolbox.

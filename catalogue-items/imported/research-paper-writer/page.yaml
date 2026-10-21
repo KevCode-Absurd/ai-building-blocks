@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It needs careful sourcing and strict reporting formats.
 new_slug: research-paper-writer
 name: Research paper writer
-summary: Give it your findings. Get a manuscript in standard sections with checked citations and reporting rules applied.
+summary: Give it your findings. Get a manuscript in standard sections with
+  checked citations and reporting rules applied.
 job: write-and-tell-stories
 headline: Research paper writer
-subhead: Give it your findings. Get a manuscript in standard sections with checked citations and reporting rules applied.
+subhead: A manuscript drafted in the standard sections, with citations formatted
+  correctly and the right reporting rules applied. It turns your findings into
+  text a journal editor can read.
 explain: |
   A manuscript drafted in the standard sections, with citations formatted correctly and the right reporting rules applied. It turns your findings into text a journal editor can read.
 
@@ -27,5 +30,6 @@ you_get:
   - Checklist-aligned reporting
   - Revised text and reviewer replies (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

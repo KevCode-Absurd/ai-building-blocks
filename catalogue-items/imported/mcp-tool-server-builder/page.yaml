@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Tool contracts and permissions need careful design.
 new_slug: mcp-tool-server-builder
 name: MCP tool server builder
-summary: Say what tools your AI should reach. Get a safe MCP server with clear tool rules and tests.
+summary: Say what tools your AI should reach. Get a safe MCP server with clear
+  tool rules and tests.
 job: connect-tools
 headline: MCP tool server builder
-subhead: Say what tools your AI should reach. Get a safe MCP server with clear tool rules and tests.
+subhead: A safe MCP server that lets your AI reach the tools and data you
+  choose, with clear rules for each tool and tests to match.
 explain: |
   A safe MCP server that lets your AI reach the tools and data you choose, with clear rules for each tool and tests to match. Say what the AI should be able to do, and get the design and code to make it so.
 
@@ -27,6 +29,7 @@ you_get:
   - Unit and access tests
   - Deployment and rollback steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

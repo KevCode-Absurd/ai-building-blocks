@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It audits a page against known patterns and proposes tests for you to pick.
 new_slug: conversion-problem-finder
 name: Conversion problem finder
-summary: Give it a landing page. Get the conversion problems found and a set of tests worth running, each with a clear reason.
+summary: Give it a landing page. Get the conversion problems found and a set of
+  tests worth running, each with a clear reason.
 job: audit-landing-page
 headline: Conversion problem finder
-subhead: Give it a landing page. Get the conversion problems found and a set of tests worth running, each with a clear reason.
+subhead: A list of why a page or checkout loses visitors, scored by how bad it
+  is, plus A/B tests worth running, each with a reason behind it.
 explain: |
   A list of why a page or checkout loses visitors, scored by how bad it is, plus A/B tests worth running, each with a reason behind it. It stops you from testing button colours while a bigger problem sits unfixed.
 
@@ -26,5 +28,6 @@ you_get:
   - Priority order
   - Test setup guidance
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a standard counting routine.
 new_slug: stock-count-program-planner
 name: Stock count program planner
-summary: Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
+summary: Give it your item list. Get a rolling count schedule, who counts what,
+  and how to trace count mismatches.
 job: plan-supply-chain
 headline: Stock count program planner
-subhead: Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
+subhead: A plan for counting inventory a little each week, so you never have to
+  shut down for one big yearly count. You get a rolling schedule, a list of who
+  counts what, and a method to trace mismatches back to their cause.
 explain: |
   A plan for counting inventory a little each week, so you never have to shut down for one big yearly count. You get a rolling schedule, a list of who counts what, and a method to trace mismatches back to their cause.
 
@@ -28,5 +31,6 @@ you_get:
   - A mismatch tracing checklist
   - Accuracy targets and tracking
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

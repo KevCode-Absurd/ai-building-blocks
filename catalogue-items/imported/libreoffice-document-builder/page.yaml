@@ -5,7 +5,9 @@ name: LibreOffice document builder
 summary: Describe the document. Get an ODT file, or a conversion to Word, PDF or HTML.
 job: work-with-files
 headline: LibreOffice document builder
-subhead: Describe the document. Get an ODT file, or a conversion to Word, PDF or HTML.
+subhead: Make a text document from a plain description, then turn it into the
+  format the other person needs. You get an ODT file, or a copy in Word, PDF or
+  HTML, without opening a word processor.
 explain: |
   Make a text document from a plain description, then turn it into the format the other person needs. You get an ODT file, or a copy in Word, PDF or HTML, without opening a word processor.
 
@@ -27,6 +29,7 @@ you_get:
   - Merged documents from a template
   - A batch conversion command
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

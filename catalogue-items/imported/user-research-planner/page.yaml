@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a method that fits your question.
 new_slug: user-research-planner
 name: User research planner
-summary: Say what you need to learn. Get the right research method, a plan and a way to store what you find.
+summary: Say what you need to learn. Get the right research method, a plan and a
+  way to store what you find.
 job: understand-customers
 headline: User research planner
-subhead: Say what you need to learn. Get the right research method, a plan and a way to store what you find.
+subhead: Say what you need to learn. Get the right research method, a plan and a
+  way to store what you find. Bring what you need to learn. Use the result to
+  plan your next step.
 explain: |
   Choose the right way to learn from users, size the study honestly, and keep what you learn in a form people can trust. 
   The skill matches your goal and product stage to a method: open interviews for discovery, usability tests for ease of use, concept tests for ideas, or validation for a decision. It then gives a plan with objective, who to recruit, a question guide and success measures. A sample size tool gives a figure with its confidence level, such as five people per group for usability problems or about twelve for themes. Afterward it groups coded notes by tag and counts how many different people said each thing.
@@ -25,6 +28,7 @@ you_get:
   - A sample size with a confidence label
   - Ranked insights marked by how many people said them
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

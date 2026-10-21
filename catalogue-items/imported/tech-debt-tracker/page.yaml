@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scans, scores and prioritises.
 new_slug: tech-debt-tracker
 name: Tech debt tracker
-summary: Point it at your code. Get debt found, scored by severity and ordered into a clean-up plan.
+summary: Point it at your code. Get debt found, scored by severity and ordered
+  into a clean-up plan.
 job: build-software
 headline: Tech debt tracker
-subhead: Point it at your code. Get debt found, scored by severity and ordered into a clean-up plan.
+subhead: Point it at your code. Get debt found, scored by severity and ordered
+  into a clean-up plan. Bring the path to your codebase. Use the result to plan
+  your next step.
 explain: |
   A scan of your codebase that finds debt, scores each item by how serious it is, and orders them into a clean-up plan you can track over time. It gives you a number for something that usually stays a feeling.
 
@@ -27,6 +30,7 @@ you_get:
   - Summary counts by type
   - A trend dashboard over time
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must weigh many possible causes with thin evidence.
 new_slug: traffic-drop-investigator
 name: Traffic drop investigator
-summary: Describe a sudden search traffic drop. Get the likely causes ranked and a fix plan.
+summary: Describe a sudden search traffic drop. Get the likely causes ranked and
+  a fix plan.
 job: get-found-in-search
 headline: Traffic drop investigator
-subhead: Describe a sudden search traffic drop. Get the likely causes ranked and a fix plan.
+subhead: When your search traffic falls off a cliff, you need to know why before
+  you change anything. This skill gives you a ranked list of likely causes and a
+  recovery plan in priority order.
 explain: |
   When your search traffic falls off a cliff, you need to know why before you change anything. This skill gives you a ranked list of likely causes and a recovery plan in priority order.
 
@@ -27,5 +30,6 @@ you_get:
   - A prioritised fix plan
   - Steps to confirm recovery
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a merge method and settings.
 new_slug: model-merger
 name: Model merger
-summary: Give it two or more tuned models. Get one model that blends their skills, with no new training.
+summary: Give it two or more tuned models. Get one model that blends their
+  skills, with no new training.
 job: build-software
 headline: Model merger
-subhead: Give it two or more tuned models. Get one model that blends their skills, with no new training.
+subhead: One model that blends the strengths of two or more tuned models, built
+  without any new training. Merge a math model with a coding model and a chat
+  model, and test the result in minutes.
 explain: |
   One model that blends the strengths of two or more tuned models, built without any new training. Merge a math model with a coding model and a chat model, and test the result in minutes.
 
@@ -27,6 +30,7 @@ you_get:
   - A comparison against the parent models
   - Advice on which method to use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

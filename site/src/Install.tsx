@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from "react";
 import type { Block } from "./lib/data";
 import { buildSkillZip, download } from "./lib/handoff";
+import { getBusiness, useBusiness, withBusiness } from "./lib/business";
 
 // The most a ChatGPT GPT takes in its Instructions box.
 const GPT_LIMIT = 8000;
@@ -26,16 +27,18 @@ function Line({ text, toast, what }: { text: string; toast: (m: string) => void;
 
 /** Add a skill to your AI once, so you start it by name instead of pasting it every time. Remembers the AI you picked, in this browser. */
 export default function Install({ b, skill, toast }: { b: Block; skill: string | null; toast: (m: string) => void }) {
+  const business = useBusiness();
+  const personalSkill = skill ? withBusiness(skill, business) : null;
   const [tab, setTab] = useState<Tab>(() => { try { const t = localStorage.getItem(KEY); return TABS.some((x) => x.id === t) ? (t as Tab) : "claude"; } catch { return "claude"; } });
   const pick = (t: Tab) => { setTab(t); try { localStorage.setItem(KEY, t); } catch { /* private mode */ } };
   const zip = async () => {
     if (!skill) return;
-    download(await buildSkillZip(b.slug, skill, b.hasFiles), `${b.slug}.zip`);
-    toast("Skill downloaded");
+    try { download(await buildSkillZip(b.slug, skill, b.hasFiles, getBusiness()), `${b.slug}.zip`); toast("Skill downloaded"); }
+    catch (e) { toast(e instanceof Error ? e.message : "The complete skill could not be downloaded."); }
   };
-  const file = () => { if (skill) { download(new Blob([skill], { type: "text/markdown" }), "SKILL.md"); toast("Downloaded SKILL.md"); } };
-  const copy = async () => { if (skill) { await navigator.clipboard.writeText(skill).catch(() => {}); toast("Skill copied"); } };
-  const chars = skill?.length ?? 0;
+  const file = () => { if (personalSkill) { download(new Blob([personalSkill], { type: "text/markdown" }), "SKILL.md"); toast("Downloaded SKILL.md"); } };
+  const copy = async () => { if (personalSkill) { await navigator.clipboard.writeText(personalSkill).catch(() => {}); toast("Skill copied"); } };
+  const chars = personalSkill?.length ?? 0;
   const n = chars.toLocaleString("en-US");
   const zipBtn = <button className="btn btn-primary btn-sm" disabled={!skill} onClick={zip} data-testid="install-zip">Download the skill</button>;
   const copyBtn = <button className="btn btn-primary btn-sm" disabled={!skill} onClick={copy}>Copy the skill</button>;

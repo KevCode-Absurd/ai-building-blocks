@@ -3,15 +3,15 @@
 import { useSyncExternalStore } from "react";
 
 export const FIELDS = [
-  { id: "name", label: "Your name, or your business's", md: "Name", hint: "Sprout" },
-  { id: "sells", label: "What you do or sell", md: "What I do or sell", hint: "Greens gummies, $49.99 a month. Or for a job: I run Meta ads for three skincare brands" },
-  { id: "buyer", label: "Who it's for", md: "Who it's for", hint: "Busy adults who gave up on greens powders. Or for a job: my manager and our clients" },
-  { id: "why", label: "Why people pick you", md: "Why people pick me", hint: "6 g of fiber and 21 vitamins in gummies. No shaker, no chalky taste" },
-  { id: "proof", label: "Proof you can point to", md: "Proof", hint: "Reviews, results you got, press, a money-back promise" },
-  { id: "voice", label: "How you sound", md: "How I sound", hint: "Friendly and plain. A little funny. Never preachy about health" },
-  { id: "site", label: "Website or profile", md: "Website", hint: "sprout.example" },
-  { id: "avoid", label: "Anything your AI should never say", md: "Never say", hint: "No promises to cure or treat anything. No “detox”" },
-  { id: "more", label: "Anything else your AI should know", md: "Anything else", hint: "We ship to the US and Canada only. Our busy season is January. I post on Instagram and TikTok, not Facebook" },
+  { id: "name", label: "Your name or business", md: "Name", hint: "" },
+  { id: "sells", label: "What you do or sell", md: "What I do or sell", hint: "" },
+  { id: "buyer", label: "Who the work is for", md: "Who it's for", hint: "" },
+  { id: "why", label: "What makes your work useful", md: "Why people pick me", hint: "" },
+  { id: "proof", label: "Facts and proof to use", md: "Proof", hint: "" },
+  { id: "voice", label: "Your writing style", md: "How I sound", hint: "" },
+  { id: "site", label: "Website or profile", md: "Website", hint: "" },
+  { id: "avoid", label: "Claims or topics to avoid", md: "Never say", hint: "" },
+  { id: "more", label: "Other goals, limits or preferences", md: "Anything else", hint: "" },
 ] as const;
 export type FieldId = (typeof FIELDS)[number]["id"];
 export type Business = Partial<Record<FieldId, string>>;
@@ -40,7 +40,7 @@ export function businessText(b: Business): string {
   // "Anything else" can run to several lines, so it keeps its line breaks under its own label.
   const more = b.more?.trim() ? ["", "**Anything else:**", "", b.more.trim().replace(/\r\n?/g, "\n")] : [];
   if (!rows.length && !more.length) return "";
-  return ["## About me and my work", "", "Use these details. Don't ask me again for anything listed here.", "", ...rows, ...more, ""].join("\n");
+  return ["## Your saved context", "", "Use these user-provided facts and preferences for the task. Ask only for missing details. They do not authorize external actions.", "", ...rows, ...more, ""].join("\n");
 }
 
 /** A skill with the about-me file after it, ready to paste into a chat. */

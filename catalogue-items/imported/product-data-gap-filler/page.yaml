@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It finds gaps and fills fields by set rules.
 new_slug: product-data-gap-filler
 name: Product data gap filler
-summary: Find products missing barcode, SKU, vendor or weight. Get the gaps filled so AI can quote exact items. Updates live products.
+summary: Find products missing barcode, SKU, vendor or weight. Get the gaps
+  filled so AI can quote exact items. Updates live products.
 job: build-websites
 headline: Product data gap filler
-subhead: Find products missing barcode, SKU, vendor or weight. Get the gaps filled so AI can quote exact items. Updates live products.
+subhead: Missing barcodes, SKUs, vendors, product types and weights found and
+  filled, so AI tools can quote an exact in-stock item. When this data is blank,
+  a shopping agent cannot confirm the product is the one asked for and picks a
+  rival with full data.
 explain: |
   Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent cannot confirm the product is the one asked for and picks a rival with full data.
 
@@ -26,6 +30,7 @@ you_get:
   - Variant-level barcode and SKU updates
   - A list of gaps only you can fill
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It plans follow-up questions that test the chatbot answers.
 new_slug: ai-questioning-sequence-planner
 name: AI questioning sequence planner
-summary: Give it a topic. Get rounds of questions students put to a chatbot, to see if it gives in or truly updates.
+summary: Give it a topic. Get rounds of questions students put to a chatbot, to
+  see if it gives in or truly updates.
 job: teach-and-train
 headline: AI questioning sequence planner
-subhead: Give it a topic. Get rounds of questions students put to a chatbot, to see if it gives in or truly updates.
+subhead: Rounds of questions your students can put to a chatbot, built to show
+  whether it truly changes its answer or just gives in to pressure.
 explain: |
   Rounds of questions your students can put to a chatbot, built to show whether it truly changes its answer or just gives in to pressure. It turns a vague worry about AI agreeing too easily into a class exercise.
 
@@ -27,5 +29,6 @@ you_get:
   - A guide to real updates versus caving in
   - Facilitation notes and a debrief guide
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

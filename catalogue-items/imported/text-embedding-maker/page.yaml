@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows standard model calls.
 new_slug: text-embedding-maker
 name: Text embedding maker
-summary: Give it sentences or documents. Get number versions of them for search, grouping and finding similar text.
+summary: Give it sentences or documents. Get number versions of them for search,
+  grouping and finding similar text.
 job: build-software
 headline: Text embedding maker
-subhead: Give it sentences or documents. Get number versions of them for search, grouping and finding similar text.
+subhead: Give it sentences or documents. Get number versions of them for search,
+  grouping and finding similar text. Bring your sentences or documents. Use the
+  result to plan your next step.
 explain: |
   Turn sentences or documents into lists of numbers that capture their meaning, so a computer can find text that says similar things even when the words differ. That powers meaning-based search, grouping of similar items and question answering over your own files.
 
@@ -26,6 +29,7 @@ you_get:
   - Similarity scores between texts
   - A working search or clustering example
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

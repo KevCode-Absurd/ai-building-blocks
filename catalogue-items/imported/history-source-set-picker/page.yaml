@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Picking sources that create useful tension takes judgment.
 new_slug: history-source-set-picker
 name: History source set picker
-summary: Give it a history question. Get a chosen, ordered set of sources that pull in different directions.
+summary: Give it a history question. Get a chosen, ordered set of sources that
+  pull in different directions.
 job: teach-and-train
 headline: History source set picker
-subhead: Give it a history question. Get a chosen, ordered set of sources that pull in different directions.
+subhead: A short, ordered set of sources for a history lesson, chosen so they
+  disagree in useful ways. A flat set where every document says the same thing
+  produces flat answers.
 explain: |
   A short, ordered set of sources for a history lesson, chosen so they disagree in useful ways. A flat set where every document says the same thing produces flat answers. A set that pulls in different directions makes students weigh evidence.
 
@@ -26,5 +29,6 @@ you_get:
   - The skill each source builds
   - A reasoned order and a voice check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It turns numbers into a short story for each reader.
 new_slug: hiring-progress-reporter
 name: Hiring progress reporter
-summary: Paste your pipeline numbers. Get a clear update or chart page for the hiring manager or your leaders.
+summary: Paste your pipeline numbers. Get a clear update or chart page for the
+  hiring manager or your leaders.
 job: hire-people
 headline: Hiring progress reporter
-subhead: Paste your pipeline numbers. Get a clear update or chart page for the hiring manager or your leaders.
+subhead: "A clear hiring update that a busy manager will actually read. Paste in
+  your pipeline numbers and say who the report is for. The skill turns them into
+  a short story: what happened, what is stuck and what to do next."
 explain: |
   A clear hiring update that a busy manager will actually read. Paste in your pipeline numbers and say who the report is for. The skill turns them into a short story: what happened, what is stuck and what to do next.
 
@@ -27,5 +30,6 @@ you_get:
   - A simple chart page if you ask
   - Specific recommendations
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

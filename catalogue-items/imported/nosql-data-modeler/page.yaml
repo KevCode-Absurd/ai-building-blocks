@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It designs from your queries and checks for hot spots.
 new_slug: nosql-data-modeler
 name: NoSQL data modeler
-summary: Describe your queries and scale. Get a Cassandra or DynamoDB table design that avoids hot partitions.
+summary: Describe your queries and scale. Get a Cassandra or DynamoDB table
+  design that avoids hot partitions.
 job: build-software
 headline: NoSQL data modeler
-subhead: Describe your queries and scale. Get a Cassandra or DynamoDB table design that avoids hot partitions.
+subhead: Describe your queries and scale. Get a Cassandra or DynamoDB table
+  design that avoids hot partitions. Bring the queries you need to run. Use the
+  result to plan your next step.
 explain: |
   A Cassandra or DynamoDB table design that answers your queries quickly and spreads load evenly, so no single partition gets overloaded.
 
@@ -26,5 +29,6 @@ you_get:
   - A hot partition check
   - Trade-offs in plain words
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

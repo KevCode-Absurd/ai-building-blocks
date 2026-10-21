@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It builds the right query, then records where the answer came from.
 new_slug: public-database-fact-finder
 name: Public database fact finder
-summary: Name the fact you need and the database. Get it retrieved the same way every time, with source and date.
+summary: Name the fact you need and the database. Get it retrieved the same way
+  every time, with source and date.
 job: research-topics
 headline: Public database fact finder
-subhead: Name the fact you need and the database. Get it retrieved the same way every time, with source and date.
+subhead: A fact pulled from a named public database, with the source, query and
+  date attached. Anyone can repeat the lookup and get the same answer.
 explain: |
   A fact pulled from a named public database, with the source, query and date attached. Anyone can repeat the lookup and get the same answer.
 
@@ -26,6 +28,7 @@ you_get:
   - Record count check
   - A log someone else can rerun
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can reach public web data services.

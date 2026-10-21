@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads each comment and judges the right change.
 new_slug: review-comment-fixer
 name: Review comment fixer
-summary: Point it at your open pull request. Get each reviewer comment handled and the code updated.
+summary: Point it at your open pull request. Get each reviewer comment handled
+  and the code updated.
 job: test-and-fix-code
 headline: Review comment fixer
-subhead: Point it at your open pull request. Get each reviewer comment handled and the code updated.
+subhead: Every reviewer comment on your open pull request, listed and numbered,
+  with the code changes made for the ones you pick. You stay in control of which
+  feedback gets applied.
 explain: |
   Every reviewer comment on your open pull request, listed and numbered, with the code changes made for the ones you pick. You stay in control of which feedback gets applied.
 
@@ -24,6 +27,7 @@ you_get:
   - A short summary of the fix for each
   - Code changes for the comments you choose
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run the GitHub CLI and reach your repo.

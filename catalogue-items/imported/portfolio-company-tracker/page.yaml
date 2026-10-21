@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It extracts numbers and compares them to plan.
 new_slug: portfolio-company-tracker
 name: Portfolio company tracker
-summary: Give it monthly or quarterly reports. Get KPIs pulled out, variances to budget flagged and a summary dashboard.
+summary: Give it monthly or quarterly reports. Get KPIs pulled out, variances to
+  budget flagged and a summary dashboard.
 job: money-and-investing
 headline: Portfolio company tracker
-subhead: Give it monthly or quarterly reports. Get KPIs pulled out, variances to budget flagged and a summary dashboard.
+subhead: A monthly view of how each company you back is doing against plan. Feed
+  it the financial packs your companies send and get the key numbers pulled out
+  and the misses flagged.
 explain: |
   A monthly view of how each company you back is doing against plan. Feed it the financial packs your companies send and get the key numbers pulled out and the misses flagged.
 
@@ -26,5 +29,6 @@ you_get:
   - Flags for debt and cash issues
   - Summary dashboard
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

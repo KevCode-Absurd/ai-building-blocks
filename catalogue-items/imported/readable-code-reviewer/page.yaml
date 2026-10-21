@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads code and applies known rules, and you approve the edits.
 new_slug: readable-code-reviewer
 name: Readable code reviewer
-summary: Give it code. Get clearer names, smaller functions and tidier error handling, each with a reason. Uses Clean Code.
+summary: Give it code. Get clearer names, smaller functions and tidier error
+  handling, each with a reason. Uses Clean Code.
 job: test-and-fix-code
 headline: Readable code reviewer
-subhead: Give it code. Get clearer names, smaller functions and tidier error handling, each with a reason. Uses Clean Code.
+subhead: Your code reviewed for how easily a stranger can read it, with a score
+  out of 10 and clear fixes. Each suggestion comes with the reason behind it,
+  based on the Clean Code approach.
 explain: |
   Your code reviewed for how easily a stranger can read it, with a score out of 10 and clear fixes. Each suggestion comes with the reason behind it, based on the Clean Code approach.
 
@@ -25,5 +28,6 @@ you_get:
   - Suggested function splits
   - Error handling fixes with reasons
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

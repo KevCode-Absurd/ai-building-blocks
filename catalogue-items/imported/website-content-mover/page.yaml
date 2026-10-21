@@ -2,10 +2,13 @@ thinking: high
 thinking_why: A bad move can lose traffic, so it checks each step.
 new_slug: website-content-mover
 name: Website content mover
-summary: Name your old and new site. Get a move plan that keeps search rank, links and bookmarks working.
+summary: Name your old and new site. Get a move plan that keeps search rank,
+  links and bookmarks working.
 job: build-websites
 headline: Website content mover
-subhead: Name your old and new site. Get a move plan that keeps search rank, links and bookmarks working.
+subhead: A move plan for taking your content to a new platform, domain or URL
+  layout without losing search rank, links or bookmarks. A bad move can wipe out
+  years of traffic.
 explain: |
   A move plan for taking your content to a new platform, domain or URL layout without losing search rank, links or bookmarks. A bad move can wipe out years of traffic.
 
@@ -26,5 +29,6 @@ you_get:
   - Redirect and launch plan
   - Post-launch check list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

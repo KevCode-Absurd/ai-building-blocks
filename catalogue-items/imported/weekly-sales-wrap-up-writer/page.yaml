@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It summarizes known activity into a fixed layout.
 new_slug: weekly-sales-wrap-up-writer
 name: Weekly sales wrap-up writer
-summary: Ask for your week. Get what closed, moved and slipped, plus Monday's plan and an optional team post draft.
+summary: Ask for your week. Get what closed, moved and slipped, plus Monday's
+  plan and an optional team post draft.
 job: organise-work
 headline: Weekly sales wrap-up writer
-subhead: Ask for your week. Get what closed, moved and slipped, plus Monday's plan and an optional team post draft.
+subhead: Monday's plan and last week's story, written for you from your
+  pipeline. You see what closed, what moved and what slipped, without opening
+  six reports.
 explain: |
   Monday's plan and last week's story, written for you from your pipeline. You see what closed, what moved and what slipped, without opening six reports.
 
@@ -27,6 +30,7 @@ you_get:
   - Monday plan
   - Draft team channel post
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your CRM, email and calendar.

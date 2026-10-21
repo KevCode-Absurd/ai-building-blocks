@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Rules vary by operator type and need careful reading.
 new_slug: transport-cyber-rules-checker
 name: Transport cyber rules checker
-summary: Describe your pipeline or rail operation. Get which TSA security rules apply, your gaps and required plans.
+summary: Describe your pipeline or rail operation. Get which TSA security rules
+  apply, your gaps and required plans.
 job: check-contracts
 headline: Transport cyber rules checker
-subhead: Describe your pipeline or rail operation. Get which TSA security rules apply, your gaps and required plans.
+subhead: For pipeline, freight rail, transit and bus operators in the US, it is
+  hard to tell which TSA security directives cover you. This skill tells you
+  which apply, where your gaps are, and which plans you must write.
 explain: |
   For pipeline, freight rail, transit and bus operators in the US, it is hard to tell which TSA security directives cover you. This skill tells you which apply, where your gaps are, and which plans you must write.
 
@@ -26,5 +29,6 @@ you_get:
   - Draft plan sections
   - An incident reporting procedure
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

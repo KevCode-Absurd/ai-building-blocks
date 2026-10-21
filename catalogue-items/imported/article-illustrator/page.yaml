@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It plans each picture first, then follows set steps to draw them.
 new_slug: article-illustrator
 name: Article illustrator
-summary: Give it an article. Get a plan for where pictures belong and a matching set of illustrations.
+summary: Give it an article. Get a plan for where pictures belong and a matching
+  set of illustrations.
 job: make-images
 headline: Article illustrator
-subhead: Give it an article. Get a plan for where pictures belong and a matching set of illustrations.
+subhead: An article with pictures in the right places, all drawn in one matching
+  look. The skill reads your text first and marks the spots where a picture
+  would help a reader, such as a hard idea, a process or a long stretch with
+  nothing to rest the eye on.
 explain: |
   An article with pictures in the right places, all drawn in one matching look. The skill reads your text first and marks the spots where a picture would help a reader, such as a hard idea, a process or a long stretch with nothing to rest the eye on.
 
@@ -25,6 +29,7 @@ you_get:
   - A matching set of illustrations
   - Placement notes for your article
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can draw images with an image tool.

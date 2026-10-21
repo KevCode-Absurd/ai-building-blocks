@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It lays out a phased plan from a set structure.
 new_slug: customer-onboarding-planner
 name: Customer onboarding planner
-summary: Describe your product and customers. Get phased onboarding steps, email templates, milestones and owners.
+summary: Describe your product and customers. Get phased onboarding steps, email
+  templates, milestones and owners.
 job: build-product
 headline: Customer onboarding planner
-subhead: Describe your product and customers. Get phased onboarding steps, email templates, milestones and owners.
+subhead: New customers who do not reach a first win tend to leave. Describe your
+  product and your customers and you get an onboarding plan with phases, task
+  lists, email templates, milestones and owners.
 explain: |
   New customers who do not reach a first win tend to leave. Describe your product and your customers and you get an onboarding plan with phases, task lists, email templates, milestones and owners.
 
@@ -26,5 +29,6 @@ you_get:
   - Email and message templates
   - Milestones and escalation rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

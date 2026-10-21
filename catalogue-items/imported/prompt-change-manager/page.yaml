@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sets up process and tracks changes.
 new_slug: prompt-change-manager
 name: Prompt change manager
-summary: Keep prompts in production. Get versioning, tests of changes, a registry and safe rollbacks.
+summary: Keep prompts in production. Get versioning, tests of changes, a
+  registry and safe rollbacks.
 job: set-up-ai
 headline: Prompt change manager
-subhead: Keep prompts in production. Get versioning, tests of changes, a registry and safe rollbacks.
+subhead: "Treat your prompts like code: saved, versioned, tested and safe to
+  roll back. A wording tweak that quietly breaks a feature gets caught before
+  users see it."
 explain: |
   Treat your prompts like code: saved, versioned, tested and safe to roll back. A wording tweak that quietly breaks a feature gets caught before users see it.
 
@@ -27,5 +30,6 @@ you_get:
   - Evaluation pipeline plan
   - A/B test and rollback process
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

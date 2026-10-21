@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a structure from your needs with set design rules.
 new_slug: database-schema-designer
 name: Database schema designer
-summary: Describe your app. Get tables, links, indexes and rules in a clean, normalized schema.
+summary: Describe your app. Get tables, links, indexes and rules in a clean,
+  normalized schema.
 job: build-software
 headline: Database schema designer
-subhead: Describe your app. Get tables, links, indexes and rules in a clean, normalized schema.
+subhead: Plain descriptions of what your app does become a clean set of tables,
+  relationships and rules, plus the SQL to create them. The design avoids
+  duplicated data and bad entries from the start.
 explain: |
   Plain descriptions of what your app does become a clean set of tables, relationships and rules, plus the SQL to create them. The design avoids duplicated data and bad entries from the start.
 
@@ -26,5 +29,6 @@ you_get:
   - Ready to run SQL statements
   - Check against your needs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

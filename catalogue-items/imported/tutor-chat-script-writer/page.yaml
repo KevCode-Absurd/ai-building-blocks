@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It plans branching replies for many kinds of confusion.
 new_slug: tutor-chat-script-writer
 name: Tutor chat script writer
-summary: Give it a topic and where students get stuck. Get a back-and-forth tutoring script with replies for each difficulty.
+summary: Give it a topic and where students get stuck. Get a back-and-forth
+  tutoring script with replies for each difficulty.
 job: teach-and-train
 headline: Tutor chat script writer
-subhead: Give it a topic and where students get stuck. Get a back-and-forth tutoring script with replies for each difficulty.
+subhead: A back-and-forth tutoring script that answers the places students
+  actually get stuck. Each wrong turn has a ready reply, so your chatbot or
+  tutor does not just repeat the same hint.
 explain: |
   A back-and-forth tutoring script that answers the places students actually get stuck. Each wrong turn has a ready reply, so your chatbot or tutor does not just repeat the same hint.
 
@@ -26,5 +29,6 @@ you_get:
   - A ladder of hints
   - A closing check for understanding
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

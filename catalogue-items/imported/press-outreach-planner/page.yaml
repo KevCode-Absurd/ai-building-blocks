@@ -5,7 +5,8 @@ name: Press outreach planner
 summary: Say your news. Get a media list, pitch emails and a press kit outline.
 job: grow-social
 headline: Press outreach planner
-subhead: Say your news. Get a media list, pitch emails and a press kit outline.
+subhead: "Tell it your news and get a plan to win press coverage: who to
+  contact, what to say and what to put in your press kit."
 explain: |
   Tell it your news and get a plan to win press coverage: who to contact, what to say and what to put in your press kit.
 
@@ -26,5 +27,6 @@ you_get:
   - Press kit outline
   - Advice on timing and follow-up
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

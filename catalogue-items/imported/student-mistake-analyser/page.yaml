@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It looks for patterns and root causes in mistakes.
 new_slug: student-mistake-analyser
 name: Student mistake analyser
-summary: Give it a set of student errors. Get the likely causes and the feedback or teaching that fixes each one.
+summary: Give it a set of student errors. Get the likely causes and the feedback
+  or teaching that fixes each one.
 job: teach-and-train
 headline: Student mistake analyser
-subhead: Give it a set of student errors. Get the likely causes and the feedback or teaching that fixes each one.
+subhead: A set of wrong answers becomes a list of causes and fixes. Instead of
+  marking 'incorrect', you learn whether the student slipped, misread, or holds
+  a wrong idea, and what to do about each.
 explain: |
   A set of wrong answers becomes a list of causes and fixes. Instead of marking 'incorrect', you learn whether the student slipped, misread, or holds a wrong idea, and what to do about each.
 
@@ -28,5 +31,6 @@ you_get:
   - A response plan for each error type
   - A self-analysis guide for students
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

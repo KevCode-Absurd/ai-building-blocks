@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks each supplier against a set list of criteria.
 new_slug: responsible-sourcing-checker
 name: Responsible sourcing checker
-summary: Give it your suppliers. Get ethics and environment gaps found, a questionnaire to send, and an improvement plan.
+summary: Give it your suppliers. Get ethics and environment gaps found, a
+  questionnaire to send, and an improvement plan.
 job: plan-supply-chain
 headline: Responsible sourcing checker
-subhead: Give it your suppliers. Get ethics and environment gaps found, a questionnaire to send, and an improvement plan.
+subhead: Give it your suppliers. Get ethics and environment gaps found, a
+  questionnaire to send, and an improvement plan. Bring a list of your
+  suppliers. Use the result to plan your next step.
 explain: |
   A supplier review that shows where each supplier falls short on ethics and the environment, with a questionnaire ready to send and a plan to close the gaps. You choose what matters first, so effort goes to real risk and not a long checklist.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - A customer or investor has asked how ethical your suppliers are.
   - You buy from many suppliers and do not know which ones carry the most risk.
-  - You need a questionnaire to send to suppliers about their environmental and labour practices.
+  - You need a questionnaire to send to suppliers about their environmental and
+    labour practices.
   - You want a plan to improve sourcing without dropping suppliers overnight.
 you_give:
   - A list of your suppliers
@@ -27,5 +31,6 @@ you_get:
   - A ranked improvement plan
   - Follow-up checks to run later
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

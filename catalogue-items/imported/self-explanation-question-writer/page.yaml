@@ -2,16 +2,19 @@ thinking: medium
 thinking_why: It picks the key ideas and writes a question for each.
 new_slug: self-explanation-question-writer
 name: Self-explanation question writer
-summary: Give it a text, example or diagram. Get questions that make students explain the why behind each step.
+summary: Give it a text, example or diagram. Get questions that make students
+  explain the why behind each step.
 job: teach-and-train
 headline: Self-explanation question writer
-subhead: Give it a text, example or diagram. Get questions that make students explain the why behind each step.
+subhead: Questions placed at the right points in your learning material so
+  students stop to explain why each step is true, not just what it says.
 explain: |
   Questions placed at the right points in your learning material so students stop to explain why each step is true, not just what it says. Research on worked examples shows that students who explain to themselves learn far more, and that prompting them works even for those who would not do it alone.
 
   Give it a text, a worked example or a diagram. It finds the steps where understanding is easiest to skip, then writes prompts that ask why, how and what principle, in place of "what happens here?". Each prompt is checked so it calls for reasoning instead of a restatement. It also drafts the follow-up feedback for a good or shallow answer.
 when:
-  - You have a worked maths or science example and want students to engage with each step.
+  - You have a worked maths or science example and want students to engage with
+    each step.
   - Your lesson text is dense and learners skim it passively.
   - You are building a tutoring chat and need good questions to ask mid-study.
   - You want to replace shallow "what happened" questions with reasoning ones.
@@ -25,5 +28,6 @@ you_get:
   - Feedback lines for strong and weak answers
   - A check that questions need reasoning
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: story-page-style-guide
 name: Story-led page style guide writer
-summary: Describe your story. Get a style guide for a page that walks visitors through it, with clear steps and tone.
+summary: Describe your story. Get a style guide for a page that walks visitors
+  through it, with clear steps and tone.
 job: design-work
 headline: Story-led page style guide writer
-subhead: Describe your story. Get a style guide for a page that walks visitors through it, with clear steps and tone.
+subhead: A design guide for a web page that tells a story, so a designer or
+  developer can build it without guessing. You describe the story and the
+  feeling you want, and get rules for how the page leads a visitor from one step
+  to the next.
 explain: |
   A design guide for a web page that tells a story, so a designer or developer can build it without guessing. You describe the story and the feeling you want, and get rules for how the page leads a visitor from one step to the next.
 
@@ -27,5 +31,6 @@ you_get:
   - Accessibility requirements
   - Do and don't lists and a tone guide
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

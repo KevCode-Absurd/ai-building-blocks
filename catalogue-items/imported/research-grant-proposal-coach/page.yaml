@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Proposals need fit to each funder's rules and a convincing argument.
 new_slug: research-grant-proposal-coach
 name: Research grant proposal coach
-summary: Name the funder and your idea. Get aims, a compliance checklist, a budget outline and a critique of your draft.
+summary: Name the funder and your idea. Get aims, a compliance checklist, a
+  budget outline and a critique of your draft.
 job: research-topics
 headline: Research grant proposal coach
-subhead: Name the funder and your idea. Get aims, a compliance checklist, a budget outline and a critique of your draft.
+subhead: "A grant application taking shape: aims, a checklist of the funder's
+  rules, a budget outline and a critique of your draft. You find gaps before
+  reviewers do."
 explain: |
   A grant application taking shape: aims, a checklist of the funder's rules, a budget outline and a critique of your draft. You find gaps before reviewers do.
 
@@ -27,5 +30,6 @@ you_get:
   - Budget outline
   - Critique against review criteria
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

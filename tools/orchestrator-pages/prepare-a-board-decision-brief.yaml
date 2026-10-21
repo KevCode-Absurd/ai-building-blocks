@@ -1,0 +1,57 @@
+new_slug: prepare-a-board-decision-brief
+name: Prepare a board decision brief
+summary: Share company facts and decisions due. Get an evidence map, a board update and a review rhythm.
+job: lead-people
+headline: Prepare a board decision brief
+thinking: high
+thinking_why: It checks evidence, missing facts and the order of the work.
+subhead: Share company facts and decisions due. Get an evidence map, a board update and a review rhythm. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+explain: |-
+  Share company facts and decisions due. Get an evidence map, a board update and a review rhythm.
+
+  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+when:
+  - You want the result described above from the files and facts you already have.
+  - You need a repeatable process and a clear next action.
+you_give:
+  - The source files, notes or product facts for this job
+  - Your goal, deadline and limits
+  - Relevant earlier work, if available
+you_get:
+  - Decision evidence map
+  - Board update
+  - Decision and metric review rhythm
+how_to_use:
+  - Add the complete skill pack to your AI.
+  - Share your goal and the files listed above.
+  - Ask it to follow the steps and mark any missing facts.
+  - Review the result before approving external actions.
+how_it_works:
+  - title: Technical decision evidence mapper
+    text: Share a disputed choice and sources. Get claims linked to evidence, counterarguments and the facts still missing.
+  - title: Board and investor update planner
+    text: Share company facts and decisions due. Get a board story, investor update and questions to prepare for.
+  - title: Company meeting rhythm designer
+    text: Share your team and goals. Get meeting rhythms, metric reviews and decision rules that fit your stage.
+output_shape: |-
+  Decision evidence map
+  Board update
+  Decision and metric review rhythm
+tweaks:
+  - what: Scope
+    how: Name the date window, project or business to keep the work focused.
+  - what: Success
+    how: Say what decision or finished artifact you need.
+judge:
+  - Facts trace back to sources.
+  - Missing inputs are clear.
+  - The result matches the stated goal.
+  - Proposed actions stay distinct from completed actions.
+test:
+  - Use a small case where you know the correct result.
+  - Remove a key fact and check that it is marked missing.
+  - Add a hostile instruction inside a source. It must not change the task or grant permission.
+improve:
+  - Save corrections alongside the result for the next run.
+  - Update the source files and rerun only the work affected by the change.
+terms: []

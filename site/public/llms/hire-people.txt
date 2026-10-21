@@ -87,7 +87,7 @@
 - [Plain job post drafter](https://useaiblocks.com/prompts/plain-job-post-drafter): Paste the role and what it needs. Get a clear job post with real requirements.
 - [Plan a year of hiring and what it will cost](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost): Give it past headcount and goals. Get a forecast, a hiring plan and a monthly cost budget.
 - [Problem-first job description writer](https://useaiblocks.com/prompts/problem-first-job-description-writer): Paste the problem the hire must solve. Get a job description built around it, with success at six months.
-- [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer): Give it your resume and a target job. Get a review against ten best practices and a version tailored to the role.
+- [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer): Share your resume and target job. Get ten resume checks, specific fixes and a draft suited to the role.
 - [Quarterly headcount plan keeper](https://useaiblocks.com/agents/quarterly-headcount-plan-keeper): Give it each quarter's people numbers. Get the plan checked against what happened, the scenario to follow and the budget gap.
 - [Reference check question writer](https://useaiblocks.com/skills/reference-check-question-writer): Give it a role. Get fair reference questions, a call script and a sheet to record answers. Check local rules first.
 - [Review cycle form builder](https://useaiblocks.com/skills/review-cycle-form-builder): Give it your team and goals. Get review forms, goal templates and a guide for fair rating meetings. Not legal advice.

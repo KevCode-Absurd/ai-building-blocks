@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It structures many pages into one plan.
 new_slug: site-map-planner
 name: Site map planner
-summary: Describe your site. Get a page hierarchy, navigation, URL plan and internal linking map.
+summary: Describe your site. Get a page hierarchy, navigation, URL plan and
+  internal linking map.
 job: build-websites
 headline: Site map planner
-subhead: Describe your site. Get a page hierarchy, navigation, URL plan and internal linking map.
+subhead: A site map with page hierarchy, navigation, URL plan and internal
+  links, so visitors find things and search engines follow your structure. It
+  stops a site from growing into a pile of orphan pages.
 explain: |
   A site map with page hierarchy, navigation, URL plan and internal links, so visitors find things and search engines follow your structure. It stops a site from growing into a pile of orphan pages.
 
@@ -27,5 +30,6 @@ you_get:
   - An internal linking map
   - Redirect notes for moved pages
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

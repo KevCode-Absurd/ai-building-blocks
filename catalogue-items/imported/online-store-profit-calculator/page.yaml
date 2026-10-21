@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows set cost formulas on your numbers.
 new_slug: online-store-profit-calculator
 name: Online store profit calculator
-summary: Give it your price, costs and ad spend. Get your margin per sale and whether your cost to win a customer works.
+summary: Give it your price, costs and ad spend. Get your margin per sale and
+  whether your cost to win a customer works.
 job: run-your-store
 headline: Online store profit calculator
-subhead: Give it your price, costs and ad spend. Get your margin per sale and whether your cost to win a customer works.
+subhead: Your real profit on each sale, after every cost that eats into it, and
+  whether what you pay to win a customer makes sense. Many sellers see revenue
+  and miss how thin the margin is once ads and fees are in.
 explain: |
   Your real profit on each sale, after every cost that eats into it, and whether what you pay to win a customer makes sense. Many sellers see revenue and miss how thin the margin is once ads and fees are in.
 
@@ -26,6 +29,7 @@ you_get:
   - Customer lifetime value against acquisition cost
   - A warning when the numbers do not work
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

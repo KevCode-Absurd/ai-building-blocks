@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It groups errors, then fixes each group in turn.
 new_slug: failing-test-fixer
 name: Failing test fixer
-summary: Point it at a broken test suite. Get failures grouped by cause and fixed one group at a time.
+summary: Point it at a broken test suite. Get failures grouped by cause and
+  fixed one group at a time.
 job: test-and-fix-code
 headline: Failing test fixer
-subhead: Point it at a broken test suite. Get failures grouped by cause and fixed one group at a time.
+subhead: A test suite that goes from red to green, fixed one cause at a time
+  instead of one test at a time. Fifty failures often come from three real bugs.
 explain: |
   A test suite that goes from red to green, fixed one cause at a time instead of one test at a time. Fifty failures often come from three real bugs.
 
@@ -25,6 +27,7 @@ you_get:
   - A re-run result after each group
   - A final full-suite result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

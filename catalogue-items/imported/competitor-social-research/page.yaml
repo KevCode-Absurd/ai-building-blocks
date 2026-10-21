@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It compares accounts and draws a plan from the gaps.
 new_slug: competitor-social-research
 name: Competitor social strategy researcher
-summary: Name your competitors. Get what content works for them, the gaps, and a short social plan. Collects data from websites.
+summary: Name your competitors. Get what content works for them, the gaps, and a
+  short social plan. Collects data from websites.
 job: study-competitors
 headline: Competitor social strategy researcher
-subhead: Name your competitors. Get what content works for them, the gaps, and a short social plan. Collects data from websites.
+subhead: A view of what content works for your competitors on social media,
+  where they are weak, and a short plan for what you could post.
 explain: |
   A view of what content works for your competitors on social media, where they are weak, and a short plan for what you could post. It judges each account against its own normal results, so a small brand is not compared with a giant on raw views.
 
@@ -27,6 +29,7 @@ you_get:
   - A list of gaps
   - A short social plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your ScrapeCreators key.

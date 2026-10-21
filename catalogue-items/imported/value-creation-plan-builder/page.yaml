@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must choose and size levers for a business.
 new_slug: value-creation-plan-builder
 name: Value creation plan builder
-summary: Give it a company's numbers. Get revenue, cost and operating levers mapped to profit, with 100 day priorities.
+summary: Give it a company's numbers. Get revenue, cost and operating levers
+  mapped to profit, with 100 day priorities.
 job: plan-strategy
 headline: Value creation plan builder
-subhead: Give it a company's numbers. Get revenue, cost and operating levers mapped to profit, with 100 day priorities.
+subhead: A plan for how a company you just bought will make more profit, with
+  each idea tied to a number and an owner. You get a profit bridge and a clear
+  list of what to do in the first 100 days.
 explain: |
   A plan for how a company you just bought will make more profit, with each idea tied to a number and an owner. You get a profit bridge and a clear list of what to do in the first 100 days.
 
@@ -26,5 +29,6 @@ you_get:
   - A 100 day priority list
   - KPI targets with owners
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

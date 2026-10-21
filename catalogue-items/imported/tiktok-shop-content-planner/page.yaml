@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans content from trends and set formats.
 new_slug: tiktok-shop-content-planner
 name: TikTok Shop content planner
-summary: Tell it your products. Get video formats, hooks, hashtags and a content calendar.
+summary: Tell it your products. Get video formats, hooks, hashtags and a content
+  calendar.
 job: grow-social
 headline: TikTok Shop content planner
-subhead: Tell it your products. Get video formats, hooks, hashtags and a content calendar.
+subhead: Share your products and brand. Get a TikTok Shop content plan with
+  video formats, opening hooks, hashtags and a posting calendar. It matches
+  ideas to your products and suggests tests when views fail to turn into sales.
 explain: |
   A month of TikTok Shop videos planned before you open the camera: formats, opening lines, hashtags and a calendar that mixes product demos, trends and proof from customers.
 
@@ -27,5 +30,6 @@ you_get:
   - A 30 day calendar
   - Tests to improve sales
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

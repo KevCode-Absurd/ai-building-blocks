@@ -5,7 +5,8 @@ name: Spec builder
 summary: Give it a spec and tickets. Get the work built in code, tested and reviewed.
 job: build-software
 headline: Spec builder
-subhead: Give it a spec and tickets. Get the work built in code, tested and reviewed.
+subhead: A finished feature, built in code from a spec and its tickets, then
+  tested and reviewed. The tickets are treated as a task graph, not a list.
 explain: |
   A finished feature, built in code from a spec and its tickets, then tested and reviewed. The tickets are treated as a task graph, not a list. Some are blocked by others, so there is always a set of tickets ready to start.
 
@@ -27,6 +28,7 @@ you_get:
   - A code review of the result
   - A draft pull request (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

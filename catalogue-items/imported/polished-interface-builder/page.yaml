@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows style rules while making design choices.
 new_slug: polished-interface-builder
 name: Polished interface builder
-summary: Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look.
+summary: Describe the interface. Get a built page with careful colour, layout
+  and motion, not a stock template look.
 job: build-websites
 headline: Polished interface builder
-subhead: Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look.
+subhead: Describe the interface. Get a built page with careful colour, layout
+  and motion, not a stock template look. Bring description of the page or app.
+  Use the result to plan your next step.
 explain: |
   Ask for a page or app screen and get working front-end code with a deliberate look, not the stock template feel of centred heroes, purple gradients and rows of identical cards.
 
@@ -26,6 +29,7 @@ you_get:
   - Loading, empty and error states
   - Ranked list of design fixes for a review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

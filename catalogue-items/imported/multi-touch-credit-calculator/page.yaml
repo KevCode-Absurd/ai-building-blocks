@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Credit rules need exact settings and a careful reading of results.
 new_slug: multi-touch-credit-calculator
 name: Multi-touch credit calculator
-summary: Give it your touches and sales. Get credit split by first, last, linear or decay rules, plus cost per sale.
+summary: Give it your touches and sales. Get credit split by first, last, linear
+  or decay rules, plus cost per sale.
 job: track-numbers
 headline: Multi-touch credit calculator
-subhead: Give it your touches and sales. Get credit split by first, last, linear or decay rules, plus cost per sale.
+subhead: Credit for each sale split across the ads and visits that came before
+  it, using first-touch, last-touch, linear, position-based or time-decay rules.
+  Then you see cost per sale by channel.
 explain: |
   Credit for each sale split across the ads and visits that came before it, using first-touch, last-touch, linear, position-based or time-decay rules. Then you see cost per sale by channel.
 
@@ -27,6 +30,7 @@ you_get:
   - Cost per sale by channel
   - A note on what the numbers can and cannot say
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run SQL on your own BigQuery data.

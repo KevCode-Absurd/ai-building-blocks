@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set convert-and-test routine.
 new_slug: local-model-converter
 name: Local model converter
-summary: Give it a model. Get a smaller file that runs on your laptop or Mac with no GPU, plus the run steps.
+summary: Give it a model. Get a smaller file that runs on your laptop or Mac
+  with no GPU, plus the run steps.
 job: build-software
 headline: Local model converter
-subhead: Give it a model. Get a smaller file that runs on your laptop or Mac with no GPU, plus the run steps.
+subhead: A smaller version of an AI model that runs on your laptop, a Mac or a
+  plain CPU with no GPU. Give it a model and get a compact GGUF file plus the
+  steps to run it.
 explain: |
   A smaller version of an AI model that runs on your laptop, a Mac or a plain CPU with no GPU. Give it a model and get a compact GGUF file plus the steps to run it.
 
@@ -27,6 +30,7 @@ you_get:
   - Run steps
   - A guide to quality versus size
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands and build llama.cpp.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scores against a set rubric.
 new_slug: ai-look-design-reviewer
 name: AI-look design reviewer
-summary: Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a ranked fix list.
+summary: Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a
+  ranked fix list.
 job: design-work
 headline: AI-look design reviewer
-subhead: Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a ranked fix list.
+subhead: Your screen looks off and you cannot say why. This review finds the
+  reason. It reads your UI code, scores it from 0 to 100 and points to the exact
+  lines that make it look machine-made.
 explain: |
   Your screen looks off and you cannot say why. This review finds the reason. It reads your UI code, scores it from 0 to 100 and points to the exact lines that make it look machine-made.
 
@@ -25,6 +28,7 @@ you_get:
   - A ranked fix list
   - A short list of what already works
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

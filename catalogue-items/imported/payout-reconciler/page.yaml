@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches amounts and explains the gaps.
 new_slug: payout-reconciler
 name: Payout reconciler
-summary: Run it on your payouts. Get each one matched to the orders that funded it, with gaps flagged.
+summary: Run it on your payouts. Get each one matched to the orders that funded
+  it, with gaps flagged.
 job: run-your-store
 headline: Payout reconciler
-subhead: Run it on your payouts. Get each one matched to the orders that funded it, with gaps flagged.
+subhead: Each Shopify Payments payout matched to the orders that funded it, with
+  gaps flagged so you can trace a missing dollar. It reads data only and changes
+  nothing.
 explain: |
   Each Shopify Payments payout matched to the orders that funded it, with gaps flagged so you can trace a missing dollar. It reads data only and changes nothing.
 
@@ -26,6 +29,7 @@ you_get:
   - List of gaps over your tolerance
   - Readable or JSON output
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

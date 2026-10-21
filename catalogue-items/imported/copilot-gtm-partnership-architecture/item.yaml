@@ -1,0 +1,37 @@
+slug: copilot-gtm-partnership-architecture
+name: Revenue partnership program planner
+summary: Share your product and potential partners. Get partner types, incentives and a plan to test shared revenue.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/gtm-partnership-architecture
+  url: https://github.com/github/awesome-copilot/tree/main/skills/gtm-partnership-architecture
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: gtm-partnership-architecture
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: gtm-partnership-architecture skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/gtm-partnership-architecture
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Smit Patel (https://linkedin.com/in/smitkpatel)
+    url: ""
+    used: Wrote the skill; GitHub Copilot community shared it in their collection.

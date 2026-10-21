@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Pay, risk and the candidate's options all pull against each other.
 new_slug: job-offer-planner
 name: Job offer planner
-summary: Give it the role and what the candidate wants. Get an offer package, a negotiation plan and call scripts.
+summary: Give it the role and what the candidate wants. Get an offer package, a
+  negotiation plan and call scripts.
 job: hire-people
 headline: Job offer planner
-subhead: Give it the role and what the candidate wants. Get an offer package, a negotiation plan and call scripts.
+subhead: An offer that has a real chance of being accepted, with a plan for the
+  conversation after it. Give it the role, your budget limits and what the
+  candidate has said they want.
 explain: |
   An offer that has a real chance of being accepted, with a plan for the conversation after it. Give it the role, your budget limits and what the candidate has said they want. The skill builds the full package: base, bonus, equity, sign-on, benefits, relocation, title, start date and flexibility.
 
@@ -26,5 +29,6 @@ you_get:
   - A negotiation plan with fallbacks
   - Scripts for the offer call and closing
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

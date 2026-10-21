@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It matches a format to the purpose and group.
 new_slug: class-discussion-format-picker
 name: Class discussion format picker
-summary: Give it your topic and group. Get the discussion format that fits, with steps to run it.
+summary: Give it your topic and group. Get the discussion format that fits, with
+  steps to run it.
 job: teach-and-train
 headline: Class discussion format picker
-subhead: Give it your topic and group. Get the discussion format that fits, with steps to run it.
+subhead: The right kind of class discussion for your goal, with steps to run it.
+  A debate, a Socratic seminar and a think-pair-share all do different jobs.
 explain: |
   The right kind of class discussion for your goal, with steps to run it. A debate, a Socratic seminar and a think-pair-share all do different jobs. You give your topic, purpose and group, and you get the best match.
 
@@ -27,5 +29,6 @@ you_get:
   - Moves for when talk stalls
   - Ways to include quiet students
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

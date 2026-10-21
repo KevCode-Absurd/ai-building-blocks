@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It separates assumptions from evidence with care.
 new_slug: hidden-belief-mapper
 name: Hidden belief mapper
-summary: Give it a topic or system. Get the beliefs, stories and values that shape it, each checked against evidence.
+summary: Give it a topic or system. Get the beliefs, stories and values that
+  shape it, each checked against evidence.
 job: teach-and-train
 headline: Hidden belief mapper
-subhead: Give it a topic or system. Get the beliefs, stories and values that shape it, each checked against evidence.
+subhead: A map of the beliefs, stories and values that keep a system the way it
+  is. When a team, school or community keeps getting the same results, the cause
+  is often how people see the situation, not the rules.
 explain: |
   A map of the beliefs, stories and values that keep a system the way it is. When a team, school or community keeps getting the same results, the cause is often how people see the situation, not the rules. This skill helps you see those views and test them against evidence.
 
@@ -26,5 +29,6 @@ you_get:
   - Reflection questions
   - Non-accusing language to use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It joins sales, refunds and stock.
 new_slug: variant-sales-ranker
 name: Variant sales ranker
-summary: Get every size and color ranked by sales, units and refunds, with stock, to spot top sellers and dead weight.
+summary: Get every size and color ranked by sales, units and refunds, with
+  stock, to spot top sellers and dead weight.
 job: run-your-store
 headline: Variant sales ranker
-subhead: Get every size and color ranked by sales, units and refunds, with stock, to spot top sellers and dead weight.
+subhead: Know which exact sizes and colors make your money and which sit on the
+  shelf. Each variant is ranked by revenue, units sold and refund rate, then set
+  beside the stock you have left.
 explain: |
   Know which exact sizes and colors make your money and which sit on the shelf. Each variant is ranked by revenue, units sold and refund rate, then set beside the stock you have left.
 
@@ -26,6 +29,7 @@ you_get:
   - Current stock next to sales
   - Lists of top performers and dead weight
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

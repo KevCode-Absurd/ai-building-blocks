@@ -5,7 +5,8 @@ name: Arduino connector
 summary: Plug in a board. Get it found, set up and connected to MATLAB.
 job: build-software
 headline: Arduino connector
-subhead: Plug in a board. Get it found, set up and connected to MATLAB.
+subhead: Your Arduino board found, set up and connected to MATLAB, with you kept
+  in the loop at every step. You plug it in and the skill handles the checking.
 explain: |
   Your Arduino board found, set up and connected to MATLAB, with you kept in the loop at every step. You plug it in and the skill handles the checking.
 
@@ -25,6 +26,7 @@ you_get:
   - A working arduino object in MATLAB
   - Clear steps if no board is found
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB and reach an Arduino board.

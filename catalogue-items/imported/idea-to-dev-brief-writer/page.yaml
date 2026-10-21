@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It fills gaps in a vague idea by asking the right questions.
 new_slug: idea-to-dev-brief-writer
 name: Idea to dev brief writer
-summary: Give it a rough idea or feature request. Get a clear brief a developer can build from, with scope and open questions.
+summary: Give it a rough idea or feature request. Get a clear brief a developer
+  can build from, with scope and open questions.
 job: build-product
 headline: Idea to dev brief writer
-subhead: Give it a rough idea or feature request. Get a clear brief a developer can build from, with scope and open questions.
+subhead: A brief that a developer or AI agent can build from without guessing.
+  Hand over a rough idea or feature request and get a spec with scope,
+  acceptance checks and a list of open questions.
 explain: |
   A brief that a developer or AI agent can build from without guessing. Hand over a rough idea or feature request and get a spec with scope, acceptance checks and a list of open questions.
 
   If the idea is vague, the first step is to ask questions. It will not write a spec around a fog. It then works through four phases to clarify the problem, define the user and the success measure, set scope with what is out, and write acceptance criteria as testable statements. It can also write a bug report others can act on, rank a backlog of requests, and slice a large initiative into small shippable parts. It is not tied to any tech stack.
 when:
-  - A manager says "add something like X" and you need to turn that into real work.
+  - A manager says "add something like X" and you need to turn that into real
+    work.
   - You need a product requirements document for kickoff.
   - You have a pile of feature requests and must decide the order.
   - A bug report keeps bouncing back because it lacks detail.
@@ -26,5 +30,6 @@ you_get:
   - A list of open questions
   - A smaller, shippable breakdown
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It plans lessons around your goal and tracks progress.
 new_slug: skill-teacher
 name: Skill teacher
-summary: Say what you want to learn. Get lessons and cheat sheets that build over many sessions toward your goal.
+summary: Say what you want to learn. Get lessons and cheat sheets that build
+  over many sessions toward your goal.
 job: think-and-decide
 headline: Skill teacher
-subhead: Say what you want to learn. Get lessons and cheat sheets that build over many sessions toward your goal.
+subhead: A learning folder that grows with you, so a topic you want to learn
+  gets taught across many sessions instead of in one long answer.
 explain: |
   A learning folder that grows with you, so a topic you want to learn gets taught across many sessions instead of in one long answer. You start by saying what you want to learn and why. The skill writes that reason into a mission file and uses it to keep every lesson on target.
 
@@ -13,7 +15,8 @@ explain: |
 when:
   - You want to learn a new subject slowly over weeks, not in one chat.
   - You keep forgetting what you learned and want cheat sheets to look back at.
-  - You have a real goal, like a promotion or a project, and want lessons tied to it.
+  - You have a real goal, like a promotion or a project, and want lessons tied
+    to it.
   - You want an AI tutor that remembers where you left off.
 you_give:
   - The topic you want to learn
@@ -26,6 +29,7 @@ you_get:
   - Printable cheat sheets for quick reference
   - A list of resources to explore next
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can save files.

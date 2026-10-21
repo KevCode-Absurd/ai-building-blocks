@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Each item must stay true to your photo, so it checks them one by one.
 new_slug: outfit-photo-composer
 name: Outfit photo composer
-summary: Give it up to eight single items. Get one photo of a model wearing the full outfit. Your image model draws it.
+summary: Give it up to eight single items. Get one photo of a model wearing the
+  full outfit. Your image model draws it.
 job: product-photos
 headline: Outfit photo composer
-subhead: Give it up to eight single items. Get one photo of a model wearing the full outfit. Your image model draws it.
+subhead: One photo of a model wearing a complete outfit, built from up to eight
+  separate item pictures. Skip the studio and the model fee when you want to
+  show how pieces look together.
 explain: |
   One photo of a model wearing a complete outfit, built from up to eight separate item pictures. Skip the studio and the model fee when you want to show how pieces look together.
 
@@ -26,6 +29,8 @@ you_get:
   - Items kept true to your pictures
   - Size options for shop use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).
+  - It works best when your AI can run code and use your own image model key
+    (OpenAI, Gemini, fal or Replicate).

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Choosing a design that answers the question is hard to reverse.
 new_slug: study-design-and-randomizer
 name: Study design and randomizer
-summary: Describe your study. Get a design, random group assignment and run order that avoid confounded results.
+summary: Describe your study. Get a design, random group assignment and run
+  order that avoid confounded results.
 job: research-topics
 headline: Study design and randomizer
-subhead: Describe your study. Get a design, random group assignment and run order that avoid confounded results.
+subhead: Plan an experiment so the results mean something. You leave with a
+  design, a random assignment and a run order that stops hidden factors from
+  muddying the answer.
 explain: |
   Plan an experiment so the results mean something. You leave with a design, a random assignment and a run order that stops hidden factors from muddying the answer.
 
@@ -27,6 +30,7 @@ you_get:
   - A table of treatment combinations
   - A list of design pitfalls to avoid
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

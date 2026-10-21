@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds set policy parts around your deal sizes.
 new_slug: discount-policy-designer
 name: Discount policy designer
-summary: Describe how you sell. Get a discount matrix, approval limits and a clear route for exceptions.
+summary: Describe how you sell. Get a discount matrix, approval limits and a
+  clear route for exceptions.
 job: sell-and-negotiate
 headline: Discount policy designer
-subhead: Describe how you sell. Get a discount matrix, approval limits and a clear route for exceptions.
+subhead: Describe how you sell. Get a discount matrix, approval limits and a
+  clear route for exceptions. Bring closed won and lost deals from the last
+  year. Use the result to plan your next step.
 explain: |
   A written discount policy your sales team can follow: who can offer what, when to ask for approval, and what happens when a request breaks the rules. It ends the habit of citing "last quarter's deal" as precedent.
 
@@ -27,5 +30,6 @@ you_get:
   - A lint report listing policy flaws
   - A short policy summary for your team
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

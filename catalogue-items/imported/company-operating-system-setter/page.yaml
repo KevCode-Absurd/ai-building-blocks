@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks from known systems and fills in the parts.
 new_slug: company-operating-system-setter
 name: Company operating system setter
-summary: "Describe your company. Get a way of running it: scorecard, accountability chart, meetings and 90-day goals."
+summary: "Describe your company. Get a way of running it: scorecard,
+  accountability chart, meetings and 90-day goals."
 job: organise-work
 headline: Company operating system setter
-subhead: "Describe your company. Get a way of running it: scorecard, accountability chart, meetings and 90-day goals."
+subhead: "Describe your company. Get a way of running it: scorecard,
+  accountability chart, meetings and 90-day goals. Bring a description of your
+  company and team size. Use the result to plan your next step."
 explain: |
   A written way of running your company: who owns what, which numbers you watch each week, how meetings run, and what the team commits to this quarter. Most repeated problems come from missing structure, not from people, so this fixes the structure.
 
@@ -27,5 +30,6 @@ you_get:
   - Quarterly goals with owners
   - A plan for the first 90 days
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

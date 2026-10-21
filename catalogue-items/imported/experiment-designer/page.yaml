@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sets up a test with a few number checks.
 new_slug: experiment-designer
 name: Experiment designer
-summary: Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result.
+summary: Describe the change you want to test. Get a clear hypothesis, test
+  plan, sample size and a way to read the result.
 job: plan-ad-tests
 headline: Experiment designer
-subhead: Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result.
+subhead: Describe the change you want to test. Get a clear hypothesis, test
+  plan, sample size and a way to read the result. Bring the change you want to
+  test. Use the result to plan your next step.
 explain: |
   A test plan you can run without fooling yourself: one clear hypothesis, the right sample size, the metric to judge it and rules for reading the result.
 
@@ -27,5 +30,6 @@ you_get:
   - Main and side metrics
   - Rules for reading the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

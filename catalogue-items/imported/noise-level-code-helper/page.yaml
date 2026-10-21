@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies set conversions.
 new_slug: noise-level-code-helper
 name: Noise level code helper
-summary: Say your SNR target. Get noise added right, with SNR, Eb/No and Es/No converted correctly.
+summary: Say your SNR target. Get noise added right, with SNR, Eb/No and Es/No
+  converted correctly.
 job: build-software
 headline: Noise level code helper
-subhead: Say your SNR target. Get noise added right, with SNR, Eb/No and Es/No converted correctly.
+subhead: Noise added at exactly the level you intended in a communications
+  simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between
+  these measures are a common source of wrong results.
 explain: |
   Noise added at exactly the level you intended in a communications simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between these measures are a common source of wrong results.
 
@@ -26,6 +29,7 @@ you_get:
   - Noise variance for demodulators
   - A fix for common mistakes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

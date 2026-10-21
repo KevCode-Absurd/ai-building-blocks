@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Finding weak spots needs real reasoning about the plan.
 new_slug: plan-pre-mortem-runner
 name: Plan pre-mortem runner
-summary: Give it a plan. Imagine it failed in a year and get the hidden assumptions and risks found now.
+summary: Give it a plan. Imagine it failed in a year and get the hidden
+  assumptions and risks found now.
 job: think-and-decide
 headline: Plan pre-mortem runner
-subhead: Give it a plan. Imagine it failed in a year and get the hidden assumptions and risks found now.
+subhead: Weak spots in a plan, found before reality finds them. Give it the
+  plan, imagine it failed a year from now, and work back to why.
 explain: |
   Weak spots in a plan, found before reality finds them. Give it the plan, imagine it failed a year from now, and work back to why. The goal is a plan that survives, not one that gets killed.
 
@@ -25,5 +27,6 @@ you_get:
   - Weak dependencies
   - Steps to reduce the biggest risks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

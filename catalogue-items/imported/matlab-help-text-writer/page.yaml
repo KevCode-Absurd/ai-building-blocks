@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a fixed help format.
 new_slug: matlab-help-text-writer
 name: MATLAB help text writer
-summary: Give it a MATLAB function. Get clear help text with a summary line, syntax lines and See Also links.
+summary: Give it a MATLAB function. Get clear help text with a summary line,
+  syntax lines and See Also links.
 job: build-software
 headline: MATLAB help text writer
-subhead: Give it a MATLAB function. Get clear help text with a summary line, syntax lines and See Also links.
+subhead: Help text for a MATLAB function that shows up properly when someone
+  types help or doc. You hand over the function and get the comment block back
+  in MathWorks style.
 explain: |
   Help text for a MATLAB function that shows up properly when someone types help or doc. You hand over the function and get the comment block back in MathWorks style.
 
@@ -26,6 +29,7 @@ you_get:
   - A See Also line
   - The whole comment block ready to paste
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

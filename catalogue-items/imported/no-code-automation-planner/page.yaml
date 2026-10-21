@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It weighs two tools and plans reliable steps.
 new_slug: no-code-automation-planner
 name: No-code automation planner
-summary: Describe a task to automate. Get the right Zapier or Make setup, built to hold up, and when to switch to code.
+summary: Describe a task to automate. Get the right Zapier or Make setup, built
+  to hold up, and when to switch to code.
 job: connect-tools
 headline: No-code automation planner
-subhead: Describe a task to automate. Get the right Zapier or Make setup, built to hold up, and when to switch to code.
+subhead: The right Zapier or Make setup for a task, built so it keeps working,
+  with a warning for when it is time to move to code.
 explain: |
   The right Zapier or Make setup for a task, built so it keeps working, with a warning for when it is time to move to code.
 
@@ -26,5 +28,6 @@ you_get:
   - Test and naming tips
   - A sign for when to switch to code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

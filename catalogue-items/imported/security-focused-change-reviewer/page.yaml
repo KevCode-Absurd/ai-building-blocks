@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It traces how each change affects code that was already safe.
 new_slug: security-focused-change-reviewer
 name: Security-focused change reviewer
-summary: Give it a pull request or commit. Get a security review of only what changed, with risks ranked.
+summary: Give it a pull request or commit. Get a security review of only what
+  changed, with risks ranked.
 job: secure-code
 headline: Security-focused change reviewer
-subhead: Give it a pull request or commit. Get a security review of only what changed, with risks ranked.
+subhead: Give it a pull request or commit. Get a security review of only what
+  changed, with risks ranked. Bring a pull request, commit range or diff. Use
+  the result to plan your next step.
 explain: |
   A security review of just what changed in a pull request, commit range or diff, with each risk backed by line numbers, history and a realistic attack story. It scales to the size of the codebase: deep reading for small ones, focused for mid-size, and only critical paths for large ones.
 
@@ -26,6 +29,7 @@ you_get:
   - Test coverage gaps
   - A markdown report with confidence level
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

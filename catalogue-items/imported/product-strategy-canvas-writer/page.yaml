@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must link nine parts into one consistent plan.
 new_slug: product-strategy-canvas-writer
 name: Product strategy canvas writer
-summary: "Describe your product. Get a nine-part strategy: vision, customers, trade-offs, metrics and what keeps you ahead."
+summary: "Describe your product. Get a nine-part strategy: vision, customers,
+  trade-offs, metrics and what keeps you ahead."
 job: plan-strategy
 headline: Product strategy canvas writer
-subhead: "Describe your product. Get a nine-part strategy: vision, customers, trade-offs, metrics and what keeps you ahead."
+subhead: "A nine-part product strategy that shows how you will compete, win and
+  grow. It puts vision, customers, costs, value, trade-offs, metrics, growth,
+  skills and defensibility on one page."
 explain: |
   A nine-part product strategy that shows how you will compete, win and grow. It puts vision, customers, costs, value, trade-offs, metrics, growth, skills and defensibility on one page.
 
@@ -27,5 +30,6 @@ you_get:
   - Metrics and growth plans
   - A view of how you stay ahead
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

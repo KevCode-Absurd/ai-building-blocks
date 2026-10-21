@@ -5,7 +5,10 @@ name: Thin page finder
 summary: Get store pages and blog posts that are empty, short or missing search fields.
 job: audit-landing-page
 headline: Thin page finder
-subhead: Get store pages and blog posts that are empty, short or missing search fields.
+subhead: Search engines downgrade pages with almost no words or no search
+  titles, and customers leave them fast. This skill lists every page and blog
+  post in your Shopify store and flags the weak ones so you know exactly what to
+  fix.
 explain: |
   Search engines downgrade pages with almost no words or no search titles, and customers leave them fast. This skill lists every page and blog post in your Shopify store and flags the weak ones so you know exactly what to fix.
 
@@ -26,6 +29,7 @@ you_get:
   - Blog posts with the same problems
   - A list to give your writer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

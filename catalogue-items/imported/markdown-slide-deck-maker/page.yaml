@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It turns a written outline into a page with set rules.
 new_slug: markdown-slide-deck-maker
 name: Markdown slide deck maker
-summary: Give it a markdown outline. Get one HTML slide deck you present with arrow keys, with speaker notes.
+summary: Give it a markdown outline. Get one HTML slide deck you present with
+  arrow keys, with speaker notes.
 job: work-with-files
 headline: Markdown slide deck maker
-subhead: Give it a markdown outline. Get one HTML slide deck you present with arrow keys, with speaker notes.
+subhead: "One HTML file that is your slide deck: open it in any browser, move
+  with the arrow keys, show speaker notes and print to PDF."
 explain: |
   One HTML file that is your slide deck: open it in any browser, move with the arrow keys, show speaker notes and print to PDF. You write it in plain markdown.
 
@@ -25,6 +27,7 @@ you_get:
   - Presenter mode with notes
   - A print-ready PDF view
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

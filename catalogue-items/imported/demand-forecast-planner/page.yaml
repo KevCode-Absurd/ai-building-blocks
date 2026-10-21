@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Picking a method depends on the sales pattern.
 new_slug: demand-forecast-planner
 name: Demand forecast planner
-summary: Give it your past sales. Get a forecast, the best-fit method and a way to track how far off it is.
+summary: Give it your past sales. Get a forecast, the best-fit method and a way
+  to track how far off it is.
 job: plan-supply-chain
 headline: Demand forecast planner
-subhead: Give it your past sales. Get a forecast, the best-fit method and a way to track how far off it is.
+subhead: A sales forecast you can trust, with a measure of how wrong it tends to
+  be. Give it your past sales and you get a projection, the method that fits
+  best, and a way to track error over time.
 explain: |
   A sales forecast you can trust, with a measure of how wrong it tends to be. Give it your past sales and you get a projection, the method that fits best, and a way to track error over time.
 
@@ -26,6 +29,7 @@ you_get:
   - Accuracy comparison
   - Error tracking routine
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks an algorithm and wires it in.
 new_slug: api-rate-limit-adder
 name: API rate limit adder
-summary: Point it at your API. Get rate limiting added with Upstash, using the right window type for each route.
+summary: Point it at your API. Get rate limiting added with Upstash, using the
+  right window type for each route.
 job: secure-code
 headline: API rate limit adder
-subhead: Point it at your API. Get rate limiting added with Upstash, using the right window type for each route.
+subhead: Your API gets a request limit that works across every server instance,
+  so one bad actor cannot flood your login or sign-up routes. You get the code
+  in place and a clear reason for each choice.
 explain: |
   Your API gets a request limit that works across every server instance, so one bad actor cannot flood your login or sign-up routes. You get the code in place and a clear reason for each choice.
 
@@ -26,6 +29,7 @@ you_get:
   - 429 replies with reset info
   - Optional usage analytics
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can edit your project files.

@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It has to hunt for the fatal flaw, not just agree.
 new_slug: business-idea-killer
 name: Business idea killer
-summary: Give it a business idea. Get the one fact that kills it, or the cheapest test it still has to pass.
+summary: Give it a business idea. Get the one fact that kills it, or the
+  cheapest test it still has to pass.
 job: test-an-idea
 headline: Business idea killer
-subhead: Give it a business idea. Get the one fact that kills it, or the cheapest test it still has to pass.
+subhead: Before you spend money or weeks, find the one fact that kills your
+  idea. If it survives, you get the cheapest test it still has to pass.
 explain: |
   Before you spend money or weeks, find the one fact that kills your idea. If it survives, you get the cheapest test it still has to pass.
 
@@ -25,6 +27,7 @@ you_get:
   - The cheapest remaining test, if survived
   - A row for your kill list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web.

@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It pulls duties from rule text and matches them to policies.
 new_slug: rule-change-policy-comparer
 name: Rule change policy comparer
-summary: Paste a rule that changed. Get which of your policies it touches and what to change. First check, not legal advice.
+summary: Paste a rule that changed. Get which of your policies it touches and
+  what to change. First check, not legal advice.
 job: check-contracts
 headline: Rule change policy comparer
-subhead: Paste a rule that changed. Get which of your policies it touches and what to change. First check, not legal advice.
+subhead: "Paste in a rule that just changed and see which of your own policies
+  it touches. You get a gap list: what the rule now asks for, what your policy
+  says and what to edit."
 explain: |
   Paste in a rule that just changed and see which of your own policies it touches. You get a gap list: what the rule now asks for, what your policy says and what to edit. This is a first check, not legal advice.
 
   It confirms the rule is real and current, pulls out each requirement, then matches each to your indexed policies. If you ask it to leave a section out, it does, but marks a warning on every page that follows, so nobody mistakes a partial review for a full one. It also notes when no policy covers a topic at all. A lawyer should review the result before you act.
 when:
-  - A regulator published a new rule and you need to know which policies it affects.
+  - A regulator published a new rule and you need to know which policies it
+    affects.
   - You must report to leadership on what has to change and in which document.
   - You want a gap list before asking outside counsel for help.
   - A rule feed flagged a major update and someone must triage it.
@@ -26,7 +30,11 @@ you_get:
   - Which policies need editing
   - A clear warning if scope was limited
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your saved setup notes and your policy files.
-  - Where the skill points to /regulatory-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can read your saved setup notes and your policy
+    files.
+  - Where the skill points to /regulatory-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

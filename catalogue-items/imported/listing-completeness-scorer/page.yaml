@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It scores against a fixed checklist.
 new_slug: listing-completeness-scorer
 name: Listing completeness scorer
-summary: Get every product scored on missing descriptions, images, SEO, weight, barcode and cost, worst first.
+summary: Get every product scored on missing descriptions, images, SEO, weight,
+  barcode and cost, worst first.
 job: run-your-store
 headline: Listing completeness scorer
-subhead: Get every product scored on missing descriptions, images, SEO, weight, barcode and cost, worst first.
+subhead: Every product in your store scored on how complete its data is, worst
+  first, so you know exactly what to fix. It only reads, and changes nothing in
+  your shop.
 explain: |
   Every product in your store scored on how complete its data is, worst first, so you know exactly what to fix. It only reads, and changes nothing in your shop.
 
@@ -25,6 +28,7 @@ you_get:
   - A list ordered worst first
   - Totals for each type of gap
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

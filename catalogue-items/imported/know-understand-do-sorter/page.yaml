@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts content by type before it picks how to test.
 new_slug: know-understand-do-sorter
 name: Know, understand, do sorter
-summary: Paste your unit content. Get it sorted into what students know, understand and do, with the matching test types.
+summary: Paste your unit content. Get it sorted into what students know,
+  understand and do, with the matching test types.
 job: teach-and-train
 headline: Know, understand, do sorter
-subhead: Paste your unit content. Get it sorted into what students know, understand and do, with the matching test types.
+subhead: "A teaching unit sorted into three clear columns: what students will
+  know, understand and be able to do. Paste your unit description, project brief
+  or competencies and give the learner stage."
 explain: |
   A teaching unit sorted into three clear columns: what students will know, understand and be able to do. Paste your unit description, project brief or competencies and give the learner stage. Every item in the chart is labelled by type of knowledge, such as facts that build step by step or ideas that stand in separate areas.
 
@@ -26,5 +29,6 @@ you_get:
   - Matching assessment types
   - Notes on keeping assessment low-pressure
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

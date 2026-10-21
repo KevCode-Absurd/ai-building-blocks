@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It traces one change through many systems and compares them.
 new_slug: shared-field-change-checker
 name: Shared field change checker
-summary: Name a changed field or flag. Get the places it is missing or read differently, across database, API and apps.
+summary: Name a changed field or flag. Get the places it is missing or read
+  differently, across database, API and apps.
 job: test-and-fix-code
 headline: Shared field change checker
-subhead: Name a changed field or flag. Get the places it is missing or read differently, across database, API and apps.
+subhead: A read-only report of every place a changed field, status or flag is
+  missing or read differently, across your database, API, apps and analytics. A
+  field added in one schema is not finished until each path agrees on what it
+  means.
 explain: |
   A read-only report of every place a changed field, status or flag is missing or read differently, across your database, API, apps and analytics. A field added in one schema is not finished until each path agrees on what it means.
 
@@ -25,6 +29,7 @@ you_get:
   - A list of gaps with evidence
   - Missing test and rollout checks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

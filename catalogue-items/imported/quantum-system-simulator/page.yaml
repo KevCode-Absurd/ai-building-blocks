@@ -2,10 +2,13 @@ thinking: high
 thinking_why: The physics assumptions need careful thought before and after the run.
 new_slug: quantum-system-simulator
 name: Quantum system simulator
-summary: Describe a quantum system. Get a simulation with stated assumptions and checks that the numbers have settled.
+summary: Describe a quantum system. Get a simulation with stated assumptions and
+  checks that the numbers have settled.
 job: research-topics
 headline: Quantum system simulator
-subhead: Describe a quantum system. Get a simulation with stated assumptions and checks that the numbers have settled.
+subhead: Describe a quantum system. Get a simulation with stated assumptions and
+  checks that the numbers have settled. Bring description of the quantum system.
+  Use the result to plan your next step.
 explain: |
   A working simulation of a small quantum system, with the assumptions written down and checks that the answer is stable and not an artefact of the setup. It covers things like qubits in a noisy environment, light in a cavity, and open system dynamics.
 
@@ -26,6 +29,7 @@ you_get:
   - Convergence and sanity checks
   - Plots of the dynamics (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

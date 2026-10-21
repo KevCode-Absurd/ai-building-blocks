@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Splitting work well means thinking through dependencies and failures.
 new_slug: multi-agent-workflow-planner
 name: Multi-agent workflow planner
-summary: Give it a big task. Get a plan that splits it among AI agents with clear owners, handoffs and checks.
+summary: Give it a big task. Get a plan that splits it among AI agents with
+  clear owners, handoffs and checks.
 job: set-up-ai
 headline: Multi-agent workflow planner
-subhead: Give it a big task. Get a plan that splits it among AI agents with clear owners, handoffs and checks.
+subhead: A plan that splits a big task among AI agents, with a clear owner for
+  each piece, defined handoffs and checks before anything is merged.
 explain: |
   A plan that splits a big task among AI agents, with a clear owner for each piece, defined handoffs and checks before anything is merged.
 
@@ -28,5 +30,6 @@ you_get:
   - A merge and check plan
   - A final report template
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

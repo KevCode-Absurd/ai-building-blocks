@@ -18,10 +18,10 @@ export function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast:
   const text = businessText(form);
   const filled = FIELDS.filter((f) => form[f.id]?.trim()).length;
   return (
-    <Drawer label="About you" top={<span className="mono">saved in this browser only</span>} onClose={close}>
-      <form className="biz" onSubmit={(e) => { e.preventDefault(); close(); toast(filled ? "Saved. Every copy and download now includes your about-me file." : "Nothing saved yet."); }} data-testid="business-form">
-        <h2 className="title" style={{ marginTop: 0 }}>About you and your work</h2>
-        <p className="small biz-lead">A short file your AI reads before every job. It works whether you have a job, run a business, or both. Fill in what fits and skip the rest. Every skill you copy and every workflow you download comes with it, so your AI doesn't have to ask.</p>
+    <Drawer label="Your context" top={<span className="mono">saved in this browser only</span>} onClose={close}>
+      <form className="biz" onSubmit={(e) => { e.preventDefault(); close(); toast(filled ? "Saved. Your copies and downloads now include your context." : "Nothing saved yet."); }} data-testid="business-form">
+        <h2 className="title" style={{ marginTop: 0 }}>Tell your AI once</h2>
+        <p className="small biz-lead">Save the facts you want your AI to use. They are added to your copied prompts and downloaded packs. Fill in what matters for your work and leave the rest blank.</p>
         {FIELDS.map((f) => (
           <label key={f.id} className="biz-field">
             <span>{f.label}</span>
@@ -31,8 +31,8 @@ export function BusinessDrawer({ onClose, toast }: { onClose: () => void; toast:
           </label>
         ))}
         <div className="biz-bar">
-          <span className="small">{filled ? `${filled} of ${FIELDS.length} filled in` : "The grey text is an example. Write your own."}</span>
-          {filled > 0 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => { if (confirm("Clear everything in your about-me file?")) setForm({}); }}>Clear</button>}
+          <span className="small">{filled ? `${filled} of ${FIELDS.length} filled in` : "Every field is optional."}</span>
+          {filled > 0 && <button type="button" className="btn btn-ghost btn-sm" onClick={() => { if (confirm("Clear your saved context?")) setForm({}); }}>Clear</button>}
           <button className="btn btn-primary btn-sm" data-testid="biz-save">Done</button>
         </div>
         {text && (
@@ -52,8 +52,8 @@ export function BusinessNote() {
   return (
     <p className="biz-note" data-testid="business-note">
       {hasBusiness(b)
-        ? <>Copies and downloads include your about-me file{b.name ? ` for ${b.name}` : ""}. <button className="link-btn" onClick={openBusiness}>Change them</button></>
-        : <>Add a short file about you and your work once, and every copy includes it. <button className="link-btn" onClick={openBusiness} data-testid="business-add">Add it</button></>}
+        ? <>Your saved context is included. <button className="link-btn" onClick={openBusiness}>Edit context</button></>
+        : <>Use the same facts across your work. <button className="link-btn" onClick={openBusiness} data-testid="business-add">Save your context</button></>}
     </p>
   );
 }

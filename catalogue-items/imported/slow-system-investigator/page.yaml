@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It weighs evidence across many possible causes.
 new_slug: slow-system-investigator
 name: Slow system investigator
-summary: Describe a slow or failing system. Get a checked list of causes and a clear incident report.
+summary: Describe a slow or failing system. Get a checked list of causes and a
+  clear incident report.
 job: test-and-fix-code
 headline: Slow system investigator
-subhead: Describe a slow or failing system. Get a checked list of causes and a clear incident report.
+subhead: A short list of checked causes and a clear incident report when a
+  server, container or app is slow or failing. Instead of running whatever
+  commands come to mind, the skill follows a fixed method from performance
+  expert Brendan Gregg.
 explain: |
   A short list of checked causes and a clear incident report when a server, container or app is slow or failing. Instead of running whatever commands come to mind, the skill follows a fixed method from performance expert Brendan Gregg.
 
@@ -25,6 +29,7 @@ you_get:
   - The most likely root cause
   - A written incident or postmortem report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands on your machine.

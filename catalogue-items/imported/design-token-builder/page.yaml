@@ -2,18 +2,24 @@ thinking: medium
 thinking_why: It follows set rules but picks values.
 new_slug: design-token-builder
 name: Design token builder
-summary: Give it your brand colours and fonts. Get design tokens, component notes, responsive sizes and a developer handoff.
+summary: Give it your brand colours and fonts. Get design tokens, component
+  notes, responsive sizes and a developer handoff.
 job: design-work
 headline: Design token builder
-subhead: Give it your brand colours and fonts. Get design tokens, component notes, responsive sizes and a developer handoff.
+subhead: A full set of design tokens built from one brand colour, with the files
+  your developers can drop straight into code. It saves the hand work of picking
+  shades, sizes and gaps that all need to fit together.
 explain: |
   A full set of design tokens built from one brand colour, with the files your developers can drop straight into code. It saves the hand work of picking shades, sizes and gaps that all need to fit together.
 
   The skill runs in four passes. First, it turns your brand colour and style (modern, classic or playful) into a palette, a type scale and a spacing scale on an 8-point grid, and exports them as JSON, CSS variables or SCSS. Second, it sets up a component structure. Third, it works out responsive breakpoints. Fourth, it writes a handoff note. It also checks colour pairs against WCAG contrast rules. It uses small Python scripts, so it needs a place to run code.
 when:
-  - You have one brand colour and need a whole palette that passes contrast checks.
-  - Your developers keep asking for exact spacing and type sizes you never wrote down.
-  - You are setting up a design system for a new product and want a clean starting point.
+  - You have one brand colour and need a whole palette that passes contrast
+    checks.
+  - Your developers keep asking for exact spacing and type sizes you never wrote
+    down.
+  - You are setting up a design system for a new product and want a clean
+    starting point.
   - You need CSS or SCSS variables that match what is in your design file.
 you_give:
   - Your main brand colour as a hex code
@@ -27,6 +33,7 @@ you_get:
   - Responsive breakpoint values
   - A developer handoff note
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

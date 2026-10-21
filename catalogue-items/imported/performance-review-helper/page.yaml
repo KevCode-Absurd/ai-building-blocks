@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Fair reviews need careful, specific wording.
 new_slug: performance-review-helper
 name: Performance review helper
-summary: Pick your review cycle. Get a self-review template, a manager review draft and calibration prep with specific examples.
+summary: Pick your review cycle. Get a self-review template, a manager review
+  draft and calibration prep with specific examples.
 job: hire-people
 headline: Performance review helper
-subhead: Pick your review cycle. Get a self-review template, a manager review draft and calibration prep with specific examples.
+subhead: Pick your review cycle. Get a self-review template, a manager review
+  draft and calibration prep with specific examples. Bring the review period.
+  Use the result to plan your next step.
 explain: |
   Review season without the blank page. Pick your mode and get a self-assessment, a manager review draft or a calibration prep document, each built around specific examples instead of vague praise.
 
@@ -26,5 +29,6 @@ you_get:
   - A calibration prep document
   - A next-period goals list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

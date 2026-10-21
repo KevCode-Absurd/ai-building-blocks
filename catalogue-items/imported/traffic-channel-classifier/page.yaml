@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows fixed rules, but odd source data needs judgement.
 new_slug: traffic-channel-classifier
 name: Traffic channel classifier
-summary: Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from.
+summary: Give it your visits and orders. Get every one sorted into the same 11
+  channels, whatever tool it came from.
 job: track-numbers
 headline: Traffic channel classifier
-subhead: Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from.
+subhead: Give it your visits and orders. Get every one sorted into the same 11
+  channels, whatever tool it came from. Bring visit or order rows with source,
+  medium, referrer and click ID fields. Use the result to plan your next step.
 explain: |
   Every visit and order gets one of the same 11 channel labels, whether it came from GA4, a tracking pixel, Shopify or an ad network. Your reports stop disagreeing about what counts as paid social or email.
 
@@ -26,6 +29,8 @@ you_get:
   - A BigQuery function
   - Test cases to check the setup
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run Node code, or SQL on your own BigQuery data.
+  - It works best when your AI can run Node code, or SQL on your own BigQuery
+    data.

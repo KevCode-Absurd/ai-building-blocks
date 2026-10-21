@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans the course, then builds a page.
 new_slug: mini-course-builder
 name: Mini-course builder
-summary: Name a topic. Get a web mini-course with lessons, flashcards and quizzes in one page.
+summary: Name a topic. Get a web mini-course with lessons, flashcards and
+  quizzes in one page.
 job: build-websites
 headline: Mini-course builder
-subhead: Name a topic. Get a web mini-course with lessons, flashcards and quizzes in one page.
+subhead: A small web course on any topic, in one page you can open in a browser,
+  with lessons, flashcards and quizzes. Name the topic and you get six to eight
+  lessons you can use or share right away, with no server or login.
 explain: |
   A small web course on any topic, in one page you can open in a browser, with lessons, flashcards and quizzes. Name the topic and you get six to eight lessons you can use or share right away, with no server or login.
 
@@ -25,6 +28,7 @@ you_get:
   - Quiz questions with feedback
   - Three files you can host or open locally
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can save files and open a browser.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It gathers indicators and reads them together.
 new_slug: rates-economy-dashboard
 name: Rates and economy dashboard builder
-summary: Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle.
+summary: Name a region. Get a dashboard of key indicators, the yield curve and
+  what they say about the cycle.
 job: track-numbers
 headline: Rates and economy dashboard builder
-subhead: Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle.
+subhead: Name a region. Get a dashboard of key indicators, the yield curve and
+  what they say about the cycle. Bring region to cover (India by default). Use
+  the result to plan your next step.
 explain: |
   A dashboard for one region that shows key economic indicators, the government yield curve, and real rates, with a read on where the economy sits in its cycle. It ends with what the signals mean for rates.
 
@@ -25,6 +28,7 @@ you_get:
   - Cycle position read
   - Notes on missing data
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the web.

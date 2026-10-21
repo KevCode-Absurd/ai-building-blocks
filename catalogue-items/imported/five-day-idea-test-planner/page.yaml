@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: The plan follows a fixed five-day shape, fitted to your idea.
 new_slug: five-day-idea-test-planner
 name: Five-day idea test planner
-summary: Describe an idea. Get a five-day plan to map, sketch, prototype and test it with real users.
+summary: Describe an idea. Get a five-day plan to map, sketch, prototype and
+  test it with real users.
 job: test-an-idea
 headline: Five-day idea test planner
-subhead: Describe an idea. Get a five-day plan to map, sketch, prototype and test it with real users.
+subhead: A five-day plan that takes a risky idea from a blank whiteboard to a
+  tested prototype, with real customer reactions by Friday. You learn what works
+  before writing any production code.
 explain: |
   A five-day plan that takes a risky idea from a blank whiteboard to a tested prototype, with real customer reactions by Friday. You learn what works before writing any production code.
 
@@ -27,5 +30,6 @@ you_get:
   - Interview script for five users
   - Plan score with missing items
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

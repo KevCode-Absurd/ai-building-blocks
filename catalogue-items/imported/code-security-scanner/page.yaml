@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs tools and judges the findings.
 new_slug: code-security-scanner
 name: Code security scanner
-summary: Point it at your source code. Get security flaws found with static tools and rules you can add to CI.
+summary: Point it at your source code. Get security flaws found with static
+  tools and rules you can add to CI.
 job: secure-code
 headline: Code security scanner
-subhead: Point it at your source code. Get security flaws found with static tools and rules you can add to CI.
+subhead: Point it at your source code. Get security flaws found with static
+  tools and rules you can add to CI. Bring your source code repository. Use the
+  result to plan your next step.
 explain: |
   Security flaws found in your source code without running the app, with a clean list of real problems and rules you can add to CI so they stay fixed.
 
@@ -25,6 +28,7 @@ you_get:
   - Config for your scan tools
   - A CI step to run on every change
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

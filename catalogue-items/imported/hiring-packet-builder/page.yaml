@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes several linked documents from one brief.
 new_slug: hiring-packet-builder
 name: Hiring packet builder
-summary: Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template.
+summary: Give it your hiring brief. Get a job post, interview guide with scoring
+  rubric, and an offer letter template.
 job: hire-people
 headline: Hiring packet builder
-subhead: Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template.
+subhead: Give it your hiring brief. Get a job post, interview guide with scoring
+  rubric, and an offer letter template. Bring role title, level and team. Use
+  the result to plan your next step.
 explain: |
   Everything you need to hire for one role, in three documents: a job post, an interview guide with a scoring guide, and an offer letter template. You answer a short set of questions about the role instead of starting from a blank page.
 
@@ -27,7 +30,9 @@ you_get:
   - An offer letter template
   - A draft DocuSign link if you ask for it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

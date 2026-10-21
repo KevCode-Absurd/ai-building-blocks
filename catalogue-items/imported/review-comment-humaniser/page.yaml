@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It rewrites short comments.
 new_slug: review-comment-humaniser
 name: Review comment humaniser
-summary: Give it a code review comment. Get a direct version that reads like a teammate wrote it.
+summary: Give it a code review comment. Get a direct version that reads like a
+  teammate wrote it.
 job: write-and-tell-stories
 headline: Review comment humaniser
-subhead: Give it a code review comment. Get a direct version that reads like a teammate wrote it.
+subhead: Give it a code review comment. Get a direct version that reads like a
+  teammate wrote it. Bring one or more code review comments. Use the result to
+  plan your next step.
 explain: |
   Code review comments rewritten to sound like a teammate: short, direct and with a fix. They get read and acted on, not skimmed past.
 
@@ -24,5 +27,6 @@ you_get:
   - Severity labels for each
   - A shorter review that is easier to act on
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

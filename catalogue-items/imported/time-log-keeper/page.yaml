@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It turns short notes into rows.
 new_slug: time-log-keeper
 name: Time log keeper
-summary: Tell it what you did today in plain words. Get rows added to your Notion time log, asking when unsure.
+summary: Tell it what you did today in plain words. Get rows added to your
+  Notion time log, asking when unsure.
 job: track-numbers
 headline: Time log keeper
-subhead: Tell it what you did today in plain words. Get rows added to your Notion time log, asking when unsure.
+subhead: Tell it what you did today in plain words, such as "read papers 2h, gym
+  1h", and get tidy rows added to your Notion time log.
 explain: |
   Tell it what you did today in plain words, such as "read papers 2h, gym 1h", and get tidy rows added to your Notion time log. No forms, no timers.
 
@@ -25,6 +27,7 @@ you_get:
   - Flags where it was unsure
   - A time review when you ask
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can connect to Notion.

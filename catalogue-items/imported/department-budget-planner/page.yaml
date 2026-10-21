@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds numbers from history and checks them against targets.
 new_slug: department-budget-planner
 name: Department budget planner
-summary: Give it past spending and targets. Get a phased budget by department, with variance reports and fixes.
+summary: Give it past spending and targets. Get a phased budget by department,
+  with variance reports and fixes.
 job: money-and-investing
 headline: Department budget planner
-subhead: Give it past spending and targets. Get a phased budget by department, with variance reports and fixes.
+subhead: A budget for each department, set up so you can compare actual spending
+  to it every month. Give it six to twelve months of past spending and your
+  targets and you get a phased budget, variance reports and suggested fixes.
 explain: |
   A budget for each department, set up so you can compare actual spending to it every month. Give it six to twelve months of past spending and your targets and you get a phased budget, variance reports and suggested fixes.
 
@@ -26,5 +29,6 @@ you_get:
   - Variance report with causes
   - Reallocation suggestions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

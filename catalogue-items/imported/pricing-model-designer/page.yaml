@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs set price methods and writes up the tiers.
 new_slug: pricing-model-designer
 name: Pricing model designer
-summary: Give it your product and price survey data. Get a pricing model, price points and good, better, best tiers.
+summary: Give it your product and price survey data. Get a pricing model, price
+  points and good, better, best tiers.
 job: set-prices
 headline: Pricing model designer
-subhead: Give it your product and price survey data. Get a pricing model, price points and good, better, best tiers.
+subhead: Choose how to charge, what to charge and how to package it. Give it
+  your product and price survey answers and get a pricing model, a price range
+  and good, better, best tiers.
 explain: |
   Choose how to charge, what to charge and how to package it. Give it your product and price survey answers and get a pricing model, a price range and good, better, best tiers.
 
@@ -26,6 +29,7 @@ you_get:
   - Good, better, best tier layout
   - List of packaging problems found
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

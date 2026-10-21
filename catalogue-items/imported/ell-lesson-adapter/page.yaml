@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reviews each lesson stage and adds support.
 new_slug: ell-lesson-adapter
 name: Lesson adapter for language learners
-summary: Paste your lesson plan. Get a version that supports students learning English in reading, writing, speaking and listening.
+summary: Paste your lesson plan. Get a version that supports students learning
+  English in reading, writing, speaking and listening.
 job: teach-and-train
 headline: Lesson adapter for language learners
-subhead: Paste your lesson plan. Get a version that supports students learning English in reading, writing, speaking and listening.
+subhead: Your lesson plan, rewritten so students learning English can follow the
+  content and still learn the subject. Paste the plan, and you get a version
+  with clear language goals added.
 explain: |
   Your lesson plan, rewritten so students learning English can follow the content and still learn the subject. Paste the plan, and you get a version with clear language goals added.
 
@@ -26,5 +29,6 @@ you_get:
   - Interaction and practice ideas
   - Review and check activities
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

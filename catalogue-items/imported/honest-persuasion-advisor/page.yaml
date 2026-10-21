@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It applies seven known principles and must keep the tone honest.
 new_slug: honest-persuasion-advisor
 name: Honest persuasion advisor
-summary: Give it a page or pitch. Get where to add proof, scarcity or reciprocity, using Cialdini's seven principles, without trickery.
+summary: Give it a page or pitch. Get where to add proof, scarcity or
+  reciprocity, using Cialdini's seven principles, without trickery.
 job: speak-and-persuade
 headline: Honest persuasion advisor
-subhead: Give it a page or pitch. Get where to add proof, scarcity or reciprocity, using Cialdini's seven principles, without trickery.
+subhead: A review of your page, pitch or product flow that shows where each of
+  the seven persuasion principles could help and where it would cross a line.
 explain: |
   A review of your page, pitch or product flow that shows where each of the seven persuasion principles could help and where it would cross a line. The seven are reciprocity, commitment, social proof, authority, liking, scarcity and unity, from Robert Cialdini's work.
 
@@ -26,5 +28,6 @@ you_get:
   - Specific changes to try
   - Warnings where a tactic would be deceptive
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It compares tools against your needs.
 new_slug: experiment-tool-picker
 name: Experiment tool picker
-summary: Describe your team and traffic. Get which testing tool fits, how to switch tools, and when to use more than one.
+summary: Describe your team and traffic. Get which testing tool fits, how to
+  switch tools, and when to use more than one.
 job: plan-ad-tests
 headline: Experiment tool picker
-subhead: Describe your team and traffic. Get which testing tool fits, how to switch tools, and when to use more than one.
+subhead: A firm choice of testing tool for your team, a migration plan if you
+  already picked the wrong one, and a view on when running two tools is fine.
 explain: |
   A firm choice of testing tool for your team, a migration plan if you already picked the wrong one, and a view on when running two tools is fine.
 
@@ -28,5 +30,6 @@ you_get:
   - Advice on using multiple tools
   - Governance setup
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans the motion first, then writes the page.
 new_slug: scroll-animation-site-builder
 name: Scroll animation site builder
-summary: Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code.
+summary: Describe the site. Get a scroll-driven page with layered depth, motion
+  and smooth reveals, built in code.
 job: build-websites
 headline: Scroll animation site builder
-subhead: Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code.
+subhead: Describe the site. Get a scroll-driven page with layered depth, motion
+  and smooth reveals, built in code. Bring a brief for the site. Use the result
+  to plan your next step.
 explain: |
   A scroll-driven web page where layers move at different speeds, sections overlap, text slides in and products rise between sections, built with plain CSS and JavaScript. No 3D software is needed, only flat images.
 
@@ -26,6 +29,7 @@ you_get:
   - Effects matched to each section
   - A performance and reduced-motion check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

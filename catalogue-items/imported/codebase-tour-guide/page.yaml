@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads the code and orders it into a story.
 new_slug: codebase-tour-guide
 name: Codebase tour guide
-summary: Name your audience. Get a step-by-step tour file that links real files and lines for a new teammate.
+summary: Name your audience. Get a step-by-step tour file that links real files
+  and lines for a new teammate.
 job: build-software
 headline: Codebase tour guide
-subhead: Name your audience. Get a step-by-step tour file that links real files and lines for a new teammate.
+subhead: A guided walkthrough of your code, saved as a tour file that opens
+  inside VS Code and jumps to real files and lines. Each tour is written for one
+  person, so it tells them what matters and what to do next.
 explain: |
   A guided walkthrough of your code, saved as a tour file that opens inside VS Code and jumps to real files and lines. Each tour is written for one person, so it tells them what matters and what to do next.
 
@@ -25,6 +28,7 @@ you_get:
   - A story suited to the reader
   - Next-step pointers at the end
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

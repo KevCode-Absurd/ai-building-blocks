@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It lists and matches devices.
 new_slug: connected-hardware-finder
 name: Connected hardware finder
-summary: Ask what devices are plugged in. Get them listed with the add-ons each one needs.
+summary: Ask what devices are plugged in. Get them listed with the add-ons each
+  one needs.
 job: build-software
 headline: Connected hardware finder
-subhead: Ask what devices are plugged in. Get them listed with the add-ons each one needs.
+subhead: A quick answer to what hardware is plugged into your computer and what
+  MATLAB add-ons each device needs. You stop hunting through menus to see why a
+  board is not recognised.
 explain: |
   A quick answer to what hardware is plugged into your computer and what MATLAB add-ons each device needs. You stop hunting through menus to see why a board is not recognised.
 
@@ -25,6 +28,7 @@ you_get:
   - Details for a named device
   - The support packages you need to install
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB on a computer with the hardware.

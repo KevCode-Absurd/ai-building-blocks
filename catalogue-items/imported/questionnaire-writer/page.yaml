@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It finds the knowledge gap before it writes questions.
 new_slug: questionnaire-writer
 name: Questionnaire writer
-summary: Tell it who you need answers from. Get a questionnaire aimed at what they know and you do not.
+summary: Tell it who you need answers from. Get a questionnaire aimed at what
+  they know and you do not.
 job: organise-work
 headline: Questionnaire writer
-subhead: Tell it who you need answers from. Get a questionnaire aimed at what they know and you do not.
+subhead: When you need answers only one person has, you get a ready document to
+  send them. It is built so they can reply on their own time, or you can fill it
+  in together in a meeting.
 explain: |
   When you need answers only one person has, you get a ready document to send them. It is built so they can reply on their own time, or you can fill it in together in a meeting.
 
@@ -25,5 +28,6 @@ you_get:
   - Why each question matters
   - How-to-answer note and catch-all question
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

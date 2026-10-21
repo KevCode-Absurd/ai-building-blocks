@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scores each item and must suggest fitting tests.
 new_slug: assumption-test-ranker
 name: Assumption test ranker
-summary: Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
+summary: Give it your list of assumptions. Get them ranked by impact and risk,
+  with a test for each top one.
 job: test-an-idea
 headline: Assumption test ranker
-subhead: Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
+subhead: A ranked list of your riskiest assumptions, with an experiment for each
+  one that matters most. Paste your assumptions about a product, feature or
+  business idea, and the AI sorts them so you stop testing the wrong things.
 explain: |
   A ranked list of your riskiest assumptions, with an experiment for each one that matters most. Paste your assumptions about a product, feature or business idea, and the AI sorts them so you stop testing the wrong things.
 
@@ -25,5 +28,6 @@ you_get:
   - An experiment for each top assumption
   - Which ones to build, wait on or drop
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

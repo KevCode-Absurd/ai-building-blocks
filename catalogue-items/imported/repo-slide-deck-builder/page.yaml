@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It builds slides and checks every cited line.
 new_slug: repo-slide-deck-builder
 name: Repo slide deck builder
-summary: Point it at a repo. Get a slide deck with cited facts that warns you when the code changes.
+summary: Point it at a repo. Get a slide deck with cited facts that warns you
+  when the code changes.
 job: work-with-files
 headline: Repo slide deck builder
-subhead: Point it at a repo. Get a slide deck with cited facts that warns you when the code changes.
+subhead: A slide deck about your code where every fact points to a file and
+  line, and a check that tells you when the slides no longer match.
 explain: |
   A slide deck about your code where every fact points to a file and line, and a check that tells you when the slides no longer match. Most decks go stale and nobody notices.
 
@@ -26,6 +28,7 @@ you_get:
   - "Drift report: current, moved, changed or missing"
   - List of slides to update
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

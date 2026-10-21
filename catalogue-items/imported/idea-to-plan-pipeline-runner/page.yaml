@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Each of five phases feeds the next and needs real research.
 new_slug: idea-to-plan-pipeline-runner
 name: Idea to plan pipeline runner
-summary: Give it a raw idea. Get clarifying questions, research, a product brief and a phased plan, as four files.
+summary: Give it a raw idea. Get clarifying questions, research, a product brief
+  and a phased plan, as four files.
 job: build-product
 headline: Idea to plan pipeline runner
-subhead: Give it a raw idea. Get clarifying questions, research, a product brief and a phased plan, as four files.
+subhead: Give it a raw idea. Get clarifying questions, research, a product brief
+  and a phased plan, as four files. Bring your raw idea or problem statement.
+  Use the result to plan your next step.
 explain: |
   Four files that take a raw idea to something you can start building on Monday: clarifying questions, deep research, a product brief and a phased plan. It was made for founders and hobbyists as well as product managers.
 
@@ -26,6 +29,7 @@ you_get:
   - A product brief
   - A phased plan with stop criteria
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web and save files.

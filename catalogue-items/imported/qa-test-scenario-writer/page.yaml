@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must think through edge cases for each story.
 new_slug: qa-test-scenario-writer
 name: QA test scenario writer
-summary: Paste your user stories. Get test scenarios with starting state, steps and the result to expect.
+summary: Paste your user stories. Get test scenarios with starting state, steps
+  and the result to expect.
 job: test-and-fix-code
 headline: QA test scenario writer
-subhead: Paste your user stories. Get test scenarios with starting state, steps and the result to expect.
+subhead: A set of test scenarios you can hand straight to a tester, one per user
+  story. Each one says what is being checked, what must be true before you
+  start, who does it, the steps, and what you should see after each step.
 explain: |
   A set of test scenarios you can hand straight to a tester, one per user story. Each one says what is being checked, what must be true before you start, who does it, the steps, and what you should see after each step.
 
@@ -25,5 +28,6 @@ you_get:
   - Numbered steps with expected results
   - List of edge cases to try
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

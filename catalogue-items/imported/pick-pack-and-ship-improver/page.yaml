@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It looks at each step and ranks the fixes by payoff.
 new_slug: pick-pack-and-ship-improver
 name: Pick, pack and ship improver
-summary: Describe how orders move through your space. Get the slow steps found and a fix plan with expected time saved.
+summary: Describe how orders move through your space. Get the slow steps found
+  and a fix plan with expected time saved.
 job: run-your-store
 headline: Pick, pack and ship improver
-subhead: Describe how orders move through your space. Get the slow steps found and a fix plan with expected time saved.
+subhead: Find the slow steps in how orders move through your space and get a fix
+  plan with the time each fix should save. It covers receiving an order through
+  to leaving the door.
 explain: |
   Find the slow steps in how orders move through your space and get a fix plan with the time each fix should save. It covers receiving an order through to leaving the door.
 
@@ -27,5 +30,6 @@ you_get:
   - Expected time and accuracy gains
   - A comparison of picking methods
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

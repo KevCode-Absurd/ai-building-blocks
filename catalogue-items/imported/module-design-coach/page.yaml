@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Good design needs weighing trade-offs across the code.
 new_slug: module-design-coach
 name: Module design coach
-summary: Name the part you want to improve. Get a simpler design with clear boundaries that is easier to test.
+summary: Name the part you want to improve. Get a simpler design with clear
+  boundaries that is easier to test.
 job: build-software
 headline: Module design coach
-subhead: Name the part you want to improve. Get a simpler design with clear boundaries that is easier to test.
+subhead: A simpler design for the part of your code you want to improve, with
+  clear edges that make it easier to test. The goal is a lot of behavior behind
+  a small, plain interface.
 explain: |
   A simpler design for the part of your code you want to improve, with clear edges that make it easier to test. The goal is a lot of behavior behind a small, plain interface.
 
@@ -27,6 +30,7 @@ you_get:
   - What to hide inside
   - A testing approach through the interface
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

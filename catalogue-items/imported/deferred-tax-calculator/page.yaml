@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows IAS 12 and ASC 740 steps.
 new_slug: deferred-tax-calculator
 name: Deferred tax calculator
-summary: Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation.
+summary: Give it asset and liability figures. Get deferred tax, whether it can
+  be used, and a tax rate reconciliation.
 job: money-and-investing
 headline: Deferred tax calculator
-subhead: Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation.
+subhead: Give it asset and liability figures. Get deferred tax, whether it can
+  be used, and a tax rate reconciliation. Bring balance sheet with carrying
+  amounts. Use the result to plan your next step.
 explain: |
   Your deferred tax position worked out line by line, with a view on whether the asset will ever be used. Give it carrying amounts and tax bases and you get the temporary differences, the deferred tax asset or liability, and a rate reconciliation.
 
@@ -27,5 +30,6 @@ you_get:
   - Recoverability assessment
   - Tax rate reconciliation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

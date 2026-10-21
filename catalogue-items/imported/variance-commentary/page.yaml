@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It must explain causes from the underlying activity.
 new_slug: variance-commentary
 name: Month-end variance commentary writer
-summary: Give it this period's and last period's numbers. Get a written reason for every line that moved past your limit.
+summary: Give it this period's and last period's numbers. Get a written reason
+  for every line that moved past your limit.
 job: track-numbers
 headline: Month-end variance commentary writer
-subhead: Give it this period's and last period's numbers. Get a written reason for every line that moved past your limit.
+subhead: A written reason for every line in your month-end numbers that moved
+  more than it should. You supply this period, last period and budget. The skill
+  flags a line when its change passes your materiality rule, which defaults to 5
+  percent or a fixed floor, whichever is larger.
 explain: |
   A written reason for every line in your month-end numbers that moved more than it should. 
   You supply this period, last period and budget. The skill flags a line when its change passes your materiality rule, which defaults to 5 percent or a fixed floor, whichever is larger. Revenue, headcount cost and cash are always checked. For each flagged line it shows the three values, the change against prior and against budget, and a one sentence driver drawn from the activity behind the number, like a vendor, a volume change or a hire. If the cause is not in the data, it writes driver unclear and flags it for the controller instead of guessing.
@@ -25,5 +29,6 @@ you_get:
   - A one sentence driver for each line
   - A short summary of the biggest movers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

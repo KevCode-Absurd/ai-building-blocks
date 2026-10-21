@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It judges a design from what it sees.
 new_slug: design-feedback-giver
 name: Design feedback giver
-summary: Share a mockup or Figma link. Get feedback on usability, hierarchy and consistency, with fixes.
+summary: Share a mockup or Figma link. Get feedback on usability, hierarchy and
+  consistency, with fixes.
 job: design-work
 headline: Design feedback giver
-subhead: Share a mockup or Figma link. Get feedback on usability, hierarchy and consistency, with fixes.
+subhead: Share a mockup or Figma link. Get feedback on usability, hierarchy and
+  consistency, with fixes. Bring figma link, screenshot or description. Use the
+  result to plan your next step.
 explain: |
   Straight feedback on a design, in the order a user would meet it. Share a Figma link, screenshot or description and you get a critique that covers first impression, usability, hierarchy and consistency, each with a specific fix.
 
@@ -26,6 +29,7 @@ you_get:
   - Hierarchy and consistency notes
   - Fixes ranked by importance
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open images or Figma links.

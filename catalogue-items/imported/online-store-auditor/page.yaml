@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts your store into a type first, then applies the right rules.
 new_slug: online-store-auditor
 name: Online store auditor
-summary: Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces.
+summary: Describe your store. Get ranked calls on marketing channels, homepage
+  layout, trust signals and marketplaces.
 job: run-your-store
 headline: Online store auditor
-subhead: Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces.
+subhead: Describe your store. Get ranked calls on marketing channels, homepage
+  layout, trust signals and marketplaces. Bring what you sell and who buys. Use
+  the result to plan your next step.
 explain: |
   Ranked answers to the big whole-store questions: where to spend marketing money, how to lay out the homepage, which trust signals to show, and whether to sell on a marketplace. All of them depend on what kind of store you run, so it classifies first.
 
@@ -26,5 +29,6 @@ you_get:
   - Homepage and category layout advice
   - Trust signal and marketplace recommendations
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

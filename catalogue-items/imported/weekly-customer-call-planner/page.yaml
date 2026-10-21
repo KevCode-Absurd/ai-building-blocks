@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It repeats the same research for each call, then gathers it.
 new_slug: weekly-customer-call-planner
 name: Weekly customer call planner
-summary: Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
+summary: Ask for your week. Get one brief covering every outside call in the
+  next seven days. Needs your Common Room account.
 job: organise-work
 headline: Weekly customer call planner
-subhead: Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
+subhead: One brief that prepares you for every outside call in the next seven
+  days. Instead of researching each company the night before, you open a single
+  document and know who you are meeting and what has changed.
 explain: |
   One brief that prepares you for every outside call in the next seven days. Instead of researching each company the night before, you open a single document and know who you are meeting and what has changed.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - Your Monday starts with five customer calls and no prep time.
   - You want one document to read instead of ten tabs.
-  - A senior contact at a prospect just changed jobs and you want to know before you call.
+  - A senior contact at a prospect just changed jobs and you want to know before
+    you call.
   - You manage a team and want your reps to walk in prepared.
 you_give:
   - Calendar access or a list of calls
@@ -27,6 +31,8 @@ you_get:
   - Recent news for each company
   - Suggested talking points
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can connect to your Common Room account and your calendar.
+  - It works best when your AI can connect to your Common Room account and your
+    calendar.

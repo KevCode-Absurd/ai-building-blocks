@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It adapts lessons to what you do.
 new_slug: claude-power-user-coach
 name: Claude power-user coach
-summary: Tell it your work. Get lessons and exercises that make you faster with Claude, one step at a time.
+summary: Tell it your work. Get lessons and exercises that make you faster with
+  Claude, one step at a time.
 job: set-up-ai
 headline: Claude power-user coach
-subhead: Tell it your work. Get lessons and exercises that make you faster with Claude, one step at a time.
+subhead: Short lessons and exercises that make you faster with Claude, one step
+  at a time and tuned to your own work. It asks one question about how you use
+  Claude, then teaches the tricks that matter for you.
 explain: |
   Short lessons and exercises that make you faster with Claude, one step at a time and tuned to your own work. It asks one question about how you use Claude, then teaches the tricks that matter for you.
 
@@ -25,5 +28,6 @@ you_get:
   - Timely tips when you miss a shortcut
   - A growing set of habits
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

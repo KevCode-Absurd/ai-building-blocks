@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It reads config files and flags unpinned package versions.
 new_slug: mcp-config-version-checker
 name: MCP config version checker
-summary: Give it your MCP config files. Get a list of server packages that can change under you, before you approve them.
+summary: Give it your MCP config files. Get a list of server packages that can
+  change under you, before you approve them.
 job: secure-code
 headline: MCP config version checker
-subhead: Give it your MCP config files. Get a list of server packages that can change under you, before you approve them.
+subhead: A list of the tool servers in your MCP config that could change under
+  you, found before you approve them. It reads your config files without running
+  anything, so nothing can start by accident.
 explain: |
   A list of the tool servers in your MCP config that could change under you, found before you approve them. It reads your config files without running anything, so nothing can start by accident.
 
@@ -26,6 +29,7 @@ you_get:
   - A short report
   - A CI check (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

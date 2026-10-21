@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads the code and writes set documents, with some judgment on what applies.
 new_slug: ship-ready-docs-writer
 name: Ship-ready docs writer
-summary: "Point it at an AI-built app. Get the short set of docs a reviewer needs: architecture, permissions, secrets and test map."
+summary: "Point it at an AI-built app. Get the short set of docs a reviewer
+  needs: architecture, permissions, secrets and test map."
 job: document-work
 headline: Ship-ready docs writer
-subhead: "Point it at an AI-built app. Get the short set of docs a reviewer needs: architecture, permissions, secrets and test map."
+subhead: "A short set of documents that lets a reviewer judge an AI-built app
+  without guessing what it was meant to do. AI writes code fast but leaves no
+  record of intent, so nobody can tell if the app is safe to ship."
 explain: |
   A short set of documents that lets a reviewer judge an AI-built app without guessing what it was meant to do. AI writes code fast but leaves no record of intent, so nobody can tell if the app is safe to ship.
 
@@ -26,6 +29,7 @@ you_get:
   - A test-coverage map
   - Extra docs for emails, schedules or agents where they apply
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your code files.

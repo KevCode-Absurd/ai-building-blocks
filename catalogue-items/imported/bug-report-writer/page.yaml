@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It sorts rough notes into a set template.
 new_slug: bug-report-writer
 name: Bug report writer
-summary: Paste error logs, notes or a screenshot. Get a clear GitHub issue with steps to repeat, impact and proof.
+summary: Paste error logs, notes or a screenshot. Get a clear GitHub issue with
+  steps to repeat, impact and proof.
 job: build-software
 headline: Bug report writer
-subhead: Paste error logs, notes or a screenshot. Get a clear GitHub issue with steps to repeat, impact and proof.
+subhead: Paste error logs, notes or a screenshot. Get a clear GitHub issue with
+  steps to repeat, impact and proof. Bring error logs, notes or a voice
+  transcript. Use the result to plan your next step.
 explain: |
   A messy error log, a voice note or a screenshot becomes a clean GitHub issue someone can act on in minutes.
 
@@ -26,5 +29,6 @@ you_get:
   - Placeholders for sensitive data
   - A dated markdown file
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

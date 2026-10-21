@@ -1,0 +1,32 @@
+slug: copilot-agent-architecture
+name: AI agent architecture planner
+summary: Describe the agent you need. Get a system design and the trade-offs to settle before building.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/agent-architecture
+  url: https://github.com/github/awesome-copilot/tree/main/skills/agent-architecture
+  licence: MIT
+  licence_file: LICENSE.txt
+  commit: 613efc8
+  original_name: agent-architecture
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: agent-architecture skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/agent-architecture
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

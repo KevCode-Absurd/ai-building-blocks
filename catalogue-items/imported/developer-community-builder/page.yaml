@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It fits known community methods to your audience.
 new_slug: developer-community-builder
 name: Developer community builder
-summary: Describe your developers. Get a plan for channels, onboarding and events that grows a Discord or forum.
+summary: Describe your developers. Get a plan for channels, onboarding and
+  events that grows a Discord or forum.
 job: grow-social
 headline: Developer community builder
-subhead: Describe your developers. Get a plan for channels, onboarding and events that grows a Discord or forum.
+subhead: Describe your developers. Get a plan for channels, onboarding and
+  events that grows a Discord or forum. Bring a short description of your
+  developers. Use the result to plan your next step.
 explain: |
   A plan for a developer community that people actually join and stay in, covering where it lives, how it is laid out and how new members get started.
 
@@ -14,7 +17,8 @@ when:
   - You are launching a Discord or forum for the people who use your product.
   - Your community has members but almost nobody posts.
   - You cannot decide between Discord, Slack and a forum.
-  - New members join, look around and leave because they do not know where to start.
+  - New members join, look around and leave because they do not know where to
+    start.
 you_give:
   - A short description of your developers
   - Your product and what it does
@@ -27,5 +31,6 @@ you_get:
   - Community rules and moderation guidance
   - An events and engagement calendar
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

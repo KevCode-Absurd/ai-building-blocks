@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Good questions need thought about what your customers have really done.
 new_slug: customer-interview-coach
 name: Customer interview coach
-summary: Describe your idea. Get questions that draw honest answers from customers and a way to spot polite lies. Uses The Mom Test.
+summary: Describe your idea. Get questions that draw honest answers from
+  customers and a way to spot polite lies. Uses The Mom Test.
 job: understand-customers
 headline: Customer interview coach
-subhead: Describe your idea. Get questions that draw honest answers from customers and a way to spot polite lies. Uses The Mom Test.
+subhead: Friends and customers tell you your idea is great, then never buy. This
+  gives you interview questions that get honest answers, and a way to spot
+  polite lies.
 explain: |
   Friends and customers tell you your idea is great, then never buy. This gives you interview questions that get honest answers, and a way to spot polite lies. It is based on The Mom Test.
 
@@ -25,5 +28,6 @@ you_get:
   - Fixes for leading or hypothetical questions
   - A closing ask that tests commitment
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

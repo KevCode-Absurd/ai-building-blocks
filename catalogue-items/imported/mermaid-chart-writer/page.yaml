@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It turns a description into diagram syntax.
 new_slug: mermaid-chart-writer
 name: Mermaid chart writer
-summary: Describe a flow, system or database. Get a Mermaid diagram you can paste into docs, in the right style.
+summary: Describe a flow, system or database. Get a Mermaid diagram you can
+  paste into docs, in the right style.
 job: work-with-files
 headline: Mermaid chart writer
-subhead: Describe a flow, system or database. Get a Mermaid diagram you can paste into docs, in the right style.
+subhead: A Mermaid diagram of your flow, system or database that you can paste
+  straight into docs, a README or a wiki. Describe it in words and get working
+  diagram code, not a drawing you must redo.
 explain: |
   A Mermaid diagram of your flow, system or database that you can paste straight into docs, a README or a wiki. Describe it in words and get working diagram code, not a drawing you must redo.
 
@@ -25,5 +28,6 @@ you_get:
   - Styling options
   - Notes on how to export or preview
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

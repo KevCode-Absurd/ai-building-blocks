@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches your offer to the buyer needs.
 new_slug: sales-proposal-writer
 name: Sales proposal writer
-summary: Give it the prospect needs. Get a proposal or RFP reply with value, price, timeline and proof.
+summary: Give it the prospect needs. Get a proposal or RFP reply with value,
+  price, timeline and proof.
 job: sell-and-negotiate
 headline: Sales proposal writer
-subhead: Give it the prospect needs. Get a proposal or RFP reply with value, price, timeline and proof.
+subhead: A proposal or RFP reply that speaks to what the buyer asked for, with
+  value, price, timeline and proof in one document. Give it the prospect's needs
+  and get a draft to polish.
 explain: |
   A proposal or RFP reply that speaks to what the buyer asked for, with value, price, timeline and proof in one document. Give it the prospect's needs and get a draft to polish.
 
@@ -26,5 +29,6 @@ you_get:
   - A pricing table
   - Case study sections
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

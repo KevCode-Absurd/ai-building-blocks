@@ -2,17 +2,21 @@ thinking: high
 thinking_why: Look-alike marks need careful comparison.
 new_slug: trademark-name-first-check
 name: Trademark name first-check
-summary: Give it a name you want to use. Get a flag list of similar marks and risk factors. Not a clearance opinion.
+summary: Give it a name you want to use. Get a flag list of similar marks and
+  risk factors. Not a clearance opinion.
 job: check-contracts
 headline: Trademark name first-check
-subhead: Give it a name you want to use. Get a flag list of similar marks and risk factors. Not a clearance opinion.
+subhead: A quick first look at a name you plan to use, so you spot obvious
+  problems before you pay for a full search. The result is a flag list, never a
+  clearance.
 explain: |
   A quick first look at a name you plan to use, so you spot obvious problems before you pay for a full search. The result is a flag list, never a clearance. It will not tell you a name is safe, and it says so.
 
   You describe the name, the goods or services, and the countries. It checks if the name is too generic, descriptive, misleading, a place name, a surname or a functional term. It then searches for similar marks through any connected legal database and walks through the confusion factors used in your region, flagging each one. It ends with next steps and a note to take the result to a trademark lawyer.
 when:
   - You have a brand name idea and want early warning signs before you commit.
-  - You are about to buy a domain or print packaging and want a quick sanity check.
+  - You are about to buy a domain or print packaging and want a quick sanity
+    check.
   - You need a short memo to take to a trademark lawyer.
   - You are comparing two or three name options.
 you_give:
@@ -26,7 +30,10 @@ you_get:
   - Notes on confusion risk factors
   - Recommended next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search trademark registers.
-  - Where the skill points to /ip-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /ip-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

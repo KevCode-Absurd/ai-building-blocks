@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs trade-offs between brand structures before choosing one.
 new_slug: brand-family-planner
 name: Brand family planner
-summary: List your brands and products. Get a clear structure for how they relate and what each one is called.
+summary: List your brands and products. Get a clear structure for how they
+  relate and what each one is called.
 job: brand-file
 headline: Brand family planner
-subhead: List your brands and products. Get a clear structure for how they relate and what each one is called.
+subhead: A clear structure for how your brands, sub-brands and products relate,
+  with a name rule for each, so customers are never confused. It picks the model
+  that fits your goals and then applies it to your real list.
 explain: |
   A clear structure for how your brands, sub-brands and products relate, with a name rule for each, so customers are never confused. It picks the model that fits your goals and then applies it to your real list.
 
@@ -26,5 +29,6 @@ you_get:
   - Naming rules for new products
   - Risks to watch
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

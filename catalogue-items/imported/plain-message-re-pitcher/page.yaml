@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It rewrites one message more simply.
 new_slug: plain-message-re-pitcher
 name: Plain message re-pitcher
-summary: Say you are lost. Get the last message said again in simple words, with a little context.
+summary: Say you are lost. Get the last message said again in simple words, with
+  a little context.
 job: think-and-decide
 headline: Plain message re-pitcher
-subhead: Say you are lost. Get the last message said again in simple words, with a little context.
+subhead: When a reply loses you, say so and get the last message said again in
+  plain words, with a little background first. It uses Simplified Technical
+  English, a short-sentence style built for clarity.
 explain: |
   When a reply loses you, say so and get the last message said again in plain words, with a little background first. It uses Simplified Technical English, a short-sentence style built for clarity.
 
@@ -24,5 +27,6 @@ you_get:
   - A short context lead-in
   - Terms matched to your glossary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

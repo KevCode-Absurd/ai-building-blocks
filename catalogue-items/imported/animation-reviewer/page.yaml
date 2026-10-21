@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It checks each animation against ten fixed standards.
 new_slug: animation-reviewer
 name: Animation reviewer
-summary: Give it a code change with motion. Get a table of fixes and a clear approve or block verdict.
+summary: Give it a code change with motion. Get a table of fixes and a clear
+  approve or block verdict.
 job: test-and-fix-code
 headline: Animation reviewer
-subhead: Give it a code change with motion. Get a table of fixes and a clear approve or block verdict.
+subhead: A code change that touches motion gets a strict review and a clear
+  verdict, Approve or Block, so nothing sluggish or jarring ships. The review
+  comes as a table of findings, each with a suggested fix.
 explain: |
   A code change that touches motion gets a strict review and a clear verdict, Approve or Block, so nothing sluggish or jarring ships. The review comes as a table of findings, each with a suggested fix.
 
   The skill acts as a picky motion designer. It checks each animation against ten fixed standards from Emil Kowalski's craft rules: easing curves, durations, where an element appears from, whether it can be interrupted, how often it fires, frame drops, and what happens for people who choose reduced motion. It starts from doubt, so a transition that merely works still gets flagged if it feels wrong. It reviews only motion and does not edit your code unless you ask.
 when:
-  - A pull request changes transitions, modals, drawers or toasts and you want a second opinion.
+  - A pull request changes transitions, modals, drawers or toasts and you want a
+    second opinion.
   - An interface feels slow and you cannot say why.
   - You want a pass or fail before releasing animated features.
   - Your team lacks someone with an eye for motion detail.
@@ -25,6 +29,7 @@ you_get:
   - Notes on speed, origin and interruption
   - Reduced-motion gaps flagged
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

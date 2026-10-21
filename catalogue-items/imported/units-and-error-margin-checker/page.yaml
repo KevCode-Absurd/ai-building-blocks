@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It tracks units and errors by set rules and flags what breaks them.
 new_slug: units-and-error-margin-checker
 name: Units and error margin checker
-summary: Give it a calculation. Get units checked, error margins carried through and an uncertainty budget you can show.
+summary: Give it a calculation. Get units checked, error margins carried through
+  and an uncertainty budget you can show.
 job: track-numbers
 headline: Units and error margin checker
-subhead: Give it a calculation. Get units checked, error margins carried through and an uncertainty budget you can show.
+subhead: A calculation with its units checked and its error margin carried
+  through, ending in an uncertainty budget you can show a reviewer. The plus or
+  minus on your result then means something.
 explain: |
   A calculation with its units checked and its error margin carried through, ending in an uncertainty budget you can show a reviewer. The plus or minus on your result then means something.
 
@@ -26,6 +29,7 @@ you_get:
   - An uncertainty budget table
   - A correctly rounded result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

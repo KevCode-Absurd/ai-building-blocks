@@ -2,10 +2,12 @@ thinking: low
 thinking_why: Proofreading follows clear rules.
 new_slug: proofreader
 name: Proofreader
-summary: Give it text. Get grammar, spelling, punctuation and style fixed against your style guide.
+summary: Give it text. Get grammar, spelling, punctuation and style fixed
+  against your style guide.
 job: write-and-tell-stories
 headline: Proofreader
-subhead: Give it text. Get grammar, spelling, punctuation and style fixed against your style guide.
+subhead: Clean text with every fix explained, so you can send it with confidence
+  and see what changed. It follows your chosen style guide instead of guessing.
 explain: |
   Clean text with every fix explained, so you can send it with confidence and see what changed. It follows your chosen style guide instead of guessing.
 
@@ -26,5 +28,6 @@ you_get:
   - Readability score
   - Tone notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

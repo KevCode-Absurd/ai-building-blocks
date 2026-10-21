@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs many kinds of problems and ranks them with evidence.
 new_slug: website-fix-backlog-builder
 name: Website fix backlog builder
-summary: Give it your live site. Get a ranked list of fixes for conversion, usability, message and speed, each with evidence.
+summary: Give it your live site. Get a ranked list of fixes for conversion,
+  usability, message and speed, each with evidence.
 job: audit-landing-page
 headline: Website fix backlog builder
-subhead: Give it your live site. Get a ranked list of fixes for conversion, usability, message and speed, each with evidence.
+subhead: A ranked list of fixes for a live site that underperforms, each one
+  tied to evidence and a reason. It covers conversion, ease of use, message and
+  speed, so you work on what matters first.
 explain: |
   A ranked list of fixes for a live site that underperforms, each one tied to evidence and a reason. It covers conversion, ease of use, message and speed, so you work on what matters first.
 
@@ -26,5 +29,6 @@ you_get:
   - Notes saved in a docs folder
   - A phase-by-phase action plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

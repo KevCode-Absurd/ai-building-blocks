@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It lists recent work in a fixed layout.
 new_slug: standup-update-writer
 name: Standup update writer
-summary: Ask for your standup. Get yesterday, today and blockers from your commits, PRs and tickets.
+summary: Ask for your standup. Get yesterday, today and blockers from your
+  commits, PRs and tickets.
 job: organise-work
 headline: Standup update writer
-subhead: Ask for your standup. Get yesterday, today and blockers from your commits, PRs and tickets.
+subhead: "Your daily standup written in under a minute: yesterday, today and
+  blockers. If your source control, tracker or chat is connected, it pulls
+  recent commits, pull requests, ticket changes and build status, then sorts
+  them into a short update."
 explain: |
   Your daily standup written in under a minute: yesterday, today and blockers. If your source control, tracker or chat is connected, it pulls recent commits, pull requests, ticket changes and build status, then sorts them into a short update.
 
@@ -24,6 +28,7 @@ you_get:
   - Yesterday and today sections
   - A clear blockers list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your code host and ticket tool.

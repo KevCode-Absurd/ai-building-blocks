@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It checks the order, then edits one field.
 new_slug: order-address-fixer
 name: Order address fixer
-summary: Give it an order and the right address. Get the shipping address changed before it ships. Changes a live order.
+summary: Give it an order and the right address. Get the shipping address
+  changed before it ships. Changes a live order.
 job: run-your-store
 headline: Order address fixer
-subhead: Give it an order and the right address. Get the shipping address changed before it ships. Changes a live order.
+subhead: A wrong ZIP code or street typo fixed on a Shopify order before it
+  leaves the building. The change goes straight through the Shopify API, so
+  nobody clicks around the admin screens.
 explain: |
   A wrong ZIP code or street typo fixed on a Shopify order before it leaves the building. The change goes straight through the Shopify API, so nobody clicks around the admin screens.
 
@@ -27,6 +30,7 @@ you_get:
   - The updated shipping address
   - A confirmation or error message
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

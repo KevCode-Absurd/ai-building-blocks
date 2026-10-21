@@ -5,6 +5,7 @@ summary: Paste your product link. Get all 19 growth channels compared, a few
 category: orchestrator
 boards: []
 type: workflow
+execution: coordinator
 role: orchestrate
 job: strategy
 level: intermediate

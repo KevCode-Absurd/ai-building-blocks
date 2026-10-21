@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: Several methods fit; it picks one per signal.
 new_slug: time-frequency-analyzer
 name: Time-frequency analyzer
-summary: Give it a signal that changes over time. Get plots and measures of how its frequencies shift.
+summary: Give it a signal that changes over time. Get plots and measures of how
+  its frequencies shift.
 job: build-software
 headline: Time-frequency analyzer
-subhead: Give it a signal that changes over time. Get plots and measures of how its frequencies shift.
+subhead: See how the pitch or frequency of a signal moves over time, such as a
+  bearing that starts to whine or a heart rhythm that shifts.
 explain: |
   See how the pitch or frequency of a signal moves over time, such as a bearing that starts to whine or a heart rhythm that shifts. You get plots and numbers showing when each frequency appears and fades.
 
@@ -27,6 +29,7 @@ you_get:
   - Frequency over time estimates
   - Working MATLAB code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Wavelet Toolbox.

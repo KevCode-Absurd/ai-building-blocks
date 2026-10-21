@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a clear guide to choose and check the test.
 new_slug: statistical-test-picker
 name: Research test picker and reporter
-summary: Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style.
+summary: Give it your data and question. Get the right test, assumption checks,
+  effect sizes and a write-up in APA style.
 job: track-numbers
 headline: Research test picker and reporter
-subhead: Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style.
+subhead: Give it your data and question. Get the right test, assumption checks,
+  effect sizes and a write-up in APA style. Bring your data file or a
+  description of it. Use the result to plan your next step.
 explain: |
   The right statistical test for your question, run properly, and written up in APA style. You describe your data and what you want to know, and you get a choice of test with the reason for it, checks that its assumptions hold, effect sizes with confidence intervals, and report-ready wording.
 
@@ -27,6 +30,7 @@ you_get:
   - A power or sample size estimate
   - APA-style results text
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

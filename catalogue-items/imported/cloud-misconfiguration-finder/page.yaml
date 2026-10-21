@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must reason about access paths an attacker could use.
 new_slug: cloud-misconfiguration-finder
 name: Cloud misconfiguration finder
-summary: Point it at your cloud setup files. Get open buckets, loose access rules and gaps ranked with fixes.
+summary: Point it at your cloud setup files. Get open buckets, loose access
+  rules and gaps ranked with fixes.
 job: secure-code
 headline: Cloud misconfiguration finder
-subhead: Point it at your cloud setup files. Get open buckets, loose access rules and gaps ranked with fixes.
+subhead: A ranked list of cloud settings that put you at risk, each with a fix.
+  Point it at your infrastructure files or exported configs, and it finds open
+  storage buckets, loose permissions and overly wide network rules.
 explain: |
   A ranked list of cloud settings that put you at risk, each with a fix. Point it at your infrastructure files or exported configs, and it finds open storage buckets, loose permissions and overly wide network rules.
 
@@ -27,6 +30,7 @@ you_get:
   - Open network rules
   - Fixes for each issue
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

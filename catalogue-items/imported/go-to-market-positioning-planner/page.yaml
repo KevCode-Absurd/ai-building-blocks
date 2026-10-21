@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Positioning needs real judgement about your market.
 new_slug: go-to-market-positioning-planner
 name: Go-to-market positioning planner
-summary: Give it your product and rivals. Get positioning, a go-to-market plan and launch steps.
+summary: Give it your product and rivals. Get positioning, a go-to-market plan
+  and launch steps.
 job: plan-strategy
 headline: Go-to-market positioning planner
-subhead: Give it your product and rivals. Get positioning, a go-to-market plan and launch steps.
+subhead: A launch plan that starts from the buyer, not the feature list. Give it
+  your product and your rivals and you get a clear position, a go-to-market plan
+  and launch steps in order.
 explain: |
   A launch plan that starts from the buyer, not the feature list. Give it your product and your rivals and you get a clear position, a go-to-market plan and launch steps in order.
 
@@ -26,6 +29,7 @@ you_get:
   - Competitor comparison
   - A go-to-market and launch plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your files.

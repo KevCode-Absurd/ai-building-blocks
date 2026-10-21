@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It groups patterns, then writes drafts for you to review.
 new_slug: repeated-work-skill-finder
 name: Repeated work skill finder
-summary: Point it at your screen history. Get a list of tasks you repeat and draft skills to automate them.
+summary: Point it at your screen history. Get a list of tasks you repeat and
+  draft skills to automate them.
 job: make-skills
 headline: Repeated work skill finder
-subhead: Point it at your screen history. Get a list of tasks you repeat and draft skills to automate them.
+subhead: A list of tasks you do again and again, with draft skills ready to
+  automate them. It finds the patterns in your own screen history that you
+  stopped noticing.
 explain: |
   A list of tasks you do again and again, with draft skills ready to automate them. It finds the patterns in your own screen history that you stopped noticing.
 
@@ -26,6 +29,8 @@ you_get:
   - Draft skills for new tasks
   - Notes on which are worth automating
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your Screenpipe screen history on your computer.
+  - It works best when your AI can read your Screenpipe screen history on your
+    computer.

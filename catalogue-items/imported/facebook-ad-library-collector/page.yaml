@@ -2,17 +2,21 @@ thinking: low
 thinking_why: It fetches public ads and lists them.
 new_slug: facebook-ad-library-collector
 name: Facebook ad library collector
-summary: Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. Collects data from websites.
+summary: Give it a brand or keyword. Get its live Facebook ads from the public
+  Ad Library. Collects data from websites.
 job: study-competitors
 headline: Facebook ad library collector
-subhead: Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. Collects data from websites.
+subhead: Give it a brand or keyword. Get its live Facebook ads from the public
+  Ad Library. Collects data from websites. Bring a brand name, Page link or
+  keyword. Use the result to plan your next step.
 explain: |
   A spreadsheet of every ad a competitor is running on Facebook and Instagram, with the creative links and start dates, so you can see which ads have stayed live the longest. Long-running ads usually mean they make money.
 
   You give it a Page link or a keyword. For a Page, it uses the page URL. For a keyword, it builds a public Ad Library search link with your country, words and active status. It then runs an Apify scraper and returns one row per ad. For political ads it also pulls the reach and spend figures that are disclosed. It needs an Apify account and token, and the scraper charges per result.
 when:
   - You want to see what ads a rival brand is running right now.
-  - You are testing a product idea and want to know who already advertises for the same keyword.
+  - You are testing a product idea and want to know who already advertises for
+    the same keyword.
   - You need a list of long-running ads to copy angles from.
   - You want video and image links from a competitor to save for a swipe file.
 you_give:
@@ -27,6 +31,7 @@ you_get:
   - Disclosed reach and spend for political ads
   - A sorted export you can open in a spreadsheet
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Apify token.

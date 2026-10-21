@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It turns a clear description into one image request.
 new_slug: image-maker-and-editor
 name: Image maker and editor
-summary: Describe a picture or give one to change. Get new images, variants or transparent cutouts.
+summary: Describe a picture or give one to change. Get new images, variants or
+  transparent cutouts.
 job: make-images
 headline: Image maker and editor
-subhead: Describe a picture or give one to change. Get new images, variants or transparent cutouts.
+subhead: New pictures or edits to a picture you already have, saved where your
+  project needs them. Describe what you want, or give a file to change, and get
+  website art, mockups, logos, product shots, variants or transparent-background
+  cutouts.
 explain: |
   New pictures or edits to a picture you already have, saved where your project needs them. Describe what you want, or give a file to change, and get website art, mockups, logos, product shots, variants or transparent-background cutouts.
 
@@ -26,6 +30,7 @@ you_get:
   - Transparent cutouts
   - Files saved in your project without overwriting old ones
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can make images.

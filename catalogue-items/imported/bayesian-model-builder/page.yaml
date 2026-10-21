@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Picking the right model for your data takes careful judgement.
 new_slug: bayesian-model-builder
 name: Bayesian model builder
-summary: Give it your data and the question. Get a Python model that estimates what drove your results, with ranges, not guesses.
+summary: Give it your data and the question. Get a Python model that estimates
+  what drove your results, with ranges, not guesses.
 job: track-numbers
 headline: Bayesian model builder
-subhead: Give it your data and the question. Get a Python model that estimates what drove your results, with ranges, not guesses.
+subhead: Give it your data and the question. Get a Python model that estimates
+  what drove your results, with ranges, not guesses. Bring your data. Use the
+  result to plan your next step.
 explain: |
   A Python model that estimates what drove your results and shows the range of likely answers, not a single guess. You bring the data and the question, and the AI chooses a starting point: a simple scaffold, an established model from your field, or a smaller piece of a bigger one.
 
@@ -26,6 +29,7 @@ you_get:
   - Fit diagnostics
   - Estimates with uncertainty ranges
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and read your data files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a narrow data request, then reads the results.
 new_slug: amazon-market-researcher
 name: Amazon market researcher
-summary: Give it a product or category. Get Amazon sales rank, reviews and seller data in a report. Collects data from websites.
+summary: Give it a product or category. Get Amazon sales rank, reviews and
+  seller data in a report. Collects data from websites.
 job: study-competitors
 headline: Amazon market researcher
-subhead: Give it a product or category. Get Amazon sales rank, reviews and seller data in a report. Collects data from websites.
+subhead: "A research report on an Amazon product or category built from live
+  data: search results, rankings, Best Sellers, New Releases, seller catalogues
+  and reviews. Each point comes with the source link so you can check it."
 explain: |
   A research report on an Amazon product or category built from live data: search results, rankings, Best Sellers, New Releases, seller catalogues and reviews. Each point comes with the source link so you can check it.
 
@@ -26,6 +29,7 @@ you_get:
   - A comparison of the products you named
   - Source links for each finding
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Pangolinfo API key.

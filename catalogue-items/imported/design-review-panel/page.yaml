@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It runs several review rounds with set roles.
 new_slug: design-review-panel
 name: Design review panel
-summary: Give it a design or plan. Get it tested by reviewers in turn for hidden assumptions and ways it could fail.
+summary: Give it a design or plan. Get it tested by reviewers in turn for hidden
+  assumptions and ways it could fail.
 job: think-and-decide
 headline: Design review panel
-subhead: Give it a design or plan. Get it tested by reviewers in turn for hidden assumptions and ways it could fail.
+subhead: A design that has survived a proper review before anyone builds it.
+  Hand over a plan and it is tested by reviewers in turn, each with a fixed job,
+  so hidden assumptions and likely failures come out early.
 explain: |
   A design that has survived a proper review before anyone builds it. Hand over a plan and it is tested by reviewers in turn, each with a fixed job, so hidden assumptions and likely failures come out early.
 
@@ -26,5 +29,6 @@ you_get:
   - Decision log
   - Revised design
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It runs one checklist per AI search tool.
 new_slug: ai-search-platform-checker
 name: AI search platform checker
-summary: Give it a site. Get a score and fix list for Google AI Overviews, ChatGPT, Perplexity and more.
+summary: Give it a site. Get a score and fix list for Google AI Overviews,
+  ChatGPT, Perplexity and more.
 job: get-found-in-search
 headline: AI search platform checker
-subhead: Give it a site. Get a score and fix list for Google AI Overviews, ChatGPT, Perplexity and more.
+subhead: Each AI search tool picks its sources by its own rules, so a site that
+  wins in one can be missing from another. Only about one domain in nine is
+  cited by both ChatGPT and Google AI Overviews for the same question.
 explain: |
   Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. Only about one domain in nine is cited by both ChatGPT and Google AI Overviews for the same question. This check scores your site on each platform separately.
 
@@ -25,6 +28,7 @@ you_get:
   - Action items for each platform
   - One saved report file
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open web pages.

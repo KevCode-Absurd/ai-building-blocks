@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must respond to what you actually understood.
 new_slug: explain-it-first-tutor
 name: Explain-it-first tutor
-summary: Explain an idea in your own words first. Your AI then builds on what you said, not a stock lesson.
+summary: Explain an idea in your own words first. Your AI then builds on what
+  you said, not a stock lesson.
 job: teach-and-train
 headline: Explain-it-first tutor
-subhead: Explain an idea in your own words first. Your AI then builds on what you said, not a stock lesson.
+subhead: A study session where you speak first. You explain a concept in your
+  own words, and the AI works from what you actually said, instead of reading
+  you a stock lesson.
 explain: |
   A study session where you speak first. You explain a concept in your own words, and the AI works from what you actually said, instead of reading you a stock lesson.
 
@@ -25,5 +28,6 @@ you_get:
   - Follow-up questions
   - Teaching that builds on your words
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

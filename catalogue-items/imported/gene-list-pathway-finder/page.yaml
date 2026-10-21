@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It picks a method for the data, runs it and interprets the results.
 new_slug: gene-list-pathway-finder
 name: Gene list pathway finder
-summary: Give it a gene list or ranked genes. Get the biological pathways that stand out, explained in plain terms.
+summary: Give it a gene list or ranked genes. Get the biological pathways that
+  stand out, explained in plain terms.
 job: research-topics
 headline: Gene list pathway finder
-subhead: Give it a gene list or ranked genes. Get the biological pathways that stand out, explained in plain terms.
+subhead: A list of genes becomes a short answer about which biology stands out.
+  Give it a list of significant genes or a full ranked table, and it finds the
+  pathways and gene sets that show up more than chance allows.
 explain: |
   A list of genes becomes a short answer about which biology stands out. Give it a list of significant genes or a full ranked table, and it finds the pathways and gene sets that show up more than chance allows.
 
   The first choice is the method. A thresholded hit list goes through over-representation testing. A full ranked table goes through GSEA, which keeps the ranking. It also covers per-sample scores. It then guides database choice, background gene sets, ID fixes and removing near-duplicate results. Results come as tables and figures you can use in a paper. It needs Python with several scientific packages, and online lookups need a network.
 when:
-  - You have a list of differentially expressed genes and ask what they have in common.
+  - You have a list of differentially expressed genes and ask what they have in
+    common.
   - You have a ranked result table and want GSEA done properly.
   - Your pathway results look repetitive and need cleaning up.
   - You are unsure whether to use a hit list or a ranked list.
@@ -26,6 +30,7 @@ you_get:
   - Cleaned, deduplicated results
   - Tables and plots for a report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

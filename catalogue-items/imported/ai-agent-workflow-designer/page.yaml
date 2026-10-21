@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Design choices cascade, so it weighs them.
 new_slug: ai-agent-workflow-designer
 name: AI agent workflow designer
-summary: Describe the job. Get a multi-agent design with handoffs, failure handling and cost limits.
+summary: Describe the job. Get a multi-agent design with handoffs, failure
+  handling and cost limits.
 job: set-up-ai
 headline: AI agent workflow designer
-subhead: Describe the job. Get a multi-agent design with handoffs, failure handling and cost limits.
+subhead: A plan for splitting a big job across several AI agents, with clear
+  handoffs, failure handling and a cost cap for each step. Many jobs do not need
+  this.
 explain: |
   A plan for splitting a big job across several AI agents, with clear handoffs, failure handling and a cost cap for each step. Many jobs do not need this. The skill tells you when one good prompt is enough.
 
@@ -27,5 +30,6 @@ you_get:
   - Timeout, retry and cost rules
   - Checks between steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

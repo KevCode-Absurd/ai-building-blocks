@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It adds error paths and checks each step.
 new_slug: n8n-failure-handler
 name: n8n failure handler
-summary: Give it an n8n workflow that breaks quietly. Get clear errors, retries and alerts so you see and fix failures.
+summary: Give it an n8n workflow that breaks quietly. Get clear errors, retries
+  and alerts so you see and fix failures.
 job: connect-tools
 headline: n8n failure handler
-subhead: Give it an n8n workflow that breaks quietly. Get clear errors, retries and alerts so you see and fix failures.
+subhead: Workflows that fail loudly instead of dying in silence. When an n8n
+  node breaks, the default is to halt the whole run, and nobody finds out.
 explain: |
   Workflows that fail loudly instead of dying in silence. When an n8n node breaks, the default is to halt the whole run, and nobody finds out. That is fine when you are watching, and a problem when it runs alone at night.
 
@@ -25,6 +27,7 @@ you_get:
   - Retry settings that cannot double-send
   - Safe error replies for callers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can use the n8n MCP tools.

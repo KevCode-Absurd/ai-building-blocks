@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fetches set figures and reports them.
 new_slug: hormuz-shipping-status-reader
 name: Hormuz shipping status reader
-summary: Ask about the Strait of Hormuz. Get open or closed status, ship counts and oil price impact. Collects data from websites.
+summary: Ask about the Strait of Hormuz. Get open or closed status, ship counts
+  and oil price impact. Collects data from websites.
 job: money-and-investing
 headline: Hormuz shipping status reader
-subhead: Ask about the Strait of Hormuz. Get open or closed status, ship counts and oil price impact. Collects data from websites.
+subhead: "A quick, readable status check on the Strait of Hormuz: open,
+  restricted or closed, and what that means for shipping and oil. Ask in plain
+  words."
 explain: |
   A quick, readable status check on the Strait of Hormuz: open, restricted or closed, and what that means for shipping and oil. Ask in plain words. The skill pulls live figures from a public dashboard called the Hormuz Strait Monitor and reads them back to you.
 
@@ -25,6 +28,7 @@ you_get:
   - Oil price and insurance impact
   - A short risk assessment
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands.

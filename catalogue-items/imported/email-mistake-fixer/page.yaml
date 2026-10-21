@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It makes small edits and keeps your wording.
 new_slug: email-mistake-fixer
 name: Email mistake fixer
-summary: Paste an email. Get small errors fixed in your own voice, and tracking bits removed from links if you ask.
+summary: Paste an email. Get small errors fixed in your own voice, and tracking
+  bits removed from links if you ask.
 job: write-emails
 headline: Email mistake fixer
-subhead: Paste an email. Get small errors fixed in your own voice, and tracking bits removed from links if you ask.
+subhead: Your email, with small errors fixed and your voice left alone. Paste a
+  draft and get a corrected copy that still sounds like you and promises the
+  same things.
 explain: |
   Your email, with small errors fixed and your voice left alone. Paste a draft and get a corrected copy that still sounds like you and promises the same things.
 
@@ -25,5 +28,6 @@ you_get:
   - Notes on things you may want to check
   - Cleaned links (only if asked)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

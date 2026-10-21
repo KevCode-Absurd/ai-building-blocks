@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a fixed layout and checks it against three searches.
 new_slug: youtube-description-tags
 name: YouTube description and tags writer
-summary: Give it your video. Get a description and tags built around the searches you want to win.
+summary: Give it your video. Get a description and tags built around the
+  searches you want to win.
 job: get-found-in-search
 headline: YouTube description and tags writer
-subhead: Give it your video. Get a description and tags built around the searches you want to win.
+subhead: Give it your video. Get a description and tags built around the
+  searches you want to win. Bring the video topic or a transcript. Use the
+  result to plan your next step.
 explain: |
   A YouTube description and tag set built around the searches you want the video to win.
 
@@ -26,5 +29,6 @@ you_get:
   - Three target search queries
   - A check that the title matches them
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It multiplies quantity by cost.
 new_slug: inventory-value-report-builder
 name: Inventory value report builder
-summary: Get what your stock is worth, by location and by supplier, ready for your books and insurance.
+summary: Get what your stock is worth, by location and by supplier, ready for
+  your books and insurance.
 job: run-your-store
 headline: Inventory value report builder
-subhead: Get what your stock is worth, by location and by supplier, ready for your books and insurance.
+subhead: A clean answer to what your stock is worth, split by location and by
+  supplier. Connect your Shopify store with read-only access. The skill pulls
+  every active location, then every variant with its stock and unit cost, and
+  multiplies quantity by cost for each variant at each location.
 explain: |
   A clean answer to what your stock is worth, split by location and by supplier. Connect your Shopify store with read-only access. The skill pulls every active location, then every variant with its stock and unit cost, and multiplies quantity by cost for each variant at each location.
 
@@ -26,6 +30,7 @@ you_get:
   - Value by supplier
   - A list of variants with no cost set
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

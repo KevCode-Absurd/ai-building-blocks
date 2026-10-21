@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It scores a listing against set rules.
 new_slug: etsy-listing-seo-scorer
 name: Etsy listing SEO scorer
-summary: Give it your Etsy listing. Get a score out of 100, better title and tags, and a ranked fix list.
+summary: Give it your Etsy listing. Get a score out of 100, better title and
+  tags, and a ranked fix list.
 job: get-found-in-search
 headline: Etsy listing SEO scorer
-subhead: Give it your Etsy listing. Get a score out of 100, better title and tags, and a ranked fix list.
+subhead: A score out of 100 for your Etsy listing, with a rewritten title, a
+  full set of tags and a fix list ordered by what will help most.
 explain: |
   A score out of 100 for your Etsy listing, with a rewritten title, a full set of tags and a fix list ordered by what will help most.
 
@@ -27,5 +29,6 @@ you_get:
   - Description fixes
   - Ranked action list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

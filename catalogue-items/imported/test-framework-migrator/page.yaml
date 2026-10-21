@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a mapping table between frameworks.
 new_slug: test-framework-migrator
 name: Test framework migrator
-summary: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose.
+summary: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them
+  converted to the framework you choose.
 job: test-and-fix-code
 headline: Test framework migrator
-subhead: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose.
+subhead: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them
+  converted to the framework you choose. Bring the existing test files. Use the
+  result to plan your next step.
 explain: |
   Your browser tests converted from one framework to another, Selenium, Playwright, Puppeteer or Cypress, so you can switch tools without rewriting every test by hand.
 
@@ -27,6 +30,7 @@ you_get:
   - Items needing manual review
   - Notes on setup differences
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

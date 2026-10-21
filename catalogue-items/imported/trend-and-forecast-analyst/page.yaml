@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Picking a sound model and reading it fairly needs care.
 new_slug: trend-and-forecast-analyst
 name: Trend and forecast analyst
-summary: Give it numbers over time. Get trend, seasons and odd spikes found, plus a forecast table and plain insights.
+summary: Give it numbers over time. Get trend, seasons and odd spikes found,
+  plus a forecast table and plain insights.
 job: track-numbers
 headline: Trend and forecast analyst
-subhead: Give it numbers over time. Get trend, seasons and odd spikes found, plus a forecast table and plain insights.
+subhead: "Turn a column of numbers over time into a clear story: where it is
+  heading, what repeats, what looks odd and what comes next. You get a forecast
+  with a stated range of error, not a single guess."
 explain: |
   Turn a column of numbers over time into a clear story: where it is heading, what repeats, what looks odd and what comes next. You get a forecast with a stated range of error, not a single guess.
 
@@ -26,6 +29,7 @@ you_get:
   - A forecast table with ranges
   - A plain-language summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes a fitting reply per review and flags risky ones.
 new_slug: public-review-reply-drafter
 name: Public review reply drafter
-summary: Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised.
+summary: Paste your store reviews. Get a specific reply to each, with risky ones
+  flagged and no refunds promised.
 job: help-customers
 headline: Public review reply drafter
-subhead: Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised.
+subhead: A reply for every review you paste, ready to post. Each reads as if you
+  wrote it to that one customer, and none promise anything you have not
+  approved.
 explain: |
   A reply for every review you paste, ready to post. Each reads as if you wrote it to that one customer, and none promise anything you have not approved.
 
@@ -26,5 +29,6 @@ you_get:
   - A table when there are four or more
   - Placeholders where approval is needed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

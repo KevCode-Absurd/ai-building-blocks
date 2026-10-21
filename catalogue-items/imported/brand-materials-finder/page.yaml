@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It searches many places and ranks what it finds.
 new_slug: brand-materials-finder
 name: Brand materials finder
-summary: Point it at your tools. Get a report of style guides, decks and call notes you already have, plus gaps.
+summary: Point it at your tools. Get a report of style guides, decks and call
+  notes you already have, plus gaps.
 job: brand-file
 headline: Brand materials finder
-subhead: Point it at your tools. Get a report of style guides, decks and call notes you already have, plus gaps.
+subhead: A report on every brand document you already own, spread across your
+  work tools, with the best sources ranked and the gaps called out. You stop
+  writing a voice guide from a blank page.
 explain: |
   A report on every brand document you already own, spread across your work tools, with the best sources ranked and the gaps called out. You stop writing a voice guide from a blank page.
 
@@ -26,6 +29,8 @@ you_get:
   - Conflicts and gaps listed
   - Draft brand voice guidelines after your review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can search your connected tools, such as Notion, Google Drive and Slack.
+  - It works best when your AI can search your connected tools, such as Notion,
+    Google Drive and Slack.

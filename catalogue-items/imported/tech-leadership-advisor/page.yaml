@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies known engineering frameworks to your case.
 new_slug: tech-leadership-advisor
 name: Tech leadership advisor
-summary: Describe your tech team and stack. Get a tech debt review, a hiring plan and architecture calls.
+summary: Describe your tech team and stack. Get a tech debt review, a hiring
+  plan and architecture calls.
 job: build-software
 headline: Tech leadership advisor
-subhead: Describe your tech team and stack. Get a tech debt review, a hiring plan and architecture calls.
+subhead: Describe your tech team and stack. Get a tech debt review, a hiring
+  plan and architecture calls. Bring a description of your team and stack. Use
+  the result to plan your next step.
 explain: |
   The kind of advice a seasoned CTO gives: a view of your tech debt, a hiring and growth plan for engineering, and clear calls on architecture, build versus buy and cloud choices. It suits founders and leads who have no technical peer to ask.
 
@@ -27,5 +30,6 @@ you_get:
   - Build versus buy recommendations
   - Engineering health measures to track
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

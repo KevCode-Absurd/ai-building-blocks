@@ -1,0 +1,32 @@
+slug: copilot-qdrant-monitoring
+name: Qdrant health monitoring planner
+summary: Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/qdrant-monitoring
+  url: https://github.com/github/awesome-copilot/tree/main/skills/qdrant-monitoring
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: qdrant-monitoring
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: qdrant-monitoring skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/qdrant-monitoring
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

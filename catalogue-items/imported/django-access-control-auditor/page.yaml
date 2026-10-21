@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It traces permission paths through the code.
 new_slug: django-access-control-auditor
 name: Django access control auditor
-summary: Point it at a Django project. Get a review of who can see or change what, with fixes for each gap.
+summary: Point it at a Django project. Get a review of who can see or change
+  what, with fixes for each gap.
 job: secure-code
 headline: Django access control auditor
-subhead: Point it at a Django project. Get a review of who can see or change what, with fixes for each gap.
+subhead: "A review of your Django code that answers one question: can user A
+  see, change or delete user B's data? You get confirmed problems, each with a
+  fix, not a list of guesses."
 explain: |
   A review of your Django code that answers one question: can user A see, change or delete user B's data? You get confirmed problems, each with a fix, not a list of guesses.
 
   The skill first learns how your project handles permissions: decorators, mixins, serializers, queryset filters and so on. Then it asks specific questions about each data flow and traces the code to find where checks happen or are missing. It reports only what it has proved by reading the code. It is built on the OWASP guidance on object-level authorization, and it works on Django and Django REST Framework. It reads your code and does not run attacks.
 when:
-  - You are about to launch and want to know if users can reach each other's records.
+  - You are about to launch and want to know if users can reach each other's
+    records.
   - An API takes object IDs and you are unsure if ownership is checked.
   - You added new endpoints and need a security check before release.
   - A customer asks for proof that data is separated between accounts.
@@ -25,6 +29,7 @@ you_get:
   - The code path behind each finding
   - A suggested fix for each gap
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

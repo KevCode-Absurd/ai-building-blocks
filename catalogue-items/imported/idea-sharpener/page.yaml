@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It opens up options first, then narrows to the best one.
 new_slug: idea-sharpener
 name: Idea sharpener
-summary: Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
+summary: Share a rough idea. Get it widened, stress-tested and cut to a one-page
+  concept worth acting on.
 job: test-an-idea
 headline: Idea sharpener
-subhead: Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
+subhead: A rough idea turned into a one-page concept worth acting on. Share what
+  you have and it widens your options, tests them hard and cuts them down to one
+  clear direction.
 explain: |
   A rough idea turned into a one-page concept worth acting on. Share what you have and it widens your options, tests them hard and cuts them down to one clear direction.
 
@@ -26,5 +29,6 @@ you_get:
   - A one-page concept
   - A not-doing list to keep scope tight
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

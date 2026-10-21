@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds a lesson sequence in a set order.
 new_slug: emotional-skills-lesson-sequence
 name: Emotional skills lesson sequence
-summary: Give it your class and goal. Get lessons on naming and handling feelings. Not medical or clinical advice.
+summary: Give it your class and goal. Get lessons on naming and handling
+  feelings. Not medical or clinical advice.
 job: teach-and-train
 headline: Emotional skills lesson sequence
-subhead: Give it your class and goal. Get lessons on naming and handling feelings. Not medical or clinical advice.
+subhead: A short run of lessons that teach students to name feelings and handle
+  them, based on the RULER approach from Yale. Describe the situation in your
+  class, and you get a plan you can teach.
 explain: |
   A short run of lessons that teach students to name feelings and handle them, based on the RULER approach from Yale. Describe the situation in your class, and you get a plan you can teach. This is classroom practice, not medical or clinical advice.
 
@@ -26,5 +29,6 @@ you_get:
   - Activities and prompts
   - Teacher notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a checklist, but each fix depends on your database.
 new_slug: sql-query-launch-reviewer
 name: SQL query launch reviewer
-summary: Give it a SQL query before it goes live. Get wrong-result risks, slow spots and rewrites ranked by impact.
+summary: Give it a SQL query before it goes live. Get wrong-result risks, slow
+  spots and rewrites ranked by impact.
 job: track-numbers
 headline: SQL query launch reviewer
-subhead: Give it a SQL query before it goes live. Get wrong-result risks, slow spots and rewrites ranked by impact.
+subhead: "A review of your SQL query before it goes live, listing wrong-result
+  risks and slow spots, ranked by impact. Paste the query and name the engine:
+  Snowflake, BigQuery, Postgres or Redshift."
 explain: |
   A review of your SQL query before it goes live, listing wrong-result risks and slow spots, ranked by impact. Paste the query and name the engine: Snowflake, BigQuery, Postgres or Redshift.
 
@@ -28,6 +31,7 @@ you_get:
   - Join fan-out warnings
   - Rewrites ranked by impact
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

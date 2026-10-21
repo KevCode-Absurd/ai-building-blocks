@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Sorting by clear rules is simple.
 new_slug: file-organizer
 name: File organizer
-summary: Point it at a messy folder. Get files sorted by type, date or project, with duplicates found.
+summary: Point it at a messy folder. Get files sorted by type, date or project,
+  with duplicates found.
 job: organise-work
 headline: File organizer
-subhead: Point it at a messy folder. Get files sorted by type, date or project, with duplicates found.
+subhead: A cluttered folder sorted into a clear structure, with duplicate files
+  found, and nothing moved until you have seen the plan. Downloads stops being a
+  pile.
 explain: |
   A cluttered folder sorted into a clear structure, with duplicate files found, and nothing moved until you have seen the plan. Downloads stops being a pile.
 
@@ -27,6 +30,7 @@ you_get:
   - Renamed files
   - An archive of stale files
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your files.

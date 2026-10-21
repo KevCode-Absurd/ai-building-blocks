@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes the outline first, then draws each slide with set steps.
 new_slug: slide-deck-image-maker
 name: Slide deck image maker
-summary: Give it your content. Get a slide deck outline and one drawn image per slide, ready to share or read.
+summary: Give it your content. Get a slide deck outline and one drawn image per
+  slide, ready to share or read.
 job: work-with-files
 headline: Slide deck image maker
-subhead: Give it your content. Get a slide deck outline and one drawn image per slide, ready to share or read.
+subhead: A slide deck made to be read and shared, where each slide is a drawn
+  image. You give your content, and the skill writes an outline with style
+  instructions, then creates one picture per slide.
 explain: |
   A slide deck made to be read and shared, where each slide is a drawn image. You give your content, and the skill writes an outline with style instructions, then creates one picture per slide.
 
@@ -26,6 +29,7 @@ you_get:
   - A deck that reads well without a speaker
   - Ready-to-share image files
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can draw images with an image tool.

@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It lists scores Shopify already made.
 new_slug: fraud-review-queue-builder
 name: Fraud review queue builder
-summary: Get orders listed by fraud risk level with the warning signs, as a queue for manual review.
+summary: Get orders listed by fraud risk level with the warning signs, as a
+  queue for manual review.
 job: secure-code
 headline: Fraud review queue builder
-subhead: Get orders listed by fraud risk level with the warning signs, as a queue for manual review.
+subhead: A list of recent Shopify orders ranked by fraud risk, with the warning
+  signs shown for each, so a person can check them by hand.
 explain: |
   A list of recent Shopify orders ranked by fraud risk, with the warning signs shown for each, so a person can check them by hand. It only reads data and changes nothing in your store.
 
@@ -27,6 +29,7 @@ you_get:
   - Order values and dates
   - Readable or JSON output
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

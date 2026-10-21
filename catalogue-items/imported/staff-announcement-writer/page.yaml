@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It shapes clear messages from facts you give.
 new_slug: staff-announcement-writer
 name: Staff announcement writer
-summary: Say what is changing. Get a clear internal announcement, a rollout plan and answers to likely questions.
+summary: Say what is changing. Get a clear internal announcement, a rollout plan
+  and answers to likely questions.
 job: hire-people
 headline: Staff announcement writer
-subhead: Say what is changing. Get a clear internal announcement, a rollout plan and answers to likely questions.
+subhead: A clear internal announcement, a plan for sending it and answers to the
+  questions people will ask. Tell it what is changing and who it affects.
 explain: |
   A clear internal announcement, a plan for sending it and answers to the questions people will ask. Tell it what is changing and who it affects. It writes in plain words so staff read it, understand it and trust it.
 
@@ -27,5 +29,6 @@ you_get:
   - An FAQ
   - A suggested rollout order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

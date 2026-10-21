@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs the tool against the teaching goal.
 new_slug: classroom-tech-fit-checker
 name: Classroom tech fit checker
-summary: Give it a tool or AI app and a subject. Get a check of how well it fits your teaching, with changes.
+summary: Give it a tool or AI app and a subject. Get a check of how well it fits
+  your teaching, with changes.
 job: teach-and-train
 headline: Classroom tech fit checker
-subhead: Give it a tool or AI app and a subject. Get a check of how well it fits your teaching, with changes.
+subhead: Before you bring an app or AI tool into a lesson, check whether it fits
+  what you teach and how. You name the tool, the topic and your students, and
+  you get a plain verdict with changes to make it work.
 explain: |
   Before you bring an app or AI tool into a lesson, check whether it fits what you teach and how. You name the tool, the topic and your students, and you get a plain verdict with changes to make it work.
 
@@ -28,5 +31,6 @@ you_get:
   - Warning signs to watch
   - Skills you need to build
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs gain and loss framing against your audience.
 new_slug: loss-framing-writer
 name: Loss framing writer
-summary: Describe your offer. Get honest wording that shows what people lose by waiting, without fear tactics.
+summary: Describe your offer. Get honest wording that shows what people lose by
+  waiting, without fear tactics.
 job: write-ad-copy
 headline: Loss framing writer
-subhead: Describe your offer. Get honest wording that shows what people lose by waiting, without fear tactics.
+subhead: Messaging that shows what people lose by putting off a decision,
+  written with real facts and without scare tactics. Used well, loss framing
+  creates honest urgency.
 explain: |
   Messaging that shows what people lose by putting off a decision, written with real facts and without scare tactics. Used well, loss framing creates honest urgency. Used badly, it reads as manipulation.
 
@@ -26,5 +29,6 @@ you_get:
   - A check for claims that need proof
   - Notes on where to avoid pressure
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

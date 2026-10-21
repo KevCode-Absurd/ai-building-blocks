@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It is a playbook of methods you pick from.
 new_slug: ai-answer-testing-planner
 name: AI answer testing planner
-summary: Describe your AI feature. Get a test plan with scores, human review and A/B checks to catch weak answers.
+summary: Describe your AI feature. Get a test plan with scores, human review and
+  A/B checks to catch weak answers.
 job: test-and-fix-code
 headline: AI answer testing planner
-subhead: Describe your AI feature. Get a test plan with scores, human review and A/B checks to catch weak answers.
+subhead: A plan to test whether your AI feature gives good answers, and to catch
+  drops in quality before users do. It mixes quick computed scores, human review
+  and live A/B tests, so no single method has to carry everything.
 explain: |
   A plan to test whether your AI feature gives good answers, and to catch drops in quality before users do. It mixes quick computed scores, human review and live A/B tests, so no single method has to carry everything.
 
@@ -27,6 +30,7 @@ you_get:
   - A baseline and regression check
   - A plan for live A/B tests
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

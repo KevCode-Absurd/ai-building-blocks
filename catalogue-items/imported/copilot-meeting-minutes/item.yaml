@@ -1,0 +1,32 @@
+slug: copilot-meeting-minutes
+name: Internal meeting minutes writer
+summary: Share your meeting notes. Get decisions, action items, owners and open questions in a concise record.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: meeting_notes
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/meeting-minutes
+  url: https://github.com/github/awesome-copilot/tree/main/skills/meeting-minutes
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: meeting-minutes
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: meeting-minutes skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/meeting-minutes
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

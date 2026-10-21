@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It moves each issue through set steps.
 new_slug: issue-triager
 name: Issue triager
-summary: Point it at open issues and outside pull requests. Get each one sorted, checked and written up as a clear brief.
+summary: Point it at open issues and outside pull requests. Get each one sorted,
+  checked and written up as a clear brief.
 job: build-software
 headline: Issue triager
-subhead: Point it at open issues and outside pull requests. Get each one sorted, checked and written up as a clear brief.
+subhead: A backlog where every open issue and outside pull request has a clear
+  status and a brief someone can act on. Point it at your tracker.
 explain: |
   A backlog where every open issue and outside pull request has a clear status and a brief someone can act on. Point it at your tracker. It gives each item one category, bug or enhancement, and one state: needs triage, needs info, ready for an agent, ready for a human, or will not fix.
 
@@ -26,6 +28,7 @@ you_get:
   - Agent-ready task briefs
   - An out-of-scope record for rejected ideas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can reach your issue tracker.

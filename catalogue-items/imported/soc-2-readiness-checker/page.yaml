@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It checks you against controls and judges each answer.
 new_slug: soc-2-readiness-checker
 name: SOC 2 readiness checker
-summary: Name your scope. Answer six questions and get gaps to fix before the SOC 2 Type II watch period.
+summary: Name your scope. Answer six questions and get gaps to fix before the
+  SOC 2 Type II watch period.
 job: secure-code
 headline: SOC 2 readiness checker
-subhead: Name your scope. Answer six questions and get gaps to fix before the SOC 2 Type II watch period.
+subhead: A list of gaps to close before your SOC 2 Type II watch period starts.
+  You name your scope, answer six pointed questions, and see where an auditor
+  would push back.
 explain: |
   A list of gaps to close before your SOC 2 Type II watch period starts. You name your scope, answer six pointed questions, and see where an auditor would push back.
 
@@ -26,5 +29,6 @@ you_get:
   - Missed cycles flagged
   - Next steps before the audit
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

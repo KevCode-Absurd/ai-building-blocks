@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must judge which outside factors matter most.
 new_slug: outside-forces-analyst
 name: Outside forces analyst
-summary: "Name your business and market. Get the outside forces that affect you: rules, money, people, tech and nature."
+summary: "Name your business and market. Get the outside forces that affect you:
+  rules, money, people, tech and nature."
 job: plan-strategy
 headline: Outside forces analyst
-subhead: "Name your business and market. Get the outside forces that affect you: rules, money, people, tech and nature."
+subhead: "A list of the outside forces that can help or hurt your business,
+  sorted into political, economic, social, technology, legal and environment. It
+  helps you spot risks before they land."
 explain: |
   A list of the outside forces that can help or hurt your business, sorted into political, economic, social, technology, legal and environment. It helps you spot risks before they land.
 
@@ -26,5 +29,6 @@ you_get:
   - The most important factors
   - Questions or actions to follow up
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

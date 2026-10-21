@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks the right query pattern for each task.
 new_slug: matlab-database-helper
 name: MATLAB database helper
-summary: Say which database and table. Get working code to read, filter, write and update rows from MATLAB.
+summary: Say which database and table. Get working code to read, filter, write
+  and update rows from MATLAB.
 job: build-software
 headline: MATLAB database helper
-subhead: Say which database and table. Get working code to read, filter, write and update rows from MATLAB.
+subhead: Working MATLAB code that reads from and writes to your database, with
+  safe habits built in. Tell it the database and table, and it writes the
+  connection, the queries and the updates.
 explain: |
   Working MATLAB code that reads from and writes to your database, with safe habits built in. Tell it the database and table, and it writes the connection, the queries and the updates.
 
@@ -26,6 +29,7 @@ you_get:
   - Insert and update code
   - A confirmation step before deletes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Database Toolbox.

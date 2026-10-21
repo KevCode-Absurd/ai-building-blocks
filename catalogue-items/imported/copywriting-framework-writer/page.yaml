@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a framework, then writes variants.
 new_slug: copywriting-framework-writer
 name: Copywriting framework writer
-summary: Describe your offer. Get copy in AIDA, PAS or BAB form, with tone options and A/B variants.
+summary: Describe your offer. Get copy in AIDA, PAS or BAB form, with tone
+  options and A/B variants.
 job: write-ad-copy
 headline: Copywriting framework writer
-subhead: Describe your offer. Get copy in AIDA, PAS or BAB form, with tone options and A/B variants.
+subhead: Marketing copy written in a proven structure, AIDA, PAS or BAB, in the
+  tone you pick, with A/B variants and stronger calls to action. You see the
+  same offer in different shapes and choose the best.
 explain: |
   Marketing copy written in a proven structure, AIDA, PAS or BAB, in the tone you pick, with A/B variants and stronger calls to action. You see the same offer in different shapes and choose the best.
 
@@ -26,5 +29,6 @@ you_get:
   - A/B variants
   - Call to action options
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: high
 thinking_why: A broad review needs many linked judgements.
 new_slug: security-posture-auditor
 name: Security posture auditor
-summary: Describe your system. Get a scoped review of code, servers, sign-in and daily operations.
+summary: Describe your system. Get a scoped review of code, servers, sign-in and
+  daily operations.
 job: secure-code
 headline: Security posture auditor
-subhead: Describe your system. Get a scoped review of code, servers, sign-in and daily operations.
+subhead: A scoped security audit of your web app, API or cloud setup, with each
+  issue rated, mapped to a known standard and paired with a fix.
 explain: |
   A scoped security audit of your web app, API or cloud setup, with each issue rated, mapped to a known standard and paired with a fix. You describe the system and what is in scope, and say whether you need to meet SOC 2, PCI-DSS or HIPAA.
 
@@ -26,6 +28,7 @@ you_get:
   - Business impact notes
   - A ranked fix plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

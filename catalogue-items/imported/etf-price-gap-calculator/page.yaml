@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It calculates a gap, then weighs the likely causes.
 new_slug: etf-price-gap-calculator
 name: ETF price gap calculator
-summary: Give it an ETF ticker. Get how far its price sits above or below its holdings, and why. Collects data from websites.
+summary: Give it an ETF ticker. Get how far its price sits above or below its
+  holdings, and why. Collects data from websites.
 job: set-prices
 headline: ETF price gap calculator
-subhead: Give it an ETF ticker. Get how far its price sits above or below its holdings, and why. Collects data from websites.
+subhead: The gap between an ETF's market price and the value of the assets it
+  holds, shown as a percent, with a clear reason for why it exists.
 explain: |
   The gap between an ETF's market price and the value of the assets it holds, shown as a percent, with a clear reason for why it exists. You see quickly whether you would be overpaying.
 
@@ -26,6 +28,7 @@ you_get:
   - Plain reason for the gap
   - Breakdown of a sudden move
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

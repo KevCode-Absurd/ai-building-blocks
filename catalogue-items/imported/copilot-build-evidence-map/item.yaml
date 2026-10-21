@@ -1,0 +1,32 @@
+slug: copilot-build-evidence-map
+name: Technical decision evidence mapper
+summary: Share a disputed choice and sources. Get claims linked to evidence, counterarguments and the facts still missing.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/build-evidence-map
+  url: https://github.com/github/awesome-copilot/tree/main/skills/build-evidence-map
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: build-evidence-map
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: build-evidence-map skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/build-evidence-map
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

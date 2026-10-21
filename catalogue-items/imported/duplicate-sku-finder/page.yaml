@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It compares codes across all variants.
 new_slug: duplicate-sku-finder
 name: Duplicate SKU finder
-summary: Get a list of products that share the same SKU or barcode, so stock and orders stop mixing up.
+summary: Get a list of products that share the same SKU or barcode, so stock and
+  orders stop mixing up.
 job: run-your-store
 headline: Duplicate SKU finder
-subhead: Get a list of products that share the same SKU or barcode, so stock and orders stop mixing up.
+subhead: Find the products in your Shopify store that share a SKU or barcode
+  before they cause wrong stock counts and mixed-up orders. You get a list of
+  every clash, with the product names.
 explain: |
   Find the products in your Shopify store that share a SKU or barcode before they cause wrong stock counts and mixed-up orders. You get a list of every clash, with the product names.
 
@@ -26,6 +29,7 @@ you_get:
   - Blank SKU flags (optional)
   - Plain or JSON output
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

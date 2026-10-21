@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It combines several data sources into one picture of where you trail.
 new_slug: rival-seo-comparer
 name: Rival SEO comparer
-summary: Name your site and rivals. Get a comparison of search overlap, content depth, backlinks, technical state and brand presence.
+summary: Name your site and rivals. Get a comparison of search overlap, content
+  depth, backlinks, technical state and brand presence.
 job: study-competitors
 headline: Rival SEO comparer
-subhead: Name your site and rivals. Get a comparison of search overlap, content depth, backlinks, technical state and brand presence.
+subhead: A side-by-side view of how your site stacks up against rivals in
+  search, showing why they outrank you and what to do about it. You see gaps in
+  topics, links and site health.
 explain: |
   A side-by-side view of how your site stacks up against rivals in search, showing why they outrank you and what to do about it. You see gaps in topics, links and site health.
 
@@ -27,6 +30,7 @@ you_get:
   - Technical comparison
   - Where rivals are strongest, and moves to close the gap
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can use SEO tools you already have.

@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It reads one ad and quotes it, with no outside research.
 new_slug: job-ad-reader
 name: Job ad reader
-summary: Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask.
+summary: Paste a job ad. Get what the job is, firm needs versus wishes, what is
+  missing, and questions to ask.
 job: think-and-decide
 headline: Job ad reader
-subhead: Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask.
+subhead: A job ad decoded before you spend a weekend on an application. Paste
+  the post or give a link. The skill sums up the real job in three sentences,
+  then sorts every requirement into firm, wish or unclear, quoting the ad for
+  each.
 explain: |
   A job ad decoded before you spend a weekend on an application. Paste the post or give a link. The skill sums up the real job in three sentences, then sorts every requirement into firm, wish or unclear, quoting the ad for each. It counts years and tools asked for and says if the list looks too broad for one person.
 
@@ -26,5 +30,6 @@ you_get:
   - Phrases worth a question
   - Questions to ask the employer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

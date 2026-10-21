@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It edits one file with a fixed list of bots.
 new_slug: ai-crawler-access-editor
 name: AI crawler access editor
-summary: Say which AI crawlers to allow. Get your robots.txt updated so AI assistants can read your catalog. Changes your live theme.
+summary: Say which AI crawlers to allow. Get your robots.txt updated so AI
+  assistants can read your catalog. Changes your live theme.
 job: build-websites
 headline: AI crawler access editor
-subhead: Say which AI crawlers to allow. Get your robots.txt updated so AI assistants can read your catalog. Changes your live theme.
+subhead: Your Shopify store's robots.txt updated so AI assistants such as
+  ChatGPT, Claude and Perplexity can read your catalog. If the file blocks them
+  or says nothing, people shopping through AI may never see you.
 explain: |
   Your Shopify store's robots.txt updated so AI assistants such as ChatGPT, Claude and Perplexity can read your catalog. If the file blocks them or says nothing, people shopping through AI may never see you.
 
@@ -26,6 +29,7 @@ you_get:
   - A marked, safe-to-rerun block of rules
   - The live theme updated once you approve
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It needs math care and speed checks.
 new_slug: glsl-shader-writer
 name: GLSL shader writer
-summary: Describe the visual effect. Get an efficient vertex and fragment shader for the web or a game.
+summary: Describe the visual effect. Get an efficient vertex and fragment shader
+  for the web or a game.
 job: build-websites
 headline: GLSL shader writer
-subhead: Describe the visual effect. Get an efficient vertex and fragment shader for the web or a game.
+subhead: A visual effect, described in words, turned into working vertex and
+  fragment shaders. Say what you want to see, such as a ripple, a glow or a
+  blur, and you get GLSL code made to run fast on the GPU.
 explain: |
   A visual effect, described in words, turned into working vertex and fragment shaders. Say what you want to see, such as a ripple, a glow or a blur, and you get GLSL code made to run fast on the GPU.
 
@@ -26,5 +29,6 @@ you_get:
   - Uniform names to adjust the effect
   - Notes on speed and compatibility
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -5,7 +5,9 @@ name: Article shaper
 summary: Give it raw material. Get it shaped into an article, paragraph by paragraph.
 job: write-and-tell-stories
 headline: Article shaper
-subhead: Give it raw material. Get it shaped into an article, paragraph by paragraph.
+subhead: A finished article built one paragraph at a time from a messy pile of
+  notes, quotes and half ideas. You stay in charge of the angle, and the AI does
+  the sorting and drafting.
 explain: |
   A finished article built one paragraph at a time from a messy pile of notes, quotes and half ideas. You stay in charge of the angle, and the AI does the sorting and drafting.
 
@@ -25,5 +27,6 @@ you_get:
   - A check that each idea is explained before it is used
   - Leftover material you did not need
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

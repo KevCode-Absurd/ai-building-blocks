@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must try to prove itself wrong before it answers.
 new_slug: claim-stress-tester
 name: Claim stress tester
-summary: Give it a hard question. Get a clear guess, a fair attempt to break it, the evidence and a tested answer.
+summary: Give it a hard question. Get a clear guess, a fair attempt to break it,
+  the evidence and a tested answer.
 job: think-and-decide
 headline: Claim stress tester
-subhead: Give it a hard question. Get a clear guess, a fair attempt to break it, the evidence and a tested answer.
+subhead: Give it a hard question. Get a clear guess, a fair attempt to break it,
+  the evidence and a tested answer. Bring the question or problem. Use the
+  result to plan your next step.
 explain: |
   For a tough question where a wrong answer costs you, this makes the AI commit to a guess, then try hard to prove itself wrong before it gives a final answer. You see the guess, the test, the evidence and the answer that survived.
 
@@ -26,5 +29,6 @@ you_get:
   - Evidence for and against
   - A tested answer with uncertainty marked
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It compares messages, then rewrites per audience.
 new_slug: company-story-aligner
 name: Company story aligner
-summary: Give it what you tell each group. Find contradictions and get one story framed for each audience.
+summary: Give it what you tell each group. Find contradictions and get one story
+  framed for each audience.
 job: write-and-tell-stories
 headline: Company story aligner
-subhead: Give it what you tell each group. Find contradictions and get one story framed for each audience.
+subhead: One company story that stays true across every group you speak to, with
+  each version framed for what that group cares about. Mixed messages are how
+  trust slips, so this finds them before staff, investors or customers do.
 explain: |
   One company story that stays true across every group you speak to, with each version framed for what that group cares about. Mixed messages are how trust slips, so this finds them before staff, investors or customers do.
 
   You give Claude what you currently tell each audience. It writes a short core narrative that all else comes from, in plain specific words. It then builds a table showing how the same fact lands with employees, investors, customers and candidates. A shift of resources from one product to another reads as job risk to staff and focus to investors. The skill checks your messages against the core story and lists contradictions to fix.
 when:
-  - You are announcing a change and need one message that works for staff and investors.
+  - You are announcing a change and need one message that works for staff and
+    investors.
   - Your all-hands and investor update seem to say different things.
   - A hard quarter is coming and you want to explain it honestly to every group.
   - You are writing your company story for the first time.
@@ -26,5 +30,6 @@ you_get:
   - A list of contradictions
   - Draft messages for each group
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

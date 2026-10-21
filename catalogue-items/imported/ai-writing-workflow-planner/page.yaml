@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It sets rules for a workflow from your answers.
 new_slug: ai-writing-workflow-planner
 name: AI writing workflow planner
-summary: Describe how your team writes. Get what AI should draft, what people own, and rules that keep your voice.
+summary: Describe how your team writes. Get what AI should draft, what people
+  own, and rules that keep your voice.
 job: set-up-ai
 headline: AI writing workflow planner
-subhead: Describe how your team writes. Get what AI should draft, what people own, and rules that keep your voice.
+subhead: A clear split of who does what when your team writes with AI. People
+  own the voice, the facts and what gets published. AI does the research
+  summaries, first drafts, edit suggestions and quality checks, always under a
+  person's direction.
 explain: |
   A clear split of who does what when your team writes with AI. People own the voice, the facts and what gets published. AI does the research summaries, first drafts, edit suggestions and quality checks, always under a person's direction.
 
@@ -26,5 +30,6 @@ you_get:
   - Rules that protect your voice
   - A checklist for consistent team use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fetches listed facts and tabulates them.
 new_slug: etsy-search-results-collector
 name: Etsy search results collector
-summary: Give it a keyword. Get Etsy listings with rank, price and shop. Collects data from websites.
+summary: Give it a keyword. Get Etsy listings with rank, price and shop.
+  Collects data from websites.
 job: run-your-store
 headline: Etsy search results collector
-subhead: Give it a keyword. Get Etsy listings with rank, price and shop. Collects data from websites.
+subhead: Give it a keyword. Get Etsy listings with rank, price and shop.
+  Collects data from websites. Bring keyword, phrase or category. Use the result
+  to plan your next step.
 explain: |
   A table of what is ranking on Etsy for a keyword right now: position, price, rating, badges, ad or organic, and the shop behind each listing. It is a quick view of your market without scrolling pages by hand.
 
@@ -26,6 +29,7 @@ you_get:
   - Ad versus organic marker
   - Shop names for each slot
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Apify token.

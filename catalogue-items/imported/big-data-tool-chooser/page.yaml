@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs a few options against your data.
 new_slug: big-data-tool-chooser
 name: Big data tool chooser
-summary: Describe your large files. Get the right MATLAB tool picked for data too big for memory.
+summary: Describe your large files. Get the right MATLAB tool picked for data
+  too big for memory.
 job: build-software
 headline: Big data tool chooser
-subhead: Describe your large files. Get the right MATLAB tool picked for data too big for memory.
+subhead: "One clear MATLAB path for working with files too big for memory, not a
+  menu of options. Describe your data: CSV, Parquet, text or spreadsheet files,
+  how many and how big, and what you want to do with them."
 explain: |
   One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them.
 
@@ -26,6 +29,7 @@ you_get:
   - Parallel settings if they help
   - A custom datastore outline (if needed)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

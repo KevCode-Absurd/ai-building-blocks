@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It writes short lines from a set voice.
 new_slug: interface-microcopy-writer
 name: Interface microcopy writer
-summary: Give it a screen. Get button labels, error messages, empty states and toasts in a friendly, polite voice.
+summary: Give it a screen. Get button labels, error messages, empty states and
+  toasts in a friendly, polite voice.
 job: design-work
 headline: Interface microcopy writer
-subhead: Give it a screen. Get button labels, error messages, empty states and toasts in a friendly, polite voice.
+subhead: The small words in your product, button labels, error messages, empty
+  states and toasts, written in a friendly, polite voice. Give it a screen and
+  get text that tells people what will happen and how to move on.
 explain: |
   The small words in your product, button labels, error messages, empty states and toasts, written in a friendly, polite voice. Give it a screen and get text that tells people what will happen and how to move on.
 
@@ -27,5 +30,6 @@ you_get:
   - Toast messages
   - A consistent term list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

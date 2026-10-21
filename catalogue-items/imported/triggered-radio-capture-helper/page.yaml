@@ -5,7 +5,9 @@ name: Triggered radio capture helper
 summary: Say which signal to catch. Get a radio that records only when it appears.
 job: build-software
 headline: Triggered radio capture helper
-subhead: Say which signal to catch. Get a radio that records only when it appears.
+subhead: A software radio that saves data only when your signal shows up, so you
+  skip hours of empty recordings. You tell it what to catch, and it writes the
+  capture code and checks it works.
 explain: |
   A software radio that saves data only when your signal shows up, so you skip hours of empty recordings. You tell it what to catch, and it writes the capture code and checks it works.
 
@@ -26,6 +28,8 @@ you_get:
   - A check that the capture is a real signal
   - Tuning steps if detection fails
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP radio.
+  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP
+    radio.

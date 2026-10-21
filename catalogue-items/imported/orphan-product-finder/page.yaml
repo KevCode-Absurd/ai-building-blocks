@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It counts collections per product.
 new_slug: orphan-product-finder
 name: Orphan product finder
-summary: Get products that sit in no collection, and ones stuffed into too many, so shoppers can find everything.
+summary: Get products that sit in no collection, and ones stuffed into too many,
+  so shoppers can find everything.
 job: run-your-store
 headline: Orphan product finder
-subhead: Get products that sit in no collection, and ones stuffed into too many, so shoppers can find everything.
+subhead: A list of products that no shopper can find through your menus, and a
+  list of products crammed into too many collections. Fixing both makes your
+  catalogue easier to browse.
 explain: |
   A list of products that no shopper can find through your menus, and a list of products crammed into too many collections. Fixing both makes your catalogue easier to browse.
 
@@ -26,6 +29,7 @@ you_get:
   - Collection names and sizes
   - A report you can act on
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

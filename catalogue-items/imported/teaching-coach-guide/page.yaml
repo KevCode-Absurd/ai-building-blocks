@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It shapes the questions around one focus.
 new_slug: teaching-coach-guide
 name: Teaching coach conversation guide
-summary: Give it a teaching focus. Get questions, a conversation flow and follow-up actions for a coaching session.
+summary: Give it a teaching focus. Get questions, a conversation flow and
+  follow-up actions for a coaching session.
 job: teach-and-train
 headline: Teaching coach conversation guide
-subhead: Give it a teaching focus. Get questions, a conversation flow and follow-up actions for a coaching session.
+subhead: "A coaching session planned before you walk in: opening questions, a
+  flow for the conversation and clear follow-up steps. It keeps the teacher
+  doing the thinking, so the change is theirs and more likely to stick."
 explain: |
   A coaching session planned before you walk in: opening questions, a flow for the conversation and clear follow-up steps. It keeps the teacher doing the thinking, so the change is theirs and more likely to stick.
 
@@ -27,5 +30,6 @@ you_get:
   - Tips for the teacher's mood and stage
   - Agreed follow-up actions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

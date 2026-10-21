@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It adds up orders by channel.
 new_slug: sales-channel-reporter
 name: Sales channel reporter
-summary: Pick a date range. Get revenue, units and average order value for each sales channel.
+summary: Pick a date range. Get revenue, units and average order value for each
+  sales channel.
 job: run-your-store
 headline: Sales channel reporter
-subhead: Pick a date range. Get revenue, units and average order value for each sales channel.
+subhead: "See which channels bring in your money: online store, point of sale,
+  draft orders and more. Pick a date range and get revenue, units sold and
+  average order value for each channel."
 explain: |
   See which channels bring in your money: online store, point of sale, draft orders and more. Pick a date range and get revenue, units sold and average order value for each channel.
 
@@ -26,6 +29,7 @@ you_get:
   - Average order value per channel
   - Order counts for context
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Choosing a filter needs technical judgement.
 new_slug: inertial-sensor-fusion-builder
 name: Inertial sensor fusion builder
-summary: Describe your sensors. Get the right fusion filter chosen and built to track orientation or position.
+summary: Describe your sensors. Get the right fusion filter chosen and built to
+  track orientation or position.
 job: build-software
 headline: Inertial sensor fusion builder
-subhead: Describe your sensors. Get the right fusion filter chosen and built to track orientation or position.
+subhead: Describe your sensors. Get the right fusion filter chosen and built to
+  track orientation or position. Bring the list of sensors you have. Use the
+  result to plan your next step.
 explain: |
   The right fusion filter chosen and built for your sensors, so you can track orientation or position from accelerometers, gyros, magnetometers and GPS. It is for MATLAB with the Navigation Toolbox.
 
@@ -27,6 +30,7 @@ you_get:
   - Tuning guidance
   - A way to check the output against truth
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Navigation Toolbox.

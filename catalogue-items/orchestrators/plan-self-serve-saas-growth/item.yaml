@@ -1,0 +1,45 @@
+slug: plan-self-serve-saas-growth
+name: Plan self serve SaaS growth
+summary: Share your funnel and product. Get self serve growth tests and an
+  onboarding plan tied to customer value.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-gtm-product-led-growth
+  - copilot-gtm-operating-cadence
+steps:
+  - uses: copilot-gtm-product-led-growth
+    note: 1. Read skills/copilot-gtm-product-led-growth/SKILL.md. Share your product
+      funnel. Get activation and expansion changes, with tests to see whether
+      self serve growth fits. Save the result with source references. Carry the
+      user's goal and all earlier findings into this step. If required evidence
+      or tool access is missing, mark this step blocked; do not fabricate a
+      result.
+  - uses: copilot-gtm-operating-cadence
+    note: 2. Read skills/copilot-gtm-operating-cadence/SKILL.md. Share your team and
+      goals. Get meeting rhythms, metric reviews and decision rules that fit
+      your stage. Save the result with source references. Carry the user's goal
+      and all earlier findings into this step. If required evidence or tool
+      access is missing, mark this step blocked; do not fabricate a result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

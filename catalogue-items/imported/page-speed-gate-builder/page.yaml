@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It sets budgets and a workflow from a fixed pattern.
 new_slug: page-speed-gate-builder
 name: Page speed gate builder
-summary: Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
+summary: Point it at your web app. Get a Lighthouse check in CI that blocks slow
+  or weak pages.
 job: ship-and-host
 headline: Page speed gate builder
-subhead: Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
+subhead: A speed check that runs on every code change and blocks pages that get
+  slow or weak, so a slow page cannot slip into your live site unnoticed.
 explain: |
   A speed check that runs on every code change and blocks pages that get slow or weak, so a slow page cannot slip into your live site unnoticed.
 
@@ -26,6 +28,7 @@ you_get:
   - Median-of-runs setup to cut flaky results
   - Saved reports for each run
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

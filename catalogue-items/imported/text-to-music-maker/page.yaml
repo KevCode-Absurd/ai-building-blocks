@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a fixed generation recipe.
 new_slug: text-to-music-maker
 name: Text to music maker
-summary: Describe the music or sound you want. Get a generated clip, even one that follows a melody you give.
+summary: Describe the music or sound you want. Get a generated clip, even one
+  that follows a melody you give.
 job: build-software
 headline: Text to music maker
-subhead: Describe the music or sound you want. Get a generated clip, even one that follows a melody you give.
+subhead: Type what you want to hear, such as "calm piano with soft rain", and
+  get an audio clip back. You can also hum or supply a melody and have the new
+  music follow it, or ask for a sound effect like footsteps on gravel.
 explain: |
   Type what you want to hear, such as "calm piano with soft rain", and get an audio clip back. You can also hum or supply a melody and have the new music follow it, or ask for a sound effect like footsteps on gravel.
 
@@ -26,6 +29,7 @@ you_get:
   - Model size advice
   - Code you can rerun with changes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

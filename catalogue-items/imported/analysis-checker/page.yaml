@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must catch subtle mistakes.
 new_slug: analysis-checker
 name: Analysis checker
-summary: Give it an analysis before you share it. Get a check of the method, the math and any bias.
+summary: Give it an analysis before you share it. Get a check of the method, the
+  math and any bias.
 job: track-numbers
 headline: Analysis checker
-subhead: Give it an analysis before you share it. Get a check of the method, the math and any bias.
+subhead: Give it an analysis before you share it. Get a check of the method, the
+  math and any bias. Bring the analysis as a report, file, query or description.
+  Use the result to plan your next step.
 explain: |
   Catch errors in your analysis before anyone else does. It checks the method, the maths and bias, then gives a confidence rating and fixes.
 
@@ -25,6 +28,7 @@ you_get:
   - Any pitfalls found
   - A confidence rating and fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

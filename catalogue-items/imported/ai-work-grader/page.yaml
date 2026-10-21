@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies a fixed two-axis rubric.
 new_slug: ai-work-grader
 name: AI work grader
-summary: Finish a task. Get an honest score on quality and effort, with the weak spots named.
+summary: Finish a task. Get an honest score on quality and effort, with the weak
+  spots named.
 job: think-and-decide
 headline: AI work grader
-subhead: Finish a task. Get an honest score on quality and effort, with the weak spots named.
+subhead: An honest score for the work you just finished, not the usual 4 out of
+  5 for everything. It rates how hard the task was and how well it was done,
+  then combines them with a fixed table.
 explain: |
   An honest score for the work you just finished, not the usual 4 out of 5 for everything. It rates how hard the task was and how well it was done, then combines them with a fixed table.
 
@@ -25,5 +28,6 @@ you_get:
   - The weak spots, named
   - A saved score history that flags score inflation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

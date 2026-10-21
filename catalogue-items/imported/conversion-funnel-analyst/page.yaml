@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: The counting is set, but picking the fix needs judgment.
 new_slug: conversion-funnel-analyst
 name: Conversion funnel analyst
-summary: Give it an event log and your steps. Get conversion per step, drop-offs, time to convert and what to fix.
+summary: Give it an event log and your steps. Get conversion per step,
+  drop-offs, time to convert and what to fix.
 job: track-numbers
 headline: Conversion funnel analyst
-subhead: Give it an event log and your steps. Get conversion per step, drop-offs, time to convert and what to fix.
+subhead: A funnel table showing how many people reach each step, where they
+  leave, how long they take, and which fixes are worth the most. It points you
+  at the step costing you the most customers.
 explain: |
   A funnel table showing how many people reach each step, where they leave, how long they take, and which fixes are worth the most. It points you at the step costing you the most customers.
 
@@ -28,6 +31,7 @@ you_get:
   - Segment comparison
   - Ranked fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

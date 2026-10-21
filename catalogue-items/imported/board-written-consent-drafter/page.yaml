@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Wording and who must sign matter.
 new_slug: board-written-consent-drafter
 name: Board written consent drafter
-summary: Describe the decision your directors must approve. Get a written consent to sign instead of a meeting. Have a lawyer check it.
+summary: Describe the decision your directors must approve. Get a written
+  consent to sign instead of a meeting. Have a lawyer check it.
 job: check-contracts
 headline: Board written consent drafter
-subhead: Describe the decision your directors must approve. Get a written consent to sign instead of a meeting. Have a lawyer check it.
+subhead: When directors must approve something, a written consent lets them sign
+  instead of meeting. This skill drafts that consent in your house style,
+  starting from the closest past example in your own files.
 explain: |
   When directors must approve something, a written consent lets them sign instead of meeting. This skill drafts that consent in your house style, starting from the closest past example in your own files.
 
@@ -26,6 +29,9 @@ you_get:
   - Conflict and notice flags
   - Prompts for what to review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - Where the skill points to /corporate-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /corporate-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set steps with a few choices.
 new_slug: gnss-position-calculator
 name: GNSS position calculator
-summary: Give it RINEX satellite data. Get receiver positions worked out from chosen satellite groups.
+summary: Give it RINEX satellite data. Get receiver positions worked out from
+  chosen satellite groups.
 job: build-software
 headline: GNSS position calculator
-subhead: Give it RINEX satellite data. Get receiver positions worked out from chosen satellite groups.
+subhead: Give it RINEX satellite data. Get receiver positions worked out from
+  chosen satellite groups. Bring rINEX 3 observation file. Use the result to
+  plan your next step.
 explain: |
   Where a receiver was, worked out from satellite data you already have. Give it RINEX observation and navigation files and it calculates positions using pseudoranges from GPS, GLONASS, Galileo, BeiDou, QZSS, NavIC and SBAS.
 
@@ -26,6 +29,7 @@ you_get:
   - Single versus multi-system comparison
   - MATLAB code you can rerun
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Navigation Toolbox.

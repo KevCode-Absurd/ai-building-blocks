@@ -1,0 +1,58 @@
+slug: review-an-agent-before-launch
+name: Review an agent before launch
+summary: Share your agent code and design. Get risks in tool access, plugin
+  trust and behavior ranked before launch.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-agent-governance
+  - copilot-agent-owasp-compliance
+  - copilot-agent-supply-chain
+  - copilot-audit-integrity
+steps:
+  - uses: copilot-agent-governance
+    note: 1. Read skills/copilot-agent-governance/SKILL.md. Share how your agent
+      uses tools. Get controls for permissions, trust and risky actions. Save
+      the result with source references. Carry the user's goal and all earlier
+      findings into this step. If required evidence or tool access is missing,
+      mark this step blocked; do not fabricate a result.
+  - uses: copilot-agent-owasp-compliance
+    note: 2. Read skills/copilot-agent-owasp-compliance/SKILL.md. Share your agent
+      code. Get findings against the OWASP agent risks, with evidence and fixes.
+      Save the result with source references. Carry the user's goal and all
+      earlier findings into this step. If required evidence or tool access is
+      missing, mark this step blocked; do not fabricate a result.
+  - uses: copilot-agent-supply-chain
+    note: 3. Read skills/copilot-agent-supply-chain/SKILL.md. Share your agent tools
+      and packages. Get file checks and a record of supply chain risks. Save the
+      result with source references. Carry the user's goal and all earlier
+      findings into this step. If required evidence or tool access is missing,
+      mark this step blocked; do not fabricate a result.
+  - uses: copilot-audit-integrity
+    note: 4. Read skills/copilot-audit-integrity/SKILL.md. Share a security audit.
+      Get claims without proof, missing facts and failed checks called out. Save
+      the result with source references. Carry the user's goal and all earlier
+      findings into this step. If required evidence or tool access is missing,
+      mark this step blocked; do not fabricate a result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

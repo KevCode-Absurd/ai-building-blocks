@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: A script does the sums and the AI writes staged emails.
 new_slug: uk-late-payment-chaser
 name: UK late payment chaser
-summary: Give it an overdue invoice. Get the legal interest and fixed fee worked out, plus reminder emails ready to send.
+summary: Give it an overdue invoice. Get the legal interest and fixed fee worked
+  out, plus reminder emails ready to send.
 job: track-numbers
 headline: UK late payment chaser
-subhead: Give it an overdue invoice. Get the legal interest and fixed fee worked out, plus reminder emails ready to send.
+subhead: When a UK business customer pays late, the law lets you claim interest
+  and a fixed fee. This skill works out the exact amount and writes the reminder
+  emails.
 explain: |
   When a UK business customer pays late, the law lets you claim interest and a fixed fee. This skill works out the exact amount and writes the reminder emails.
 
@@ -26,6 +29,7 @@ you_get:
   - A sequence of reminder emails
   - Notes on what the law does and does not cover
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -1,0 +1,38 @@
+slug: engineering-evidence-keeper
+name: Engineering change evidence agent
+summary: Share a change and prior review state. Get fresh test and docs gaps,
+  resolved findings and the next verification step.
+category: agent
+boards:
+  - business
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-test-gap-audit
+  - copilot-docs-sync-audit
+  - copilot-bug-receipt
+steps:
+  - uses: copilot-test-gap-audit
+    note: Run only when the saved state and decision rules require it.
+  - uses: copilot-docs-sync-audit
+    note: Run only when the saved state and decision rules require it.
+  - uses: copilot-bug-receipt
+    note: Run only when the saved state and decision rules require it.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

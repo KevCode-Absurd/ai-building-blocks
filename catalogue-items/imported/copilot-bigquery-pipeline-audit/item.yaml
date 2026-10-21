@@ -1,0 +1,32 @@
+slug: copilot-bigquery-pipeline-audit
+name: BigQuery pipeline cost safety reviewer
+summary: Share your Python data pipeline. Get costly queries, repeat-run risks and failure cases with code references.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/bigquery-pipeline-audit
+  url: https://github.com/github/awesome-copilot/tree/main/skills/bigquery-pipeline-audit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: bigquery-pipeline-audit
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: bigquery-pipeline-audit skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/bigquery-pipeline-audit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Sizes and labels differ by country, so each market needs checking.
 new_slug: overseas-listing-localizer
 name: Overseas listing localizer
-summary: Give it your product images and copy. Get versions for other countries with local language, sizes and required labels.
+summary: Give it your product images and copy. Get versions for other countries
+  with local language, sizes and required labels.
 job: run-your-store
 headline: Overseas listing localizer
-subhead: Give it your product images and copy. Get versions for other countries with local language, sizes and required labels.
+subhead: Your product listing rewritten for each country you sell in, not just
+  translated. You get local-language copy, converted sizes, correct image rules
+  and reminders about labels the market expects.
 explain: |
   Your product listing rewritten for each country you sell in, not just translated. You get local-language copy, converted sizes, correct image rules and reminders about labels the market expects.
 
@@ -27,6 +30,8 @@ you_get:
   - Platform image specs
   - Label reminders
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).
+  - It works best when your AI can run code and use your own image model key
+    (OpenAI, Gemini, fal or Replicate).

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: A script finds the cuts, and the AI only explains them.
 new_slug: dead-air-and-retake-cutter
 name: Dead air and retake cutter
-summary: Give it your recording transcript. Get a timed list of pauses, fillers and retakes to cut.
+summary: Give it your recording transcript. Get a timed list of pauses, fillers
+  and retakes to cut.
 job: grow-social
 headline: Dead air and retake cutter
-subhead: Give it your recording transcript. Get a timed list of pauses, fillers and retakes to cut.
+subhead: "A list of exact cut points for your recording, taken from its
+  transcript: silences, filler lines and sentences you started over. You apply
+  the cuts in your editor, so nothing in your footage changes without you."
 explain: |
   A list of exact cut points for your recording, taken from its transcript: silences, filler lines and sentences you started over. You apply the cuts in your editor, so nothing in your footage changes without you.
 
@@ -25,6 +28,7 @@ you_get:
   - Estimated time saved
   - JSON version for tools (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

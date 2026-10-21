@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It needs exact rules and careful reading of the match rates.
 new_slug: lead-source-field-checker
 name: Lead source field checker
-summary: Give it your CRM leads and ad history. Learn if your lead source fields are good enough to link leads to ads.
+summary: Give it your CRM leads and ad history. Learn if your lead source fields
+  are good enough to link leads to ads.
 job: track-numbers
 headline: Lead source field checker
-subhead: Give it your CRM leads and ad history. Learn if your lead source fields are good enough to link leads to ads.
+subhead: A yes or no on whether your CRM's source fields are good enough to link
+  leads to the ads that brought them. Give it CRM rows and ad history rows, plus
+  a binding that says which CRM fields join to which ad account, platform and
+  entity type.
 explain: |
   A yes or no on whether your CRM's source fields are good enough to link leads to the ads that brought them. Give it CRM rows and ad history rows, plus a binding that says which CRM fields join to which ad account, platform and entity type. Joins are never guessed from a bare ID.
 
@@ -26,6 +30,7 @@ you_get:
   - Gaps in what is captured
   - Counts you can share without customer data
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Node code and read your CRM export.

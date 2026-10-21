@@ -1,0 +1,32 @@
+slug: copilot-aws-resource-health-diagnose
+name: AWS service health investigator
+summary: Share your AWS resources and symptoms. Get health findings, log evidence and a recovery plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/aws-resource-health-diagnose
+  url: https://github.com/github/awesome-copilot/tree/main/skills/aws-resource-health-diagnose
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: aws-resource-health-diagnose
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: aws-resource-health-diagnose skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/aws-resource-health-diagnose
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

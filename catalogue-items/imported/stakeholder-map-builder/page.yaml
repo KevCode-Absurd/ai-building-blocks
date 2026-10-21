@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It places people on a grid and applies a standard plan per box.
 new_slug: stakeholder-map-builder
 name: Stakeholder map builder
-summary: List the people affected by your project. Get a power and interest grid with how to talk to each group.
+summary: List the people affected by your project. Get a power and interest grid
+  with how to talk to each group.
 job: organise-work
 headline: Stakeholder map builder
-subhead: List the people affected by your project. Get a power and interest grid with how to talk to each group.
+subhead: A grid of who matters to your project and exactly how to talk to each
+  group. List the people and groups affected, or share an org chart or brief and
+  let the skill infer them.
 explain: |
   A grid of who matters to your project and exactly how to talk to each group. List the people and groups affected, or share an org chart or brief and let the skill infer them. It rates each one on power and interest, then places them on a four-box grid.
 
@@ -26,5 +29,6 @@ you_get:
   - Key messages
   - Risks of ignoring each group
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

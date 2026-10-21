@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs in-house work against outside help.
 new_slug: online-order-fulfillment-planner
 name: Online order fulfillment planner
-summary: Give it your order volume and setup. Get ways to pick, pack and ship faster and cheaper, with returns handled.
+summary: Give it your order volume and setup. Get ways to pick, pack and ship
+  faster and cheaper, with returns handled.
 job: run-your-store
 headline: Online order fulfillment planner
-subhead: Give it your order volume and setup. Get ways to pick, pack and ship faster and cheaper, with returns handled.
+subhead: A plan to pick, pack and ship your online orders faster and cheaper,
+  with returns handled as part of the flow. You describe your volume and setup
+  and get fixes ranked by how much they save.
 explain: |
   A plan to pick, pack and ship your online orders faster and cheaper, with returns handled as part of the flow. You describe your volume and setup and get fixes ranked by how much they save.
 
@@ -26,5 +29,6 @@ you_get:
   - A comparison of fulfillment models
   - A returns process
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

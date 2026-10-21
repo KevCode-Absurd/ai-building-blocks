@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: Ordering the steps well depends on your data and deadline.
 new_slug: analysis-plan-builder
 name: Analysis plan builder
-summary: Give it a brief and your data. Get ordered steps with time estimates and a list of risks.
+summary: Give it a brief and your data. Get ordered steps with time estimates
+  and a list of risks.
 job: track-numbers
 headline: Analysis plan builder
-subhead: Give it a brief and your data. Get ordered steps with time estimates and a list of risks.
+subhead: A step by step plan for a data analysis, with time estimates and a list
+  of what could go wrong, made before you touch any data.
 explain: |
   A step by step plan for a data analysis, with time estimates and a list of what could go wrong, made before you touch any data. It is most useful when the work has many steps or the data may not be there.
 
@@ -25,5 +27,6 @@ you_get:
   - A risk and dependency log
   - A kickoff document (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

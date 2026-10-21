@@ -2,10 +2,13 @@ thinking: high
 thinking_why: A fresh reviewer must attack the work, then the findings must be weighed.
 new_slug: second-opinion-reviewer
 name: Second-opinion reviewer
-summary: Give it a plan or change you feel sure about. Get a fresh reviewer's hardest objections, sorted by what matters.
+summary: Give it a plan or change you feel sure about. Get a fresh reviewer's
+  hardest objections, sorted by what matters.
 job: think-and-decide
 headline: Second-opinion reviewer
-subhead: Give it a plan or change you feel sure about. Get a fresh reviewer's hardest objections, sorted by what matters.
+subhead: A set of the hardest objections to a plan or change you feel sure
+  about, sorted by how much each one matters. In a long session, guesses quietly
+  turn into facts.
 explain: |
   A set of the hardest objections to a plan or change you feel sure about, sorted by how much each one matters. In a long session, guesses quietly turn into facts. This skill breaks that by handing your work to a fresh reviewer who has not seen your reasoning and is told to find what is wrong.
 
@@ -13,8 +16,10 @@ explain: |
 when:
   - You are about to commit a change that touches logic you only half understand.
   - You made an architecture choice under uncertainty and want it challenged.
-  - You are about to say "this scales" and want someone to try to prove otherwise.
-  - A plan has run for many messages and you suspect your assumptions have hardened.
+  - You are about to say "this scales" and want someone to try to prove
+    otherwise.
+  - A plan has run for many messages and you suspect your assumptions have
+    hardened.
 you_give:
   - The plan, code change or claim
   - What it must achieve
@@ -25,6 +30,7 @@ you_get:
   - Which points to fix and which to dismiss
   - A revised decision
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run subagents and read your project files.

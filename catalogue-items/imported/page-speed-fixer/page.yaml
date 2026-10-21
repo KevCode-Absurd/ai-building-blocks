@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts issues into batches and fixes each one in order.
 new_slug: page-speed-fixer
 name: Page speed fixer
-summary: Paste your PageSpeed report. Get fixes for speed, access, best practice and SEO scores, in ordered batches.
+summary: Paste your PageSpeed report. Get fixes for speed, access, best practice
+  and SEO scores, in ordered batches.
 job: build-websites
 headline: Page speed fixer
-subhead: Paste your PageSpeed report. Get fixes for speed, access, best practice and SEO scores, in ordered batches.
+subhead: A faster, cleaner page, fixed in ordered batches from the report you
+  already have. Paste your PageSpeed or Lighthouse results and the work follows
+  the scores, not guesses.
 explain: |
   A faster, cleaner page, fixed in ordered batches from the report you already have. Paste your PageSpeed or Lighthouse results and the work follows the scores, not guesses.
 
@@ -25,5 +28,6 @@ you_get:
   - Re-test after each batch
   - Notes on what changed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

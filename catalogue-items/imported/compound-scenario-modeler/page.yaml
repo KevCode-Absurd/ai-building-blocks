@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It must trace knock-on effects across the whole business.
 new_slug: compound-scenario-modeler
 name: Compound scenario modeler
-summary: Describe several things going wrong at once. Get how each team feels it and a response plan.
+summary: Describe several things going wrong at once. Get how each team feels it
+  and a response plan.
 job: plan-strategy
 headline: Compound scenario modeler
-subhead: Describe several things going wrong at once. Get how each team feels it and a response plan.
+subhead: A what-if plan for several bad things happening together, showing how
+  one problem spreads into others. Single-risk stress tests miss this, and
+  compound trouble is what actually hurts.
 explain: |
   A what-if plan for several bad things happening together, showing how one problem spreads into others. Single-risk stress tests miss this, and compound trouble is what actually hurts.
 
   You state up to three variables, such as losing a top customer, a delayed fundraise and a key engineer leaving. For each you give size, odds and timing. Claude then maps the effect on cash, revenue, product, people and operations, models three severity levels, and traces how a hit in one area lands in the next. It ends with specific hedges to put in place now and warning triggers that tell you to act. A Python script is available for guided input.
 when:
-  - You rely on one customer for a large share of revenue and want to plan for losing them.
+  - You rely on one customer for a large share of revenue and want to plan for
+    losing them.
   - A fundraise is uncertain and you need a Plan B.
   - You want to know how many things must go wrong before you run out of cash.
   - A board asked for a risk plan with real numbers.
@@ -27,5 +31,6 @@ you_get:
   - Hedges to set up now
   - Warning triggers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes short messages in your voice with set rules.
 new_slug: linkedin-outreach-plan
 name: LinkedIn comment and outreach planner
-summary: Say who you want to reach. Get a commenting list, connection notes and a plan, all sent by you.
+summary: Say who you want to reach. Get a commenting list, connection notes and
+  a plan, all sent by you.
 job: grow-social
 headline: LinkedIn comment and outreach planner
-subhead: Say who you want to reach. Get a commenting list, connection notes and a plan, all sent by you.
+subhead: A plan to grow your reach on LinkedIn by commenting first and reaching
+  out second, and every message is sent by you. Tell it who you want to reach
+  and it builds the list and the notes.
 explain: |
   A plan to grow your reach on LinkedIn by commenting first and reaching out second, and every message is sent by you. Tell it who you want to reach and it builds the list and the notes.
 
@@ -28,5 +31,6 @@ you_get:
   - A weekly pace you can keep
   - A follow-up rule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

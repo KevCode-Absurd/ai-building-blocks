@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks measures to fit your goals and size.
 new_slug: brand-health-metrics-planner
 name: Brand health metrics planner
-summary: Say what your brand should achieve. Get the numbers to track, how to collect them and how to read them.
+summary: Say what your brand should achieve. Get the numbers to track, how to
+  collect them and how to read them.
 job: track-numbers
 headline: Brand health metrics planner
-subhead: Say what your brand should achieve. Get the numbers to track, how to collect them and how to read them.
+subhead: A measurement plan that tracks your brand against its own goals, not
+  generic numbers. You get the metrics to follow, how to collect each one and
+  how to read the results.
 explain: |
   A measurement plan that tracks your brand against its own goals, not generic numbers. You get the metrics to follow, how to collect each one and how to read the results.
 
@@ -26,5 +29,6 @@ you_get:
   - How to collect each one
   - Guidance on reading the numbers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

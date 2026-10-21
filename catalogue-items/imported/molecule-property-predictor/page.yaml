@@ -2,16 +2,20 @@ thinking: high
 thinking_why: Fair splits and model choice need careful judgement.
 new_slug: molecule-property-predictor
 name: Molecule property predictor
-summary: Give it molecules and measured results. Get a tested model that predicts a property, with fair train and test splits.
+summary: Give it molecules and measured results. Get a tested model that
+  predicts a property, with fair train and test splits.
 job: research-topics
 headline: Molecule property predictor
-subhead: Give it molecules and measured results. Get a tested model that predicts a property, with fair train and test splits.
+subhead: Give it molecules and measured results. Get a tested model that
+  predicts a property, with fair train and test splits. Bring molecules as
+  SMILES strings. Use the result to plan your next step.
 explain: |
   A tested model that predicts a property of a molecule, such as solubility or toxicity, with fair splits so the score means something.
 
   The skill uses DeepChem. It first cleans your data: it parses molecule strings, records rejected rows and checks duplicate structures and repeated measurements. It trains a simple number-based baseline before any neural network. It splits by molecular scaffold or by time, so test molecules are truly new, and fits preprocessing on training data only. Settings are chosen on validation data and the final test is run once. The report shows per-task counts and warns that a good fit is not proof for new chemistry.
 when:
-  - You have lab results for a few thousand compounds and want to predict the rest.
+  - You have lab results for a few thousand compounds and want to predict the
+    rest.
   - Your model looks great and you worry about leakage between train and test.
   - You need a baseline before trying a graph neural network.
   - You want results in the original units, not scaled numbers.
@@ -27,6 +31,7 @@ you_get:
   - Test scores with counts per task
   - Limits on where to trust it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

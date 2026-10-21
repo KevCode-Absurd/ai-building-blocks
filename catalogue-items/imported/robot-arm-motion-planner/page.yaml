@@ -5,7 +5,9 @@ name: Robot arm motion planner
 summary: Give it a start and goal pose. Get a smooth path and timed moves for the arm.
 job: build-software
 headline: Robot arm motion planner
-subhead: Give it a start and goal pose. Get a smooth path and timed moves for the arm.
+subhead: An arm that moves from pose A to pose B along a path that avoids
+  obstacles, with timing that respects speed and acceleration limits. That is
+  what you finish with, as MATLAB code you can run.
 explain: |
   An arm that moves from pose A to pose B along a path that avoids obstacles, with timing that respects speed and acceleration limits. That is what you finish with, as MATLAB code you can run.
 
@@ -26,6 +28,7 @@ you_get:
   - Planner choice with reasons
   - A collision check of the final motion
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Robotics System Toolbox.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set format with the facts you give it.
 new_slug: internal-update-writer
 name: Internal update writer
-summary: Give it the facts. Get a status report, leadership update, newsletter or incident note in a clear format.
+summary: Give it the facts. Get a status report, leadership update, newsletter
+  or incident note in a clear format.
 job: organise-work
 headline: Internal update writer
-subhead: Give it the facts. Get a status report, leadership update, newsletter or incident note in a clear format.
+subhead: A status report, leadership update, newsletter, FAQ answer or incident
+  note in the right format, written from the facts you give. Each type has its
+  own guideline, so the result reads as it should for that audience.
 explain: |
   A status report, leadership update, newsletter, FAQ answer or incident note in the right format, written from the facts you give. Each type has its own guideline, so the result reads as it should for that audience.
 
@@ -26,5 +29,6 @@ you_get:
   - Plans and problems clearly separated
   - A tone suited to the audience
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

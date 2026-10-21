@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It adapts content to one platform.
 new_slug: wechat-article-planner
 name: WeChat article planner
-summary: Name your topic. Get a WeChat Official Account article plan with title options and layout built for the platform.
+summary: Name your topic. Get a WeChat Official Account article plan with title
+  options and layout built for the platform.
 job: grow-social
 headline: WeChat article planner
-subhead: Name your topic. Get a WeChat Official Account article plan with title options and layout built for the platform.
+subhead: A full plan for one WeChat Official Account article, built around how
+  the platform works. Distribution is closed, sharing happens in Moments and
+  readers tap titles that promise something.
 explain: |
   A full plan for one WeChat Official Account article, built around how the platform works. Distribution is closed, sharing happens in Moments and readers tap titles that promise something. You leave with a title shortlist, a layout and a call to action that fits your goal.
 
@@ -28,5 +31,6 @@ you_get:
   - Call to action to private traffic
   - Posting schedule suggestion
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

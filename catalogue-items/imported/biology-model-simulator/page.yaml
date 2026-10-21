@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a solver and runs set analyses.
 new_slug: biology-model-simulator
 name: Biology model simulator
-summary: Give it a model. Get it run for what-if cases, with the most influential settings found.
+summary: Give it a model. Get it run for what-if cases, with the most
+  influential settings found.
 job: build-software
 headline: Biology model simulator
-subhead: Give it a model. Get it run for what-if cases, with the most influential settings found.
+subhead: Run your SimBiology model forward in time and see what changes when you
+  tweak a dose, a rate or a starting level. You also learn which settings move
+  the result most, so you know where to spend your effort.
 explain: |
   Run your SimBiology model forward in time and see what changes when you tweak a dose, a rate or a starting level. You also learn which settings move the result most, so you know where to spend your effort.
 
@@ -26,6 +29,7 @@ you_get:
   - Plots of the runs
   - A ranked list of influential parameters
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with SimBiology.

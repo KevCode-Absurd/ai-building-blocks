@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies known patterns to your data shape.
 new_slug: graphql-schema-designer
 name: GraphQL schema designer
-summary: Describe your data. Get a GraphQL schema with fast resolvers, paging and performance patterns.
+summary: Describe your data. Get a GraphQL schema with fast resolvers, paging
+  and performance patterns.
 job: build-software
 headline: GraphQL schema designer
-subhead: Describe your data. Get a GraphQL schema with fast resolvers, paging and performance patterns.
+subhead: Describe your data and get a GraphQL API plan you can build from. You
+  receive a full schema, plus resolver code that avoids the slow trap of one
+  database call per item.
 explain: |
   Describe your data and get a GraphQL API plan you can build from. You receive a full schema, plus resolver code that avoids the slow trap of one database call per item.
 
@@ -26,5 +29,6 @@ you_get:
   - Paging for list fields
   - Depth and cost limits
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

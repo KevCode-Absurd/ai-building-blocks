@@ -1,6 +1,7 @@
 slug: react-test-writer
 name: React test writer
-summary: Point it at your React app. Get unit, integration and end-to-end tests for the parts that lack them.
+summary: Share your React app. Get tests for components, linked features and
+  full user tasks that lack coverage.
 category: general
 boards: []
 type: skill

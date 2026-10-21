@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a strict file format and fixes what the checker finds.
 new_slug: agent-procedure-writer
 name: Agent procedure writer
-summary: Describe a repeatable job. Get a step-by-step procedure file for your AI, with firm rules and a format check.
+summary: Describe a repeatable job. Get a step-by-step procedure file for your
+  AI, with firm rules and a format check.
 job: make-skills
 headline: Agent procedure writer
-subhead: Describe a repeatable job. Get a step-by-step procedure file for your AI, with firm rules and a format check.
+subhead: A step-by-step procedure file that an AI agent follows the same way
+  each time, for a job you repeat. It has inputs you can change, clear steps,
+  and firm rules the agent cannot wave off.
 explain: |
   A step-by-step procedure file that an AI agent follows the same way each time, for a job you repeat. It has inputs you can change, clear steps, and firm rules the agent cannot wave off.
 
@@ -26,6 +29,7 @@ you_get:
   - Examples and fixes for common problems
   - A format check result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run shell scripts and save files.

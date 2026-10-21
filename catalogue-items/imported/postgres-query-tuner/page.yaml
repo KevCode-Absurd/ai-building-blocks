@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It applies ranked rules to your queries and schema.
 new_slug: postgres-query-tuner
 name: Postgres query tuner
-summary: Share your queries or schema. Get faster Postgres with better indexes, types and settings, ranked by impact.
+summary: Share your queries or schema. Get faster Postgres with better indexes,
+  types and settings, ranked by impact.
 job: build-software
 headline: Postgres query tuner
-subhead: Share your queries or schema. Get faster Postgres with better indexes, types and settings, ranked by impact.
+subhead: Share a slow query or a table design and get back a faster version with
+  the reason for each change. Fixes are ranked from biggest gain to smallest.
 explain: |
   Share a slow query or a table design and get back a faster version with the reason for each change. Fixes are ranked from biggest gain to smallest.
 
@@ -26,5 +28,6 @@ you_get:
   - Settings changes
   - A ranked list of issues
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

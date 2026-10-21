@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Several models answer, then a chair model weighs them.
 new_slug: multi-model-answer-panel
 name: Multi-model answer panel
-summary: Ask one question. Get answers from several open AI models, ranked, plus one final answer.
+summary: Ask one question. Get answers from several open AI models, ranked, plus
+  one final answer.
 job: think-and-decide
 headline: Multi-model answer panel
-subhead: Ask one question. Get answers from several open AI models, ranked, plus one final answer.
+subhead: One question answered by several open AI models, ranked by each other,
+  then boiled down to one final answer. You see every answer and every ranking,
+  so nothing is hidden.
 explain: |
   One question answered by several open AI models, ranked by each other, then boiled down to one final answer. You see every answer and every ranking, so nothing is hidden.
 
@@ -26,6 +29,7 @@ you_get:
   - A final combined answer
   - Saved files with all raw responses
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Fireworks API key.

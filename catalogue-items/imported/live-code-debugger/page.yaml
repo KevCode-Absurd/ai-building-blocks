@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It steps through live state and reasons about each finding.
 new_slug: live-code-debugger
 name: Live code debugger
-summary: Point it at a bug. Get the program run with breakpoints, so you see exact values and where it goes wrong.
+summary: Point it at a bug. Get the program run with breakpoints, so you see
+  exact values and where it goes wrong.
 job: test-and-fix-code
 headline: Live code debugger
-subhead: Point it at a bug. Get the program run with breakpoints, so you see exact values and where it goes wrong.
+subhead: Instead of guessing from error text, run the program and stop it where
+  the bug lives. You see the exact values at that moment and trace back to the
+  cause.
 explain: |
   Instead of guessing from error text, run the program and stop it where the bug lives. You see the exact values at that moment and trace back to the cause.
 
@@ -26,6 +29,7 @@ you_get:
   - The root cause
   - A fix suggestion
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and a debugger.

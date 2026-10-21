@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows strict style rules while it writes.
 new_slug: forceful-prose-writer
 name: Forceful prose writer
-summary: Give it a topic or a draft. Get clean, concrete writing with no filler and none of the usual AI habits.
+summary: Give it a topic or a draft. Get clean, concrete writing with no filler
+  and none of the usual AI habits.
 job: write-and-tell-stories
 headline: Forceful prose writer
-subhead: Give it a topic or a draft. Get clean, concrete writing with no filler and none of the usual AI habits.
+subhead: "Clean, concrete writing with no filler and none of the usual AI
+  habits: no friendly assistant tone, no empty openers, no stock phrases. Use it
+  for essays and rewrites that need weight."
 explain: |
   Clean, concrete writing with no filler and none of the usual AI habits: no friendly assistant tone, no empty openers, no stock phrases. Use it for essays and rewrites that need weight.
 
@@ -25,5 +28,6 @@ you_get:
   - Version in the voice you picked
   - Rewrite that removes stock phrases
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

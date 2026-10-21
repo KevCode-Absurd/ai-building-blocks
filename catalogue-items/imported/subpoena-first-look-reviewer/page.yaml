@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Deadlines are short and a wrong move is costly.
 new_slug: subpoena-first-look-reviewer
 name: Subpoena first-look reviewer
-summary: Give it a subpoena. Get what it asks for, the deadline and a plan for your lawyer. Not legal advice.
+summary: Give it a subpoena. Get what it asks for, the deadline and a plan for
+  your lawyer. Not legal advice.
 job: check-contracts
 headline: Subpoena first-look reviewer
-subhead: Give it a subpoena. Get what it asks for, the deadline and a plan for your lawyer. Not legal advice.
+subhead: A first read of a subpoena your company has received, so you know what
+  it wants and when before you call your lawyer. It is a triage aid, not legal
+  advice.
 explain: |
   A first read of a subpoena your company has received, so you know what it wants and when before you call your lawyer. It is a triage aid, not legal advice.
 
@@ -27,7 +30,11 @@ you_get:
   - An objections framework
   - A deadline calendar and compliance plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your saved legal setup notes and your files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can read your saved legal setup notes and your
+    files.
+  - Where the skill points to /litigation-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

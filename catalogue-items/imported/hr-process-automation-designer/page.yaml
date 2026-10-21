@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs effort against gain for each chore.
 new_slug: hr-process-automation-designer
 name: HR process automation designer
-summary: Name your HR processes, like onboarding. Get which to automate, which tool fits each and a build order.
+summary: Name your HR processes, like onboarding. Get which to automate, which
+  tool fits each and a build order.
 job: hire-people
 headline: HR process automation designer
-subhead: Name your HR processes, like onboarding. Get which to automate, which tool fits each and a build order.
+subhead: A shortlist of HR tasks worth automating, with the tool for each and
+  the order to build them in. Name your processes, such as onboarding or leave,
+  and get a plan that saves real hours without breaking accuracy.
 explain: |
   A shortlist of HR tasks worth automating, with the tool for each and the order to build them in. Name your processes, such as onboarding or leave, and get a plan that saves real hours without breaking accuracy.
 
@@ -26,5 +29,6 @@ you_get:
   - Tool suggestions for each flow
   - A business case and build order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

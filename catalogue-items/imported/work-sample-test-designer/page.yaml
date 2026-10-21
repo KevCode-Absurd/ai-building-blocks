@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: A fair test needs clear scoring tied to the job.
 new_slug: work-sample-test-designer
 name: Work sample test designer
-summary: Name the role. Get a work test, a scoring guide and fairness checks. You make the hiring call, not the AI.
+summary: Name the role. Get a work test, a scoring guide and fairness checks.
+  You make the hiring call, not the AI.
 job: hire-people
 headline: Work sample test designer
-subhead: Name the role. Get a work test, a scoring guide and fairness checks. You make the hiring call, not the AI.
+subhead: A work test tied to the real job, with a scoring guide and fairness
+  checks. You hire on what candidates can do, not how well they interview.
 explain: |
   A work test tied to the real job, with a scoring guide and fairness checks. You hire on what candidates can do, not how well they interview. The final decision stays with you, not the AI.
 
@@ -28,5 +30,6 @@ you_get:
   - Bias and fairness checks
   - Guide to combining scores
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

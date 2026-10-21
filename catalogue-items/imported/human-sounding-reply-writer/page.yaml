@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It mostly changes tone and style.
 new_slug: human-sounding-reply-writer
 name: Human-sounding reply writer
-summary: Ask for it once. Get AI replies that sound like a person, with less listing and fewer stock phrases.
+summary: Ask for it once. Get AI replies that sound like a person, with less
+  listing and fewer stock phrases.
 job: write-and-tell-stories
 headline: Human-sounding reply writer
-subhead: Ask for it once. Get AI replies that sound like a person, with less listing and fewer stock phrases.
+subhead: AI answers that sound like a person talking, not a helpdesk. Ask for it
+  once and replies drop the stock phrases, the bullet lists and the hollow
+  sympathy.
 explain: |
   AI answers that sound like a person talking, not a helpdesk. Ask for it once and replies drop the stock phrases, the bullet lists and the hollow sympathy.
 
@@ -24,5 +27,6 @@ you_get:
   - Fewer lists and stock phrases
   - A direct tone with real warmth
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

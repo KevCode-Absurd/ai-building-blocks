@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It learns your voice and personalises each message.
 new_slug: own-voice-outreach-writer
 name: Own-voice outreach writer
-summary: Give it your prospects. Get emails and follow-ups that sound like you, each tied to something specific about them.
+summary: Give it your prospects. Get emails and follow-ups that sound like you,
+  each tied to something specific about them.
 job: write-emails
 headline: Own-voice outreach writer
-subhead: Give it your prospects. Get emails and follow-ups that sound like you, each tied to something specific about them.
+subhead: Emails and follow-ups that read like you wrote them, each tied to
+  something real about the person getting them. Nobody has to wonder if a bot
+  did it.
 explain: |
   Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. Nobody has to wonder if a bot did it.
 
@@ -26,7 +29,9 @@ you_get:
   - Follow-ups in your tone
   - Subject line options
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

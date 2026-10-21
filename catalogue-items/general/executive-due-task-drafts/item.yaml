@@ -1,0 +1,27 @@
+slug: executive-due-task-drafts
+name: Due task follow up drafter
+summary: Share due tasks and related threads. Get follow-up drafts linked to
+  each task, with missing facts and send status clear.
+category: general
+boards:
+  - business
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Executive assistant job ideas
+    by: mgonto
+    url: https://github.com/mgonto/executive-assistant-skills
+    used: Inspiration for meeting preparation, action tracking, email drafting and
+      daily briefings. These are original portable instructions, not copies of
+      the unlicensed source.
+example_pending: true

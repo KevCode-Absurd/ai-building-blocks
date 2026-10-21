@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies a set decision rule to each page.
 new_slug: page-keep-or-cut-auditor
 name: Page keep-or-cut auditor
-summary: Give it your site's content list. Get each page marked keep, update, merge, redirect or delete, with reasons.
+summary: Give it your site's content list. Get each page marked keep, update,
+  merge, redirect or delete, with reasons.
 job: get-found-in-search
 headline: Page keep-or-cut auditor
-subhead: Give it your site's content list. Get each page marked keep, update, merge, redirect or delete, with reasons.
+subhead: "A spreadsheet-style decision for every page on your site: keep,
+  update, merge, redirect or delete, each with a reason. It helps when traffic
+  has dropped or you inherited a pile of old posts."
 explain: |
   A spreadsheet-style decision for every page on your site: keep, update, merge, redirect or delete, each with a reason. It helps when traffic has dropped or you inherited a pile of old posts.
 
@@ -26,5 +29,6 @@ you_get:
   - Priority order of work
   - Redirect map for pages you remove
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

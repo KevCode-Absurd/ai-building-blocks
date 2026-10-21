@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It must match the right standard and justify every limit.
 new_slug: lab-method-validation-planner
 name: Lab method validation planner
-summary: Name the lab test method and rules. Get a validation plan, acceptance limits and a write-up ready for review.
+summary: Name the lab test method and rules. Get a validation plan, acceptance
+  limits and a write-up ready for review.
 job: document-work
 headline: Lab method validation planner
-subhead: Name the lab test method and rules. Get a validation plan, acceptance limits and a write-up ready for review.
+subhead: A validation plan with acceptance limits fixed before any data is
+  collected. Name the test method and the rules it falls under. The skill first
+  picks the governing framework, because ICH Q2(R2), ICH M10, USP and ISO 17025
+  ask for different studies, and blending them satisfies none.
 explain: |
   A validation plan with acceptance limits fixed before any data is collected. Name the test method and the rules it falls under. The skill first picks the governing framework, because ICH Q2(R2), ICH M10, USP and ISO 17025 ask for different studies, and blending them satisfies none.
 
@@ -26,5 +30,6 @@ you_get:
   - Calculated statistics
   - A report outline for review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

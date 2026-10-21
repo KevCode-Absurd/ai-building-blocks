@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It measures the image, builds, then compares.
 new_slug: screenshot-to-interface-builder
 name: Screenshot to interface builder
-summary: Give it a screenshot or mockup. Get matching UI built with your own parts, compared side by side with the image.
+summary: Give it a screenshot or mockup. Get matching UI built with your own
+  parts, compared side by side with the image.
 job: build-websites
 headline: Screenshot to interface builder
-subhead: Give it a screenshot or mockup. Get matching UI built with your own parts, compared side by side with the image.
+subhead: "A working screen that matches your screenshot or mockup, built from
+  your project's own components and colours, then compared against the image and
+  corrected. Pictures usually go wrong in the same ways: spacing close but off,
+  text sizes guessed, colours picked by eye, a missing state."
 explain: |
   A working screen that matches your screenshot or mockup, built from your project's own components and colours, then compared against the image and corrected. Pictures usually go wrong in the same ways: spacing close but off, text sizes guessed, colours picked by eye, a missing state. This skill measures first.
 
@@ -26,6 +30,7 @@ you_get:
   - A list of differences fixed
   - Placeholders where assets are not yours to copy
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

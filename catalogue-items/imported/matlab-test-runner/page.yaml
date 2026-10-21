@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs known test commands and reads the output.
 new_slug: matlab-test-runner
 name: MATLAB test runner
-summary: Point it at your tests. Get them run and filtered, with failures, coverage gaps and CI set up.
+summary: Point it at your tests. Get them run and filtered, with failures,
+  coverage gaps and CI set up.
 job: test-and-fix-code
 headline: MATLAB test runner
-subhead: Point it at your tests. Get them run and filtered, with failures, coverage gaps and CI set up.
+subhead: Your MATLAB tests run, filtered and explained. You get a clear pass and
+  fail count, the reason for each failure, which lines are not covered by tests,
+  and a build file for continuous integration.
 explain: |
   Your MATLAB tests run, filtered and explained. You get a clear pass and fail count, the reason for each failure, which lines are not covered by tests, and a build file for continuous integration.
 
@@ -27,6 +30,7 @@ you_get:
   - A build file
   - A CI config (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

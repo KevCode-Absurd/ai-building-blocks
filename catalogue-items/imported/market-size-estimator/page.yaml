@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It builds the numbers two ways and checks that they agree.
 new_slug: market-size-estimator
 name: Market size estimator
-summary: Give it a market or product idea. Get a TAM, SAM and SOM estimate built top-down and bottom-up, with sources.
+summary: Give it a market or product idea. Get a TAM, SAM and SOM estimate built
+  top-down and bottom-up, with sources.
 job: plan-strategy
 headline: Market size estimator
-subhead: Give it a market or product idea. Get a TAM, SAM and SOM estimate built top-down and bottom-up, with sources.
+subhead: A market size estimate for your idea, shown as TAM, SAM and SOM and
+  built three ways so you can see if the numbers agree.
 explain: |
   A market size estimate for your idea, shown as TAM, SAM and SOM and built three ways so you can see if the numbers agree. It is useful for fundraising, planning and checking whether an idea is big enough.
 
@@ -26,6 +28,7 @@ you_get:
   - A willingness-to-pay view
   - Assumptions and sources list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web for market data.

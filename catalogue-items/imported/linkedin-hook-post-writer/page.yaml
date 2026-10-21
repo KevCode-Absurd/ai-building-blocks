@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It picks a hook pattern and fills it in.
 new_slug: linkedin-hook-post-writer
 name: LinkedIn hook post writer
-summary: Give a topic and angle. Get a LinkedIn post built on a tested opening line for your goal.
+summary: Give a topic and angle. Get a LinkedIn post built on a tested opening
+  line for your goal.
 job: grow-social
 headline: LinkedIn hook post writer
-subhead: Give a topic and angle. Get a LinkedIn post built on a tested opening line for your goal.
+subhead: "A LinkedIn post that opens with a line chosen for what you want it to
+  do: draw comments, reposts, likes or saves. You pick the goal first and the
+  opening follows."
 explain: |
   A LinkedIn post that opens with a line chosen for what you want it to do: draw comments, reposts, likes or saves. You pick the goal first and the opening follows.
 
@@ -27,5 +30,6 @@ you_get:
   - Formatting set for the feed
   - A cleaned version without AI tells
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

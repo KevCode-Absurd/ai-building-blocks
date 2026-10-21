@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It needs creative ideas and tough challenge of each.
 new_slug: research-idea-workshop
 name: Research idea workshop
-summary: Name your research area. Get ideas built, challenged and ranked, with assumptions and a decision log.
+summary: Name your research area. Get ideas built, challenged and ranked, with
+  assumptions and a decision log.
 job: research-topics
 headline: Research idea workshop
-subhead: Name your research area. Get ideas built, challenged and ranked, with assumptions and a decision log.
+subhead: A structured brainstorm for your research area that builds ideas,
+  challenges them and ranks them, ending with a log of why you chose what you
+  chose.
 explain: |
   A structured brainstorm for your research area that builds ideas, challenges them and ranks them, ending with a log of why you chose what you chose. Ideas stay proposals until evidence says otherwise.
 
@@ -27,5 +30,6 @@ you_get:
   - Ranked shortlist
   - Decision log
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

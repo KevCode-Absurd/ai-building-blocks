@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Real-time loops need careful design.
 new_slug: live-audio-processing-builder
 name: Live audio processing builder
-summary: Describe the effect. Get a frame-by-frame audio chain with filters, EQ and level meters.
+summary: Describe the effect. Get a frame-by-frame audio chain with filters, EQ
+  and level meters.
 job: build-software
 headline: Live audio processing builder
-subhead: Describe the effect. Get a frame-by-frame audio chain with filters, EQ and level meters.
+subhead: A chain of audio processing that runs on sound as it plays, with
+  filters, equaliser and level meters you can tweak while it runs. Describe the
+  effect you want and get MATLAB code that does it.
 explain: |
   A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it.
 
@@ -27,6 +30,7 @@ you_get:
   - Level meters
   - Cleanup steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Audio Toolbox.

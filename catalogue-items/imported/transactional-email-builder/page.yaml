@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds from set parts and checks each in the preview.
 new_slug: transactional-email-builder
 name: Transactional email builder
-summary: Say which emails your app sends. Get coded templates, a sending setup, preview and dark mode.
+summary: Say which emails your app sends. Get coded templates, a sending setup,
+  preview and dark mode.
 job: build-software
 headline: Transactional email builder
-subhead: Say which emails your app sends. Get coded templates, a sending setup, preview and dark mode.
+subhead: The emails your app sends, such as welcome, verify, password reset and
+  invoice, built as real code you can ship. They look right in dark mode, in
+  different languages and in major email apps.
 explain: |
   The emails your app sends, such as welcome, verify, password reset and invoice, built as real code you can ship. They look right in dark mode, in different languages and in major email apps.
 
@@ -26,6 +29,7 @@ you_get:
   - A local preview server
   - A spam and dark mode checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

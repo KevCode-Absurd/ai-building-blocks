@@ -1,0 +1,32 @@
+slug: copilot-verify-agent-action
+name: Agent action approval reviewer
+summary: Share a proposed agent action. Get its scope, risks and missing evidence checked before execution.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/verify-agent-action
+  url: https://github.com/github/awesome-copilot/tree/main/skills/verify-agent-action
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: verify-agent-action
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: verify-agent-action skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/verify-agent-action
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

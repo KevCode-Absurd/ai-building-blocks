@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a standard multi-step sourcing method.
 new_slug: sourcing-plan-builder
 name: Sourcing plan builder
-summary: Name a spend category. Get a sourcing plan with supplier list, quote request, scoring rules and negotiation levers.
+summary: Name a spend category. Get a sourcing plan with supplier list, quote
+  request, scoring rules and negotiation levers.
 job: plan-supply-chain
 headline: Sourcing plan builder
-subhead: Name a spend category. Get a sourcing plan with supplier list, quote request, scoring rules and negotiation levers.
+subhead: A full sourcing plan for one spend category, with supplier list, quote
+  request, scoring rules and negotiation tactics. Name the category, its yearly
+  spend, how important it is and who supplies it today.
 explain: |
   A full sourcing plan for one spend category, with supplier list, quote request, scoring rules and negotiation tactics. Name the category, its yearly spend, how important it is and who supplies it today.
 
@@ -27,5 +30,6 @@ you_get:
   - Quote request and scoring rules
   - Negotiation tactics
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It summarizes deal data into a clear story.
 new_slug: forecast-narrative-writer
 name: Forecast narrative writer
-summary: "Ask for your forecast. Get a commit, best case and pipeline story: what is closing, at risk and changed."
+summary: "Ask for your forecast. Get a commit, best case and pipeline story:
+  what is closing, at risk and changed."
 job: sell-and-negotiate
 headline: Forecast narrative writer
-subhead: "Ask for your forecast. Get a commit, best case and pipeline story: what is closing, at risk and changed."
+subhead: "A forecast story you can say out loud in a review or 1:1: the number,
+  the deals behind it, what changed since last week and where the risk sits."
 explain: |
   A forecast story you can say out loud in a review or 1:1: the number, the deals behind it, what changed since last week and where the risk sits. It is split into commit, best case and pipeline.
 
@@ -27,6 +29,7 @@ you_get:
   - Deals at risk with reasons
   - Short script to say in the meeting
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your CRM.

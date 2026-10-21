@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It must avoid guessing at what others feel.
 new_slug: perspective-taking-activity
 name: Perspective-taking activity builder
-summary: Give it a topic in history, social science or literature. Get an activity that builds real understanding of other views.
+summary: Give it a topic in history, social science or literature. Get an
+  activity that builds real understanding of other views.
 job: teach-and-train
 headline: Perspective-taking activity builder
-subhead: Give it a topic in history, social science or literature. Get an activity that builds real understanding of other views.
+subhead: A classroom activity where students work out how people actually saw
+  their world, instead of imagining what they would feel. That difference builds
+  sound reasoning and keeps the lesson safe and honest.
 explain: |
   A classroom activity where students work out how people actually saw their world, instead of imagining what they would feel. That difference builds sound reasoning and keeps the lesson safe and honest.
 
   Given a topic in history, social science or literature, the skill designs the activity around evidence: what the person knew, valued and faced. It follows research on perspective-taking as a skill that can be learned, in steps from noticing views differ to checking your guess. Assessment looks at the quality of reasoning, use of evidence and honest uncertainty, not how emotional a student sounds. It suits teachers.
 when:
-  - You teach a historical event and want students to understand each side's reasons.
+  - You teach a historical event and want students to understand each side's
+    reasons.
   - A novel unit needs work on character motives.
   - You are running a stakeholder activity in social science.
   - You want to grade reasoning, not displays of empathy.
@@ -26,5 +30,6 @@ you_get:
   - Guards against projection
   - An assessment guide focused on reasoning
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

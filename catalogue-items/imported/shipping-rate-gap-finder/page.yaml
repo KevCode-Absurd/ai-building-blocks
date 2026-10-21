@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It checks each zone against one simple rule.
 new_slug: shipping-rate-gap-finder
 name: Shipping rate gap finder
-summary: Point it at your store. Get a list of shipping zones with no rate or only manual rates.
+summary: Point it at your store. Get a list of shipping zones with no rate or
+  only manual rates.
 job: run-your-store
 headline: Shipping rate gap finder
-subhead: Point it at your store. Get a list of shipping zones with no rate or only manual rates.
+subhead: A list of shipping zones in your store that have no rate, or only
+  hand-typed flat rates. A zone with no rate quietly stops customers from
+  checking out.
 explain: |
   A list of shipping zones in your store that have no rate, or only hand-typed flat rates. A zone with no rate quietly stops customers from checking out.
 
@@ -26,6 +29,7 @@ you_get:
   - Profiles missing sales regions
   - A readable or JSON report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

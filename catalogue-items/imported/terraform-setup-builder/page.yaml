@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows known infrastructure patterns.
 new_slug: terraform-setup-builder
 name: Terraform setup builder
-summary: Describe your cloud. Get Terraform modules with safe state, security checks and clean structure.
+summary: Describe your cloud. Get Terraform modules with safe state, security
+  checks and clean structure.
 job: ship-and-host
 headline: Terraform setup builder
-subhead: Describe your cloud. Get Terraform modules with safe state, security checks and clean structure.
+subhead: Terraform modules for your cloud, laid out cleanly, with safe state
+  storage and security checks built in. Your infrastructure stays predictable
+  and does not drift or break at 3 AM.
 explain: |
   Terraform modules for your cloud, laid out cleanly, with safe state storage and security checks built in. Your infrastructure stays predictable and does not drift or break at 3 AM.
 
@@ -27,6 +30,7 @@ you_get:
   - A security findings list
   - Refactor suggestions for existing code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

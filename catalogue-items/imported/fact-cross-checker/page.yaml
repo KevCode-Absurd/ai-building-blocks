@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It compares many sources and weighs where they disagree.
 new_slug: fact-cross-checker
 name: Fact cross-checker
-summary: Give it a claim to check. Get an evidence table with sources, confidence, conflicts and gaps.
+summary: Give it a claim to check. Get an evidence table with sources,
+  confidence, conflicts and gaps.
 job: think-and-decide
 headline: Fact cross-checker
-subhead: Give it a claim to check. Get an evidence table with sources, confidence, conflicts and gaps.
+subhead: A claim checked against several independent sources, with a table that
+  shows what supports it, what contradicts it and where the evidence runs out.
+  You stop trusting the first search result.
 explain: |
   A claim checked against several independent sources, with a table that shows what supports it, what contradicts it and where the evidence runs out. You stop trusting the first search result.
 
@@ -26,6 +29,7 @@ you_get:
   - A list of conflicts between sources
   - A list of gaps still open
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web.

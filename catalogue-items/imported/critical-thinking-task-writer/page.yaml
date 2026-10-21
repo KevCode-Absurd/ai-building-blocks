@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds a task around one chosen skill.
 new_slug: critical-thinking-task-writer
 name: Critical thinking task writer
-summary: Name a subject and a skill. Get a task where learners weigh evidence, spot bias or test an argument.
+summary: Name a subject and a skill. Get a task where learners weigh evidence,
+  spot bias or test an argument.
 job: teach-and-train
 headline: Critical thinking task writer
-subhead: Name a subject and a skill. Get a task where learners weigh evidence, spot bias or test an argument.
+subhead: Name a subject and a skill. Get a task where learners weigh evidence,
+  spot bias or test an argument. Bring subject and topic. Use the result to plan
+  your next step.
 explain: |
   A classroom task that makes students weigh evidence, spot bias or test an argument, with a guide that shows what a strong answer looks like next to a surface one. It moves lessons past recall and into judgment.
 
@@ -26,5 +29,6 @@ you_get:
   - Teacher follow-up prompts
   - Assessment indicators
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

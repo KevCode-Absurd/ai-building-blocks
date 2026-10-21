@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It groups raw notes into themes and decisions.
 new_slug: customer-interview-synthesizer
 name: Customer interview synthesizer
-summary: Paste interviews, tickets or survey notes. Get clear patterns and what each means for your product.
+summary: Paste interviews, tickets or survey notes. Get clear patterns and what
+  each means for your product.
 job: understand-customers
 headline: Customer interview synthesizer
-subhead: Paste interviews, tickets or survey notes. Get clear patterns and what each means for your product.
+subhead: Piles of interview notes turn into a decision when they are sorted
+  properly. Paste interviews, support tickets, call notes or survey answers and
+  you get clear patterns with what each one means for your product.
 explain: |
   Piles of interview notes turn into a decision when they are sorted properly. Paste interviews, support tickets, call notes or survey answers and you get clear patterns with what each one means for your product.
 
@@ -25,5 +28,6 @@ you_get:
   - Product implications for each pattern
   - Decisions and open questions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

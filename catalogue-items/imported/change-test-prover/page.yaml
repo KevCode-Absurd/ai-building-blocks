@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It loops between mutating code and writing tests until they bite.
 new_slug: change-test-prover
 name: Change test prover
-summary: Give it a Python change. Get tests that fail whenever that change is broken, proven by code mutations.
+summary: Give it a Python change. Get tests that fail whenever that change is
+  broken, proven by code mutations.
 job: test-and-fix-code
 headline: Change test prover
-subhead: Give it a Python change. Get tests that fail whenever that change is broken, proven by code mutations.
+subhead: Tests that fail whenever your Python change is broken, proven by
+  deliberately breaking the code. Give it a change and the skill checks it is
+  actually tested, not just passing.
 explain: |
   Tests that fail whenever your Python change is broken, proven by deliberately breaking the code. Give it a change and the skill checks it is actually tested, not just passing.
 
@@ -26,6 +29,7 @@ you_get:
   - Tests that fail on the old code
   - Evidence the change is safe to trust
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

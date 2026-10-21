@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must pick a method, handle paging and check the results.
 new_slug: data-extraction-pipeline-builder
 name: Data extraction pipeline builder
-summary: Give it a site and the data you want. Get a checked script and a clean data file. Collects data from websites.
+summary: Give it a site and the data you want. Get a checked script and a clean
+  data file. Collects data from websites.
 job: build-software
 headline: Data extraction pipeline builder
-subhead: Give it a site and the data you want. Get a checked script and a clean data file. Collects data from websites.
+subhead: Give it a site and the data you want. Get a checked script and a clean
+  data file. Collects data from websites. Bring the site, file or API address.
+  Use the result to plan your next step.
 explain: |
   Get a script that pulls data from a website, document or API into a clean CSV or JSON file, with a check that the result is not empty or broken. It avoids fragile one off scripts.
 
@@ -26,6 +29,7 @@ you_get:
   - Validation result
   - Cost and quota estimate
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Firecrawl API key.

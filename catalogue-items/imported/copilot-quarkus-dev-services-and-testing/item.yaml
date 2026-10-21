@@ -1,0 +1,32 @@
+slug: copilot-quarkus-dev-services-and-testing
+name: Quarkus integration test builder
+summary: Share your Quarkus app. Get tests with local service containers and checks for real API behavior.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/quarkus-dev-services-and-testing
+  url: https://github.com/github/awesome-copilot/tree/main/skills/quarkus-dev-services-and-testing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: quarkus-dev-services-and-testing
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: quarkus-dev-services-and-testing skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/quarkus-dev-services-and-testing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

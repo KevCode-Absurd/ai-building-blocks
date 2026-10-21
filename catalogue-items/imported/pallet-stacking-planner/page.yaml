@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It tries several patterns and keeps the best fit.
 new_slug: pallet-stacking-planner
 name: Pallet stacking planner
-summary: Give it your box sizes and pallet size. Get a stacking pattern that fits the most boxes safely.
+summary: Give it your box sizes and pallet size. Get a stacking pattern that
+  fits the most boxes safely.
 job: plan-supply-chain
 headline: Pallet stacking planner
-subhead: Give it your box sizes and pallet size. Get a stacking pattern that fits the most boxes safely.
+subhead: A stacking pattern that fits the most boxes on a pallet without
+  breaking weight, height or crush limits. You give box and pallet sizes, and it
+  works out the layers.
 explain: |
   A stacking pattern that fits the most boxes on a pallet without breaking weight, height or crush limits. You give box and pallet sizes, and it works out the layers.
 
@@ -26,6 +29,7 @@ you_get:
   - Weight and height check
   - Wrapping and handling notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

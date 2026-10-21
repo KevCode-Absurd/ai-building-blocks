@@ -1,0 +1,51 @@
+slug: check-an-ai-app-improvement
+name: Check an AI app improvement
+summary: Share your AI app and proposed change. Get evaluation criteria,
+  feedback loops and an evidence-based comparison plan.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-eval-driven-dev
+  - copilot-agentic-eval
+  - copilot-diagnose
+steps:
+  - uses: copilot-eval-driven-dev
+    note: 1. Read skills/copilot-eval-driven-dev/SKILL.md. Share your AI app and
+      goal. Get test cases and a way to compare changes with real results. Save
+      the result with source references. Carry the user's goal and all earlier
+      findings into this step. If required evidence or tool access is missing,
+      mark this step blocked; do not fabricate a result.
+  - uses: copilot-agentic-eval
+    note: 2. Read skills/copilot-agentic-eval/SKILL.md. Share an agent task. Get
+      checks and feedback loops to improve the quality of its answers. Save the
+      result with source references. Carry the user's goal and all earlier
+      findings into this step. If required evidence or tool access is missing,
+      mark this step blocked; do not fabricate a result.
+  - uses: copilot-diagnose
+    note: 3. Read skills/copilot-diagnose/SKILL.md. Share a workflow that
+      disappoints. Get its weak points ranked, with causes and practical fixes.
+      Save the result with source references. Carry the user's goal and all
+      earlier findings into this step. If required evidence or tool access is
+      missing, mark this step blocked; do not fabricate a result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

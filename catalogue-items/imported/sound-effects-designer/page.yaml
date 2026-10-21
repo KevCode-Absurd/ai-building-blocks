@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It turns a short description into a clip with a set tool.
 new_slug: sound-effects-designer
 name: Sound effects designer
-summary: Describe a sound. Get a clip such as rain, an impact or a button click, with the length you set.
+summary: Describe a sound. Get a clip such as rain, an impact or a button click,
+  with the length you set.
 job: work-with-audio
 headline: Sound effects designer
-subhead: Describe a sound. Get a clip such as rain, an impact or a button click, with the length you set.
+subhead: A sound clip made from a short description, such as thunder with light
+  rain, a cinematic impact or a button click. You pick the length from half a
+  second to 30 seconds.
 explain: |
   A sound clip made from a short description, such as thunder with light rain, a cinematic impact or a button click. You pick the length from half a second to 30 seconds. You can also ask for a clip that loops cleanly, which suits background ambience.
 
@@ -25,6 +28,7 @@ you_get:
   - Code that makes the clip
   - Settings to tune length and prompt match
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your own ElevenLabs API key.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It uses standard charts and a fixed fix method.
 new_slug: quality-control-plan-builder
 name: Quality control plan builder
-summary: Give it your defect data. Get control charts, the biggest causes ranked, and a plan to cut defects.
+summary: Give it your defect data. Get control charts, the biggest causes
+  ranked, and a plan to cut defects.
 job: plan-supply-chain
 headline: Quality control plan builder
-subhead: Give it your defect data. Get control charts, the biggest causes ranked, and a plan to cut defects.
+subhead: A quality plan built from your own defect data. You see control charts
+  that show whether your process is stable, a ranked list of the biggest causes
+  of defects, and a step-by-step plan to cut them.
 explain: |
   A quality plan built from your own defect data. You see control charts that show whether your process is stable, a ranked list of the biggest causes of defects, and a step-by-step plan to cut them.
 
@@ -25,6 +28,7 @@ you_get:
   - Ranked list of main defect causes
   - Improvement plan with owners and targets
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

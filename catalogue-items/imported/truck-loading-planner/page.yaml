@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Packing many sizes takes careful trial and error.
 new_slug: truck-loading-planner
 name: Truck loading planner (bin packing)
-summary: Give it your box sizes and counts. Get a plan to pack them into the fewest trucks or containers.
+summary: Give it your box sizes and counts. Get a plan to pack them into the
+  fewest trucks or containers.
 job: plan-supply-chain
 headline: Truck loading planner (bin packing)
-subhead: Give it your box sizes and counts. Get a plan to pack them into the fewest trucks or containers.
+subhead: A plan for packing your boxes into the fewest trucks or containers,
+  with a count you can trust before you book freight. A wrong container count
+  costs a full container, so the plan is checked box by box.
 explain: |
   A plan for packing your boxes into the fewest trucks or containers, with a count you can trust before you book freight. A wrong container count costs a full container, so the plan is checked box by box.
 
@@ -26,6 +29,7 @@ you_get:
   - Spare room on tight loads
   - A verification check of the plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

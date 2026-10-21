@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must handle harm and fairness with care.
 new_slug: restorative-conversation-planner
 name: Restorative conversation planner
-summary: Describe a conflict between students. Get steps to repair trust and relationships. Not legal or medical advice.
+summary: Describe a conflict between students. Get steps to repair trust and
+  relationships. Not legal or medical advice.
 job: teach-and-train
 headline: Restorative conversation planner
-subhead: Describe a conflict between students. Get steps to repair trust and relationships. Not legal or medical advice.
+subhead: Describe a conflict between students. Get steps to repair trust and
+  relationships. Not legal or medical advice. Bring what happened. Use the
+  result to plan your next step.
 explain: |
   A step-by-step plan for repairing a relationship after a conflict between students, built around naming harm and agreeing how to put it right. It does not replace school policy, and it is not legal or medical advice.
 
@@ -27,5 +30,6 @@ you_get:
   - A running order for the conversation
   - A repair agreement and check-in plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

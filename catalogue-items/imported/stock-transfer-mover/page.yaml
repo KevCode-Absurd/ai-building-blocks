@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It subtracts in one place and adds in another.
 new_slug: stock-transfer-mover
 name: Stock transfer mover
-summary: Name a product, two locations and a number. Get stock moved from one to the other. Changes live stock levels.
+summary: Name a product, two locations and a number. Get stock moved from one to
+  the other. Changes live stock levels.
 job: run-your-store
 headline: Stock transfer mover
-subhead: Name a product, two locations and a number. Get stock moved from one to the other. Changes live stock levels.
+subhead: Move units of a product from one of your locations to another in
+  Shopify, with the two sides kept in step. You name the products by code, the
+  source and destination locations and the quantities.
 explain: |
   Move units of a product from one of your locations to another in Shopify, with the two sides kept in step. You name the products by code, the source and destination locations and the quantities. The skill takes stock off the source and adds it to the destination.
 
@@ -14,7 +17,8 @@ when:
   - You are shipping stock from your warehouse to a retail shop.
   - A location is running out while another has too much.
   - You are closing a pop-up and moving what is left home.
-  - You need to move many products between places without editing each one by hand.
+  - You need to move many products between places without editing each one by
+    hand.
 you_give:
   - Your Shopify store link and access
   - Source and destination locations
@@ -25,6 +29,8 @@ you_get:
   - A warning if a source would go negative
   - A record of what was moved
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

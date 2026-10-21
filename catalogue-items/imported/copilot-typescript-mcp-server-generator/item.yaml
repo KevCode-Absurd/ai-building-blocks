@@ -1,0 +1,32 @@
+slug: copilot-typescript-mcp-server-generator
+name: TypeScript MCP server starter builder
+summary: Describe your tools and data. Get a TypeScript MCP server project with tools, resources and tests.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/typescript-mcp-server-generator
+  url: https://github.com/github/awesome-copilot/tree/main/skills/typescript-mcp-server-generator
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: typescript-mcp-server-generator
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: typescript-mcp-server-generator skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/typescript-mcp-server-generator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

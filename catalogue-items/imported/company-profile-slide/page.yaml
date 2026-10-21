@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It collects facts and fits a slide.
 new_slug: company-profile-slide
 name: Company strip profile slide maker
-summary: Name a company. Get a one-slide profile with business, key numbers and ownership in a standard layout.
+summary: Name a company. Get a one-slide profile with business, key numbers and
+  ownership in a standard layout.
 job: money-and-investing
 headline: Company strip profile slide maker
-subhead: Name a company. Get a one-slide profile with business, key numbers and ownership in a standard layout.
+subhead: One clean slide that tells a reader what a company does, its key
+  numbers and who owns it. It is the kind of page that sits at the front of a
+  bank or investor pack.
 explain: |
   One clean slide that tells a reader what a company does, its key numbers and who owns it. It is the kind of page that sits at the front of a bank or investor pack.
 
@@ -26,6 +29,7 @@ you_get:
   - An ownership and segment breakdown
   - An outline you approve before the build
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web and make slides.

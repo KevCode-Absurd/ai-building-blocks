@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts your type first, then lists set duties.
 new_slug: eu-network-security-check
 name: EU network security rules checker
-summary: Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps.
+summary: Describe your company. Get whether NIS2 covers you, your security
+  duties, reporting deadlines and gaps.
 job: check-contracts
 headline: EU network security rules checker
-subhead: Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps.
+subhead: Describe your company. Get whether NIS2 covers you, your security
+  duties, reporting deadlines and gaps. Bring sector and services you offer. Use
+  the result to plan your next step.
 explain: |
   A clear answer on whether the EU NIS2 security law covers your company, and what that means in practice: your category, the ten risk measures, reporting deadlines and the gaps to close.
 
@@ -27,5 +30,6 @@ you_get:
   - Board duty checklist
   - Fine exposure estimate
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

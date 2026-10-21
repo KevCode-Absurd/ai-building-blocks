@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It builds a custom control page for each task.
 new_slug: look-tuning-studio-builder
 name: Look tuning studio builder
-summary: Name what to tune. Get a local page with sliders and pickers to adjust the look by eye.
+summary: Name what to tune. Get a local page with sliders and pickers to adjust
+  the look by eye.
 job: design-work
 headline: Look tuning studio builder
-subhead: Name what to tune. Get a local page with sliders and pickers to adjust the look by eye.
+subhead: A small local web page where you change the look of something with
+  sliders and pickers, and see the result as you go. You choose by eye, not by
+  typing numbers into a chat.
 explain: |
   A small local web page where you change the look of something with sliders and pickers, and see the result as you go. You choose by eye, not by typing numbers into a chat.
 
   There are two kinds. For visual settings such as color, type, layout, image treatment or animation, the page has controls for each setting and records your final choices. For text, such as a blog post, doc or copy, the page lets you read, edit and mark up the content directly, and it captures your edits. Either way, the point is to replace static grids of options and walls of prose with something you can act on. Your AI builds the page for whatever you name.
 when:
-  - You want to fine-tune colors and spacing and pick by looking, not by guessing numbers.
+  - You want to fine-tune colors and spacing and pick by looking, not by
+    guessing numbers.
   - You need to compare design variations quickly.
   - You want to mark up a blog post or doc and pass the edits back.
   - You are reviewing a set of images or copy and want to react in place.
@@ -26,6 +30,7 @@ you_get:
   - A record of your chosen values
   - Captured edits and notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

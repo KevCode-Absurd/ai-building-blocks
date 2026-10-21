@@ -2,10 +2,14 @@ thinking: high
 thinking_why: A full audit spans many areas and needs careful ranking.
 new_slug: seo-auditor
 name: SEO auditor
-summary: Give it a site or page. Get a scored SEO report and ranked fixes. Collects data from websites.
+summary: Give it a site or page. Get a scored SEO report and ranked fixes.
+  Collects data from websites.
 job: get-found-in-search
 headline: SEO auditor
-subhead: Give it a site or page. Get a scored SEO report and ranked fixes. Collects data from websites.
+subhead: 'A scored SEO report on your site or page, plus an action plan with the
+  fixes in priority order. Say "perform seo analysis on" and a URL, and it runs
+  a full audit and saves two files: a detailed findings report and a ranked
+  action plan.'
 explain: |
   A scored SEO report on your site or page, plus an action plan with the fixes in priority order. Say "perform seo analysis on" and a URL, and it runs a full audit and saves two files: a detailed findings report and a ranked action plan. An HTML version is available too.
 
@@ -26,6 +30,7 @@ you_get:
   - An HTML report (optional)
   - Evidence from the fetched pages
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the web.

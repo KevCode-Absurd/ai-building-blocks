@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a check for each stage of the lesson.
 new_slug: lesson-understanding-check
 name: Lesson understanding check planner
-summary: Give it your lesson stages. Get a check for each stage, so you know who has it before moving on.
+summary: Give it your lesson stages. Get a check for each stage, so you know who
+  has it before moving on.
 job: teach-and-train
 headline: Lesson understanding check planner
-subhead: Give it your lesson stages. Get a check for each stage, so you know who has it before moving on.
+subhead: Know who has understood before you move on, not after the test. Give it
+  your lesson stages and you get a planned check for each one, so quiet students
+  cannot hide behind the confident few.
 explain: |
   Know who has understood before you move on, not after the test. Give it your lesson stages and you get a planned check for each one, so quiet students cannot hide behind the confident few.
 
@@ -28,5 +31,6 @@ you_get:
   - An exit ticket
   - A decision tree for what to do with answers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

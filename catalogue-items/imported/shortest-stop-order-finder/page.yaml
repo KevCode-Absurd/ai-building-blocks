@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: One route, one clear answer, easy to check.
 new_slug: shortest-stop-order-finder
 name: Shortest stop order finder
-summary: Give it a list of stops. Get the shortest order to visit them all and return, with the total distance.
+summary: Give it a list of stops. Get the shortest order to visit them all and
+  return, with the total distance.
 job: plan-supply-chain
 headline: Shortest stop order finder
-subhead: Give it a list of stops. Get the shortest order to visit them all and return, with the total distance.
+subhead: The shortest order to visit a list of stops and return to the start,
+  with the total distance. It cuts drive time and fuel on delivery rounds, site
+  visits or sales calls.
 explain: |
   The shortest order to visit a list of stops and return to the start, with the total distance. It cuts drive time and fuel on delivery rounds, site visits or sales calls.
 
@@ -26,6 +29,7 @@ you_get:
   - How close it is to the best possible
   - The method used and code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

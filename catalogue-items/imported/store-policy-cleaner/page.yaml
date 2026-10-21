@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It rewrites policies without changing their meaning.
 new_slug: store-policy-cleaner
 name: Store policy cleaner
-summary: Check your shipping, returns and privacy policies. Get clean, plain text versions AI can quote to shoppers. Can update live policies.
+summary: Check your shipping, returns and privacy policies. Get clean, plain
+  text versions AI can quote to shoppers. Can update live policies.
 job: build-websites
 headline: Store policy cleaner
-subhead: Check your shipping, returns and privacy policies. Get clean, plain text versions AI can quote to shoppers. Can update live policies.
+subhead: Shipping, returns and privacy policies that both people and AI shopping
+  assistants can read and quote correctly. When a shopper's AI asks do you ship
+  to me or what is the return window, it needs clear plain text to answer from.
 explain: |
   Shipping, returns and privacy policies that both people and AI shopping assistants can read and quote correctly. When a shopper's AI asks do you ship to me or what is the return window, it needs clear plain text to answer from. If your policy is missing or messy, it may skip you.
 
@@ -26,6 +29,7 @@ you_get:
   - Clean plain text versions
   - A preview before any live change
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

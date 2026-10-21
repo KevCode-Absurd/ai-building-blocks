@@ -1,0 +1,27 @@
+slug: executive-action-register
+name: Executive action register keeper
+summary: Share meeting notes or email threads. Get one action list with owners,
+  deadlines, source links and unresolved commitments.
+category: general
+boards:
+  - business
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: meeting_notes
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Executive assistant job ideas
+    by: mgonto
+    url: https://github.com/mgonto/executive-assistant-skills
+    used: Inspiration for meeting preparation, action tracking, email drafting and
+      daily briefings. These are original portable instructions, not copies of
+      the unlicensed source.
+example_pending: true

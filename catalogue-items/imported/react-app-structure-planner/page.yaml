@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Structure choices affect the whole codebase.
 new_slug: react-app-structure-planner
 name: React app structure planner
-summary: Point it at a React or React Native app. Get a clear folder layout and rules for what may import what.
+summary: Point it at a React or React Native app. Get a clear folder layout and
+  rules for what may import what.
 job: build-software
 headline: React app structure planner
-subhead: Point it at a React or React Native app. Get a clear folder layout and rules for what may import what.
+subhead: A clear folder layout for your React or React Native app, plus simple
+  rules for what may import what. Any contributor can then answer where code
+  lives without asking anyone.
 explain: |
   A clear folder layout for your React or React Native app, plus simple rules for what may import what. Any contributor can then answer where code lives without asking anyone.
 
@@ -25,6 +28,7 @@ you_get:
   - Server state versus UI state guide
   - Steps to migrate an existing app
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

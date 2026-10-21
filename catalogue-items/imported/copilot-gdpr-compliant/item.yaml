@@ -1,0 +1,32 @@
+slug: copilot-gdpr-compliant
+name: Privacy engineering practice reviewer
+summary: Share the way your app handles personal data. Get engineering gaps and changes to support privacy requirements.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/gdpr-compliant
+  url: https://github.com/github/awesome-copilot/tree/main/skills/gdpr-compliant
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: gdpr-compliant
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: gdpr-compliant skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/gdpr-compliant
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Setup needs matching dialects and ports.
 new_slug: drone-autopilot-connector
 name: Drone autopilot connector
-summary: Say which drone or flight controller. Get MATLAB connected over MAVLink and reading its data.
+summary: Say which drone or flight controller. Get MATLAB connected over MAVLink
+  and reading its data.
 job: build-software
 headline: Drone autopilot connector
-subhead: Say which drone or flight controller. Get MATLAB connected over MAVLink and reading its data.
+subhead: MATLAB talking to your drone in a few minutes. You name the flight
+  controller, such as PX4 or ArduPilot, and get a working MAVLink link over UDP,
+  with MATLAB acting as the ground station.
 explain: |
   MATLAB talking to your drone in a few minutes. You name the flight controller, such as PX4 or ArduPilot, and get a working MAVLink link over UDP, with MATLAB acting as the ground station.
 
@@ -26,6 +29,8 @@ you_get:
   - Confirmation that the client is found
   - A link ready for reading flight data
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB and reach a PX4 or ArduPilot autopilot.
+  - It works best when your AI can run MATLAB and reach a PX4 or ArduPilot
+    autopilot.

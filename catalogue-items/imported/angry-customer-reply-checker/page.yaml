@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It tests a draft against the message and your rules.
 new_slug: angry-customer-reply-checker
 name: Angry customer reply checker
-summary: Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft.
+summary: Paste the complaint and your draft reply. Get promises, facts and tone
+  checked, plus a repaired draft.
 job: help-customers
 headline: Angry customer reply checker
-subhead: Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft.
+subhead: A reply to an upset customer can calm things down or make them worse.
+  Paste the complaint and your draft, and you get a clear list of what works and
+  what will backfire, plus a repaired version you can send.
 explain: |
   A reply to an upset customer can calm things down or make them worse. Paste the complaint and your draft, and you get a clear list of what works and what will backfire, plus a repaired version you can send.
 
@@ -26,5 +29,6 @@ you_get:
   - Tone flags with the exact words quoted
   - A repaired draft with a clear next step
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

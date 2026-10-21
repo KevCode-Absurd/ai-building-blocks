@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set steps for each test data type.
 new_slug: battery-health-feature-extractor
 name: Battery health feature extractor
-summary: Give it battery test data. Get health and wear features ready for life prediction.
+summary: Give it battery test data. Get health and wear features ready for life
+  prediction.
 job: build-software
 headline: Battery health feature extractor
-subhead: Give it battery test data. Get health and wear features ready for life prediction.
+subhead: Give it battery test data. Get health and wear features ready for life
+  prediction. Bring battery cycling or test data. Use the result to plan your
+  next step.
 explain: |
   Health and wear numbers pulled out of battery test data, ready for models that estimate state of health or predict remaining life. Give it cycling files and it produces more than 165 features, from simple statistics per charge or discharge segment to differential curves that show electrode aging.
 
@@ -26,6 +29,8 @@ you_get:
   - Peak features from the curves
   - A batch pipeline for many files
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with the Predictive Maintenance Toolbox.
+  - It works best when your AI can run MATLAB with the Predictive Maintenance
+    Toolbox.

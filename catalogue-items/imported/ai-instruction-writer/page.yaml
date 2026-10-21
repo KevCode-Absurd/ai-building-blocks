@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies a style guide to your draft.
 new_slug: ai-instruction-writer
 name: AI instruction writer
-summary: Say which skill or instruction file you are writing. Get it written so your AI follows it well.
+summary: Say which skill or instruction file you are writing. Get it written so
+  your AI follows it well.
 job: make-skills
 headline: AI instruction writer
-subhead: Say which skill or instruction file you are writing. Get it written so your AI follows it well.
+subhead: A guide to writing skills and instruction files so your AI follows them
+  the same way each run. It applies to skills, AGENTS.md or CLAUDE.md, and any
+  document the AI is pointed to.
 explain: |
   A guide to writing skills and instruction files so your AI follows them the same way each run. It applies to skills, AGENTS.md or CLAUDE.md, and any document the AI is pointed to.
 
@@ -25,5 +28,6 @@ you_get:
   - A tighter version of your document
   - A list of triggers by case
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

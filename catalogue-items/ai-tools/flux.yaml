@@ -36,7 +36,6 @@ blocks:
   - image-ad-maker-with-exact-text
   - image-ad-settings-picker
   - marketing-image-maker
-  - stable-diffusion-image-maker
 alternatives: [stable-diffusion, midjourney, nano-banana, ideogram]
 last_checked: 2026-10-21
 sources:

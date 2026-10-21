@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches by rule and judges likely causes.
 new_slug: ledger-to-subledger-reconciler
 name: Ledger to subledger reconciler
-summary: Give it ledger and subledger data. Get matches, breaks and a likely cause for each break.
+summary: Give it ledger and subledger data. Get matches, breaks and a likely
+  cause for each break.
 job: track-numbers
 headline: Ledger to subledger reconciler
-subhead: Give it ledger and subledger data. Get matches, breaks and a likely cause for each break.
+subhead: A reconciliation that shows what matches between your general ledger
+  and subledger, what does not, and a likely reason for each gap. Supply both
+  extracts for the same entity and date.
 explain: |
   A reconciliation that shows what matches between your general ledger and subledger, what does not, and a likely reason for each gap. Supply both extracts for the same entity and date. The skill lines them up on the lowest shared key, converts dates and amounts to one format, and joins them.
 
@@ -26,5 +29,6 @@ you_get:
   - A likely cause for each break
   - A break report for review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

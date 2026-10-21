@@ -1,0 +1,37 @@
+slug: copilot-upstash-redis
+name: Edge Redis cache and limit builder
+summary: Share your serverless app. Get Redis caching or rate limits over HTTP with the required setup explained.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/upstash-redis
+  url: https://github.com/github/awesome-copilot/tree/main/skills/upstash-redis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: upstash-redis
+  author: Upstash
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: upstash-redis skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/upstash-redis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Upstash
+    url: ""
+    used: Wrote the skill; GitHub Copilot community shared it in their collection.

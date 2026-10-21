@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads sources and writes up what they say.
 new_slug: source-based-researcher
 name: Source-based researcher
-summary: Ask a question. Get answers from trusted primary sources, saved as a Markdown file in your project.
+summary: Ask a question. Get answers from trusted primary sources, saved as a
+  Markdown file in your project.
 job: build-software
 headline: Source-based researcher
-subhead: Ask a question. Get answers from trusted primary sources, saved as a Markdown file in your project.
+subhead: A research note you can trust, saved as a Markdown file in your
+  project. Ask a question and the skill sends a background agent to read for you
+  while you carry on with other work.
 explain: |
   A research note you can trust, saved as a Markdown file in your project. Ask a question and the skill sends a background agent to read for you while you carry on with other work.
 
@@ -24,6 +27,7 @@ you_get:
   - Citations for every claim
   - The file location
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web and save files.

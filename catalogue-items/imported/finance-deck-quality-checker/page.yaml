@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares slides and judges the writing.
 new_slug: finance-deck-quality-checker
 name: Finance deck quality checker
-summary: Give it a client deck. Get number mismatches, weak wording and format slips found slide by slide.
+summary: Give it a client deck. Get number mismatches, weak wording and format
+  slips found slide by slide.
 job: work-with-files
 headline: Finance deck quality checker
-subhead: Give it a client deck. Get number mismatches, weak wording and format slips found slide by slide.
+subhead: A slide-by-slide check of a client presentation that finds numbers that
+  do not match, loose wording and formatting slips before the client sees them.
+  It only reads, and changes nothing.
 explain: |
   A slide-by-slide check of a client presentation that finds numbers that do not match, loose wording and formatting slips before the client sees them. It only reads, and changes nothing.
 
@@ -25,5 +28,6 @@ you_get:
   - Formatting inconsistencies
   - A priority order for fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: Cutting scope needs judgment about what your users truly need.
 new_slug: lean-product-shaping-coach
 name: Lean product shaping coach
-summary: Describe your product plan. Get a smaller scope, a six-week bet and features to say no to. Uses Shape Up.
+summary: Describe your product plan. Get a smaller scope, a six-week bet and
+  features to say no to. Uses Shape Up.
 job: build-product
 headline: Lean product shaping coach
-subhead: Describe your product plan. Get a smaller scope, a six-week bet and features to say no to. Uses Shape Up.
+subhead: "A smaller plan that you can actually finish: a fixed six-week bet, a
+  clear scope, and a list of features you chose not to build."
 explain: |
   A smaller plan that you can actually finish: a fixed six-week bet, a clear scope, and a list of features you chose not to build. Describe your product plan. The skill scores it from 0 to 10 against ideas from 37signals' Shape Up, Getting Real and Rework, then names the exact changes that raise the score.
 
@@ -26,5 +28,6 @@ you_get:
   - A six-week pitch outline
   - A list of features to say no to
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

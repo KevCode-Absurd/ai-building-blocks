@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills in a known pipeline file for your CI tool.
 new_slug: api-test-pipeline-writer
 name: API test pipeline writer
-summary: Give it your Postman collection. Get a ready CI pipeline file that runs your API tests on every push.
+summary: Give it your Postman collection. Get a ready CI pipeline file that runs
+  your API tests on every push.
 job: test-and-fix-code
 headline: API test pipeline writer
-subhead: Give it your Postman collection. Get a ready CI pipeline file that runs your API tests on every push.
+subhead: A ready pipeline file that runs your API tests every time someone
+  pushes code, so a broken endpoint is caught within minutes. You hand over your
+  Postman collection and name your build tool.
 explain: |
   A ready pipeline file that runs your API tests every time someone pushes code, so a broken endpoint is caught within minutes. You hand over your Postman collection and name your build tool.
 
@@ -26,6 +29,7 @@ you_get:
   - JUnit or HTML reports
   - A build that fails on test failure
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

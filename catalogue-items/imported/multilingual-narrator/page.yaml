@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It follows a set recipe to turn text into audio.
 new_slug: multilingual-narrator
 name: Multilingual narrator
-summary: Give it your text. Get spoken audio in a natural voice in 90+ languages, saved as a sound file.
+summary: Give it your text. Get spoken audio in a natural voice in 90+
+  languages, saved as a sound file.
 job: work-with-audio
 headline: Multilingual narrator
-subhead: Give it your text. Get spoken audio in a natural voice in 90+ languages, saved as a sound file.
+subhead: Spoken audio of your text in a natural voice, in over 90 languages,
+  saved as a sound file you can use in videos, courses or apps.
 explain: |
   Spoken audio of your text in a natural voice, in over 90 languages, saved as a sound file you can use in videos, courses or apps.
 
@@ -26,6 +28,7 @@ you_get:
   - A voice and model recommendation
   - Setup steps for your key
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your own ElevenLabs API key.

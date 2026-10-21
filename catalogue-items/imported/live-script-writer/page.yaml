@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a fixed file format with formatting rules.
 new_slug: live-script-writer
 name: Live script writer
-summary: Describe the analysis or lesson. Get a MATLAB live script with text, equations and figures you can run.
+summary: Describe the analysis or lesson. Get a MATLAB live script with text,
+  equations and figures you can run.
 job: build-software
 headline: Live script writer
-subhead: Describe the analysis or lesson. Get a MATLAB live script with text, equations and figures you can run.
+subhead: A MATLAB live script, as plain text you can open and run, with
+  explanations, equations and figures built in. Describe the analysis or lesson
+  and get a runnable notebook.
 explain: |
   A MATLAB live script, as plain text you can open and run, with explanations, equations and figures built in. Describe the analysis or lesson and get a runnable notebook.
 
@@ -27,6 +30,7 @@ you_get:
   - An HTML export (optional)
   - A run-checked version (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB R2025a or later.

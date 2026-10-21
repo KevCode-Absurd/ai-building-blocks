@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It works through five set phases with a score check at each.
 new_slug: proof-of-concept-plan
 name: Pre-sales proof of concept planner
-summary: Give it a buyer request. Get a requirement gap score, a rival feature table and a trial plan.
+summary: Give it a buyer request. Get a requirement gap score, a rival feature
+  table and a trial plan.
 job: sell-and-negotiate
 headline: Pre-sales proof of concept planner
-subhead: Give it a buyer request. Get a requirement gap score, a rival feature table and a trial plan.
+subhead: Before you answer a buyer's request, see how well you fit it, where you
+  fall short and how to run a trial that wins the deal.
 explain: |
   Before you answer a buyer's request, see how well you fit it, where you fall short and how to run a trial that wins the deal. You get numbers for fit, a clear comparison with rivals and a trial plan.
 
@@ -27,6 +29,7 @@ you_get:
   - Competitor feature table
   - Phased trial plan with success checks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

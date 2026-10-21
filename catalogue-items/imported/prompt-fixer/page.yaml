@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It tries known prompt fixes and picks what fits.
 new_slug: prompt-fixer
 name: Prompt fixer
-summary: Give it a prompt that gives weak or uneven answers. Get a tighter version that works more reliably.
+summary: Give it a prompt that gives weak or uneven answers. Get a tighter
+  version that works more reliably.
 job: set-up-ai
 headline: Prompt fixer
-subhead: Give it a prompt that gives weak or uneven answers. Get a tighter version that works more reliably.
+subhead: A prompt that stops giving vague, wrong or uneven answers. You hand
+  over the weak one and get back a tighter version that behaves the same way run
+  after run.
 explain: |
   A prompt that stops giving vague, wrong or uneven answers. You hand over the weak one and get back a tighter version that behaves the same way run after run.
 
@@ -26,5 +29,6 @@ you_get:
   - Why each change helps
   - Tips to test it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

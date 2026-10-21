@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It deals with people's careers, so judgment is needed.
 new_slug: succession-plan-builder
 name: Succession plan builder
-summary: Give it your key roles. Get a coverage map, a possible successors list and development plans. The final calls stay yours.
+summary: Give it your key roles. Get a coverage map, a possible successors list
+  and development plans. The final calls stay yours.
 job: hire-people
 headline: Succession plan builder
-subhead: Give it your key roles. Get a coverage map, a possible successors list and development plans. The final calls stay yours.
+subhead: A succession plan that shows which key roles have no cover, who might
+  step in, and what each person needs to be ready. People decisions stay with
+  you.
 explain: |
   A succession plan that shows which key roles have no cover, who might step in, and what each person needs to be ready. People decisions stay with you.
 
@@ -27,5 +30,6 @@ you_get:
   - Development plans for successors
   - A short board summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads what you know and infers the deeper drivers.
 new_slug: customer-motivation-profiler
 name: Customer motivation profiler
-summary: Describe your buyer. Get a profile of their wants, fears, identity and trust doubts to use in copy and offers.
+summary: Describe your buyer. Get a profile of their wants, fears, identity and
+  trust doubts to use in copy and offers.
 job: understand-customers
 headline: Customer motivation profiler
-subhead: Describe your buyer. Get a profile of their wants, fears, identity and trust doubts to use in copy and offers.
+subhead: Age and income rarely explain why someone buys. Describe your buyer and
+  you get a profile of their wants, fears, self-image and trust doubts that you
+  can use in copy, offers and funnels.
 explain: |
   Age and income rarely explain why someone buys. Describe your buyer and you get a profile of their wants, fears, self-image and trust doubts that you can use in copy, offers and funnels.
 
@@ -26,5 +29,6 @@ you_get:
   - Identity cues and language
   - Notes for copy, offers and funnel design
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

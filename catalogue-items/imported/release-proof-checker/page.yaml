@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It gathers evidence from several systems and judges it.
 new_slug: release-proof-checker
 name: Release proof checker
-summary: Point it at a deployed service. Get fresh proof across code, CI, database and live routes before you call it ready.
+summary: Point it at a deployed service. Get fresh proof across code, CI,
+  database and live routes before you call it ready.
 job: ship-and-host
 headline: Release proof checker
-subhead: Point it at a deployed service. Get fresh proof across code, CI, database and live routes before you call it ready.
+subhead: A clear pass, fail or blocked verdict on a deployed service, backed by
+  fresh evidence instead of a green build light. A finished pipeline does not
+  mean the live site works, and this shows the difference.
 explain: |
   A clear pass, fail or blocked verdict on a deployed service, backed by fresh evidence instead of a green build light. A finished pipeline does not mean the live site works, and this shows the difference.
 
@@ -27,6 +30,7 @@ you_get:
   - Steps to repeat each check
   - List of gaps that block release
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach your deployed service.

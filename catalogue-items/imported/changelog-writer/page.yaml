@@ -5,7 +5,9 @@ name: Changelog writer
 summary: Point it at a repo. Get a clear changelog built from the git history.
 job: build-software
 headline: Changelog writer
-subhead: Point it at a repo. Get a clear changelog built from the git history.
+subhead: A readable changelog built straight from your git history, so you can
+  see what changed this week without reading every commit. Point it at a repo
+  and it groups changes by day for the last week, then by week.
 explain: |
   A readable changelog built straight from your git history, so you can see what changed this week without reading every commit. Point it at a repo and it groups changes by day for the last week, then by week.
 
@@ -25,6 +27,7 @@ you_get:
   - Breaking changes with migration notes
   - Links from each line to its commit
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

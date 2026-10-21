@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It must spot subtle flaws and weigh how strong the evidence is.
 new_slug: study-claim-checker
 name: Study claim checker
-summary: Give it a study or claim. Get its biases, flaws, weak statistics and evidence grade, explained in plain words.
+summary: Give it a study or claim. Get its biases, flaws, weak statistics and
+  evidence grade, explained in plain words.
 job: research-topics
 headline: Study claim checker
-subhead: Give it a study or claim. Get its biases, flaws, weak statistics and evidence grade, explained in plain words.
+subhead: A clear verdict on how far to trust a study or a scientific claim, in
+  plain words. You learn what the evidence can and cannot show.
 explain: |
   A clear verdict on how far to trust a study or a scientific claim, in plain words. You learn what the evidence can and cannot show.
 
@@ -26,5 +28,6 @@ you_get:
   - A plain-language verdict
   - Questions to ask the authors
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

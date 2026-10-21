@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It matches the request to known jq patterns.
 new_slug: json-query-helper
 name: JSON query helper
-summary: Describe the JSON data and what you need. Get a working jq command that filters, reshapes or sums it.
+summary: Describe the JSON data and what you need. Get a working jq command that
+  filters, reshapes or sums it.
 job: work-with-files
 headline: JSON query helper
-subhead: Describe the JSON data and what you need. Get a working jq command that filters, reshapes or sums it.
+subhead: The exact jq command for the JSON in front of you. Describe the data
+  and what you want from it, or paste a sample. The skill writes a working
+  command that picks fields, filters records, renames keys, flattens arrays,
+  groups items and totals numbers.
 explain: |
   The exact jq command for the JSON in front of you. Describe the data and what you want from it, or paste a sample. The skill writes a working command that picks fields, filters records, renames keys, flattens arrays, groups items and totals numbers.
 
@@ -25,6 +29,7 @@ you_get:
   - The expected output on your sample
   - A version ready to paste into a script
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands.

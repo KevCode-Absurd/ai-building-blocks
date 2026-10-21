@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows strict output rules on one text.
 new_slug: keyword-list-maker
 name: Keyword list maker
-summary: Paste any text. Get one line of up to 50 ranked keywords, ready for SEO or tags.
+summary: Paste any text. Get one line of up to 50 ranked keywords, ready for SEO
+  or tags.
 job: get-found-in-search
 headline: Keyword list maker
-subhead: Paste any text. Get one line of up to 50 ranked keywords, ready for SEO or tags.
+subhead: "One clean line of up to fifty keywords from any text you paste. The
+  output is machine-ready: lowercase, comma separated, ranked from most to least
+  relevant, with no numbers, bullets, notes or full stop at the end."
 explain: |
   One clean line of up to fifty keywords from any text you paste. The output is machine-ready: lowercase, comma separated, ranked from most to least relevant, with no numbers, bullets, notes or full stop at the end.
 
@@ -25,5 +28,6 @@ you_get:
   - Lowercase and without duplicates
   - A mix of words and short phrases
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

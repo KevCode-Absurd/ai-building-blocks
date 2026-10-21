@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It forms ideas, then tests them against sources.
 new_slug: organization-dossier-researcher
 name: Organization dossier researcher
-summary: Name a company, person or group. Get a tested research file with sources. Collects data from websites.
+summary: Name a company, person or group. Get a tested research file with
+  sources. Collects data from websites.
 job: think-and-decide
 headline: Organization dossier researcher
-subhead: Name a company, person or group. Get a tested research file with sources. Collects data from websites.
+subhead: A research file on a company, person or group that tests what you
+  believe instead of repeating what everyone knows. Every claim carries a
+  source.
 explain: |
   A research file on a company, person or group that tests what you believe instead of repeating what everyone knows. Every claim carries a source.
 
@@ -26,6 +29,7 @@ you_get:
   - Conversation hooks
   - A Word document
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web.

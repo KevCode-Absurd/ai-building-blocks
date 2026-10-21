@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a calendar from audience and goals.
 new_slug: content-strategy-planner
 name: Content strategy planner
-summary: Describe your audience and goals. Get an editorial plan that maps content to funnel stages.
+summary: Describe your audience and goals. Get an editorial plan that maps
+  content to funnel stages.
 job: plan-strategy
 headline: Content strategy planner
-subhead: Describe your audience and goals. Get an editorial plan that maps content to funnel stages.
+subhead: Describe your audience and goals. Get an editorial plan that maps
+  content to funnel stages. Bring your audience and their questions. Use the
+  result to plan your next step.
 explain: |
   An editorial plan that matches each piece of content to a buyer stage and a business goal, so every article has a reason to exist. You can see what to publish, in what order, and what each piece should achieve.
 
@@ -26,5 +29,6 @@ you_get:
   - Content audit with keep, update or cut calls
   - Success measures per piece
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

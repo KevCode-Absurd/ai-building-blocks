@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It fills a fixed record from your notes.
 new_slug: crm-activity-logger
 name: CRM activity logger
-summary: Describe a call or email. Get a ready entry on the right account and deal, saved when you say so.
+summary: Describe a call or email. Get a ready entry on the right account and
+  deal, saved when you say so.
 job: sell-and-negotiate
 headline: CRM activity logger
-subhead: Describe a call or email. Get a ready entry on the right account and deal, saved when you say so.
+subhead: A call, meeting or email logged to the right account, contact and deal
+  in your CRM, shown to you first and saved only when you say so.
 explain: |
   A call, meeting or email logged to the right account, contact and deal in your CRM, shown to you first and saved only when you say so. It turns a quick description or transcript into a clean entry.
 
@@ -26,6 +28,7 @@ you_get:
   - Preview before saving
   - Saved record check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and write to your CRM.

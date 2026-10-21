@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It needs timing between arrivals and departures.
 new_slug: cross-docking-planner
 name: Cross-docking planner
-summary: Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
+summary: Describe your inbound and outbound loads. Get a plan to move goods
+  truck to truck without storing them.
 job: plan-supply-chain
 headline: Cross-docking planner
-subhead: Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
+subhead: A cross-dock plan that moves goods from inbound trucks to outbound
+  trucks without putting them on a shelf. You get a layout idea, a flow design
+  and the numbers to check it.
 explain: |
   A cross-dock plan that moves goods from inbound trucks to outbound trucks without putting them on a shelf. You get a layout idea, a flow design and the numbers to check it.
 
@@ -27,5 +30,6 @@ you_get:
   - Dock assignment rules
   - Handling time and cost targets
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It reshapes text into a fixed layout.
 new_slug: bullet-note-maker
 name: Bullet note maker
-summary: Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise.
+summary: Paste messy notes or an article. Get tidy nested bullets that are quick
+  to scan and revise.
 job: organise-work
 headline: Bullet note maker
-subhead: Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise.
+subhead: Paste messy notes or an article. Get tidy nested bullets that are quick
+  to scan and revise. Bring text, notes or an article. Use the result to plan
+  your next step.
 explain: |
   Dense text turned into clean nested bullets that you can scan in seconds and revise easily. No paragraphs, no long sentences.
 
@@ -25,5 +28,6 @@ you_get:
   - Short lines with no paragraphs
   - Consistent indentation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

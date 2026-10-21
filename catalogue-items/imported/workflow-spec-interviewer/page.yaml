@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It asks questions and writes the answers down.
 new_slug: workflow-spec-interviewer
 name: Workflow spec interviewer
-summary: Tell it the workflows you want to build. Get grilled with questions until each one is clear.
+summary: Tell it the workflows you want to build. Get grilled with questions
+  until each one is clear.
 job: make-skills
 headline: Workflow spec interviewer
-subhead: Tell it the workflows you want to build. Get grilled with questions until each one is clear.
+subhead: A clear written spec for each workflow you want to build, drawn out of
+  you by questions. It keeps going until a builder could implement it without
+  asking anything more.
 explain: |
   A clear written spec for each workflow you want to build, drawn out of you by questions. It keeps going until a builder could implement it without asking anything more.
 
@@ -26,5 +29,6 @@ you_get:
   - Notes file on your tools and terms
   - List of open questions until done
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

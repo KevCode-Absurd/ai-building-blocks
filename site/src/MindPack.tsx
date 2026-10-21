@@ -7,6 +7,7 @@ import { buildMindPack, download } from "./lib/handoff";
 import { Link } from "./lib/router";
 import PixelFace from "./PixelFace";
 import { LabelBadges } from "./MindLabel";
+import { getBusiness } from "./lib/business";
 
 export function MindSkills({ c, mind, toast }: { c: Catalogue; mind: Block; toast: (m: string) => void }) {
   const skills = (mind.skills ?? []).map((s) => c.bySlug[s]).filter(Boolean);
@@ -18,11 +19,13 @@ export function MindSkills({ c, mind, toast }: { c: Catalogue; mind: Block; toas
   const all = picked.size === skills.length;
   const get = async () => {
     setBusy(true);
-    const r = await buildMindPack(c, mind.slug, skills.filter((s) => picked.has(s.slug)).map((s) => s.slug));
-    setBusy(false);
-    if ("error" in r) { toast(r.error ?? "Couldn't make the pack."); return; }
-    download(r.blob, r.filename);
-    toast(r.skills ? `Downloaded ${first} with ${r.skills === 1 ? "1 skill" : `${r.skills} skills`}.` : `Downloaded ${first}.`);
+    try {
+      const r = await buildMindPack(c, mind.slug, skills.filter((s) => picked.has(s.slug)).map((s) => s.slug), getBusiness());
+      if ("error" in r) { toast(r.error ?? "Couldn't make the pack."); return; }
+      download(r.blob, r.filename);
+      toast(r.skills ? `Downloaded ${first} with ${r.skills === 1 ? "1 skill" : `${r.skills} skills`}.` : `Downloaded ${first}.`);
+    } catch (e) { toast(e instanceof Error ? e.message : "Couldn't make the complete pack. Try again."); }
+    finally { setBusy(false); }
   };
   return (
     <div className="mind-skills" data-testid="mind-skills">

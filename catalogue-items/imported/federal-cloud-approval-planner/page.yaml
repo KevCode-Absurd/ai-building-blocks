@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Approval paths and papers are long and linked.
 new_slug: federal-cloud-approval-planner
 name: Federal cloud approval planner
-summary: Describe your cloud service. Get a FedRAMP path, the papers you need and the gaps to close first.
+summary: Describe your cloud service. Get a FedRAMP path, the papers you need
+  and the gaps to close first.
 job: check-contracts
 headline: Federal cloud approval planner
-subhead: Describe your cloud service. Get a FedRAMP path, the papers you need and the gaps to close first.
+subhead: "A FedRAMP path for your cloud service: what level you aim for, which
+  documents you need, and which gaps to close before you start. It saves months
+  of guessing."
 explain: |
   A FedRAMP path for your cloud service: what level you aim for, which documents you need, and which gaps to close before you start. It saves months of guessing.
 
@@ -27,5 +30,6 @@ you_get:
   - A control mapping
   - Monitoring steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

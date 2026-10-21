@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It adds a standard set of states and fits them to the page.
 new_slug: loading-and-error-state-designer
 name: Loading and error state designer
-summary: Give it a component or page. Get loading, success, error and empty states added, so users always know what is happening.
+summary: Give it a component or page. Get loading, success, error and empty
+  states added, so users always know what is happening.
 job: design-work
 headline: Loading and error state designer
-subhead: Give it a component or page. Get loading, success, error and empty states added, so users always know what is happening.
+subhead: A screen that always tells people what is going on. Give it a component
+  or page and it adds loading, empty, error and success states, so nobody stares
+  at a blank box.
 explain: |
   A screen that always tells people what is going on. Give it a component or page and it adds loading, empty, error and success states, so nobody stares at a blank box.
 
@@ -26,6 +29,7 @@ you_get:
   - A success confirmation
   - Updated component code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and edit your project files.

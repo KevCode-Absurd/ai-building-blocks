@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Hardware setup needs matching settings.
 new_slug: vehicle-network-setup-helper
 name: Vehicle network setup helper
-summary: Say which CAN device you have. Get channels set up and messages sent and received.
+summary: Say which CAN device you have. Get channels set up and messages sent
+  and received.
 job: build-software
 headline: Vehicle network setup helper
-subhead: Say which CAN device you have. Get channels set up and messages sent and received.
+subhead: "A working CAN connection in MATLAB: your device found, a channel
+  opened at the right speed, and messages going out and coming in. You can test
+  without hardware too, using a virtual channel."
 explain: |
   A working CAN connection in MATLAB: your device found, a channel opened at the right speed, and messages going out and coming in. You can test without hardware too, using a virtual channel.
 
@@ -26,6 +29,8 @@ you_get:
   - Send and receive examples
   - Fixes for common channel errors
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with Vehicle Network Toolbox and CAN hardware.
+  - It works best when your AI can run MATLAB with Vehicle Network Toolbox and
+    CAN hardware.

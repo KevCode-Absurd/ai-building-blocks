@@ -2,16 +2,20 @@ thinking: low
 thinking_why: It fills in a config file from set options.
 new_slug: matlab-project-setup-helper
 name: MATLAB project setup helper
-summary: Say how your project is laid out. Get a matlab.toml with paths, dependencies and scripts set up.
+summary: Say how your project is laid out. Get a matlab.toml with paths,
+  dependencies and scripts set up.
 job: build-software
 headline: MATLAB project setup helper
-subhead: Say how your project is laid out. Get a matlab.toml with paths, dependencies and scripts set up.
+subhead: "A matlab.toml file that sets up your project: its folders, search
+  paths, dependencies and scripts that run on open or close. You describe how
+  the project is laid out and get a file that fits."
 explain: |
   A matlab.toml file that sets up your project: its folders, search paths, dependencies and scripts that run on open or close. You describe how the project is laid out and get a file that fits.
 
   The skill asks only for the project name, then scans your folder for what already exists. It writes a minimal draft first and shows it to you,. When you edit an existing file it changes only the parts you name, and leaves the rest as it was. It checks every key against the format rules by hand, because MATLAB's openProject does not report mistakes in the file; unknown keys are silently ignored.
 when:
-  - You are starting a MATLAB project and want its folders on the path automatically.
+  - You are starting a MATLAB project and want its folders on the path
+    automatically.
   - A teammate cannot run your code because the paths are wrong.
   - You need a startup script to run each time the project opens.
   - Your project file has a typo that MATLAB does not warn about.
@@ -26,6 +30,7 @@ you_get:
   - A check against the format rules
   - Option to create the folders
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

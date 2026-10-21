@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It groups orders by size, weight and place.
 new_slug: truck-load-builder
 name: Truck load builder
-summary: Give it your orders and truck sizes. Get orders grouped into full truck loads that cost less to ship.
+summary: Give it your orders and truck sizes. Get orders grouped into full truck
+  loads that cost less to ship.
 job: plan-supply-chain
 headline: Truck load builder
-subhead: Give it your orders and truck sizes. Get orders grouped into full truck loads that cost less to ship.
+subhead: Orders grouped into full truck loads, so you ship fewer trucks and pay
+  less per delivery. You see how full each trailer is by space and weight before
+  anything is loaded.
 explain: |
   Orders grouped into full truck loads, so you ship fewer trucks and pay less per delivery. You see how full each trailer is by space and weight before anything is loaded.
 
@@ -26,6 +29,7 @@ you_get:
   - A stop-order plan
   - Ideas to cut truck count and cost
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

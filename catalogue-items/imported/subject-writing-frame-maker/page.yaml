@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies known genre rules to your subject.
 new_slug: subject-writing-frame-maker
 name: Subject writing frame maker
-summary: Name a text type, like a lab report. Get a frame that teaches the writing rules of that subject.
+summary: Name a text type, like a lab report. Get a frame that teaches the
+  writing rules of that subject.
 job: teach-and-train
 headline: Subject writing frame maker
-subhead: Name a text type, like a lab report. Get a frame that teaches the writing rules of that subject.
+subhead: A writing frame that teaches students how a subject writes, such as a
+  lab report conclusion or a history essay. Each subject has its own rules, and
+  this makes them visible.
 explain: |
   A writing frame that teaches students how a subject writes, such as a lab report conclusion or a history essay. Each subject has its own rules, and this makes them visible.
 
@@ -27,5 +30,6 @@ you_get:
   - An annotated model text
   - Easier and harder versions of the frame
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

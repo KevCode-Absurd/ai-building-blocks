@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs scans and reads the output.
 new_slug: dependency-risk-scanner
 name: Dependency risk scanner
-summary: Point it at your project. Get known weak spots in packages found, plus a parts list and license check.
+summary: Point it at your project. Get known weak spots in packages found, plus
+  a parts list and license check.
 job: secure-code
 headline: Dependency risk scanner
-subhead: Point it at your project. Get known weak spots in packages found, plus a parts list and license check.
+subhead: Point it at your project. Get known weak spots in packages found, plus
+  a parts list and license check. Bring project folder with manifest and lock
+  files. Use the result to plan your next step.
 explain: |
   A list of the weak spots in the packages your project uses, plus a parts list and a licence check. Point it at your project and it finds your manifest files, reads lock files to see indirect packages too, and checks each version against public vulnerability databases.
 
@@ -25,6 +28,7 @@ you_get:
   - Software bill of materials
   - Minimum upgrades to fix problems
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

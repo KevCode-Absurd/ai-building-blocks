@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set deck structure and fills it from your facts.
 new_slug: board-deck-builder
 name: Board deck builder
-summary: Give it your quarter. Get a board or investor deck outline with the story, numbers and bad news placed right.
+summary: Give it your quarter. Get a board or investor deck outline with the
+  story, numbers and bad news placed right.
 job: speak-and-persuade
 headline: Board deck builder
-subhead: Give it your quarter. Get a board or investor deck outline with the story, numbers and bad news placed right.
+subhead: A board or investor deck outline where the story comes first and the
+  numbers back it up. Each section has a headline, the data, a short narrative
+  and a next step or ask, so directors know what you want from them.
 explain: |
   A board or investor deck outline where the story comes first and the numbers back it up. Each section has a headline, the data, a short narrative and a next step or ask, so directors know what you want from them.
 
@@ -26,5 +29,6 @@ you_get:
   - Bad news framed with a plan
   - Placeholders where numbers are missing
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

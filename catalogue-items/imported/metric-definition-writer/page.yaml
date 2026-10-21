@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: The format is strict, but the definition needs your business rules.
 new_slug: metric-definition-writer
 name: Metric definition writer
-summary: Tell it how a metric is worked out. Get one agreed definition as checked YAML your team can reuse.
+summary: Tell it how a metric is worked out. Get one agreed definition as
+  checked YAML your team can reuse.
 job: document-work
 headline: Metric definition writer
-subhead: Tell it how a metric is worked out. Get one agreed definition as checked YAML your team can reuse.
+subhead: One agreed definition for a metric, written as YAML that a tool can
+  check and your team can reuse. It ends the arguments over how a number is
+  worked out when two teams run different queries for the same thing.
 explain: |
   One agreed definition for a metric, written as YAML that a tool can check and your team can reuse. It ends the arguments over how a number is worked out when two teams run different queries for the same thing.
 
@@ -27,6 +30,7 @@ you_get:
   - dbt-ready field names
   - Notes on edge cases
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Each finding needs a worked attack path.
 new_slug: github-actions-attack-finder
 name: GitHub Actions attack finder
-summary: Point it at your workflows. Get only the holes an outsider could use, each with the exact attack.
+summary: Point it at your workflows. Get only the holes an outsider could use,
+  each with the exact attack.
 job: secure-code
 headline: GitHub Actions attack finder
-subhead: Point it at your workflows. Get only the holes an outsider could use, each with the exact attack.
+subhead: "A security review of your GitHub Actions that reports only what an
+  outsider could really exploit. Each finding must come with the exact attack:
+  who the attacker is, what they send, and what they gain."
 explain: |
   A security review of your GitHub Actions that reports only what an outsider could really exploit. Each finding must come with the exact attack: who the attacker is, what they send, and what they gain. If the attack cannot be built, it is not reported.
 
@@ -26,6 +29,7 @@ you_get:
   - Impact for each hole
   - A fix for each finding
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It picks a fitting chart and checks it for honesty and access.
 new_slug: journal-ready-figure-maker
 name: Journal-ready figure maker
-summary: Give it your data. Get clear, honest, colour-safe figures with uncertainty shown, sized for journal export.
+summary: Give it your data. Get clear, honest, colour-safe figures with
+  uncertainty shown, sized for journal export.
 job: research-topics
 headline: Journal-ready figure maker
-subhead: Give it your data. Get clear, honest, colour-safe figures with uncertainty shown, sized for journal export.
+subhead: Charts that tell the truth and survive peer review. Give it your data
+  and say where the figure is going. The skill records what the numbers mean,
+  the units, how uncertainty is defined and every change made to the data, so
+  the figure can be rebuilt later.
 explain: |
   Charts that tell the truth and survive peer review. Give it your data and say where the figure is going. The skill records what the numbers mean, the units, how uncertainty is defined and every change made to the data, so the figure can be rebuilt later. It picks an honest chart type: bars start at zero, points show their spread, and no missing values are quietly joined up.
 
@@ -27,6 +31,7 @@ you_get:
   - A record of every data transformation
   - A list of journal checks still to do
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows set import and cleanup steps for each sensor type.
 new_slug: driving-data-importer
 name: Driving data importer
-summary: Give it recorded GPS, camera or lidar data. Get it loaded, synced and cleaned for building driving scenarios.
+summary: Give it recorded GPS, camera or lidar data. Get it loaded, synced and
+  cleaned for building driving scenarios.
 job: build-software
 headline: Driving data importer
-subhead: Give it recorded GPS, camera or lidar data. Get it loaded, synced and cleaned for building driving scenarios.
+subhead: Recorded driving data loaded, lined up in time and cleaned, ready for
+  building driving scenarios in MATLAB. It handles GPS, camera, lidar and
+  tracked-object data from common sources.
 explain: |
   Recorded driving data loaded, lined up in time and cleaned, ready for building driving scenarios in MATLAB. It handles GPS, camera, lidar and tracked-object data from common sources.
 
@@ -26,6 +29,7 @@ you_get:
   - Time offsets corrected
   - A saved dataset ready for scenario building
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Automated Driving Toolbox.

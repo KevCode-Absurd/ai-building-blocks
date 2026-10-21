@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Money code needs care, but the patterns are well known.
 new_slug: stripe-payments-builder
 name: Stripe payments builder
-summary: Say how you charge. Get Stripe checkout, subscriptions and webhooks built safely, with test steps.
+summary: Say how you charge. Get Stripe checkout, subscriptions and webhooks
+  built safely, with test steps.
 job: build-software
 headline: Stripe payments builder
-subhead: Say how you charge. Get Stripe checkout, subscriptions and webhooks built safely, with test steps.
+subhead: "Working code to take payments with Stripe: one-off checkout, monthly
+  plans, trials, upgrades and downgrades with correct proration, and usage-based
+  billing. You say how you charge, and it builds the pieces and the test steps."
 explain: |
   Working code to take payments with Stripe: one-off checkout, monthly plans, trials, upgrades and downgrades with correct proration, and usage-based billing. You say how you charge, and it builds the pieces and the test steps.
 
@@ -27,6 +30,7 @@ you_get:
   - Customer portal setup
   - A local test plan with the Stripe CLI
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

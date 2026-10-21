@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It combines many checks into one scored report.
 new_slug: ai-search-audit
 name: AI search audit
-summary: Give it a website. Get a score for how likely AI search is to cite it, plus fixes. Collects data from websites.
+summary: Give it a website. Get a score for how likely AI search is to cite it,
+  plus fixes. Collects data from websites.
 job: get-found-in-search
 headline: AI search audit
-subhead: Give it a website. Get a score for how likely AI search is to cite it, plus fixes. Collects data from websites.
+subhead: A score out of 100 for how likely ChatGPT, Perplexity, Claude and
+  Google AI to cite your site, with fixes sorted by urgency. Pages built for AI
+  answers can earn far more mentions, so this shows where you stand.
 explain: |
   A score out of 100 for how likely ChatGPT, Perplexity, Claude and Google AI to cite your site, with fixes sorted by urgency. Pages built for AI answers can earn far more mentions, so this shows where you stand.
 
@@ -25,6 +28,7 @@ you_get:
   - Issues ranked critical to low
   - A 30 day action plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open web pages.

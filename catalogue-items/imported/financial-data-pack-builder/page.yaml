@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It extracts numbers and standardises them.
 new_slug: financial-data-pack-builder
 name: Financial data pack builder
-summary: Give it a deal document or filing. Get its financials pulled into a clean, standard Excel data pack.
+summary: Give it a deal document or filing. Get its financials pulled into a
+  clean, standard Excel data pack.
 job: money-and-investing
 headline: Financial data pack builder
-subhead: Give it a deal document or filing. Get its financials pulled into a clean, standard Excel data pack.
+subhead: Give it a deal document or filing. Get its financials pulled into a
+  clean, standard Excel data pack. Bring the deal document, annual report or
+  filing. Use the result to plan your next step.
 explain: |
   A clean Excel data pack with income statement, balance sheet and cash flow pulled from a deal document or filing, with every number traced to its page. It follows the layout used in private equity and banking.
 
@@ -26,6 +29,7 @@ you_get:
   - Source page references
   - A check sheet showing the statements balance
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read files and save spreadsheets.

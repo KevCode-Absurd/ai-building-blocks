@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares several policies and ranks what could cost you.
 new_slug: store-policy-checker
 name: Store policy checker
-summary: Give it your store link or policy text. Get gaps, clashes and unclear wording, with fixes to paste in.
+summary: Give it your store link or policy text. Get gaps, clashes and unclear
+  wording, with fixes to paste in.
 job: check-contracts
 headline: Store policy checker
-subhead: Give it your store link or policy text. Get gaps, clashes and unclear wording, with fixes to paste in.
+subhead: Give it your store link or policy text. Get gaps, clashes and unclear
+  wording, with fixes to paste in. Bring your store link or pasted policy text.
+  Use the result to plan your next step.
 explain: |
   A check of your shop's refund, shipping, privacy and terms pages that tells you what is missing, what contradicts itself and what will confuse customers, with fixed wording to paste in. Give it a store link or the policy text.
 
@@ -26,5 +29,6 @@ you_get:
   - Rewritten wording to paste in
   - Notes on region rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

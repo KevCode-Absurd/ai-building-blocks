@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows known manifest patterns for your app.
 new_slug: kubernetes-deployer
 name: Kubernetes deployer
-summary: Give it your app. Get manifests, Helm charts and autoscaling so it runs on Kubernetes.
+summary: Give it your app. Get manifests, Helm charts and autoscaling so it runs
+  on Kubernetes.
 job: ship-and-host
 headline: Kubernetes deployer
-subhead: Give it your app. Get manifests, Helm charts and autoscaling so it runs on Kubernetes.
+subhead: Your app, running on Kubernetes, with the config files to prove it.
+  Give the container image, how many copies you want and how much CPU and memory
+  each may use.
 explain: |
   Your app, running on Kubernetes, with the config files to prove it. Give the container image, how many copies you want and how much CPU and memory each may use. The skill first confirms your kubectl points at the right cluster and namespace. It then writes the deployment, service and ingress files, including health probes and TLS for your domain.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - You have a container image and need it running in production on Kubernetes.
   - You want the app to add copies automatically when traffic spikes.
-  - You run staging and production and want one Helm chart with different settings for each.
+  - You run staging and production and want one Helm chart with different
+    settings for each.
   - You need a domain with HTTPS pointing at your service.
 you_give:
   - Container image name and tag
@@ -27,6 +31,7 @@ you_get:
   - Autoscaling rules
   - A Helm chart with per-environment values (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

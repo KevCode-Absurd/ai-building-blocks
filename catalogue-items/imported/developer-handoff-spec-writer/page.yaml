@@ -2,17 +2,21 @@ thinking: medium
 thinking_why: It must read details out of a design.
 new_slug: developer-handoff-spec-writer
 name: Developer handoff spec writer
-summary: Share a finished design. Get a spec for layout, tokens, component props, states, breakpoints and edge cases.
+summary: Share a finished design. Get a spec for layout, tokens, component
+  props, states, breakpoints and edge cases.
 job: design-work
 headline: Developer handoff spec writer
-subhead: Share a finished design. Get a spec for layout, tokens, component props, states, breakpoints and edge cases.
+subhead: A handoff spec that answers a developer's questions before they ask, so
+  a finished design gets built the way you meant it. Nothing is left for them to
+  guess.
 explain: |
   A handoff spec that answers a developer's questions before they ask, so a finished design gets built the way you meant it. Nothing is left for them to guess.
 
   Give it a Figma link, a screenshot or a plain description. It writes down exact measurements, uses token names such as spacing-md in place of raw pixel values, and lists every component state: default, hover, active, disabled, loading, error and empty. It adds interaction details like timing and easing, then covers content limits, long text, slow connections and missing data. It also covers accessibility: focus order, labels and keyboard use. Each odd choice gets a one-line reason.
 when:
   - A design is approved and it is time to pass it to engineers.
-  - Developers keep building your screens with the wrong spacing or missing states.
+  - Developers keep building your screens with the wrong spacing or missing
+    states.
   - You need to specify how a component behaves on mobile versus desktop.
   - You want accessibility needs written down before the build starts.
 you_give:
@@ -27,6 +31,7 @@ you_get:
   - Edge case and content rules
   - An accessibility checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open images or Figma links.

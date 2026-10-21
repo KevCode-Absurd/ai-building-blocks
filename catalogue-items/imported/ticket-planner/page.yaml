@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It splits work into ordered pieces.
 new_slug: ticket-planner
 name: Ticket planner
-summary: Give it a plan or spec. Get small tickets that each say what blocks them, posted to your tracker.
+summary: Give it a plan or spec. Get small tickets that each say what blocks
+  them, posted to your tracker.
 job: build-software
 headline: Ticket planner
-subhead: Give it a plan or spec. Get small tickets that each say what blocks them, posted to your tracker.
+subhead: A big plan becomes a set of small tickets, each one a thin slice that
+  works from start to finish and says which other tickets must be done first.
 explain: |
   A big plan becomes a set of small tickets, each one a thin slice that works from start to finish and says which other tickets must be done first. Your team can then see what to start today and what has to wait.
 
@@ -26,6 +28,7 @@ you_get:
   - A review round with you before posting
   - Tickets posted to your tracker in order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can reach your issue tracker.

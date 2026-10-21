@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a page format and must stay accurate.
 new_slug: alternative-page-writer
 name: Alternative page writer
-summary: Name a rival. Get a fair comparison or alternative page built to rank and convince buyers.
+summary: Name a rival. Get a fair comparison or alternative page built to rank
+  and convince buyers.
 job: write-landing-page
 headline: Alternative page writer
-subhead: Name a rival. Get a fair comparison or alternative page built to rank and convince buyers.
+subhead: A comparison or alternative page for a named rival, written so it ranks
+  for searches like "X alternative" and helps a buyer decide. It leads with
+  fairness, because readers check claims and trust fades fast when you misstate
+  a competitor.
 explain: |
   A comparison or alternative page for a named rival, written so it ranks for searches like "X alternative" and helps a buyer decide. It leads with fairness, because readers check claims and trust fades fast when you misstate a competitor.
 
@@ -26,5 +30,6 @@ you_get:
   - Who-it-suits sections for each side
   - Headings and wording aimed at search
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

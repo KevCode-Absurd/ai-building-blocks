@@ -1,0 +1,54 @@
+slug: cut-ci-cost-without-weakening-checks
+name: Cut CI cost without weakening checks
+summary: Share your GitHub workflows. Get cost savings, permission fixes and
+  runtime upgrades that preserve the build checks.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-github-actions-efficiency
+  - copilot-github-actions-hardening
+  - copilot-github-actions-runtime-upgrade-conventions
+steps:
+  - uses: copilot-github-actions-efficiency
+    note: 1. Read skills/copilot-github-actions-efficiency/SKILL.md. Share your
+      Actions workflows. Get wasted build minutes, slow jobs and ways to cut
+      repeat work. Save the result with source references. Carry the user's goal
+      and all earlier findings into this step. If required evidence or tool
+      access is missing, mark this step blocked; do not fabricate a result.
+  - uses: copilot-github-actions-hardening
+    note: 2. Read skills/copilot-github-actions-hardening/SKILL.md. Share your build
+      workflows. Get risky permissions, unsafe inputs and dependency trust
+      problems with fixes. Save the result with source references. Carry the
+      user's goal and all earlier findings into this step. If required evidence
+      or tool access is missing, mark this step blocked; do not fabricate a
+      result.
+  - uses: copilot-github-actions-runtime-upgrade-conventions
+    note: 3. Read
+      skills/copilot-github-actions-runtime-upgrade-conventions/SKILL.md. Share
+      your Actions workflows. Get supported action versions while keeping the
+      build's behavior intact. Save the result with source references. Carry the
+      user's goal and all earlier findings into this step. If required evidence
+      or tool access is missing, mark this step blocked; do not fabricate a
+      result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

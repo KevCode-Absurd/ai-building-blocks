@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It chains several design methods and needs your input at each phase.
 new_slug: app-polish-guide
 name: App polish guide
-summary: Describe your shipped app. Get fixes for fit, flow, clarity and honest persuasion, step by step.
+summary: Describe your shipped app. Get fixes for fit, flow, clarity and honest
+  persuasion, step by step.
 job: build-product
 headline: App polish guide
-subhead: Describe your shipped app. Get fixes for fit, flow, clarity and honest persuasion, step by step.
+subhead: A shipped app that works but feels rough, turned into one that fits its
+  job, flows without friction, reads clearly and persuades honestly. You get a
+  step-by-step plan, not a one-off list.
 explain: |
   A shipped app that works but feels rough, turned into one that fits its job, flows without friction, reads clearly and persuades honestly. You get a step-by-step plan, not a one-off list.
 
@@ -26,5 +29,6 @@ you_get:
   - Sharper in-app wording
   - Saved docs you can resume from
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Hardware rate limits make it exacting.
 new_slug: fpga-down-converter-designer
 name: FPGA down converter designer
-summary: Describe the rates and bands. Get a digital down converter built for FPGA or ASIC use.
+summary: Describe the rates and bands. Get a digital down converter built for
+  FPGA or ASIC use.
 job: build-software
 headline: FPGA down converter designer
-subhead: Describe the rates and bands. Get a digital down converter built for FPGA or ASIC use.
+subhead: Describe the rates and bands. Get a digital down converter built for
+  FPGA or ASIC use. Bring input sample rate. Use the result to plan your next
+  step.
 explain: |
   A digital down converter that takes a radio signal to baseband, built in MATLAB and ready for FPGA or ASIC code generation. It covers both whole-number and fractional sample rate changes.
 
@@ -28,6 +31,7 @@ you_get:
   - Verilog or VHDL output
   - Notes on design rules followed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with DSP HDL Toolbox.

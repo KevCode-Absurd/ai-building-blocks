@@ -5,7 +5,10 @@ name: Audio streamer code writer
 summary: Say what to play or record. Get modern MATLAB audio code, not the old methods.
 job: build-software
 headline: Audio streamer code writer
-subhead: Say what to play or record. Get modern MATLAB audio code, not the old methods.
+subhead: MATLAB code for playing and recording sound that uses the newer
+  audiostreamer object instead of the older device writer and reader classes.
+  Without this guidance, AI tends to write the old style, which has fewer
+  features.
 explain: |
   MATLAB code for playing and recording sound that uses the newer audiostreamer object instead of the older device writer and reader classes. Without this guidance, AI tends to write the old style, which has fewer features.
 
@@ -26,6 +29,7 @@ you_get:
   - Playback, recording or full-duplex setup
   - Notes on when to use older tools
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB R2025a or later with Audio Toolbox.

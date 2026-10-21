@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts many messages and drafts replies.
 new_slug: inbox-triager
 name: Inbox triager
-summary: Run it on your recent email. Get messages sorted, senders checked and reply drafts. It never sends.
+summary: Run it on your recent email. Get messages sorted, senders checked and
+  reply drafts. It never sends.
 job: organise-work
 headline: Inbox triager
-subhead: Run it on your recent email. Get messages sorted, senders checked and reply drafts. It never sends.
+subhead: Your recent email sorted by what needs you, with new senders checked
+  and reply drafts waiting. It never sends anything, so you stay in control of
+  every message.
 explain: |
   Your recent email sorted by what needs you, with new senders checked and reply drafts waiting. It never sends anything, so you stay in control of every message.
 
@@ -27,6 +30,7 @@ you_get:
   - Draft replies, never sent
   - A short report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your email and save files.

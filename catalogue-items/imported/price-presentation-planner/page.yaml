@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs how people judge price against your goal.
 new_slug: price-presentation-planner
 name: Price presentation planner
-summary: Give it your product and prices. Get a tier and anchor layout that makes value clear without tricks.
+summary: Give it your product and prices. Get a tier and anchor layout that
+  makes value clear without tricks.
 job: set-prices
 headline: Price presentation planner
-subhead: Give it your product and prices. Get a tier and anchor layout that makes value clear without tricks.
+subhead: A layout for your prices, tiers and anchors that makes value easy to
+  see without tricks. Give it your product and prices and get a plan that is
+  clear and fair.
 explain: |
   A layout for your prices, tiers and anchors that makes value easy to see without tricks. Give it your product and prices and get a plan that is clear and fair.
 
@@ -26,5 +29,6 @@ you_get:
   - Reason each choice works
   - Test ideas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

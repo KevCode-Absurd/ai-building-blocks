@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: bento-grid-style-guide-writer
 name: Bento grid style guide writer
-summary: Describe your product. Get a style guide for a tidy card-grid look, with tokens, states and checks.
+summary: Describe your product. Get a style guide for a tidy card-grid look,
+  with tokens, states and checks.
 job: design-work
 headline: Bento grid style guide writer
-subhead: Describe your product. Get a style guide for a tidy card-grid look, with tokens, states and checks.
+subhead: A design-system guide for a Bento look, the tidy layout of cards in
+  different sizes that you see on many modern product pages. Describe your
+  product, and the AI writes guidance engineers and designers can use directly.
 explain: |
   A design-system guide for a Bento look, the tidy layout of cards in different sizes that you see on many modern product pages. Describe your product, and the AI writes guidance engineers and designers can use directly.
 
@@ -26,5 +29,6 @@ you_get:
   - Component rules with states
   - Do and don't lists and quality gates
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads the repo and wraps it step by step.
 new_slug: python-vision-model-connector
 name: Python vision model connector
-summary: Give it a vision model repo on GitHub. Get a MATLAB function that runs it on your images.
+summary: Give it a vision model repo on GitHub. Get a MATLAB function that runs
+  it on your images.
 job: connect-tools
 headline: Python vision model connector
-subhead: Give it a vision model repo on GitHub. Get a MATLAB function that runs it on your images.
+subhead: Give it a vision model repo on GitHub. Get a MATLAB function that runs
+  it on your images. Bring gitHub link or package name of the vision model. Use
+  the result to plan your next step.
 explain: |
   A MATLAB function that runs a Python vision model on your images, so you can use tools like segmentation or depth estimation without leaving MATLAB.
 
@@ -26,6 +29,7 @@ you_get:
   - A demo script on your sample image
   - Notes on inputs and outputs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB and Python.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It checks you against legal articles and has to judge each answer.
 new_slug: gdpr-audit-prep-coach
 name: GDPR audit prep coach
-summary: Name your scope. Answer six article-based questions and get gaps to fix before a review or regulator visit.
+summary: Name your scope. Answer six article-based questions and get gaps to fix
+  before a review or regulator visit.
 job: secure-code
 headline: GDPR audit prep coach
-subhead: Name your scope. Answer six article-based questions and get gaps to fix before a review or regulator visit.
+subhead: Before a privacy review lands, you hear the hard questions first. Name
+  the scope, such as a product, a team or a data flow, and you get six pointed
+  questions, each tied to a GDPR article.
 explain: |
   Before a privacy review lands, you hear the hard questions first. Name the scope, such as a product, a team or a data flow, and you get six pointed questions, each tied to a GDPR article. Your answers turn into a list of gaps to fix.
 
@@ -26,5 +29,6 @@ you_get:
   - A list of gaps ranked by risk
   - Fix steps before the review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

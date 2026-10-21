@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It searches, then groups papers by theme.
 new_slug: literature-review-finder
 name: Literature review finder
-summary: Give it a topic. Get the key academic papers found from open databases and sorted by theme.
+summary: Give it a topic. Get the key academic papers found from open databases
+  and sorted by theme.
 job: think-and-decide
 headline: Literature review finder
-subhead: Give it a topic. Get the key academic papers found from open databases and sorted by theme.
+subhead: A starting set of real academic papers on your topic, found from free
+  databases and sorted by theme. You can trust each paper because it was found
+  in this session.
 explain: |
   A starting set of real academic papers on your topic, found from free databases and sorted by theme. You can trust each paper because it was found in this session.
 
@@ -27,6 +30,7 @@ you_get:
   - Counts of searches and papers
   - A note on any search failures
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web.

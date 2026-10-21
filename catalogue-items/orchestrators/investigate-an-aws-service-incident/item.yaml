@@ -1,0 +1,53 @@
+slug: investigate-an-aws-service-incident
+name: Investigate an AWS service incident
+summary: Share an incident window and AWS resources. Get log evidence, a
+  recovery plan and a learning report.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-aws-cloudwatch-investigation
+  - copilot-aws-resource-health-diagnose
+  - copilot-incident-postmortem
+steps:
+  - uses: copilot-aws-cloudwatch-investigation
+    note: 1. Read skills/copilot-aws-cloudwatch-investigation/SKILL.md. Share an AWS
+      incident and time window. Get useful log queries, deployment links and the
+      likely affected services. Save the result with source references. Carry
+      the user's goal and all earlier findings into this step. If required
+      evidence or tool access is missing, mark this step blocked; do not
+      fabricate a result.
+  - uses: copilot-aws-resource-health-diagnose
+    note: 2. Read skills/copilot-aws-resource-health-diagnose/SKILL.md. Share your
+      AWS resources and symptoms. Get health findings, log evidence and a
+      recovery plan. Save the result with source references. Carry the user's
+      goal and all earlier findings into this step. If required evidence or tool
+      access is missing, mark this step blocked; do not fabricate a result.
+  - uses: copilot-incident-postmortem
+    note: 3. Read skills/copilot-incident-postmortem/SKILL.md. Share an outage
+      timeline and evidence. Get a blameless report with causes, follow-up
+      owners and unresolved facts. Save the result with source references. Carry
+      the user's goal and all earlier findings into this step. If required
+      evidence or tool access is missing, mark this step blocked; do not
+      fabricate a result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

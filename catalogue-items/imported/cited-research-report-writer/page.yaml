@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It runs several research rounds and checks every claim against its quote.
 new_slug: cited-research-report-writer
 name: Cited research report writer
-summary: Ask a question. Get a cited report with each claim checked against its source quote. Uses many tokens. Scrapes sites.
+summary: Ask a question. Get a cited report with each claim checked against its
+  source quote. Uses many tokens. Scrapes sites.
 job: research-topics
 headline: Cited research report writer
-subhead: Ask a question. Get a cited report with each claim checked against its source quote. Uses many tokens. Scrapes sites.
+subhead: Ask a question and get a written report where each important claim is
+  tied to a source and a quote you can check. It leaves a full run folder
+  behind, so you can see how the answer was reached.
 explain: |
   Ask a question and get a written report where each important claim is tied to a source and a quote you can check. It leaves a full run folder behind, so you can see how the answer was reached. It uses many tokens and scrapes websites, so expect a longer wait and bigger usage.
 
@@ -26,6 +29,7 @@ you_get:
   - A run folder with the audit trail
   - Claims that failed checks removed or flagged
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web, run Python and save files.

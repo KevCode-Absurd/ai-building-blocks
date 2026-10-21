@@ -1,6 +1,6 @@
 // Starting from a goal: "a landing page for my best ad" becomes the steps that make it, or the pages to read.
 // Plain code, no AI: the same words always give the same answer.
-import { type Block, type Catalogue, kindOf, portLabel, taskOf } from "./data";
+import { type Block, type Catalogue, kindOf, portLabel, taskOf, workflowEntries } from "./data";
 
 export const GOAL_EXAMPLES = ["a landing page for my best ad", "video ads from my reviews", "find why my ads stopped selling"];
 
@@ -31,7 +31,7 @@ export function planFromGoal(c: Catalogue, goal: string): Plan | null {
     .map((b) => ({ b, h: hits(toks, `${b.name} ${b.headline} ${b.summary}`) }))
     .filter((x) => x.h >= 2 && x.h / toks.length >= 0.6)
     .sort((x, y) => y.h - x.h || y.b.steps.length - x.b.steps.length)[0];
-  if (wf) return { slugs: wf.b.steps.map((s) => s.uses).filter((s) => c.bySlug[s]), name, from: { workflow: wf.b } };
+  if (wf) return { slugs: workflowEntries(wf.b).filter((s) => c.bySlug[s]), name, from: { workflow: wf.b } };
 
   const pool = c.blocks.filter((b) => b.category !== "orchestrator" && b.type !== "agent");
   const scoreOf = (b: Block) => hits(toks, b.name) * 3 + hits(toks, `${b.headline} ${b.summary}`) + hits(toks, `${b.outputs.map((p) => portLabel(p.type)).join(" ")} ${taskOf(b).name}`) * 2;

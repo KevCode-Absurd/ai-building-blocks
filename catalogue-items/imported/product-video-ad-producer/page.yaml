@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It plans shots, makes each clip and joins them, so one weak shot hurts the ad.
 new_slug: product-video-ad-producer
 name: Product video ad producer
-summary: Give it your selling points. Get a shot script and a 15 to 30 second captioned ad. Your video model makes it.
+summary: Give it your selling points. Get a shot script and a 15 to 30 second
+  captioned ad. Your video model makes it.
 job: make-video-ads
 headline: Product video ad producer
-subhead: Give it your selling points. Get a shot script and a 15 to 30 second captioned ad. Your video model makes it.
+subhead: A 15 to 30 second ad with a shot script, built shot by shot and joined
+  with captions. If one shot fails, only that shot gets redone.
 explain: |
   A 15 to 30 second ad with a shot script, built shot by shot and joined with captions. If one shot fails, only that shot gets redone.
 
@@ -26,6 +28,8 @@ you_get:
   - A joined video with subtitles
   - A re-run list for failed shots
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run code and use your own video model key (fal or Replicate). Add ffmpeg to join clips.
+  - It works best when your AI can run code and use your own video model key
+    (fal or Replicate). Add ffmpeg to join clips.

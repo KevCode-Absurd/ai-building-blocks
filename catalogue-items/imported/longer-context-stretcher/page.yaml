@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Changing how a model reads position is delicate.
 new_slug: longer-context-stretcher
 name: Longer context stretcher
-summary: Name your model. Get a method and code to make it read much longer documents than it was trained for.
+summary: Name your model. Get a method and code to make it read much longer
+  documents than it was trained for.
 job: build-software
 headline: Longer context stretcher
-subhead: Name your model. Get a method and code to make it read much longer documents than it was trained for.
+subhead: A method, with working code, for making a language model read documents
+  far longer than it was trained on. This is for people training or running
+  models, and it needs Python and a GPU.
 explain: |
   A method, with working code, for making a language model read documents far longer than it was trained on. This is for people training or running models, and it needs Python and a GPU.
 
@@ -26,6 +29,7 @@ you_get:
   - Fine-tuning steps if needed
   - Paper references to check against
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

@@ -2,17 +2,20 @@ thinking: high
 thinking_why: Finding weak spots takes creative, careful probing.
 new_slug: ai-agent-attack-tester
 name: AI agent attack tester
-summary: Give it your AI agent. Get a safe, authorized test plan and a report of where it can be tricked.
+summary: Give it your AI agent. Get a safe, authorized test plan and a report of
+  where it can be tricked.
 job: secure-code
 headline: AI agent attack tester
-subhead: Give it your AI agent. Get a safe, authorized test plan and a report of where it can be tricked.
+subhead: A safe, approved plan to find where your AI agent can be tricked, plus
+  a report of what was found. It treats written permission as step one.
 explain: |
   A safe, approved plan to find where your AI agent can be tricked, plus a report of what was found. It treats written permission as step one. Without clear scope and approval, it stops at a plan and probes nothing live.
 
   First it collects the owner, the exact systems in scope, test accounts, time window, limits and a stop signal. Then it maps what the agent can touch and lists likely attacks, such as injected instructions, too much power, memory poisoning and tricks between agents. Tests use fake identities and planted marker values, never real data. Each case gets an ID and a record. Findings are merged, ranked, and retested after fixes. Cleanup is checked at the end.
 when:
   - You are about to launch an agent that can send, buy or delete things.
-  - Your boss or client asks if the agent can be talked into doing something it should not.
+  - Your boss or client asks if the agent can be talked into doing something it
+    should not.
   - You want rules of engagement written before any security test.
   - You fixed a weakness and need to prove it is closed.
 you_give:
@@ -27,6 +30,7 @@ you_get:
   - Findings with proof, impact and fixes
   - Retest and cleanup results
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

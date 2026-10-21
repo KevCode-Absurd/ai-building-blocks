@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set method but makes many small design choices.
 new_slug: generative-art-maker
 name: Generative art maker
-summary: Describe the look you want. Get an interactive generative art piece you can tweak and repeat.
+summary: Describe the look you want. Get an interactive generative art piece you
+  can tweak and repeat.
 job: make-images
 headline: Generative art maker
-subhead: Describe the look you want. Get an interactive generative art piece you can tweak and repeat.
+subhead: A piece of generative art you can open in a browser, change and
+  reproduce. Describe the mood or look you want, and the skill first writes a
+  short manifesto for an art movement that fits it.
 explain: |
   A piece of generative art you can open in a browser, change and reproduce. Describe the mood or look you want, and the skill first writes a short manifesto for an art movement that fits it. Then it turns that idea into code.
 
@@ -26,6 +29,7 @@ you_get:
   - A p5.js sketch file
   - Seeds to repeat any result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

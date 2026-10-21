@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It measures first and then applies known fixes.
 new_slug: website-speed-tuner
 name: Website speed tuner
-summary: Point it at a slow site. Get Core Web Vitals, bundle size and caching problems fixed.
+summary: Point it at a slow site. Get Core Web Vitals, bundle size and caching
+  problems fixed.
 job: build-websites
 headline: Website speed tuner
-subhead: Point it at a slow site. Get Core Web Vitals, bundle size and caching problems fixed.
+subhead: A slow site fixed in the order that moves the numbers most. You get a
+  clear read on your Core Web Vitals, a list of what is dragging them down and
+  the changes to make.
 explain: |
   A slow site fixed in the order that moves the numbers most. You get a clear read on your Core Web Vitals, a list of what is dragging them down and the changes to make.
 
@@ -27,6 +30,7 @@ you_get:
   - Target numbers for each fix
   - Re-test plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

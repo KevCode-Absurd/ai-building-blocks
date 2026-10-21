@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set test method and judges what the findings mean.
 new_slug: usability-test-runner
 name: Usability test runner
-summary: Give it a design or prototype. Get a test plan, task scripts, moderator notes and a findings summary.
+summary: Give it a design or prototype. Get a test plan, task scripts, moderator
+  notes and a findings summary.
 job: test-an-idea
 headline: Usability test runner
-subhead: Give it a design or prototype. Get a test plan, task scripts, moderator notes and a findings summary.
+subhead: Find out whether real people can use your design before you ship it.
+  You get a full test plan, tasks to read aloud, notes for the person running
+  the session and a findings report that ranks the problems.
 explain: |
   Find out whether real people can use your design before you ship it. You get a full test plan, tasks to read aloud, notes for the person running the session and a findings report that ranks the problems.
 
@@ -26,5 +29,6 @@ you_get:
   - Moderator notes
   - A ranked list of findings with fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

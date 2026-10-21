@@ -1,6 +1,6 @@
 # Lead and manage people: AI Blocks
 
-> 74 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 75 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Anger pause and repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner): Describe a fight or hurt at work or home. Get a pause routine and a calm first message.
 - [Announce a change of direction and keep the team](https://useaiblocks.com/workflows/announce-a-change-of-direction-and-bring-the-team-with-you): Give it the change and why. Get the memo, a rollout plan, the announcement script and listening talks.
@@ -47,6 +47,7 @@
 - [Order-to-request rewriter](https://useaiblocks.com/skills/order-to-request-rewriter): Paste a message full of orders. Get each turned into a question or request with their gain and an easy first step.
 - [Peer feedback session planner](https://useaiblocks.com/skills/peer-feedback-session-planner): Paste the stuck project and who could review it. Get a session plan with rules so notes stay honest.
 - [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner): Name a policy you suspect is not working. Get a small, dated test to remove it and what to measure.
+- [Prepare a board decision brief](https://useaiblocks.com/workflows/prepare-a-board-decision-brief): Share company facts and decisions due. Get an evidence map, a board update and a review rhythm.
 - [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer): Paste the problems found in your work. Get each traced to a likely cause, plus notes that may name the wrong spot.
 - [Process and meeting cull planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner): List your regular meetings, approvals and reports. Get a keep, simplify or drop call on each.
 - [Project review prep planner](https://useaiblocks.com/skills/project-review-prep-planner): Name a finished project. Get prep: a fresh format, a two-list form, numbers to pull and who hears the lessons.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies your rules and cites each one.
 new_slug: onboarding-rules-checker
 name: Onboarding rules checker
-summary: Give it a parsed record and your rules. Get a risk rating, each rule result and missing items. It does not decide.
+summary: Give it a parsed record and your rules. Get a risk rating, each rule
+  result and missing items. It does not decide.
 job: hire-people
 headline: Onboarding rules checker
-subhead: Give it a parsed record and your rules. Get a risk rating, each rule result and missing items. It does not decide.
+subhead: Your firm's compliance rules applied to a client record, with each
+  result shown and the rule cited. It gives a risk rating and a list of what is
+  missing.
 explain: |
   Your firm's compliance rules applied to a client record, with each result shown and the rule cited. It gives a risk rating and a list of what is missing. It does not approve or reject anyone. That call stays with a person.
 
@@ -18,7 +21,8 @@ when:
 you_give:
   - The structured client record
   - Your rules grid
-  - Screening results from sanctions and politically exposed person checks (optional)
+  - Screening results from sanctions and politically exposed person checks
+    (optional)
   - The client type and risk factors
 you_get:
   - A low, medium or high risk rating with factor table
@@ -26,5 +30,6 @@ you_get:
   - Every rule result with the rule cited
   - Items to send for human review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

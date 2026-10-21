@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It turns your brand look into specific packaging choices.
 new_slug: packaging-brief-writer
 name: Packaging brief writer
-summary: Describe your product and brand. Get a packaging brief a designer can follow, from materials to unboxing.
+summary: Describe your product and brand. Get a packaging brief a designer can
+  follow, from materials to unboxing.
 job: design-work
 headline: Packaging brief writer
-subhead: Describe your product and brand. Get a packaging brief a designer can follow, from materials to unboxing.
+subhead: A packaging brief a designer or agency can pick up and work from. It
+  covers shape, materials, layout and the moment the customer opens the box.
 explain: |
   A packaging brief a designer or agency can pick up and work from. It covers shape, materials, layout and the moment the customer opens the box.
 
@@ -27,5 +29,6 @@ you_get:
   - Visual hierarchy for the pack
   - An unboxing experience plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

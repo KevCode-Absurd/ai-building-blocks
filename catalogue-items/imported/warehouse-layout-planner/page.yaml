@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Size, flow and storage all depend on each other.
 new_slug: warehouse-layout-planner
 name: Warehouse layout planner
-summary: Give it your products, volumes and building size. Get zones, aisle layout, storage type and space needed.
+summary: Give it your products, volumes and building size. Get zones, aisle
+  layout, storage type and space needed.
 job: plan-supply-chain
 headline: Warehouse layout planner
-subhead: Give it your products, volumes and building size. Get zones, aisle layout, storage type and space needed.
+subhead: "A warehouse design on paper before you commit: zones, aisles, storage
+  type and the floor space you need. It is built to cut handling and wasted
+  walking."
 explain: |
   A warehouse design on paper before you commit: zones, aisles, storage type and the floor space you need. It is built to cut handling and wasted walking.
 
@@ -26,5 +29,6 @@ you_get:
   - Aisle and dock sizing
   - Space needed and design notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

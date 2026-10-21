@@ -1,0 +1,32 @@
+slug: copilot-azure-role-selector
+name: Azure least access role picker
+summary: Describe what an identity must do. Get the narrow Azure role that fits, with reasons.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/azure-role-selector
+  url: https://github.com/github/awesome-copilot/tree/main/skills/azure-role-selector
+  licence: MIT
+  licence_file: LICENSE.txt
+  commit: 613efc8
+  original_name: azure-role-selector
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: azure-role-selector skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/azure-role-selector
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

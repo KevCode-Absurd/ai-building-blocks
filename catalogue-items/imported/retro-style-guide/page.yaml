@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: retro-style-guide
 name: Retro throwback style guide writer
-summary: Describe your product. Get a style guide with a vintage look, nostalgic type and bold colour pairs.
+summary: Describe your product. Get a style guide with a vintage look, nostalgic
+  type and bold colour pairs.
 job: design-work
 headline: Retro throwback style guide writer
-subhead: Describe your product. Get a style guide with a vintage look, nostalgic type and bold colour pairs.
+subhead: Describe your product. Get a style guide with a vintage look, nostalgic
+  type and bold colour pairs. Bring a description of your product. Use the
+  result to plan your next step.
 explain: |
   A written style guide for a throwback look: vintage-feeling type, high-contrast colour pairs and the little rules that keep a whole product consistent. Designers and developers can build from it without guessing.
 
@@ -27,5 +30,6 @@ you_get:
   - Tone examples and things to avoid
   - A review checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Many specialist methods must be matched to the data.
 new_slug: spectral-image-analyst
 name: Spectral image analyst
-summary: Give it a hyperspectral or satellite image. Get it cleaned, unmixed and checked for targets or anomalies.
+summary: Give it a hyperspectral or satellite image. Get it cleaned, unmixed and
+  checked for targets or anomalies.
 job: build-software
 headline: Spectral image analyst
-subhead: Give it a hyperspectral or satellite image. Get it cleaned, unmixed and checked for targets or anomalies.
+subhead: Cleaned hyperspectral or satellite images, with materials separated and
+  targets or odd spots flagged. The skill writes MATLAB code for the full path.
+  It reads files in formats like ENVI, GeoTIFF, Sentinel-2 and Landsat.
 explain: |
   Cleaned hyperspectral or satellite images, with materials separated and targets or odd spots flagged. The skill writes MATLAB code for the full path. It reads files in formats like ENVI, GeoTIFF, Sentinel-2 and Landsat. Then it applies calibration, atmospheric correction, denoising and sharpening, and cuts bands down with PCA.
 
@@ -27,6 +30,8 @@ you_get:
   - Target or anomaly detections
   - Spectral index maps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run MATLAB with the Hyperspectral Imaging Library.
+  - It works best when your AI can run MATLAB with the Hyperspectral Imaging
+    Library.

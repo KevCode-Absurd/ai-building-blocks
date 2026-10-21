@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It splits a workflow by set rules and wires the parts.
 new_slug: n8n-sub-workflow-builder
 name: n8n sub-workflow builder
-summary: Give it a long n8n workflow. Get reusable sub-workflows with clear inputs that your agents can also call.
+summary: Give it a long n8n workflow. Get reusable sub-workflows with clear
+  inputs that your agents can also call.
 job: connect-tools
 headline: n8n sub-workflow builder
-subhead: Give it a long n8n workflow. Get reusable sub-workflows with clear inputs that your agents can also call.
+subhead: A long n8n workflow split into small, reusable pieces. Each piece has
+  named inputs and a clear output, like a function, so you fix a bug once
+  instead of in five copies.
 explain: |
   A long n8n workflow split into small, reusable pieces. Each piece has named inputs and a clear output, like a function, so you fix a bug once instead of in five copies.
 
@@ -26,6 +29,7 @@ you_get:
   - A findable name
   - A parent workflow that is shorter and simpler
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can use the n8n MCP tools.

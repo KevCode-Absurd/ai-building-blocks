@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows known pipeline patterns but must fit your project.
 new_slug: build-pipeline-setter
 name: Build pipeline setter
-summary: Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users.
+summary: Describe how you ship. Get automatic checks and a deploy pipeline so
+  bad changes never reach users.
 job: ship-and-host
 headline: Build pipeline setter
-subhead: Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users.
+subhead: Describe how you ship. Get automatic checks and a deploy pipeline so
+  bad changes never reach users. Bring your language and tools. Use the result
+  to plan your next step.
 explain: |
   Every change is checked automatically before it reaches users, so a broken build gets caught in minutes instead of in production.
 
@@ -26,6 +29,7 @@ you_get:
   - Security and size checks
   - Guidance on fixing CI failures
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

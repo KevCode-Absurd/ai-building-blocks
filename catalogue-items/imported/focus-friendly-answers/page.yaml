@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It only changes how answers are shaped.
 new_slug: focus-friendly-answers
 name: Focus-friendly answer style setter
-summary: Turn it on once. Get every reply with the next action first, short numbered steps and time estimates.
+summary: Turn it on once. Get every reply with the next action first, short
+  numbered steps and time estimates.
 job: set-up-ai
 headline: Focus-friendly answer style setter
-subhead: Turn it on once. Get every reply with the next action first, short numbered steps and time estimates.
+subhead: Every reply from your AI starts with the next thing to do, then
+  numbered steps with time estimates. It is written for readers who lose track
+  in long answers, such as people with ADHD.
 explain: |
   Every reply from your AI starts with the next thing to do, then numbered steps with time estimates. It is written for readers who lose track in long answers, such as people with ADHD.
 
@@ -26,5 +29,6 @@ you_get:
   - Recap of where you are
   - Visible progress markers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

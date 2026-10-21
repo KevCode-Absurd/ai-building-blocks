@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set review method for each vendor.
 new_slug: vendor-risk-reviewer
 name: Vendor risk reviewer
-summary: Give it a vendor and what they handle. Get a risk tier, tailored questions and a review of their SOC 2 report.
+summary: Give it a vendor and what they handle. Get a risk tier, tailored
+  questions and a review of their SOC 2 report.
 job: check-contracts
 headline: Vendor risk reviewer
-subhead: Give it a vendor and what they handle. Get a risk tier, tailored questions and a review of their SOC 2 report.
+subhead: Give it a vendor and what they handle. Get a risk tier, tailored
+  questions and a review of their SOC 2 report. Bring the vendor and what they
+  do for you. Use the result to plan your next step.
 explain: |
   A decision on how closely to watch a vendor, the questions to ask them, and a read of their security report that spots what the cover page hides. 
   First, the skill sorts the vendor into a risk tier based on what data and systems they touch. It then writes a questionnaire to match, aligned to the rules that apply to you, such as ISO 27001, SOC 2, DORA, NIS2 or HIPAA. When the vendor sends a SOC 2 Type II report, it reads it for exceptions, carved-out services, controls you must run yourself and gaps in dates that need a bridge letter. It also reviews data processing terms and the vendor's own suppliers.
@@ -25,5 +28,6 @@ you_get:
   - A SOC 2 review with issues and next steps
   - A review schedule
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

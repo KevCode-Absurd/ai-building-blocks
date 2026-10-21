@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It reads and flags, and does not rewrite.
 new_slug: technical-doc-proofreader
 name: Technical doc proofreader
-summary: Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites.
+summary: Give it an English technical doc. Get a list of typos, grammar slips,
+  term clashes and jargon, with no rewrites.
 job: work-with-files
 headline: Technical doc proofreader
-subhead: Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites.
+subhead: Give it an English technical doc. Get a list of typos, grammar slips,
+  term clashes and jargon, with no rewrites. Bring the English technical
+  document. Use the result to plan your next step.
 explain: |
   A clean checklist of the typos, grammar slips, mixed-up terms and jargon in your English technical document, so you can fix them yourself and keep your own voice. Nothing is rewritten and no fact is changed quietly.
 
@@ -26,5 +29,6 @@ you_get:
   - Doubtful facts marked to verify
   - Counts of issues by category
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

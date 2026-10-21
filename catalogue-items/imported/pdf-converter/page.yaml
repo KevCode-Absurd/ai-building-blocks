@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It first checks what kind of PDF this is, then picks a route.
 new_slug: pdf-converter
 name: PDF converter
-summary: Give it a PDF and the format you want. Get a faithful Markdown, HTML, Word or JSON copy with tables kept intact.
+summary: Give it a PDF and the format you want. Get a faithful Markdown, HTML,
+  Word or JSON copy with tables kept intact.
 job: work-with-files
 headline: PDF converter
-subhead: Give it a PDF and the format you want. Get a faithful Markdown, HTML, Word or JSON copy with tables kept intact.
+subhead: Give it a PDF and the format you want. Get a faithful Markdown, HTML,
+  Word or JSON copy with tables kept intact. Bring the PDF file. Use the result
+  to plan your next step.
 explain: |
   A PDF turned into Markdown, HTML, Word or JSON that still reads like the original, with tables intact and labels still tied to their values. It matters when plain text extraction would scramble columns or lose which number belongs to which row.
 
@@ -26,6 +29,7 @@ you_get:
   - A note on the PDF type and route used
   - Spot-check results on sample sections
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read files.

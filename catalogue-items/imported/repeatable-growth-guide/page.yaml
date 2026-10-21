@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It chains many methods and builds one forecast from your answers.
 new_slug: repeatable-growth-guide
 name: Repeatable growth guide
-summary: Describe your business. Get a growth plan with a forecast, built step by step from your marketing to your numbers.
+summary: Describe your business. Get a growth plan with a forecast, built step
+  by step from your marketing to your numbers.
 job: plan-strategy
 headline: Repeatable growth guide
-subhead: Describe your business. Get a growth plan with a forecast, built step by step from your marketing to your numbers.
+subhead: A growth plan and forecast for a business whose good months happened by
+  luck, built one phase at a time. Each phase produces a document that the next
+  phase uses.
 explain: |
   A growth plan and forecast for a business whose good months happened by luck, built one phase at a time. Each phase produces a document that the next phase uses.
 
@@ -27,5 +30,6 @@ you_get:
   - Metrics plan with one key number
   - Growth forecast
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

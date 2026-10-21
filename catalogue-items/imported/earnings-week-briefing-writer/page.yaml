@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds scenarios from known figures.
 new_slug: earnings-week-briefing-writer
 name: Earnings week briefing writer
-summary: Name a company about to report. Get what to watch, scenario cases and the numbers that matter.
+summary: Name a company about to report. Get what to watch, scenario cases and
+  the numbers that matter.
 job: money-and-investing
 headline: Earnings week briefing writer
-subhead: Name a company about to report. Get what to watch, scenario cases and the numbers that matter.
+subhead: What to watch before a company reports, set out as scenarios so the
+  result does not catch you off guard. Name the company and you get the numbers
+  that matter and how each outcome could land.
 explain: |
   What to watch before a company reports, set out as scenarios so the result does not catch you off guard. Name the company and you get the numbers that matter and how each outcome could land.
 
@@ -26,5 +29,6 @@ you_get:
   - Consensus estimates and results date
   - Key metrics and guidance checks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

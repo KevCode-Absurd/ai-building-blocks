@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Each step affects the next and needs expert reading.
 new_slug: brain-recording-analyst
 name: Brain recording analyst
-summary: Give it Neuropixels recordings. Get cleaned data, sorted neuron spikes and quality checks.
+summary: Give it Neuropixels recordings. Get cleaned data, sorted neuron spikes
+  and quality checks.
 job: research-topics
 headline: Brain recording analyst
-subhead: Give it Neuropixels recordings. Get cleaned data, sorted neuron spikes and quality checks.
+subhead: Give it Neuropixels recordings. Get cleaned data, sorted neuron spikes
+  and quality checks. Bring neuropixels recording files. Use the result to plan
+  your next step.
 explain: |
   Go from raw Neuropixels recordings to cleaned data, sorted neuron spikes and quality checks you can act on. The workflow follows common practice from SpikeInterface, the Allen Institute and the International Brain Laboratory.
 
@@ -26,6 +29,7 @@ you_get:
   - Quality metrics for each unit
   - Curated data ready to export
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and use computing power.

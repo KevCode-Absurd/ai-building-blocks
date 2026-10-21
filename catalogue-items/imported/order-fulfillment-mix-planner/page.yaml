@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It trades cost, speed and stock across many sites.
 new_slug: order-fulfillment-mix-planner
 name: Order fulfillment mix planner
-summary: Give it your stores, stock and order types. Get rules for where each online order ships from and a pickup plan.
+summary: Give it your stores, stock and order types. Get rules for where each
+  online order ships from and a pickup plan.
 job: plan-supply-chain
 headline: Order fulfillment mix planner
-subhead: Give it your stores, stock and order types. Get rules for where each online order ships from and a pickup plan.
+subhead: A clear rule set for where each online order ships from, plus a plan
+  for in-store pickup. It helps a retailer with shops, warehouses and a website
+  sell more without paying for extra shipping.
 explain: |
   A clear rule set for where each online order ships from, plus a plan for in-store pickup. It helps a retailer with shops, warehouses and a website sell more without paying for extra shipping.
 
@@ -14,7 +17,8 @@ when:
   - Your shops have stock but online orders ship from far away.
   - You want to launch click-and-collect and need a plan.
   - Split shipments keep driving your costs up.
-  - You are choosing an order management system and need your rules defined first.
+  - You are choosing an order management system and need your rules defined
+    first.
 you_give:
   - Store and warehouse locations
   - Stock levels by location
@@ -27,5 +31,6 @@ you_get:
   - Cost and speed trade-offs
   - Targets and measures to track
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

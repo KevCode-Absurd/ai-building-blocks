@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It plans in a set order and keeps each step linked.
 new_slug: backwards-unit-planner
 name: Backwards unit planner
-summary: Give it your standards. Get a unit planned from the end result, then the proof of learning, then the activities.
+summary: Give it your standards. Get a unit planned from the end result, then
+  the proof of learning, then the activities.
 job: teach-and-train
 headline: Backwards unit planner
-subhead: Give it your standards. Get a unit planned from the end result, then the proof of learning, then the activities.
+subhead: A full teaching unit planned from the end result backwards. Give it the
+  standards or outcomes, the year group and how long the unit lasts.
 explain: |
   A full teaching unit planned from the end result backwards. Give it the standards or outcomes, the year group and how long the unit lasts. The AI fills in three stages from the Understanding by Design method.
 
@@ -26,5 +28,6 @@ you_get:
   - A lesson-by-lesson learning plan
   - An alignment check
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

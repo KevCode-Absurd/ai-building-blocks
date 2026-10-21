@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs a set script to capture each screen.
 new_slug: app-screenshot-maker
 name: App screenshot maker
-summary: Point it at your running app. Get sharp, high-resolution screenshots ready for Product Hunt, social or your site.
+summary: Point it at your running app. Get sharp, high-resolution screenshots
+  ready for Product Hunt, social or your site.
 job: make-images
 headline: App screenshot maker
-subhead: Point it at your running app. Get sharp, high-resolution screenshots ready for Product Hunt, social or your site.
+subhead: Sharp, high-resolution screenshots of your running app, ready for
+  Product Hunt, social posts, a landing page or docs. You point it at your local
+  or live app address and pick how many shots you need.
 explain: |
   Sharp, high-resolution screenshots of your running app, ready for Product Hunt, social posts, a landing page or docs. You point it at your local or live app address and pick how many shots you need.
 
@@ -26,6 +29,7 @@ you_get:
   - Files sized for your purpose
   - A repeatable capture script
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

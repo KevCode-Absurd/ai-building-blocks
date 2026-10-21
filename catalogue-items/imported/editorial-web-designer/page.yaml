@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies a strict style guide with a few design choices.
 new_slug: editorial-web-designer
 name: Editorial web designer
-summary: Describe the interface. Get a calm, document-style design with warm greys, crisp borders and quiet motion.
+summary: Describe the interface. Get a calm, document-style design with warm
+  greys, crisp borders and quiet motion.
 job: build-websites
 headline: Editorial web designer
-subhead: Describe the interface. Get a calm, document-style design with warm greys, crisp borders and quiet motion.
+subhead: A calm, document-style interface in the manner of Notion or Linear,
+  with warm greys, thin borders and quiet motion. You describe the screen and
+  get design and code that avoid the usual busy web look.
 explain: |
   A calm, document-style interface in the manner of Notion or Linear, with warm greys, thin borders and quiet motion. You describe the screen and get design and code that avoid the usual busy web look.
 
@@ -26,5 +29,6 @@ you_get:
   - A prioritised list of fixes (optional)
   - A banned-elements checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

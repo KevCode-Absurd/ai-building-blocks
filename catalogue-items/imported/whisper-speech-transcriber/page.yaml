@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a short, fixed recipe.
 new_slug: whisper-speech-transcriber
 name: Whisper speech transcriber
-summary: Give it an audio file. Get a written transcript in 99 languages, or an English translation.
+summary: Give it an audio file. Get a written transcript in 99 languages, or an
+  English translation.
 job: work-with-audio
 headline: Whisper speech transcriber
-subhead: Give it an audio file. Get a written transcript in 99 languages, or an English translation.
+subhead: Give it an audio file. Get a written transcript in 99 languages, or an
+  English translation. Bring an audio or video file. Use the result to plan your
+  next step.
 explain: |
   A written transcript of your audio, in the original language or translated into English. Podcasts, interviews and meeting recordings become searchable text.
 
@@ -27,6 +30,7 @@ you_get:
   - Choice of model size
   - Saved transcript file
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

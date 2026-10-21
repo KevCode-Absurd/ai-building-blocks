@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans the list of items and fields, then checks them online.
 new_slug: research-outline-builder
 name: Research outline builder
-summary: Give it a topic. Get a list of items to compare and questions to answer for each, found online. Scrapes sites.
+summary: Give it a topic. Get a list of items to compare and questions to answer
+  for each, found online. Scrapes sites.
 job: research-topics
 headline: Research outline builder
-subhead: Give it a topic. Get a list of items to compare and questions to answer for each, found online. Scrapes sites.
+subhead: Give it a topic. Get a list of items to compare and questions to answer
+  for each, found online. Scrapes sites. Bring research topic. Use the result to
+  plan your next step.
 explain: |
   A research outline for any topic: the list of things to compare and the questions to answer about each one, filled in with results found online. You get a clear frame before the real research starts.
 
@@ -26,6 +29,7 @@ you_get:
   - Web-sourced additions
   - Outline file for later steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web and save files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It filters and orders material by what the task needs.
 new_slug: context-package-cleaner
 name: Context package cleaner
-summary: Give it a pile of notes and documents. Get a deduplicated, ordered set that fits your size limit.
+summary: Give it a pile of notes and documents. Get a deduplicated, ordered set
+  that fits your size limit.
 job: think-and-decide
 headline: Context package cleaner
-subhead: Give it a pile of notes and documents. Get a deduplicated, ordered set that fits your size limit.
+subhead: Give it a pile of notes and documents. Get a deduplicated, ordered set
+  that fits your size limit. Bring the pile of text chunks or files. Use the
+  result to plan your next step.
 explain: |
   A cleaned-up set of notes, documents and search results that fits your size limit and puts the best material where the AI will notice it. Messy input costs money and gives weaker answers, so this trims it before the question is asked.
 
@@ -26,5 +29,6 @@ you_get:
   - Token budget per chunk
   - Coverage check against your question
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

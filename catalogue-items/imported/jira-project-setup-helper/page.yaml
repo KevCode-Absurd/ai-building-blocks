@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It plans a setup, then builds it step by step.
 new_slug: jira-project-setup-helper
 name: Jira project setup helper
-summary: Say how your team works. Get Jira projects, workflows, JQL queries and automations set up for it.
+summary: Say how your team works. Get Jira projects, workflows, JQL queries and
+  automations set up for it.
 job: organise-work
 headline: Jira project setup helper
-subhead: Say how your team works. Get Jira projects, workflows, JQL queries and automations set up for it.
+subhead: Jira that matches how your team really works. Say how your team plans
+  and ships, Scrum or Kanban, and what you want to track. The skill picks a
+  project type, then proposes issue types, a workflow with the right statuses
+  and transitions, fields and permissions.
 explain: |
   Jira that matches how your team really works. Say how your team plans and ships, Scrum or Kanban, and what you want to track. The skill picks a project type, then proposes issue types, a workflow with the right statuses and transitions, fields and permissions.
 
@@ -27,6 +31,7 @@ you_get:
   - Automation rules
   - Steps for what to set up by hand
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can connect to Jira.

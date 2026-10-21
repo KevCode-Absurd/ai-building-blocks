@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It follows a fixed file format with clear rules.
 new_slug: obsidian-database-view-builder
 name: Obsidian database view builder
-summary: Say how you want your notes filtered and shown. Get a working Obsidian Base file with views, formulas and summaries.
+summary: Say how you want your notes filtered and shown. Get a working Obsidian
+  Base file with views, formulas and summaries.
 job: organise-work
 headline: Obsidian database view builder
-subhead: Say how you want your notes filtered and shown. Get a working Obsidian Base file with views, formulas and summaries.
+subhead: A working Obsidian Base file that turns your notes into a table or card
+  view, filtered and sorted the way you describe. No hand-written syntax needed.
 explain: |
   A working Obsidian Base file that turns your notes into a table or card view, filtered and sorted the way you describe. No hand-written syntax needed.
 
@@ -26,5 +28,6 @@ you_get:
   - Formula columns
   - Table or card views with summaries
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

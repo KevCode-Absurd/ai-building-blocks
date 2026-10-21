@@ -2,17 +2,22 @@ thinking: medium
 thinking_why: It lists each state, then builds each one.
 new_slug: screen-states-designer
 name: Screen states designer
-summary: "Give it a screen. Get the states people hit first: empty, loading, error, offline, no results and success."
+summary: "Give it a screen. Get the states people hit first: empty, loading,
+  error, offline, no results and success."
 job: build-websites
 headline: Screen states designer
-subhead: "Give it a screen. Get the states people hit first: empty, loading, error, offline, no results and success."
+subhead: "Most screens are built for the best case: lots of data, fast network,
+  nothing breaking. Real people hit the other cases first. This skill takes a
+  screen you are building and finds those states, then builds each one
+  properly."
 explain: |
   Most screens are built for the best case: lots of data, fast network, nothing breaking. Real people hit the other cases first. This skill takes a screen you are building and finds those states, then builds each one properly.
 
   It goes through a list for every screen that loads, lists, searches or saves: first use, empty, loading, partial data, error, offline, bad input, no results and success. It keeps only the ones that can happen, then writes the content and design for each, with a way out of every error. It works on its own. An optional connection to the UXKIN screen library can show how other products handle the same case.
 when:
   - Your screen only shows the version with perfect data and you need the rest.
-  - A new user would see an empty list on day one and you have nothing designed for it.
+  - A new user would see an empty list on day one and you have nothing designed
+    for it.
   - Someone asked you to make a screen ready for real use.
   - You want to review a finished feature for missing error and offline cases.
 you_give:
@@ -25,6 +30,7 @@ you_get:
   - Error messages with a clear next step
   - Built versions in your code
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

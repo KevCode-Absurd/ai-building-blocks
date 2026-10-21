@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It works through a set checklist against your setup.
 new_slug: mcp-server-hardener
 name: MCP server hardener
-summary: Point it at an MCP server you run. Get a checklist of fixes for transport, auth, access and logging.
+summary: Point it at an MCP server you run. Get a checklist of fixes for
+  transport, auth, access and logging.
 job: secure-code
 headline: MCP server hardener
-subhead: Point it at an MCP server you run. Get a checklist of fixes for transport, auth, access and logging.
+subhead: A checklist of fixes that locks down an MCP server you run. It covers
+  the connection, who may sign in, what each user may do and what gets logged.
 explain: |
   A checklist of fixes that locks down an MCP server you run. It covers the connection, who may sign in, what each user may do and what gets logged.
 
@@ -27,6 +29,7 @@ you_get:
   - Access rules per tool
   - Logging suggestions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

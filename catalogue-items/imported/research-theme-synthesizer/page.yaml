@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must group notes and rank the findings.
 new_slug: research-theme-synthesizer
 name: Research theme synthesizer
-summary: Give it interviews, surveys or tickets. Get themes ranked by how often they come up, with quotes.
+summary: Give it interviews, surveys or tickets. Get themes ranked by how often
+  they come up, with quotes.
 job: understand-customers
 headline: Research theme synthesizer
-subhead: Give it interviews, surveys or tickets. Get themes ranked by how often they come up, with quotes.
+subhead: The themes in your interviews, surveys or support tickets, ranked by
+  how often they come up and backed by real quotes. You stop reading piles of
+  notes and start seeing the pattern.
 explain: |
   The themes in your interviews, surveys or support tickets, ranked by how often they come up and backed by real quotes. You stop reading piles of notes and start seeing the pattern.
 
@@ -26,5 +29,6 @@ you_get:
   - Evidence strength notes
   - Recommendations tied to your question
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

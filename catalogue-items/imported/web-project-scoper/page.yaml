@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It asks structured questions and organises answers.
 new_slug: web-project-scoper
 name: Web project scoper
-summary: Describe a web project. Get its goals, users, features, design tokens and page plan in one scoped brief.
+summary: Describe a web project. Get its goals, users, features, design tokens
+  and page plan in one scoped brief.
 job: build-product
 headline: Web project scoper
-subhead: Describe a web project. Get its goals, users, features, design tokens and page plan in one scoped brief.
+subhead: "A single scoped brief for a new website or page: who it is for, what
+  it must do, how people move through it, how it looks and what to build first."
 explain: |
   A single scoped brief for a new website or page: who it is for, what it must do, how people move through it, how it looks and what to build first. You start a project knowing what you are making.
 
@@ -26,5 +28,6 @@ you_get:
   - A page and flow plan
   - Design tokens and a tech suggestion
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It plans a long project across many decisions.
 new_slug: big-project-mapper
 name: Big project mapper
-summary: Give it a project too big for one session. Get a map of decisions, resolved one at a time.
+summary: Give it a project too big for one session. Get a map of decisions,
+  resolved one at a time.
 job: plan-strategy
 headline: Big project mapper
-subhead: Give it a project too big for one session. Get a map of decisions, resolved one at a time.
+subhead: Some projects are too big to hold in one chat. This skill turns a
+  loose, foggy idea into a shared map of open questions, then settles them one
+  at a time until the route is clear.
 explain: |
   Some projects are too big to hold in one chat. This skill turns a loose, foggy idea into a shared map of open questions, then settles them one at a time until the route is clear. You end up with a list of decisions made, not a pile of half-done work.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - You have a large idea and no clear first step.
   - A project is too big to fit in one AI session.
-  - Your team keeps arguing about choices that should have been settled before work began.
+  - Your team keeps arguing about choices that should have been settled before
+    work began.
   - You need a spec or a locked decision before any building starts.
 you_give:
   - A rough description of the big idea
@@ -26,6 +30,7 @@ you_get:
   - A running list of decisions so far
   - A clear hand-off point when the route is clear
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can reach your issue tracker.

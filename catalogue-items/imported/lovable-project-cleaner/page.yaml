@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks 15 known spots and fixes each one.
 new_slug: lovable-project-cleaner
 name: Lovable project cleaner
-summary: Point it at a Lovable export. Get the Lovable tags, branding and filler files removed so the project is yours.
+summary: Point it at a Lovable export. Get the Lovable tags, branding and filler
+  files removed so the project is yours.
 job: build-software
 headline: Lovable project cleaner
-subhead: Point it at a Lovable export. Get the Lovable tags, branding and filler files removed so the project is yours.
+subhead: A project export with every trace of Lovable removed, so the code reads
+  as your own before you ship or open-source it. It covers fifteen places where
+  the tool leaves marks.
 explain: |
   A project export with every trace of Lovable removed, so the code reads as your own before you ship or open-source it. It covers fifteen places where the tool leaves marks.
 
@@ -25,6 +28,7 @@ you_get:
   - Generated docs deleted
   - A final leftovers report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and change your project files.

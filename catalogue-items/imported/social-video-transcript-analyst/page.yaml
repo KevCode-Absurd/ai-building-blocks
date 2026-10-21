@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads long transcripts and pulls out the key parts.
 new_slug: social-video-transcript-analyst
 name: Social video transcript analyst
-summary: Give it video posts. Get the hooks, claims, quotes and themes pulled from what was said. Collects data from websites.
+summary: Give it video posts. Get the hooks, claims, quotes and themes pulled
+  from what was said. Collects data from websites.
 job: research-topics
 headline: Social video transcript analyst
-subhead: Give it video posts. Get the hooks, claims, quotes and themes pulled from what was said. Collects data from websites.
+subhead: The words spoken in social videos, pulled apart into hooks, claims,
+  quotes and themes you can reuse. You give video links, and the skill collects
+  the transcripts and studies what was said.
 explain: |
   The words spoken in social videos, pulled apart into hooks, claims, quotes and themes you can reuse. You give video links, and the skill collects the transcripts and studies what was said.
 
@@ -26,6 +29,7 @@ you_get:
   - Common themes across videos
   - Content ideas based on what was said
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your ScrapeCreators key.

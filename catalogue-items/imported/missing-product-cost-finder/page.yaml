@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It flags blank fields.
 new_slug: missing-product-cost-finder
 name: Missing product cost finder
-summary: Get a list of products with no cost set, so your margin and stock value reports stay right.
+summary: Get a list of products with no cost set, so your margin and stock value
+  reports stay right.
 job: run-your-store
 headline: Missing product cost finder
-subhead: Get a list of products with no cost set, so your margin and stock value reports stay right.
+subhead: A list of products in your Shopify store that have no cost, or a cost
+  of zero, so your margin and stock value reports can be trusted.
 explain: |
   A list of products in your Shopify store that have no cost, or a cost of zero, so your margin and stock value reports can be trusted. Reports built on missing costs look better than they are.
 
@@ -26,6 +28,7 @@ you_get:
   - Estimated stock value affected
   - Output as a readable list or JSON
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

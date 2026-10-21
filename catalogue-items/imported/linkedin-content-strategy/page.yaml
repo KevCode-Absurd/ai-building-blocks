@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It plans across your goals and time.
 new_slug: linkedin-content-strategy
 name: LinkedIn content strategy planner
-summary: Say your goal. Get content pillars, positioning and a posting rhythm you can keep.
+summary: Say your goal. Get content pillars, positioning and a posting rhythm
+  you can keep.
 job: grow-social
 headline: LinkedIn content strategy planner
-subhead: Say your goal. Get content pillars, positioning and a posting rhythm you can keep.
+subhead: "A LinkedIn plan you can keep: who you write for, what you stand for,
+  what you will not post about, and how often you will show up."
 explain: |
   A LinkedIn plan you can keep: who you write for, what you stand for, what you will not post about, and how often you will show up. It is a plan, not a pile of posts.
 
@@ -28,5 +30,6 @@ you_get:
   - A realistic posting rhythm
   - A newsletter decision
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

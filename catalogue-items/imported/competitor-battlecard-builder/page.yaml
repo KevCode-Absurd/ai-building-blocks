@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set tracking method and writes cards.
 new_slug: competitor-battlecard-builder
 name: Competitor battlecard builder
-summary: Name your rivals. Get a tracking plan, sales battlecards and where to position against them.
+summary: Name your rivals. Get a tracking plan, sales battlecards and where to
+  position against them.
 job: study-competitors
 headline: Competitor battlecard builder
-subhead: Name your rivals. Get a tracking plan, sales battlecards and where to position against them.
+subhead: A way to keep watch on your competitors that leads to decisions, plus
+  sales-ready battlecards you can use on calls. It stops competitor tracking
+  from turning into an endless hobby.
 explain: |
   A way to keep watch on your competitors that leads to decisions, plus sales-ready battlecards you can use on calls. It stops competitor tracking from turning into an endless hobby.
 
@@ -27,5 +30,6 @@ you_get:
   - A positioning map
   - A win and loss summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

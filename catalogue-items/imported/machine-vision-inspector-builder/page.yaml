@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Picking the right method for the problem takes care.
 new_slug: machine-vision-inspector-builder
 name: Machine vision inspector builder
-summary: Describe the inspection job. Get a system that finds defects, counts parts or measures them.
+summary: Describe the inspection job. Get a system that finds defects, counts
+  parts or measures them.
 job: build-software
 headline: Machine vision inspector builder
-subhead: Describe the inspection job. Get a system that finds defects, counts parts or measures them.
+subhead: An inspection system that finds defects, counts parts or measures them
+  from camera images, matched to your problem. It runs in MATLAB with the Visual
+  Inspection Toolbox.
 explain: |
   An inspection system that finds defects, counts parts or measures them from camera images, matched to your problem. It runs in MATLAB with the Visual Inspection Toolbox.
 
@@ -26,6 +29,7 @@ you_get:
   - Training data ideas
   - Deployment steps for your target
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the Visual Inspection Toolbox.

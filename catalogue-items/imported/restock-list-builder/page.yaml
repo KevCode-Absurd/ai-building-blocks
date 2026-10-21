@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It filters stock below a limit.
 new_slug: restock-list-builder
 name: Restock list builder
-summary: Get every product below your stock limit, grouped by supplier, as a list ready to order from.
+summary: Get every product below your stock limit, grouped by supplier, as a
+  list ready to order from.
 job: run-your-store
 headline: Restock list builder
-subhead: Get every product below your stock limit, grouped by supplier, as a list ready to order from.
+subhead: Get every product below your stock limit, grouped by supplier, as a
+  list ready to order from. Bring your Shopify store address. Use the result to
+  plan your next step.
 explain: |
   A reorder list of every product that has dropped below your stock limit, grouped by supplier, so you can send one order per vendor instead of hunting through your admin. It reads live counts from your Shopify store and changes nothing.
 
@@ -25,6 +28,7 @@ you_get:
   - Product, SKU and current count for each
   - A file you can order from
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

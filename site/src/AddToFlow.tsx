@@ -1,7 +1,7 @@
 // "Add to a workflow": from any skill, start a new workflow or open one of yours,
 // then put the steps in order, drop the ones you don't need and add the ones you do.
 import { useEffect, useMemo, useRef, useState, type DragEvent } from "react";
-import { type Block, type Catalogue, taskOf, wireSteps } from "./lib/data";
+import { type Block, type Catalogue, taskOf, wireSteps, workflowEntries } from "./lib/data";
 import { type Step, applySteps, isAutoWired, stepsOf } from "./lib/flowEdit";
 import { navigate } from "./lib/router";
 import { type Flow, flows, uid, useStore } from "./lib/store";
@@ -29,7 +29,7 @@ export default function AddToFlow({ c, slug, onClose, toast }: Props) {
   const withThis = (steps: Step[]) => (steps.some((s) => s.slug === slug) ? steps : [...steps, { id: uid(), slug, added: true }]);
   const startNew = () => setDraft({ base: null, name: `${b.name} workflow`, steps: [{ id: uid(), slug, added: true }], from: "new" });
   const openMine = (f: Flow) => setDraft({ base: f, name: f.name, steps: withThis(stepsOf(f)), from: "mine" });
-  const copyReady = (t: Block) => setDraft({ base: null, name: `My ${t.name.charAt(0).toLowerCase()}${t.name.slice(1)}`, steps: withThis(t.steps.map((s) => s.uses).filter((s) => c.bySlug[s]).map((s) => ({ id: uid(), slug: s }))), from: "ready" });
+  const copyReady = (t: Block) => setDraft({ base: null, name: `My ${t.name.charAt(0).toLowerCase()}${t.name.slice(1)}`, steps: withThis(workflowEntries(t).filter((s) => c.bySlug[s]).map((s) => ({ id: uid(), slug: s }))), from: "ready" });
 
   return (
     <dialog

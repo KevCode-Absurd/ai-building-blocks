@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It has to weigh your whole market and find gaps nobody is serving.
 new_slug: uncontested-market-finder
 name: Uncontested market finder
-summary: Describe your market. Get a strategy canvas showing what to cut, raise and add to stand apart.
+summary: Describe your market. Get a strategy canvas showing what to cut, raise
+  and add to stand apart.
 job: plan-strategy
 headline: Uncontested market finder
-subhead: Describe your market. Get a strategy canvas showing what to cut, raise and add to stand apart.
+subhead: A strategy canvas that shows where you copy your rivals and where you
+  could stand apart in a space with no fights. You see what to cut, what to
+  reduce, what to raise and what to create.
 explain: |
   A strategy canvas that shows where you copy your rivals and where you could stand apart in a space with no fights. You see what to cut, what to reduce, what to raise and what to create.
 
@@ -26,5 +29,6 @@ you_get:
   - A look at non-customers
   - A score with moves to improve it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

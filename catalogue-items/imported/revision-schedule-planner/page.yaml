@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a set spacing pattern over your dates.
 new_slug: revision-schedule-planner
 name: Revision schedule planner
-summary: List your topics and dates. Get a spaced revision schedule that brings each topic back at the right gaps.
+summary: List your topics and dates. Get a spaced revision schedule that brings
+  each topic back at the right gaps.
 job: teach-and-train
 headline: Revision schedule planner
-subhead: List your topics and dates. Get a spaced revision schedule that brings each topic back at the right gaps.
+subhead: A week-by-week revision plan that brings each topic back at gaps chosen
+  to stop it fading from memory. You get new teaching and review slots in one
+  table.
 explain: |
   A week-by-week revision plan that brings each topic back at gaps chosen to stop it fading from memory. You get new teaching and review slots in one table.
 
@@ -27,5 +30,6 @@ you_get:
   - The reasoning behind each gap
   - A final review plan before the assessment
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It groups data, then explains what changed.
 new_slug: customer-cohort-reader
 name: Customer cohort reader
-summary: Run it on your customers. Get repeat-purchase rate and revenue for each first-purchase month.
+summary: Run it on your customers. Get repeat-purchase rate and revenue for each
+  first-purchase month.
 job: run-your-store
 headline: Customer cohort reader
-subhead: Run it on your customers. Get repeat-purchase rate and revenue for each first-purchase month.
+subhead: Do customers you win in March come back more than the ones from
+  January? This groups your Shopify customers by the month of their first order
+  and shows how each group behaves afterwards.
 explain: |
   Do customers you win in March come back more than the ones from January? This groups your Shopify customers by the month of their first order and shows how each group behaves afterwards.
 
@@ -25,6 +28,7 @@ you_get:
   - Revenue per cohort by month
   - A plain summary of the best and weakest cohorts
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

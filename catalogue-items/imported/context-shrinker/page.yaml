@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It trades detail for length and must keep what matters.
 new_slug: context-shrinker
 name: Context shrinker
-summary: Give it long material and a size limit. Get a shorter version that keeps decisions, facts and open questions.
+summary: Give it long material and a size limit. Get a shorter version that
+  keeps decisions, facts and open questions.
 job: think-and-decide
 headline: Context shrinker
-subhead: Give it long material and a size limit. Get a shorter version that keeps decisions, facts and open questions.
+subhead: A shorter version of long material that still holds the decisions,
+  facts, limits and open questions you need. You set the size, and it fits the
+  text into it without dropping what matters.
 explain: |
   A shorter version of long material that still holds the decisions, facts, limits and open questions you need. You set the size, and it fits the text into it without dropping what matters.
 
@@ -26,5 +29,6 @@ you_get:
   - List of what was cut
   - Retention check against the original
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

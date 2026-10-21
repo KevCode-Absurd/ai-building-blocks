@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a standard pipeline and reads the quality results.
 new_slug: crispr-screen-hit-ranker
 name: CRISPR screen hit ranker
-summary: Give it guide read counts. Get quality checks and a ranked gene hit list with effect sizes.
+summary: Give it guide read counts. Get quality checks and a ranked gene hit
+  list with effect sizes.
 job: research-topics
 headline: CRISPR screen hit ranker
-subhead: Give it guide read counts. Get quality checks and a ranked gene hit list with effect sizes.
+subhead: A quality-checked ranked list of genes from a pooled CRISPR screen,
+  with effect sizes and false discovery rates. You see which genes truly rise or
+  fall between conditions and whether the data can be trusted.
 explain: |
   A quality-checked ranked list of genes from a pooled CRISPR screen, with effect sizes and false discovery rates. You see which genes truly rise or fall between conditions and whether the data can be trusted.
 
@@ -26,6 +29,7 @@ you_get:
   - Effect sizes and FDR
   - Commands used
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run command line tools.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts each factor into the right circle.
 new_slug: circles-of-control
 name: Control and influence circles map
-summary: Give it a big problem. Get what students control, can influence or only care about, so they act where it counts.
+summary: Give it a big problem. Get what students control, can influence or only
+  care about, so they act where it counts.
 job: teach-and-train
 headline: Control and influence circles map
-subhead: Give it a big problem. Get what students control, can influence or only care about, so they act where it counts.
+subhead: "A big problem can leave students feeling either helpless or guilty.
+  This sorts it into three rings: what they control, what they can influence,
+  and what they can only care about."
 explain: |
   A big problem can leave students feeling either helpless or guilty. This sorts it into three rings: what they control, what they can influence, and what they can only care about. Then they pick actions in the right ring.
 
@@ -26,5 +29,6 @@ you_get:
   - Notes on avoiding blame
   - A way to review what students did
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

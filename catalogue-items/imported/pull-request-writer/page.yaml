@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It summarises changes in a set format.
 new_slug: pull-request-writer
 name: Pull request writer
-summary: Give it your changes. Get a clear pull request description a reviewer can follow.
+summary: Give it your changes. Get a clear pull request description a reviewer
+  can follow.
 job: build-software
 headline: Pull request writer
-subhead: Give it your changes. Get a clear pull request description a reviewer can follow.
+subhead: "A pull request body built for fast review: one picture of the change,
+  proof it works, and a plain warning about how risky the merge is."
 explain: |
   A pull request body built for fast review: one picture of the change, proof it works, and a plain warning about how risky the merge is. Reviewers get the point in seconds.
 
@@ -26,5 +28,6 @@ you_get:
   - Before and after evidence section
   - Merge risk rating
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

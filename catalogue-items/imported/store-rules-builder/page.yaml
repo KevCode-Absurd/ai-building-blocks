@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Rule logic runs on every order, so mistakes cost money.
 new_slug: store-rules-builder
 name: Store rules builder
-summary: Say the discount, shipping or payment rule you want. Get a working Shopify Function that runs it.
+summary: Say the discount, shipping or payment rule you want. Get a working
+  Shopify Function that runs it.
 job: build-software
 headline: Store rules builder
-subhead: Say the discount, shipping or payment rule you want. Get a working Shopify Function that runs it.
+subhead: Say the discount, shipping or payment rule you want. Get a working
+  Shopify Function that runs it. Bring the rule in plain words. Use the result
+  to plan your next step.
 explain: |
   A custom rule for your Shopify checkout, written as working code. Say what you want in plain words, like 10 percent off when a cart has three of a product, hide a shipping option for large orders or block checkout for a bad cart, and get a Shopify Function that runs it.
 
@@ -26,6 +29,7 @@ you_get:
   - Setup and deploy steps
   - Test cases to try
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use the Shopify CLI.

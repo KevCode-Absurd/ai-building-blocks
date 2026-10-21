@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows official guidance but must fit your app.
 new_slug: windows-app-builder
 name: Windows app builder
-summary: Describe the Windows desktop app. Get a WinUI 3 project set up and built to Microsoft guidance.
+summary: Describe the Windows desktop app. Get a WinUI 3 project set up and
+  built to Microsoft guidance.
 job: build-software
 headline: Windows app builder
-subhead: Describe the Windows desktop app. Get a WinUI 3 project set up and built to Microsoft guidance.
+subhead: A new Windows desktop app, set up and built the way Microsoft
+  recommends for WinUI 3. You describe what the app should do and get a working
+  project instead of a blank folder and a long setup guide.
 explain: |
   A new Windows desktop app, set up and built the way Microsoft recommends for WinUI 3. You describe what the app should do and get a working project instead of a blank folder and a long setup guide.
 
@@ -27,6 +30,7 @@ you_get:
   - Design guidance for modern Windows
   - Fixes for setup problems
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code on Windows.

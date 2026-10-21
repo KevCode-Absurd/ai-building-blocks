@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It orders problems by difficulty and checks variety.
 new_slug: practice-problem-set-writer
 name: Practice problem set writer
-summary: Give it a skill. Get practice problems that rise in difficulty and vary just enough, for worksheets or homework.
+summary: Give it a skill. Get practice problems that rise in difficulty and vary
+  just enough, for worksheets or homework.
 job: teach-and-train
 headline: Practice problem set writer
-subhead: Give it a skill. Get practice problems that rise in difficulty and vary just enough, for worksheets or homework.
+subhead: A set of practice problems that start easy, grow harder step by step
+  and change just enough to build real skill. Ready for worksheets, homework or
+  tutoring.
 explain: |
   A set of practice problems that start easy, grow harder step by step and change just enough to build real skill. Ready for worksheets, homework or tutoring.
 
@@ -26,5 +29,6 @@ you_get:
   - Answer key
   - Notes on common mistakes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

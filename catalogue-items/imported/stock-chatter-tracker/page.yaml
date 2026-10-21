@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It fetches numbers and reports them side by side.
 new_slug: stock-chatter-tracker
 name: Stock chatter tracker
-summary: Give it stock tickers. Get how much Reddit, X, news and Polymarket talk about each, and whether the mood is rising.
+summary: Give it stock tickers. Get how much Reddit, X, news and Polymarket talk
+  about each, and whether the mood is rising.
 job: money-and-investing
 headline: Stock chatter tracker
-subhead: Give it stock tickers. Get how much Reddit, X, news and Polymarket talk about each, and whether the mood is rising.
+subhead: "How much people are talking about a stock, and whether the mood is
+  warming or cooling, across Reddit, X, news and Polymarket. You give tickers
+  and get a comparison: a buzz score, the share of bullish posts, mention or
+  trade counts and a trend for each source."
 explain: |
   How much people are talking about a stock, and whether the mood is warming or cooling, across Reddit, X, news and Polymarket. You give tickers and get a comparison: a buzz score, the share of bullish posts, mention or trade counts and a trend for each source.
 
@@ -27,6 +31,7 @@ you_get:
   - A trend direction
   - A side-by-side comparison of tickers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use your Adanos API key.

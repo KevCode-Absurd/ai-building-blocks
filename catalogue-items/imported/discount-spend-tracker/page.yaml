@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It adds up discount totals over time.
 new_slug: discount-spend-tracker
 name: Discount spend tracker
-summary: Pick a time range. Get total discount dollars by week or month, split by discount type and code.
+summary: Pick a time range. Get total discount dollars by week or month, split
+  by discount type and code.
 job: run-your-store
 headline: Discount spend tracker
-subhead: Pick a time range. Get total discount dollars by week or month, split by discount type and code.
+subhead: A clear total of how much money your store gave away in discounts, by
+  week, month or quarter, split by code and by type. You can see if discounting
+  is growing before it hurts margin.
 explain: |
   A clear total of how much money your store gave away in discounts, by week, month or quarter, split by code and by type. You can see if discounting is growing before it hurts margin.
 
@@ -27,6 +30,7 @@ you_get:
   - The top codes named individually
   - A trend you can compare across periods
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

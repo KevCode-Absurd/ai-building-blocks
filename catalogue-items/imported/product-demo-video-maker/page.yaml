@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans scenes and then renders them with code.
 new_slug: product-demo-video-maker
 name: Product demo video maker
-summary: Give it screenshots or a page. Get a short demo video or GIF that walks through the product.
+summary: Give it screenshots or a page. Get a short demo video or GIF that walks
+  through the product.
 job: make-images
 headline: Product demo video maker
-subhead: Give it screenshots or a page. Get a short demo video or GIF that walks through the product.
+subhead: A short demo video or GIF that walks someone through your product,
+  built from screenshots or scene notes. It is planned like a small film, with a
+  story, pacing and a clear point for every frame.
 explain: |
   A short demo video or GIF that walks someone through your product, built from screenshots or scene notes. It is planned like a small film, with a story, pacing and a clear point for every frame.
 
@@ -26,6 +29,7 @@ you_get:
   - Narration audio or text
   - Fallback files if a tool is missing
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save video files.

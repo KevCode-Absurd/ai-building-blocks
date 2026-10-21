@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It collects dated events and sorts them.
 new_slug: upcoming-events-calendar-builder
 name: Upcoming events calendar builder
-summary: Give it a list of companies. Get a dated calendar of earnings, conferences and decisions that could move them.
+summary: Give it a list of companies. Get a dated calendar of earnings,
+  conferences and decisions that could move them.
 job: money-and-investing
 headline: Upcoming events calendar builder
-subhead: Give it a list of companies. Get a dated calendar of earnings, conferences and decisions that could move them.
+subhead: Give it a list of companies. Get a dated calendar of earnings,
+  conferences and decisions that could move them. Bring a list of company names
+  or tickers. Use the result to plan your next step.
 explain: |
   A dated calendar of what could move the companies you follow: earnings, investor days, conferences, regulatory decisions, product launches and big economic releases. You see what is coming in the next two weeks, month or quarter, and where to look first.
 
@@ -26,5 +29,6 @@ you_get:
   - Fiscal quarter labels written correctly
   - A short list of weeks to watch
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs a fixed git sequence.
 new_slug: commit-and-pull-request-sender
 name: Commit and pull request sender
-summary: Say the word. Get your changes committed, pushed and opened as a GitHub pull request in one go.
+summary: Say the word. Get your changes committed, pushed and opened as a GitHub
+  pull request in one go.
 job: ship-and-host
 headline: Commit and pull request sender
-subhead: Say the word. Get your changes committed, pushed and opened as a GitHub pull request in one go.
+subhead: Say the word. Get your changes committed, pushed and opened as a GitHub
+  pull request in one go. Bring your changes in a git repo. Use the result to
+  plan your next step.
 explain: |
   Your changes get committed, pushed and opened as a GitHub pull request in one go. You say the word and review the result.
 
@@ -26,6 +29,7 @@ you_get:
   - A pushed branch
   - An open pull request with the link
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run git and the GitHub CLI.

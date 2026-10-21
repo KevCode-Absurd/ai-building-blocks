@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must spot waste in your own steps.
 new_slug: waste-reduction-planner
 name: Waste reduction planner
-summary: Describe your process. Get a map of waste, a 5S plan and quick fixes ranked by payoff.
+summary: Describe your process. Get a map of waste, a 5S plan and quick fixes
+  ranked by payoff.
 job: plan-supply-chain
 headline: Waste reduction planner
-subhead: Describe your process. Get a map of waste, a 5S plan and quick fixes ranked by payoff.
+subhead: A map of where your process wastes time, money and materials, plus a 5S
+  plan and quick fixes ranked by payoff. It uses lean methods from
+  manufacturing, but the ideas work in any repeated process.
 explain: |
   A map of where your process wastes time, money and materials, plus a 5S plan and quick fixes ranked by payoff. It uses lean methods from manufacturing, but the ideas work in any repeated process.
 
@@ -26,5 +29,6 @@ you_get:
   - Quick fixes ranked by payoff
   - Measures to track progress
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

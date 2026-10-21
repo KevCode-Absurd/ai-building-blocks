@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It chooses how deep to go.
 new_slug: data-question-answerer
 name: Data question answerer
-summary: Ask a data question. Get a quick lookup or a full analysis with the numbers and what they mean.
+summary: Ask a data question. Get a quick lookup or a full analysis with the
+  numbers and what they mean.
 job: track-numbers
 headline: Data question answerer
-subhead: Ask a data question. Get a quick lookup or a full analysis with the numbers and what they mean.
+subhead: Ask a data question. Get a quick lookup or a full analysis with the
+  numbers and what they mean. Bring your question. Use the result to plan your
+  next step.
 explain: |
   Ask a question about your data in plain words and get an answer sized to the question: a quick number, a full analysis, or a formal report with caveats.
 
@@ -26,6 +29,7 @@ you_get:
   - The query used
   - Caveats and next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and connect to your data.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It gathers data and writes a structured note.
 new_slug: stock-research-snapshot-writer
 name: Stock research snapshot writer
-summary: Name a stock. Get a note combining estimates, reported numbers, price history and the macro backdrop. It collects data from websites.
+summary: Name a stock. Get a note combining estimates, reported numbers, price
+  history and the macro backdrop. It collects data from websites.
 job: money-and-investing
 headline: Stock research snapshot writer
-subhead: Name a stock. Get a note combining estimates, reported numbers, price history and the macro backdrop. It collects data from websites.
+subhead: Name a stock. Get a note combining estimates, reported numbers, price
+  history and the macro backdrop. It collects data from websites. Bring a
+  company name or ticker. Use the result to plan your next step.
 explain: |
   A short research note on one company that ties together what analysts expect, what the company has reported, how the price has moved and what the economy is doing. Every number connects to a thesis so the note reads as an argument.
 
@@ -27,6 +30,7 @@ you_get:
   - A macro backdrop section
   - A short thesis with risks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and reach the web.

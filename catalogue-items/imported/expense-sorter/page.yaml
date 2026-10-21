@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Sorting follows clear category rules.
 new_slug: expense-sorter
 name: Expense sorter
-summary: Give it transactions. Get each sorted by category, department and tax treatment.
+summary: Give it transactions. Get each sorted by category, department and tax
+  treatment.
 job: money-and-investing
 headline: Expense sorter
-subhead: Give it transactions. Get each sorted by category, department and tax treatment.
+subhead: Give it transactions. Get each sorted by category, department and tax
+  treatment. Bring transactions with date, amount and merchant. Use the result
+  to plan your next step.
 explain: |
   A clean list of your transactions, each sorted by category, department and tax treatment, with a flag on anything the skill is unsure about.
 
@@ -27,5 +30,6 @@ you_get:
   - Totals by category and department
   - Uncertain items to review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

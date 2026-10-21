@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It orders steps by what each one depends on.
 new_slug: skill-progression-map-builder
 name: Skill progression map builder
-summary: Name a skill. Get the steps from first prerequisite to mastery, with checks to find where a student is stuck.
+summary: Name a skill. Get the steps from first prerequisite to mastery, with
+  checks to find where a student is stuck.
 job: teach-and-train
 headline: Skill progression map builder
-subhead: Name a skill. Get the steps from first prerequisite to mastery, with checks to find where a student is stuck.
+subhead: A map of steps from first prerequisite to mastery of a skill, with
+  checks to find where a student is stuck. You can teach in the right order and
+  fill gaps early.
 explain: |
   A map of steps from first prerequisite to mastery of a skill, with checks to find where a student is stuck. You can teach in the right order and fill gaps early.
 
@@ -26,5 +29,6 @@ you_get:
   - Checks for each stage
   - Notes on common stuck points
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

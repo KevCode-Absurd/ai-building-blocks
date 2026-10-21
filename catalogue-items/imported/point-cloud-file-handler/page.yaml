@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It matches each file type to a reader or writer.
 new_slug: point-cloud-file-handler
 name: Point cloud file handler
-summary: Give it a lidar file. Get it read or saved in the right format, with its point details kept.
+summary: Give it a lidar file. Get it read or saved in the right format, with
+  its point details kept.
 job: build-software
 headline: Point cloud file handler
-subhead: Give it a lidar file. Get it read or saved in the right format, with its point details kept.
+subhead: Open and save 3D lidar files without guessing which function fits which
+  format. The skill routes by file type and keeps the extra point details such
+  as class, time and scan angle.
 explain: |
   Open and save 3D lidar files without guessing which function fits which format. The skill routes by file type and keeps the extra point details such as class, time and scan angle.
 
@@ -25,6 +28,7 @@ you_get:
   - A saved file in the new format
   - The right reader for your format
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the Lidar Toolbox.

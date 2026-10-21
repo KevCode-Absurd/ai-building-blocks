@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a fixed lesson order and fills in each part.
 new_slug: direct-teaching-lesson-builder
 name: Direct teaching lesson builder
-summary: Give it a skill. Get a lesson that moves from you showing it, to practice together, to practice alone.
+summary: Give it a skill. Get a lesson that moves from you showing it, to
+  practice together, to practice alone.
 job: teach-and-train
 headline: Direct teaching lesson builder
-subhead: Give it a skill. Get a lesson that moves from you showing it, to practice together, to practice alone.
+subhead: A lesson plan where the teacher shows the skill first, the class tries
+  it together next, and then each learner does it alone. This gradual hand-over,
+  backed by research on explicit instruction, helps new skills stick.
 explain: |
   A lesson plan where the teacher shows the skill first, the class tries it together next, and then each learner does it alone. This gradual hand-over, backed by research on explicit instruction, helps new skills stick.
 
@@ -27,5 +30,6 @@ you_get:
   - Independent practice tasks
   - Quick checks for understanding
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

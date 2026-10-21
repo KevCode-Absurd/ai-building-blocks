@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It designs questions and reads patterns in answers.
 new_slug: employee-survey-designer
 name: Employee survey designer
-summary: Say what you want to learn. Get survey questions, a focus group guide, a result reading and an action plan.
+summary: Say what you want to learn. Get survey questions, a focus group guide,
+  a result reading and an action plan.
 job: hire-people
 headline: Employee survey designer
-subhead: Say what you want to learn. Get survey questions, a focus group guide, a result reading and an action plan.
+subhead: "A listening plan for your people: survey questions, a focus group
+  guide, a way to read results and an action plan. Say what you want to learn,
+  and you get instruments you can use this month."
 explain: |
   A listening plan for your people: survey questions, a focus group guide, a way to read results and an action plan. Say what you want to learn, and you get instruments you can use this month.
 
@@ -26,5 +29,6 @@ you_get:
   - A reading of results
   - An action plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

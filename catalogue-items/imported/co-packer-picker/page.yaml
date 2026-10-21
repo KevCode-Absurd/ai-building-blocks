@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scores outside makers on cost, quality and fit.
 new_slug: co-packer-picker
 name: Co-packer picker
-summary: Tell it what you need made or packed. Get a way to pick a co-packer and a plan to manage the deal.
+summary: Tell it what you need made or packed. Get a way to pick a co-packer and
+  a plan to manage the deal.
 job: plan-supply-chain
 headline: Co-packer picker
-subhead: Tell it what you need made or packed. Get a way to pick a co-packer and a plan to manage the deal.
+subhead: A clear way to choose a contract manufacturer, and a plan to run the
+  deal once you sign. It helps you avoid picking on price alone and finding out
+  about quality problems after launch.
 explain: |
   A clear way to choose a contract manufacturer, and a plan to run the deal once you sign. It helps you avoid picking on price alone and finding out about quality problems after launch.
 
@@ -26,5 +29,6 @@ you_get:
   - Questions to ask each candidate
   - A plan to manage the relationship
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

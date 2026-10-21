@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares parts to find mismatches.
 new_slug: design-system-auditor
 name: Design system auditor
-summary: Point it at your components. Get naming and hardcoded value problems, docs for variants, or a new pattern.
+summary: Point it at your components. Get naming and hardcoded value problems,
+  docs for variants, or a new pattern.
 job: design-work
 headline: Design system auditor
-subhead: Point it at your components. Get naming and hardcoded value problems, docs for variants, or a new pattern.
+subhead: A check of how consistent your components are, in one of three modes.
+  Audit finds naming problems and hardcoded values. Document writes up a
+  component with its variants.
 explain: |
   A check of how consistent your components are, in one of three modes. Audit finds naming problems and hardcoded values. Document writes up a component with its variants. Extend designs a new pattern that fits what you already have.
 
@@ -25,6 +28,7 @@ you_get:
   - Design for a new pattern
   - Fixes for naming and tokens
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open Figma or code files.

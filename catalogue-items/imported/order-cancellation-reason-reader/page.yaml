@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Reasons are logged by hand and can be messy.
 new_slug: order-cancellation-reason-reader
 name: Order cancellation reason reader
-summary: Get your cancellation rate over time and why orders were cancelled, such as fraud, stock or declined payment.
+summary: Get your cancellation rate over time and why orders were cancelled,
+  such as fraud, stock or declined payment.
 job: run-your-store
 headline: Order cancellation reason reader
-subhead: Get your cancellation rate over time and why orders were cancelled, such as fraud, stock or declined payment.
+subhead: "Know how many orders you lose and why. You get a cancellation rate
+  over time, split by reason: customer request, fraud, stock problems, declined
+  payment, staff or other."
 explain: |
   Know how many orders you lose and why. You get a cancellation rate over time, split by reason: customer request, fraud, stock problems, declined payment, staff or other.
 
@@ -27,6 +30,7 @@ you_get:
   - Spikes and shifts flagged
   - A readable table or JSON
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a short upload path and builds one link.
 new_slug: matlab-code-sharer
 name: MATLAB code sharer
-summary: Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive, plus an Open in MATLAB Online link.
+summary: Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive,
+  plus an Open in MATLAB Online link.
 job: ship-and-host
 headline: MATLAB code sharer
-subhead: Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive, plus an Open in MATLAB Online link.
+subhead: Your MATLAB files online, with a link that opens them in MATLAB Online
+  in one click. Anyone you send it to can run your code without installing
+  anything.
 explain: |
   Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can run your code without installing anything.
 
@@ -25,6 +28,7 @@ you_get:
   - A README badge (optional)
   - Upload steps in plain words
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB and use the GitHub tool.

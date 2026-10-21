@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It studies the site, then fills a set file format.
 new_slug: llms-txt-writer
 name: llms.txt writer
-summary: Give it your site. Get an llms.txt file that tells AI tools which pages and facts matter most.
+summary: Give it your site. Get an llms.txt file that tells AI tools which pages
+  and facts matter most.
 job: get-found-in-search
 headline: llms.txt writer
-subhead: Give it your site. Get an llms.txt file that tells AI tools which pages and facts matter most.
+subhead: An llms.txt file for your site, a plain list that tells AI tools which
+  pages and facts matter most. You choose what they see first instead of letting
+  them guess.
 explain: |
   An llms.txt file for your site, a plain list that tells AI tools which pages and facts matter most. You choose what they see first instead of letting them guess.
 
@@ -27,6 +30,7 @@ you_get:
   - Placement steps for your site
   - A check of an existing file
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open web pages.

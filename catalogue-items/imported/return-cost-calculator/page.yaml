@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Costs are estimates built from several sources.
 new_slug: return-cost-calculator
 name: Return cost calculator
-summary: "Get the true cost of returns by reason and product: refunds, shipping lost and written-off stock."
+summary: "Get the true cost of returns by reason and product: refunds, shipping
+  lost and written-off stock."
 job: run-your-store
 headline: Return cost calculator
-subhead: "Get the true cost of returns by reason and product: refunds, shipping lost and written-off stock."
+subhead: "The real cost of your returns, not only the refund amount. You see
+  what each return reason and each product costs you in refunds, lost shipping
+  income, written-off stock and handling time."
 explain: |
   The real cost of your returns, not only the refund amount. You see what each return reason and each product costs you in refunds, lost shipping income, written-off stock and handling time.
 
@@ -27,6 +30,7 @@ you_get:
   - Refund, shipping and stock loss totals
   - A ranked list of what to fix first
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

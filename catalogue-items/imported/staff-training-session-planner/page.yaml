@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It balances time, activities and goals.
 new_slug: staff-training-session-planner
 name: Staff training session planner
-summary: Give it a training goal. Get a session plan for teachers that uses adult learning methods.
+summary: Give it a training goal. Get a session plan for teachers that uses
+  adult learning methods.
 job: teach-and-train
 headline: Staff training session planner
-subhead: Give it a training goal. Get a session plan for teachers that uses adult learning methods.
+subhead: A teacher training session plan built on how adults actually learn.
+  Give it the topic, who is attending and how long you have. The skill draws on
+  research on effective teacher development, including work by Timperley,
+  Darling-Hammond and Desimone.
 explain: |
   A teacher training session plan built on how adults actually learn. Give it the topic, who is attending and how long you have. The skill draws on research on effective teacher development, including work by Timperley, Darling-Hammond and Desimone.
 
@@ -28,5 +32,6 @@ you_get:
   - A follow-up plan
   - Evidence behind the design
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

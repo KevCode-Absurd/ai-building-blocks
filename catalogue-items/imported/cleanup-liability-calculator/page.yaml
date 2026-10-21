@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows accounting rules with a few judgment calls.
 new_slug: cleanup-liability-calculator
 name: Cleanup cost liability calculator
-summary: Give it an asset and its cleanup cost. Get the liability, yearly interest cost and journal entries worked out.
+summary: Give it an asset and its cleanup cost. Get the liability, yearly
+  interest cost and journal entries worked out.
 job: money-and-investing
 headline: Cleanup cost liability calculator
-subhead: Give it an asset and its cleanup cost. Get the liability, yearly interest cost and journal entries worked out.
+subhead: If you must clean up or remove an asset later, the cost counts today.
+  You give the asset and the estimated cleanup cost, and you get the liability,
+  the yearly interest cost and the journal entries for each year.
 explain: |
   If you must clean up or remove an asset later, the cost counts today. You give the asset and the estimated cleanup cost, and you get the liability, the yearly interest cost and the journal entries for each year.
 
@@ -27,5 +30,6 @@ you_get:
   - Depreciation of the added cost
   - Journal entries including settlement
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

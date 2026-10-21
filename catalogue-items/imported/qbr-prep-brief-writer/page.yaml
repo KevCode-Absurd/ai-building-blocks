@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs mixed signs of how the account is doing.
 new_slug: qbr-prep-brief-writer
 name: QBR prep brief writer
-summary: Name a customer. Get a health read with risk signs, value delivered and an agenda for the review.
+summary: Name a customer. Get a health read with risk signs, value delivered and
+  an agenda for the review.
 job: sell-and-negotiate
 headline: QBR prep brief writer
-subhead: Name a customer. Get a health read with risk signs, value delivered and an agenda for the review.
+subhead: Name a customer and get a plain read on how healthy the account is,
+  plus a prep brief for the quarterly business review. The brief shows risk
+  signs, the value you delivered, and a proposed agenda for the meeting.
 explain: |
   Name a customer and get a plain read on how healthy the account is, plus a prep brief for the quarterly business review. The brief shows risk signs, the value you delivered, and a proposed agenda for the meeting.
 
@@ -25,6 +28,7 @@ you_get:
   - Trend against the last quarter
   - Meeting agenda and next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your CRM, email and calendar.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a system first, then builds it.
 new_slug: interface-builder
 name: Interface builder
-summary: Describe the screens. Get responsive, accessible components with a design system and dark mode.
+summary: Describe the screens. Get responsive, accessible components with a
+  design system and dark mode.
 job: build-websites
 headline: Interface builder
-subhead: Describe the screens. Get responsive, accessible components with a design system and dark mode.
+subhead: Responsive, accessible interface components with a design system behind
+  them and dark mode that works, built from your description of the screens.
+  Output is code in the framework you use, such as React with Tailwind.
 explain: |
   Responsive, accessible interface components with a design system behind them and dark mode that works, built from your description of the screens. Output is code in the framework you use, such as React with Tailwind.
 
@@ -27,6 +30,7 @@ you_get:
   - Accessible markup
   - Dark mode styles
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

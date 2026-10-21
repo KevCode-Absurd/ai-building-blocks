@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It detects the stack and fills a known pattern.
 new_slug: build-pipeline-writer
 name: Build pipeline writer
-summary: Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages.
+summary: Point it at your project. Get a CI/CD pipeline file for your stack with
+  test and deploy stages.
 job: ship-and-host
 headline: Build pipeline writer
-subhead: Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages.
+subhead: Point it at your project. Get a CI/CD pipeline file for your stack with
+  test and deploy stages. Bring your project folder. Use the result to plan your
+  next step.
 explain: |
   A CI/CD pipeline file written for the stack your project really uses, with test, build and deploy stages, ready to commit.
 
@@ -25,6 +28,7 @@ you_get:
   - Caching and matrix settings
   - A pre-merge checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a standard monthly planning cycle.
 new_slug: demand-supply-meeting
 name: Monthly demand and supply meeting planner
-summary: Give it your forecast and capacity. Get a monthly meeting agenda, gap list and decisions that need an owner.
+summary: Give it your forecast and capacity. Get a monthly meeting agenda, gap
+  list and decisions that need an owner.
 job: plan-supply-chain
 headline: Monthly demand and supply meeting planner
-subhead: Give it your forecast and capacity. Get a monthly meeting agenda, gap list and decisions that need an owner.
+subhead: Give it your forecast and capacity. Get a monthly meeting agenda, gap
+  list and decisions that need an owner. Bring demand forecast. Use the result
+  to plan your next step.
 explain: |
   A monthly planning meeting that gets sales, operations and finance agreeing on one plan. You give it your forecast and capacity, and you get an agenda, a list of gaps between demand and supply, and decisions that each need a named owner.
 
@@ -26,5 +29,6 @@ you_get:
   - Decisions with owners
   - Measures to track
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It probes every branch of a plan.
 new_slug: design-interviewer
 name: Design interviewer
-summary: Give it a plan. Get tough questions until it holds, plus a glossary and decision records.
+summary: Give it a plan. Get tough questions until it holds, plus a glossary and
+  decision records.
 job: think-and-decide
 headline: Design interviewer
-subhead: Give it a plan. Get tough questions until it holds, plus a glossary and decision records.
+subhead: Your plan, questioned until it holds. Give it a design or proposal and
+  it asks hard questions one at a time, branch by branch, until the weak parts
+  show.
 explain: |
   Your plan, questioned until it holds. Give it a design or proposal and it asks hard questions one at a time, branch by branch, until the weak parts show. You finish with a shared glossary and written records of the decisions you made.
 
@@ -25,5 +28,6 @@ you_get:
   - Decision records
   - List of open problems
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

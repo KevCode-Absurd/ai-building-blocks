@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a template, then writes and tests the Actor code.
 new_slug: apify-actor-builder
 name: Apify Actor builder
-summary: Describe the task to automate. Get an Apify Actor project with inputs, outputs and deploy steps. Needs a paid Apify account.
+summary: Describe the task to automate. Get an Apify Actor project with inputs,
+  outputs and deploy steps. Needs a paid Apify account.
 job: build-software
 headline: Apify Actor builder
-subhead: Describe the task to automate. Get an Apify Actor project with inputs, outputs and deploy steps. Needs a paid Apify account.
+subhead: Describe the task to automate. Get an Apify Actor project with inputs,
+  outputs and deploy steps. Needs a paid Apify account. Bring the task to
+  automate. Use the result to plan your next step.
 explain: |
   A ready Apify Actor project for a task you want to automate, such as scraping a site or processing data, with its inputs, outputs and deploy steps in place. You need an Apify account, which is paid.
 
@@ -26,6 +29,7 @@ you_get:
   - Run and test commands
   - Deploy steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use the Apify command line tool.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It pulls text from order fields.
 new_slug: gift-message-collector
 name: Gift message collector
-summary: Run it on recent orders. Get gift messages, recipients and gift flags in one list for packing slips.
+summary: Run it on recent orders. Get gift messages, recipients and gift flags
+  in one list for packing slips.
 job: run-your-store
 headline: Gift message collector
-subhead: Run it on recent orders. Get gift messages, recipients and gift flags in one list for packing slips.
+subhead: Every gift note for your open orders on one sheet, ready for the
+  packing table. It scans recent unfulfilled Shopify orders and pulls out gift
+  messages, recipient names and gift flags from custom fields and order notes.
 explain: |
   Every gift note for your open orders on one sheet, ready for the packing table. It scans recent unfulfilled Shopify orders and pulls out gift messages, recipient names and gift flags from custom fields and order notes.
 
@@ -26,6 +29,7 @@ you_get:
   - Gift flags per order
   - A file ready for packing slips
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

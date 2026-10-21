@@ -29,11 +29,13 @@ export default function Globe() {
     const host = canvas.parentElement!;
     const ctx = canvas.getContext("2d")!;
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const touch = matchMedia("(hover: none)").matches;
 
     // Even points on a sphere; east is to the right when longitude 0 faces you.
     const pts: Pt[] = [];
-    for (let i = 0; i < N; i++) {
-      const y = 1 - (2 * (i + 0.5)) / N;
+    const pointCount = touch ? 3600 : N;
+    for (let i = 0; i < pointCount; i++) {
+      const y = 1 - (2 * (i + 0.5)) / pointCount;
       const r = Math.sqrt(1 - y * y);
       const t = i * Math.PI * (3 - Math.sqrt(5));
       const x = Math.cos(t) * r, z = Math.sin(t) * r;
@@ -115,7 +117,7 @@ export default function Globe() {
         }
         if (k > 0.02 && Math.random() < k * 0.12 * dt * 60) { p.c = p.c === "0" ? "1" : "0"; p.glow = Math.max(p.glow, 0.6); }
         const band = Math.min(3, Math.floor(z * 4));
-        const colour = hov * 0.7 + k > 0.18;
+        const colour = hov * 0.7 + k > 0.18 || (touch && !still && p.glow > 0.8);
         const s = sprite(p.c, band, colour ? Math.floor(((p.hue + shift) % 360) / 15) : -1);
         const scale = 1 + 0.7 * k;
         ctx.globalAlpha = Math.min(0.95, 0.06 + 0.46 * z * z + p.glow * 0.45 + k * 0.6 + (colour ? hov * 0.12 : 0));
@@ -126,6 +128,11 @@ export default function Globe() {
     };
 
     const tick = (now: number) => {
+      // Idle decoration needs fewer frames than active pointer feedback, especially on phones.
+      if (!still && !drag && !hovTarget && !tapFade && now - last < (touch ? 1000 / 24 : 1000 / 30) - 1) {
+        raf = visible && !document.hidden ? requestAnimationFrame(tick) : 0;
+        return;
+      }
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       if (!drag) {

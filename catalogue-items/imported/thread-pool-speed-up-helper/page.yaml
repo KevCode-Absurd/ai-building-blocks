@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It tests whether code is safe for threads before switching.
 new_slug: thread-pool-speed-up-helper
 name: Thread pool speed-up helper
-summary: Give it slow local parallel code. Get it switched to a thread pool and timed to prove the gain.
+summary: Give it slow local parallel code. Get it switched to a thread pool and
+  timed to prove the gain.
 job: build-software
 headline: Thread pool speed-up helper
-subhead: Give it slow local parallel code. Get it switched to a thread pool and timed to prove the gain.
+subhead: Give it slow local parallel code. Get it switched to a thread pool and
+  timed to prove the gain. Bring your MATLAB parallel code. Use the result to
+  plan your next step.
 explain: |
   MATLAB code that runs in parallel on your own computer often barely beats a plain loop, because data gets copied between worker processes. Switching to a thread pool removes much of that copying, and your existing parfor, parfeval or spmd code needs no rewrite.
 
@@ -26,6 +29,7 @@ you_get:
   - A fallback plan if threads are unsupported
   - A setting to make Threads your default
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB.

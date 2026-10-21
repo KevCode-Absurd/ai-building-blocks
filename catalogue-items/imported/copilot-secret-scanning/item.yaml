@@ -1,0 +1,32 @@
+slug: copilot-secret-scanning
+name: GitHub secret protection setter
+summary: Share your repo setup. Get secret scanning and push protection configured, with an alert response plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/secret-scanning
+  url: https://github.com/github/awesome-copilot/tree/main/skills/secret-scanning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: secret-scanning
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: secret-scanning skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/secret-scanning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

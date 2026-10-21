@@ -2,10 +2,13 @@ thinking: high
 thinking_why: A careless demand can hurt your case, so it checks what you may admit.
 new_slug: demand-letter-drafter
 name: Demand letter drafter
-summary: Give it your finished fact sheet. Get a demand letter draft and a send checklist. A first draft, not legal advice.
+summary: Give it your finished fact sheet. Get a demand letter draft and a send
+  checklist. A first draft, not legal advice.
 job: check-contracts
 headline: Demand letter drafter
-subhead: Give it your finished fact sheet. Get a demand letter draft and a send checklist. A first draft, not legal advice.
+subhead: A demand letter draft and a checklist for after you send it, built from
+  a finished fact sheet. It refuses to start if the fact sheet is missing, since
+  the care is in what comes before the writing.
 explain: |
   A demand letter draft and a checklist for after you send it, built from a finished fact sheet. It refuses to start if the fact sheet is missing, since the care is in what comes before the writing.
 
@@ -27,7 +30,11 @@ you_get:
   - Post-send checklist
   - Notes on quotes to verify
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your saved legal setup notes and make Word files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can read your saved legal setup notes and make
+    Word files.
+  - Where the skill points to /litigation-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

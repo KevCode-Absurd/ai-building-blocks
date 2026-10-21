@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It gathers public pages and compares them.
 new_slug: competitor-messaging-comparer
 name: Competitor messaging comparer
-summary: Name your rivals. Get a messaging and positioning comparison with content gaps. Reads public web pages.
+summary: Name your rivals. Get a messaging and positioning comparison with
+  content gaps. Reads public web pages.
 job: study-competitors
 headline: Competitor messaging comparer
-subhead: Name your rivals. Get a messaging and positioning comparison with content gaps. Reads public web pages.
+subhead: A side by side look at how your rivals describe themselves, what
+  content they publish and where they have gone quiet. You can see which claims
+  are crowded and which message nobody owns.
 explain: |
   A side by side look at how your rivals describe themselves, what content they publish and where they have gone quiet. You can see which claims are crowded and which message nobody owns.
 
@@ -26,6 +29,7 @@ you_get:
   - Recent news and launches
   - A list of gaps to use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web.

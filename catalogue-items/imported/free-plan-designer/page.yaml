@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Limits and pricing trade off against each other.
 new_slug: free-plan-designer
 name: Free plan designer
-summary: Describe your product. Get a free tier with limits that win paid users without anger or abuse.
+summary: Describe your product. Get a free tier with limits that win paid users
+  without anger or abuse.
 job: plan-strategy
 headline: Free plan designer
-subhead: Describe your product. Get a free tier with limits that win paid users without anger or abuse.
+subhead: A free tier for a developer product with limits that let people build
+  real things and still lead many of them to pay. It avoids both stingy limits
+  and ones that invite abuse.
 explain: |
   A free tier for a developer product with limits that let people build real things and still lead many of them to pay. It avoids both stingy limits and ones that invite abuse.
 
@@ -28,5 +31,6 @@ you_get:
   - Upgrade trigger points
   - Metrics to track
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

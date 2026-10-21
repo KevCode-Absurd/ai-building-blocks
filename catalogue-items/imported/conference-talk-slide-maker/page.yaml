@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It turns a long paper into a short talk.
 new_slug: conference-talk-slide-maker
 name: Conference talk slide maker
-summary: Give it your finished paper. Get talk slides, speaker notes and a script for a conference talk.
+summary: Give it your finished paper. Get talk slides, speaker notes and a
+  script for a conference talk.
 job: research-topics
 headline: Conference talk slide maker
-subhead: Give it your finished paper. Get talk slides, speaker notes and a script for a conference talk.
+subhead: Give it your finished paper. Get talk slides, speaker notes and a
+  script for a conference talk. Bring your compiled research paper. Use the
+  result to plan your next step.
 explain: |
   Talk slides, speaker notes and a script made from your finished research paper, so you do not rebuild the story from scratch before a conference. You pick the talk type and the slide count follows.
 
@@ -26,6 +29,7 @@ you_get:
   - Speaker notes
   - A talk script
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and LaTeX, and read your paper.

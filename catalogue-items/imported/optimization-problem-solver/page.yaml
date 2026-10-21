@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Solver choice and result checks need careful judgment.
 new_slug: optimization-problem-solver
 name: Optimization problem solver
-summary: Describe what to minimise and your limits. Get the problem set up, solved and the result checked.
+summary: Describe what to minimise and your limits. Get the problem set up,
+  solved and the result checked.
 job: build-software
 headline: Optimization problem solver
-subhead: Describe what to minimise and your limits. Get the problem set up, solved and the result checked.
+subhead: MATLAB code for an optimisation problem that is set up properly, solved
+  with a suitable solver and checked before you trust it. It avoids common traps
+  like the wrong method or a bad stop.
 explain: |
   MATLAB code for an optimisation problem that is set up properly, solved with a suitable solver and checked before you trust it. It avoids common traps like the wrong method or a bad stop.
 
@@ -27,6 +30,7 @@ you_get:
   - The solution
   - A check of convergence and constraint satisfaction
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the Optimization Toolbox.

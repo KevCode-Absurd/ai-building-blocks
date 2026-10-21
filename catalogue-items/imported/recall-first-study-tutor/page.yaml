@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It reads your recall before it explains.
 new_slug: recall-first-study-tutor
 name: Recall-first study tutor
-summary: Write what you remember and rate your confidence first. Your AI then fills gaps instead of repeating what you know.
+summary: Write what you remember and rate your confidence first. Your AI then
+  fills gaps instead of repeating what you know.
 job: teach-and-train
 headline: Recall-first study tutor
-subhead: Write what you remember and rate your confidence first. Your AI then fills gaps instead of repeating what you know.
+subhead: A study helper that makes you try first. You write what you remember
+  and rate how sure you are, and only then does your AI fill the gaps.
 explain: |
   A study helper that makes you try first. You write what you remember and rate how sure you are, and only then does your AI fill the gaps. This beats rereading, because pulling facts from memory is what makes them stick.
 
@@ -26,5 +28,6 @@ you_get:
   - Explanation of only what you missed
   - Short retrieval quiz
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

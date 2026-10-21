@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set design system but makes many layout choices.
 new_slug: interactive-visual-builder
 name: Interactive visual builder
-summary: Describe what to show. Get a chart, diagram or explainer with sliders and toggles, ready to open in a browser.
+summary: Describe what to show. Get a chart, diagram or explainer with sliders
+  and toggles, ready to open in a browser.
 job: design-work
 headline: Interactive visual builder
-subhead: Describe what to show. Get a chart, diagram or explainer with sliders and toggles, ready to open in a browser.
+subhead: A diagram, chart or explainer that you can click and drag, with sliders
+  and toggles, ready to open in a browser. It picks the right type of visual
+  from the way you phrase the request.
 explain: |
   A diagram, chart or explainer that you can click and drag, with sliders and toggles, ready to open in a browser. It picks the right type of visual from the way you phrase the request.
 
@@ -26,6 +29,7 @@ you_get:
   - Controls like sliders and toggles
   - A page you can open in a browser
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can open a browser.

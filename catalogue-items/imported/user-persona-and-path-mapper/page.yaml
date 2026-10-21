@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It builds personas from what people said.
 new_slug: user-persona-and-path-mapper
 name: User persona and path mapper
-summary: Give it your research notes. Get personas, a path map and a usability test plan.
+summary: Give it your research notes. Get personas, a path map and a usability
+  test plan.
 job: understand-customers
 headline: User persona and path mapper
-subhead: Give it your research notes. Get personas, a path map and a usability test plan.
+subhead: Give it your research notes. Get personas, a path map and a usability
+  test plan. Bring user data or interview notes. Use the result to plan your
+  next step.
 explain: |
   Your research notes turned into three working tools: personas that match real people, a map of what they go through, and a plan to test your design with them. Your team gets the same picture of who you are building for.
 
@@ -26,6 +29,7 @@ you_get:
   - A usability test plan
   - A summary of research themes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches by rule and drafts entries.
 new_slug: intercompany-balance-matcher
 name: Intercompany balance matcher
-summary: Give it each entity's balances. Get mismatches found, settlement netted and elimination entries drafted.
+summary: Give it each entity's balances. Get mismatches found, settlement netted
+  and elimination entries drafted.
 job: money-and-investing
 headline: Intercompany balance matcher
-subhead: Give it each entity's balances. Get mismatches found, settlement netted and elimination entries drafted.
+subhead: Your group's internal balances matched across entities, with each
+  mismatch traced, settlements netted and elimination entries drafted. That
+  clears the way for a clean consolidation at month end.
 explain: |
   Your group's internal balances matched across entities, with each mismatch traced, settlements netted and elimination entries drafted. That clears the way for a clean consolidation at month end.
 
@@ -27,5 +30,6 @@ you_get:
   - Draft elimination entries
   - Notes on pricing and agreements
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

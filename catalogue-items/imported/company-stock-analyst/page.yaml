@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Judging a company needs many factors weighed.
 new_slug: company-stock-analyst
 name: Company stock analyst
-summary: Name a listed company. Get a sector-relative review of its numbers, strengths and risks.
+summary: Name a listed company. Get a sector-relative review of its numbers,
+  strengths and risks.
 job: money-and-investing
 headline: Company stock analyst
-subhead: Name a listed company. Get a sector-relative review of its numbers, strengths and risks.
+subhead: Name a listed company. Get a sector-relative review of its numbers,
+  strengths and risks. Bring the company name or ticker. Use the result to plan
+  your next step.
 explain: |
   A written review of one listed company that judges its numbers against the right peers, not a random firm in another industry. A 20 percent margin means different things in software and in distribution, so the review checks the sector first.
 
@@ -26,6 +29,7 @@ you_get:
   - A list of strengths and risks
   - Gaps clearly marked
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web for company data.

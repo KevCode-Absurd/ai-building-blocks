@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows set steps but must judge what looks unusual.
 new_slug: unusual-transaction-finder
 name: Unusual transaction finder
-summary: Give it a large set of transactions. Get the odd ones flagged, with a short reason for each.
+summary: Give it a large set of transactions. Get the odd ones flagged, with a
+  short reason for each.
 job: money-and-investing
 headline: Unusual transaction finder
-subhead: Give it a large set of transactions. Get the odd ones flagged, with a short reason for each.
+subhead: "Hidden in thousands of payments, a few look wrong: a duplicate, a rare
+  amount, a strange hour. This skill finds them and gives each one a risk score
+  and a short reason, so you review a handful of rows instead of the whole
+  file."
 explain: |
   Hidden in thousands of payments, a few look wrong: a duplicate, a rare amount, a strange hour. This skill finds them and gives each one a risk score and a short reason, so you review a handful of rows instead of the whole file.
 
@@ -26,6 +30,7 @@ you_get:
   - The factors that drove the scores
   - Python code to rerun on larger files
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your files.

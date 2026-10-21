@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It diagnoses a business from a chat.
 new_slug: amazon-cost-cutting-advisor
 name: Amazon cost cutting advisor
-summary: Tell it how you source and ship. Get the biggest cost bottlenecks and ways to cut them.
+summary: Tell it how you source and ship. Get the biggest cost bottlenecks and
+  ways to cut them.
 job: run-your-store
 headline: Amazon cost cutting advisor
-subhead: Tell it how you source and ship. Get the biggest cost bottlenecks and ways to cut them.
+subhead: Find the biggest cost leaks in how you source and ship Amazon stock,
+  and get ways to cut them. You just describe your situation in a sentence or
+  two, and no account links or data feeds are needed.
 explain: |
   Find the biggest cost leaks in how you source and ship Amazon stock, and get ways to cut them. You just describe your situation in a sentence or two, and no account links or data feeds are needed.
 
@@ -26,5 +29,6 @@ you_get:
   - Cost reduction ideas for each
   - Suggested next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

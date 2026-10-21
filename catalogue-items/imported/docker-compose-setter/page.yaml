@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Compose files follow a clear, known structure.
 new_slug: docker-compose-setter
 name: Docker Compose setter
-summary: Describe your app services. Get a Docker Compose setup with networks, volumes and settings.
+summary: Describe your app services. Get a Docker Compose setup with networks,
+  volumes and settings.
 job: ship-and-host
 headline: Docker Compose setter
-subhead: Describe your app services. Get a Docker Compose setup with networks, volumes and settings.
+subhead: Describe your app services. Get a Docker Compose setup with networks,
+  volumes and settings. Bring the services your app needs. Use the result to
+  plan your next step.
 explain: |
   A Docker Compose setup for your multi-service app, with networks, saved data and health checks, so everything starts together in the right order.
 
@@ -27,6 +30,7 @@ you_get:
   - An override file per environment
   - A short run guide
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

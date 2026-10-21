@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It lays out content you already approved, then runs set checks.
 new_slug: research-poster-builder
 name: Research poster builder
-summary: Give it your approved text and images. Get an editable PowerPoint poster at print size, checked for access and file safety.
+summary: Give it your approved text and images. Get an editable PowerPoint
+  poster at print size, checked for access and file safety.
 job: work-with-files
 headline: Research poster builder
-subhead: Give it your approved text and images. Get an editable PowerPoint poster at print size, checked for access and file safety.
+subhead: Give it your approved text and images. Get an editable PowerPoint
+  poster at print size, checked for access and file safety. Bring approved
+  poster text. Use the result to plan your next step.
 explain: |
   An editable PowerPoint poster at print size, built only from text and images you approved, and checked for accessibility and file safety. You can still change it in PowerPoint afterward.
 
@@ -27,6 +30,7 @@ you_get:
   - Record of the approved content
   - List of unresolved items
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

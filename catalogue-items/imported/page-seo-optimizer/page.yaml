@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks a set list of factors on the page.
 new_slug: page-seo-optimizer
 name: Page SEO optimizer
-summary: Give it a web page. Get on-page, speed and structured data fixes to rank better.
+summary: Give it a web page. Get on-page, speed and structured data fixes to
+  rank better.
 job: get-found-in-search
 headline: Page SEO optimizer
-subhead: Give it a web page. Get on-page, speed and structured data fixes to rank better.
+subhead: A page-by-page search report with exact code changes, sorted from most
+  to least important. Give it a web address and a target keyword and it tells
+  you what is holding the page back.
 explain: |
   A page-by-page search report with exact code changes, sorted from most to least important. Give it a web address and a target keyword and it tells you what is holding the page back.
 
@@ -25,6 +28,7 @@ you_get:
   - Structured data code
   - Speed and internal-link advice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: soft-shadow-style-guide-writer
 name: Soft shadow style guide writer
-summary: Describe your product. Get a style guide for a soft, pressed-in look, with shadow rules and contrast fixes.
+summary: Describe your product. Get a style guide for a soft, pressed-in look,
+  with shadow rules and contrast fixes.
 job: design-work
 headline: Soft shadow style guide writer
-subhead: Describe your product. Get a style guide for a soft, pressed-in look, with shadow rules and contrast fixes.
+subhead: A style guide for a soft, pressed-in interface, where buttons and cards
+  look gently raised or sunk into the page. You describe your product, and the
+  skill writes the shadow rules and the contrast fixes that keep it usable.
 explain: |
   A style guide for a soft, pressed-in interface, where buttons and cards look gently raised or sunk into the page. You describe your product, and the skill writes the shadow rules and the contrast fixes that keep it usable.
 
@@ -26,5 +29,6 @@ you_get:
   - Contrast and focus fixes
   - Rules for pressed, raised and disabled states
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

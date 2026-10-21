@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs one command per step from a reference list.
 new_slug: obsidian-vault-manager
 name: Obsidian vault manager
-summary: Tell it what to find, add or change in your vault. Get notes read, created and searched from the command line.
+summary: Tell it what to find, add or change in your vault. Get notes read,
+  created and searched from the command line.
 job: organise-work
 headline: Obsidian vault manager
-subhead: Tell it what to find, add or change in your vault. Get notes read, created and searched from the command line.
+subhead: Run your Obsidian vault from the command line, in plain words. You say
+  what to find, create or change, and the skill turns it into the right command
+  for the running app.
 explain: |
   Run your Obsidian vault from the command line, in plain words. You say what to find, create or change, and the skill turns it into the right command for the running app.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - You want to create ten notes from a list without clicking through the app.
   - You need to search your vault for a phrase and see which notes match.
-  - You are building an Obsidian plugin and want to reload and test it from the terminal.
+  - You are building an Obsidian plugin and want to reload and test it from the
+    terminal.
   - You keep several vaults and need to be sure a change goes into the right one.
 you_give:
   - What you want to find, add or change
@@ -26,6 +30,7 @@ you_get:
   - Search results from your vault
   - Plugin and theme debugging steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands on your computer.

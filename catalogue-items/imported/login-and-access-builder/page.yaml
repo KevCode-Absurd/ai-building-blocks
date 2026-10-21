@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Auth mistakes are costly, so it weighs token, session and access choices.
 new_slug: login-and-access-builder
 name: Login and access builder
-summary: Describe your app's users. Get a login and permissions plan, or a review of the one you have.
+summary: Describe your app's users. Get a login and permissions plan, or a
+  review of the one you have.
 job: secure-code
 headline: Login and access builder
-subhead: Describe your app's users. Get a login and permissions plan, or a review of the one you have.
+subhead: Describe your app's users. Get a login and permissions plan, or a
+  review of the one you have. Bring a description of your app and its users. Use
+  the result to plan your next step.
 explain: |
   A written plan for who can sign in to your app and what each person is allowed to do, or a review of the setup you already have. Login mistakes are costly, so the plan is explicit about every boundary.
 
@@ -13,7 +16,8 @@ explain: |
 when:
   - You are adding sign-in, social login or single sign-on to an app.
   - You need roles so admins, staff and customers see different things.
-  - Your API lets someone reach data that is not theirs, and you need to find why.
+  - Your API lets someone reach data that is not theirs, and you need to find
+    why.
   - You want a second look at your session or token setup before launch.
 you_give:
   - A description of your app and its users
@@ -26,6 +30,7 @@ you_get:
   - Token lifetime and storage rules
   - A list of security gaps to fix
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

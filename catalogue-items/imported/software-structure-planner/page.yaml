@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Good boundaries depend on understanding how the whole code fits together.
 new_slug: software-structure-planner
 name: Software structure planner
-summary: Give it your codebase. Get a plan to keep business rules apart from frameworks and databases. Uses the Clean Architecture method.
+summary: Give it your codebase. Get a plan to keep business rules apart from
+  frameworks and databases. Uses the Clean Architecture method.
 job: build-software
 headline: Software structure planner
-subhead: Give it your codebase. Get a plan to keep business rules apart from frameworks and databases. Uses the Clean Architecture method.
+subhead: A plan that keeps your business rules free of frameworks, databases and
+  screens, so you can swap any of them later without a rewrite. You share your
+  codebase or describe it.
 explain: |
   A plan that keeps your business rules free of frameworks, databases and screens, so you can swap any of them later without a rewrite. You share your codebase or describe it. The skill applies the Clean Architecture method, built on one rule: code dependencies point inward, from frameworks to use cases to core entities.
 
@@ -25,5 +28,6 @@ you_get:
   - The fix for each broken dependency
   - A suggested layer layout
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

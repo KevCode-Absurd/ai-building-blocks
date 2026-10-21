@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It measures each stage, then names the main constraint.
 new_slug: process-bottleneck-finder
 name: Process bottleneck finder
-summary: Describe a business process. Get a swim-lane map, cycle times and the one stage holding everything up.
+summary: Describe a business process. Get a swim-lane map, cycle times and the
+  one stage holding everything up.
 job: organise-work
 headline: Process bottleneck finder
-subhead: Describe a business process. Get a swim-lane map, cycle times and the one stage holding everything up.
+subhead: The one stage that holds your process back, named and ranked, with a
+  likely cause. Most elapsed time in a process is waiting, not work.
 explain: |
   The one stage that holds your process back, named and ranked, with a likely cause. Most elapsed time in a process is waiting, not work. This finds where the waiting piles up so you fix the right stage.
 
@@ -27,6 +29,7 @@ you_get:
   - A root-cause guess for each bottleneck
   - The share of time spent on real work
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

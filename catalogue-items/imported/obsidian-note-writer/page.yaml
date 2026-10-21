@@ -2,16 +2,20 @@ thinking: low
 thinking_why: It applies known syntax rules to your text.
 new_slug: obsidian-note-writer
 name: Obsidian note writer
-summary: Give it your notes. Get Obsidian-ready Markdown with links, embeds, callouts and properties that show up right.
+summary: Give it your notes. Get Obsidian-ready Markdown with links, embeds,
+  callouts and properties that show up right.
 job: organise-work
 headline: Obsidian note writer
-subhead: Give it your notes. Get Obsidian-ready Markdown with links, embeds, callouts and properties that show up right.
+subhead: Notes that look right the first time you open them in Obsidian. You
+  hand over rough text and get Markdown that uses Obsidian's own features
+  correctly.
 explain: |
   Notes that look right the first time you open them in Obsidian. You hand over rough text and get Markdown that uses Obsidian's own features correctly.
 
   The skill starts with a properties block at the top for title, tags and aliases. It writes the body in normal Markdown, then adds links between notes in double brackets, so Obsidian keeps them working if you rename a note. It can link to a single heading or block, embed other notes, images and PDFs, and wrap key points in callouts such as tip or warning. External web links stay as standard links. At the end it checks that the note renders properly in reading view.
 when:
-  - You pasted meeting notes and want them linked to the people and project notes already in your vault.
+  - You pasted meeting notes and want them linked to the people and project
+    notes already in your vault.
   - You want a warning or tip box that stands out in a long note.
   - You need to embed a section of one note inside another.
   - Your tags and dates should show as proper properties, not loose text.
@@ -26,5 +30,6 @@ you_get:
   - Links and block references
   - Callouts and embeds in the right syntax
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

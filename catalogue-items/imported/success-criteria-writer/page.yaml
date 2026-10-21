@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It splits one broad goal into testable parts.
 new_slug: success-criteria-writer
 name: Standard to success criteria writer
-summary: Paste a broad standard. Get clear, checkable success criteria and the small skills inside it.
+summary: Paste a broad standard. Get clear, checkable success criteria and the
+  small skills inside it.
 job: teach-and-train
 headline: Standard to success criteria writer
-subhead: Paste a broad standard. Get clear, checkable success criteria and the small skills inside it.
+subhead: A broad standard turned into criteria a student can check themselves
+  against. Instead of 'analyses language', you get the small skills inside it
+  and what each looks like in work.
 explain: |
   A broad standard turned into criteria a student can check themselves against. Instead of 'analyses language', you get the small skills inside it and what each looks like in work.
 
@@ -27,5 +30,6 @@ you_get:
   - Success criteria in student language
   - Teaching implications
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

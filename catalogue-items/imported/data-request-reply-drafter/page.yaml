@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Deadlines and exemptions differ by law.
 new_slug: data-request-reply-drafter
 name: Data request reply drafter
-summary: Paste a request for someone's data. Get steps to find it and a draft reply. First check, not legal advice.
+summary: Paste a request for someone's data. Get steps to find it and a draft
+  reply. First check, not legal advice.
 job: check-contracts
 headline: Data request reply drafter
-subhead: Paste a request for someone's data. Get steps to find it and a draft reply. First check, not legal advice.
+subhead: When someone asks for a copy of their data or asks you to delete it,
+  you get a step by step plan and a draft reply.
 explain: |
   When someone asks for a copy of their data or asks you to delete it, you get a step by step plan and a draft reply. It is a first check, not legal advice, and a person reviews before anything is sent.
 
@@ -26,7 +28,10 @@ you_get:
   - Exemption review
   - Draft acknowledgement and reply
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your saved privacy setup notes.
-  - Where the skill points to /privacy-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to /privacy-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

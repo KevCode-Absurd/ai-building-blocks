@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It spreads limited stock using each store sales.
 new_slug: store-stock-allocator
 name: Store stock allocator
-summary: Give it a new buy and store sales. Get how many units of each size and style go to each store.
+summary: Give it a new buy and store sales. Get how many units of each size and
+  style go to each store.
 job: plan-supply-chain
 headline: Store stock allocator
-subhead: Give it a new buy and store sales. Get how many units of each size and style go to each store.
+subhead: A split of a new delivery across your stores that matches what each one
+  can sell. You give the buy, the sizes and styles, and each store's sales, and
+  get how many units of each go where.
 explain: |
   A split of a new delivery across your stores that matches what each one can sell. You give the buy, the sizes and styles, and each store's sales, and get how many units of each go where.
 
@@ -28,5 +31,6 @@ you_get:
   - Re-balancing rules
   - Targets for sell-through
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

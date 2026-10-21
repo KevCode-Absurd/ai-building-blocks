@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: frosted-glass-style-guide-writer
 name: Frosted glass style guide writer
-summary: Describe your product. Get a style guide for a frosted, see-through look, with blur levels and contrast checks.
+summary: Describe your product. Get a style guide for a frosted, see-through
+  look, with blur levels and contrast checks.
 job: design-work
 headline: Frosted glass style guide writer
-subhead: Describe your product. Get a style guide for a frosted, see-through look, with blur levels and contrast checks.
+subhead: A style guide for a frosted, see-through look, with blur levels,
+  layered surfaces and contrast rules that keep text readable. Designers and
+  engineers can use it straight away.
 explain: |
   A style guide for a frosted, see-through look, with blur levels, layered surfaces and contrast rules that keep text readable. Designers and engineers can use it straight away.
 
@@ -27,5 +30,6 @@ you_get:
   - Contrast and accessibility rules
   - Do and don't list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

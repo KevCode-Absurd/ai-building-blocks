@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It ranks customers by spend and order count.
 new_slug: loyalty-customer-list-builder
 name: Loyalty customer list builder
-summary: Get your top-spending customers tagged and exported, ready for a loyalty program. Adds tags to live customer records.
+summary: Get your top-spending customers tagged and exported, ready for a
+  loyalty program. Adds tags to live customer records.
 job: run-your-store
 headline: Loyalty customer list builder
-subhead: Get your top-spending customers tagged and exported, ready for a loyalty program. Adds tags to live customer records.
+subhead: A list of your best customers, tagged inside Shopify and exported,
+  ready to invite into a loyalty program or a VIP campaign. It changes live
+  customer records, so run it in preview first.
 explain: |
   A list of your best customers, tagged inside Shopify and exported, ready to invite into a loyalty program or a VIP campaign. It changes live customer records, so run it in preview first.
 
@@ -26,6 +29,8 @@ you_get:
   - A count of who qualified
   - A preview of changes when dry run is on
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

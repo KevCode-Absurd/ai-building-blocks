@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It loads or builds a known model type.
 new_slug: robot-arm-modeler
 name: Robot arm modeler
-summary: Name your robot arm. Get a MATLAB model ready for moves, reach checks and drawing.
+summary: Name your robot arm. Get a MATLAB model ready for moves, reach checks
+  and drawing.
 job: build-software
 headline: Robot arm modeler
-subhead: Name your robot arm. Get a MATLAB model ready for moves, reach checks and drawing.
+subhead: A MATLAB robot arm model you can trust, so later moves and reach checks
+  do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and
+  it builds the model.
 explain: |
   A MATLAB robot arm model you can trust, so later moves and reach checks do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and it builds the model.
 
@@ -26,6 +29,7 @@ you_get:
   - Checked inverse kinematics solutions
   - A note on any gaps in the model
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Robotics System Toolbox.

@@ -2,17 +2,22 @@ thinking: medium
 thinking_why: Small setup errors give wrong results.
 new_slug: ofdm-system-builder
 name: OFDM system builder
-summary: Describe your OFDM link. Get a correct simulation using the proper modulation functions.
+summary: Describe your OFDM link. Get a correct simulation using the proper
+  modulation functions.
 job: build-software
 headline: OFDM system builder
-subhead: Describe your OFDM link. Get a correct simulation using the proper modulation functions.
+subhead: MATLAB code for a custom OFDM link that gives correct results, not just
+  plausible ones. Standard shortcuts in MATLAB quietly break OFDM simulations,
+  and this skill is built to avoid them.
 explain: |
   MATLAB code for a custom OFDM link that gives correct results, not just plausible ones. Standard shortcuts in MATLAB quietly break OFDM simulations, and this skill is built to avoid them.
 
   Before writing anything it asks about FFT size, cyclic prefix, subcarrier layout, channel type, pilots, coding and synchronisation. Then it follows firm rules. It uses the built-in OFDM modulate and demodulate functions rather than raw FFT calls. It sets the symbol offset by hand. It gives the noise function an explicit signal power, because the modulator output is not one watt. It uses the dedicated channel response function, and it shows how each parameter was worked out. It also checks that your MATLAB release supports the functions used.
 when:
-  - You are building a custom OFDM transmitter and receiver and your bit error rate looks wrong.
-  - You need to add noise at a chosen signal-to-noise ratio without getting the power wrong.
+  - You are building a custom OFDM transmitter and receiver and your bit error
+    rate looks wrong.
+  - You need to add noise at a chosen signal-to-noise ratio without getting the
+    power wrong.
   - You want to equalise a fading channel using pilots.
   - You have physical specs and need the FFT size and prefix length worked out.
 you_give:
@@ -26,6 +31,7 @@ you_get:
   - Correct noise and channel handling
   - A list of questions if your brief has gaps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Communications Toolbox.

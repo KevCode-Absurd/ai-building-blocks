@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Tuning memory and speed needs careful tradeoffs.
 new_slug: vllm-model-server-setup
 name: vLLM model server setup
-summary: Name your model and GPU. Get a fast model server running, with settings for speed and memory.
+summary: Name your model and GPU. Get a fast model server running, with settings
+  for speed and memory.
 job: build-software
 headline: vLLM model server setup
-subhead: Name your model and GPU. Get a fast model server running, with settings for speed and memory.
+subhead: A running model server that answers requests fast, with settings picked
+  to fit your GPU and model size. It speaks the same API as OpenAI, so your
+  existing code points at it with a one-line change.
 explain: |
   A running model server that answers requests fast, with settings picked to fit your GPU and model size. It speaks the same API as OpenAI, so your existing code points at it with a one-line change.
 
@@ -26,6 +29,7 @@ you_get:
   - A test call using the OpenAI client
   - A launch check list with monitoring
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code on a machine with an NVIDIA GPU.

@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It rewrites known facts for an audience.
 new_slug: stakeholder-update-writer
 name: Stakeholder update writer
-summary: Give it your progress. Get an update for leaders, engineers or customers at the right depth and cadence.
+summary: Give it your progress. Get an update for leaders, engineers or
+  customers at the right depth and cadence.
 job: organise-work
 headline: Stakeholder update writer
-subhead: Give it your progress. Get an update for leaders, engineers or customers at the right depth and cadence.
+subhead: A progress update written for the right reader at the right depth. Say
+  whether it is weekly, monthly, a launch or a one-off, and who will read it.
 explain: |
   A progress update written for the right reader at the right depth. Say whether it is weekly, monthly, a launch or a one-off, and who will read it. The skill then shapes the content to that audience.
 
@@ -26,5 +28,6 @@ you_get:
   - Decisions needed from the reader
   - Versions for other audiences (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

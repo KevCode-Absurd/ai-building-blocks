@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It picks a look, builds the page, then looks at screenshots and fixes them.
 new_slug: website-art-director
 name: Website art director
-summary: Describe your site or app screen. Get a built page with a chosen look, checked in a browser, not a template.
+summary: Describe your site or app screen. Get a built page with a chosen look,
+  checked in a browser, not a template.
 job: build-websites
 headline: Website art director
-subhead: Describe your site or app screen. Get a built page with a chosen look, checked in a browser, not a template.
+subhead: "A built web page with a chosen look, checked in a real browser, not a
+  stock template. It stops pages from all looking the same: centred headline,
+  icon cards, soft gradient."
 explain: |
   A built web page with a chosen look, checked in a real browser, not a stock template. It stops pages from all looking the same: centred headline, icon cards, soft gradient.
 
@@ -26,6 +29,7 @@ you_get:
   - Screenshots at three widths
   - A fix list after review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and open a browser.

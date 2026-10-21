@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It reviews notes against a set method.
 new_slug: claude-memory-curator
 name: Claude memory curator
-summary: Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut.
+summary: Point it at Claude Code memory. Get what it learned reviewed, kept
+  rules moved up and stale notes cut.
 job: set-up-ai
 headline: Claude memory curator
-subhead: Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut.
+subhead: Claude Code keeps notes about your project as it works. This reviews
+  those notes so the good ones become firm rules, and the stale ones get cut.
 explain: |
   Claude Code keeps notes about your project as it works. This reviews those notes so the good ones become firm rules, and the stale ones get cut. You end up with a shorter, sharper memory file that Claude reads each session.
 
@@ -25,6 +27,7 @@ you_get:
   - A standalone skill from a repeated fix
   - A memory health summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and change your project files.

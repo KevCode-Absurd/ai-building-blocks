@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows standard model calls.
 new_slug: stable-diffusion-image-maker
 name: Stable Diffusion image maker
-summary: Describe a picture. Get generated images, edits to your own photos or code for a custom image pipeline.
+summary: Describe a picture. Get generated images, edits to your own photos or
+  code for a custom image pipeline.
 job: make-images
 headline: Stable Diffusion image maker
-subhead: Describe a picture. Get generated images, edits to your own photos or code for a custom image pipeline.
+subhead: Images made from a text description, edits to your own photos, or code
+  for your own image pipeline. The skill uses the Hugging Face Diffusers library
+  with Stable Diffusion models, including SDXL and Flux.
 explain: |
   Images made from a text description, edits to your own photos, or code for your own image pipeline. The skill uses the Hugging Face Diffusers library with Stable Diffusion models, including SDXL and Flux.
 
@@ -26,6 +29,7 @@ you_get:
   - Image-to-image and inpainting setups
   - ControlNet and style tuning options
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

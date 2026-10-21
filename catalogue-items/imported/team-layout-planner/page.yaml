@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Team structure is tied to your product and needs careful trade-offs.
 new_slug: team-layout-planner
 name: Team layout planner
-summary: Describe your teams. Get a team structure for fast work, with clear owners and how teams hand off. Uses Team Topologies.
+summary: Describe your teams. Get a team structure for fast work, with clear
+  owners and how teams hand off. Uses Team Topologies.
 job: lead-people
 headline: Team layout planner
-subhead: Describe your teams. Get a team structure for fast work, with clear owners and how teams hand off. Uses Team Topologies.
+subhead: A team structure designed for fast delivery, with clear owners and a
+  set way for teams to work together. You find out where teams are overloaded,
+  where work bounces between groups and what to change, scored out of ten.
 explain: |
   A team structure designed for fast delivery, with clear owners and a set way for teams to work together. You find out where teams are overloaded, where work bounces between groups and what to change, scored out of ten.
 
@@ -27,5 +30,6 @@ you_get:
   - Overload and boundary problems
   - A score and steps to improve it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

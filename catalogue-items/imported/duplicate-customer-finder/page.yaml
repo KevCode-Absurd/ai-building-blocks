@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Matching names and emails needs judgment on near misses.
 new_slug: duplicate-customer-finder
 name: Duplicate customer finder
-summary: Run it on your customers. Get likely duplicate records matched by email, phone or name, ready to review.
+summary: Run it on your customers. Get likely duplicate records matched by
+  email, phone or name, ready to review.
 job: run-your-store
 headline: Duplicate customer finder
-subhead: Run it on your customers. Get likely duplicate records matched by email, phone or name, ready to review.
+subhead: A review list of customer records that probably belong to one person.
+  Run it on your Shopify store and see matches by email, phone or name, so order
+  history stops splitting across profiles.
 explain: |
   A review list of customer records that probably belong to one person. Run it on your Shopify store and see matches by email, phone or name, so order history stops splitting across profiles.
 
@@ -26,6 +29,7 @@ you_get:
   - Plain or JSON output
   - A list ready to merge by hand
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

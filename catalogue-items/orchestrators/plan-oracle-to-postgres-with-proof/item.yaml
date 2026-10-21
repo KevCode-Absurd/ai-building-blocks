@@ -1,0 +1,64 @@
+slug: plan-oracle-to-postgres-with-proof
+name: Plan Oracle to Postgres with proof
+summary: Share your .NET data access code. Get migration scope, baseline tests
+  and a review of database behavior risks.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-creating-oracle-to-postgres-master-migration-plan
+  - copilot-planning-oracle-to-postgres-migration-integration-testing
+  - copilot-creating-oracle-to-postgres-migration-integration-tests
+  - copilot-reviewing-oracle-to-postgres-migration
+steps:
+  - uses: copilot-creating-oracle-to-postgres-master-migration-plan
+    note: 1. Read
+      skills/copilot-creating-oracle-to-postgres-master-migration-plan/SKILL.md.
+      Share your .NET solution. Get a project inventory, migration scope and a
+      master plan to track the work. Save the result with source references.
+      Carry the user's goal and all earlier findings into this step. If required
+      evidence or tool access is missing, mark this step blocked; do not
+      fabricate a result.
+  - uses: copilot-planning-oracle-to-postgres-migration-integration-testing
+    note: 2. Read
+      skills/copilot-planning-oracle-to-postgres-migration-integration-testing/SKILL.md.
+      Share your data access code. Get test scope and parity checks for an
+      Oracle to Postgres migration. Save the result with source references.
+      Carry the user's goal and all earlier findings into this step. If required
+      evidence or tool access is missing, mark this step blocked; do not
+      fabricate a result.
+  - uses: copilot-creating-oracle-to-postgres-migration-integration-tests
+    note: 3. Read
+      skills/copilot-creating-oracle-to-postgres-migration-integration-tests/SKILL.md.
+      Share your Oracle data access code. Get tests that record what the code
+      does before you change databases. Save the result with source references.
+      Carry the user's goal and all earlier findings into this step. If required
+      evidence or tool access is missing, mark this step blocked; do not
+      fabricate a result.
+  - uses: copilot-reviewing-oracle-to-postgres-migration
+    note: 4. Read skills/copilot-reviewing-oracle-to-postgres-migration/SKILL.md.
+      Share your migrated code. Get Oracle and PostgreSQL behavior gaps checked
+      before release. Save the result with source references. Carry the user's
+      goal and all earlier findings into this step. If required evidence or tool
+      access is missing, mark this step blocked; do not fabricate a result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

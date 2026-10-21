@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must trace where untrusted text enters and what it can trigger.
 new_slug: prompt-injection-defender
 name: Prompt injection defender
-summary: Describe your AI app. Get a threat map and fixes against hidden instructions in text it reads.
+summary: Describe your AI app. Get a threat map and fixes against hidden
+  instructions in text it reads.
 job: secure-code
 headline: Prompt injection defender
-subhead: Describe your AI app. Get a threat map and fixes against hidden instructions in text it reads.
+subhead: A threat map and a fix list for your AI app, so text it reads cannot
+  take it over. You see exactly where hidden instructions could get in and what
+  they could reach.
 explain: |
   A threat map and a fix list for your AI app, so text it reads cannot take it over. You see exactly where hidden instructions could get in and what they could reach.
 
@@ -28,6 +31,7 @@ you_get:
   - Injection tests
   - Residual risk notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

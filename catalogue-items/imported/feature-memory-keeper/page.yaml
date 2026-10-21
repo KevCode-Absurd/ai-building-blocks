@@ -2,16 +2,19 @@ thinking: medium
 thinking_why: It must keep records short and true over time.
 new_slug: feature-memory-keeper
 name: Feature memory keeper
-summary: Point it at your project. Get one short file per feature with status, decisions and risks for the next session.
+summary: Point it at your project. Get one short file per feature with status,
+  decisions and risks for the next session.
 job: build-software
 headline: Feature memory keeper
-subhead: Point it at your project. Get one short file per feature with status, decisions and risks for the next session.
+subhead: A set of short files in your repo, one per feature, so the next person
+  or AI session knows what was decided and what is still risky.
 explain: |
   A set of short files in your repo, one per feature, so the next person or AI session knows what was decided and what is still risky. Nothing has to be re-explained.
 
   The skill keeps a global index plus one markdown file per feature under a docs folder. Before you change anything, it reads the index and the feature's file, and follows links to current sources. If they are missing, it creates the smallest useful structure with a lowercase feature id. After the work it records the status, decisions, risks, rollout limits and the checked outcome. It stays short on purpose. It is not a log of every edit or a replacement for an issue tracker.
 when:
-  - You come back to a feature after a month and cannot recall why it works that way.
+  - You come back to a feature after a month and cannot recall why it works that
+    way.
   - A new AI session keeps asking questions you already answered.
   - Notes on one feature are spread across tickets and old plans.
   - You want to hand a feature to a teammate with context.
@@ -26,6 +29,7 @@ you_get:
   - Recorded decisions and risks
   - Status and next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read and write your project files.

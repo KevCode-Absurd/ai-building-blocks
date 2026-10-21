@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills short fields within set length limits.
 new_slug: title-and-meta-tag-writer
 name: Title and meta tag writer
-summary: Give it a page. Get title tags, meta descriptions and social share tags that fit the page's aim.
+summary: Give it a page. Get title tags, meta descriptions and social share tags
+  that fit the page's aim.
 job: get-found-in-search
 headline: Title and meta tag writer
-subhead: Give it a page. Get title tags, meta descriptions and social share tags that fit the page's aim.
+subhead: Give it a page. Get title tags, meta descriptions and social share tags
+  that fit the page's aim. Bring page title and type. Use the result to plan
+  your next step.
 explain: |
   Page titles and descriptions that make people click when they see your page in search results, plus the tags that control how links look when shared on social sites.
 
@@ -27,5 +30,6 @@ you_get:
   - Open Graph and Twitter tags
   - Length checks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

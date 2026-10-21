@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies design rules but weighs trade-offs for your case.
 new_slug: rest-api-designer
 name: REST API designer
-summary: Describe what your service does. Get a clean REST API plan with routes, status codes, paging and docs.
+summary: Describe what your service does. Get a clean REST API plan with routes,
+  status codes, paging and docs.
 job: build-software
 headline: REST API designer
-subhead: Describe what your service does. Get a clean REST API plan with routes, status codes, paging and docs.
+subhead: "A complete plan for a REST API before anyone writes code: the routes,
+  the methods, the status codes and the docs. Mistakes caught here cost
+  minutes."
 explain: |
   A complete plan for a REST API before anyone writes code: the routes, the methods, the status codes and the docs. Mistakes caught here cost minutes. Caught after launch, they cost your users.
 
@@ -28,5 +31,6 @@ you_get:
   - A paging, filtering and versioning plan
   - OpenAPI documentation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs the market and picks positions to explore.
 new_slug: brand-discovery-researcher
 name: Brand discovery researcher
-summary: Describe your business. Get who it is for, who you compete with and where you could stand out.
+summary: Describe your business. Get who it is for, who you compete with and
+  where you could stand out.
 job: understand-customers
 headline: Brand discovery researcher
-subhead: Describe your business. Get who it is for, who you compete with and where you could stand out.
+subhead: Find out who your brand is for, what they need, who else is trying to
+  meet that need, and where you could stand apart. This comes before any brief,
+  logo or content plan.
 explain: |
   Find out who your brand is for, what they need, who else is trying to meet that need, and where you could stand apart. This comes before any brief, logo or content plan.
 
@@ -26,5 +29,6 @@ you_get:
   - A category map with its conventions
   - A discovery report with positioning territories
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

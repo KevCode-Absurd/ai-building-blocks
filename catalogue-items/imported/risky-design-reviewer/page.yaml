@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It has to spot subtle ways people will misuse a design.
 new_slug: risky-design-reviewer
 name: Risky design reviewer
-summary: Give it an API or config design. Get the easy-to-misuse parts that lead to security mistakes.
+summary: Give it an API or config design. Get the easy-to-misuse parts that lead
+  to security mistakes.
 job: secure-code
 headline: Risky design reviewer
-subhead: Give it an API or config design. Get the easy-to-misuse parts that lead to security mistakes.
+subhead: Give it an API or config design. Get the easy-to-misuse parts that lead
+  to security mistakes. Bring the API, library interface or config schema. Use
+  the result to plan your next step.
 explain: |
   A list of the places in your API or settings where the easy choice is the unsafe one, so developers cannot slip into security mistakes. You fix the design, not the people.
 
@@ -26,6 +29,7 @@ you_get:
   - A safer design for each
   - Priority order for fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

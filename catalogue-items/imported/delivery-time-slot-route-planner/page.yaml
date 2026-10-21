@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Time windows make the route puzzle much harder.
 new_slug: delivery-time-slot-route-planner
 name: Delivery time slot route planner
-summary: Give it stops with promised delivery windows. Get routes that hit each window with the fewest vehicles.
+summary: Give it stops with promised delivery windows. Get routes that hit each
+  window with the fewest vehicles.
 job: plan-supply-chain
 headline: Delivery time slot route planner
-subhead: Give it stops with promised delivery windows. Get routes that hit each window with the fewest vehicles.
+subhead: Delivery routes that arrive inside each customer's promised window,
+  using as few vehicles as possible. Give it stops with their time slots and you
+  get a timed route for every driver.
 explain: |
   Delivery routes that arrive inside each customer's promised window, using as few vehicles as possible. Give it stops with their time slots and you get a timed route for every driver.
 
@@ -27,6 +30,7 @@ you_get:
   - Number of vehicles needed
   - Stops that miss their window
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

@@ -1,0 +1,32 @@
+slug: copilot-performance-review-writer
+name: Personal performance review drafter
+summary: Share your work history and writing samples. Get a self review or feedback draft grounded in evidence.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: meeting_notes
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/performance-review-writer
+  url: https://github.com/github/awesome-copilot/tree/main/skills/performance-review-writer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: performance-review-writer
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: performance-review-writer skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/performance-review-writer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a proven method but must pick fresh angles.
 new_slug: meta-ad-copywriter
 name: Meta ad copywriter
-summary: Describe your offer and buyer. Get Facebook and Instagram ad text, hooks and UGC scripts ready to test.
+summary: Describe your offer and buyer. Get Facebook and Instagram ad text,
+  hooks and UGC scripts ready to test.
 job: write-ad-copy
 headline: Meta ad copywriter
-subhead: Describe your offer and buyer. Get Facebook and Instagram ad text, hooks and UGC scripts ready to test.
+subhead: Facebook and Instagram ad text written for the one job an ad has, which
+  is to get the click. Describe your offer and buyer and you get hooks, primary
+  text, headlines and UGC video scripts to test.
 explain: |
   Facebook and Instagram ad text written for the one job an ad has, which is to get the click. Describe your offer and buyer and you get hooks, primary text, headlines and UGC video scripts to test.
 
@@ -27,5 +30,6 @@ you_get:
   - UGC or video ad scripts
   - A note on the ad strategy used
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

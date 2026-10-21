@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It looks up each source and checks the details.
 new_slug: citation-and-bibtex-fixer
 name: Citation and BibTeX fixer
-summary: Give it DOIs, paper titles or a messy bibliography. Get clean, checked BibTeX entries with duplicates removed.
+summary: Give it DOIs, paper titles or a messy bibliography. Get clean, checked
+  BibTeX entries with duplicates removed.
 job: work-with-files
 headline: Citation and BibTeX fixer
-subhead: Give it DOIs, paper titles or a messy bibliography. Get clean, checked BibTeX entries with duplicates removed.
+subhead: A clean bibliography with every entry checked against the real paper.
+  Give it DOIs, PubMed or arXiv IDs, paper titles or a messy BibTeX file, and
+  get back tidy entries with duplicates removed.
 explain: |
   A clean bibliography with every entry checked against the real paper. Give it DOIs, PubMed or arXiv IDs, paper titles or a messy BibTeX file, and get back tidy entries with duplicates removed.
 
@@ -26,6 +29,7 @@ you_get:
   - Flagged entries that do not match the source
   - Consistent key names
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web and save files.

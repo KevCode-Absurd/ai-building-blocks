@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies known form patterns.
 new_slug: web-form-designer
 name: Web form designer
-summary: Name your form. Get fields, error messages, spam protection and a plan to raise completions.
+summary: Name your form. Get fields, error messages, spam protection and a plan
+  to raise completions.
 job: build-websites
 headline: Web form designer
-subhead: Name your form. Get fields, error messages, spam protection and a plan to raise completions.
+subhead: A form that people finish, with spam kept out and clean data passed on
+  to your tools. It matters because forms are where visitors turn into leads and
+  orders, and small flaws lose them.
 explain: |
   A form that people finish, with spam kept out and clean data passed on to your tools. It matters because forms are where visitors turn into leads and orders, and small flaws lose them.
 
@@ -26,5 +29,6 @@ you_get:
   - Spam protection plan
   - Steps to track and raise completions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

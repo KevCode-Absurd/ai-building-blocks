@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows library patterns to draw the chart.
 new_slug: python-chart-maker
 name: Python chart maker
-summary: Give it your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
+summary: Give it your data. Get a clean Matplotlib chart, static, animated or
+  interactive, ready to save as an image.
 job: work-with-files
 headline: Python chart maker
-subhead: Give it your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
+subhead: A clean chart from your data, saved as an image or built as an animated
+  or interactive plot. You get tidy labels, sensible colours and the right chart
+  for the numbers.
 explain: |
   A clean chart from your data, saved as an image or built as an animated or interactive plot. You get tidy labels, sensible colours and the right chart for the numbers.
 
@@ -26,6 +29,7 @@ you_get:
   - Styled labels and legend
   - Multi-panel layout if needed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

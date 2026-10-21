@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sets up a full process, so choices need weighing.
 new_slug: review-cycle-form-builder
 name: Review cycle form builder
-summary: Give it your team and goals. Get review forms, goal templates and a guide for fair rating meetings. Not legal advice.
+summary: Give it your team and goals. Get review forms, goal templates and a
+  guide for fair rating meetings. Not legal advice.
 job: hire-people
 headline: Review cycle form builder
-subhead: Give it your team and goals. Get review forms, goal templates and a guide for fair rating meetings. Not legal advice.
+subhead: "A ready set of performance review materials: appraisal forms, goal
+  templates and a guide for running fair rating meetings. Managers get wording
+  they can use instead of starting from a blank page."
 explain: |
   A ready set of performance review materials: appraisal forms, goal templates and a guide for running fair rating meetings. Managers get wording they can use instead of starting from a blank page. It is not legal advice.
 
@@ -28,5 +31,6 @@ you_get:
   - A calibration meeting guide
   - Improvement plan outlines
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

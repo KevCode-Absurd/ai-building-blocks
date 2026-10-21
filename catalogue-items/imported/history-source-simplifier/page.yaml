@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must simplify without losing the key features.
 new_slug: history-source-simplifier
 name: History source simplifier
-summary: Paste a primary source and the learners' age. Get a shorter, simpler version that keeps what they need to analyse.
+summary: Paste a primary source and the learners' age. Get a shorter, simpler
+  version that keeps what they need to analyse.
 job: teach-and-train
 headline: History source simplifier
-subhead: Paste a primary source and the learners' age. Get a shorter, simpler version that keeps what they need to analyse.
+subhead: A shorter, easier version of a primary source that still works as
+  evidence. Paste a document and say how old your learners are. You get a
+  version they can read, with the parts they need for analysis left in.
 explain: |
   A shorter, easier version of a primary source that still works as evidence. Paste a document and say how old your learners are. You get a version they can read, with the parts they need for analysis left in.
 
@@ -27,5 +30,6 @@ you_get:
   - Notes on what was changed
   - A list of features kept for analysis
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Rules must be clear and match local law.
 new_slug: attendance-policy-writer
 name: Attendance policy writer
-summary: Give it your shifts and country. Get clear lateness, overtime and absence rules to review. Not legal advice.
+summary: Give it your shifts and country. Get clear lateness, overtime and
+  absence rules to review. Not legal advice.
 job: hire-people
 headline: Attendance policy writer
-subhead: Give it your shifts and country. Get clear lateness, overtime and absence rules to review. Not legal advice.
+subhead: Give it your shifts and country. Get clear lateness, overtime and
+  absence rules to review. Not legal advice. Bring shift patterns and industry.
+  Use the result to plan your next step.
 explain: |
   A draft attendance policy in plain words that managers can follow and staff can understand. Describe your shifts, your country and your industry, and the AI writes rules for clocking in, lateness, breaks, overtime, absences and no-call, no-show cases.
 
@@ -26,5 +29,6 @@ you_get:
   - Time-tracking system settings
   - A staff announcement and a manager guide
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

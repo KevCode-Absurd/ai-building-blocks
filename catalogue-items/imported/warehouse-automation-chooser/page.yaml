@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It compares costs against savings for each option.
 new_slug: warehouse-automation-chooser
 name: Warehouse automation chooser
-summary: Give it your orders and space. Get which machines pay back, ranked, with cost, payback time and risks.
+summary: Give it your orders and space. Get which machines pay back, ranked,
+  with cost, payback time and risks.
 job: plan-supply-chain
 headline: Warehouse automation chooser
-subhead: Give it your orders and space. Get which machines pay back, ranked, with cost, payback time and risks.
+subhead: A ranked list of automation options for your warehouse, with cost,
+  payback time and risks for each, so you spend only where it pays off.
 explain: |
   A ranked list of automation options for your warehouse, with cost, payback time and risks for each, so you spend only where it pays off.
 
@@ -26,5 +28,6 @@ you_get:
   - Risks and fit with your site
   - A phased roll-out plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

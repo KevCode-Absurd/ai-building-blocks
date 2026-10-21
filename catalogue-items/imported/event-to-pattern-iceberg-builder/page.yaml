@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It digs through levels from event to belief.
 new_slug: event-to-pattern-iceberg-builder
 name: Event-to-pattern iceberg builder
-summary: Give it a current event. Get the patterns, structures and beliefs under it, laid out as an iceberg.
+summary: Give it a current event. Get the patterns, structures and beliefs under
+  it, laid out as an iceberg.
 job: teach-and-train
 headline: Event-to-pattern iceberg builder
-subhead: Give it a current event. Get the patterns, structures and beliefs under it, laid out as an iceberg.
+subhead: Give it a current event. Get the patterns, structures and beliefs under
+  it, laid out as an iceberg. Bring the visible event or repeated issue. Use the
+  result to plan your next step.
 explain: |
   An iceberg chart that takes one visible event and digs below it: the patterns repeating over time, the structures behind them and the beliefs that keep them in place. It turns a headline problem into something a group can act on.
 
@@ -28,5 +31,6 @@ you_get:
   - Beliefs behind the structures
   - Questions for group discussion
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

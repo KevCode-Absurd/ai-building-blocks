@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes routes from a documented pattern.
 new_slug: expo-api-route-builder
 name: Expo API route builder
-summary: Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host.
+summary: Say what your mobile app needs from a server. Get API routes built in
+  Expo Router and set up to host.
 job: build-software
 headline: Expo API route builder
-subhead: Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host.
+subhead: Server routes for your mobile app, built inside Expo Router and ready
+  to host with EAS Hosting. They keep your secret keys on the server, away from
+  the phone.
 explain: |
   Server routes for your mobile app, built inside Expo Router and ready to host with EAS Hosting. They keep your secret keys on the server, away from the phone.
 
@@ -26,6 +29,7 @@ you_get:
   - Deploy steps for EAS Hosting
   - Advice if a managed backend fits better
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

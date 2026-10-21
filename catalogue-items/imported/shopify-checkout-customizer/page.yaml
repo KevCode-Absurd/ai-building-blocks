@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows the extension rules, with a few design choices.
 new_slug: shopify-checkout-customizer
 name: Shopify checkout customizer
-summary: Say what checkout should add, such as a field or upsell. Get working checkout extension code.
+summary: Say what checkout should add, such as a field or upsell. Get working
+  checkout extension code.
 job: build-software
 headline: Shopify checkout customizer
-subhead: Say what checkout should add, such as a field or upsell. Get working checkout extension code.
+subhead: Working checkout code for the change you want, such as a gift note
+  field, a post-purchase upsell or a rule that blocks bad orders. It stays safe
+  when Shopify updates checkout.
 explain: |
   Working checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. It stays safe when Shopify updates checkout.
 
@@ -26,6 +29,7 @@ you_get:
   - Validation or field logic
   - Steps to test and deploy
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use the Shopify CLI.

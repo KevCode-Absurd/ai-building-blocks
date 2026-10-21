@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies one status change to many products.
 new_slug: product-launch-retire
 name: Product launch and retire manager
-summary: Pick products and a status. Get them moved between draft, live and archived. Changes what shoppers can see and buy.
+summary: Pick products and a status. Get them moved between draft, live and
+  archived. Changes what shoppers can see and buy.
 job: run-your-store
 headline: Product launch and retire manager
-subhead: Pick products and a status. Get them moved between draft, live and archived. Changes what shoppers can see and buy.
+subhead: Pick products and a status. Get them moved between draft, live and
+  archived. Changes what shoppers can see and buy. Bring your store domain. Use
+  the result to plan your next step.
 explain: |
   Products moved in bulk between draft, live and archived, so a seasonal launch or sell-off takes one run instead of a long afternoon of clicking. It changes what shoppers can see and buy.
 
@@ -26,6 +29,8 @@ you_get:
   - A count of what changed
   - A list of any failures
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

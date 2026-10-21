@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Reading what the features mean takes research judgment.
 new_slug: model-feature-finder
 name: Model feature finder
-summary: Give it a language model. Get a small network trained to show which ideas its inner activity stands for.
+summary: Give it a language model. Get a small network trained to show which
+  ideas its inner activity stands for.
 job: research-topics
 headline: Model feature finder
-subhead: Give it a language model. Get a small network trained to show which ideas its inner activity stands for.
+subhead: A small helper network, trained on your language model, that shows
+  which ideas its inner activity stands for. Instead of a blur of numbers, you
+  get named features such as a place, a tone or a risky topic.
 explain: |
   A small helper network, trained on your language model, that shows which ideas its inner activity stands for. Instead of a blur of numbers, you get named features such as a place, a tone or a risky topic.
 
@@ -27,6 +30,7 @@ you_get:
   - Steering and removal tests
   - Notes on quality checks
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

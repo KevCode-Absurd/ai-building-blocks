@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Strategy needs judgement across many trade-offs.
 new_slug: product-vision-and-okr-planner
 name: Product vision and OKR planner
-summary: Give it your product and team. Get a vision, quarterly plan and a goal cascade for each team.
+summary: Give it your product and team. Get a vision, quarterly plan and a goal
+  cascade for each team.
 job: plan-strategy
 headline: Product vision and OKR planner
-subhead: Give it your product and team. Get a vision, quarterly plan and a goal cascade for each team.
+subhead: A product vision, a quarterly plan and a chain of goals from company
+  down to each team, all pointing the same way. You also see how well the goals
+  line up.
 explain: |
   A product vision, a quarterly plan and a chain of goals from company down to each team, all pointing the same way. You also see how well the goals line up.
 
@@ -27,6 +30,7 @@ you_get:
   - A quarterly plan
   - A team scaling proposal (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

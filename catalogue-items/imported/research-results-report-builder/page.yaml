@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a fixed recipe to merge files.
 new_slug: research-results-report-builder
 name: Research results report builder
-summary: Give it your research files. Get one report with a contents list and every checked answer. Unsure ones are left out.
+summary: Give it your research files. Get one report with a contents list and
+  every checked answer. Unsure ones are left out.
 job: research-topics
 headline: Research results report builder
-subhead: Give it your research files. Get one report with a contents list and every checked answer. Unsure ones are left out.
+subhead: One report that pulls together the results from many research files,
+  with a contents list and only the answers that were checked. Uncertain values
+  are left out instead of guessed.
 explain: |
   One report that pulls together the results from many research files, with a contents list and only the answers that were checked. Uncertain values are left out instead of guessed.
 
@@ -26,6 +29,7 @@ you_get:
   - Every field covered per item
   - Uncertain values left out
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and save files.

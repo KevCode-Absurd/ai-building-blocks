@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It follows data gates and checks many signals.
 new_slug: vercel-cost-and-speed-auditor
 name: Vercel cost and speed auditor
-summary: Point it at a Vercel app. Get cost and speed problems found from real production metrics, with fixes.
+summary: Point it at a Vercel app. Get cost and speed problems found from real
+  production metrics, with fixes.
 job: ship-and-host
 headline: Vercel cost and speed auditor
-subhead: Point it at a Vercel app. Get cost and speed problems found from real production metrics, with fixes.
+subhead: A list of what is costing you money or slowing your Vercel app, found
+  from real production numbers instead of guesses, with a fix for each.
 explain: |
   A list of what is costing you money or slowing your Vercel app, found from real production numbers instead of guesses, with a fix for each. 
   The skill first collects metrics, usage and contract data with the Vercel command line tool and saves them to a signals file. A script then decides what is worth looking into, such as a slow route or an expensive function. js strongest. It needs the Vercel CLI, a login, a linked project and Node. Route-level detail needs the Observability Plus plan. It never asks you to paste secret keys into commands.
@@ -25,6 +27,7 @@ you_get:
   - Fixes tied to the exact route or setting
   - Doc references for your framework version
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

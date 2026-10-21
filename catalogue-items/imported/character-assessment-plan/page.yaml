@@ -2,19 +2,25 @@ thinking: high
 thinking_why: Judging softer traits fairly is hard and needs care.
 new_slug: character-assessment-plan
 name: Character and habits assessment planner
-summary: Name a trait like curiosity. Get a plan to gather evidence from several people. Not medical advice.
+summary: Name a trait like curiosity. Get a plan to gather evidence from several
+  people. Not medical advice.
 job: teach-and-train
 headline: Character and habits assessment planner
-subhead: Name a trait like curiosity. Get a plan to gather evidence from several people. Not medical advice.
+subhead: A plan for judging a personal quality, like curiosity or persistence,
+  without turning it into a grade that hurts the learner. You name the trait and
+  the age band, and you get a way to collect evidence from several angles.
 explain: |
   A plan for judging a personal quality, like curiosity or persistence, without turning it into a grade that hurts the learner. You name the trait and the age band, and you get a way to collect evidence from several angles.
 
   The skill writes a plain definition of the trait, then lists what an adult would actually see when it shows up. It picks who should give evidence: the teacher, the student, a parent or a peer. It spreads observations across different settings and times, so one bad day cannot decide the result. It also drafts feedback wording that supports growth and keeps the learner's motivation intact. It is a teaching aid and gives no medical or psychological advice.
 when:
-  - You teach a trait like resilience and have no fair way to see whether students are growing in it.
-  - Your report cards need a note on curiosity or teamwork, and you want proof behind it.
+  - You teach a trait like resilience and have no fair way to see whether
+    students are growing in it.
+  - Your report cards need a note on curiosity or teamwork, and you want proof
+    behind it.
   - You want students to reflect on a trait without feeling judged.
-  - Several staff observe one class and need a shared way to record what they see.
+  - Several staff observe one class and need a shared way to record what they
+    see.
 you_give:
   - The trait you want to assess
   - A one sentence definition of it
@@ -27,5 +33,6 @@ you_get:
   - Prompts for student self-reflection
   - Feedback wording that keeps motivation up
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

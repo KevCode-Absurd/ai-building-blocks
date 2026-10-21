@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks the right signals, then follows known patterns.
 new_slug: logging-and-alerts-setter
 name: Logging and alerts setter
-summary: Say what must work in production. Get logs, metrics and alerts added so problems show up fast.
+summary: Say what must work in production. Get logs, metrics and alerts added so
+  problems show up fast.
 job: build-software
 headline: Logging and alerts setter
-subhead: Say what must work in production. Get logs, metrics and alerts added so problems show up fast.
+subhead: Code that tells you what it is doing in production, so when something
+  breaks you can see what happened. Say what must work and get logs, metrics and
+  alerts added to match.
 explain: |
   Code that tells you what it is doing in production, so when something breaks you can see what happened. Say what must work and get logs, metrics and alerts added to match.
 
@@ -27,6 +30,7 @@ you_get:
   - Alert rules with thresholds
   - A short runbook for each alert
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

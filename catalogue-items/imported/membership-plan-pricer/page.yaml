@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs tier layout and price choices with set rules.
 new_slug: membership-plan-pricer
 name: Membership plan pricer
-summary: Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades.
+summary: Tell it your plans or membership. Get tier prices, flat or pay-per-use
+  advice, and ways to win upgrades.
 job: set-prices
 headline: Membership plan pricer
-subhead: Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades.
+subhead: Clear prices for your plan tiers that nudge people to pick a plan and
+  move up a level. You give your tiers and goals, and get rounded,
+  ready-to-publish prices with a one-line reason for each.
 explain: |
   Clear prices for your plan tiers that nudge people to pick a plan and move up a level. You give your tiers and goals, and get rounded, ready-to-publish prices with a one-line reason for each.
 
@@ -27,5 +30,6 @@ you_get:
   - Simple add-on prices
   - A short reason for each choice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

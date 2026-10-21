@@ -3,8 +3,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
-import { Marked } from "marked";
+import { markdown as md } from "./lib/safe-markdown.mjs";
 import { zipSync } from "fflate";
+import { quarantineClosure } from "../../tools/lib/quarantine.mjs";
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
 const ROOT = path.resolve(process.env.CATALOGUE_ROOT || "../catalogue-items");
@@ -33,7 +34,6 @@ const asPorts = (list) =>
 
 // Markdown is turned into HTML here, at build time, so the site ships no Markdown library.
 // Raw HTML in a file is escaped: files are data, never markup we trust.
-const md = new Marked({ gfm: true, renderer: { html: ({ text }) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;") } });
 // The skill file as shown on the page: no frontmatter, and no <!-- markers --> the section tools leave.
 const bodyOf = (t) => t.replace(/\r\n?/g, "\n").replace(/^---\n[\s\S]*?\n---\n?/, "").replace(/^<!--[\s\S]*?-->\n?/gm, "");
 
@@ -110,6 +110,7 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
       outputs: asPorts(item.outputs),
       uses: item.uses ?? [],
       steps,
+      ...(item.execution === "coordinator" ? { execution: "coordinator" } : {}),
       origin: imported ? "imported" : item.origin ?? "own",
       ...(item.source ? { source: { by: String(item.source.by ?? ""), repo: String(item.source.repo ?? ""), url: String(item.source.url ?? ""), licence: String(item.source.licence ?? ""), original: String(item.source.original_name ?? ""), commit: String(item.source.commit ?? "") } } : {}),
       ...(Array.isArray(item.warnings) && item.warnings.length ? { warnings: item.warnings.map(String) } : {}),
@@ -202,6 +203,18 @@ for (const r of roster.minds) {
   });
 }
 
+// Exclude reviewed risks and their dependents from every published asset. Keep sources intact for review.
+const quarantineFile = path.join(ROOT, "quarantine.yaml");
+const quarantine = fs.existsSync(quarantineFile) ? YAML.parse(fs.readFileSync(quarantineFile, "utf8")) ?? {} : {};
+const blocked = quarantineClosure(blocks, Object.keys(quarantine));
+for (let i = blocks.length - 1; i >= 0; i--) if (blocked.has(blocks[i].slug)) {
+  const slug = blocks[i].slug;
+  fs.rmSync(path.join(OUT_SKILLS, slug), { recursive: true, force: true });
+  fs.rmSync(path.join(OUT_SKILLS, `${slug}.zip`), { force: true });
+  fs.rmSync(path.join(OUT_PAGES, `${slug}.json`), { force: true });
+  blocks.splice(i, 1);
+}
+if (blocked.size) console.log(`Quarantine: ${blocked.size} blocks and their assets withheld`);
 // How many workflows use each block: the honest "popular" signal until people can vote.
 const bySlug = Object.fromEntries(blocks.map((b) => [b.slug, b]));
 // Each skill names the minds whose work it comes from; each mind then lists those skills, the ones it leads first.

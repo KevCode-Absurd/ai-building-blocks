@@ -2,10 +2,13 @@ thinking: low
 thinking_why: Sorting files follows simple, repeatable rules.
 new_slug: folder-tidier
 name: Folder tidier
-summary: Point it at a messy folder. Get a clean folder plan and duplicates found. Files move only when you say yes.
+summary: Point it at a messy folder. Get a clean folder plan and duplicates
+  found. Files move only when you say yes.
 job: organise-work
 headline: Folder tidier
-subhead: Point it at a messy folder. Get a clean folder plan and duplicates found. Files move only when you say yes.
+subhead: Point it at a messy folder. Get a clean folder plan and duplicates
+  found. Files move only when you say yes. Bring folder to tidy. Use the result
+  to plan your next step.
 explain: |
   A messy folder becomes a clear plan for how it should be organised, with duplicates listed. Nothing moves until you approve it.
 
@@ -27,6 +30,7 @@ you_get:
   - Move plan to approve
   - Report after the changes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your files and move them.

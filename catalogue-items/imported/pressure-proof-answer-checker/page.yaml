@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It must spot pressure tactics and weigh the evidence.
 new_slug: pressure-proof-answer-checker
 name: Pressure-proof answer checker
-summary: Use it when someone pushes your AI to agree or sign off. Get answers that separate evidence from pressure.
+summary: Use it when someone pushes your AI to agree or sign off. Get answers
+  that separate evidence from pressure.
 job: think-and-decide
 headline: Pressure-proof answer checker
-subhead: Use it when someone pushes your AI to agree or sign off. Get answers that separate evidence from pressure.
+subhead: A way to keep your AI honest when someone pushes it to agree, sign off
+  or hurry. It separates what the evidence shows from what the pressure demands.
 explain: |
   A way to keep your AI honest when someone pushes it to agree, sign off or hurry. It separates what the evidence shows from what the pressure demands.
 
@@ -25,5 +27,6 @@ you_get:
   - Refusal of false sign-off
   - Honest next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

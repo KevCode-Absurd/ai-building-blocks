@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies a set of known principles to code and suggests edits.
 new_slug: code-habits-reviewer
 name: Code habits reviewer
-summary: Give it code. Get duplication, tight coupling and weak contracts flagged, with fixes. Uses Pragmatic Programmer principles.
+summary: Give it code. Get duplication, tight coupling and weak contracts
+  flagged, with fixes. Uses Pragmatic Programmer principles.
 job: test-and-fix-code
 headline: Code habits reviewer
-subhead: Give it code. Get duplication, tight coupling and weak contracts flagged, with fixes. Uses Pragmatic Programmer principles.
+subhead: Your code gets a score out of ten against the habits from The Pragmatic
+  Programmer, plus a list of what to fix. It shows where repeated logic, tangled
+  parts and unclear promises will make future changes expensive.
 explain: |
   Your code gets a score out of ten against the habits from The Pragmatic Programmer, plus a list of what to fix. It shows where repeated logic, tangled parts and unclear promises will make future changes expensive.
 
@@ -25,5 +28,6 @@ you_get:
   - A fix for each problem
   - What to do first
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It reacts to one short answer.
 new_slug: follow-up-question-writer
 name: Follow-up question writer
-summary: Give it what a student just said. Get follow-up moves that push their thinking further.
+summary: Give it what a student just said. Get follow-up moves that push their
+  thinking further.
 job: teach-and-train
 headline: Follow-up question writer
-subhead: Give it what a student just said. Get follow-up moves that push their thinking further.
+subhead: Give it what a student just said. Get follow-up moves that push their
+  thinking further. Bring what the student said. Use the result to plan your
+  next step.
 explain: |
   After a student says something half right or surprising, you get follow-up questions that push their thinking further, so you are not stuck saying "good, anyone else?".
 
@@ -26,5 +29,6 @@ you_get:
   - When to use each one
   - Prompt for the whole class to join in
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

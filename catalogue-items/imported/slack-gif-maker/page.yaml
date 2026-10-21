@@ -5,7 +5,9 @@ name: Slack GIF maker
 summary: Describe the animation. Get a GIF sized and checked to work in Slack.
 job: make-images
 headline: Slack GIF maker
-subhead: Describe the animation. Get a GIF sized and checked to work in Slack.
+subhead: A small animated GIF that fits Slack's limits and looks right on
+  screen. You describe the animation, like a star spinning or a coffee cup
+  bouncing, and get a file that uploads without trouble.
 explain: |
   A small animated GIF that fits Slack's limits and looks right on screen. You describe the animation, like a star spinning or a coffee cup bouncing, and get a file that uploads without trouble.
 
@@ -25,6 +27,7 @@ you_get:
   - A file size and frame check
   - A smaller version if the first one is too big
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

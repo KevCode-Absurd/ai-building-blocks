@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks between making names and judging names, then weighs each one.
 new_slug: brand-name-finder
 name: Brand name finder
-summary: Share your brand brief. Get name ideas, or scores and honest feedback on the names you already have.
+summary: Share your brand brief. Get name ideas, or scores and honest feedback
+  on the names you already have.
 job: brand-file
 headline: Brand name finder
-subhead: Share your brand brief. Get name ideas, or scores and honest feedback on the names you already have.
+subhead: Name ideas that come with reasons, or scores and honest feedback on
+  names you already have. It works like a naming consultant, not a random word
+  generator.
 explain: |
   Name ideas that come with reasons, or scores and honest feedback on names you already have. It works like a naming consultant, not a random word generator.
 
@@ -26,5 +29,6 @@ you_get:
   - Honest feedback on weak names
   - A shortlist to take forward
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

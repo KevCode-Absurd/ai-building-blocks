@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It maps each hand-off and picks what to record.
 new_slug: shipment-tracking-planner
 name: Shipment tracking planner
-summary: Describe your shipments. Get what to track at each step, how to tag items, and alerts for late or lost goods.
+summary: Describe your shipments. Get what to track at each step, how to tag
+  items, and alerts for late or lost goods.
 job: plan-supply-chain
 headline: Shipment tracking planner
-subhead: Describe your shipments. Get what to track at each step, how to tag items, and alerts for late or lost goods.
+subhead: A tracking plan that shows where your goods are at each step and warns
+  you when something is late or lost. It also gives you the trail you need for a
+  recall or an audit.
 explain: |
   A tracking plan that shows where your goods are at each step and warns you when something is late or lost. It also gives you the trail you need for a recall or an audit.
 
@@ -26,5 +29,6 @@ you_get:
   - Alert rules for late or lost goods
   - A plan for who sees tracking data
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts stock by expiry date and plans markdowns.
 new_slug: expiry-date-stock-manager
 name: Expiry date stock manager
-summary: Give it items with expiry dates. Get a sell-first list, markdown timing and a way to cut waste.
+summary: Give it items with expiry dates. Get a sell-first list, markdown timing
+  and a way to cut waste.
 job: run-your-store
 headline: Expiry date stock manager
-subhead: Give it items with expiry dates. Get a sell-first list, markdown timing and a way to cut waste.
+subhead: Give it items with expiry dates. Get a sell-first list, markdown timing
+  and a way to cut waste. Bring products with shelf life and date codes. Use the
+  result to plan your next step.
 explain: |
   A sell-first list ordered by expiry date, markdown timing and a rotation routine that cuts the stock you throw away.
 
@@ -28,5 +31,6 @@ you_get:
   - Order quantity advice
   - Waste reduction targets
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

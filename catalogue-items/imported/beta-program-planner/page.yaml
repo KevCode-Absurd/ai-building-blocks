@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It plans a beta and sets the exit rules.
 new_slug: beta-program-planner
 name: Beta program planner
-summary: Describe your launch. Get who to invite, what to ask them, and clear rules for when the beta ends.
+summary: Describe your launch. Get who to invite, what to ask them, and clear
+  rules for when the beta ends.
 job: build-product
 headline: Beta program planner
-subhead: Describe your launch. Get who to invite, what to ask them, and clear rules for when the beta ends.
+subhead: A beta that produces answers, not noise. Describe your launch, and the
+  AI helps you choose between a closed or open beta, then pick participants who
+  match the people you will have after launch, and size the group so you can
+  handle the feedback.
 explain: |
   A beta that produces answers, not noise. Describe your launch, and the AI helps you choose between a closed or open beta, then pick participants who match the people you will have after launch, and size the group so you can handle the feedback.
 
@@ -26,5 +30,6 @@ you_get:
   - A feedback and triage plan
   - Ship, extend or stop rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

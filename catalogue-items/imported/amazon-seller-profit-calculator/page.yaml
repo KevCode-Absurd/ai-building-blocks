@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows set cost formulas on your numbers.
 new_slug: amazon-seller-profit-calculator
 name: Amazon seller profit calculator
-summary: Give it your product cost and price. Get fees, profit margin, break-even point and a price to charge.
+summary: Give it your product cost and price. Get fees, profit margin,
+  break-even point and a price to charge.
 job: run-your-store
 headline: Amazon seller profit calculator
-subhead: Give it your product cost and price. Get fees, profit margin, break-even point and a price to charge.
+subhead: Know what you really keep on each Amazon FBA sale before you buy stock.
+  Enter your price and costs and get the full cost breakdown, profit margin,
+  break-even point and a suggested price for the margin you want.
 explain: |
   Know what you really keep on each Amazon FBA sale before you buy stock. Enter your price and costs and get the full cost breakdown, profit margin, break-even point and a suggested price for the margin you want.
 
@@ -28,6 +31,7 @@ you_get:
   - A price for your target margin
   - A comparison table across SKUs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

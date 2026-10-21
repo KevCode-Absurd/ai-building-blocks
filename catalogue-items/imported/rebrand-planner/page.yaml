@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It judges what to keep and what to drop, which takes careful thought.
 new_slug: rebrand-planner
 name: Rebrand planner
-summary: Say why your brand must change. Get what to keep, what to change and a rollout plan.
+summary: Say why your brand must change. Get what to keep, what to change and a
+  rollout plan.
 job: plan-strategy
 headline: Rebrand planner
-subhead: Say why your brand must change. Get what to keep, what to change and a rollout plan.
+subhead: A rebrand plan that says what to keep, what to change and how to roll
+  it out without losing customer trust. It begins with the real reason for the
+  change, since a new logo alone never fixes a strategy problem.
 explain: |
   A rebrand plan that says what to keep, what to change and how to roll it out without losing customer trust. It begins with the real reason for the change, since a new logo alone never fixes a strategy problem.
 
@@ -26,5 +29,6 @@ you_get:
   - New brand direction
   - Phased rollout plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

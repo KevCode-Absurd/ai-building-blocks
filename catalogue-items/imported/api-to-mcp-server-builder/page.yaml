@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It maps an API to tools using a set method.
 new_slug: api-to-mcp-server-builder
 name: API to MCP server builder
-summary: Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
+summary: Give it an API spec. Get an MCP server in Python or TypeScript that
+  lets your AI use that API.
 job: connect-tools
 headline: API to MCP server builder
-subhead: Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
+subhead: An MCP server that lets your AI use a real API, built from the API's
+  own spec instead of hand-written wrappers. Give it an OpenAPI file and you get
+  a server in Python or TypeScript that exposes each action as a tool.
 explain: |
   An MCP server that lets your AI use a real API, built from the API's own spec instead of hand-written wrappers. Give it an OpenAPI file and you get a server in Python or TypeScript that exposes each action as a tool.
 
@@ -26,6 +29,7 @@ you_get:
   - A validation report
   - Notes for safe versioning
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

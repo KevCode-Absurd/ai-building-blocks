@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It makes design choices, then sets rules around them.
 new_slug: logo-and-brand-kit-designer
 name: Logo and brand kit designer
-summary: Describe your brand. Get logo directions with colors, type, file formats and usage rules.
+summary: Describe your brand. Get logo directions with colors, type, file
+  formats and usage rules.
 job: design-work
 headline: Logo and brand kit designer
-subhead: Describe your brand. Get logo directions with colors, type, file formats and usage rules.
+subhead: A logo brief and two or three distinct logo directions, each with
+  colors, fonts, file formats and rules for using it. You can hand it to a
+  designer or an image tool and know what to ask for.
 explain: |
   A logo brief and two or three distinct logo directions, each with colors, fonts, file formats and rules for using it. You can hand it to a designer or an image tool and know what to ask for.
 
@@ -28,5 +31,6 @@ you_get:
   - Export sizes and file formats
   - Usage rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

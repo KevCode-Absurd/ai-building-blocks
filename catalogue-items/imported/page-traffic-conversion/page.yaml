@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It pulls analytics numbers into a table.
 new_slug: page-traffic-conversion
 name: Page traffic and conversion reader
-summary: Run it on your store. Get sessions, conversion and bounce rate for each product and collection page.
+summary: Run it on your store. Get sessions, conversion and bounce rate for each
+  product and collection page.
 job: audit-landing-page
 headline: Page traffic and conversion reader
-subhead: Run it on your store. Get sessions, conversion and bounce rate for each product and collection page.
+subhead: A ranked list of your store's product and collection pages by visits,
+  sales rate and bounce rate, so you see which pages earn their traffic and
+  which waste it.
 explain: |
   A ranked list of your store's product and collection pages by visits, sales rate and bounce rate, so you see which pages earn their traffic and which waste it.
 
@@ -26,6 +29,7 @@ you_get:
   - Product versus collection split
   - Readable or JSON output
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

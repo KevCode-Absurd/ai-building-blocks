@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It balances cost, service and carrier relationships.
 new_slug: freight-carrier-manager
 name: Freight carrier manager
-summary: Describe your shipping lanes and carriers. Get a bid plan, rate talking points and a carrier scorecard.
+summary: Describe your shipping lanes and carriers. Get a bid plan, rate talking
+  points and a carrier scorecard.
 job: sell-and-negotiate
 headline: Freight carrier manager
-subhead: Describe your shipping lanes and carriers. Get a bid plan, rate talking points and a carrier scorecard.
+subhead: Describe your shipping lanes and carriers. Get a bid plan, rate talking
+  points and a carrier scorecard. Bring lanes with volumes and spend. Use the
+  result to plan your next step.
 explain: |
   A plan for running your carrier network: how to bid out freight, what to say when negotiating rates and a scorecard that actually gets used.
 
@@ -27,5 +30,6 @@ you_get:
   - Routing guide per lane
   - Carrier mix advice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: texture-style-guide
 name: Real-world texture style guide writer
-summary: Describe your product. Get a style guide that copies real objects and textures, with rules for each part.
+summary: Describe your product. Get a style guide that copies real objects and
+  textures, with rules for each part.
 job: design-work
 headline: Real-world texture style guide writer
-subhead: Describe your product. Get a style guide that copies real objects and textures, with rules for each part.
+subhead: "A style guide for an app or site that looks like real things: leather,
+  paper, glass, brushed metal, buttons that seem to press down. It gives your
+  designers and developers one shared rulebook instead of guesses."
 explain: |
   A style guide for an app or site that looks like real things: leather, paper, glass, brushed metal, buttons that seem to press down. It gives your designers and developers one shared rulebook instead of guesses.
 
@@ -26,5 +29,6 @@ you_get:
   - Accessibility requirements
   - A review checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

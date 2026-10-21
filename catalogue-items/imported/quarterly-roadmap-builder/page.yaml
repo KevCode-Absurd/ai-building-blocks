@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs competing priorities and decides what to leave out.
 new_slug: quarterly-roadmap-builder
 name: Quarterly roadmap builder
-summary: Give it your backlog and requests. Get a multi-quarter roadmap that balances build, improve and maintain, plus a not-doing list.
+summary: Give it your backlog and requests. Get a multi-quarter roadmap that
+  balances build, improve and maintain, plus a not-doing list.
 job: plan-strategy
 headline: Quarterly roadmap builder
-subhead: Give it your backlog and requests. Get a multi-quarter roadmap that balances build, improve and maintain, plus a not-doing list.
+subhead: A multi-quarter roadmap you can defend in a room, plus the ranking work
+  behind it. It balances new builds, improvements and upkeep, and ends with a
+  list of things you are not doing and why.
 explain: |
   A multi-quarter roadmap you can defend in a room, plus the ranking work behind it. It balances new builds, improvements and upkeep, and ends with a list of things you are not doing and why.
 
@@ -27,5 +30,6 @@ you_get:
   - Not-doing list
   - Version for stakeholders
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It balances more bookings against better-qualified ones.
 new_slug: booking-page-designer
 name: Booking page designer
-summary: Describe your calls or appointments. Get a booking flow with open times, qualifying questions, prep emails and follow-up.
+summary: Describe your calls or appointments. Get a booking flow with open
+  times, qualifying questions, prep emails and follow-up.
 job: sell-and-negotiate
 headline: Booking page designer
-subhead: Describe your calls or appointments. Get a booking flow with open times, qualifying questions, prep emails and follow-up.
+subhead: A booking flow that sets up good calls instead of cold demos. You get
+  open times, a short set of questions, prep emails for your team and a
+  follow-up sequence, all matched to who is booking.
 explain: |
   A booking flow that sets up good calls instead of cold demos. You get open times, a short set of questions, prep emails for your team and a follow-up sequence, all matched to who is booking.
 
@@ -26,5 +29,6 @@ you_get:
   - Prep briefs for the rep
   - Reminder and follow-up emails
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

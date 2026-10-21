@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Rules must fit together without gaps.
 new_slug: lead-handoff-designer
 name: Lead handoff designer
-summary: Describe your sales process. Get lead scoring, stages and handoff rules from marketing to sales.
+summary: Describe your sales process. Get lead scoring, stages and handoff rules
+  from marketing to sales.
 job: sell-and-negotiate
 headline: Lead handoff designer
-subhead: Describe your sales process. Get lead scoring, stages and handoff rules from marketing to sales.
+subhead: The rules that tell marketing, sales and customer success when a lead
+  is ready to pass on, written down before you automate anything. Describe your
+  sales process, deal size and tools.
 explain: |
   The rules that tell marketing, sales and customer success when a lead is ready to pass on, written down before you automate anything. Describe your sales process, deal size and tools. The skill builds a lead scoring model, defines each stage from new lead to closed deal, and sets handoff rules with a time limit and an owner for every step.
 
@@ -26,5 +29,6 @@ you_get:
   - Handoff rules with time limits
   - Metrics to track each handoff
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

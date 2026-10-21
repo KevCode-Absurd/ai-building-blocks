@@ -5,7 +5,9 @@ name: Apify Actor converter
 summary: Give it an existing script or project. Get it ready to run as an Apify Actor.
 job: build-software
 headline: Apify Actor converter
-subhead: Give it an existing script or project. Get it ready to run as an Apify Actor.
+subhead: Give it an existing script or project. Get it ready to run as an Apify
+  Actor. Bring your existing code or project folder. Use the result to plan your
+  next step.
 explain: |
   Your existing script or project, made ready to run as an Apify Actor so it can run in the cloud, take input from a form and give back structured results. You need an Apify account.
 
@@ -26,6 +28,7 @@ you_get:
   - Updated Actor settings file
   - Local test and push steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and use the Apify command line tool.

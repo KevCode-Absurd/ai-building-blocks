@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It lists records and formats them.
 new_slug: wholesale-account-lister
 name: Wholesale account lister
-summary: Run it on your store. Get your B2B companies with locations, catalogs and payment terms in one view.
+summary: Run it on your store. Get your B2B companies with locations, catalogs
+  and payment terms in one view.
 job: run-your-store
 headline: Wholesale account lister
-subhead: Run it on your store. Get your B2B companies with locations, catalogs and payment terms in one view.
+subhead: "A single view of every wholesale customer in your Shopify store:
+  companies, their locations, price lists and payment terms. You stop clicking
+  through admin pages one account at a time."
 explain: |
   A single view of every wholesale customer in your Shopify store: companies, their locations, price lists and payment terms. You stop clicking through admin pages one account at a time.
 
@@ -27,6 +30,7 @@ you_get:
   - Payment terms
   - Readable table or JSON
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

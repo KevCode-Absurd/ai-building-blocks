@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows the tool's command guide for each job.
 new_slug: google-workspace-cli
 name: Google Workspace command-line operator
-summary: Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you.
+summary: Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands
+  set up and run for you.
 job: connect-tools
 headline: Google Workspace command-line operator
-subhead: Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you.
+subhead: Gmail, Drive, Sheets, Calendar, Docs, Chat and Tasks handled by
+  commands instead of clicks. Say what you want done, such as sending an email
+  or listing files, and it sets up the tool and runs the right command.
 explain: |
   Gmail, Drive, Sheets, Calendar, Docs, Chat and Tasks handled by commands instead of clicks. Say what you want done, such as sending an email or listing files, and it sets up the tool and runs the right command.
 
@@ -26,6 +29,7 @@ you_get:
   - Results shown as tables
   - Reusable scripts for repeat jobs
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands on your computer.

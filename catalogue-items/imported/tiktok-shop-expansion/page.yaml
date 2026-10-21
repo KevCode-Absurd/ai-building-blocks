@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It weighs markets, shipping and rules together.
 new_slug: tiktok-shop-expansion
 name: TikTok Shop overseas expansion planner
-summary: Tell it your products and target countries. Get which markets to enter first, plus shipping, rules and localizing steps.
+summary: Tell it your products and target countries. Get which markets to enter
+  first, plus shipping, rules and localizing steps.
 job: run-your-store
 headline: TikTok Shop overseas expansion planner
-subhead: Tell it your products and target countries. Get which markets to enter first, plus shipping, rules and localizing steps.
+subhead: A shortlist of countries to sell in next, in the order you should enter
+  them, with the shipping, tax, rule and language work each one needs.
 explain: |
   A shortlist of countries to sell in next, in the order you should enter them, with the shipping, tax, rule and language work each one needs. It helps you avoid launching in a market and then finding out about a customs problem.
 
@@ -27,5 +29,6 @@ you_get:
   - A localization list
   - An order of rollout
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

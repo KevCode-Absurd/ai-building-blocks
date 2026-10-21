@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It reads many visual cues and fits them to a fixed profile.
 new_slug: design-style-analyst
 name: Design style analyst
-summary: Share screenshots or links of designs you like. Get their colors, type, feel and effects as a profile you can reuse.
+summary: Share screenshots or links of designs you like. Get their colors, type,
+  feel and effects as a profile you can reuse.
 job: design-work
 headline: Design style analyst
-subhead: Share screenshots or links of designs you like. Get their colors, type, feel and effects as a profile you can reuse.
+subhead: A reusable profile of a look you like. Share screenshots or links to
+  designs you admire and you get a structured file with the colours, type,
+  spacing, overall feel and any special effects, which you can then use to guide
+  new designs.
 explain: |
   A reusable profile of a look you like. Share screenshots or links to designs you admire and you get a structured file with the colours, type, spacing, overall feel and any special effects, which you can then use to guide new designs.
 
@@ -26,5 +30,6 @@ you_get:
   - Structured style file
   - Design made from the profile (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

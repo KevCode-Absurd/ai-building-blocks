@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares many facts and picks the gaps that matter.
 new_slug: competitor-product-analyst
 name: Competitor product analyst
-summary: Give it facts on a rival. Get their pricing, features and strengths set against yours, with gaps to act on.
+summary: Give it facts on a rival. Get their pricing, features and strengths set
+  against yours, with gaps to act on.
 job: study-competitors
 headline: Competitor product analyst
-subhead: Give it facts on a rival. Get their pricing, features and strengths set against yours, with gaps to act on.
+subhead: Give it facts on a rival. Get their pricing, features and strengths set
+  against yours, with gaps to act on. Bring two to four competitors. Use the
+  result to plan your next step.
 explain: |
   A scored teardown of how a rival's product, pricing and customer experience stack up against yours, with a short list of what to do next. It turns scattered facts into something a team can act on.
 
@@ -26,5 +29,6 @@ you_get:
   - A SWOT and positioning map
   - An action plan by timeframe
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

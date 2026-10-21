@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies known frameworks to your service.
 new_slug: monitoring-planner
 name: Monitoring planner
-summary: Describe your service. Get metrics, logs, traces, alerts and service targets that tell you when it hurts.
+summary: Describe your service. Get metrics, logs, traces, alerts and service
+  targets that tell you when it hurts.
 job: ship-and-host
 headline: Monitoring planner
-subhead: Describe your service. Get metrics, logs, traces, alerts and service targets that tell you when it hurts.
+subhead: A monitoring setup for your service that tells you when users are
+  hurting, without waking you for noise. You get the dashboards, the alert rules
+  and the targets that define good service.
 explain: |
   A monitoring setup for your service that tells you when users are hurting, without waking you for noise. You get the dashboards, the alert rules and the targets that define good service.
 
@@ -27,5 +30,6 @@ you_get:
   - A first draft of service targets
   - A tuning check for the next rotation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

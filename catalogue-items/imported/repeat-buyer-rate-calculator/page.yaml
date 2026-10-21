@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It counts customers with two or more orders.
 new_slug: repeat-buyer-rate-calculator
 name: Repeat buyer rate calculator
-summary: Get the share of customers who order again within your chosen days, split by product or collection.
+summary: Get the share of customers who order again within your chosen days,
+  split by product or collection.
 job: run-your-store
 headline: Repeat buyer rate calculator
-subhead: Get the share of customers who order again within your chosen days, split by product or collection.
+subhead: The share of your customers who come back and order again within the
+  number of days you pick, with the rate split by first product bought.
 explain: |
   The share of your customers who come back and order again within the number of days you pick, with the rate split by first product bought. It shows which products bring people back.
 
@@ -26,6 +28,7 @@ you_get:
   - Ranked list of products that bring buyers back
   - Output as text or JSON
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

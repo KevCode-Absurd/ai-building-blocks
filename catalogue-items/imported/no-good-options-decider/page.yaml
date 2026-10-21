@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It weighs painful trade-offs across time.
 new_slug: no-good-options-decider
 name: No-good-options decider
-summary: Describe a choice where every option hurts. Get a 10/10/10 and regret check, and a clear pick.
+summary: Describe a choice where every option hurts. Get a 10/10/10 and regret
+  check, and a clear pick.
 job: think-and-decide
 headline: No-good-options decider
-subhead: Describe a choice where every option hurts. Get a 10/10/10 and regret check, and a clear pick.
+subhead: "A clear pick when every choice hurts. This is for the calls that keep
+  you awake: letting a co-founder go, cutting staff, killing a loved product or
+  shutting down."
 explain: |
   A clear pick when every choice hurts. This is for the calls that keep you awake: letting a co-founder go, cutting staff, killing a loved product or shutting down.
 
@@ -26,5 +29,6 @@ you_get:
   - A regret check
   - A clear pick with first steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

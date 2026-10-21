@@ -1,0 +1,32 @@
+slug: copilot-aws-cloudwatch-investigation
+name: CloudWatch incident evidence collector
+summary: Share an AWS incident and time window. Get useful log queries, deployment links and the likely affected services.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/aws-cloudwatch-investigation
+  url: https://github.com/github/awesome-copilot/tree/main/skills/aws-cloudwatch-investigation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: aws-cloudwatch-investigation
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: aws-cloudwatch-investigation skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/aws-cloudwatch-investigation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

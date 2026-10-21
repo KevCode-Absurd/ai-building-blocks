@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts spend by set rules, then you judge the cuts.
 new_slug: software-spend-auditor
 name: Software spend auditor
-summary: Give it your spend list. Get spend by category, duplicate tools and a plan to cut suppliers.
+summary: Give it your spend list. Get spend by category, duplicate tools and a
+  plan to cut suppliers.
 job: money-and-investing
 headline: Software spend auditor
-subhead: Give it your spend list. Get spend by category, duplicate tools and a plan to cut suppliers.
+subhead: A clear picture of what you spend on software, where you pay twice, and
+  which suppliers to cut. You give your spend list, and get it sorted into
+  categories with a plan for fewer vendors.
 explain: |
   A clear picture of what you spend on software, where you pay twice, and which suppliers to cut. You give your spend list, and get it sorted into categories with a plan for fewer vendors.
 
@@ -26,6 +29,7 @@ you_get:
   - Duplicate tool groups
   - A keep, merge or drop plan for suppliers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

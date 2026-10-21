@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Geometry, loads and meshing must all fit together.
 new_slug: physics-simulation-builder
 name: Physics simulation builder
-summary: Describe the part and its loads. Get a finite element model built, solved and plotted.
+summary: Describe the part and its loads. Get a finite element model built,
+  solved and plotted.
 job: build-software
 headline: Physics simulation builder
-subhead: Describe the part and its loads. Get a finite element model built, solved and plotted.
+subhead: Describe a part and the forces or heat acting on it, and get a finite
+  element model built, solved and plotted. It covers heat, stress and
+  electromagnetic problems.
 explain: |
   Describe a part and the forces or heat acting on it, and get a finite element model built, solved and plotted. It covers heat, stress and electromagnetic problems.
 
@@ -26,6 +29,7 @@ you_get:
   - Field plots
   - Derived values such as peak stress or temperature
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the PDE Toolbox.

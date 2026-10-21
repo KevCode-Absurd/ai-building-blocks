@@ -2,10 +2,12 @@ thinking: high
 thinking_why: Distinctive design needs taste and a lot of creative decisions.
 new_slug: standout-website-designer
 name: Standout website designer
-summary: Describe your site. Get a bold, award-level design plan with motion, layout and effects.
+summary: Describe your site. Get a bold, award-level design plan with motion,
+  layout and effects.
 job: design-work
 headline: Standout website designer
-subhead: Describe your site. Get a bold, award-level design plan with motion, layout and effects.
+subhead: A bold design plan for a site that people remember, with layout, type,
+  motion and effects spelled out. Describe your site and who it is for.
 explain: |
   A bold design plan for a site that people remember, with layout, type, motion and effects spelled out. Describe your site and who it is for. The skill rates your design from 0 to 10, with 10 being award-level, and lists exactly what to change to get there.
 
@@ -26,5 +28,6 @@ you_get:
   - Performance guidance for animation
   - A list of changes to reach top level
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

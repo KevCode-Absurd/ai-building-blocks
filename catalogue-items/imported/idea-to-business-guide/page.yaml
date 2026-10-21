@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It runs a long chain of decisions that depend on one another.
 new_slug: idea-to-business-guide
 name: Idea to business guide
-summary: Describe your idea. Get a tested customer, a position, a price and a first market to win, step by step.
+summary: Describe your idea. Get a tested customer, a position, a price and a
+  first market to win, step by step.
 job: test-an-idea
 headline: Idea to business guide
-subhead: Describe your idea. Get a tested customer, a position, a price and a first market to win, step by step.
+subhead: A step-by-step path from a raw idea to a business you can defend. You
+  get a tested customer, a clear position, a price and the first market to win,
+  each saved as a short document.
 explain: |
   A step-by-step path from a raw idea to a business you can defend. You get a tested customer, a clear position, a price and the first market to win, each saved as a short document.
 
@@ -26,5 +29,6 @@ you_get:
   - A strategy and positioning document
   - An offer and pricing plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

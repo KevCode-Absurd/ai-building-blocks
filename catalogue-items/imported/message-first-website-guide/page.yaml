@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It runs a long chain of choices from message to page layout.
 new_slug: message-first-website-guide
 name: Message-first website guide
-summary: Describe your business. Get a website plan that starts with your message, then design, then conversion, step by step.
+summary: Describe your business. Get a website plan that starts with your
+  message, then design, then conversion, step by step.
 job: write-landing-page
 headline: Message-first website guide
-subhead: Describe your business. Get a website plan that starts with your message, then design, then conversion, step by step.
+subhead: A step-by-step plan for building a website that gets visitors to act,
+  with the words settled before the looks. Describe your business and you are
+  walked through ten phases, saved in a plan file you can pick up again later.
 explain: |
   A step-by-step plan for building a website that gets visitors to act, with the words settled before the looks. Describe your business and you are walked through ten phases, saved in a plan file you can pick up again later.
 
@@ -25,5 +28,6 @@ you_get:
   - A design brief
   - A conversion and test plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

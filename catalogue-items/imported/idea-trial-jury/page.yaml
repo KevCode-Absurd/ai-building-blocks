@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It runs many separate arguments and weighs them against each other.
 new_slug: idea-trial-jury
 name: Idea trial jury
-summary: Give it a plan or claim. Get a verdict from a prosecutor, a defender and 12 jurors, plus what would flip it.
+summary: Give it a plan or claim. Get a verdict from a prosecutor, a defender
+  and 12 jurors, plus what would flip it.
 job: think-and-decide
 headline: Idea trial jury
-subhead: Give it a plan or claim. Get a verdict from a prosecutor, a defender and 12 jurors, plus what would flip it.
+subhead: Give it a plan or claim. Get a verdict from a prosecutor, a defender
+  and 12 jurors, plus what would flip it. Bring the idea, plan or claim. Use the
+  result to plan your next step.
 explain: |
   A verdict on your plan, argued like a court case, for the times when Claude agrees with everything you say. A prosecutor builds the case against it, a defender builds the case for it and a jury of twelve independent Claudes votes without seeing each other.
 
@@ -26,6 +29,7 @@ you_get:
   - A clear verdict
   - What would flip the decision
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and start helper agents.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads sales patterns and turns them into priorities.
 new_slug: sales-led-content-planner
 name: Sales-led content planner
-summary: Give it your sales data. Get a 30 day plan of what to push, what offers to run and what to hold.
+summary: Give it your sales data. Get a 30 day plan of what to push, what offers
+  to run and what to hold.
 job: grow-social
 headline: Sales-led content planner
-subhead: Give it your sales data. Get a 30 day plan of what to push, what offers to run and what to hold.
+subhead: A thirty-day plan of what to promote, which offers to run and what to
+  hold back, built from your real sales. It is a strategy brief, with no
+  calendar and no finished posts.
 explain: |
   A thirty-day plan of what to promote, which offers to run and what to hold back, built from your real sales. It is a strategy brief, with no calendar and no finished posts.
 
@@ -26,7 +29,9 @@ you_get:
   - A ranked list of what to push or hold
   - Offer ideas for the next thirty days
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

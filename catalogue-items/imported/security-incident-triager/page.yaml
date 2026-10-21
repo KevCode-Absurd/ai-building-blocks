@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Wrong calls here cost a lot, so it reasons carefully.
 new_slug: security-incident-triager
 name: Security incident triager
-summary: Give it a security alert. Get severity, who to tell, what to preserve and the next steps.
+summary: Give it a security alert. Get severity, who to tell, what to preserve
+  and the next steps.
 job: secure-code
 headline: Security incident triager
-subhead: Give it a security alert. Get severity, who to tell, what to preserve and the next steps.
+subhead: Give it a security alert. Get severity, who to tell, what to preserve
+  and the next steps. Bring the alert or event details, in JSON if you have
+  them. Use the result to plan your next step.
 explain: |
   The first hour of a security alert, sorted out: what kind of incident it is, how severe, who needs to know, and what evidence to keep. You feed it an alert from a SIEM, an endpoint tool, a threat feed or a user report.
 
@@ -27,5 +30,6 @@ you_get:
   - An evidence preservation list
   - Next steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

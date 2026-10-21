@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It follows a fixed three-step lesson shape.
 new_slug: vocabulary-lesson-planner
 name: Three-step hands-on vocabulary lesson planner
-summary: Name the concept. Get a lesson that shows it, names it and checks it, using real objects.
+summary: Name the concept. Get a lesson that shows it, names it and checks it,
+  using real objects.
 job: teach-and-train
 headline: Three-step hands-on vocabulary lesson planner
-subhead: Name the concept. Get a lesson that shows it, names it and checks it, using real objects.
+subhead: "A short lesson plan that teaches a new word or idea with real objects,
+  in three clear moves: show it, name it, then check it."
 explain: |
   A short lesson plan that teaches a new word or idea with real objects, in three clear moves: show it, name it, then check it. It is based on the three-period lesson used in Montessori classrooms.
 
@@ -27,5 +29,6 @@ you_get:
   - A quick check for understanding
   - Notes for language learners
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

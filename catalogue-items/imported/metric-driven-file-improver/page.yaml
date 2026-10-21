@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It loops through experiments and judges each result.
 new_slug: metric-driven-file-improver
 name: Metric-driven file improver
-summary: Pick a file and a score. Get an agent that edits, measures and keeps only changes that raise the score.
+summary: Pick a file and a score. Get an agent that edits, measures and keeps
+  only changes that raise the score.
 job: set-up-ai
 headline: Metric-driven file improver
-subhead: Pick a file and a score. Get an agent that edits, measures and keeps only changes that raise the score.
+subhead: A file that gets better while you sleep, because an agent tries
+  changes, measures each one and keeps only those that raise your score. Give it
+  one file and one way to score it, and it runs dozens of small experiments
+  instead of one guess.
 explain: |
   A file that gets better while you sleep, because an agent tries changes, measures each one and keeps only those that raise your score. Give it one file and one way to score it, and it runs dozens of small experiments instead of one guess.
 
@@ -26,6 +30,7 @@ you_get:
   - A status dashboard
   - The ability to pause and resume
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code, use git and run commands on a timer.

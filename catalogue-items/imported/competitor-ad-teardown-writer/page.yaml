@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It has to judge patterns and keep facts apart from guesses.
 new_slug: competitor-ad-teardown-writer
 name: Competitor ad teardown writer
-summary: Name your rivals. Get a report on their public ads and landing pages, with proof apart from guesses. Collects data from websites.
+summary: Name your rivals. Get a report on their public ads and landing pages,
+  with proof apart from guesses. Collects data from websites.
 job: study-competitors
 headline: Competitor ad teardown writer
-subhead: Name your rivals. Get a report on their public ads and landing pages, with proof apart from guesses. Collects data from websites.
+subhead: A report on what your rivals are running in ads and where those ads
+  send people, with what you can prove kept apart from what you are guessing.
 explain: |
   A report on what your rivals are running in ads and where those ads send people, with what you can prove kept apart from what you are guessing. A long-running ad hints at money being spent on it, but the public library cannot confirm that.
 
@@ -27,6 +29,7 @@ you_get:
   - Evidence marked apart from guesses
   - Gaps and counter ideas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can browse the web.

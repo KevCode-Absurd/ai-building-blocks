@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads numbers and turns them into coaching.
 new_slug: sprint-coach
 name: Sprint coach
-summary: Give it your sprint data. Get velocity trends, retro themes and fixes for your team's habits.
+summary: Give it your sprint data. Get velocity trends, retro themes and fixes
+  for your team's habits.
 job: lead-people
 headline: Sprint coach
-subhead: Give it your sprint data. Get velocity trends, retro themes and fixes for your team's habits.
+subhead: A clear read on how your sprints are going, using your own data, and
+  fixes for the habits that slow the team down. Export sprint history from Jira
+  or a similar tool.
 explain: |
   A clear read on how your sprints are going, using your own data, and fixes for the habits that slow the team down. Export sprint history from Jira or a similar tool. Three Python scripts do the maths.
 
@@ -27,6 +30,7 @@ you_get:
   - Action item follow-through rates
   - Suggested team improvements
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

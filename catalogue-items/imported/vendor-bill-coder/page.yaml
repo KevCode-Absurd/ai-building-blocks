@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads messy bills and judges where each one belongs.
 new_slug: vendor-bill-coder
 name: Vendor bill coder
-summary: Give it your vendor bills. Get each one read, coded and matched, with a payment run ready for your approval.
+summary: Give it your vendor bills. Get each one read, coded and matched, with a
+  payment run ready for your approval.
 job: track-numbers
 headline: Vendor bill coder
-subhead: Give it your vendor bills. Get each one read, coded and matched, with a payment run ready for your approval.
+subhead: Give it your vendor bills. Get each one read, coded and matched, with a
+  payment run ready for your approval. Bring your chart of accounts and jobs.
+  Use the result to plan your next step.
 explain: |
   The bill pile cleared in one sitting: every bill read, coded to the right account and job, checked against the order and receipt, and a proposed payment run waiting for your yes. Nothing is entered and nothing is paid until you approve.
 
@@ -26,7 +29,9 @@ you_get:
   - Match results and duplicate flags
   - A proposed payment run for approval
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

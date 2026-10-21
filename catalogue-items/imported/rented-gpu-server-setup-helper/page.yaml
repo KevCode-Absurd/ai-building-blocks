@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It matches the job to a server and tracks cost.
 new_slug: rented-gpu-server-setup-helper
 name: Rented GPU server setup helper
-summary: Say what you need to train. Get a rented GPU server chosen, set up, loaded with your files and shut down after.
+summary: Say what you need to train. Get a rented GPU server chosen, set up,
+  loaded with your files and shut down after.
 job: build-software
 headline: Rented GPU server setup helper
-subhead: Say what you need to train. Get a rented GPU server chosen, set up, loaded with your files and shut down after.
+subhead: A rented GPU machine picked for your job, set up, loaded with your
+  files and shut down when you finish. You stop paying for idle hardware.
 explain: |
   A rented GPU machine picked for your job, set up, loaded with your files and shut down when you finish. You stop paying for idle hardware.
 
@@ -27,6 +29,8 @@ you_get:
   - Persistent storage set up
   - Shutdown steps so billing stops
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can run commands and use a Lambda Labs account (paid).
+  - It works best when your AI can run commands and use a Lambda Labs account
+    (paid).

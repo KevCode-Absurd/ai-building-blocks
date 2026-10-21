@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It chooses what is worth an alert, which depends on your risks.
 new_slug: uptime-and-alert-setup-planner
 name: Uptime and alert setup planner
-summary: Describe your site. Get uptime checks, error tracking, targets, alert rules and an on-call plan that avoids alert fatigue.
+summary: Describe your site. Get uptime checks, error tracking, targets, alert
+  rules and an on-call plan that avoids alert fatigue.
 job: ship-and-host
 headline: Uptime and alert setup planner
-subhead: Describe your site. Get uptime checks, error tracking, targets, alert rules and an on-call plan that avoids alert fatigue.
+subhead: A monitoring plan that tells the right person when your site breaks and
+  stays quiet when it does not. You get what to check, what to alert on and who
+  gets woken up, without a flood of noise.
 explain: |
   A monitoring plan that tells the right person when your site breaks and stays quiet when it does not. You get what to check, what to alert on and who gets woken up, without a flood of noise.
 
@@ -26,5 +29,6 @@ you_get:
   - Alert rules split into page and quiet channel
   - An on-call rotation plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

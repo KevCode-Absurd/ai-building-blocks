@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs a set scan and connect routine.
 new_slug: bluetooth-device-connector
 name: Bluetooth device connector
-summary: Name a Bluetooth Low Energy device. Get it scanned, connected and its data read or written.
+summary: Name a Bluetooth Low Energy device. Get it scanned, connected and its
+  data read or written.
 job: build-software
 headline: Bluetooth device connector
-subhead: Name a Bluetooth Low Energy device. Get it scanned, connected and its data read or written.
+subhead: Find a Bluetooth Low Energy device near you, connect to it from MATLAB,
+  and read, write or subscribe to its data. This is the setup step for anything
+  that needs live sensor or wearable data.
 explain: |
   Find a Bluetooth Low Energy device near you, connect to it from MATLAB, and read, write or subscribe to its data. This is the setup step for anything that needs live sensor or wearable data.
 
@@ -26,6 +29,7 @@ you_get:
   - Read, write or notification code that works
   - Data flowing into MATLAB
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB and reach a Bluetooth device.

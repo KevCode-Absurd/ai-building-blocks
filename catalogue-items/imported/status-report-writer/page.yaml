@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It summarizes updates in a fixed layout.
 new_slug: status-report-writer
 name: Status report writer
-summary: Give it your project updates. Get a weekly or monthly report with status, risks and decisions needed.
+summary: Give it your project updates. Get a weekly or monthly report with
+  status, risks and decisions needed.
 job: document-work
 headline: Status report writer
-subhead: Give it your project updates. Get a weekly or monthly report with status, risks and decisions needed.
+subhead: Give it your project updates. Get a weekly or monthly report with
+  status, risks and decisions needed. Bring notes on what happened this period.
+  Use the result to plan your next step.
 explain: |
   A status report you can send to leadership today, built from the rough updates you already have. It opens with a short summary, an overall green, amber or red rating, and then lays out what is done, what is in progress, what could go wrong and what you need someone to decide.
 
@@ -28,6 +31,7 @@ you_get:
   - A table of decisions needed
   - A list of next priorities
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project tracker or chat.

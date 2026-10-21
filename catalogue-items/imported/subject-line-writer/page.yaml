@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It asks a few questions, then writes short lines.
 new_slug: subject-line-writer
 name: Subject line writer
-summary: Give it your email and audience. Get subject lines in several angles that earn opens without losing clarity.
+summary: Give it your email and audience. Get subject lines in several angles
+  that earn opens without losing clarity.
 job: write-ad-copy
 headline: Subject line writer
-subhead: Give it your email and audience. Get subject lines in several angles that earn opens without losing clarity.
+subhead: Email subject lines in several angles, each built to earn an open
+  without tricking the reader. You pick the one that fits your message and your
+  audience.
 explain: |
   Email subject lines in several angles, each built to earn an open without tricking the reader. You pick the one that fits your message and your audience.
 
@@ -26,5 +29,6 @@ you_get:
   - Checks for clickbait or misleading wording
   - A suggested pick to test first
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

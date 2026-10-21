@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It sorts by one stock rule.
 new_slug: collection-order-sorter
 name: Collection order sorter
-summary: Pick a collection. Get in-stock products moved to the top and sold-out ones to the bottom. Changes your live store.
+summary: Pick a collection. Get in-stock products moved to the top and sold-out
+  ones to the bottom. Changes your live store.
 job: run-your-store
 headline: Collection order sorter
-subhead: Pick a collection. Get in-stock products moved to the top and sold-out ones to the bottom. Changes your live store.
+subhead: Products in stock move to the top of a Shopify collection and sold-out
+  ones drop to the bottom. It changes your live store, so shoppers see what they
+  can actually buy first.
 explain: |
   Products in stock move to the top of a Shopify collection and sold-out ones drop to the bottom. It changes your live store, so shoppers see what they can actually buy first.
 
@@ -26,6 +29,8 @@ you_get:
   - A report of what moved
   - A way to reverse it
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can access your Shopify admin and change live store data.
+  - It works best when your AI can access your Shopify admin and change live
+    store data.

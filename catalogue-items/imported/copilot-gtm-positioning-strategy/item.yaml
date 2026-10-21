@@ -1,0 +1,37 @@
+slug: copilot-gtm-positioning-strategy
+name: SaaS market position adviser
+summary: Share your product and rivals. Get a distinct market position, buyer reasons and messages to test.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/gtm-positioning-strategy
+  url: https://github.com/github/awesome-copilot/tree/main/skills/gtm-positioning-strategy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: gtm-positioning-strategy
+  author: Smit Patel (https://linkedin.com/in/smitkpatel)
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: gtm-positioning-strategy skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/gtm-positioning-strategy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Smit Patel (https://linkedin.com/in/smitkpatel)
+    url: ""
+    used: Wrote the skill; GitHub Copilot community shared it in their collection.

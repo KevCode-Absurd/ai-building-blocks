@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It weighs seven options against your case.
 new_slug: launch-channel-picker
 name: Launch channel picker
-summary: Describe your product and buyers. Get the best of seven ways to reach them, with tools and first steps.
+summary: Describe your product and buyers. Get the best of seven ways to reach
+  them, with tools and first steps.
 job: plan-strategy
 headline: Launch channel picker
-subhead: Describe your product and buyers. Get the best of seven ways to reach them, with tools and first steps.
+subhead: Describe your product and buyers. Get the best of seven ways to reach
+  them, with tools and first steps. Bring what you sell and the price. Use the
+  result to plan your next step.
 explain: |
   A clear pick of how to reach your first buyers, chosen from seven proven approaches. Describe your product, price and who buys it. The skill weighs inbound content, outbound sales, paid ads and four other motions against your sales cycle and deal size, since a cheap app and an enterprise contract need very different ones.
 
@@ -26,5 +29,6 @@ you_get:
   - First steps for week one
   - Trade-offs of each channel
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

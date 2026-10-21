@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It orders ideas and checks each one is explained.
 new_slug: article-beat-planner
 name: Article beat planner
-summary: Give it raw notes. Get them arranged into a story of beats, with each term explained first.
+summary: Give it raw notes. Get them arranged into a story of beats, with each
+  term explained first.
 job: write-and-tell-stories
 headline: Article beat planner
-subhead: Give it raw notes. Get them arranged into a story of beats, with each term explained first.
+subhead: Your raw notes, turned into an article one beat at a time. You pick the
+  path, and every term is explained before a later beat relies on it, so readers
+  are never lost.
 explain: |
   Your raw notes, turned into an article one beat at a time. You pick the path, and every term is explained before a later beat relies on it, so readers are never lost.
 
@@ -25,5 +28,6 @@ you_get:
   - Next beat options after each step
   - A finished article in your file
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

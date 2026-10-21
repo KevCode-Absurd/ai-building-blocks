@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: The steps are fixed, but you must check quality after.
 new_slug: model-size-reducer
 name: Model size reducer
-summary: Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU.
+summary: Give it a large model. Get a 4-bit copy that is about 3 times faster
+  and fits on a smaller GPU.
 job: build-software
 headline: Model size reducer
-subhead: Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU.
+subhead: Give it a large model. Get a 4-bit copy that is about 3 times faster
+  and fits on a smaller GPU. Bring the model you want to shrink. Use the result
+  to plan your next step.
 explain: |
   A large language model shrunk to 4-bit, running about three times faster and fitting on a smaller GPU, with only a small loss in answer quality.
 
@@ -27,6 +30,7 @@ you_get:
   - Before and after speed and quality checks
   - A method comparison
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on a computer with a GPU.

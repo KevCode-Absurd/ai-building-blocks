@@ -2,10 +2,14 @@ thinking: high
 thinking_why: Choosing one segment means weighing your market and trade-offs.
 new_slug: beachhead-market-picker
 name: Beachhead market picker
-summary: Describe your product and early users. Get one starting segment and a plan to reach the mainstream. Uses Crossing the Chasm.
+summary: Describe your product and early users. Get one starting segment and a
+  plan to reach the mainstream. Uses Crossing the Chasm.
 job: plan-strategy
 headline: Beachhead market picker
-subhead: Describe your product and early users. Get one starting segment and a plan to reach the mainstream. Uses Crossing the Chasm.
+subhead: One starting customer segment you can win, and a plan to grow from
+  there into the mainstream. Describe your product and your first users, and the
+  AI uses Geoffrey Moore's Crossing the Chasm to see where you are on the
+  adoption curve.
 explain: |
   One starting customer segment you can win, and a plan to grow from there into the mainstream. Describe your product and your first users, and the AI uses Geoffrey Moore's Crossing the Chasm to see where you are on the adoption curve.
 
@@ -26,5 +30,6 @@ you_get:
   - A follow-on segment order
   - A 0 to 10 diagnostic score with fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

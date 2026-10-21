@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a small set of known macro calls.
 new_slug: excel-and-matlab-bridge-writer
 name: Excel and MATLAB bridge writer
-summary: Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results.
+summary: Say what to move between Excel and MATLAB. Get VBA macros that send
+  data, run MATLAB and return results.
 job: work-with-files
 headline: Excel and MATLAB bridge writer
-subhead: Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results.
+subhead: Say what to move between Excel and MATLAB. Get VBA macros that send
+  data, run MATLAB and return results. Bring what data moves between Excel and
+  MATLAB. Use the result to plan your next step.
 explain: |
   Working Excel VBA macros that send your sheet data into MATLAB, run MATLAB commands and bring the results or charts back into cells, so Excel stays your front end and MATLAB does the heavy maths.
 
@@ -26,6 +29,7 @@ you_get:
   - Code to run MATLAB commands
   - Steps to bring figures into Excel
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Excel.

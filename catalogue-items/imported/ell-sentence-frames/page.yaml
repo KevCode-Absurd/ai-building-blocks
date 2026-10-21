@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It writes short frames and grades them by difficulty.
 new_slug: ell-sentence-frames
 name: Sentence frame writer for language learners
-summary: Give it a classroom task. Get sentence starters at several English levels so every student can join in.
+summary: Give it a classroom task. Get sentence starters at several English
+  levels so every student can join in.
 job: teach-and-train
 headline: Sentence frame writer for language learners
-subhead: Give it a classroom task. Get sentence starters at several English levels so every student can join in.
+subhead: Sentence starters matched to the thinking a task asks for, at several
+  English levels, so every student can take part. Name the task, such as
+  comparing two poems or explaining a process, and you get frames to hand out.
 explain: |
   Sentence starters matched to the thinking a task asks for, at several English levels, so every student can take part. Name the task, such as comparing two poems or explaining a process, and you get frames to hand out.
 
@@ -26,5 +29,6 @@ you_get:
   - Frames for writing and speaking
   - Notes on how to use them
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

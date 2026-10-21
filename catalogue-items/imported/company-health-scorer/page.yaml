@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It scores set areas, then ranks fixes.
 new_slug: company-health-scorer
 name: Company health scorer
-summary: Give it signals from your teams. Get a traffic-light score on eight areas with what to fix first.
+summary: Give it signals from your teams. Get a traffic-light score on eight
+  areas with what to fix first.
 job: lead-people
 headline: Company health scorer
-subhead: Give it signals from your teams. Get a traffic-light score on eight areas with what to fix first.
+subhead: A traffic-light score for your company across eight areas, so you see
+  which problem to fix first instead of guessing. Each area is judged against
+  stated thresholds, not a feeling.
 explain: |
   A traffic-light score for your company across eight areas, so you see which problem to fix first instead of guessing. Each area is judged against stated thresholds, not a feeling.
 
@@ -25,5 +28,6 @@ you_get:
   - A list of what to fix first
   - A saved score to compare next quarter
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

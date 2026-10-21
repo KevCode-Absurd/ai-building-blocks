@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It covers many teams and sets rollback rules.
 new_slug: feature-launch-planner
 name: Feature launch planner
-summary: Name your feature. Get a launch plan with messaging, support prep, rollout steps and rollback triggers.
+summary: Name your feature. Get a launch plan with messaging, support prep,
+  rollout steps and rollback triggers.
 job: build-product
 headline: Feature launch planner
-subhead: Name your feature. Get a launch plan with messaging, support prep, rollout steps and rollback triggers.
+subhead: "A launch plan that covers more than shipping the code: messaging,
+  sales and support prep, a rollout schedule, and clear triggers for rolling
+  back. Many features fail because nobody launched them."
 explain: |
   A launch plan that covers more than shipping the code: messaging, sales and support prep, a rollout schedule, and clear triggers for rolling back. Many features fail because nobody launched them.
 
@@ -28,5 +31,6 @@ you_get:
   - Metrics to track
   - Rollback triggers
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

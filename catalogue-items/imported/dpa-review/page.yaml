@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Reviewing from the wrong side flips every call.
 new_slug: dpa-review
 name: Data processing agreement reviewer
-summary: Give it a data processing agreement. Get each term checked, with edits to ask for. First check, not legal advice.
+summary: Give it a data processing agreement. Get each term checked, with edits
+  to ask for. First check, not legal advice.
 job: check-contracts
 headline: Data processing agreement reviewer
-subhead: Give it a data processing agreement. Get each term checked, with edits to ask for. First check, not legal advice.
+subhead: Give it a data processing agreement. Get each term checked, with edits
+  to ask for. First check, not legal advice. Bring the DPA as a file, link or
+  pasted text. Use the result to plan your next step.
 explain: |
   A term-by-term review of a data processing agreement, with the edits to ask for. It is a first check and not legal advice.
 
@@ -26,7 +29,11 @@ you_get:
   - A consistency check with your privacy policy
   - Open points to raise with the other side
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your saved privacy setup notes and your files.
-  - Where the skill points to /privacy-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can read your saved privacy setup notes and your
+    files.
+  - Where the skill points to /privacy-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It prices from your history and writes to win.
 new_slug: quote-and-proposal-builder
 name: Quote and proposal builder
-summary: Give it your call notes, photos or an RFP. Get a branded, costed proposal or quote in your own template.
+summary: Give it your call notes, photos or an RFP. Get a branded, costed
+  proposal or quote in your own template.
 job: sell-and-negotiate
 headline: Quote and proposal builder
-subhead: Give it your call notes, photos or an RFP. Get a branded, costed proposal or quote in your own template.
+subhead: Notes from a call, photos of a job, or an RFP become a branded, priced
+  proposal ready to send. It uses your own templates and past prices, so quotes
+  look the same each time and stop eating your evenings.
 explain: |
   Notes from a call, photos of a job, or an RFP become a branded, priced proposal ready to send. It uses your own templates and past prices, so quotes look the same each time and stop eating your evenings.
 
@@ -25,7 +28,9 @@ you_get:
   - Scope and exclusions
   - Signature and deposit steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

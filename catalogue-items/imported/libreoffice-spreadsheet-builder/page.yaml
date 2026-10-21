@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows known file steps.
 new_slug: libreoffice-spreadsheet-builder
 name: LibreOffice spreadsheet builder
-summary: Describe the sheet. Get an ODS file with formulas and charts, or a conversion to Excel or CSV.
+summary: Describe the sheet. Get an ODS file with formulas and charts, or a
+  conversion to Excel or CSV.
 job: work-with-files
 headline: LibreOffice spreadsheet builder
-subhead: Describe the sheet. Get an ODS file with formulas and charts, or a conversion to Excel or CSV.
+subhead: A working spreadsheet with formulas and charts, built from a plain
+  description, and ready to open in Excel or save as CSV. You describe the sheet
+  and skip the manual setup.
 explain: |
   A working spreadsheet with formulas and charts, built from a plain description, and ready to open in Excel or save as CSV. You describe the sheet and skip the manual setup.
 
@@ -27,6 +30,7 @@ you_get:
   - XLSX, CSV or PDF copies
   - A batch conversion command
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and save files.

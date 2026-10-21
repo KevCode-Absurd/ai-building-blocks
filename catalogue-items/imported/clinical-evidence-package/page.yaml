@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Health work needs care, caution and clear limits on claims.
 new_slug: clinical-evidence-package
 name: Clinical research evidence packager
-summary: Give it study data that is safe to share. Get evidence profiles, cohort and survival summaries and privacy notes.
+summary: Give it study data that is safe to share. Get evidence profiles, cohort
+  and survival summaries and privacy notes.
 job: research-topics
 headline: Clinical research evidence packager
-subhead: Give it study data that is safe to share. Get evidence profiles, cohort and survival summaries and privacy notes.
+subhead: Give it study data that is safe to share. Get evidence profiles, cohort
+  and survival summaries and privacy notes. Bring aggregate study data with
+  small cells hidden. Use the result to plan your next step.
 explain: |
   Research documents for a clinical study, built from data that is safe to share. You get evidence profiles, cohort tables, survival analysis plans and privacy notes, all marked as research use only.
 
@@ -27,6 +30,7 @@ you_get:
   - Model performance summary
   - Privacy and governance notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on local files.

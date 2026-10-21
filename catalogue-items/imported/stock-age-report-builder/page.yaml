@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It buckets items by age.
 new_slug: stock-age-report-builder
 name: Stock age report builder
-summary: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90 days and over."
+summary: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90
+  days and over."
 job: run-your-store
 headline: Stock age report builder
-subhead: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90 days and over."
+subhead: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90
+  days and over. Bring your Shopify store link and read access. Use the result
+  to plan your next step."
 explain: |
   A clear picture of which products have sat on your shelves too long, and what holding them costs. Every item with stock is placed in an age bucket based on when it last sold, such as 0 to 30, 31 to 60, 61 to 90, 91 to 180 and 181 or more days.
 
@@ -26,6 +29,7 @@ you_get:
   - Monthly carrying cost per bucket
   - A ranked list of markdown candidates
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

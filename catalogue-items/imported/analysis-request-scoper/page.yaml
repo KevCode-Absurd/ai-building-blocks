@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Good questions depend on what the requester really needs.
 new_slug: analysis-request-scoper
 name: Analysis request scoper
-summary: Give it a vague request for data work. Get the right questions asked and a clear brief ready to hand over.
+summary: Give it a vague request for data work. Get the right questions asked
+  and a clear brief ready to hand over.
 job: track-numbers
 headline: Analysis request scoper
-subhead: Give it a vague request for data work. Get the right questions asked and a clear brief ready to hand over.
+subhead: Give it a vague request for data work. Get the right questions asked
+  and a clear brief ready to hand over. Bring the original request, however
+  vague. Use the result to plan your next step.
 explain: |
   Turn a vague "can you look into this?" into a clear brief an analyst can start on, after the right questions are asked and the requester signs off. It saves the rework that comes from guessing what someone meant.
 
@@ -25,5 +28,6 @@ you_get:
   - A signed-off scope
   - An analysis brief for the analyst
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sets numbers from how users feel outages.
 new_slug: reliability-target-setter
 name: Reliability target setter
-summary: Name your service. Get service level targets, error budgets and alerts to track them.
+summary: Name your service. Get service level targets, error budgets and alerts
+  to track them.
 job: ship-and-host
 headline: Reliability target setter
-subhead: Name your service. Get service level targets, error budgets and alerts to track them.
+subhead: Name your service. Get service level targets, error budgets and alerts
+  to track them. Bring name and type of your service. Use the result to plan
+  your next step.
 explain: |
   A set of reliability goals for your service that people can measure, with an error budget and alerts that warn you before users feel it. Instead of vague promises like "keep it up", you get numbers.
 
@@ -26,5 +29,6 @@ you_get:
   - Error budget numbers
   - Alert rules based on budget burn
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

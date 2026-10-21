@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Designing fair measures needs careful reasoning.
 new_slug: agent-system-tester
 name: Agent system tester
-summary: Describe your AI agent. Get a way to measure how well it works and compare changes.
+summary: Describe your AI agent. Get a way to measure how well it works and
+  compare changes.
 job: test-and-fix-code
 headline: Agent system tester
-subhead: Describe your AI agent. Get a way to measure how well it works and compare changes.
+subhead: A way to measure how well your AI agent works, so you can tell if a
+  change made it better or worse. Agents answer differently each run and can
+  reach a goal by several paths, so one pass or fail test is not enough.
 explain: |
   A way to measure how well your AI agent works, so you can tell if a change made it better or worse. Agents answer differently each run and can reach a goal by several paths, so one pass or fail test is not enough.
 
@@ -26,5 +29,6 @@ you_get:
   - A judging plan using AI and human review
   - Pass marks to use as a release gate
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

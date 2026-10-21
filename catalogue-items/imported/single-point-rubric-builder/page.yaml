@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It must turn a goal into clear, checkable criteria.
 new_slug: single-point-rubric-builder
 name: Single-point rubric builder
-summary: Give it a learning goal. Get a one-criterion rubric with open columns for evidence, ready for feedback or self-assessment.
+summary: Give it a learning goal. Get a one-criterion rubric with open columns
+  for evidence, ready for feedback or self-assessment.
 job: teach-and-train
 headline: Single-point rubric builder
-subhead: Give it a learning goal. Get a one-criterion rubric with open columns for evidence, ready for feedback or self-assessment.
+subhead: A one-criterion rubric with open columns where specific evidence goes,
+  instead of a scoring scale. It gives students feedback they can act on and
+  takes about three minutes to make.
 explain: |
   A one-criterion rubric with open columns where specific evidence goes, instead of a scoring scale. It gives students feedback they can act on and takes about three minutes to make.
 
@@ -25,5 +28,6 @@ you_get:
   - A three-column rubric with open evidence columns
   - A version for the stated purpose
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

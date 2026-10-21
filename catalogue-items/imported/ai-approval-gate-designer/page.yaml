@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Wrong gates cause harm or friction, so it weighs each action.
 new_slug: ai-approval-gate-designer
 name: AI approval gate designer
-summary: Describe what your AI agent does. Get clear rules for which actions need a person to approve and when to escalate.
+summary: Describe what your AI agent does. Get clear rules for which actions
+  need a person to approve and when to escalate.
 job: build-software
 headline: AI approval gate designer
-subhead: Describe what your AI agent does. Get clear rules for which actions need a person to approve and when to escalate.
+subhead: Clear rules for which actions your AI agent may do alone, which need a
+  person to approve, and who steps in when nobody answers. A yes-or-no pop-up is
+  not real oversight, so the approval is tied to the exact action being taken.
 explain: |
   Clear rules for which actions your AI agent may do alone, which need a person to approve, and who steps in when nobody answers. A yes-or-no pop-up is not real oversight, so the approval is tied to the exact action being taken.
 
@@ -27,5 +30,6 @@ you_get:
   - A design for the approver's screen
   - A decision log format and test list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

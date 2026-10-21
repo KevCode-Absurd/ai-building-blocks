@@ -1,0 +1,32 @@
+slug: copilot-qdrant-version-upgrade
+name: Qdrant version upgrade planner
+summary: Share your Qdrant version and setup. Get upgrade, backup and validation steps that protect availability.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/qdrant-version-upgrade
+  url: https://github.com/github/awesome-copilot/tree/main/skills/qdrant-version-upgrade
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: qdrant-version-upgrade
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: qdrant-version-upgrade skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/qdrant-version-upgrade
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

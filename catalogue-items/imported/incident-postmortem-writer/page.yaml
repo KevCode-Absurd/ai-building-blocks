@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts facts into causes without blaming people.
 new_slug: incident-postmortem-writer
 name: Incident postmortem writer
-summary: Give it the facts of an outage. Get a blameless postmortem with timeline, causes and follow-up actions.
+summary: Give it the facts of an outage. Get a blameless postmortem with
+  timeline, causes and follow-up actions.
 job: organise-work
 headline: Incident postmortem writer
-subhead: Give it the facts of an outage. Get a blameless postmortem with timeline, causes and follow-up actions.
+subhead: A blameless postmortem of an outage, written so your team learns from
+  it and the same failure does not return. You give the facts and get a document
+  with a timeline, causes and follow-up actions that have owners.
 explain: |
   A blameless postmortem of an outage, written so your team learns from it and the same failure does not return. You give the facts and get a document with a timeline, causes and follow-up actions that have owners.
 
@@ -28,5 +31,6 @@ you_get:
   - Action items with owners and dates
   - A meeting plan for the review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

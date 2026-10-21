@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sorts the cause by a set list, then fixes it.
 new_slug: flaky-test-fixer
 name: Flaky test fixer
-summary: Give it a failing or flaky Playwright test. Get the cause found and the fix made.
+summary: Give it a failing or flaky Playwright test. Get the cause found and the
+  fix made.
 job: test-and-fix-code
 headline: Flaky test fixer
-subhead: Give it a failing or flaky Playwright test. Get the cause found and the fix made.
+subhead: A failing or flaky Playwright test gets its cause found and fixed,
+  instead of being retried until it passes. You end with a test you can trust in
+  CI.
 explain: |
   A failing or flaky Playwright test gets its cause found and fixed, instead of being retried until it passes. You end with a test you can trust in CI.
 
@@ -25,6 +28,7 @@ you_get:
   - Fix applied to the test
   - Repeat-run results showing it is stable
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

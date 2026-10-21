@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: The steps are standard but order and risk calls depend on your setup.
 new_slug: site-go-live-runbook-writer
 name: Site go-live runbook writer
-summary: Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
+summary: Tell it what you are launching. Get a go-live runbook with checks, DNS
+  cutover steps, post-launch watching and a rollback plan.
 job: ship-and-host
 headline: Site go-live runbook writer
-subhead: Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
+subhead: A launch day runbook the whole team can follow, with checks before
+  launch, DNS cutover steps, watching after launch and a rollback plan. It stops
+  launch day from running on memory and chat messages.
 explain: |
   A launch day runbook the whole team can follow, with checks before launch, DNS cutover steps, watching after launch and a rollback plan. It stops launch day from running on memory and chat messages.
 
@@ -28,5 +31,6 @@ you_get:
   - A post-launch watch plan
   - A rollback plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

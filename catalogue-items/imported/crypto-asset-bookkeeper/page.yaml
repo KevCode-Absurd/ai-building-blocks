@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies standards to unusual assets.
 new_slug: crypto-asset-bookkeeper
 name: Crypto asset bookkeeper
-summary: Describe your coin or NFT holdings. Get them classified, valued and recorded under accounting standards.
+summary: Describe your coin or NFT holdings. Get them classified, valued and
+  recorded under accounting standards.
 job: track-numbers
 headline: Crypto asset bookkeeper
-subhead: Describe your coin or NFT holdings. Get them classified, valued and recorded under accounting standards.
+subhead: Crypto holdings need a clear place in your books. Describe your coins,
+  NFTs or tokens and you get them classified, valued and recorded under standard
+  accounting rules such as ASC 350 or IAS 38.
 explain: |
   Crypto holdings need a clear place in your books. Describe your coins, NFTs or tokens and you get them classified, valued and recorded under standard accounting rules such as ASC 350 or IAS 38.
 
@@ -26,5 +29,6 @@ you_get:
   - Income recognition entries
   - A digital asset ledger summary
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

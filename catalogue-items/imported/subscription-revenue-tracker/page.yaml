@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It follows set formulas but needs clean contract data.
 new_slug: subscription-revenue-tracker
 name: Subscription revenue tracker
-summary: Run it on your subscriptions. Get monthly and yearly recurring revenue, active subscribers and churn.
+summary: Run it on your subscriptions. Get monthly and yearly recurring revenue,
+  active subscribers and churn.
 job: run-your-store
 headline: Subscription revenue tracker
-subhead: Run it on your subscriptions. Get monthly and yearly recurring revenue, active subscribers and churn.
+subhead: "A read-only count of your subscription income: monthly and yearly
+  recurring revenue, active subscribers and churn, taken straight from your
+  store's subscription contracts. Nothing in the store is changed."
 explain: |
   A read-only count of your subscription income: monthly and yearly recurring revenue, active subscribers and churn, taken straight from your store's subscription contracts. Nothing in the store is changed.
 
   The skill queries subscription contract data through the store's API, then converts each plan to a monthly amount so weekly, monthly and yearly plans can be added together. It counts active subscribers, then tracks rolling churn by comparing who stayed and who cancelled over the period. It records the session and handles errors, such as missing permissions or large stores that need paging. It needs API access to a store with subscription products.
 when:
-  - You sell subscription boxes and want one number for monthly recurring revenue.
+  - You sell subscription boxes and want one number for monthly recurring
+    revenue.
   - You need churn for a board update.
   - You want a quick health check without exporting spreadsheets.
   - You are comparing plans with different billing periods.
@@ -26,6 +30,7 @@ you_get:
   - Rolling churn rate
   - A short session log
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

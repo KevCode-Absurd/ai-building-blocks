@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes declarative code, with care for safe changes.
 new_slug: cloud-setup-coder
 name: Cloud setup coder
-summary: Describe the cloud setup you need. Get Terraform, Pulumi or CloudFormation code that builds it the same way every time.
+summary: Describe the cloud setup you need. Get Terraform, Pulumi or
+  CloudFormation code that builds it the same way every time.
 job: ship-and-host
 headline: Cloud setup coder
-subhead: Describe the cloud setup you need. Get Terraform, Pulumi or CloudFormation code that builds it the same way every time.
+subhead: Describe the servers, networks and databases you want, and get code
+  that builds them the same way every time. Nobody has to click through a
+  console and hope they remember each step.
 explain: |
   Describe the servers, networks and databases you want, and get code that builds them the same way every time. Nobody has to click through a console and hope they remember each step.
 
@@ -27,6 +30,7 @@ you_get:
   - A plan for storing state
   - Steps to preview and apply changes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

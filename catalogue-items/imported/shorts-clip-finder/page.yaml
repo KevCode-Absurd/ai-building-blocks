@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It judges which moments stand alone.
 new_slug: shorts-clip-finder
 name: Shorts clip finder
-summary: Give it a long video transcript. Get the best five moments to clip, each with a new first line.
+summary: Give it a long video transcript. Get the best five moments to clip,
+  each with a new first line.
 job: grow-social
 headline: Shorts clip finder
-subhead: Give it a long video transcript. Get the best five moments to clip, each with a new first line.
+subhead: The five best moments in a long video to cut into Shorts, each with a
+  new first line, on-screen text and a loop point. A good clip stands alone
+  without the video around it.
 explain: |
   The five best moments in a long video to cut into Shorts, each with a new first line, on-screen text and a loop point. A good clip stands alone without the video around it.
 
@@ -25,5 +28,6 @@ you_get:
   - On-screen text for the first two seconds
   - A loop point and a crop note for vertical video
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

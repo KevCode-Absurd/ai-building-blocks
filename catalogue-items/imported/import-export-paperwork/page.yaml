@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Rules vary by country and each answer needs careful reasoning.
 new_slug: import-export-paperwork
 name: Import and export paperwork advisor
-summary: Describe your goods and route. Get tariff codes, duty options and the papers customs will ask for.
+summary: Describe your goods and route. Get tariff codes, duty options and the
+  papers customs will ask for.
 job: check-contracts
 headline: Import and export paperwork advisor
-subhead: Describe your goods and route. Get tariff codes, duty options and the papers customs will ask for.
+subhead: A clear list of the tariff code, duty options and papers customs will
+  ask for, matched to your goods and shipping route. That saves you from a held
+  shipment or a wrong duty bill.
 explain: |
   A clear list of the tariff code, duty options and papers customs will ask for, matched to your goods and shipping route. That saves you from a held shipment or a wrong duty bill. It gives general guidance, so check key decisions with a licensed broker.
 
@@ -28,5 +31,6 @@ you_get:
   - Trade term suggestions
   - Common mistakes to avoid
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

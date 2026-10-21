@@ -1,0 +1,32 @@
+slug: copilot-azure-resource-health-diagnose
+name: Azure service health investigator
+summary: Share your Azure resources and symptoms. Get health findings, log evidence and a recovery plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/azure-resource-health-diagnose
+  url: https://github.com/github/awesome-copilot/tree/main/skills/azure-resource-health-diagnose
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: azure-resource-health-diagnose
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: azure-resource-health-diagnose skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/azure-resource-health-diagnose
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

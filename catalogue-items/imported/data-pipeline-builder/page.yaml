@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows known pipeline patterns with checks.
 new_slug: data-pipeline-builder
 name: Data pipeline builder
-summary: Describe your data sources and goal. Get a working pipeline with checks, scheduling and fixes for common faults.
+summary: Describe your data sources and goal. Get a working pipeline with
+  checks, scheduling and fixes for common faults.
 job: build-software
 headline: Data pipeline builder
-subhead: Describe your data sources and goal. Get a working pipeline with checks, scheduling and fixes for common faults.
+subhead: A plan and working code for moving data from where it starts to where
+  people use it, with checks along the way. You also get advice on choices such
+  as batch versus streaming.
 explain: |
   A plan and working code for moving data from where it starts to where people use it, with checks along the way. You also get advice on choices such as batch versus streaming.
 
@@ -26,6 +29,7 @@ you_get:
   - Data quality checks
   - Scheduling setup and fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

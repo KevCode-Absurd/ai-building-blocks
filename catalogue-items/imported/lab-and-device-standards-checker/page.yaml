@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It maps your evidence to exact clauses and finds the gaps.
 new_slug: lab-and-device-standards-checker
 name: Lab and device standards checker
-summary: Name the standard and share your records. Get an evidence gap list for ISO 13485, 14971 or 17025.
+summary: Name the standard and share your records. Get an evidence gap list for
+  ISO 13485, 14971 or 17025.
 job: check-contracts
 headline: Lab and device standards checker
-subhead: Name the standard and share your records. Get an evidence gap list for ISO 13485, 14971 or 17025.
+subhead: A gap list showing which of your records already support an ISO
+  standard and which are missing. Name the standard, such as ISO 13485, 14971 or
+  17025, and share your procedures and records.
 explain: |
   A gap list showing which of your records already support an ISO standard and which are missing. Name the standard, such as ISO 13485, 14971 or 17025, and share your procedures and records. The skill sorts them into scope, controlled documents, implementation records and traceability, then runs local checks to see what evidence is present.
 
   It is strict about limits. It does not certify anything, predict an audit result, or quote the standard, which is copyrighted. Every output is labelled a draft for a qualified person to review, and open decisions stay listed as blockers instead of being guessed. You need your own licensed copy of the standard.
 when:
-  - You are preparing for a quality audit and want to see your evidence gaps early.
+  - You are preparing for a quality audit and want to see your evidence gaps
+    early.
   - You need to organise documents and records against a named ISO standard.
   - A new quality manager wants a map of what exists and what is missing.
   - You want a checklist of open decisions to take to your regulatory lead.
@@ -26,5 +30,6 @@ you_get:
   - A list of blockers and open decisions
   - A draft marked for human review
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

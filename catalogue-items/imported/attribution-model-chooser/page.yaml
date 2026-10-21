@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Tools disagree, so it must weigh messy data.
 new_slug: attribution-model-chooser
 name: Attribution model chooser
-summary: Share your channels and numbers. Get the right attribution model and a way to settle conflicting reports.
+summary: Share your channels and numbers. Get the right attribution model and a
+  way to settle conflicting reports.
 job: read-ad-results
 headline: Attribution model chooser
-subhead: Share your channels and numbers. Get the right attribution model and a way to settle conflicting reports.
+subhead: A clear answer to which marketing effort caused your sales, and what to
+  do when your tools disagree. Share your channels, sales cycle and the numbers
+  each tool reports.
 explain: |
   A clear answer to which marketing effort caused your sales, and what to do when your tools disagree. Share your channels, sales cycle and the numbers each tool reports.
 
@@ -26,5 +29,6 @@ you_get:
   - A short list of blind spots
   - A first-party tracking plan (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

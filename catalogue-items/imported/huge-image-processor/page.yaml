@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows set block patterns for large data.
 new_slug: huge-image-processor
 name: Huge image processor
-summary: Give it a very large image. Get it processed in blocks and in parallel without running out of memory.
+summary: Give it a very large image. Get it processed in blocks and in parallel
+  without running out of memory.
 job: build-software
 headline: Huge image processor
-subhead: Give it a very large image. Get it processed in blocks and in parallel without running out of memory.
+subhead: A way to work with images too big to open at once, in MATLAB, without
+  running out of memory. Whole-slide microscope scans, satellite maps and 3D
+  volumes get read, processed and saved in small blocks, even across many
+  processor cores.
 explain: |
   A way to work with images too big to open at once, in MATLAB, without running out of memory. Whole-slide microscope scans, satellite maps and 3D volumes get read, processed and saved in small blocks, even across many processor cores.
 
@@ -26,6 +30,7 @@ you_get:
   - Parallel processing setup
   - Viewing or training data preparation steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with the Image Processing Toolbox.

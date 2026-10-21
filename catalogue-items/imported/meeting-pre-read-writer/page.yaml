@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It gathers context, then shapes it for the people attending.
 new_slug: meeting-pre-read-writer
 name: Meeting pre-read writer
-summary: Name the meeting. Get an agenda and pre-read built from your Notion pages and research.
+summary: Name the meeting. Get an agenda and pre-read built from your Notion
+  pages and research.
 job: organise-work
 headline: Meeting pre-read writer
-subhead: Name the meeting. Get an agenda and pre-read built from your Notion pages and research.
+subhead: Name the meeting. Get an agenda and pre-read built from your Notion
+  pages and research. Bring the meeting goal and the decisions needed. Use the
+  result to plan your next step.
 explain: |
   An agenda and pre-read page built from what your team already wrote, so people arrive knowing the goal and the decision they need to make. Name the meeting and the page comes together in Notion.
 
@@ -26,6 +29,7 @@ you_get:
   - A template matched to the meeting type
   - Short research notes with sources (optional)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can reach your Notion workspace.

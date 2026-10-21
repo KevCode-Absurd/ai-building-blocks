@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows Apple rules but makes design choices.
 new_slug: iphone-screen-designer
 name: iPhone screen designer
-summary: Describe your app screens. Get native-feeling iPhone screens, checked on small and large sizes.
+summary: Describe your app screens. Get native-feeling iPhone screens, checked
+  on small and large sizes.
 job: design-work
 headline: iPhone screen designer
-subhead: Describe your app screens. Get native-feeling iPhone screens, checked on small and large sizes.
+subhead: iPhone screens that look and behave like they belong on an iPhone, not
+  like a website squeezed into an app. Describe the screens you need, such as
+  onboarding, settings, a paywall or a list with a detail view.
 explain: |
   iPhone screens that look and behave like they belong on an iPhone, not like a website squeezed into an app. Describe the screens you need, such as onboarding, settings, a paywall or a list with a detail view. The skill applies Apple conventions: back buttons where people expect them, tab bars instead of hamburger menus, sheets, text that grows with accessibility settings, and native-style lists and forms.
 
@@ -26,6 +29,7 @@ you_get:
   - A size check on small and large phones
   - A list of places that break Apple conventions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

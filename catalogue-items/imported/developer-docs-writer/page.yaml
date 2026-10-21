@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It writes and edits to a known style guide and you review it.
 new_slug: developer-docs-writer
 name: Developer docs writer
-summary: Give it your product or draft docs. Get clear developer documentation that follows Google's style guide.
+summary: Give it your product or draft docs. Get clear developer documentation
+  that follows Google's style guide.
 job: document-work
 headline: Developer docs writer
-subhead: Give it your product or draft docs. Get clear developer documentation that follows Google's style guide.
+subhead: Give it your product or draft docs. Get clear developer documentation
+  that follows Google's style guide. Bring your product, API or draft docs. Use
+  the result to plan your next step.
 explain: |
   Developer documentation that a reader can follow to finish a task, written and checked to the standards of Google's developer style guide.
 
@@ -26,5 +29,6 @@ you_get:
   - A score out of 10 with failed checks listed
   - Before and after rewrites of weak sentences
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

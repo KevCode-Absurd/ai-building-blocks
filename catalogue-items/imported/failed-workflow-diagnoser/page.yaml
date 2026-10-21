@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads long logs and traces one cause.
 new_slug: failed-workflow-diagnoser
 name: Failed workflow diagnoser
-summary: Paste a failed GitHub Actions log. Get the root cause and a fix for your workflow file.
+summary: Paste a failed GitHub Actions log. Get the root cause and a fix for
+  your workflow file.
 job: test-and-fix-code
 headline: Failed workflow diagnoser
-subhead: Paste a failed GitHub Actions log. Get the root cause and a fix for your workflow file.
+subhead: The real reason your GitHub Actions run failed, plus the exact change
+  to your workflow file that fixes it. You skip scrolling through hundreds of
+  log lines.
 explain: |
   The real reason your GitHub Actions run failed, plus the exact change to your workflow file that fixes it. You skip scrolling through hundreds of log lines.
 
@@ -25,5 +28,6 @@ you_get:
   - A check of secrets and permissions
   - Tips to speed up slow steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,32 @@
+slug: copilot-migrating-oracle-to-postgres-stored-procedures
+name: Oracle stored procedure migrator
+summary: Share your Oracle procedures. Get PostgreSQL code with changed behavior and checks called out.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/migrating-oracle-to-postgres-stored-procedures
+  url: https://github.com/github/awesome-copilot/tree/main/skills/migrating-oracle-to-postgres-stored-procedures
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: migrating-oracle-to-postgres-stored-procedures
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: migrating-oracle-to-postgres-stored-procedures skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/migrating-oracle-to-postgres-stored-procedures
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

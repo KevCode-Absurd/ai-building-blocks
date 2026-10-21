@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Spotting risky clauses takes close, careful reading.
 new_slug: contract-risk-reviewer
 name: Contract risk reviewer
-summary: Give it a contract. Get key clauses, duties and risks rated by severity. Not legal advice.
+summary: Give it a contract. Get key clauses, duties and risks rated by
+  severity. Not legal advice.
 job: check-contracts
 headline: Contract risk reviewer
-subhead: Give it a contract. Get key clauses, duties and risks rated by severity. Not legal advice.
+subhead: "A structured risk report on a contract: the key clauses, who owes
+  what, and every risk rated by how severe it is. You see the dangerous parts
+  first instead of finding them on page twelve."
 explain: |
   A structured risk report on a contract: the key clauses, who owes what, and every risk rated by how severe it is. You see the dangerous parts first instead of finding them on page twelve.
 
@@ -26,5 +29,6 @@ you_get:
   - Risks rated by severity
   - Suggested changes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

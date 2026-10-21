@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows set rules for timing and copy.
 new_slug: popup-optimiser
 name: Popup optimiser
-summary: Say what you want from visitors. Get popup type, timing and copy that gets signups without annoying them.
+summary: Say what you want from visitors. Get popup type, timing and copy that
+  gets signups without annoying them.
 job: audit-landing-page
 headline: Popup optimiser
-subhead: Say what you want from visitors. Get popup type, timing and copy that gets signups without annoying them.
+subhead: Popups that earn signups without making visitors leave. Tell the skill
+  what you want from visitors and it picks the type, the timing, the trigger and
+  the words.
 explain: |
   Popups that earn signups without making visitors leave. Tell the skill what you want from visitors and it picks the type, the timing, the trigger and the words.
 
@@ -26,5 +29,6 @@ you_get:
   - Headline, body and button copy
   - A/B test ideas with metrics
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

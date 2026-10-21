@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: Stock rules differ by item risk.
 new_slug: hospital-supply-stock-planner
 name: Hospital supply stock planner
-summary: Give it your supply usage. Get par levels, expiry rules and an emergency stock plan.
+summary: Give it your supply usage. Get par levels, expiry rules and an
+  emergency stock plan.
 job: plan-supply-chain
 headline: Hospital supply stock planner
-subhead: Give it your supply usage. Get par levels, expiry rules and an emergency stock plan.
+subhead: A stock plan for your hospital supply room that cuts both stockouts and
+  waste. It sets a par level for each item, so staff know how much to keep on
+  the shelf and when to reorder.
 explain: |
   A stock plan for your hospital supply room that cuts both stockouts and waste. It sets a par level for each item, so staff know how much to keep on the shelf and when to reorder.
 
   First it asks about your facility, your departments and how you restock today. Then it sorts items by cost and by how critical they are, so a missing glove box and a missing heart valve are not treated alike. It adds first-expired, first-out rules to stop expired stock, sets contents for crash carts, and checks operating room case carts and implant consignment. It also tracks stockout causes so you can fix them.
 when:
-  - You keep running out of items on a ward and staff are borrowing from other units.
+  - You keep running out of items on a ward and staff are borrowing from other
+    units.
   - Expired stock is being thrown away and you want rules to prevent it.
   - You need to set or reset par levels for several departments.
   - You want to check that crash carts and emergency supplies are always ready.
@@ -26,5 +30,6 @@ you_get:
   - Crash cart and emergency stock plan
   - Stockout prevention checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

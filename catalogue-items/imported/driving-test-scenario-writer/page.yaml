@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It sequences actors and conditions into one scenario.
 new_slug: driving-test-scenario-writer
 name: Driving test scenario writer
-summary: Describe the traffic event. Get a RoadRunner scenario with actors, routes and triggers, built in code.
+summary: Describe the traffic event. Get a RoadRunner scenario with actors,
+  routes and triggers, built in code.
 job: build-software
 headline: Driving test scenario writer
-subhead: Describe the traffic event. Get a RoadRunner scenario with actors, routes and triggers, built in code.
+subhead: Describe a traffic event in words and get a RoadRunner scenario written
+  as code. A car cuts in, a pedestrian crosses, a lead vehicle brakes hard.
 explain: |
   Describe a traffic event in words and get a RoadRunner scenario written as code. A car cuts in, a pedestrian crosses, a lead vehicle brakes hard. Each one becomes actors, routes and trigger logic you can run and change.
 
@@ -26,6 +28,7 @@ you_get:
   - Phase logic with conditions and actions
   - A structure check before simulation
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with RoadRunner.

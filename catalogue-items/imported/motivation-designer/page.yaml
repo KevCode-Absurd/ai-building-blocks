@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It applies three clear ideas to your situation and suggests changes.
 new_slug: motivation-designer
 name: Motivation designer
-summary: Describe your team or product. Get ways to raise drive through choice, skill growth and purpose.
+summary: Describe your team or product. Get ways to raise drive through choice,
+  skill growth and purpose.
 job: lead-people
 headline: Motivation designer
-subhead: Describe your team or product. Get ways to raise drive through choice, skill growth and purpose.
+subhead: Ways to raise drive in your team or product that rely on choice, skill
+  growth and purpose instead of bonuses and threats. Each idea comes with a
+  score so you can see where you stand.
 explain: |
   Ways to raise drive in your team or product that rely on choice, skill growth and purpose instead of bonuses and threats. Each idea comes with a score so you can see where you stand.
 
@@ -26,5 +29,6 @@ you_get:
   - Fixes for autonomy, skill growth and purpose
   - What to drop or change in your rewards
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,32 @@
+slug: copilot-github-codespaces-efficiency
+name: Codespaces startup and cost reviewer
+summary: Share your dev container setup. Get faster startup and ways to reduce idle costs and repeated setup.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/github-codespaces-efficiency
+  url: https://github.com/github/awesome-copilot/tree/main/skills/github-codespaces-efficiency
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: github-codespaces-efficiency
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: github-codespaces-efficiency skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/github-codespaces-efficiency
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

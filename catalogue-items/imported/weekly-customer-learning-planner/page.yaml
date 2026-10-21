@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Mapping goals to opportunities and tests takes careful reasoning.
 new_slug: weekly-customer-learning-planner
 name: Weekly customer learning planner
-summary: Describe your product goal. Get an opportunity tree, risky assumptions to test and a weekly customer contact routine.
+summary: Describe your product goal. Get an opportunity tree, risky assumptions
+  to test and a weekly customer contact routine.
 job: understand-customers
 headline: Weekly customer learning planner
-subhead: Describe your product goal. Get an opportunity tree, risky assumptions to test and a weekly customer contact routine.
+subhead: A weekly habit for learning from customers, plus the map that tells you
+  what to learn next. You end with an opportunity tree linking your goal to
+  customer needs, ideas and small tests.
 explain: |
   A weekly habit for learning from customers, plus the map that tells you what to learn next. You end with an opportunity tree linking your goal to customer needs, ideas and small tests.
 
@@ -27,5 +30,6 @@ you_get:
   - Weekly customer contact routine
   - Score of your current practice
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

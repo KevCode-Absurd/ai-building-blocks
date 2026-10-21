@@ -2,10 +2,12 @@ thinking: low
 thinking_why: Summarising is a standard task.
 new_slug: summarizer
 name: Summarizer
-summary: Give it long text. Get a short summary at the detail level you choose, from one text or many.
+summary: Give it long text. Get a short summary at the detail level you choose,
+  from one text or many.
 job: think-and-decide
 headline: Summarizer
-subhead: Give it long text. Get a short summary at the detail level you choose, from one text or many.
+subhead: Long text cut down to the size you need, from a single line to a
+  layered summary. It works on one document or many at once.
 explain: |
   Long text cut down to the size you need, from a single line to a layered summary. It works on one document or many at once.
 
@@ -26,5 +28,6 @@ you_get:
   - A merged summary across documents
   - Notes on conflicts between sources
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

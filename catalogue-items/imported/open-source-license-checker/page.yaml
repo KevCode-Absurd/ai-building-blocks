@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It reads license terms and compares them.
 new_slug: open-source-license-checker
 name: Open-source license checker
-summary: Give it your project dependencies. Get license clashes, duties and risks flagged.
+summary: Give it your project dependencies. Get license clashes, duties and
+  risks flagged.
 job: secure-code
 headline: Open-source license checker
-subhead: Give it your project dependencies. Get license clashes, duties and risks flagged.
+subhead: A report on the licenses in your project's dependencies, showing which
+  ones clash, what each requires of you, and where the risk sits. It helps you
+  avoid a surprise when you publish or sell your software.
 explain: |
   A report on the licenses in your project's dependencies, showing which ones clash, what each requires of you, and where the risk sits. It helps you avoid a surprise when you publish or sell your software.
 
   The skill reads your dependency file and follows the chain to every package underneath. It finds each license, then checks how they fit together given how you share your software: as a service, a download, a library or an internal tool. It flags strong copyleft licenses such as GPL and AGPL and weaker ones such as LGPL and MPL. The report lists notices you must include and suggests fixes. It is not legal advice.
 when:
-  - You are about to publish your project and want to know if a dependency's license blocks it.
+  - You are about to publish your project and want to know if a dependency's
+    license blocks it.
   - A customer asks for a list of third-party licenses.
   - You added a GPL package and are not sure what that means.
   - You want to know which attribution notices you must ship.
@@ -26,6 +30,7 @@ you_get:
   - Copyleft risk flags with severity
   - Required notices and suggested fixes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

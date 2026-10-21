@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It runs a short, checked set of steps.
 new_slug: order-canceller-and-restocker
 name: Order canceller and restocker
-summary: Name the order. Get it cancelled, stock put back and the customer told, as you choose. Cancels a live order.
+summary: Name the order. Get it cancelled, stock put back and the customer told,
+  as you choose. Cancels a live order.
 job: run-your-store
 headline: Order canceller and restocker
-subhead: Name the order. Get it cancelled, stock put back and the customer told, as you choose. Cancels a live order.
+subhead: Name the order. Get it cancelled, stock put back and the customer told,
+  as you choose. Cancels a live order. Bring store domain. Use the result to
+  plan your next step.
 explain: |
   Cancel a Shopify order, put the items back in stock, refund the money and email the customer, all in one step and in the way you choose. It saves the trip through several admin screens.
 
@@ -27,6 +30,7 @@ you_get:
   - Stock restored and refund issued as chosen
   - A summary of what changed
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

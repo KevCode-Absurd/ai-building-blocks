@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It compares two ratings with the result.
 new_slug: confidence-check-coach
 name: Confidence check coach
-summary: Rate how sure you are before and after you try something. See where you guess too high or too low.
+summary: Rate how sure you are before and after you try something. See where you
+  guess too high or too low.
 job: teach-and-train
 headline: Confidence check coach
-subhead: Rate how sure you are before and after you try something. See where you guess too high or too low.
+subhead: A short exercise that shows whether you tend to be too sure or too
+  unsure about what you know. You rate your confidence, try the question, see
+  how you did, and then compare.
 explain: |
   A short exercise that shows whether you tend to be too sure or too unsure about what you know. You rate your confidence, try the question, see how you did, and then compare.
 
@@ -26,5 +29,6 @@ you_get:
   - A named pattern
   - Advice on what to do next
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

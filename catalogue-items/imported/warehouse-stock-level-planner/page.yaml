@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Stock at one site changes what the others need.
 new_slug: warehouse-stock-level-planner
 name: Warehouse stock level planner
-summary: Give it your warehouses and demand. Get how much stock to hold at each level of your network.
+summary: Give it your warehouses and demand. Get how much stock to hold at each
+  level of your network.
 job: plan-supply-chain
 headline: Warehouse stock level planner
-subhead: Give it your warehouses and demand. Get how much stock to hold at each level of your network.
+subhead: A plan for how much stock to hold at every level of your network, from
+  the central warehouse down to local sites. It keeps service high without tying
+  up cash in extra stock.
 explain: |
   A plan for how much stock to hold at every level of your network, from the central warehouse down to local sites. It keeps service high without tying up cash in extra stock.
 
@@ -26,6 +29,7 @@ you_get:
   - Central versus local stock split
   - Notes on transfers and rush shipping
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

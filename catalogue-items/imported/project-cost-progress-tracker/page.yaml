@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It applies standard earned value formulas.
 new_slug: project-cost-progress-tracker
 name: Project cost progress tracker
-summary: Give it a project's budget, schedule and spend. Get cost and schedule indexes and a finish cost estimate.
+summary: Give it a project's budget, schedule and spend. Get cost and schedule
+  indexes and a finish cost estimate.
 job: money-and-investing
 headline: Project cost progress tracker
-subhead: Give it a project's budget, schedule and spend. Get cost and schedule indexes and a finish cost estimate.
+subhead: A clear answer to whether your project is on budget and on time, plus a
+  forecast of what it will cost at the end. It replaces gut feel with three
+  numbers you can defend in a meeting.
 explain: |
   A clear answer to whether your project is on budget and on time, plus a forecast of what it will cost at the end. It replaces gut feel with three numbers you can defend in a meeting.
 
@@ -26,5 +29,6 @@ you_get:
   - Efficiency needed on remaining work
   - A short dashboard in plain words
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

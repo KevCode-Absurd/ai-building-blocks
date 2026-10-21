@@ -1,0 +1,32 @@
+slug: copilot-bug-receipt
+name: Bug fix evidence recorder
+summary: Share a fix and its checks. Get a dated record of what is verified, partial or blocked.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: GitHub Copilot community
+  repo: github/awesome-copilot
+  path: skills/bug-receipt
+  url: https://github.com/github/awesome-copilot/tree/main/skills/bug-receipt
+  licence: MIT
+  licence_file: LICENSE
+  commit: 613efc8
+  original_name: bug-receipt
+  imported: 2026-10-21
+version: 1.0.0
+credits:
+  - title: bug-receipt skill
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot/tree/main/skills/bug-receipt
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

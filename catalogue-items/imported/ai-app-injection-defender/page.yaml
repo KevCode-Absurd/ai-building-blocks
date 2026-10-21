@@ -2,16 +2,20 @@ thinking: high
 thinking_why: It must trace where untrusted text can reach the model.
 new_slug: ai-app-injection-defender
 name: AI app injection defender
-summary: Point it at your AI app. Get the weak spots found and layered defences added against hijacked instructions.
+summary: Point it at your AI app. Get the weak spots found and layered defences
+  added against hijacked instructions.
 job: secure-code
 headline: AI app injection defender
-subhead: Point it at your AI app. Get the weak spots found and layered defences added against hijacked instructions.
+subhead: Your AI app checked for hijacked instructions and given layers of
+  defence. Prompt injection happens when text from a user, web page or document
+  tells the AI to ignore its real rules.
 explain: |
   Your AI app checked for hijacked instructions and given layers of defence. Prompt injection happens when text from a user, web page or document tells the AI to ignore its real rules.
 
   The skill maps where untrusted text enters: chat input, retrieved documents, tool results, shared context and displayed markup. Then it adds layers. System rules rank above user text, and tool output is treated as data only. Untrusted text is kept apart from control instructions. Each tool gets an allow-list for the task. Replies are checked for format, secrets and unsafe actions. High-impact steps need human approval. Starter Python code screens for common attack phrases, and you test it with sample attacks.
 when:
-  - Your app reads web pages or documents and you worry about hidden instructions.
+  - Your app reads web pages or documents and you worry about hidden
+    instructions.
   - Someone reported that your bot can be tricked.
   - Your agent can call tools and you need to limit what a bad prompt can do.
   - You are reviewing an AI product before launch.
@@ -27,6 +31,7 @@ you_get:
   - Tool permission rules
   - A set of attack tests
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

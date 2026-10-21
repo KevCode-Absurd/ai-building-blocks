@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It must change policy text without breaking its other parts.
 new_slug: policy-redraft-proposer
 name: Policy redraft proposer
-summary: Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice.
+summary: Give it a policy gap and the current policy. Get a marked-up draft with
+  small edits. Not legal advice.
 job: check-contracts
 headline: Policy redraft proposer
-subhead: Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice.
+subhead: Give it a policy gap and the current policy. Get a marked-up draft with
+  small edits. Not legal advice. Bring description of the gap. Use the result to
+  plan your next step.
 explain: |
   When a review finds your policy no longer meets a rule, this writes the fix as a marked-up draft with the smallest edits that close the gap. Nothing in your original policy is touched.
 
@@ -26,7 +29,11 @@ you_get:
   - Redraft memo in a new dated file
   - List of facts still to verify
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
-  - It works best when your AI can read your saved setup notes and your policy files.
-  - Where the skill points to /regulatory-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can read your saved setup notes and your policy
+    files.
+  - Where the skill points to /regulatory-legal:cold-start-interview, use the
+    setup-interview folder inside it. We copied it in so the skill works on its
+    own.

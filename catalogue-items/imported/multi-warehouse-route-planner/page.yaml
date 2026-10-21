@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It splits stops across sites and then routes them.
 new_slug: multi-warehouse-route-planner
 name: Multi-warehouse route planner
-summary: Give it your warehouses and stops. Get which warehouse serves each stop and the route for every truck.
+summary: Give it your warehouses and stops. Get which warehouse serves each stop
+  and the route for every truck.
 job: plan-supply-chain
 headline: Multi-warehouse route planner
-subhead: Give it your warehouses and stops. Get which warehouse serves each stop and the route for every truck.
+subhead: Give it your warehouses and stops. Get which warehouse serves each stop
+  and the route for every truck. Bring depot locations and capacities. Use the
+  result to plan your next step.
 explain: |
   A decision on which warehouse serves each customer and the best truck routes out of every depot, to cut total distribution cost.
 
@@ -28,6 +31,7 @@ you_get:
   - Workload by depot
   - A method matched to your size
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

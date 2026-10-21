@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It solves a hard route puzzle and checks the result.
 new_slug: multi-stop-route-planner
 name: Multi-stop route planner
-summary: Give it your stops and vehicles. Get the shortest routes for each driver with total miles and time.
+summary: Give it your stops and vehicles. Get the shortest routes for each
+  driver with total miles and time.
 job: plan-supply-chain
 headline: Multi-stop route planner
-subhead: Give it your stops and vehicles. Get the shortest routes for each driver with total miles and time.
+subhead: Give it your stops and vehicles. Get the shortest routes for each
+  driver with total miles and time. Bring your stop addresses or locations. Use
+  the result to plan your next step.
 explain: |
   The shortest set of routes for your drivers, with total miles and time for each, so deliveries cost less and arrive on time.
 
@@ -28,6 +31,7 @@ you_get:
   - The method used and why
   - Notes on stops that cause problems
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code (Python).

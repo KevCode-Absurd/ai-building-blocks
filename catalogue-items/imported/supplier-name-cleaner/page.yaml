@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It groups near-matching names.
 new_slug: supplier-name-cleaner
 name: Supplier name cleaner
-summary: Get supplier name typos and case variants grouped, with one proper name suggested for each.
+summary: Get supplier name typos and case variants grouped, with one proper name
+  suggested for each.
 job: run-your-store
 headline: Supplier name cleaner
-subhead: Get supplier name typos and case variants grouped, with one proper name suggested for each.
+subhead: Messy supplier names grouped and fixed. 'Acme Co', 'ACME co.' and 'Acme
+  Co ' become one name, with a suggested clean version for each group.
 explain: |
   Messy supplier names grouped and fixed. 'Acme Co', 'ACME co.' and 'Acme Co ' become one name, with a suggested clean version for each group. It only reads your store and changes nothing.
 
@@ -25,6 +27,7 @@ you_get:
   - Product counts for each spelling
   - A read-only session log
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin (read only).

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It keeps code changes small and checks each one.
 new_slug: simple-code-coach
 name: Simple code coach
-summary: Write code with it. Get assumptions stated, the smallest change made and only what you asked for.
+summary: Write code with it. Get assumptions stated, the smallest change made
+  and only what you asked for.
 job: build-software
 headline: Simple code coach
-subhead: Write code with it. Get assumptions stated, the smallest change made and only what you asked for.
+subhead: "Code changes that are small, tied to your request and checked against
+  clear goals, instead of large rewrites you did not ask for. It targets the
+  usual AI coding habits: silent guesses, bloat and drive-by edits."
 explain: |
   Code changes that are small, tied to your request and checked against clear goals, instead of large rewrites you did not ask for. It targets the usual AI coding habits: silent guesses, bloat and drive-by edits.
 
@@ -25,6 +28,7 @@ you_get:
   - A success test for the task
   - A check of the diff against the four rules
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

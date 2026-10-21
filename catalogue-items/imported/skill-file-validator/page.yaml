@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It checks a file against a fixed rule list.
 new_slug: skill-file-validator
 name: Skill file validator
-summary: Give it a SKILL.md. Get a list of structure, wording and naming problems to fix before you share it.
+summary: Give it a SKILL.md. Get a list of structure, wording and naming
+  problems to fix before you share it.
 job: make-skills
 headline: Skill file validator
-subhead: Give it a SKILL.md. Get a list of structure, wording and naming problems to fix before you share it.
+subhead: A list of structure, wording and naming problems in your SKILL.md,
+  found before anyone else hits them. It checks the file against the open agent
+  skills specification and Anthropic's advice.
 explain: |
   A list of structure, wording and naming problems in your SKILL.md, found before anyone else hits them. It checks the file against the open agent skills specification and Anthropic's advice.
 
@@ -25,6 +28,7 @@ you_get:
   - A quality score
   - Fixes for the issues found
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your skill files.

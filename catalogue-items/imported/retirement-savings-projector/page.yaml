@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It runs compound growth maths on your inputs.
 new_slug: retirement-savings-projector
 name: Retirement savings projector
-summary: Give it your age, savings and goals. Get a projected nest egg and the gap to your target.
+summary: Give it your age, savings and goals. Get a projected nest egg and the
+  gap to your target.
 job: money-and-investing
 headline: Retirement savings projector
-subhead: Give it your age, savings and goals. Get a projected nest egg and the gap to your target.
+subhead: A projected retirement pot and the exact gap between it and the amount
+  you need. You also see the monthly saving that would close that gap.
 explain: |
   A projected retirement pot and the exact gap between it and the amount you need. You also see the monthly saving that would close that gap.
 
@@ -27,5 +29,6 @@ you_get:
   - The shortfall or surplus
   - The monthly saving needed to close the gap
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

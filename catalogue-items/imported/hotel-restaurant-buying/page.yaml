@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It ranks spend by category and supplier.
 new_slug: hotel-restaurant-buying
 name: Hotel and restaurant buying planner
-summary: Give it what you buy. Get a sourcing plan, a supplier shortlist and negotiation points to cut costs.
+summary: Give it what you buy. Get a sourcing plan, a supplier shortlist and
+  negotiation points to cut costs.
 job: plan-supply-chain
 headline: Hotel and restaurant buying planner
-subhead: Give it what you buy. Get a sourcing plan, a supplier shortlist and negotiation points to cut costs.
+subhead: A buying plan for your hotel or restaurant that lowers what you pay
+  without hurting what guests get. You come away with a supplier shortlist and
+  the points to raise when you negotiate.
 explain: |
   A buying plan for your hotel or restaurant that lowers what you pay without hurting what guests get. You come away with a supplier shortlist and the points to raise when you negotiate.
 
   It starts by sizing up your property, your spend and your current suppliers. Then it splits spend into groups: food and drink, cleaning and guest supplies, linens and uniforms, equipment and services. For each group it picks a sourcing approach, such as one main supplier, a group buying deal or local producers. It compares contract types, scores suppliers on price, quality and reliability, and lays out negotiation points and a savings target for each category.
 when:
-  - Your food costs keep rising and you are not sure which suppliers are overcharging.
+  - Your food costs keep rising and you are not sure which suppliers are
+    overcharging.
   - You run several sites and want to buy as one group.
   - A key supplier contract is coming up for renewal.
   - You want sustainability goals reflected in what you buy.
@@ -26,5 +30,6 @@ you_get:
   - Negotiation points for each contract
   - A savings target and action list
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

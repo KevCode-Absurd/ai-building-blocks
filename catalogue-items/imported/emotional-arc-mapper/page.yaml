@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It plans a path of feelings, then checks the flow.
 new_slug: emotional-arc-mapper
 name: Emotional arc mapper
-summary: Give it a story, page or campaign. Get the feeling you want at each step, from attention to action.
+summary: Give it a story, page or campaign. Get the feeling you want at each
+  step, from attention to action.
 job: write-and-tell-stories
 headline: Emotional arc mapper
-subhead: Give it a story, page or campaign. Get the feeling you want at each step, from attention to action.
+subhead: A step-by-step map of the feeling you want at each point of a page, ad,
+  story or campaign, from first attention to action. Give it the piece and the
+  reader, and you get an arc to write against.
 explain: |
   A step-by-step map of the feeling you want at each point of a page, ad, story or campaign, from first attention to action. Give it the piece and the reader, and you get an arc to write against.
 
@@ -26,5 +29,6 @@ you_get:
   - Pacing advice
   - Where to place the ask
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

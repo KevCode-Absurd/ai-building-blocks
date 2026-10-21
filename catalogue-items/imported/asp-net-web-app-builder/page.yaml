@@ -2,16 +2,20 @@ thinking: medium
 thinking_why: It follows official guidance but must fit your code.
 new_slug: asp-net-web-app-builder
 name: ASP.NET web app builder
-summary: Describe the web app or API. Get ASP.NET Core code that follows current official guidance.
+summary: Describe the web app or API. Get ASP.NET Core code that follows current
+  official guidance.
 job: build-websites
 headline: ASP.NET web app builder
-subhead: Describe the web app or API. Get ASP.NET Core code that follows current official guidance.
+subhead: "ASP.NET Core code that matches what Microsoft recommends now, not what
+  old tutorials show. Tell the AI what you are building and it first picks the
+  right style: Blazor, Razor Pages, MVC, a minimal API or controller-based API."
 explain: |
   ASP.NET Core code that matches what Microsoft recommends now, not what old tutorials show. Tell the AI what you are building and it first picks the right style: Blazor, Razor Pages, MVC, a minimal API or controller-based API.
 
   It then checks your .NET version and loads only the guidance that fits the job, so the answer isn't cluttered. It covers how the app starts, the request pipeline, dependency injection, settings, login and permissions, live updates with SignalR, gRPC, background work, testing and speed. You can use it to start a new app, review one, or refactor an old one. You need the .NET SDK to run the result.
 when:
-  - You are starting a new .NET web app and can't decide between Blazor, MVC and Razor Pages.
+  - You are starting a new .NET web app and can't decide between Blazor, MVC and
+    Razor Pages.
   - Your Program.cs has grown messy and you want it cleaned up.
   - You need login and role checks added to an existing API.
   - You want a code review of an ASP.NET project against current guidance.
@@ -25,6 +29,7 @@ you_get:
   - A clean startup and pipeline setup
   - Notes on tests, speed and security
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

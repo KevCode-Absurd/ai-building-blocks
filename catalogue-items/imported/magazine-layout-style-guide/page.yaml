@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: magazine-layout-style-guide
 name: Magazine layout style guide writer
-summary: "Describe your product. Get a style guide with a magazine feel: serif type, tidy grids and easy reading."
+summary: "Describe your product. Get a style guide with a magazine feel: serif
+  type, tidy grids and easy reading."
 job: design-work
 headline: Magazine layout style guide writer
-subhead: "Describe your product. Get a style guide with a magazine feel: serif type, tidy grids and easy reading."
+subhead: "Describe your product. Get a style guide with a magazine feel: serif
+  type, tidy grids and easy reading. Bring a description of your product. Use
+  the result to plan your next step."
 explain: |
   A style guide for your product with a magazine feel, covering serif type, tidy grids and easy reading. Engineers and designers can use it directly without further interpretation.
 
@@ -27,5 +30,6 @@ you_get:
   - Accessibility requirements
   - Tone-of-voice notes
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

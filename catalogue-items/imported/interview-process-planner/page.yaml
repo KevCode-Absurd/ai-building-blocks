@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It matches each skill you need to a stage and a person.
 new_slug: interview-process-planner
 name: Interview process planner
-summary: Name the role and level. Get the interview stages, who runs each one and what each stage checks.
+summary: Name the role and level. Get the interview stages, who runs each one
+  and what each stage checks.
 job: hire-people
 headline: Interview process planner
-subhead: Name the role and level. Get the interview stages, who runs each one and what each stage checks.
+subhead: A hiring process where every stage has a purpose and no one asks the
+  same thing twice. Give it the role and level. It lists the skills you must
+  have, then assigns each to an interview stage, such as a recruiter screen,
+  technical deep dive, work sample or panel.
 explain: |
   A hiring process where every stage has a purpose and no one asks the same thing twice. Give it the role and level. It lists the skills you must have, then assigns each to an interview stage, such as a recruiter screen, technical deep dive, work sample or panel.
 
@@ -27,5 +31,6 @@ you_get:
   - Advance and reject criteria
   - A candidate timeline
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

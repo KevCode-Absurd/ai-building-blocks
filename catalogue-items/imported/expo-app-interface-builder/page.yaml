@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows Expo guides for each part of the app.
 new_slug: expo-app-interface-builder
 name: Expo app interface builder
-summary: Describe the mobile screens you want. Get Expo Router code with native tabs, styling and motion.
+summary: Describe the mobile screens you want. Get Expo Router code with native
+  tabs, styling and motion.
 job: build-software
 headline: Expo app interface builder
-subhead: Describe the mobile screens you want. Get Expo Router code with native tabs, styling and motion.
+subhead: Describe the mobile screens you want. Get Expo Router code with native
+  tabs, styling and motion. Bring description of the screens and flow. Use the
+  result to plan your next step.
 explain: |
   Mobile screens written as Expo Router code, with native tabs, tidy styling and smooth motion, so your app feels like it belongs on the phone.
 
@@ -27,6 +30,7 @@ you_get:
   - Native controls and forms
   - Storage setup
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

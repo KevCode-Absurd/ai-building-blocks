@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It writes short prompts for one task.
 new_slug: metacognition-prompts
 name: Thinking-about-thinking prompt set
-summary: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone.
+summary: Give it a task. Get prompts for planning, checking and reviewing work
+  that students can use alone.
 job: teach-and-train
 headline: Thinking-about-thinking prompt set
-subhead: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone.
+subhead: Give it a task. Get prompts for planning, checking and reviewing work
+  that students can use alone. Bring the task students are doing. Use the result
+  to plan your next step.
 explain: |
   A set of questions that students can ask themselves before, during and after a task, so they notice when they are lost and fix it without waiting for you. You describe the task and the class, and the prompts are tuned to both.
 
@@ -26,5 +29,6 @@ you_get:
   - Prompts for before, during and after
   - Tips on how to introduce them
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

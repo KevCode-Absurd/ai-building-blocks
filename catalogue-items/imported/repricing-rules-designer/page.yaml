@@ -2,10 +2,13 @@ thinking: high
 thinking_why: One bad rule can cost real money, so each rule needs checking.
 new_slug: repricing-rules-designer
 name: Repricing rules designer
-summary: Give it your margins and stock. Get safe automatic price rules, test cases, and a kill switch you can trust.
+summary: Give it your margins and stock. Get safe automatic price rules, test
+  cases, and a kill switch you can trust.
 job: set-prices
 headline: Repricing rules designer
-subhead: Give it your margins and stock. Get safe automatic price rules, test cases, and a kill switch you can trust.
+subhead: A set of price rules that change your prices on their own within safe
+  limits, with test cases and a stop button. You get dynamic pricing without a
+  price war or a sale below cost.
 explain: |
   A set of price rules that change your prices on their own within safe limits, with test cases and a stop button. You get dynamic pricing without a price war or a sale below cost.
 
@@ -27,5 +30,6 @@ you_get:
   - Scenario test results
   - Approval, audit and stop plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

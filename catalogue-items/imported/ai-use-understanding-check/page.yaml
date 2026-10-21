@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It finds where AI use hides gaps and adds checks.
 new_slug: ai-use-understanding-check
 name: AI-use understanding check planner
-summary: Tell it how students use AI on a task. Get checkpoints that show whether they really understand the work.
+summary: Tell it how students use AI on a task. Get checkpoints that show
+  whether they really understand the work.
 job: teach-and-train
 headline: AI-use understanding check planner
-subhead: Tell it how students use AI on a task. Get checkpoints that show whether they really understand the work.
+subhead: Students who use AI can feel they understand a topic because the answer
+  reads so smoothly. Checkpoints that expose the gap between what they think
+  they know and what they can do turn that into a lesson.
 explain: |
   Students who use AI can feel they understand a topic because the answer reads so smoothly. Checkpoints that expose the gap between what they think they know and what they can do turn that into a lesson.
 
@@ -27,5 +30,6 @@ you_get:
   - Prompts for students to predict and compare
   - Guidance on running them in class
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

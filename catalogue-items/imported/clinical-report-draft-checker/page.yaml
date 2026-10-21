@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Safety reports need exact structure and careful wording.
 new_slug: clinical-report-draft-checker
 name: Clinical report draft checker
-summary: Give it de-identified case or trial data. Get a structured report draft and checks for gaps.
+summary: Give it de-identified case or trial data. Get a structured report draft
+  and checks for gaps.
 job: document-work
 headline: Clinical report draft checker
-subhead: Give it de-identified case or trial data. Get a structured report draft and checks for gaps.
+subhead: Give it de-identified case or trial data. Get a structured report draft
+  and checks for gaps. Bring de-identified or synthetic facts. Use the result to
+  plan your next step.
 explain: |
   A structured draft for a clinical case, trial or safety report, plus checks that show what is missing or inconsistent. It works only with de-identified or invented data, and every output is marked as a draft not for clinical use.
 
@@ -27,6 +30,7 @@ you_get:
   - Checks on tables and sections
   - Draft markers on every page
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code on local files.

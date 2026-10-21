@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads people's self-image and turns it into wording.
 new_slug: customer-identity-messaging
 name: Customer identity messaging mapper
-summary: Give it your audience. Get a map of who they are and want to be, plus copy that reflects it.
+summary: Give it your audience. Get a map of who they are and want to be, plus
+  copy that reflects it.
 job: understand-customers
 headline: Customer identity messaging mapper
-subhead: Give it your audience. Get a map of who they are and want to be, plus copy that reflects it.
+subhead: People respond to messages that match who they are and who they want to
+  be. Give it your audience and you get a map of their current self-image and
+  their aspired identity, then copy that reflects both without sounding fake.
 explain: |
   People respond to messages that match who they are and who they want to be. Give it your audience and you get a map of their current self-image and their aspired identity, then copy that reflects both without sounding fake.
 
@@ -26,5 +29,6 @@ you_get:
   - Language patterns that fit
   - Rewritten copy
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

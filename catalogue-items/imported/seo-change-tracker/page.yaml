@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It compares two snapshots and flags differences.
 new_slug: seo-change-tracker
 name: SEO change tracker
-summary: Save your site's SEO state today. Get a warning when rankings, tags or pages slip later.
+summary: Save your site's SEO state today. Get a warning when rankings, tags or
+  pages slip later.
 job: get-found-in-search
 headline: SEO change tracker
-subhead: Save your site's SEO state today. Get a warning when rankings, tags or pages slip later.
+subhead: A saved picture of how your site looks to search engines today, and a
+  warning later if something slips. It records a baseline of search performance
+  and live page details, then compares a new snapshot against it.
 explain: |
   A saved picture of how your site looks to search engines today, and a warning later if something slips. It records a baseline of search performance and live page details, then compares a new snapshot against it.
 
@@ -26,6 +29,7 @@ you_get:
   - Ranking and index losses
   - Changed titles, tags and schema
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can browse the web.

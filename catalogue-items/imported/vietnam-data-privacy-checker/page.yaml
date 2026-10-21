@@ -2,16 +2,21 @@ thinking: medium
 thinking_why: It applies a set law to your facts.
 new_slug: vietnam-data-privacy-checker
 name: Vietnam data privacy checker
-summary: Describe how you handle Vietnamese personal data. Get your duties, transfer checks and a plan under the new law.
+summary: Describe how you handle Vietnamese personal data. Get your duties,
+  transfer checks and a plan under the new law.
 job: check-contracts
 headline: Vietnam data privacy checker
-subhead: Describe how you handle Vietnamese personal data. Get your duties, transfer checks and a plan under the new law.
+subhead: A clear list of what Vietnam's new personal data law asks of you, with
+  gaps marked and a plan to close them. It matters because the law took effect
+  on 1 January 2026 and reaches foreign firms that handle data about people in
+  Vietnam.
 explain: |
   A clear list of what Vietnam's new personal data law asks of you, with gaps marked and a plan to close them. It matters because the law took effect on 1 January 2026 and reaches foreign firms that handle data about people in Vietnam.
 
   You describe what personal data you collect and where it goes. The skill sorts it into basic and sensitive data, checks your consent and notices, and tests any transfer abroad. It then covers breach reporting, sector rules for finance, AI and cloud, and what your data protection officer needs. It reads the law and its decree text before it drafts any advice.
 when:
-  - You sell to customers in Vietnam and need to know what the new law requires of you.
+  - You sell to customers in Vietnam and need to know what the new law requires
+    of you.
   - You send Vietnamese user data to servers or vendors in another country.
   - You need a privacy notice or internal policy that matches the 2026 rules.
   - You want to check your breach response steps before something goes wrong.
@@ -26,5 +31,6 @@ you_get:
   - Gaps in consent, notices and policies
   - A step-by-step fix plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

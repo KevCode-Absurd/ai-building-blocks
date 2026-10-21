@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Statistics need the right method and honest limits.
 new_slug: statistics-helper
 name: Statistics helper
-summary: Give it data and a question. Get trends, outliers, correlations and tests, explained in plain words.
+summary: Give it data and a question. Get trends, outliers, correlations and
+  tests, explained in plain words.
 job: track-numbers
 headline: Statistics helper
-subhead: Give it data and a question. Get trends, outliers, correlations and tests, explained in plain words.
+subhead: "Plain-language answers from your data: what is typical, what is odd,
+  what is moving and what is likely just noise. You paste a table or describe a
+  metric, and get a written read of it, not a wall of numbers."
 explain: |
   Plain-language answers from your data: what is typical, what is odd, what is moving and what is likely just noise. You paste a table or describe a metric, and get a written read of it, not a wall of numbers.
 
@@ -27,6 +30,7 @@ you_get:
   - Test results in plain words
   - Cautions about what the data cannot show
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code.

@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It weighs several kinds of difficulty together.
 new_slug: text-difficulty-checker
 name: Text difficulty checker
-summary: Paste a text. Get its difficulty by length, meaning and reader task, with support ideas for struggling readers.
+summary: Paste a text. Get its difficulty by length, meaning and reader task,
+  with support ideas for struggling readers.
 job: teach-and-train
 headline: Text difficulty checker
-subhead: Paste a text. Get its difficulty by length, meaning and reader task, with support ideas for struggling readers.
+subhead: "Pick the wrong text and half the class stalls, pick a text that is too
+  easy and nobody grows. This skill rates a passage three ways: how long and
+  tangled the language is, how deep the meaning goes, and how hard the task
+  asked of the reader is."
 explain: |
   Pick the wrong text and half the class stalls, pick a text that is too easy and nobody grows. This skill rates a passage three ways: how long and tangled the language is, how deep the meaning goes, and how hard the task asked of the reader is.
 
@@ -26,5 +30,6 @@ you_get:
   - Support ideas for each trouble spot
   - A suggested reading plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

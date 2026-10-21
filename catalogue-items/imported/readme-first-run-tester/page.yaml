@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It checks each step against the project files.
 new_slug: readme-first-run-tester
 name: README first-run tester
-summary: Point it at a project. Get each README step marked working or broken, with proof, and the edits that fix it.
+summary: Point it at a project. Get each README step marked working or broken,
+  with proof, and the edits that fix it.
 job: test-and-fix-code
 headline: README first-run tester
-subhead: Point it at a project. Get each README step marked working or broken, with proof, and the edits that fix it.
+subhead: Each step in your README marked working, broken, missing or unchecked,
+  with proof from the repo and the edits that fix it. You see what a new user
+  would hit first.
 explain: |
   Each step in your README marked working, broken, missing or unchecked, with proof from the repo and the edits that fix it. You see what a new user would hit first.
 
@@ -25,6 +28,7 @@ you_get:
   - The real first-run path
   - README edits to fix problems
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

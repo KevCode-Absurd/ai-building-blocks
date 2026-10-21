@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks a known pattern and fills it in.
 new_slug: n8n-workflow-designer
 name: n8n workflow designer
-summary: Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
+summary: Describe the automation you want. Get an n8n workflow laid out with a
+  proven pattern, from webhook to schedule.
 job: connect-tools
 headline: n8n workflow designer
-subhead: Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
+subhead: Pick the shape of an n8n automation before you drag a single node. Many
+  workflows go wrong because the structure was a guess. This skill matches your
+  idea to one of five proven patterns and lays it out step by step.
 explain: |
   Pick the shape of an n8n automation before you drag a single node. Many workflows go wrong because the structure was a guess. This skill matches your idea to one of five proven patterns and lays it out step by step.
 
@@ -25,6 +28,7 @@ you_get:
   - Where error handling goes
   - Examples of the same pattern in use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can use the n8n MCP tools.

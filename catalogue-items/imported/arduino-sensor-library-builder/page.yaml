@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It wraps device code in a set format.
 new_slug: arduino-sensor-library-builder
 name: Arduino sensor library builder
-summary: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use it from MATLAB.
+summary: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use
+  it from MATLAB.
 job: build-software
 headline: Arduino sensor library builder
-subhead: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use it from MATLAB.
+subhead: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use
+  it from MATLAB. Bring the sensor or part name. Use the result to plan your
+  next step.
 explain: |
   A custom library so MATLAB can use a sensor or part it doesn't support out of the box, such as a DHT22, an OLED screen or NeoPixels. Name the part and you get the link between MATLAB and the Arduino code.
 
@@ -26,6 +29,7 @@ you_get:
   - MATLAB functions for the part
   - Setup and test steps
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB and reach an Arduino board.

@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It maps, plans and verifies before and after coding.
 new_slug: verified-code-writer
 name: Verified code writer
-summary: Describe the change. Get code grounded in your real files, with each step checked before it counts.
+summary: Describe the change. Get code grounded in your real files, with each
+  step checked before it counts.
 job: build-software
 headline: Verified code writer
-subhead: Describe the change. Get code grounded in your real files, with each step checked before it counts.
+subhead: "Code that matches what is actually in your project: no made-up
+  functions, no guessed imports, no placeholders. Each step is checked before it
+  counts as done."
 explain: |
   Code that matches what is actually in your project: no made-up functions, no guessed imports, no placeholders. Each step is checked before it counts as done.
 
@@ -26,6 +29,7 @@ you_get:
   - Small steps, each with a check
   - Verified code with results shown
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

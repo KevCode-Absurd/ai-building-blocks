@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads a long transcript and condenses it.
 new_slug: youtube-video-summariser
 name: YouTube video summariser
-summary: Give it a YouTube link. Get a detailed summary of the talk or lesson, taken from its transcript.
+summary: Give it a YouTube link. Get a detailed summary of the talk or lesson,
+  taken from its transcript.
 job: organise-work
 headline: YouTube video summariser
-subhead: Give it a YouTube link. Get a detailed summary of the talk or lesson, taken from its transcript.
+subhead: Give it a YouTube link. Get a detailed summary of the talk or lesson,
+  taken from its transcript. Bring a YouTube video link. Use the result to plan
+  your next step.
 explain: |
   A long, detailed written summary of a YouTube talk, lecture or tutorial, built from its transcript so you do not need to rewatch it.
 
@@ -25,6 +28,7 @@ you_get:
   - Takeaways to act on
   - A clear error message if the video has no captions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and fetch web pages.

@@ -2,10 +2,14 @@ thinking: low
 thinking_why: It is a short set of habits, not a long process.
 new_slug: careful-coding-rules
 name: Careful coding rules
-summary: Add four habits to your AI coder. Get smaller, simpler changes that state their assumptions and prove they work.
+summary: Add four habits to your AI coder. Get smaller, simpler changes that
+  state their assumptions and prove they work.
 job: build-software
 headline: Careful coding rules
-subhead: Add four habits to your AI coder. Get smaller, simpler changes that state their assumptions and prove they work.
+subhead: Your AI coder makes smaller, simpler changes and shows its thinking
+  before it writes. Add four habits, and the code you get back states its
+  assumptions, does only what you asked, touches only what it must, and proves
+  it works.
 explain: |
   Your AI coder makes smaller, simpler changes and shows its thinking before it writes. Add four habits, and the code you get back states its assumptions, does only what you asked, touches only what it must, and proves it works.
 
@@ -25,5 +29,6 @@ you_get:
   - Edits limited to the lines that matter
   - A clear way to check the result
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

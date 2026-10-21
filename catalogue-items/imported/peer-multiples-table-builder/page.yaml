@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It picks peers and computes standard multiples.
 new_slug: peer-multiples-table-builder
 name: Peer multiples table builder
-summary: Name a company. Get a table comparing its price multiples and key numbers with its peers.
+summary: Name a company. Get a table comparing its price multiples and key
+  numbers with its peers.
 job: money-and-investing
 headline: Peer multiples table builder
-subhead: Name a company. Get a table comparing its price multiples and key numbers with its peers.
+subhead: Name a company. Get a table comparing its price multiples and key
+  numbers with its peers. Bring the target company name. Use the result to plan
+  your next step.
 explain: |
   A comparison table of your target company against its listed peers, showing price multiples and key figures side by side, so you can tell whether it looks cheap or dear. This version is set up for Indian markets.
 
@@ -26,5 +29,6 @@ you_get:
   - Median and mean across peers
   - Notes on gaps with no Indian equivalent
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

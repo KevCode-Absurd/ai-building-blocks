@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It models uncertain reserves and prices.
 new_slug: oil-and-gas-reserves-valuer
 name: Oil and gas reserves valuer
-summary: Give it reserve and cost data. Get the present value of the reserves, such as PV-10.
+summary: Give it reserve and cost data. Get the present value of the reserves,
+  such as PV-10.
 job: money-and-investing
 headline: Oil and gas reserves valuer
-subhead: Give it reserve and cost data. Get the present value of the reserves, such as PV-10.
+subhead: "A present value for oil and gas reserves, worked out step by step so
+  you can check every line. The headline figure is PV-10: all future net cash
+  flow, discounted at 10 percent a year."
 explain: |
   A present value for oil and gas reserves, worked out step by step so you can check every line. The headline figure is PV-10: all future net cash flow, discounted at 10 percent a year.
 
@@ -26,5 +29,6 @@ you_get:
   - Reserve life in years
   - Notes on the pre-tax versus post-tax difference
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

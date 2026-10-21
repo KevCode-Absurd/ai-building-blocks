@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It audits pages, then plans fixes for each.
 new_slug: tool-pages-seo-fixer
 name: Tool pages SEO fixer
-summary: Point it at a site with many tool or feature pages. Get duplicate text found and unique titles and copy planned.
+summary: Point it at a site with many tool or feature pages. Get duplicate text
+  found and unique titles and copy planned.
 job: get-found-in-search
 headline: Tool pages SEO fixer
-subhead: Point it at a site with many tool or feature pages. Get duplicate text found and unique titles and copy planned.
+subhead: If you run a site with dozens of tool or feature pages that all use the
+  same template text, search engines treat them as copies and rank them low.
 explain: |
   If you run a site with dozens of tool or feature pages that all use the same template text, search engines treat them as copies and rank them low. This skill finds that duplication and plans a way to give each page its own words.
 
@@ -27,5 +29,6 @@ you_get:
   - Slug and internal link plan
   - A rewrite order
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

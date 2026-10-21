@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It prompts you through steps and ranks ideas.
 new_slug: research-idea-finder
 name: Research idea finder
-summary: Describe your field or stuck project. Get ten ways to find research ideas worth chasing, with the best ones ranked.
+summary: Describe your field or stuck project. Get ten ways to find research
+  ideas worth chasing, with the best ones ranked.
 job: research-topics
 headline: Research idea finder
-subhead: Describe your field or stuck project. Get ten ways to find research ideas worth chasing, with the best ones ranked.
+subhead: Ten different ways to find a research idea worth chasing, applied to
+  your field, with the strongest ideas ranked at the end. When you are stuck, a
+  fresh angle matters more than a longer list.
 explain: |
   Ten different ways to find a research idea worth chasing, applied to your field, with the strongest ideas ranked at the end. When you are stuck, a fresh angle matters more than a longer list.
 
@@ -25,5 +28,6 @@ you_get:
   - Ranked shortlist
   - Next step for the top ideas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sets a layout where small mistakes break sites.
 new_slug: domain-and-dns-planner
 name: Domain and DNS planner
-summary: List your domains and sites. Get a DNS layout, redirect rules and a plan for unused names.
+summary: List your domains and sites. Get a DNS layout, redirect rules and a
+  plan for unused names.
 job: ship-and-host
 headline: Domain and DNS planner
-subhead: List your domains and sites. Get a DNS layout, redirect rules and a plan for unused names.
+subhead: List your domains and sites. Get a DNS layout, redirect rules and a
+  plan for unused names. Bring a list of all your domains and their status. Use
+  the result to plan your next step.
 explain: |
   A clear layout for how your domains, subdomains and DNS records fit together, including redirects and what to do with the names you do not use. It works for one site or a hundred.
 
@@ -27,5 +30,6 @@ you_get:
   - A plan for parked and unused names
   - A list of records to set
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

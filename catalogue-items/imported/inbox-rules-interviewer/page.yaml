@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It asks questions and writes what it learns.
 new_slug: inbox-rules-interviewer
 name: Inbox rules interviewer
-summary: Answer questions about your email. Get a saved guide to your senders, reply voice and rules for triage.
+summary: Answer questions about your email. Get a saved guide to your senders,
+  reply voice and rules for triage.
 job: hire-people
 headline: Inbox rules interviewer
-subhead: Answer questions about your email. Get a saved guide to your senders, reply voice and rules for triage.
+subhead: Answer questions about your email. Get a saved guide to your senders,
+  reply voice and rules for triage. Bring answers to the interview questions.
+  Use the result to plan your next step.
 explain: |
   A saved set of files that tells an AI how you handle email: who matters, how you sound when you reply, and what to do with each kind of message. You answer once, and the later triage runs from your answers.
 
@@ -26,5 +29,6 @@ you_get:
   - Rules on senders and priorities
   - Seven saved files the triage skill reads
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

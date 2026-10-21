@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It guides set steps and checks your skill idea as you go.
 new_slug: skill-making-guide
 name: Skill-making guide
-summary: Describe a task you repeat. Get a step-by-step guide to turning it into your own skill that triggers reliably.
+summary: Describe a task you repeat. Get a step-by-step guide to turning it into
+  your own skill that triggers reliably.
 job: make-skills
 headline: Skill-making guide
-subhead: Describe a task you repeat. Get a step-by-step guide to turning it into your own skill that triggers reliably.
+subhead: A step-by-step guide to turn a task you repeat into your own skill that
+  triggers when it should. You stop pasting the same instructions every time.
 explain: |
   A step-by-step guide to turn a task you repeat into your own skill that triggers when it should. You stop pasting the same instructions every time.
 
@@ -26,5 +28,6 @@ you_get:
   - Advice on reference files
   - A test and maintenance plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

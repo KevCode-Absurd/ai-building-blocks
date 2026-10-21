@@ -2,10 +2,13 @@ thinking: high
 thinking_why: Option rules and pricing conflicts need careful logic.
 new_slug: build-your-own-product-designer
 name: Build-your-own product designer
-summary: Describe your customisable product. Get a plan with option rules, live pricing, checks and saving.
+summary: Describe your customisable product. Get a plan with option rules, live
+  pricing, checks and saving.
 job: build-product
 headline: Build-your-own product designer
-subhead: Describe your customisable product. Get a plan with option rules, live pricing, checks and saving.
+subhead: A plan for a build-your-own product tool that people finish, not
+  abandon. It covers the choices to show, the rules between them, live pricing,
+  checks and saving.
 explain: |
   A plan for a build-your-own product tool that people finish, not abandon. It covers the choices to show, the rules between them, live pricing, checks and saving.
 
@@ -27,5 +30,6 @@ you_get:
   - A live pricing approach
   - Save and share ideas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -5,7 +5,9 @@ name: Vercel deployer
 summary: Say "deploy my app". Get it live on Vercel and a link you can share.
 job: ship-and-host
 headline: Vercel deployer
-subhead: Say "deploy my app". Get it live on Vercel and a link you can share.
+subhead: Tell it to deploy and your app goes live on Vercel with a link to
+  share. It makes a preview first, so you check before anything reaches real
+  visitors.
 explain: |
   Tell it to deploy and your app goes live on Vercel with a link to share. It makes a preview first, so you check before anything reaches real visitors.
 
@@ -26,6 +28,7 @@ you_get:
   - A check of git, login and team setup
   - Next steps for automatic deploys
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run commands and sign in to Vercel.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It writes a short piece from a clear rule.
 new_slug: linkedin-comment-writer
 name: LinkedIn comment writer
-summary: Paste a post. Get a comment that adds something new instead of agreeing, in your voice.
+summary: Paste a post. Get a comment that adds something new instead of
+  agreeing, in your voice.
 job: grow-social
 headline: LinkedIn comment writer
-subhead: Paste a post. Get a comment that adds something new instead of agreeing, in your voice.
+subhead: Paste a post. Get a comment that adds something new instead of
+  agreeing, in your voice. Bring the post text. Use the result to plan your next
+  step.
 explain: |
   A short LinkedIn comment that adds something the post did not have, written in your voice. It replaces the "Great post!" that nobody reads.
 
@@ -26,5 +29,6 @@ you_get:
   - A choice of comment shape
   - A shorter version to paste
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

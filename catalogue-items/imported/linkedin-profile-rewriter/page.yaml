@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It rewrites each section with set checks.
 new_slug: linkedin-profile-rewriter
 name: LinkedIn profile rewriter
-summary: Describe your profile. Get a stronger headline, About section and experience bullets.
+summary: Describe your profile. Get a stronger headline, About section and
+  experience bullets.
 job: grow-social
 headline: LinkedIn profile rewriter
-subhead: Describe your profile. Get a stronger headline, About section and experience bullets.
+subhead: A LinkedIn profile that tells people why to contact you. You describe
+  yours and get a sharper headline, About section and experience bullets, fixed
+  in the order that pays off most.
 explain: |
   A LinkedIn profile that tells people why to contact you. You describe yours and get a sharper headline, About section and experience bullets, fixed in the order that pays off most.
 
@@ -27,5 +30,6 @@ you_get:
   - Stronger experience bullets
   - Notes on Featured, banner and recommendations
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

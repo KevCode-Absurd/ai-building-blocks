@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It breaks a role into parts and weighs each one.
 new_slug: job-duties-and-level-analyst
 name: Job duties and level analyst
-summary: Name a role. Get its duties, time split, required skills and a fair level, ready for pay and planning.
+summary: Name a role. Get its duties, time split, required skills and a fair
+  level, ready for pay and planning.
 job: hire-people
 headline: Job duties and level analyst
-subhead: Name a role. Get its duties, time split, required skills and a fair level, ready for pay and planning.
+subhead: Name a role. Get its duties, time split, required skills and a fair
+  level, ready for pay and planning. Bring the role title and department. Use
+  the result to plan your next step.
 explain: |
   A role written down as it is actually done, with a fair level to match. Name the role. The skill plans a job analysis, choosing methods such as interviews, questionnaires and task lists, and then drafts the duties, the share of time spent on each, and the knowledge, skills and abilities needed.
 
@@ -27,5 +30,6 @@ you_get:
   - A job analysis plan
   - A record you can use for pay and planning
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

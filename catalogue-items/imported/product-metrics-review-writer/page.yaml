@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads numbers and explains the causes.
 new_slug: product-metrics-review-writer
 name: Product metrics review writer
-summary: Give it your product numbers. Get trends against targets, what moved and what to do about it.
+summary: Give it your product numbers. Get trends against targets, what moved
+  and what to do about it.
 job: build-product
 headline: Product metrics review writer
-subhead: Give it your product numbers. Get trends against targets, what moved and what to do about it.
+subhead: A metrics review that says what moved, why it may have moved, and what
+  to do about it. You get a scorecard against targets instead of a pile of
+  numbers.
 explain: |
   A metrics review that says what moved, why it may have moved, and what to do about it. You get a scorecard against targets instead of a pile of numbers.
 
@@ -26,5 +29,6 @@ you_get:
   - Likely causes for spikes and drops
   - Recommended actions
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It matches facts to policy and writes in your tone.
 new_slug: customer-reply-and-order-checker
 name: Customer reply and order checker
-summary: Forward a customer email. Get order status checked and a reply in your voice. Refunds only on your yes.
+summary: Forward a customer email. Get order status checked and a reply in your
+  voice. Refunds only on your yes.
 job: help-customers
 headline: Customer reply and order checker
-subhead: Forward a customer email. Get order status checked and a reply in your voice. Refunds only on your yes.
+subhead: Forward a customer email and get back a reply in your own voice, with
+  the facts already checked. It pulls order and payment status, account history
+  and open tickets before it writes.
 explain: |
   Forward a customer email and get back a reply in your own voice, with the facts already checked. It pulls order and payment status, account history and open tickets before it writes.
 
@@ -26,7 +29,9 @@ you_get:
   - A staged refund waiting for your approval
   - A list of orders needing attention (with Shopify)
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We
+    copied it in so the skill works on its own.

@@ -2,10 +2,12 @@ thinking: medium
 thinking_why: It follows a set method but depends on your setup.
 new_slug: ai-agent-monitoring-planner
 name: AI agent monitoring planner
-summary: Describe your AI agent. Get a plan to trace its steps, costs and errors without logging private data.
+summary: Describe your AI agent. Get a plan to trace its steps, costs and errors
+  without logging private data.
 job: build-software
 headline: AI agent monitoring planner
-subhead: Describe your AI agent. Get a plan to trace its steps, costs and errors without logging private data.
+subhead: "A plan to see what your AI agent is doing: each step, how long it
+  took, what it cost and where it failed. Nobody's private text gets stored."
 explain: |
   A plan to see what your AI agent is doing: each step, how long it took, what it cost and where it failed. Nobody's private text gets stored.
 
@@ -14,7 +16,8 @@ when:
   - Your agent sometimes runs slowly and you cannot tell which step is the cause.
   - The bill for your agent rose and you need to know why.
   - You need audit evidence of what the agent did without keeping customer text.
-  - Different tools and frameworks log in different ways and you want one standard.
+  - Different tools and frameworks log in different ways and you want one
+    standard.
 you_give:
   - A description of the agent's workflow
   - Questions you want answered
@@ -27,5 +30,6 @@ you_get:
   - Privacy and retention settings
   - An investigation runbook
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,38 @@
+slug: saas-launch-review-agent
+name: SaaS launch decision agent
+summary: Share your product, launch plan and new results. Get a dated decision
+  on what to test, revise or keep.
+category: agent
+boards:
+  - business
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+uses:
+  - copilot-gtm-positioning-strategy
+  - copilot-gtm-0-to-1-launch
+  - copilot-gtm-product-led-growth
+steps:
+  - uses: copilot-gtm-positioning-strategy
+    note: Run only when the saved state and decision rules require it.
+  - uses: copilot-gtm-0-to-1-launch
+    note: Run only when the saved state and decision rules require it.
+  - uses: copilot-gtm-product-led-growth
+    note: Run only when the saved state and decision rules require it.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Awesome Copilot skill collection
+    by: GitHub Copilot community
+    url: https://github.com/github/awesome-copilot
+    used: The component skills are copied under their own licenses. This catalogue
+      adds original orchestration and decision rules.
+example_pending: true

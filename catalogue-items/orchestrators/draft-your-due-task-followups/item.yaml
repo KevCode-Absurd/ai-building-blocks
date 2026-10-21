@@ -1,0 +1,52 @@
+slug: draft-your-due-task-followups
+name: Draft your due task follow ups
+summary: Share due tasks and their threads. Get checked follow-up drafts in your
+  voice, ready for review.
+category: orchestrator
+boards:
+  - business
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+execution: coordinator
+inputs:
+  - type: brief
+    required: true
+  - type: plan
+    required: false
+  - type: script
+    required: false
+  - type: ad_copy
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: document
+uses:
+  - executive-due-task-drafts
+  - brand-voice-editor
+steps:
+  - uses: executive-due-task-drafts
+    note: 1. Read skills/executive-due-task-drafts/SKILL.md. Share due tasks and
+      related threads. Get follow-up drafts linked to each task, with missing
+      facts and send status clear. Save the result with source references. Carry
+      the user's goal and all earlier findings into this step. If required
+      evidence or tool access is missing, mark this step blocked; do not
+      fabricate a result.
+  - uses: brand-voice-editor
+    note: 2. Read skills/brand-voice-editor/SKILL.md. Paste your ad and customer
+      quotes. Get off-brand words fixed, claims untouched, and a score out of
+      100. Save the result with source references. Carry the user's goal and all
+      earlier findings into this step. If required evidence or tool access is
+      missing, mark this step blocked; do not fabricate a result.
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: Executive assistant job ideas
+    by: mgonto
+    url: https://github.com/mgonto/executive-assistant-skills
+    used: Inspiration for meeting preparation, action tracking, email drafting and
+      daily briefings. These are original portable instructions, not copies of
+      the unlicensed source.
+example_pending: true

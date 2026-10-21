@@ -2,18 +2,24 @@ thinking: low
 thinking_why: It finds disputes and adds a fixed tag.
 new_slug: chargeback-customer-tagger
 name: Chargeback customer tagger
-summary: Find customers with disputed orders. Get their records tagged so you review their next orders. Changes live customer tags.
+summary: Find customers with disputed orders. Get their records tagged so you
+  review their next orders. Changes live customer tags.
 job: run-your-store
 headline: Chargeback customer tagger
-subhead: Find customers with disputed orders. Get their records tagged so you review their next orders. Changes live customer tags.
+subhead: Customers who have lost you a dispute get a tag on their record, so you
+  can review or hold their next orders. This one writes to your live Shopify
+  store, so it starts in preview mode and shows you who would be tagged before
+  anything changes.
 explain: |
   Customers who have lost you a dispute get a tag on their record, so you can review or hold their next orders. This one writes to your live Shopify store, so it starts in preview mode and shows you who would be tagged before anything changes.
 
   It scans orders from the last two years (you can change that) and finds every order linked to a dispute. It groups them by customer and skips anyone already tagged. By default it skips customers whose disputes you won. Then it adds a tag, named chargeback-history unless you pick another. You need the Shopify command line signed in with read and write access to orders and customers.
 when:
-  - You keep getting repeat disputes from the same buyers and want a flag on their account.
+  - You keep getting repeat disputes from the same buyers and want a flag on
+    their account.
   - You want to hold new orders from past dispute customers for a manual look.
-  - You need a list of every customer who has filed a dispute in the past year or two.
+  - You need a list of every customer who has filed a dispute in the past year
+    or two.
   - You want to build a Shopify customer segment around risky buyers.
 you_give:
   - Your store domain
@@ -27,6 +33,7 @@ you_get:
   - A count of skipped and already tagged customers
   - Any errors Shopify returned
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin and change it.

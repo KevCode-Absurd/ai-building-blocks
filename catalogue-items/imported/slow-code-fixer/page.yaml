@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It measures first, then changes one thing at a time.
 new_slug: slow-code-fixer
 name: Slow code fixer
-summary: Describe what feels slow. Get the bottleneck found, fixed, and proven faster with before and after numbers.
+summary: Describe what feels slow. Get the bottleneck found, fixed, and proven
+  faster with before and after numbers.
 job: test-and-fix-code
 headline: Slow code fixer
-subhead: Describe what feels slow. Get the bottleneck found, fixed, and proven faster with before and after numbers.
+subhead: A slow page, API or database call, fixed and proven faster with
+  numbers. You describe what feels slow, and the skill measures first, so it
+  never guesses.
 explain: |
   A slow page, API or database call, fixed and proven faster with numbers. You describe what feels slow, and the skill measures first, so it never guesses.
 
@@ -26,6 +29,7 @@ you_get:
   - Before and after timings
   - A short note on what changed and why
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

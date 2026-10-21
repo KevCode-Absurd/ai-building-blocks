@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It uses your attempts to shape the teaching.
 new_slug: try-first-problem-tutor
 name: Try-first problem tutor
-summary: Try a hard problem two ways before any teaching. Your AI then builds the lesson from your attempts.
+summary: Try a hard problem two ways before any teaching. Your AI then builds
+  the lesson from your attempts.
 job: teach-and-train
 headline: Try-first problem tutor
-subhead: Try a hard problem two ways before any teaching. Your AI then builds the lesson from your attempts.
+subhead: A lesson built on your own attempts. You try a hard problem two
+  different ways before anyone explains it, and the teaching then starts from
+  what you tried.
 explain: |
   A lesson built on your own attempts. You try a hard problem two different ways before anyone explains it, and the teaching then starts from what you tried. The method is called productive failure, and it helps ideas stick.
 
@@ -26,5 +29,6 @@ you_get:
   - A short lesson linked to your attempts
   - A check of what you learned
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It adds balances into groups.
 new_slug: gift-card-liability-calculator
 name: Gift card liability calculator
-summary: Run it on your gift cards. Get the total balance you still owe, split by issue date and balance size.
+summary: Run it on your gift cards. Get the total balance you still owe, split
+  by issue date and balance size.
 job: run-your-store
 headline: Gift card liability calculator
-subhead: Run it on your gift cards. Get the total balance you still owe, split by issue date and balance size.
+subhead: The amount you still owe customers in unspent gift cards, as one clear
+  number. It reads your Shopify gift cards and adds up the open balances, which
+  count as a future obligation to deliver goods.
 explain: |
   The amount you still owe customers in unspent gift cards, as one clear number. It reads your Shopify gift cards and adds up the open balances, which count as a future obligation to deliver goods.
 
@@ -26,6 +29,7 @@ you_get:
   - Breakdown by balance band
   - A list of stale cards
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

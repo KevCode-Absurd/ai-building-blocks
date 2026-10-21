@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It follows a standard logging pattern.
 new_slug: training-curve-viewer
 name: Training curve viewer
-summary: Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs.
+summary: Give it your training code. Get live charts of loss and accuracy, plus
+  a way to compare runs.
 job: track-numbers
 headline: Training curve viewer
-subhead: Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs.
+subhead: Live charts of loss and accuracy while your model trains, with runs
+  lined up so you can see which settings worked. You stop guessing from printed
+  numbers and watch the curves.
 explain: |
   Live charts of loss and accuracy while your model trains, with runs lined up so you can see which settings worked. You stop guessing from printed numbers and watch the curves.
 
@@ -26,6 +29,7 @@ you_get:
   - A run comparison setup
   - The command to launch the viewer
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code and open a browser.

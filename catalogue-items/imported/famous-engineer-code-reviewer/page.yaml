@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It argues from several views, which takes some thought.
 new_slug: famous-engineer-code-reviewer
 name: Famous engineer code reviewer
-summary: Give it code. Get blunt reviews in the voices of well-known engineers, each tied to their written views.
+summary: Give it code. Get blunt reviews in the voices of well-known engineers,
+  each tied to their written views.
 job: test-and-fix-code
 headline: Famous engineer code reviewer
-subhead: Give it code. Get blunt reviews in the voices of well-known engineers, each tied to their written views.
+subhead: A code review in the voices of well-known engineers, each finding tied
+  to something they have written or said. The notes are blunter and more
+  concrete than a generic review.
 explain: |
   A code review in the voices of well-known engineers, each finding tied to something they have written or said. The notes are blunter and more concrete than a generic review.
 
@@ -25,6 +28,7 @@ you_get:
   - A product-angle check
   - A final verdict
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code and read your project files.

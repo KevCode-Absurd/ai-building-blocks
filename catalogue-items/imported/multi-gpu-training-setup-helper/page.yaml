@@ -2,10 +2,13 @@ thinking: low
 thinking_why: The change is small and follows a known pattern.
 new_slug: multi-gpu-training-setup-helper
 name: Multi-GPU training setup helper
-summary: Give it a training script. Get it running on one GPU, many GPUs or several machines with a few added lines.
+summary: Give it a training script. Get it running on one GPU, many GPUs or
+  several machines with a few added lines.
 job: build-software
 headline: Multi-GPU training setup helper
-subhead: Give it a training script. Get it running on one GPU, many GPUs or several machines with a few added lines.
+subhead: Your training script running on one GPU, several GPUs or several
+  machines, with only a handful of added lines. The same script works in all
+  three setups.
 explain: |
   Your training script running on one GPU, several GPUs or several machines, with only a handful of added lines. The same script works in all three setups.
 
@@ -26,6 +29,7 @@ you_get:
   - A config file for your setup
   - Memory-saving options for large models
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run Python code.

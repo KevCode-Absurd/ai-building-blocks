@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It recomputes sums and checks a short list of fields.
 new_slug: invoice-totals-checker
 name: Invoice totals checker
-summary: Give it an invoice. Get every line and total recalculated, and any missing fields or date problems listed.
+summary: Give it an invoice. Get every line and total recalculated, and any
+  missing fields or date problems listed.
 job: track-numbers
 headline: Invoice totals checker
-subhead: Give it an invoice. Get every line and total recalculated, and any missing fields or date problems listed.
+subhead: Every number on an invoice rechecked, so you pay or send the right
+  amount. Paste the invoice text, a table or a CSV. The skill pulls out each
+  line, the discounts, the tax and the stated totals.
 explain: |
   Every number on an invoice rechecked, so you pay or send the right amount. Paste the invoice text, a table or a CSV. The skill pulls out each line, the discounts, the tax and the stated totals. Then it recomputes them, using a small Python script if it can run one, and compares the results with what the invoice says.
 
@@ -26,5 +29,6 @@ you_get:
   - Date and consistency flags
   - Questions to send to the other party
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

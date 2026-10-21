@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: Ranking insights needs judgment about impact and certainty.
 new_slug: insight-brief-writer
 name: Insight brief writer
-summary: Give it your findings and goals. Get the top insights ranked by impact and confidence, each with an action.
+summary: Give it your findings and goals. Get the top insights ranked by impact
+  and confidence, each with an action.
 job: track-numbers
 headline: Insight brief writer
-subhead: Give it your findings and goals. Get the top insights ranked by impact and confidence, each with an action.
+subhead: A one-page brief of the three to five findings that matter most, each
+  ranked and paired with an action. It turns a heap of statistics into a clear
+  answer to the question "so what do we do?"
 explain: |
   A one-page brief of the three to five findings that matter most, each ranked and paired with an action. It turns a heap of statistics into a clear answer to the question "so what do we do?"
 
@@ -27,5 +30,6 @@ you_get:
   - Notes on conflicting findings
   - A short brief
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

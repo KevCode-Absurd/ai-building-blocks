@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It turns a script into a set structure of experiment settings.
 new_slug: training-experiment-setup-helper
 name: Training experiment setup helper
-summary: Give it a training script. Get an experiment that sweeps settings, set up in MATLAB and kept in sync.
+summary: Give it a training script. Get an experiment that sweeps settings, set
+  up in MATLAB and kept in sync.
 job: build-software
 headline: Training experiment setup helper
-subhead: Give it a training script. Get an experiment that sweeps settings, set up in MATLAB and kept in sync.
+subhead: Instead of changing settings by hand and rerunning, you get a MATLAB
+  experiment that sweeps them for you. Your training script becomes a set of
+  runs you can compare, and the Experiment Manager screen updates as you edit.
 explain: |
   Instead of changing settings by hand and rerunning, you get a MATLAB experiment that sweeps them for you. Your training script becomes a set of runs you can compare, and the Experiment Manager screen updates as you edit.
 
@@ -25,6 +28,7 @@ you_get:
   - Live edits shown in the app
   - Answers about the strategy and settings
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run MATLAB with Experiment Manager open.

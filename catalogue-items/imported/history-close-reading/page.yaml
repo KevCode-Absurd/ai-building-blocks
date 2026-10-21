@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It sequences practice steps for a hard skill.
 new_slug: history-close-reading
 name: Close reading lesson builder for history
-summary: Give it a history source. Get a lesson series that teaches learners to read word choice, tone and bias.
+summary: Give it a history source. Get a lesson series that teaches learners to
+  read word choice, tone and bias.
 job: teach-and-train
 headline: Close reading lesson builder for history
-subhead: Give it a history source. Get a lesson series that teaches learners to read word choice, tone and bias.
+subhead: A lesson series that teaches learners to read a history source for how
+  it says things, not only what it says. Students often summarise a document and
+  stop.
 explain: |
   A lesson series that teaches learners to read a history source for how it says things, not only what it says. Students often summarise a document and stop. Here they learn to treat word choice, tone and claims as clues to the writer's view.
 
@@ -27,5 +30,6 @@ you_get:
   - Prompts on word choice and tone
   - Common mistakes and marking indicators
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

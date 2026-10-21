@@ -33,7 +33,6 @@ works_with:
 runs_in: [web]
 blocks:
   - marketing-image-maker
-  - stable-diffusion-image-maker
 alternatives: [nano-banana, flux, ideogram, leonardo]
 last_checked: 2026-10-21
 sources:

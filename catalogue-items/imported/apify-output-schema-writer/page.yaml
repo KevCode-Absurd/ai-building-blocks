@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It reads what the code saves, then writes matching schema files.
 new_slug: apify-output-schema-writer
 name: Apify output schema writer
-summary: Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account.
+summary: Give it an Apify Actor. Get output schema files that show its results
+  as a clear table. Needs a paid Apify account.
 job: build-software
 headline: Apify output schema writer
-subhead: Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account.
+subhead: Give it an Apify Actor. Get output schema files that show its results
+  as a clear table. Needs a paid Apify account. Bring the Actor project folder.
+  Use the result to plan your next step.
 explain: |
   Schema files that make an Actor's results show up as a clear table in Apify Console, so anyone can read a run without opening raw data. It suits Actors already built on Apify, which needs a paid account.
 
@@ -25,6 +28,7 @@ you_get:
   - A key-value store schema (when needed)
   - Updated Actor settings
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your project files.

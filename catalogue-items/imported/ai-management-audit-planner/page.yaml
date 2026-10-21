@@ -5,7 +5,9 @@ name: AI management audit planner
 summary: Describe how you run AI. Get gaps against ISO 42001 and a plan to close them.
 job: secure-code
 headline: AI management audit planner
-subhead: Describe how you run AI. Get gaps against ISO 42001 and a plan to close them.
+subhead: A clear picture of where your AI governance falls short of ISO 42001,
+  plus a 12 month audit plan to close the gaps. That standard covers how a
+  company manages its AI systems.
 explain: |
   A clear picture of where your AI governance falls short of ISO 42001, plus a 12 month audit plan to close the gaps. That standard covers how a company manages its AI systems.
 
@@ -26,5 +28,6 @@ you_get:
   - A ranked list of fixes
   - A 12 month internal audit plan
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

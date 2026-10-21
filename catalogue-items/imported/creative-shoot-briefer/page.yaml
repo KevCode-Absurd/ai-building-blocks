@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It turns a brand look into a clear brief for others.
 new_slug: creative-shoot-briefer
 name: Creative shoot briefer
-summary: Give it your brand and campaign goal. Get a brief for a photographer, illustrator or video team.
+summary: Give it your brand and campaign goal. Get a brief for a photographer,
+  illustrator or video team.
 job: design-work
 headline: Creative shoot briefer
-subhead: Give it your brand and campaign goal. Get a brief for a photographer, illustrator or video team.
+subhead: Give it your brand and campaign goal. Get a brief for a photographer,
+  illustrator or video team. Bring brand and campaign goal. Use the result to
+  plan your next step.
 explain: |
   A brief that a photographer, illustrator or video team can act on, covering the story, the look, how to shoot it, the variants needed and the quality bar. It cuts back and forth and gets you the right images the first time.
 
@@ -27,5 +30,6 @@ you_get:
   - Quality standards
   - Feedback checklist
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

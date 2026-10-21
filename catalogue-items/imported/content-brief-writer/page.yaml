@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It combines search intent and audience into an outline.
 new_slug: content-brief-writer
 name: Content brief writer
-summary: Give it a topic and keyword. Get a brief with search intent, outline, key terms and links, ready for a writer.
+summary: Give it a topic and keyword. Get a brief with search intent, outline,
+  key terms and links, ready for a writer.
 job: get-found-in-search
 headline: Content brief writer
-subhead: Give it a topic and keyword. Get a brief with search intent, outline, key terms and links, ready for a writer.
+subhead: A brief that tells a writer exactly what to write, so the first draft
+  comes back close to done. It replaces the thin version of a keyword, a word
+  count and a deadline.
 explain: |
   A brief that tells a writer exactly what to write, so the first draft comes back close to done. It replaces the thin version of a keyword, a word count and a deadline.
 
@@ -26,5 +29,6 @@ you_get:
   - A section-by-section outline
   - Key terms and links to use
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

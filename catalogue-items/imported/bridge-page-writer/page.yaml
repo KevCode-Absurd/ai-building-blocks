@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It follows a set page structure and fits it to your offer.
 new_slug: bridge-page-writer
 name: Bridge page writer
-summary: Describe your ad and offer. Get a short page that warms visitors and sends them on to buy.
+summary: Describe your ad and offer. Get a short page that warms visitors and
+  sends them on to buy.
 job: write-landing-page
 headline: Bridge page writer
-subhead: Describe your ad and offer. Get a short page that warms visitors and sends them on to buy.
+subhead: A short page of 300 to 800 words that sits between your ad and your
+  offer. It warms up a curious visitor so they click through to watch your video
+  or see the offer.
 explain: |
   A short page of 300 to 800 words that sits between your ad and your offer. It warms up a curious visitor so they click through to watch your video or see the offer.
 
@@ -26,5 +29,6 @@ you_get:
   - A curiosity-led body with proof
   - A call to action that leads to the next step
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It counts consent fields.
 new_slug: marketing-consent-auditor
 name: Marketing consent auditor
-summary: Run it on your customers. Get who agreed to email and SMS marketing, and who did not, for compliance.
+summary: Run it on your customers. Get who agreed to email and SMS marketing,
+  and who did not, for compliance.
 job: run-your-store
 headline: Marketing consent auditor
-subhead: Run it on your customers. Get who agreed to email and SMS marketing, and who did not, for compliance.
+subhead: A count of how many of your Shopify customers agreed to email and SMS
+  marketing, and how many did not. It is useful for privacy reviews and for
+  knowing your real reachable audience.
 explain: |
   A count of how many of your Shopify customers agreed to email and SMS marketing, and how many did not. It is useful for privacy reviews and for knowing your real reachable audience.
 
@@ -25,6 +28,7 @@ you_get:
   - Pending and unreachable counts
   - A read-only report
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can access your Shopify admin.

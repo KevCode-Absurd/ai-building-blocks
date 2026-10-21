@@ -2,10 +2,12 @@ thinking: low
 thinking_why: It finds a rule and restates it.
 new_slug: company-policy-explainer
 name: Company policy explainer
-summary: Ask about leave, travel or expenses. Get the rule in plain words from your handbook. Check with HR for big decisions.
+summary: Ask about leave, travel or expenses. Get the rule in plain words from
+  your handbook. Check with HR for big decisions.
 job: hire-people
 headline: Company policy explainer
-subhead: Ask about leave, travel or expenses. Get the rule in plain words from your handbook. Check with HR for big decisions.
+subhead: Straight answers to questions like how much leave you get or what you
+  can claim on a trip, taken from your own handbook and put in plain words.
 explain: |
   Straight answers to questions like how much leave you get or what you can claim on a trip, taken from your own handbook and put in plain words. Staff stop waiting days for HR to reply to simple questions.
 
@@ -25,6 +27,7 @@ you_get:
   - Steps to follow, such as who to ask or what form to file
   - A note when HR should confirm
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can read your handbook or wiki.

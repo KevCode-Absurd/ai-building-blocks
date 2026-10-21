@@ -2,10 +2,13 @@ thinking: high
 thinking_why: It coordinates many agents and judges their results.
 new_slug: competing-agent-racer
 name: Competing agent racer
-summary: Give it one task. Get several AI agents trying it in separate branches, scored, with the best one merged.
+summary: Give it one task. Get several AI agents trying it in separate branches,
+  scored, with the best one merged.
 job: build-software
 headline: Competing agent racer
-subhead: Give it one task. Get several AI agents trying it in separate branches, scored, with the best one merged.
+subhead: Several AI agents try the same task side by side, each in its own copy
+  of your project, and the best result is merged. You stop betting on one
+  attempt and pick from real alternatives with scores.
 explain: |
   Several AI agents try the same task side by side, each in its own copy of your project, and the best result is merged. You stop betting on one attempt and pick from real alternatives with scores.
 
@@ -26,6 +29,7 @@ you_get:
   - The winning branch merged
   - A status view of every agent
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can run code, use git and start helper agents.

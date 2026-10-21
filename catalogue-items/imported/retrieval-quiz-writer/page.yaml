@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It writes questions from a clear topic.
 new_slug: retrieval-quiz-writer
 name: Retrieval quiz writer
-summary: Give it a topic. Get low-stakes recall questions at easy, medium and hard levels for starters or revision.
+summary: Give it a topic. Get low-stakes recall questions at easy, medium and
+  hard levels for starters or revision.
 job: teach-and-train
 headline: Retrieval quiz writer
-subhead: Give it a topic. Get low-stakes recall questions at easy, medium and hard levels for starters or revision.
+subhead: A set of short recall questions on one topic, ready to use as a lesson
+  starter or revision task. Because they are low stakes, students practise
+  pulling facts from memory, which makes them stick better than re-reading.
 explain: |
   A set of short recall questions on one topic, ready to use as a lesson starter or revision task. Because they are low stakes, students practise pulling facts from memory, which makes them stick better than re-reading.
 
@@ -27,5 +30,6 @@ you_get:
   - Answer notes
   - When to use the quiz after teaching
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

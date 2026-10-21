@@ -2,10 +2,13 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: ai-assistant-style-guide
 name: AI assistant interface style guide writer
-summary: Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
+summary: Describe your AI product. Get a style guide for a chat-first screen
+  with few controls and clear outcomes.
 job: design-work
 headline: AI assistant interface style guide writer
-subhead: Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
+subhead: A style guide for an AI product where the main screen is a
+  conversation, with few buttons and a clear result at the end. The guide is
+  built so designers and engineers can use it directly.
 explain: |
   A style guide for an AI product where the main screen is a conversation, with few buttons and a clear result at the end. The guide is built so designers and engineers can use it directly.
 
@@ -26,5 +29,6 @@ you_get:
   - Accessibility rules
   - Writing tone rules and do and don't lists
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

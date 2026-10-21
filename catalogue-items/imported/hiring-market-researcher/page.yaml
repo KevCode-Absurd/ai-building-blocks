@@ -2,10 +2,12 @@ thinking: high
 thinking_why: It must compare sources and judge how fresh each one is.
 new_slug: hiring-market-researcher
 name: Hiring market researcher
-summary: Name a role and place. Get pay ranges, talent supply and hiring difficulty. Reads public web pages.
+summary: Name a role and place. Get pay ranges, talent supply and hiring
+  difficulty. Reads public web pages.
 job: hire-people
 headline: Hiring market researcher
-subhead: Name a role and place. Get pay ranges, talent supply and hiring difficulty. Reads public web pages.
+subhead: A clear picture of the job market for one role in one place, so you
+  know what to offer and how long it will take.
 explain: |
   A clear picture of the job market for one role in one place, so you know what to offer and how long it will take. Name the role, level and location. The skill gathers public pay data from sources like job postings, salary sites and surveys, and tells you which ones to trust most.
 
@@ -26,6 +28,7 @@ you_get:
   - A hiring difficulty rating
   - Advice you can bring to the hiring manager
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.
   - It works best when your AI can search the web.

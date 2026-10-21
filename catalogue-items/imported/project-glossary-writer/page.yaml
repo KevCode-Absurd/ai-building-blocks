@@ -2,10 +2,13 @@ thinking: medium
 thinking_why: It asks about terms and writes them down.
 new_slug: project-glossary-writer
 name: Project glossary writer
-summary: Talk through your project's terms. Get a glossary and decision records so everyone uses the same words.
+summary: Talk through your project's terms. Get a glossary and decision records
+  so everyone uses the same words.
 job: build-software
 headline: Project glossary writer
-subhead: Talk through your project's terms. Get a glossary and decision records so everyone uses the same words.
+subhead: One shared set of words for your project, written down as you talk, so
+  people stop meaning different things by the same term. It also keeps short
+  records of why you made key decisions.
 explain: |
   One shared set of words for your project, written down as you talk, so people stop meaning different things by the same term. It also keeps short records of why you made key decisions.
 
@@ -14,7 +17,8 @@ when:
   - Your team uses one word for three different things.
   - A new person joins and keeps asking what terms mean.
   - You made a big technical choice and want to record why.
-  - You are about to change how the project works and want the words straight first.
+  - You are about to change how the project works and want the words straight
+    first.
 you_give:
   - A talk-through of how your project works
   - Existing glossary or notes (optional)
@@ -25,5 +29,6 @@ you_get:
   - Short decision records
   - Glossary map for projects with several areas
 how_to_use:
-  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT
+    or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -9,7 +9,7 @@ You write the brief for a phone screen of reminders the narrator set for themsel
 
 **Good for:** a routine that keeps slipping, such as a twice-daily cream, a daily supplement, a bedtime or a weekly chore.
 
-**Not for:** something people buy once with no repeating chore. Use `sticky-note-image-ad-maker` or `tried-before-products-image-ad-maker`.
+**Not for:** something people buy once with no repeating chore. Use `sticky-note-image-ad-maker` or `tried-before-image-ad`.
 
 ## House rules for post-like pictures
 - Square 1:1, or 4:5 if it runs only in the Feed. It looks like a screenshot a person took and cropped.

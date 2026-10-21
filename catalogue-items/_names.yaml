@@ -108,7 +108,7 @@ M17:
   - {id: CES-014, old: "buyer-led-selling", new: buyer-led-selling-principles, level: skill, status: proposed}
   - {id: CES-023, old: "copy-floor", new: clear-before-clever-copy-checker, level: prompt, status: proposed}
   - {id: CES-024, old: "copy-principles", new: sales-copy-editor, level: skill, status: proposed}
-  - {id: CES-025, old: "creative-lessons", new: ai-image-and-video-fix-rule-writer, level: knowledge, status: proposed}
+  - {id: CES-025, old: "creative-lessons", new: ai-image-fix-rules, level: knowledge, status: proposed}
   - {id: CES-044, old: "image-ad-copy", new: static-ad-copy-planner, level: skill, status: proposed}
   - {id: CES-046, old: "image-prompt-craft", new: image-prompt-writer, level: skill, status: proposed}
   - {id: CES-053, old: "native-ad-copy", new: native-story-ad-copy, level: skill, status: proposed}
@@ -126,7 +126,7 @@ M17:
   - {id: CES-074, old: "whatsapp-chat", new: native-image-group-chat, level: prompt, status: proposed}
   - {id: CES-075, old: "worn-object", new: native-image-worn-object, level: prompt, status: proposed}
   - {id: CES-076, old: "native-ads", new: native-story-ad-principles, level: knowledge, status: proposed}
-  - {id: CES-131, old: "script-surfaces", new: video-format-picker-for-ad-scripts, level: skill, status: proposed}
+  - {id: CES-131, old: "script-surfaces", new: video-ad-format-picker, level: skill, status: proposed}
   - {id: CES-142, old: "taste", new: image-ad-settings-picker, level: prompt, status: proposed}
   - {id: CES-188, old: "ad-copy-flow.md", new: static-ad-one-call-writer, level: prompt, status: proposed}
   - {id: CES-189, old: "ad-review.md", new: static-ad-pre-spend-review, level: prompt, status: proposed}
@@ -166,9 +166,9 @@ M18:
   - {id: CEA-052, old: "Creator Studio", new: ugc-creator-studio, level: workflow, status: proposed}
   - {id: CEA-053, old: "Video editing", new: ad-video-editor, level: workflow, status: proposed}
   - {id: CES-004, old: "ad-script-principles", new: dr-video-script-principles-library, level: knowledge, status: proposed}
-  - {id: CES-030, old: "ecommerce-motion-finishing", new: on-screen-text-planner-for-video-ads, level: skill, status: proposed}
+  - {id: CES-030, old: "ecommerce-motion-finishing", new: video-ad-text-overlays, level: skill, status: proposed}
   - {id: CES-032, old: "ecommerce-video-editing", new: ecommerce-ad-video-editor, level: skill, status: proposed}
-  - {id: CES-052, old: "motion-reel", new: get-offer-reel-that-shows-your-real-product, level: workflow, status: proposed}
+  - {id: CES-052, old: "motion-reel", new: offer-reel-real-product, level: workflow, status: proposed}
   - {id: CES-106, old: "script-format-carousel", new: carousel-ad-format-rules, level: skill, status: proposed}
   - {id: CES-107, old: "script-format-cinematic", new: cinematic-live-action-ad-format-rules, level: skill, status: proposed}
   - {id: CES-110, old: "script-format-claymation", new: claymation-story-ad-format-rules, level: skill, status: proposed}
@@ -182,10 +182,10 @@ M18:
   - {id: CES-123, old: "script-format-talking-object", new: talking-object-ad-format-rules, level: skill, status: proposed}
   - {id: CES-124, old: "script-format-ugc", new: ugc-selfie-video-ad-format-rules, level: skill, status: proposed}
   - {id: CES-125, old: "script-format-vsl", new: long-video-sales-letter-format-rules, level: skill, status: proposed}
-  - {id: CES-128, old: "script-from-research", new: video-ad-script-writer-from-customer-quotes, level: skill, status: proposed}
-  - {id: CES-129, old: "script-reference-principles", new: video-script-writer-from-a-competitor-ad-idea, level: skill, status: proposed}
+  - {id: CES-128, old: "script-from-research", new: quote-video-ad-script, level: skill, status: proposed}
+  - {id: CES-129, old: "script-reference-principles", new: competitor-idea-video-script, level: skill, status: proposed}
   - {id: CES-130, old: "script-reference-structure", new: competitor-ad-structure-rewrite, level: skill, status: proposed}
-  - {id: CES-132, old: "script-transpose", new: video-ad-script-point-of-view-editor, level: skill, status: proposed}
+  - {id: CES-132, old: "script-transpose", new: video-script-pov-editor, level: skill, status: proposed}
   - {id: CES-133, old: "script-types", new: video-ad-script-type-picker, level: asset, status: proposed}
   - {id: CES-134, old: "script-voice-pass", new: ad-script-read-aloud-editor, level: skill, status: proposed}
   - {id: CES-147, old: "video-director", new: ad-video-shot-director, level: skill, status: proposed}

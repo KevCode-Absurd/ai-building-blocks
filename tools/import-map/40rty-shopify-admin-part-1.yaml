@@ -252,6 +252,7 @@
   needs: "access your Shopify admin"
   author: "40rty AI"
   author_url: https://github.com/40rty-ai
+  slug: page-traffic-conversion
 "40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-b2b-company-overview":
   name: "Wholesale account lister"
   summary: "Run it on your store. Get your B2B companies with locations, catalogs and payment terms in one view."
@@ -304,6 +305,7 @@
   needs: "access your Shopify admin"
   author: "40rty AI"
   author_url: https://github.com/40rty-ai
+  slug: cac-by-source
 "40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-customer-cohort-analysis":
   name: "Customer cohort reader"
   summary: "Run it on your customers. Get repeat-purchase rate and revenue for each first-purchase month."

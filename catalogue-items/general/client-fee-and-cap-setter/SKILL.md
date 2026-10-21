@@ -7,7 +7,7 @@ description: Use when you are about to take paying clients on your own and need 
 
 Fewer clients at a better price usually beats a full diary at the going rate. It leaves time for your own work and does not leave you stuck in the common crowd. This skill sets the fee from your floor, caps the number of clients, and writes terms that stop pauses and skipped sessions from emptying your income. It is a planning aid, not personal financial advice.
 
-Use [Independent income floor calculator](https://useaiblocks.com/skills/independent-income-floor-calculator) instead when you have not yet worked out the monthly income you need.
+Use [Independent income floor calculator](https://useaiblocks.com/skills/income-floor-calculator) instead when you have not yet worked out the monthly income you need.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

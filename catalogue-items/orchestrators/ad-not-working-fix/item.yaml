@@ -1,0 +1,28 @@
+slug: ad-not-working-fix
+name: "Find why an ad is not pulling and fix it"
+summary: "Give it an ad that gets no replies. Get likely causes in order, a fixed version and a test to prove it."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: offer, required: false}
+  - {type: brief, required: false}
+outputs:
+  - {type: plan}
+uses: [ad-pull-diagnoser, winners-and-losers-ad-comparer, reply-getting-fix-writer, sales-copy-readiness-checker, split-run-test-planner]
+steps:
+  - {uses: ad-pull-diagnoser, note: "Causes in order, starting with the headline and the appeal."}
+  - {uses: winners-and-losers-ad-comparer, note: "What your own winners share, so the fix copies a pattern and not a hunch."}
+  - {uses: reply-getting-fix-writer, note: "A fixed version that changes only what the causes called for."}
+  - {uses: sales-copy-readiness-checker, note: "A last pass before the fixed ad goes out."}
+  - {uses: split-run-test-planner, note: "Proves the fix beats the old ad instead of assuming it does."}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples]
+credits:
+  - {title: "Tested Advertising Methods, fifth edition", by: "John Caples, revised by Fred E. Hahn", used: "The order of the steps: find the likely cause, compare your winners with your losers, write the fixed ad, check the fixed ad is ready, plan the test of old against new"}
+generated_from: intake/tested-ads-fix-an-ad/skeleton.yaml

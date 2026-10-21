@@ -62,6 +62,7 @@
   outputs: [ { type: copy_draft, required: true } ]
   author: Jake Schincariol
   author_url: https://github.com/Jakeschincariol
+  slug: youtube-title-thumbnail-check
 "Jakeschincariol/youtube-agent-skill:skills/yt-plan":
   name: YouTube upload planner
   summary: "Tell it your free hours. Get a week of uploads with titles, formats and what to drop first."
@@ -112,6 +113,7 @@
   outputs: [ { type: copy_draft, required: true } ]
   author: Jake Schincariol
   author_url: https://github.com/Jakeschincariol
+  slug: youtube-description-tags
 "Jakeschincariol/youtube-agent-skill:skills/yt-shorts":
   name: Shorts clip finder
   summary: "Give it a long video transcript. Get the best five moments to clip, each with a new first line."

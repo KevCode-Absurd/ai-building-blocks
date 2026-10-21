@@ -1,0 +1,25 @@
+slug: seven-powers-check
+name: "Find which of seven powers you hold or can build"
+summary: "Describe your business. Get each of the seven powers scored on benefit and barrier, a ten-year check and what to build first."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+uses: [business-power-tester, seven-powers-scorecard-builder, ten-year-durability-checker, power-stage-build-planner]
+steps:
+  - {uses: business-power-tester, note: "The benefit, the barrier, whether it is big enough and the one power it matches."}
+  - {uses: seven-powers-scorecard-builder, note: "Each power scored on benefit and barrier, so the one you named is checked against the other six."}
+  - {uses: ten-year-durability-checker, note: "What could take the top-scoring power away, and how soon."}
+  - {uses: power-stage-build-planner, note: "The power to build now, a first test, and the choices that would close other powers."}
+origin: rebuilt
+version: 1.0.0
+minds: [hamilton-helmer]
+credits:
+  - {title: "7 Powers: The Foundations of Business Strategy (a book summary)", by: "Hamilton Helmer", used: "The order of the steps: test your main advantage, score all seven powers, check it lasts ten years, plan what to build at your stage"}
+generated_from: intake/seven-powers-find-your-power/skeleton.yaml

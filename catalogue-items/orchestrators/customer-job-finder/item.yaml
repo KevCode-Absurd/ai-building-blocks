@@ -1,0 +1,25 @@
+slug: customer-job-finder
+name: "Find the job customers hire your product for"
+summary: "Describe what you sell and when people buy it. Get an interview plan and the ranked reasons they bought."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: angle_library}
+uses: [customer-job-interview-planner, customer-buying-reasons-finder]
+steps:
+  - {uses: customer-job-interview-planner, note: "A plan to learn the job buyers hired it for"}
+  - {uses: customer-buying-reasons-finder, note: "Ranks the reasons in the answers with the exact phrases customers used."}
+origin: rebuilt
+version: 1.0.0
+minds: [clayton-christensen]
+credits:
+  - {title: "Know Your Customers' Jobs to Be Done", by: "Clayton Christensen and others", used: "The order of the steps: customer job interview planner, customer buying reasons finder"}
+generated_from: intake/know-your-customers-jobs-to-be-done/skeleton.yaml

@@ -77,9 +77,9 @@ If an image tool is connected, offer to make the picture with it, and ask before
 3. **Pick the shape from the evidence.** Read the quotes for the pattern they show, then choose the matching shape in `references/story-shapes.md` (several failed fixes, a setback and a return, self-blame, a change seen in someone else, a slow habit). Name the quotes it rests on. Never pick a shape and then hunt for quotes.
 4. **Ask where the evidence lives.** Take the first trace the customer words support:
    - **In a place** (a room the problem changed): `empty-room-image-ad-maker`.
-   - **On a thing** (what's left over, what failed, one visible flaw): `leftover-mess-image-ad-maker`, `tried-before-products-image-ad-maker` or `circled-flaw-image-ad-maker`.
+   - **On a thing** (what's left over, what failed, one visible flaw): `leftover-mess-image-ad-maker`, `tried-before-image-ad` or `circled-flaw-image-ad-maker`.
    - **On the body** (a sign on a hand, foot, arm or leg): `visible-symptom-image-ad-maker`, and only if it passes that skill's gate.
-   - **In words** (a note, a message, a page headline): `handwritten-note-image-ad-maker`, `phone-note-screenshot-image-ad-maker` or `article-headline-image-ad-maker`.
+   - **In words** (a note, a message, a page headline): `handwritten-note-image-ad-maker`, `phone-note-image-ad` or `article-headline-image-ad-maker`.
    - **Nowhere safe to photograph**: `hand-drawn-story-image-ad-maker`.
    - **Only a moment**: `problem-moment-image-ad-maker`.
    The full menu is in `image-style-picker-for-story-ads`. Whatever the trace, the picture must pass for something a person posted: no logo, headline, designed layout or studio product shot, and zero to six typed words, usually none. A real phone photo beats a generated one.

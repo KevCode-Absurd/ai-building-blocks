@@ -11,8 +11,8 @@
   level: beginner
   thinking: low
   thinking_why: It follows a fixed help format.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-write-performance-tests":
   name: MATLAB speed test writer
@@ -22,8 +22,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It picks what to measure, then follows a set test pattern.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}, {type: test_report}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change }, { type: test_report } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-write-tests":
   name: MATLAB unit test writer
@@ -33,8 +33,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It plans cases, then writes them in a set style.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}, {type: test_report}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change }, { type: test_report } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-diagnose-parfor":
   name: Parfor error fixer
@@ -44,8 +44,8 @@
   level: advanced
   thinking: high
   thinking_why: Finding why a loop fails needs careful reasoning about variables.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-discover-clusters":
   name: Parallel cluster finder
@@ -55,8 +55,8 @@
   level: intermediate
   thinking: low
   thinking_why: It lists and checks settings with simple commands.
-  inputs: [{type: brief, required: false}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: false } ]
+  outputs: [ { type: document } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-set-up-worker-state":
   name: Parallel worker setup helper
@@ -66,8 +66,8 @@
   level: advanced
   thinking: medium
   thinking_why: It must match setup to how each worker starts.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-setup-gpu":
   name: GPU setup checker
@@ -77,8 +77,8 @@
   level: intermediate
   thinking: low
   thinking_why: It runs a short set of checks in order.
-  inputs: [{type: brief, required: false}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: brief, required: false } ]
+  outputs: [ { type: audit_report } ]
   needs: run MATLAB on a computer with a GPU
 "matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-use-thread-pool":
   name: Thread pool speed-up helper
@@ -88,8 +88,8 @@
   level: advanced
   thinking: medium
   thinking_why: It tests whether code is safe for threads before switching.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/radar/matlab-design-radar-waveform":
   name: Radar waveform designer
@@ -99,8 +99,8 @@
   level: expert
   thinking: high
   thinking_why: Waveform choices trade off many technical limits.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with the Phased Array System Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/radar/matlab-import-tracking-data":
   name: Tracking data importer
@@ -110,8 +110,8 @@
   level: advanced
   thinking: medium
   thinking_why: It maps messy columns into a strict format.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Sensor Fusion and Tracking Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/radar/matlab-simulate-radar-detections":
   name: Radar detection simulator
@@ -121,8 +121,8 @@
   level: expert
   thinking: high
   thinking_why: Debugging missed detections takes careful technical reasoning.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with Radar Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/reporting-and-database-access/matlab-connect-databricks":
   name: Databricks connection setup helper
@@ -132,9 +132,10 @@
   level: advanced
   thinking: medium
   thinking_why: Several sign-in options need the right match.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with a Databricks account
+  slug: databricks-connection-setup
 "matlab/matlab-agentic-toolkit:skills-catalog/reporting-and-database-access/matlab-generate-report":
   name: MATLAB report builder
   summary: Give it your results. Get a PDF, Word or HTML report built with titles, chapters, tables and charts.
@@ -143,8 +144,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It lays out content with a set report toolkit.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/reporting-and-database-access/matlab-use-database":
   name: MATLAB database helper
@@ -154,8 +155,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It picks the right query pattern for each task.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Database Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/reporting-and-database-access/matlab-use-duckdb":
   name: DuckDB big file query helper
@@ -165,8 +166,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It writes queries and checks the setup works.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB R2026a or later with Database Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-analyze-ams-waveform":
   name: Mixed-signal waveform analyzer
@@ -176,8 +177,8 @@
   level: expert
   thinking: high
   thinking_why: Measurements need exact method choices.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run MATLAB with Mixed-Signal Blockset
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-analyze-antenna-structures":
   name: Large antenna analyzer
@@ -187,8 +188,8 @@
   level: expert
   thinking: high
   thinking_why: Large structures need careful solver choices.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with Antenna Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-analyze-em":
   name: PCB signal loss analyzer
@@ -198,8 +199,8 @@
   level: expert
   thinking: high
   thinking_why: Solver and mesh choices change the result.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run MATLAB with Antenna Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-analyze-pcb-pdn":
   name: PCB power network checker
@@ -209,8 +210,8 @@
   level: expert
   thinking: high
   thinking_why: Power checks need careful setup per net.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-assemble-pcb-layout":
   name: Custom PCB shape builder
@@ -220,8 +221,8 @@
   level: expert
   thinking: medium
   thinking_why: It follows a set build pattern with exact geometry.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-antenna":
   name: Antenna designer
@@ -231,8 +232,8 @@
   level: expert
   thinking: high
   thinking_why: Antenna design balances many linked limits.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with Antenna Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-pcb-coupler":
   name: PCB coupler designer
@@ -242,8 +243,8 @@
   level: expert
   thinking: high
   thinking_why: Tuning needs careful technical reasoning.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-pcb-filter":
   name: PCB RF filter designer
@@ -253,8 +254,8 @@
   level: expert
   thinking: high
   thinking_why: Tuning needs careful technical reasoning.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-pcb-passive":
   name: PCB passive part designer
@@ -264,8 +265,8 @@
   level: expert
   thinking: high
   thinking_why: Each part needs its own tuning.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-pcb-transmission-line":
   name: PCB trace designer
@@ -275,8 +276,8 @@
   level: expert
   thinking: medium
   thinking_why: It uses set formulas with checks.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-export-session-script":
   name: Session to script exporter
@@ -286,8 +287,8 @@
   level: beginner
   thinking: low
   thinking_why: It gathers working code and tidies it.
-  inputs: [{type: codebase, required: false}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-integrate-antenna":
   name: Antenna matching helper
@@ -297,8 +298,8 @@
   level: expert
   thinking: high
   thinking_why: Matching needs careful design trade-offs.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Antenna Toolbox and RF Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-integrate-pcb-circuit":
   name: PCB circuit combiner
@@ -308,8 +309,8 @@
   level: advanced
   thinking: medium
   thinking_why: It joins parts with a set method.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-manage-pcb-material":
   name: PCB material setup helper
@@ -319,8 +320,8 @@
   level: advanced
   thinking: medium
   thinking_why: It maps material data to the right settings.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-model-ams-systems":
   name: PLL circuit modeler
@@ -330,8 +331,8 @@
   level: expert
   thinking: high
   thinking_why: Wrong solver choices break the model.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Mixed-Signal Blockset
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-model-rf":
   name: RF system modeler
@@ -341,8 +342,8 @@
   level: expert
   thinking: high
   thinking_why: RF modeling needs deep technical judgement.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with RF Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-model-serdes-systems":
   name: SerDes link modeler
@@ -352,8 +353,8 @@
   level: expert
   thinking: high
   thinking_why: Equalizer tuning needs careful analysis.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with SerDes Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-model-via":
   name: PCB via modeler
@@ -363,8 +364,8 @@
   level: expert
   thinking: high
   thinking_why: Via behavior depends on many linked settings.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-optimize-pcb-design":
   name: PCB design optimizer
@@ -374,8 +375,8 @@
   level: expert
   thinking: high
   thinking_why: It sets limits and judges search results.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with PCB Toolbox and Global Optimization Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-read-pcb-layout":
   name: PCB layout file reader
@@ -385,8 +386,8 @@
   level: intermediate
   thinking: low
   thinking_why: It reads files with fixed commands.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-write-pcb-layout":
   name: PCB Gerber exporter
@@ -396,8 +397,8 @@
   level: intermediate
   thinking: low
   thinking_why: It writes files with set commands.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
   needs: run MATLAB with PCB Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-compute-gnss-position":
   name: GNSS position calculator
@@ -407,8 +408,8 @@
   level: advanced
   thinking: medium
   thinking_why: It follows set steps with a few choices.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with Navigation Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-connect-mavlink":
   name: Drone autopilot connector
@@ -418,8 +419,8 @@
   level: advanced
   thinking: medium
   thinking_why: Setup needs matching dialects and ports.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB and reach a PX4 or ArduPilot autopilot
 "matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-create-uav-scenario":
   name: Drone scenario builder
@@ -429,8 +430,8 @@
   level: advanced
   thinking: medium
   thinking_why: It builds a scene from set parts.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with UAV Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-fuse-inertial-sensors":
   name: Inertial sensor fusion builder
@@ -440,8 +441,8 @@
   level: expert
   thinking: high
   thinking_why: Choosing a filter needs technical judgement.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Navigation Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-model-robot-kinematics":
   name: Robot arm modeler
@@ -451,8 +452,8 @@
   level: advanced
   thinking: medium
   thinking_why: It loads or builds a known model type.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Robotics System Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-plan-robot-motion":
   name: Robot arm motion planner
@@ -462,8 +463,8 @@
   level: advanced
   thinking: medium
   thinking_why: It picks a planner and checks the path.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Robotics System Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-analyze-spectrum":
   name: Signal spectrum analyzer
@@ -473,8 +474,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It must match the estimator to the signal.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run MATLAB with Signal Processing Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-analyze-time-frequency-content":
   name: Time-frequency analyzer
@@ -484,8 +485,8 @@
   level: advanced
   thinking: medium
   thinking_why: Several methods fit; it picks one per signal.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run MATLAB with Wavelet Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-design-adaptive-filter":
   name: Adaptive filter designer
@@ -495,8 +496,8 @@
   level: advanced
   thinking: medium
   thinking_why: Filter choice depends on the signal.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with DSP System Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-design-digital-filter":
   name: Digital filter designer
@@ -506,8 +507,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It picks a filter type and checks its response.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Signal Processing Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-design-dsphdl-ddc":
   name: FPGA down converter designer
@@ -517,8 +518,8 @@
   level: expert
   thinking: high
   thinking_why: Hardware rate limits make it exacting.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with DSP HDL Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-evaluate-acoustic-metrics":
   name: Audio quality metric picker
@@ -528,8 +529,8 @@
   level: advanced
   thinking: medium
   thinking_why: It matches each metric to the question.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run MATLAB with Audio Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-extract-signal-features":
   name: Signal feature extractor
@@ -539,8 +540,8 @@
   level: intermediate
   thinking: low
   thinking_why: It applies set extractors.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Signal Processing Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-play-record-audio":
   name: Audio streamer code writer
@@ -550,8 +551,8 @@
   level: beginner
   thinking: low
   thinking_why: It follows one current API.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB R2025a or later with Audio Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-prepare-signal-data":
   name: Signal data cleaner
@@ -561,8 +562,8 @@
   level: intermediate
   thinking: medium
   thinking_why: Cleaning steps depend on the data.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Signal Processing Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-process-streaming-audio":
   name: Live audio processing builder
@@ -572,8 +573,8 @@
   level: advanced
   thinking: medium
   thinking_why: Real-time loops need careful design.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Audio Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-write-audio-plugin":
   name: Audio plugin writer
@@ -583,8 +584,8 @@
   level: advanced
   thinking: medium
   thinking_why: It follows a strict class pattern and a validator.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Audio Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-build-industrial-hmi":
   name: Industrial dashboard builder
@@ -594,8 +595,8 @@
   level: advanced
   thinking: high
   thinking_why: It applies strict design rules and safety choices.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: web_app}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: web_app } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-call-nidaqmx":
   name: NI-DAQmx call translator
@@ -605,8 +606,8 @@
   level: advanced
   thinking: medium
   thinking_why: Types and arguments must match exactly.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with National Instruments drivers
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-connect-arduino":
   name: Arduino connector
@@ -616,8 +617,8 @@
   level: beginner
   thinking: low
   thinking_why: It follows a short connect routine.
-  inputs: [{type: brief, required: false}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: false } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB and reach an Arduino board
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-connect-bluetooth-low-energy-device":
   name: Bluetooth device connector
@@ -627,8 +628,8 @@
   level: intermediate
   thinking: low
   thinking_why: It runs a set scan and connect routine.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB and reach a Bluetooth device
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-create-custom-arduino-library":
   name: Arduino sensor library builder
@@ -638,8 +639,8 @@
   level: advanced
   thinking: medium
   thinking_why: It wraps device code in a set format.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB and reach an Arduino board
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-discover-hardware":
   name: Connected hardware finder
@@ -649,8 +650,8 @@
   level: beginner
   thinking: low
   thinking_why: It lists and matches devices.
-  inputs: [{type: brief, required: false}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: false } ]
+  outputs: [ { type: document } ]
   needs: run MATLAB on a computer with the hardware
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-enhance-camera-image":
   name: Camera image fixer
@@ -660,8 +661,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It reads camera settings before changing them.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB and reach a camera
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-find-pi-assets":
   name: PI asset finder
@@ -671,8 +672,8 @@
   level: intermediate
   thinking: low
   thinking_why: It runs set lookups.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
   needs: run MATLAB and reach an OSIsoft PI server
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-import-export-vehicle-data":
   name: Vehicle log data converter
@@ -682,8 +683,8 @@
   level: advanced
   thinking: medium
   thinking_why: Decoding needs the right signal database.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Vehicle Network Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-modernize-daq":
   name: Data acquisition code updater
@@ -693,8 +694,8 @@
   level: intermediate
   thinking: medium
   thinking_why: Each old call maps to a new pattern.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Data Acquisition Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-use-cameras":
   name: MATLAB camera capture helper
@@ -704,8 +705,8 @@
   level: beginner
   thinking: low
   thinking_why: It follows a short connect routine.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB and reach a camera
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-use-opcua-client":
   name: OPC UA client connector
@@ -715,8 +716,8 @@
   level: advanced
   thinking: medium
   thinking_why: Security setup needs care.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB and reach an OPC UA server
 "matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-use-vehicle-network":
   name: Vehicle network setup helper
@@ -726,8 +727,8 @@
   level: advanced
   thinking: medium
   thinking_why: Hardware setup needs matching settings.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Vehicle Network Toolbox and CAN hardware
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-add-awgn":
   name: Noise level code helper
@@ -737,8 +738,8 @@
   level: intermediate
   thinking: low
   thinking_why: It applies set conversions.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-design-ofdm-system":
   name: OFDM system builder
@@ -748,8 +749,8 @@
   level: advanced
   thinking: medium
   thinking_why: Small setup errors give wrong results.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Communications Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-detect-capture-usrp":
   name: Triggered radio capture helper
@@ -759,8 +760,8 @@
   level: expert
   thinking: high
   thinking_why: Triggers need tuning to the signal.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Wireless Testbench and a USRP radio
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-generate-5g-waveform":
   name: 5G waveform generator
@@ -770,8 +771,8 @@
   level: expert
   thinking: medium
   thinking_why: Standards give exact settings.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with 5G Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-generate-ble-waveform":
   name: Bluetooth LE waveform generator
@@ -781,8 +782,8 @@
   level: advanced
   thinking: medium
   thinking_why: It follows a set API.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Bluetooth Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-generate-gnss-waveform":
   name: GNSS signal generator
@@ -792,8 +793,8 @@
   level: expert
   thinking: medium
   thinking_why: Signal options are set but numerous.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Satellite Communications Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-generate-wlan-waveform":
   name: Wi-Fi waveform generator
@@ -803,8 +804,8 @@
   level: advanced
   thinking: medium
   thinking_why: Standards give exact settings.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with WLAN Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-set-up-usrp-radio":
   name: USRP radio setup helper
@@ -814,8 +815,8 @@
   level: intermediate
   thinking: low
   thinking_why: It follows a set connect routine.
-  inputs: [{type: brief, required: false}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: false } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Wireless Testbench and a USRP radio
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-simulate-bluetooth-network":
   name: Bluetooth network simulator
@@ -825,8 +826,8 @@
   level: advanced
   thinking: medium
   thinking_why: Network setups vary by topology.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with Bluetooth Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-simulate-wireless-network":
   name: Wireless network simulator
@@ -836,8 +837,8 @@
   level: advanced
   thinking: medium
   thinking_why: Setup choices change the results.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run MATLAB with Wireless Network Toolbox
 "matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-transmit-capture-usrp":
   name: Radio transmit and capture helper
@@ -847,6 +848,7 @@
   level: advanced
   thinking: medium
   thinking_why: Radio timing needs care.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: run MATLAB with Wireless Testbench and a USRP radio
+  slug: radio-transmit-capture

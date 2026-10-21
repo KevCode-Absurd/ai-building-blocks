@@ -1,0 +1,104 @@
+new_slug: competitor-gap-image-ads
+name: Turn competitor gaps into image ad copy that passes Meta
+summary: Give it competitor ads. Get their gaps, image ad copy for each gap, and a Meta rules check.
+job: study-competitors
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Turn what competitors miss into image ad copy that passes Meta
+subhead: Give it the competitor ads you saved. It sorts them into a board, finds what is crowded and what nobody says, writes image ad copy for each gap, then checks every ad against Meta's ad rules and rewrites what would be rejected.
+explain: |-
+  Copying a competitor's best ad puts you in the most crowded spot in the category. The useful move is to find what nobody says and say it first.
+
+  This workflow files the ads you saved by the question each one answers, then counts how many brands use each type. It reads your customers' wants and doubts for ones no ad speaks to. It writes copy for each gap, using only proof you hold. A Meta rules check ends the run, and any line that would be rejected is rewritten.
+when:
+  - Your category's ads all look and sound the same.
+  - You want image ads that say something the others do not.
+  - You have been rejected on Meta before and want a check before you launch.
+you_give:
+  - Competitor ads you saved from the public Ad Library, with library ID, brand, start date and screenshot
+  - Your brand file (optional)
+  - The competitors that matter to you (optional)
+  - Your customer reviews (optional)
+you_get:
+  - A board of competitor ads sorted by type, three per type
+  - A map of crowded types, repeated claims and open gaps
+  - Image ad copy for each gap, with one appeal tested per version
+  - A Meta rules report with a rewrite of any line that fails
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. It works step by step and saves each result.
+how_it_works:
+  - title: Builds the swipe file
+    text: Uses the swipe file skill to merge duplicates, file each ad under one type and keep three per type from different brands.
+  - title: Finds the gaps
+    text: Uses the gap finder skill to count brands per type, spot repeated claims and brief your version of each gap.
+  - title: Writes the image ad copy
+    text: Uses the image ad copy skill to write headline and text for each gap, opening by the ad type.
+  - title: Checks Meta rules
+    text: Uses the Meta rules checker to judge each ad against the rule groups that apply and rewrite what fails.
+output_shape: |-
+  SWIPE FILE
+    | Type | Brand | Library ID | Start | Live | Note |
+
+  GAPS
+    Crowded: <types> | Repeated claims: <claims>
+    Gap 1: <question nobody answers> | Your version: <card>
+
+  IMAGE AD COPY
+    Gap 1: <headline> | <text> | Appeal: <one>
+
+  META CHECK
+    Verdict: <ready / fix first / likely rejected> | Score: <0 to 100>
+    Findings: <rule, where, fix>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |-
+    [the handoff pack] Follow HANDOFF.md.
+
+    Competitor ads: 12 saved greens-powder ads from 4 brands. Practice data.
+    Brand file: the Sprout brand file.
+  output: |-
+    STEP 1: SWIPE FILE
+    12 ads merged to 10. Types: before-and-after (4), ingredient list (3), doctor quote (2), subscription deal (1).
+    Board: 3 per type where 3 exist, from at least 2 brands.
+
+    STEP 2: GAPS
+    Crowded: before-and-after, 3 of 4 brands.
+    Repeated claim: "clinically proven" from 2 brands.
+    Gap 1: nobody answers "will this upset my stomach?" Your version: a card that opens on a gut-sensitive buyer and Low Sugar.
+
+    STEP 3: IMAGE AD COPY
+    Headline: Easy on a sensitive stomach.
+    Text: Start with Low Sugar and build up. 6g prebiotic fiber per serving.
+    Appeal: reassurance
+
+    STEP 4: META CHECK
+    Verdict: fix first. Score 85.
+    Finding: "cures bloating" is a health claim Meta would reject. No proof is on file for a digestion claim, so the line is removed.
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-04. MISSING: proof for any digestion claim.
+tweaks:
+  - what: Which gaps to pursue
+    how: Name the question you care about most (for example, doubts about taste). The gap step ranks those gaps first.
+  - what: What you can prove
+    how: List the claims and proof you hold. The copy step uses only those.
+  - what: Where the ads run
+    how: Say if the ads also go on Instagram or Reels. The rules check then adds those placements.
+judge:
+  - Every ad on the board has a library ID and was filed from the picture, not the caption.
+  - Each gap is an open type or a buyer doubt no ad answers.
+  - No copy line uses a claim, figure or quote from the competitor ads.
+  - Every finding in the rules report names the rule and where it appears.
+test:
+  - Open the Ad Library and find two ads from the board by ID. The type should match what you see.
+  - Check each repeated claim appears in two or more brands' ads.
+  - Read the rewritten lines. Each should be something your brand can say and prove.
+improve:
+  - Add a step at the end that turns the best gap into a video script.
+  - Save the board and rerun it each month to see what new ads fill your gaps.
+  - Add your proof list to the copy step so it stops asking for it.

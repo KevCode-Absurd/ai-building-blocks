@@ -1,0 +1,123 @@
+# Run your online store: AI Blocks
+
+> 119 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Abandoned checkout reader](https://useaiblocks.com/skills/abandoned-checkout-reader): Pick a date range. Get abandoned checkouts split by cart value and hour, so you see when and where buyers drop.
+- [Acquisition cost by source calculator](https://useaiblocks.com/skills/cac-by-source): Add your ad spend. Get the cost to win a customer from each traffic source.
+- [After-purchase experience planner](https://useaiblocks.com/skills/post-purchase-experience): Give it your shipping, returns and loyalty setup. Get a plan for what happens after checkout so customers order again.
+- [Amazon brand protection planner](https://useaiblocks.com/skills/amazon-brand-protection-planner): Give it your brand and listings. Get checks for hijackers and fakes, plus complaint letters ready to send.
+- [Amazon cost cutting advisor](https://useaiblocks.com/skills/amazon-cost-cutting-advisor): Tell it how you source and ship. Get the biggest cost bottlenecks and ways to cut them.
+- [Amazon product edge finder](https://useaiblocks.com/skills/amazon-product-edge-finder): Give it rival listings and reviews. Get their weak spots, your best selling points, and a ranked fix list.
+- [Amazon seller profit calculator](https://useaiblocks.com/skills/amazon-seller-profit-calculator): Give it your product cost and price. Get fees, profit margin, break-even point and a price to charge.
+- [Average order value tracker](https://useaiblocks.com/skills/average-order-value-tracker): Pick a time range. Get average order value over time, split into new and returning customers.
+- [Breakeven point calculator](https://useaiblocks.com/skills/breakeven-point-calculator): Give it your prices and costs. Get the breakeven volume, margin of safety and the effect of price changes.
+- [Bulk order fulfiller](https://useaiblocks.com/skills/bulk-order-fulfiller): Give it orders and tracking numbers. Get them fulfilled in one batch, with customer alerts if you choose. Changes live orders.
+- [Bundle pair finder](https://useaiblocks.com/skills/bundle-pair-finder): Run it on your orders. Get the product pairs and triples people buy together, as ideas for bundles and cross-sells.
+- [Bundle stock checker](https://useaiblocks.com/skills/bundle-stock-checker): Run it on your bundles. Get a check that every part is in stock, and how many bundles you can really sell.
+- [Carrier performance comparer](https://useaiblocks.com/skills/carrier-performance-comparer): Run it on your shipments. Get delivery times and costs side by side by carrier, to guide your carrier mix.
+- [Chargeback customer tagger](https://useaiblocks.com/skills/chargeback-customer-tagger): Find customers with disputed orders. Get their records tagged so you review their next orders. Changes live customer tags.
+- [Checkout page auditor](https://useaiblocks.com/skills/checkout-page-auditor): Give it your cart and checkout. Get a ranked list of fixes for guest checkout, fields, wallets and surprise costs.
+- [Collection order sorter](https://useaiblocks.com/skills/collection-order-sorter): Pick a collection. Get in-stock products moved to the top and sold-out ones to the bottom. Changes your live store.
+- [Customer churn risk scorer](https://useaiblocks.com/skills/customer-churn-risk-scorer): Run it on your customers. Get each one scored for churn risk from how often they buy and how long since.
+- [Customer cohort reader](https://useaiblocks.com/skills/customer-cohort-reader): Run it on your customers. Get repeat-purchase rate and revenue for each first-purchase month.
+- [Customer email list checker](https://useaiblocks.com/skills/customer-email-list-checker): Run it on your customer emails. Get bad, role-based and throwaway addresses flagged to protect your sender reputation.
+- [Customer history exporter](https://useaiblocks.com/skills/customer-history-exporter): Name a customer. Get their orders, refunds, returns, notes and consent in one dated CSV.
+- [Customer note bulk adder](https://useaiblocks.com/skills/customer-note-bulk-adder): Give it a customer list and a note. Get the note added to each record in one go. Changes live customer data.
+- [Customer record merger](https://useaiblocks.com/skills/customer-record-merger): Name the duplicate and the one to keep. Get the records merged with tags and notes kept. Changes live customer data.
+- [Customer segment builder](https://useaiblocks.com/skills/customer-segment-builder): Run it on your customers. Get each one scored on recency, frequency and spend, then grouped from Champions to Lost.
+- [Customer spend tier tagger](https://useaiblocks.com/skills/customer-spend-tier-tagger): Set your spend levels. Get each customer tagged Bronze, Silver, Gold or Platinum from lifetime spend. Changes live customer tags.
+- [Customer tag bulk updater](https://useaiblocks.com/skills/customer-tag-bulk-updater): Pick customers and tags. Get tags added or removed across the whole group. Changes live customer data.
+- [Daily fulfillment digest writer](https://useaiblocks.com/skills/daily-fulfillment-digest-writer): Run it each morning. Get open orders grouped by age, with holds and exceptions flagged for action.
+- [Days of stock calculator](https://useaiblocks.com/skills/days-of-stock-calculator): Get how many days each product stock will last and how fast it sells, by location.
+- [Dead stock finder](https://useaiblocks.com/skills/dead-stock-finder): Get products with stock on the shelf but no sales in your chosen number of days.
+- [Delivery time analyzer](https://useaiblocks.com/skills/delivery-time-analyzer): Run it on your shipments. Get average days from shipment to delivery for each carrier.
+- [Discount code comparer](https://useaiblocks.com/skills/discount-code-comparer): Name two or more discount codes. Get redemption and revenue side by side, so you know which one earned more.
+- [Discount payoff calculator](https://useaiblocks.com/skills/discount-payoff-calculator): Run it on your discounts. Get the real return of each code: extra revenue against what the discount cost.
+- [Discount spend tracker](https://useaiblocks.com/skills/discount-spend-tracker): Pick a time range. Get total discount dollars by week or month, split by discount type and code.
+- [Duplicate customer finder](https://useaiblocks.com/skills/duplicate-customer-finder): Run it on your customers. Get likely duplicate records matched by email, phone or name, ready to review.
+- [Duplicate SKU finder](https://useaiblocks.com/skills/duplicate-sku-finder): Get a list of products that share the same SKU or barcode, so stock and orders stop mixing up.
+- [Etsy search results collector](https://useaiblocks.com/skills/etsy-search-results-collector): Give it a keyword. Get Etsy listings with rank, price and shop. Collects data from websites.
+- [Exchange or refund split reader](https://useaiblocks.com/skills/exchange-or-refund-split-reader): Get how many returns become exchanges, refunds or store credit, and how much revenue you keep.
+- [Expiry date stock manager](https://useaiblocks.com/skills/expiry-date-stock-manager): Give it items with expiry dates. Get a sell-first list, markdown timing and a way to cut waste.
+- [Fake review spotter](https://useaiblocks.com/skills/fake-review-spotter): Give it a product's reviews. Get a trust rating and the red flags that point to fake or bought reviews.
+- [Fulfillment location rerouter](https://useaiblocks.com/skills/fulfillment-location-rerouter): Name the orders and the new location. Get fulfillment moved between warehouses. Changes live orders.
+- [Gift card issuer](https://useaiblocks.com/skills/gift-card-issuer): Name the customers and amounts. Get gift cards issued as goodwill, return credit or rewards. Creates live gift cards.
+- [Gift card liability calculator](https://useaiblocks.com/skills/gift-card-liability-calculator): Run it on your gift cards. Get the total balance you still owe, split by issue date and balance size.
+- [Gift message collector](https://useaiblocks.com/skills/gift-message-collector): Run it on recent orders. Get gift messages, recipients and gift flags in one list for packing slips.
+- [Growth roadmap builder](https://useaiblocks.com/skills/growth-roadmap-builder): Tell it your stage and numbers. Get the growth lever that pays most now, plus a step by step roadmap.
+- [Inventory value calculator](https://useaiblocks.com/skills/inventory-value-calculator): Give it your stock purchases and counts. Get inventory valued by FIFO or average cost, with write-downs flagged.
+- [Inventory value report builder](https://useaiblocks.com/skills/inventory-value-report-builder): Get what your stock is worth, by location and by supplier, ready for your books and insurance.
+- [Lapsed customer finder](https://useaiblocks.com/skills/lapsed-customer-finder): Get a list of customers who stopped ordering, tagged for your win-back campaign. Adds tags to live customer records.
+- [Listing completeness scorer](https://useaiblocks.com/skills/listing-completeness-scorer): Get every product scored on missing descriptions, images, SEO, weight, barcode and cost, worst first.
+- [Loyalty customer list builder](https://useaiblocks.com/skills/loyalty-customer-list-builder): Get your top-spending customers tagged and exported, ready for a loyalty program. Adds tags to live customer records.
+- [Marketing consent auditor](https://useaiblocks.com/skills/marketing-consent-auditor): Run it on your customers. Get who agreed to email and SMS marketing, and who did not, for compliance.
+- [Missing product cost finder](https://useaiblocks.com/skills/missing-product-cost-finder): Get a list of products with no cost set, so your margin and stock value reports stay right.
+- [Ninety day marketing plan builder](https://useaiblocks.com/skills/90-day-marketing-plan): Describe your store. Get a buyer profile, your best channels, a budget split, and a 90 day action plan.
+- [Old discount code cleaner](https://useaiblocks.com/skills/old-discount-code-cleaner): Get expired, unused and duplicate discount codes found, then switched off or deleted if you say so. Deletes cannot be undone.
+- [Online order fulfillment planner](https://useaiblocks.com/skills/online-order-fulfillment-planner): Give it your order volume and setup. Get ways to pick, pack and ship faster and cheaper, with returns handled.
+- [Online store auditor](https://useaiblocks.com/skills/online-store-auditor): Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces.
+- [Online store bottleneck finder](https://useaiblocks.com/skills/online-store-bottleneck-finder): Give it your cash, stock and shipping numbers. Get the bottleneck holding your store back and fixes ranked by payoff.
+- [Online store marketing planner](https://useaiblocks.com/skills/online-store-marketing-planner): Describe your store. Get a marketing plan covering search, email, paid ads, conversion and keeping customers.
+- [Online store profit calculator](https://useaiblocks.com/skills/online-store-profit-calculator): Give it your price, costs and ad spend. Get your margin per sale and whether your cost to win a customer works.
+- [Order address fixer](https://useaiblocks.com/skills/order-address-fixer): Give it an order and the right address. Get the shipping address changed before it ships. Changes a live order.
+- [Order cancellation reason reader](https://useaiblocks.com/skills/order-cancellation-reason-reader): Get your cancellation rate over time and why orders were cancelled, such as fraud, stock or declined payment.
+- [Order canceller and restocker](https://useaiblocks.com/skills/order-canceller-and-restocker): Name the order. Get it cancelled, stock put back and the customer told, as you choose. Cancels a live order.
+- [Order hold manager](https://useaiblocks.com/skills/order-hold-manager): Give it orders and a reason. Get fulfilment holds placed or lifted in one batch. Changes live orders, so preview first.
+- [Order lookup assistant](https://useaiblocks.com/skills/order-lookup-assistant): Give an email, phone or order number. Get the full order summary: items, payment, shipping and history.
+- [Order note collector](https://useaiblocks.com/skills/order-note-collector): Get every gift message and special instruction from your orders in one table for your packing team.
+- [Order tagger](https://useaiblocks.com/skills/order-tagger): Set your rules, such as region or order value. Get matching orders tagged. Changes live orders, so preview first.
+- [Orphan product finder](https://useaiblocks.com/skills/orphan-product-finder): Get products that sit in no collection, and ones stuffed into too many, so shoppers can find everything.
+- [Overseas listing localizer](https://useaiblocks.com/skills/overseas-listing-localizer): Give it your product images and copy. Get versions for other countries with local language, sizes and required labels.
+- [Overseas market planner](https://useaiblocks.com/skills/overseas-market-planner): Name your store and goals. Get ranked countries, shipping and tax costs, and a phased plan to sell abroad.
+- [Payout reconciler](https://useaiblocks.com/skills/payout-reconciler): Run it on your payouts. Get each one matched to the orders that funded it, with gaps flagged.
+- [Pick, pack and ship improver](https://useaiblocks.com/skills/pick-pack-and-ship-improver): Describe how orders move through your space. Get the slow steps found and a fix plan with expected time saved.
+- [Product description writer](https://useaiblocks.com/skills/product-description-writer): Give it your product facts. Get a description with the right number of claims, units and tone to lift sales.
+- [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor): Pick products and a custom field value. Get it set or removed on all of them. Overwrites live store data.
+- [Product launch and retire manager](https://useaiblocks.com/skills/product-launch-retire): Pick products and a status. Get them moved between draft, live and archived. Changes what shoppers can see and buy.
+- [Product profit analyst](https://useaiblocks.com/skills/product-profit-analyst): Give it revenue and costs by product. Get each product's margin and which ones lose money.
+- [Product tag bulk editor](https://useaiblocks.com/skills/product-tag-bulk-editor): Pick products and a tag. Get it added or removed on all of them. Changes your live catalog; preview first.
+- [Product title cleaner](https://useaiblocks.com/skills/product-title-cleaner): Give it your product list. Get tidy, consistent titles as a CSV for Shopify, plus a before and after sheet.
+- [Purchase order and reorder drafter](https://useaiblocks.com/skills/purchase-order-reorder): Give it sales and stock numbers. Get what to reorder and when, draft orders and slow movers to clear.
+- [Refund rate analyzer](https://useaiblocks.com/skills/refund-rate-analyzer): Pick products, collections or dates. Get refund rates that point to quality or listing problems.
+- [Refund speed checker](https://useaiblocks.com/skills/refund-speed-checker): Get the average days from return request to refund, and the returns that ran late.
+- [Reorder quantity planner](https://useaiblocks.com/skills/reorder-quantity-planner): Get a sales forecast for each product, plus when to reorder and how many to buy.
+- [Repeat buyer rate calculator](https://useaiblocks.com/skills/repeat-buyer-rate-calculator): Get the share of customers who order again within your chosen days, split by product or collection.
+- [Repeat partial refund spotter](https://useaiblocks.com/skills/repeat-partial-refund-spotter): Get orders with many partial refunds or high refund share, a sign of fraud, complaints or process gaps.
+- [Restock list builder](https://useaiblocks.com/skills/restock-list-builder): Get every product below your stock limit, grouped by supplier, as a list ready to order from.
+- [Restock rule designer](https://useaiblocks.com/skills/restock-rule-designer): Give it your sales and lead times. Get a restock rule for each product group, like min-max or fixed cycle.
+- [Return cost calculator](https://useaiblocks.com/skills/return-cost-calculator): Get the true cost of returns by reason and product: refunds, shipping lost and written-off stock.
+- [Return reason finder](https://useaiblocks.com/skills/return-reason-finder): Get return reasons counted by product, to find quality problems and listings that mislead.
+- [Return request creator](https://useaiblocks.com/skills/return-request-creator): Name the order, items and reason. Get a formal return record opened in Shopify. Creates a live return.
+- [Returned item restocker](https://useaiblocks.com/skills/returned-item-restocker): Get returned items added back to stock at the right location. Changes live stock, so skip damaged goods.
+- [Revenue by location reporter](https://useaiblocks.com/skills/revenue-by-location-reporter): Run it on your orders. Get revenue for each warehouse or fulfillment location, ready for a split profit view.
+- [Review insight finder](https://useaiblocks.com/skills/review-insight-finder): Give it your product reviews. Get the pain points, praise and feature requests, ranked by how often they come up.
+- [Risky order flagger](https://useaiblocks.com/skills/risky-order-flagger): Get orders Shopify marks as risky tagged for review, and held from shipping if you choose. Changes live orders.
+- [Sales channel gap finder](https://useaiblocks.com/skills/sales-channel-gap-finder): Get live products that are not published to the sales channels you expect.
+- [Sales channel reporter](https://useaiblocks.com/skills/sales-channel-reporter): Pick a date range. Get revenue, units and average order value for each sales channel.
+- [Sales tax summary builder](https://useaiblocks.com/skills/sales-tax-summary-builder): Pick a filing period. Get tax collected by state, province and rate, ready for filing prep.
+- [Shipping cost analyzer](https://useaiblocks.com/skills/shipping-cost-analyzer): Run it on your orders. Get shipping you charged against shipping you paid, by carrier and method.
+- [Shipping rate gap finder](https://useaiblocks.com/skills/shipping-rate-gap-finder): Point it at your store. Get a list of shipping zones with no rate or only manual rates.
+- [Split shipment planner](https://useaiblocks.com/skills/split-shipment-planner): Say which items ship from where. Get one order split into separate shipments. Changes a live order and cannot be undone.
+- [Stale draft order cleaner](https://useaiblocks.com/skills/stale-draft-order-cleaner): Get draft orders older than your set days found, and deleted if you say so. Deletes cannot be undone.
+- [Stock age report builder](https://useaiblocks.com/skills/stock-age-report-builder): Get your stock sorted by how long it has sat unsold: under 30, 60, 90 days and over.
+- [Stock and reorder planner](https://useaiblocks.com/skills/stock-and-reorder-planner): Give it your stock and sales numbers. Get safety stock, reorder points, an ABC ranking and fulfillment cost checks.
+- [Stock count updater](https://useaiblocks.com/skills/stock-count-updater): Give it counts by product and location. Get live stock levels corrected. Wrong numbers can cause overselling.
+- [Stock sync error finder](https://useaiblocks.com/skills/stock-sync-error-finder): Get products with negative or impossible stock across your locations, a sign your counts have drifted.
+- [Stock transfer mover](https://useaiblocks.com/skills/stock-transfer-mover): Name a product, two locations and a number. Get stock moved from one to the other. Changes live stock levels.
+- [Store brand protection planner](https://useaiblocks.com/skills/store-brand-protection-planner): Give it your brand and store. Get a check for fake stores and misuse, plus takedown and legal letters.
+- [Store product edge finder](https://useaiblocks.com/skills/store-product-edge-finder): Give it rival stores and reviews. Get their gaps, your unique value, and a ranked list of what to change.
+- [Store profit margin calculator](https://useaiblocks.com/skills/store-profit-margin-calculator): Run it on your orders. Get true profit per order and product after cost, shipping, fees, discounts, refunds and tax.
+- [Subscription revenue tracker](https://useaiblocks.com/skills/subscription-revenue-tracker): Run it on your subscriptions. Get monthly and yearly recurring revenue, active subscribers and churn.
+- [Supplier name cleaner](https://useaiblocks.com/skills/supplier-name-cleaner): Get supplier name typos and case variants grouped, with one proper name suggested for each.
+- [Survey-ready order finder](https://useaiblocks.com/skills/survey-ready-order-finder): Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
+- [TikTok Shop launch planner](https://useaiblocks.com/skills/tiktok-shop-launch-planner): Tell it where you are starting. Get a week-by-week plan to set up, list, create content and scale.
+- [TikTok Shop overseas expansion planner](https://useaiblocks.com/skills/tiktok-shop-expansion): Tell it your products and target countries. Get which markets to enter first, plus shipping, rules and localizing steps.
+- [Top product ranker](https://useaiblocks.com/skills/top-product-ranker): Pick a date range. Get your products ranked by revenue, units sold and refund rate.
+- [Tracking number fixer](https://useaiblocks.com/skills/tracking-number-fixer): Give it new tracking numbers. Get them updated on shipments already sent. Changes live orders; customers may get emails.
+- [Unused custom field finder](https://useaiblocks.com/skills/unused-custom-field-finder): Get custom field definitions that are unused, undocumented or share a key, so your setup stays clean.
+- [Unused store file finder](https://useaiblocks.com/skills/unused-store-file-finder): Get files in your store that no product, page or post uses, so you can clear out clutter.
+- [Variant name tidier](https://useaiblocks.com/skills/variant-name-tidier): Get mixed names like Sm, Small and S fixed to one standard. Changes live variants and may break saved links.
+- [Variant sales ranker](https://useaiblocks.com/skills/variant-sales-ranker): Get every size and color ranked by sales, units and refunds, with stock, to spot top sellers and dead weight.
+- [VIP customer finder](https://useaiblocks.com/skills/vip-customer-finder): Get your top customers by lifetime spend as a VIP list. It tags them in Shopify only if you ask.
+- [Where-is-my-order risk finder](https://useaiblocks.com/skills/where-is-my-order-risk-finder): Run it on open orders. Get shipped orders with stale tracking and late unshipped ones, before customers ask.
+- [Wholesale account lister](https://useaiblocks.com/skills/wholesale-account-lister): Run it on your store. Get your B2B companies with locations, catalogs and payment terms in one view.

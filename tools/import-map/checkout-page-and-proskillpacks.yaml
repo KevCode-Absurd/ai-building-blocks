@@ -9,8 +9,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It walks a set list of checks and ranks what it finds."
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
 "checkout-page/ecommerce-skills:skills/digital-product-pricing":
   name: Digital product pricer
   summary: "Tell it what you sell, such as a course or ebook. Get the price digits, labels and launch discount to use."
@@ -19,8 +19,8 @@
   level: beginner
   thinking: low
   thinking_why: "It applies a short set of pricing rules to your product."
-  inputs: [{type: product_data, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
 "checkout-page/ecommerce-skills:skills/discounts":
   name: Discount wording planner
   summary: "Give it the discount you plan. Get the percent or amount form, sale price display and banner wording that look biggest."
@@ -29,8 +29,8 @@
   level: beginner
   thinking: low
   thinking_why: "It turns a planned discount into numbers and words with set rules."
-  inputs: [{type: offer, required: true}]
-  outputs: [{type: copy_draft}]
+  inputs: [ { type: offer, required: true } ]
+  outputs: [ { type: copy_draft } ]
 "checkout-page/ecommerce-skills:skills/event-pricing":
   name: Event ticket pricer
   summary: "Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates."
@@ -39,8 +39,8 @@
   level: beginner
   thinking: low
   thinking_why: "It applies a short set of pricing rules to your event."
-  inputs: [{type: offer, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: offer, required: true } ]
+  outputs: [ { type: plan } ]
 "checkout-page/ecommerce-skills:skills/post-purchase":
   name: After-purchase experience planner
   summary: "Give it your shipping, returns and loyalty setup. Get a plan for what happens after checkout so customers order again."
@@ -49,8 +49,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It weighs timing and wording choices across several steps."
-  inputs: [{type: offer, required: false}, {type: question, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: offer, required: false }, { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: post-purchase-experience
 "checkout-page/ecommerce-skills:skills/price-research":
   name: Willingness-to-pay survey designer
   summary: "Tell it what you sell. Get two survey questions to send customers and a way to turn answers into a best price."
@@ -59,8 +60,9 @@
   level: advanced
   thinking: high
   thinking_why: "It sets up a survey and corrects the answers with careful math."
-  inputs: [{type: product_data, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: willingness-to-pay-survey
 "checkout-page/ecommerce-skills:skills/pricing":
   name: Price digits and placement planner
   summary: "Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it."
@@ -69,8 +71,9 @@
   level: beginner
   thinking: low
   thinking_why: "It applies a short set of pricing rules to one price."
-  inputs: [{type: product_data, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: price-display-planner
 "checkout-page/ecommerce-skills:skills/product-copy":
   name: Product description writer
   summary: "Give it your product facts. Get a description with the right number of claims, units and tone to lift sales."
@@ -79,8 +82,8 @@
   level: beginner
   thinking: medium
   thinking_why: "It picks claims and units, then writes with set rules."
-  inputs: [{type: product_data, required: true}]
-  outputs: [{type: pdp_copy}]
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: pdp_copy } ]
 "checkout-page/ecommerce-skills:skills/product-page":
   name: Product page auditor
   summary: "Give it a product page. Get ranked changes to variants, social proof, buttons and price, each with the research behind it."
@@ -89,8 +92,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It checks the page against a set list and ranks the fixes."
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
 "checkout-page/ecommerce-skills:skills/product-visuals":
   name: Product shoot brief writer
   summary: "Tell it your product. Get a shot list for photos and video, with a reason for each shot."
@@ -99,8 +102,8 @@
   level: beginner
   thinking: medium
   thinking_why: "It chooses shots by what research says helps sales."
-  inputs: [{type: product_data, required: true}]
-  outputs: [{type: shot_list}]
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: shot_list } ]
 "checkout-page/ecommerce-skills:skills/promotions":
   name: Promotion idea planner
   summary: "Say what you want to launch or clear. Get a gift, bundle or pre-order promotion that avoids plain price cuts."
@@ -109,8 +112,8 @@
   level: beginner
   thinking: medium
   thinking_why: "It matches a promotion type to your goal and words it well."
-  inputs: [{type: offer, required: false}, {type: question, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: offer, required: false }, { type: question, required: true } ]
+  outputs: [ { type: plan } ]
 "checkout-page/ecommerce-skills:skills/reviews":
   name: Review request and reply planner
   summary: "Tell it about your reviews. Get when to ask, how to word the request, and how to answer a bad review."
@@ -119,8 +122,8 @@
   level: beginner
   thinking: low
   thinking_why: "It applies a few clear rules to timing and replies."
-  inputs: [{type: voc_reviews, required: false}, {type: question, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: voc_reviews, required: false }, { type: question, required: true } ]
+  outputs: [ { type: plan } ]
 "checkout-page/ecommerce-skills:skills/store-audit":
   name: Online store auditor
   summary: "Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces."
@@ -129,8 +132,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It sorts your store into a type first, then applies the right rules."
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
 "checkout-page/ecommerce-skills:skills/subscription-pricing":
   name: Membership plan pricer
   summary: "Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades."
@@ -139,8 +142,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It weighs tier layout and price choices with set rules."
-  inputs: [{type: product_data, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
 "checkout-page/ecommerce-skills:skills/increase-aov":
   skip: Only ranks levers and sends you to the repo's other skills for the how-to, so it adds no work of its own.
 "checkout-page/ecommerce-skills:skills/increase-conversion":
@@ -161,8 +164,8 @@
   level: beginner
   thinking: low
   thinking_why: "It reads one ad and quotes it, with no outside research."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: feedback_notes}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: feedback_notes } ]
 "proskillpacks/skills:skills/data/csv-profile-and-sanity-check":
   skip: Near copy of the Data quality auditor and Messy spreadsheet cleaner we already list.
 "proskillpacks/skills:skills/developers/accessibility-quick-audit":
@@ -183,8 +186,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It checks each step against the project files."
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: test_report}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
   needs: read your project files
 "proskillpacks/skills:skills/developers/skill-portability-check":
   name: Skill portability checker
@@ -194,8 +197,8 @@
   level: intermediate
   thinking: low
   thinking_why: "A script finds the problems and the AI explains the fixes."
-  inputs: [{type: skill_files, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: skill_files, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run code and read your files
 "proskillpacks/skills:skills/developers/test-gap-finder":
   name: Test gap finder
@@ -205,8 +208,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It traces each change against the tests."
-  inputs: [{type: code_change, required: true}, {type: codebase, required: true}]
-  outputs: [{type: test_report}]
+  inputs: [ { type: code_change, required: true }, { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
   needs: read your project files
 "proskillpacks/skills:skills/ecommerce/agent-ready-quick-check":
   name: AI shopper store scorecard
@@ -216,8 +219,8 @@
   level: beginner
   thinking: low
   thinking_why: "A script runs six fixed checks and the AI reports them."
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run code
   scrapes: true
 "proskillpacks/skills:skills/ecommerce/chargeback-evidence-checklist":
@@ -228,8 +231,8 @@
   level: beginner
   thinking: medium
   thinking_why: "It matches the dispute reason to a fixed evidence list."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
 "proskillpacks/skills:skills/ecommerce/product-title-cleaner":
   name: Product title cleaner
   summary: "Give it your product list. Get tidy, consistent titles as a CSV for Shopify, plus a before and after sheet."
@@ -238,8 +241,8 @@
   level: beginner
   thinking: low
   thinking_why: "It applies one naming pattern to every title."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
 "proskillpacks/skills:skills/ecommerce/review-reply-drafter":
   name: Public review reply drafter
   summary: "Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised."
@@ -248,8 +251,8 @@
   level: beginner
   thinking: medium
   thinking_why: "It writes a fitting reply per review and flags risky ones."
-  inputs: [{type: voc_reviews, required: true}]
-  outputs: [{type: copy_draft}]
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: copy_draft } ]
 "proskillpacks/skills:skills/ecommerce/shopify-alt-text-writer":
   skip: Same job and format as the Product image alt text writer we already list.
 "proskillpacks/skills:skills/ecommerce/shopify-policy-checker":
@@ -260,8 +263,8 @@
   level: beginner
   thinking: medium
   thinking_why: "It compares several policies and ranks what could cost you."
-  inputs: [{type: web_page, required: false}, {type: source_text, required: false}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: false }, { type: source_text, required: false } ]
+  outputs: [ { type: audit_report } ]
 "proskillpacks/skills:skills/finance/invoice-checker":
   name: Invoice totals checker
   summary: "Give it an invoice. Get every line and total recalculated, and any missing fields or date problems listed."
@@ -270,8 +273,8 @@
   level: beginner
   thinking: low
   thinking_why: "It recomputes sums and checks a short list of fields."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "proskillpacks/skills:skills/freelancers/late-payment-chaser-uk":
   name: UK late payment chaser
   summary: "Give it an overdue invoice. Get the legal interest and fixed fee worked out, plus reminder emails ready to send."
@@ -280,8 +283,8 @@
   level: beginner
   thinking: medium
   thinking_why: "A script does the sums and the AI writes staged emails."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: copy_draft}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: copy_draft } ]
   needs: run code
 "proskillpacks/skills:skills/marketing-seo/ai-search-readiness-check":
   skip: Same job as the AI search platform checker we already list (a score and fix list for AI search).
@@ -293,8 +296,8 @@
   level: beginner
   thinking: medium
   thinking_why: "It compares ranking pages, then plans an outline."
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: brief}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: brief } ]
 "proskillpacks/skills:skills/sales/cold-email-checker":
   name: Cold email pre-send checker
   summary: "Paste a cold email and what you know of the prospect. Get claims tested, legal basics checked, and a tighter version."
@@ -303,8 +306,8 @@
   level: beginner
   thinking: low
   thinking_why: "It checks a short draft against a fixed list."
-  inputs: [{type: copy_draft, required: true}]
-  outputs: [{type: copy_draft}, {type: feedback_notes}]
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft }, { type: feedback_notes } ]
 "proskillpacks/skills:skills/support/angry-customer-reply-check":
   name: Angry customer reply checker
   summary: "Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft."
@@ -313,8 +316,8 @@
   level: beginner
   thinking: medium
   thinking_why: "It tests a draft against the message and your rules."
-  inputs: [{type: copy_draft, required: true}, {type: voc_reviews, required: true}]
-  outputs: [{type: copy_draft}, {type: feedback_notes}]
+  inputs: [ { type: copy_draft, required: true }, { type: voc_reviews, required: true } ]
+  outputs: [ { type: copy_draft }, { type: feedback_notes } ]
 "proskillpacks/skills:skills/writing/fact-claim-checker":
   name: Unsupported claim spotter
   summary: "Paste a draft. Get every claim that needs a source, ranked by risk, with the kind of source to find."
@@ -323,5 +326,5 @@
   level: beginner
   thinking: medium
   thinking_why: "It sorts each claim by risk but does not verify them."
-  inputs: [{type: copy_draft, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: audit_report } ]

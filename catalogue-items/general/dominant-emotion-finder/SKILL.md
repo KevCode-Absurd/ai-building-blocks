@@ -58,10 +58,10 @@ The dominant emotion in one sentence and the proposed theme. The lived events wi
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Understand your buyers** with the [Shared want hook mapper](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buying reasons and brand brain.
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/image-ad-maker-from-customer-quotes). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the brand brain and buying reasons.
+- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
+- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the brand brain and buying reasons.
 - **Make an offer people want** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It takes the brand brain.
-- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/learn-what-sells-from-50-different-image-ads). It takes the brand brain.
+- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/image-ad-test-learnings). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

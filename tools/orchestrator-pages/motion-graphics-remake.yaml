@@ -1,0 +1,148 @@
+new_slug: motion-graphics-remake
+name: "Remake your best video ad as motion graphics"
+summary: "Give it the script of your best video ad. Get it remade with every word kept, and ready to build."
+job: make-video-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+
+headline: "Remake your best video ad as motion graphics, with every word kept"
+subhead: Give it the script of a video ad that already works. It plans the remake beat by beat, fixes lines that sound written, checks the format fits, takes the script through the build stages with your approval, and checks it against ad rules.
+
+explain: |
+  A video ad that works is worth reusing, but filming it again costs time, and a new cast can change what made it work. A version made of graphics keeps the argument and the words and drops the cast, the set and the shoot. The words, numbers and product photo are built as live layers, so they come out exactly as written.
+
+  The remake plan lays the ad out in order, finds the beat that sells and rebuilds each part in the new look. Every spoken word and every on-screen line keeps its wording and its place. Then the script is read aloud, the format is checked, and the build planner runs the stages, stopping for your yes at the points where a mistake would be costly.
+
+when:
+  - You have a video ad that works and want a version with no actors or filming.
+  - You need a new format for the same message, such as a silent version for feeds.
+  - You want the same ad in a look that is easy to update when a price changes.
+
+you_give:
+  - The script of your best video ad, with its on-screen text
+  - Your product facts and photos
+  - Your brand file (optional)
+  - Your target countries, for the ad rules check (optional)
+you_get:
+  - A remake plan with every word kept, a shot table and a cast note
+  - A read-aloud fix list and the final script
+  - A score for how well the script fits each video format
+  - A build plan in stages, with your approval points
+  - An ad rules check on the script and the on-screen words
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. The script of the ad, the on-screen text, your product facts and your product photos.
+  - Approve the product card, the sheets and the storyboard when it stops. Nothing moves on without your yes.
+  - Build the final video in your editor or video tool from the build plan.
+
+how_it_works:
+  - title: Plans the remake
+    text: Uses the remake planner to lay the ad out in order, find the beat that sells and rebuild each part in the new look with every word kept.
+  - title: Fixes lines nobody would say
+    text: Uses the read-aloud editor to say every line at delivery speed and fix the ones that sound written, changing no claim.
+  - title: Checks the format fits
+    text: Uses the format picker to find the part doing the persuading and score formats for the script.
+  - title: Plans the build
+    text: Uses the motion graphics build planner to take the script through its stages, from product card to storyboard to the finished render.
+  - title: Checks against Meta rules
+    text: Uses the ad rules checker to flag claims in the script and the on-screen text.
+
+output_shape: |
+  REMAKE PLAN
+  Order: <beats in order>   The beat that sells: <which and why>
+  Shot table: <shot | words kept | new picture>
+  Cast note: <who or what replaces the people>
+  Changes: <every change, and what stayed word for word>
+
+  READ-ALOUD FIXES: <lines changed, why>   FINAL SCRIPT: <whole script>
+
+  FORMAT FIT: <format, score out of 100, why>
+
+  BUILD PLAN
+  Stage 1 product card (approve) / Stage 2 look / Stage 3 sheets (approve) /
+  Stage 4 storyboard (approve) / Stage 5 build and render
+
+  AD RULES CHECK: <verdict, findings with the exact line>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Script: the 30-second founder ad in best-ad.md, with its captions
+    Product facts and photos: the product table and the pouch photos
+    I want: a graphics version with no people, for feeds
+  output: |
+    REMAKE PLAN
+    Order: opening question, problem, the pack, proof, price, action
+    The beat that sells: the pack torn open (beat 3)
+    Shot table: 1 | "Quit your greens powder yet?" | big type on cream
+    | 3 | "Tear. Eat. Done." | pack animates open, steps as icons
+    Cast note: no people. The founder's voice becomes a text voice-over.
+    Changes: the founder's face is gone; every spoken line is unchanged.
+
+    FORMAT FIT: motion graphics 86, plain photo reel 71.
+
+    BUILD PLAN
+    Stage 1 product card (approve): shape, colours, printed words from
+    photo 2.
+    (cut for length: stages 2 to 5)
+
+    AD RULES CHECK: fix first. Line 5 "fixes your gut" is a health claim.
+    Use "supports digestion and gut health", the wording on file.
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-05. MISSING: the font files;
+    approval of the product card.
+
+tweaks:
+  - what: Keep or drop the voice
+    how: Say "text only, no voice" for a silent feed version, or "keep the voice" to carry on with the original audio.
+  - what: Sizes
+    how: Name every size you need. Each is laid out for its own shape.
+  - what: How far to remake
+    how: Say "same words, new look" for a strict remake, or allow changed picture notes where a person is on screen.
+  - what: Approvals in one go
+    how: Say "I approve every stage ahead" and it runs through, marking each point approve.
+
+judge:
+  - Every spoken word and every on-screen line keeps its wording and its place.
+  - The remake adds no claim, number or offer term of its own.
+  - The product matches your photos in shape, colours and printing.
+  - The format score is shown with a reason.
+  - The run ends with a summary that lists every file and every MISSING line in one place.
+
+test:
+  - Compare the remade script with the original, line by line. Only picture notes should differ.
+  - Check that no real person or other brand's character appears in the plan.
+  - Check every number and claim against your facts.
+  - Check the product card against your real photo.
+
+improve:
+  - Run the same script through a second look and compare the two builds.
+  - Add a step that writes the sound plan and the exports for each size.
+  - Pair it with a skill that adds captions in your brand font.
+  - Tune the remake step with your do-not-change list, such as the guarantee line.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps the original wording safe across five steps."}
+    - {name: "After Effects", why: "Takes live type layers and shape animation without rewriting any word."}
+    - {name: "Remotion", why: "Builds the ad from code, so a price change is one edit."}
+  inputs:
+    - "The original ad's script and on-screen text, exactly as run"
+    - "Full-size product photos from the front and in use"
+    - "Your logo as an SVG and your font files"
+
+terms:
+  - term: Motion graphics
+    meaning: An ad made of moving type, shapes and product pictures, with no filmed people.
+  - term: Remake
+    meaning: The same ad in a new look, with the same words in the same places.
+  - term: Live layer
+    meaning: Text or a shape that the editor draws, so it is always sharp and spelled as you wrote it.

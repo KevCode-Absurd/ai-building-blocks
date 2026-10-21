@@ -1,0 +1,89 @@
+new_slug: four-filter-decision
+name: Put a deal, hire or purchase through four filters
+summary: Describe a deal, hire or purchase. Get it tested on knowledge, staying power, people and price, then a clear call.
+job: plan-strategy
+thinking: high
+thinking_why: It judges four separate questions and weighs them together. Give it your strongest model.
+headline: Test a deal, hire or purchase on four questions before you say yes
+subhead: Describe what you are about to commit to. It asks whether you understand it, whether it will last, whether you can trust the people and whether the price is right. It then turns the plan upside down and ends with a yes, no or too-hard call and how big to go.
+explain: |
+  Most bad commitments fail one of four ways. You did not really understand the thing, it did not last, the people were not who they seemed, or you paid too much. Charlie Munger and Warren Buffett ran their choices through a sequence like this and said no or "too hard" to most of what came by. The few that passed, they backed heavily.
+
+  This workflow puts any deal, hire or purchase through that sequence. Each filter is a separate skill with its own tests and facts. A fail at any point is a real answer, not something to argue away. It then flips the plan to find how it could fail, compares it with the best chances you saw lately, and writes the call. The price step is a method of analysis. It is not personal financial advice.
+when:
+  - You are about to sign a contract, hire a senior person or buy a business, tool or stake.
+  - Someone is pushing you to decide fast on something you only partly understand.
+  - You want a fixed way to say no, so you stop being talked into things.
+you_give:
+  - What you are considering, in a few lines, and the years that matter
+  - What you have done, studied or read about the field
+  - Everything you know about the people involved and how they are paid
+  - What you would get over time and what it costs
+  - Your best alternative use of the same money or time (optional)
+you_get:
+  - A map of what you know and don't, with a basket of in, learn first or pass
+  - A staying-power grade with the protection, the threat and the technology test
+  - A trust verdict on the people, with questions to ask others
+  - A value range, a walk-away price and the alternative to beat
+  - A yes, no or too-hard call, the size of the commitment and what would change it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Answer the first step honestly. If it says pass, read the reason before you ask it to carry on.
+  - Bring the best chances you saw in the last year to the last step, so the call has something to compare with.
+how_it_works:
+  - title: Do you understand it?
+    text: Splits it into parts, rates each by what you have done, finds the edge and picks a basket.
+  - title: Will it last?
+    text: Names what protects it, how long a rival needs to copy it, whether that is widening, and what could replace it.
+  - title: Can you trust the people?
+    text: Tests ability, honesty when it cost them, reliability and owner mindset, and writes questions for people they did not choose.
+  - title: Is the price right?
+    text: Builds a low, middle and high value, sets a walk-away price and compares it with your best alternative.
+  - title: Turns it upside down
+    text: Asks what would guarantee failure and checks the plan against the usual ways it fails.
+  - title: Makes the call
+    text: Applies the yes, no or too-hard rule, compares with your best recent chances and sets the size.
+output_shape: |-
+  STEP 1: DO YOU UNDERSTAND IT?
+    Parts | KNOWN, PARTLY or NOT | the edge | basket: IN, LEARN FIRST or PASS
+
+  STEP 2: WILL IT LAST?
+    Protection with facts | time to copy | trend | threat | technology test | grade
+
+  STEP 3: CAN YOU TRUST THE PEOPLE?
+    Ability, honesty, reliability, owner mindset | pay | questions for others | verdict
+
+  STEP 4: IS THE PRICE RIGHT?
+    Value range with sums | walk-away price | best alternative | fees | before you commit
+    Not personal financial advice
+
+  STEP 5: TURNED UPSIDE DOWN
+    What would guarantee failure | survival risks | changes
+
+  STEP 6: THE CALL
+    YES, NO or TOO HARD | rule used | size | what would change it | review date
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: What you say you have done
+    how: Say what you did, with years and numbers. Reading a lot counts, but less than doing.
+  - what: Facts you checked yourself
+    how: Mark which facts about the people you checked and which you were told. Checked facts count for far more.
+  - what: Your best alternative
+    how: Name it, even if it is only keeping the cash. The price step is meaningless without something to beat.
+judge:
+  - Each filter result rests on a fact you could show someone, not on a feeling.
+  - A pass at any filter ends in a no or too hard, and the final call says why.
+  - The walk-away price comes from a stated rule and a sum you can redo.
+  - The call is compared with your best recent chances and sized within what you could lose.
+  - Nothing here names a security to buy or sell.
+test:
+  - Run it on a purchase you regret. See which filter would have stopped you.
+  - Give it a deal you only know from a pitch. The people step should rate most tests unknown.
+  - Run it twice on the same input. The basket, the grade and the call should match.
+improve:
+  - Keep your list of best chances up to date and bring it to the last step each time.
+  - Save every call with its reasons, and compare with what happened.
+  - Add your field's usual traps to the upside-down step.

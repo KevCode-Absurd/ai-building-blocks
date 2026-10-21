@@ -9,7 +9,7 @@ You brief a plain screenshot of a chat where someone close brings up the problem
 
 **Good for:** a story where someone close noticed the problem, the habit or the workaround. Problems a family jokes about or keeps noticing.
 
-**Not for:** a story with no second person (`phone-note-screenshot-image-ad-maker`).
+**Not for:** a story with no second person (`phone-note-image-ad`).
 
 ## House rules for post-like pictures
 - Square 1:1, or 4:5 if it runs only in the Feed. It looks like a real screenshot: slightly cropped, nothing polished.
@@ -110,7 +110,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.
-- No second person in the story: use `phone-note-screenshot-image-ad-maker` or `problem-moment-image-ad-maker`.
+- No second person in the story: use `phone-note-image-ad` or `problem-moment-image-ad-maker`.
 - No words allowed on the image: use `problem-moment-image-ad-maker`.
 
 ## Avoid

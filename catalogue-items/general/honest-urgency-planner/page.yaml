@@ -1,0 +1,103 @@
+new_slug: honest-urgency-planner
+name: Honest scarcity and urgency planner
+summary: Paste your offer and what you can handle. Get real limits and dates, plus the lines to say them.
+job: make-offer
+thinking: medium
+thinking_why: It chooses limits from your real capacity and writes them out. The rules are fixed and every number must be true.
+headline: Honest scarcity and urgency planner
+subhead: Give it your offer and how many buyers you can serve well. It picks a real cap and a real deadline, keeps supply a little under demand, writes the lines for your page, ads and calls, and checks that every claim is true on the day.
+explain: |-
+  People act on what they might lose. A limit on seats or a date that ends a deal moves them off the fence. But fake counters and timers that reset teach buyers to ignore you, and in many places they break the law.
+
+  This skill builds limits that are true. It starts from what you can really handle in a week or a cohort and sets the cap there. It picks a start date or an end date you will keep. It also uses the pull of unmet demand: sell a little fewer than you could, say it sold out, and open a few more next time. Every line it writes can be checked against a real count or a real date.
+when:
+  - Buyers say they will think about it and never return.
+  - You have no cap and no dates, so there is no reason to buy this week.
+  - You want urgency but refuse to use fake timers.
+you_give:
+  - Your offer and price
+  - How many new buyers you can serve well per week or per cohort
+  - Past sales by week or month (optional)
+  - "Your channels: page, ads, email, calls"
+you_get:
+  - One scarcity rule and one urgency rule that match how you work
+  - The numbers and dates, with the sum behind each
+  - The line for each channel, a sold-out message and a waiting-list message
+  - An honesty check you can run before each launch
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the offer and say how many buyers you can serve well at once.
+  - Pick the scarcity and urgency types that fit how you deliver.
+  - Put the lines in place, and update the counts as they change.
+how_it_works:
+  - title: Finds real capacity
+    text: Sets the cap from what you can serve well, not from a wish.
+  - title: Picks the type
+    text: Total cap, weekly cap, cohort cap, limited batch or bonuses that end.
+  - title: Picks the deadline
+    text: Cohort start, promotion end, price change or an offer that expires.
+  - title: Keeps supply under demand
+    text: Sells a little fewer than you could and says when you sell out.
+  - title: Writes the lines
+    text: For the page, ads, email and calls, plus a late buyer plan.
+output_shape: |-
+  CAPACITY
+  <how many you can serve well, per week or cohort, and the sum>
+
+  SCARCITY RULE
+  <type, number, why it is real>
+
+  URGENCY RULE
+  <type, date, why it is real>
+
+  SUPPLY AND DEMAND SUM
+  <seats, expected interest, what happens when it sells out>
+
+  LINES
+  Page | Ad | Email | Call | Sold out | Waiting list
+
+  IF SOMEONE IS LATE
+  <what to offer>
+
+  HONESTY CHECK
+  <pass or fail for each line>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+tweaks:
+  - what: How you deliver
+    how: A cohort or class suits fixed dates. Ongoing services suit a weekly cap. Physical goods suit limited batches.
+  - what: How often you open
+    how: Opening less often makes each deadline stronger. Say how often you can.
+  - what: Interest level
+    how: Give a rough count of interested people so the cap sits below demand.
+judge:
+  - The cap comes from real capacity, with the sum shown.
+  - Every date is one you will keep.
+  - No timer or counter is fake or resets.
+  - Each channel has a line with a true number in it.
+  - There is a plan for sold-out and for late buyers.
+test:
+  - Check each line against your calendar and your list. Every number should match.
+  - Run the sold-out message past a friend. It should read as a fact, not a trick.
+  - After a launch, compare seats sold to seats offered. You should have sold out, or the cap was too high.
+improve:
+  - Cut the cap a little next round if you did not sell out.
+  - Keep a log of dates and sell-out times.
+  - Add one extra seat or two each round only after a sell-out.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text and number work that any strong chat AI does well with the skill.
+  inputs:
+    - Past sales by week
+    - Your delivery calendar
+    - A count of interested people or a waiting list
+terms:
+  - term: Scarcity
+    meaning: A limit on how many can buy.
+  - term: Urgency
+    meaning: A limit on when someone can buy.

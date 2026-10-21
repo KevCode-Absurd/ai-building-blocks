@@ -1,0 +1,115 @@
+new_slug: investor-type-quiz
+name: "Defensive or enterprising investor sorter"
+summary: "Tell it your time, skill and nerve. Get sorted as a defensive or enterprising investor, with the paths to skip."
+job: money-and-investing
+thinking: low
+thinking_why: "It scores a few honest answers against fixed tests and writes a short verdict. A fast model does this well."
+
+headline: "Find out if you should invest the plain way or do the research yourself"
+subhead: "Answer a few questions about your hours, your skill and how you acted in the last big fall. It sorts you as a defensive investor (safety and little bother) or an enterprising one (real research), says what each path can fairly expect, and names the paths to skip. A method of analysis, not personal financial advice."
+
+explain: |
+  Most money mistakes start with picking a path that does not fit the person. A busy person tries to trade. A person who panics in a fall puts most of their money in shares. A person with no time for research buys what a friend recommends.
+
+  This skill uses one idea: the return you can fairly aim for depends on the intelligent effort you will actually bring, not on the risk you are willing to run. It tests your hours, skill, interest and nerve, sorts you into the defensive or enterprising path, and says what that path asks of you. It also flags the courses that are neither, such as trading on tips or borrowing to buy. It never tells you what to buy.
+
+when:
+  - You are about to start investing and do not know which approach fits.
+  - You keep switching between plain and active investing and want to settle it.
+  - Someone has offered you a hot idea and you want to know if it fits who you are.
+
+you_give:
+  - Hours a month you can give to investing, and how you spend them
+  - Your skill at reading a balance sheet, and whether you want to learn
+  - What you did or felt in the last big fall in prices
+  - Any money you want to speculate with, kept apart
+
+you_get:
+  - A type of defensive, enterprising or neither yet
+  - The reasons, ranked, from your own answers
+  - What each path asks of you
+  - The paths to skip, and a plain note on fair expectations
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Answer the questions with what you actually did, not what you wish you did.
+  - Read the verdict first, then the paths to skip.
+  - Take the type to "Stock and bond split planner".
+
+how_it_works:
+  - title: Counts your real effort
+    text: Adds up the hours, the skill and the interest you will bring, using what you did over the last year.
+  - title: Tests your nerve
+    text: Asks what you did when prices last fell hard, and what you would do if your holdings halved.
+  - title: Sorts you
+    text: Places you on the defensive path, the enterprising path, or neither until something changes.
+  - title: Sets fair expectations
+    text: Says what each path can expect and why more effort is no promise of more return.
+  - title: Closes the wrong doors
+    text: Lists trading, tips and borrowing to buy as courses that are not investing.
+
+output_shape: |
+  YOUR EFFORT
+  Hours a month: <n> | Skill: <...> | Interest: <...>
+
+  YOUR NERVE
+  Last big fall: <what you did> | If holdings halved: <answer> | Reads as: <steady / shaky>
+
+  TYPE: <DEFENSIVE / ENTERPRISING / NEITHER YET>
+  Why, ranked: <1. ... 2. ... 3. ...>
+
+  WHAT YOUR PATH ASKS OF YOU
+  <list>
+
+  PATHS TO SKIP
+  <trading / tips / borrowing / other> because <reason>
+
+  FAIR EXPECTATIONS
+  <plain note, no promised return>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Money to speculate with
+    how: Say how much you want to keep apart for risky bets. It is sized separately and kept out of the investing plan.
+  - what: A shared decision
+    how: Say if you invest with a partner. Each of you may sort differently, and the plan has to fit both.
+  - what: A learning plan
+    how: Say you want to move to the enterprising path later. It lists what to learn first.
+
+judge:
+  - The type follows from the answers and each answer is quoted.
+  - Hours, skill and nerve are all covered.
+  - The note on expectations promises no return.
+  - The paths to skip are named with a reason.
+  - Nothing names a security to buy or sell.
+
+test:
+  - Say you have 30 minutes a month and sold everything in the last fall. It should say defensive, and say why.
+  - Say you want to trade daily. It should call that a course that is not investing and offer the speculation account idea.
+  - Leave out your hours. It should ask, or mark them MISSING.
+  - Run it twice on the same answers. The type should match.
+
+improve:
+  - Run it again after a year or after a big fall, with what you really did.
+  - Share the verdict with someone who knows you and ask if it rings true.
+  - Pair it with "Stock and bond split planner" and "Investing policy page writer".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing a few honest answers and writing a short verdict is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "An honest count of hours you spent on money in the last three months"
+    - "A note of what you did in the last big fall in prices"
+
+terms:
+  - term: Defensive investor
+    meaning: A person who wants safety and freedom from bother. They hold a plain mix of bonds and sound stocks and make few decisions.
+  - term: Enterprising investor
+    meaning: A person who will put real time and skill into research. They start from the same plain base and add well-reasoned departures.
+  - term: Speculation
+    meaning: Buying in the hope the price rises, without a study that promises safety of your money and a fair return.

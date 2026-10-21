@@ -1,0 +1,39 @@
+slug: campaign-brief-calendar
+renamed_from: campaign-brief-and-calendar-builder
+name: "Campaign brief and calendar builder"
+summary: "Describe your launch or push. Get a brief with goals, audience, messages, channels and a week-by-week calendar."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: brief
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: marketing/skills/campaign-plan
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing/skills/campaign-plan
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: campaign-plan
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: campaign-plan skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing/skills/campaign-plan
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

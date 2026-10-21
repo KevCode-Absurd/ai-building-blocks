@@ -1,0 +1,113 @@
+new_slug: buyer-aware-headline
+name: "Write a headline that fits what your buyers already know"
+summary: "Give it your product and buyers. Get their awareness and claim fatigue read, stage-matched headlines, a promise check and a test plan."
+job: write-ad-copy
+thinking: high
+thinking_why: "It reads evidence, writes to rules, checks the lines and plans a test. Give it your strongest model."
+
+headline: "A headline that fits what your buyers know and what they have already heard"
+subhead: "Give it your product facts and what rivals claim. It places your buyers on an awareness scale and your market on a claim-fatigue scale, writes headlines that make only the moves that stage allows, checks each promises something worth reading for, and plans a small test between the best two."
+
+explain: |
+  A headline that works on a buyer who already wants your product fails on someone who has never thought about the problem. A bold claim that was fresh three years ago may now be the one every rival makes. Most teams write the headline they like and test it.
+
+  This workflow starts earlier. It reads your buyers and your market, using a summary of Eugene Schwartz's Breakthrough Advertising as its source. It names the want buyers already have, places them from ready to buy down to unaware, lists the claims in your market oldest first and sets how worn the claims are. Then it writes one headline per allowed move: name the deal, make the claim bigger, give a new reason it works, make that reason better, or speak to who the buyer is. A promise check follows, and last a keyed test plan that picks headlines which differ in kind. The source is a third-party summary, so treat its detail as second-hand.
+
+when:
+  - Your headline gets ignored or doubted and you do not know if buyers know too little or have heard too much.
+  - Rivals all make the same claim and you need a different move, not a louder one.
+  - You are writing to people who do not know your product exists.
+
+you_give:
+  - Your product facts, including what it does for the buyer
+  - What rivals claim, pasted from their ads and pages (optional, but the stage call needs it)
+  - Customer words, such as reviews, word for word (optional)
+  - Your offer and the place you will test (for the last two steps)
+
+you_get:
+  - "A stage brief: the want, where buyers sit on awareness, how worn the claims are, and what a headline may and may not do"
+  - Five to eight headlines, each with the move it makes and a mark for the one to test first
+  - A check of each headline for reader and reward, with stronger versions of weak ones
+  - A keyed test plan with codes and a rule for picking the winner
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your product facts, rival claims and customer words.
+  - It works step by step and saves each result. Check the claim timeline in step 1 before you read the headlines.
+
+how_it_works:
+  - title: Read the market
+    text: "Names the want, places buyers on a five-step awareness scale, tags the market's claims oldest first and sets the claim-fatigue stage. Writes a MAY and MAY NOT list."
+  - title: Write for the stage
+    text: "Writes one headline per allowed move, sharpens each from facts you supplied and marks the one to test first and a second that makes a different move."
+  - title: Check the promise
+    text: "Checks each headline picks its reader and promises a reward worth reading for. Rewrites the weak ones and lists the changes."
+  - title: Plan the test
+    text: "Sorts the checked headlines by appeal, picks two or three that differ in kind, gives each a code and sets the winner rule before the test."
+
+output_shape: |-
+  STEP 1: THE STAGE BRIEF
+    Want: <...> | Awareness: <main place, backup> | Claim-fatigue stage: <1-5>
+    Claim timeline: <oldest to newest, tagged>
+    MAY / MAY NOT: <...>
+
+  STEP 2: HEADLINES FOR THE STAGE
+    Headlines: <move | sharpened by | headline>
+    Test first: <...> | Test against: <...>
+
+  STEP 3: PROMISE CHECK
+    Per headline: <reader | reward | so-what result>
+    Rewrites: <weak | stronger | what changed>
+
+  STEP 4: KEYED TEST PLAN
+    Versions and codes: <...>
+    Winner rule: <replies per cost>, set before the test
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Rival claims
+    how: Paste at least five real lines from rival ads or pages. Without them step 1 gives the awareness read only and leaves the stage call open.
+  - what: Two buyer groups
+    how: If two groups sit far apart in awareness, run it twice and write a headline set for each.
+  - what: Facts
+    how: Exact figures with sources allow the sharpening moves. Without them the lines stay plainer.
+
+judge:
+  - Every awareness call and claim tag points to something you gave it.
+  - No headline breaks the MAY NOT list, and no unaware headline carries a price or product name.
+  - At least two different moves are tested against each other.
+  - Every number and quote comes from your facts.
+  - The winner rule is set before the test, on replies per cost.
+
+test:
+  - Run it on a product where you already know a winning headline. Check that the stage fits what that headline did.
+  - Stop after step 1 and show the timeline to someone who knows your market. Ask if any claim is tagged wrongly.
+  - Show each headline alone to a stranger and ask what they expect next.
+  - Run the two marked headlines against each other, with the same offer and image.
+
+improve:
+  - Save the stage call with its date and re-read the market every few months.
+  - Keep every tested headline with its move and result, and look back at which moves win for you.
+  - Add your own banned claims to the check.
+  - Run the body copy workflow next, so the copy under the headline fits the same stage.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting evidence, writing to rules and planning a test in one run works well in any strong chat AI."}
+    - {name: "Meta Ad Library or a search engine", why: "Shows the claims your rivals are running now, which step 1 needs."}
+    - {name: "Meta Ads Manager or Google Ads", why: "Runs the small test and reports replies and cost for each version."}
+  inputs:
+    - "Rival headlines and page openings, with the year if you know it"
+    - "Ten to twenty reviews in your buyers' own words"
+    - "Exact figures from tests or customer counts, with sources"
+
+terms:
+  - term: Awareness
+    meaning: How much a buyer already knows, from not seeing a problem to being ready to buy your product.
+  - term: Claim fatigue
+    meaning: How many times buyers have heard your kind of promise, so the same words no longer work.
+  - term: Keyed test
+    meaning: A test where each version carries its own code or link, so every reply can be traced to the version that brought it.

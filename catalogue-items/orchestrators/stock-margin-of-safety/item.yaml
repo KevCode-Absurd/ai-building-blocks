@@ -1,0 +1,25 @@
+slug: stock-margin-of-safety
+name: "Value a stock with a margin of safety"
+summary: "Paste a company's results, its balance sheet and the share price. Get an earnings value, an asset floor and the gap."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: true}
+outputs:
+  - {type: audit_report}
+uses: [investment-or-speculation-sorter, earnings-value-range-builder, asset-floor-estimator, price-versus-value-gap-judge]
+steps:
+  - {uses: investment-or-speculation-sorter, note: "A first label and a reminder of how rough the value will be."}
+  - {uses: earnings-value-range-builder, note: "A low, middle and high value from earnings, and how much of the price is hope."}
+  - {uses: asset-floor-estimator, note: "What the company would fetch if it stopped, set beside the earnings value."}
+  - {uses: price-versus-value-gap-judge, note: "A plain verdict on whether there is a real margin of safety, and the risks that could remove it."}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "The order of the steps: sort it as investment or speculation, value it from earning power, find the asset floor, judge the gap between price and value"}
+generated_from: intake/security-analysis-stock-value/skeleton.yaml

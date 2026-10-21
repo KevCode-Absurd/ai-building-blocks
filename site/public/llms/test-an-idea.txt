@@ -1,0 +1,61 @@
+# Test an idea before you build it: AI Blocks
+
+> 57 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [AI-fit problem checker](https://useaiblocks.com/skills/ai-fit-problem-checker): Describe a problem. Get a verdict on whether AI suits it, using three tests, and the data or simulator you would need.
+- [Assumption test ranker](https://useaiblocks.com/skills/assumption-test-ranker): Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
+- [Build risk reviewer](https://useaiblocks.com/skills/build-risk-reviewer): Describe what you plan to build. Get the biggest risks on demand and switching, plus the smallest test to run first.
+- [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test): Give it a plan and its key bets. Find which assumptions break first and what to test.
+- [Business idea killer](https://useaiblocks.com/skills/business-idea-killer): Give it a business idea. Get the one fact that kills it, or the cheapest test it still has to pass.
+- [Business model guess tester](https://useaiblocks.com/skills/business-model-guess-tester): Paste your plan. Get it rewritten as testable guesses on one page, with a test and a pass line for each.
+- [Commitment ask planner](https://useaiblocks.com/skills/commitment-ask-planner): Say where you are and what people said. Get the next step to ask for and which leads are real.
+- [Contrarian belief tester](https://useaiblocks.com/skills/contrarian-belief-tester): Paste your big idea. Get the true-but-unpopular belief behind it, who disagrees and the smallest market where it could win.
+- [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request): Say who you want to talk to. Get a warm intro note, a cold message and an opening line.
+- [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions): Paste your idea and draft questions. Get fixed questions about their life, your top three and a plan for the scary one.
+- [Customer success leading-sign definer](https://useaiblocks.com/skills/customer-success-signals): Paste what customers do after they buy. Get one early sign of success: a percent, an action and a time limit.
+- [Deep research reporter](https://useaiblocks.com/skills/deep-research-reporter): Give it a topic. Get a cross-checked report built from many sources, with findings and sources.
+- [Find out if your idea is worth building](https://useaiblocks.com/workflows/idea-worth-building): Give it your idea. Get who to talk to, what to ask, and a keep, change or stop call.
+- [Find the riskiest guess in your plan and test it](https://useaiblocks.com/workflows/riskiest-guess-test): Paste your plan. Get the guesses it rests on as numbers, the smallest test for the riskiest and pass lines set first.
+- [First customer group picker](https://useaiblocks.com/skills/first-customer-group-picker): Describe your idea and who might want it. Get who-and-where groups and the one to talk to first.
+- [Five-day idea test planner](https://useaiblocks.com/skills/five-day-idea-test-planner): Describe an idea. Get a five-day plan to map, sketch, prototype and test it with real users.
+- [Founder office hours questioner](https://useaiblocks.com/skills/founder-office-hours-questioner): Share a fuzzy idea. Answer six sharp questions on customer, reach and defence before you get advice.
+- [Idea evidence review](https://useaiblocks.com/skills/idea-evidence-review): Paste your beliefs and notes from customer talks. Get a keep going, change or stop call and your next three talks.
+- [Idea odds scorer](https://useaiblocks.com/skills/idea-odds-scorer): List your ideas. Get each scored on upside, passion and odds, with the best next small step.
+- [Idea sharpener](https://useaiblocks.com/skills/idea-sharpener): Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
+- [Idea stress-test panel](https://useaiblocks.com/skills/idea-stress-test-panel): Give it your idea. Get a blunt panel review of what is weak, with what to fix before you build.
+- [Idea to business guide](https://useaiblocks.com/skills/idea-to-business-guide): Describe your idea. Get a tested customer, a position, a price and a first market to win, step by step.
+- [Investor panel pitch tester](https://useaiblocks.com/skills/investor-panel-pitch-tester): Pitch a business idea. Get a panel of tough investors who grill it and vote in or out.
+- [Lean canvas builder](https://useaiblocks.com/skills/lean-canvas-builder): Describe your idea. Get a one-page lean canvas with problem, solution, channels, costs and revenue.
+- [Leap-of-faith assumption finder](https://useaiblocks.com/skills/leap-of-faith-assumption-finder): Paste your plan. Get the few guesses it stands on, each with a number, ranked so you test the riskiest first.
+- [Literature reviewer](https://useaiblocks.com/skills/literature-reviewer): Give it a topic. Get a structured review of sources chosen by clear rules, with findings synthesised.
+- [Local production opportunity scanner](https://useaiblocks.com/skills/local-production-scanner): List what your market buys from outside. Get the best thing to make locally, what to build around it and a buffer.
+- [Market boundary checker](https://useaiblocks.com/skills/market-boundary-checker): Paste what you sell and who buys. Get your true market share and an own, reach or sliver verdict.
+- [Must-have survey planner](https://useaiblocks.com/skills/must-have-survey-planner): Paste your product and users. Get a short survey, the 40 percent test and a plan to learn from fans.
+- [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner): Paste your product idea. Get the riskiest guess, the smallest test and a pivot or persevere rule.
+- [Network launch planner](https://useaiblocks.com/skills/network-launch-planner): Describe your product that needs many users to work. Get a plan to win the first small group and grow from there.
+- [Niche readiness checker](https://useaiblocks.com/skills/niche-readiness-checker): Paste your offer and how customers found you. Get a niche verdict, a one-line niche statement and the next step.
+- [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner): Describe any idea or number to test. Get a plan that changes one thing at a time and says what results mean.
+- [Opportunity validation planner](https://useaiblocks.com/skills/opportunity-validation-planner): Give it a product bet. Get your riskiest assumptions mapped and a short plan to test them before you build.
+- [Prediction and bet planner](https://useaiblocks.com/skills/prediction-and-bet-planner): Paste a belief you hold. Get what it predicts, what would prove it wrong, a small bet and a date to check.
+- [Pretotype experiment designer](https://useaiblocks.com/skills/pretotype-experiment-designer): Give it a new product idea. Get cheap tests like landing pages and pre-orders, each with a clear pass mark.
+- [Product demand researcher](https://useaiblocks.com/skills/product-demand-researcher): Give it a product idea. Get the pain points, objections and buying signals people post, with links. Collects data from websites.
+- [Product experiment designer](https://useaiblocks.com/skills/product-experiment-designer): Give it an idea to test. Get a clear hypothesis, sample size, test plan and how to read the result.
+- [Product idea brainstorm partner](https://useaiblocks.com/skills/product-idea-brainstorm-partner): Describe a problem. Get ideas explored, assumptions challenged and the strongest options narrowed down.
+- [Product idea risk checker](https://useaiblocks.com/skills/product-idea-risk-checker): Paste your product idea and what you know. Get the four risks scored out of 100 and the cheapest first test.
+- [Product-market fit checker](https://useaiblocks.com/skills/product-market-fit-checker): Describe your product, market and early customers. Get a fit score out of 100 and the one thing to change first.
+- [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer): Paste your plan and earlier checks. Get a score on seven make-or-break questions and the one to fix first.
+- [Signal-guided search planner](https://useaiblocks.com/skills/signal-guided-search-planner): Describe a hunt for a cause or winner. Get a plan that splits the pile, measures one signal and follows it.
+- [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker): Paste your ranked guesses. Get the cheapest test for the top one, who to try it on and what to cut.
+- [Startup business planner](https://useaiblocks.com/skills/startup-business-planner): Describe your startup idea. Get market sizing, a business model, brand basics and tests to run first.
+- [Startup idea tester](https://useaiblocks.com/skills/startup-idea-tester): Paste your idea. Get a score out of 100 for real problem, who needs it badly and the cheapest check.
+- [Ten-times-better checker](https://useaiblocks.com/skills/ten-times-better-checker): Paste your product and what buyers use today. Get a measured gap to the closest substitute and a ten-times verdict.
+- [Ten-year durability checker](https://useaiblocks.com/skills/ten-year-durability-checker): Paste your business and its edge. Get how much value sits past year five and what could end the edge.
+- [Test if your idea can own its market](https://useaiblocks.com/workflows/idea-market-test): Give it your idea. Get an honest market size, a ten-times test, a ten-year check and a go, fix or stop call.
+- [Test your riskiest guess and measure what counts](https://useaiblocks.com/workflows/guess-test-metrics): Give it your product idea. Get the riskiest guess, the smallest test, honest numbers and the root cause of a miss.
+- [Thirty day launch planner](https://useaiblocks.com/skills/thirty-day-launch-planner): Paste your idea, budget and tools. Get a 30-day plan to launch, take payment and decide to keep, kill or change.
+- [Thought experiment planner](https://useaiblocks.com/skills/thought-experiment-planner): Describe a plan or belief. Get a what-if scene to run in your head, and a check that could prove it wrong.
+- [Three-buyer idea test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner): Paste your business idea. Get the one-minute math and a weekend plan to ask ten people to pay.
+- [Trial log planner](https://useaiblocks.com/skills/trial-log-planner): Paste what you want to get working. Get many cheap trials, a log for each and what each failure ruled out.
+- [Turn your plan into guesses and test them with customers](https://useaiblocks.com/workflows/plan-assumption-tests): Give it your business plan. Get testable guesses, an interview plan and the smallest test of the riskiest guess.
+- [Usability test runner](https://useaiblocks.com/skills/usability-test-runner): Give it a design or prototype. Get a test plan, task scripts, moderator notes and a findings summary.
+- [Would people miss your product? Then pick growth tests](https://useaiblocks.com/workflows/product-miss-growth-tests): Give it your product and users. Get a short survey, the 40 percent test and ranked growth ideas.

@@ -12,6 +12,7 @@
   outputs: [ { type: plan }, { type: document } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: accommodation-process
 "tuanductran/hr-skills:skills/hr-agentic-ai":
   skip: "Topic overview of agentic AI in HR, no usable output."
 "tuanductran/hr-skills:skills/hr-ai":
@@ -140,6 +141,7 @@
   outputs: [ { type: document }, { type: plan } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: career-ladder-plan
 "tuanductran/hr-skills:skills/hr-change-communication":
   name: Org change announcement writer
   summary: "Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers."
@@ -206,6 +208,7 @@
   outputs: [ { type: document } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: policy-handbook-writer
 "tuanductran/hr-skills:skills/hr-conflict-resolution":
   name: Workplace conflict mediation guide
   summary: "Describe the conflict. Get its likely causes, a mediation plan with ground rules and what to say in the talk."
@@ -218,6 +221,7 @@
   outputs: [ { type: plan }, { type: script } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: conflict-mediation-guide
 "tuanductran/hr-skills:skills/hr-consulting":
   skip: "Role overview for HR consultants, no usable output."
 "tuanductran/hr-skills:skills/hr-contingent-workforce":
@@ -336,6 +340,7 @@
   outputs: [ { type: plan }, { type: document } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: exit-interview-guide
 "tuanductran/hr-skills:skills/hr-employee-self-service":
   skip: "Mostly HR software tool lists, no usable output."
 "tuanductran/hr-skills:skills/hr-employer-branding":
@@ -384,6 +389,7 @@
   outputs: [ { type: plan }, { type: document } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: internal-mobility-program
 "tuanductran/hr-skills:skills/hr-interviewing":
   name: Structured interview guide builder
   summary: "Name the role. Get set questions, strong and weak answer signs and a scorecard. You make the hiring call, not the AI."
@@ -396,6 +402,7 @@
   outputs: [ { type: document } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: structured-interview-guide
 "tuanductran/hr-skills:skills/hr-iot":
   skip: "Thin topic overview of hiring IoT engineers."
 "tuanductran/hr-skills:skills/hr-job-analysis":

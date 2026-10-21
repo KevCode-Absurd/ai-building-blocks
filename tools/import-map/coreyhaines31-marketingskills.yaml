@@ -16,8 +16,8 @@
   level: intermediate
   thinking: high
   thinking_why: It must read each site and judge how rivals position themselves.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
   needs: run code and use your Firecrawl API key
   scrapes: true
 
@@ -323,6 +323,7 @@
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: plan } ]
   needs: run on a schedule
+  slug: marketing-routine-builder
 
 "coreyhaines31/marketingskills:skills/marketing-plan":
   name: Marketing plan writer

@@ -12,14 +12,14 @@ An ad is only as good as what people carry away. This skill takes the claim you 
 This skill runs on its own. What's below makes the result better, but none of it is required.
 
 **Works best with** (or they can paste their own instead):
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes): the script, beat by beat, with on-screen text.
+- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). Bring customer words. It uses your brand brain and your offer and buying reasons.
+2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
 3. This one.
 
 How to start:

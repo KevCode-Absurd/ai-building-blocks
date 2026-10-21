@@ -1,0 +1,90 @@
+# Sell and negotiate: AI Blocks
+
+> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Account catch-up brief writer](https://useaiblocks.com/skills/account-catch-up-brief-writer): Name a customer. Get one brief from your CRM, email, docs and calls on what is going on with them.
+- [Account plan builder](https://useaiblocks.com/skills/account-plan-builder): Name an account. Get a plan with goals, key people, open deals, risks and next steps, ready for your CRM.
+- [Account snapshot writer](https://useaiblocks.com/skills/account-snapshot-writer): Name a company. Get a short briefing from your Common Room data. Needs your Common Room account.
+- [Account tier ranker](https://useaiblocks.com/skills/account-tier-ranker): Give it your accounts. Get each scored on fit and activity and sorted into tiers, so you know where to spend time.
+- [Ask-which closing planner](https://useaiblocks.com/skills/ask-which-closing-planner): Paste your offer and where buyers stall. Get closing questions that offer two ways to say yes.
+- [Booking page designer](https://useaiblocks.com/skills/booking-page-designer): Describe your calls or appointments. Get a booking flow with open times, qualifying questions, prep emails and follow-up.
+- [Buy-in conversation planner](https://useaiblocks.com/skills/buy-in-conversation-planner): Paste who you need to win over and what you want. Get a conversation plan that starts from what they want.
+- [Buyer-matched argument planner](https://useaiblocks.com/skills/buyer-matched-argument-planner): List your selling points and the buyer types you meet. Get which argument leads for each and what to ask first.
+- [Buying path rebuilder](https://useaiblocks.com/skills/buying-path-rebuilder): Paste what your best customers read, watched or did before buying. Get the steps every new lead should follow.
+- [Call follow-up drafter](https://useaiblocks.com/skills/call-follow-up-drafter): Give it call notes or a transcript. Get a follow-up email draft, a team summary and CRM updates to approve.
+- [Can-they-pay deal checker](https://useaiblocks.com/skills/can-they-pay-deal-checker): Paste your terms and what you know of their means. Get a range they can pay and a sum they can meet.
+- [Capability pitch letter writer](https://useaiblocks.com/skills/capability-pitch-letter-writer): Paste what you can do and who you are writing to. Get a numbered offer letter ending in a proof to run.
+- [Change barrier finder](https://useaiblocks.com/skills/change-barrier-finder): Describe the change you want from a person or group. Get the barriers and a plan that removes them instead of pushing.
+- [Counter demo script writer](https://useaiblocks.com/skills/counter-demo-script-writer): Describe your product and who tries it. Get a short demo script that explains it, then lets the buyer see the result.
+- [CRM activity logger](https://useaiblocks.com/skills/crm-activity-logger): Describe a call or email. Get a ready entry on the right account and deal, saved when you say so.
+- [CRM deal updater](https://useaiblocks.com/skills/crm-deal-updater): Say what changed on a deal. Get a before and after, then the update saved when you accept.
+- [CRM hygiene auditor](https://useaiblocks.com/skills/crm-hygiene-auditor): Give it your CRM deals. Get a fix list of missing fields, stale dates and stage mismatches. Changes nothing.
+- [CRM record filler](https://useaiblocks.com/skills/crm-record-filler): Give it your CRM records. Get missing company and contact details filled in to help routing and outreach.
+- [Customer call prep writer](https://useaiblocks.com/skills/customer-call-prep-writer): Name the company and who is on the call. Get a one-page brief with signals and talking points. Needs Common Room.
+- [Customer one-pager and deck builder](https://useaiblocks.com/skills/customer-one-pager-deck): Give it your account notes. Get a customer deck, one-pager or leave-behind with no made-up numbers.
+- [Deal competitor playbook builder](https://useaiblocks.com/skills/deal-competitor-playbook-builder): Name a rival. Get a plan for winning the deal against them, plus win and loss patterns. Reads public web pages.
+- [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer): Give it a deal with a big discount or redlined terms. Get margin after discount and a clear yes, no or counter.
+- [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer): Name a deal. Get a health score, risks, gaps in how it is qualified and the next actions to take.
+- [Deal next-stage gap finder](https://useaiblocks.com/skills/deal-next-stage-gap-finder): Name a deal. Get what is missing to reach the next stage and to close, who does what and by when.
+- [Deal notes and CRM updater](https://useaiblocks.com/skills/deal-notes-and-crm-updater): Give it your emails, calls and meetings. Get contacts and deals updated, quiet deals flagged and follow-ups drafted.
+- [Deal slip impact modeler](https://useaiblocks.com/skills/deal-slip-impact-modeler): Name a deal that may slip. Get the hit to your number, new coverage and the pipeline you need to replace it.
+- [Deal stakeholder mapper](https://useaiblocks.com/skills/deal-stakeholder-mapper): Name a deal. Get the people in it, their influence and mood, who is missing and how to reach them.
+- [Deal watch digest writer](https://useaiblocks.com/skills/deal-watch-digest-writer): Ask what changed in your deals. Get a short alert list of quiet deals, slipping dates and renewals opening.
+- [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer): Paste the point you expect them to dispute. Get short lines for pushback that keep the person while you hold your view.
+- [Discount policy designer](https://useaiblocks.com/skills/discount-policy-designer): Describe how you sell. Get a discount matrix, approval limits and a clear route for exceptions.
+- [Expansion whitespace finder](https://useaiblocks.com/skills/expansion-whitespace-finder): Name an account. Get what they own, what they could add, the proof for each and the deals to open.
+- [Find your niche, write the first message, split sales jobs](https://useaiblocks.com/workflows/niche-first-message): Give it your offer and how customers found you. Get a niche verdict, a stranger-friendly message and a sales role split.
+- [Forecast narrative writer](https://useaiblocks.com/skills/forecast-narrative-writer): Ask for your forecast. Get a commit, best case and pipeline story: what is closing, at risk and changed.
+- [Franchise and reseller terms writer](https://useaiblocks.com/skills/partner-deal-terms-writer): Paste your offer and the partner's profit sum. Get a one-page term sheet for people who run your business: duties, fees, exits.
+- [Freight carrier manager](https://useaiblocks.com/skills/freight-carrier-manager): Describe your shipping lanes and carriers. Get a bid plan, rate talking points and a carrier scorecard.
+- [Grant and bid response writer](https://useaiblocks.com/skills/grant-and-bid-response-writer): Say who you are. Get grants and bids worth chasing, a go or no-go call, and a draft response. Scrapes sites.
+- [Lead grader](https://useaiblocks.com/skills/lead-grader): Paste your prospects. Get each graded A, B or C by how soon they need to act, with a follow-up.
+- [Lead handoff designer](https://useaiblocks.com/skills/lead-handoff-designer): Describe your sales process. Get lead scoring, stages and handoff rules from marketing to sales.
+- [Lead owner router](https://useaiblocks.com/skills/lead-owner-router): Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note.
+- [Lead prioritizer](https://useaiblocks.com/skills/lead-prioritizer): Give it your leads. Get them scored on fit and activity and sorted into ranked tiers.
+- [Live objection responder](https://useaiblocks.com/skills/live-objection-responder): Paste what the buyer said. Get what it really means, a reply that has worked before and proof to use.
+- [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder): Name a deal. Get a why-buy case and a dated plan to signature that you can share with the customer.
+- [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner): Paste the deal and what the other side may think. Get lines to open with, questions to ask and what to hear.
+- [Negotiation prep coach](https://useaiblocks.com/skills/negotiation-prep-coach): Describe a deal or salary talk. Get an opening, calibrated questions and a fallback plan. Uses tactical empathy.
+- [Negotiation prep planner for the weaker side](https://useaiblocks.com/skills/weak-position-negotiation): Describe a talk where the other side holds more power. Get your terms, their needs and the order to move in.
+- [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer): List the doubts buyers raise. Get an answer sheet that agrees where true, restates each doubt as a yes-question and brings proof.
+- [Opponent favour request writer](https://useaiblocks.com/skills/opponent-favour-request-writer): Name someone who works against you. Get a small, flattering favour to ask for, the note to write and the thank-you.
+- [Other person's view mapper](https://useaiblocks.com/skills/other-person-view-mapper): Describe the person and the matter. Get their side only: what they want, why they act so and how they save face.
+- [Outbound sales team planner](https://useaiblocks.com/skills/outbound-sales-team-planner): Describe your sales. Get roles, a lead flow and a repeatable outreach process for outbound B2B sales.
+- [Paid-work case writer](https://useaiblocks.com/skills/paid-work-case-writer): Describe work people expect free. Get a short case for charging, a fair price model and a reply to 'it spreads anyway'.
+- [Partner deal evaluator](https://useaiblocks.com/skills/partner-deal-evaluator): Describe a partner who approached you. Get a sign or pass call, the right tier and terms to ask for.
+- [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester): Paste your offer, fees and partner costs. Get what the partner keeps, at forecast and weaker sales, and a call.
+- [Payment reminder letter writer](https://useaiblocks.com/skills/payment-reminder-letter-writer): Paste the invoice facts and your history with the customer. Get a reminder that starts where they are and keeps their goodwill.
+- [Pick the one way to reach customers and plan it](https://useaiblocks.com/workflows/one-channel-plan): Give it your product and price. Get one sales route, a plan for it and a pitch for hires.
+- [Pipeline stage health reviewer](https://useaiblocks.com/skills/pipeline-stage-health-reviewer): Ask for a pipeline review. Get coverage, aging, conversion and at-risk deals stage by stage.
+- [Plan a hard talk so they end up agreeing](https://useaiblocks.com/workflows/hard-talk-plan): Describe the talk you dread. Get their side, a plan, easy yeses in order and lines for pushback.
+- [Plan a sales conversation from first line to close](https://useaiblocks.com/workflows/sales-call-plan): Give it your product and buyer. Get the lead argument, a ten-second opener, answers to doubts and a close.
+- [Post-sale follow-up planner](https://useaiblocks.com/skills/post-sale-follow-up-planner): Paste what you sell and a customer's details. Get a thank-you note and a plan to keep them: schedule, records, referral ask.
+- [Pre-sales proof of concept planner](https://useaiblocks.com/skills/proof-of-concept-plan): Give it a buyer request. Get a requirement gap score, a rival feature table and a trial plan.
+- [Prospect list builder](https://useaiblocks.com/skills/prospect-list-builder): Describe your ideal customer. Get a qualified list of accounts and the reason each one fits.
+- [Prospect outreach drafter](https://useaiblocks.com/skills/prospect-outreach-drafter): Name a prospect. Get a short personal email or sequence saved as a draft for you to review. You send it.
+- [Prospecting block planner](https://useaiblocks.com/skills/prospecting-block-planner): Paste your week and target list. Get a protected call block, a two-minute research batch and one reason to call each lead.
+- [QBR prep brief writer](https://useaiblocks.com/skills/qbr-prep-brief-writer): Name a customer. Get a health read with risk signs, value delivered and an agenda for the review.
+- [Quote and proposal builder](https://useaiblocks.com/skills/quote-and-proposal-builder): Give it your call notes, photos or an RFP. Get a branded, costed proposal or quote in your own template.
+- [Reach a deal both sides will back](https://useaiblocks.com/workflows/win-win-deal): Describe the deal or dispute. Get your stance, a plan to listen first, a third option and a written agreement.
+- [Reason-to-join pitch writer](https://useaiblocks.com/skills/reason-to-join-pitch-writer): Paste your company and the role. Get a pitch to the people you need that rests on mission and team, not perks.
+- [Renewal watch planner](https://useaiblocks.com/skills/renewal-watch-planner): Ask what is renewing. Get upcoming renewals with timing, risk and room to raise the price.
+- [RFP response builder](https://useaiblocks.com/skills/rfp-response-builder): Paste an RFP or security questionnaire. Get requirements sorted by must have, a fit score and draft answers.
+- [Sales agent training planner](https://useaiblocks.com/skills/sales-agent-training-planner): Describe your product and who could sell it. Get a short course, a pay and prize plan and a first-month schedule.
+- [Sales battlecard builder](https://useaiblocks.com/skills/sales-battlecard-builder): Name your rival. Get a battlecard with comparisons, reply scripts, positioning and win themes.
+- [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner): Paste what you know about the buyer. Get the order of questions that finds their problem, its cost and the fix's value.
+- [Sales collateral writer](https://useaiblocks.com/skills/sales-collateral-writer): Name the deal or buyer. Get a pitch deck outline, one-pager, objection sheet or demo script.
+- [Sales proposal writer](https://useaiblocks.com/skills/sales-proposal-writer): Give it the prospect needs. Get a proposal or RFP reply with value, price, timeline and proof.
+- [Sales route picker](https://useaiblocks.com/skills/sales-route-picker): Paste your product, price and buyer. Get customer value, cost to win and the one route to use.
+- [Sales route plan builder](https://useaiblocks.com/skills/sales-route-plan-builder): Paste your chosen sales route. Get a ninety-day plan with who sells, who to start with and the number to watch.
+- [Set up a partner deal both sides win from](https://useaiblocks.com/workflows/partner-deal-setup): Describe your offer. Get the partner's profit sum, fair terms in writing, an incentive check and supplier terms.
+- [Stalled deal indecision checker](https://useaiblocks.com/skills/stalled-deal-indecision-checker): Paste notes on a quiet deal. Get whether the buyer doubts you or fears a mistake, a firm recommendation and safety nets.
+- [Stranger first-message writer](https://useaiblocks.com/skills/stranger-first-message-writer): Paste what you offer and who you want to reach. Get a first message a stranger can read in seconds.
+- [Supplier partner terms planner](https://useaiblocks.com/skills/supplier-partner-terms-planner): Paste what you buy and your growth plan. Get terms for your suppliers, with give-backs, shared savings and no side payments.
+- [Supplier rights pitch planner](https://useaiblocks.com/skills/supplier-rights-pitch-planner): Paste the product you want to sell and the maker you want. Get a pitch to win local selling rights.
+- [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer): Paste what you sell and who you are about to meet. Get a ten-second opener and two spares, as short honest questions.
+- [Trust deposit planner](https://useaiblocks.com/skills/trust-deposit-planner): Name a relationship that matters. Get where trust stands and two small deposits to make before a hard talk.
+- [Who to call first ranker](https://useaiblocks.com/skills/who-to-call-first-ranker): Give it your new leads. Get them ranked by fit and urgency, with talking points and follow-up drafts.
+- [Win and loss pattern finder](https://useaiblocks.com/skills/win-and-loss-pattern-finder): Ask why you win and lose. Get patterns from closed deals: loss stage, common objections and deal traits.
+- [Win-win stance planner](https://useaiblocks.com/skills/win-win-stance-planner): Describe a deal or dispute. Get your likely stance, what a win is for each side, and where you walk away.
+- [Yes-ladder question writer](https://useaiblocks.com/skills/yes-ladder-question-writer): Paste your request and plan. Get four to seven questions in order, each with an honest yes, ending at your ask.

@@ -1,0 +1,18 @@
+slug: investor-type-quiz
+renamed_from: defensive-or-enterprising-investor-sorter
+name: "Defensive or enterprising investor sorter"
+summary: "Tell it your time, skill and nerve. Get sorted as a defensive or enterprising investor, with the paths to skip."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "The Intelligent Investor (revised edition, 2003)", by: "Benjamin Graham, with commentary by Jason Zweig", used: "The two kinds of investor, the idea that return follows the effort you can bring and not the risk you take, the starting base both share, and the courses that are not investing"}

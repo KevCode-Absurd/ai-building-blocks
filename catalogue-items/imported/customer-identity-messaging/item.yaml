@@ -1,0 +1,40 @@
+slug: customer-identity-messaging
+renamed_from: customer-identity-messaging-mapper
+name: "Customer identity messaging mapper"
+summary: "Give it your audience. Get a map of who they are and want to be, plus copy that reflects it."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: persona
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: angle_library
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/identity-mirror
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/identity-mirror
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: identity-mirror
+  author: MMEHDI0606
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: identity-mirror skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/identity-mirror
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: MMEHDI0606
+    url: https://github.com/MMEHDI0606
+    used: Wrote the skill; sickn33 shared it in their collection.

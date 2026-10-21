@@ -1,0 +1,23 @@
+slug: falling-market-plan
+name: "Write your plan for a falling market before it happens"
+summary: "Paste your holdings and what you paid. Get the market's mood read, each holding checked for real change, and a written plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [market-mood-reader, holding-value-change-checker, price-drop-rules-writer]
+steps:
+  - {uses: market-mood-reader, note: "A plain read of what the price is telling you and what it is not."}
+  - {uses: holding-value-change-checker, note: "A holding by holding note that separates a price scare from a real problem."}
+  - {uses: price-drop-rules-writer, note: "The written plan, ready before the fall."}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham, warren-buffett]
+credits:
+  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "The order of the steps: read what the market is offering you, check whether the business itself has changed, write your rules for price drops"}
+generated_from: intake/intelligent-investor-mr-market/skeleton.yaml

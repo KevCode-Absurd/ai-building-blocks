@@ -1,0 +1,19 @@
+slug: book-notes-system
+renamed_from: book-notes-and-margin-system-builder
+name: "Book notes and margin system builder"
+summary: "Name what you want to learn. Get a slow reading routine with margin notes, a notes file and one action per book."
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [ryan-holiday]
+credits:
+  - {title: "If You're Trying To Do This Fast, You're Doing It Wrong", by: "Ryan Holiday", used: "Reading slowly with margin marks, a single notes file, and checking a claim's source"}
+  - {title: "I'm Sorry But There's No Shortcut for This", by: "Ryan Holiday", url: "https://ryanholiday.net/im-sorry-but-theres-no-shortcut-for-this-and-thats-a-good-thing/", used: "Why depth takes time, and turning what you read into something you do"}

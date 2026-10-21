@@ -1,0 +1,222 @@
+new_slug: review-based-ad
+name: "Turn reviews into an ad strangers read"
+summary: "Give it your reviews and product facts. You get a story ad and picture plan, checked against ad rules."
+job: write-ad-copy
+
+headline: "Turn reviews into an ad strangers read"
+subhead: Give it your reviews and product facts. It finds the problem your customers describe most and why they switched, writes a 120 to 260 word story for people who have never heard of you, plans a picture that looks like a normal post, and checks both against ad rules.
+
+explain: |
+  People who don't know you aren't shopping. They scroll past anything that looks like an ad in a fraction of a second. A story ad is made to look like a normal post instead: an ordinary photo or a note, with a short story underneath that describes the reader's problem so exactly that they recognise themselves. Only near the end does it point to a way out.
+
+  This workflow builds one from your reviews. First it checks your buyers have quit other fixes before, ranks the problems they describe, and maps why they switched: the moment the old way broke, the habit that kept them stuck, the doubt about trying something new, and what pulled them across. It picks who may tell the story (a real person who agreed, or your brand summing up what customers say) and the page the click should open. Then it writes the story in your customers' own words, plans a square picture with no product in it, and checks everything against Facebook and Instagram ad rules.
+
+when:
+  - Your ads do fine with people who already know you, but strangers ignore them.
+  - Your customers had the problem for years and tried other fixes first.
+  - You want to test a long, story-led ad but don't know how to write one honestly.
+
+you_give:
+  - Your customer reviews, support emails or survey answers, copied as written
+  - Your product facts and the claims you may and may not make
+  - Who the buyer is and when the problem bites (optional)
+  - The article-style page the ad will link to, if you have one (optional)
+you_get:
+  - A setup sheet with the lead problem, why buyers switch, who narrates and where the click goes
+  - The story, 120 to 260 words, with the short line that sits under the picture
+  - A picture brief and image prompt for a square, ordinary-looking photo or note, plus a runner-up to test
+  - An ad rules check, a four-story test plan and one list of what's missing
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your reviews (the more mixed and three-star ones the better), your product facts with allowed claims, and the names of anyone who has agreed in writing to be quoted.
+  - It works step by step and saves each result. Read the setup sheet first. If it says the format doesn't fit, the run stops there and you make a direct ad instead.
+  - Before it runs, make sure the click goes to an article-style page that explains the problem first, not straight to your product page. If you don't have one, the summary at the end says so.
+
+how_it_works:
+  - title: Decides if it fits
+    text: Uses the story ad setup skill to check your buyers have quit other fixes, rank the problems by count and strength, and map why they switch.
+  - title: Writes the story
+    text: Uses the story ad writer to write 120 to 260 words in four parts (the moment, the habit, the doubt, what's different), ending on a soft step to your page.
+  - title: Plans the picture
+    text: Uses the story ad image skill to find where the story's moment leaves evidence, pick the picture for it plus a runner-up to test, and write the prompt.
+  - title: Checks the ad rules
+    text: Uses the Facebook and Instagram ad rules skill to flag health claims, lines about the reader and anything that could pass for a fake post.
+
+output_shape: |
+  FIT
+  <suits or doesn't suit, with review numbers>
+
+  WHY THEY SWITCH
+  Push: "<quote>" (<n>) | Habit: ... | Doubt: ... | Pull: ...
+  Narrator: <who> | Click goes to: <page, or MISSING>
+
+  PICTURE: <type>
+  Scene: <one line> | It makes people wonder: <one line>
+  Line under the picture: <words> (<characters>)
+
+  STORY (<word count> words, opens by <opener>)
+  <the story, 120 to 260 words>
+
+  IMAGE PROMPT
+  <from the chosen picture skill: square, phone-photo look, no product, no logo>
+  Runner-up: <a picture from a different trace, for the test>
+
+  AD RULES CHECK
+  Verdict: <ready to run / fix first / likely rejected>
+  Problems: <area, where, fix>   Set at launch: <restrictions>
+
+  TEST PLAN
+  <four stories: opening force, what the picture shows, opener>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Reviews: the 20 public reviews in reviews.md
+    Product facts: the brand file's product table and "fine to repeat"
+    claims. Never use the risky list.
+    Buyer (optional): people who have quit greens powders, pill stacks
+    and multivitamins, and want one habit that lasts.
+    People cleared to quote: none.
+    Article page: none yet.
+  output: |
+    FIT
+    Suits. Buyers dropped other fixes first: "a few green powders over
+    the years" (1), a powder they were "choking on" (4), separate
+    probiotic, B12 and multivitamin gummies (5).
+    Lead problem: quitting supplements (reviews 1 to 6). Backup: gut
+    trouble (7 to 11), told only as one buyer's story.
+
+    WHY THEY SWITCH
+    Push: "the drink was definitely gritty/chalky" (3)
+    Habit: "I've tried a few green powders over the years" (1)
+    Doubt: "They are expensive" (retailer)
+    Pull: "It's wild I WANT to take [Sprout] and don't forget." (2)
+    Narrator: the brand, summing up what customers say. Reviews 1 and 2
+    may be quoted word for word as "one customer wrote", unnamed.
+    Click goes to: MISSING, an article-style page that opens on the
+    half-used tub.
+
+    PICTURE: something the problem leaves behind
+    Scene: a half-used tub of greens powder at the back of a cupboard.
+    It makes people wonder: why is that tub still nearly full?
+    Line under the picture: The tub, week three. (20 characters, a plain
+    caption)
+
+    STORY (190 words, opens by describing the picture)
+    That tub has been at the back of the cupboard since week three. We
+    hear about tubs like it all the time.
+
+    Someone buys a greens powder meaning well. They shake it up every
+    morning for a week or two. Then they miss a day, then three, and the
+    tub slides behind the cereal.
+
+    Most people blame themselves. One customer wrote: "The issue has
+    never been nutritive content. It's always been an issue of
+    consistency like many things."
+
+    So they try again. A pricier powder that is still gritty. A shaker to
+    rinse every day. A row of separate gummies, one for each vitamin,
+    which means three things to remember instead of one.
+
+    Trying something new feels risky too. It could be the same story, or
+    cost more.
+
+    What customers tell us is different with Sprout is small. One pack a
+    day, torn open, a handful of gummy bears. Nothing to mix or wash.
+    Another customer wrote: "It's wild I WANT to take [Sprout] and don't
+    forget." 80% of surveyed users take it daily.
+
+    We put what people told us about quitting, and about sticking with
+    it, on one page.
+
+    IMAGE PROMPT
+    Square phone photo inside a kitchen cupboard, door open, flat
+    overhead room light, slightly tilted. On a worn white shelf at the
+    back, behind a cereal box and a jar of peanut butter, sits a plain
+    unbranded white tub of green powder, lid on, a light film of dust on
+    top, a plastic scoop on the lid. A clear shaker bottle lies on its
+    side next to it with a dried green ring near the bottom. Ordinary, a
+    little messy, not styled. No words, no logo, no label text, no
+    price, no person, no gummies or pouch.
+    Runner-up: a phone note listing the powders and pills tried (the
+    evidence in words), for the picture test.
+
+    AD RULES CHECK
+    Verdict: Fix first. Main reason: a supplement ad needs 18+ targeting.
+    - Commercial practices, "80% of surveyed users": keep "of surveyed
+      users" and name the brand survey on the page.
+    - Endorsements, both quotes: they are real reviews. Get written
+      consent before paid use, or cut them and let the brand sum up.
+    Passed: health claims (none made), personal attributes (no line
+    says what the reader has), fake posts (no real app or person is
+    copied), third-party marks (the tub and the cereal are unbranded).
+    Could not check: the landing page, because it doesn't exist yet.
+
+    TEST PLAN
+    1 opens on the push: the half-used tub, the scene in the picture
+    2 opens on the habit: a row of gummy bottles, a count ("three bottles")
+    3 opens on the doubt: the shaker to clean, a real quote
+    4 opens on the pull: the morning pack, a real quote
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-04.
+    MISSING: the article-style page (build it before the ad runs);
+    written consent to quote reviews 1 and 2; target age and countries;
+    what rivals already say (the aim was assumed).
+
+tweaks:
+  - what: The problem to lead with
+    how: Name a different problem from the ranked list and you get a new story and a new picture. Test one problem at a time.
+  - what: Who tells it
+    how: Say who has agreed in writing to be quoted. A real customer can tell their own story; without one, the founder speaks, or the brand sums up what customers say.
+  - what: Picture type
+    how: Ask for a specific type (a note, a message thread, a candid photo). It checks the type can be made honestly from the story and switches if not, saying why.
+  - what: Length
+    how: Ask for the short end (about 120 words) for a first test, or the long end when your buyers have tried many fixes and have a lot to recognise.
+
+judge:
+  - The story's first line picks up what the picture makes people wonder.
+  - The story uses phrases your customers actually wrote, word for word, and no quote is made up.
+  - The story is 120 to 260 words, with no price, discount or product page link.
+  - The picture has no product, logo or price, and could pass for something a person posted.
+  - Nothing says "you have" a condition, and no made-up person speaks as a real customer.
+  - The run ends with a summary that lists every file and every MISSING line in one place.
+
+test:
+  - Check the problem step 1 picks against your reviews. It should be one many customers describe, in their words.
+  - Mark every phrase in the story that came from a review and find it in the review. None should be made up.
+  - Show the picture plan and the story's first line to someone outside the business. Ask if it looks like an ad. If they say yes, ask for a different picture type.
+  - Run step 2 twice with the same setup sheet. The problem and the narrator should stay the same; only the story's wording should change.
+
+improve:
+  - In the builder, add a step before step 1 that turns your reviews into ranked buying reasons, so the setup starts from counted evidence.
+  - Add a step after the story that writes the article-style page the ad lands on. A story ad that lands on a product page wastes the click.
+  - Drop step 1 once you've settled the problem and the narrator, and give step 2 your saved setup sheet.
+  - "Tune step 2's skill: add your banned claims to its file (for Sprout: never \"fix\", and no energy or immunity results), and the customer phrases you want it to reach for first."
+  - "Tune step 3's skill: list the picture types you can make honestly (a note, a message thread, a candid photo) and drop the ones you can't, so it never plans a picture you can't make."
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps every review number and quote straight across four steps and a long story."}
+    - {name: "Nano Banana", why: "Draws words in a picture accurately, which a note or message picture needs."}
+    - {name: "Meta Ads Manager", why: "Sets the 18+ age and countries the rules check asks for, and previews the ad in the feed."}
+  inputs:
+    - "Three-star reviews and cancel reasons, so the doubt part uses real words"
+    - "Written consent from any customer you want to quote, so the story can use their words in a paid ad"
+    - "A list of the ads your rivals run on this problem, so the aim isn't guessed"
+    - "Photos of real places your buyers use the product, so the picture can be shot instead of made"
+
+terms:
+  - term: Story ad
+    meaning: An ad made to look like a normal post, with an ordinary picture and a short story underneath.
+  - term: Article-style page
+    meaning: A page that reads like an article explaining the problem, and reaches your product near the end.
+  - term: Narrator
+    meaning: Who the story is told by. It must be a real person who agreed, or your brand clearly summing up what customers say.

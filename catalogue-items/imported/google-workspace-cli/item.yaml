@@ -1,0 +1,33 @@
+slug: google-workspace-cli
+renamed_from: google-workspace-command-line-operator
+name: "Google Workspace command-line operator"
+summary: "Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you."
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: tool_connection
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/google-workspace-cli/skills/google-workspace-cli
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/google-workspace-cli/skills/google-workspace-cli
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: google-workspace-cli
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: google-workspace-cli skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/google-workspace-cli/skills/google-workspace-cli
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

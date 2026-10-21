@@ -8,7 +8,7 @@ description: Use when too few people respond to your offer or the cost to win a 
 There are three ways to open a sale: sell the main offer at full price, give a first step away, or sell a piece at a deep discount. Each suits different facts. This skill scores the three on yours and picks one. It is a method for choosing a first step, not a promise of results.
 
 Use [Free sample offer planner](https://useaiblocks.com/skills/free-sample-offer-planner) instead when you have already chosen a free first step for a physical product and need the offer built.
-Use [Information-led lead offer planner](https://useaiblocks.com/skills/information-led-lead-offer-planner) instead when you have chosen to lead with useful information and need the offer and reply step built.
+Use [Information-led lead offer planner](https://useaiblocks.com/skills/lead-offer-planner) instead when you have chosen to lead with useful information and need the offer and reply step built.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -64,7 +64,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
 - **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
 - **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-interview-planner). It takes the plan.
+- **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

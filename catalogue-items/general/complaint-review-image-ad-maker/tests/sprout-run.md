@@ -75,7 +75,7 @@ I can't draw pictures in this chat unless an image tool is connected, so this wo
 - MISSING: original wording behind "[Sprout]". The brackets suggest the text was edited, so the word-for-word match can't be confirmed.
 
 ## Use this picture instead
-- **First choice: `tried-before-products-image-ad-maker`.** Your story opens on "$94 a month for a greens powder," so a picture of the products they used before fits that first line directly.
+- **First choice: `tried-before-image-ad`.** Your story opens on "$94 a month for a greens powder," so a picture of the products they used before fits that first line directly.
 - **Second choice: `problem-moment-image-ad-maker`.** Use it if you'd rather show the moment of the problem than the old products.
 
 ## What kind of review to watch for
@@ -86,5 +86,5 @@ Look for grumbles that only happen because Sprout works:
 
 Check return-reason notes, post-purchase emails and marketplace questions as well as star reviews. Record the stars, date, source, name and ad-use permission for each one.
 
-Want to switch to the [Tried-before products image ad maker](https://useaiblocks.com/skills/tried-before-products-image-ad-maker) for this story, or something else of your own?
+Want to switch to the [Tried-before products image ad maker](https://useaiblocks.com/skills/tried-before-image-ad) for this story, or something else of your own?
 ```

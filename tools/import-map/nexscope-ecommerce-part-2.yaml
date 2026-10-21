@@ -263,6 +263,7 @@
   outputs: [ { type: plan } ]
   author: Nexscope AI
   author_url: https://github.com/nexscope-ai/eCommerce-Skills
+  slug: tiktok-shop-expansion
 "nexscope-ai/eCommerce-Skills:tiktok-shop-customer-service":
   skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
 "nexscope-ai/eCommerce-Skills:tiktok-shop-fulfillment":

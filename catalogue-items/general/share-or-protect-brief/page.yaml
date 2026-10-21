@@ -1,0 +1,121 @@
+new_slug: share-or-protect-brief
+name: "Share or protect decision brief writer"
+summary: "Describe something you made. Get a one-page choice between keeping it, licensing it or giving it away, with who gains and pays."
+job: think-and-decide
+thinking: medium
+thinking_why: "It weighs two sides and writes a clear brief, but the steps are fixed."
+
+headline: "Share or protect decision brief writer"
+subhead: Describe something you made, such as a method, a tool, a dataset or a design. It shows who gains if you share it fully and who gains if you protect it, and checks what the protection money would fund. You get a one-page brief with a decision and what you will share.
+
+explain: |
+  When you make something useful, you must choose: keep it to yourself, license it for a fee, or give it away. Each has costs. Giving it away can help a whole field, but leaves you with no income to keep working. Protecting it can fund the next piece of work, but slows everyone else down.
+
+  This skill names what you made and who could use it. It lists who gains if you publish it fully and who gains if you protect it. It checks what further work would need money that only protecting it can bring in, and weighs the effect on your field or market. It then states the decision in one sentence and lists exactly what you will publish and what you will share on request.
+
+when:
+  - You have built a method, template, tool or dataset others could use.
+  - A partner or advisor is pushing you to lock something down, or to open it up.
+  - You need a clear page to share with your team before you decide.
+
+you_give:
+  - What you made and what it does
+  - Who could use it, and who might copy it
+  - What your next piece of work would cost and how you fund it
+you_get:
+  - A table of who gains and who pays under each option
+  - The funding need, named and not skipped
+  - A one-sentence decision with its reason
+  - A list of what will be shared openly and what only on request
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you made and how you earn your living from this work.
+  - Say what the next stage of work needs and how it would be paid for.
+  - Read both options and correct any gains or costs it got wrong.
+  - Share the one-page brief with the people who must agree.
+
+how_it_works:
+  - title: Names the work and its users
+    text: States what you made and who could use it.
+  - title: Lists gains from sharing
+    text: Lists who gains if you publish it fully.
+  - title: Lists gains from protecting
+    text: Lists who gains if you protect it, including you.
+  - title: Checks the funding need
+    text: Asks what more work needs money that only protecting it can buy.
+  - title: Weighs the field
+    text: Looks at the effect on the field or market you work in.
+  - title: States the decision
+    text: Writes the decision and its reason in one sentence.
+  - title: Lists what is shared
+    text: Says what you will publish and what you will answer on request.
+
+output_shape: |
+  WHAT YOU MADE
+  <description> | Who could use it: <list>
+
+  IF YOU SHARE IT FULLY
+  Gains: <who and what>  Costs: <who and what>
+
+  IF YOU PROTECT IT
+  Gains: <who and what>  Costs: <who and what>
+
+  FUNDING NEED
+  <next work> costs <amount> | Can open sharing pay for it? <yes/no/partly>
+
+  EFFECT ON YOUR FIELD OR MARKET
+  <line>
+
+  THE DECISION
+  <one sentence with the reason>
+
+  WHAT YOU WILL SHARE
+  Published openly: <list>  On request only: <list>  Not shared: <list>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How you earn a living
+    how: Say if this work pays your bills. It changes how much the funding need weighs.
+  - what: Who could copy it
+    how: Name real rivals or types of copier. Risks are tied to them.
+  - what: A middle path
+    how: Mention options such as licence terms, delayed release or free for non-commercial use.
+  - what: Who must agree
+    how: Name partners or backers who have a say. The brief addresses their concerns.
+
+judge:
+  - Both options are shown with who gains.
+  - The reason fits in one sentence.
+  - The funding need is named, not skipped.
+  - The brief says exactly what will be shared.
+  - Costs are listed for both options, not only the one not chosen.
+
+test:
+  - Run it on something you already shared or protected, and see if the brief matches what you found.
+  - Show the brief to a partner and ask if their gains and costs are fairly stated.
+  - Check the funding need against your real budget.
+  - Reread the decision sentence aloud. If it needs two sentences, the reason is not clear yet.
+
+improve:
+  - Add the usual licence types in your field to the options.
+  - Add your funding sources so the need is measured against real income.
+  - Keep each brief with the work, and review it when the funding changes.
+  - Pair it with "Ruin risk stress tester" if the decision could put your income at risk.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing options and writing a brief is text work any strong chat AI handles with this skill."}
+    - {name: "A lawyer or licensing adviser", why: "This brief is not legal advice. For patents, licences or contracts, take it to someone qualified."}
+  inputs:
+    - "The cost and timeline of the next stage of work"
+    - "Any existing licence, contract or funder terms that limit what you can share"
+
+terms:
+  - term: Licensing
+    meaning: Letting others use your work under agreed terms, often for a fee.

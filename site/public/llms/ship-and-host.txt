@@ -1,0 +1,60 @@
+# Ship and host your app: AI Blocks
+
+> 56 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [App update health checker](https://useaiblocks.com/skills/app-update-health-checker): Name your Expo app. Get crash rates, installs and update sizes for each published update.
+- [AWS architecture designer](https://useaiblocks.com/skills/aws-architecture-designer): Describe your app. Get an AWS design with serverless parts, setup templates and cost cuts.
+- [Azure architecture designer](https://useaiblocks.com/skills/azure-architecture-designer): Describe your app. Get an Azure design with setup templates, a pipeline and cost cuts.
+- [Build and release pipeline setter](https://useaiblocks.com/skills/ci-cd-pipeline-setup): Describe your project. Get a CI/CD pipeline that builds, tests and ships across environments.
+- [Build pipeline setter](https://useaiblocks.com/skills/build-pipeline-setter): Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users.
+- [Build pipeline writer](https://useaiblocks.com/skills/build-pipeline-writer): Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages.
+- [Changelog entry writer](https://useaiblocks.com/skills/changelog-entry-writer): Give it a commit range or pull request. Get a clean changelog entry grouped into added, changed and fixed.
+- [Cloud bill waste finder](https://useaiblocks.com/skills/cloud-bill-waste-finder): Point it at your AWS account. Get idle and unused resources listed, with the savings for each fix.
+- [Cloud GPU job runner](https://useaiblocks.com/skills/cloud-gpu-job-runner): Give it your Python code. Get it running on rented GPUs, or live as a web API, with no server to manage.
+- [Cloud monitoring setter](https://useaiblocks.com/skills/cloud-monitoring-setter): Name your app and cloud. Get metrics, logs, traces and alerts set up to see health in real time.
+- [Cloud setup coder](https://useaiblocks.com/skills/cloud-setup-coder): Describe the cloud setup you need. Get Terraform, Pulumi or CloudFormation code that builds it the same way every time.
+- [Cloudflare publisher](https://useaiblocks.com/skills/cloudflare-publisher): Point it at your project. Get it live on Cloudflare, with the link to open.
+- [Commit and pull request sender](https://useaiblocks.com/skills/commit-and-pull-request-sender): Say the word. Get your changes committed, pushed and opened as a GitHub pull request in one go.
+- [Database backup setter](https://useaiblocks.com/skills/database-backup-setter): Name your database. Get full, incremental and point-in-time backups set up and tested.
+- [Deploy verifier](https://useaiblocks.com/skills/deploy-verifier): Run it before you deploy. Get silent failure modes checked, then proof that the live version is the new one.
+- [Docker Compose setter](https://useaiblocks.com/skills/docker-compose-setter): Describe your app services. Get a Docker Compose setup with networks, volumes and settings.
+- [Docker setup builder](https://useaiblocks.com/skills/docker-setup-builder): Point it at your app. Get a lean, safe Dockerfile and compose file that run your project.
+- [Domain and DNS planner](https://useaiblocks.com/skills/domain-and-dns-planner): List your domains and sites. Get a DNS layout, redirect rules and a plan for unused names.
+- [Error budget planner](https://useaiblocks.com/skills/error-budget-planner): Name your service. Get service level targets, error budgets and alert rules that match what users feel.
+- [Expo build workflow writer](https://useaiblocks.com/skills/expo-build-workflow-writer): Say how you want your app built and released. Get a working EAS workflow file that does it.
+- [Feature flag planner](https://useaiblocks.com/skills/feature-flag-planner): Say what you ship. Get flags with rollout steps, kill switches and a plan to remove them later.
+- [Google Cloud architect](https://useaiblocks.com/skills/google-cloud-architect): Describe your app. Get a Google Cloud design with services, cost estimate and deploy steps.
+- [Helm chart builder](https://useaiblocks.com/skills/helm-chart-builder): Describe your service. Get a Helm chart for Kubernetes with sensible values, checks and safe defaults.
+- [Kubernetes deployer](https://useaiblocks.com/skills/kubernetes-deployer): Give it your app. Get manifests, Helm charts and autoscaling so it runs on Kubernetes.
+- [Launch checklist runner](https://useaiblocks.com/skills/launch-checklist-runner): Say what you are releasing. Get a pre-launch checklist, a staged rollout and a rollback plan.
+- [MATLAB code sharer](https://useaiblocks.com/skills/matlab-code-sharer): Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive, plus an Open in MATLAB Online link.
+- [MCP server publisher](https://useaiblocks.com/skills/mcp-server-publisher): Point it at your MCP server. Get it hosted, scaled and packaged so others can install it.
+- [Microcontroller code deployer](https://useaiblocks.com/skills/microcontroller-code-deployer): Give it MATLAB code and a chip. Get embedded code set up and tested on that hardware.
+- [Mobile app release shipper](https://useaiblocks.com/skills/mobile-app-release-shipper): Point it at your Expo app. Get iOS and Android builds made and sent to the app stores.
+- [Model launch engineer](https://useaiblocks.com/skills/model-launch-engineer): Give it a trained model. Get it running as a live service with an API and container.
+- [Monitoring planner](https://useaiblocks.com/skills/monitoring-planner): Describe your service. Get metrics, logs, traces, alerts and service targets that tell you when it hurts.
+- [Monitoring system planner](https://useaiblocks.com/skills/monitoring-system-planner): Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts that you can build step by step.
+- [Netlify publisher](https://useaiblocks.com/skills/netlify-publisher): Point it at your site. Get it live on Netlify as a preview or production deploy, with the link.
+- [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader): Give it an outage. Get severity, a timeline, roles and a blame-free review once it is fixed.
+- [Page speed gate builder](https://useaiblocks.com/skills/page-speed-gate-builder): Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
+- [Pre-push repo cleaner](https://useaiblocks.com/skills/pre-push-repo-cleaner): Point it at your project. Get junk files, dead code and leaked secrets found and fixed before you publish.
+- [Production stability reviewer](https://useaiblocks.com/skills/production-stability-reviewer): Give it a service. Get weak spots found and fixes like timeouts, retries and circuit breakers, so outages stay small.
+- [Release preparer](https://useaiblocks.com/skills/release-preparer): Point it at your project. Get the version bumped, a changelog written and a tagged release ready to publish.
+- [Release proof checker](https://useaiblocks.com/skills/release-proof-checker): Point it at a deployed service. Get fresh proof across code, CI, database and live routes before you call it ready.
+- [Release readiness reviewer](https://useaiblocks.com/skills/release-readiness-reviewer): Point it at a release. Get a read-only report of real deploy risks: migrations, config, order and rollback.
+- [Reliability target setter](https://useaiblocks.com/skills/reliability-target-setter): Name your service. Get service level targets, error budgets and alerts to track them.
+- [Render publisher](https://useaiblocks.com/skills/render-publisher): Point it at your project. Get it deployed on Render, with a setup file and the link.
+- [Runbook writer](https://useaiblocks.com/skills/runbook-writer): Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
+- [Safe release planner](https://useaiblocks.com/skills/safe-release-planner): Describe your release. Get a deploy plan with checks, rollback steps and how to know it worked.
+- [Service target planner](https://useaiblocks.com/skills/service-target-planner): Describe your service. Get service level targets, error budgets and alert rules that fit.
+- [Ship readiness gate](https://useaiblocks.com/skills/ship-readiness-gate): Before you release. Get a go or no-go from set checks, with the blockers listed.
+- [Site go-live runbook writer](https://useaiblocks.com/skills/site-go-live-runbook-writer): Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
+- [Terraform best-practice guide](https://useaiblocks.com/skills/terraform-best-practice-guide): Describe the cloud setup you need. Get Terraform or OpenTofu code with tested modules and CI steps.
+- [Terraform setup builder](https://useaiblocks.com/skills/terraform-setup-builder): Describe your cloud. Get Terraform modules with safe state, security checks and clean structure.
+- [Toolbox packager](https://useaiblocks.com/skills/toolbox-packager): Give it MATLAB code. Get a published toolbox file, built in checked stages from scope to release.
+- [Uptime and alert setup planner](https://useaiblocks.com/skills/uptime-and-alert-setup-planner): Describe your site. Get uptime checks, error tracking, targets, alert rules and an on-call plan that avoids alert fatigue.
+- [Vercel cost and speed auditor](https://useaiblocks.com/skills/vercel-cost-and-speed-auditor): Point it at a Vercel app. Get cost and speed problems found from real production metrics, with fixes.
+- [Vercel deployer](https://useaiblocks.com/skills/vercel-deployer): Say "deploy my app". Get it live on Vercel and a link you can share.
+- [Vercel publisher](https://useaiblocks.com/skills/vercel-publisher): Say "deploy my app". Get it live on Vercel as a preview or production site, with the link.
+- [Version and changelog automator](https://useaiblocks.com/skills/version-and-changelog-automator): Point it at your repo. Get release numbers and a changelog worked out from your commits.
+- [Zero-downtime migration planner](https://useaiblocks.com/skills/zero-downtime-migration-planner): Name what you are moving. Get a zero-downtime plan with checks and a rollback for each step.

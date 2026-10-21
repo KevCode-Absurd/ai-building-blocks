@@ -1,0 +1,162 @@
+new_slug: phone-style-video-ad
+name: "Get a phone-style video ad from idea to cut list"
+summary: "Give it your product and buyer. Get a creator script, a filming brief, and after filming a timed cut list."
+job: make-video-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+
+headline: "Get a phone-style video ad from idea to timed cut list"
+subhead: Give it your product, your reviews and who the ad is for. It writes a script a creator can say naturally, checks it line by line, turns it into a filming brief, and after the footage comes back, plans the edit.
+
+explain: |
+  A video that looks filmed on a phone sells because the person sounds real. It fails when the script reads like an ad, or when the creator gets a vague brief and films the wrong things. This workflow fixes both ends. The script is written to be spoken, and the brief tells the creator what to film, in what order, with a must-have list and a maybe list.
+
+  It runs in two parts with a pause in the middle. First the angle, script, line check, read-aloud edit and filming brief, all before anyone picks up a phone. Then, when the footage is back, the edit planner sorts the clips by job, opens on a clean first frame, times the captions and sets the exports.
+
+when:
+  - You will have a creator or a customer film the ad on a phone.
+  - Your last creator videos came back unusable or off message.
+  - You want the edit planned from the footage, not guessed.
+
+you_give:
+  - Your product facts and who the ad is for
+  - Your customer reviews and your brand file
+  - Later, the footage the creator sends back
+you_get:
+  - A brief that says who the ad is for and what it argues
+  - A phone-style script with picture notes, a shot list and two other openings
+  - A line-by-line check with a fix for each weak line
+  - A filming brief the creator can follow
+  - After filming, a timed cut list with captions, sound and exports
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your product facts, your reviews, your brand file, and a line on who the ad is for.
+  - Send the filming brief to your creator. When the footage comes back, give it to the same run for the last step.
+  - Check the script and the line fixes before you send anything to the creator.
+
+how_it_works:
+  - title: Picks the buyer and the angle
+    text: Uses the angle planner to pick one level and stage of buyer knowledge and write the brief that fixes the doubt and the argument.
+  - title: Writes the phone-style script
+    text: Uses the phone-style script skill to settle who speaks, write the spine and five beats, and make it sound spoken.
+  - title: Checks every line
+    text: Uses the line checker to label each line by beat, run the checks and fix the weak lines.
+  - title: Fixes lines nobody would say
+    text: Uses the read-aloud editor to say every line at delivery speed and fix the ones that sound written.
+  - title: Writes the filming brief
+    text: Uses the filming brief skill to give the creator the idea, the run order and a must-have and maybe list.
+  - title: Waits for the footage
+    text: You send the brief and collect the clips.
+  - title: Plans the edit
+    text: Uses the edit planner to sort the footage by job, open on a clean first frame, time the captions and set the exports.
+
+output_shape: |
+  BRIEF: <buyer, doubt, the one argument>
+
+  SCRIPT (<seconds>, <spoken words>)
+  Spine: <one line>
+  <beat 1 to 5, each with spoken words, picture note and on-screen text>
+  Other openings: <two>
+
+  LINE CHECK: <weak lines, quoted, with the check code and a fix>
+  READ-ALOUD FIXES: <lines changed, why>   FINAL SCRIPT: <whole script>
+
+  FILMING BRIEF
+  The idea: <two or three sentences>
+  Run order: <shots in order>   Must: <list>   Maybe: <list>
+
+  (pause for the footage)
+
+  CUT LIST
+  <timed cuts, caption windows, sound plan, exports>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Product facts: the product table and the claims list
+    Reviews: the 20 reviews in reviews.md
+    Brand file: sprout/brand-brain/
+    Who it is for: someone who quit a greens powder over the grit
+  output: |
+    BRIEF: the powder quitter, Warm. Doubt: will it work the same.
+    Argument: one small pack does the job of the powder with nothing
+    to mix.
+
+    SCRIPT (30 seconds, 74 spoken words)
+    Spine: I quit the shaker, kept the greens.
+    Beat 1: "My shaker has been in the sink since March." (picture: the
+    sink, a dried green ring)
+    Beat 3: "This is the whole thing. Tear. Eat. Done."
+    Other openings: "Okay, confession about my greens powder."
+
+    LINE CHECK: beat 4 "ensure optimal digestive wellness" (V3).
+    Fix: "it has 6 g of fiber in a pack."
+
+    FILMING BRIEF
+    The idea: a woman at her kitchen counter tells the camera why she
+    stopped using powder.
+    Run order: sink, counter, tear the pack, eat, talk to camera.
+    Must: the torn pack in close-up. Maybe: a walk to the door.
+
+    (pause for the footage)
+
+    CUT LIST: 0:00 to 0:03 sink clip; 0:03 to 0:09 talk to camera;
+    captions on for every spoken line; export 9:16 and 4:5.
+    (cut for length: beats 2 to 5 and the sound plan)
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-06. MISSING: the footage, so the cut
+    list is a plan, not timed to real clips.
+
+tweaks:
+  - what: Length
+    how: Ask for 15, 30 or 45 seconds. The beats and the spoken word count change with it.
+  - what: Who speaks
+    how: Say whether the creator is a customer, a founder or an actor. The script and the filming brief change with it.
+  - what: Number of openings
+    how: Ask for more than two other openings if you plan to test several first seconds.
+  - what: Skip the pause
+    how: If you already have footage, give it with the script and run only the last step.
+
+judge:
+  - Every spoken line passes the read-aloud test, with no phrase nobody would say.
+  - Each claim in the script appears in your product facts.
+  - The filming brief lists the shots in order, with a must-have list.
+  - The cut list opens on a clean first frame and keeps the product in view.
+  - The run ends with a summary that lists every file and every MISSING line in one place.
+
+test:
+  - Read the script aloud once. Note any line you stumble on, and see if the checker caught it.
+  - Give the filming brief to someone who has not seen the script. Could they film it?
+  - Check each claim in the script against your product facts.
+  - Run the last step on real footage and check the cut times against the clips.
+
+improve:
+  - Save the angle brief in your brand file so later runs start from step 2.
+  - Add a step after the cut list that checks the finished video against Meta's ad rules.
+  - Tune the script skill with your usual phrases and the words you never use.
+  - Pair it with a skill that reads your ad results, so each new video tests a different angle.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps the script, the fixes and the filming brief consistent in one run."}
+    - {name: "CapCut", why: "Takes the cut list and caption windows straight into an edit."}
+  inputs:
+    - "Your reviews, so the script uses the words buyers use"
+    - "Two or three phone videos you like, so the creator sees the feel"
+    - "Raw clips, not edited ones, for the last step"
+
+terms:
+  - term: Phone-style video
+    meaning: A video that looks filmed on a phone by one person talking to the camera.
+  - term: Cut list
+    meaning: A timed list of which clip plays when, with captions and sound.
+  - term: Beat
+    meaning: One short part of the script that does one job, such as the opening or the proof.

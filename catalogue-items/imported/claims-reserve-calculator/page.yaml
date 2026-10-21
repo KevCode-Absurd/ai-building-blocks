@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It models claims that have not yet been reported.
+new_slug: claims-reserve-calculator
+name: Insurance claims reserve calculator
+summary: Give it claims history. Get loss reserves, IBNR estimates and loss and combined ratios.
+job: money-and-investing
+headline: Insurance claims reserve calculator
+subhead: Give it claims history. Get loss reserves, IBNR estimates and loss and combined ratios.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your files.

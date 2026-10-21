@@ -1,0 +1,33 @@
+slug: small-model-distillation
+renamed_from: small-model-trainer-from-a-big-one
+name: "Small model trainer from a big one"
+summary: "Name your large model. Get a plan and code to teach a smaller, cheaper model to match it."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 19-emerging-techniques/knowledge-distillation
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/knowledge-distillation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: knowledge-distillation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: knowledge-distillation skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/knowledge-distillation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

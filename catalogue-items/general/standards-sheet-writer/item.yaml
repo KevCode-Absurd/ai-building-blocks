@@ -1,0 +1,21 @@
+slug: standards-sheet-writer
+renamed_from: repeatable-standards-sheet-writer
+name: "Repeatable standards sheet writer"
+summary: "Describe your product or service. Get a one-page sheet of checkable standards so it feels the same every time."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [ray-kroc]
+credits:
+  - {title: "Grinding It Out: The Making of McDonald's", by: "Ray Kroc with Robert Anderson", used: "Quality, service, cleanliness and value as the four things to hold the same; one clear job per person; training to a written standard"}
+  - {title: "Ray Kroc, sourced quotations", by: "Ray Kroc", used: "Cross-checked what he said about sameness, basics and owner-operators"}
+  - {title: "Ray Kroc, biography", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ray_Kroc", used: "Dates and the shape of the franchise model"}

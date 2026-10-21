@@ -100,7 +100,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.
 - No reviews given: ask once for them. A made-up or reworded review would be dishonest, so with none, treat it as no review passing.
-- No review passes: don't use this picture. Use `tried-before-products-image-ad-maker` or `problem-moment-image-ad-maker`.
+- No review passes: don't use this picture. Use `tried-before-image-ad` or `problem-moment-image-ad-maker`.
 - No ad-use permission recorded: show no name, and flag "real review: check permission before it runs".
 - Stars not captured: write `MISSING: stars` and leave them off the card. Never guess them.
 

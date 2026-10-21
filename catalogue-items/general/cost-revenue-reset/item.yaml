@@ -1,0 +1,21 @@
+slug: cost-revenue-reset
+renamed_from: cost-versus-revenue-reset-planner
+name: "Cost versus revenue reset planner"
+summary: "Paste last year's costs and revenue. Get one clear reset decision, who is affected and a staff note that owns the mistake."
+category: general
+type: skill
+role: make
+job: strategy
+level: expert
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [daniel-ek, ratan-tata]
+credits:
+  - {title: "An update on January 2023 organizational changes (note to staff)", by: "Daniel Ek, Spotify", used: "Putting cost growth next to revenue growth, owning that spending ran ahead of revenue, and the order of a staff note: decision, context, own part, what changes, support"}
+  - {title: "An update on December 2023 organizational changes (note to staff)", by: "Daniel Ek, Spotify", used: "Choosing one larger move over smaller cuts spread out, keeping the goal large, and spelling out support for people leaving"}

@@ -79,6 +79,7 @@
   inputs: [ { type: spreadsheet, required: true } ]
   outputs: [ { type: spreadsheet } ]
   needs: run code and read your files
+  slug: india-financial-model-filler
 
 "nighomni123/fsi-skills-india:src/financial-analysis/skills/audit-xls":
   name: Spreadsheet formula auditor
@@ -113,6 +114,7 @@
   thinking_why: "It compares peers and pulls out a view."
   inputs: [ { type: question, required: true } ]
   outputs: [ { type: slide_deck } ]
+  slug: competitor-landscape-deck
 
 "nighomni123/fsi-skills-india:src/financial-analysis/skills/comps-analysis":
   name: Peer multiples table builder
@@ -266,6 +268,7 @@
   thinking_why: "It must explain causes from the underlying activity."
   inputs: [ { type: spreadsheet, required: true } ]
   outputs: [ { type: document } ]
+  slug: variance-commentary
 
 "nighomni123/fsi-skills-india:src/investment-banking/skills/buyer-list":
   name: Likely buyers list builder
@@ -340,6 +343,7 @@
   inputs: [ { type: question, required: true } ]
   outputs: [ { type: slide_deck } ]
   needs: search the web and make slides
+  slug: company-profile-slide
 
 "nighomni123/fsi-skills-india:src/investment-banking/skills/teaser":
   name: Anonymous company teaser writer
@@ -398,6 +402,7 @@
   inputs: [ { type: question, required: true } ]
   outputs: [ { type: document } ]
   needs: run code and reach the web
+  slug: rates-economy-dashboard
 
 "nighomni123/fsi-skills-india:src/market-data/lseg/option-vol-analysis":
   skip: "Calls option volatility rich or cheap for positioning, which is trading advice."
@@ -426,6 +431,7 @@
   outputs: [ { type: web_page } ]
   needs: run code and reach the web
   scrapes: true
+  slug: india-earnings-preview
 
 "nighomni123/fsi-skills-india:src/market-data/spglobal/funding-digest":
   skip: "Covers only US Form D private placements, so it does not help for India."
@@ -442,6 +448,7 @@
   outputs: [ { type: document } ]
   needs: run code and reach the web
   scrapes: true
+  slug: company-tear-sheet
 
 "nighomni123/fsi-skills-india:src/operations/skills/kyc-doc-parse":
   name: Onboarding document reader
@@ -515,6 +522,7 @@
   thinking_why: "It organises many findings into a formal memo."
   inputs: [ { type: source_text, required: true }, { type: brief, required: true } ]
   outputs: [ { type: document } ]
+  slug: investment-committee-memo
 
 "nighomni123/fsi-skills-india:src/private-equity/skills/portfolio-monitoring":
   name: Portfolio company tracker
@@ -548,6 +556,7 @@
   thinking_why: "It calculates standard measures and reads them."
   inputs: [ { type: spreadsheet, required: true } ]
   outputs: [ { type: audit_report } ]
+  slug: subscription-unit-economics
 
 "nighomni123/fsi-skills-india:src/private-equity/skills/value-creation-plan":
   name: Value creation plan builder

@@ -28,6 +28,7 @@
     - from: commercial-legal/skills/cold-start-interview
       to: setup-interview
       link: /commercial-legal:cold-start-interview
+  slug: saas-terms-check
 "anthropics/claude-for-legal:commercial-legal/skills/stakeholder-summary":
   name: Contract plain-words summary writer
   summary: "Give it a reviewed contract. Get a two-minute summary of what to know before signing. A first check, not legal advice."
@@ -42,6 +43,7 @@
     - from: commercial-legal/skills/cold-start-interview
       to: setup-interview
       link: /commercial-legal:cold-start-interview
+  slug: contract-plain-summary
 "anthropics/claude-for-legal:ai-governance-legal/skills/aia-generation":
   name: AI impact assessment writer
   summary: "Describe an AI use at work. Get risks, rules that apply and conditions to meet. Not legal advice."
@@ -146,6 +148,7 @@
     - from: corporate-legal/skills/cold-start-interview
       to: setup-interview
       link: /corporate-legal:cold-start-interview
+  slug: contract-review-grid
 "anthropics/claude-for-legal:corporate-legal/skills/written-consent":
   name: Board written consent drafter
   summary: "Describe the decision your directors must approve. Get a written consent to sign instead of a meeting. Have a lawyer check it."
@@ -189,6 +192,7 @@
     - from: employment-legal/skills/cold-start-interview
       to: setup-interview
       link: /employment-legal:cold-start-interview
+  slug: offer-letter-check
 "anthropics/claude-for-legal:employment-legal/skills/internal-investigation":
   name: Workplace investigation guide
   summary: "Describe a workplace complaint. Get a plan, evidence log and draft memo. Not legal advice."

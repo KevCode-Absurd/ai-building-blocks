@@ -1,0 +1,21 @@
+slug: customer-interview-request
+renamed_from: customer-conversation-request-writer
+name: "Customer conversation request writer"
+summary: "Say who you want to talk to. Get a warm intro note, a cold message and an opening line."
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: shortlist, required: false}
+outputs:
+  - {type: copy_draft}
+uses: [first-customer-group-picker]
+origin: rebuilt
+version: 1.0.0
+minds: [rob-fitzpatrick, steve-blank, paul-graham, dale-carnegie]
+credits:
+  - {title: "The Mom Test: how to talk to customers and learn if your business is a good idea when everybody is lying to you", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", used: "Keeping it casual, finding conversations, the five-part way to ask for and frame a meeting, warm and cold routes, and going in as if looking for advisors"}
+  - {title: "EP 231: The Mom Test with Rob Fitzpatrick", by: "Aidan McCullen, The Innovation Show", url: "https://theinnovationshow.io/episode/ep-231-the-mom-test-with-rob-fitzpatrick/", used: "Using informal moments for unguarded conversations without tricking or selling to people"}

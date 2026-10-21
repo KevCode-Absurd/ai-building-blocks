@@ -7,7 +7,7 @@ description: Use when buyers fear paying and not getting the result, or your ref
 
 Risk is the biggest brake on buying. A guarantee moves it from the buyer to you. This skill designs one you can afford, runs the refund sums on your numbers and gives it a name. It is a method for offer design. It is not legal advice, and some fields restrict what a guarantee may promise.
 
-Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder-that-answers-buyer-doubts) instead when the doubt may not be about risk, and you want the whole offer built around it (result, time, effort or price as well as a guarantee).
+Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder) instead when the doubt may not be about risk, and you want the whole offer built around it (result, time, effort or price as well as a guarantee).
 Use [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer) instead when you already have a guarantee and want it reviewed against a checklist, not designed.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->

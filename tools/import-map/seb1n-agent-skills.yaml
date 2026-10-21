@@ -136,6 +136,7 @@
   needs: run code and read your project files
   author: Burhan Sebin
   author_url: https://github.com/seb1n
+  slug: ml-pipeline-builder
 "seb1n/awesome-ai-agent-skills:ai-ml-operations/model-deployment":
   name: Model launch engineer
   summary: "Give it a trained model. Get it running as a live service with an API and container."
@@ -653,6 +654,7 @@
   needs: run code and read your project files
   author: Burhan Sebin
   author_url: https://github.com/seb1n
+  slug: ci-cd-pipeline-setup
 "seb1n/awesome-ai-agent-skills:devops-and-infrastructure/cloud-monitoring":
   name: Cloud monitoring setter
   summary: "Name your app and cloud. Get metrics, logs, traces and alerts set up to see health in real time."
@@ -803,6 +805,7 @@
   outputs: [ { type: audit_report, required: true } ]
   author: Burhan Sebin
   author_url: https://github.com/seb1n
+  slug: compliance-checklist
 "seb1n/awesome-ai-agent-skills:legal-and-compliance/contract-review":
   name: Contract risk reviewer
   summary: "Give it a contract. Get key clauses, duties and risks rated by severity. Not legal advice."

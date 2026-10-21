@@ -7,7 +7,7 @@ description: Use when you have a press release or one-page product description a
 
 The questions show what the release hides. Ask them on paper, while a gap costs an hour to fix. For the memo that follows, use "Six-page narrative memo writer".
 
-Use [Unanswered customer question finder](https://useaiblocks.com/skills/unanswered-customer-question-finder) instead when you have a live page and real customer questions, and want to see which the page leaves unanswered.
+Use [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder) instead when you have a live page and real customer questions, and want to see which the page leaves unanswered.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

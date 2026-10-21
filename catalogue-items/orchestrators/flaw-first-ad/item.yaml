@@ -1,0 +1,27 @@
+slug: flaw-first-ad
+name: "Write a flaw-first ad from the drive behind the sale"
+summary: "Paste your product facts and buyer words. Get a brief on why people buy, a flaw-first ad and fresh wording."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: hooks}
+  - {type: ad_copy}
+uses: [buyer-instinct-brief-writer, flaw-first-ad-writer, fresh-line-rewriter]
+steps:
+  - {uses: buyer-instinct-brief-writer, note: "A brief naming the drive behind buying and the feeling the ad must leave"}
+  - {uses: flaw-first-ad-writer, note: "An ad that states the flaw first and makes it a reason to buy. Reads the brief from the step before"}
+  - {uses: fresh-line-rewriter, note: "Fresh ways to say the same true claim, with a swap test. Reads the ad copy from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [bill-bernbach, joseph-sugarman]
+credits:
+  - {title: "Facts Are Not Enough", by: "Bill Bernbach", used: "The order of the steps: buyer instinct brief writer, flaw-first ad writer, fresh line rewriter"}
+generated_from: intake/facts-are-not-enough/skeleton.yaml

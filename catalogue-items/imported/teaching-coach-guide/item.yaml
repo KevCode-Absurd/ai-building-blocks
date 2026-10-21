@@ -1,0 +1,33 @@
+slug: teaching-coach-guide
+renamed_from: teaching-coach-conversation-guide
+name: "Teaching coach conversation guide"
+summary: "Give it a teaching focus. Get questions, a conversation flow and follow-up actions for a coaching session."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/professional-learning/instructional-coaching-conversation-guide
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/instructional-coaching-conversation-guide
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: instructional-coaching-conversation-guide
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: instructional-coaching-conversation-guide skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/instructional-coaching-conversation-guide
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

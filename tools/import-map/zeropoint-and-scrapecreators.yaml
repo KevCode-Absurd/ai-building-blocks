@@ -6,8 +6,8 @@
   level: beginner
   thinking: low
   thinking_why: "It runs searches and lists the results."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: shortlist}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: shortlist } ]
   needs: "run code and use your TranscriptAPI key"
   paid: "TranscriptAPI"
   scrapes: true
@@ -20,8 +20,8 @@
   level: beginner
   thinking: low
   thinking_why: "It fetches public lists and shows them."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: shortlist}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: shortlist } ]
   needs: "run code and use your TranscriptAPI key"
   paid: "TranscriptAPI"
   scrapes: true
@@ -34,8 +34,8 @@
   level: beginner
   thinking: low
   thinking_why: "It pulls a list and fetches text for each item."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: transcript}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: transcript } ]
   needs: "run code and use your TranscriptAPI key"
   paid: "TranscriptAPI"
   scrapes: true
@@ -75,8 +75,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It gathers ads, then reads the pattern in them."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: ad_breakdowns}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: ad_breakdowns } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true
@@ -89,8 +89,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It weighs public signals to judge fit."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true
@@ -103,8 +103,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It reads many comments and groups the themes."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: voc_reviews}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: voc_reviews } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true
@@ -117,11 +117,12 @@
   level: intermediate
   thinking: medium
   thinking_why: "It compares accounts and draws a plan from the gaps."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true
+  slug: competitor-social-research
 
 "ScrapeCreators/social-media-research-skills:skills/creator-profile-teardown":
   name: Creator profile teardown writer
@@ -131,8 +132,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It samples posts, then reads what drives them."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true
@@ -145,8 +146,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It sets a baseline, then explains the winners."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: reference_set}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: reference_set } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true
@@ -159,8 +160,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It gathers posts, then judges how strong demand is."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: voc_reviews}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: voc_reviews } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true
@@ -173,8 +174,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It collects mentions and sorts them into themes."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true
@@ -187,8 +188,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It reads long transcripts and pulls out the key parts."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: transcript}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: transcript } ]
   needs: "run code and use your ScrapeCreators key"
   paid: "ScrapeCreators"
   scrapes: true

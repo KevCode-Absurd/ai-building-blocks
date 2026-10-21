@@ -1,0 +1,27 @@
+slug: selling-claim-demo
+name: "Find the one claim that sells and show it working"
+summary: "Give it your product and rivals. Get one tested selling claim, a demonstration that proves it and a check for distractions."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+uses: [product-differentiation-checker, selling-proposition-finder, usp-claim-checker, claim-demonstration-planner, ad-distraction-checker]
+steps:
+  - {uses: product-differentiation-checker, note: "A verdict on whether the product has a difference a buyer can notice, or needs work first."}
+  - {uses: selling-proposition-finder, note: "Three to five claims, one sentence each, from the three roads, with the weak ones struck out."}
+  - {uses: usp-claim-checker, note: "A pass or fail on the three tests for the top claim, with fixes."}
+  - {uses: claim-demonstration-planner, note: "A short script where each spoken line has a picture that shows the same thing."}
+  - {uses: ad-distraction-checker, note: "A count of how many people played back the claim, what stole the rest, and what to cut."}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves, claude-hopkins]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves", used: "The order of the steps: check you have something real to say, draft the candidate claims, test the best claim, plan the demonstration, check nothing steals attention from the claim"}
+generated_from: intake/reality-ads-find-your-one-claim/skeleton.yaml

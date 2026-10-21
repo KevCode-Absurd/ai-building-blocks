@@ -1,0 +1,25 @@
+slug: review-based-ad
+name: Get an ad strangers read, built from reviews
+summary: "A 120 to 260 word story ad that reads like a normal post, with its picture plan and an ad rules check."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: ads
+level: advanced
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: audit_report}
+uses: [story-ad-test-planner, story-image-ad-writer, image-style-picker-for-story-ads, meta-ads-compliance-checker]
+steps:
+  - {uses: story-ad-test-planner, note: "Check the buyers have quit other fixes, rank the problems by count and strength, and map push, habit, doubt and pull for the lead problem with review numbers. Pick a narrator who is real or the brand summing up, name the page the click opens, and plan four test stories. If it doesn't suit, stop here and recommend a direct ad."}
+  - {uses: story-image-ad-writer, note: "Use the setup sheet from step 1: its lead problem, push quote, narrator and page. Write a 120 to 260 word story in four parts (push, habit, doubt, pull) whose first 125 characters pick up the picture, plus the line under the picture and a starter image prompt. No price, discount or product page link. If step 1 stopped, say so and write nothing."}
+  - {uses: image-style-picker-for-story-ads, note: "Find where the story's moment leaves evidence, pick the picture skill for it plus a runner-up from a different trace, and hand on that skill's brief with its image prompt: square, phone-photo look, no product, no logo. Keep step 2's line under the picture unless it breaks a rule, and say why if it changes. If step 1 stopped, say so and write nothing."}
+  - {uses: meta-ads-compliance-checker, note: "Check the story, the line under the picture and the picture brief against Facebook and Instagram ad rules, pointing to exact lines. State target countries only if the brand file gives them; otherwise write MISSING. Then close the run with a HAND-BACK SUMMARY: each step's file, any step not run and why, and every MISSING: line from all steps in one list."}
+origin: own
+version: 1.1.0

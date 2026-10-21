@@ -1,0 +1,21 @@
+slug: outcome-based-roadmap
+renamed_from: feature-roadmap-to-outcomes-rewriter
+name: "Feature roadmap to outcomes rewriter"
+summary: "Paste your list of features and dates. Get a short list of problems to solve, each with a result to measure."
+category: general
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: audit_report, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [marty-cagan]
+credits:
+  - {title: "Product vs. Feature Teams, study notes", by: "Marty Cagan, SVPG", used: "Turning a ranked list of features with dates into problems to solve with results to measure, and who owns each risk"}
+  - {title: "The Four Big Risks, summary", by: "Marty Cagan, SVPG", used: "Value and viability ownership for each problem"}

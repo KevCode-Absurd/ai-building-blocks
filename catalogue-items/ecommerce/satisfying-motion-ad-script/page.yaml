@@ -1,0 +1,190 @@
+new_slug: satisfying-motion-ad-script
+name: "Satisfying motion video ad script writer"
+summary: "Paste how your product is used. Get a satisfying-motion opening, a demo script and a cast note."
+job: make-video-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
+
+headline: "Satisfying motion video ad script writer"
+subhead: Give it your product photo, how it's used and one fact you can prove. It picks one real motion with a clear finish, such as a fill, click or peel. You get a wordless opening, a short demo script and a cast note for the video stages.
+
+explain: |
+  People stop for a motion they can see coming to an end: a seal peeling off in one piece, a glass filling to its line, a lid clicking shut. Writers on these clips put it down to the "just right" feeling of things being finished and in order. Most attempts fall flat. The product spins on a turntable, nothing actually finishes, or the shot is slowed and splashed until it looks fake.
+
+  This skill starts from what using your product ends with, and sorts it into one of five finishes: level, fit, release, smooth or order. The opening shows that one motion at real speed, already under way, in the buyer's own room, with no face and no talking, and the finish lands in the last third. Then a plain narrated demo ties what they just watched to the buyer, shows one action, says one approved fact and ends on your offer. A cast note makes the product the avatar, so the video skills can build its sheets and storyboard.
+
+when:
+  - Your product makes a motion worth watching when it's used (it pours, peels, clicks or fits).
+  - You need an opening for people who already know they want something like this.
+  - You want an ad with no presenter and no face to film.
+
+you_give:
+  - A photo of your product and pack (attach it; your AI can see pictures), and how it's used, step by step
+  - The motions and sounds it makes, if you know them
+  - How much the buyer knows, the one fact to prove and the length
+  - Your approved claims and your offer
+  - The buyer's own words and where they use it (optional)
+you_get:
+  - The fit, what's in focus and the finish, in three lines
+  - A wordless opening with its overlay and an exact visual note
+  - Demo lines with spoken words, on-screen text and visual notes
+  - A cast note that makes the product the avatar for the video stages
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste how your product is used, step by step, and how it opens.
+  - Add the one fact you want to prove and your offer in real terms.
+  - Say the length, for example "15 seconds".
+  - Check the opening's visual note. It should name the motion already under way and what "done" looks like.
+  - Film it for real with the shot list skill. For AI video, the storyboard skill builds the product sheet and storyboard, then the shot list skill makes the clips.
+
+how_it_works:
+  - title: Checks it fits
+    text: Needs a motion a camera can see. If using the product is nothing to look at, it says so and points you to the old way instead.
+  - title: Picks what's in focus
+    text: The product out of its pack first, then what it's made of, then the old way it replaces.
+  - title: Picks the finish
+    text: Level, fit, release, smooth or order, chosen from what using your product ends with. Anything the facts don't describe is marked inferred.
+  - title: Keeps it physical
+    text: Real weight, real speed and plain verbs, with the real product opened where it actually opens, in the buyer's own room.
+  - title: Writes the opening
+    text: One shot of 4 to 6 seconds, no speech, no cut, the finish in the last third, and an overlay of one to four words.
+  - title: Writes the demo
+    text: A line that ties the motion to the buyer, then start, action and end, one approved fact said once, and the offer.
+  - title: Writes the cast note
+    text: Makes the product the avatar, names the place and light, and hands the script on to the video skills.
+
+output_shape: |
+  FIT  <why it works for this product and buyer>
+  IN FOCUS  <product out of pack, material, or the old way>
+  FINISH  <level, fit, release, smooth or order>: <the motion>
+
+  OPENING (<4 to 6 s>, one shot, no speech)
+  Overlay: "<1 to 4 words>"
+  Visual note: <object>, <motion part done>, <what done looks like>,
+  <place>, <sound at the finish>, <last frame>
+
+  DEMO
+  Line | Spoken | On-screen | Visual note
+  2 | "<what they saw, what it means for them>" | - | ...
+  ... | "<one approved fact>" | <same> | ...
+  Close | "<offer, 2 to 4 word call to action>" | <same> | ...
+
+  CAST NOTE  <the product as avatar, any hand, place and light, and why>
+
+  Inferred: <motions or sounds not in the facts>
+  MISSING: <..>
+
+  CHECKS MISSED: <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Product: Sprout daily greens gummies. A pouch of 28 daily packs.
+    Use: tear one daily pack straight across the top, tip the small
+    handful into your palm or a bowl. "Rip. Tip. Enjoy."
+    Gummies: small opaque deep-green bears, soft matte, about
+    thumbnail height. Big pouch: glossy deep green, opens only at its
+    resealable top.
+    Brand photos: bright, sunny, adults at home pouring gummies into
+    a hand.
+    Buyer: knows Sprout already. Length: 15 seconds.
+    Fact to prove: "60+ ingredients, 21 vitamins & minerals, and 6g
+    fiber" in 1 pack.
+    Also true: no water, no mixing, no shaker.
+    Offer: $29.99 first order with text sign-up, renews at $49.99
+    every 4 weeks.
+  output: |
+    FIT  A real motion you can watch (tip and pour). The buyer knows
+         the product. Fits.
+    IN FOCUS  The product out of its pack: the gummies.
+    FINISH  Level: the gummies tip out of the torn top into a palm
+            until the last one lands. (How they bounce and the sound:
+            inferred.)
+
+    OPENING (5 s, one shot, no speech)
+    Overlay: "Wait for it"
+    Visual note: one Sprout daily pack, already torn straight across
+    its top and tipping, held over a cupped palm at a sunny kitchen
+    counter. The small deep-green bears slide out in a run and settle
+    in the palm; the last one drops with a soft tap. Last frame: a
+    small handful still in the palm, the empty pack in the other
+    hand, the pouch upright behind them, in focus.
+
+    DEMO
+    Line | Spoken | On-screen | Visual note
+    2 | "One pack, straight into your hand." | - | Same palm, same
+        counter, from above
+    3 | "No water, no mixing, no shaker to wash." | - | The hand closes
+        over the gummies; the counter beside it is bare
+    4 | "One pack has 60-plus ingredients, 21 vitamins and minerals,
+        and 6 grams of fiber." | 60+ ingredients. 21 vitamins &
+        minerals. 6g fiber | The pouch close, front on
+    Close | "First order $29.99 with text sign-up. Start your first
+        pack." | $29.99 first order with text sign-up. Renews at
+        $49.99 every 4 weeks. Start your first pack | Pouch and an
+        empty pack on the counter, still
+
+    CAST NOTE  The product carries it: the gummies out of a daily pack,
+    one adult hand cropped at the wrist, a sunny kitchen counter. The
+    buyer knows Sprout, so the product itself is the draw. Next: the
+    storyboard skill builds the product and set sheets, then the shot
+    list skill makes the clips.
+
+    Inferred: the soft tap and the way the bears settle (not in the
+    facts). The tear is shown already done, along the top, the only
+    way the brand allows.
+    MISSING: what a single daily pack looks like (colour, printing),
+    needed before the opening can be filmed or made.
+
+    CHECKS MISSED: none
+
+tweaks:
+  - what: What's in focus
+    how: For people who know the problem but not you, ask to put the old way in focus (a tub and a shaker) instead of the product.
+  - what: The finish
+    how: Name the kind you want (level, fit, release, smooth or order). A product with two motions can give you two openings to test, one each.
+  - what: Real shoot or AI video
+    how: Say which. A real shoot goes to the shot list skill for the camera list. AI video goes to the storyboard skill first, with the product as the avatar.
+  - what: Length
+    how: 15 seconds gives the opening plus two or three lines. 30 seconds gives five or six, with start, action and end in separate shots.
+
+judge:
+  - The opening shows one motion, already under way, with a finish you can see coming.
+  - Nobody speaks in the opening and there's no cut.
+  - The overlay is four words or fewer and says nothing about price or results.
+  - The fact said is one of your approved claims, said once.
+  - The product opens exactly where it opens in real life.
+
+test:
+  - Check the motion against how your product is opened and used. For Sprout, the pack should tear straight across the top, nowhere else.
+  - Run it on a product where using it is nothing to look at. It should tell you the format doesn't fit.
+  - Read the opening on its own. One motion, already under way, no speech, no cut, and an overlay of four words or fewer.
+  - Ask for two openings with different finishes and run both in front of the same demo, as separate ads.
+
+improve:
+  - Write your product's real motions into "What you need" in the skill file (how it opens, pours or clicks), so step 3 never has to mark one inferred.
+  - Add your never-show rules to step 4, for example where the pack opens and where it never does.
+  - Paste your approved claims into "What you need", so the one fact is always one you can back.
+  - Pair it with the skill that makes wordless openings, to test more openings in front of the same demo.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing the opening and demo to these rules works well in any strong chat AI."}
+    - {name: "Veo", why: "Makes 4 to 8 second clips with matching sound, and can aim at an end frame you give it."}
+    - {name: "Nano Banana", why: "Makes the product sheet and start frames from your photos, so the pack looks right before any clip."}
+  inputs:
+    - "A phone video of the product being opened and used in real time, so the motion and its sound are true, not inferred"
+    - "A close photo of the product out of its pack, so its colour and texture in the opening are right"
+    - "The brand's rule for where the pack opens and where it never does, so nothing is shown torn the wrong way"
+    - "A photo of the old way it replaces, in case the opening should start there"
+
+terms:
+  - term: Overlay
+    meaning: Short text on screen over the video, added in editing.
+  - term: Finish
+    meaning: The end of the motion that the eye waits for, such as a fill reaching its line or a lid clicking shut.
+  - term: Inferred
+    meaning: A motion or sound the skill guessed from how the product is used, for you to confirm.

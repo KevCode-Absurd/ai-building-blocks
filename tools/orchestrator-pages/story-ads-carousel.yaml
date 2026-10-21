@@ -1,0 +1,130 @@
+new_slug: story-ads-carousel
+name: "Get story ads and a carousel from your buyer's problem"
+summary: "Give it customer reviews and product facts. Get a problem story, a card-by-card carousel and a story image ad."
+job: write-ad-copy
+
+headline: "Story ads that start with your buyer's problem and bring the product in last"
+subhead: Give it customer reviews and product facts. It writes a brief on your buyer, lists the selling points in buying order, then writes a long problem story, a carousel card by card and a story image ad.
+
+explain: |
+  A buyer who has never heard of you will not read an ad that opens on your product. They will read one that opens on their own bad week. Story ads work because the reader sees themselves first and meets the product only after the problem is clear.
+
+  This workflow starts with a short brief on one buyer, taken from your reviews. It lists your selling points in the order this buyer asks about them and flags the claims that need proof. Then it writes a long problem story with the product arriving last, splits the same story into carousel cards, each with a picture, words and headline, and ends with a story ad for one image, with a picture plan and two tests.
+
+when:
+  - Your ads open on features and strangers don't stop to read them.
+  - You have a lot of customer stories in your reviews and want to use them.
+  - You want one buyer's story told as a long post, a carousel and a single image ad.
+
+you_give:
+  - Customer reviews, copied as written
+  - Your product facts, such as price, ingredients or materials, and how it is used
+  - Your brand file, if you have one (optional)
+
+you_get:
+  - A short brief on one buyer and the moment they started looking
+  - Selling points in buying order, with the claims that need proof flagged
+  - A long problem story, with the product arriving last
+  - A carousel, card by card, each with picture, words and headline
+  - A story image ad with a picture plan, two other openings and two tests
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Paste real reviews, including the ones that tell a story, and your product facts.
+  - It works step by step and saves each result. Read the buyer brief first, then the story. If the story doesn't sound like your buyers, change the brief and run again.
+  - Hand the carousel and image plan to whoever makes your pictures.
+
+how_it_works:
+  - title: Writes the buyer brief
+    text: Uses the buyer brief skill to find the moment people started looking and the one thing the story must move.
+  - title: Lists the selling points
+    text: Uses the selling points skill to order your facts as this buyer asks about them and flag claims that need proof.
+  - title: Writes the problem story
+    text: Uses the problem story skill to set the scene, map the fall, write the turn and bring the product in last.
+  - title: Splits it into a carousel
+    text: Uses the carousel skill to give each card one idea, a picture and a headline, with the first card able to stand alone.
+  - title: Writes the story image ad
+    text: Uses the story image ad skill to write one story for a single picture, with a picture plan and two tests.
+
+output_shape: |
+  BUYER BRIEF
+  Moment: <what happened right before they looked> | Stops them: <fear or habit>
+
+  SELLING POINTS (in buying order)
+  1 <point> (<fact>) | Needs proof: <claim, or none>
+
+  PROBLEM STORY
+  Scene: <opening> ... Low point: <moment> ... Turn: <the change> ... Product: <arrives last>
+
+  CAROUSEL
+  Card 1: <picture> | <words> | <headline>
+  ...
+  Main text: <text>
+
+  STORY IMAGE AD
+  Picture: <what it shows and what it makes people wonder>
+  Story: <text> | Other openings: <two> | Tests: <two>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+    Reviews: reviews.md (22 reviews)
+    Product facts: Sprout greens gummies, 21 vitamins and minerals, first box $29.99.
+  output: |
+    BUYER BRIEF
+    Moment: the third tub of greens powder went stale | Stops them: habit
+    
+    PROBLEM STORY
+    Scene: a shaker bottle at the back of the cupboard ... Low point: the powder is clumped again ... Turn: a friend hands over a torn pack ... Product: named in the last two lines.
+    
+    CAROUSEL (card 1)
+    Picture: a full shaker, untouched | Words: "Day 9. Still full." | Headline: The tub you never finish
+    
+    MISSING: grams of sugar per pack
+
+tweaks:
+  - what: Number of cards
+    how: Say how many cards you want. Fewer cards means a tighter story, more cards means a slower build.
+  - what: Who tells it
+    how: Say whether the story is told by a customer, an observer or the founder. The story step then keeps to what that speaker could know.
+  - what: How much of the product shows
+    how: Say "product only in the last card" or "product on card 3". The default is last, for strangers.
+  - what: One review to build on
+    how: Paste the one review you like best. The story step then builds on that moment first.
+
+judge:
+  - The first card or line names the buyer's moment, not the product.
+  - Every fact in the story is in your product facts or reviews. Check three.
+  - The product appears only after the problem is clear.
+  - Each carousel card carries one idea and a headline.
+  - The run ends with every MISSING line in one list.
+
+test:
+  - Show card 1 on its own to someone who hasn't seen your product. They should be able to say who it is for.
+  - Pick three facts in the story and find them in your product facts.
+  - Run the story image ad against the carousel with the same budget for a week and keep the one that holds attention longer.
+
+improve:
+  - In the builder, drop step 2 if you already have a list of selling points in buying order.
+  - Add a step at the end that writes the first lines for each card.
+  - Save the buyer brief in your brand file, so later runs can start from step 2.
+  - Pair it with the workflow that turns reviews into image ads, so the story and the pictures share a buyer.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps one buyer's story consistent across a post, a carousel and an image ad in one run."}
+  inputs:
+    - "Reviews that tell a story, with what happened before and after"
+    - "Real product photos, so the picture plan can name the ones to use"
+    - "The ad format you plan to run, with its picture sizes"
+
+terms:
+  - term: Carousel
+    meaning: An ad made of several cards you swipe through.
+  - term: Problem story
+    meaning: A story that starts with the buyer's trouble and brings the product in only after it.

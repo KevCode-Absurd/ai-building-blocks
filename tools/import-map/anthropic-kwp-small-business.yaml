@@ -130,6 +130,7 @@
   outputs: [ { type: spreadsheet } ]
   needs: "read your accounts and files"
   bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+  slug: purchase-order-reorder
 
 "anthropics/knowledge-work-plugins:small-business/skills/invoice-chase":
   name: Unpaid invoice chaser
@@ -182,6 +183,7 @@
   outputs: [ { type: audit_report }, { type: document } ]
   needs: "read your accounts and files"
   bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+  slug: books-reconciliation-pl
 
 "anthropics/knowledge-work-plugins:small-business/skills/outreach-composer":
   name: Own-voice outreach writer
@@ -262,6 +264,7 @@
   needs: "read your accounts and files"
   scrapes: true
   bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+  slug: ai-search-visibility-audit
 
 "anthropics/knowledge-work-plugins:small-business/skills/social-content-engine":
   name: Standing social calendar maker

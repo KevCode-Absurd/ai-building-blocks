@@ -56,6 +56,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: org-structure-map
 "tuanductran/hr-skills:skills/hr-organizational-development":
   skip: "Broad change and culture overview; the useful parts are covered by org design."
 "tuanductran/hr-skills:skills/hr-passive-candidate-engagement":
@@ -270,6 +271,7 @@
   outputs: [ { type: document, required: true } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: pay-benefits-package
 "tuanductran/hr-skills:skills/hr-training-development":
   name: "Training program builder"
   summary: "Give it a skills gap. Get a learning plan, a training outline and coaching steps."
@@ -310,6 +312,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Tuan Duc Tran
   author_url: https://github.com/tuanductran
+  slug: employee-wellbeing-program
 "tuanductran/hr-skills:skills/hr-workforce-capability":
   skip: "Capability heat maps and academies for large firms; an overview."
 "tuanductran/hr-skills:skills/hr-workforce-economics":

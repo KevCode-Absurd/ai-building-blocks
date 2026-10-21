@@ -46,6 +46,7 @@
   inputs: [ { type: document, required: true } ]
   outputs: [ { type: plan } ]
   needs: run code
+  slug: proof-of-concept-plan
 
 "alirezarezvani/claude-skills:business-growth/skills/business-growth-skills":
   skip: "Only an index that points to four other skills in this repo."
@@ -76,6 +77,7 @@
   outputs: [ { type: document } ]
   author: claude-code-skills
   author_url: https://github.com/alirezarezvani/claude-code-skills
+  slug: change-announcement
 
 "alirezarezvani/claude-skills:business-operations/skills/knowledge-ops":
   name: SOP and runbook checker
@@ -192,6 +194,7 @@
   thinking_why: "It has to find which assumptions carry the plan."
   inputs: [ { type: plan, required: true } ]
   outputs: [ { type: audit_report } ]
+  slug: assumption-stress-test
 
 "alirezarezvani/claude-skills:c-level-advisor/skills/board-deck-builder":
   name: Board deck builder
@@ -236,6 +239,7 @@
   thinking_why: "It turns workshop answers into set outputs."
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: document } ]
+  slug: company-values-culture
 
 "alirezarezvani/claude-skills:c-level-advisor/skills/intl-expansion":
   name: New country expansion planner
@@ -258,6 +262,7 @@
   thinking_why: "Deals have many risks to weigh, so it needs deep reasoning."
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: plan } ]
+  slug: acquisition-due-diligence
 
 "alirezarezvani/claude-skills:c-level-advisor/skills/org-health-diagnostic":
   name: Company health scorer
@@ -740,6 +745,7 @@
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: tool_connection } ]
   needs: run commands on your computer
+  slug: google-workspace-cli
 
 "alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/generate":
   name: Browser test writer
@@ -821,8 +827,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It sets up the browser list, runs tests and reads failures."
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: test_report}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
   needs: "run code and use a BrowserStack tool you set up yourself"
   paid: "BrowserStack"
 
@@ -834,8 +840,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It maps cases to tests, then reports results back."
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: test_report}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
   needs: "run code and use a TestRail tool you set up yourself"
   paid: "TestRail"
 

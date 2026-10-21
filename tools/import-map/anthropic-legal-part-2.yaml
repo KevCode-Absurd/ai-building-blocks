@@ -90,6 +90,7 @@
     - from: litigation-legal/skills/cold-start-interview
       to: setup-interview
       link: /litigation-legal:cold-start-interview
+  slug: legal-hold-notice
 "anthropics/claude-for-legal:privacy-legal/skills/dpa-review":
   name: Data processing agreement reviewer
   summary: "Give it a data processing agreement. Get each term checked, with edits to ask for. First check, not legal advice."
@@ -105,6 +106,7 @@
     - from: privacy-legal/skills/cold-start-interview
       to: setup-interview
       link: /privacy-legal:cold-start-interview
+  slug: dpa-review
 "anthropics/claude-for-legal:privacy-legal/skills/dsar-response":
   name: Data request reply drafter
   summary: "Paste a request for someone's data. Get steps to find it and a draft reply. First check, not legal advice."

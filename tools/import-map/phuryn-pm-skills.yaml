@@ -263,6 +263,7 @@
   thinking_why: "It must link outcomes, needs and ideas in a clear order."
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: plan } ]
+  slug: opportunity-solution-tree
 "phuryn/pm-skills:pm-product-discovery/skills/prioritize-assumptions":
   name: Assumption test ranker
   summary: "Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one."

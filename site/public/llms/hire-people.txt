@@ -1,0 +1,90 @@
+# Hire and look after your people: AI Blocks
+
+> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner): Tell it the role and team. Get a 30, 60 and 90 day plan that gets a new person productive.
+- [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder): Give it the job and the resumes. Get a ranked shortlist scored only on the job needs, with replies drafted.
+- [Attendance policy writer](https://useaiblocks.com/skills/attendance-policy-writer): Give it your shifts and country. Get clear lateness, overtime and absence rules to review. Not legal advice.
+- [Candidate experience improver](https://useaiblocks.com/skills/candidate-experience-improver): Describe your hiring steps. Get a map of what candidates go through, where they struggle and messages for each stage.
+- [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter): Say where the candidate is in your process. Get a clear email, rejection or update draft for you to send.
+- [Candidate outreach drafter](https://useaiblocks.com/skills/candidate-outreach-drafter): Describe the role and the person you want. Get personal first messages and follow-ups to send yourself.
+- [Candidate sourcing planner](https://useaiblocks.com/skills/candidate-sourcing-planner): Give it a role and candidate profile. Get the best places to look, target companies and a week-by-week plan.
+- [Career ladder and growth plan writer](https://useaiblocks.com/skills/career-ladder-plan): Name a job family. Get career levels, growth plans and a manager guide for career talks.
+- [Company policy explainer](https://useaiblocks.com/skills/company-policy-explainer): Ask about leave, travel or expenses. Get the rule in plain words from your handbook. Check with HR for big decisions.
+- [Contractor program setup guide](https://useaiblocks.com/skills/contractor-program-setup-guide): Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice.
+- [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker): Name the AI tool using staff data. Get a privacy review, a shorter data list and a notice. Not legal advice.
+- [Employee experience map builder](https://useaiblocks.com/skills/employee-experience-map-builder): Pick a stage, like first week or exit. Get a map of key moments, pain points and fixes.
+- [Employee or contractor checker](https://useaiblocks.com/skills/employee-or-contractor-checker): Describe how someone will work for you. Get employee or contractor risks flagged. Not legal advice.
+- [Employee survey designer](https://useaiblocks.com/skills/employee-survey-designer): Say what you want to learn. Get survey questions, a focus group guide, a result reading and an action plan.
+- [Employee wellbeing program planner](https://useaiblocks.com/skills/employee-wellbeing-program): Give it your team's needs. Get a wellbeing plan, a manager guide and return-to-work steps. Not medical advice.
+- [Exit interview and grievance guide](https://useaiblocks.com/skills/exit-interview-guide): Describe the case. Get a fair step-by-step way to handle it, plus exit interview questions. Not legal advice.
+- [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer): Paste interview notes or transcripts. Get candidates compared on evidence, with bias checks. You make the hiring call.
+- [Handbook change checker](https://useaiblocks.com/skills/handbook-change-checker): Give it a proposed handbook change. Get what it affects elsewhere, including state differences. A first check, not legal advice.
+- [Headcount and turnover reporter](https://useaiblocks.com/skills/headcount-and-turnover-reporter): Give it your people data. Get headcount, turnover and team health reports. Use your own data only.
+- [Headcount business case builder](https://useaiblocks.com/skills/headcount-business-case-builder): Give it a role you want to add. Get its yearly cost, a hire or contract comparison and a case to present.
+- [Headcount forecast builder](https://useaiblocks.com/skills/headcount-forecast-builder): Give it past headcount and goals. Get a forecast of hires and exits with a clear method and a range of error.
+- [Headcount plan builder](https://useaiblocks.com/skills/headcount-plan-builder): Share your growth goals. Get a role-by-role hiring plan, a priority order and a monthly report for leaders.
+- [Headcount scenario planner](https://useaiblocks.com/skills/headcount-scenario-planner): Give it your hiring plan. Get base, best and worst cases with costs and signs it is time to switch plans.
+- [Hiring interview designer](https://useaiblocks.com/skills/hiring-interview-designer): Name the role. Get an interview plan with questions, scoring guides and a way to compare candidates.
+- [Hiring market researcher](https://useaiblocks.com/skills/hiring-market-researcher): Name a role and place. Get pay ranges, talent supply and hiring difficulty. Reads public web pages.
+- [Hiring packet builder](https://useaiblocks.com/skills/hiring-packet-builder): Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template.
+- [Hiring progress reporter](https://useaiblocks.com/skills/hiring-progress-reporter): Paste your pipeline numbers. Get a clear update or chart page for the hiring manager or your leaders.
+- [Hiring quality reviewer](https://useaiblocks.com/skills/hiring-quality-reviewer): Give it a finished search. Get surveys, a look back at what worked and a start-day checklist for the new hire.
+- [Hiring search brief writer](https://useaiblocks.com/skills/hiring-search-brief-writer): Give it a role and what the hiring manager wants. Get a search plan with channels, timeline and risks.
+- [HR AI tool vendor checker](https://useaiblocks.com/skills/hr-ai-tool-vendor-checker): Name the HR job and the AI tool. Get a vendor test covering accuracy, bias and a small pilot with success rules.
+- [HR AI use policy writer](https://useaiblocks.com/skills/hr-ai-use-policy-writer): Describe how you use AI in hiring. Get a use policy, a bias check and a staff notice. Not legal advice.
+- [HR compliance audit planner](https://useaiblocks.com/skills/hr-compliance-audit-planner): Pick what to audit. Get a checklist, a file sampling plan, a findings report and a fix plan. Not legal advice.
+- [HR metrics and report builder](https://useaiblocks.com/skills/hr-metrics-and-report-builder): Share your people data and questions. Get the right metrics, a dashboard layout and a leadership report that tells the story.
+- [HR policy drafter](https://useaiblocks.com/skills/hr-policy-drafter): Give it a policy topic and your country. Get a plain draft, a manager guide and a rollout plan. Not legal advice.
+- [HR process automation designer](https://useaiblocks.com/skills/hr-process-automation-designer): Name your HR processes, like onboarding. Get which to automate, which tool fits each and a build order.
+- [HR project plan builder](https://useaiblocks.com/skills/hr-project-plan-builder): Give it an HR project idea. Get a charter, timeline, risk list and status report template.
+- [HR vendor selection planner](https://useaiblocks.com/skills/hr-vendor-selection-planner): Give it a tool or service you need. Get an RFP outline, a scorecard and a contract negotiation checklist.
+- [Ideal candidate profiler](https://useaiblocks.com/skills/ideal-candidate-profiler): Give it a job description. Get a profile of who fits: their motives, where they spend time, what moves them.
+- [Inbox rules interviewer](https://useaiblocks.com/skills/inbox-rules-interviewer): Answer questions about your email. Get a saved guide to your senders, reply voice and rules for triage.
+- [Inclusive job post writer](https://useaiblocks.com/skills/inclusive-job-post-writer): Name the role. Get a clear job post with real requirements, plus a fix for biased or bloated wording.
+- [Inclusive workplace plan builder](https://useaiblocks.com/skills/inclusive-workplace-plan-builder): Describe your team. Get an inclusion plan, fair hiring steps, group ideas and measures to track.
+- [Internal job move program builder](https://useaiblocks.com/skills/internal-mobility-program): Describe your company. Get a transfer process, forms for staff and managers, and measures to track.
+- [Interview process planner](https://useaiblocks.com/skills/interview-process-planner): Name the role and level. Get the interview stages, who runs each one and what each stage checks.
+- [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder): Give it your interview stages. Get scorecards, question banks, a phone screen script and a rating guide.
+- [Job ad campaign planner](https://useaiblocks.com/skills/job-ad-campaign-planner): Give it a role and who you want to reach. Get job ad copy, a content calendar and a test plan.
+- [Job duties and level analyst](https://useaiblocks.com/skills/job-duties-and-level-analyst): Name a role. Get its duties, time split, required skills and a fair level, ready for pay and planning.
+- [Job offer planner](https://useaiblocks.com/skills/job-offer-planner): Give it the role and what the candidate wants. Get an offer package, a negotiation plan and call scripts.
+- [Job post writer](https://useaiblocks.com/skills/job-post-writer): Describe the role and your team. Get a clear job description that attracts the right people and avoids biased wording.
+- [Leadership program designer](https://useaiblocks.com/skills/leadership-program-designer): Say who you are training. Get a program, a 360 review form, a coaching guide and a succession plan.
+- [Manager quality review planner](https://useaiblocks.com/skills/manager-quality-review-planner): Give it your management team. Get skill standards, a 360 feedback form and a plan to support managers who struggle.
+- [Mentoring program builder](https://useaiblocks.com/skills/mentoring-program-builder): Say who the program is for. Get matching rules, a six-month plan and coaching talk guides for managers.
+- [New country hiring planner](https://useaiblocks.com/skills/new-country-hiring-planner): Name the country. Get an own-entity or employer-of-record choice, a local rules list and a hiring plan. Not legal advice.
+- [New hire plan builder](https://useaiblocks.com/skills/new-hire-plan-builder): Give it a name, role and start date. Get a pre-start checklist, a first week plan, and 30/60/90 day goals.
+- [Offboarding plan builder](https://useaiblocks.com/skills/offboarding-plan-builder): Give it a role and leave date. Get a checklist, exit interview questions and handover plan. Not legal advice; check local rules.
+- [Offer letter and non-compete checker](https://useaiblocks.com/skills/offer-letter-check): Give it an offer letter and work location. Get risky terms and non-compete limits flagged. Not legal advice.
+- [Offer letter drafter](https://useaiblocks.com/skills/offer-letter-drafter): Give it a role and level. Get an offer letter, pay package and talking points. Have HR or a lawyer check it.
+- [Onboarding document reader](https://useaiblocks.com/skills/onboarding-document-reader): Give it an onboarding pack. Get identity, ownership, source of funds and a document list in set fields.
+- [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker): Give it a parsed record and your rules. Get a risk rating, each rule result and missing items. It does not decide.
+- [Org change announcement writer](https://useaiblocks.com/skills/org-change-announcement-writer): Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers.
+- [Org structure and role map builder](https://useaiblocks.com/skills/org-structure-map): Give it your goals and team. Get an org structure plan, a spans check and a chart of who decides what.
+- [Pay and benefits package designer](https://useaiblocks.com/skills/pay-benefits-package): Give it your pay goals and team size. Get pay bands, bonus ideas and a total pay statement outline. Not legal advice.
+- [Pay and benefits plan builder](https://useaiblocks.com/skills/pay-and-benefits-plan-builder): Describe your roles and budget. Get a pay philosophy, pay bands, a bonus plan and a benefits list. Check the maths yourself.
+- [Pay and hours rules answerer](https://useaiblocks.com/skills/pay-and-hours-rules-answerer): Ask a pay, overtime or break question and where you are. Get the rule with its source. Not legal advice.
+- [Pay band builder](https://useaiblocks.com/skills/pay-band-builder): Give it a role and market pay data. Get a pay range and a clear method you can explain to leaders.
+- [Pay benchmark and equity modeler](https://useaiblocks.com/skills/pay-benchmark-and-equity-modeler): Give it a role or pay data. Get market ranges, outliers and equity grant models. Not pay or tax advice.
+- [Payroll timesheet checker](https://useaiblocks.com/skills/payroll-timesheet-checker): Give it your timesheets. Get hours totalled by person, every oddity flagged, and a run ready for your line by line approval.
+- [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder): Give it your headcount plan. Get a budget by team, a month-by-month view and notes to explain gaps to finance.
+- [People risk register builder](https://useaiblocks.com/skills/people-risk-register-builder): Give it your team and rules. Get a ranked list of people risks, owners and response steps. Not legal advice.
+- [Performance review helper](https://useaiblocks.com/skills/performance-review-helper): Pick your review cycle. Get a self-review template, a manager review draft and calibration prep with specific examples.
+- [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer): Give it your resume and a target job. Get a review against ten best practices and a version tailored to the role.
+- [Reference check question writer](https://useaiblocks.com/skills/reference-check-question-writer): Give it a role. Get fair reference questions, a call script and a sheet to record answers. Check local rules first.
+- [Review cycle form builder](https://useaiblocks.com/skills/review-cycle-form-builder): Give it your team and goals. Get review forms, goal templates and a guide for fair rating meetings. Not legal advice.
+- [Role skills framework builder](https://useaiblocks.com/skills/role-skills-framework-builder): Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions.
+- [Shift schedule planner](https://useaiblocks.com/skills/shift-schedule-planner): Give it your demand and staff. Get a shift pattern, a weekly schedule and a fair rotation for nights and weekends.
+- [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer): Say what is changing. Get a clear internal announcement, a rollout plan and answers to likely questions.
+- [Structured interview guide builder](https://useaiblocks.com/skills/structured-interview-guide): Name the role. Get set questions, strong and weak answer signs and a scorecard. You make the hiring call, not the AI.
+- [Succession plan builder](https://useaiblocks.com/skills/succession-plan-builder): Give it your key roles. Get a coverage map, a possible successors list and development plans. The final calls stay yours.
+- [Talent pool mapper](https://useaiblocks.com/skills/talent-pool-mapper): Describe who you need. Get target companies, pool sizes and ways in. Reads public web pages.
+- [Termination risk checker](https://useaiblocks.com/skills/termination-risk-checker): Describe a planned firing. Get risk flags, severance and release points, and final pay timing. A first check, not legal advice.
+- [Training program builder](https://useaiblocks.com/skills/training-program-builder): Give it a skills gap. Get a learning plan, a training outline and coaching steps.
+- [Work sample test designer](https://useaiblocks.com/skills/work-sample-test-designer): Name the role. Get a work test, a scoring guide and fairness checks. You make the hiring call, not the AI.
+- [Workforce crisis playbook writer](https://useaiblocks.com/skills/workforce-crisis-playbook-writer): Name the crisis type. Get roles, a first-hour staff message, a 24-hour action list and a review plan for your people.
+- [Workplace accommodation process builder](https://useaiblocks.com/skills/accommodation-process): Describe your team. Get a clear accommodation request process and manager guidance. Not legal advice; check with a lawyer or HR adviser.
+- [Workplace conflict mediation guide](https://useaiblocks.com/skills/conflict-mediation-guide): Describe the conflict. Get its likely causes, a mediation plan with ground rules and what to say in the talk.
+- [Workplace investigation guide](https://useaiblocks.com/skills/workplace-investigation-guide): Describe a workplace complaint. Get a plan, evidence log and draft memo. Not legal advice.
+- [Workplace policy and handbook writer](https://useaiblocks.com/skills/policy-handbook-writer): Name your country and company size. Get handbook sections, a harassment policy and a privacy policy. Not legal advice.

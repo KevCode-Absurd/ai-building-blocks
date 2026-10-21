@@ -1,0 +1,161 @@
+# Plan your strategy: AI Blocks
+
+> 157 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [90-day plan builder](https://useaiblocks.com/skills/90-day-plan-builder): Give it a decision you made. Get a 90-day plan with weekly steps, owners and check-in times.
+- [AI disruption risk checker](https://useaiblocks.com/skills/ai-disruption-risk-checker): Name your business or industry. Get your exposure to AI on ten points and a 90-day plan to defend.
+- [Backlink builder](https://useaiblocks.com/skills/backlink-builder): Give it your site. Get places to earn links, pitch text and a plan to win mentions.
+- [Beachhead market picker](https://useaiblocks.com/skills/beachhead-market-picker): Describe your product and early users. Get one starting segment and a plan to reach the mainstream. Uses Crossing the Chasm.
+- [Beat a bigger rival with a model it cannot copy](https://useaiblocks.com/workflows/beat-bigger-rival): Paste your rivals. Get gaps, a model the leader would lose by copying, and what to build while the window is open.
+- [Big decisions first sorter](https://useaiblocks.com/skills/big-decisions-first-sorter): List the open questions on a plan. Get the big ones your goal already settles, and the hard ones left.
+- [Big problem splitter](https://useaiblocks.com/skills/big-problem-splitter): Describe a problem that feels too big. Get it split into small steps, each with a test and a clear next move.
+- [Big project mapper](https://useaiblocks.com/skills/big-project-mapper): Give it a project too big for one session. Get a map of decisions, resolved one at a time.
+- [Blitzscale readiness checker](https://useaiblocks.com/skills/blitzscale-readiness-checker): Describe your product and market. Get a check on whether to grow at speed, and a plan for the chaos.
+- [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter): Paste your ad spend by channel and market numbers. Get a brand versus sales split, a share-of-voice check and what to shift.
+- [Brand launch planner](https://useaiblocks.com/skills/brand-launch-planner): Say when and where you launch. Get a rollout plan with the message and steps for each stage.
+- [Brand name stretch checker](https://useaiblocks.com/skills/brand-name-stretch-checker): Paste your brand and the new product. Get a stretch score out of 100 and a call on the name.
+- [Brand reach audit](https://useaiblocks.com/skills/brand-reach-audit): Paste your sales and what you know of your buyers. Get where you are hard to think of or hard to buy.
+- [Brand strategy report writer](https://useaiblocks.com/skills/brand-strategy-report-writer): Answer a set of brand questions. Get a full brand strategy report for your business or your client.
+- [Brief reframer](https://useaiblocks.com/skills/brief-reframer): Paste your brief or goal. Get it rewritten three ways, with a cheaper change in how it feels to try first.
+- [Business buyer trust builder](https://useaiblocks.com/skills/business-buyer-trust-builder): Say who buys from you. Get a plan for thought leadership and trust with slow, careful business buyers.
+- [Business mission writer](https://useaiblocks.com/skills/business-mission-writer): Say what you make and who it helps. Get a one-paragraph mission bigger than profit, a staged plan and an announcement day.
+- [Business model canvas builder](https://useaiblocks.com/skills/business-model-canvas-builder): Describe your business. Get a nine-block Business Model Canvas checked for gaps between customers, costs and revenue.
+- [Business power tester](https://useaiblocks.com/skills/business-power-tester): Describe your business and rivals. Get a test of whether your edge lasts and which of seven powers to build next.
+- [Business snapshot writer](https://useaiblocks.com/skills/business-snapshot-writer): Connect what you use. Get a one-page view of cash, sales and open leads, plus the one thing to handle today.
+- [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer): Describe what you sell and the buying you want repeated. Get the rewards, ties, reach and proof that make it a habit.
+- [Campaign brief and calendar builder](https://useaiblocks.com/skills/campaign-brief-calendar): Describe your launch or push. Get a brief with goals, audience, messages, channels and a week-by-week calendar.
+- [Category name writer](https://useaiblocks.com/skills/category-name-writer): Paste your chosen category. Get a plain name for it, brand names that can become its word and a category pitch.
+- [Check your plan against the laws that decide who wins](https://useaiblocks.com/workflows/marketing-laws-check): Paste your marketing plan. Get the laws it breaks, a name check, a short versus long-term check and one move to make.
+- [Choose a position, check a name stretch, launch with press](https://useaiblocks.com/workflows/position-name-launch): Paste your product and rivals. Get one position to own, a name check for the new product and a press-first launch.
+- [Cohort funnel reader](https://useaiblocks.com/skills/cohort-funnel-reader): Paste results by join date. Get each group's path, which changes moved which rates, and whether the report holds up.
+- [Company mantra writer](https://useaiblocks.com/skills/company-mantra-writer): Describe what you do and for whom. Get three two-to-four word mantras and a niche check.
+- [Competitor landscape deck builder](https://useaiblocks.com/skills/competitor-landscape-deck): Name a company and its rivals. Get a deck on market position, side by side comparison and what it means.
+- [Compound scenario modeler](https://useaiblocks.com/skills/compound-scenario-modeler): Describe several things going wrong at once. Get how each team feels it and a response plan.
+- [Content strategy planner](https://useaiblocks.com/skills/content-strategy-planner): Describe your audience and goals. Get an editorial plan that maps content to funnel stages.
+- [Content topic planner](https://useaiblocks.com/skills/content-topic-planner): Describe your business. Get topic clusters, a content calendar and the pieces to write first.
+- [Cost every step and turn your waste into profit](https://useaiblocks.com/workflows/waste-to-profit): Describe how you make or deliver your product. Get a cost for every step and a price on each kind of waste.
+- [Counter-positioning finder](https://useaiblocks.com/skills/counter-positioning-finder): Paste your market leader and your idea. Get a new business model the leader would lose money by copying, with the sum.
+- [Customer concentration risk check](https://useaiblocks.com/skills/customer-concentration-risk): List your top clients and key dependencies. Get a risk map, limits to set and an exit plan for the biggest one.
+- [Customer progress measure picker](https://useaiblocks.com/skills/customer-progress-measure-picker): Paste the numbers you track and your job spec. Get which ones miss the customer and three measures of progress to use.
+- [Customer value and spend limit calculator](https://useaiblocks.com/skills/customer-value-spend-limit): Paste sales by customer type and source. Get what a customer is worth and the most you can spend to win one.
+- [Demand and stock planner](https://useaiblocks.com/skills/demand-and-stock-planner): Give it sales history and lead times. Get a demand forecast, safety stock levels and a restock plan.
+- [Design the experience, name and measures around your customer's job](https://useaiblocks.com/workflows/job-based-product-design): Give it your job spec. Get the key moments, features to keep, a name for the job and measures of progress.
+- [Direct selling model check](https://useaiblocks.com/skills/direct-selling-model-check): List your channels and margins. Get a sell-direct verdict, what to build to order and a score out of 100.
+- [Event marketing planner](https://useaiblocks.com/skills/event-marketing-planner): Say the event type and goal. Get a plan to fill seats, follow up and turn attendees into pipeline.
+- [Experience drift auditor](https://useaiblocks.com/skills/experience-drift-auditor): List the changes you made while growing. Get which ones watered down what customers loved, and a reset plan.
+- [Failure-first plan check](https://useaiblocks.com/skills/failure-first-plan-check): Paste a plan. Get a list of the ways it could fail, and the changes that avoid them.
+- [Feature roadmap to outcomes rewriter](https://useaiblocks.com/skills/outcome-based-roadmap): Paste your list of features and dates. Get a short list of problems to solve, each with a result to measure.
+- [Find a category to be first in and launch it](https://useaiblocks.com/workflows/new-category-launch): Paste your rivals and product. Get a category you can lead, a name for it and a press-first launch.
+- [Find a space no rival holds and win buy-in](https://useaiblocks.com/workflows/uncontested-market-space): Paste your rivals and what buyers value. Get a white-space map, a one-line only-ness statement and a buy-in plan.
+- [Find process waste and the cause behind it](https://useaiblocks.com/workflows/process-waste-cause): Paste your process step by step. Get the waste named, one change to try and the root cause behind it.
+- [Find which of seven powers you hold or can build](https://useaiblocks.com/workflows/seven-powers-check): Describe your business. Get each of the seven powers scored on benefit and barrier, a ten-year check and what to build first.
+- [First market picker](https://useaiblocks.com/skills/first-market-picker): Paste your product and who could use it. Get a ranked short list of small first markets and the one to own.
+- [First-in-category finder](https://useaiblocks.com/skills/first-in-category-finder): Paste your market map and product. Get ranked categories you could lead, each tested for rivals, size and timing.
+- [Five forces industry checker](https://useaiblocks.com/skills/five-forces-industry-checker): Name your industry and buyers. Get a five-force read of where profit comes from and a score out of 100.
+- [Free plan designer](https://useaiblocks.com/skills/free-plan-designer): Describe your product. Get a free tier with limits that win paid users without anger or abuse.
+- [Give-up list planner](https://useaiblocks.com/skills/give-up-list-planner): Paste your chosen word and what you sell. Get what to cut against that word, one target and a rule against drift.
+- [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker): Paste your plan. Get a go or no-go against the book's six faults and three halfway checks.
+- [Go-to-market positioning planner](https://useaiblocks.com/skills/go-to-market-positioning-planner): Give it your product and rivals. Get positioning, a go-to-market plan and launch steps.
+- [Goal cascade checker](https://useaiblocks.com/skills/goal-cascade-checker): Give it company goals and team plans. Find orphan goals, silos and gaps between strategy and work.
+- [Goal sharpener](https://useaiblocks.com/skills/goal-sharpener): Give it a fuzzy aim. Get a clear goal with a number to hit and a finish line.
+- [Growth engine finder](https://useaiblocks.com/skills/growth-engine-finder): Describe how customers arrive and your rates. Get your growth engine, its key rate and a sum showing where you stand.
+- [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker): Paste your list of growth ideas. Get each scored for impact, confidence and ease, with the first three to test.
+- [Growth lever audit](https://useaiblocks.com/skills/growth-lever-audit): Paste your customer count, average sale and repeat rate. Get the three growth levers sized and the one to pull first.
+- [Growth loop designer](https://useaiblocks.com/skills/growth-loop-designer): Describe your product and users. Get the growth loops that fit, from sharing to referrals, and how to start one.
+- [Growth option mapper](https://useaiblocks.com/skills/growth-option-mapper): Describe your business. Get four growth paths mapped, from selling more to new markets, with risks.
+- [Hedgehog focus finder](https://useaiblocks.com/skills/hedgehog-focus-finder): Describe what you do and what you do well. Get a plain statement of the one thing to focus on.
+- [Hours-to-assets planner](https://useaiblocks.com/skills/hours-to-assets-planner): Paste how you earn today. Get which parts pay only while you work, and a plan to build something you own.
+- [Input metric picker](https://useaiblocks.com/skills/input-metric-picker): Paste the numbers you report. Get the inputs you control, a proxy test for each and one output to check them.
+- [Job experience mapper](https://useaiblocks.com/skills/job-experience-mapper): Paste your job spec. Get the moments from first look to later use, each worry and the fix.
+- [Job name picker](https://useaiblocks.com/skills/job-name-picker): Paste your job spec. Get names that tell a stranger what to hire it for, ranked, with a not-for line.
+- [Launch channel picker](https://useaiblocks.com/skills/launch-channel-picker): Describe your product and buyers. Get the best of seven ways to reach them, with tools and first steps.
+- [Launch task force planner](https://useaiblocks.com/skills/launch-task-force-planner): Paste your new product idea and your team. Get a kickoff plan that puts design, sales, marketing and engineering first.
+- [Launch teaser to preview planner](https://useaiblocks.com/skills/launch-teaser-to-preview-planner): Paste what you are launching and when. Get a teaser, preview and launch plan with a sign-up page and free sample.
+- [Learning milestone planner](https://useaiblocks.com/skills/learning-milestone-planner): Paste your plan. Get the rates you hope for, the starting rates to measure and dated milestones that count learning, not output.
+- [Long-goal coordinator](https://useaiblocks.com/skills/long-goal-coordinator): Give it a goal that takes days. Get helpers and schedules set up to work on it.
+- [Long-run effects checker](https://useaiblocks.com/skills/long-run-effects-checker): Paste your plan. Get each tactic's short-term and long-term effect, a fad or trend call and what to change.
+- [Long-shot bet planner](https://useaiblocks.com/skills/long-shot-bet-planner): Describe an idea that might fail. Get a small test, a loss cap and a rule for dropping it.
+- [Long-term principles writer](https://useaiblocks.com/skills/long-term-principles-writer): Describe your business and its hard trade-offs. Get a short list of plain promises on how you will choose.
+- [Market expansion sequencer](https://useaiblocks.com/skills/market-expansion-sequencer): Paste your first market and product. Get the next markets in order, nearest first, with the sign to move on.
+- [Market shift turnaround planner](https://useaiblocks.com/skills/market-shift-turnaround-planner): Describe a business losing share. Get what changed in the market, a new range and a survive-the-year plan.
+- [Market size estimator](https://useaiblocks.com/skills/market-size-estimator): Give it a market or product idea. Get a TAM, SAM and SOM estimate built top-down and bottom-up, with sources.
+- [Marketing brief writer](https://useaiblocks.com/skills/marketing-brief-writer): Paste what you know about your product and buyers. Get a one-page brief: what to say, to whom and what next.
+- [Marketing decision coach](https://useaiblocks.com/skills/marketing-decision-coach): Ask whether a marketing move will work. Get a straight verdict with the reasons, including "not worth doing".
+- [Marketing idea picker](https://useaiblocks.com/skills/marketing-idea-picker): Describe your product. Get tested marketing ideas matched to your stage and budget.
+- [Marketing plan law checker](https://useaiblocks.com/skills/marketing-plan-law-checker): Paste your marketing plan. Get each law it breaks, the line that breaks it, a score and a fix list.
+- [Marketing plan order checker](https://useaiblocks.com/skills/marketing-plan-order-checker): Paste your marketing plan. Get it sorted into diagnosis, strategy and tactics, the gaps named and a score out of 100.
+- [Marketing plan writer](https://useaiblocks.com/skills/marketing-plan-writer): Describe your business. Get a full marketing plan by funnel stage with a 90-day or 12-month roadmap.
+- [Marketing strategy advisor](https://useaiblocks.com/skills/marketing-strategy-advisor): Describe your growth stage. Get a positioning check, growth model choice and a budget split by channel.
+- [Measure real progress and decide to pivot or persevere](https://useaiblocks.com/workflows/pivot-or-persevere): Paste your plan and your numbers. Get honest progress measures by customer group and a dated pivot or persevere call.
+- [Money-first business cut planner](https://useaiblocks.com/skills/money-first-business-cut-planner): List what you do each week and what each part earns. Get what to keep, hand off, drop or park.
+- [Network effect claim tester](https://useaiblocks.com/skills/network-effect-claim-tester): Paste your claim that more users make it better. Get a test of its effect on price or cost, and a call.
+- [New country expansion planner](https://useaiblocks.com/skills/new-country-expansion-planner): Name the markets you eye. Get a market pick, entry route, localisation list and rules to check.
+- [Objectives and key results writer](https://useaiblocks.com/skills/okr-goal-writer): Describe your team and the quarter. Get a few objectives, each with dated key results that show if you got there.
+- [OKR writer](https://useaiblocks.com/skills/okr-writer): Give it your goals for the quarter. Get clear objectives and measurable key results, plus a scoring and mid-quarter check routine.
+- [One bold move picker](https://useaiblocks.com/skills/one-bold-move-picker): Paste your plan and rivals. Get one move to back, what to stop, the money it needs and a pass test.
+- [One-goal marketing plan builder](https://useaiblocks.com/skills/one-goal-marketing-plan-builder): Paste your goal and tactics you could try. Get one numbered goal, scored tactics and a test calendar.
+- [One-page marketing plan builder](https://useaiblocks.com/skills/one-page-marketing-plan-builder): Describe your business. Get a one-page plan that takes people from stranger to loyal fan.
+- [Onliness statement writer](https://useaiblocks.com/skills/onliness-statement-writer): Paste your brand file and rivals. Get one sentence on what only you do, with a rival swap test.
+- [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer): Paste your standards sheet. Get a job card for each role, a missed-standard rule and a day-one trial sheet.
+- [Outside forces analyst](https://useaiblocks.com/skills/outside-forces-analyst): Name your business and market. Get the outside forces that affect you: rules, money, people, tech and nature.
+- [Ownable word picker](https://useaiblocks.com/skills/ownable-word-picker): Paste your word map and product. Get one word to own, two backups and a four-test result for each.
+- [Partner campaign planner](https://useaiblocks.com/skills/partner-campaign-planner): Say who you serve. Get partner ideas and a joint campaign plan with a pitch you can send.
+- [Pick the one word to own in your customers' minds](https://useaiblocks.com/workflows/one-word-positioning): Paste your rivals and product. Get one word to own, an honest line to set it up and what to cut.
+- [Pick your first small market and the ones after](https://useaiblocks.com/workflows/first-small-market): Give it your product. Get one small first market, the order to grow and a pitch with no rival.
+- [Pivot or persevere decider](https://useaiblocks.com/skills/pivot-or-persevere-decider): Paste your progress and customer notes. Get a keep-going or change-course call, the type of change and a review date.
+- [Plan a week that puts what matters first](https://useaiblocks.com/workflows/weekly-priorities-plan): Paste your task list and roles. Get what to drop, hand off and protect, a role-based week and a Friday review.
+- [Positioning idea generator](https://useaiblocks.com/skills/positioning-idea-generator): Give it your product and rivals. Get several ways to stand apart, each with a positioning statement and a reason.
+- [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer): Paste your product and your main rivals. Get one position to own, the rival weakness to use, and a one-line statement.
+- [Power and fear map builder](https://useaiblocks.com/skills/power-and-fear-map-builder): Describe a team, deal or dispute. Get who really holds power, what each person wants and fears, and your safest first move.
+- [Power build-order planner](https://useaiblocks.com/skills/power-stage-build-planner): Paste your power test and market facts. Get your stage, the powers still open and a first test.
+- [Process waste finder](https://useaiblocks.com/skills/process-waste-finder): Paste your process step by step. Get each step marked value or waste, the worst waste named and one change to try.
+- [Product differentiation checker](https://useaiblocks.com/skills/product-differentiation-checker): Paste your product facts and won and lost deals. Get a verdict: truly the same as rivals, or only described badly.
+- [Product harm audit planner](https://useaiblocks.com/skills/product-harm-audit-planner): Paste your products and what they are made of. Get the biggest harm ranked, a swap plan and its cost.
+- [Product line cutter](https://useaiblocks.com/skills/product-line-cutter): List everything you sell. Get what to keep and what to cut, and a simple grid of the plan.
+- [Product positioning planner](https://useaiblocks.com/skills/product-positioning-planner): Describe your product and its rivals. Get the best market to compete in and a clear line on why you win.
+- [Product strategy canvas writer](https://useaiblocks.com/skills/product-strategy-canvas-writer): Describe your product. Get a nine-part strategy: vision, customers, trade-offs, metrics and what keeps you ahead.
+- [Product uses lister](https://useaiblocks.com/skills/product-uses-lister): Paste what your product does. Get a long list of uses, ranked by who would pay, with the first one to prove.
+- [Product vision and OKR planner](https://useaiblocks.com/skills/product-vision-and-okr-planner): Give it your product and team. Get a vision, quarterly plan and a goal cascade for each team.
+- [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer): Paste results for the projects you run. Get each one marked keep, cut or double down, judged on cash and customer value.
+- [Project kickoff brief writer](https://useaiblocks.com/skills/project-kickoff-brief-writer): Describe your project. Get a one-page brief with goal, audience, tone and limits that your team can sign off.
+- [Project risk and portfolio manager](https://useaiblocks.com/skills/project-risk-portfolio): Give it your projects. Get risks scored, resources balanced and a clear status for stakeholders.
+- [Publicity-first launch planner](https://useaiblocks.com/skills/publicity-first-launch-planner): Paste your new product and its category. Get a launch that starts with press coverage, then ads once people believe it.
+- [Put a deal, hire or purchase through four filters](https://useaiblocks.com/workflows/four-filter-decision): Describe a deal, hire or purchase. Get it tested on knowledge, staying power, people and price, then a clear call.
+- [Quarterly roadmap builder](https://useaiblocks.com/skills/quarterly-roadmap-builder): Give it your backlog and requests. Get a multi-quarter roadmap that balances build, improve and maintain, plus a not-doing list.
+- [Raw cost breakdown finder](https://useaiblocks.com/skills/raw-cost-breakdown-finder): Name something you buy or sell. Get its price broken into raw parts and costs, and the biggest gaps to go after.
+- [Real strategy checker](https://useaiblocks.com/skills/real-strategy-checker): Give it a strategy. Get an honest diagnosis, a guiding policy and coherent actions, or a list of what is hollow.
+- [Rebrand planner](https://useaiblocks.com/skills/rebrand-planner): Say why your brand must change. Get what to keep, what to change and a rollout plan.
+- [Repeatable growth guide](https://useaiblocks.com/skills/repeatable-growth-guide): Describe your business. Get a growth plan with a forecast, built step by step from your marketing to your numbers.
+- [Rising trend spotter](https://useaiblocks.com/skills/rising-trend-spotter): Give it a topic. Get what is rising on Google Trends and social sites. Collects data from websites.
+- [Rival-free pitch rewriter](https://useaiblocks.com/skills/rival-free-pitch-rewriter): Paste your pitch. Get it rewritten around what only you do, with no rival, no cheaper and no fight in it.
+- [Second business picker](https://useaiblocks.com/skills/second-business-picker): List your strengths and new market ideas. Get each sorted as reinvention, coaction or diversification, with a pick.
+- [Second location readiness checker](https://useaiblocks.com/skills/second-location-check): Paste your manual and trial notes. Get the gaps a newcomer found, a profit-without-you check and what to fix before opening.
+- [Seven powers scorecard builder](https://useaiblocks.com/skills/seven-powers-scorecard-builder): Paste your business facts. Get seven powers scored on benefit and barrier, sorted into held, buildable or out of reach.
+- [Shipment problem handler](https://useaiblocks.com/skills/shipment-problem-handler): Describe a late, lost or damaged shipment. Get the right steps, claim paperwork and carrier messages.
+- [Small-unit profit tracker](https://useaiblocks.com/skills/small-unit-profit-tracker): List your teams and their income and costs. Get small units, a profit-per-hour figure for each and a weekly sheet.
+- [Sort decisions by reversibility and fund long shots](https://useaiblocks.com/workflows/reversible-decisions): Paste a choice you are stuck on. Get it sorted by reversibility, a capped long-shot test and a keep-or-cut review.
+- [Split your marketing budget between brand and sales](https://useaiblocks.com/workflows/brand-sales-budget-split): Paste your spend and the numbers you track. Get a balanced scorecard and a brand versus sales budget split.
+- [Staged product ladder planner](https://useaiblocks.com/skills/staged-product-ladder-planner): Describe your end goal and your first product. Get a step-by-step plan where each sale funds the next, cheaper product.
+- [Stalled business turnaround guide](https://useaiblocks.com/skills/business-turnaround-guide): Describe your business. Get an honest diagnosis, a working rhythm and offers repriced to real value, step by step.
+- [Startup canvas builder](https://useaiblocks.com/skills/startup-canvas-builder): Describe your new product. Get one canvas joining your strategy to costs and revenue.
+- [Staying power checker](https://useaiblocks.com/skills/staying-power-checker): Describe what you may buy, join or back. Get what protects it for ten years, what could break it, and a grade.
+- [Step cost tracker](https://useaiblocks.com/skills/step-cost-tracker): Describe how you make your product. Get a cost for each step, a weekly count sheet and the lines that drain you.
+- [Strategy trade-off planner](https://useaiblocks.com/skills/strategy-trade-off-planner): List what you offer and who you serve. Get a position, what you will not do and the activities that must fit.
+- [SWOT analyst](https://useaiblocks.com/skills/swot-analyst): Name your business or product. Get strengths, weaknesses, opportunities and threats, with actions to take.
+- [Target size back-solver](https://useaiblocks.com/skills/target-size-back-solver): Name the size you want a business to reach. Get the buyers, volume, share and profit that must be true.
+- [Tech stack comparer](https://useaiblocks.com/skills/tech-stack-comparer): Name the options. Get a side-by-side of cost, security, team fit and long-term support, with a pick.
+- [Tenfold goal rewriter](https://useaiblocks.com/skills/tenfold-goal-rewriter): Paste a goal that aims for 10 percent more. Get a tenfold version, what must change and a small first test.
+- [Tracking plan builder](https://useaiblocks.com/skills/tracking-plan-builder): Say what you need to measure. Get a tracking plan with events, names and tags for GA4, Mixpanel or similar tools.
+- [Tree to web knowledge mapper](https://useaiblocks.com/skills/tree-to-web-knowledge-mapper): Describe how your team stores what it knows. Get a map of things and links, and a plan to link them.
+- [Turn one working shop into a system others can copy](https://useaiblocks.com/workflows/shop-system-playbook): Describe your best location. Get written standards, a manual a stranger can follow, a readiness check and a go or no-go.
+- [Uncontested market finder](https://useaiblocks.com/skills/uncontested-market-finder): Describe your market. Get a strategy canvas showing what to cut, raise and add to stand apart.
+- [Urgent versus important sorter](https://useaiblocks.com/skills/urgent-versus-important-sorter): Paste your task list with rough hours. Get four boxes, your real time split, and what to drop, hand off and protect.
+- [Value created tally builder](https://useaiblocks.com/skills/value-created-tally-builder): List who you serve and your figures. Get a cautious value tally for each group and your weakest link.
+- [Value creation plan builder](https://useaiblocks.com/skills/value-creation-plan-builder): Give it a company's numbers. Get revenue, cost and operating levers mapped to profit, with 100 day priorities.
+- [Values-to-week planner](https://useaiblocks.com/skills/values-to-week-planner): Share your roles, values and calendar. Get a plan from values to quarter, week and day, with protected hours for hard work.
+- [Waste and by-product finder](https://useaiblocks.com/skills/waste-and-by-product-finder): List what you throw away, leave idle or redo. Get each item priced as a possible product, reuse or saving.
+- [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter): Paste your task list. Get the few big tasks that matter, the small ones to batch or drop, and a week plan.
+- [Weekly growth target setter](https://useaiblocks.com/skills/weekly-growth-target-setter): Paste your weekly numbers. Get one growth target, what it means for the week and what to skip.
+- [Work back from a low price to cheaper production](https://useaiblocks.com/workflows/target-cost-production): Name the price you want to sell at. Get a cost-cutting plan, a better work layout and the waste worth chasing.
+- [Work out what a new business needs to get huge](https://useaiblocks.com/workflows/new-business-growth-needs): Name a business and a target size. Get the big choices, the sums behind the size and what to avoid.
+- [Work-backwards plan checker](https://useaiblocks.com/skills/work-backwards-plan-checker): Paste your goal and plan. Get it rebuilt from the end date, checked a second way, with a score out of 100.

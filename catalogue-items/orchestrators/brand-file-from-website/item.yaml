@@ -1,0 +1,23 @@
+slug: brand-file-from-website
+name: "Build a brand file and brand guide from your website"
+summary: "Give it your website. Get a brand file, a founder interview to fill its gaps, and a brand guide."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: brand
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: brand_guide}
+uses: [website-brand-brain-builder, founder-interview-planner, brand-guide-builder]
+steps:
+  - {uses: website-brand-brain-builder, note: "Turns your site into a brand file with every gap marked unknown, disputed or inferred."}
+  - {uses: founder-interview-planner, note: "Reads the gaps in the brand file and turns them into a short ranked interview plan."}
+  - {uses: brand-guide-builder, note: "Uses the finished brand file, now with the founder's answers, to build a guide and a tokens file."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-build-a-brand-file-and-brand-guide-from-your-website/skeleton.yaml

@@ -1,0 +1,77 @@
+# Grow on social: AI Blocks
+
+> 73 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Community growth planner](https://useaiblocks.com/skills/community-growth-planner): Say who your community is for. Get a plan to start it, grow it and turn members into advocates.
+- [Content calendar builder](https://useaiblocks.com/skills/content-calendar-builder): Give it your product and platforms. Get topics from real customer words, rival content gaps, and a ready calendar.
+- [Content channel planner](https://useaiblocks.com/skills/content-channel-planner): Give it your content and audience. Get where to share it, when, and which channels to skip.
+- [Content pillar finder](https://useaiblocks.com/skills/content-pillar-finder): Share what you have posted and know first-hand. Get three to five subjects you can post about again and again.
+- [Content repurposer](https://useaiblocks.com/skills/content-repurposer): Give it one strong piece. Get a blog series, emails, posts and clips, each adapted to its format.
+- [Creator partnership planner](https://useaiblocks.com/skills/creator-partnership-planner): Say what you sell. Get a plan to find creators, set deals, brief them and track results.
+- [Cross-platform post writer](https://useaiblocks.com/skills/cross-platform-post-writer): Give it one idea. Get an X post and a LinkedIn post that read as written separately.
+- [Customer content planner](https://useaiblocks.com/skills/customer-content-planner): Say what you sell. Get ways to get customers posting, a creator brief and ideas to reuse their posts in ads.
+- [Dead air and retake cutter](https://useaiblocks.com/skills/dead-air-and-retake-cutter): Give it your recording transcript. Get a timed list of pauses, fillers and retakes to cut.
+- [Developer community builder](https://useaiblocks.com/skills/developer-community-builder): Describe your developers. Get a plan for channels, onboarding and events that grows a Discord or forum.
+- [Directory listing planner](https://useaiblocks.com/skills/directory-listing-planner): Give it your product. Get a ranked list of directories and ready listing text to submit by hand.
+- [First customers by hand planner](https://useaiblocks.com/skills/first-customers-by-hand-planner): Paste your product and the first customers you want. Get a plan to win them one by one and what to learn.
+- [Flop post diagnoser](https://useaiblocks.com/skills/flop-post-diagnoser): Paste a post that did badly. Get why it failed, whether unseen, skipped or ignored, and what to change.
+- [Founder video series planner](https://useaiblocks.com/skills/founder-video-series-planner): Paste buyer questions. Get a ten-week founder video plan, a filming setup and three cuts.
+- [GitHub README improver](https://useaiblocks.com/skills/github-readme-improver): Give it your repo or profile. Get a stronger README, profile and topics so developers try your project.
+- [Give before ask sequence planner](https://useaiblocks.com/skills/give-before-ask-sequence-planner): Paste your audience and your offer. Get a run of useful posts or messages, then one clear ask.
+- [Guide outreach list planner](https://useaiblocks.com/skills/guide-outreach-list-planner): Paste your new guide and topic. Get lists of who to contact, a personal note for each type, and a send-and-track plan.
+- [Influencer gifting planner](https://useaiblocks.com/skills/influencer-gifting-planner): Paste your product and budget. Get the box card, a tracking table and which posts to run.
+- [Influencer shortlist builder](https://useaiblocks.com/skills/influencer-shortlist-builder): Give it a niche. Get creators with follower counts, engagement and fit notes. Collects data from websites.
+- [Launch stunt planner](https://useaiblocks.com/skills/launch-stunt-planner): Paste your launch and the big rival. Get three stunt ideas the press may cover, each with a worst-case limit.
+- [LinkedIn comment and outreach planner](https://useaiblocks.com/skills/linkedin-outreach-plan): Say who you want to reach. Get a commenting list, connection notes and a plan, all sent by you.
+- [LinkedIn comment writer](https://useaiblocks.com/skills/linkedin-comment-writer): Paste a post. Get a comment that adds something new instead of agreeing, in your voice.
+- [LinkedIn content strategy planner](https://useaiblocks.com/skills/linkedin-content-strategy): Say your goal. Get content pillars, positioning and a posting rhythm you can keep.
+- [LinkedIn hook post writer](https://useaiblocks.com/skills/linkedin-hook-post-writer): Give a topic and angle. Get a LinkedIn post built on a tested opening line for your goal.
+- [LinkedIn post writer](https://useaiblocks.com/skills/linkedin-post-writer): Give it a story or idea. Get a LinkedIn post, carousel script or poll that you post yourself.
+- [LinkedIn profile rewriter](https://useaiblocks.com/skills/linkedin-profile-rewriter): Describe your profile. Get a stronger headline, About section and experience bullets.
+- [LinkedIn results reader](https://useaiblocks.com/skills/linkedin-results-reader): Paste your own LinkedIn numbers. Get which posts worked, why reach changed and a test to run next.
+- [Long-form post repurposer](https://useaiblocks.com/skills/long-form-post-repurposer): Give it an article, newsletter or transcript. Get an X or LinkedIn post that works even if nobody clicks.
+- [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter): Say what you need. Get a blog post, social post, newsletter, page or press release with headline options.
+- [Multi-platform post planner](https://useaiblocks.com/skills/multi-platform-post-planner): Say what you want to share. Get posts made for each platform, with hooks and a posting plan.
+- [Network launch distribution planner](https://useaiblocks.com/skills/network-launch-plan): Describe the product and who already hosts your audience. Get a launch route that borrows an existing network.
+- [Open source promoter](https://useaiblocks.com/skills/open-source-promoter): Give it your open source project. Get a plan to win stars, users and contributors without sounding pushy.
+- [Outlier post finder](https://useaiblocks.com/skills/outlier-post-finder): Give it accounts. Get the posts that beat their normal reach, why they worked, and a swipe file. Collects data from websites.
+- [Personal brand planner](https://useaiblocks.com/skills/personal-brand-planner): Say who you want to be known as. Get your focus, your audience and a plan to show up steadily.
+- [Plan a month of founder videos and edit the first](https://useaiblocks.com/workflows/founder-video-month): Give it your brand file. Get ten founder video episodes, a script for the first, and an edit plan for your footage.
+- [Platform-native content planner](https://useaiblocks.com/skills/platform-native-content-planner): Paste your business and the platform. Get a month of content made for that place and a daily habit.
+- [Press outreach planner](https://useaiblocks.com/skills/press-outreach-planner): Say your news. Get a media list, pitch emails and a press kit outline.
+- [Referral program designer](https://useaiblocks.com/skills/referral-program-designer): Describe your product. Get a referral or affiliate program with rewards, flow and launch plan.
+- [Sales-led content planner](https://useaiblocks.com/skills/sales-led-content-planner): Give it your sales data. Get a 30 day plan of what to push, what offers to run and what to hold.
+- [Send creators a gift and a brief to film from](https://useaiblocks.com/workflows/creator-gifting-brief): Give it your brand file. Get a creator gifting plan, a phone-video script, a filming brief and an edit plan.
+- [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker): Paste your post, video or product idea. Get a score on six reasons people share and the one change most worth testing.
+- [Shorts clip finder](https://useaiblocks.com/skills/shorts-clip-finder): Give it a long video transcript. Get the best five moments to clip, each with a new first line.
+- [Social content results reader](https://useaiblocks.com/skills/social-content-results-reader): Give it social accounts. Get engagement figures and which posts did best. Collects data from websites.
+- [Social media results analyst](https://useaiblocks.com/skills/social-media-results-analyst): Give it your post numbers. Get engagement rates, ROI and platform benchmarks, plus what to post next.
+- [Social post planner](https://useaiblocks.com/skills/social-post-planner): Name your platforms. Get a content calendar and ready posts for LinkedIn, X, Instagram and TikTok.
+- [Social video edit planner](https://useaiblocks.com/skills/social-video-edit-planner): Attach clips and the post's idea. Get a timed cut list, captions, a cover and export checks.
+- [Standing social calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker): Give it your brand and products. Get a rolling post calendar, captions in your voice and posts ready for approval.
+- [Thumbnail and title planner](https://useaiblocks.com/skills/thumbnail-and-title-planner): Paste your video idea and channel. Get title and thumbnail pairs to test, with the first minute written to pay them off.
+- [TikTok creator outreach planner](https://useaiblocks.com/skills/tiktok-creator-outreach-planner): Tell it your product and budget. Get how to find creators, what to offer, and how to track results.
+- [TikTok research collector](https://useaiblocks.com/skills/tiktok-research-collector): Give it a hashtag or account. Get public videos, comments and stats. Collects data from websites.
+- [TikTok Shop affiliate planner](https://useaiblocks.com/skills/tiktok-shop-affiliate-planner): Tell it your products and margins. Get a commission setup, creator outreach plan and sample process.
+- [TikTok Shop content planner](https://useaiblocks.com/skills/tiktok-shop-content-planner): Tell it your products. Get video formats, hooks, hashtags and a content calendar.
+- [Trust-first launch planner](https://useaiblocks.com/skills/trust-first-launch-planner): Describe a product people are wary of. Get the number who must hear about it, cheap trust tactics and a proof sequence.
+- [Video content planner](https://useaiblocks.com/skills/video-content-planner): Give it your channel goal. Get a video plan, scripts and ways to turn one long video into short clips.
+- [Voice-matched post writer](https://useaiblocks.com/skills/voice-matched-post-writer): Share posts you already wrote. Get new Twitter/X or LinkedIn posts that sound like you, checked against your style.
+- [Webinar promotion planner](https://useaiblocks.com/skills/webinar-promotion-planner): Give it your webinar topic and audience. Get a plan to promote it, run it and follow up.
+- [WeChat article planner](https://useaiblocks.com/skills/wechat-article-planner): Name your topic. Get a WeChat Official Account article plan with title options and layout built for the platform.
+- [Word of mouth planner](https://useaiblocks.com/skills/word-of-mouth-planner): Describe your product or message. Get ideas for making people talk about it, scored on six sharing triggers. Uses the STEPPS method.
+- [X growth writer](https://useaiblocks.com/skills/x-growth-writer): Give it your topic and past posts. Get tweets, threads and a plan to grow your audience on X.
+- [X reply writer](https://useaiblocks.com/skills/x-reply-writer): Paste a tweet. Get a reply worth reading on its own, or a clear call to skip it.
+- [X thread writer](https://useaiblocks.com/skills/x-thread-writer): Give it a long idea, transcript or draft. Get an X thread where every post stands on its own.
+- [Xiaohongshu post planner](https://useaiblocks.com/skills/xiaohongshu-post-planner): Name your topic. Get a Xiaohongshu post plan with cover, title and layout aimed at saves and sales.
+- [YouTube channel auditor](https://useaiblocks.com/skills/youtube-channel-auditor): Give it your channel link or three videos. Get the one fix that matters most, plus what to keep doing.
+- [YouTube channel browser](https://useaiblocks.com/skills/youtube-channel-browser): Give it a channel. Get its latest uploads and a search inside its videos. Collects data from websites.
+- [YouTube channel growth kit](https://useaiblocks.com/skills/youtube-channel-growth-kit): The full kit: tell it your channel and goal. Get an audit, ideas, scripts, thumbnails, SEO and a calendar.
+- [YouTube chapter writer](https://useaiblocks.com/skills/youtube-chapter-writer): Give it your video transcript. Get a chapter list that follows YouTube's rules and shows up on the video.
+- [YouTube comment reply writer](https://useaiblocks.com/skills/youtube-comment-reply-writer): Paste your comments. Get them sorted by what to answer, short replies in your voice, and one comment to pin.
+- [YouTube retention reader](https://useaiblocks.com/skills/youtube-retention-reader): Give it your retention export. Get where viewers leave, what you said then, and the one change to make.
+- [YouTube title and thumbnail checker](https://useaiblocks.com/skills/youtube-title-thumbnail-check): Give it your video idea. Get ten titles checked for length and repeats, plus a thumbnail brief for the best.
+- [YouTube transcript and channel reader](https://useaiblocks.com/skills/youtube-transcript-reader): Give it a video or channel. Get transcripts, video lists and new uploads. Collects data from websites.
+- [YouTube upload planner](https://useaiblocks.com/skills/youtube-upload-planner): Tell it your free hours. Get a week of uploads with titles, formats and what to drop first.
+- [YouTube video finder](https://useaiblocks.com/skills/youtube-video-finder): Say a topic. Get matching videos and channels, with transcripts for the ones you pick. Collects data from websites.
+- [YouTube viral video finder](https://useaiblocks.com/skills/youtube-viral-video-finder): Name your niche. It reads public YouTube pages and ranks videos that beat their channel's usual views.

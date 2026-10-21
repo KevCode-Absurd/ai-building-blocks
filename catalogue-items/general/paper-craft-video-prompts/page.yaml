@@ -1,0 +1,215 @@
+new_slug: paper-craft-video-prompts
+name: "Paper craft video clip prompt writer"
+summary: "Paste your paper-craft script and attach product photos. Get cut-paper image and clip prompts and an edit list."
+job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
+
+headline: "Paper craft video clip prompt writer"
+subhead: Give it a narrated paper-craft script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts where paper moves only as paper can, stopping three times for your OK. You get every prompt and an edit list for putting the video together.
+
+explain: |
+  Paper ads break in familiar ways once an AI video tool gets them. The scene turns into flat clip art. It shows up as a craft model on a desk instead of a world you're inside. The paper woman looks different in every shot, paper bends like rubber, and your label gets redrawn wrong.
+
+  This skill runs the same six stages as every video block here. It picks who carries the ad, turns them into an image, and makes a sheet of every angle, plus product and set sheets. A material sentence (build, paper types, edge, colors, one low side light) and a motion sentence (stop-motion on twos, rigid pieces) are locked there and pasted into every prompt. Then a storyboard, where every frame says where the camera stands inside the paper world. Only then come clips, with each paper mechanism written as it really works. You approve the avatar, the sheets and the storyboard first.
+
+when:
+  - You have a paper-craft script and need it made with AI image and video tools.
+  - Earlier attempts looked like clip art, clay, or a model on a table.
+  - You want to approve each step before you spend credits on video.
+
+you_give:
+  - The script with narration and picture notes (and its show plan and cast note, if you have them)
+  - Clean photos of your product's front, side and top, and its label text word for word
+  - How your product is used
+  - Your tools and clip lengths, and whether your video tool makes sound (optional)
+you_get:
+  - An avatar card to approve, then reference image prompts and a pick
+  - Character, product and set sheets, with the material and motion sentences locked
+  - A storyboard with a frame prompt, a camera spot and a shot card for every shot
+  - Clip prompts where paper moves only as paper can, and an edit list
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your script, then your label text, and attach the product photos.
+  - Approve the avatar card, then make the reference images and pick one.
+  - Make the sheets and approve them with the lock lines, then approve the storyboard.
+  - Make the clips from the approved frames, record the narration, and cut the edit from the edit list.
+
+how_it_works:
+  - title: Takes in the script
+    text: Reads the show job, paper mechanism and build, and where the change starts and ends.
+  - title: Picks the avatar
+    text: One flat-cut paper adult, paper hands, or the product alone, written as a card. You approve it.
+  - title: Turns it into an image
+    text: Three or four paper reference images of the avatar, and the pick.
+  - title: Makes sheets and lock lines
+    text: Every angle of the figure, the card product, each empty set, a material sentence and a motion sentence. You approve them.
+  - title: Storyboards every shot
+    text: A frame with a camera spot inside the paper world and a shot card per shot. You approve the whole board.
+  - title: Turns it into video
+    text: Clips in stop-motion on twos with the mechanism written as paper works, the narration, then the edit and a claims check.
+
+output_shape: |
+  STAGE 0  SCRIPT IN   Turn: <show job>, <mechanism>. Starts <where>,
+           ends <where>. Paper scene change: <one, or none>
+  STAGE 1  AVATAR CARD (approve, or approved in advance)
+           Role <...> | Age <...> | Look <...> | Clothes <...>
+           Props <...> | Voice <...> | Never changes <...>
+  STAGE 2  REFERENCE IMAGES  <prompt>  Make <3 or 4>. Pick: <which, why>
+  STAGE 3  SHEETS AND LOCK LINES (approve, or approved in advance)
+           MATERIAL <sentence>  MOTION <sentence>
+           FIGURE <line>  PRODUCT <line>
+           Character sheet <angles, gestures, size>  Product sheet <views>
+           Set sheet <each place, empty, camera spot>
+  STAGE 4  STORYBOARD (approve, or approved in advance)
+           F<n> <frame prompt with [MATERIAL]>  Camera <spot inside>
+           Card <n>: <framing> | <camera> | <action> | "<line>" | <s> | <sound>
+           Continuity <180° line, hands, product state>
+  STAGE 5  CLIP <n> (<s>, start F<n>, end <frame or none>)
+           [MOTION] Camera <one move>  0 to <n> s <...>  Fixed <...>
+           VOICE <...>  EDIT <order, captions, overlay, end card, safe zone>
+           MISSING: <facts it needed>
+  CHECKS MISSED: <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script (from the paper world script skill), about 30 s.
+    Show plan: reveal, pop-up. Flat-cut figure on layered planes,
+    matte card, kraft lunchboxes, scissor-cut edges.
+    1 "Lunchboxes. Permission slip. One missing shoe." Card kitchen.
+    2 "Your own vitamins? Still on the shelf." Card shelf, plain tub.
+    3 "So put them where your day already goes." Paper planner.
+    4 "One pack, right there." THE TURN: the page turns, the daily
+      pack stands up from the fold.
+    5 "Rip. Tip. Enjoy." Paper hands tear the pack across the top.
+    6 "Sixty-plus ingredients, twenty-one vitamins and minerals, six
+      grams of fiber." The pouch on a card car seat.
+    7 "First order $29.99 with the text sign-up." Held. On screen:
+      renews at $49.99 every 4 weeks.
+    Cast note: one flat-cut paper woman, an invented adult about 40.
+    Photos attached: pouch front, side and top. Label: "Sprout" in
+    yellow, a yellow bear face top right, "28 Daily Packs" at the
+    bottom. Gummies: small deep-green bears. Tear only across the top.
+    Colors: forest green #00582D, cream #FFF7DF, sunflower #FFCC2E.
+    Video tool: 8-second clips, takes an end frame, no sound.
+    Approvals: all three given in advance. Run every stage in one go.
+  output: |
+    STAGE 0  SCRIPT IN  Turn: reveal, pop-up. Starts on the open
+    planner at line 3, ends with the pack upright in the fold. Paper
+    scene change: none; the page turn is the turn itself.
+
+    STAGE 1  AVATAR CARD (approved in advance)
+    Role: a parent in a packed morning, lines 1 to 5. Age: about 40.
+    Look: flat-cut cream card face, two black dot eyes, short dark
+    brown card hair. Clothes: blue card jumper, grey card trousers.
+    Props: paper planner, then one daily pack. Voice: none on screen;
+    off-screen narrator. Never changes: blue jumper, short hair, pins
+    at shoulders, elbows and knees.
+
+    STAGE 2  REFERENCE IMAGES
+    A flat-cut paper figure of a woman, adult proportions, front on,
+    as on the card, against plain cream card. [draft MATERIAL]. Make
+    4. Pick: the one whose pins show clearly, so gestures read.
+
+    STAGE 3  SHEETS AND LOCK LINES (approved in advance)
+    MATERIAL  A world built from real paper: flat-cut figures pinned at
+    the joints, set on three layered planes, matte card stock in cream,
+    forest green, sunflower yellow and sky blue, kraft paper for boxes,
+    clean scissor-cut edges showing the card's thickness, one low warm
+    side light so each layer casts a soft shadow on the one behind,
+    the paper scene filling the frame on every side.
+    MOTION  Paper stop-motion animated on twos: each pose holds for two
+    frames, about 12 new poses a second; every piece stays rigid and
+    flat.
+    WOMAN  A flat-cut paper woman, cream card face, short dark brown
+    card hair, blue card jumper, grey card trousers.
+    POUCH  A deep green card pouch, a yellow card bear face top right;
+    label "Sprout" in large yellow letters, "28 Daily Packs" small.
+    Woman sheet: front, three-quarter left and right, side, back, arm
+    raised to turn a page; the daily pack about the size of her hand.
+    Pouch sheet: front, side, top, from the photos. Sets: the kitchen
+    (camera at her eye level), the car seat (camera at seat height).
+
+    STAGE 4  STORYBOARD (approved in advance)
+    F3 (lines 3-4) [WOMAN]'s pinned hands hold an open paper planner,
+    the right page crowded with flat-cut icons (a bus, a laptop, a
+    shopping bag), the kitchen layers behind. [MATERIAL]. Camera: over
+    her shoulder, at her eye level. Attach: image 1 = the woman.
+    Card 3: over the shoulder | locked-off | the page turns, the pack
+    stands up | "So put them where... One pack, right there." | 8 s
+    Continuity: her right hand turns the page and tears the pack; the
+    pack is whole until line 5; the pouch is never torn.
+
+    STAGE 5  CLIP 2 (8 s, start F3, end: the pack upright in the fold)
+    [MOTION] Camera: locked-off. 0 to 4 s: her paper hand turns the
+    planner page from right to left. 4 to 7 s: as the next page opens
+    flat, a green card daily pack fixed across the fold stands up, its
+    shadow growing. 7 to 8 s: the pack stands still. Fixed: her figure
+    and the kitchen layers. Takes: 3.
+    VOICE  Narrator recorded separately in a stock voice. Figures
+    never speak, so no lip-sync.
+    EDIT  Clips 1 to 4 in order, cuts. Captions inside the safe zone.
+    If the pouch label is wrong in clip 4, lay the real label from the
+    photo over it. End card: $29.99 first order with text sign-up.
+    Renews at $49.99 every 4 weeks.
+    MISSING: a photo of a single daily pack for the pop-up and the tear.
+    (cut for length: the full run also had F1, F2, F5, F6 and clips 1,
+    3 and 4)
+    CHECKS MISSED: none
+
+tweaks:
+  - what: Who carries it
+    how: One paper figure, paper hands, or the product alone. With no figure, stages 1 to 3 become the product and set sheets.
+  - what: The build
+    how: Change the build in the material sentence (flat cut, layered planes, pop-up and fold, quilled detail) and every image prompt follows.
+  - what: Camera spot
+    how: Name one per set on the set sheet (her eye level, low at the counter, straight down). It always stands inside the paper world.
+  - what: Busy labels
+    how: Ask for the cut-out photo version of your pack on the product sheet. It keeps every word exact without asking the image tool to spell them.
+
+judge:
+  - It stopped for your approval after the avatar card, the sheets and the storyboard, or marked each stop "approved in advance" if you gave the approvals up front.
+  - The material and motion sentences are word for word the same in every prompt.
+  - Every frame names a camera spot inside the scene, and every object names its paper or card.
+  - Each clip has one camera move and one paper change, written as paper moves.
+  - The label lines on the card pack are short, in quotes, and match your pack.
+
+test:
+  - Make the character sheet first. If the figure comes back as flat digital art, run the same prompt once more before changing any words.
+  - Flick through the storyboard frames. The woman should look the same in every one, from every angle the sheet showed.
+  - Make the turn's clip and watch the pack. It should stand up stiffly from the fold, never bend or melt into place.
+  - Search the prompts for "desk", "table" and "scissors". None should appear outside the avoid field.
+
+improve:
+  - Save your approved material sentence, motion sentence and figure line in your brand file, so every ad in a series uses the same paper.
+  - Keep the approved sheets and attach them from the start, so new ads begin at stage 4.
+  - Add your video tool, clip length and end-frame support to "Your tools", so the timed steps fit first time.
+  - Add any miss you keep seeing to the fixes table in stage 5, with the change that cured it.
+  - Pair it with the skill that writes the paper-craft script, so every line is already one paper picture.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
+    - {name: "Veo", why: "Starts each clip from your approved frame and can end on a second frame, in 8-second clips."}
+    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot."}
+    - {name: "ElevenLabs", why: "Reads the narration in a stock voice from its library, with tags for pauses and pace."}
+  inputs:
+    - "Photos of real paper you like (card, tissue, kraft), so the material sentence names paper that exists"
+    - "The flat label artwork, so the label you put back in editing matches the pack exactly"
+    - "The recorded narration before you make clips, so each clip is timed to its line"
+
+terms:
+  - term: Avatar card
+    meaning: A short description of who or what carries the ad (look, clothes, props, voice, what never changes). You approve it before any image is made.
+  - term: Lock lines
+    meaning: Fixed lines, like the material sentence, pasted word for word into every prompt so every frame matches.
+  - term: On twos
+    meaning: Each pose is held for two frames, so you see about 12 new poses a second. It gives the stepped, handmade look of stop-motion.
+  - term: Start frame
+    meaning: The approved still a video tool animates from. The clip prompt then describes only what moves.
+  - term: 180° line
+    meaning: An imaginary line through the action. Keeping the camera on one side of it stops people and things swapping sides between shots.

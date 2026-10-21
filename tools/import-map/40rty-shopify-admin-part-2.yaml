@@ -365,6 +365,7 @@
   needs: access your Shopify admin and change live store data
   author: 40rty AI
   author_url: https://github.com/40rty-ai
+  slug: product-launch-retire
 "40rty-ai/shopify-admin-skills:skills/merchandising/shopify-admin-product-tag-bulk-update":
   name: Product tag bulk editor
   summary: Pick products and a tag. Get it added or removed on all of them. Changes your live catalog; preview first.

@@ -7,7 +7,7 @@ description: Use when you need a decision on a proposal and have a press release
 
 A narrative memo makes you connect your facts in sentences, so weak spots show before the meeting. Read in silence at the start, it gives everyone the same facts. For a check before the meeting, use "Narrative memo checker".
 
-Use [Outcome-first positioning memo writer](https://useaiblocks.com/skills/outcome-first-positioning-memo-writer) instead when your team needs one clear idea of what you sell, not a proposal to decide on.
+Use [Outcome-first positioning memo writer](https://useaiblocks.com/skills/positioning-memo) instead when your team needs one clear idea of what you sell, not a proposal to decide on.
 Use [Top-priority shift memo writer](https://useaiblocks.com/skills/top-priority-shift-memo-writer) instead when a change has broken the plan and every leader must change direction in one page.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->

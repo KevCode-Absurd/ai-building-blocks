@@ -1,0 +1,163 @@
+new_slug: captioned-product-reel
+name: "Get a short product reel with captions that fit"
+summary: "Give it your product facts and photos. Get a satisfying-motion script, a short reel and timed captions."
+job: make-video-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+
+headline: "Get a short product reel with captions that stay readable"
+subhead: Give it your product facts and real photos. It writes an opening built on one satisfying movement, builds a 10 to 20 second reel in every size, places the on-screen words clear of the buttons, adds timed captions in your font, and checks it before launch.
+
+explain: |
+  A short reel has about a second to stop the scroll. A product moving in a satisfying way can do that with no face and no voice. The risk is in the details: the pack that looks different from the real one, words hidden under the buttons, or captions that run ahead of the speech.
+
+  This workflow writes the movement first, then builds the reel from your real photos. Two caption steps follow. One chooses the few on-screen words and places them where the feed does not cover them. The other times captions to the speech, sets them in your brand font and exports a subtitle file. A last check walks the finished reel the way a viewer meets it on a phone.
+
+when:
+  - You want a short reel that shows your real product in use.
+  - Your captions get covered by the feed buttons or run out of time with the speech.
+  - You need the same reel in several sizes.
+
+you_give:
+  - Your product facts and how it is used
+  - Real product photos, from the front and in use
+  - Your brand file and your font file
+  - Your offer (optional)
+you_get:
+  - A brief with the buyer and the argument
+  - A script that opens on one satisfying movement, then shows the demo
+  - A finished 10 to 20 second reel in every size you need
+  - A plan for the on-screen words, timed and placed
+  - Timed captions in your brand font and a subtitle file
+  - A pre-launch check with a verdict
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your product facts, how it is used, real photos, your font and the sizes you need.
+  - Check the script before the reel is built, then review the reel for at least three rounds.
+  - Watch the finished reel on a phone with the sound off before it runs.
+
+how_it_works:
+  - title: Picks the buyer and the angle
+    text: Uses the angle planner to fix who the reel is for and the one thing it shows.
+  - title: Writes the opening and demo
+    text: Uses the satisfying-motion script skill to pick what is in focus, keep it physical, and open with no face and no voice.
+  - title: Makes the reel
+    text: Uses the offer reel skill to lay a beat grid, write a shot list from your real photos, build the film and render every size.
+  - title: Plans the on-screen words
+    text: Uses the on-screen text planner to pick the moments, choose the words and place them clear of the buttons.
+  - title: Adds the captions
+    text: Uses the caption skill to lock the words, split them into groups, time them to the speech and set them in your font.
+  - title: Checks before launch
+    text: Uses the pre-launch check to walk the reel as a viewer on a phone and list stop-ship mistakes.
+
+output_shape: |
+  BRIEF: <buyer, the one thing the reel shows>
+
+  SCRIPT (<seconds>)
+  Opening: <the satisfying movement, no face, no voice>
+  Demo: <steps with picture notes>   Cast note: <who appears, if anyone>
+
+  REEL
+  Beat grid: <seconds per beat>   Shots: <shot | photo used | length>
+  Sizes: <list>   Files: <each size>
+
+  ON-SCREEN WORDS
+  <time | words | position>   Count: <words, max per frame>
+
+  CAPTIONS
+  <groups with start and end times>   Font: <name>   Files: <video, subtitle file>
+
+  PRE-LAUNCH CHECK
+  Stop-ship: <mistakes>   Worth a look: <items>   Verdict: <next action>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Product facts: the product table
+    How it is used: tear the pack across the top, eat the gummies
+    Photos: 6 pack photos, 2 of the torn pack
+    Font: WorkSans-Bold.ttf   Sizes: 9:16 and 4:5
+  output: |
+    BRIEF: the powder quitter, Warm. The reel shows how little there
+    is to do.
+
+    SCRIPT (15 seconds)
+    Opening: a pack tears open across the top in slow motion.
+    Demo: a hand tips green gummies into a palm; the hand closes.
+
+    REEL
+    Beat grid: 0 to 3 tear, 3 to 8 pour, 8 to 12 pack and fiber number,
+    12 to 15 action
+    Shots: 1 | photo 4 (torn pack) | 3 s
+    Sizes: 9:16, 4:5
+
+    ON-SCREEN WORDS
+    0:00 | "Greens, minus the shaker." | upper third, clear of the top 14%
+    Count: 4 words, 1 frame
+
+    CAPTIONS: none needed, the reel has no speech. Subtitle file
+    skipped.
+
+    PRE-LAUNCH CHECK
+    Stop-ship: none. Worth a look: the pack at 0:09 looks smaller than
+    in photo 2; compare at full size.
+    Verdict: fix the pack size, then launch.
+    (cut for length: the full shot list and the 4:5 layout)
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-06. MISSING: a voice, since the
+    reel has none; target countries.
+
+tweaks:
+  - what: Length
+    how: Ask for 10, 15 or 20 seconds. The beat grid changes with it.
+  - what: Voice
+    how: Say "no voice" or "add a voice-over". With a voice, the caption step times captions to it.
+  - what: Sizes
+    how: Name every size you need. Each is laid out for its own shape and its own safe zones.
+  - what: Offer
+    how: Add your offer and the last frame shows it, with the terms in the on-screen words.
+
+judge:
+  - The product in the reel matches your photos in shape, colours and printing.
+  - No on-screen word sits in the areas the feed covers.
+  - Captions match the speech word for word and appear when it is spoken.
+  - The words on screen are few enough to read in the time they are shown.
+  - The run ends with a summary that lists every file and every MISSING line in one place.
+
+test:
+  - Watch the reel on a phone with the sound off. Can you tell what it is for?
+  - Pause at three random frames and compare the product with your real photo.
+  - Check the first second. Does the movement show before any words?
+  - Check the caption file against the script, word for word.
+
+improve:
+  - Add a step before the script that finds the reasons people buy, so the demo shows the main one.
+  - Add a step after the reel that checks it against Meta's ad rules.
+  - Tune the script skill with the movements your product does best.
+  - Make a second reel with a different opening and compare the two.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps the script, words and captions consistent across six steps."}
+    - {name: "CapCut", why: "Takes the shot list and captions straight into an edit."}
+    - {name: "Meta Ads Manager", why: "Its preview shows which parts the feed buttons cover."}
+  inputs:
+    - "Full-size photos of your product, front, back and torn open"
+    - "Your font file, so the captions use your real type"
+    - "A short clip of the product being used, if you have one, so the movement is true"
+
+terms:
+  - term: Satisfying motion
+    meaning: A smooth, physical movement that is pleasant to watch, such as a pour or a tear.
+  - term: Beat grid
+    meaning: A plan that says what happens in each second of the reel.
+  - term: Safe zone
+    meaning: The part of the screen the feed buttons and text do not cover.

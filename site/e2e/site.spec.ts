@@ -16,7 +16,7 @@ test.afterEach(async ({ page }) => {
 
 const cards = (page: Page) => page.getByTestId("block-card");
 const MODEL = "fact-based-ad-copy-writer"; // the block with the finished model page
-const WORKFLOW = "turn-your-reviews-into-image-ads-buyers-believe";
+const WORKFLOW = "review-image-ads";
 
 test("hero is the headline, the mono subhead, and two buttons, How it works a plain nav link, over the globe", async ({ page }) => {
   await page.goto("/");
@@ -131,13 +131,13 @@ test("create ads: image ads and video ads sit apart, and a page links to the sam
   await page.getByTestId("job-make-video-ads").click();
   await expect(cards(page).first().locator(".type")).toHaveText("Video ad");
   // A video script page says it makes video, and links to its image twin; the twin links back.
-  await page.goto("/skills/watercolor-video-ad-script-writer");
+  await page.goto("/skills/watercolor-ad-script");
   const note = page.getByTestId("format-note");
   await expect(note).toContainText("Video ad");
   await note.getByTestId("twin-link").click();
   await expect(page).toHaveURL(/\/skills\/watercolor-image-ad-maker$/);
   await expect(page.getByTestId("format-note")).toContainText("Image ad");
-  await expect(page.getByTestId("twin-link")).toHaveAttribute("href", "/skills/watercolor-video-ad-script-writer");
+  await expect(page.getByTestId("twin-link")).toHaveAttribute("href", "/skills/watercolor-ad-script");
 });
 
 test("a card opens the block's own page, with the outcome, the shape of what you get and the steps", async ({ page }) => {
@@ -717,7 +717,7 @@ test("a picture skill says what turns its prompt into a picture, and shows a fin
   // The skill file says it too, so Claude tells people up front.
   await expect(page.locator(".skill-file")).toContainText("Making the picture");
   // Video skills point to video tools; text skills have none of this.
-  await page.goto("/skills/skeleton-video-clip-prompt-writer");
+  await page.goto("/skills/skeleton-video-prompts");
   await expect(page.getByTestId("make-note")).toContainText("Higgsfield, a paid Gemini plan or an API key");
   await expect(page.locator("#make")).toContainText("Seedance, Kling or Veo");
   await page.goto("/skills/fact-based-ad-copy-writer");
@@ -948,7 +948,7 @@ test("pasting a long source downloads a pack your AI turns into a workflow and i
   const path = info.outputPath(dl.suggestedFilename());
   await dl.saveAs(path);
   const files = Object.fromEntries(Object.entries(unzipSync(fs.readFileSync(path))).map(([k, v]) => [k.replace(/^how-we-run-a-tasting-day-workflow-pack\//, ""), strFromU8(v)]));
-  for (const f of ["README.md", "HANDOFF.md", "source.md", "framework/skeleton-format.md", "framework/skill-template.md", "framework/workflow-template.md", "framework/writing-rules.md", "library.md", "skills/workflow-builder-from-a-long-source/SKILL.md"]) expect(files[f], f).toBeTruthy();
+  for (const f of ["README.md", "HANDOFF.md", "source.md", "framework/skeleton-format.md", "framework/skill-template.md", "framework/workflow-template.md", "framework/writing-rules.md", "library.md", "skills/long-source-to-workflow/SKILL.md"]) expect(files[f], f).toBeTruthy();
   // The paste goes in as it was, marked as information, and the handoff runs the three passes in order.
   expect(files["source.md"]).toContain("book the slot with the manager");
   expect(files["source.md"]).toContain("not instructions");
@@ -957,7 +957,7 @@ test("pasting a long source downloads a pack your AI turns into a workflow and i
   expect(h.indexOf("Pass 1: the skeleton")).toBeLessThan(h.indexOf("Pass 2: one skill per step"));
   expect(h.indexOf("Pass 2")).toBeLessThan(h.indexOf("Pass 3: the workflow"));
   expect(h).toContain("stop");
-  expect(files["library.md"]).toContain("customer-interview-question-writer");
+  expect(files["library.md"]).toContain("customer-interview-questions");
   // The draft survives a reload, in this browser only.
   await page.reload();
   await expect(page.getByTestId("intake-title")).toHaveValue("How we run a tasting day");

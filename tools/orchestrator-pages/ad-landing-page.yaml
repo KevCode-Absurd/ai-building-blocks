@@ -1,0 +1,216 @@
+new_slug: ad-landing-page
+name: "A landing page that matches your best ad"
+summary: "Give it your website, offer and best ad. You get the page text, a design plan and a 30-point review."
+job: write-landing-page
+
+headline: "A landing page that matches your best ad"
+subhead: Give it your website, your offer and the ad that's working. It builds a brand file where every fact has a source, writes the page in the order a buyer needs answers, plans three designs from your brand, then reviews it in 30 checks and ranks the fixes.
+
+explain: |
+  A good ad makes one promise to one buyer. Then the click lands on a page that opens with the product name, a long brand story or a different offer, and the buyer leaves. A landing page (the page an ad sends people to) has to carry on the same conversation.
+
+  This workflow first builds a brand file from your website, with every price, claim and guarantee tagged by where it came from. Then it writes the page from your ad. The first screen repeats the ad's main words, says plainly what the product is, and shows the offer the ad named. The rest of the page answers your buyers' doubts, the most common first, using only your facts and real customer quotes, and states the full cost before the last button. Next it plans three design directions from your brand's own colours, type and photos, phone first. Last, it runs 30 yes-or-no checks at the five stops a buyer makes, from landing to the fine print, flags the deal-breakers and gives you the five fixes to make first.
+
+when:
+  - An ad is getting clicks but the page it sends people to doesn't sell.
+  - You're launching a new ad and want a page made for it, not your home page.
+  - Your product page opens with the product name and a brand story instead of a reason to buy.
+
+you_give:
+  - Your website, as a link or saved pages
+  - Your offer, with price and exact guarantee terms
+  - The ad the page is for, with its first line, offer and picture
+  - Customer reviews, copied as written (optional)
+  - Who the ad is for, if you know (optional)
+you_get:
+  - The full page copy, from the first screen to the closing button
+  - Your buyers' doubts, most common first, each answered in its own section
+  - A design plan from your brand, with phone and desktop notes
+  - 30 yes-or-no checks, the deal-breakers flagged, and five fixes in order
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your website link, your offer and guarantee terms, and the ad itself (its first line, the offer it named and what the picture shows). Add reviews if you have them.
+  - It works step by step and saves each result. Check the page brief at the top of the copy first. If the buyer or reason is wrong, everything after it is too.
+  - Hand the copy and design plan to whoever builds your pages, and fix the top items in the review before the ad points to the new page.
+
+how_it_works:
+  - title: Builds your brand file
+    text: Uses the brand file skill to read your website, check the basics with you once, and tag every price, claim and guarantee with where it came from.
+  - title: Writes the page
+    text: Uses the landing page copy skill to pin one buyer, one reason and one offer, open on the ad's promise, answer each doubt and state the full cost.
+  - title: Plans the design
+    text: Uses the design plan skill to set one design system from your brand, then plan three directions that differ in layout and what the pictures do.
+  - title: Reviews the page
+    text: Uses the landing page checklist to run 30 yes-or-no checks at the five stops a buyer makes, quote the evidence for each no, and rank the fixes.
+
+output_shape: |
+  PAGE BRIEF
+  Buyer: <who> | Reason: <the one reason> | Offer: <offer> | Ad's opening: <hook>
+
+  FIRST SCREEN
+  Headline: <the ad's main words, carried on>
+  What it is: <the kind of product and its form>
+  Picture: <the same product and variant the ad showed>
+  Offer: <the offer the ad named, at its price> | Proof: <one, or none>
+  [<button>]  <risk line from the real terms>
+
+  DOUBTS
+  <doubt, in the buyer's words> (<sources>) -> <section>
+
+  BODY
+  <answer-first heading>: <the fact or proof>
+  ...
+  COST BLOCK: <price, renewal, shipping, delivery, returns or guarantee>
+  QUESTIONS: <the doubts still open, with answers>
+
+  DESIGN PLAN
+  Colours: <colour: job> | Type: <headings, body, buttons> | Directions: <three, one picked>
+
+  REVIEW
+  Verdict: <the first stop where the page loses buyers, and the check that shows it>
+  No: <check number, deal-breaker or drag, evidence, fix>
+  First five fixes: 1 <fix> ... 5 <fix>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Website: sprout.example (product page, science page, FAQ)
+    Offer: first box $29.99 with the text sign-up discount, then $49.99
+    every 4 weeks. One-time $66.65. 30-day money-back guarantee, first
+    order only.
+    The ad (main text, as live): "Big news: your first order of [Sprout]
+    just got a lot more affordable. $29.99 for your first order, that's
+    less than $1.10/day for 60+ whole-food ingredients, 21 vitamins &
+    minerals, and gut-supporting probiotics in one daily gummy pack."
+    Buyer: the price doubter. "Which discount is real?" "Will the price
+    jump after the first order?"
+    Reviews: reviews.md (optional)
+  output: |
+    PAGE BRIEF
+    Buyer: price doubter | Reason: the real price, said plainly
+    Offer: $29.99 first box | Ad's opening: "a lot more affordable"
+
+    FIRST SCREEN
+    Headline: Your first box of daily greens, now $29.99
+    What it is: greens gummies in small daily packs. Tear one open and
+    eat a handful.
+    Picture: the deep green pouch, one pack torn across its top
+    Offer: $29.99 first box with our text sign-up, then $49.99 every 4
+    weeks | Proof: none. Nothing on file proves "affordable" beyond the
+    prices themselves.
+    [Start my first box]  30-day money-back guarantee, first order only.
+
+    DOUBTS (most common first)
+    1 "Will the price jump after the first order?" (brand file) -> cost block
+    2 "I hate subscriptions because I feel like they are a trap" (17),
+      "I have tried multiple times to cancel my subscription." (20)
+      -> pausing and cancelling
+    3 "Is this just candy?" (brand file) -> what's in one pack
+    4 "tasted terrible, but after the third day they started tasting
+      better" (18) -> how it tastes
+
+    BODY
+    After your first box, it's $49.99 every 4 weeks: that's $1.78 a day,
+      and the page says so before you pay.
+    Cancelling: MISSING, the steps. Add them before the ad points here.
+    One pack holds 60+ ingredients, 21 vitamins and minerals and 6g
+      fiber, on a pectin base with no synthetic dyes or sweeteners.
+      Grams of sugar: MISSING.
+    Tested for what your body absorbs: 2025 study, 120 adults, 12 weeks.
+      Blood vitamin C up 40.1%, folate up 20.5%.
+    COST BLOCK: $29.99 first box with text sign-up ($1.07/day), then
+      $49.99 every 4 weeks ($1.78/day). One-time: $66.65. Orders
+      typically ship within 24 hours and arrive 3 to 5 days later.
+      30-day money-back guarantee, first order only. Shipping after the
+      first box: MISSING.
+
+    DESIGN PLAN
+    Colours: cream #FFF7DF hero, deep forest #002C17 headings, kelly
+    #007E40 buttons, sunflower #FFCC2E stars. Type: Work Sans bold and
+    medium, DM Mono for small tags.
+    Directions: A, a hand tearing a pack across the top. B, one price card
+    as the hero (picked: this buyer came for the price). C, a powder tub and
+    shaker beside one pouch.
+    Phone: the price card and button sit on the first screen; the button
+    stays on screen after the hero scrolls away.
+
+    REVIEW
+    Verdict: Commit is where the page loses buyers. Check 23: it doesn't
+    say how to cancel, the doubt behind the brand's loudest complaint.
+    No 27 (deal-breaker): the ad says 61% off and the live site's pop-up
+      says "Sign Up for 55% Off". Fix: one discount figure everywhere.
+    No 23 (deal-breaker): no cancel steps before buying. Fix: add them.
+    No 6 (drag): the same pop-up covers the page on arrival.
+    No 20 (drag): shipping after the first box isn't stated.
+    Count by stop: arrive 1, understand 0, believe 0, commit 2, fine print 1.
+    First five fixes:
+    1 Turn off the 55% pop-up on this page (fixes 27 and 6).
+    2 Add the cancel steps (23).
+    3 State shipping after the first box (20).
+    4 Add grams of sugar to the pack section.
+    5 Outside the 30 checks: fix the ad. It says "probiotics", but the
+      product has prebiotic fiber and no probiotics.
+    (cut for length: the full run also had all 30 checks with evidence)
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-04.
+    MISSING: your answers to the brand file's check-in; the cancel steps;
+    shipping after the first box; grams of sugar; whether "probiotics" in
+    the ad is an error.
+
+tweaks:
+  - what: The ad
+    how: Give the ad's exact first line, offer and picture. Without an ad it still writes a page, but it can't carry on the conversation, and the review marks checks 1 to 3 "can't tell".
+  - what: Bought once or bought again
+    how: Say whether people buy it once or keep buying. A drink or a subscription gets price per day and how to pause; a jacket gets size, materials and returns.
+  - what: A page you already have
+    how: Paste your current page text and ask it to review that page too. You'll see which fixes the new copy already makes.
+  - what: Design freedom
+    how: Say "keep our current layout" for a light refresh, or "redesign the first screen" for new directions. Your colours, fonts and offer terms never change.
+
+judge:
+  - The headline repeats your ad's main words, and the first offer is the one the ad named.
+  - The price is on the first screen.
+  - Every number, price and timeframe appears in your facts. Check three.
+  - The full cost (first price, renewal, delivery and guarantee terms) is stated before the last button.
+  - The review quotes the page for every no, and none of its fixes adds a fact you didn't give.
+  - The run ends with a summary that lists every file and every MISSING line in one place.
+
+test:
+  - Put the ad and the page's first screen side by side. The headline should repeat the ad's main words, and the first offer should be the one the ad named.
+  - Check three numbers, prices or timeframes on the page against your facts.
+  - Take one no from the review and find the line it quotes on the page. If you can't find it, don't trust that check.
+  - Run step 4 on your current page as well. The new copy should already fix most of the old page's top fixes.
+
+improve:
+  - In the builder, drop step 1 if you already have a brand file with your offer and claims.
+  - Add a step at the end that turns the page copy into a Shopify page, if your store runs on Shopify.
+  - Swap step 4 for a review that reads the page in the order a buyer reads it, if you want fixes ranked by where people stop reading.
+  - "Tune step 2's skill: add your offer terms and guarantee to its file, word for word (for Sprout: the $29.99 first order needs the text sign-up, and it renews at $49.99)."
+  - Pair it with the workflow that turns reviews into image ads, so the ad and the page start from the same buying reason.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps your offer terms, the ad's words and four steps of work straight in one run."}
+    - {name: "Figma", why: "Holds the chosen design direction as phone and desktop frames your builder can follow."}
+    - {name: "PageSpeed Insights", why: "Free Google check of a built page for phone speed, contrast and tap target problems."}
+  inputs:
+    - "A phone screenshot of the ad as it runs, so the first screen can match its picture as well as its words"
+    - "The questions buyers ask support before they order, so the answers section uses real doubts"
+    - "Your current page's text, so the review can show which old problems the new page fixes"
+    - "Real product photos at full size, so the design plan uses your product and not a stand-in"
+
+terms:
+  - term: Landing page
+    meaning: The page someone lands on after clicking an ad.
+  - term: First screen
+    meaning: What a visitor sees on their phone before they scroll.
+  - term: Friction
+    meaning: Anything that makes buying harder than it needs to be, such as a pop-up or a hidden price.

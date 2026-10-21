@@ -1,0 +1,82 @@
+new_slug: bond-safety-check
+name: Check if a bond or loan is safe to hold
+summary: Paste the debt terms and the borrower's statements. Get coverage and cushion tests and a safe, speculative or reject call.
+job: money-and-investing
+thinking: high
+thinking_why: It runs four skills in a row and each one does sums and judgment on the last. Give it your strongest model.
+headline: Find out if a borrower can keep paying, even in a bad year
+subhead: Give it the debt terms and several years of the borrower's statements. It labels the loan, tests average earnings against every debt the borrower has, tests how much the business is worth beyond what it owes, and writes a safe, speculative or reject call with its reasons.
+explain: |
+  A loan or bond only pays back if the borrower keeps paying. A good year proves little, and a pledge of property helps less than it sounds, because pledged assets lose value just when they are needed. A high rate is the usual bait for thin numbers.
+
+  This workflow follows the method in the 1940 edition of Security Analysis by Benjamin Graham and David Dodd. It starts by asking if the loan is an investment or a speculation. It then tests the borrower's average earnings against all its debts together, tests how much the business is worth next to what it owes, and writes the call using rules that exclude rather than persuade. It is a method of analysis, not financial advice. It never says buy or sell.
+when:
+  - You are about to lend to a business and want a test beyond "they seem solid".
+  - You are looking at a bond, a note or a preferred share and want to know how well it is covered.
+  - A borrower offers a high rate, a short term or collateral to make up for thin numbers.
+you_give:
+  - The loan or bond terms and the price you would pay
+  - Seven or more years of the borrower's earnings or income statements
+  - The borrower's other debts and lease payments
+  - What the owners' stake is worth, from a share price or a fair private price (optional)
+you_get:
+  - A first label of investment or speculation
+  - Average earnings cover against every fixed charge, in a bad year too
+  - The cushion of value behind the debt, against a bar for the type of business
+  - A safe, speculative or reject call, with ranked reasons and what would change it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the terms and the borrower's statements. It works step by step and saves each result.
+  - Read the final call first, then the two tests behind it.
+how_it_works:
+  - title: Labels the loan
+    text: Asks whether careful study promises safety of your money and a fair return at this price. If not, it says speculation.
+  - title: Tests earnings against all debt
+    text: Adds every fixed charge, averages earnings over about seven years and sets the cover against a bar that fits the business.
+  - title: Tests the cushion
+    text: Divides what the owners' stake is worth by the total debt, and reads it next to the earnings test.
+  - title: Writes the call
+    text: Does not relax the bar for a near due date, a high rate or a pledge, and says what would change the call.
+output_shape: |-
+  STEP 1: LABEL
+    Investment or speculation: <label> | Why: <test result>
+
+  STEP 2: EARNINGS COVER
+    Total charges: <amount> | Cover: <x> on two bases | Bar: <x> | Call: <pass / borderline / fail>
+
+  STEP 3: CUSHION
+    Total debt: <amount> | Cushion: <amount> | Ratio: <x> | Bar: <x> | Call: <pass / fail>
+
+  STEP 4: THE CALL
+    <MEETS THE BAR / SPECULATIVE AT THESE TERMS / REJECT>
+    Why, ranked: <list> | What would change it: <facts> | Test again: <date>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Before or after tax
+    how: Say which one your earnings figures are. After tax is the stricter test.
+  - what: A low share price
+    how: Give a low from the last slump. A peak price flatters the cushion.
+  - what: Your lending limit
+    how: Say the most you could lose without harm. A speculative call is then sized to it.
+judge:
+  - Each step used the result of the step before.
+  - Every fixed charge is in the total, and no prior-deductions figure was used.
+  - No bar was relaxed for a near due date, a high rate or a pledge.
+  - The call says what would change it.
+  - No step invented a figure, and nothing was named as a security to buy or sell.
+test:
+  - Run it on a business loan you know well and check the cover against your own sum.
+  - Give it a loan with a high rate and thin cover and check it holds the bar.
+  - Run it twice on the same facts. The call should not change.
+improve:
+  - Save your own bars by type of business, from loans you have made.
+  - Keep a log of past calls and what happened.
+  - Run "Earnings padding detector" on the borrower's accounts before step 2 if the numbers look too good.
+terms:
+  - term: Cover
+    meaning: How many times average earnings cover the yearly charges on all the borrower's debts.
+  - term: Cushion
+    meaning: The value of everything that ranks behind your claim, mainly the owners' stake. It takes the first losses.

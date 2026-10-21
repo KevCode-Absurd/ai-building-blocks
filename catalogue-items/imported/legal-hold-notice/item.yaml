@@ -1,0 +1,33 @@
+slug: legal-hold-notice
+renamed_from: records-preservation-notice-drafter
+name: "Records preservation notice drafter"
+summary: "Tell it about a dispute. Get a notice telling staff which records to keep. A first draft, not legal advice."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: litigation-legal/skills/legal-hold
+  url: https://github.com/anthropics/claude-for-legal/tree/main/litigation-legal/skills/legal-hold
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: legal-hold
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: legal-hold skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/litigation-legal/skills/legal-hold
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

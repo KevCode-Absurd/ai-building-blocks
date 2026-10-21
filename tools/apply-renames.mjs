@@ -14,7 +14,7 @@ const all = new Set();
 const problems = [];
 const read = (f) => { try { return YAML.parse(fs.readFileSync(f, "utf8")); } catch (e) { problems.push(`${f}: ${e.message.split(String.fromCharCode(10))[0]}`); return {}; } };
 
-for (const cat of ["general", "ecommerce"]) {
+for (const cat of ["general", "ecommerce", "imported"]) {
   for (const slug of fs.readdirSync(`catalogue-items/${cat}`)) {
     const folder = `catalogue-items/${cat}/${slug}`;
     if (!fs.existsSync(`${folder}/item.yaml`)) continue;

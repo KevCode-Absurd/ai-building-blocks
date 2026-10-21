@@ -1,0 +1,39 @@
+slug: curriculum-gap-check
+renamed_from: curriculum-requirements-gap-checker
+name: "Curriculum requirements gap checker"
+summary: "Give it your curriculum and a list of requirements. Get a table showing what is covered, what is missing and a CSV."
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/curriculum-alignment/coverage-audit
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-alignment/coverage-audit
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: coverage-audit
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: coverage-audit skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-alignment/coverage-audit
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

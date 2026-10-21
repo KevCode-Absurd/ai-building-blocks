@@ -1,0 +1,71 @@
+# Make video ads: AI Blocks
+
+> 67 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [3D how-it-works video ad script writer](https://useaiblocks.com/skills/3d-explainer-video-script): Paste how it works. Get a timed 3D explainer video script and a cast note.
+- [3D how-it-works video clip prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts): Paste your 3D script or product facts. Get matching how-it-works clip prompts and an edit list.
+- [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor): Paste your script. Get every line that trips when spoken, fixed, with the rule it broke.
+- [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner): Give it a one-line video idea. Get a shot list, a ready prompt per shot and fixes for failed clips.
+- [An offer video with your product and price exactly right](https://useaiblocks.com/workflows/offer-reel-real-product): Give it your product photos, words and offer. You get a finished 10 to 20 second video in every size you need.
+- [Animated film video ad script writer](https://useaiblocks.com/skills/animated-video-ad-script): Paste your idea and brand file. Get a timed animated-film video script and a cast note.
+- [Animated film video clip prompt writer](https://useaiblocks.com/skills/animated-video-ad-prompts): Paste your animated-movie script and attach product photos. Get steady clip prompts and an edit list.
+- [Anime video ad script writer](https://useaiblocks.com/skills/anime-video-ad-script-writer): Paste your idea and brand file. Get anime-style video shot cards and a cast note.
+- [Anime video clip prompt writer](https://useaiblocks.com/skills/anime-video-clip-prompt-writer): Paste your anime script and attach product photos. Get hand-drawn clip prompts and an edit list.
+- [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner): Paste your claim and product facts. Get a short script where every spoken line has a picture showing the same thing.
+- [Clay town video ad script writer](https://useaiblocks.com/skills/clay-town-video-ad-script-writer): Paste your idea and brand file. Get a clay-town video script, set card and cast note.
+- [Clay town video clip prompt writer](https://useaiblocks.com/skills/clay-town-video-prompts): Paste your clay-town script and attach product photos. Get stop-motion image and clip prompts, stage by stage.
+- [Claymation video ad script writer](https://useaiblocks.com/skills/claymation-ad-script): Paste your idea and product facts. Get a claymation video shot table and a cast note.
+- [Claymation video clip prompt writer](https://useaiblocks.com/skills/claymation-video-prompts): Paste your clay script and attach product photos. Get matching clip prompts and an edit list.
+- [Creator filming brief writer](https://useaiblocks.com/skills/creator-filming-brief-writer): Paste your approved script. Get a creator filming brief, shoot order and file-naming pattern.
+- [Creator-style testimonial video maker](https://useaiblocks.com/skills/creator-testimonial-video): Give it a product and a persona. Get a spoken recommendation script and a handheld, creator-style video. Your video model makes it.
+- [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer): Paste your founder's words. Get a filming brief on one real decision, or interview questions first.
+- [Get a phone-style video ad from idea to cut list](https://useaiblocks.com/workflows/phone-style-video-ad): Give it your product and buyer. Get a creator script, a filming brief, and after filming a timed cut list.
+- [Get a short product reel with captions that fit](https://useaiblocks.com/workflows/captioned-product-reel): Give it your product facts and photos. Get a satisfying-motion script, a short reel and timed captions.
+- [Get a talking product video ad ready to generate](https://useaiblocks.com/workflows/talking-product-video-ad): Give it your product and buyer. Get a script where the product talks, clip prompts, and an ad rules check.
+- [Jingle video ad script writer](https://useaiblocks.com/skills/jingle-video-ad-script-writer): Paste product facts and buyer. Get a 6 to 30 second jingle script and a music-tool brief.
+- [Jingle video clip prompt writer](https://useaiblocks.com/skills/jingle-video-clip-prompt-writer): Paste your song script and attach product photos. Get the music prompt and clip prompts cut on the beat.
+- [Knitted wool video ad script writer](https://useaiblocks.com/skills/knitted-wool-ad-script): Paste your brief and product facts. Get a knitted-wool video script, a room list and a cast note.
+- [Knitted wool video clip prompt writer](https://useaiblocks.com/skills/knitted-wool-video-prompts): Paste your knitted script and attach product photos. Get sheets, a storyboard and wool clip prompts.
+- [Long-form video ad script writer](https://useaiblocks.com/skills/long-form-video-ad-script-writer): Paste research and proof. Get a 1 to 10 minute narrated script with a picture for every line.
+- [Marketing video producer](https://useaiblocks.com/skills/marketing-video-producer): Say the video you need. Get the right tool, a script and shot plan for AI, avatar or coded video.
+- [Motion comic video ad script writer](https://useaiblocks.com/skills/motion-comic-ad-script): Paste your idea and product facts. Get a motion-comic panel list, captions and a cast note.
+- [Motion comic video clip prompt writer](https://useaiblocks.com/skills/motion-comic-video-prompts): Paste your comic script and attach product photos. Get panel clip prompts and an edit list.
+- [Motion graphics video ad script writer](https://useaiblocks.com/skills/motion-graphics-ad-script): Paste your facts and offer. Get a motion-graphics video script and a sourced fact sheet.
+- [Motion graphics video build planner](https://useaiblocks.com/skills/motion-graphics-build-plan): Paste your graphic script and attach cutouts. Get an exact build plan and a text table with sources.
+- [Narrated video maker](https://useaiblocks.com/skills/narrated-video-maker): Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+- [On-screen text planner for video ads](https://useaiblocks.com/skills/video-ad-text-overlays): Attach video frames and paste the script. Get timed on-screen words, placed clear of the buttons.
+- [Paper craft video ad script writer](https://useaiblocks.com/skills/paper-craft-ad-script): Paste your brief and product facts. Get a paper-craft video script and a cast note.
+- [Paper craft video clip prompt writer](https://useaiblocks.com/skills/paper-craft-video-prompts): Paste your paper-craft script and attach product photos. Get cut-paper image and clip prompts and an edit list.
+- [Paper cutout explainer video ad script writer](https://useaiblocks.com/skills/paper-cutout-ad-script): Paste your point and product facts. Get a timed paper-cutout explainer script and a cast note.
+- [Paper cutout explainer video clip prompt writer](https://useaiblocks.com/skills/paper-cutout-video-prompts): Paste your cutout script and attach product photos. Get timed clip prompts and an edit list.
+- [Podcast-style video ad script writer](https://useaiblocks.com/skills/podcast-style-ad-script): Paste the doubt and your facts. Get a two-person podcast-style video script, with every fact sourced.
+- [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts): Paste your podcast-style script and attach a product photo. Get cast cards, a storyboard and clip prompts.
+- [Product photo to clip maker](https://useaiblocks.com/skills/product-photo-to-clip-maker): Give it a main product photo. Get a 3 to 5 second video for your listing. Your video model makes it.
+- [Product video ad producer](https://useaiblocks.com/skills/product-video-ad-producer): Give it your selling points. Get a shot script and a 15 to 30 second captioned ad. Your video model makes it.
+- [Remake your best video ad as motion graphics](https://useaiblocks.com/workflows/motion-graphics-remake): Give it the script of your best video ad. Get it remade with every word kept, and ready to build.
+- [Satisfying motion video ad script writer](https://useaiblocks.com/skills/satisfying-motion-ad-script): Paste how your product is used. Get a satisfying-motion opening, a demo script and a cast note.
+- [Selfie-style video ad script writer](https://useaiblocks.com/skills/selfie-style-ad-script): Paste your buyer's doubt and facts. Get a selfie-style video script, shot list and two other openings.
+- [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts): Paste your selfie-style script and attach product photos. Get phone-style clip prompts and an edit list.
+- [Short film video ad script writer](https://useaiblocks.com/skills/short-film-ad-script): Paste your idea and brand file. Get a twist short-film script, timed shot table and cast note.
+- [Short film video clip prompt writer](https://useaiblocks.com/skills/short-film-video-prompts): Paste your short-film script and attach product photos. Get steady clip prompts and an edit list.
+- [Skeleton video ad script writer](https://useaiblocks.com/skills/skeleton-video-ad-script-writer): Name the habit you replace. Get a skeleton comedy video script, claims list and cast note.
+- [Skeleton video clip prompt writer](https://useaiblocks.com/skills/skeleton-video-prompts): Paste your skeleton script and attach product photos. Get every image and clip prompt, plus an edit list.
+- [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer): Paste your ad, attach product photos. Get three spoken openings, a storyboard and clip prompts.
+- [Talking object video ad script writer](https://useaiblocks.com/skills/talking-object-ad-script): Paste your buyer's moment and product. Get a talking-object video script and a cast note.
+- [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts): Paste your talking-object script and attach a product photo. Get a character card, clip prompts and edit notes.
+- [Turn reviews into a video ad ready to film](https://useaiblocks.com/workflows/review-video-ad): Give it your website and reviews. You get a script in your customers' words, then every stage to the clips.
+- [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner): List your clips and script. Get a timed cut list, caption windows, a sound plan and exports.
+- [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker): Paste your video ad script. Get each weak line with a fix, and a score out of 100.
+- [Video ad script point-of-view editor](https://useaiblocks.com/skills/video-script-pov-editor): Paste a working script. Get it in a new voice, with every fact, line and length kept.
+- [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker): Paste your buyer and proof. Get four different video script types, each with its opening and tone.
+- [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): Paste real customer quotes and facts. Get a sourced video script, checked openings and a first test plan.
+- [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker): Paste your script and storyboard. Get timed shots, clip prompts and an edit list.
+- [Video ad style remake planner](https://useaiblocks.com/skills/video-ad-style-remake-planner): Paste your best ad. Get a video remake plan with every word kept, a shot table and a cast note.
+- [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner): Paste your script, attach product photos. Get an avatar, angle sheets and a storyboard ready for the clips.
+- [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions): Attach clips, script and font. Get timed brand-font captions, a subtitle file and a fault list.
+- [Video format picker for ad scripts](https://useaiblocks.com/skills/video-ad-format-picker): Paste a finished script. Get formats ranked by fit score out of 100, plus the skills to use.
+- [Video route picker](https://useaiblocks.com/skills/video-route-picker): Describe your video. Get the right way to make it chosen first: generate, compose, or edit your footage.
+- [Voice-over stripping test](https://useaiblocks.com/skills/voice-over-stripping-test): Paste a script with narration. Get a verdict on each line: does the story work without it?
+- [Watercolor video ad script writer](https://useaiblocks.com/skills/watercolor-ad-script): Paste your idea and product facts. Get a timed watercolor video script and a cast note.
+- [Watercolor video clip prompt writer](https://useaiblocks.com/skills/watercolor-video-prompts): Paste your watercolor script and photos. Get every painted image and clip prompt, plus an edit list.
+- [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer): Attach product photos. Get 2 or 3 wordless openings, start and end frames, and clip prompts.

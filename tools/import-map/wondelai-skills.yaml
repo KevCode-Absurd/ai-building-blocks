@@ -312,6 +312,7 @@
   outputs: [ { type: plan } ]
   author: wondelai
   author_url: https://github.com/wondelai
+  slug: business-turnaround-guide
 "wondelai/skills:improve-code-quality":
   name: "Prototype to production guide"
   summary: "Give it a working prototype. Get tests, cleaner structure and a plan to make it ready for real users."
@@ -444,6 +445,7 @@
   outputs: [ { type: plan } ]
   author: wondelai
   author_url: https://github.com/wondelai
+  slug: willingness-to-pay-pricing
 "wondelai/skills:negotiation":
   name: "Negotiation prep coach"
   summary: "Describe a deal or salary talk. Get an opening, calibrated questions and a fallback plan. Uses tactical empathy."

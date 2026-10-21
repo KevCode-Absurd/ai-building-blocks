@@ -9,10 +9,11 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
+  slug: ai-assistant-style-guide
 "bergside/awesome-design-skills:skills/ant":
   skip: "Copies the Ant Design look, which has its own docs."
 "bergside/awesome-design-skills:skills/artistic":
@@ -27,8 +28,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/bold":
@@ -41,8 +42,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/cafe":
@@ -57,8 +58,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/clean":
@@ -83,8 +84,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/doodle":
@@ -95,8 +96,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/dramatic":
@@ -109,10 +110,11 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
+  slug: magazine-layout-style-guide
 "bergside/awesome-design-skills:skills/enterprise":
   skip: "Copies Heroku, Vercel and GitHub looks; a brand copy."
 "bergside/awesome-design-skills:skills/expressive":
@@ -137,8 +139,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/gradient":
@@ -157,10 +159,11 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
+  slug: conversion-page-style-guide
 "bergside/awesome-design-skills:skills/lingo":
   skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
 "bergside/awesome-design-skills:skills/material":
@@ -175,8 +178,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/modern":
@@ -191,8 +194,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/neon":
@@ -205,8 +208,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
 "bergside/awesome-design-skills:skills/pacman":
@@ -233,10 +236,11 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
+  slug: retro-style-guide
 "bergside/awesome-design-skills:skills/riso":
   name: Risograph print style guide writer
   summary: Describe your product. Get a style guide with a two-colour print look on warm paper, plus rules for each part.
@@ -245,10 +249,11 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
+  slug: risograph-style-guide
 "bergside/awesome-design-skills:skills/roku":
   skip: "Copies one company's look (Roku's), so it suits that brand only."
 "bergside/awesome-design-skills:skills/sega":
@@ -265,10 +270,11 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
+  slug: texture-style-guide
 "bergside/awesome-design-skills:skills/sleek":
   skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
 "bergside/awesome-design-skills:skills/spacious":
@@ -285,10 +291,11 @@
   level: beginner
   thinking: low
   thinking_why: It fills a set template with the style's rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: typeui.sh
   author_url: https://typeui.sh
+  slug: story-page-style-guide
 "bergside/awesome-design-skills:skills/terracotta":
   skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
 "bergside/awesome-design-skills:skills/tetris":

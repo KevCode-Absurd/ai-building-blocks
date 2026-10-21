@@ -1,0 +1,80 @@
+new_slug: failure-root-cause
+name: Find why it went wrong and fix it in proportion
+summary: Describe a failure. Get a no-blame review plan, a checked chain of whys and sized fixes.
+job: lead-people
+thinking: high
+thinking_why: It checks causes against evidence and sizes fixes to the pain. Give it your strongest model.
+headline: Learn what really caused a failure, and fix it without overreacting
+subhead: Describe something that broke, missed its date or let customers down. It plans a review that stays on the process, asks why until it reaches a cause you can fix, then gives each level of that chain one fix, sized to how much the problem hurt.
+explain: |
+  After a failure, teams tend to do one of two things. They patch what they saw and the same problem returns. Or they plan a rebuild that costs more than the failure did. A review that turns to blame makes both worse, because people start hiding problems.
+
+  This workflow follows the five whys method as Eric Ries adapted it from Taiichi Ohno. It first sets up the review: a narrow target, everyone affected in the room, a moderator and rules that keep blame out. It then asks why until it reaches a process or training cause. Last, it makes a proportional investment: a small fix at every level for a small problem, a larger one for a larger problem, each with one owner, a date and a check.
+when:
+  - Something broke or missed its date and you want to stop it happening again.
+  - Your last review ended with one person being blamed.
+  - Someone wants a full rebuild after a small failure.
+you_give:
+  - What went wrong, when, who noticed and how often it has happened
+  - The people and teams involved, and how much they trust one another (optional)
+  - Logs, messages or customer comments (optional)
+  - "How much it hurt (customers affected, time or money lost, optional)"
+you_get:
+  - A class of failure, a trigger rule, who must attend, a moderator and ground rules
+  - A chain of whys with evidence at each level and a cause you can change
+  - One fix at each level, sized to the pain, with an owner, a date and a check
+  - A recurrence rule and a plain-words write-up for the team
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the failure in a few lines and name the people involved. Send the plan to attendees before the review.
+  - Share the write-up with everyone, and check each fix on its date.
+how_it_works:
+  - title: Plans the review
+    text: Narrows the target, writes a trigger rule, lists who must attend, names a moderator and sets the rules and the line for when blame starts.
+  - title: Asks why
+    text: States the problem as something seen, asks why from facts, tries a second branch and stops at a cause you can change.
+  - title: Sizes a fix to each level
+    text: Rates the pain, writes one fix per level, makes sure the deep levels get a small first step and adds owners, dates, checks and a recurrence rule.
+output_shape: |-
+  STEP 1: THE REVIEW PLAN
+    Failure class | trigger rule | who attends and why
+    Moderator | ground rules | line for blame | agenda
+
+  STEP 2: THE CHAIN OF WHYS
+    <why> | answer | evidence
+    Second branch | cause you can change | prevention check
+
+  STEP 3: FIXES IN PROPORTION
+    Pain band | total effort
+    Level | fix | size | owner | date | done when | check
+    If it comes back | write-up
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who was involved
+    how: Name every role that found, fixed or built the failed part. A missing role means missing facts.
+  - what: How much it hurt
+    how: Give customers affected, hours lost and cost. Without them the sizes use a band only.
+  - what: How safe people feel
+    how: Say honestly. Low trust gets a smaller, simpler start with two rules only.
+judge:
+  - No answer in the chain names a person as the cause.
+  - Each answer in the chain rests on something seen, not a guess.
+  - Every level has a fix, and the deep levels are not empty.
+  - No fix is a rebuild for a small problem.
+  - Each fix has one owner, a date and a check.
+test:
+  - Run it on a past failure and compare with what you did. Did the deep levels get a fix?
+  - Show the attendee list to someone who was there. Ask who is missing.
+  - Check each fix on its date and see whether the problem returned.
+improve:
+  - Keep a log of failures, chains and fixes, and spot the causes that repeat.
+  - Add your own blame line, in your own voice, to the review plan.
+  - Name a standing moderator for each area, so reviews happen without being set up each time.
+terms:
+  - term: Five whys
+    meaning: Asking why about five times in a row to move from the symptom to a cause you can fix.
+  - term: Proportional investment
+    meaning: Spending more effort on a problem the more it hurts, and always starting with a small step.

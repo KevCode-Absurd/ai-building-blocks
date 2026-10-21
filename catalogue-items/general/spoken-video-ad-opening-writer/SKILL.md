@@ -102,7 +102,7 @@ One opening frame and one shot card per opening:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Make video ads** with the [On-screen text planner for video ads](https://useaiblocks.com/skills/on-screen-text-planner-for-video-ads). It takes the video ads.
+- **Make video ads** with the [On-screen text planner for video ads](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the video ads.
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.

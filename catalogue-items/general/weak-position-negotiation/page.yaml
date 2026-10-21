@@ -1,0 +1,127 @@
+new_slug: weak-position-negotiation
+name: "Negotiation prep planner for the weaker side"
+summary: "Describe a talk where the other side holds more power. Get your terms, their needs and the order to move in."
+job: sell-and-negotiate
+thinking: high
+thinking_why: "It weighs terms, pressure and other people's needs against each other, and a poor plan can cost you the deal."
+
+headline: "Negotiation prep planner for the weaker side"
+subhead: Describe a talk where the other side holds more power, such as a big buyer, a landlord or an employer. It writes the end you want, what the other side needs, your firm terms and the mildest steps that still have weight. You get a plan with the order to move in.
+
+explain: |
+  When you hold less power, it is tempting to ask for little, or to push hard and break the talk. Both lose. Without written terms, you give way a piece at a time. Without knowing what the other side fears, you push in the wrong place.
+
+  This skill prepares you before anyone sits down. It starts from the outcome both sides could live with, then learns the other side's world and words. It separates the person across the table from the system they work in. It lists steps from mild to strong, picks the mildest that still carries force, and writes your non-negotiables before any offer. It also checks that every group who must live with the result has a voice.
+
+when:
+  - A large customer is changing your terms and you depend on them for much of your income.
+  - You are asking a landlord, manager or council for a change they can refuse.
+  - A partner or supplier holds more power than you and a deadline is coming.
+
+you_give:
+  - What the talk is about and who is on each side
+  - What you want, and what you cannot accept
+  - What you know about the other side's needs, rules and pressures (optional)
+you_get:
+  - A one-line end state both sides could live with
+  - A profile of the other side, with their needs, fears and words
+  - Your non-negotiables and what you can give
+  - Steps from mild to strong, with the one to try first
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the situation and what is at stake. Be honest about where you are weak.
+  - Paste anything the other side has written, such as emails, contracts or policies.
+  - Read the non-negotiables out loud. Change any you would give up under pressure.
+  - Use the step list to decide when to open, wait or escalate.
+
+how_it_works:
+  - title: Writes the end state
+    text: One sentence on the outcome both sides could live with, so every move points at it.
+  - title: Learns their world
+    text: Lists the other side's needs, fears, rules and the words they use, with gaps marked.
+  - title: Separates person from system
+    text: Notes who across the table can help and which pressures come from rules above them.
+  - title: Ranks the steps
+    text: Lists options from mild to strong and picks the mildest that still has force.
+  - title: Sets firm terms
+    text: Writes what you will not give up, before any offer is on the table.
+  - title: Checks who is affected
+    text: Lists every group that must live with the outcome and whether each has been heard.
+  - title: Plans timing
+    text: Says when to open talks, when to pause and what would signal it is time to step back.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE END STATE
+  <one sentence both sides could live with>
+
+  THE OTHER SIDE
+  Needs: <list>  Fears: <list>  Their words: <phrases>  Who can help: <role>
+
+  YOUR NON-NEGOTIABLES
+  1. <term> | Why it holds
+
+  WHAT YOU CAN GIVE
+  - <item> | Costs you: <low, medium, high>
+
+  STEPS, MILD TO STRONG
+  1. <step> | Force: <low, medium, high> | Risk: <what it could cost>
+  First step to try: <number and why>
+
+  EVERYONE AFFECTED
+  - <group> | Heard? <yes, no, how to reach them>
+
+  TIMING
+  Open when: <signal>  Step back when: <signal>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How honest you are about weakness
+    how: Say plainly what they could do to you. The steps are then sized to the real risk.
+  - what: Papers from the other side
+    how: Paste their emails and policies. Their words and fears come from the text.
+  - what: Your deadline
+    how: Give a date. It changes whether the mildest step has time to work.
+  - what: Allies
+    how: Name anyone who shares your interest. They show up in the list of affected groups.
+
+judge:
+  - Non-negotiables are written before any offer.
+  - The other side's needs are listed in their own terms.
+  - The first step is the mildest one that could still work.
+  - Every group affected by the outcome appears in the list.
+  - Nothing is claimed about the other side that you did not tell it.
+
+test:
+  - Run it on a talk that already ended. See if the plan names a need you missed.
+  - Show the non-negotiables to someone you trust and ask which one they would give up first.
+  - Run it twice. The first step and the firm terms should stay close.
+  - Compare the other side's needs with what they say in the real meeting, and note the gaps.
+
+improve:
+  - Add your own limits, such as a lowest price or a notice period, to step 5.
+  - Add the rules and contracts that bind you, so the plan never breaks them.
+  - Save what worked after each talk and paste it in next time.
+  - Pair it with "Sales call question planner" for the questions to ask in the room.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning and ranking steps is text work any strong chat AI does well with this skill."}
+    - {name: "A trusted adviser", why: "A person who knows you can say which terms you would really give up."}
+  inputs:
+    - "The contract or terms under dispute"
+    - "Emails or notices from the other side"
+    - "A list of who else is affected by the outcome"
+
+terms:
+  - term: Non-negotiable
+    meaning: A term you will not give up, written down before talks so pressure cannot move it.
+  - term: End state
+    meaning: The outcome both sides could live with, written as one sentence.

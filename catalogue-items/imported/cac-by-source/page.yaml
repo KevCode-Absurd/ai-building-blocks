@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It joins spend to orders, with some guesswork on sources.
+new_slug: cac-by-source
+name: Acquisition cost by source calculator
+summary: Add your ad spend. Get the cost to win a customer from each traffic source.
+job: run-your-store
+headline: Acquisition cost by source calculator
+subhead: Add your ad spend. Get the cost to win a customer from each traffic source.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

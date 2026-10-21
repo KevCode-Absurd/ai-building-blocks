@@ -1,0 +1,28 @@
+# Set up your brand file: AI Blocks
+
+> 24 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer): Describe your idea. Get name options, positioning angles, mood directions and a story, narrowed to one direction.
+- [Brand family planner](https://useaiblocks.com/skills/brand-family-planner): List your brands and products. Get a clear structure for how they relate and what each one is called.
+- [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder): Attach your brand file. Get a printable brand guide and a values file to paste into any tool.
+- [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor): Describe your brand as it is today. Get a clear diagnosis of what works and what is off, with ranked fixes.
+- [Brand materials finder](https://useaiblocks.com/skills/brand-materials-finder): Point it at your tools. Get a report of style guides, decks and call notes you already have, plus gaps.
+- [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder): Give it your brand facts. Get a tagline, key messages and proof points for each audience.
+- [Brand name finder](https://useaiblocks.com/skills/brand-name-finder): Share your brand brief. Get name ideas, or scores and honest feedback on the names you already have.
+- [Brand perception auditor](https://useaiblocks.com/skills/brand-perception-auditor): Describe your brand and who it is for. Get a list of mixed signals and changes to close the gap.
+- [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer): Give it your logo, colours and fonts. Get a full style guide others can follow without guessing.
+- [Brand style setup wizard](https://useaiblocks.com/skills/brand-style-setup-wizard): Answer ten questions once. Get your colours, fonts and style saved for every page that follows.
+- [Brand style starter picker](https://useaiblocks.com/skills/brand-style-starter-picker): Say what your business does. Get a ready style starting point with colours, fonts, voice and image direction.
+- [Brand voice guide builder](https://useaiblocks.com/skills/brand-voice-guide-builder): Give it your documents or call transcripts. Get a brand voice guide with rules, examples and open questions.
+- [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter): Give it a draft or a topic. Get emails, posts or pitches written in your brand voice, with notes on each choice.
+- [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer): Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow.
+- [Build a brand file and brand guide from your website](https://useaiblocks.com/workflows/brand-file-from-website): Give it your website. Get a brand file, a founder interview to fill its gaps, and a brand guide.
+- [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker): Paste a draft. Get deviations from your voice and style guide ranked by severity, each with a before and after fix.
+- [Founder interview planner](https://useaiblocks.com/skills/founder-interview-planner): Attach your brand file. Get a ranked founder call plan, a written form, and every answer filed.
+- [Origin-true business name picker](https://useaiblocks.com/skills/origin-true-business-name-picker): Give it your roots and target markets. Get business names that stay true to you and still work for buyers.
+- [Product context builder](https://useaiblocks.com/skills/product-context-builder): Answer questions about your product. Get one context file every marketing skill reads first.
+- [Product name brainstormer](https://useaiblocks.com/skills/product-name-brainstormer): Describe your product and buyers. Get five memorable name ideas, each with the reason it fits.
+- [Store photo style locker](https://useaiblocks.com/skills/store-photo-style-locker): Describe your store look once. Get a style file that keeps models, light and layout the same across every product photo.
+- [TikTok Shop brand builder](https://useaiblocks.com/skills/tiktok-shop-brand-builder): Describe your shop. Get your brand voice, content pillars, story and ways to build a community.
+- [Voice and tone guide writer](https://useaiblocks.com/skills/voice-and-tone-guide-writer): Describe how your brand talks. Get voice traits, tone by situation, word lists and side-by-side examples.
+- [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): Give it your website. Get eight brand files, with every fact sourced and every gap listed.

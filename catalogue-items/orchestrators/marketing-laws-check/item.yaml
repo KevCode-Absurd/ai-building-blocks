@@ -1,0 +1,27 @@
+slug: marketing-laws-check
+name: "Check your plan against the laws that decide who wins"
+summary: "Paste your marketing plan. Get the laws it breaks, a name check, a short versus long-term check and one move to make."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+uses: [marketing-plan-law-checker, brand-name-stretch-checker, long-run-effects-checker, one-bold-move-picker]
+steps:
+  - {uses: marketing-plan-law-checker, note: "Every law the plan breaks, with the line that breaks it, a score and a fix list."}
+  - {uses: brand-name-stretch-checker, note: "A call on the name for any new product in the plan. Reads the fix list from the step before."}
+  - {uses: long-run-effects-checker, note: "Which tactics pay now and cost later, and whether you are riding a fad or a trend."}
+  - {uses: one-bold-move-picker, note: "One move to back, what to stop doing, the money it needs and how you will know it worked."}
+origin: rebuilt
+version: 1.0.0
+minds: [al-ries, jack-trout]
+credits:
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The order of the steps: check the plan against the laws, check the name stretch, check short-term gains against long-term costs, pick the one bold move"}
+generated_from: intake/immutable-laws-check-a-plan/skeleton.yaml

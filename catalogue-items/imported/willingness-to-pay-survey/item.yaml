@@ -1,0 +1,33 @@
+slug: willingness-to-pay-survey
+renamed_from: willingness-to-pay-survey-designer
+name: "Willingness-to-pay survey designer"
+summary: "Tell it what you sell. Get two survey questions to send customers and a way to turn answers into a best price."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/price-research
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/price-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: price-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: price-research skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/price-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

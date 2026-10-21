@@ -1,0 +1,119 @@
+# Test and fix code: AI Blocks
+
+> 115 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Accessibility checker](https://useaiblocks.com/skills/accessibility-checker): Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+- [Agent run evidence auditor](https://useaiblocks.com/skills/agent-run-evidence-auditor): Give it logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
+- [Agent system tester](https://useaiblocks.com/skills/agent-system-tester): Describe your AI agent. Get a way to measure how well it works and compare changes.
+- [AI agent tester](https://useaiblocks.com/skills/ai-agent-tester): Describe your AI agent. Get a test set, scoring rules and a release decision memo you can trust.
+- [AI answer judge designer](https://useaiblocks.com/skills/ai-answer-judge-designer): Say what good looks like. Get a scoring guide an AI can use to grade answers fairly, with bias checks.
+- [AI answer testing planner](https://useaiblocks.com/skills/ai-answer-testing-planner): Describe your AI feature. Get a test plan with scores, human review and A/B checks to catch weak answers.
+- [AI-written code reviewer](https://useaiblocks.com/skills/ai-written-code-reviewer): Give it code an AI wrote fast. Get the real risks that will hurt later, with the smallest fix for each.
+- [Animation reviewer](https://useaiblocks.com/skills/animation-reviewer): Give it a code change with motion. Get a table of fixes and a clear approve or block verdict.
+- [API contract tester](https://useaiblocks.com/skills/api-contract-tester): Give it an API and its users. Get tests that catch breaking changes between the two before they ship.
+- [API design reviewer](https://useaiblocks.com/skills/api-design-reviewer): Give it your API spec. Get a scorecard, flagged breaking changes and fixes for naming and errors.
+- [API test pipeline writer](https://useaiblocks.com/skills/api-test-pipeline-writer): Give it your Postman collection. Get a ready CI pipeline file that runs your API tests on every push.
+- [API test suite builder](https://useaiblocks.com/skills/api-test-suite-builder): Point it at your endpoints. Get integration and contract tests for each route, with fixtures.
+- [Browser automation scripter](https://useaiblocks.com/skills/browser-automation-scripter): Say what to do in a web browser. Get Playwright code written and run for it, with results and screenshots.
+- [Browser page debugger](https://useaiblocks.com/skills/browser-page-debugger): Point it at a page that misbehaves. Get the real errors, network calls and slow spots found in a live browser.
+- [Browser task runner](https://useaiblocks.com/skills/browser-task-runner): Describe a browser task. Get pages visited, forms filled, and screenshots or data saved.
+- [Browser test migrator](https://useaiblocks.com/skills/browser-test-migrator): Point it at Cypress or Selenium tests. Get them moved to Playwright file by file.
+- [Browser test reviewer](https://useaiblocks.com/skills/browser-test-reviewer): Point it at your Playwright tests. Get each one checked against 20 bad habits with fixes.
+- [Browser test setup builder](https://useaiblocks.com/skills/browser-test-setup-builder): Point it at your project. Get Playwright installed with a config, a sample test and a CI file.
+- [Browser test writer](https://useaiblocks.com/skills/browser-test-writer): Describe a user story or page. Get Playwright tests written for it that you can run.
+- [BrowserStack test runner](https://useaiblocks.com/skills/browserstack-test-runner): Give it your Playwright tests. Get them run on many browsers and devices, with a pass and fail report.
+- [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer): Give it a file or pull request. Get a review of bugs, security gaps, speed issues and style.
+- [Bug cause investigator team](https://useaiblocks.com/skills/bug-cause-investigator-team): Give it a crash or odd behaviour. Get several parallel read-only investigations and one ranked list of likely causes.
+- [Bug diagnoser](https://useaiblocks.com/skills/bug-diagnoser): Describe what is broken or slow. Get the cause found step by step and the fix checked.
+- [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder): Describe the bug. Get the cause proven with evidence before any code is changed, so fixes stop being guesses.
+- [Change impact checker](https://useaiblocks.com/skills/change-impact-checker): Describe a code change. Get what it could break outside its own diff, and one proof it is safe.
+- [Change test prover](https://useaiblocks.com/skills/change-test-prover): Give it a Python change. Get tests that fail whenever that change is broken, proven by code mutations.
+- [CI failure fixer](https://useaiblocks.com/skills/ci-failure-fixer): Point it at a failing pull request. Get the cause of the failed GitHub check and a fix plan.
+- [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer): Point it at a set of changes. Get a review against your coding standards and your spec, side by side.
+- [Code cleanup planner](https://useaiblocks.com/skills/code-cleanup-planner): Point it at messy code. Get the problem spots named and cleaned up with proven patterns.
+- [Code correctness planner](https://useaiblocks.com/skills/code-correctness-planner): Give it a tricky function. It writes the rules and edge cases first, then code that keeps them.
+- [Code habits reviewer](https://useaiblocks.com/skills/code-habits-reviewer): Give it code. Get duplication, tight coupling and weak contracts flagged, with fixes. Uses Pragmatic Programmer principles.
+- [Code refactor planner](https://useaiblocks.com/skills/code-refactor-planner): Give it messy code. Get named refactoring moves to apply in small safe steps, without changing what it does.
+- [Code simplifier](https://useaiblocks.com/skills/code-simplifier): Point it at code that works but is hard to read. Get a simpler version that behaves the same.
+- [Database migration conflict fixer](https://useaiblocks.com/skills/db-migration-conflicts): Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back.
+- [Desktop app tester](https://useaiblocks.com/skills/desktop-app-tester): Point it at your Electron app. Get it launched and driven by clicks and typing, with screenshots and logs.
+- [Django speed reviewer](https://useaiblocks.com/skills/django-speed-reviewer): Point it at a Django project. Get slow queries and N+1 problems found, with the fix for each.
+- [Documentation checker](https://useaiblocks.com/skills/documentation-checker): Give it a README or doc. Get false claims, drift from the code and weak spots listed before you publish.
+- [Error and log debugger](https://useaiblocks.com/skills/error-and-log-debugger): Give it an error, log or stack trace. Get the cause found and a fix that works.
+- [Failed workflow diagnoser](https://useaiblocks.com/skills/failed-workflow-diagnoser): Paste a failed GitHub Actions log. Get the root cause and a fix for your workflow file.
+- [Failing test fixer](https://useaiblocks.com/skills/failing-test-fixer): Point it at a broken test suite. Get failures grouped by cause and fixed one group at a time.
+- [Failure drill planner](https://useaiblocks.com/skills/failure-drill-planner): Name a system. Get safe experiments that break parts on purpose, with limits, checks and lessons.
+- [Fake data finder](https://useaiblocks.com/skills/fake-data-finder): Give it a live page. Get a report of which numbers are real, mocked, hardcoded or broken.
+- [Famous engineer code reviewer](https://useaiblocks.com/skills/famous-engineer-code-reviewer): Give it code. Get blunt reviews in the voices of well-known engineers, each tied to their written views.
+- [Feature fixer](https://useaiblocks.com/skills/feature-fixer): Name the broken feature. Get it traced end to end, fixed and tested without touching the rest.
+- [Fix loop breaker](https://useaiblocks.com/skills/fix-loop-breaker): Give it a bug your AI keeps failing to fix. Get a three-try repair plan, proof it works and a way back.
+- [Fixed-point code reviewer](https://useaiblocks.com/skills/fixed-point-code-reviewer): Give it MATLAB fixed-point code. Get slow or risky patterns found, with cleaner replacements.
+- [Flaky test fixer](https://useaiblocks.com/skills/flaky-test-fixer): Give it a failing or flaky Playwright test. Get the cause found and the fix made.
+- [Generated code reviewer](https://useaiblocks.com/skills/generated-code-reviewer): Give it code your AI just wrote. Get a pass for clean-code slips, repeated logic and common AI mistakes.
+- [GPU code speed tuner](https://useaiblocks.com/skills/gpu-code-speed-tuner): Give it MATLAB code bound for the GPU. Get faster generated CUDA code, measured after each change.
+- [Hidden bug hunter](https://useaiblocks.com/skills/hidden-bug-hunter): Point it at your code. Get a hard line-by-line hunt for logic errors and gaps, sorted by how bad they are.
+- [Hostile code reviewer](https://useaiblocks.com/skills/hostile-code-reviewer): Point it at recent changes. Get a tough review from three hostile reviewers, with each finding ranked.
+- [Human review gate](https://useaiblocks.com/skills/human-review-gate): Finish AI work. Get a one-page review you sign off before anything counts as done, with proof it happened.
+- [Library change finder](https://useaiblocks.com/skills/library-change-finder): Point it at a Python project. Get which library changes came after the AI's training and where your code uses them.
+- [Lint and type check runner](https://useaiblocks.com/skills/lint-and-type-check-runner): Run it after a change. It runs your project's checks, fixes real failures and reports what did not run.
+- [Live code debugger](https://useaiblocks.com/skills/live-code-debugger): Point it at a bug. Get the program run with breakpoints, so you see exact values and where it goes wrong.
+- [Live screen debugger](https://useaiblocks.com/skills/live-screen-debugger): Describe the screen bug. Get your web or Electron app opened, tried out and fixed step by step.
+- [MATLAB bug tracer](https://useaiblocks.com/skills/matlab-bug-tracer): Give it code that fails. Get the cause found, with breakpoints and variable checks to show it.
+- [MATLAB code reviewer](https://useaiblocks.com/skills/matlab-code-reviewer): Give it MATLAB code. Get a review of style, speed and upkeep, checked against MathWorks standards.
+- [MATLAB memory saver](https://useaiblocks.com/skills/matlab-memory-saver): Give it code that runs out of memory. Get the cause found, fixed and measured, with a short report.
+- [MATLAB speed test writer](https://useaiblocks.com/skills/matlab-speed-test-writer): Give it MATLAB code to time. Get repeatable performance tests that measure run time with sound statistics.
+- [MATLAB speed tuner](https://useaiblocks.com/skills/matlab-speed-tuner): Give it slow code. Get the real slowdown found, fixed and measured, with no made-up speed claims.
+- [MATLAB test runner](https://useaiblocks.com/skills/matlab-test-runner): Point it at your tests. Get them run and filtered, with failures, coverage gaps and CI set up.
+- [MATLAB unit test writer](https://useaiblocks.com/skills/matlab-unit-test-writer): Give it MATLAB code. Get class-based unit tests with fixtures, mocks and app tests that you can run.
+- [MCP server test runner](https://useaiblocks.com/skills/mcp-server-test-runner): Point it at your MCP server. Get realistic task tests and a report on whether an AI picks the right tool.
+- [MEX file upgrader](https://useaiblocks.com/skills/mex-file-upgrader): Give it old C, C++ or Fortran MEX files. Get them moved to the newer complex number format.
+- [Mistake-proofing designer](https://useaiblocks.com/skills/mistake-proofing-designer): Point it at code, a form or a process. Get changes that make the wrong move impossible or loud.
+- [Model math debugger](https://useaiblocks.com/skills/model-math-debugger): Give it the PyTensor code that errors or runs slow. Get it fixed, with checks that the numbers still match.
+- [Old code paydown guide](https://useaiblocks.com/skills/old-code-paydown-guide): Give it a large old codebase. Get a safe plan to make it legible, bounded and resilient, step by step.
+- [Old MATLAB code updater](https://useaiblocks.com/skills/old-matlab-code-updater): Give it code that uses removed or discouraged functions. Get current replacements in place.
+- [Open-source contribution preparer](https://useaiblocks.com/skills/open-source-contribution): Point it at an open-source issue. Get a checked fix, rerun tests and a drafted post held for your approval.
+- [Parallel code reviewer](https://useaiblocks.com/skills/parallel-code-reviewer): Point it at a code change. Get four reviewers working at once and one short list of issues that matter.
+- [Parfor error fixer](https://useaiblocks.com/skills/parfor-error-fixer): Paste a failing parfor loop. Get the cause of the error and a fixed loop that runs in parallel.
+- [PowerShell pitfall checker](https://useaiblocks.com/skills/powershell-pitfall-checker): Give it a Windows script. Get operator, quoting and error handling mistakes caught and fixed.
+- [Pre-commit hook setter](https://useaiblocks.com/skills/pre-commit-hook-setter): Point it at your repo. Get checks for formatting, types and tests that run before every commit.
+- [Production error summarizer](https://useaiblocks.com/skills/production-error-summarizer): Ask about recent errors. Get the Sentry issues and events summed up with the key details.
+- [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester): Give it a prompt change and a fixed set of cases. Get a clear report of what got better or worse.
+- [Prototype to production guide](https://useaiblocks.com/skills/prototype-to-production-guide): Give it a working prototype. Get tests, cleaner structure and a plan to make it ready for real users.
+- [Pull request risk reviewer](https://useaiblocks.com/skills/pull-request-risk-reviewer): Give it a pull request. Get issues ranked by severity, security notes and clear review comments.
+- [Pull request risk scorer](https://useaiblocks.com/skills/pull-request-risk-scorer): Point it at a pull request. Get complexity and risk scored, code smells flagged and review comments written.
+- [QA test scenario writer](https://useaiblocks.com/skills/qa-test-scenario-writer): Paste your user stories. Get test scenarios with starting state, steps and the result to expect.
+- [Quality bar setter](https://useaiblocks.com/skills/quality-bar-setter): Answer a few questions. Get a written quality bar for your project and a watch for anyone lowering it.
+- [React test writer](https://useaiblocks.com/skills/react-test-writer): Point it at your React app. Get unit, integration and end-to-end tests for the parts that lack them.
+- [Readable code reviewer](https://useaiblocks.com/skills/readable-code-reviewer): Give it code. Get clearer names, smaller functions and tidier error handling, each with a reason. Uses Clean Code.
+- [README first-run tester](https://useaiblocks.com/skills/readme-first-run-tester): Point it at a project. Get each README step marked working or broken, with proof, and the edits that fix it.
+- [Review comment fixer](https://useaiblocks.com/skills/review-comment-fixer): Point it at your open pull request. Get each reviewer comment handled and the code updated.
+- [Sample data file maker](https://useaiblocks.com/skills/sample-data-file-maker): Say which columns and rules you need. Get a realistic fake dataset as CSV, JSON, SQL or a script.
+- [Schedule timing checker](https://useaiblocks.com/skills/schedule-timing-checker): Give it a cron schedule. Get a plain-English meaning, the next run times, and any silent mistakes that stop or repeat it.
+- [Shared field change checker](https://useaiblocks.com/skills/shared-field-change-checker): Name a changed field or flag. Get the places it is missing or read differently, across database, API and apps.
+- [Single-cell RNA quality checker](https://useaiblocks.com/skills/single-cell-rna-quality-checker): Give it an h5ad or h5 file. Get low-quality cells filtered and plots showing data quality.
+- [Site QA sweep runner](https://useaiblocks.com/skills/site-qa-sweep-runner): Name a page or site and a depth. Get a smoke, standard or full test pass with a list of problems found.
+- [Slow code finder](https://useaiblocks.com/skills/slow-code-finder): Point it at slow code. Get CPU, memory and I/O hot spots found, with flame graphs and fixes.
+- [Slow code fixer](https://useaiblocks.com/skills/slow-code-fixer): Describe what feels slow. Get the bottleneck found, fixed, and proven faster with before and after numbers.
+- [Slow code speeder](https://useaiblocks.com/skills/slow-code-speeder): Give it slow code. Get a faster version, one change at a time, with tests run before and after.
+- [Slow query fixer](https://useaiblocks.com/skills/slow-query-fixer): Give it a slow SQL query. Get the cause found and a faster version with indexes where needed.
+- [Slow system investigator](https://useaiblocks.com/skills/slow-system-investigator): Describe a slow or failing system. Get a checked list of causes and a clear incident report.
+- [Spark job tuner](https://useaiblocks.com/skills/spark-job-tuner): Give it a slow Spark job. Get changes to partitions, caching and memory that speed it up.
+- [Speed tuner](https://useaiblocks.com/skills/speed-tuner): Name what feels slow. Get the real bottleneck measured, fixed and measured again.
+- [Test coverage gap finder](https://useaiblocks.com/skills/test-coverage-gap-finder): Point it at your app. Get every page, part and endpoint listed with what is tested and what is not.
+- [Test data seeder](https://useaiblocks.com/skills/test-data-seeder): Describe your tables. Get realistic, repeatable test data loaded for development and staging.
+- [Test framework migrator](https://useaiblocks.com/skills/test-framework-migrator): Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose.
+- [Test gap finder](https://useaiblocks.com/skills/test-gap-finder): Give it a code change and your tests. Get each new behaviour marked covered or not, plus test cases for the gaps.
+- [Test plan writer](https://useaiblocks.com/skills/test-plan-writer): Describe what you are building. Get a test plan with what to test, at what level and where the gaps are.
+- [Test suite auditor](https://useaiblocks.com/skills/test-suite-auditor): Point it at a Python project. Get a list of weak, flaky, slow and useless tests, checked by mutation.
+- [Test suite writer](https://useaiblocks.com/skills/test-suite-writer): Point it at your code. Get unit, integration and end-to-end tests, run with a coverage report.
+- [Test type fixer](https://useaiblocks.com/skills/test-type-fixer): Point it at your tests. Get unsafe type casts swapped for shoehorn so test data stays typed.
+- [Test-first coach](https://useaiblocks.com/skills/test-first-coach): Say what to build or fix. Get it done test first, in small steps from failing test to clean code.
+- [TestRail test syncer](https://useaiblocks.com/skills/testrail-test-syncer): Give it your TestRail project. Get its test cases turned into Playwright tests, and results sent back.
+- [Tuning experiment runner](https://useaiblocks.com/skills/tuning-experiment-runner): Name the setting to tune and the score to improve. Get a small tested search with a trial log and stop rule.
+- [Two-model pull request reviewer](https://useaiblocks.com/skills/two-model-pull-request-reviewer): Give it a pull request. Get a review where two AI models argue over the code and agree on what to fix.
+- [Untested code change guide](https://useaiblocks.com/skills/untested-code-change-guide): Give it code with no tests. Get safe steps to add tests and change it without breaking anything.
+- [Vibe-coded app cleaner](https://useaiblocks.com/skills/vibe-coded-app-cleaner): Point it at a fast-built app. Get dead code and broken imports removed without breaking routes or APIs.
+- [Web app tester](https://useaiblocks.com/skills/web-app-tester): Point it at your local app. Get its screens tried in a real browser, with screenshots and error logs.
+- [Web page control tester](https://useaiblocks.com/skills/web-page-control-tester): Point it at a page you just built. Get a report of buttons and controls that do not work.
+- [WooCommerce code checker](https://useaiblocks.com/skills/woocommerce-code-checker): Give it new WooCommerce code. Get common AI mistakes caught, like broken order storage and missed checkout checks.
+- [WordPress code checker](https://useaiblocks.com/skills/wordpress-code-checker): Give it a new WordPress plugin or theme. Get security, translation and speed problems found before you ship.

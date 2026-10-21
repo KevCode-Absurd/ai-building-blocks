@@ -1,0 +1,36 @@
+# Study competitor ads: AI Blocks
+
+> 32 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Ad library teardown writer](https://useaiblocks.com/skills/ad-library-teardown-writer): Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
+- [Amazon market researcher](https://useaiblocks.com/skills/amazon-market-researcher): Give it a product or category. Get Amazon sales rank, reviews and seller data in a report. Collects data from websites.
+- [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder): Paste competitor ads from the Ad Library. Get the gaps, briefs and a score out of 100.
+- [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): Paste ads from Meta's Ad Library. Get them sorted into 9 types, with what to study in each.
+- [Competitor ad teardown writer](https://useaiblocks.com/skills/competitor-ad-teardown-writer): Name your rivals. Get a report on their public ads and landing pages, with proof apart from guesses. Collects data from websites.
+- [Competitor ad video script writer](https://useaiblocks.com/skills/competitor-video-ad-script): Paste an admired ad and facts. Get a new script on its structure and a copy check.
+- [Competitor battle card builder](https://useaiblocks.com/skills/competitor-battle-card-builder): Name your market. Get each rival's product, pricing and customer views with battle cards and a feature grid.
+- [Competitor battlecard builder](https://useaiblocks.com/skills/competitor-battlecard-builder): Name your rivals. Get a tracking plan, sales battlecards and where to position against them.
+- [Competitor funnel mystery shopper](https://useaiblocks.com/skills/competitor-funnel-review): Paste your competitor list. Get a plan to subscribe, buy and note how each one follows up, upsells and handles a no.
+- [Competitor messaging comparer](https://useaiblocks.com/skills/competitor-messaging-comparer): Name your rivals. Get a messaging and positioning comparison with content gaps. Reads public web pages.
+- [Competitor product analyst](https://useaiblocks.com/skills/competitor-product-analyst): Give it facts on a rival. Get their pricing, features and strengths set against yours, with gaps to act on.
+- [Competitor product review writer](https://useaiblocks.com/skills/competitor-product-review-writer): Paste a rival product and its market. Get a short, hard review: what it does well, what it misses, where trends head.
+- [Competitor profile writer](https://useaiblocks.com/skills/competitor-profile-writer): Give it competitor links. Get a profile of each with site, pricing and positioning. Collects data from websites.
+- [Competitor site experience auditor](https://useaiblocks.com/skills/competitor-site-audit): Name your market. Get what leading sites do well and badly, and the bar your own site must meet.
+- [Competitor social strategy researcher](https://useaiblocks.com/skills/competitor-social-research): Name your competitors. Get what content works for them, the gaps, and a short social plan. Collects data from websites.
+- [Competitor white space mapper](https://useaiblocks.com/skills/competitor-white-space-mapper): Paste your rivals and what buyers value. Get a grid that shows where nobody is strong and where to stop fighting.
+- [Copy an ad layout that works, using your product](https://useaiblocks.com/workflows/copy-winning-ad-layout): Give it an ad or template you admire. You get your own version, in feed and story sizes.
+- [Creator profile teardown writer](https://useaiblocks.com/skills/creator-profile-teardown-writer): Give it a social account. Get its positioning, content themes, top posts and what to test. Collects data from websites.
+- [Disruption risk checker](https://useaiblocks.com/skills/disruption-risk-checker): List a cheaper rival and your best customers. Get a check of whether it is a nuisance or a real threat.
+- [Facebook ad library collector](https://useaiblocks.com/skills/facebook-ad-library-collector): Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. Collects data from websites.
+- [Owned word mapper](https://useaiblocks.com/skills/owned-word-mapper): Paste your rivals and what buyers say. Get the word each rival owns, words nobody can own and the open ones.
+- [Patent prior-art searcher](https://useaiblocks.com/skills/patent-prior-art-searcher): Describe your invention or rival. Get patents found for novelty, freedom to operate or a landscape view.
+- [Rival keyword gap finder](https://useaiblocks.com/skills/rival-keyword-gap-finder): Connect Ahrefs and name rivals. Get keywords they rank for that you do not, ranked by opportunity into quick wins.
+- [Rival matchup scorer](https://useaiblocks.com/skills/rival-matchup-scorer): Describe you and a rival. Get a side-by-side on the five factors, with where to fight and where to avoid.
+- [Rival SEO comparer](https://useaiblocks.com/skills/rival-seo-comparer): Name your site and rivals. Get a comparison of search overlap, content depth, backlinks, technical state and brand presence.
+- [Rival store comparer](https://useaiblocks.com/skills/rival-store-comparer): Name your top rivals. Get a side-by-side of their channels, prices and messages, plus the gaps you can win.
+- [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder): Name a rival and your strengths. Get the one strength that is also their weakness, as a message you can defend.
+- [Size up a rival and decide whether to go](https://useaiblocks.com/workflows/rival-go-no-go): Describe your plan and a rival. Get a five-factor matchup, where to fight and avoid, and a go or no-go check.
+- [Store product data collector](https://useaiblocks.com/skills/store-product-data-collector): Give it a product search or store link. Get prices, reviews and seller details in a table. Collects data from websites.
+- [Turn competitor ads into a script of your own](https://useaiblocks.com/workflows/competitor-ad-to-script): Give it competitor ads and your reviews. You get an original script that borrows one idea, checked against ad rules.
+- [Turn competitor gaps into image ad copy that passes Meta](https://useaiblocks.com/workflows/competitor-gap-image-ads): Give it competitor ads. Get their gaps, image ad copy for each gap, and a Meta rules check.
+- [Video script writer from a competitor ad idea](https://useaiblocks.com/skills/competitor-idea-video-script): Paste an admired ad and facts. Get a script on one idea, checked so nothing is copied.

@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sequences practice steps for a hard skill.
+new_slug: who-wrote-it-lesson
+name: Check who wrote it lesson builder
+summary: Give it a history source. Get a lesson series that teaches learners to ask who wrote it, when and why.
+job: teach-and-train
+headline: Check who wrote it lesson builder
+subhead: Give it a history source. Get a lesson series that teaches learners to ask who wrote it, when and why.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

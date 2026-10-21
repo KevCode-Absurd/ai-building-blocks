@@ -9,6 +9,8 @@ import { Marked } from "marked";
 const ROOT = path.resolve(process.env.CATALOGUE_ROOT || "../catalogue-items");
 const OUT_DATA = "public/data";
 const OUT_SKILLS = "public/skills";
+// Headings inside a skill's text drop one level (h1 to h2 and so on), so every page has one h1: its own title.
+const sub = (html) => html.replace(/<(\/?)h([1-5])\b/g, (_, slash, n) => `<${slash}h${Number(n) + 1}`);
 const OUT_PAGES = "public/data/pages";
 const WORKFLOW_PAGES = path.resolve("../tools/orchestrator-pages");
 fs.rmSync(OUT_SKILLS, { recursive: true, force: true });
@@ -73,7 +75,7 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "imported"]) {
       // Public sources a block was built from, shown on its page. Only http(s) links are kept.
       const credits = (item.credits ?? []).filter((c) => c && c.title && (!c.url || /^https?:\/\//.test(c.url))).map((c) => ({ title: String(c.title), by: c.by ? String(c.by) : "", url: c.url ? String(c.url) : "", used: c.used ? String(c.used) : "" }));
       if (credits.length) out.credits = credits;
-      out.html = { explain: page.explain ? md.parse(String(page.explain)) : "", skill: md.parse(bodyOf(skill)) };
+      out.html = { explain: page.explain ? sub(md.parse(String(page.explain))) : "", skill: sub(md.parse(bodyOf(skill))) };
       fs.writeFileSync(path.join(OUT_PAGES, `${slug}.json`), JSON.stringify(out));
     }
     blocks.push({
@@ -171,7 +173,7 @@ for (const r of roster.minds) {
     pairs: (m.pairs_with ?? []).filter((s) => roster.minds.some((x) => x.slug === s)),
     credits: m.sources.filter((s) => s.title).map((s) => ({ title: String(s.title), by: s.by ? String(s.by) : "", url: s.url && /^https?:\/\//.test(s.url) ? String(s.url) : "", used: "" })),
   };
-  page.html = { explain: md.parse(page.explain), skill: md.parse(bodyOf(skill)) };
+  page.html = { explain: sub(md.parse(page.explain)), skill: sub(md.parse(bodyOf(skill))) };
   fs.writeFileSync(path.join(OUT_PAGES, `${r.slug}.json`), JSON.stringify(page));
   blocks.push({
     slug: r.slug, name: m.name, summary: m.summary, headline: m.name,
@@ -269,8 +271,72 @@ const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
 const urls = ["/", "/how-it-works", "/minds", "/from-a-source", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
-fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`);
-fs.writeFileSync("public/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+// One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed. No lastmod:
+// the only dates we have are file times, and a wrong date teaches search engines to ignore it.
+// sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs.
+const urlset = (us) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${us.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`;
+const SITEMAPS = { pages: urls.filter((u) => !/^\/(skills|workflows|prompts|minds)\//.test(u)), skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
+for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(f))) fs.rmSync(path.join("public", f));
+for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(`public/sitemap-${k}.xml`, urlset(us));
+fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...Object.keys(SITEMAPS).filter((k) => SITEMAPS[k].length), "jobs"].map((k) => `  <sitemap><loc>${SITE}/sitemap-${k}.xml</loc></sitemap>`).join("\n")}\n</sitemapindex>\n`);
+// Everyone may crawl and index everything: search engines, answer engines and AI assistants. The library is free and
+// credited, so training crawlers are allowed too, on purpose. The saved example app is a copy of another app (noindex).
+// /data/ stays open because the pages need it to render.
+fs.writeFileSync("public/robots.txt", [
+  "# AI Blocks: free AI skills, workflows, minds and mini tools.",
+  "# Search engines, answer engines and AI assistants are all welcome, including AI training crawlers: the library is free and every skill is credited.",
+  "# A short guide for AI assistants: https://useaiblocks.com/llms.txt",
+  "User-agent: *", "Allow: /", "Disallow: /example-app/", "",
+  "Content-Signal: search=yes, ai-input=yes, ai-train=yes", "",
+  `Sitemap: ${SITE}/sitemap.xml`, "",
+].join("\n"));
+
+// llms.txt (llmstxt.org): a plain guide to the site for AI assistants. It links one file per job (/llms/<job>.txt),
+// each listing that job's pages with their one line, and llms-full.txt is the index of those files.
+const TASK_NAMES = Object.fromEntries([...fs.readFileSync("src/lib/data.ts", "utf8").split("export const TASKS")[1].split("];")[0].matchAll(/\{ id: "([^"]+)", name: "([^"]+)" \}/g)].map((m) => [m[1], m[2]]));
+const paged = blocks.filter((b) => b.headline);
+const line = (b) => `- [${b.name}](${SITE}/${kindPath(b)}/${b.slug}): ${b.summary}`;
+const byTask = {};
+for (const b of paged) if (b.type !== "mind") (byTask[b.task] ??= []).push(b);
+const tasksBySize = Object.entries(byTask).sort((a, b) => b[1].length - a[1].length);
+const nSkills = paged.filter((b) => b.type !== "mind").length, nMinds = paged.filter((b) => b.type === "mind").length;
+const example = paged.find((b) => b.slug === "ad-angle-planner") ?? paged[0];
+const intro = [
+  "# AI Blocks", "",
+  "> Free AI skills, workflows, prompts and minds for real work. Each skill is a SKILL.md for Claude, ChatGPT, Gemini or Codex.", "",
+  "## Key facts", "",
+  "- Free to use, no account needed.",
+  `- ${nSkills} skills, workflows and prompts in ${tasksBySize.length} jobs, ${nMinds} minds and ${TOOLS.length} mini tools.`,
+  "- Imported skills are copied as they are from open-licence GitHub repos (MIT, Apache 2.0, BSD, CC BY, CC BY-SA), credited on their page with a link to the original.",
+  "- Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.",
+  "- Skills that scrape websites or need a paid outside account say so on their page.",
+  `- Last built ${new Date().toISOString().slice(0, 10)}.`, "",
+  "## How to use a skill", "",
+  `- Every skill has a page and a skill file. For example: [${example.name}](${SITE}/${kindPath(example)}/${example.slug}), and its file [SKILL.md](${SITE}/skills/${example.slug}/SKILL.md). Add the file to your AI as a skill, or paste it into a chat.`,
+  `- [Every page by job](${SITE}/jobs), and the whole catalogue as data: [blocks.json](${SITE}/data/blocks.json)`, "",
+  "## Main pages", "",
+  `- [All skills by job](${SITE}/jobs): every skill, workflow and prompt, sorted by the job it does`,
+  `- [How it works](${SITE}/how-it-works): from one prompt to your own AI app`,
+  `- [Minds](${SITE}/minds): hire a great thinker's method for your problem`,
+  `- [From a source](${SITE}/from-a-source): turn a video, article or course into skills`,
+  `- [Mini tools](${SITE}/tools): calculators for prices, margins, discounts and AI costs`,
+  `- [Apps](${SITE}/apps): an example AI app and a starter pack`, "",
+];
+const jobLine = ([t, bs]) => `- [${TASK_NAMES[t] ?? t}](${SITE}/llms/${t}.txt): ${bs.length} skills and workflows, such as ${bs.slice(0, 2).map((b) => b.name).join(" and ")}`;
+fs.rmSync("public/llms", { recursive: true, force: true });
+fs.mkdirSync("public/llms", { recursive: true });
+for (const [t, bs] of tasksBySize) fs.writeFileSync(`public/llms/${t}.txt`, [`# ${TASK_NAMES[t] ?? t}: AI Blocks`, "", `> ${bs.length} free AI skills and workflows for this job. Each page links its SKILL.md.`, "", ...[...bs].sort((x, y) => x.name.localeCompare(y.name)).map(line), ""].join("\n"));
+fs.writeFileSync("public/llms/minds.txt", ["# Minds: AI Blocks", "", "> AIs built from great thinkers' public work. Not the people themselves.", "", ...paged.filter((b) => b.type === "mind").sort((x, y) => x.name.localeCompare(y.name)).map(line), ""].join("\n"));
+fs.writeFileSync("public/llms.txt", [...intro, "## Skills by job", "", ...tasksBySize.map(jobLine), `- [Minds](${SITE}/llms/minds.txt): ${nMinds} minds, from founders and investors to writers and scientists`, "", "## Optional", "", `- [Every job file in one list](${SITE}/llms-full.txt)`, ""].join("\n"));
+fs.writeFileSync("public/llms-full.txt", [...intro, "## Every job", "", ...[...tasksBySize].sort((a, b) => (TASK_NAMES[a[0]] ?? a[0]).localeCompare(TASK_NAMES[b[0]] ?? b[0])).map(jobLine), `- [Minds](${SITE}/llms/minds.txt): ${nMinds} minds`, ""].join("\n"));
+
+// Old addresses answer with a real 301 to the new one (Cloudflare Pages _redirects), so links and search results carry
+// over. A rename never changes a block's kind, so one rule each. The app's own routes with no page file come last
+// (rewrites, status 200), because dist/404.html turns off Cloudflare's fall back to the app for unknown addresses.
+const redirects = Object.entries(renamed).map(([from, to]) => [from, bySlug[to]]).filter(([, b]) => b?.headline).map(([from, b]) => `/${kindPath(b)}/${from} /${kindPath(b)}/${b.slug} 301`);
+const appRoutes = ["/space /index.html 200", "/people /index.html 200", "/s/* /index.html 200"];
+fs.writeFileSync("public/_redirects", `# Old block names, moved to shorter ones (catalogue-items/renamed.json). Made by scripts/build-index.mjs.\n${redirects.join("\n")}\n\n# App pages with no page file of their own.\n${appRoutes.join("\n")}\n`);
+if (redirects.length + appRoutes.length > 2000) problems.push(`_redirects has ${redirects.length + appRoutes.length} rules; Cloudflare Pages allows 2,000`);
 console.log(`sitemap: ${urls.length} pages`);
 console.log(`${blocks.filter((b) => b.headline).length} of ${blocks.length} have a page`);
 console.log(`${blocks.length} blocks (${blocks.filter((b) => b.category === "general").length} general, ${blocks.filter((b) => b.category === "ecommerce").length} ecommerce, ${blocks.filter((b) => b.category === "orchestrator").length} orchestrators, ${blocks.filter((b) => b.category === "mind").length} minds)`);

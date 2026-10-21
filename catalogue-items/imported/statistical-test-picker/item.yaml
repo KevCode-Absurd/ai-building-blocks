@@ -1,0 +1,36 @@
+slug: statistical-test-picker
+renamed_from: research-test-picker-and-reporter
+name: "Research test picker and reporter"
+summary: "Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: document
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/statistical-analysis
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/statistical-analysis
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: statistical-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: statistical-analysis skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/statistical-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

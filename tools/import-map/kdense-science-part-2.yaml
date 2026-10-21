@@ -111,9 +111,10 @@
   level: advanced
   thinking: medium
   thinking_why: It matches terms by lookup and checks each match, so little judgment is needed.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: spreadsheet}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: spreadsheet } ]
   needs: call public web APIs and run code
+  slug: ontology-id-matcher
 "K-Dense-AI/scientific-agent-skills:skills/openpiv":
   name: Flow image velocity analyst
   summary: Give it pairs of flow images. Get velocity fields, bad vectors fixed, and vorticity and turbulence numbers.
@@ -122,8 +123,8 @@
   level: expert
   thinking: medium
   thinking_why: It follows a set method but needs care when it rejects bad vectors.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: document}, {type: image}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document }, { type: image } ]
   needs: run code and save files
 "K-Dense-AI/scientific-agent-skills:skills/opentrons-integration":
   name: Lab robot protocol writer
@@ -133,8 +134,8 @@
   level: expert
   thinking: medium
   thinking_why: It follows the robot's rules and checks the protocol in a simulator.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: test_report}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: test_report } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/paper-lookup":
   name: Scholarly database searcher
@@ -144,8 +145,8 @@
   level: intermediate
   thinking: low
   thinking_why: It runs searches across set sources and lists what each returned.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: source_text}, {type: shortlist}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: source_text }, { type: shortlist } ]
   needs: call public web APIs
 "K-Dense-AI/scientific-agent-skills:skills/pathogen-variant-surveillance":
   name: Virus variant trend reader
@@ -155,8 +156,8 @@
   level: advanced
   thinking: medium
   thinking_why: It queries public data and must separate sampling gaps from real change.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: call public web APIs and run code
 "K-Dense-AI/scientific-agent-skills:skills/pathway-enrichment":
   name: Gene list pathway finder
@@ -166,8 +167,8 @@
   level: advanced
   thinking: medium
   thinking_why: It picks a method for the data, runs it and interprets the results.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/peer-review":
   name: Manuscript peer review drafter
@@ -177,8 +178,8 @@
   level: advanced
   thinking: high
   thinking_why: It must weigh claims against evidence and stay fair.
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "K-Dense-AI/scientific-agent-skills:skills/pkpd-modeling":
   name: Drug exposure model builder
   summary: Give it concentration-over-time data. Get fitted drug exposure models, dose estimates and a clear write-up of what holds.
@@ -187,8 +188,8 @@
   level: expert
   thinking: high
   thinking_why: Choosing and checking the model takes careful reasoning.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: document}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/pptx-posters":
   name: Research poster builder
@@ -198,8 +199,8 @@
   level: intermediate
   thinking: low
   thinking_why: It lays out content you already approved, then runs set checks.
-  inputs: [{type: document, required: true}]
-  outputs: [{type: slide_deck}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: slide_deck } ]
   needs: run code and save files
 "K-Dense-AI/scientific-agent-skills:skills/primer-design":
   name: PCR primer designer
@@ -209,8 +210,8 @@
   level: advanced
   thinking: medium
   thinking_why: It runs a design tool, then checks each pair against set rules.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: spreadsheet}, {type: audit_report}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/pybamm":
   name: Battery cycling simulator
@@ -220,8 +221,8 @@
   level: expert
   thinking: medium
   thinking_why: It runs a set simulation method and checks it is stable.
-  inputs: [{type: brief, required: true}, {type: spreadsheet, required: false}]
-  outputs: [{type: image}, {type: document}]
+  inputs: [ { type: brief, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: image }, { type: document } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/pydeseq2":
   name: RNA-seq group difference finder
@@ -231,8 +232,8 @@
   level: advanced
   thinking: medium
   thinking_why: It follows a standard method and checks the design first.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/pymoo":
   name: Trade-off optimizer
@@ -242,8 +243,8 @@
   level: expert
   thinking: medium
   thinking_why: It picks a solver, runs it and checks the answers are sound.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: image}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/pyzotero":
   name: Zotero library manager
@@ -253,8 +254,8 @@
   level: intermediate
   thinking: low
   thinking_why: It runs simple library requests one after another.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: source_text}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: source_text } ]
   needs: run code and use your Zotero key
 "K-Dense-AI/scientific-agent-skills:skills/qiime2-amplicon":
   name: 16S microbiome read processor
@@ -264,8 +265,8 @@
   level: expert
   thinking: medium
   thinking_why: It runs a fixed pipeline but checks primers and overlap first.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: spreadsheet}, {type: audit_report}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/qutip":
   name: Quantum system simulator
@@ -275,8 +276,8 @@
   level: expert
   thinking: high
   thinking_why: The physics assumptions need careful thought before and after the run.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}, {type: image}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/relsa-severity-assessment":
   name: Animal study severity scorer
@@ -286,8 +287,8 @@
   level: advanced
   thinking: medium
   thinking_why: It combines measures with a set formula and a basic forecast.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/research-grants":
   name: Research grant proposal coach
@@ -297,8 +298,8 @@
   level: advanced
   thinking: high
   thinking_why: Proposals need fit to each funder's rules and a convincing argument.
-  inputs: [{type: brief, required: true}, {type: document, required: false}]
-  outputs: [{type: document}, {type: plan}]
+  inputs: [ { type: brief, required: true }, { type: document, required: false } ]
+  outputs: [ { type: document }, { type: plan } ]
 "K-Dense-AI/scientific-agent-skills:skills/research-lookup":
   name: Manuscript evidence gatherer
   summary: Name your paper topic. Get a packet of current sources, competing findings and background, each with its link.
@@ -307,8 +308,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It searches, reads sources and sorts them by how well they support each point.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: source_text}, {type: shortlist}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: source_text }, { type: shortlist } ]
   needs: search the web
   paid: Parallel
 "K-Dense-AI/scientific-agent-skills:skills/scanpy":
@@ -319,9 +320,10 @@
   level: expert
   thinking: medium
   thinking_why: It follows the standard steps and checks each before moving on.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: image } ]
   needs: run code
+  slug: single-cell-rna-pipeline
 "K-Dense-AI/scientific-agent-skills:skills/scholar-evaluation":
   name: Scholarly work reviewer
   summary: Give it a paper or thesis. Get a fair review of what is strong, what is weak and what to fix next.
@@ -330,8 +332,8 @@
   level: advanced
   thinking: high
   thinking_why: It has to judge quality fairly and back each point with evidence.
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "K-Dense-AI/scientific-agent-skills:skills/scientific-brainstorming":
   name: Research idea workshop
   summary: Name your research area. Get ideas built, challenged and ranked, with assumptions and a decision log.
@@ -340,8 +342,8 @@
   level: beginner
   thinking: high
   thinking_why: It needs creative ideas and tough challenge of each.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: shortlist}, {type: plan}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: shortlist }, { type: plan } ]
 "K-Dense-AI/scientific-agent-skills:skills/scientific-critical-thinking":
   name: Study claim checker
   summary: Give it a study or claim. Get its biases, flaws, weak statistics and evidence grade, explained in plain words.
@@ -350,8 +352,8 @@
   level: intermediate
   thinking: high
   thinking_why: It must spot subtle flaws and weigh how strong the evidence is.
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "K-Dense-AI/scientific-agent-skills:skills/scientific-schematics":
   name: Science diagram drafter
   summary: Describe a diagram. Get a draft of a network, pathway or flowchart, reviewed and refined once or twice.
@@ -360,8 +362,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It drafts, reviews and improves in a short fixed loop.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: image}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: image } ]
   needs: run code and save files
   paid: OpenRouter
 "K-Dense-AI/scientific-agent-skills:skills/scientific-visualization":
@@ -372,8 +374,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It picks a fitting chart and checks it for honesty and access.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: image } ]
   needs: run code and save files
 "K-Dense-AI/scientific-agent-skills:skills/scientific-writing":
   name: Scientific manuscript drafter
@@ -383,8 +385,8 @@
   level: advanced
   thinking: high
   thinking_why: It must stay true to the evidence while writing clearly.
-  inputs: [{type: source_text, required: true}, {type: spreadsheet, required: false}]
-  outputs: [{type: document}]
+  inputs: [ { type: source_text, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: document } ]
 "K-Dense-AI/scientific-agent-skills:skills/scikit-survival":
   name: Time-to-event model builder
   summary: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves.
@@ -393,8 +395,8 @@
   level: expert
   thinking: high
   thinking_why: Handling censored data correctly needs careful choices.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/scvelo":
   name: Cell direction velocity analyst
@@ -404,8 +406,8 @@
   level: expert
   thinking: medium
   thinking_why: It fits set models and checks if the picture is believable.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: image}, {type: spreadsheet}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: image }, { type: spreadsheet } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/shap":
   name: Prediction driver explainer
@@ -415,8 +417,8 @@
   level: advanced
   thinking: medium
   thinking_why: It picks the right explainer and checks the results hold up.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/simpy":
   name: Queue and process simulator
@@ -426,8 +428,8 @@
   level: advanced
   thinking: medium
   thinking_why: It builds a model, tests it and runs it many times.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: code_change}, {type: audit_report}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change }, { type: audit_report } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/statistical-analysis":
   name: Research test picker and reporter
@@ -437,9 +439,10 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows a clear guide to choose and check the test.
-  inputs: [{type: spreadsheet, required: true}, {type: question, required: true}]
-  outputs: [{type: document}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true }, { type: question, required: true } ]
+  outputs: [ { type: document }, { type: image } ]
   needs: run code
+  slug: statistical-test-picker
 "K-Dense-AI/scientific-agent-skills:skills/statistical-power":
   name: Sample size planner
   summary: Say what effect you want to detect. Get how many subjects you need, with power curves you can put in a grant.
@@ -448,8 +451,8 @@
   level: beginner
   thinking: low
   thinking_why: It applies set formulas to numbers you give it.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}, {type: image}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/statsmodels":
   name: Regression and forecast modeller
@@ -459,8 +462,8 @@
   level: advanced
   thinking: medium
   thinking_why: It picks a model, fits it and checks the fit.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: image } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/timesfm-forecasting":
   name: Quick time series forecaster
@@ -470,8 +473,8 @@
   level: intermediate
   thinking: low
   thinking_why: A pre-trained model does the forecast, so little judgment is needed.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: image } ]
   needs: run code and download a model
 "K-Dense-AI/scientific-agent-skills:skills/uncertainty-and-units":
   name: Units and error margin checker
@@ -481,8 +484,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It tracks units and errors by set rules and flags what breaks them.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: run code
 "K-Dense-AI/scientific-agent-skills:skills/usfiscaldata":
   name: US Treasury data puller
@@ -492,8 +495,8 @@
   level: beginner
   thinking: low
   thinking_why: It calls a public API and returns the figures.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: spreadsheet}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet } ]
   needs: call public web APIs
 "K-Dense-AI/scientific-agent-skills:skills/venue-templates":
   name: Journal submission formatter
@@ -503,6 +506,6 @@
   level: intermediate
   thinking: low
   thinking_why: It applies set venue rules to your paper.
-  inputs: [{type: document, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]
   needs: run code and search the web

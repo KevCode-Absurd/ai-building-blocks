@@ -1,0 +1,223 @@
+new_slug: copy-winning-ad-layout
+name: "Copy an ad layout that works, using your product"
+summary: "Give it an ad or template you admire. You get your own version, in feed and story sizes."
+job: study-competitors
+thinking: high
+thinking_why: "It runs several skills in a row. Give it your strongest model."
+
+headline: "Copy an ad layout that works, using your product"
+subhead: Give it a reference ad or template, your brand file and your real photos. It tests every spot in the layout against your proof, keeps, changes or drops each one, plans every zone with labelled words, then builds 4:5 and 9:16 versions and revises them with you.
+
+explain: |
+  When you copy an ad that's working for someone else, or fill a template, it's easy to take too much. The layout asks for five comparison rows when you can prove two, a press badge you don't have, or a number you can't back. You end up with a near copy that says things you can't prove.
+
+  This workflow keeps the layout and leaves the rest. It names what kind of ad the reference is, using one map of nine ad types, then tests every spot in it, such as the headline, a comparison row or a quote, against the proof you hold. Spots you can prove stay. The rest change or drop, with the reason. If the spot that carries the main point fails, it switches to a type you can fill instead of patching it. Every line is labelled as a fact, a customer's words or a line written to test. Every export is checked at phone size before you see it.
+
+when:
+  - You've saved ads from other brands, or bought templates, whose layout you like and want versions for your own product.
+  - You want a comparison or labelled-product layout but aren't sure your facts can fill it.
+  - You need the same ad in feed and story sizes, each composed properly, not cropped.
+
+you_give:
+  - Your brand file, with the figures you may quote, approved claims, never-say list, colours and typefaces
+  - Your real product photos and logo file, named by what each shows
+  - The reference ad or template, as an image or a short description of its layout
+  - Customer quotes with their source, if the layout has a quote or review spot (optional)
+  - A direction for each layout naming the buyer and their doubt, in a sentence (optional, but it outranks the workflow's own reading)
+you_get:
+  - A list of what's missing before anything is built
+  - Keep, change or drop for every spot, and a verdict on the layout
+  - A plan per layout with the ad's type, eye path, zones, labelled copy, a claims table, an assets table and risks
+  - After you approve, 4:5 and 9:16 images and a review deck with the reference beside your version
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brand file underneath and attach your logo file and product photos.
+  - Attach the reference ad or template image. If you can only describe it, say so, and check the plan against the real image later.
+  - Write one sentence of direction, such as "use this to show what's in one pack, for people who quit greens powders" or "use this to compare our three sizes, for first-time buyers".
+  - Read the dropped spots and the verdict first. Fix every MISSING line, approve the plan, then leave notes in the review deck until it's right.
+
+how_it_works:
+  - title: Checks what you have
+    text: Looks for your logo file, typefaces, photos and quotable figures, asks once for anything missing, and marks each gap.
+  - title: Names the ad type
+    text: Uses a skill that finds the image ad types you're missing to place the reference on a map of nine types, from a product shot to a customer quote.
+  - title: Reads the layout
+    text: Notes the skeleton, the eye path, how the frame is shared, and which spot carries the main point.
+  - title: Tests every spot
+    text: Writes what each spot claims and the proof it needs, then marks it keep, change or drop. A failed main spot switches the type, never gets patched.
+  - title: Plans with labelled words
+    text: Zones in percent for each size, every line labelled as a fact, a customer's words or a line to test, with conditions beside their claims.
+  - title: Builds both sizes
+    text: Uses a skill that writes image prompts for the picture, then sets real type and your logo on top. Each size is composed on its own.
+  - title: Checks and revises
+    text: Checks headline length, type size, contrast, spelling, claims and the product against its photo, then revises one spot at a time until you have no notes.
+
+output_shape: |
+  KIT CHECK
+  MISSING: <logo, typeface, photo files, sources>
+  NOTE     <anything to check before building>
+
+  REFERENCE
+  Working from  <the image | your description only>
+  Code      <type · dress · audience>
+  Skeleton  <stack | split | centre and labels | full bleed and card | big type>
+  Eye path  1 <first>  2 <second>  3 <third>
+  Main spot <the spot that carries the point>
+
+  SPOT BY SPOT
+  <spot>  needs <proof>  have <fact, source>  KEEP | CHANGE <how> | DROP <why>
+  VERDICT  <use it | use it with changes | switch type | pick another>
+
+  ZONES, <size> (top to bottom)
+  <from-to %>   <what sits there>
+
+  COPY AND CLAIMS (<your voice>)
+  <slot>  "<line>"  (<words>)  <fact | customer's words | our point | our line>, <source>
+
+  ASSETS
+  <slot>   <real file | generate | MISSING>
+
+  RISKS
+  - <what could go wrong in the build>
+  STOP  WAITING FOR YOU. <what to send or approve>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Brand file: Sprout, daily greens gummies (pasted below: facts,
+    fine and risky claims, colours, Work Sans, voice, show-it-right
+    rules).
+    Photos: the pouch on a soft gradient and gummies poured into a
+    hand exist. Not attached.
+    Logo: not attached.
+
+    Reference (I can only describe it): another brand's ad. Their
+    product sits dead centre on a flat colour. Four thin lines run out
+    to four short labels, two on each side. Short headline across the
+    top, logo small at the bottom.
+
+    Direction: "Use this to show what's in one daily pack, for people
+    who quit greens powders."
+    Sizes: 4:5 and 9:16.
+  output: |
+    KIT CHECK
+    MISSING: logo file. "Sprout" won't be typed as text in its place.
+    MISSING: photo files. Both are described, not attached.
+    NOTE     Work Sans is named in the brand file. Confirm it's
+             installed before the build.
+
+    REFERENCE
+    Working from  your description only. Check against the image.
+    Code      Look inside · Designed · New
+    Skeleton  centre and labels
+    Eye path  1 headline  2 product  3 labels, top left, clockwise
+    Main spot the labels: each one is a fact, so it reads as proof
+
+    SPOT BY SPOT
+    Product, centre  needs a real photo  have gummies-in-hand photo
+                     (file MISSING)                          KEEP
+    Headline         needs room for 7 words  have top band   KEEP
+    Labels 1 to 3    needs a published fact each  have 60+
+                     ingredients, 21 vitamins & minerals, 6 g fiber
+                     (fine-to-repeat claims)                 KEEP
+    Label 4          has proof (vegan, pectin base), but 4 labels
+                     plus the headline is 5 things to read   DROP
+    Background       flat colour  have warm cream #FFF7DF    KEEP
+    Logo, foot       needs the real mark  have none          KEEP,
+                     file MISSING
+    VERDICT  use it with changes: the main spot holds, 1 of 6
+             spots dropped.
+
+    ZONES, 4:5 (top to bottom)
+    0-6%    margin
+    6-20%   headline, forest green #00582D on warm cream
+    22-80%  gummies in a hand, centred, 3 labels on thin forest
+            green lines: 2 on the left, 1 on the right
+    82-90%  the pouch, small, closed, beside the logo
+    90-96%  margin
+    9:16 is composed fresh: same eye path, headline from 16%, pouch
+    and logo end by 62%, nothing in the bottom 35%.
+
+    COPY AND CLAIMS (Sprout voice: short lines, numbers up front)
+    Headline "What's inside one daily pack" (5)  our line,
+             rests on the product page
+    Label 1  "60+ ingredients"         (2)  fact, product page
+    Label 2  "21 vitamins & minerals"  (4)  fact, science page
+    Label 3  "6 g prebiotic fiber"     (4)  fact, product page
+    Cut      "Each gummy delivers 100%..." (wrong unit: per pack)
+    Cut      "revive whole body vitality" (vague, no support)
+
+    ASSETS
+    Gummies, centre   gummies-in-hand photo  real, file MISSING
+    Pouch, foot       gradient pouch photo   real, file MISSING
+    Torn daily pack   none on file           left out
+    Logo              none on file           MISSING
+
+    RISKS
+    - The site also says "20+" and "over 20" vitamins and minerals.
+      The ad says 21, the fine-to-repeat claim.
+    - Minerals are about 25% of daily value, so no label says
+      "complete" or "everything you need".
+    - The pouch is never shown torn. Only a daily pack, across its top.
+
+    STOP  WAITING FOR YOU. Send the logo file and photo files, and
+    approve this plan. Say "build it" to go ahead now with the
+    logo and photo slots marked MISSING.
+
+tweaks:
+  - what: The direction line
+    how: One sentence changes the whole plan. "For busy parents" would swap the labels for facts that suit a quick morning, such as one pack and no water.
+  - what: A comparison template
+    how: Give it a "this vs the usual way" layout and name the usual way, unbranded. Every row is retested, and any row you can't fill for both sides is dropped, never left blank.
+  - what: Fixed choices
+    how: Say "no text in the image" or "keep the illustration style". It keeps those and changes other spots around them.
+  - what: Sizes
+    how: Add 1:1 or remove 9:16. Each size is composed on its own, so every one gets its own zone list.
+
+judge:
+  - Every spot marked keep has a named source you can check.
+  - Nothing from the reference survives except the layout. No borrowed claim, badge, number or product.
+  - Every line of copy has a label and a source, and quotes match the review word for word.
+  - The brand name isn't typed anywhere. The plan places the real logo or says it's missing.
+  - The headline is 7 words or fewer, with no more than 3 other things to read.
+  - The verdict follows the rule. If the main spot fails, it switches type or says pick another.
+
+test:
+  - Run it on a reference ad you've already rebuilt by hand. Compare its eye path and zones with what your designer did. Big differences are worth a look before you trust its plans.
+  - Give it a reference with a press badge or a big number you can't back. The plan must switch the type or cut the claim, and record why.
+  - Leave out one fact on purpose, such as a rival's price in a comparison. That row should drop and show as MISSING, never be filled.
+  - Run the plan twice on the same reference. The keep, change and drop marks and the claims should match. Only lines labelled "our line" may change.
+
+improve:
+  - Paste your quotable figures, never-say list, colours and typefaces into "What you need" in the skill file, so every plan checks against the same list.
+  - Add your show-it-right rules (how the pack opens, what's never shown) to step 8, next to the other checks.
+  - Mark the types on the map you can never fill (for example Checked fact, if you hold no study or press), so they're switched at once.
+  - If you reuse the same few templates, write their spots into the skill, so you only paste the template's name.
+  - Pair it with the skill that writes image prompts for the picture, and keep each approved plan in your brand file to reuse.
+
+works_best_with:
+  tools:
+    - {name: "GPT Image", why: "Takes several reference photos at once and makes targeted edits, so the product stays close to the real one."}
+    - {name: "Nano Banana", why: "Handles many reference images and shiny surfaces such as foil pouches and glass."}
+    - {name: "Figma", why: "Sets real type and your logo over the picture and exports 4:5 and 9:16 from one file."}
+    - {name: "Meta Ad Library", why: "Shows the full ad a layout came from, including its main text, so you can see every spot it relies on."}
+  inputs:
+    - "Your logo as an SVG file, so it stays sharp at every size"
+    - "Your brand typefaces as font files, so the type matches your other ads"
+    - "Rival facts you have checked, with the date and where you found them, so comparison rows can stay"
+    - "A product photo shot at the same angle and light as the reference, so less of the picture has to be generated"
+
+terms:
+  - term: Ad type map
+    meaning: Nine kinds of image ad, sorted by the question each answers for a stranger, such as "what is it?" or "can I believe it?".
+  - term: Spot
+    meaning: One place in a layout that holds one thing, such as the headline, a comparison row, a quote or the product.
+  - term: Skeleton
+    meaning: The basic shape of a layout, such as two halves side by side, or a product in the middle with labels around it.
+  - term: 4:5 and 9:16
+    meaning: Ad sizes. 4:5 is the tall rectangle in a feed. 9:16 is full-screen phone height, used in stories and reels.
+  - term: Our line
+    meaning: A line written to test, not taken from a customer. It can run, but it isn't proof.

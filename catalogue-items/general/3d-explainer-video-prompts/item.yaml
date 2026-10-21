@@ -1,0 +1,38 @@
+slug: 3d-explainer-video-prompts
+renamed_from: 3d-how-it-works-video-clip-prompt-writer
+name: "3D how-it-works video clip prompt writer"
+summary: "Paste your 3D script or product facts. Get matching how-it-works clip prompts and an edit list."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: video
+level: expert
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: true}
+  - {type: script, required: false}
+outputs:
+  - {type: script}
+  - {type: image_prompt}
+  - {type: video_prompt}
+uses: [3d-explainer-video-script]
+example: explainer
+origin: rebuilt
+source_ids: [CES-152]
+old_name: 3D how-it-works explainer video prompts
+version: 2.1.0
+minds: [charles-and-ray-eames]
+credits:
+  - {title: "Powers of Ten (film)", by: "Wikipedia, on Charles and Ray Eames (1977)", url: "https://en.wikipedia.org/wiki/Powers_of_Ten_(film)", used: "Starting at human size and moving down through scale in one continuous move, then back"}
+  - {title: "Communications Toolkit: And, But, Therefore Statement", by: "SESYNC, after Randy Olson", url: "https://www.sesync.org/resources/communications-toolkit-and-therefore-statement", used: "A chain that needs a snag link and a product link"}
+  - {title: "Mayer's 12 Principles of Multimedia Learning", by: "Dartmouth, summarising Richard E. Mayer, Multimedia Learning", url: "https://services.dartmouth.edu/TDClient/1806/Portal/KB/PrintArticle?ID=171655", used: "Colour-coded parts as signals, one sentence per picture, cutting extras"}
+  - {title: "Sora 2: Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide", used: "Rerun, simplify, then change one thing"}
+  - {title: "Model sheet", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Model_sheet", used: "The sheet that keeps a character the same: several angles, expressions and poses"}
+  - {title: "Storyboard", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Storyboard", used: "One frame per shot with framing, camera, movement, dialogue and timing, approved before production"}
+tested:
+  on: 2026-10-20
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-sonnet-5-5
+  result: pass

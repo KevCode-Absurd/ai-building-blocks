@@ -1,0 +1,53 @@
+# Build a product people want: AI Blocks
+
+> 49 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [App polish guide](https://useaiblocks.com/skills/app-polish-guide): Describe your shipped app. Get fixes for fit, flow, clarity and honest persuasion, step by step.
+- [Beta program planner](https://useaiblocks.com/skills/beta-program-planner): Describe your launch. Get who to invite, what to ask them, and clear rules for when the beta ends.
+- [Build blueprint writer](https://useaiblocks.com/skills/build-blueprint-writer): Give it a product idea. Get one researched build document with stack, steps and tests an AI can build from.
+- [Build-your-own product designer](https://useaiblocks.com/skills/build-your-own-product-designer): Describe your customisable product. Get a plan with option rules, live pricing, checks and saving.
+- [Chatbot conversation designer](https://useaiblocks.com/skills/chatbot-conversation-designer): Describe your chatbot job. Get conversation flows with questions, error recovery and graceful fallbacks.
+- [Check an idea's four risks and rewrite your roadmap](https://useaiblocks.com/workflows/idea-four-risks-check): Paste your product idea. Get its four risks rated and a feature list rewritten as problems with results to measure.
+- [Churn reducer](https://useaiblocks.com/skills/churn-reducer): Describe your product and why people leave. Get a cancel flow, save offers and a failed-payment recovery plan.
+- [Code to requirements writer](https://useaiblocks.com/skills/code-to-requirements-writer): Point it at a codebase. Get a product requirements document built from its screens, data and flows.
+- [Customer onboarding planner](https://useaiblocks.com/skills/customer-onboarding-planner): Describe your product and customers. Get phased onboarding steps, email templates, milestones and owners.
+- [Developer onboarding improver](https://useaiblocks.com/skills/developer-onboarding-improver): Describe your API sign-up path. Get a plan that cuts the time to a developer's first working call.
+- [Developer quickstart writer](https://useaiblocks.com/skills/developer-quickstart-writer): Describe your product. Get a quickstart, tutorial and sample app plan that gets a developer to Hello World fast.
+- [Feature launch planner](https://useaiblocks.com/skills/feature-launch-planner): Name your feature. Get a launch plan with messaging, support prep, rollout steps and rollback triggers.
+- [Feature priority scorer](https://useaiblocks.com/skills/feature-priority-scorer): Give it your feature list. Get each scored with RICE and ranked, plus interview analysis and a requirements template.
+- [Feature request screener](https://useaiblocks.com/skills/feature-request-screener): Paste your feature requests and who asked. Get a yes, later or no on each, with the full cost of every yes.
+- [Feature spec writer](https://useaiblocks.com/skills/feature-spec-writer): Describe a feature idea. Get a spec with goals, non-goals, success measures and acceptance checks.
+- [First-run wizard designer](https://useaiblocks.com/skills/first-run-wizard-designer): Describe your product's first minutes. Get a step-by-step setup wizard with skip options, rewards and drop-off tracking.
+- [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer): Describe your product and its first win. Get an onboarding flow that cuts setup and builds a habit.
+- [Free tool idea planner](https://useaiblocks.com/skills/free-tool-idea-planner): Describe your buyers. Get free calculator or tool ideas that bring leads, with a build plan.
+- [Habit loop designer](https://useaiblocks.com/skills/habit-loop-designer): Describe your product. Get a loop of trigger, action, reward and investment that brings users back. Uses the Hook Model.
+- [Hardware project mentor](https://useaiblocks.com/skills/hardware-project-mentor): Describe your sensor or device idea. Get a board pick, where readings go and a phased build plan.
+- [Idea to dev brief writer](https://useaiblocks.com/skills/idea-to-dev-brief-writer): Give it a rough idea or feature request. Get a clear brief a developer can build from, with scope and open questions.
+- [Idea to plan pipeline runner](https://useaiblocks.com/skills/idea-to-plan-pipeline-runner): Give it a raw idea. Get clarifying questions, research, a product brief and a phased plan, as four files.
+- [In-app tour designer](https://useaiblocks.com/skills/in-app-tour-designer): Describe your product and what new users must learn. Get a short tour plan with triggers, tips and completion tracking.
+- [Job story writer](https://useaiblocks.com/skills/job-story-writer): Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done.
+- [Launch a smaller product on the date you set](https://useaiblocks.com/workflows/smaller-product-launch): Give it your launch plan, date and budget. Get half the scope, a screened request list and a teaser plan.
+- [Launch scope cutter](https://useaiblocks.com/skills/launch-scope-cutter): Paste your launch plan, date and budget. Get the same date with half the scope, the core first and the rest parked.
+- [Lean product shaping coach](https://useaiblocks.com/skills/lean-product-shaping-coach): Describe your product plan. Get a smaller scope, a six-week bet and features to say no to. Uses Shape Up.
+- [New project planner](https://useaiblocks.com/skills/new-project-planner): Give it a vague app idea. Get eight planning files your AI reads each session to stay on track.
+- [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder): Paste visits, sign-ups and 30-day users. Get where new people leave and the first-visit fix to try before any new feature.
+- [Onboarding improver](https://useaiblocks.com/skills/onboarding-improver): Describe your product. Get a faster path to first value with a checklist, empty states and emails.
+- [Opportunity solution tree builder](https://useaiblocks.com/skills/opportunity-solution-tree): Give it the outcome you want. Get a tree of customer opportunities, solution ideas and the tests for each.
+- [Paywall designer](https://useaiblocks.com/skills/paywall-designer): Describe your plans. Get upgrade screens, trigger moments and copy that convert free users.
+- [Priority method picker](https://useaiblocks.com/skills/priority-method-picker): Describe your backlog and team. Get the best way to rank it from nine methods, with the steps to use it.
+- [Product launch planner](https://useaiblocks.com/skills/product-launch-planner): Describe what you are launching. Get a launch plan with timing, channels and announcement copy.
+- [Product metrics planner](https://useaiblocks.com/skills/product-metrics-planner): Say your product stage. Get the KPIs to track, a dashboard layout and how to read retention and adoption.
+- [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer): Give it your product numbers. Get trends against targets, what moved and what to do about it.
+- [Product requirements writer](https://useaiblocks.com/skills/product-requirements-writer): Describe a product or feature. Get a short product requirements document with goal, audience, value and release plan.
+- [Product team discovery coach](https://useaiblocks.com/skills/product-team-discovery-coach): Describe your product team. Get a plan for finding what to build, testing ideas first and working with empowered teams.
+- [Roadmap update writer](https://useaiblocks.com/skills/roadmap-update-writer): Give it your plans. Get a roadmap story, release notes or changelog written for executives, engineers or customers.
+- [SaaS blueprint planner](https://useaiblocks.com/skills/saas-blueprint-planner): Give it a one-line SaaS idea. Get eight files: research, analysis, architecture, features, screens, phases and a step-by-step build plan.
+- [SaaS MVP roadmap planner](https://useaiblocks.com/skills/saas-mvp-roadmap-planner): Give it your SaaS idea. Get a stack choice, build order and launch checklist you can follow.
+- [Signup flow improver](https://useaiblocks.com/skills/signup-flow-improver): Describe your signup steps. Get fewer fields, clearer copy and a plan to cut drop-off.
+- [Sprint plan writer](https://useaiblocks.com/skills/sprint-plan-writer): Give it your backlog and team time off. Get sprint scope, goals and a stretch list sized to real capacity.
+- [User flow mapper](https://useaiblocks.com/skills/user-flow-mapper): Describe what users do. Get a flow diagram with choices, error states and drop-off points.
+- [User story writer](https://useaiblocks.com/skills/user-story-writer): Give it a feature idea. Get user stories with acceptance criteria and a sprint plan.
+- [Weak part design-out planner](https://useaiblocks.com/skills/weak-part-design-out-planner): Describe what keeps breaking. Get the part causing most trouble and ways to design it out.
+- [Web project scoper](https://useaiblocks.com/skills/web-project-scoper): Describe a web project. Get its goals, users, features, design tokens and page plan in one scoped brief.
+- [Work flow layout planner](https://useaiblocks.com/skills/work-flow-layout-planner): Describe a repeated job. Get a layout where the work moves to the person, with fewer steps and less walking.
+- [Write the press release and six-page memo before you build](https://useaiblocks.com/workflows/press-release-memo): Paste your idea. Get a future press release, the hard questions, a six-page memo and a check of that memo.

@@ -52,7 +52,7 @@ SHAPE      Down and back up: one fix after another, then a gentler one. It rests
 
 PICTURE
 Trace:     thing
-Skill:     tried-before-products-image-ad-maker
+Skill:     tried-before-image-ad
 Scene:     A pantry shelf holding two half-used fiber powder tubs (one open, with a dry scoop inside), a barely started probiotic bottle and a glass with cloudy residue. Labels are blank or turned away.
 Wonder:    Why does someone keep buying these and never finish one?
 Starter prompt: Candid phone photo, slightly overhead, of a kitchen pantry shelf in soft morning light. Two unbranded fiber powder tubs, one open with a dry scoop resting inside. A small probiotic bottle, nearly full, with its cap off beside it. A drinking glass with cloudy residue at the bottom. Labels blank or turned away. A real, slightly cluttered home, natural colours, no people, no text, no logo, no product.

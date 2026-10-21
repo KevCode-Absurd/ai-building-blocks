@@ -31,39 +31,39 @@ images:
 
 blocks:
   paper-craft-image-ad-maker: paper-craft
-  paper-craft-video-clip-prompt-writer: paper-craft
+  paper-craft-video-prompts: paper-craft
   knitted-wool-image-ad-maker: knitted-wool
-  knitted-wool-video-clip-prompt-writer: knitted-wool
+  knitted-wool-video-prompts: knitted-wool
   clay-scene-image-ad-maker: clay-before-after
-  claymation-video-clip-prompt-writer: clay-figure
+  claymation-video-prompts: clay-figure
   watercolor-image-ad-maker: watercolor
-  watercolor-video-clip-prompt-writer: watercolor
-  motion-comic-video-clip-prompt-writer: comic-panels
+  watercolor-video-prompts: watercolor
+  motion-comic-video-prompts: comic-panels
   talking-object-image-ad-maker: talking-object
-  talking-object-video-clip-prompt-writer: talking-object
-  phone-note-screenshot-image-ad-maker: phone-note
+  talking-object-video-prompts: talking-object
+  phone-note-image-ad: phone-note
   story-image-ad-writer: phone-note
   chat-screenshot-image-ad-maker: chat-screenshot
   handwritten-note-image-ad-maker: handwritten-note
   image-ad-maker-with-exact-text: handwritten-note
   sticky-note-image-ad-maker: sticky-notes-selfie
-  selfie-style-video-clip-prompt-writer: sticky-notes-selfie
+  selfie-style-video-prompts: sticky-notes-selfie
   problem-moment-image-ad-maker: problem-moment
   empty-room-image-ad-maker: empty-room
   leftover-mess-image-ad-maker: leftover-mess
   feared-outcome-image-ad-maker: quiet-plate
-  tried-before-products-image-ad-maker: bottle-wall
+  tried-before-image-ad: bottle-wall
   visual-twist-image-ad-maker: cup-tower
   overhead-portrait-image-maker: overhead-portrait
-  skeleton-video-clip-prompt-writer: skeleton
-  podcast-style-video-clip-prompt-writer: podcast
-  short-film-video-clip-prompt-writer: short-film
+  skeleton-video-prompts: skeleton
+  podcast-style-video-prompts: podcast
+  short-film-video-prompts: short-film
   spoken-video-ad-opening-writer: character-sheet
-  video-avatar-and-storyboard-planner: storyboard
+  avatar-storyboard-planner: storyboard
   video-ad-shot-list-maker: storyboard
-  turn-reviews-into-a-video-ad-ready-to-film: storyboard
+  review-video-ad: storyboard
   image-style-picker-for-story-ads: story-pictures
-  turn-your-reviews-into-image-ads-buyers-believe: story-pictures
-  get-an-ad-strangers-read-built-from-reviews: story-pictures
-  learn-what-sells-from-50-different-image-ads: ad-grid
-  get-image-ads-strangers-stop-scrolling-for: ad-grid
+  review-image-ads: story-pictures
+  review-based-ad: story-pictures
+  image-ad-test-learnings: ad-grid
+  scroll-stopping-image-ads: ad-grid

@@ -1,0 +1,128 @@
+new_slug: roe-margin-check
+name: "Return on equity and margin checker"
+summary: "Paste several years of a company's accounts. Get return on equity, margins and a one-dollar test, each marked pass or fail."
+job: money-and-investing
+thinking: high
+thinking_why: "It cleans accounts, runs several sums and compares them with rivals. Mistakes in the cleaning change the answer, so give it your strongest model."
+
+headline: "Return on equity and margin checker"
+subhead: "Paste four or five years of a company's accounts. It works out return on equity on operating profit, checks whether debt props it up, compares margins and cost habits with rivals, and runs the one-dollar test on the profit the company kept. It is a method of analysis, not personal financial advice."
+
+explain: |
+  Profit per share goes up at nearly any company that keeps its profits, even when the kept money earns almost nothing. It tells you very little about how good the business is.
+
+  This skill asks better questions. How much does the business earn on the money already in it? Does that return survive once you take away debt and one-off gains? How do its margins compare with rivals, and does it keep announcing cost cuts? And over several years, did each dollar of profit it kept add at least a dollar of value? Each of the three tests ends as pass, fail or unknown, with the figures behind it. It gives no buy or sell calls and marks every missing figure.
+
+when:
+  - You are checking whether a business earns good money on the capital in it.
+  - A company shows rising profit per share and you want to know if that means anything.
+  - You are comparing two businesses and one shows a higher return that may come from debt.
+
+you_give:
+  - Four or five years of operating profit, equity, debt, sales, dividends and buybacks
+  - Market value of the company at the start and end of the period
+  - Figures for two or three rivals (optional)
+  - Earlier findings on the business (optional)
+you_get:
+  - Return on equity by year and on average, on a clean basis
+  - Return on total capital, so debt cannot hide
+  - A margin comparison and a note on cost habits
+  - The one-dollar test with its figures
+  - Pass, fail or unknown for each of the three tests
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the figures from the accounts, or attach a spreadsheet.
+  - Add rival figures if you have them, and the company's market value at the start and end.
+  - Read the return on total capital next to the return on equity.
+  - Take the calls to "Business tenet scorecard writer".
+
+how_it_works:
+  - title: Lines up the years
+    text: One row per year with every figure, and a missing marker for each gap.
+  - title: Cleans the profit
+    text: Uses operating profit and takes out gains, property sales and other one-offs.
+  - title: Cleans the equity
+    text: Holds securities at cost so market swings do not distort the sum.
+  - title: Works out the return
+    text: Operating profit after tax over average equity, by year and on average.
+  - title: Strips out the debt
+    text: Shows return on total capital, so a high return built on borrowing is plain.
+  - title: Compares with rivals
+    text: Marks the return and margins as ahead, level or behind.
+  - title: Checks cost habits
+    text: Looks at overhead as a share of sales and at how often cost-cutting is announced.
+  - title: Runs the one-dollar test
+    text: Compares profit kept with the rise in market value over five years or more.
+
+output_shape: |
+  YEARS
+  <year> | operating profit | equity | debt | sales | kept profit | MISSING
+
+  CLEANED
+  <what was removed or restated>
+
+  RETURN
+  ROE by year <...> | average <n>% | return on total capital <n>% | debt to equity <n>
+
+  RIVALS
+  <return and margin: ahead / level / behind / MISSING>
+
+  MARGINS AND COSTS
+  <trend and habits>
+
+  ONE-DOLLAR TEST
+  Kept <n> | value rose <n> | <pass / fail>
+
+  CALLS
+  Return: <pass/fail/unknown> | Margins: <...> | One-dollar: <...>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your debt line
+    how: Tell it what debt-to-equity level you want flagged. Without one it uses debt equal to equity.
+  - what: The rivals
+    how: Name two or three that sell the same thing. Different businesses give misleading comparisons.
+  - what: Years in the test
+    how: Give five or more for the one-dollar test, and say if the start or end year was a boom or a crash.
+
+judge:
+  - Profit is operating profit and every one-off is named.
+  - Return on equity is shown beside return on total capital.
+  - Each comparison says ahead, level, behind or missing.
+  - The one-dollar test shows its figures and its period.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it a company with large debt and a 25% return on equity. The return on total capital should come out much lower.
+  - Give it a year with a big gain on investments. The gain should be removed and named.
+  - Leave out equity. It should stop and say the return cannot be worked out.
+  - Run it twice on the same data. The calls should match.
+
+improve:
+  - Keep a sheet of the cleaned figures so a new year adds one row.
+  - Add the same figures for a rival and compare them in one table.
+  - Note the years the company announced cost-cutting and see if margins held afterward.
+  - Pair it with "Owner earnings calculator" for the cash side.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Keeps the cleaned years and rival figures together and lets you recheck each sum."}
+    - {name: "Any good chat AI", why: "Reading pasted accounts and running fixed sums is work any strong chat AI does well with this skill."}
+  inputs:
+    - "Five years of income statements and balance sheets"
+    - "Dividends paid and shares bought back in each year"
+    - "The same figures for two or three rivals"
+
+terms:
+  - term: Return on equity
+    meaning: Operating profit after tax divided by the money owners have in the business. It shows how well that money is put to work.
+  - term: Equity
+    meaning: What is left for owners after all debts are taken off the assets.
+  - term: Operating margin
+    meaning: Operating profit divided by sales. It shows how much of each sale is left after the costs of running the business.

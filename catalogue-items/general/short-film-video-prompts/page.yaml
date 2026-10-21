@@ -1,0 +1,203 @@
+new_slug: short-film-video-prompts
+name: "Short film video clip prompt writer"
+summary: "Paste your short-film script and attach product photos. Get steady clip prompts and an edit list."
+job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
+
+headline: "Short film video clip prompt writer"
+subhead: Give it an approved short-film script and real product photos. It draws a floor plan, casts each person, builds sheets and a storyboard with a prop log, and writes the clips, stopping three times for your OK. You get the floor plan, every prompt and an edit list.
+
+explain: |
+  AI video can now make photo-real people acting in a room. Across several angles it slips. Faces change, the window jumps to the other wall, two people seem to swap sides, a mug vanishes between shots, and the listener's mouth moves during someone else's line.
+
+  This skill runs the whole process in six stages. It writes the turn and a floor plan with lettered camera positions, all on one side of the line between the two people. It writes a card for each person and waits for your OK. It makes casting images, then sheets from every angle, a product sheet and one establishing frame with a light recipe, plus lock lines. You approve those, then a storyboard where every shot has one action, a dialogue block and a log of who holds what. Only then does it write the clips, the voices and the edit.
+
+when:
+  - You have an approved film-style script and want to make it with AI image and video tools.
+  - Your generated shots keep changing faces, rooms or light between angles.
+  - Things appear, vanish or swap hands between your shots.
+
+you_give:
+  - The approved script with speaker labels, scenes and its cast note
+  - Real product photos (front, side, top) and how it's held and used
+  - The buyer's moment and your brand's places (optional)
+  - Your video tool's clip lengths and reference limits (optional)
+you_get:
+  - A turn line, a floor plan with lettered camera positions, and a card for each person
+  - Casting image prompts, then sheets, an establishing frame, a light recipe and lock lines
+  - A storyboard with shot cards, dialogue blocks and a prop log
+  - Clip prompts and an edit list with cuts, captions, sound and fixes
+  - Any check the prompts still miss, one line each
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the approved script, ideally from "Short film video ad script writer", and attach your product photos.
+  - Approve or change each person's card, then make the casting images and say which you picked.
+  - Make and approve the sheets, the establishing frame and the lock lines, then the storyboard.
+  - Make the clips in order. If a shot fails, attach a screenshot, say what went wrong and ask for the fix.
+
+how_it_works:
+  - title: Plans the scene
+    text: Writes the turn in one line, then a floor plan with walls, light, people, the product and lettered camera positions on one side of the line.
+  - title: Writes the avatar cards
+    text: One card per made-up adult, with face, clothes, one accessory, voice and what never changes. It stops for your OK.
+  - title: Makes casting images
+    text: Three or four per person on a plain background. You pick one each.
+  - title: Builds the sheets
+    text: Each person from five angles, the product from your photos, one establishing frame and a light recipe, then lock lines. It stops for your OK.
+  - title: Draws the storyboard
+    text: One frame per shot with one action in countable beats, a dialogue block and a prop log, checked against the line. It stops for your OK.
+  - title: Turns it into video
+    text: Clips that describe only the motion, one mouth moving at a time, cuts, captions and a two-pass review. Misses are rerun, simplified, then fixed one thing at a time.
+
+output_shape: |
+  STAGE 0  TURN        <setup> and <...>, but <snag>, therefore <change>
+           FLOOR PLAN  <walls, windows, light, people, product>
+                       Line: <A>-<B>. Setups: A wide, B, C singles,
+                       D inserts
+  STAGE 1  AVATAR CARDS  A: <...>  B: <...>      > STOP for approval
+  STAGE 2  CASTING IMAGES  <3 or 4 per person>  Picked: <n>
+  STAGE 3  SHEETS      Characters: <5 angles, expressions, height>
+                       Product: <front, side, top, label words>
+                       Establishing frame (setup A): <prompt>
+           LIGHT       <source, direction, softness, 3 to 5 colours>
+           LOCK LINES  <casting cards, product, light, room>
+                                                 > STOP for approval
+  STAGE 4  STORYBOARD
+           [<setup>] <size> · <action beats> · gaze · focus · move
+             Character A: <exact line>
+           Props after: <who holds what>
+                                                 > STOP for approval
+  STAGE 5  CLIP <n>    From frame <n>. <motion only>. Cut out: <...>
+           EDIT LIST   <order, captions, sound, end card, retakes>
+  CHECKS MISSED: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Script: the 20-second script from "A short film ad where your
+    product is the twist". Turn: he asks what day it is; her answer
+    is a torn daily pack. Lines: B "What day is it?" / A "Pack day." /
+    B "Same as yesterday?" / A "Same as every day." / Narrator "One
+    pack a day. Rip. Tip. Enjoy."
+    Cast note: B carries it. A: about 40, short grey-streaked hair,
+    navy jumper, reading glasses on her head. B: about 40, rumpled
+    dark hair, faded green T-shirt, one sock on.
+    Photos: [pouch front] [daily pack in a hand] [gummies in a palm]
+    Handling: tear the daily pack straight across the top only.
+    Tool: 10-second clips, 3 reference images, takes an end frame.
+  output: |
+    STAGE 0  TURN  A half-asleep man asks what day it is, but her
+    answer is a torn daily pack, therefore the day stops mattering.
+    FLOOR PLAN  Kitchen counter along the back wall, window on the
+    left (the only light), door at right. A sits at the counter end
+    by the window; B comes in from the door. The tub at the back of
+    the counter; the pouch in the fruit bowl, front just showing.
+    Line: between A and B. Setups: A wide from the room side, counter
+    height · B over B's shoulder onto A · C over A's shoulder onto B ·
+    D inserts from above the counter.
+
+    STAGE 1  AVATAR CARDS
+    A: a made-up woman, about 40, short grey-streaked hair, navy
+      jumper, reading glasses pushed up on her head. Voice low, calm,
+      a little dry. Never change: glasses on her head.
+    B: a made-up man, about 40, rumpled dark hair, faded green
+      T-shirt, one sock on, a little stubble. Voice sleepy, warm,
+      slow. Never change: the one sock.
+    > STOP: approved.
+
+    STAGE 2  CASTING IMAGES (4 each; picked A2 and B3)
+
+    STAGE 3  SHEETS
+    Characters: front, three-quarter left and right, side, back; A
+      with a flat look and a small smile, B mid-yawn and with one
+      eyebrow up; each holding a daily pack, which fits a palm.
+    Product: pouch front = "Sprout" wordmark, bear face, "28 Daily
+      Packs"; daily pack from the hand photo, front down (words not
+      captured).
+    Establishing frame (setup A): photo-real, the floor plan as one
+      frame, A at the counter with a mug, B in the doorway. [LIGHT]
+    LIGHT  soft morning daylight from the left window, gentle fall-off
+      to the right; cream, navy, sage green, warm wood, pale grey.
+    > STOP: approved.
+
+    STAGE 4  STORYBOARD (3 of 7 shots)
+    [A] wide · B shuffles in mid-yawn, stops at the counter · gaze on
+      A · focus on B · no move · 3 s
+      Character B: What day is it?
+    Props after: A holds her mug; the pouch in the bowl; the tub back.
+    [D] close from above · A's hands tear a daily pack straight across
+      the top · no move · 3 s
+      Character A: Pack day.
+    Props after: A holds the torn pack in her right hand.
+    [C] medium on B · takes the pack from her hand, eyes from the pack
+      to A, one eyebrow lifts · no move · 2 s
+    Props after: B holds the torn pack in his right hand.
+    Continuity: every setup on the room side; the pack passes right
+      hand to right hand; the pouch stays in the bowl until shot 7.
+    > STOP: approved.
+
+    STAGE 5  CLIP 1 (10 s, shots 1 to 4)  From frame 1, end on frame 4.
+      Motion only, beats as the cards. Only the speaker's mouth moves.
+      [LOCK LINES]. Cut out: hard cut to clip 2.
+    EDIT LIST  Two clips in order; captions for all four lines; room
+      tone, no music; offer card from current terms over shot 7,
+      inside the safe zone.
+
+    (cut for length: the full run also had the casting prompts, shots
+    2 and 5 to 7, and clip 2)
+
+tweaks:
+  - what: Clip limits
+    how: Say whether your tool can start and end a clip on chosen images. If not, every join is planned as a clean cut with a fresh start frame.
+  - what: Setups
+    how: Ask for a fifth position, such as a shot from the doorway. It's added on the same side of the line, with its own fixed height and lens.
+  - what: Crossing the line
+    how: Ask for a planned cross for a moment of unease. It plans a camera move the viewer sees, or a shot straight down the line.
+  - what: Voices
+    how: Give each voice's accent, pitch and pace. They go on the avatar cards and are reused in every clip.
+
+judge:
+  - It stopped for your OK after the avatar cards, the sheets and the storyboard, unless you asked for every stage in one go.
+  - Every camera position sits on one side of the line, or the crossing is planned.
+  - The light recipe is the same, word for word, in every prompt for the scene.
+  - Each shot card has one action and at most one camera move, and the prop log has no gaps.
+  - Dialogue matches the script exactly, and no character claims a result or plays a customer.
+
+test:
+  - Make the establishing frame and two other setups. The window, the door and the pouch should stay in the same places.
+  - Read the prop log from top to bottom. Every object should be accounted for after every shot.
+  - Watch one dialogue clip with the sound off. Only the speaker's mouth should move.
+  - When a shot fails, paste the fault back in. You should get the next fix step for that shot only.
+
+improve:
+  - Save the approved avatar cards, sheets, light recipe and establishing frame in your brand file, so a series starts at stage 4.
+  - Add each voice's accent, pitch and pace to "What you need".
+  - Write your tool's limits into the skill (clip length, start and end frames), so every join is planned right.
+  - Pair it with "Short film video ad script writer" first, and a captions skill in your brand font after.
+
+works_best_with:
+  tools:
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
+    - {name: "Veo", why: "Makes speech and lip movement along with the picture, starting from your approved frame."}
+    - {name: "Kling", why: "Makes speech with lip sync in several languages, from your reference images."}
+    - {name: "Gemini", why: "Lets you fix one thing in a clip by asking, while the rest of the shot stays the same."}
+  inputs:
+    - "Photos of a real room like your set, taken from the corners, so the floor plan matches"
+    - "A short description of each character's voice (accent, pitch, pace), so voices stay the same across clips"
+    - "Photos of hands holding the product the right way, so every prop shot is true"
+
+terms:
+  - term: Avatar card
+    meaning: A short, fixed description of a person in the ad, from their look to their voice, approved before any image is made.
+  - term: Floor plan
+    meaning: A map of the room from above, showing where people, lights, props and cameras go.
+  - term: The line
+    meaning: An imaginary line between two characters. Keeping the camera on one side stops them seeming to swap places.
+  - term: Establishing frame
+    meaning: One wide picture of the whole scene that fixes the room, the light and where everything sits.
+  - term: Prop log
+    meaning: A running note of who holds what after each shot.

@@ -1,0 +1,86 @@
+new_slug: customer-job-finder
+name: Find the job customers hire your product for
+summary: Describe what you sell and when people buy it. Get an interview plan and the ranked reasons they bought.
+job: understand-customers
+thinking: high
+thinking_why: It reads real customer words and has to rank reasons without making them up. Give it your strongest model.
+headline: Learn what people really hire your product to do, in their own words
+subhead: Describe what you sell and when people buy it. It plans a day of watching buyers and the questions to ask people who switched to you. After you have the interviews, it marks up their words and ranks the reasons they bought, with exact quotes.
+explain: |
+  Asking buyers what they want and profiling who they are often leaves you with nothing to act on. A profile says who bought. It doesn't say what they were trying to get done, or what else they could have chosen.
+
+  This workflow plans how to find the job behind the purchase. It sets up a day at the place of purchase, quick questions for buyers on their way out and interviews with people who switched to you in the last year. You hold the interviews and keep each person's words. Then it marks up those words, tags each phrase by how strong the reason is, counts separate people and ranks the reasons. The first half follows the milkshake study described by Clayton Christensen and his co-authors in "Know Your Customers' Jobs to Be Done".
+when:
+  - You know who buys, but not what they are trying to get done when they buy.
+  - Sales are flat and you suspect you are marketing to the wrong reason.
+  - You have a pile of reviews or interview notes and no ranking of why people bought.
+you_give:
+  - What you sell and when or where people buy it
+  - Your question, such as why people buy or switch
+  - Product facts (optional)
+  - Reviews or notes, word for word (optional)
+  - Time to watch buyers for a day and interview several people who switched to you
+  - The interview answers, with each customer's own words
+  - Your brand file (optional)
+you_get:
+  - A plan for a day of watching buyers, with a log sheet
+  - Quick questions for buyers on their way out
+  - An interview plan for people who switched to you in the last year
+  - A ranked map of buying reasons, each with the best exact quote and how many separate people said it
+  - A list of risky quotes to check before you use them, and a score out of 100 for how many of its own checks the map passes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe what you sell and when people buy it. It writes the plan and stops.
+  - Do the observation day and the interviews. Keep each person's own words with an ID and a date.
+  - Bring the answers back and say "carry on from step 2".
+how_it_works:
+  - title: Sets up the observation
+    text: Plans a day at the place of purchase, with a log for who buys, when and whether they use it on the spot.
+  - title: Writes the questions
+    text: Writes exit questions for buyers on their way out and an interview plan for people who switched to you in the last 6 to 12 months.
+  - title: Waits for the interviews
+    text: You watch, ask and keep each customer's own words. Nothing more runs until you bring them back.
+  - title: Marks up the words
+    text: Marks up the phrases in the answers instead of summarising them, and tags each by how strong the reason is.
+  - title: Counts and ranks
+    text: Counts separate people, ranks the reasons and pairs each with its best exact quote.
+output_shape: |-
+  STEP 1: CUSTOMER JOB INTERVIEW PLAN
+    Frame: <what you want to learn> | why profiles will not answer it
+    Observation day: where | when | log (who, time, what bought, used on the spot?)
+    Exit questions: <question> | shows <what the answer tells>
+    Who to interview: <who> | switched to you <months ago> | how many <n>
+
+  (you watch buyers and run the interviews)
+
+  STEP 2: CUSTOMER BUYING REASONS
+    Forces map (ranked by separate people): reason | force | people (n, share) | best quote [ID] | backups
+    Never said by the brand: <reason> | <n people>
+    What nearly stopped them: <exact words> [IDs] | <n people>
+    Check before use: <quote> [ID] | why it is flagged
+    Checks passed: <n>/100, with each miss named
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who you interview
+    how: Pick people who switched to you in the last 6 to 12 months, not long-time fans. They remember what changed and why.
+  - what: How you record the answers
+    how: Write the exact words, with an ID and a date for each person. Summaries lose the phrases the ranking depends on.
+  - what: The place and time you watch
+    how: Choose the busiest slot and one odd one out. The odd one often shows a second job.
+judge:
+  - Each reason is backed by an exact quote with an ID.
+  - Reasons are counted by separate people, not by mentions.
+  - Risky quotes are flagged with a reason, such as a free product or a one-off.
+  - The score says how it was worked out.
+  - No quote or customer is invented.
+test:
+  - Give it ten reviews where three people say the same thing in different words. They should count as three people for one reason.
+  - Paste one review you wrote yourself. It should be flagged for checking, not used as proof.
+  - Run the ranking twice on the same answers. The top three reasons should be the same.
+improve:
+  - Run the interviews again each year, and compare the ranking with the last one.
+  - Save the ranked reasons to your brand file, so ads and pages use real customer words.
+  - Add your own product page, so the map shows reasons you never say.

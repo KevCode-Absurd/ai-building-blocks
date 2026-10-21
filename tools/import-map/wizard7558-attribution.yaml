@@ -29,6 +29,7 @@
   needs: run code and read your spreadsheet
   author: Riley Sorenson
   author_url: https://github.com/wizard7558
+  slug: marketing-budget-scenarios
 "wizard7558/attribution-skills:skills/channel-taxonomy":
   name: Traffic channel classifier
   summary: "Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from."
@@ -94,6 +95,7 @@
   needs: run code, and use your own hosting and Postgres database accounts
   author: Riley Sorenson
   author_url: https://github.com/wizard7558
+  slug: first-party-tracking-pixel
 "wizard7558/attribution-skills:skills/funnel-truth-and-cost-per-stage":
   name: Cost per funnel stage reporter
   summary: "Give it your CRM stages and ad spend. Get a trusted funnel with the true cost of each stage."

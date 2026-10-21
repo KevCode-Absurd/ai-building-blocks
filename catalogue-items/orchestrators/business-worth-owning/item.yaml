@@ -1,0 +1,29 @@
+slug: business-worth-owning
+name: "Find out if a business is worth owning long term"
+summary: "Give it a business and its figures. Get a pass, fail or too-hard call on ten tests, and what to check next."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+uses: [business-power-tester, circle-of-competence-sorter, steady-track-record-checker, owner-minded-management-checker, roe-margin-check, owner-earnings-calculator, business-tenet-scorecard-writer]
+steps:
+  - {uses: business-power-tester, note: "Judges whether the edge is real and how long it should last."}
+  - {uses: circle-of-competence-sorter, note: "Reads the edge test, then asks whether you understand the business well enough to judge it."}
+  - {uses: steady-track-record-checker, note: "Tests whether past results are a fair guide, and flags a business that keeps changing course."}
+  - {uses: owner-minded-management-checker, note: "Reads the record of how managers used cash and told owners the truth."}
+  - {uses: roe-margin-check, note: "Uses your figures to test returns, margins and what kept profits earned."}
+  - {uses: owner-earnings-calculator, note: "Turns the accounts into the cash an owner could really take out."}
+  - {uses: business-tenet-scorecard-writer, note: "One page: each test as pass, fail or unknown, and whether a price check is worth your time."}
+origin: rebuilt
+version: 1.0.0
+minds: [warren-buffett]
+credits:
+  - {title: "The Warren Buffett Way (Second Edition)", by: "Robert G. Hagstrom", used: "The order of the steps: test for a lasting edge, check it is inside what you understand, check the record is steady, check the people running it, check returns and margins, work out owner earnings, score the tests"}
+generated_from: intake/buffett-way-twelve-tenets/skeleton.yaml

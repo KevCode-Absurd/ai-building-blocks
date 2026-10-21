@@ -1,0 +1,16 @@
+slug: long-source-to-workflow
+renamed_from: workflow-builder-from-a-long-source
+name: "Workflow builder from a long source"
+summary: "Paste a long article, transcript or book notes. Get the method as a workflow, with a skill for every step."
+category: general
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: source_text, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: skill_pack}
+origin: own
+version: 1.0.0

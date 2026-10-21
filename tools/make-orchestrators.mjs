@@ -36,19 +36,19 @@ const HINTS = {
 
 const FLOWS = [
   {
-    slug: "turn-reviews-into-a-video-ad-ready-to-film", when: "you want a video ad made from scratch, starting from your website and your customer reviews.", name: "Turn reviews into a video ad ready to film", job: "video", level: "advanced", boards: ["ecommerce"],
+    slug: "review-video-ad", when: "you want a video ad made from scratch, starting from your website and your customer reviews.", name: "Turn reviews into a video ad ready to film", job: "video", level: "advanced", boards: ["ecommerce"],
     summary: "A video ad script and shot list in your customers' words, checked against ad rules before you film.",
     steps: [
       ["website-brand-brain-builder", "Build your brand file from your website: facts, voice, offers and the claims you can make."],
       ["customer-buying-reasons-finder", "Pull the reasons people buy out of your reviews, in their own words, ranked by how many say it."],
-      ["video-ad-script-writer-from-customer-quotes", "Write the script around the top reason, using only facts from the brand file."],
+      ["quote-video-ad-script", "Write the script around the top reason, using only facts from the brand file."],
       ["ad-script-read-aloud-editor", "Read every line aloud and fix the ones nobody would say, without changing what they say."],
       ["video-ad-shot-list-maker", "Turn the script into timed shots a video tool can follow, one action per shot."],
       ["meta-ads-compliance-checker", "Check the script and on-screen words against Facebook and Instagram ad rules before anything is filmed or made."],
     ],
   },
   {
-    slug: "turn-your-reviews-into-image-ads-buyers-believe", when: "you want image ads built on what your customers actually say.", name: "Turn your reviews into image ads buyers believe", job: "image", level: "intermediate", boards: ["ecommerce"],
+    slug: "review-image-ads", when: "you want image ads built on what your customers actually say.", name: "Turn your reviews into image ads buyers believe", job: "image", level: "intermediate", boards: ["ecommerce"],
     summary: "Image ads built on why your customers buy, with words, layout and image prompts, checked before launch.",
     steps: [
       ["website-brand-brain-builder", "Build your brand file: facts, voice, current offers and the claims you can make."],
@@ -59,7 +59,7 @@ const FLOWS = [
     ],
   },
   {
-    slug: "get-a-checked-landing-page-for-your-best-ad", when: "an ad is working and needs a page that picks up where the ad left off.", name: "Get a checked landing page for your best ad", job: "page", level: "intermediate", boards: ["ecommerce"],
+    slug: "ad-landing-page", when: "an ad is working and needs a page that picks up where the ad left off.", name: "Get a checked landing page for your best ad", job: "page", level: "intermediate", boards: ["ecommerce"],
     summary: "Page copy that carries on from your ad, a design plan and a 30-point review with ranked fixes.",
     steps: [
       ["website-brand-brain-builder", "Build your brand file with your offer and the claims you can prove."],
@@ -69,7 +69,7 @@ const FLOWS = [
     ],
   },
   {
-    slug: "get-an-ad-strangers-read-built-from-reviews", when: "you want an ad that reads like a normal post, for people who have never heard of you.", name: "Get an ad strangers read, built from reviews", job: "ads", level: "advanced", boards: ["ecommerce"],
+    slug: "review-based-ad", when: "you want an ad that reads like a normal post, for people who have never heard of you.", name: "Get an ad strangers read, built from reviews", job: "ads", level: "advanced", boards: ["ecommerce"],
     summary: "A story ad that reads like a normal post, with its picture plan and an ad rules check.",
     steps: [
       ["story-ad-test-planner", "Decide whether a story ad fits, which customer problem to lead with, and who tells the story."],
@@ -79,12 +79,12 @@ const FLOWS = [
     ],
   },
   {
-    slug: "turn-competitor-ads-into-your-own-script", when: "you have collected other brands' ads you admire and want an original script that learns from them.", name: "Turn competitor ads into your own script", job: "ads", level: "advanced", boards: ["ecommerce"],
+    slug: "competitor-ad-to-script", when: "you have collected other brands' ads you admire and want an original script that learns from them.", name: "Turn competitor ads into your own script", job: "ads", level: "advanced", boards: ["ecommerce"],
     summary: "An original script that borrows one idea from long-running competitor ads, in your words, checked against ad rules.",
     steps: [
       ["competitor-ad-swipe-file-builder", "Sort the ads you collected and keep the few worth studying."],
       ["competitor-ad-gap-finder", "Work out why they hold attention and note how you would make your own version."],
-      ["video-script-writer-from-a-competitor-ad-idea", "Write an original script that borrows one idea, using your product and your customers' words."],
+      ["competitor-idea-video-script", "Write an original script that borrows one idea, using your product and your customers' words."],
       ["ad-script-read-aloud-editor", "Read every line aloud and fix the ones nobody would say."],
       ["meta-ads-compliance-checker", "Check the script against Facebook and Instagram ad rules."],
     ],
@@ -100,12 +100,12 @@ const FLOWS = [
     ],
   },
   {
-    slug: "turn-real-photos-into-a-product-page-gallery", when: "a product needs a full set of product page images made from its real photos.", name: "Turn real photos into a product page gallery", job: "image", level: "advanced", category: "ecommerce",
+    slug: "photo-product-gallery", when: "a product needs a full set of product page images made from its real photos.", name: "Turn real photos into a product page gallery", job: "image", level: "advanced", category: "ecommerce",
     summary: "Product page images that each answer one shopper question, planned from and checked against your real photos.",
     steps: [
       ["product-image-spec-writer", "Write down what the product really looks like, so every image stays true to it."],
       ["product-page-gallery-planner", "Plan the gallery frame by frame, each frame answering one question a shopper asks."],
-      ["get-a-product-page-gallery-that-answers-doubts", "Make the images from the plan, after you approve every frame and every word."],
+      ["product-gallery-answers", "Make the images from the plan, after you approve every frame and every word."],
       ["product-page-image-checker", "Check every image against the plan and the real photos before upload."],
     ],
   },

@@ -1,0 +1,26 @@
+slug: sales-letter-outline
+name: "Research your buyer and outline the sales letter"
+summary: "Give it your product material. Get sorted research, the feeling to write to and a full sales letter outline."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: brief}
+uses: [copy-research-file-builder, dominant-emotion-finder, sales-letter-outline-planner]
+steps:
+  - {uses: copy-research-file-builder, note: "Sorted research files and a short list of proof you can give away"}
+  - {uses: dominant-emotion-finder, note: "The strongest feeling to write to and where it comes from. Reads the angle library from the step before"}
+  - {uses: sales-letter-outline-planner, note: "A full outline, with headline ideas and the proof each claim needs. Reads the angle library from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [clayton-makepeace]
+credits:
+  - {title: "The 7 Daily Habits of Successful Copywriters", by: "Clayton Makepeace", used: "The order of the steps: copy research file builder, dominant emotion finder, sales letter outline planner"}
+generated_from: intake/seven-daily-habits-of-copywriters/skeleton.yaml

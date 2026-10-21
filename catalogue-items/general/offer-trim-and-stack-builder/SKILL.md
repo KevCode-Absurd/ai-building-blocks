@@ -7,7 +7,7 @@ description: Use when you have many delivery options for an offer and need to cu
 
 An offer is what is left after you cut the list, not the list itself. This skill cuts by a rule on cost and value, keeps an answer for every buyer problem, and groups the rest into named bundles with a value on each. It hands back a stack you can price.
 
-Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder-that-answers-buyer-doubts) instead when you have one buyer and one doubt and need a single offer built around it, with a profit check, rather than a long list of delivery options cut down.
+Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder) instead when you have one buyer and one doubt and need a single offer built around it, with a profit check, rather than a long list of delivery options cut down.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -64,7 +64,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Make an offer people want** with the [Commodity trap checker](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.
 - **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the offer.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the offer.
+- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the offer.
 - **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -88,6 +88,7 @@
   needs: run code and use your TranscriptAPI key
   paid: "TranscriptAPI"
   scrapes: true
+  slug: youtube-transcript-reader
 "alirezarezvani/claude-skills:marketing/linkedin/skills/linkedin-skills":
   skip: Only routes to the five LinkedIn skills, which we list one by one.
 "alirezarezvani/claude-skills:product-team/skills/product-skills":
@@ -166,8 +167,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It groups topics, searches papers and only lists what it found."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
   needs: "run code and connect Consensus"
   paid: "Consensus"
 "alirezarezvani/claude-skills:markdown-html/skills/md-slides":
@@ -327,6 +328,7 @@
   thinking_why: It writes short messages in your voice with set rules.
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: plan } ]
+  slug: linkedin-outreach-plan
 "alirezarezvani/claude-skills:marketing/linkedin/skills/linkedin-profile":
   name: LinkedIn profile rewriter
   summary: Describe your profile. Get a stronger headline, About section and experience bullets.
@@ -347,6 +349,7 @@
   thinking_why: It plans across your goals and time.
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: plan } ]
+  slug: linkedin-content-strategy
 "alirezarezvani/claude-skills:product-team/agile-product-owner/skills/agile-product-owner":
   name: User story writer
   summary: Give it a feature idea. Get user stories with acceptance criteria and a sprint plan.
@@ -655,6 +658,7 @@
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: plan } ]
   needs: run code
+  slug: project-risk-portfolio
 "alirezarezvani/claude-skills:ra-qm-team/compliance-team-eu-ai-act/skills/eu-ai-act-specialist":
   name: EU AI Act risk classifier
   summary: Describe your AI system. Get its risk tier under the EU AI Act and the duties that follow.

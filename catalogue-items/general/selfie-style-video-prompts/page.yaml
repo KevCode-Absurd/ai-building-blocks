@@ -1,0 +1,212 @@
+new_slug: selfie-style-video-prompts
+name: "Selfie-style video clip prompt writer"
+summary: "Paste your selfie-style script and attach product photos. Get phone-style clip prompts and an edit list."
+job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
+
+headline: "Selfie-style video clip prompt writer"
+subhead: Give it an approved selfie-style script and real product photos. It designs one made-up AI presenter, builds sheets and a storyboard with one action per clip, and writes phone-style clip prompts, stopping three times for your OK. You get the presenter card, every prompt and an edit list.
+
+explain: |
+  Videos that look filmed by someone on their phone often stop people scrolling, because they look like a normal post. Made with AI, they usually fall apart: the presenter's face changes between clips, the product grows a new label, an extra phone appears in a hand, or the whole thing looks like a glossy film.
+
+  This skill runs the whole video process in order. It picks a made-up presenter from your buyer and writes them down as a card, makes reference images for you to pick from, then builds a sheet with every angle, a sheet for your product from real photos and one for the room. Those become lock lines, pasted unchanged into every prompt. Next comes a storyboard: one frame and one card per clip, each with one action and the hand that does it. Only then does it write the clip prompts, in phone-video words with no film terms. The presenter never says anything only a real customer could say, and the edit carries the platform's AI label.
+
+when:
+  - You have an approved script and want a phone-style video ad without filming anyone.
+  - Your AI video clips keep changing the presenter's face or the product between shots.
+  - You need a product demo that stays readable when the sound is off.
+
+you_give:
+  - The approved script, with the demo line marked and the disclosure line
+  - Real product photos, labelled front, in hand and in use
+  - How the product is opened and used
+  - Your buyer, voice and never-show list from your brand file (optional)
+  - Your video tool's clip lengths (optional, 4 to 8 seconds by default)
+you_get:
+  - A presenter card and voice card to approve, and reference image prompts
+  - Sheet prompts for every angle, your product and the room, with lock lines
+  - A storyboard with a frame and a shot card per clip
+  - Clip prompts, a fix table and an edit list with the AI label
+  - Any check the prompts still miss, one line each
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your approved script and check the demo line is marked. Attach your product photos and say what each one shows.
+  - Approve the presenter card, then make the reference images and pick one.
+  - Make and approve the sheets, then approve the storyboard.
+  - Make the demo clip first, check it, then the rest. Add captions and the AI label in the edit.
+
+how_it_works:
+  - title: Reads the script
+    text: Sends back any line a made-up person couldn't truthfully say, such as their own result.
+  - title: Picks the presenter
+    text: Three options from your buyer, written up as a presenter card and a voice card. You approve them.
+  - title: Makes reference images
+    text: Three or four phone-style pictures of the presenter. You pick one.
+  - title: Builds the sheets
+    text: Every angle and expression, your product from real photos, the room and its light, and the lock lines. You approve them.
+  - title: Storyboards the clips
+    text: One frame and one card per clip, with one action, the hand that does it and where the product starts and ends. You approve the board.
+  - title: Writes the clips
+    text: Each approved frame starts a clip. The prompt gives the action, the quoted words, the product, the face and the light, with no film words.
+  - title: Cuts and labels
+    text: Hard cuts, captions in your font, the platform's AI label and the disclosure line, then a check against the script.
+
+output_shape: |
+  STAGE 0  SENT BACK  <lines a made-up presenter can't say, or none>
+  STAGE 1  AVATAR CARD (approval 1)
+  PRESENTER  <made-up adult: age, hair, eyes, skin, clothes, details>
+  VOICE      <age, pace, traits, accent>
+  STAGE 2  REFERENCE IMAGES  1-4 <prompt>  Picked: <n>
+  STAGE 3  SHEETS (approval 2)
+  Character: <views, expressions, holding the product>
+  Product: <views, label words, states>  Room: <place, light, objects>
+  Set-up: <arm's length, propped, or both with the cut>
+  LOCK LINES  <presenter> <room> <product>
+  STAGE 4  STORYBOARD (approval 3)
+  Clip | s | words | action (hand) | product start > end | set-up | sound
+  Frame <n>: <lock lines, the starting moment>
+  STAGE 5  CLIPS
+  CLIP <n>  Objects: <..>. <action>. She says, in <voice>: "<words>"
+  <product>. <face and eyes>. <light>. Ambient noise: <..> SFX: <..>
+  EDIT  <hard cuts, captions, AI label, disclosure line, final check>
+  MISSING: <..>
+  CHECKS MISSED: <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Approved script (from the selfie-style script skill):
+    1 HOOK "Quick question. How full is the greens tub at the back of
+      your cupboard?"
+    2 DOUBT "You've probably figured a few gummies can't do what a
+      scoop of powder does."
+    3 SHOW [DEMO] "Here's the daily pack. Tear it across the top, tip
+      it out. Twenty-one vitamins and minerals in that handful. No
+      water, no shaker to wash."
+    4 HONEST RESULT "One customer put it like this. 'The one thing
+      I've been able to stick to.'"
+    5 HAND-OFF "It's on their site. First order's twenty-nine
+      ninety-nine if you sign up by text."
+    Cast note: a made-up AI presenter, early 30s, about to leave for work.
+    Disclosure: platform AI label, "AI presenter" on screen in beat 1.
+    Photos: [pouch front] [daily pack in a hand] [gummies in a palm]
+    Handling: tear the daily pack straight across the top edge only;
+    gummies pour from the torn top into a palm; the pouch opens only
+    at its resealable top.
+    Tool: 4, 6 or 8 second clips with speech.
+  output: |
+    STAGE 0  SENT BACK  None. She never says she takes it, and the
+    review is quoted with its source.
+
+    STAGE 1  AVATAR CARD (approval 1)
+    Options: a) woman about 32, camel coat; b) man about 30, rain
+    jacket; c) woman about 36, denim shirt.
+    PRESENTER (a)  A woman who looks about 32, shoulder-length straight
+    dark-brown hair tucked behind one ear, brown eyes, olive skin, a
+    camel wool coat half on over a plain white T-shirt, small gold
+    studs, a thin scar on her left thumb. Made up, not a customer.
+    VOICE  About 32, quick but relaxed, warm, a little wry, plain US
+    accent.  [approved]
+
+    STAGE 2  REFERENCE IMAGES
+    1-4 [PRESENTER], an unretouched phone photo, waist up, plain wall,
+    daylight; 2 hair loose, 3 coat off, 4 a small smile.
+    Picked: 1, the card as written.
+
+    STAGE 3  SHEETS (approval 2)
+    Character: front, three-quarters, side, back, face and hands;
+    wry, shrugging; the pouch in her left hand.
+    Product: pouch front from its photo; daily pack sealed, then torn
+    across the top. Side and top views: MISSING.
+    Room: a small kitchen on a weekday morning, window light from the
+    left. Only objects: a half-used powder tub on a shelf (the old
+    way), a coffee mug, keys on the counter, the pouch.
+    Set-up: arm's length for beats 1, 2, 4 and 5; propped on the
+    counter for beat 3, where tearing needs both hands.  [approved]
+
+    STAGE 4  STORYBOARD (approval 3)
+    Clip | s | words | action (hand) | product start > end
+    1 | 6 | beat 1 | left hand settles the coat | pouch on counter
+    2 | 6 | beat 2 | left hand lifts the sealed pouch | counter > hand
+    3 | 4 | "Here's the daily pack." | propped; right hand takes one
+        pack from the pouch's open top | pouch > pack in hand
+    4 | 4 | "Tear it across the top," | both hands tear the top edge
+    5 | 4 | "tip it out." | right hand tips gummies into left palm
+    6 | 6 | "Twenty-one vitamins ... to wash." | palm toward the camera
+    7 | 6 | beat 4 | arm's length; a small shrug | gummies in hand
+    8 | 6 | beat 5 | she eats the gummies | palm > eaten
+    Frame 4: [PRESENTER] [ROOM]. The camera resting on the counter,
+    looking down; both her hands hold a sealed daily pack by its top
+    edge.  [approved]
+
+    STAGE 5  CLIPS
+    CLIP 4  Objects: the powder tub, the mug, the keys, the pouch, one
+    daily pack. Both her hands tear the pack straight across its top
+    edge. She says, in a quick, relaxed, warm voice: "Tear it across
+    the top," The pack faces the camera as in the attached photo. She
+    looks down at it. Window light from the left. Ambient noise: a
+    kitchen, a faint fridge hum. SFX: a soft foil tear on "tear".
+    Attach: picked picture; daily pack in a hand = how it's held.
+    (Clips 1 to 3 and 5 to 8 follow the same order.)
+    EDIT  Clip 4 made first, 3 takes. Hard cuts in order, about 35
+    seconds. Captions in the brand font inside the safe area. AI label
+    on; "AI presenter" small on screen through clip 1. Offer terms as
+    text in clip 8. Checked against the script: every word, no claims
+    added.
+    MISSING: side and top photos of the pouch.
+
+tweaks:
+  - what: Set-up
+    how: Say if you want the whole ad at arm's length. Any clip that needs two hands then becomes a one-hand action, or the script goes back to the writer.
+  - what: The presenter
+    how: Attach a presenter card and sheet you approved before. The run reuses them and starts at the storyboard.
+  - what: Clip lengths
+    how: Give your tool's lengths. Shorter clips mean more cuts, which suits the demo; talking beats can run 6 to 8 seconds.
+  - what: Room sound
+    how: Name the room (bathroom, kitchen, car) and the sound line changes to match it. The product's own sound only plays when it happens.
+
+judge:
+  - The run stopped for your yes after the presenter card, the sheets and the storyboard, unless you asked for every stage in one go.
+  - The presenter looks the same in every clip, and the room and light don't change.
+  - Every scripted word is said, unchanged, and nobody claims a result they couldn't have had.
+  - The product looks like its photos and opens only the brand's way.
+  - No prompt contains a film word like "cinematic" or "bokeh".
+  - The AI label and the disclosure line are in the edit.
+
+test:
+  - Give it a script with a line like "I've used it for three months". It should send that line back, not make it.
+  - Make the demo clips first. If the pack tears on the wrong edge, paste the brand's handling words into the prompt and remake.
+  - Lay the first frames of clips 1 and 7 side by side. The face, hair and coat should match.
+  - Search every prompt for "phone" in the action. A phone named there often appears as a second phone in the hand.
+
+improve:
+  - Save your approved presenter card, picked picture and sheets in your brand file, so the next ad starts at the storyboard.
+  - Write your product's handling words into stage 5 of the skill file, so every clip prompt carries them.
+  - Add your house caption style and disclosure wording to the edit step.
+  - Pair it with the selfie-style script skill, which writes the five beats, the cast note and the disclosure this skill reads.
+
+works_best_with:
+  tools:
+    - {name: "Veo", why: "Speaks quoted lines in a phone-like look and keeps the presenter from reference images."}
+    - {name: "Kling", why: "Reuses a saved presenter made from your pictures, so the face holds across clips."}
+    - {name: "Nano Banana", why: "Makes the reference images, sheets and start frames with real skin and room light."}
+    - {name: "ElevenLabs", why: "Records one steady voice for the whole script if the video tool's voice drifts."}
+  inputs:
+    - "A phone photo of a real room like your buyer's, so the room sheet describes a place that exists"
+    - "A phone video of someone opening the product, so the demo clips copy real hand moves"
+    - "Your platform's AI label rules, so the disclosure is set up before you publish"
+
+terms:
+  - term: Presenter card
+    meaning: A fixed description of the made-up person, pasted word for word into every prompt.
+  - term: Character sheet
+    meaning: Pictures of the presenter from every angle, with the expressions the script needs.
+  - term: Propped
+    meaning: The phone rests on a surface, so both hands are free for the demo.
+  - term: AI label
+    meaning: The platform's tag that marks a video as made or changed with AI.

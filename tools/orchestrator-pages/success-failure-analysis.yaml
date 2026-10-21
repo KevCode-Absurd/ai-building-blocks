@@ -1,0 +1,79 @@
+new_slug: success-failure-analysis
+name: Work out why something worked or failed
+summary: Describe a surprising result. Get ranked causes, a check through many fields and rewards, and what to copy or skip.
+job: think-and-decide
+thinking: high
+thinking_why: It reasons by elimination and by pattern, and has to keep guesses apart from facts. Give it your strongest model.
+headline: Find the real reason a result was far better or worse than normal
+subhead: Describe a result that surprised you with the numbers you have. It rules out causes the facts cannot support, ranks the likely ones, checks them through several fields and through who was paid for what, then sorts each into copy, adapt, skip or luck for your own case.
+explain: |
+  When something does far better or worse than normal, the usual explanation is a story that fits. Charlie Munger worked these out aloud and from both ends. He guessed the cause, asked what had to be true if it were right, and crossed out what the facts could not support. He also looked for four patterns that explain most extreme results.
+
+  This workflow follows that method. It rules causes out by fact and tests the four patterns: one or two things pushed far, many factors adding up past a tipping point, steady excellence on many fronts, and a big wave. It checks the ranked causes through several fields and through the rewards behind the behaviour. It ends by sorting each cause into copy, adapt, skip or luck, with a small test for each idea you keep.
+when:
+  - A store, product or person is doing far better than the rest and you want to know why.
+  - Something failed and the stories you hear do not add up.
+  - You want to copy a success and need to know which part actually drives it.
+you_give:
+  - The surprising result, with the numbers you have
+  - What is normal for comparison
+  - What you already believe about the cause (optional)
+  - A description of your own situation, size and what you can spend
+you_get:
+  - The causes the facts rule out, and four to six likely causes ranked with a cheap test for each
+  - An answer from each field about the causes
+  - Whether pay and rewards explain the result
+  - Each cause sorted as copy, adapt, skip or luck, with a small test and a pass number for the ideas you keep
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the result with numbers and a fair comparison. Say what you already believe about the cause.
+  - Run the first test it suggests before you copy anything.
+how_it_works:
+  - title: Ranks the causes
+    text: Rules out causes by fact, tests four patterns of extreme results, ranks four to six causes and picks the cheapest test between the top two.
+  - title: Checks many fields
+    text: Runs the ranked causes through maths, engineering, biology, psychology and economics, and finds where they agree and clash.
+  - title: Checks the rewards
+    text: Lists how the people involved were paid and whether that explains the result.
+  - title: Sorts copy from luck
+    text: Compares the conditions with your own, finds the hidden systems behind visible features and sorts each cause as copy, adapt, skip or luck.
+output_shape: |-
+  STEP 1: RANKED CAUSES
+    The surprise and the normal | ruled out: <cause> | fact
+    Patterns tested | ranked causes: <cause> | likelihood | what else must be true | cheap check
+    First test | what stays unexplained
+
+  STEP 2: MANY FIELDS
+    <field> | what it says about the causes | stacks and clashes
+
+  STEP 3: REWARDS
+    <person> | reward | what it encouraged | does it explain the result?
+
+  STEP 4: COPY OR SKIP
+    <cause> | conditions present or absent | hidden parts | COPY, ADAPT, SKIP or LUCK
+    Tests: <idea> | pass if | fail if | stop copying
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The comparison you give
+    how: Compare like with like, in the same market and the same period. A fair comparison matters more than any other input.
+  - what: What you already believe
+    how: State it. It is ranked beside the other causes and tested the same way.
+  - what: How you describe your own situation
+    how: Use the same terms as the success, such as size, price, market and team. The copy-or-skip step compares them.
+judge:
+  - Each cause ruled out cites a fact you can see.
+  - The ranked causes are different from one another, not one story in four wordings.
+  - Likelihoods are high, medium or low, with no exact percentages.
+  - Each cause is sorted with a reason tied to a condition.
+  - Each test you keep has a pass number and a fail number.
+test:
+  - Use a success you understand well. See if the top cause matches what you know.
+  - Give it a result that was luck. Luck should show up as a cause and be ranked.
+  - Run it twice on the same input. The top two causes and the sorts should match.
+improve:
+  - Keep a log of results you explained and check the ranks against what you learn later.
+  - Add the usual causes in your field under each of the four patterns.
+  - Keep the stop-copying list where your team can see it.

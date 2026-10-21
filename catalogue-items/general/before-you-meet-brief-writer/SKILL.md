@@ -49,10 +49,10 @@ Who and why. What they care about, with sources. The people around them. Two hon
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Say it to the room** with the [Get-them-talking conversation planner](https://useaiblocks.com/skills/get-them-talking-conversation-planner). It takes the brand brain.
+- **Say it to the room** with the [Get-them-talking conversation planner](https://useaiblocks.com/skills/get-them-talking-plan). It takes the brand brain.
 - **Make image ads** with the [Feared outcome image ad maker](https://useaiblocks.com/skills/feared-outcome-image-ad-maker). It takes the brand brain.
 - **Make an offer people want** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It takes the brand brain.
-- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/learn-what-sells-from-50-different-image-ads). It takes the brand brain.
+- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/image-ad-test-learnings). It takes the brand brain.
 - **Make video ads** with the [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -48,9 +48,9 @@ The ideas in one line each. A table with profit, passion, odds, product and a re
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Test the idea with real people** with the [Customer conversation request writer](https://useaiblocks.com/skills/customer-conversation-request-writer). It takes the shortlist.
+- **Test the idea with real people** with the [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request). It takes the shortlist.
 - **Plan your strategy** with the [Category name writer](https://useaiblocks.com/skills/category-name-writer). It takes the shortlist.
-- **Decide what to do** with the [Shortlist and running-order planner](https://useaiblocks.com/skills/shortlist-and-running-order-planner). It takes the shortlist.
+- **Decide what to do** with the [Shortlist and running-order planner](https://useaiblocks.com/skills/shortlist-running-order). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

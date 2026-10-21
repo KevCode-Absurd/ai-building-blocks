@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It reads closely and ties each claim to evidence.
+new_slug: paper-repo-notes
+name: Paper and repo to structured notes
+summary: Give it a paper, repo or messy notes. Get claims, methods and evidence sorted into a clear research folder.
+job: research-topics
+headline: Paper and repo to structured notes
+subhead: Give it a paper, repo or messy notes. Get claims, methods and evidence sorted into a clear research folder.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your files and run code.

@@ -1,0 +1,105 @@
+new_slug: seven-powers-check
+name: "Find which of seven powers you hold or can build"
+summary: "Describe your business. Get each of the seven powers scored on benefit and barrier, a ten-year check and what to build first."
+job: plan-strategy
+thinking: high
+thinking_why: "It runs four checks in a row and has to tell a real edge from a story that flatters you. Give it your strongest model."
+
+headline: "Find out which lasting edge you really have, and which to build next"
+subhead: Describe your business. It tests your main advantage, then scores all seven powers on a benefit and a barrier each. It checks the best one will last ten years, then says which power your market still lets you build, with a first test.
+
+explain: |
+  Many businesses believe they have a moat and cannot say what stops a rival copying it. The advantage named is often execution, a good team or a big user count. None of those is a barrier on its own.
+
+  This workflow runs four steps. The first tests your main advantage for a benefit in numbers and a barrier in words. The second sets the same two tests against all seven powers: scale, networks, counter-positioning, switching costs, brand, cornered resource and process. The third asks who could take the top power from you and how soon. The fourth finds your market stage and picks the one power you can still build, with a first test and a pass line.
+
+  It rests on a third-party summary of a book on strategy, so its claims are kept modest. It gives no investment advice.
+
+when:
+  - You think your business has a moat and want proof before you tell a backer or build on it.
+  - You can name one advantage and want to know if a stronger one is sitting unused.
+  - You are choosing between spending on brand, scale, a community or a better model, and want to know which one your market still allows.
+
+you_give:
+  - What you sell, to whom, and your price, cost and margin
+  - Your main rivals and what they do
+  - How fast your market is growing, if you know (optional)
+you_get:
+  - A test of your main advantage, with the benefit in numbers, the barrier in words and a size check
+  - A scorecard of all seven powers, sorted into held, buildable and out of reach
+  - A ten-year check on what could take your best power away
+  - The power to build first at your stage, a first test with a pass line, and the early choices that close the others
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your business and paste any numbers on price, cost, margin and repeat rate. It works step by step and saves each result.
+  - Read the buildable list and the first test last. Run the test before you spend on the power.
+
+how_it_works:
+  - title: Tests your main advantage
+    text: Names the benefit in numbers and the barrier in words, checks the benefit is big enough, and matches it to one power.
+  - title: Scores all seven powers
+    text: Writes a benefit and a barrier for each power, finds the fact behind each, and scores from 0 to 3.
+  - title: Checks it lasts ten years
+    text: Asks who could copy you, how long it would take and what change in the world would end the edge.
+  - title: Plans what to build at your stage
+    text: Finds whether your market is starting, taking off or settled, marks the open powers and picks one with a first test.
+
+output_shape: |
+  STEP 1: YOUR MAIN ADVANTAGE
+    Benefit: <number> | Barrier: <words> | Big enough: <yes / no / unknown> | Power: <>
+
+  STEP 2: THE SEVEN POWERS
+    Scale <0-3> Network <0-3> Counter-positioning <0-3> Switching costs <0-3> Brand <0-3> Cornered resource <0-3> Process <0-3>
+    Held: <> | Buildable: <> | Out of reach: <>
+
+  STEP 3: TEN YEARS OUT
+    Who could copy it and when: <> | What could end the edge: <> | Call: <lasting / fading / unknown>
+
+  STEP 4: BUILD FIRST
+    Stage: <> | Open powers: <> | Build: <power> | First test: <> | Pass line: <number> | Check in: <date>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Your numbers
+    how: Paste real prices, unit costs, margin and repeat rate. Scores above 1 depend on them.
+  - what: Your rivals
+    how: Say what each would have to give up to match you. The barrier rows use it.
+  - what: Your market growth
+    how: A growth figure, even a rough one, makes the stage call in step 4 firm.
+
+judge:
+  - Each step used the result of the step before.
+  - Every score above 1 points at a fact you gave it, and missing facts say MISSING.
+  - Good execution is never scored as a barrier.
+  - The power chosen in step 4 is open at the stage called.
+  - The first test has a number and a date.
+
+test:
+  - Run it on a business with a loud claim, such as a large audience, and no margin data. The network score should stay low.
+  - Run it twice on the same input. The held and buildable lists should be the same.
+  - Stop it after step 2 and check the scores yourself before letting it carry on.
+
+improve:
+  - Add your margins and churn after the first run, then rerun steps 2 to 4 and compare.
+  - Rerun each quarter. Powers move from buildable to held as you build them.
+  - Pair it with "Beat a bigger rival with a model it cannot copy" if the buildable list names counter-positioning.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds four checks, their numbers and your facts in one run."}
+  inputs:
+    - "Price, cost and margin"
+    - "Customer repeat rate or churn"
+    - "Market growth figures"
+
+terms:
+  - term: Power
+    meaning: A position that lets a business keep better returns than its rivals for a long time.
+  - term: Benefit and barrier
+    meaning: The benefit is what you get that a typical rival does not. The barrier is what stops a rival taking it.
+  - term: Stage
+    meaning: Where your market is in its life, either starting, taking off or settled. It decides which powers you can still build.

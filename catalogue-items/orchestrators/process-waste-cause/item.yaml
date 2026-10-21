@@ -1,0 +1,24 @@
+slug: process-waste-cause
+name: "Find process waste and the cause behind it"
+summary: "Paste your process step by step. Get the waste named, one change to try and the root cause behind it."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: audit_report}
+uses: [process-waste-finder, root-cause-finder]
+steps:
+  - {uses: process-waste-finder, note: "Each step marked value or waste, the worst waste named and one change to try"}
+  - {uses: root-cause-finder, note: "A chain of whys checked against facts, the fixable cause and a prevention check. Reads the plan from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [taiichi-ohno]
+credits:
+  - {title: "An Interview with Taiichi Ohno", by: "Taiichi Ohno", used: "The order of the steps: process waste finder, root cause finder"}
+generated_from: intake/taiichi-ohno-toyota-production/skeleton.yaml

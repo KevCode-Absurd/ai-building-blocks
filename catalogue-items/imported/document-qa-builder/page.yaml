@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It sets up reading, indexing and answering.
+new_slug: document-qa-builder
+name: Document question answerer builder
+summary: Point it at your documents. Get code that answers questions from them and shows which pages it used.
+job: build-software
+headline: Document question answerer builder
+subhead: Point it at your documents. Get code that answers questions from them and shows which pages it used.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and call an AI model.

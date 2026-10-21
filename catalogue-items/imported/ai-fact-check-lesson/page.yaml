@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It adapts a source-checking method to AI errors.
+new_slug: ai-fact-check-lesson
+name: AI claim fact-check lesson builder
+summary: Give it a topic. Get a step-by-step way for students to check AI claims and citations before they trust them.
+job: research-topics
+headline: AI claim fact-check lesson builder
+subhead: Give it a topic. Get a step-by-step way for students to check AI claims and citations before they trust them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

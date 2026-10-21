@@ -6,7 +6,10 @@ import { installDither } from "./lib/pixel";
 
 installDither();
 
-createRoot(document.getElementById("root")!).render(
+// Built pages arrive with a plain first screen for search engines (scripts/prerender.mjs); the app replaces it.
+const root = document.getElementById("root")!;
+root.replaceChildren();
+createRoot(root).render(
   <StrictMode>
     <App />
   </StrictMode>,

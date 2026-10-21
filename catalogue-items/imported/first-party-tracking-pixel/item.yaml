@@ -1,0 +1,41 @@
+slug: first-party-tracking-pixel
+renamed_from: first-party-tracking-pixel-builder
+name: "First-party tracking pixel builder"
+summary: "Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: wizard7558
+  repo: wizard7558/attribution-skills
+  path: skills/first-party-pixel
+  url: https://github.com/wizard7558/attribution-skills/tree/main/skills/first-party-pixel
+  licence: MIT
+  licence_file: LICENSE
+  commit: bed5a8f
+  original_name: first-party-pixel
+  author: Riley Sorenson
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: first-party-pixel skill
+    by: wizard7558
+    url: https://github.com/wizard7558/attribution-skills/tree/main/skills/first-party-pixel
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Riley Sorenson
+    url: https://github.com/wizard7558
+    used: Wrote the skill; wizard7558 shared it in their collection.

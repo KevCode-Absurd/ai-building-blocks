@@ -16,14 +16,14 @@ This skill runs on its own. What's below makes the result better, but none of it
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Makes it better (optional):**
-- **Your lessons**, made by the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-and-video-fix-rule-writer): what past ads taught you: what worked, what failed and why.
+- **Your lessons**, made by the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
 - **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
-4. **Your lessons** with the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-and-video-fix-rule-writer). Bring your notes (optional). It uses your brand brain.
+4. **Your lessons** with the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand brain.
 5. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 6. This one.
 

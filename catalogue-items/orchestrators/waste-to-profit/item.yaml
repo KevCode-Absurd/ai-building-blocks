@@ -1,0 +1,24 @@
+slug: waste-to-profit
+name: "Cost every step and turn your waste into profit"
+summary: "Describe how you make or deliver your product. Get a cost for every step and a price on each kind of waste."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [step-cost-tracker, waste-and-by-product-finder]
+steps:
+  - {uses: step-cost-tracker, note: "A cost for each step, a weekly count sheet and the lines that drain you"}
+  - {uses: waste-and-by-product-finder, note: "Each item priced as a possible product, reuse or saving. Reads the audit report from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [andrew-carnegie, john-d-rockefeller]
+credits:
+  - {title: "Autobiography of Andrew Carnegie", by: "Andrew Carnegie", used: "The order of the steps: step cost tracker, waste and by-product finder"}
+generated_from: intake/autobiography-of-andrew-carnegie/skeleton.yaml

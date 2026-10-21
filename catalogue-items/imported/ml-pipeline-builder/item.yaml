@@ -1,0 +1,41 @@
+slug: ml-pipeline-builder
+renamed_from: machine-learning-pipeline-builder
+name: "Machine learning pipeline builder"
+summary: "Describe your data and goal. Get a repeatable pipeline from data prep to training, checks and release."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: ai-ml-operations/ml-pipeline-creation
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/ai-ml-operations/ml-pipeline-creation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: ml-pipeline-creation
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ml-pipeline-creation skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/ai-ml-operations/ml-pipeline-creation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

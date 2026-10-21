@@ -1,0 +1,83 @@
+new_slug: idea-four-risks-check
+name: Check an idea's four risks and rewrite your roadmap
+summary: Paste your product idea. Get its four risks rated and a feature list rewritten as problems with results to measure.
+job: build-product
+thinking: high
+thinking_why: It has to judge evidence and then rewrite a whole roadmap from it. Give it your strongest model.
+headline: Know what could sink your product idea, and what each feature should change
+subhead: Paste your product idea and what you know. It rates the four risks (will people want it, can they use it, can you build it, can the business run it) and picks the cheapest test. Then it rewrites your feature list as problems to solve, each with a result to measure.
+explain: |
+  Many product plans fail in two ways. The team builds something nobody wanted, or it keeps a roadmap that is just a list of features with dates. Nobody can say what each feature should change, so nobody can say when it worked.
+
+  This workflow starts with the idea and rates the four risks: value, usability, feasibility and viability. It names an owner for each and picks the cheapest test for the riskiest one. Then it takes your feature list and turns each item into a problem for a named customer with one result you can measure. The order comes from Marty Cagan's article "The Four Big Risks" and his writing on teams that solve problems instead of shipping features.
+when:
+  - You have a product idea and want to know which risk to test first, before you spend on building.
+  - Your roadmap is a list of features and nobody can say what each one should change.
+  - A leader keeps asking for features, and you want to turn the requests into problems you can measure.
+you_give:
+  - The idea, the problem it solves and who it is for
+  - What you already know, such as customer words, tests, costs and limits
+  - Customer reviews or messages (optional)
+  - Your brand file, for rules on claims and fit (optional)
+  - Your list of features, tasks or requests, with any dates
+  - Who asked for each item (optional)
+you_get:
+  - Each of the four risks with the evidence behind it, or marked unknown
+  - An evidence score out of 100, with the working shown
+  - An owner for each risk, the cheapest test for the riskiest one and the result that would change your plan
+  - Your list sorted into features, problems and results
+  - Three to five problems for named customers, each with one result to measure and a review point in place of a date
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your idea and your feature list. It works step by step and saves each result.
+  - Run the cheapest test on the riskiest risk, then bring back what you learn.
+how_it_works:
+  - title: States the problem
+    text: Writes the problem and the customer in plain words, so everything after it has something to check against.
+  - title: Rates the four risks
+    text: Asks what the evidence says on value, usability, feasibility and viability, and marks anything unknown as unknown.
+  - title: Picks the first test
+    text: Names one owner for each risk, picks the cheapest test for the riskiest and writes the result that would change your plan.
+  - title: Sorts your roadmap
+    text: Takes your feature list and marks each item as a feature, a problem or a result, and who asked for it.
+  - title: Rewrites it as problems
+    text: Turns each feature into a problem for a named customer, using the risk findings, and gives each one a result you can measure.
+  - title: Replaces dates with review points
+    text: Groups the list into three to five problems and swaps fixed dates for a review point and the evidence needed.
+output_shape: |-
+  STEP 1: PRODUCT IDEA RISK CHECK
+    The problem: <problem> for <customer>
+    Four risks: value | usability | feasibility | viability, each with evidence or unknown, owner and score out of 25
+    Evidence score: <n>/100 (it measures evidence, not how good the idea is)
+    The riskiest: <risk> | cheapest test <what> | result that would change the plan <what>
+
+  STEP 2: ROADMAP REWRITTEN AS OUTCOMES
+    Your list, sorted: <item> | feature / problem / result | asked by <who>
+    Problems to solve: <customer> struggles to <problem> | result <number, now to target>
+    Review point: <when> | evidence needed <what>
+    Dropped or parked: <item> | why
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The evidence you bring
+    how: Customer words, test results and real costs raise the score. A feeling that "people will love it" counts as unknown.
+  - what: Who asked for each feature
+    how: Say whether it came from a customer, sales, a leader or the team. It shows which requests are guesses.
+  - what: The result you can measure
+    how: Give the numbers you already track. The rewrite pulls the result from a source you can check, not from a wish.
+judge:
+  - Each risk shows evidence or says unknown, never a guess in place of evidence.
+  - The evidence score says what it measures and how it was worked out.
+  - Each problem names a customer, not "users" in general.
+  - Each result is a number with a start and a target.
+  - No customer, figure or request is invented.
+test:
+  - Give it an idea with no customer evidence. The risk check should mark most risks unknown and give a low evidence score.
+  - Give it a roadmap of ten features. You should get three to five problems back, with every feature either placed or parked.
+  - Run the risk check twice on the same idea. The riskiest risk should be the same both times.
+improve:
+  - Keep your results and review points in a file, and bring them back at each review.
+  - Add your real customer reviews to the input, so the problems come from their words.
+  - After the first test, run the risk check again with the new evidence and watch the score move.

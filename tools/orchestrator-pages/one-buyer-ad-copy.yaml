@@ -1,0 +1,135 @@
+new_slug: one-buyer-ad-copy
+name: "Get ad copy for one buyer, built on one fact"
+summary: "Give it customer reviews and product facts. Get a buyer brief, ten first lines, the ad copy and headlines to test."
+job: write-ad-copy
+
+headline: "Ad copy for one buyer, built on a fact you can prove"
+subhead: Give it customer reviews and your product facts. It writes a brief on who the ad is for, picks how the ad opens and argues, then writes ten scored first lines, the ad itself and headlines to test.
+
+explain: |
+  Most ad copy fails before the first line. It speaks to everyone, so it reaches no one, and it leans on words like "premium" that prove nothing. A buyer scrolling past needs to see their own moment and one fact that answers their doubt.
+
+  This workflow starts from your customer reviews and writes a short brief on one buyer, the moment they started looking and what holds them back. Then it picks how much that buyer already knows and how the ad should argue. From that brief it writes ten first lines and scores them, builds the ad on one product fact with its source beside every line, and ends with headlines that fit the space, with the one to test first marked.
+
+when:
+  - Your ads open on the product name or a vague promise, and people scroll past.
+  - You have reviews and product facts but no clear idea who the ad should speak to.
+  - You want a set of first lines, an ad and headlines you can test against each other.
+
+you_give:
+  - Customer reviews, copied as written
+  - Your product facts, such as price, ingredients or materials, and how it is used
+  - Your brand file, if you have one (optional)
+
+you_get:
+  - A short brief on the buyer, their moment and the one thing the copy must move
+  - A plan for how the ad opens, argues and asks
+  - Ten first lines, each scored out of 100
+  - The ad copy, built on one fact, with the source of every line
+  - Headlines with character counts, and the one to test first
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Paste at least a dozen real reviews, and your product facts with prices and any claims you can prove.
+  - It works step by step and saves each result. Read the buyer brief first. If the buyer or moment is wrong, every line after it is too.
+  - Pick the first line and headline you like, put them on the ad, and run them against each other.
+
+how_it_works:
+  - title: Writes the buyer brief
+    text: Uses the buyer brief skill to find the moment people started looking, sort the reviews into what pushes and what holds them back, and pick the one thing the copy must move.
+  - title: Plans the opening and argument
+    text: Uses the ad angle skill to pick how much this buyer already knows and how the ad should argue, then writes it into a short brief.
+  - title: Writes ten first lines
+    text: Uses the first line skill to name a moment the buyer owns, write each line in 12 words or fewer and score it out of 100.
+  - title: Writes the ad on one fact
+    text: Uses the fact-based copy skill to find the one detail that answers the buyer's doubt and put its source beside every line.
+  - title: Writes headlines
+    text: Uses the headline skill to write one line for each way in, count the characters and mark the one to test first.
+
+output_shape: |
+  BUYER BRIEF
+  Moment: <what happened right before they looked> | Stops them: <fear or habit>
+  Their words: <five to eight short quotes>
+
+  ANGLE
+  Knows: <level> | Market: <stage> | Opens on: <situation> | Asks for: <one offer term>
+
+  FIRST LINES (10)
+  <line> (<score>/100) -> on screen: <7 words or fewer>
+
+  AD COPY
+  Fact: <the one fact> (<source>)
+  <primary text, line by line, each with its source>
+
+  HEADLINES
+  <headline> (<characters>) ... Test first: <headline>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+    Reviews: reviews.md (22 reviews)
+    Product facts: Sprout greens gummies. 60+ whole-food ingredients, 21 vitamins and minerals, 6g fiber per pack. First box $29.99, then $49.99 every 4 weeks.
+  output: |
+    BUYER BRIEF
+    Moment: after the third tub of greens powder went stale | Stops them: "Is this just candy?"
+    Their words: "tastes like grass", "never finish the tub"
+    
+    FIRST LINES (3 of 10)
+    The tub you never finish. (84/100)
+    Greens you can eat from a pouch. (78/100)
+    
+    AD COPY
+    Fact: 6g fiber per pack (product page)
+    Most greens go in a shaker. This one goes in your bag: 6g of fiber in a pack you tear open.
+    
+    HEADLINES
+    Greens without the shaker (24) ... Test first: Greens without the shaker
+    
+    MISSING: grams of sugar per pack
+
+tweaks:
+  - what: How much the buyer knows
+    how: Say whether buyers already know your product or have never heard of the problem. A buyer who has never heard of it needs the problem named first, not the product.
+  - what: The platform
+    how: Name where the ad will run and its limits, such as Meta primary text or a search headline. The headlines step counts characters against that.
+  - what: The fact it builds on
+    how: Name the fact you most want to lead with. Without one, it picks the fact that best answers the buyer's biggest doubt.
+  - what: Image or video ad
+    how: Tell it the ad is an image. The copy step then writes words that add to the picture instead of describing it.
+
+judge:
+  - Every line of the ad traces to a fact or review you supplied. Check three.
+  - The first line names something this buyer feels or has done, not the product.
+  - No line uses a word like "premium" or "best" without a fact behind it.
+  - Each headline is under the character limit, and a stranger could say what it offers.
+  - The run ends with every MISSING line in one list.
+
+test:
+  - Pick three lines in the ad and find the review or product fact each one rests on. If you can't find it, don't run the ad.
+  - Read the first line to someone who has never heard of your product. They should be able to say who it is for.
+  - Run the "test first" headline against one other for a week with the same picture and budget.
+
+improve:
+  - In the builder, drop step 2 if you already know how much your buyer knows and how the ad should argue.
+  - Add a step at the end that checks the copy for platform rules before you launch.
+  - Save the buyer brief in your brand file, so later runs can start from step 2.
+  - Pair it with the workflow that turns reviews into image ads, so the words and pictures start from the same buyer.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps the brief, the first lines and the facts straight across five steps in one run."}
+  inputs:
+    - "At least a dozen real reviews, with the angry and doubtful ones included"
+    - "Your best-performing ad's text, so the first lines can be compared with what already works"
+    - "Your platform's character limits for the headline and main text"
+
+terms:
+  - term: Hook
+    meaning: The first line that makes someone stop scrolling.
+  - term: Awareness
+    meaning: How much the buyer already knows about the problem and about you.

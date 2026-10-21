@@ -23,15 +23,15 @@ export const INPUTS = {
   brief: { label: "A buyer brief", what: "who it's for, how much they already know, and what will move them", maker: "buyer-brief-writer" },
   angle_library: { label: "Buying reasons", what: "why people buy, in their own words, ranked by how many said it", maker: "customer-buying-reasons-finder" },
   ad_copy: { label: "Ad copy", what: "the headline and text of the ad", maker: "fact-based-ad-copy-writer" },
-  script: { label: "A video ad script", what: "the script, beat by beat, with on-screen text", maker: "video-ad-script-writer-from-customer-quotes" },
-  avatar_sheet: { label: "A character sheet", what: "pictures that keep one person looking the same in every shot", maker: "video-avatar-and-storyboard-planner" },
+  script: { label: "A video ad script", what: "the script, beat by beat, with on-screen text", maker: "quote-video-ad-script" },
+  avatar_sheet: { label: "A character sheet", what: "pictures that keep one person looking the same in every shot", maker: "avatar-storyboard-planner" },
   shot_list: { label: "A shot list", what: "the video broken into shots, with timing and on-screen text", maker: "video-ad-shot-list-maker" },
   truth_sheet: { label: "A product truth sheet", what: "what the product really looks like, read from photos, so pictures stay accurate", maker: "product-image-spec-writer" },
   gallery_plan: { label: "A gallery plan", what: "the planned pictures of a product page, one job each", maker: "product-page-gallery-planner" },
   design_direction: { label: "A design direction", what: "the page's type, colours and layout rules", maker: "landing-page-design-planner" },
   ad_breakdowns: { label: "Ad breakdowns", what: "what each reference ad does: opening, angle, format, offer and proof", maker: "competitor-ad-gap-finder" },
   shortlist: { label: "A shortlist", what: "the best few picked from a bigger set, with reasons", maker: "competitor-ad-swipe-file-builder" },
-  lessons_register: { label: "Your lessons", what: "what past ads taught you: what worked, what failed and why", maker: "ai-image-and-video-fix-rule-writer" },
+  lessons_register: { label: "Your lessons", what: "what past ads taught you: what worked, what failed and why", maker: "ai-image-fix-rules" },
   copy_draft: { label: "A draft", what: "the ad, page, email or script you want checked or improved" },
   voc_reviews: { label: "Customer words", what: "reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in" },
   product_photos: { label: "Product photos", what: "clear photos of the real product, from more than one angle. Attach them" },
@@ -179,7 +179,7 @@ const FAMILY = {
 };
 const familyOf = (task) => FAMILY[task] ?? "marketing";
 const BROAD = new Set(["audit_report", "plan", "brief", "question", "feedback_notes", "shortlist", "copy_draft"]);
-const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "video-ad-script-writer-from-customer-quotes", "meta-ads-compliance-checker", "buyer-brief-writer", "hidden-offer-finder"];
+const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "quote-video-ad-script", "meta-ads-compliance-checker", "buyer-brief-writer", "hidden-offer-finder"];
 
 /**
  * The paths from here: blocks that take what this block makes, one per job, best fit first. After something is made,
@@ -189,7 +189,7 @@ const LIKE = { hooks: "ad_copy", objection_map: "angle_library", photo_set: "pro
 
 /** Blocks that open many paths get a chosen list: the brand brain feeds almost everything. */
 const NEXT_CHOSEN = {
-  "website-brand-brain-builder": ["customer-buying-reasons-finder", "fact-based-ad-copy-writer", "video-ad-script-writer-from-customer-quotes", "hidden-offer-finder", "ad-matched-landing-page-writer", "founder-interview-planner"],
+  "website-brand-brain-builder": ["customer-buying-reasons-finder", "fact-based-ad-copy-writer", "quote-video-ad-script", "hidden-offer-finder", "ad-matched-landing-page-writer", "founder-interview-planner"],
 };
 
 export function nextOf(b, all, max = 5) {

@@ -1,0 +1,94 @@
+new_slug: leave-job-own-income
+name: Leave a steady job and earn from your own work
+summary: Give it your job, pay and skills. Get an income floor, fees, a safety plan and a way to leave.
+job: think-and-decide
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Plan your move from a salary to your own clients, with the money sums done
+subhead: Tell it your job, your costs and what you could sell. It works out the monthly income you need, sets fees and a client limit, plans your first clients, stress-tests the plan, writes rules for thin months and plans how you leave. You get a plan you can check before you resign.
+explain: |
+  Most people decide to go solo from a feeling: the job is stifling, a few people have said they would pay. The sums come later, after the notice is in. By then a salary's hidden costs, slow payments and a bad month have all been missed.
+
+  This workflow follows the path Mozart set out in his Vienna letters when he left his employer in 1781, and it adds the parts his own story shows he needed. He counted pupils by the month and took fewer at a higher fee, and he lined up work before and after the break. Later his income fell, he borrowed again and again from one friend, and he asked late. So this workflow builds the floor first, then the fee, then a stress test, then rules for thin months, then the talk with the people who rely on you, and last the way out. It is a planning aid, not personal financial advice.
+when:
+  - You are thinking of leaving a steady job to live on your own clients, sales or commissions.
+  - You already work for yourself, your income swings and you cannot plan.
+  - You are being treated badly at work and want to leave in a way you will not regret.
+you_give:
+  - Your job, pay and what the job covers (health cover, pension, tools, space)
+  - Your monthly costs, lean and comfortable
+  - What you could sell, to whom, and any clients or leads you already have
+  - Real prices others in your field charge
+  - Who relies on you
+you_get:
+  - A monthly income floor, the steady streams that cover it and what a sick month does
+  - A fee, billing terms and a client limit
+  - A plan to win your first paying clients one by one
+  - The one outcome that could ruin the plan, and a version that survives it
+  - A cash buffer, rules for thin months and a loan request ready to send
+  - A plan for the talk with your family or partner, and a leaving plan with a notice letter
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your costs, your job's terms and three real prices ready. It works step by step and saves each result.
+  - Do not resign until step 7 says the readiness check passes.
+how_it_works:
+  - title: Works out the floor
+    text: Adds up a lean month, what the job covers and a tax share, sorts your income into steady and extra, and sizes the cash for a month you cannot work.
+  - title: Sets fees and a limit
+    text: Picks a fee above the middle on purpose, bills by the month and caps your clients so you keep time for your own work.
+  - title: Plans your first clients
+    text: Lists who already knows your work and plans how to win each of them in person, then learn what they paid for.
+  - title: Stress-tests the plan
+    text: Finds the one outcome that would ruin it, caps the downside and changes the plan so it survives.
+  - title: Writes rules for thin months
+    text: Sets a buffer, a yellow and a red line, who to ask early, and a request with an exact sum and a repayment date.
+  - title: Plans the talk at home
+    text: Starts from what the other person wants, answers the fear behind the objection and sets a check-in date.
+  - title: Plans how you leave
+    text: Drafts a short notice, sets the order of conversations and checks that signed work covers half the floor for three months.
+output_shape: |-
+  STEP 1: INCOME FLOOR
+    Floor | Steady streams | Gap and clients needed | Sick-month hole | Cash before leaving
+
+  STEP 2: FEE AND CLIENT LIMIT
+    Fee with reason | Cap with hours sum | Billing terms | Discount rule
+
+  STEP 3: FIRST CLIENTS
+    Who to approach first | How to win each | What to learn
+
+  STEP 4: STRESS TEST
+    The ruin outcome | Capped version of the plan
+
+  STEP 5: THIN-MONTH RULES
+    Buffer | Yellow and red lines | Helpers and limits | Request | Repayment rule
+
+  STEP 6: THE TALK AT HOME
+    What they want | Their fear and your answer | Check-in date
+
+  STEP 7: HOW YOU LEAVE
+    Readiness verdict | Notice letter | Order of conversations | Hand-back | Nasty-day lines
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your real numbers
+    how: Use three months of bank statements and a list of current clients. A guess at the lean month makes every later step wrong.
+  - what: Prices
+    how: Find three to five real prices in your field before step 2. Without them the fee is a guess.
+  - what: How you are leaving
+    how: Say if you are leaving in anger. Step 7 sets the order so that you do not hand in notice in the middle of a row.
+judge:
+  - The floor includes what the employer used to cover and a tax share.
+  - Only steady income counts toward the floor.
+  - The fee is above the middle and has a reason you can say aloud.
+  - Every repayment date in the thin-month request comes from money already due.
+  - The notice has dates and thanks and no complaints, and the readiness check counts only signed or paid work.
+test:
+  - Run it on your real numbers and check the floor against your last three lean months.
+  - Change one big stream to zero and see which step breaks first. That is your weak point.
+  - Run it twice on the same input. The floor and client count should match.
+improve:
+  - Save the floor report. Update it every quarter with what really arrived and when.
+  - Keep the thin-month rules where you will see them, and share the red-line rule with the person who relies on you.
+  - After you leave, note what the plan missed and fix the steps.

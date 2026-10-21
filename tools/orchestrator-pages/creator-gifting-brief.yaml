@@ -1,0 +1,110 @@
+new_slug: creator-gifting-brief
+name: Send creators a gift and a brief to film from
+summary: Give it your brand file. Get a creator gifting plan, a phone-video script, a filming brief and an edit plan.
+job: grow-social
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Send creators a gift and a brief they can film from
+subhead: Give it your brand file. It picks creators by fit, writes the card that goes with the gift, scripts a short phone video, turns the script into a filming brief, and plans the edit of what they send back.
+explain: |-
+  Gifting fails when the creator gets a box and no direction, or a brief so long that nobody reads it. Then the footage that comes back needs rework.
+
+  This workflow scores creators on fit, not size, and writes a short card with the disclosure wording. It scripts a phone video the creator can film in a few takes, then turns that into a brief with the shoot in order and the must-haves split from the maybes. When footage comes back, it plans the cut.
+when:
+  - You want creators to post about your product but have no process.
+  - Past creator posts missed the point of your product.
+  - You want footage you can also use in paid ads, with the right permissions.
+you_give:
+  - Your brand file
+  - Who you want to reach (optional)
+  - Customer reviews, copied as written
+  - Your product facts
+  - The creator's footage once it comes back
+you_get:
+  - A shortlist scored on fit, with a one-page card per creator
+  - Disclosure wording for each post
+  - A short phone-video script
+  - A filming brief the creator can follow without questions
+  - An edit plan for the footage you get back
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. It works step by step and saves each result.
+how_it_works:
+  - title: Plans the gifting
+    text: Uses the gifting planner to score creators on four fit signals and write the card, including the disclosure wording.
+  - title: Writes the phone-video script
+    text: Uses the phone-video script skill to settle who is speaking and write five beats a creator can say naturally.
+  - title: Writes the filming brief
+    text: Uses the filming brief skill to set deliverables, order the shoot and split must-haves from maybes.
+  - title: Waits for the footage
+    text: You send the gift and the brief, then collect what the creator films.
+  - title: Plans the edit
+    text: Uses the video edit planner to sort the footage, open on a clean first frame and plan captions and sound.
+output_shape: |-
+  GIFTING PLAN
+    Creator shortlist: <name> | fit score <0 to 4> | why
+    Card (about 120 words) | Disclosure wording
+
+  SCRIPT
+    Spine: <situation, but snag, so what they did> | Five beats | Anchor
+
+  FILMING BRIEF
+    Deliverables | Idea | Shoot order | Must / Maybe | Naming
+
+  [you send the gift and collect footage]
+
+  EDIT PLAN
+    Shots by job | Opening | Captions | Close | Exports
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |-
+    [the handoff pack] Follow HANDOFF.md.
+
+    Brand file: the Sprout brand file. Practice data.
+    Reviews: 6 Sprout reviews. Product facts: powder, 6g prebiotic fiber.
+    Footage (after the send step): 3 clips from one creator, 40 seconds in total.
+  output: |-
+    STEP 1: GIFTING PLAN
+    Shortlist: Creator A (4 of 4 fit signals: talks about gut health, posts weekly, audience matches, honest tone).
+    Card: Why we picked you, what is in the box, what to say, one thing not to say. Disclosure: "Gifted by Sprout."
+
+    STEP 2: SCRIPT
+    Spine: "I wanted a greens routine, but I kept quitting, so I tried one I enjoy." Anchor: the 7:40 am shaker.
+    Beats 1 to 5 in the creator's own words.
+
+    STEP 3: FILMING BRIEF
+    Deliverables: one 30-second vertical video, due in 10 days.
+    Shoot order: pour, stir, taste, talk. Must: show the pack, say the disclosure. Maybe: your own opening.
+    Name files: sprout_creatorA_pour_t1.
+
+    [box and brief sent, footage returned]
+
+    STEP 5: EDIT PLAN
+    Open on the pour at 0:03. Hold the pack on screen 2 seconds. Captions two lines. Close on the disclosure.
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-04. MISSING: written permission to run the video as a paid ad.
+tweaks:
+  - what: Gift size
+    how: Say what you can afford to send. The planner picks creators and a card that fit it.
+  - what: Where it will run
+    how: Say if you will also use the video in paid ads. The card then asks for the permission you will need.
+  - what: How much the creator can change
+    how: Mark more lines as maybe if you want their own style. The brief keeps only the must-haves fixed.
+judge:
+  - Each creator has a fit score with the evidence behind it.
+  - The disclosure wording is in the card and the brief.
+  - The brief can be followed without asking you a question.
+  - The edit plan keeps your product and proof on screen.
+test:
+  - Read the brief as if you were the creator. You should know what to film within a minute.
+  - Check each fit signal against the creator's real posts.
+  - Compare the edit plan's time stamps with the footage you got.
+improve:
+  - Add a step at the end that checks the final video against Meta's ad rules.
+  - After round one, write down how many posted and how many you would run, then tune the fit score.
+  - Save the best creator's brief as the template for the next batch.

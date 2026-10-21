@@ -1,0 +1,112 @@
+new_slug: shop-system-playbook
+name: "Turn one working shop into a system others can copy"
+summary: "Describe your best location. Get written standards, a manual a stranger can follow, a readiness check and a go or no-go."
+job: plan-strategy
+thinking: high
+thinking_why: "It runs four skills in a row and the later steps depend on what a real person finds in the trial. Give it your strongest model."
+
+headline: "Turn the one place that works into a system a stranger can run"
+subhead: Describe your best location. It writes standards with numbers, turns them into a manual with a job card for each role, then reads what a newcomer found when they ran a shift. It checks the place earns without you and gives a go or no-go on the next one.
+
+explain: |
+  A shop, clinic or studio that works in your hands often fails in someone else's. The reason is rarely effort. The know-how lives in your head, so the copy gets your good days and misses the hundred small things you do without noticing.
+
+  This workflow runs four steps with one pause. The first writes standards as yes-or-no lines with numbers, and names what you never cut. The second turns them into a job card for each role, with a rule for what to do when a standard is missed and a trial sheet. Then you pause: someone who has never worked for you runs one shift while you watch and write down every place they stop. The third turns those notes into gaps, checks the first place earns when you are away, and checks the next site, supplies and the named person. The fourth gives a go or no-go.
+
+  It rests on a third-party summary of a memoir about building a restaurant chain, so its claims are kept modest.
+
+when:
+  - One location works well and you want a second, a partner or a franchisee to run it the same way without you.
+  - A new hire keeps asking you things that should be written down.
+  - You are about to hire a manager and hand over the keys.
+
+you_give:
+  - What you sell and how a customer gets it, from order to hand-off
+  - Your roles and what each person does in a shift
+  - Takings and costs for a week you were away, if you have them (optional)
+you_get:
+  - Standards with numbers and a list of what you never cut
+  - A job card for each role, a missed-standard rule and a day-one trial sheet
+  - A list of gaps from the trial, each with a fix
+  - A check that the first location earns without you, and a go or no-go on the next one
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your business and your roles. It works step by step and saves each result.
+  - At the pause, print the trial sheet, have a newcomer run one shift, and write down every stop. Bring the notes back.
+
+how_it_works:
+  - title: Writes the standards
+    text: Walks the customer's path from order to hand-off and turns quality, service, cleanliness and value into yes-or-no standards with numbers.
+  - title: Turns them into a manual
+    text: One job card per role, in order, with a done-when check on each step, a missed-standard rule and a trial sheet.
+  - title: Pauses for a real trial
+    text: A person who has never worked for you runs a shift from the manual. You write down every stop, question and guess.
+  - title: Checks it is ready to copy
+    text: Sorts the trial notes into gaps with fixes, checks the first location earns without you, and checks the site, supplies and the named person.
+  - title: Makes the call
+    text: Checks the plan for known faults, sets a halfway check and says go or no-go.
+
+output_shape: |
+  STEP 1: STANDARDS
+    <standards with numbers> | Never cut: <> | One job per person: <>
+
+  STEP 2: MANUAL
+    Job cards: <one per role> | Missed-standard rules: <> | Fixed and local: <> | Trial sheet: <>
+
+  PAUSE
+    Newcomer shift run: <your notes>
+
+  STEP 3: READY TO COPY?
+    Trial gaps: <each with a fix> | Runs without you: <yes / partly / no / unknown> | Site, supplies, named person: <> | Call: <ready / ready with fixes / not yet>
+
+  STEP 4: GO OR NO-GO
+    Call: <go / no-go> | Halfway check: <> | First fix: <>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Your numbers
+    how: Weights, temperatures, times and counts make the standards and cards exact. Where you have none, they show MISSING.
+  - what: Your newcomer
+    how: Pick someone who has never watched you work. A friend who knows your ways will miss the gaps.
+  - what: A week you were away
+    how: Takings and costs from a week without you turn the step 3 check from unknown into a number.
+  - what: Your second site
+    how: Say how it differs from the first in size, layout and supply route.
+
+judge:
+  - Each step used the result of the step before.
+  - Every standard has a yes-or-no test, and numbers come from your facts or say MISSING.
+  - Every trial note became a gap with a fix.
+  - The ready call names a real person, not only a role.
+  - No step invented a fact to fill a gap.
+
+test:
+  - Run the trial with a person who has never worked for you and count the stops. Each one should appear as a gap.
+  - Run it with no trial notes. Step 3 should call the manual untested and make the trial its first fix.
+  - Run steps 1 and 2 twice on the same input. The standards and the cards should match, even if the wording differs.
+
+improve:
+  - Fix every gap and run the trial again with a second newcomer. The gap list should shrink.
+  - Keep each trial's gap list. A gap that repeats points to a weak card.
+  - Rerun step 3 after your first month at the second location, using its real numbers.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds four steps, your numbers and the trial notes in one run."}
+    - {name: "A phone camera", why: "A photo of what done looks like settles most arguments about a step."}
+  inputs:
+    - "Your opening and closing routines"
+    - "Takings and costs for a week you were away"
+    - "Photos of what done looks like"
+
+terms:
+  - term: Standard
+    meaning: A yes-or-no statement about quality, service, cleanliness or value, with a number where one applies.
+  - term: Job card
+    meaning: A one-page list of the steps one role does, in order, with a check that each is done.
+  - term: Trial
+    meaning: A shift run from the manual by a person who has never worked for you, while you watch and write down every stop.

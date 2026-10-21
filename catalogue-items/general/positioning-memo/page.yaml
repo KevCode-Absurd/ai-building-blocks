@@ -1,0 +1,127 @@
+new_slug: positioning-memo
+name: "Outcome-first positioning memo writer"
+summary: "Paste your product facts. Get a team memo that names the outcome you sell, who users become and a relatable example user."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It reframes the product around an outcome and must keep every claim tied to the facts."
+
+headline: "Outcome-first positioning memo writer"
+subhead: "Paste your product facts. It names what customers think they are buying, the outcome they really get, who they become after three months and one relatable example user, then writes a team memo with one line everyone can repeat."
+
+explain: |
+  Teams drift into selling the feature list. The product is a tool, so the talk is about the tool. Customers do not shop for a tool. They shop for the thing the tool helps them become.
+
+  This skill writes a memo for your team that starts there. It states what customers think they are shopping for and translates your value into those terms and into the outcome they really get. It asks who a customer becomes after three months. It uses one analogy from a business that sells a way of life, not a thing. It invents a clearly labelled, relatable user and walks them through. It boils everything to one line the team can repeat, and ends with the bar of polish the work must meet.
+
+when:
+- "Your team argues about features and nobody can say what you sell."
+- "You are about to write a launch, a pitch or a site and need one clear point."
+- "You joined a company and want to write down what it is really for."
+
+you_give:
+- "Facts about your product or service: what it does, who uses it, what it costs"
+- "What customers say they wanted when they came (optional)"
+- "Your brand file (optional)"
+- "Who the memo is for (optional)"
+you_get:
+- "What customers think they are shopping for, and the outcome they get"
+- "Who users become after three months"
+- "A relatable example user, labelled as invented"
+- "A memo with one repeatable line and a polish bar"
+
+how_to_use:
+- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+- "Paste the product facts."
+- "Say who will read the memo."
+- "Check the outcome against what real customers have told you."
+- "Read the repeatable line aloud to your team."
+
+how_it_works:
+  - title: "Say what they think they are shopping for"
+    text: "Write in one or two lines what a customer believes they are buying when they arrive, in their words."
+  - title: "Translate to the outcome"
+    text: "Restate your value in those terms, then in the outcome they really get."
+  - title: "Ask who they become"
+    text: "Describe who a customer is after three months of use, in two or three lines, using only what the facts support."
+  - title: "Add one analogy"
+    text: "Choose one analogy from a business that sells a way of life or an identity rather than a thing."
+  - title: "Walk through a relatable user"
+    text: "Invent one example user who is in a hurry."
+  - title: "Boil it to one line"
+    text: "Write the single line the team can repeat to explain what you sell."
+  - title: "End with the polish bar"
+    text: "State the standard of quality the work must meet, based on what the outcome demands."
+  - title: "Check it"
+    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_shape: |
+  WHAT THEY THINK THEY ARE SHOPPING FOR
+  <two lines>
+
+  OUTCOME
+  Feature | what it lets them do | what it changes
+
+  WHO THEY BECOME (3 months)
+  <two or three lines>
+
+  ANALOGY
+  <business, how it maps, where it breaks>
+
+  EXAMPLE USER (invented)
+  <walkthrough>
+
+  THE LINE
+  <one breath>
+
+  POLISH BAR
+  <standard and three things that fail it>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Customer words"
+    how: "Real quotes make the first section true instead of guessed."
+  - what: "Time frame"
+    how: "Change three months to what fits your product."
+  - what: "The reader"
+    how: "A memo for a new hire reads different from one for a board."
+  - what: "Analogy business"
+    how: "Name one you like and it will use it."
+
+judge:
+- "The outcome would still make sense without your product's name."
+- "The repeatable line fits in one breath."
+- "The example user is labelled invented."
+- "Every claim traces to your facts."
+- "You could read the memo to a new hire and they would get it."
+
+test:
+- "Read the line to three team members and ask what they think you sell."
+- "Compare the outcome with what your last five customers told you."
+- "Check each product claim against your facts."
+- "Run it twice. The line should stay close."
+
+improve:
+- "Add your real customer quotes to the facts."
+- "Add your own quality bar to the last step."
+- "Save the line in your brand file."
+- "Pair it with a landing page or ad writer once the line is agreed."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reframing facts and writing a memo are text work."}
+    - {name: "Customer interview notes", why: "They are the best source for what people think they are buying."}
+  inputs:
+    - "Reviews or support tickets"
+    - "Your brand file"
+    - "A competitor's one-line pitch to contrast"
+
+terms:
+  - term: "Outcome"
+    meaning: "What changes for the customer after they use the product."
+  - term: "Polish bar"
+    meaning: "The standard of quality the work must meet to deliver the outcome."

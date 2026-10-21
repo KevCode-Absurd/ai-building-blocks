@@ -12,6 +12,7 @@
   outputs: [ { type: audit_report, required: true }, { type: plan, required: true } ]
   author: Daniel Agrici
   author_url: https://github.com/AgriciDaniel
+  slug: ad-account-audit
 "AgriciDaniel/claude-ads:skills/ads-attribution":
   name: Cross-platform conversion reconciler
   summary: "Give it your Meta and Google conversion reports. Get why the numbers differ and a plan to make them match."
@@ -24,6 +25,7 @@
   outputs: [ { type: audit_report, required: true }, { type: plan, required: false } ]
   author: Daniel Agrici
   author_url: https://github.com/AgriciDaniel
+  slug: conversion-reconciliation
 "AgriciDaniel/claude-ads:skills/ads-amazon":
   skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. Amazon checks are inside the all-in-one ad auditor."
 "AgriciDaniel/claude-ads:skills/ads-apple":

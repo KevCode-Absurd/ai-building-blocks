@@ -13,9 +13,9 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: shortlist}
-uses: [honest-scarcity-and-urgency-planner, bonus-stack-builder, guarantee-designer, offer-name-writer]
+uses: [honest-urgency-planner, bonus-stack-builder, guarantee-designer, offer-name-writer]
 steps:
-  - {uses: honest-scarcity-and-urgency-planner, note: "Real limits and dates, with the lines to say them."}
+  - {uses: honest-urgency-planner, note: "Real limits and dates, with the lines to say them."}
   - {uses: bonus-stack-builder, note: "Named bonuses, each answering one doubt, with a value and proof."}
   - {uses: guarantee-designer, note: "A guarantee that fits your costs, with the refund math and a name."}
   - {uses: offer-name-writer, note: "Names to test and a plan for renaming when the offer tires."}

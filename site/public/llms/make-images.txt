@@ -1,0 +1,21 @@
+# Make images and art: AI Blocks
+
+> 17 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [App screenshot maker](https://useaiblocks.com/skills/app-screenshot-maker): Point it at your running app. Get sharp, high-resolution screenshots ready for Product Hunt, social or your site.
+- [Article cover maker](https://useaiblocks.com/skills/article-cover-maker): Give it an article. Get a cover image with a type, colours and mood that fit the piece.
+- [Article illustrator](https://useaiblocks.com/skills/article-illustrator): Give it an article. Get a plan for where pictures belong and a matching set of illustrations.
+- [Brand sticker set maker](https://useaiblocks.com/skills/brand-sticker-set-maker): Give it your logo. Get a set of playful die-cut character stickers on clear backgrounds.
+- [Fashion scene image maker](https://useaiblocks.com/skills/fashion-scene-image-maker): Describe a scene, with or without a reference photo. Get an image or a new pose. Your image model draws it.
+- [Gemini image and video maker](https://useaiblocks.com/skills/gemini-image-and-video-maker): Give it a picture idea and reference images. Get images or short video drawn by Google Gemini.
+- [Generative art maker](https://useaiblocks.com/skills/generative-art-maker): Describe the look you want. Get an interactive generative art piece you can tweak and repeat.
+- [Image compressor](https://useaiblocks.com/skills/image-compressor): Give it images. Get smaller WebP or PNG files that look the same and load faster.
+- [Image maker and editor](https://useaiblocks.com/skills/image-maker-and-editor): Describe a picture or give one to change. Get new images, variants or transparent cutouts.
+- [Infographic maker](https://useaiblocks.com/skills/infographic-maker): Give it your content. Get an infographic with a layout and style picked to fit the message.
+- [Knowledge comic maker](https://useaiblocks.com/skills/knowledge-comic-maker): Give it a topic or story. Get a finished comic with panel layouts, a chosen art style and drawn pages.
+- [Marketing image maker](https://useaiblocks.com/skills/marketing-image-maker): Say what image you need. Get a prompt, size and file plan for blog heroes, social graphics and mockups.
+- [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker): Give it a prompt. Get an image from the image service you choose, in the size you pick.
+- [Product demo video maker](https://useaiblocks.com/skills/product-demo-video-maker): Give it screenshots or a page. Get a short demo video or GIF that walks through the product.
+- [Science diagram drafter](https://useaiblocks.com/skills/science-diagram-drafter): Describe a diagram. Get a draft of a network, pathway or flowchart, reviewed and refined once or twice.
+- [Slack GIF maker](https://useaiblocks.com/skills/slack-gif-maker): Describe the animation. Get a GIF sized and checked to work in Slack.
+- [Stable Diffusion image maker](https://useaiblocks.com/skills/stable-diffusion-image-maker): Describe a picture. Get generated images, edits to your own photos or code for a custom image pipeline.

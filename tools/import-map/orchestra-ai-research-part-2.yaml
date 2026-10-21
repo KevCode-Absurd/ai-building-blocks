@@ -56,6 +56,7 @@
   needs: run Python code and call an AI model
   author: A-EVO Lab
   author_url: https://github.com/A-EVO-Lab
+  slug: agent-improvement-loop
 "orchestra-research/AI-research-SKILLs:14-agents/crewai":
   name: Agent team builder
   summary: "Describe the jobs your agents do. Get a team of AI agents with roles, tasks and shared memory."
@@ -89,6 +90,7 @@
   inputs: [ { type: document, required: true } ]
   outputs: [ { type: code_change } ]
   needs: run Python code and call an AI model
+  slug: document-qa-builder
 "orchestra-research/AI-research-SKILLs:15-rag/chroma":
   name: Chroma search database setup
   summary: "Give it your text. Get a searchable store that finds passages by meaning, ready for question-answering."
@@ -265,6 +267,7 @@
   inputs: [ { type: codebase, required: true } ]
   outputs: [ { type: code_change } ]
   needs: run Python code on a computer with a GPU
+  slug: small-model-distillation
 "orchestra-research/AI-research-SKILLs:19-emerging-techniques/long-context":
   name: Longer context stretcher
   summary: Name your model. Get a method and code to make it read much longer documents than it was trained for.
@@ -384,6 +387,7 @@
   inputs: [ { type: source_text, required: true } ]
   outputs: [ { type: document } ]
   needs: read your files and run code
+  slug: paper-repo-notes
 "orchestra-research/AI-research-SKILLs:12-inference-serving/sglang":
   skip: Same job as the vLLM model server setup we list; kept the clearer one
 "orchestra-research/AI-research-SKILLs:12-inference-serving/tensorrt-llm":

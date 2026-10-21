@@ -1,0 +1,68 @@
+# Plan stock, shipping and suppliers: AI Blocks
+
+> 64 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [AI task scoper for supply chain](https://useaiblocks.com/skills/ai-task-scoper-for-supply-chain): Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
+- [Assembly line balancer](https://useaiblocks.com/skills/assembly-line-balancer): Give it your work steps and times. Get steps split across stations so none waits or overloads.
+- [Budget and space picker (knapsack)](https://useaiblocks.com/skills/budget-and-space-picker-knapsack): Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
+- [Co-packer picker](https://useaiblocks.com/skills/co-packer-picker): Tell it what you need made or packed. Get a way to pick a co-packer and a plan to manage the deal.
+- [Cross-docking planner](https://useaiblocks.com/skills/cross-docking-planner): Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
+- [Delivery route planner (vehicle routing)](https://useaiblocks.com/skills/delivery-route-planner): Give it your stops and truck limits. Get routes that reach every stop with the fewest miles.
+- [Delivery time slot route planner](https://useaiblocks.com/skills/delivery-time-slot-route-planner): Give it stops with promised delivery windows. Get routes that hit each window with the fewest vehicles.
+- [Demand forecast planner](https://useaiblocks.com/skills/demand-forecast-planner): Give it your past sales. Get a forecast, the best-fit method and a way to track how far off it is.
+- [Electronics parts sourcing planner](https://useaiblocks.com/skills/electronics-parts-sourcing): Give it your parts list. Get a plan for scarce parts, long lead times and leftover stock.
+- [Equipment maintenance planner](https://useaiblocks.com/skills/equipment-maintenance-planner): Give it your machines and repair history. Get a service schedule and spare parts list that cut breakdowns.
+- [Factory bottleneck finder](https://useaiblocks.com/skills/factory-bottleneck-finder): Describe your production steps and times. Get the slowest step found and ranked fixes with expected output gains.
+- [Food supply chain planner](https://useaiblocks.com/skills/food-supply-chain-planner): Describe your food business. Get a plan for shelf life, safe handling, tracing and cold storage.
+- [Freight mode and carrier picker](https://useaiblocks.com/skills/freight-mode-and-carrier-picker): Give it your shipments. Get the cheapest mix of modes and carriers, and where to combine loads.
+- [Hospital supply stock planner](https://useaiblocks.com/skills/hospital-supply-stock-planner): Give it your supply usage. Get par levels, expiry rules and an emergency stock plan.
+- [Hotel and restaurant buying planner](https://useaiblocks.com/skills/hotel-restaurant-buying): Give it what you buy. Get a sourcing plan, a supplier shortlist and negotiation points to cut costs.
+- [Last-mile delivery planner](https://useaiblocks.com/skills/last-mile-delivery-planner): Describe your local deliveries. Get ways to cut cost per drop, speed up delivery and plan same-day service.
+- [Machine job scheduler](https://useaiblocks.com/skills/machine-job-scheduler): Give it your jobs and machines. Get a job order that finishes everything sooner.
+- [Monthly demand and supply meeting planner](https://useaiblocks.com/skills/demand-supply-meeting): Give it your forecast and capacity. Get a monthly meeting agenda, gap list and decisions that need an owner.
+- [Multi-stop route planner](https://useaiblocks.com/skills/multi-stop-route-planner): Give it your stops and vehicles. Get the shortest routes for each driver with total miles and time.
+- [Multi-warehouse route planner](https://useaiblocks.com/skills/multi-warehouse-route-planner): Give it your warehouses and stops. Get which warehouse serves each stop and the route for every truck.
+- [One-time stock quantity picker](https://useaiblocks.com/skills/one-time-stock-quantity-picker): Give it cost, price and demand range for a short-life item. Get the best order amount and the risk of each choice.
+- [Optimization model builder](https://useaiblocks.com/skills/optimization-model-builder): Describe a choice with limits, like budget or capacity. Get a working model and the best answer it finds.
+- [Order fulfillment mix planner](https://useaiblocks.com/skills/order-fulfillment-mix-planner): Give it your stores, stock and order types. Get rules for where each online order ships from and a pickup plan.
+- [Order quantity calculator](https://useaiblocks.com/skills/order-quantity-calculator): Give it demand, order cost and holding cost. Get the order size with the lowest total cost, with discounts compared.
+- [Pallet stacking planner](https://useaiblocks.com/skills/pallet-stacking-planner): Give it your box sizes and pallet size. Get a stacking pattern that fits the most boxes safely.
+- [Picking batch planner](https://useaiblocks.com/skills/picking-batch-planner): Give it a day of orders. Get groups to pick together so pickers walk less, with the expected distance saved.
+- [Production capacity checker](https://useaiblocks.com/skills/production-capacity-checker): Give it demand and what you can make. Get your bottlenecks and a plan to close the gap.
+- [Production plan builder](https://useaiblocks.com/skills/production-plan-builder): Give it your sales forecast and capacity. Get a week-by-week plan of what to make and when.
+- [Production schedule planner](https://useaiblocks.com/skills/production-schedule-planner): Give it your jobs, machines and due dates. Get a job order that meets deadlines and keeps machines busy.
+- [Promotion and stock planner](https://useaiblocks.com/skills/promotion-and-stock-planner): Give it past promotions and stock. Get a promo calendar with expected sales lift and the extra stock to have ready.
+- [Quality control plan builder](https://useaiblocks.com/skills/quality-control-plan-builder): Give it your defect data. Get control charts, the biggest causes ranked, and a plan to cut defects.
+- [Responsible sourcing checker](https://useaiblocks.com/skills/responsible-sourcing-checker): Give it your suppliers. Get ethics and environment gaps found, a questionnaire to send, and an improvement plan.
+- [Return pickup route planner](https://useaiblocks.com/skills/return-pickup-route-planner): Give it your deliveries and returns to collect. Get routes that bring returns back on the same trip.
+- [Reuse and returns planner](https://useaiblocks.com/skills/reuse-and-returns-planner): Tell it your products. Get a plan to reuse, refurbish or recycle them and take back returns.
+- [Rod and pipe cutting planner](https://useaiblocks.com/skills/rod-and-pipe-cutting-planner): Give it your stock lengths and cut list. Get cutting patterns that use the fewest pieces and waste the least.
+- [Seasonal buy planner](https://useaiblocks.com/skills/seasonal-buy-planner): Give it last season sales. Get how much to buy early, how much to hold back, and when to mark down.
+- [Sheet cutting planner](https://useaiblocks.com/skills/sheet-cutting-planner): Give it your sheet size and the panels you need. Get cutting layouts that waste the least material.
+- [Shelf layout planner](https://useaiblocks.com/skills/shelf-layout-planner): Give it your products and shelf sizes. Get a shelf layout that gives your best sellers the best space.
+- [Shift schedule builder](https://useaiblocks.com/skills/shift-schedule-builder): Give it your busy hours and staff limits. Get a shift plan that covers demand and respects time-off rules.
+- [Shipment tracking planner](https://useaiblocks.com/skills/shipment-tracking-planner): Describe your shipments. Get what to track at each step, how to tag items, and alerts for late or lost goods.
+- [Shortest stop order finder](https://useaiblocks.com/skills/shortest-stop-order-finder): Give it a list of stops. Get the shortest order to visit them all and return, with the total distance.
+- [Sourcing plan builder](https://useaiblocks.com/skills/sourcing-plan-builder): Name a spend category. Get a sourcing plan with supplier list, quote request, scoring rules and negotiation levers.
+- [Stock count program planner](https://useaiblocks.com/skills/stock-count-program-planner): Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
+- [Store delivery route planner](https://useaiblocks.com/skills/store-delivery-route-planner): Give it your stores, order sizes and delivery windows. Get weekly truck routes that cover every store at less cost.
+- [Store stock allocator](https://useaiblocks.com/skills/store-stock-allocator): Give it a new buy and store sales. Get how many units of each size and style go to each store.
+- [Supplier order splitter](https://useaiblocks.com/skills/supplier-order-splitter): Give it quotes, limits and demand. Get how much to order from each supplier for the lowest total cost.
+- [Supplier partnership planner](https://useaiblocks.com/skills/supplier-partnership-planner): Name a key supplier. Get what to share, a joint plan, meeting rhythm and measures that show it is working.
+- [Supplier risk scorecard builder](https://useaiblocks.com/skills/supplier-risk-scorecard-builder): Give it your suppliers. Get a risk score for each, warning signs to watch, and a backup supplier plan.
+- [Supplier scorer](https://useaiblocks.com/skills/supplier-scorer): Give it your needs and supplier offers. Get a weighted score for each supplier and a clear pick with reasons.
+- [Supply and demand balancer](https://useaiblocks.com/skills/supply-and-demand-balancer): Give it your stock and open orders. Get a plan to fill the right orders first when you cannot fill them all.
+- [Supply chain backup plan builder](https://useaiblocks.com/skills/supply-chain-backup-plan-builder): Describe your supply chain. Get the top risks ranked, a backup for each, and who does what if it breaks.
+- [Supply network designer](https://useaiblocks.com/skills/supply-network-designer): Give it your sites, customers and costs. Get a short list of warehouse layouts with cost and delivery time compared.
+- [Truck load builder](https://useaiblocks.com/skills/truck-load-builder): Give it your orders and truck sizes. Get orders grouped into full truck loads that cost less to ship.
+- [Truck loading planner (bin packing)](https://useaiblocks.com/skills/truck-loading-planner): Give it your box sizes and counts. Get a plan to pack them into the fewest trucks or containers.
+- [Van loading planner](https://useaiblocks.com/skills/van-loading-planner): Give it your parcels and van size. Get a load order that fits everything and puts the first stop last in.
+- [Vehicle fleet planner](https://useaiblocks.com/skills/vehicle-fleet-planner): Give it your vehicles and costs. Get how many you need and when to replace each one.
+- [Warehouse automation chooser](https://useaiblocks.com/skills/warehouse-automation-chooser): Give it your orders and space. Get which machines pay back, ranked, with cost, payback time and risks.
+- [Warehouse layout planner](https://useaiblocks.com/skills/warehouse-layout-planner): Give it your products, volumes and building size. Get zones, aisle layout, storage type and space needed.
+- [Warehouse location planner](https://useaiblocks.com/skills/warehouse-location-planner): Give it your customers and demand. Get how many warehouses you need and where to put them.
+- [Warehouse picker route planner](https://useaiblocks.com/skills/warehouse-picker-route-planner): Give it your aisle layout and pick lists. Get the shortest walking order for each picker.
+- [Warehouse slot assigner](https://useaiblocks.com/skills/warehouse-slot-assigner): Give it your products and their pick counts. Get which item goes in which spot so fast sellers sit closest.
+- [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner): Give it your warehouses and demand. Get how much stock to hold at each level of your network.
+- [Waste reduction planner](https://useaiblocks.com/skills/waste-reduction-planner): Describe your process. Get a map of waste, a 5S plan and quick fixes ranked by payoff.
+- [What-if supply scenario planner](https://useaiblocks.com/skills/what-if-supply-scenario-planner): Name a worry like a late shipment or a demand spike. Get three scenarios, their cost, and a response for each.

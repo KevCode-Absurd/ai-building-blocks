@@ -1,0 +1,30 @@
+slug: winning-style-image-ads
+name: "Make new image ads in the style your winners share"
+summary: "Give it your ads with results. Get the style your winners share, new ad plans, and image prompts ready to make."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: approved_image, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: angle_library, required: false}
+  - {type: script, required: false}
+  - {type: product_photos, required: false}
+  - {type: lessons_register, required: false}
+outputs:
+  - {type: upscaled_image}
+uses: [winning-image-ad-style-finder, image-ad-settings-picker, single-image-ad-planner, accurate-product-image-ad-maker, image-upscale-checker]
+steps:
+  - {uses: winning-image-ad-style-finder, note: "Start from your ads and results. Keep the style traits and drop the old words and numbers."}
+  - {uses: image-ad-settings-picker, note: "Turn the new ad plans into a brief with the settings locked, so every ad is made the same way."}
+  - {uses: single-image-ad-planner, note: "Plan each ad from the locked brief: the argument, the words on the image and the feed copy."}
+  - {uses: accurate-product-image-ad-maker, note: "Turn each planned ad and its words into a prompt that keeps the real product."}
+  - {uses: image-upscale-checker, note: "Take the images you approved and set up a faithful upscale to the size each place needs."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-make-new-image-ads-in-the-style-your-best-ads-share/skeleton.yaml

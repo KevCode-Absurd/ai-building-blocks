@@ -1,0 +1,71 @@
+# Understand your customers: AI Blocks
+
+> 67 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [App stickiness guide](https://useaiblocks.com/skills/app-stickiness-guide): Describe your app. Get a retention plan with a habit loop, a better first run and one metric to watch.
+- [Audience hangout finder](https://useaiblocks.com/skills/audience-hangout-finder): Describe your buyer group. Get a map of the sites, shows, accounts and communities they use, and where to show up first.
+- [Audience profile analyst](https://useaiblocks.com/skills/audience-profile-analyst): Give it a brand or account. Get who follows it, what they like and how engaged they are. Collects data from websites.
+- [Best customer finder](https://useaiblocks.com/skills/best-customer-finder): Paste customers with what each paid and how long they stayed. Get your top 20 percent and what they share.
+- [Brand discovery researcher](https://useaiblocks.com/skills/brand-discovery-researcher): Describe your business. Get who it is for, who you compete with and where you could stand out.
+- [Brand mention tracker](https://useaiblocks.com/skills/brand-mention-tracker): Give it a brand name. Get reviews, ratings and mentions from many sites in one report. Collects data from websites.
+- [Buyer awareness stage mapper](https://useaiblocks.com/skills/buyer-awareness-stage-mapper): Describe your audience and offer. Get where buyers sit, from unaware to ready, and what to say to each.
+- [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): Paste your offer and some reviews. Get a half-page buyer brief and the one force your copy must move.
+- [Buyer instinct brief writer](https://useaiblocks.com/skills/buyer-instinct-brief-writer): Paste your product facts and buyer words. Get a brief naming the drive behind buying and the feeling the ad must leave.
+- [Buyer psychology advisor](https://useaiblocks.com/skills/buyer-psychology-advisor): Describe a page or offer. Get the mental models that apply and how to use them honestly.
+- [Buying story interview guide](https://useaiblocks.com/skills/buying-story-interview-guide): Name what you sell. Get a timeline interview script for five to eight recent buyers, from first thought to first use.
+- [Chat export need finder](https://useaiblocks.com/skills/chat-export-need-finder): Give it a Telegram group export. Get a ranked list of unmet needs, each backed by real quotes.
+- [Churn risk finder](https://useaiblocks.com/skills/churn-risk-finder): Give it usage, engagement and support data. Get at-risk accounts scored with ideas for how to step in.
+- [Comment mining analyst](https://useaiblocks.com/skills/comment-mining-analyst): Give it social posts. Get what people ask, complain about and want, in their own words. Collects data from websites.
+- [Copy research file builder](https://useaiblocks.com/skills/copy-research-file-builder): Paste your product material and past issues. Get sorted research files and a short list of proof you can give away.
+- [Creator audience checker](https://useaiblocks.com/skills/creator-audience-checker): Give it a creator. Get who their audience is, where they live and if they fit a sponsorship. Collects data from websites.
+- [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder): Paste reviews or support emails. Get buying reasons in customers' exact words and a score out of 100.
+- [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes): Paste raw notes from customer talks. Get facts, praise and feature ideas told apart, plus the follow-up question for each.
+- [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan): Paste your business idea. Get your guesses, who to talk to and questions that test them outside the building.
+- [Customer health and churn scorer](https://useaiblocks.com/skills/customer-health-and-churn-scorer): Give it your customer data. Get health scores, churn risk and upsell chances for each account.
+- [Customer identity messaging mapper](https://useaiblocks.com/skills/customer-identity-messaging): Give it your audience. Get a map of who they are and want to be, plus copy that reflects it.
+- [Customer interview coach](https://useaiblocks.com/skills/customer-interview-coach): Describe your idea. Get questions that draw honest answers from customers and a way to spot polite lies. Uses The Mom Test.
+- [Customer interview synthesizer](https://useaiblocks.com/skills/customer-interview-synthesizer): Paste interviews, tickets or survey notes. Get clear patterns and what each means for your product.
+- [Customer job interview planner](https://useaiblocks.com/skills/customer-job-interview-planner): Describe what you sell. Get a plan to watch buyers, ask them on the way out and interview people who switched.
+- [Customer job mapper](https://useaiblocks.com/skills/customer-job-mapper): Describe your product and buyer. Get the functional, emotional and social jobs they hire it for.
+- [Customer motivation profiler](https://useaiblocks.com/skills/customer-motivation-profiler): Describe your buyer. Get a profile of their wants, fears, identity and trust doubts to use in copy and offers.
+- [Customer path blueprint maker](https://useaiblocks.com/skills/customer-path-blueprint-maker): Describe your customer and their goal. Get a map of each step with touchpoints, feelings, friction and the systems behind it.
+- [Customer path mapper](https://useaiblocks.com/skills/customer-path-mapper): Describe your product and customer. Get a stage by stage map with feelings, pain points and fixes.
+- [Customer quote finder](https://useaiblocks.com/skills/customer-quote-finder): Name a topic. Get real customer quotes on it from your calls and emails, each tied to who said it.
+- [Customer research analyst](https://useaiblocks.com/skills/customer-research-analyst): Share interviews, surveys or tickets. Get the patterns, the words buyers use and clear personas.
+- [Customer success plan writer](https://useaiblocks.com/skills/customer-success-plan-writer): Paste why customers cancel. Get a plan for getting buyers to a result, with onboarding, teaching and a community step.
+- [Customer watching plan](https://useaiblocks.com/skills/customer-watching-plan): Name who you want to understand. Get a plan to watch them first-hand, log what you see and test odd moments.
+- [Dominant emotion finder](https://useaiblocks.com/skills/dominant-emotion-finder): Paste your product and what you know of your buyer. Get the strongest feeling to write to and where it comes from.
+- [Durable customer need finder](https://useaiblocks.com/skills/durable-customer-need-finder): Describe your idea and who it is for. Get the customer need behind it, a ten-year test and the skills gap.
+- [Feedback pile sorter](https://useaiblocks.com/skills/feedback-pile-sorter): Give it feedback from tickets, NPS and calls. Get one ranked signal of what customers need, not just the loudest voice.
+- [Feedback theme finder](https://useaiblocks.com/skills/feedback-theme-finder): Give it NPS, CSAT or open comments. Get themes, trends and an insight report you can act on.
+- [Find the job customers hire your product for](https://useaiblocks.com/workflows/customer-job-finder): Describe what you sell and when people buy it. Get an interview plan and the ranked reasons they bought.
+- [Find why buyers switched and what held others back](https://useaiblocks.com/workflows/why-buyers-switched): Give it what you sell. Get a buying-story interview guide, mapped stories and a plan to ease what holds buyers back.
+- [Find your best customers and rebuild how they buy](https://useaiblocks.com/workflows/best-customers-buying-path): Paste your customer list with what each paid. Get your best customers and the steps every new lead should follow.
+- [Hard questions FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer): Paste your press release. Get the hard questions customers and your team will ask, answered and graded.
+- [Hungry audience ranker](https://useaiblocks.com/skills/hungry-audience-ranker): Paste the groups you could sell to. Get them ranked from coldest to hungriest, with the group to test first.
+- [Ideal buyer profiler](https://useaiblocks.com/skills/ideal-buyer-profiler): Describe who you sell to. Get one specific buyer with pains, goals, failed attempts and what drives their choices.
+- [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer): Describe what you sell. Get detailed buyer personas with motivations, doubts and habits.
+- [Ideal customer profiler](https://useaiblocks.com/skills/ideal-customer-profiler): Give it survey or customer data. Get a profile of your best customers and what they need.
+- [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner): Describe your research question. Get a plan with recruiting, interview guide, synthesis steps and next product decisions.
+- [Interview summary writer](https://useaiblocks.com/skills/interview-summary-writer): Paste a customer interview transcript. Get a one-page summary of needs, satisfaction and next steps.
+- [Job hunting spot finder](https://useaiblocks.com/skills/job-hunting-spot-finder): Tell it what you sell. Get ranked leads for unmet jobs and what to go and watch for each.
+- [Job rival mapper](https://useaiblocks.com/skills/job-rival-mapper): Paste your job spec. Get every rival, including doing nothing, each with a short resume and what must be fired.
+- [Job spec writer](https://useaiblocks.com/skills/job-spec-writer): Paste your watch notes and leads. Get one job written as a situation, with its practical, social and emotional sides.
+- [Jobs-to-be-done framer](https://useaiblocks.com/skills/jobs-to-be-done-framer): Give it a product or customer problem. Get job statements, struggling moments and hire and fire reasons that sharpen your choices.
+- [Low-star review triager](https://useaiblocks.com/skills/low-star-review-triager): Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat problems and what to fix first.
+- [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner): Give it your market. Get market size two ways, survey sample sizes and segments scored.
+- [Market stage reader](https://useaiblocks.com/skills/market-stage-reader): Paste your product facts and rival claims. Get what buyers know, how worn claims are and what a headline may say.
+- [Recent topic pulse researcher](https://useaiblocks.com/skills/recent-topic-pulse-researcher): Give it a topic. Get a cited briefing of what Reddit, Hacker News and the web say lately. Collects data from websites.
+- [Reddit thread collector](https://useaiblocks.com/skills/reddit-thread-collector): Give it a topic or subreddit. Get posts and comments in a table you can study. Collects data from websites.
+- [Research theme synthesizer](https://useaiblocks.com/skills/research-theme-synthesizer): Give it interviews, surveys or tickets. Get themes ranked by how often they come up, with quotes.
+- [Retention problem fixer](https://useaiblocks.com/skills/retention-problem-fixer): Describe why users drop off. Get the cause found and fixes to onboarding and habits. Uses behavior design.
+- [Shared want hook mapper](https://useaiblocks.com/skills/shared-want-hook-mapper): Describe your product and its buyers. Get the one want they share, its smaller parts and a hook for each.
+- [Smallest audience picker](https://useaiblocks.com/skills/smallest-audience-picker): Paste who you serve now and who you could serve. Get the smallest group worth serving and what would delight them.
+- [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover): Paste your switch story map. Get the habits and worries ranked, a fix for each and one small change to test first.
+- [Switch story mapper](https://useaiblocks.com/skills/switch-story-mapper): Paste interview notes from recent buyers. Get each buying story mapped, the four forces marked and the patterns across them.
+- [Trust barrier fixer](https://useaiblocks.com/skills/trust-barrier-fixer): Give it your message and audience. Get the doubts they hold and the proof and claim strength that settle them.
+- [Turn reviews into ad copy in your brand voice](https://useaiblocks.com/workflows/review-ad-copy): Give it customer reviews and your brand file. Get a buyer brief, an ad angle, fact-based ad copy and a voice check.
+- [User persona and path mapper](https://useaiblocks.com/skills/user-persona-and-path-mapper): Give it your research notes. Get personas, a path map and a usability test plan.
+- [User research planner](https://useaiblocks.com/skills/user-research-planner): Say what you need to learn. Get the right research method, a plan and a way to store what you find.
+- [Weekly customer learning planner](https://useaiblocks.com/skills/weekly-customer-learning-planner): Describe your product goal. Get an opportunity tree, risky assumptions to test and a weekly customer contact routine.
+- [Write your customers' job and name its real rivals](https://useaiblocks.com/workflows/job-statement-rivals): Give it what you sell and who buys. Get places to look, the job as a situation and your real rivals.

@@ -1,0 +1,25 @@
+slug: investment-results-review
+name: "Review your investments by business results, not price"
+summary: "Give it your holdings. Get each judged on business results, a short ranked list with sizes and rules for sitting still."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: [holdings-results-review, lifetime-punch-card-bet-ranker, sit-still-rule-writer, price-drop-rules-writer]
+steps:
+  - {uses: holdings-results-review, note: "Sorts every holding by business results with the price kept out of it."}
+  - {uses: lifetime-punch-card-bet-ranker, note: "Turns the results review into a short ranked list with sizes, using your best holding as the bar."}
+  - {uses: sit-still-rule-writer, note: "A one-page holding rule set with the cost of acting and the only reasons to change a holding."}
+  - {uses: price-drop-rules-writer, note: "Fixes your rules before the next drop, so you do not decide in the middle of one."}
+origin: rebuilt
+version: 1.0.0
+minds: [warren-buffett, charlie-munger]
+credits:
+  - {title: "The Warren Buffett Way (Second Edition)", by: "Robert G. Hagstrom", used: "The order of the steps: judge each holding by its business results, rank them and cut the list, write the rules for sitting still, write your rules for price drops"}
+generated_from: intake/buffett-way-focus-portfolio/skeleton.yaml

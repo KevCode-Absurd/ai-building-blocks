@@ -45,7 +45,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Add honest limits and deadlines.** Use the skill `honest-scarcity-and-urgency-planner`. Real limits and dates, with the lines to say them.
+1. **Add honest limits and deadlines.** Use the skill `honest-urgency-planner`. Real limits and dates, with the lines to say them.
 2. **Build the bonus stack.** Use the skill `bonus-stack-builder`. Give it the plan from the steps before. Named bonuses, each answering one doubt, with a value and proof.
 3. **Design the guarantee.** Use the skill `guarantee-designer`. Give it the offer and the plan from the steps before. A guarantee that fits your costs, with the refund math and a name.
 4. **Name the offer.** Use the skill `offer-name-writer`. Give it the offer from the steps before. Names to test and a plan for renaming when the offer tires.

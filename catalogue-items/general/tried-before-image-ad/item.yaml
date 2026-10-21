@@ -1,0 +1,31 @@
+slug: tried-before-image-ad
+renamed_from: tried-before-products-image-ad-maker
+name: "Tried-before products image ad maker"
+summary: "Paste your story ad. Get an image prompt of what your buyer gave up on, and its caption."
+category: general
+boards: [ecommerce]
+type: skill
+role: render
+job: image
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: image_prompt}
+uses: [image-style-picker-for-story-ads]
+example: native
+origin: own
+source_ids: [CES-075]
+old_name: worn-object
+version: 2.0.0
+credits:
+  - {title: "Forces Friday: Pull and Anxiety", by: "Bob Moesta and Chris Spiek, JTBD Radio", url: "https://jobstobedone.org/radio/pull-and-anxiety/", used: "The old things as the habit made visible"}
+  - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The stop check: unexpected and relevant together"}
+  - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "About 27 characters for the line under the picture"}
+tested:
+  on: 2026-10-20
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

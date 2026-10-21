@@ -1,0 +1,33 @@
+slug: internal-controls-testing
+renamed_from: internal-controls-testing-planner
+name: "Internal controls testing planner"
+summary: "Give it your key controls. Get a test plan, sample sizes and a way to rate any control gaps."
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/sox-compliance
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/sox-compliance
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: sox-compliance
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sox-compliance skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/sox-compliance
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

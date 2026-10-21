@@ -1,0 +1,25 @@
+slug: new-business-growth-needs
+name: "Work out what a new business needs to get huge"
+summary: "Name a business and a target size. Get the big choices, the sums behind the size and what to avoid."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [big-decisions-first-sorter, target-size-back-solver, buying-habit-stack-designer, incentive-checker, failure-first-plan-check]
+steps:
+  - {uses: big-decisions-first-sorter, note: "The few big choices that are already decided by the goal"}
+  - {uses: target-size-back-solver, note: "The sum that links the goal to buyers, volume, share and profit. Reads the big choices"}
+  - {uses: buying-habit-stack-designer, note: "How the product becomes a repeat habit, using many forces at once. Reads the sized plan"}
+  - {uses: incentive-checker, note: "Who you depend on and whether the deal pulls them the right way. Reads the plan"}
+  - {uses: failure-first-plan-check, note: "What to avoid, such as losing the name, a sudden big product change or earning envy"}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger]
+credits:
+  - {title: "Poor Charlie's Almanack", by: "Charles T. Munger, ed. Peter D. Kaufman", used: "The order of the steps: big decisions first sorter, target size back-solver, buying habit stack designer, incentive checker, failure-first plan check"}
+generated_from: intake/munger-invest-build-from-scratch/skeleton.yaml

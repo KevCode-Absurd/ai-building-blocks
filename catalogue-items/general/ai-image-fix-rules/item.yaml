@@ -1,0 +1,29 @@
+slug: ai-image-fix-rules
+renamed_from: ai-image-and-video-fix-rule-writer
+name: "AI image and video fix rule writer"
+summary: "Paste feedback on AI work. Get each fix as a reusable rule with a prompt line and a check line."
+category: general
+boards: [ecommerce]
+type: skill
+role: check
+job: image
+level: intermediate
+inputs:
+  - {type: feedback_notes, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: lessons_register}
+uses: []
+origin: own
+source_ids: [CES-025]
+old_name: creative-lessons
+version: 2.0.0
+credits:
+  - {title: "Postmortem Culture: Learning from Failure", by: "John Lunney and Sue Lueder, Google SRE Book", url: "https://sre.google/sre-book/postmortem-culture/", used: "Blame the process, not the person, and fix the cause"}
+  - {title: "The Checklist Manifesto: How to Get Things Right", by: "Atul Gawande", url: "https://atulgawande.com/book/the-checklist-manifesto/", used: "Keep the working list short, and retire items fixed elsewhere"}
+tested:
+  on: 2026-10-20
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

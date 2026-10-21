@@ -1,0 +1,91 @@
+new_slug: uncontested-market-space
+name: Find a space no rival holds and win buy-in
+summary: Paste your rivals and what buyers value. Get a white-space map, a one-line only-ness statement and a buy-in plan.
+job: plan-strategy
+thinking: high
+thinking_why: It compares many rivals and then has to write a line none of them can say. Give it your strongest model.
+headline: Find what only you do, say it in one line, and get your team behind it
+subhead: Paste your rivals and what buyers value. It grids the rivals against those features to show where nobody is strong. Then it writes one sentence on what only you do, tests it against each rival, and plans how to win over the people who must say yes.
+explain: |
+  Most brands end up fighting rivals on the same few features, in the same words. Then the team writes a position statement that any rival could also sign, and the idea gets stuck because nobody was brought along.
+
+  This workflow shows where nobody is strong before it writes a word. It grids your rivals against the features that decide the choice and marks the gaps. It then writes a sentence naming what only you do and swaps in each rival's name to see if they could say it too. Last, it plans the buy-in: a short story, a picture of life after the change, and a way to reach each person who can say yes. The ideas come from Marty Neumeier's book "The Brand Gap" and his later talks on zagging and buy-in.
+when:
+  - You need a brand position that rivals do not hold, and you can't see one.
+  - Your positioning line could fit three of your rivals and you want one only you can use.
+  - You have a good idea and need leaders or a team to back it.
+you_give:
+  - Your rivals, including those buyers might compare you with
+  - What buyers in your category value, in their words if you have them
+  - Your brand file, and what you love to do (optional)
+  - Customer reviews or quotes (optional)
+  - The people who can say yes or no to the idea, and what you know about each
+  - What you want them to do next
+you_get:
+  - A grid of rivals against the features that decide the choice
+  - The gaps nobody serves well, with evidence, and where to stop fighting
+  - A small, cheap test of the best gap
+  - Two or three versions of an only-ness sentence, with a rival swap test for each
+  - A plan through the four stages of buy-in, a story that fits in under two minutes, a vision picture and a pitch line for each person
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your rivals and what buyers value, plus your brand file if you have one. It works step by step and saves each result.
+  - Check the rival ratings against what you know before you build on the gaps.
+how_it_works:
+  - title: Maps the white space
+    text: Lists rivals as buyers see them, grids them against the features that drive the choice and marks the gaps nobody serves.
+  - title: Picks the gap
+    text: Picks gaps that match what you love and the risk you can take, and plans a small, cheap test of the best one.
+  - title: Writes the only-ness line
+    text: Takes the map and answers six prompts (what, how, who, where, why, when), then drafts the sentence naming what only you do.
+  - title: Swaps in each rival
+    text: Puts each named rival into the sentence. If it still fits a rival, it narrows the line and tries again.
+  - title: Plans the four stages
+    text: Takes the chosen line and names who will react in each of the four stages of buy-in, and what to say to each.
+  - title: Writes the story and picture
+    text: Writes a short story that carries the idea and a vision of life after the change, then orders the pitches with allies first.
+output_shape: |-
+  STEP 1: COMPETITOR WHITE SPACE MAP
+    Rivals as buyers see them: <rival> | why buyers compare | source
+    Features that drive success: <feature> | evidence buyers care
+    The grid: <feature> | <rival> strong / middle / weak / unknown | you
+    Gaps nobody serves: <gap> | evidence | fit with you
+    Where to stop fighting: <feature>
+    Small test: <what> | cost | how to undo
+
+  STEP 2: ONLY-NESS STATEMENT
+    The six prompts: what | how | who | where | why | when
+    Versions: 1 <sentence> | 2 <sentence> | 3 <sentence>
+    Rival swap test: <rival> into version <n> | could say it? yes/no
+    Chosen sentence: <sentence> | proof <where>
+
+  STEP 3: BUY-IN PLAN
+    The idea and the ask: <line> | <what you want them to do>
+    The four stages: stage <n> | what people say | who | our answer
+    Story (under two minutes) | vision picture | rough measures
+    Pitch order: <person> | why they need it | allies first
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Which rivals you list
+    how: List who buyers compare you with, including the cheap and the big. Leave out rivals you only admire.
+  - what: What buyers value
+    how: Use their words from reviews or calls. A feature that you value more than they do will point you at an empty space for good reason.
+  - what: The people who decide
+    how: Name them one by one, with what each cares about. "The leadership team" can't be pitched, but "Maria in finance" can.
+judge:
+  - The grid rates each rival on the features buyers use to choose, with evidence.
+  - Every gap shows evidence and why it fits you.
+  - The chosen sentence fails the swap test for every rival you named.
+  - The buy-in plan gives a different pitch to each person.
+  - No rival, quote or buyer is invented.
+test:
+  - Write your current position line and give it in. If a rival can say it too, the swap test should show that.
+  - Remove one feature from the buyer list and run again. The gaps should change in a way you can explain.
+  - Read the story to a colleague. They should be able to say what you want them to do next.
+improve:
+  - Save the chosen sentence in your brand file, so pages and ads use the same line.
+  - Add real customer quotes, so the gaps rest on their words.
+  - After the small test, bring back the result and re-run the grid.

@@ -15,10 +15,10 @@ This skill runs on its own. What's below makes the result better, but none of it
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your lessons**, made by the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-and-video-fix-rule-writer): what past ads taught you: what worked, what failed and why.
+- **Your lessons**, made by the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your lessons** with the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-and-video-fix-rule-writer). Bring your notes (optional). It uses your brand brain.
+1. **Your lessons** with the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand brain.
 2. This one.
 
 How to start:

@@ -51,7 +51,7 @@ The chosen function and why. The hidden state list. The comment to add. The pure
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Build it** with the [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-and-behaviour-change-splitter). It takes the plan.
+- **Build it** with the [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

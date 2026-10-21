@@ -118,6 +118,7 @@
   needs: "read your CRM, email and calendar"
   author: Anthropic
   author_url: https://github.com/anthropics
+  slug: customer-one-pager-deck
 "anthropics/knowledge-work-plugins:sales/skills/crm-hygiene-check":
   name: "CRM hygiene auditor"
   summary: "Give it your CRM deals. Get a fix list of missing fields, stale dates and stage mismatches. Changes nothing."
@@ -438,6 +439,7 @@
   outputs: [ { type: brief }, { type: plan } ]
   author: Anthropic
   author_url: https://github.com/anthropics
+  slug: campaign-brief-calendar
 "anthropics/knowledge-work-plugins:marketing/skills/competitive-brief":
   name: "Competitor messaging comparer"
   summary: "Name your rivals. Get a messaging and positioning comparison with content gaps. Reads public web pages."
@@ -476,6 +478,7 @@
   outputs: [ { type: document } ]
   author: Anthropic
   author_url: https://github.com/anthropics
+  slug: marketing-performance-report
 "anthropics/knowledge-work-plugins:marketing/skills/content-creation":
   skip: "Same job as Marketing content drafter (draft-content) in this folder, with more length but no new output."
 "anthropics/knowledge-work-plugins:marketing/skills/email-sequence":
@@ -596,6 +599,7 @@
   needs: "read and write files"
   author: Anthropic
   author_url: https://github.com/anthropics
+  slug: workplace-shorthand-memory
 "anthropics/knowledge-work-plugins:productivity/skills/start":
   skip: "Setup for the Anthropic productivity plugin and its dashboard only."
 "anthropics/knowledge-work-plugins:productivity/skills/update":
@@ -771,6 +775,7 @@
   needs: "run code"
   author: Anthropic
   author_url: https://github.com/anthropics
+  slug: single-cell-deep-learning
 "anthropics/knowledge-work-plugins:bio-research/skills/single-cell-rna-qc":
   name: "Single-cell RNA quality checker"
   summary: "Give it an h5ad or h5 file. Get low-quality cells filtered and plots showing data quality."

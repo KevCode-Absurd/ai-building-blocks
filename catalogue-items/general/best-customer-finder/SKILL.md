@@ -62,7 +62,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Understand your buyers** with the [Job spec writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
 - **Make image ads** with the [Feared outcome image ad maker](https://useaiblocks.com/skills/feared-outcome-image-ad-maker). It takes the brand brain.
 - **Make an offer people want** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It takes the brand brain.
-- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/learn-what-sells-from-50-different-image-ads). It takes the brand brain.
+- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/image-ad-test-learnings). It takes the brand brain.
 - **Make video ads** with the [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

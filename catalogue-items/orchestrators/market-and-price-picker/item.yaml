@@ -1,0 +1,30 @@
+slug: market-and-price-picker
+name: "Pick a market worth selling to and its price"
+summary: "Give it your offer and who might buy. Get the best narrow market and a price that fits what it is worth."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: offer}
+  - {type: plan}
+uses: [commodity-trap-checker, starving-crowd-market-scorer, niche-price-ladder-builder, pricing-decision-planner]
+steps:
+  - {uses: commodity-trap-checker, note: "Whether you are a commodity, what gives it away and where to break the comparison."}
+  - {uses: starving-crowd-market-scorer, note: "A scored list of markets and the one to commit to."}
+  - {uses: niche-price-ladder-builder, note: "The offer rewritten for narrower and narrower buyers, with a price for each."}
+  - {uses: pricing-decision-planner, note: "A price set from the value of the narrow market, with the reason it holds."}
+origin: rebuilt
+version: 1.0.0
+minds: [alex-hormozi]
+credits:
+  - {title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No", by: "Alex Hormozi", url: "https://shop.acquisition.com/products/100m-offers-hardcover", used: "The order of the steps: check whether buyers can compare you on price, score the markets you could serve, narrow the audience and price each level, set the price from the value"}
+generated_from: intake/hormozi-offers-market-and-price/skeleton.yaml

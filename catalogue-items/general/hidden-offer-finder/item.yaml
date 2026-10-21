@@ -13,7 +13,7 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: offer}
-uses: [offer-builder-that-answers-buyer-doubts]
+uses: [offer-builder]
 origin: own
 source_ids: [CES-079]
 old_name: offer-set

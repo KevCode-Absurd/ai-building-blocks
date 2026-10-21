@@ -1,0 +1,24 @@
+slug: idea-four-risks-check
+name: "Check an idea's four risks and rewrite your roadmap"
+summary: "Paste your product idea. Get its four risks rated and a feature list rewritten as problems with results to measure."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: [product-idea-risk-checker, outcome-based-roadmap]
+steps:
+  - {uses: product-idea-risk-checker, note: "The four risks rated and the cheapest test to run first"}
+  - {uses: outcome-based-roadmap, note: "A short list of problems to solve, each with a result to measure. Reads the plan from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [marty-cagan]
+credits:
+  - {title: "The Four Big Risks", by: "Marty Cagan", used: "The order of the steps: product idea risk checker, feature roadmap to outcomes rewriter"}
+generated_from: intake/marty-cagan-four-big-risks/skeleton.yaml

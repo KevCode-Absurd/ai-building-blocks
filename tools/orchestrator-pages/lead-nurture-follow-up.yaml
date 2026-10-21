@@ -1,0 +1,69 @@
+new_slug: lead-nurture-follow-up
+name: Offer useful information first and follow up with stalled leads
+summary: Give it your product and who has the costly problem. Get an information offer and follow-up emails for stalled leads.
+job: make-offer
+thinking: high
+thinking_why: It writes an offer and a message series that must give each person a real reason to reply. Give it your strongest model.
+headline: Offer useful information first and follow up with leads who stalled
+subhead: Give it your product and the people who have the costly problem. It picks one piece of useful information to offer in place of a pitch, and plans how replies are recorded and handled. Then it writes a series of follow-up emails for the leads who stopped before buying.
+explain: |
+  Many businesses lead with a sales pitch. Most of the people who see it are not ready to buy, so they do nothing, and the business never learns who they are. The few who do reply get a slow, vague answer, and the ones who stopped halfway hear nothing at all.
+
+  The steps fix both ends. First it names who has the costly problem and what it costs them, picks one piece of information they would ask for, and makes that the offer, with a clear step for replying and a plan to route each reply to a named person. Then it writes follow-up emails for people who came close and stopped, with a new reason in each message and a point to stop. The ideas come from The 10 Rules of Direct Response Marketing by Dan Kennedy.
+when:
+  - You want leads to raise their hand before you sell to them.
+  - People ask for your price or quote, then go quiet, and you have no plan for what comes next.
+  - Your ads or letters pitch straight away and bring in few replies.
+you_give:
+  - Your product or service, what it costs and what it does
+  - Who has the costly problem and what it costs them
+  - Who will handle replies and how often they can follow up (optional)
+  - Your offer terms and any real deadline
+  - What the leads who stopped did, and how far they got
+  - Reviews, replies or questions that show their doubts, word for word (optional)
+you_get:
+  - One information offer, named in the buyer's terms, and a short ad or letter that offers it
+  - A plan to record each reply, route it to a named person and count replies and sales by source
+  - A series of follow-up emails for stalled leads, each with a subject line, a next step and a new reason
+  - A send schedule, a stop rule and a plan for people who still do not respond
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your product and who has the costly problem. It builds the information offer and the reply plan.
+  - Say how far the stalled leads got, and add any doubts they gave in their own words. It writes the follow-up series.
+  - Check that your email tool follows the rules in your area on consent and unsubscribes before you send.
+how_it_works:
+  - title: Plan the information offer
+    text: Names who has the costly problem, picks the one piece of information they would ask for, and sets how a reply is recorded and routed.
+  - title: Write the follow-ups
+    text: Takes the offer from the step before, sorts stalled leads by how far they got, and writes emails that each give a new reason to act.
+output_shape: |-
+  STEP 1: INFORMATION OFFER
+    Who has the problem and what it costs | the one piece of information offered | what counts as a reply | short ad or letter | routing and counting plan
+
+  STEP 2: FOLLOW-UP EMAILS
+    Group each email is for | subject, body, one next step, new reason | send schedule | stop rule | link to a sale | plan for non-responders
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who you say has the costly problem
+    how: A narrow group with a clear cost makes a better offer. "Clinics that lose patients to no-shows" beats "small businesses".
+  - what: How far stalled leads got
+    how: Someone who opened a quote needs a different message from someone who only joined the list. Group them for it.
+  - what: Your real deadlines and limits
+    how: Only give deadlines you will keep. It will not invent urgency.
+judge:
+  - The offer is information the buyer would ask for, not a pitch in disguise.
+  - A reply is defined, recorded and handed to a named person with a time.
+  - Each email has one next step and a reason that is new, not a repeat.
+  - Every deadline and limit is one you gave it.
+  - There is a stop rule.
+test:
+  - Give it a product and see if the information offer is something you would really want if you had the problem.
+  - Read the follow-up emails in a row. No two should lean on the same reason.
+  - Send the first email to a friend who fits the group and ask if they know what to do next.
+improve:
+  - Add replies and questions from past leads to your brand file, so the follow-ups answer real doubts.
+  - After a few weeks, add which emails and which reply source led to sales, and run step 2 again with that in mind.
+  - Make the information offer into a short guide, checklist or recording that you can send at once.

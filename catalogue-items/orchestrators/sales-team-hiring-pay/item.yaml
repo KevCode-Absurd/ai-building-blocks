@@ -1,0 +1,26 @@
+slug: sales-team-hiring-pay
+name: "Hire, pay and measure a sales team on what works"
+summary: "Describe your sale and past hires. Get a hiring scorecard, a pay plan check and one early sign of customer success."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: lessons_register, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+uses: [sales-hiring-scorecard-builder, sales-pay-plan-checker, customer-success-signals]
+steps:
+  - {uses: sales-hiring-scorecard-builder, note: "A 1 to 10 scorecard with a test for each trait"}
+  - {uses: sales-pay-plan-checker, note: "What it rewards and ignores, plus one change to test. Reads the plan from the step before"}
+  - {uses: customer-success-signals, note: "One early sign of success: a percent, an action and a time limit. Reads the audit report from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [mark-roberge]
+credits:
+  - {title: "The Sales Acceleration Formula", by: "Mark Roberge", used: "The order of the steps: sales hiring scorecard builder, sales pay plan checker, customer success leading-sign definer"}
+generated_from: intake/sales-acceleration-formula/skeleton.yaml

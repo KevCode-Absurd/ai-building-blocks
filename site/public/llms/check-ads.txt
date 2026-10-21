@@ -1,0 +1,27 @@
+# Check ads before they go live: AI Blocks
+
+> 23 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker): Paste your ad, page or email. Get policy risks flagged for each platform, with safer rewrites.
+- [Ad distraction checker](https://useaiblocks.com/skills/ad-distraction-checker): Paste your ad and what ten viewers said it said. Get the playback count, what stole their attention and what to cut.
+- [Ad meaning test planner](https://useaiblocks.com/skills/ad-meaning-test-planner): Paste your ad and your audience groups. Get a simple test of whether each group reads it as you mean.
+- [Ad pull diagnoser](https://useaiblocks.com/skills/ad-pull-diagnoser): Paste an ad that gets few replies. Get causes ranked by likelihood and cost to fix, starting with the headline.
+- [Ad reading-flow checker](https://useaiblocks.com/skills/ad-reading-flow-checker): Paste or describe a print ad layout. Get notes on where the eye goes first, what to move and what to cut.
+- [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules): Paste feedback on AI work. Get each fix as a reusable rule with a prompt line and a check line.
+- [Anti-AI-slop copy editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor): Paste your copy. Get each machine-sounding line fixed, the full rewrite and a score out of 100.
+- [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor): Paste your ad and customer quotes. Get off-brand words fixed, claims untouched, and a score out of 100.
+- [Campaign fame checker](https://useaiblocks.com/skills/campaign-fame-checker): Paste your campaign plan or ad. Get it scored on four fame facets, with the weakest one and the first fix.
+- [Claim and proof matcher](https://useaiblocks.com/skills/claim-and-proof-matcher): Paste your ad or page and your proof. Get every claim paired with proof, the claims that outrun it, and fixes.
+- [Direct mail package reviewer](https://useaiblocks.com/skills/direct-mail-package-reviewer): Paste your mailing, envelope line and letter. Get a review of the envelope, offer, copy and look, with fixes.
+- [Find why an ad is not pulling and fix it](https://useaiblocks.com/workflows/ad-not-working-fix): Give it an ad that gets no replies. Get likely causes in order, a fixed version and a test to prove it.
+- [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker): Paste your finished ad. Get a pass or fail on its five jobs, a score out of 100 and ranked fixes.
+- [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker): Paste your headline and offer. Get whether it picks the right reader and promises a clear reward, with stronger versions.
+- [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker): Paste your ad and its image. Get a compliance score out of 100, every problem, and a fixed ad.
+- [Permission email audit](https://useaiblocks.com/skills/permission-email-audit): Paste your email list source and last ten messages. Get which contacts gave real permission and which messages earn it.
+- [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker): Attach your finished ad. Get stop-ship mistakes, each fix, a verdict and a score out of 100.
+- [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker): Paste finished copy and facts. Get ship, fix or rewrite, three fixes and a score out of 100.
+- [Slippery slide copy checker](https://useaiblocks.com/skills/slippery-slide-copy-checker): Paste your ad or page copy. Get each line marked for whether it pulls the reader to the next one.
+- [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker): Paste a video ad script or storyboard. Get a pass or fail on whether it still sells with the sound off.
+- [Telegram ad vetter](https://useaiblocks.com/skills/telegram-ad-vetter): Give it a channel and its price. Get a verdict on audience, fake followers and fair cost per thousand.
+- [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker): Paste an ad and your product facts. Get a pass or fail on whether its one claim is real, unique and strong.
+- [Winners and losers ad comparer](https://useaiblocks.com/skills/winners-and-losers-ad-comparer): Paste your ads with their replies. Get them ranked, a checklist of what differs and what your winners share.

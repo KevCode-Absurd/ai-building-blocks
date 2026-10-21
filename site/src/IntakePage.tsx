@@ -28,7 +28,7 @@ export default function IntakePage({ c, toast }: { c: Catalogue; toast: (m: stri
   };
   return (
     <main className="wrap bp-hero intake" data-testid="intake-page">
-      <p className="bp-kicker"><span className="kind">Intake</span><Link to="/skills/workflow-builder-from-a-long-source">How it works</Link></p>
+      <p className="bp-kicker"><span className="kind">Intake</span><Link to="/skills/long-source-to-workflow">How it works</Link></p>
       <h1 className="bp-h1">Turn a long article, video or book into a workflow you can run</h1>
       <p className="bp-sub">Paste the full text. You get a pack with your source, the steps to follow and the library's skills. Give it to your AI and it finds the method, checks the order with you, writes a skill for every step, then the workflow that runs them in order.</p>
 

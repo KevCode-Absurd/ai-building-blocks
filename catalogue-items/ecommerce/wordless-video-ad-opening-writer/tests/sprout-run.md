@@ -143,5 +143,5 @@ If you change something at one point, I'll redo the stages after it.
 1. Make the start and end frames from the image prompts in ChatGPT (GPT Image), Gemini (Nano Banana) or Higgsfield.
 2. Animate them with the clip prompt. You can use Higgsfield (Seedance, Kling or Veo, on paid credits) or Veo in the Gemini app on a paid Google AI plan. In Claude Code, I can send it with a video-service key.
 
-**Next:** check it before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), or plan on-screen text with the [On-screen text planner for video ads](https://useaiblocks.com/skills/on-screen-text-planner-for-video-ads). Or tell me your own next step.
+**Next:** check it before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), or plan on-screen text with the [On-screen text planner for video ads](https://useaiblocks.com/skills/video-ad-text-overlays). Or tell me your own next step.
 ```

@@ -1,0 +1,80 @@
+new_slug: first-impression-plan
+name: Make a strong first impression and build the relationship
+summary: Name who you are about to meet. Get a brief, a meeting plan, a memory card and an honest thank-you note.
+job: speak-and-persuade
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Meet someone new, be remembered well and keep the relationship going
+subhead: Tell it who you are about to meet and why. It reads what you can find about them, plans a meeting where they do most of the talking, turns your notes into a memory card with promises and dates, and writes an honest thank-you note.
+explain: |
+  Most people walk into a first meeting with their own pitch ready and nothing prepared about the other person. They talk about themselves, forget the name by the end and never follow up. The person leaves with no sense of being seen.
+
+  This workflow prepares the other half. It finds what the person cares about, picks two things you can honestly admire and writes one question only they can answer. It plans the first ten seconds, the questions, the listening and the close. After the meeting, it turns your rough notes into a card with the exact name, the facts they shared, your promises and the next touch. Then it writes a short, specific thank-you with no request in it. The order comes from the second part of Dale Carnegie's How to Win Friends and Influence People, on making people like you.
+when:
+  - You are about to meet a senior person, a new contact or a buyer.
+  - You go to events and forget most of the people you meet.
+  - You owe someone a follow-up and want it to be about them.
+you_give:
+  - The person's name and role, and why you are meeting
+  - Anything public about them, such as a site, talk or post (optional)
+  - Where and how long you will meet
+  - Your rough notes after the meeting, with the name as spelled and anything you promised
+you_get:
+  - A one-page brief on what they care about, the people around them and the one question only they can answer
+  - A meeting plan with their name, open questions, listening rules and a close
+  - A memory card with facts, promises with dates and the next touch
+  - A short thank-you note with one specific, true appreciation and no ask
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the person's name and why you are meeting. It plans the meeting and saves the result.
+  - Have the meeting. Write your notes within an hour, then bring them back to make the card and the note.
+how_it_works:
+  - title: Learns what they care about
+    text: Gathers public facts with their sources, ranks what they treasure, notes the people around them and picks two honest admirations.
+  - title: Plans how to get them talking
+    text: Plans the first ten seconds, writes open questions in three layers, sets listening rules and places two true appreciations.
+  - title: Writes the memory card
+    text: Fixes the exact name, records what they shared, lists promises with dates and sets the next touch with a reason about them.
+  - title: Writes the thank-you note
+    text: Picks one thing you truly valued, adds a detail only a listener would know and keeps any request out.
+output_shape: |-
+  STEP 1: THE BRIEF
+    What they care about | The people around them | Two honest admirations | The one question | The size of your ask
+
+  STEP 2: THE MEETING PLAN
+    The first ten seconds | Questions in three layers | Listening rules | Two appreciations | The close
+
+  STEP 3: THE MEMORY CARD
+    Name as spelled | What they shared | Promises with dates | Next touch | Dates for your calendar
+
+  STEP 4: THE THANK-YOU NOTE
+    The note | The detail used | Any ask moved to a later message
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: What you can paste about them
+    how: Paste their bio, a talk summary or recent posts. Real text gives better topics than a name alone.
+  - what: The time you have
+    how: Ten minutes at an event needs fewer questions than an hour at lunch. Say how long you will have.
+  - what: Your notes after the meeting
+    how: Include every detail, even small ones. The card keeps what matters and leaves out what is private.
+  - what: Your own voice
+    how: Paste a note you wrote and liked. The thank-you matches your length and words.
+judge:
+  - Every fact in the brief has a public source.
+  - Both admirations are specific and true.
+  - Their name is planned for the first ten seconds.
+  - The card has dates and owners for every promise.
+  - The note has one detail only a listener would know and makes no request.
+test:
+  - Run the first two steps on someone you know well. Check if the brief names what they love.
+  - Read the questions to a friend. See if they want to answer.
+  - Use the plan at a real meeting and note how much of the time the other person spoke.
+  - After the meeting, check that they remembered your name.
+improve:
+  - Add your own opening lines, so the first ten seconds sound like you.
+  - Add a monthly review of cards due for a touch.
+  - Keep the cards in one sheet, one row per person.
+  - Add fields that matter in your work, such as their other suppliers or budget cycle.

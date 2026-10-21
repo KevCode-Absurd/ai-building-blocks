@@ -1,0 +1,208 @@
+new_slug: motion-graphics-ad-script
+name: "Motion graphics video ad script writer"
+summary: "Paste your facts and offer. Get a motion-graphics video script and a sourced fact sheet."
+job: make-video-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
+
+headline: "Motion graphics video ad script writer"
+subhead: Give it your idea, product facts, brand colours and a product photo. It lists every fact with its source, then gives each shot one fact with a picture and move to suit it. You get a look card, a shot table and a cast note.
+
+explain: |
+  Graphic ads are good at what filmed ads find hard: what's inside, how many, what it costs, the steps to use it. They go wrong in two ways. Some cram icons, charts and a paragraph into one frame. Others show bars that don't match any real number, which is a claim you can't back.
+
+  This skill starts with a fact sheet. Every number, ingredient, step and price term gets its source, and anything without one stays off screen. Then each shot carries one fact, and the kind of fact picks the picture. A count becomes one big number. A list builds one item at a time. A result becomes bars drawn to scale from zero. The price holds still while it's read. Each line stays on screen long enough to read twice, and the full price terms always appear with the price.
+
+when:
+  - Your buyers already know the problem and want facts, contents or the offer.
+  - You have real figures (a study, a count, a spec) and want them shown clearly.
+  - You want a graphic video ad in your exact brand colours and fonts, built so no number comes out wrong.
+
+you_give:
+  - The selling idea, or a script you already have
+  - Your product facts, offer terms and approved claims
+  - Your colours, fonts and a clean product photo (attach it; your AI can see pictures)
+  - Who the ad is for and what stops them buying
+you_get:
+  - A look card (frame, colour jobs, type, product, motion)
+  - A fact sheet with the source of every number and term
+  - A shot table with narration, picture and move, exact words and hold times
+  - A cast note naming your product as the avatar, the voice and what never changes
+  - Any of its own checks the script still missed, one line each, or none
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts, offer terms, colours and fonts underneath.
+  - Add any figures you want charted, each with where it comes from.
+  - Say the length, such as "20 seconds", and who the ad is for.
+  - Check the fact sheet first. Every number on screen should be on it.
+  - Take the script and cast note to "Motion graphics video build planner". It takes it from there, with the product sheet, storyboard and the build in code.
+
+how_it_works:
+  - title: Checks it fits
+    text: Graphic ads suit buyers who want specifics. It says so if your buyer first needs to feel the problem.
+  - title: Lists the facts
+    text: Every number, ingredient, step and price term, each with its source. No source, no screen time.
+  - title: Fills in the look card
+    text: Your frame, colour jobs, two type sizes, the real product photo and one way of moving.
+  - title: One fact per shot
+    text: The kind of fact picks the picture. A count gets a big number, steps go in order, a result gets bars to scale.
+  - title: Keeps charts honest
+    text: Bars start at zero and match their numbers, with the source on screen. No named rivals.
+  - title: Writes words to read twice
+    text: One short line per shot, held long enough to read twice, with a note on how to build each shot.
+  - title: Writes the cast note
+    text: Your product is the avatar. The note names the cutout and views it needs, the narrator's voice and what never changes.
+
+output_shape: |
+  FIT  <does a graphic ad suit this buyer, in one line>
+
+  LOOK CARD
+  Frame: <shape, margins, areas kept empty>
+  Colour jobs: <background, shape colours, one highlight>
+  Type: <main line, label, small line, in your fonts>
+  Product: <photo cutout, shadow>  Motion: <one way in, one way out>
+
+  FACT SHEET
+  <fact> = <source>
+
+  # | Fact | Narration | Picture and move | On-screen text (characters) | Hold | Build note
+  1 | ... | "<line>" | <picture>, <move> | <text> (<n>) | <s> | <live text / wordless background>
+
+  NOTES
+  Inferred: <...>  Left out: <fact, and why>  MISSING: <...>
+
+  CAST NOTE  <the product as the avatar, views needed, voice, never change>
+
+  CHECKS MISSED  <one line per check missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: what's in one pack, and proof it's absorbed.
+    Buyer: knows Sprout, maybe from a store shelf. Worried gummies
+    are just sweets.
+    Colours: cream #FFF7DF, forest green #00582D, deep forest #002C17,
+    kelly green #007E40, sunflower yellow #FFCC2E.
+    Fonts: Work Sans bold (headings), Work Sans medium (body), DM Mono
+    (small uppercase tags).
+    Product: Sprout pouch (glossy deep green, yellow wordmark), clean
+    photo on file.
+    Approved: "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
+    in 1 pack. "Clinically tested for nutrient absorption": 2025 study,
+    12 weeks, 120 adults, vitamin C +40.1% (2.7x placebo).
+    Offer: $29.99 first order with text sign-up. "Renews at $49.99
+    each 4 weeks. Cancel anytime."
+    Video, 20 seconds, tall.
+  output: |
+    FIT  This buyer knows the brand and doubts what's inside. Facts
+    and contents answer that, so a graphic ad fits.
+
+    LOOK CARD
+    Frame: 9:16, 96 px side margins at 1080 wide; words in the upper
+      middle, product below; the top seventh, bottom third and right
+      edge stay empty of words
+    Colour jobs: cream #FFF7DF background; forest #00582D and deep
+      forest #002C17 for shapes and text; sunflower #FFCC2E as the
+      highlight, on one thing per shot
+    Type: main line Work Sans bold 96 px, label Work Sans medium
+      48 px, small line DM Mono 28 px uppercase
+    Product: the real pouch photo, cut out, one soft shadow beneath
+    Motion: rise in with ease out, drop out with ease in, 0.4 s each
+
+    FACT SHEET
+    60+ ingredients, 21 vitamins & minerals, 6g fiber = label claim
+    Vitamin C 2.7x placebo = 2025 study, 12 weeks, 120 adults
+    $29.99 first order with text sign-up = offer
+    Renews at $49.99 every 4 weeks, cancel anytime = offer terms
+
+    # | Fact | Narration | Picture and move | Text (characters) | Hold | Build
+    1 | none (opening) | "What's in one Sprout pack?" | pouch rises
+        into place | What's in one pack? (19) | 1.8 s | live text
+    2 | count | "Sixty-plus ingredients." | "60+" snaps in beside
+        the pouch, in sunflower | 60+ ingredients (15) | 1.5 s | live
+        text
+    3 | inside | "Twenty-one vitamins and minerals." | a second line
+        joins under the first | 21 vitamins & minerals (22) | 2.0 s |
+        live text
+    4 | inside | "And six grams of prebiotic fiber." | a third line
+        joins the stack | 6 g prebiotic fiber (19) | 1.8 s | live text
+    5 | measured result | "In a 12-week study, vitamin C in the
+        blood rose 2.7 times more than with placebo." | two bars grow
+        from one baseline; the Sprout bar 2.7 times the height of the
+        placebo bar, in sunflower | Vitamin C: 2.7x placebo (23) +
+        small line 2025 study, 12 weeks, 120 adults (32) | 4.2 s |
+        bars drawn in the editor from the numbers
+    6 | price and terms | "Your first order is $29.99 with text
+        sign-up." | pouch centred, nothing moves | $29.99 first order
+        (18) + with text sign-up (17) | 2.8 s | live text
+    7 | price and terms | "Then it's $49.99 every 4 weeks. Cancel
+        anytime." | held still | Then $49.99 every 4 weeks (25) +
+        Cancel anytime (14) | 3.1 s | live text
+
+    About 50 spoken words, about 20 seconds.
+
+    NOTES
+    Left out: the +40.1% figure. The study gives "2.7x placebo" as
+      the comparison, and one number per shot reads faster.
+    The renewal price gets its own shot, so $29.99 never looks like
+      the ongoing price.
+    Inferred: nothing. The three lines in shots 2 to 4 use the
+      label's words, not icons, so nothing reads as a new claim.
+
+    CAST NOTE  The pouch carries it: the product is the avatar, as the
+    front cutout in every shot. No person; this buyer wants facts, not
+    a face. Narrator: a clear, friendly adult voice, steady pace.
+    Never change: the cutout's shape and printing, and sunflower used
+    only as the highlight.
+
+tweaks:
+  - what: Want a still instead?
+    how: Use "Single image ad planner", which plans one designed image ad from the same facts.
+  - what: The kind of fact
+    how: Point at the fact you want to lead with (a count, the steps, a result, the offer). The table in step 4 picks its picture and move.
+  - what: How you'll build it
+    how: Say "editor" or "code" for live text in every shot, or "video model" to get wordless background prompts with the text set on top.
+  - what: Your figures
+    how: Paste them with sources. Without them it won't draw a chart, and it uses a plain shape with no scale instead.
+
+judge:
+  - Every number on screen is on the fact sheet, with a source.
+  - Each chart starts at zero and its bars match their numbers.
+  - Every shot has one fact and one on-screen line of about 30 characters or fewer.
+  - The look card names your real colours and fonts, with one highlight colour.
+  - The full price terms appear wherever the price does.
+
+test:
+  - Check the fact sheet against your product page and offer. Every line should match, word for word.
+  - Ask for a chart without giving the figure. It should drop the chart or mark it MISSING.
+  - Measure the bars in a chart shot. Their heights should keep the same ratio as the numbers.
+  - Read only the on-screen lines. Together they should make sense with the sound off.
+
+improve:
+  - Write your look card into step 3 of the skill file, so you don't rebuild it for every ad.
+  - Add your figures with sources to your brand file, so step 2 can fill the fact sheet without asking.
+  - Write your full offer terms into "What you need", including what the price renews at.
+  - Pair it with "Motion graphics video build planner", which runs the product sheet, storyboard and the build in code.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing the fact sheet and shot table from your facts works well in any strong chat AI."}
+    - {name: "Claude Code with Remotion", why: "Builds the ad in code, so every word, number and bar height comes out exactly as written."}
+  inputs:
+    - "Your product page copied in full, so the fact sheet uses its exact words"
+    - "The study or test summary behind any figure, so each chart has a source line"
+    - "A past ad in your brand style, so the look card matches what buyers know"
+    - "The words buyers use in reviews about what's inside, so the opening line asks their question"
+
+terms:
+  - term: Motion graphics
+    meaning: Flat shapes, numbers and text that move, with no filmed footage.
+  - term: Cutout
+    meaning: A photo of your product with the background removed.
+  - term: Look card
+    meaning: A short set of rules (frame, colours, type, product, motion) that every shot follows.
+  - term: Fact sheet
+    meaning: The list of every number and term the ad may show, each with its source.

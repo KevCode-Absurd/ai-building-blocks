@@ -49,7 +49,7 @@ The situation in four facts. The stance for each side with evidence. When each s
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Sell it** with the [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the question and plan.
-- **Lead the team** with the [Informed captain decision planner](https://useaiblocks.com/skills/informed-captain-decision-planner). It takes the plan and question.
+- **Lead the team** with the [Informed captain decision planner](https://useaiblocks.com/skills/informed-captain-decisions). It takes the plan and question.
 - **Say it to the room** with the [Bad news update writer](https://useaiblocks.com/skills/bad-news-update-writer). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

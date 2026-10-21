@@ -1,0 +1,25 @@
+slug: one-channel-plan
+name: "Pick the one way to reach customers and plan it"
+summary: "Give it your product and price. Get one sales route, a plan for it and a pitch for hires."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: offer, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+uses: [sales-route-picker, sales-route-plan-builder, reason-to-join-pitch-writer]
+steps:
+  - {uses: sales-route-picker, note: "One route, picked from the value and cost of a customer, and why not the others."}
+  - {uses: sales-route-plan-builder, note: "The first ninety days of the chosen route, with who does what and the number to watch."}
+  - {uses: reason-to-join-pitch-writer, note: "A pitch to the people you need to hire, built on mission and team rather than perks."}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "The order of the steps: pick the sales route from the numbers, plan the route, write the reason to join"}
+generated_from: intake/zero-to-one-first-customers/skeleton.yaml

@@ -1,0 +1,92 @@
+new_slug: pivot-or-persevere
+name: Measure real progress and decide to pivot or persevere
+summary: Paste your plan and your numbers. Get honest progress measures by customer group and a dated pivot or persevere call.
+job: plan-strategy
+thinking: high
+thinking_why: It compares groups, weighs cause against coincidence and makes a costly call. Give it your strongest model.
+headline: Tell if your work is moving the numbers, and decide whether to change course
+subhead: Paste your plan, then your results by join week or month. It finds your growth engine, sets dated milestones, turns totals into rates per customer group, checks which changes really moved a rate and makes a pivot or persevere call with a review date.
+explain: |
+  Early on, every total goes up and every team has a story about why. You cannot tell if your changes work, or whether growth comes from your work or from a source that was already running. Many teams find out too late.
+
+  This workflow follows the method Eric Ries calls innovation accounting. It starts with one growth engine and one rate to watch. It sets the starting rates, the target and dated milestones, with predictions written first. After a test, it turns totals into rates for each group of customers and asks of each change whether a comparison group backed it. It ends with a call to keep going or change course, backed by the evidence and a new guess to test.
+when:
+  - You have run a first test or launched, and your totals are rising but you cannot say why.
+  - You made many changes and no rate moved.
+  - Your team is split between one more try and a change of direction.
+you_give:
+  - Your plan, with the figures you hope for
+  - "After a test, results by join week or month for each step of the customer path"
+  - Dates of each change you released (optional)
+  - Notes from customers, including those who left (optional)
+  - Money and time left (optional)
+you_get:
+  - Your growth engine, the one rate that drives it and a sum showing where you stand
+  - A chain of hoped-for rates, starting rates to measure and dated milestones with predictions
+  - Per-group rates in place of totals, and which changes were proven or unproven
+  - A keep going or change course call with facts for and against, the kind of change and a dated review
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Start with the plan. It sets the milestones first, then tells you when to run the test and bring back results.
+  - Hold the review on the date it gives, with the people it lists.
+how_it_works:
+  - title: Picks the growth engine
+    text: Decides whether growth comes from keeping, referral or paid customers, does the sum with your figures and names the one rate to watch.
+  - title: Sets milestones
+    text: Writes the hoped-for rates, the test that gives true starting figures, one target rate per change and three dated milestones with predictions.
+  - title: Turns totals into rates
+    text: Marks the numbers that only grow and swaps them for per-customer rates split by group and release.
+  - title: Reads the groups
+    text: Puts each customer group in its own row, checks which changes moved which rates and tests whether the report can be trusted.
+  - title: Makes the call
+    text: Counts the signs of being stuck, works out how many test cycles are left and says pivot or persevere, with the kind of change and a review date.
+output_shape: |-
+  STEP 1: THE ENGINE
+    Engine | the sum with your figures | verdict | the one rate to watch
+
+  STEP 2: MILESTONES
+    Rate chain | starting test | changes tied to rates
+    Baseline, tune, decide: dates and predictions
+
+  STEP 3: RATES, NOT TOTALS
+    Vanity numbers | rates per group | one main number
+
+  STEP 4: READING THE GROUPS
+    Group table | moves against targets | changes proven or unproven
+    Actionable, accessible, auditable | next split test
+
+  STEP 5: THE CALL
+    Stuck signs | runway in test cycles | PERSEVERE or PIVOT
+    Kind of pivot | new guess | next review
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Counts by join date
+    how: Real counts for each step of the customer path let the later steps work in shares, not totals.
+  - what: Your hoped-for figures
+    how: Paste your forecast. Milestones carry your targets, not placeholders.
+  - what: Notes from customers who left
+    how: They often explain what the numbers cannot. The last step weighs them.
+judge:
+  - Every rate is a share of people, not a running total.
+  - Each change is labelled proven, with a comparison group, or unproven.
+  - Predictions were written before the results came in.
+  - The call shows facts for and against, and what would change it.
+  - A review date and attendees are named.
+test:
+  - Run it on a past venture whose outcome you know. See if the call would have been right.
+  - Run it on a quiet period. It should find no cause rather than invent one.
+  - Run the final step twice on the same facts. The call should not change.
+improve:
+  - Keep your predictions and results side by side, and rerun the workflow after each decision.
+  - Add your own funnel steps and reporting dates so the milestones fit your calendar.
+  - Add the warning signs you learned from past stalled projects to the stuck-sign list.
+terms:
+  - term: Growth engine
+    meaning: "How your growth really works: customers who stay, customers who bring others, or customers you pay to win."
+  - term: Cohort
+    meaning: A group of customers who joined in the same period.
+  - term: Pivot
+    meaning: A planned change to the product, customer, price or growth route that tests a new guess.

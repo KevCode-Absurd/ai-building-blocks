@@ -9,7 +9,7 @@ const arg = (k, d) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ?
 const BASE = arg("base", "http://localhost:4173");
 const WORKERS = Number(arg("workers", 8));
 const ONLY = arg("only", "");
-const urls = [...fs.readFileSync("public/sitemap.xml", "utf8").matchAll(/<loc>https:\/\/useaiblocks\.com([^<]*)<\/loc>/g)].map((m) => m[1] || "/")
+const urls = [...fs.readdirSync("public").filter((f) => /^sitemap-.*.xml$/.test(f)).map((f) => fs.readFileSync(`public/${f}`, "utf8")).join("").matchAll(/<loc>https:\/\/useaiblocks\.com([^<]*)<\/loc>/g)].map((m) => m[1] || "/")
   .filter((u) => !ONLY || u.startsWith(`/${ONLY}`));
 
 // Same browser as the tests: the installed Chrome (PW_CHANNEL= for Playwright's own Chromium).
@@ -37,7 +37,9 @@ async function worker(queue) {
       const wide = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
       if (wide > 1) errors.push(`sideways scroll: ${wide}px`);
       const h1 = (await page.textContent("h1"))?.trim();
-      if (!h1 || /not found|doesn't exist/i.test(h1)) errors.push(`heading: "${h1}"`);
+      if (!h1 || /not found|doesn.t exist/i.test(h1)) errors.push(`heading: "${h1}"`);
+      if (await page.locator("[data-prerendered]").count()) errors.push("first screen for search engines was not replaced");
+      if (await page.locator("h1").count() > 1) errors.push("more than one h1");
     } catch (e) { errors.push(`load: ${e.message.split("\n")[0]}`); }
     const ms = Date.now() - start;
     slowest.push([ms, u]); slowest = slowest.sort((a, b) => b[0] - a[0]).slice(0, 8);

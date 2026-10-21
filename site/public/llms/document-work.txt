@@ -1,0 +1,24 @@
+# Write down how work gets done: AI Blocks
+
+> 20 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Analysis assumptions logger](https://useaiblocks.com/skills/analysis-assumptions-logger): Tell it about your analysis. Get every assumption logged with its risk, so reviewers see what could change the answer.
+- [Analysis write-up builder](https://useaiblocks.com/skills/analysis-write-up-builder): Give it your finished analysis. Get a write-up with the question, data, method, results and steps to rerun it.
+- [Board minutes drafter](https://useaiblocks.com/skills/board-minutes-drafter): Give it a meeting agenda and notes. Get draft board or committee minutes in a proper format. Have a lawyer check them.
+- [Change request writer](https://useaiblocks.com/skills/change-request-writer): Describe a system or process change. Get a change request with impact, risks, rollback steps and who to tell.
+- [Clinical report draft checker](https://useaiblocks.com/skills/clinical-report-draft-checker): Give it de-identified case or trial data. Get a structured report draft and checks for gaps.
+- [Column mapping document writer](https://useaiblocks.com/skills/column-mapping-document-writer): Give it your source and target tables. Get a column-by-column map with rules, gaps and decisions to review.
+- [Company wiki planner](https://useaiblocks.com/skills/company-wiki-planner): Describe your business. Get the smallest useful process wiki set-up, with a register of each process.
+- [Data catalog entry writer](https://useaiblocks.com/skills/data-catalog-entry-writer): Give it a table and its owner. Get a plain entry with column meanings, quality notes, sources and who may use it.
+- [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer): Give it your product or draft docs. Get clear developer documentation that follows Google's style guide.
+- [Documentation system planner](https://useaiblocks.com/skills/documentation-system-planner): Describe your team and product. Get what to write down, where it lives and how to keep it fresh.
+- [Lab method validation planner](https://useaiblocks.com/skills/lab-method-validation-planner): Name the lab test method and rules. Get a validation plan, acceptance limits and a write-up ready for review.
+- [Method explainer](https://useaiblocks.com/skills/method-explainer): Tell it how you did your analysis and who reads it. Get a plain how-we-did-this section with limits.
+- [Metric definition writer](https://useaiblocks.com/skills/metric-definition-writer): Tell it how a metric is worked out. Get one agreed definition as checked YAML your team can reuse.
+- [On-call runbook writer](https://useaiblocks.com/skills/on-call-runbook-writer): Describe a service or process. Get a step-by-step runbook that anyone on call can follow under pressure.
+- [Plain-words SQL explainer](https://useaiblocks.com/skills/plain-words-sql-explainer): Paste a SQL query. Get what it counts, which rows it keeps and what each column means, in plain words.
+- [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer): Describe how work gets done. Get a flowchart, who does what, and a written procedure with the edge cases.
+- [Repeat task step guide writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer): Name a repeat task. Get exact steps, fixes if it fails, how to roll back and who to call.
+- [Ship-ready docs writer](https://useaiblocks.com/skills/ship-ready-docs-writer): Point it at an AI-built app. Get the short set of docs a reviewer needs: architecture, permissions, secrets and test map.
+- [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker): Give it your SOPs or wiki export. Get missing owners, stale pages and gaps, plus new SOPs to fix them.
+- [Status report writer](https://useaiblocks.com/skills/status-report-writer): Give it your project updates. Get a weekly or monthly report with status, risks and decisions needed.

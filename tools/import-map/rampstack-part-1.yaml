@@ -1,25 +1,25 @@
 # rampstackco/claude-skills, skills folder, chunk 1 of 2 (MIT, RampStack)
 
-"rampstackco/claude-skills:skills/accessibility-audit": {skip: "Same job as the accessibility auditor and WCAG fixer skills we already list."}
-"rampstackco/claude-skills:skills/after-action-report": {skip: "Same job in the same form as our failure and incident postmortem writers."}
-"rampstackco/claude-skills:skills/brand-identity": {skip: "Same job as our logo and brand kit designer, which covers logo, colour and type."}
-"rampstackco/claude-skills:skills/chatbot-flow-design": {skip: "Same job as our chatbot conversation designer."}
-"rampstackco/claude-skills:skills/code-review-web": {skip: "Same job as the many code review skills we already list."}
-"rampstackco/claude-skills:skills/content-and-copy": {skip: "Thin general writing skill that repeats our blog post and copy skills."}
-"rampstackco/claude-skills:skills/content-strategy": {skip: "Same job as our content strategy planner and content topic planner."}
-"rampstackco/claude-skills:skills/analytics-strategy": {skip: "Same job as our tracking plan builder and KPI dashboard designer."}
-"rampstackco/claude-skills:skills/email-sequences": {skip: "Same job as our email sequence writer, which already covers welcome, nurture and win-back flows."}
-"rampstackco/claude-skills:skills/cost-optimization": {skip: "Same job as our cloud bill waste finder and software spend auditor."}
-"rampstackco/claude-skills:skills/creative-brief-selector": {skip: "Built to work with the repo's own other skills and its own demo builds, so it does not stand alone."}
-"rampstackco/claude-skills:skills/cro-optimization": {skip: "Repeats our experiment designer and landing page auditor skills."}
-"rampstackco/claude-skills:skills/dependency-management": {skip: "Same job as our dependency risk auditor."}
-"rampstackco/claude-skills:skills/design-system": {skip: "Same job as our design system auditor and design system file writer."}
-"rampstackco/claude-skills:skills/experiment-design": {skip: "Same job as our experiment designer and product experiment designer."}
-"rampstackco/claude-skills:skills/experimentation-analytics": {skip: "Same job as our experiment result analyst and A/B test verdict maker."}
-"rampstackco/claude-skills:skills/feature-flagging": {skip: "Same job as our feature flag planner."}
-"rampstackco/claude-skills:skills/frontend-component-build": {skip: "Same job as our interface builder and accessible UI builder."}
-"rampstackco/claude-skills:skills/incident-response": {skip: "Same job as our outage incident leader and incident runbook writer."}
-"rampstackco/claude-skills:skills/information-architecture": {skip: "Same job as our site map planner."}
+"rampstackco/claude-skills:skills/accessibility-audit": { skip: "Same job as the accessibility auditor and WCAG fixer skills we already list." }
+"rampstackco/claude-skills:skills/after-action-report": { skip: "Same job in the same form as our failure and incident postmortem writers." }
+"rampstackco/claude-skills:skills/brand-identity": { skip: "Same job as our logo and brand kit designer, which covers logo, colour and type." }
+"rampstackco/claude-skills:skills/chatbot-flow-design": { skip: "Same job as our chatbot conversation designer." }
+"rampstackco/claude-skills:skills/code-review-web": { skip: "Same job as the many code review skills we already list." }
+"rampstackco/claude-skills:skills/content-and-copy": { skip: "Thin general writing skill that repeats our blog post and copy skills." }
+"rampstackco/claude-skills:skills/content-strategy": { skip: "Same job as our content strategy planner and content topic planner." }
+"rampstackco/claude-skills:skills/analytics-strategy": { skip: "Same job as our tracking plan builder and KPI dashboard designer." }
+"rampstackco/claude-skills:skills/email-sequences": { skip: "Same job as our email sequence writer, which already covers welcome, nurture and win-back flows." }
+"rampstackco/claude-skills:skills/cost-optimization": { skip: "Same job as our cloud bill waste finder and software spend auditor." }
+"rampstackco/claude-skills:skills/creative-brief-selector": { skip: "Built to work with the repo's own other skills and its own demo builds, so it does not stand alone." }
+"rampstackco/claude-skills:skills/cro-optimization": { skip: "Repeats our experiment designer and landing page auditor skills." }
+"rampstackco/claude-skills:skills/dependency-management": { skip: "Same job as our dependency risk auditor." }
+"rampstackco/claude-skills:skills/design-system": { skip: "Same job as our design system auditor and design system file writer." }
+"rampstackco/claude-skills:skills/experiment-design": { skip: "Same job as our experiment designer and product experiment designer." }
+"rampstackco/claude-skills:skills/experimentation-analytics": { skip: "Same job as our experiment result analyst and A/B test verdict maker." }
+"rampstackco/claude-skills:skills/feature-flagging": { skip: "Same job as our feature flag planner." }
+"rampstackco/claude-skills:skills/frontend-component-build": { skip: "Same job as our interface builder and accessible UI builder." }
+"rampstackco/claude-skills:skills/incident-response": { skip: "Same job as our outage incident leader and incident runbook writer." }
+"rampstackco/claude-skills:skills/information-architecture": { skip: "Same job as our site map planner." }
 
 "rampstackco/claude-skills:skills/ads-creative-development":
   name: Ad creative variation planner
@@ -29,8 +29,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It plans many ad variations and a test order.
-  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
-  outputs: [{type: hooks}, {type: plan}]
+  inputs: [ { type: brand_brain, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: hooks }, { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/ads-performance-analytics":
@@ -41,8 +41,8 @@
   level: advanced
   thinking: high
   thinking_why: It weighs biased numbers against each other before advising.
-  inputs: [{type: performance_sheet, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/ai-content-collaboration":
@@ -53,8 +53,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It sets rules for a workflow from your answers.
-  inputs: [{type: brand_guide, required: false}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brand_guide, required: false } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/art-direction":
@@ -65,8 +65,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It turns a brand look into a clear brief for others.
-  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
-  outputs: [{type: brief}]
+  inputs: [ { type: brand_brain, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: brief } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/backup-and-disaster-recovery":
@@ -77,8 +77,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It sets recovery targets and checks for gaps.
-  inputs: [{type: codebase, required: false}]
-  outputs: [{type: plan}]
+  inputs: [ { type: codebase, required: false } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/beta-program-management":
@@ -89,8 +89,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It plans a beta and sets the exit rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/brand-archetype-system":
@@ -101,8 +101,8 @@
   level: beginner
   thinking: low
   thinking_why: It picks from a set of ready starting points.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/brand-discovery":
@@ -113,8 +113,8 @@
   level: intermediate
   thinking: high
   thinking_why: It weighs the market and picks positions to explore.
-  inputs: [{type: competitor_set, required: false}, {type: voc_reviews, required: false}]
-  outputs: [{type: brief}]
+  inputs: [ { type: competitor_set, required: false }, { type: voc_reviews, required: false } ]
+  outputs: [ { type: brief } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/brand-ideation":
@@ -125,8 +125,8 @@
   level: beginner
   thinking: medium
   thinking_why: It makes many ideas, then narrows them.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: brief}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: brief } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/brand-style-guide":
@@ -137,8 +137,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It organises a finished identity into a reference.
-  inputs: [{type: brand_brain, required: false}, {type: design_direction, required: false}]
-  outputs: [{type: brand_guide}]
+  inputs: [ { type: brand_brain, required: false }, { type: design_direction, required: false } ]
+  outputs: [ { type: brand_guide } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/brand-voice":
@@ -149,8 +149,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It turns a brand sound into rules with examples.
-  inputs: [{type: copy_draft, required: false}, {type: brand_brain, required: false}]
-  outputs: [{type: brand_guide}]
+  inputs: [ { type: copy_draft, required: false }, { type: brand_brain, required: false } ]
+  outputs: [ { type: brand_guide } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/calculator-design":
@@ -161,8 +161,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It plans inputs, results and lead capture together.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/comparison-tool-design":
@@ -173,8 +173,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It chooses what to compare and how to guide the choice.
-  inputs: [{type: product_data, required: true}]
-  outputs: [{type: page_layout_spec}]
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: page_layout_spec } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/competitor-experience-audit":
@@ -185,11 +185,12 @@
   level: intermediate
   thinking: high
   thinking_why: It compares many sites and finds patterns.
-  inputs: [{type: competitor_set, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: competitor_set, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: "open web pages in a browser"
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
+  slug: competitor-site-audit
 "rampstackco/claude-skills:skills/content-brief-authoring":
   name: Content brief writer
   summary: Give it a topic and keyword. Get a brief with search intent, outline, key terms and links, ready for a writer.
@@ -198,8 +199,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It combines search intent and audience into an outline.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: brief}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: brief } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/content-distribution":
@@ -210,8 +211,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It matches content types to channels.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/content-migration":
@@ -222,8 +223,8 @@
   level: advanced
   thinking: high
   thinking_why: A bad move can lose traffic, so it checks each step.
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/content-refresh-system":
@@ -234,8 +235,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It scores pages and applies decision rules.
-  inputs: [{type: web_page, required: true}, {type: performance_sheet, required: false}]
-  outputs: [{type: plan}]
+  inputs: [ { type: web_page, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/content-repurposing":
@@ -246,8 +247,8 @@
   level: beginner
   thinking: medium
   thinking_why: It rewrites one source for many formats.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: copy_draft}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/creative-brief":
@@ -258,8 +259,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a standard brief from your answers.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: brief}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: brief } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/creative-direction":
@@ -270,8 +271,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It turns taste answers into usable design rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: design_direction}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/data-warehouse-experimentation":
@@ -282,8 +283,8 @@
   level: expert
   thinking: high
   thinking_why: It needs careful statistics and SQL.
-  inputs: [{type: performance_sheet, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: plan } ]
   needs: "run code and query your data warehouse"
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
@@ -295,8 +296,8 @@
   level: intermediate
   thinking: low
   thinking_why: It runs a fixed list of design checks.
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/discovery-research-synthesis":
@@ -307,8 +308,8 @@
   level: intermediate
   thinking: high
   thinking_why: It groups raw notes into themes and decisions.
-  inputs: [{type: voc_reviews, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: audit_report } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/dispatch-authoring":
@@ -319,8 +320,8 @@
   level: advanced
   thinking: medium
   thinking_why: It writes strict instructions an agent can run alone.
-  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
-  outputs: [{type: brief}]
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: brief } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/documentation-strategy":
@@ -331,8 +332,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It plans a doc system from your needs.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/domain-strategy":
@@ -343,8 +344,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It sets a layout where small mistakes break sites.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/editorial-qa":
@@ -355,8 +356,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It reviews a draft against many fixed checks.
-  inputs: [{type: copy_draft, required: true}, {type: brief, required: false}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: copy_draft, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/email-deliverability":
@@ -367,8 +368,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows set steps but needs your setup details.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/evidence-based-reviews":
@@ -379,8 +380,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It must sort real evidence from guesses.
-  inputs: [{type: product_data, required: true}, {type: voc_reviews, required: false}]
-  outputs: [{type: copy_draft}]
+  inputs: [ { type: product_data, required: true }, { type: voc_reviews, required: false } ]
+  outputs: [ { type: copy_draft } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/experimentation-platform-orchestrator":
@@ -391,8 +392,8 @@
   level: advanced
   thinking: medium
   thinking_why: It compares tools against your needs.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/feature-launch-playbook":
@@ -403,8 +404,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It covers many teams and sets rollback rules.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/form-strategy":
@@ -415,8 +416,8 @@
   level: beginner
   thinking: low
   thinking_why: It applies known form patterns.
-  inputs: [{type: web_page, required: false}]
-  outputs: [{type: plan}]
+  inputs: [ { type: web_page, required: false } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills
 "rampstackco/claude-skills:skills/funnel-flow-architecture":
@@ -427,7 +428,7 @@
   level: advanced
   thinking: high
   thinking_why: It links many tools into one path matched to the buyer.
-  inputs: [{type: persona, required: false}, {type: offer, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: persona, required: false }, { type: offer, required: true } ]
+  outputs: [ { type: plan } ]
   author: RampStack
   author_url: https://github.com/rampstackco/claude-skills

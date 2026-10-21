@@ -122,7 +122,7 @@ SCORE     <passed> of <all> checks = <score> out of 100
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Study competitor ads** with the [Video script writer from a competitor ad idea](https://useaiblocks.com/skills/video-script-writer-from-a-competitor-ad-idea). It takes the ad breakdowns and buyer brief.
+- **Study competitor ads** with the [Video script writer from a competitor ad idea](https://useaiblocks.com/skills/competitor-idea-video-script). It takes the ad breakdowns and buyer brief.
 - **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
 - **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
 - **Make video ads** with the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.

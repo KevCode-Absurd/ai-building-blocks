@@ -95,7 +95,7 @@ export default {
     [{ text: `Prices are each lab's standard rate, checked in ${CHECKED_WORDS}. You can change any price under "Prices per million tokens".` }],
   ],
   next: [
-    { slug: "ai-image-and-video-fix-rule-writer", why: "Cut repeat runs by keeping a record of what went wrong last time." },
+    { slug: "ai-image-fix-rules", why: "Cut repeat runs by keeping a record of what went wrong last time." },
     { slug: "old-vs-new-ad-prompt-scorer", why: "Check a cheaper model or a shorter prompt still does the job, before you switch." },
   ],
   sources: [

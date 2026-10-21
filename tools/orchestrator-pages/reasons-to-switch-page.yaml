@@ -1,0 +1,130 @@
+new_slug: reasons-to-switch-page
+name: "Get a reasons-to-switch page that answers doubts"
+summary: "Give it a buyer's doubt and your costs. Get an offer, a reasons-to-switch page and the doubts it still leaves open."
+job: write-landing-page
+
+headline: "A page that gives buyers reasons to switch and answers their doubts"
+subhead: Give it one buyer's doubt and your product facts. It builds an offer that answers the doubt, writes a page of 3 to 7 reasons to switch, finds the doubts the page still misses, then audits it and ranks the fixes.
+
+explain: |
+  Buyers who already use something else won't move because your page says you're better. They move when the page gives them specific reasons, answers the doubt that has kept them where they are, and makes the offer easy to say yes to.
+
+  This workflow starts by building an offer around one doubt, such as "what if it doesn't work for me", with a profit check so you don't give away the margin. It then writes a page of 3 to 7 reasons to switch, each with its proof beside it, the offer once after the reasons, and a questions section. Next it compares the page with your customers' real questions and lists each one the page still doesn't answer. Last, it audits the page the way a stranger reads it and ranks the fixes, quick wins first.
+
+when:
+  - Your buyers already use a rival or an old habit and your page doesn't say why they should move.
+  - Buyers keep asking the same question before they buy and your page doesn't answer it.
+  - You want an offer and a page made together, so the page carries an offer that answers the doubt.
+
+you_give:
+  - The buyer and their biggest doubt, in their words
+  - Your product facts and what the offer costs you
+  - Customer questions or reviews, copied as written
+  - Your brand file, if you have one (optional)
+
+you_get:
+  - An offer that answers the doubt, its wording and a profit check
+  - A page with 3 to 7 reasons to switch, proof beside each, and three headline options
+  - A list of doubts the page still leaves open, with the answer to add and where
+  - A ranked list of fixes, quick wins first, and a score out of 100
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your buyer's doubt, your product facts, your costs, and real customer questions if you have them.
+  - It works step by step and saves each result. Check the offer first, including the profit check. The page carries it from then on.
+  - Add the answers from step 3 to the page, then work through the fixes from step 4.
+
+how_it_works:
+  - title: Builds the offer
+    text: Uses the offer builder skill to put the buyer's doubt on one lever, build the offer, check the profit and word it.
+  - title: Writes the page
+    text: Uses the reasons-to-switch skill to pin the buyer and the old way, choose 3 to 7 reasons, put proof under each and place the offer once.
+  - title: Finds open doubts
+    text: Uses the unanswered question skill to check each customer doubt against the page and say where each missing answer goes.
+  - title: Audits the page
+    text: Uses the landing page auditor to read the page as a glance, a skim and a doubt, check phone basics and rank the fixes.
+
+output_shape: |
+  OFFER
+  Buyer: <who> | Doubt: <in their words> | Offer: <what, price, terms> | Profit check: <result>
+
+  PAGE
+  Headlines: <three options>
+  Reason 1: <reason> | Proof: <fact or review>
+  ...
+  Offer: <wording, once> | Questions: <doubts, answered>
+
+  OPEN DOUBTS
+  <doubt> (<how often>) | Missing: <answer or proof> | Add at: <section>
+
+  AUDIT
+  Score: <n>/100 | Quick wins: <fixes> | Bigger fixes: <fixes>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+    Buyer: the price doubter. Doubt: "Will the price jump after the first order?"
+    Product facts: first box $29.99, then $49.99 every 4 weeks, 30-day money-back guarantee, first order only.
+    Reviews: reviews.md
+  output: |
+    OFFER
+    Doubt: price jump | Offer: first box $29.99, renewal price shown before checkout | Profit check: margin stays above your floor
+    
+    PAGE
+    Reason 1: you see the renewal price before you pay | Proof: the cost block
+    Reason 2: cancel from your account | Proof: MISSING, the cancel steps
+    
+    OPEN DOUBTS
+    "How do I cancel?" (5 reviews) | Missing: steps | Add at: before the last button
+    
+    AUDIT
+    Score: 71/100 | Quick win: add the renewal price to the first screen
+
+tweaks:
+  - what: What buyers use now
+    how: Name the rival or habit buyers would be leaving. The page then argues against that, not against nothing.
+  - what: Number of reasons
+    how: Say "three" for a short page or "seven" for a long one. The default is the number the evidence supports.
+  - what: Offer limits
+    how: Give your margin floor and any discount you won't go below. The offer step stays inside it.
+  - what: A page you already have
+    how: Paste your current page and ask step 4 to audit that too, so you can compare the two.
+
+judge:
+  - The offer answers one named doubt and passes its profit check.
+  - Each reason has a fact or review beside it. Check three.
+  - The offer appears once, after the reasons, with every condition stated.
+  - Each open doubt names a customer question and the section where its answer goes.
+  - Every fix in the audit quotes the page line it comes from.
+
+test:
+  - Read each reason out loud and ask "says who?". Each should point to a proof on the page.
+  - Take three customer questions and find each answer on the page.
+  - Check that the offer's price and terms match what you put in.
+  - Run the page against your current one for a week with the same traffic.
+
+improve:
+  - In the builder, drop step 1 if you already have an offer you trust.
+  - Add a step at the end that writes the ad that points to the page.
+  - Swap step 4 for the 30-point checker if you want yes-or-no checks at each stop a buyer makes.
+  - Pair it with the workflow that finds where a page loses buyers, once the page has live traffic.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds the offer terms, the reasons and the doubts straight across four steps."}
+    - {name: "PageSpeed Insights", why: "Free Google check of a built page for phone speed and tap target problems."}
+  inputs:
+    - "Support tickets or pre-sale questions, to find real doubts"
+    - "Your costs per order, so the profit check is honest"
+    - "Screenshots of the current page on a phone"
+
+terms:
+  - term: Landing page
+    meaning: The page someone lands on after clicking an ad or a link.
+  - term: Offer
+    meaning: What the buyer gets, for what price, on what terms.

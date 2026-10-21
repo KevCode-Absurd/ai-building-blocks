@@ -1,0 +1,213 @@
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
+new_slug: 3d-explainer-video-script
+name: "3D how-it-works video ad script writer"
+summary: "Paste how it works. Get a timed 3D explainer video script and a cast note."
+job: make-video-ads
+
+headline: "3D how-it-works video ad script writer"
+subhead: Give it how your product works, with a source for each step. It checks the process is hidden, true and worth teaching, then scripts a narrated 3D film that dives in from an everyday moment. You get a timed script, a cast note and any check it missed.
+
+explain: |
+  Some products do their work out of sight. A fiber feeds the bacteria in your gut, a coating bakes onto hot steel, a weave pulls sweat away from skin. A short 3D film can show that, and people will watch it the way they watch a good science clip. It's also where ads overclaim most easily, because a picture of damage disappearing says more than any line of copy.
+
+  This skill tests the process first. It must be hidden from a camera, true at every step, and worth learning even without your brand name. Then it writes the process as a chain of 2 to 4 links and marks each one as sourced, common knowledge or unsupported. The film has four parts: the everyday moment, one dive down to where it happens, the chain one link at a time, and back up to the same moment. Your product is named at the link where it acts, and each part of the process keeps one colour all the way through.
+
+when:
+  - Your product's main benefit happens out of sight, and buyers doubt it does anything.
+  - You have a sourced fact about how it works that a normal ad can't show.
+  - You want a script your 3D video tool can follow, with every part in one fixed colour.
+
+you_give:
+  - Your selling idea
+  - How the product works, step by step, each step with a source
+  - Your approved and banned claims, and what buyers assume
+  - The length (optional)
+you_get:
+  - The three tests, passed or failed, with a reason each
+  - The chain, with every link marked and any dropped chains explained
+  - A parts key giving each part one colour and shape
+  - A timed script with narration, picture and on-screen text for every line, and a cast note
+  - Any of the skill's six checks it couldn't meet, one line each
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste how your product works, step by step, with the source of each step (label, study, test report).
+  - Paste your approved and banned claims. This format lives or dies on them.
+  - Say the length, such as "30 seconds".
+  - Read the tests and the chain first. If a test fails, use a different format rather than stretch the claim.
+  - Take the script and cast note to "3D how-it-works video clip prompt writer". It takes it from there, with the avatar, sheets, storyboard and clips.
+
+how_it_works:
+  - title: Runs three tests
+    text: Hidden from a camera, true at every link, and worth teaching even with your brand name taken out.
+  - title: Writes the chain
+    text: The process as 2 to 4 links, each marked sourced, common knowledge or unsupported. One link is what gets in the way, one is where your product acts.
+  - title: Sets honesty rules
+    text: Your approved verbs only, no picture that shows more than its line, and numbers only with a source.
+  - title: Makes a parts key
+    text: Each part of the process gets one plain name, one colour and one shape for the whole film.
+  - title: Writes four parts
+    text: The everyday moment, the dive, the chain one link at a time, then back up to the same moment, about 4 seconds a link.
+  - title: Writes the cast note
+    text: Often your product or its active part is the avatar. The note says why, names the narrator's voice and what never changes.
+
+output_shape: |
+  TESTS
+  Hidden:  <pass/fail, why>
+  True:    <pass/fail, why>
+  Teaches: <pass/fail, why>
+
+  CHAIN  <this> meets <that>, <that happens>, so you get <this>
+  Links: <each one marked sourced / common knowledge / unsupported>
+  Dropped: <other chains, and the test each failed>
+
+  PARTS KEY  <part = colour and shape, for each actor>
+  HONESTY    <verbs, pictures and numbers to avoid>
+
+  Part | seconds | narration | picture | on-screen text
+  Surface | 4 | "<line>" | <human size> | <1-3 words>
+  Dive    | 4 | "<says the size>" | <one move down> | <...>
+  Link 1..n (snag, then product) | 4 each | ...
+  Surface again | 4-5 | ... | <same moment, product in hand> | <offer>
+
+  SKETCH  <the chain as four boxes a viewer could draw>
+  NOTES   <inferred links to confirm, claims left out>
+  CAST NOTE  <what carries it, why, voice, what never changes>
+  CHECKS MISSED  <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Idea: answer "Does a gummy even do anything?" for the gut-fix
+    seeker (brand file).
+    Facts (sprout/brand.md):
+    - 1 pack: 60+ ingredients, 21 vitamins & minerals, 6 g prebiotic
+      fiber (a branded fiber blend, inulin listed). Label.
+    - Study, 2025: 12 weeks, randomized, double-blind,
+      placebo-controlled, 120 healthy adults. Blood vitamin C up
+      40.1%, folate up 20.5%. Science page.
+    - Approved: "Supports digestion and gut health". "Clinically
+      tested for nutrient absorption", with the study named.
+    - Risky: "61% of Americans experience weekly digestive issues"
+      (footnote only says "Source").
+    - Reviews: people quit gritty, chalky powders.
+    - Use: tear a daily pack straight across the top.
+    Offer: $29.99 first order with text sign-up, renews at $49.99
+    every 4 weeks.
+    Settings: video, 30 seconds.
+  output: |
+    TESTS
+    Hidden:  pass. Bacteria feeding on fiber can't be filmed.
+    True:    pass, with one link for the brand to confirm (below).
+    Teaches: pass. "Gut bacteria feed on fiber" is worth knowing
+             with the brand name taken out.
+
+    CHAIN  6 g prebiotic fiber meets the bacteria already in your
+    gut, they feed on it, so it supports digestion.
+    Links: bacteria feed on prebiotic fiber (common knowledge, brand
+    to confirm); no fiber arrives when the powder stays shut (snag,
+    from reviews of quit powders); 6 g per pack (label); "supports
+    digestion and gut health" (approved).
+    Dropped: vitamin C absorption. It fails "teaches": the only new
+    fact is the brand's own study result.
+
+    PARTS KEY  gut bacteria = small soft blue spheres. Prebiotic
+    fiber = thin yellow strands. The gut = a plain cream tube, never
+    anatomy.
+    HONESTY  Say "supports digestion", never "fixes bloating". Leave
+    out the "61%" figure, it has no source. Nothing about energy or
+    immunity. Supplements have claim rules, so the brand reads the
+    script before any picture is made.
+
+    Part | s | narration | picture | on-screen text
+    Surface | 4 | "Breakfast at seven. But who else is eating?" |
+      a stylised woman at a sunny kitchen table, coffee in hand | -
+    Dive | 4 | "Now smaller than a grain of salt, inside you." |
+      one smooth move down into the cream tube | Smaller than salt
+    Link 1 | 4 | "Tiny bacteria live here, and they feed on fiber." |
+      blue spheres resting along the tube wall | Gut bacteria
+    Link 2, snag | 4 | "No fiber arrives when the powder stays shut." |
+      the same spheres, still, nothing drifting in | No fiber
+    Link 3, product | 4 | "Sprout brings six grams of prebiotic
+      fiber, food for them." | yellow strands drift in from above |
+      6 g prebiotic fiber
+    Link 4 | 4 | "They feed, and that supports digestion and gut
+      health." | blue spheres gather on the strands, calm |
+      Supports digestion
+    Surface again | 5 | "Same morning. One pack, torn open on your
+      way." | the woman at the front door tears a daily pack
+      straight across the top, the real pouch on the side table |
+      $29.99 first order with text sign-up. Renews at $49.99 every
+      4 weeks.
+
+    29 seconds, 62 words.
+
+    SKETCH  bacteria waiting > no fiber from the shut tub > the pack
+    brings 6 g fiber > they feed, digestion supported.
+
+    NOTES
+    - Inferred: "bacteria feed on prebiotic fiber" is textbook level.
+      Ask the brand to confirm it before the script goes further.
+    - Left out: the vitamin C study (another ad), folate, the 61%
+      figure, energy and immunity.
+
+    CAST NOTE  The fiber carries it: the yellow strands are the
+    avatar, with the blue bacteria as the supporting cast. The woman
+    appears only at human size, silent. The gut-fix seeker wants to
+    see what the fiber does, not a face. Narrator: calm, warm adult
+    voice, about 2.5 words a second. Never change: each part's colour,
+    shape and name from the parts key.
+
+tweaks:
+  - what: Want a still instead?
+    how: Use "3D cutaway image ad maker", which makes one cutaway image ad with this same parts key.
+  - what: Length
+    how: Each link adds about 4 seconds. A 2-link chain makes a 20-second film. A 4-link chain fills about 30 to 40.
+  - what: The opening moment
+    how: Name a moment your buyer knows (the gym bag, the school run) and the surface shots are built around it.
+  - what: Your sources
+    how: Add a source for any link marked "common knowledge, brand to confirm". It turns sourced, and more chains may pass.
+
+judge:
+  - Every link in the chain is marked sourced or common knowledge, never assumed.
+  - Your product's name first appears at its own link, not in the opening.
+  - Every part keeps the same name, colour and shape in every line.
+  - No picture shows a body part, damage or result your facts don't name.
+  - Each line fits its seconds when you read it aloud at a calm pace.
+
+test:
+  - Give it a product whose result you can watch happen, such as a spray that lifts a stain. It should say a filmed demo suits it better.
+  - Check every link and number against its source.
+  - Read the script to someone who doesn't know the product, then ask them to draw it in four boxes. Their boxes should match the sketch line.
+  - Time it aloud. If a line runs past its seconds, it needs cutting.
+
+improve:
+  - Write how your product works as a sourced chain into "What you need" in the skill file, so step 2 starts from your facts.
+  - Add your approved verbs and banned words to step 3, for example "supports" yes, "repairs" no.
+  - Save the parts key in your brand file, so every explainer uses the same colours and names.
+  - Pair it with "3D how-it-works video clip prompt writer", which runs the avatar, sheets, storyboard and clips.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Follows long skill files closely and keeps each link tied to the source you gave it."}
+    - {name: "ElevenLabs", why: "Reads your draft aloud in a steady voice, so you can time each line before paying for pictures."}
+  inputs:
+    - "The study or test report itself, not just its headline number, so each link can name its real source and study size"
+    - "Photos of the product from the front, the side and in use, so the closing shot matches the real thing"
+    - "Three or four buyer phrases about what they think happens inside, so the opening question uses their words"
+    - "Your claims reviewer's list of allowed and banned words, so the verbs pass the first time"
+
+terms:
+  - term: Chain
+    meaning: How something works, written as 2 to 4 linked steps. This meets that, that happens, so you get this.
+  - term: Common knowledge
+    meaning: Something a school textbook would say, so it doesn't need the brand's own source.
+  - term: Parts key
+    meaning: A list giving each part of the process one name, colour and shape, kept the same in every shot.
+  - term: Cutaway
+    meaning: A picture that slices through something to show what's happening inside it.
+  - term: Placebo-controlled
+    meaning: A study where some people got a dummy version, so the real effect can be compared against it.

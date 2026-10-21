@@ -32,6 +32,7 @@
   inputs: [ { type: spreadsheet, required: true } ]
   outputs: [ { type: plan } ]
   needs: run code
+  slug: truck-loading-planner
 "kishorkukreja/awesome-supply-chain:skills/load-building-optimization":
   name: Truck load builder
   summary: Give it your orders and truck sizes. Get orders grouped into full truck loads that cost less to ship.
@@ -65,6 +66,7 @@
   inputs: [ { type: spreadsheet, required: true } ]
   outputs: [ { type: plan } ]
   needs: run code
+  slug: delivery-route-planner
 "kishorkukreja/awesome-supply-chain:skills/multi-depot-vrp":
   name: Multi-warehouse route planner
   summary: Give it your warehouses and stops. Get which warehouse serves each stop and the route for every truck.
@@ -253,6 +255,7 @@
   thinking_why: It matches your business to the right rules.
   inputs: [ { type: document, required: false } ]
   outputs: [ { type: audit_report } ]
+  slug: trade-compliance-checklist
 "kishorkukreja/awesome-supply-chain:skills/contract-management":
   name: Supplier contract manager
   summary: Give it your supplier deals. Get a renewal calendar, terms to push for and a way to track broken promises.
@@ -345,6 +348,7 @@
   thinking_why: It ranks spend by category and supplier.
   inputs: [ { type: spreadsheet, required: false } ]
   outputs: [ { type: plan } ]
+  slug: hotel-restaurant-buying
 "kishorkukreja/awesome-supply-chain:skills/hotel-inventory-management":
   name: Hotel room pricing planner
   summary: Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
@@ -385,6 +389,7 @@
   thinking_why: It weighs supply risk across many parts.
   inputs: [ { type: spreadsheet, required: true } ]
   outputs: [ { type: plan } ]
+  slug: electronics-parts-sourcing
 "kishorkukreja/awesome-supply-chain:skills/aerospace-supply-chain":
   skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
 "kishorkukreja/awesome-supply-chain:skills/automotive-supply-chain":

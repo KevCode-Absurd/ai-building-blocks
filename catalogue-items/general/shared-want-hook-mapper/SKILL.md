@@ -62,7 +62,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
 - **Understand your buyers** with the [Dominant emotion finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the buying reasons.
+- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
 - **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

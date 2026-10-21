@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Fixes depend on your site platform and which customer details you can send.
+new_slug: meta-pixel-capi-fix
+name: Meta pixel and server events fixer
+summary: Give it your site and Meta pixel. Get a tracking audit, a match quality score and step-by-step fixes for your platform.
+job: track-numbers
+headline: Meta pixel and server events fixer
+subhead: Give it your site and Meta pixel. Get a tracking audit, a match quality score and step-by-step fixes for your platform.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run shell scripts and use your own Meta access token. Test events go to Meta only when you ask.

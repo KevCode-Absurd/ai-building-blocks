@@ -191,6 +191,7 @@
   thinking_why: It follows set steps but picks channels to fit your business.
   inputs: [ { type: product_data, required: true } ]
   outputs: [ { type: plan } ]
+  slug: 90-day-marketing-plan
 "nexscope-ai/eCommerce-Skills:ecommerce-social-media-marketing":
   skip: Our platform-native content planner already builds the monthly calendar by platform, and the rest is generic outline.
 "nexscope-ai/eCommerce-Skills:ecommerce-content-marketing":

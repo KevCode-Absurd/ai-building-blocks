@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It weighs supply risk across many parts.
+new_slug: electronics-parts-sourcing
+name: Electronics parts sourcing planner
+summary: Give it your parts list. Get a plan for scarce parts, long lead times and leftover stock.
+job: plan-supply-chain
+headline: Electronics parts sourcing planner
+subhead: Give it your parts list. Get a plan for scarce parts, long lead times and leftover stock.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

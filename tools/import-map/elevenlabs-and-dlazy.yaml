@@ -418,6 +418,7 @@
   outputs: [ { type: script }, { type: video_ads, required: true } ]
   author: dLazy
   author_url: https://github.com/dlazy-ai
+  slug: creator-testimonial-video
 "dlazy-ai/ecommerce-skills:skills/remove-watermark":
   skip: "Removes watermarks, logos and text from any picture. It can be used to strip someone else's mark, so we skip it."
 "dlazy-ai/ecommerce-skills:skills/clothing-extraction":

@@ -1,0 +1,27 @@
+slug: image-ad-test-plan
+name: "Plan image ad tests from the ads you already run"
+summary: "Give it your running image ads. Get the gaps in them, a test brief, image ad copy and scored opening lines."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: static_ads, required: true}
+  - {type: brand_brain, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: competitor_set, required: false}
+  - {type: audit_report, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: hooks}
+uses: [image-ad-gap-finder, ad-test-brief-writer, image-ad-copy-writer, ad-first-line-writer-and-scorer]
+steps:
+  - {uses: image-ad-gap-finder, note: "Maps what your image ads already cover and picks up to three new tests."}
+  - {uses: ad-test-brief-writer, note: "Turns the gap cards into a brief with three ideas and three versions each."}
+  - {uses: image-ad-copy-writer, note: "Writes headline and text for each version in the brief."}
+  - {uses: ad-first-line-writer-and-scorer, note: "Writes and scores opening lines for the same ideas, so you start the test with the strongest."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-plan-image-ad-tests-from-the-ads-you-already-run/skeleton.yaml

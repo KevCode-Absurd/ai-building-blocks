@@ -1,0 +1,34 @@
+slug: single-cell-rna-pipeline
+renamed_from: single-cell-rna-analysis-pipeline
+name: "Single-cell RNA analysis pipeline"
+summary: "Give it single-cell counts. Get cleaned data, cell clusters, marker genes and plots from start to finish."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/scanpy
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scanpy
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: scanpy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scanpy skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scanpy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

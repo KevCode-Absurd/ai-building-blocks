@@ -1,0 +1,24 @@
+slug: video-ad-format-picker
+renamed_from: video-format-picker-for-ad-scripts
+name: "Video format picker for ad scripts"
+summary: "Paste a finished script. Get formats ranked by fit score out of 100, plus the skills to use."
+category: general
+type: skill
+role: check
+job: video
+level: intermediate
+inputs:
+  - {type: script, required: true}
+outputs:
+  - {type: plan}
+uses: [video-ad-script-line-checker]
+origin: own
+source_ids: [CES-131]
+old_name: script-surfaces
+version: 2.1.0
+tested:
+  on: 2026-10-20
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-sonnet-5-5
+  result: pass

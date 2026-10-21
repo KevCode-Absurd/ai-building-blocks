@@ -1,0 +1,26 @@
+slug: four-filter-decision
+name: "Put a deal, hire or purchase through four filters"
+summary: "Describe a deal, hire or purchase. Get it tested on knowledge, staying power, people and price, then a clear call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [circle-of-competence-mapper, staying-power-checker, people-trust-checker, price-against-value-checker, failure-first-plan-check, yes-no-too-hard-call-writer]
+steps:
+  - {uses: circle-of-competence-mapper, note: "What you know, half know and don't, and a verdict. The first filter"}
+  - {uses: staying-power-checker, note: "What protects it for ten years, what could break it, and a grade. The second filter. Reads the first result"}
+  - {uses: people-trust-checker, note: "How able, honest, reliable and owner-minded they are, and what to verify. The third filter"}
+  - {uses: price-against-value-checker, note: "A value range, a walk-away price and the alternative to beat. The fourth filter. Not personal financial advice"}
+  - {uses: failure-first-plan-check, note: "The ways it could fail, with changes. Reads the price plan from the step before"}
+  - {uses: yes-no-too-hard-call-writer, note: "A yes, no or too-hard call, the size of the commitment and what would change it"}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "The order of the steps: do you understand it?, will it last?, can you trust the people?, is the price right?, turn it upside down, make the call"}
+generated_from: intake/munger-models-four-filters/skeleton.yaml

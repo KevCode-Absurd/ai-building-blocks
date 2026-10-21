@@ -1,0 +1,36 @@
+slug: competitor-social-research
+renamed_from: competitor-social-strategy-researcher
+name: "Competitor social strategy researcher"
+summary: "Name your competitors. Get what content works for them, the gaps, and a short social plan. Collects data from websites."
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:ScrapeCreators
+source:
+  by: ScrapeCreators
+  repo: ScrapeCreators/social-media-research-skills
+  path: skills/competitor-social-research
+  url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/competitor-social-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: 64ba7b4
+  original_name: competitor-social-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competitor-social-research skill
+    by: ScrapeCreators
+    url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/competitor-social-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

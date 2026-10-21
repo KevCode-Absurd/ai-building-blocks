@@ -314,6 +314,7 @@
   thinking_why: Audit work follows strict rules.
   inputs: [ { type: question, required: true } ]
   outputs: [ { type: document }, { type: spreadsheet } ]
+  slug: control-testing-workpaper
 "anthropics/knowledge-work-plugins:finance/skills/variance-analysis":
   name: Budget variance explainer
   summary: Give it actual and budget numbers. Get what moved, why, and a short note for leadership.

@@ -61,8 +61,8 @@ A proof map with one row per claim: claim, likely doubt, strongest proof, its ki
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the ad copy** with the [Typed headline batch writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/image-ad-maker-from-customer-quotes). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the buying reasons.
+- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
+- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
 - **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
 - **Make an offer people want** with the [Delivery option generator](https://useaiblocks.com/skills/delivery-option-generator). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

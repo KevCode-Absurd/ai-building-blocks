@@ -7,8 +7,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It must spot assumptions the writer cannot see."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "GarethManning/education-agent-skills:skills/global-cross-cultural-pedagogies/culturally-responsive-teaching-designer":
   name: "Culturally responsive lesson rewriter"
   summary: "Paste a lesson and describe your learners. Get a rewrite that draws on their backgrounds, communities and lived experience."
@@ -17,8 +17,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It reworks a lesson around who is in the room."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]
+  slug: culturally-responsive-lesson
 "GarethManning/education-agent-skills:skills/global-cross-cultural-pedagogies/emergent-project-design-scaffold":
   name: "Child-led project planner"
   summary: "Describe what young children keep asking about. Get a project plan that follows their interests into deeper inquiry."
@@ -27,8 +28,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It turns loose observations into a workable plan."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/global-cross-cultural-pedagogies/phenomenon-based-unit-anchor":
   name: "Real-world phenomenon unit planner"
   summary: "Name a real event or puzzle. Get a unit plan that uses several subjects to explain it."
@@ -37,8 +38,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It links subjects around one real-world question."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: phenomenon-unit-planner
 "GarethManning/education-agent-skills:skills/global-cross-cultural-pedagogies/place-based-inquiry-anchor":
   name: "Local place lesson planner"
   summary: "Name a place near your learners. Get lessons that tie your content to that place, its community and its heritage."
@@ -47,8 +49,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It matches set content to a local setting."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/global-cross-cultural-pedagogies/reggio-documentation-protocol":
   name: "Learning documentation planner"
   summary: "Describe a class activity. Get a way to record children's learning, share it with families and plan next steps."
@@ -57,8 +59,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It sets up a record-keeping routine that fits the setting."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/global-cross-cultural-pedagogies/ubuntu-collective-knowledge-task-designer":
   name: "Group knowledge-building task designer"
   summary: "Give it a topic. Get a group task where learners build knowledge together and share responsibility for the result."
@@ -67,8 +69,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It shapes group roles so cooperation is real."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: group-knowledge-task
 "GarethManning/education-agent-skills:skills/global-cross-cultural-pedagogies/variation-theory-task-designer":
   name: "Confusing concept contrast task designer"
   summary: "Name two ideas your learners mix up. Get a task of contrasting examples that shows what sets them apart."
@@ -77,8 +80,9 @@
   level: intermediate
   thinking: high
   thinking_why: "Choosing the right contrasts takes careful thought."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: concept-contrast-task
 "GarethManning/education-agent-skills:skills/historical-thinking/central-historical-question-evaluator":
   name: "History inquiry question checker"
   summary: "Paste your main history question. Get a verdict on whether it drives real inquiry, with sharper rewrites."
@@ -87,8 +91,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It weighs a question against what it will draw out."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
 "GarethManning/education-agent-skills:skills/historical-thinking/close-reading-skill-builder":
   name: "Close reading lesson builder for history"
   summary: "Give it a history source. Get a lesson series that teaches learners to read word choice, tone and bias."
@@ -97,8 +101,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It sequences practice steps for a hard skill."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: history-close-reading
 "GarethManning/education-agent-skills:skills/historical-thinking/contextualisation-skill-builder":
   name: "Historical context lesson builder"
   summary: "Give it a source and its period. Get a lesson series that teaches learners to use the time and place as evidence."
@@ -107,8 +112,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It sequences practice steps for a hard skill."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: historical-context-lesson
 "GarethManning/education-agent-skills:skills/historical-thinking/corroboration-skill-builder":
   name: "Compare history sources lesson builder"
   summary: "Give it two or more accounts. Get a lesson series that teaches learners to find agreement, conflict and gaps."
@@ -117,8 +123,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It sequences practice steps for a hard skill."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: compare-sources-lesson
 "GarethManning/education-agent-skills:skills/historical-thinking/document-based-lesson-designer":
   name: "Primary source history lesson planner"
   summary: "Give it a topic and sources. Get a full lesson where learners investigate a historical question from documents."
@@ -127,8 +134,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It follows a set lesson structure with your content."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: primary-source-lesson
 "GarethManning/education-agent-skills:skills/historical-thinking/historical-document-set-curator":
   name: "History source set picker"
   summary: "Give it a history question. Get a chosen, ordered set of sources that pull in different directions."
@@ -137,8 +145,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "Picking sources that create useful tension takes judgment."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/historical-thinking/historical-source-adapter":
   name: "History source simplifier"
   summary: "Paste a primary source and the learners' age. Get a shorter, simpler version that keeps what they need to analyse."
@@ -147,8 +155,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It must simplify without losing the key features."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: source_text}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: source_text } ]
 "GarethManning/education-agent-skills:skills/historical-thinking/historical-thinking-assessment-designer":
   name: "History thinking quiz designer"
   summary: "Say which history skills you teach. Get short checks that show how your learners source, read, place and compare evidence."
@@ -157,8 +165,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It matches checks to specific skills."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: question}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: question } ]
 "GarethManning/education-agent-skills:skills/historical-thinking/historical-thinking-strategy-modelling-guide":
   name: "History think-aloud script writer"
   summary: "Give it a source. Get a script for talking through your thinking so learners see how a historian reads."
@@ -167,8 +175,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It needs to show real reasoning, not steps."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: script}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: script } ]
+  slug: history-think-aloud
 "GarethManning/education-agent-skills:skills/historical-thinking/sourcing-skill-builder":
   name: "Check who wrote it lesson builder"
   summary: "Give it a history source. Get a lesson series that teaches learners to ask who wrote it, when and why."
@@ -177,8 +186,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It sequences practice steps for a hard skill."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: who-wrote-it-lesson
 "GarethManning/education-agent-skills:skills/inclusive-design/udl-barrier-anticipator":
   name: "Lesson barrier spotter"
   summary: "Paste a lesson and describe your class. Get likely barriers and which ones design can fix. It does not diagnose anyone."
@@ -187,8 +197,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It predicts problems from the task and class description."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "GarethManning/education-agent-skills:skills/inclusive-design/udl-lesson-auditor":
   name: "Accessible lesson auditor"
   summary: "Paste a lesson. Get a check against Universal Design for Learning, with fixes ranked by impact."
@@ -197,8 +207,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It reviews a whole lesson against three principles."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "GarethManning/education-agent-skills:skills/inclusive-design/udl-options-designer":
   name: "Learning options designer"
   summary: "Give it a learning goal. Get specific ways to engage learners, present content and let them show what they know."
@@ -207,8 +217,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It must give practical options, not generic ones."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/literacy-critical-thinking/argument-structure-scaffold-generator":
   name: "Argument writing scaffold maker"
   summary: "Give it a claim or question. Get a fill-in frame using Toulmin, PEEL or CER that helps learners build an argument."
@@ -217,8 +227,8 @@
   level: beginner
   thinking: low
   thinking_why: "It fills a known frame with your topic."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
 "GarethManning/education-agent-skills:skills/literacy-critical-thinking/critical-thinking-task-designer":
   name: "Critical thinking task writer"
   summary: "Name a subject and a skill. Get a task where learners weigh evidence, spot bias or test an argument."
@@ -227,8 +237,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It builds a task around one chosen skill."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
 "GarethManning/education-agent-skills:skills/literacy-critical-thinking/disciplinary-writing-scaffold":
   name: "Subject writing frame maker"
   summary: "Name a text type, like a lab report. Get a frame that teaches the writing rules of that subject."
@@ -237,8 +247,8 @@
   level: beginner
   thinking: low
   thinking_why: "It applies known genre rules to your subject."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
 "GarethManning/education-agent-skills:skills/literacy-critical-thinking/media-literacy-deconstruction-protocol":
   name: "Media literacy lesson builder"
   summary: "Give it an ad, news item or post. Get a lesson that helps learners see persuasion, bias and who is shown."
@@ -247,8 +257,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It builds questions around a specific media piece."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/literacy-critical-thinking/reading-comprehension-strategy-selector":
   name: "Reading strategy picker for a text"
   summary: "Paste a text. Get the reading strategies that fit its hard parts, in a teaching order."
@@ -257,8 +267,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It matches strategies to what makes the text hard."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: reading-strategy-picker
 "GarethManning/education-agent-skills:skills/literacy-critical-thinking/source-credibility-evaluation-protocol":
   name: "Online source checking lesson builder"
   summary: "Describe your learners. Get a lesson that teaches them to check websites and posts by reading across other sources."
@@ -267,8 +278,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It adapts a known method to your learners."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: online-source-check-lesson
 "GarethManning/education-agent-skills:skills/literacy-critical-thinking/text-complexity-analyser":
   name: "Text difficulty checker"
   summary: "Paste a text. Get its difficulty by length, meaning and reader task, with support ideas for struggling readers."
@@ -277,8 +289,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It weighs several kinds of difficulty together."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report } ]
 "GarethManning/education-agent-skills:skills/memory-learning-science/cognitive-load-analyser":
   name: "Overloaded lesson checker"
   summary: "Paste a task or handout. Get the places that overload learners, with changes that lighten it."
@@ -287,8 +299,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It must judge where working memory runs out."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "GarethManning/education-agent-skills:skills/memory-learning-science/dual-coding-designer":
   name: "Words and picture explainer designer"
   summary: "Paste an explanation. Get a plan for a diagram or visual that pairs with the words so it sticks."
@@ -297,8 +309,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It decides what to show and what to say."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: word-picture-explainer
 "GarethManning/education-agent-skills:skills/memory-learning-science/elaborative-interrogation-generator":
   name: "Why and how question writer"
   summary: "Give it your content. Get why and how questions that push learners past memorising to understanding."
@@ -307,8 +320,8 @@
   level: beginner
   thinking: low
   thinking_why: "It turns facts into a set of probing questions."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: question}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: question } ]
 "GarethManning/education-agent-skills:skills/memory-learning-science/feedback-quality-analyser":
   name: "Written feedback checker"
   summary: "Paste feedback given to learners. Get a check for how specific and useful it is, with better wording."
@@ -317,8 +330,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It judges feedback against clear quality marks."
-  inputs: [{type: feedback_notes, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: feedback_notes, required: true } ]
+  outputs: [ { type: audit_report } ]
 "GarethManning/education-agent-skills:skills/memory-learning-science/interleaving-unit-planner":
   name: "Mixed practice unit planner"
   summary: "Paste a topic order. Get a plan that mixes related topics through the unit for stronger recall."
@@ -327,8 +340,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It reorders a plan while keeping coverage."
-  inputs: [{type: plan, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/memory-learning-science/retrieval-practice-generator":
   name: "Retrieval quiz writer"
   summary: "Give it a topic. Get low-stakes recall questions at easy, medium and hard levels for starters or revision."
@@ -337,8 +350,8 @@
   level: beginner
   thinking: low
   thinking_why: "It writes questions from a clear topic."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: question}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: question } ]
 "GarethManning/education-agent-skills:skills/memory-learning-science/spaced-practice-scheduler":
   name: "Revision schedule planner"
   summary: "List your topics and dates. Get a spaced revision schedule that brings each topic back at the right gaps."
@@ -347,8 +360,8 @@
   level: beginner
   thinking: low
   thinking_why: "It follows a set spacing pattern over your dates."
-  inputs: [{type: plan, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/memory-learning-science/worked-example-fading-designer":
   name: "Worked example to practice sequence builder"
   summary: "Give it a procedure. Get a sequence from fully worked examples to solving it alone."
@@ -357,8 +370,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It steps support down at the right pace."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: worked-example-practice
 "GarethManning/education-agent-skills:skills/montessori-alternative-approaches/mixed-age-learning-task-designer":
   name: "Mixed-age group task designer"
   summary: "Describe the age groups. Get a shared task where older and younger learners both gain."
@@ -367,8 +381,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It balances roles so each age group benefits."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/montessori-alternative-approaches/prepared-environment-designer":
   name: "Classroom layout redesigner"
   summary: "Describe your room. Get a layout and materials plan that helps learners work on their own with calm moves between tasks."
@@ -377,8 +391,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It reworks a space around independence."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/montessori-alternative-approaches/three-part-lesson-designer":
   name: "Three-step hands-on vocabulary lesson planner"
   summary: "Name the concept. Get a lesson that shows it, names it and checks it, using real objects."
@@ -387,8 +401,9 @@
   level: beginner
   thinking: low
   thinking_why: "It follows a fixed three-step lesson shape."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: vocabulary-lesson-planner
 "GarethManning/education-agent-skills:skills/montessori-alternative-approaches/uninterrupted-work-cycle-designer":
   name: "Choice work block planner"
   summary: "Describe your time block. Get a plan for a long stretch of independent, choice-based work."
@@ -397,8 +412,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It balances freedom and structure in a time block."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/original-frameworks/dispositional-knowledge-assessment-designer":
   name: "Character and habits assessment planner"
   summary: "Name a trait like curiosity. Get a plan to gather evidence from several people. Not medical advice."
@@ -407,8 +422,9 @@
   level: advanced
   thinking: high
   thinking_why: "Judging softer traits fairly is hard and needs care."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: character-assessment-plan
 "GarethManning/education-agent-skills:skills/original-frameworks/self-determined-project-design-protocol":
   name: "Student-led project planner"
   summary: "Describe a student's project idea. Get a plan with mentor check-ins, links to your curriculum goals and reflection."
@@ -417,8 +433,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It must respect student choice and still meet goals."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "GarethManning/education-agent-skills:skills/original-frameworks/seeds-regenerative-inquiry-cycle":
   name: "Local nature inquiry cycle planner"
   summary: "Name a local habitat. Get an inquiry cycle for young learners that links place, nature and community."
@@ -427,8 +443,9 @@
   level: intermediate
   thinking: medium
   thinking_why: "It builds a multi-step cycle around one place."
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  slug: nature-inquiry-cycle
 "GarethManning/education-agent-skills:skills/original-frameworks/assessment-design-orchestrator":
   skip: "Only routes to other skills in this repo."
 "GarethManning/education-agent-skills:skills/original-frameworks/coherent-rubric-logic-builder":

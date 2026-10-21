@@ -147,5 +147,5 @@ MISSING: product photos. No product picture or clip should be made until these a
 
 CHECKS MISSED: none
 
-Next, would you like to fill the gaps in your brand brain with the [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder), or make an offer with the [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder-that-answers-buyer-doubts)? You can also name your own next step.
+Next, would you like to fill the gaps in your brand brain with the [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder), or make an offer with the [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder)? You can also name your own next step.
 ```

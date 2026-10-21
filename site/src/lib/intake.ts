@@ -21,7 +21,7 @@ export type IntakeInput = { title: string; by: string; link: string; kind: Sourc
 export const wordCount = (t: string) => t.trim().split(/\s+/).filter(Boolean).length;
 /** Under this many words a paste is probably a summary, and the method will have gaps. */
 export const SHORT = 400;
-const BUILDER = "workflow-builder-from-a-long-source";
+const BUILDER = "long-source-to-workflow";
 
 export const slugOf = (s: string) => s.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || "my-source";
 

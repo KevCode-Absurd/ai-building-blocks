@@ -1,0 +1,91 @@
+new_slug: new-business-growth-needs
+name: Work out what a new business needs to get huge
+summary: Name a business and a target size. Get the big choices, the sums behind the size and what to avoid.
+job: plan-strategy
+thinking: high
+thinking_why: It carries a plan through five checks, works sums backward and thinks in reverse. Give it your strongest model.
+headline: Work out what must be true for a new business to reach a huge size
+subhead: Name a business and the size you want it to reach. It settles the big choices first, works backward from the target to buyers, purchases, share and profit per sale, designs the repeat-buying habit, checks the deals with partners and lists what to avoid.
+explain: |
+  A huge target looks impossible until it is broken apart. Most of the big choices follow from the goal, and the target turns into a short sum you can test. This workflow starts there, then asks how the product becomes a habit, who you depend on and what would guarantee failure.
+
+  It runs five steps in order. It settles the big, obvious choices that the goal already forces. It works back from the target to yearly earnings and splits them into buyers, purchases, share and profit per sale, marking each figure as checked, estimated or a guess. It designs the stack of forces that makes buying repeat. It checks how your partners are paid. Last it asks what you must avoid, by thinking in reverse. The method comes from Charlie Munger's talk on turning a small start into a huge business, in Poor Charlie's Almanack. It is a planning aid, not a valuation of any company and not investment advice.
+when:
+  - You are shaping a business from scratch and want its plan tested against a big target.
+  - A pitch says a huge market means a huge result, and you want to test it.
+  - You want to find the one assumption your plan leans on most.
+you_give:
+  - The business, what it sells and to whom
+  - The size you want it to reach and by what year
+  - Your open questions and the limits you cannot change (optional)
+  - Market size, purchase counts and prices you can source (optional)
+  - Your partners and how each is paid (optional)
+you_get:
+  - Three to six big choices settled by the goal, each with its reason
+  - The target turned into earnings and a four-part sum, each figure marked checked, estimated or guess
+  - The figure the plan leans on most, from a half test on each part
+  - A design for the repeat-buying habit, with true rewards, true ties and a reach map
+  - A check of your partners' pay, and a list of what to avoid
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give your business, the target size and the year. Paste every open question you have, even small ones.
+  - It works step by step and saves each result. Go and find real facts for the figure the plan leans on.
+how_it_works:
+  - title: Settles the big choices first
+    text: Tests each open question against the goal, settles those it forces with a one-line reason and notes what each choice rules out.
+  - title: Works backward from the target
+    text: Turns the target into yearly earnings, splits it into buyers, purchases, share and profit per sale, and halves each part to find the weak one.
+  - title: Designs the repeat habit
+    text: Names the action and its cue, checks the rewards are real, lists true ties, maps where rivals could form a habit and links the forces into a chain.
+  - title: Checks how partners are paid
+    text: Lists who you depend on, what their pay encourages and where it differs from what the business needs.
+  - title: Thinks in reverse
+    text: Asks what would guarantee failure, checks the plan against the standard ways of failing and writes what to avoid.
+output_shape: |-
+  STEP 1: BIG DECISIONS FIRST SORTER
+    Goal: <one line> | Settled: <choice> | because <reason> | rules out <options>
+    Still open, in order: <questions>
+
+  STEP 2: TARGET SIZE BACK-SOLVER
+    Target: <earnings a year in year N>
+    Sum: buyers x purchases x share x profit | each marked CHECKED / ESTIMATED / GUESS
+    Today's-money test | Half test | The plan leans most on: <part>
+
+  STEP 3: BUYING HABIT STACK DESIGNER
+    Response and cue | Rewards (strong / weak / none) | Five true ties | Reach map | Chain
+
+  STEP 4: INCENTIVE CHECKER
+    Partner | how paid | what it encourages | where it pulls the wrong way | fix
+
+  STEP 5: FAILURE-FIRST PLAN CHECK
+    What would guarantee failure: <list> | Standard failures checked: <list>
+    What to avoid: <list>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The target
+    how: Give a number and a year. "Huge" gives nothing to test against; a figure does.
+  - what: The market
+    how: Name the exact group of buyers. A narrow, real group gives a firm sum.
+  - what: Your sources
+    how: Give a source for each market figure so it can be marked as checked.
+  - what: Your partners
+    how: List who you depend on to reach buyers and how each is paid.
+judge:
+  - Each settled choice follows from the goal and rules something out.
+  - The sum has four parts, and every figure is marked as checked, estimated or guess.
+  - The half test names the part the plan leans on.
+  - Every reward in the habit design is real, and nothing depends on a false claim.
+  - The avoid list is specific to this business.
+test:
+  - Give it a plan with a clear, large goal. Step 1 should settle three to six choices that clearly follow.
+  - Give it a huge target with no market data. Most figures in step 2 should be guesses.
+  - Give it a plan that depends on fake reviews. Step 3 should remove them.
+  - Run it twice. The settled choices and the part the plan leans on should hold.
+improve:
+  - Rerun step 2 each quarter as guesses become checked figures.
+  - Add the typical failures in your field to step 5.
+  - Save the first step's choices so later runs can start from step 2.
+  - Run the "Business power tester" on the result to see how well the edge holds.

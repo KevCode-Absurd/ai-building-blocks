@@ -49,7 +49,7 @@ The kept passages in order, each with its source time or line and a reason for i
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
-- **Make video ads** with the [On-screen text planner for video ads](https://useaiblocks.com/skills/on-screen-text-planner-for-video-ads). It takes the video ads.
+- **Make video ads** with the [On-screen text planner for video ads](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the video ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -1,0 +1,24 @@
+slug: mission-choice-test
+name: "Write a mission statement and test it on real choices"
+summary: "Describe what matters to you. Get a mission statement built from your roles and a test of it on real choices."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: [eulogy-values-finder, roles-and-goals-mapper, personal-mission-statement, mission-choice-tester]
+steps:
+  - {uses: eulogy-values-finder, note: "Five ranked values and contributions, drawn from what you would want said about you."}
+  - {uses: roles-and-goals-mapper, note: "Your roles, what you are about in each, and one or two long-term results per role."}
+  - {uses: personal-mission-statement, note: "A short statement you could say from memory, with a one-line version."}
+  - {uses: mission-choice-tester, note: "Which choices the statement settles, which it leaves open, and the fixes."}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "The 7 Habits of Highly Effective People (25th anniversary edition)", by: "Stephen R. Covey", used: "The order of the steps: find what matters from the end, map your roles and long-term goals, write the mission statement, test it on real choices"}
+generated_from: intake/seven-habits-mission/skeleton.yaml

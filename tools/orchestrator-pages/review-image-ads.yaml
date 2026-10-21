@@ -1,0 +1,214 @@
+new_slug: review-image-ads
+name: "Turn reviews into image ads buyers believe"
+summary: "Give it your website and reviews. You get the words, picture plan and image prompt for each ad, all checked."
+job: make-image-ads
+
+headline: "Turn reviews into image ads buyers believe"
+subhead: Give it your website, your reviews, your product facts and how many ads you want. It finds why people buy, writes the words for each ad, plans the picture, writes an image prompt for it and checks every ad before launch.
+
+explain: |
+  Image ads often get made the other way round. Someone picks a nice photo, then writes a headline on top that could belong to any brand. Those ads are easy to scroll past, and they sometimes promise more than the product can back up.
+
+  This workflow starts with your customers. It builds a brand file where every fact says where it came from, then reads your reviews for the reasons people buy and the doubts that nearly stopped them, counting separate people, not mentions. Then it plans each ad around one reason for one buyer: the words on the image, the text above it, the picture and the layout. Each plan becomes an image prompt that keeps your real product and your exact words. A last check lists what's fine, what's worth a look and what only a person can judge on a phone.
+
+when:
+  - You want several image ads to test, and each one should argue something different.
+  - Your image ads are pretty but nobody can say what they're for.
+  - You have good reviews and want them working in your ads.
+
+you_give:
+  - Your website, as a link or saved pages
+  - Your customer reviews, copied as written
+  - Your product facts and the claims you may and may not make
+  - What you want made, such as "three ads, square and 4:5"
+  - Your ad results, so it doesn't repeat what already runs (optional)
+you_get:
+  - Each ad's argument in one sentence, and its words with character counts for the image, text, headline and button
+  - A picture and layout plan for each ad
+  - An image prompt per ad, ready for an image tool
+  - A check of every ad, with what a person still has to look at
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your website link, your reviews, your product facts with the claims you may make, and a line on what you want, such as "three ads for Facebook and Instagram feeds, square and 4:5".
+  - It works step by step and saves each result. Check the list of buying reasons and the ad plans before it writes the image prompts.
+  - Paste each image prompt into your image tool together with a real photo of your product. Then look at every finished image on your phone before it runs.
+
+how_it_works:
+  - title: Builds your brand file
+    text: Uses the brand file skill to read your website, check the basics with you once, and tag every fact, offer and claim with where it came from.
+  - title: Finds why people buy
+    text: Uses the buying reasons skill to rank the reasons in your reviews by how many separate people say them, each in a customer's exact words.
+  - title: Writes and plans each ad
+    text: Uses the image ad planner to write the one sentence each ad argues, pick what the picture must prove, and write the image words and feed copy to Meta's lengths.
+  - title: Writes the image prompts
+    text: Uses the image prompt skill to turn each plan into one prompt that keeps your real product, its pack and your exact words.
+  - title: Checks before launch
+    text: Uses the pre-launch check to flag mistakes that should stop launch, point to anything worth a second look, and list what only you can judge on a phone.
+
+output_shape: |
+  AD <n>: <short name>
+  Argument: <this buyer should do this because one fact on file>
+  Buyer: <who> | <New, Warm or Ready> | Picture job: <what the picture must prove>
+  On the image: <headline, 8 words or fewer> / <badge or support line>
+  First line: <line> (<characters>)
+  Headline: <line> (<characters, 27 or fewer>)   Description: <line>   Button: <button>
+  Picture: <zones in reading order, where the words sit>
+  Backed by: <fact or review>   MISSING: <gap>
+
+  IMAGE PROMPT, AD <n>
+  <one prompt per shape, ready to paste>
+  References: <photo: its job>
+
+  (repeat for each ad)
+
+  CHECK
+  Stop-ship: <mistake, where, fix>   Worth a look: <items, with the number or quote>
+  For a person: <what to look at on a phone>
+  Next: <approve / change one named thing / hold>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Website: sprout.example (product page, science page, FAQ)
+    Reviews: the 20 public reviews in reviews.md
+    Product facts: the brand file's product table, price table and
+    "fine to repeat" claims. Never use the risky list.
+    What I want: 3 image ads for Facebook and Instagram feeds,
+    square and 4:5, words on the image and text above it.
+    Ad results: ad-results.csv (optional)
+  output: |
+    From step 2: top reasons are gut (reviews 7 to 11), sticking with it
+    (1, 2, 5) and quitting powders (3, 4, 6). Only gut is a pattern: 5
+    people, from the brand site and a retailer. The other two come from
+    the brand site alone. No review is marked verified, so no ad quotes one.
+
+    AD 1: The shaker you stopped washing
+    Argument: powder quitters should try Sprout because one pack of
+    gummies needs no water, mixing or shaker.
+    Buyer: the powder quitter | Warm | Picture job: what's different from
+    the usual way
+    On the image: "Greens with nothing to wash up." (6 words)
+    Badge: 60+ ingredients, 21 vitamins & minerals, 6g fiber
+    First line: "If you've quit a greens powder over the grit, this is one
+    small pack of gummies a day." (86 characters)
+    Headline: Greens you'll want to eat (25)
+    Description: Low Sugar or Sugar-Free (23)   Button: Shop now
+    Picture: left third, an unbranded powder tub and a shaker with a green
+    ring; right, a palm of green bears and a pack torn across its top.
+    Backed by: fine-to-repeat claim; "no water, no mixing, no shaker"
+    from the brand file.
+
+    AD 2: Fiber on the way out
+    Argument: gut-fix seekers should try Sprout because one pack has 6 g
+    of prebiotic fiber.
+    Buyer: the gut-fix seeker | Warm | Picture job: how it's used
+    On the image: "6g fiber you eat on the go" (7 words)
+    First line: "One pack has 6 g of prebiotic fiber, and Sprout supports
+    digestion and gut health." (82)
+    Headline: 6g fiber in one small pack (26)
+    Description: Start with Low Sugar (20)   Button: Shop now
+    Picture: keys in one hand, a pack torn across its top in the other,
+    front door ajar.
+    Backed by: "Supports digestion and gut health". Low Sugar steer from the
+    brand file, because Sugar-Free upsets some stomachs.
+
+    AD 3: The plain price
+    Argument: price doubters should start a box because the renewal price
+    is stated up front.
+    Buyer: the price doubter | Ready | Picture job: the price or the deal
+    On the image: "$49.99 every 4 weeks. $1.78 a day." (7 words)
+    First line: "Which Sprout price is the real one? First box $29.99 with
+    our text sign-up, then $49.99 every 4 weeks." (102)
+    Headline: $1.78 a day after box one (25)
+    Description: 28 daily packs a box (20)   Button: Shop now
+    Picture: one pouch on cream, 28 packs fanned out in front.
+    Backed by: price table; footer terms for $29.99. No percentages, because
+    the site shows 49% to 61% depending on the page.
+
+    IMAGE PROMPT, AD 1 (square)
+    Square photo on a bright kitchen counter in morning window light. Left
+    third: an unbranded white tub of green powder, lid off, and a clear
+    shaker with a dried green ring inside, a little powder spilled. Right:
+    an adult's open palm holding a small handful of soft matte deep-green
+    gummy bears, a flat daily pack torn straight across its top edge
+    beside it, and the glossy deep green stand-up pouch behind, exactly as
+    in the attached photo. Headline across the top on a cream #FFF7DF band
+    in Work Sans bold, #002C17: "Greens with nothing to wash up."
+    Yellow #FFCC2E badge, bottom right: "60+ ingredients, 21
+    vitamins & minerals, 6g fiber". No other words. No logo on the tub.
+    References: pouch photo (product identity), torn-pack photo (how it opens)
+    (cut for length: the full run also had the 4:5 prompts and ads 2 and 3)
+
+    CHECK
+    Stop-ship: none found. Every number matches the price table, and
+    the $29.99 keeps its text sign-up condition.
+    Worth a look: ad 3's first line is 102 characters. It fits under
+    125, but phones show about 90 before "more". Try "First box $29.99
+    with text sign-up, then $49.99 every 4 weeks." (62)
+    For a person: once made, open each at full size. Is the pack torn across
+    the top, not the side? Does the pouch match the real one?
+    Next: change ad 3's first line, then run the ad rules check before launch.
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-05.
+    MISSING: your answers to the brand file's check-in; a photo of one
+    pack torn across the top; the finished images, so a person can check
+    them at full size; target countries for the ad rules check.
+
+tweaks:
+  - what: How many ads
+    how: Ask for three to five. Each ad gets a different reason, buyer or ad type, so you can tell what won. Ten near-copies of one idea teach you nothing.
+  - what: Words on the image
+    how: Say "no words on the image" and the picture has to argue alone, with the opening moving to the text above it. Say "image only, no text above" and the image carries the claim plus a short action.
+  - what: Sizes
+    how: Name every size you need, such as square, 4:5 and 9:16. Each one is planned for its own shape, not cropped from another.
+  - what: Your ad results
+    how: Add your results export and it will avoid ideas you already run, and say which existing ad each new one is meant to beat.
+
+judge:
+  - You can say what each ad argues in one sentence, and no two ads argue the same thing.
+  - Every number on an ad appears in your facts, and the guarantee is in your own wording.
+  - Character counts are shown and inside the limits. The first line above the image is 125 characters or fewer, the headline 27 or fewer, and the words on the image 8 or fewer.
+  - No ad names a competitor or tells the viewer what condition they have.
+  - The image prompt describes your real pack, not a made-up one.
+  - The run ends with a summary that lists every file and every MISSING line in one place.
+
+test:
+  - Run it on reviews for a product with an image ad that already sells. One of the new ads should use the same buying reason. If none does, check which reviews you gave it.
+  - "Check the counts yourself: 125 characters or fewer for the first line above the image, 27 or fewer for the headline, 8 words or fewer on the image."
+  - Check every number and the guarantee on each ad against your facts.
+  - Paste one image prompt into your image tool and compare the pack with your real photo at full size.
+
+improve:
+  - In the builder, drop step 1 if your brand file is up to date, and start from step 2.
+  - Add a step after step 5 that checks each ad against Meta's ad rules before anything runs on Facebook or Instagram.
+  - Swap step 4 for the more detailed image plan skill when you need layouts in zones and several sizes from one plan.
+  - "Tune step 3's skill: write your character limits and your offer terms, word for word, into its file (for Sprout: \"30-day money-back guarantee, first order only\")."
+  - Pair it with a skill that reads your ad results and lists what you haven't tried, so each new set tests something new.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds the brand file, every review number and five steps of work in one run."}
+    - {name: "GPT Image", why: "Takes several product photos as references and keeps short headline words readable."}
+    - {name: "Nano Banana", why: "Takes many reference photos at once and handles shiny packs such as foil pouches."}
+    - {name: "Meta Ads Manager", why: "Its preview shows where the text above the image and the headline get cut off."}
+  inputs:
+    - "Full-size photos of your pack from the front and in use, so the prompts can attach the real product"
+    - "Your logo as an SVG and your font files, so words can be set as real type after the image is made"
+    - "Support emails or survey answers as well as reviews, so more reasons count as patterns"
+    - "The opening lines of image ads you already run, so the new ones argue something different"
+
+terms:
+  - term: Image ad
+    meaning: An ad that is a single picture, with words on it and text above it in the feed.
+  - term: Image prompt
+    meaning: The written instructions you give an image tool so it makes the picture you planned.
+  - term: Stage
+    meaning: How much the buyer already knows about the problem and about you.

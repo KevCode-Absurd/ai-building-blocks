@@ -1,0 +1,33 @@
+slug: online-source-check-lesson
+renamed_from: online-source-checking-lesson-builder
+name: "Online source checking lesson builder"
+summary: "Describe your learners. Get a lesson that teaches them to check websites and posts by reading across other sources."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/literacy-critical-thinking/source-credibility-evaluation-protocol
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/literacy-critical-thinking/source-credibility-evaluation-protocol
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: source-credibility-evaluation-protocol
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: source-credibility-evaluation-protocol skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/literacy-critical-thinking/source-credibility-evaluation-protocol
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

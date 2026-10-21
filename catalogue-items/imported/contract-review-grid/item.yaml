@@ -1,0 +1,33 @@
+slug: contract-review-grid
+renamed_from: contract-batch-review-grid-builder
+name: "Contract batch review grid builder"
+summary: "Give it contracts and points to find. Get one cited spreadsheet row per contract. Verify before relying on it."
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: corporate-legal/skills/tabular-review
+  url: https://github.com/anthropics/claude-for-legal/tree/main/corporate-legal/skills/tabular-review
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: tabular-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tabular-review skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/corporate-legal/skills/tabular-review
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

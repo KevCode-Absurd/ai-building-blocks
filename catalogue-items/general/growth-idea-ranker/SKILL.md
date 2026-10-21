@@ -16,10 +16,10 @@ This skill runs on its own. What's below makes the result better, but none of it
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Your lessons**, made by the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-and-video-fix-rule-writer): what past ads taught you: what worked, what failed and why.
+- **Your lessons**, made by the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Your lessons** with the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-and-video-fix-rule-writer). Bring your notes (optional). It uses your brand brain.
+1. **Your lessons** with the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand brain.
 2. This one.
 
 How to start:
@@ -59,7 +59,7 @@ The scored and sorted list with reasons. The first three tests with measure and 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan your strategy** with the [Give-up list planner](https://useaiblocks.com/skills/give-up-list-planner). It takes the shortlist and plan.
-- **Decide what to do** with the [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement-writer). It takes the plan and shortlist.
+- **Decide what to do** with the [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement). It takes the plan and shortlist.
 - **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
 - **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
 - **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.

@@ -1,0 +1,73 @@
+# Keep your code secure: AI Blocks
+
+> 69 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Advisory exposure checker](https://useaiblocks.com/skills/advisory-exposure-checker): Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
+- [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester): Give it your AI agent. Get a safe, authorized test plan and a report of where it can be tricked.
+- [AI app injection defender](https://useaiblocks.com/skills/ai-app-injection-defender): Point it at your AI app. Get the weak spots found and layered defences added against hijacked instructions.
+- [AI management audit planner](https://useaiblocks.com/skills/ai-management-audit-planner): Describe how you run AI. Get gaps against ISO 42001 and a plan to close them.
+- [AI spend limit checker](https://useaiblocks.com/skills/ai-spend-limit-checker): Point it at code that calls paid AI services. Get spending caps and loop limits added before a surprise bill.
+- [AI system attack tester](https://useaiblocks.com/skills/ai-system-attack-tester): Point it at an AI app. Get prompt injection, jailbreak and tool abuse risks found, ranked and mapped to known attacks.
+- [AI workflow security checker](https://useaiblocks.com/skills/ai-workflow-security-checker): Point it at a repo. Get a report on where outside text could reach an AI agent in your GitHub workflows.
+- [API rate limit adder](https://useaiblocks.com/skills/api-rate-limit-adder): Point it at your API. Get rate limiting added with Upstash, using the right window type for each route.
+- [API security checker](https://useaiblocks.com/skills/api-security-checker): Point it at your API routes. Get a check of sign-in, access rules and input, with fixes for each gap.
+- [AWS access policy reviewer](https://useaiblocks.com/skills/aws-access-policy-reviewer): Give it your IAM policies. Get risky permissions found and tighter versions that grant only what is needed.
+- [AWS security checker](https://useaiblocks.com/skills/aws-security-checker): Point it at your AWS account. Get a ranked list of security gaps with fixes.
+- [Cloud misconfiguration finder](https://useaiblocks.com/skills/cloud-misconfiguration-finder): Point it at your cloud setup files. Get open buckets, loose access rules and gaps ranked with fixes.
+- [Code deep reader](https://useaiblocks.com/skills/code-deep-reader): Point it at code you need to understand. Get a line-by-line map of how it works before you hunt bugs.
+- [Code intent gap auditor](https://useaiblocks.com/skills/code-intent-gap-auditor): Give it your docs and code. Get each place the code breaks its own rules, with a fix.
+- [Code ownership analyst](https://useaiblocks.com/skills/code-ownership-analyst): Point it at a git repo. Get who owns the sensitive code and where one person is the only owner.
+- [Code scan rule writer](https://useaiblocks.com/skills/code-scan-rule-writer): Describe a bug pattern. Get a tested Semgrep rule that finds it across your code.
+- [Code security reviewer](https://useaiblocks.com/skills/code-security-reviewer): Point it at your Python, JavaScript, TypeScript or Go code. Get a ranked list of security gaps, each with a fix.
+- [Code security scanner](https://useaiblocks.com/skills/code-security-scanner): Point it at your source code. Get security flaws found with static tools and rules you can add to CI.
+- [Code vulnerability auditor](https://useaiblocks.com/skills/code-vulnerability-auditor): Point it at code you own. Get proven, exploitable bugs with steps to reproduce and fixes.
+- [Compliance readiness checklist builder](https://useaiblocks.com/skills/compliance-checklist): Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority.
+- [Connected product security checker](https://useaiblocks.com/skills/iot-security-check): Describe your product with software. Get its EU risk class, security duties, parts list needs and reporting steps.
+- [Cybersecurity profile builder](https://useaiblocks.com/skills/cybersecurity-profile-builder): Describe your security today and your goals. Get a NIST CSF profile, gaps and a step by step plan.
+- [Dependency risk auditor](https://useaiblocks.com/skills/dependency-risk-auditor): Point it at your project. Get risky packages, licence clashes and a safe order to upgrade.
+- [Dependency risk scanner](https://useaiblocks.com/skills/dependency-risk-scanner): Point it at your project. Get known weak spots in packages found, plus a parts list and license check.
+- [Django access control auditor](https://useaiblocks.com/skills/django-access-control-auditor): Point it at a Django project. Get a review of who can see or change what, with fixes for each gap.
+- [EU AI Act readiness checker](https://useaiblocks.com/skills/eu-ai-act-readiness-checker): Describe your AI systems. Get a first read of your risk level, duties and gaps under the EU AI Act.
+- [EU AI Act risk classifier](https://useaiblocks.com/skills/eu-ai-act-risk-classifier): Describe your AI system. Get its risk tier under the EU AI Act and the duties that follow.
+- [Exposed secrets finder](https://useaiblocks.com/skills/exposed-secrets-finder): Give it a site you own. Get a report of keys and private files visitors can read, with fixes.
+- [Federal security controls planner](https://useaiblocks.com/skills/federal-security-controls): Describe your system. Get the right control baseline, tailoring choices and draft control write-ups.
+- [Fraud review queue builder](https://useaiblocks.com/skills/fraud-review-queue-builder): Get orders listed by fraud risk level with the warning signs, as a queue for manual review.
+- [GDPR audit prep coach](https://useaiblocks.com/skills/gdpr-audit-prep-coach): Name your scope. Answer six article-based questions and get gaps to fix before a review or regulator visit.
+- [GDPR privacy checker](https://useaiblocks.com/skills/gdpr-privacy-checker): Point it at your code and data use. Get privacy risks, an impact assessment and a tracker for data requests.
+- [GitHub Actions attack finder](https://useaiblocks.com/skills/github-actions-attack-finder): Point it at your workflows. Get only the holes an outsider could use, each with the exact attack.
+- [Insecure code catcher](https://useaiblocks.com/skills/insecure-code-catcher): Turn it on. Get a warning when your AI writes risky code, like injection, XSS or unsafe commands.
+- [ISO 27001 audit planner](https://useaiblocks.com/skills/iso-27001-audit-planner): Describe your security setup. Get an audit plan, control checks and a list of findings to fix.
+- [ISO 27001 audit prep coach](https://useaiblocks.com/skills/iso-27001-audit-prep-coach): Name your scope. Answer six questions and get gaps to fix before an internal or outside ISO 27001 audit.
+- [Live app security tester](https://useaiblocks.com/skills/live-app-security-tester): Give it a running web app or API you own. Get weaknesses found by safe probing.
+- [Login and access builder](https://useaiblocks.com/skills/login-and-access-builder): Describe your app's users. Get a login and permissions plan, or a review of the one you have.
+- [Marketplace access auditor](https://useaiblocks.com/skills/marketplace-access-auditor): Point it at a multi-role marketplace app. Get a report of who can see or change what, with evidence from the code.
+- [MATLAB secret keeper](https://useaiblocks.com/skills/matlab-secret-keeper): Give it code with passwords or API keys. Get them moved into the MATLAB Vault, not left in the file.
+- [MCP attack defence reviewer](https://useaiblocks.com/skills/mcp-attack-defence-reviewer): Point it at an MCP server. Get a ranked list of attack risks, each with a fix.
+- [MCP config version checker](https://useaiblocks.com/skills/mcp-config-version-checker): Give it your MCP config files. Get a list of server packages that can change under you, before you approve them.
+- [MCP server hardener](https://useaiblocks.com/skills/mcp-server-hardener): Point it at an MCP server you run. Get a checklist of fixes for transport, auth, access and logging.
+- [Open-source license checker](https://useaiblocks.com/skills/open-source-license-checker): Give it your project dependencies. Get license clashes, duties and risks flagged.
+- [Privacy-first app designer](https://useaiblocks.com/skills/privacy-first-app-designer): Describe the data your app collects. Get privacy controls designed in: less data kept, clear consent, safe storage.
+- [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender): Describe your AI app. Get a threat map and fixes against hidden instructions in text it reads.
+- [Risky design reviewer](https://useaiblocks.com/skills/risky-design-reviewer): Give it an API or config design. Get the easy-to-misuse parts that lead to security mistakes.
+- [Safe secrets manager](https://useaiblocks.com/skills/safe-secrets-manager): Get API keys and env variables checked and loaded without ever showing the values in logs or chat.
+- [Secrets hygiene checker](https://useaiblocks.com/skills/secrets-hygiene-checker): Point it at your project. Get leaked keys found, env files tidied and a plan to rotate secrets.
+- [Secrets setup helper](https://useaiblocks.com/skills/secrets-setup-helper): Name your pipeline and secret store. Get a safe plan for storing, reading and rotating secrets.
+- [Secure development checker](https://useaiblocks.com/skills/secure-development-checker): Give it your project. Get a scan for code flaws, weak packages and exposed secrets, with fixes ranked.
+- [Security incident triager](https://useaiblocks.com/skills/security-incident-triager): Give it a security alert. Get severity, who to tell, what to preserve and the next steps.
+- [Security posture auditor](https://useaiblocks.com/skills/security-posture-auditor): Describe your system. Get a scoped review of code, servers, sign-in and daily operations.
+- [Security safeguards planner](https://useaiblocks.com/skills/security-safeguards-planner): Describe your setup and size. Get which CIS safeguards you need first, your gaps and a fix order.
+- [Security-focused change reviewer](https://useaiblocks.com/skills/security-focused-change-reviewer): Give it a pull request or commit. Get a security review of only what changed, with risks ranked.
+- [Serial returner spotter](https://useaiblocks.com/skills/serial-returner-spotter): Get customers with unusual return habits listed for you to review. It never blocks anyone on its own.
+- [Shipped app gap finder](https://useaiblocks.com/skills/shipped-app-gap-finder): Point it at a shipped repo. Get gaps found in database rules, webhooks, secrets, payments and mobile use.
+- [Skill safety auditor](https://useaiblocks.com/skills/skill-safety-auditor): Give it a skill before you install it. Get risky code and hidden commands flagged.
+- [Skill safety reviewer](https://useaiblocks.com/skills/skill-safety-reviewer): Point it at a skill, MCP server or add-on. Get a read-only safety review before you install it.
+- [SOC 2 readiness checker](https://useaiblocks.com/skills/soc-2-readiness-checker): Name your scope. Answer six questions and get gaps to fix before the SOC 2 Type II watch period.
+- [SOC 2 readiness planner](https://useaiblocks.com/skills/soc-2-readiness-planner): Describe your systems. Get your controls mapped, gaps found and the evidence an auditor will ask for.
+- [Staff access reviewer](https://useaiblocks.com/skills/staff-access-reviewer): Get staff accounts with old logins, inactive status or too much access, so your store stays safe.
+- [Threat model writer](https://useaiblocks.com/skills/threat-model-writer): Point it at your code. Get a short threat model of what attackers could reach, how, and how to stop them.
+- [Threat modeler](https://useaiblocks.com/skills/threat-modeler): Describe your system. Get threats found with STRIDE, rated by risk, each with a way to reduce it.
+- [Timing leak checker](https://useaiblocks.com/skills/timing-leak-checker): Point it at crypto code. Get a list of spots where run time could leak secret keys, with fixes.
+- [UK Cyber Essentials checker](https://useaiblocks.com/skills/uk-cyber-essentials-checker): Describe your devices and cloud services. Get gaps against Cyber Essentials and what to fix before you apply.
+- [Untrusted input checker](https://useaiblocks.com/skills/untrusted-input-checker): Point it at code. Get every place outside data enters found and checked before it reaches your logic.
+- [Vulnerability scan planner](https://useaiblocks.com/skills/vulnerability-scan-planner): Point it at your own app. Get a check for common web flaws and a ranked list of fixes.
+- [Website security baseline checker](https://useaiblocks.com/skills/website-security-check): Point it at your site. Get a checklist covering HTTPS, security headers, secrets and content policy, with fixes ranked.

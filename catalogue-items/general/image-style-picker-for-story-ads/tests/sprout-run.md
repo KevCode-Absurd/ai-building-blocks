@@ -59,7 +59,7 @@ Only a moment (3pm at the desk, the pause before getting back to work) -> proble
 (3) the push leaves no trace in the room itself, so the place skill doesn't fit either. The moment is the evidence.
 
 RUNNER-UP
-tried-before-products-image-ad-maker (on a thing): a half-used tub of generic fiber powder and a probiotic bottle with a few capsules left, pushed to the back of a kitchen shelf. It comes from "I'd tried fiber powders. I'd tried probiotics. Nothing stuck."
+tried-before-image-ad (on a thing): a half-used tub of generic fiber powder and a probiotic bottle with a few capsules left, pushed to the back of a kitchen shelf. It comes from "I'd tried fiber powders. I'd tried probiotics. Nothing stuck."
 
 THE BRIEF
 Note: the problem-moment skill file isn't in this chat. This brief is built from its line in step 2 ("the moment itself") plus "People and fixes", and that skill's own checks weren't run.

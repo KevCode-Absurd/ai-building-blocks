@@ -17,8 +17,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It weighs where help helps and where it just gets in the way.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/internationalization":
   name: Multi-language site planner
   summary: Tell it your site and target markets. Get a plan for language URLs, hreflang, translation steps, currencies and right-to-left layouts.
@@ -27,8 +27,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It compares several set-up options and picks one for your case.
-  inputs: [{type: web_app, required: false}, {type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: web_app, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/journey-mapping":
   name: Customer path blueprint maker
   summary: Describe your customer and their goal. Get a map of each step with touchpoints, feelings, friction and the systems behind it.
@@ -37,8 +37,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows a set map format but needs judgment on where the friction sits.
-  inputs: [{type: persona, required: false}, {type: voc_reviews, required: false}]
-  outputs: [{type: document}]
+  inputs: [ { type: persona, required: false }, { type: voc_reviews, required: false } ]
+  outputs: [ { type: document } ]
 "rampstackco/claude-skills:skills/jtbd-framing":
   name: Jobs-to-be-done framer
   summary: Give it a product or customer problem. Get job statements, struggling moments and hire and fire reasons that sharpen your choices.
@@ -47,8 +47,8 @@
   level: intermediate
   thinking: high
   thinking_why: It has to separate what customers say from the job they are really hiring for.
-  inputs: [{type: voc_reviews, required: false}, {type: brief, required: false}]
-  outputs: [{type: document}]
+  inputs: [ { type: voc_reviews, required: false }, { type: brief, required: false } ]
+  outputs: [ { type: document } ]
 "rampstackco/claude-skills:skills/landing-page-copy":
   name: Conversion page writer
   summary: Give it your offer and audience. Get landing page copy with hero, value points, proof, answers to doubts and clear buttons.
@@ -57,8 +57,8 @@
   level: beginner
   thinking: medium
   thinking_why: It follows a set page structure but needs fitting words for each section.
-  inputs: [{type: brief, required: true}, {type: brand_brain, required: false}]
-  outputs: [{type: copy_draft}]
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: copy_draft } ]
 "rampstackco/claude-skills:skills/launch-runbook":
   name: Site go-live runbook writer
   summary: Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
@@ -67,8 +67,8 @@
   level: intermediate
   thinking: medium
   thinking_why: The steps are standard but order and risk calls depend on your setup.
-  inputs: [{type: web_app, required: false}, {type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: web_app, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/lead-magnet-design":
   name: Free giveaway designer
   summary: Tell it your audience and what you sell next. Get a free guide or checklist idea worth an email address.
@@ -77,8 +77,8 @@
   level: beginner
   thinking: medium
   thinking_why: It must pick a format that gives real value and still leads to your offer.
-  inputs: [{type: brief, required: true}, {type: persona, required: false}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/logo-design":
   name: Logo concept generator
   summary: Describe your brand. Get several logo directions, from wordmarks to symbols, each with the reasoning and how to use it.
@@ -87,8 +87,8 @@
   level: beginner
   thinking: medium
   thinking_why: It explores set logo types and explains the choices.
-  inputs: [{type: brand_guide, required: false}, {type: brief, required: true}]
-  outputs: [{type: design_direction}, {type: document}]
+  inputs: [ { type: brand_guide, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: design_direction }, { type: document } ]
 "rampstackco/claude-skills:skills/long-form-content-frameworks":
   name: Long-form piece structurer
   summary: Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
@@ -97,8 +97,8 @@
   level: beginner
   thinking: medium
   thinking_why: It picks a structure by piece type, then shapes your points to fit.
-  inputs: [{type: source_text, required: false}, {type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: source_text, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: document } ]
 "rampstackco/claude-skills:skills/media-asset-management":
   name: Image and video pipeline planner
   summary: Tell it your site's media. Get a plan for formats, responsive images, video hosting and a tidy brand asset library.
@@ -107,8 +107,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It compares options against your traffic and tools.
-  inputs: [{type: web_app, required: false}, {type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: web_app, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   needs: look at your site's files
 "rampstackco/claude-skills:skills/monitoring-and-alerting":
   name: Uptime and alert setup planner
@@ -118,8 +118,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It chooses what is worth an alert, which depends on your risks.
-  inputs: [{type: web_app, required: false}, {type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: web_app, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/multi-step-form-design":
   name: Multi-step form designer
   summary: Describe the data you must collect. Get a staged form plan with progress cues, conditional questions and save-and-resume.
@@ -128,8 +128,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It balances how much to ask at once against finishing rates.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/okr-design":
   name: OKR writer
   summary: Give it your goals for the quarter. Get clear objectives and measurable key results, plus a scoring and mid-quarter check routine.
@@ -138,8 +138,8 @@
   level: intermediate
   thinking: high
   thinking_why: Good key results need real judgment about what to measure.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/onboarding-wizard-design":
   name: First-run wizard designer
   summary: Describe your product's first minutes. Get a step-by-step setup wizard with skip options, rewards and drop-off tracking.
@@ -148,8 +148,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It decides what to ask now and what to leave for later.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/oss-contribution-research":
   name: Open-source contribution preparer
   summary: Point it at an open-source issue. Get a checked fix, rerun tests and a drafted post held for your approval.
@@ -158,9 +158,10 @@
   level: expert
   thinking: high
   thinking_why: It reproduces bugs, writes patches and has to judge its own work.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: run code and read the repo
+  slug: open-source-contribution
 "rampstackco/claude-skills:skills/paid-media-strategy":
   name: Paid media budget planner
   summary: Give it your goal and budget. Get a plan with test ideas, channel picks, spend split, targeting and what not to buy.
@@ -169,8 +170,8 @@
   level: intermediate
   thinking: high
   thinking_why: Spend choices depend on tradeoffs between channels and risk.
-  inputs: [{type: brief, required: true}, {type: performance_sheet, required: false}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/pillar-content-architecture":
   name: Content hub planner
   summary: Give it your topic area. Get pillar pages, supporting cluster pages, URL structure and an internal link map.
@@ -179,8 +180,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows a set hub pattern but must pick topics that fit you.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/pm-spec-writing":
   name: Idea to dev brief writer
   summary: Give it a rough idea or feature request. Get a clear brief a developer can build from, with scope and open questions.
@@ -189,8 +190,8 @@
   level: beginner
   thinking: medium
   thinking_why: It fills gaps in a vague idea by asking the right questions.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
 "rampstackco/claude-skills:skills/product-analytics-setup":
   name: Event tracking planner
   summary: Describe your product. Get an event list, naming rules, funnels, retention cohorts and one main metric to watch.
@@ -199,8 +200,8 @@
   level: advanced
   thinking: high
   thinking_why: Bad event design is costly later, so it needs careful reasoning.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: spreadsheet}, {type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: plan } ]
 "rampstackco/claude-skills:skills/product-configurator-design":
   name: Build-your-own product designer
   summary: Describe your customisable product. Get a plan with option rules, live pricing, checks and saving.
@@ -209,8 +210,8 @@
   level: advanced
   thinking: high
   thinking_why: Option rules and pricing conflicts need careful logic.
-  inputs: [{type: product_data, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/qa-testing":
   name: Site QA sweep runner
   summary: Name a page or site and a depth. Get a smoke, standard or full test pass with a list of problems found.
@@ -219,8 +220,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows set test steps but judges what counts as a problem.
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: test_report}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: test_report } ]
   needs: open a browser
 "rampstackco/claude-skills:skills/quiz-and-assessment-design":
   name: Quiz and recommender designer
@@ -230,8 +231,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It must design scoring that maps cleanly to useful results.
-  inputs: [{type: brief, required: true}, {type: persona, required: false}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/roadmap-planning":
   name: Quarterly roadmap builder
   summary: Give it your backlog and requests. Get a multi-quarter roadmap that balances build, improve and maintain, plus a not-doing list.
@@ -240,8 +241,8 @@
   level: intermediate
   thinking: high
   thinking_why: It weighs competing priorities and decides what to leave out.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/scheduler-and-booking-design":
   name: Booking page designer
   summary: Describe your calls or appointments. Get a booking flow with open times, qualifying questions, prep emails and follow-up.
@@ -250,8 +251,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It balances more bookings against better-qualified ones.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/security-baseline":
   name: Website security baseline checker
   summary: Point it at your site. Get a checklist covering HTTPS, security headers, secrets and content policy, with fixes ranked.
@@ -260,9 +261,10 @@
   level: intermediate
   thinking: medium
   thinking_why: The checks are standard but fixes depend on your stack.
-  inputs: [{type: codebase, required: false}, {type: web_app, required: false}]
-  outputs: [{type: security_report}]
+  inputs: [ { type: codebase, required: false }, { type: web_app, required: false } ]
+  outputs: [ { type: security_report } ]
   needs: look at your site's code or settings
+  slug: website-security-check
 "rampstackco/claude-skills:skills/seo-backlink-audit":
   name: Backlink profile auditor
   summary: Connect Ahrefs. Get a backlink health report with anchor text spread, toxic links, lost links to win back and rival gaps.
@@ -271,8 +273,8 @@
   level: advanced
   thinking: high
   thinking_why: Judging which links harm you takes careful weighing of the data.
-  inputs: [{type: web_page, required: true}, {type: competitor_set, required: false}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: audit_report } ]
   needs: connect to Ahrefs
   paid: Ahrefs
 "rampstackco/claude-skills:skills/seo-competitor":
@@ -283,8 +285,8 @@
   level: intermediate
   thinking: high
   thinking_why: It combines several data sources into one picture of where you trail.
-  inputs: [{type: web_page, required: true}, {type: competitor_set, required: false}]
-  outputs: [{type: competitor_set}, {type: audit_report}]
+  inputs: [ { type: web_page, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: competitor_set }, { type: audit_report } ]
   needs: use SEO tools you already have
 "rampstackco/claude-skills:skills/seo-content-audit":
   name: Page keep-or-cut auditor
@@ -294,8 +296,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It applies a set decision rule to each page.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
 "rampstackco/claude-skills:skills/seo-content-gap-audit":
   name: Content gap and decay finder
   summary: Connect Ahrefs. Get missing topics, thin pages, outdated posts and decaying pages, sorted into update or replace.
@@ -304,8 +306,8 @@
   level: advanced
   thinking: high
   thinking_why: Telling update from replace needs judgment across several data sets.
-  inputs: [{type: web_page, required: true}, {type: competitor_set, required: false}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: audit_report } ]
   needs: connect to Ahrefs
   paid: Ahrefs
 "rampstackco/claude-skills:skills/seo-keyword":
@@ -316,8 +318,8 @@
   level: beginner
   thinking: medium
   thinking_why: It groups and ranks by a set method.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: spreadsheet}, {type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: plan } ]
 "rampstackco/claude-skills:skills/seo-keyword-gap-audit":
   name: Rival keyword gap finder
   summary: Connect Ahrefs and name rivals. Get keywords they rank for that you do not, ranked by opportunity into quick wins.
@@ -326,8 +328,8 @@
   level: advanced
   thinking: high
   thinking_why: Ranking opportunity means weighing volume, difficulty and fit.
-  inputs: [{type: competitor_set, required: true}]
-  outputs: [{type: shortlist}, {type: audit_report}]
+  inputs: [ { type: competitor_set, required: true } ]
+  outputs: [ { type: shortlist }, { type: audit_report } ]
   needs: connect to Ahrefs
   paid: Ahrefs
 "rampstackco/claude-skills:skills/seo-offpage":
@@ -338,8 +340,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows known tactics and picks the ones that fit you.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/seo-onpage":
   name: On-page SEO tuner
   summary: Give it a page. Get fixes for titles, descriptions, headings, content, internal links, images, URLs and schema.
@@ -348,8 +350,8 @@
   level: beginner
   thinking: medium
   thinking_why: It runs a set checklist and rewrites what falls short.
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: audit_report}, {type: copy_draft}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report }, { type: copy_draft } ]
 "rampstackco/claude-skills:skills/seo-rank-tracking":
   name: Rank tracking set-up helper
   summary: Connect Ahrefs. Get the keywords worth tracking, grouped by purpose, with baselines, alert limits and a reporting routine.
@@ -358,8 +360,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It picks and groups keywords by a set method.
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: plan}, {type: spreadsheet}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: plan }, { type: spreadsheet } ]
   needs: connect to Ahrefs
   paid: Ahrefs
 "rampstackco/claude-skills:skills/seo-site-health-audit":
@@ -370,8 +372,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It ranks a long list by business effect using set rules.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
 "rampstackco/claude-skills:skills/seo-technical":
   name: Technical SEO auditor
   summary: Give it your site. Get an audit of crawling, indexing, site structure, structured data, page experience and security.
@@ -380,8 +382,8 @@
   level: advanced
   thinking: high
   thinking_why: Technical faults interact, so it needs careful cause-finding.
-  inputs: [{type: web_page, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: open pages and read site files
 "rampstackco/claude-skills:skills/seo-traffic-diagnosis":
   name: Organic traffic drop detective
@@ -391,8 +393,8 @@
   level: advanced
   thinking: high
   thinking_why: It must tell apart updates, site changes and market shifts from the same data.
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: connect to Ahrefs and Search Console
   paid: Ahrefs
 "rampstackco/claude-skills:skills/skill-creation-walkthrough":
@@ -403,8 +405,8 @@
   level: beginner
   thinking: medium
   thinking_why: It guides set steps and checks your skill idea as you go.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: skill_files}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: skill_files } ]
 "rampstackco/claude-skills:skills/sprint-operations":
   name: Delivery team sprint runner
   summary: Tell it your team and sprint. Get metrics, capacity plans, ceremony agendas and a sprint report for your PMO routine.
@@ -413,8 +415,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows set team routines and adjusts to your numbers.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
 "rampstackco/claude-skills:skills/stakeholder-communication":
   name: Executive update drafter
   summary: Give it the news and who reads it. Get a status update, exec review or bad-news note pitched to that audience.
@@ -423,8 +425,8 @@
   level: beginner
   thinking: medium
   thinking_why: It matches tone and detail to the reader.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
 "rampstackco/claude-skills:skills/team-onboarding-playbook":
   name: 30-60-90 day onboarding planner
   summary: Tell it the role and team. Get a 30, 60 and 90 day plan that gets a new person productive.
@@ -433,8 +435,8 @@
   level: beginner
   thinking: medium
   thinking_why: It builds the plan from a set pattern fitted to the role.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
 "rampstackco/claude-skills:skills/ticket-authoring":
   name: Work ticket writer
   summary: Give it a bug, task or idea. Get a complete Jira, Linear or GitHub ticket with fields and a clear done test.
@@ -443,8 +445,8 @@
   level: beginner
   thinking: low
   thinking_why: It fills a fixed ticket format from what you give it.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
 "rampstackco/claude-skills:skills/upgrade-flow-design":
   name: Free-to-paid flow designer
   summary: Describe your SaaS plans. Get upgrade moments, paywall design, win-back flows and churn prevention steps.
@@ -453,8 +455,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It balances pushing upgrades against annoying users.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
 "rampstackco/claude-skills:skills/usability-testing":
   name: Usability test runner
   summary: Give it a design or prototype. Get a test plan, task scripts, moderator notes and a findings summary.
@@ -463,8 +465,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows a set test method and judges what the findings mean.
-  inputs: [{type: design_file, required: false}, {type: brief, required: true}]
-  outputs: [{type: plan}, {type: document}]
+  inputs: [ { type: design_file, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
 "rampstackco/claude-skills:skills/user-feedback-aggregation":
   name: Feedback pile sorter
   summary: Give it feedback from tickets, NPS and calls. Get one ranked signal of what customers need, not just the loudest voice.
@@ -473,8 +475,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It groups many notes and weighs them, not just counts them.
-  inputs: [{type: feedback_notes, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: feedback_notes, required: true } ]
+  outputs: [ { type: document } ]
 "rampstackco/claude-skills:skills/ux-research":
   name: Interview and research planner
   summary: Describe your research question. Get a plan with recruiting, interview guide, synthesis steps and next product decisions.
@@ -483,8 +485,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It follows a set research method fitted to your question.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}, {type: question}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: question } ]
 "rampstackco/claude-skills:skills/vendor-evaluation":
   name: Software vendor chooser
   summary: Give it your needs and options. Get vendors scored against your criteria, RFP questions, risk notes and a contract checklist.
@@ -493,8 +495,8 @@
   level: intermediate
   thinking: high
   thinking_why: Choosing a vendor means weighing cost, risk and fit.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: shortlist}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shortlist }, { type: document } ]
 "rampstackco/claude-skills:skills/vertical-site-conventions":
   name: Industry-look site composer
   summary: Name your industry, such as store, restaurant or manufacturer. Get page layouts that look like that kind of site.
@@ -503,5 +505,5 @@
   level: intermediate
   thinking: medium
   thinking_why: It applies known layout patterns for each industry.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: page_layout_spec}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: page_layout_spec } ]

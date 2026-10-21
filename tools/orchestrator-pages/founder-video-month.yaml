@@ -1,0 +1,110 @@
+new_slug: founder-video-month
+name: Plan a month of founder videos and edit the first
+summary: Give it your brand file. Get ten founder video episodes, a script for the first, and an edit plan for your footage.
+job: grow-social
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Plan a month of founder videos and get the first one edited
+subhead: Give it your brand file. It plans ten founder video episodes, writes a script for the first one in the founder's voice, fixes any line a person would trip on, then plans the edit once you have filmed it.
+explain: |-
+  Founder videos work because only the founder can tell the story. They stall because nobody knows what to film next, or the script reads like a press release.
+
+  This workflow turns the questions your buyers ask into ten episodes across four threads, each paired with something to show. It scripts the first one in the founder's words, then reads it aloud to fix any line that trips the tongue. You film it. Then it plans the cuts, captions, cover and export.
+when:
+  - You want to post founder videos every week and keep running out of ideas.
+  - The founder will film but hates writing scripts.
+  - You have raw footage and no plan for the edit.
+you_give:
+  - Your brand file
+  - The founder's real story, in notes or from a call (optional)
+  - Who the videos are for (optional)
+  - Your footage once you have filmed the first episode
+you_get:
+  - Ten episodes in order, each with something to show
+  - A filming setup you can use every time
+  - A script for episode one, with two or three openings
+  - An edit plan with cuts, captions, cover and export checks
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. It works step by step and saves each result.
+how_it_works:
+  - title: Plans the series
+    text: Uses the founder video series planner to sort questions into four threads and choose and order ten episodes.
+  - title: Scripts the first episode
+    text: Uses the founder video script skill to find the decision only the founder can speak to and tell it in four moves.
+  - title: Makes it easy to say
+    text: Uses the read-aloud editor to say each line at speaking pace and fix what trips the tongue.
+  - title: Waits for the film
+    text: You film the episode with the script and the setup.
+  - title: Plans the edit
+    text: Uses the social video edit planner to log the footage, shape the story, plan captions and sound, and check platform rules.
+output_shape: |-
+  SERIES
+    Episode 1 to 10: <question> | thread | what to show
+    Filming setup: <once>
+
+  SCRIPT: EPISODE 1
+    Openings: <2 to 3> | Script: <four moves> | Cutaways: <list>
+
+  READ-ALOUD FIXES
+    | Line | Problem | Fix |
+
+  [you film the episode]
+
+  EDIT PLAN
+    Cuts with in and out times | Captions | Cover | Export
+    CHECKS MISSED: <one line each, or none>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |-
+    [the handoff pack] Follow HANDOFF.md.
+
+    Brand file: the Sprout brand file. Practice data.
+    Founder notes: started Sprout after quitting three greens powders in a year.
+    Footage (after the film step): 4 minutes, one take, kitchen counter.
+  output: |-
+    STEP 1: SERIES
+    Episode 1: "Why did I quit three powders before making one?" (thread: story) Show: the three empty tubs.
+    Episode 2: "What is actually in a scoop?" (thread: product) Show: a scoop poured out.
+    Episodes 3 to 10 follow, no thread two weeks running.
+    Filming setup: window light, phone at eye level, kitchen counter.
+
+    STEP 2: SCRIPT, EPISODE 1
+    Opening A (admission): "I quit three greens powders in one year."
+    Move 1 to 4 written in the founder's plain words. Claims limited to ones on file.
+
+    STEP 3: READ-ALOUD FIXES
+    | "I do not enjoy" | stiff | "I didn't enjoy" |
+
+    [founder films episode 1]
+
+    STEP 5: EDIT PLAN
+    Cut 0:00 to 0:05 open on the three tubs. Cut the 8-second pause at 1:12. Captions two lines, 42 characters. Cover frame: tubs in a row.
+    CHECKS MISSED: none
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-04. MISSING: music licence.
+tweaks:
+  - what: How often you post
+    how: Say how many episodes a week. The planner spaces the threads to fit.
+  - what: How the founder feels on camera
+    how: Say if they prefer notes to a script. The script step then writes beats, not full lines.
+  - what: Where it posts
+    how: Name the platform. The edit plan then checks length, captions and cover to its rules.
+judge:
+  - Each episode has something to show, not just something to say.
+  - The script only claims what the founder can show or what is in your brand file.
+  - No stiff line is left after the read-aloud step.
+  - The edit plan gives in and out times for every cut.
+test:
+  - Read episode 1 aloud before you film. You should not stumble.
+  - Check that no thread appears two weeks in a row.
+  - Compare the edit plan's cut list with your footage. Each time stamp should match.
+improve:
+  - Run the script step again for episode 2 and keep the same filming setup.
+  - Save the founder's best lines in your brand file so later scripts sound the same.
+  - Add the edit plan from episode 1 as a model for the next ones.

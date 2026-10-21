@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It maps rules to evidence and ranks the gaps.
+new_slug: compliance-checklist
+name: Compliance readiness checklist builder
+summary: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority.
+job: secure-code
+headline: Compliance readiness checklist builder
+subhead: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sorts your type first, then lists set duties.
+new_slug: eu-network-security-check
+name: EU network security rules checker
+summary: Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps.
+job: check-contracts
+headline: EU network security rules checker
+subhead: Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

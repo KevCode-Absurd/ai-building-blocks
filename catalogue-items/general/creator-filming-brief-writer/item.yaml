@@ -12,7 +12,7 @@ inputs:
   - {type: product_data, required: true}
 outputs:
   - {type: brief}
-uses: [selfie-style-video-ad-script-writer]
+uses: [selfie-style-ad-script]
 origin: rebuilt
 source_ids: [CES-144]
 old_name: creator filming brief

@@ -57,8 +57,8 @@ The weak spots with sources. Your strengths with proof, and a claim-only list. T
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/image-ad-maker-from-customer-quotes). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the buying reasons.
+- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
+- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
 - **Understand your buyers** with the [Dominant emotion finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
 - **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
 - **Write the ad copy** with the [Typed headline batch writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.

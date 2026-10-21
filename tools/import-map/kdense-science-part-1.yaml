@@ -8,8 +8,8 @@
   level: expert
   thinking: high
   thinking_why: "Fitting and judging flux models needs careful, many-step reasoning."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: document}, {type: spreadsheet}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document }, { type: spreadsheet } ]
   needs: "run Python code and save files"
 "K-Dense-AI/scientific-agent-skills:skills/analytical-method-validation":
   name: "Lab method validation planner"
@@ -19,8 +19,8 @@
   level: expert
   thinking: high
   thinking_why: "It must match the right standard and justify every limit."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: plan}, {type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
 "K-Dense-AI/scientific-agent-skills:skills/arbor":
   name: "Hypothesis tree optimizer"
   summary: "Give it a result you want to improve. Get ranked hypotheses tested one by one, with a record of what worked."
@@ -29,8 +29,8 @@
   level: expert
   thinking: high
   thinking_why: "It plans many linked experiments and keeps the trail."
-  inputs: [{type: codebase, required: true}, {type: question, required: true}]
-  outputs: [{type: document}, {type: code_change}]
+  inputs: [ { type: codebase, required: true }, { type: question, required: true } ]
+  outputs: [ { type: document }, { type: code_change } ]
   needs: "run code and keep files between steps"
 "K-Dense-AI/scientific-agent-skills:skills/autoskill":
   name: "Repeated work skill finder"
@@ -40,8 +40,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It groups patterns, then writes drafts for you to review."
-  inputs: [{type: transcript, required: true}]
-  outputs: [{type: skill_files}]
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: skill_files } ]
   needs: "read your Screenpipe screen history on your computer"
 "K-Dense-AI/scientific-agent-skills:skills/bgpt-paper-search":
   name: "Paper claim evidence finder"
@@ -51,8 +51,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It searches, then compares what each paper really shows."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
   needs: "connect to the BGPT paper search service"
 "K-Dense-AI/scientific-agent-skills:skills/bids":
   name: "Brain imaging dataset organizer"
@@ -62,8 +62,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It follows a strict standard but needs judgement on edge cases."
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: audit_report}, {type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report }, { type: code_change } ]
   needs: "run code and read files on your computer"
 "K-Dense-AI/scientific-agent-skills:skills/bulk-rnaseq":
   name: "RNA-seq comparison preparer"
@@ -73,8 +73,8 @@
   level: advanced
   thinking: high
   thinking_why: "Wrong setup choices quietly ruin the final comparison."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}, {type: audit_report}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
   needs: "run Python and command line tools"
 "K-Dense-AI/scientific-agent-skills:skills/cantera":
   name: "Ignition delay simulator"
@@ -84,8 +84,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It follows set steps but must check conservation and settings."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}, {type: spreadsheet}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document }, { type: spreadsheet } ]
   needs: "run Python code"
 "K-Dense-AI/scientific-agent-skills:skills/cellprofiler":
   name: "Microscopy cell counter"
@@ -95,8 +95,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It follows a repeatable pipeline with a few tuning choices."
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: spreadsheet}, {type: image}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: image } ]
   needs: "run command line tools and save files"
 "K-Dense-AI/scientific-agent-skills:skills/clinical-decision-support":
   name: "Clinical research evidence packager"
@@ -106,9 +106,10 @@
   level: expert
   thinking: high
   thinking_why: "Health work needs care, caution and clear limits on claims."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document } ]
   needs: "run Python code on local files"
+  slug: clinical-evidence-package
 "K-Dense-AI/scientific-agent-skills:skills/clinical-reports":
   name: "Clinical report draft checker"
   summary: "Give it de-identified case or trial data. Get a structured report draft and checks for gaps."
@@ -117,8 +118,8 @@
   level: expert
   thinking: high
   thinking_why: "Safety reports need exact structure and careful wording."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: document}, {type: audit_report}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document }, { type: audit_report } ]
   needs: "run Python code on local files"
 "K-Dense-AI/scientific-agent-skills:skills/database-lookup":
   name: "Public database fact finder"
@@ -128,8 +129,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It builds the right query, then records where the answer came from."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
   needs: "reach public web data services"
 "K-Dense-AI/scientific-agent-skills:skills/deepchem":
   name: "Molecule property predictor"
@@ -139,8 +140,8 @@
   level: advanced
   thinking: high
   thinking_why: "Fair splits and model choice need careful judgement."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: code_change}, {type: document}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: code_change }, { type: document } ]
   needs: "run Python code"
 "K-Dense-AI/scientific-agent-skills:skills/depmap":
   name: "Cancer dependency analyst"
@@ -150,8 +151,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It joins several large tables and reads them with care."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}, {type: spreadsheet}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document }, { type: spreadsheet } ]
   needs: "run Python code and download public data"
 "K-Dense-AI/scientific-agent-skills:skills/diffdock":
   name: "Drug docking pose ranker"
@@ -161,8 +162,8 @@
   level: expert
   thinking: high
   thinking_why: "Reading docking confidence correctly takes expert judgement."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
   needs: "run DiffDock on a computer with a strong graphics card"
 "K-Dense-AI/scientific-agent-skills:skills/exa-search":
   name: "Scientific web searcher"
@@ -172,8 +173,8 @@
   level: intermediate
   thinking: low
   thinking_why: "It runs searches and pulls out text with little judgement."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: source_text}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: source_text } ]
   needs: "run code and call the Exa search service"
   scrapes: true
   paid: "Exa"
@@ -185,8 +186,8 @@
   level: advanced
   thinking: high
   thinking_why: "Choosing a design that answers the question is hard to reverse."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: plan}, {type: spreadsheet}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan }, { type: spreadsheet } ]
   needs: "run Python code"
 "K-Dense-AI/scientific-agent-skills:skills/flowkit":
   name: "Flow cytometry gating analyst"
@@ -196,8 +197,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It applies set methods but needs choices on gates."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}, {type: document}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
   needs: "run Python code"
 "K-Dense-AI/scientific-agent-skills:skills/fluidsim":
   name: "Fluid flow simulation planner"
@@ -207,8 +208,8 @@
   level: expert
   thinking: high
   thinking_why: "Numerical settings can silently give wrong physics."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: plan}, {type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
   needs: "run Python code and use computing power"
 "K-Dense-AI/scientific-agent-skills:skills/folklore-variant-evidence":
   name: "Gene variant evidence checker"
@@ -218,8 +219,8 @@
   level: advanced
   thinking: high
   thinking_why: "It weighs mixed evidence and must not overclaim."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: "reach public web data services"
 "K-Dense-AI/scientific-agent-skills:skills/genomic-coordinates":
   name: "Genome position converter"
@@ -229,8 +230,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "Off-by-one and naming errors need careful rule checks."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}, {type: audit_report}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
   needs: "run Python code"
 "K-Dense-AI/scientific-agent-skills:skills/geomaster":
   name: "Geospatial research analyst"
@@ -240,8 +241,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It picks methods across many map tools, then runs them."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: document}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document }, { type: image } ]
   needs: "run Python code and save files"
 "K-Dense-AI/scientific-agent-skills:skills/hugging-science":
   name: "Science dataset and model finder"
@@ -251,8 +252,8 @@
   level: intermediate
   thinking: low
   thinking_why: "It looks things up in a catalogue and lists them."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
   needs: "browse the Hugging Face catalogue"
 "K-Dense-AI/scientific-agent-skills:skills/hypothesis-generation":
   name: "Research hypothesis builder"
@@ -262,8 +263,8 @@
   level: intermediate
   thinking: high
   thinking_why: "Good hypotheses need creative thinking and strict testing logic."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: plan}, {type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
 "K-Dense-AI/scientific-agent-skills:skills/imaging-data-commons":
   name: "Cancer imaging data finder"
   summary: "Describe the scans you need. Get public cancer images found, licence-checked and ready to download."
@@ -272,8 +273,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It builds queries and checks each dataset's licence."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: spreadsheet}, {type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
   needs: "run Python code and download public data"
 "K-Dense-AI/scientific-agent-skills:skills/iso-standards-readiness":
   name: "Lab and device standards checker"
@@ -283,8 +284,8 @@
   level: expert
   thinking: high
   thinking_why: "It maps your evidence to exact clauses and finds the gaps."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
 "K-Dense-AI/scientific-agent-skills:skills/lab-hardware-cad":
   name: "Lab hardware designer"
   summary: "Describe a lab part, like a mount or chip mold. Get a parametric design and STEP, STL or DXF files."
@@ -293,8 +294,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It writes code that builds exact shapes and checks fit."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: design_file}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: design_file } ]
   needs: "run Python code and save files"
 "K-Dense-AI/scientific-agent-skills:skills/latex-posters":
   name: "Research poster maker"
@@ -304,8 +305,8 @@
   level: intermediate
   thinking: medium
   thinking_why: "It follows a layout method with some design choices."
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
   needs: "run LaTeX and save files"
 "K-Dense-AI/scientific-agent-skills:skills/liteparse":
   name: "Scanned PDF text reader"
@@ -315,8 +316,8 @@
   level: intermediate
   thinking: low
   thinking_why: "It runs a parser and returns text with little judgement."
-  inputs: [{type: document, required: true}]
-  outputs: [{type: source_text}]
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: source_text } ]
   needs: "run Python code and save files"
 "K-Dense-AI/scientific-agent-skills:skills/literature-review":
   name: "Systematic review writer"
@@ -326,8 +327,8 @@
   level: advanced
   thinking: high
   thinking_why: "It must plan, screen and synthesise many sources with checked citations."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
   needs: "search public paper databases"
 "K-Dense-AI/scientific-agent-skills:skills/mageck":
   name: "CRISPR screen hit ranker"
@@ -337,8 +338,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It follows a standard pipeline and reads the quality results."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}, {type: audit_report}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
   needs: "run command line tools"
 "K-Dense-AI/scientific-agent-skills:skills/marine-carbonate-chemistry":
   name: "Seawater carbonate calculator"
@@ -348,8 +349,8 @@
   level: advanced
   thinking: medium
   thinking_why: "The math is set but inputs need careful pairing."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
   needs: "run Python code"
 "K-Dense-AI/scientific-agent-skills:skills/market-research-reports":
   name: "Market research report writer"
@@ -359,8 +360,8 @@
   level: intermediate
   thinking: high
   thinking_why: "It weighs evidence and keeps facts and guesses apart."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
   needs: "search the web"
 "K-Dense-AI/scientific-agent-skills:skills/molecular-dynamics":
   name: "Molecular simulation runner"
@@ -370,8 +371,8 @@
   level: expert
   thinking: high
   thinking_why: "Setup choices change results and need expert care."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}, {type: spreadsheet}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document }, { type: spreadsheet } ]
   needs: "run Python code and use computing power"
 "K-Dense-AI/scientific-agent-skills:skills/ncats-arax":
   name: "Biomedical link finder"
@@ -381,8 +382,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It builds exact queries and traces each result."
-  inputs: [{type: question, required: true}]
-  outputs: [{type: spreadsheet}, {type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
   needs: "reach the NCATS Translator service"
 "K-Dense-AI/scientific-agent-skills:skills/nextflow":
   name: "Nextflow pipeline builder"
@@ -392,8 +393,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It writes and debugs code with set conventions."
-  inputs: [{type: question, required: true}, {type: codebase, required: false}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: question, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
   needs: "run Nextflow and containers"
 "K-Dense-AI/scientific-agent-skills:skills/neurokit2":
   name: "Body signal analysis builder"
@@ -403,8 +404,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It uses set processing steps with checks on timing and quality."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: document}, {type: spreadsheet}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document }, { type: spreadsheet } ]
   needs: "run Python code"
 "K-Dense-AI/scientific-agent-skills:skills/neuropixels-analysis":
   name: "Brain recording analyst"
@@ -414,8 +415,8 @@
   level: expert
   thinking: high
   thinking_why: "Each step affects the next and needs expert reading."
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: document}, {type: spreadsheet}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document }, { type: spreadsheet } ]
   needs: "run Python code and use computing power"
 "K-Dense-AI/scientific-agent-skills:skills/nmrglue":
   name: "NMR spectrum processor"
@@ -425,8 +426,8 @@
   level: advanced
   thinking: medium
   thinking_why: "It follows set processing steps with checks on the axis."
-  inputs: [{type: spreadsheet, required: true}]
-  outputs: [{type: spreadsheet}, {type: image}]
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: image } ]
   needs: "run Python code"
 "K-Dense-AI/scientific-agent-skills:skills/adaptyv":
   skip: "Orders protein tests from one paid lab service, so it mainly sells that service."

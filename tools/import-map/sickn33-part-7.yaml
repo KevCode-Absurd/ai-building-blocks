@@ -8,8 +8,8 @@
   level: beginner
   thinking: medium
   thinking_why: It picks a mindset first, then drafts and compares angles.
-  inputs: [{type: persona, required: false}, {type: brief, required: true}]
-  outputs: [{type: hooks}]
+  inputs: [ { type: persona, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: hooks } ]
   author: MMEHDI0606
   author_url: https://github.com/MMEHDI0606
 "sickn33/agentic-awesome-skills:skills/identity-mirror":
@@ -20,10 +20,11 @@
   level: intermediate
   thinking: medium
   thinking_why: It reads people's self-image and turns it into wording.
-  inputs: [{type: persona, required: false}, {type: brief, required: true}]
-  outputs: [{type: angle_library}]
+  inputs: [ { type: persona, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: angle_library } ]
   author: MMEHDI0606
   author_url: https://github.com/MMEHDI0606
+  slug: customer-identity-messaging
 "sickn33/agentic-awesome-skills:skills/idea-autopsy":
   name: Business idea killer
   summary: Give it a business idea. Get the one fact that kills it, or the cheapest test it still has to pass.
@@ -32,8 +33,8 @@
   level: intermediate
   thinking: high
   thinking_why: It has to hunt for the fatal flaw, not just agree.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
   needs: search the web
   author: hafiz-actyte
   author_url: https://github.com/hafiz-actyte
@@ -45,8 +46,8 @@
   level: intermediate
   thinking: high
   thinking_why: It runs several rounds of scoring and combining ideas.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: shortlist}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shortlist } ]
 "sickn33/agentic-awesome-skills:skills/idea-evaluator":
   name: Idea debate judge
   summary: Give it an idea. Get a three-round debate between a fan and a critic, then a clear verdict.
@@ -55,8 +56,8 @@
   level: beginner
   thinking: medium
   thinking_why: It plays two sides and then weighs both.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: feedback_notes}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: feedback_notes } ]
   author: Prince-1652
   author_url: https://github.com/Prince-1652
 "sickn33/agentic-awesome-skills:skills/idea-os":
@@ -67,8 +68,8 @@
   level: intermediate
   thinking: high
   thinking_why: Each of five phases feeds the next and needs real research.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}, {type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
   needs: search the web and save files
   author: Slashworks-biz
   author_url: https://github.com/Slashworks-biz
@@ -80,8 +81,8 @@
   level: advanced
   thinking: high
   thinking_why: It researches, picks a stack and writes testable steps with no guessing.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: plan}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
   needs: search the web and save files
   author: iniesohidham
   author_url: https://github.com/iniesohidham
@@ -93,10 +94,11 @@
   level: beginner
   thinking: low
   thinking_why: It only changes how answers are shaped.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
   author: ayghri
   author_url: https://github.com/ayghri
+  slug: focus-friendly-answers
 "sickn33/agentic-awesome-skills:skills/hr-pro":
   name: HR partner
   summary: Describe the people task. Get job posts, interview kits, onboarding lists, review plans or policy drafts to check with counsel.
@@ -105,8 +107,8 @@
   level: beginner
   thinking: medium
   thinking_why: It drafts careful documents and flags legal limits.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
 "sickn33/agentic-awesome-skills:skills/incident-runbook-templates":
   name: Incident runbook writer
   summary: Name your service. Get a runbook with severity levels, first steps, fixes and who to tell.
@@ -115,8 +117,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It fills proven templates with your service details.
-  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: document } ]
 "sickn33/agentic-awesome-skills:skills/graceful-shutdown":
   name: Safe shutdown code writer
   summary: Point it at your server or worker. Get code that finishes live work and exits cleanly when stopped.
@@ -125,8 +127,8 @@
   level: advanced
   thinking: medium
   thinking_why: It follows a set pattern but must fit your code.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: read and edit your project files
   author: Prajeeth-12
   author_url: https://github.com/Prajeeth-12
@@ -138,8 +140,8 @@
   level: intermediate
   thinking: high
   thinking_why: It traces crawl and redirect problems across a whole site.
-  inputs: [{type: codebase, required: false}, {type: source_text, required: false}]
-  outputs: [{type: audit_report}]
+  inputs: [ { type: codebase, required: false }, { type: source_text, required: false } ]
+  outputs: [ { type: audit_report } ]
   needs: read your files or open your site
   author: WHOISABHISHEKADHIKARI
   author_url: https://github.com/WHOISABHISHEKADHIKARI
@@ -151,8 +153,8 @@
   level: intermediate
   thinking: low
   thinking_why: It runs a set tool and cleans the text.
-  inputs: [{type: source_text, required: true}]
-  outputs: [{type: transcript}]
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: transcript } ]
   needs: run code and save files
   author: adelaidasofia
   author_url: https://github.com/adelaidasofia
@@ -164,8 +166,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It reads the project layout and writes short notes for each part.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: skill_files}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: skill_files } ]
   needs: read and edit your project files
 "sickn33/agentic-awesome-skills:skills/infinity":
   name: Untrusted input checker
@@ -175,8 +177,8 @@
   level: advanced
   thinking: medium
   thinking_why: It lists entry points, then checks each one in turn.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: security_report}, {type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report }, { type: code_change } ]
   needs: read and edit your project files
 "sickn33/agentic-awesome-skills:skills/i18n-localization":
   name: App translation setup helper
@@ -186,8 +188,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It scans code for text and applies standard patterns.
-  inputs: [{type: codebase, required: true}]
-  outputs: [{type: code_change}]
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
   needs: read and edit your project files
 "sickn33/agentic-awesome-skills:skills/google-no-code":
   name: Google Forms automator
@@ -197,8 +199,8 @@
   level: beginner
   thinking: low
   thinking_why: It follows a short recipe and fills in the script.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: document}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
   author: WHOISABHISHEKADHIKARI
   author_url: https://github.com/WHOISABHISHEKADHIKARI
 "sickn33/agentic-awesome-skills:skills/high-end-visual-design":
@@ -209,8 +211,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It picks a look then builds it with careful detail.
-  inputs: [{type: brief, required: true}]
-  outputs: [{type: web_page}]
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_page } ]
   needs: run code and open a browser
   author: Leonxlnx
   author_url: https://github.com/Leonxlnx
@@ -222,8 +224,8 @@
   level: intermediate
   thinking: medium
   thinking_why: It compares your design against a set of known rules.
-  inputs: [{type: design_file, required: true}]
-  outputs: [{type: feedback_notes}]
+  inputs: [ { type: design_file, required: true } ]
+  outputs: [ { type: feedback_notes } ]
   author: Raintree Technology
   author_url: https://raintree.technology
 "sickn33/agentic-awesome-skills:skills/google-analytics-automation":

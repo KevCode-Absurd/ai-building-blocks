@@ -1,0 +1,28 @@
+slug: competitor-ad-to-script
+name: Turn competitor ads into your own script
+summary: "An original script that borrows one idea from competitor ads you saved, in your words, checked against ad rules."
+category: orchestrator
+boards: [ecommerce]
+type: workflow
+role: orchestrate
+job: ads
+level: advanced
+inputs:
+  - {type: reference_set, required: true}
+  - {type: brand_brain, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: ad_copy, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: script}
+  - {type: audit_report}
+uses: [competitor-ad-swipe-file-builder, competitor-ad-gap-finder, competitor-idea-video-script, ad-script-read-aloud-editor, meta-ads-compliance-checker]
+steps:
+  - {uses: competitor-ad-swipe-file-builder, note: "File each ad you can see under one of the nine types, three per type from at least two brands, long-running first, each with its library ID, start date and what to study. If no real ad can be seen (notes or descriptions only), file nothing, list exactly what to collect, and stop the run here."}
+  - {uses: competitor-ad-gap-finder, note: "Use the board from step 1. Map which types the category crowds, list repeated claims word for word, check them against what buyers say, and brief the gaps the brand's proof can fill. If step 1 stopped, write 'Not run: no ads to study' and nothing else."}
+  - {uses: competitor-idea-video-script, note: "Use the ad cards and gap briefs from step 2. Pick one idea the brand's facts can back, name where it acts, write a new script from the reviews and facts, and run the five-line distance check. If step 1 or 2 stopped, write 'Not run: no reference ad' and draft nothing."}
+  - {uses: ad-script-read-aloud-editor, note: "Read every line of the step 3 script aloud and fix the ones nobody would say, without changing any claim or number. Hand on the fixes and the whole script with them made. If no script exists, write 'Not run' and nothing else."}
+  - {uses: meta-ads-compliance-checker, note: "Check the final script from step 4 against Facebook and Instagram ad rules, pointing to exact lines. State target countries only if the brand file gives them; otherwise write MISSING. If no script exists, mark the check not run. Then close the run with a HAND-BACK SUMMARY: each step's file, any step not run and why, and every MISSING: line from all steps in one list."}
+origin: own
+version: 1.1.0

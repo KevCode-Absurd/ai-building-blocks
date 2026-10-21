@@ -1,0 +1,25 @@
+slug: bond-safety-check
+name: "Check if a bond or loan is safe to hold"
+summary: "Paste the debt terms and the borrower's statements. Get coverage and cushion tests and a safe, speculative or reject call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: true}
+outputs:
+  - {type: audit_report}
+uses: [investment-or-speculation-sorter, average-earnings-coverage-tester, equity-cushion-ratio-tester, lender-safety-verdict-writer]
+steps:
+  - {uses: investment-or-speculation-sorter, note: "A first label, so the rest of the run knows whether it is testing for safety or for a gamble."}
+  - {uses: average-earnings-coverage-tester, note: "Takes the label, then tests earnings against the full pile of charges, not only the borrower's own claim."}
+  - {uses: equity-cushion-ratio-tester, note: "Adds a second, independent test: is the business worth far more than it owes?"}
+  - {uses: lender-safety-verdict-writer, note: "Turns both tests into one call with reasons, using rules that exclude rather than rules that persuade."}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "The order of the steps: sort it as investment or speculation, test the borrower's average earnings against all its debt, test the cushion of value behind the debt, write the safe, speculative or reject call"}
+generated_from: intake/security-analysis-bond-safety/skeleton.yaml

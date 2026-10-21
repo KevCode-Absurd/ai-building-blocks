@@ -1,0 +1,19 @@
+slug: roe-margin-check
+renamed_from: return-on-equity-and-margin-checker
+name: "Return on equity and margin checker"
+summary: "Paste several years of a company's accounts. Get return on equity, margins and a one-dollar test, each marked pass or fail."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [warren-buffett]
+credits:
+  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "Judging a business by return on equity on operating profit rather than profit per share, holding securities at cost, stripping out gains and heavy debt, comparing margins and cost habits with rivals, and the test that each dollar of profit kept should add at least a dollar of value"}

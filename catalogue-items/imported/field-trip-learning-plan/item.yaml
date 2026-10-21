@@ -1,0 +1,39 @@
+slug: field-trip-learning-plan
+renamed_from: field-trip-learning-cycle-planner
+name: "Field trip learning cycle planner"
+summary: "Describe a trip, simulation or practical. Get the before, during and after steps that turn it into lasting learning."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/environmental-experiential-learning/experiential-learning-cycle-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/environmental-experiential-learning/experiential-learning-cycle-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: experiential-learning-cycle-designer
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: experiential-learning-cycle-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/environmental-experiential-learning/experiential-learning-cycle-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

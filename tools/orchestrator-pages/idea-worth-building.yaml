@@ -1,0 +1,113 @@
+new_slug: idea-worth-building
+name: "Find out if your idea is worth building"
+summary: "Give it your idea. Get who to talk to, what to ask, and a keep, change or stop call."
+job: test-an-idea
+thinking: high
+thinking_why: "It runs six skills and has to tell real interest from polite praise. Give it your strongest model."
+
+headline: "Find out if your idea is worth building, before you build it"
+subhead: Give it your idea. It picks who to talk to first, writes questions about their life instead of your idea, and writes the messages that get the talks. After you've had them, it sorts your notes, plans what to ask each person to commit to, and makes a keep going, change or stop call.
+
+explain: |
+  Ask people about your idea and they'll be kind. They'll say it sounds great and that they'd buy it, and you'll build something nobody pays for. The problem isn't the people. It's the questions.
+
+  This workflow keeps every conversation on the customer's life: the last time the problem came up, what they tried, what it cost them, and what they already do about it. It runs in two halves. The first half picks a group you can reach this week, writes the questions (including the one you're afraid to ask) and writes the messages that get you the talks. Then you go and have five to ten conversations. The second half sorts your notes into what people did, gave up and committed to, flags the compliments and wish lists that only feel like proof, plans the next step to ask each person for, and ends with a clear call and the next three talks to have.
+
+when:
+  - You have an idea and want to know if it's worth building before you spend time or money on it.
+  - You've talked to people, everyone liked the idea, and you still don't know if anyone will pay.
+  - You're choosing between two ideas, or two groups of customers, and want evidence instead of a hunch.
+
+you_give:
+  - Your idea in a sentence or two, and who you think it's for
+  - Any group of customers you already have in mind, and where they spend time (optional)
+  - Your notes from the talks, for the second half
+you_get:
+  - The group to talk to first, with where to find them this week
+  - A question guide about their life, your big three unknowns and the scary question, planned
+  - Messages that get you the conversations
+  - Your notes sorted into what people did, gave up and committed to, with the weak signals flagged
+  - A keep going, change or stop call with the reason, and the next three talks to have
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your idea in a sentence or two. It runs the first half and stops.
+  - Send the messages and have five to ten conversations. Write notes straight after each one, as close to their words as you can.
+  - Bring the notes back and say "carry on from step 4". Read the call last, with the evidence it rests on.
+
+how_it_works:
+  - title: Picks who to talk to
+    text: Slices the market until there's a who and a where you could reach this week, and picks the group to start with.
+  - title: Writes the questions
+    text: Questions about their life and their past, never about your idea, plus the three unknowns that could change the plan and the question you're afraid to ask.
+  - title: Writes the messages
+    text: Warm-intro and cold messages that ask for help, not a sale, and keep it casual.
+  - title: Sorts what you heard
+    text: Splits your notes into what they did, what it cost them and what they committed to. Compliments, vague claims and feature ideas are flagged as weak.
+  - title: Plans the commitment
+    text: For each person, the next step to ask for in time, reputation or money, and who is all praise and no commitment.
+  - title: Makes the call
+    text: Sets what you believed against what people did, then says keep going, change or stop, and lists the next three talks.
+
+output_shape: |
+  FIRST HALF
+  Start with: <who> at <where>, because <why this group first>
+  Big three: 1 <unknown, what it could change> 2 <...> 3 <...>
+  Scary question: <how to ask it, and what each answer means>
+  Questions: <about their life and the last time it happened>
+  Messages: <warm intro> | <cold message>
+
+  (you have the talks)
+
+  SECOND HALF
+  Per talk: did <...> | cost them <...> | committed <time / reputation / money / none>
+  Weak signals: <compliment / vague claim / feature idea> -> ask next time: <...>
+  Ask plan: <person>: <next step to ask for>
+  CALL: <keep going / change / stop>, because <what people did>
+  Next three talks: <who, and what to learn>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: How narrow the group is
+    how: The narrower the who and where, the faster you learn. "Freelance designers" is too broad. "Freelance designers who send invoices to more than five clients a month, in two local Slack groups" is something you can act on this week.
+  - what: Your notes
+    how: Write them straight after each talk, in their words, with what they did and what they offered. Notes that only say "liked it" can't be sorted into anything useful.
+  - what: The scary question
+    how: Tell it what you're most afraid to hear. That question goes into the guide, planned out, so you don't skip it in the room.
+
+judge:
+  - No question or message pitches the idea before learning about the person's life.
+  - Every question is about the past or the present, not what they would do.
+  - The call rests on what people did or gave up, not on praise.
+  - Weak signals are named, each with the follow-up to ask next time.
+  - Nothing a customer said is invented.
+
+test:
+  - Give it notes where everyone said "great idea" but nobody offered time or money. The call should be change or stop, not keep going.
+  - Paste three questions that ask about your idea. Each should come back rewritten about the person's life, with the reason it failed.
+  - Run the first half twice. The group can differ, but both should be a who and a where you could reach this week.
+
+improve:
+  - Keep one notes file per talk, with the date, so the review can see how things changed over time.
+  - Add the group you picked and your big three unknowns to your brand file, so later runs start from there.
+  - After a "change" call, run the first half again with the new group or the new problem.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds the questions, the notes from ten talks and six steps of work in one run."}
+    - {name: "A notes app or voice memo", why: "Lets you write or record what was said straight after each talk, in their words."}
+  inputs:
+    - "Notes from each conversation, written straight after, in the person's own words"
+    - "What you're most afraid to hear about your idea"
+    - "Where your customers already gather, such as groups, events or forums"
+
+terms:
+  - term: Commitment
+    meaning: Something a person gives up to move forward, such as their time, their reputation (an intro to their boss) or money (a deposit or pre-order).
+  - term: Weak signal
+    meaning: Something that feels like proof but isn't, such as a compliment, a vague "I always", or a feature they wish for.
+  - term: Big three
+    meaning: The three unknowns whose answers could change or end the plan.

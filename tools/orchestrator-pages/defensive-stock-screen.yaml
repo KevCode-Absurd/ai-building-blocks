@@ -1,0 +1,89 @@
+new_slug: defensive-stock-screen
+name: Screen stocks with a defensive investor's seven tests
+summary: Paste company figures. Get each company passed or failed on seven tests, with the price sums shown, and a short list.
+job: money-and-investing
+thinking: high
+thinking_why: It runs five skills in a row and every one works on pasted figures. Give it your strongest model, and check the sums.
+headline: Cut a long list of companies to a short, safe one before you read any story
+subhead: Paste figures for the companies you are looking at. It tests size, financial strength, profit record, dividends and growth, checks the earnings for traps, tests the price against three ceilings and builds a spread list with rules for sitting still. A method of analysis, not personal financial advice.
+explain: |
+  A plain investor does not need to find the next big winner. They need a list of companies that are large, strong, steady and not overpriced, and a way to cut a long list down fast.
+
+  This workflow follows the seven tests in The Intelligent Investor by Benjamin Graham. Five tests check the company: size, financial strength, a profit in each of ten years, a long unbroken dividend and a minimum of growth. Two check the price: no more than fifteen times three-year average earnings and no more than one and a half times book value, with a combined limit. Between them it checks the per-share earnings for traps, because the price tests are only as good as the earnings they use. Popular growth names usually fail on price, and that is on purpose. The result is a spread list of ten to thirty names, with rules for when you may change it. It names no company to buy.
+when:
+  - You want a list of sound companies to hold for years with little fuss.
+  - Someone gave you a stock tip and you want to test it against plain rules.
+  - You have a long list and need a repeatable way to cut it.
+you_give:
+  - Ten years of figures for each company, with profit and dividends per share
+  - The latest balance sheet and the share price
+  - Book value per share
+  - What safe bonds pay now, if you know it
+you_get:
+  - A pass, fail or unknown on each quality test, with the figure
+  - Restated earnings, if one-off items or share counts were hiding in them
+  - A pass or fail on three price ceilings, with every sum shown
+  - A spread list, caps for any one name and industry, and a holding plan
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the figures. Mark any year you cannot find, since a gap is marked unknown, not guessed.
+  - Read the cuts first. Most companies fail at least one test.
+how_it_works:
+  - title: Tests the company
+    text: Checks size, strength, a profit in each of ten years, a long dividend record and growth measured with three-year averages.
+  - title: Checks the earnings
+    text: Looks for special charges, share count changes and other items that make one year's profit unreliable.
+  - title: Tests the price
+    text: Sets the price against three-year average earnings and book value, and against the two together, and compares the earnings yield with safe bonds.
+  - title: Builds the list
+    text: Keeps only full passes, spreads them over ten to thirty names, caps names and industries, and offers a broad fund if too few pass.
+  - title: Writes the holding rules
+    text: Lists the facts that must stay true, the reasons that do not count and the only reasons to act.
+output_shape: |-
+  STEP 1: QUALITY
+    <company> | Size | Strength | Profit record | Dividends | Growth | Result
+
+  STEP 2: EARNINGS CHECK
+    Reported <x> | Restated <y> | Call: <CLEAN / ADJUSTED / AVOID>
+
+  STEP 3: PRICE
+    Price / 3-yr earnings <x> | Price / book <y> | Product <z> | Earnings yield <n>% | Result
+
+  STEP 4: LIST
+    Names <n> | Caps | If too few passed: <plan> | Yearly review date
+
+  STEP 5: HOLDING RULES
+    Facts that must hold | Reasons that do not count | Only reasons to act
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Size floor
+    how: Set your own in today's money. The original figures are from the 1970s and far too small.
+  - what: Other kinds of company
+    how: Name any utilities, banks or insurers. Utilities use debt against equity, and banks and insurers are set aside.
+  - what: Number of names
+    how: Say how many you can follow. The list stays between ten and thirty, or says why not.
+judge:
+  - Each step used the result of the step before.
+  - Every test shows its figure, and unknown is used for a gap.
+  - The price tests use restated earnings where step 2 changed them.
+  - No test was loosened to fill the list.
+  - Nothing names a company to buy or sell.
+test:
+  - Give it a company with one loss year in ten. It should fail it on the profit record.
+  - Give it a famous growth company with a high price. It should fail on the price ceilings.
+  - Give it only five years of figures. It should mark the ten-year tests unknown.
+  - Run it twice on the same figures. The results should match.
+improve:
+  - Rerun the screen each year on the same companies and note who drops out.
+  - Judge the list as one group over several years, not name by name.
+  - Pair it with "Choose your investing style and your stock and bond split" so this list sits inside a plan.
+terms:
+  - term: Current ratio
+    meaning: Current assets divided by current liabilities. It shows if a company can pay its short-term bills.
+  - term: Book value
+    meaning: What a company owns less everything it owes, per share, from its balance sheet.
+  - term: Earnings yield
+    meaning: Average earnings divided by price. It is the flip side of the price to earnings multiple.

@@ -1,0 +1,25 @@
+slug: product-review-mining
+name: "Mine your product's own words and find the shared want"
+summary: "Paste a product page or manual. Get its own phrases sorted for headlines, plus the one want buyers share."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: angle_library}
+  - {type: hooks}
+uses: [product-vocabulary-sheet-builder, shared-want-hook-mapper]
+steps:
+  - {uses: product-vocabulary-sheet-builder, note: "A sorted sheet of its own phrases, ready for headlines, proof and demos"}
+  - {uses: shared-want-hook-mapper, note: "The one want they share, its smaller parts and a hook for each. Reads the angle library from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "The Lost Secrets of Breakthrough Advertising", by: "Eugene Schwartz", used: "The order of the steps: product vocabulary sheet builder, shared want hook mapper"}
+generated_from: intake/breakthrough-advertising/skeleton.yaml

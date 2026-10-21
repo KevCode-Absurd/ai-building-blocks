@@ -14,7 +14,7 @@ inputs:
   - {type: brand_brain, required: false}
 outputs:
   - {type: image_prompt}
-uses: [problem-moment-image-ad-maker, tried-before-products-image-ad-maker, handwritten-note-image-ad-maker, sticky-note-image-ad-maker, phone-note-screenshot-image-ad-maker, ignored-reminders-image-ad-maker, chat-screenshot-image-ad-maker, dont-buy-warning-image-ad-maker, complaint-review-image-ad-maker, fact-caption-image-ad-maker, circled-flaw-image-ad-maker, leftover-mess-image-ad-maker, visible-symptom-image-ad-maker, empty-room-image-ad-maker, tracker-chart-image-ad-maker, feared-outcome-image-ad-maker, hand-drawn-story-image-ad-maker, article-headline-image-ad-maker, odd-one-out-image-ad-maker]
+uses: [problem-moment-image-ad-maker, tried-before-image-ad, handwritten-note-image-ad-maker, sticky-note-image-ad-maker, phone-note-image-ad, ignored-reminders-image-ad-maker, chat-screenshot-image-ad-maker, dont-buy-warning-image-ad-maker, complaint-review-image-ad-maker, fact-caption-image-ad-maker, circled-flaw-image-ad-maker, leftover-mess-image-ad-maker, visible-symptom-image-ad-maker, empty-room-image-ad-maker, tracker-chart-image-ad-maker, feared-outcome-image-ad-maker, hand-drawn-story-image-ad-maker, article-headline-image-ad-maker, odd-one-out-image-ad-maker]
 example: native
 origin: rebuilt
 source_ids: [CES-054]

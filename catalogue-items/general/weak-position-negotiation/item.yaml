@@ -1,0 +1,19 @@
+slug: weak-position-negotiation
+renamed_from: negotiation-from-a-weak-position-planner
+name: "Negotiation prep planner for the weaker side"
+summary: "Describe a talk where the other side holds more power. Get your terms, their needs and the order to move in."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [nelson-mandela]
+credits:
+  - {title: "Statement from the dock at the Rivonia Trial", by: "Nelson Mandela, 1964 (United Nations record)", used: "Stating the end you want, taking the mildest steps that still have force, and thinking about everyone who must live with the outcome"}
+  - {title: "Nelson Mandela", by: "Wikipedia, licensed secondary biography", used: "Background on learning the other side's language and history before talks, and on separating people from the system"}

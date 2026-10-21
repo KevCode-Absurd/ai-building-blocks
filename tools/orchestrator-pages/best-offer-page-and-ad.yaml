@@ -1,0 +1,131 @@
+new_slug: best-offer-page-and-ad
+name: "Find your best offer and write the page and ad"
+summary: "Give it your brand file and live prices. Get an offer to try, an article-style page, a check and a matching ad."
+job: make-offer
+
+headline: "Find the offer worth testing and sell it with a page and ad that read like an article"
+subhead: Give it your brand file and what you sell now. It finds clashes in your live deals and the offer to try first, writes an article-style page for it, checks the page in 30 points, then writes the matching ad.
+
+explain: |
+  Many shops run deals that quietly clash, such as a pop-up at 55% off while an ad says 61%. Fixing that and choosing one offer to test comes before any page or ad. An offer nobody can find, or two that disagree, loses the sale.
+
+  This workflow copies down what is live, flags the clashes and takes stock of what you could offer without losing money. It picks the offer to try first and writes it three ways. Then it writes an article-style page, labelled as an ad, that carries the offer, runs 30 yes-or-no checks on the page and ranks five fixes. Last, it writes the article-style ad that sends people to the page, with one claim and an image brief.
+
+when:
+  - Your site and ads show different deals and you're not sure which one is real.
+  - You want to test a new offer but don't know which one to try.
+  - Readers click through to your page from an ad that reads like a news story.
+
+you_give:
+  - Your brand file, with prices, deals and terms
+  - What is live now, such as ads, pop-ups and the site's offers
+  - Who the offer is for, if you know (optional)
+  - Customer reviews (optional)
+
+you_get:
+  - The clashes in your live deals, and three offers to try first
+  - An article-style page, labelled as an ad, with the offer block
+  - 30 yes-or-no checks, five fixes in order and a score out of 100
+  - An article-style ad with one claim, and an image brief
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your brand file, and a list of every deal live right now, with where you saw it.
+  - It works step by step and saves each result. Fix any clash it finds before you launch. Check the offer's price and terms against your own records.
+  - Make the five fixes from the check, then use the ad and image brief.
+
+how_it_works:
+  - title: Finds the offer
+    text: Uses the hidden offer finder to list what is live, flag clashes, take stock and turn it into offers for a buyer and a stage.
+  - title: Writes the page
+    text: Uses the article-style page skill to keep the ad's promise on the first screen, label the page as an ad and build the offer block.
+  - title: Checks the page
+    text: Uses the 30-point checker to run yes-or-no checks at five stops, quote the page for every no and rank five fixes.
+  - title: Writes the ad
+    text: Uses the article-style ad skill to write the headline as an editor would, hold one claim and brief the image.
+
+output_shape: |
+  LIVE DEALS
+  <deal> (<where seen>) | Clash: <with what>
+
+  OFFERS TO TRY FIRST
+  1 <offer> | Buyer: <who> | Why now: <reason> | Wording: <three ways>
+
+  ARTICLE-STYLE PAGE
+  Label: <ad label> | Headline: <headline>
+  Sections: <ten, in four moves> | Offer block: <price, terms, guarantee>
+
+  30-POINT CHECK
+  No: <check, evidence, fix> ... Five fixes: 1 ... 5 | Score: <n>/100
+
+  ARTICLE-STYLE AD
+  Headline: <text> | Main text: <text> | Claim: <one> | Image brief: <text>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+    Brand file: sprout-brand/
+    Live now: ad says 61% off, pop-up says 55% off, first box $29.99.
+  output: |
+    LIVE DEALS
+    Ad: 61% off | Pop-up: 55% off | Clash: two discounts
+    
+    OFFERS TO TRY FIRST
+    1 First box $29.99, then $49.99 every 4 weeks, said plainly | Buyer: the price doubter
+    
+    ARTICLE-STYLE PAGE
+    Label: Advertisement | Offer block: $29.99 first box, renews at $49.99
+    
+    30-POINT CHECK
+    No 27 (deal-breaker): pop-up says 55%. Fix: one figure everywhere. Score: 68/100
+    
+    ARTICLE-STYLE AD
+    Claim: the first box is $29.99 | Image brief: a torn pack on a kitchen table
+
+tweaks:
+  - what: Which offer to take forward
+    how: Name the offer you prefer from the three. The page and ad are then built on that one.
+  - what: Where the ad runs
+    how: Say the platform. The ad step then keeps to its rules and character limits.
+  - what: How it is bought
+    how: Say whether people buy once, subscribe or come back. The offer block then shows the full cost of that path.
+  - what: A page you already have
+    how: Paste your current page and ask for the 30-point check on that too, to see what the new one fixes.
+
+judge:
+  - Every deal in the clash list is quoted from something live, with where it was seen.
+  - The offer's price, terms and dates match your records.
+  - The page is clearly labelled as an ad.
+  - Every no in the 30-point check quotes a line from the page.
+  - The ad holds one claim, and the page backs it.
+
+test:
+  - Check the offer's price and terms against what you offer in your store.
+  - Put the ad next to the page's first screen. The promise should carry over.
+  - Take one no from the check and find the line it quotes on the page.
+  - Run the new ad and page against your current best for a week.
+
+improve:
+  - In the builder, drop step 1 if you already know your offer and have no clashes.
+  - Add a step at the end that sizes an A/B test for the page.
+  - Swap step 3 for the landing page auditor if you want fixes ranked by quick wins.
+  - Pair it with the workflow that finds where a page loses buyers, once it has live traffic.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps the live deals, the offer terms and the page claims straight across four steps."}
+  inputs:
+    - "A screenshot of every live ad and pop-up, so clashes can be quoted"
+    - "Your costs and margin floor, so offers stay profitable"
+    - "Customer reviews, so the page uses real doubts"
+
+terms:
+  - term: Article-style page
+    meaning: A page written like an article, labelled as an ad.
+  - term: Clash
+    meaning: Two deals or prices live at the same time that disagree.

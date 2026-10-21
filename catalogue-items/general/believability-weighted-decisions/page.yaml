@@ -1,0 +1,125 @@
+new_slug: believability-weighted-decisions
+name: "Believability-weighted decision helper"
+summary: "Paste a decision and the views on it. Get each view weighed by track record on this topic, and a clear call."
+job: lead-people
+thinking: high
+thinking_why: "It must weigh people's views against evidence without bias, and flag where the record is thin."
+
+headline: "Believability-weighted decision helper"
+subhead: Paste a decision and the views people hold on it. It rates how believable each person is on this topic by track record and how well they explain their reasoning, writes the strongest opposing case, and states a call. You get a decision record to check later.
+
+explain: |
+  In many groups the loudest or most senior voice wins. That is not the same as the most likely to be right. A manager with a long record in another field may know less about this topic than a junior person who has done it ten times.
+
+  This skill weighs each view by how believable the person is on this specific topic. It looks at their track record and at how well they can explain the cause and effect behind their view, not their rank or how often they speak. It finds the most believable person who disagrees and writes their case fairly. It then states the call, notes how disagreements will be settled, and records the reasons with a review date so you can learn from the result.
+
+when:
+  - Your team is split on a decision and the senior person keeps winning by default.
+  - You must choose between experts who disagree and cannot tell who to trust.
+  - You want to record why you decided something so you can check it later.
+
+you_give:
+  - The decision and the goal in a sentence
+  - The views people hold, and who holds each
+  - What each person has done on this topic before, with results if known
+  - How disagreements are settled in your group (optional)
+you_get:
+  - Each view rated for believability on this topic, with reasons
+  - The strongest opposing case, written fairly
+  - A call that follows the weighted views, with what would change it
+  - A decision record with a review date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - State the decision and the goal in one line.
+  - List each view and who holds it, with what they have done on this topic.
+  - Read the weights and the strongest dissent. Correct any facts the skill got wrong.
+  - Save the decision record and open it on the review date.
+
+how_it_works:
+  - title: States the decision
+    text: Writes the decision and the goal in one line.
+  - title: Lists the views
+    text: Records each view and who holds it.
+  - title: Rates believability
+    text: Rates each person on this topic by track record and ability to explain their reasoning.
+  - title: Finds the dissent
+    text: Finds the most believable person who disagrees and writes their case fairly.
+  - title: Weighs the views
+    text: Weighs by believability, not rank or volume.
+  - title: States the call
+    text: Gives the call and how disagreements will end.
+  - title: Records reasons
+    text: Writes why, with a review date.
+
+output_shape: |
+  THE DECISION
+  <decision and goal in one line>
+
+  THE VIEWS
+  <view> | Held by: <person or role> | Believability on this topic: <low, medium, high> | Why: <track record and reasoning>
+
+  THE STRONGEST DISSENT
+  <the case, in its best form>
+
+  WEIGHED RESULT
+  <how the weights point>
+
+  THE CALL
+  <decision> | What would change it: <evidence>
+
+  HOW DISAGREEMENT ENDS
+  <agreed way>
+
+  RECORD
+  Reasons: <list>   Review date: <date>   Check: <result to compare>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Track record
+    how: Give real examples of what each person has done on this topic. Without them the rating is low confidence.
+  - what: The goal
+    how: State what you are trying to achieve. A decision can only be weighed against a goal.
+  - what: How well each person explains
+    how: Describe whether the person can say why their view holds. Reasoning counts as much as results.
+  - what: How your group settles ties
+    how: State your usual method. The skill uses it for the "how disagreement ends" step.
+
+judge:
+  - Believability is rated on this topic, not overall seniority.
+  - The strongest dissent is written in its best form.
+  - The record of reasons has a review date.
+  - No person is scored in public ranking form.
+  - It marks where the record is thin.
+
+test:
+  - Use it on a past decision whose result you know. See if the weighing would have pointed the right way.
+  - Ask the person whose view lost whether their case was fair.
+  - Run it twice. The call should stay the same unless new facts are added.
+  - At the review date, compare the result with the record and note what you learned.
+
+improve:
+  - Add a short record of how each person's past calls turned out in areas you decide on often.
+  - Add your group's agreed ways of ending a disagreement.
+  - Keep a decision log in one file the skill reads for track records.
+  - Pair it with the council or a team meeting when people need to hear the dissent in person.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing views and writing a decision record is text work any strong chat AI does well."}
+    - {name: "A shared decision log", why: "A single place where decisions and results are kept makes track records easy to check."}
+  inputs:
+    - "Past decisions and how they turned out"
+    - "Each person's experience on this topic"
+    - "Your group's rule for settling disagreements"
+
+terms:
+  - term: Believability
+    meaning: How much weight a person's view deserves on a topic, based on results and the quality of their reasoning.
+  - term: Dissent
+    meaning: A well-argued view that opposes the leading one.

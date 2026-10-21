@@ -1,0 +1,21 @@
+# Make your own skills: AI Blocks
+
+> 17 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Agent procedure writer](https://useaiblocks.com/skills/agent-procedure-writer): Describe a repeatable job. Get a step-by-step procedure file for your AI, with firm rules and a format check.
+- [AI instruction writer](https://useaiblocks.com/skills/ai-instruction-writer): Say which skill or instruction file you are writing. Get it written so your AI follows it well.
+- [Book to skill converter](https://useaiblocks.com/skills/book-to-skill-converter): Give it a book or a folder of documents. Get skill files that put its method to work.
+- [Pattern to skill extractor](https://useaiblocks.com/skills/pattern-to-skill-extractor): Name a fix you keep repeating. Get it packaged as a reusable skill with notes and examples.
+- [Project skill finder](https://useaiblocks.com/skills/project-skill-finder): Point it at a project. Get a short list of skills worth adding or updating, based on how you really work.
+- [Repeated work skill finder](https://useaiblocks.com/skills/repeated-work-skill-finder): Point it at your screen history. Get a list of tasks you repeat and draft skills to automate them.
+- [Session lesson writer](https://useaiblocks.com/skills/session-lesson-writer): Give it a fixed problem from your session. Get one short, tested how-to your AI can reuse next time.
+- [Skill builder](https://useaiblocks.com/skills/skill-builder): Describe what your AI should learn. Get a skill folder with clear instructions and helper files.
+- [Skill file validator](https://useaiblocks.com/skills/skill-file-validator): Give it a SKILL.md. Get a list of structure, wording and naming problems to fix before you share it.
+- [Skill portability checker](https://useaiblocks.com/skills/skill-portability-checker): Point it at your skill folder. Get a list of mistakes that stop it loading in other AI tools, with fixes.
+- [Skill quality tester](https://useaiblocks.com/skills/skill-quality-tester): Give it a skill. Get its structure checked, scripts run and a score with fixes.
+- [Skill safety checker](https://useaiblocks.com/skills/skill-safety-checker): Give it a skill or bundle before you add it. Get a list of risky code, data leaks and hidden payloads.
+- [Skill trigger auditor](https://useaiblocks.com/skills/skill-trigger-auditor): Give it your skills. Get a grade for each on when it fires, and which skills block each other.
+- [Skill writer](https://useaiblocks.com/skills/skill-writer): Describe the job. Get a new skill with test prompts and a description that makes it trigger well.
+- [Skill writer and reviewer](https://useaiblocks.com/skills/skill-writer-and-reviewer): Describe a skill or paste one. Get a well-built version with clear triggers and safety notes.
+- [Skill-making guide](https://useaiblocks.com/skills/skill-making-guide): Describe a task you repeat. Get a step-by-step guide to turning it into your own skill that triggers reliably.
+- [Workflow spec interviewer](https://useaiblocks.com/skills/workflow-spec-interviewer): Tell it the workflows you want to build. Get grilled with questions until each one is clear.

@@ -86,9 +86,9 @@ The style sheet, the frame list, one prompt per frame, the photos named `<nn>_<j
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Make product photos** with the [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer). It takes the product photos.
 - **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the product photos.
-- **Make video ads** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/video-avatar-and-storyboard-planner). It takes the product photos.
-- **Study competitor ads** with the [Copy an ad layout that works, using your product](https://useaiblocks.com/workflows/borrow-an-ad-layout-that-already-works). It takes the product photos.
-- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/learn-what-sells-from-50-different-image-ads). It takes the product photos.
+- **Make video ads** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the product photos.
+- **Study competitor ads** with the [Copy an ad layout that works, using your product](https://useaiblocks.com/workflows/copy-winning-ad-layout). It takes the product photos.
+- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/image-ad-test-learnings). It takes the product photos.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

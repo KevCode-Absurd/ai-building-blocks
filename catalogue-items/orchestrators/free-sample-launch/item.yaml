@@ -1,0 +1,25 @@
+slug: free-sample-launch
+name: "Launch with a free sample and learn what customers cost"
+summary: "Give it your product and price. Get a sample offer, a small test plan and the true cost of each customer."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: offer
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: audit_report}
+uses: [free-sample-offer-planner, small-launch-test-planner, cost-per-customer-calculator]
+steps:
+  - {uses: free-sample-offer-planner, note: "A free sample offer, who gets it, how to claim it and a cost-per-customer check"}
+  - {uses: small-launch-test-planner, note: "A small test in a few places and a rollout rule. Reads the offer from the step before"}
+  - {uses: cost-per-customer-calculator, note: "What a customer really costs, how soon it pays back and which ads to keep"}
+origin: rebuilt
+version: 1.0.0
+minds: [claude-hopkins]
+credits:
+  - {title: "Scientific Advertising", by: "Claude C. Hopkins", used: "The order of the steps: free sample offer planner, small launch test planner, cost per customer calculator"}
+generated_from: intake/scientific-advertising/skeleton.yaml

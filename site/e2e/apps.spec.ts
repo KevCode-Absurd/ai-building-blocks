@@ -111,7 +111,9 @@ test("every page has its own address on useaiblocks.com, and the saved app stays
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://useaiblocks.com/apps/starter-pack");
   await expect(page.locator(".header .brand")).toHaveText("AI Blocks");
   await expect(page.locator(".footer")).toContainText("useaiblocks.com");
-  const map = fs.readFileSync("public/sitemap.xml", "utf8");
+  // sitemap.xml is an index; the app pages are in the pages sitemap.
+  expect(fs.readFileSync("public/sitemap.xml", "utf8")).toContain("<loc>https://useaiblocks.com/sitemap-pages.xml</loc>");
+  const map = fs.readFileSync("public/sitemap-pages.xml", "utf8");
   for (const p of ["/apps", "/apps/starter-pack"]) expect(map).toContain(`<loc>https://useaiblocks.com${p}</loc>`);
   expect(map).not.toContain("example-app");
   expect(fs.readFileSync("public/robots.txt", "utf8")).toContain("Sitemap: https://useaiblocks.com/sitemap.xml");

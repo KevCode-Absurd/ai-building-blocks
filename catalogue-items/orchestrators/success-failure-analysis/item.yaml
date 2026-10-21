@@ -1,0 +1,24 @@
+slug: success-failure-analysis
+name: "Work out why something worked or failed"
+summary: "Describe a surprising result. Get ranked causes, a check through many fields and rewards, and what to copy or skip."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [surprise-cause-ranker, mental-model-checklist-runner, incentive-checker, copy-or-skip-lesson-writer]
+steps:
+  - {uses: surprise-cause-ranker, note: "Ranked causes, a cheap test for each and what stays unexplained"}
+  - {uses: mental-model-checklist-runner, note: "An answer from each field about the ranked causes. Reads the plan from the step before"}
+  - {uses: incentive-checker, note: "Whether pay or rewards explain the result. Reads the plan from step one"}
+  - {uses: copy-or-skip-lesson-writer, note: "What carries over to your case, what was luck, and small tests. Reads the checks from the steps before"}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "The order of the steps: rank the likely causes, check the causes through many fields, check who was rewarded for what, decide what to copy and what to skip"}
+generated_from: intake/munger-models-explain-a-surprise/skeleton.yaml

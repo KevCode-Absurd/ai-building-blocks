@@ -1,0 +1,27 @@
+slug: ad-works-check
+name: "Check if your ad works, then keep or change it"
+summary: "Give it your current ad. Get a short survey, the recall and pull sums, and a keep or change call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brief, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: [recall-and-pull-survey-planner, ad-recall-and-pull-calculator, campaign-keep-or-change-checker, reach-before-repeat-planner]
+steps:
+  - {uses: recall-and-pull-survey-planner, note: "The questions, the sample and the scoring rule for the two groups."}
+  - {uses: ad-recall-and-pull-calculator, note: "Recall, buyers in each group, the pull as a number, and which of the four patterns it is."}
+  - {uses: campaign-keep-or-change-checker, note: "Keep, fix or replace, with the sums behind the call."}
+  - {uses: reach-before-repeat-planner, note: "A spread plan that reaches new people first and repeats later."}
+origin: rebuilt
+version: 1.0.0
+minds: [rosser-reeves]
+credits:
+  - {title: "Reality in Advertising", by: "Rosser Reeves", used: "The order of the steps: plan the recall and pull survey, work out recall and pull, decide to keep or change, plan who sees it"}
+generated_from: intake/reality-ads-keep-one-campaign/skeleton.yaml

@@ -1,0 +1,136 @@
+new_slug: shopify-page-rebuild
+name: "Rebuild a page you admire as your own Shopify page"
+summary: "Give it a page screenshot, your brand file and product facts. Get your own page, a design plan and Shopify files."
+job: write-landing-page
+
+headline: "Your own Shopify page, laid out like one you admire"
+subhead: Give it a screenshot of a page you like, your brand file and your product facts. It keeps the layout idea, fills every slot with your words, plans three designs, builds the Shopify files, then audits the live page.
+
+explain: |
+  A page that sells well has a layout worth learning from, but copying its words or pictures is a mistake. The useful part is the order of sections and what each one does. Your page needs your facts in that order.
+
+  This workflow reads the screenshot, logs the layout and decides what you can borrow. It builds a slot map and writes your own copy for each slot. It then plans three on-brand designs and a build brief, and loads your copy and the chosen design into Shopify theme files, with install steps. After you install the page, it audits screenshots of the live page and lists what blocks shoppers.
+
+when:
+  - You like how another brand's product page is laid out and want yours to work the same way.
+  - Your product page is a standard theme with your copy dropped in, and it doesn't sell.
+  - You want a new page built in Shopify without writing theme code.
+
+you_give:
+  - A screenshot of the page you admire
+  - Your brand file, with your facts, voice and colours
+  - Your product facts, such as price and variants (optional)
+  - Your offer (optional)
+  - After you install it, screenshots of your new page on a phone and a computer
+
+you_get:
+  - A slot-by-slot layout with your own copy in every slot
+  - Three design directions from your brand, and a build brief for the chosen one
+  - Shopify theme files with your copy loaded in, and install steps
+  - An audit of your live page, what blocks shoppers, changes to test and a score out of 100
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. A full-page screenshot of the page you admire, your brand file and your product facts.
+  - It works step by step and saves each result. After step 3, upload the files to your theme and publish the page.
+  - Take screenshots of the live page on a phone and a computer, then give them to the last step.
+
+how_it_works:
+  - title: Plans the layout
+    text: Uses the layout planner to read the screenshot, log the layout system, decide what may be borrowed and write your copy for each slot.
+  - title: Plans the design
+    text: Uses the design planner to set type, colour and rules from your brand, make three directions and write a build brief.
+  - title: Builds the Shopify files
+    text: Uses the Shopify page builder to put the words in settings, read price and facts from your store and add install steps.
+  - title: Audits the live page
+    text: Uses the screenshot auditor to record only what it sees in your screenshots, test its guesses and score the page.
+
+output_shape: |
+  LAYOUT
+  Borrowed: <the order and job of each section> | Not borrowed: <their words and pictures>
+  Slot map: <slot> -> <your copy>
+
+  DESIGN PLAN
+  Colours: <colour: job> | Type: <headings, body, buttons>
+  Directions: <three, one picked> | Build brief: <text>
+
+  SHOPIFY FILES
+  Files: <list> | Install steps: <numbered>
+
+  PAUSE
+  Install the files and save screenshots of the live page.
+
+  AUDIT
+  Blocks shoppers: <finding, what was seen> | Changes to test: <list> | Score: <n>/100
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+    Reference: screenshot of a competitor's product page (full page)
+    Brand file: sprout-brand/
+    Product: Sprout greens gummies, first box $29.99
+  output: |
+    LAYOUT
+    Borrowed: price card first, then proof, then how it works | Not borrowed: their words and photos
+    Slot map: hero -> "Your first box of daily greens, now $29.99"
+    
+    DESIGN PLAN
+    Colours: cream hero, deep forest headings | Direction B picked: one price card
+    
+    SHOPIFY FILES
+    sections/sprout-hero.liquid ... Install: upload, add the section, publish
+    
+    PAUSE: install and save screenshots
+    
+    AUDIT
+    Blocks shoppers: the cancel steps are missing | Score: 74/100
+
+tweaks:
+  - what: What to borrow
+    how: Say "keep their section order" or "borrow only the first screen". The planner then borrows no more than that.
+  - what: Your theme
+    how: Name your Shopify theme and version. The file step then matches its sections and settings.
+  - what: Design freedom
+    how: Say "keep our current look" for a light refresh, or "new first screen" for new directions. Your colours, fonts and offer terms never change.
+  - what: Several products
+    how: Run the workflow once per product page, and keep the layout and design from the first run.
+
+judge:
+  - No sentence, price or picture from the admired page appears in your copy.
+  - Every slot has your own fact or is marked MISSING.
+  - The design uses your colours and fonts.
+  - The Shopify files have install steps you can follow without writing code.
+  - Every finding in the audit says what was seen in your screenshots.
+
+test:
+  - Put the admired page and your slot map side by side. The order should match and the words should not.
+  - Check three prices or facts in the copy against your store.
+  - Install the files on a duplicate theme first and click through the page on a phone.
+  - Take one finding from the audit and find it in your screenshot.
+
+improve:
+  - In the builder, drop step 2 if your theme already sets the look you want.
+  - Add a step before step 1 that writes your brand file from your website.
+  - Add a step at the end that sizes an A/B test for the old page against the new one.
+  - Pair it with the workflow that finds where a page loses buyers, once the page has live traffic.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Holds your theme, products and the page files this workflow builds."}
+    - {name: "Claude", why: "Keeps the slot map, the design and the theme files straight across four steps."}
+    - {name: "PageSpeed Insights", why: "Free Google check of the built page for phone speed and tap target problems."}
+  inputs:
+    - "A full-page screenshot of the page you admire, not a cropped one"
+    - "Real product photos at full size"
+    - "Your theme name and version"
+
+terms:
+  - term: Slot map
+    meaning: A list of the sections on a page, with what each one holds.
+  - term: Theme files
+    meaning: The files that make up how a Shopify page looks and works.

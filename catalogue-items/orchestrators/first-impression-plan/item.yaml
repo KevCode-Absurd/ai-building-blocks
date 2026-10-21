@@ -1,0 +1,24 @@
+slug: first-impression-plan
+name: "Make a strong first impression and build the relationship"
+summary: "Name who you are about to meet. Get a brief, a meeting plan, a memory card and an honest thank-you note."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+uses: [before-you-meet-brief-writer, get-them-talking-plan, contact-memory-card-writer, honest-appreciation-note-writer]
+steps:
+  - {uses: before-you-meet-brief-writer, note: "What they care about, what you honestly admire, and the question only they can answer."}
+  - {uses: get-them-talking-plan, note: "Their name, a warm start, questions they like to answer and where you stop and listen."}
+  - {uses: contact-memory-card-writer, note: "A card for remembering them: name, facts, promises and the date of the next contact."}
+  - {uses: honest-appreciation-note-writer, note: "A short note with one specific, honest appreciation and no ask."}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, joe-girard]
+credits:
+  - {title: "How to Win Friends and Influence People (1981 revised edition)", by: "Dale Carnegie", used: "The order of the steps: learn what they care about, plan how to get them talking, write the memory card, write the thank-you note"}
+generated_from: intake/win-friends-new-relationship/skeleton.yaml

@@ -1,0 +1,25 @@
+slug: shopify-page-rebuild
+name: "Rebuild a page you admire as your own Shopify page"
+summary: "Give it a page screenshot, your brand file and product facts. Get your own page, a design plan and Shopify files."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: reference_set, required: true}
+  - {type: brand_brain, required: true}
+  - {type: store_capture, required: true}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: [competitor-landing-layout, landing-page-design-planner, shopify-landing-page-builder, product-page-screenshot-auditor]
+steps:
+  - {uses: competitor-landing-layout, note: "Keeps the layout idea and fills every slot with your own facts and words."}
+  - {uses: landing-page-design-planner, note: "Turns the page copy into three on-brand designs and a build brief."}
+  - {uses: shopify-landing-page-builder, note: "Loads the page copy and chosen design into theme files, with install steps."}
+  - {uses: product-page-screenshot-auditor, note: "Looks at the built page as a shopper would and lists what blocks buying."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-rebuild-a-page-you-admire-as-your-own-shopify-page/skeleton.yaml

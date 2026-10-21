@@ -1,0 +1,19 @@
+slug: okr-goal-writer
+renamed_from: objectives-and-key-results-writer
+name: "Objectives and key results writer"
+summary: "Describe your team and the quarter. Get a few objectives, each with dated key results that show if you got there."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [andy-grove, peter-drucker]
+credits:
+  - {title: "High Output Management", by: "Andy Grove", url: "https://en.wikipedia.org/wiki/High_Output_Management", used: "Pairing a direction with measurable checkpoints, keeping the number of objectives small, short review periods, and linking each person's goals to the level above"}

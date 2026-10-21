@@ -1,0 +1,118 @@
+new_slug: earnings-reliability-check
+name: "Earnings record reliability checker"
+summary: "Paste cleaned earnings by year and a note on the business. Get whether the record can guide the future, and how much."
+job: money-and-investing
+thinking: high
+thinking_why: "It judges whether a history still describes the business, using numbers and facts about the industry. That needs careful reasoning."
+
+headline: "Find out if a company's past profits are a fair guide to what it will earn"
+subhead: "Paste cleaned earnings for five to ten years and a few lines on the business. It tests how far the years scatter, whether the business is the kind that lasts, whether the good years were temporary and what the loss years say about survival. You get a rating and how wide your range should be."
+
+explain: |
+  Ten years of profit gives a comforting average. But an average of wild swings is just a sum. A run of good years can rest on a boom price or a peak rate of output. A company can also have changed so much that its old results describe a business that no longer exists.
+
+  This skill runs six tests. It measures the scatter, looks at what the business is, checks whether the good years were temporary, checks the company's place in its industry, reads the loss years as a question of survival, and sets the trend beside the average. It rates the record as a guide, a partial guide or not a guide, and says how wide the next range should be. It is a method, not financial advice.
+
+when:
+  - You have a company's earnings for several years and are about to average them.
+  - A company's best years came during a boom in its product.
+  - A company has had losses in some years and you do not know how to treat them.
+
+you_give:
+  - Cleaned earnings by year, from the earlier steps
+  - A note on the business covering what it sells, to whom, its costs, its debts and its place in the industry
+  - Output, price or volume by year (optional)
+you_get:
+  - The record with its scatter
+  - A finding for each of the six tests
+  - A rating of guide, partial guide or not a guide
+  - How wide the next range should be
+  - What facts would raise the rating
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the cleaned earnings and a few lines on what the business does.
+  - Add output and price by year if you have them.
+  - Read the rating, then the reasons ranked.
+  - Take the result to "Normal earnings estimator".
+
+how_it_works:
+  - title: Measures the scatter
+    text: Counts how many years sit near the average and shows the high, low and spread.
+  - title: Looks at the business
+    text: Asks if it sells a need or a fashion, who carries it and whether it could survive a long bad spell.
+  - title: Tests the good years
+    text: Checks for a boom price, a peak rate of output, one big contract or a cost saving that may end.
+  - title: Checks the company's place
+    text: Asks whether costs, customers or rivals have changed since the old years.
+  - title: Reads the losses
+    text: Asks how many years the company could last, not how big the loss per share was.
+  - title: Reads the trend
+    text: Treats it as a clue and does not project it.
+
+output_shape: |
+  THE RECORD
+  <year>: <earnings> | Average: <amount> | High: <amount> | Low: <amount> | Years near the average: <n of n>
+
+  TESTS
+  Scatter: <typical / just a sum> | Business: <supports / neutral / undermines> | Temporary profits: <finding> | Company's place: <finding> | Loss years: <years it could last> | Trend: <finding>
+
+  RATING
+  <GUIDE / PARTIAL GUIDE / NOT A GUIDE>
+
+  WHY, RANKED
+  1. <reason>
+  2. <reason>
+
+  FOR THE NEXT STEP
+  Range width: <narrow / wide> | What would raise the rating: <facts>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Output and prices
+    how: Give volumes and selling prices by year. It lets the skill separate a boom from a business.
+  - what: Industry facts
+    how: Say what has changed in the industry in recent years, such as new rivals or rules.
+  - what: Cash and debts
+    how: Give them. The loss-year test needs to know how long the company could last.
+  - what: A longer record
+    how: Add more years. Scatter is easier to judge over ten.
+
+judge:
+  - All six tests are run or marked missing.
+  - The rating follows from the tests and gives reasons.
+  - The effect on the next range is stated.
+  - No forecast is presented as a fact.
+  - It never says buy or sell and invents no figure.
+
+test:
+  - Run it on a company with steady years and a company with big swings and check the ratings differ.
+  - Give it a boom-year record and see that it asks what a normal year would be.
+  - Give it a company with deep losses and see that it asks how long it could last.
+  - Run it twice. The rating should not change.
+
+improve:
+  - Add your own rule for what counts as near the average.
+  - Keep a record of companies rated and what happened.
+  - Pair it with "Earnings padding detector" and "Normal earnings estimator".
+  - Add a line on the main cost, such as labour or materials, for each business.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging a record against a business description is text work."}
+    - {name: "A spreadsheet", why: "Handy for the average, the spread and how profit moves with volume."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "Cleaned earnings by year"
+    - "Annual report text about the business and its industry"
+
+terms:
+  - term: Scatter
+    meaning: How far each year's result sits from the average. A small scatter means the average is typical.
+  - term: Rate of output
+    meaning: How much of its capacity a business is using. When output is high, fixed costs are spread thin and profit jumps.

@@ -1,0 +1,122 @@
+new_slug: book-notes-system
+name: "Book notes and margin system builder"
+summary: "Name what you want to learn. Get a slow reading routine with margin notes, a notes file and one action per book."
+job: think-and-decide
+thinking: low
+thinking_why: "It sets up a routine from a fixed pattern."
+
+headline: "Book notes and margin system builder"
+subhead: "Name what you want to learn and how much time you have each day. It sets a slow reading routine: margin marks, a notes file with sources, a check on claims that matter and one action per book."
+
+explain: |
+  Reading to finish a count leaves you with a list of titles and little you can use. Highlighting everything has the same effect: the page looks studied and nothing comes back to you later.
+
+  This skill ties the reading to a question or a job, and to a number of minutes you can keep each day. It picks one book to read at its own pace and sets four kinds of margin marks: comments, questions, disagreements and things to look up. It moves the passages worth keeping into one notes file with page and source, checks the claims that matter against another source, and ends each book with one thing you will do differently, done this week. It sets a date to revisit the notes.
+
+when:
+  - "You buy books and finish few, or finish them and remember little."
+  - "You are learning a new field and want your reading to feed your work."
+  - "You keep notes in many places and cannot find anything."
+
+you_give:
+  - "What you want to learn or the job the reading serves"
+  - "How many minutes a day you can give it"
+  - "The book you will start with (optional)"
+  - "How you take notes now (optional)"
+you_get:
+  - "A daily reading routine with a real time"
+  - "A margin-mark key for your book"
+  - "A notes file layout, with page and source for every entry"
+  - "A claim-check habit, one action per book and a revisit date"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say what you want to learn and how many minutes a day you can keep."
+  - "Name the book, or ask for a short list of three to start from."
+  - "Set up the notes file as the routine says before you open the book."
+  - "At the end of the book do the one action, then revisit on the date."
+
+how_it_works:
+  - title: "Name the question"
+    text: "Names the question and the minutes you can keep daily."
+  - title: "Pick one book"
+    text: "Picks one book and sets the pace."
+  - title: "Set the margin marks"
+    text: "Sets four kinds of margin marks."
+  - title: "Build the notes file"
+    text: "Sets up one notes file with page and source for each entry."
+  - title: "Check what matters"
+    text: "Checks the claims that matter against another source."
+  - title: "Write one action"
+    text: "Writes what you would do differently and one thing to do this week."
+  - title: "Set the revisit"
+    text: "Sets a date to revisit the notes."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  THE QUESTION
+  <one sentence> | Minutes a day: <number> at <time of day>
+
+  THE BOOK
+  <title> | Why: <reason> | Finish around: <date>
+
+  MARGIN KEY
+  Comment: <mark> | Question: <mark> | Disagree: <mark> | Look up: <mark>
+
+  NOTES FILE ENTRY
+  Idea: <own words> | Book and page: <source> | Date: <date> | Mark: <which>
+  Checked: <source or unchecked>
+
+  END OF BOOK
+  Do differently: <change> | This week: <one action>
+
+  REVISIT ON: <date> | Ask: <question>
+
+  MISSING
+  <what would sharpen the routine>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Minutes per day"
+    how: "Give a number you can keep on your worst day. The finish date follows from it."
+  - what: "The question"
+    how: "A sharper question gives a better book choice."
+  - what: "Paper or screen"
+    how: "Say which. The marks change to fit."
+  - what: "How you note now"
+    how: "Describe it. The system fits around what you already do."
+
+judge:
+  - "The time per day is a number you can keep."
+  - "Each saved passage has a source."
+  - "At least one claim is checked against another source."
+  - "There is one real action, not only a summary."
+  - "A revisit date is set."
+
+test:
+  - "Follow the routine for one week and count the notes you would use again."
+  - "Look back at a passage a month later and see if the source helps you find it."
+  - "Do the one action and note what happened."
+
+improve:
+  - "Add the tool you use for notes to the template."
+  - "Add subjects you return to, so the notes file grows by topic."
+  - "Keep a list of books by the question they answered."
+  - "Pair it with Specific knowledge finder to choose what to read."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning, questioning and structuring are text work any strong chat AI does well with this skill."}
+    - {name: "A notes app or a notebook", why: "Holds the single notes file with page and source for each entry."}
+  inputs:
+    - "Books you own or plan to read"
+    - "Your current notes"
+    - "A target date or project the reading serves"
+    - "A time of day when you can read"
+
+terms:
+  - {term: "Margin marks", meaning: "Short marks in the margin to show what you thought as you read."}
+  - {term: "Notes file", meaning: "One file for the whole subject where kept passages go, with page and source."}

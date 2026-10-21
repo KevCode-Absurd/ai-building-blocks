@@ -1,0 +1,39 @@
+slug: assignment-ai-boundaries
+renamed_from: assignment-ai-use-boundary-mapper
+name: "Assignment AI-use boundary mapper"
+summary: "Give it an assignment. Get which parts AI can help with and which parts it would ruin, plus a clear rule."
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/ai-literacy/ai-learning-boundary-mapper
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-literacy/ai-learning-boundary-mapper
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: ai-learning-boundary-mapper
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ai-learning-boundary-mapper skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-literacy/ai-learning-boundary-mapper
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

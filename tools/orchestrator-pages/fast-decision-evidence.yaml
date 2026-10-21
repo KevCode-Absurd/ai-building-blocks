@@ -1,0 +1,111 @@
+new_slug: fast-decision-evidence
+name: "Make a fast, committed decision with the right evidence"
+summary: "Paste a choice you keep debating. Get its door type, how much evidence is enough, and a note that commits the team."
+job: think-and-decide
+thinking: high
+thinking_why: "It weighs reversibility, evidence and disagreement. Give it your strongest model."
+
+headline: "Stop a debate by knowing how much evidence is enough"
+subhead: "Paste a choice you keep debating and what each person thinks. It sorts the choice as one you can undo or not, tests whether numbers or judgment should settle it, sets a bar for enough evidence and writes a note that records the doubts and commits the team."
+
+explain: |
+  Slow decisions rarely come from hard choices. They come from not knowing what would settle it, how much evidence is enough and when the talking should stop. The loudest or most patient voice wins, and the team drifts.
+
+  This workflow first sorts the choice by whether you can undo it. It then asks if your own numbers can settle it or if it needs a written judgment with the short-term math argued against it. It sets a bar for evidence, about 70 percent of what you wish you knew for most reversible choices, and compares the cost of being wrong with the cost of waiting. The last step records each person's doubt in one fair line, tests whether the clash is about facts or about aims, and writes the note that commits the team. The ideas come from Jeff Bezos's letters to shareholders.
+
+when:
+  - A decision has been argued in several meetings with no end.
+  - The team keeps asking for more data before it will act.
+  - Someone keeps reopening a call after it was made, or you disagree with a call as the boss.
+
+you_give:
+  - The choice, and who it touches
+  - The numbers and history you have
+  - What each person thinks and why, in a line or two
+  - Who owns the decision, and any deadline
+
+you_get:
+  - The choice sorted as a one-way or two-way door
+  - A verdict on whether math or judgment settles it
+  - A weighted evidence bar, a decide-now or wait call and a date to stop collecting facts
+  - A note with each dissent on record, the commit lines and the review date
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the choice, your numbers and what each person thinks. It works step by step.
+  - Send the team note. Act on the call and look again on the review date.
+
+how_it_works:
+  - title: Sort the decision by reversibility
+    text: "Asks what would be hard to undo. Sorts the choice as a one-way or two-way door and picks the process that fits."
+  - title: Decide whether math or judgment settles it
+    text: "Tests if your own history can settle it. If not, writes the judgment with the short-term math against it and what the math cannot see."
+  - title: Set the evidence bar
+    text: "Weights the facts you wish you had and works out your share. Sets the bar, compares wrong with slow and gives a call date."
+  - title: Write the disagree-and-commit note
+    text: "Records each dissent in one fair line and sorts it as view or aims. Escalates a clash of aims and writes the commit lines and team note."
+
+output_shape: |-
+  STEP 1: DOOR
+    Choice: <...> | Door: <one-way / two-way>, because <...>
+    Process: <owner and fast / wide and slow>
+
+  STEP 2: MATH OR JUDGMENT
+    Tests: <history / speed / agreement> | Sorted as: <math / judgment>
+    <model and flip point, or the judgment, the math against it and what math cannot see>
+
+  STEP 3: EVIDENCE BAR
+    Share: <n>% | Bar: <n>% | Verdict: <decide now / wait until date>
+    Get first: <the one fact>
+
+  STEP 4: DISAGREE-AND-COMMIT NOTE
+    Decision, owner, review date, signal
+    Dissent on record: <name | reason>
+    Commit lines: <name | action>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: What it would cost to undo
+    how: Give a time or a cost. It lets the door sort and the evidence bar be exact.
+  - what: What waiting costs
+    how: Add a figure per week. It decides if waiting is worth it.
+  - what: Each person's reason
+    how: Give the reason, not just the position. The dissent lines depend on it.
+  - what: Who owns the call
+    how: Name one person. A clash of aims goes to them or the person above.
+
+judge:
+  - The door sort names what makes the choice hard or easy to undo.
+  - A judgment call states the math that argues against it.
+  - The evidence share is shown as a sum and the bar differs for one-way choices.
+  - Each dissent is a line the person would call fair.
+  - A clash of aims has a named decider and a time limit.
+
+test:
+  - Run it on a past decision that stalled. See if the evidence share shows you already had enough.
+  - Run it on a decision you rushed. See if the door sort would have asked for more.
+  - Show each person their dissent line and ask if it is fair.
+  - Hold the review date and compare the signal with what happened.
+
+improve:
+  - Keep a log of each call, its door type and the result, and check your sorting after a few months.
+  - Add your usual evidence bar for common decisions, such as hiring or pricing.
+  - Add your team's way of escalating, such as a named tie-breaker.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Holds the sort, the bar and the views across the steps."}
+    - {name: "A shared document", why: "The team can read the note and add their commit line."}
+  inputs:
+    - "Meeting notes where the views were argued"
+    - "Cost of delay per week"
+    - "Results of similar past decisions"
+
+terms:
+  - term: One-way door
+    meaning: A choice that is hard or costly to undo, so it deserves a slower, wider look.
+  - term: Disagree and commit
+    meaning: You say you disagree, then back the decision fully once it is made.

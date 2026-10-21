@@ -49,7 +49,7 @@ The design. The score with its six marks. Each principle with pass, partial or f
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Build it** with the [Error warning and recovery designer](https://useaiblocks.com/skills/error-warning-and-recovery-designer). It takes the audit report.
+- **Build it** with the [Error warning and recovery designer](https://useaiblocks.com/skills/error-message-designer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

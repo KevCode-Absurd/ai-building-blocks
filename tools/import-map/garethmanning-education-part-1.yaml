@@ -95,6 +95,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: ai-use-understanding-check
 "GarethManning/education-agent-skills:skills/ai-learning-science/productive-failure-desirable-difficulty-designer":
   name: Struggle-first lesson reshaper
   summary: "Give it a lesson that starts with the explanation. Get a version where students try the problem first."
@@ -143,6 +144,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: spot-ai-mistakes-activity
 "GarethManning/education-agent-skills:skills/ai-literacy/ai-hallucination-fact-check-protocol":
   name: AI claim fact-check lesson builder
   summary: "Give it a topic. Get a step-by-step way for students to check AI claims and citations before they trust them."
@@ -155,6 +157,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: ai-fact-check-lesson
 "GarethManning/education-agent-skills:skills/ai-literacy/ai-learning-boundary-mapper":
   name: Assignment AI-use boundary mapper
   summary: "Give it an assignment. Get which parts AI can help with and which parts it would ruin, plus a clear rule."
@@ -167,6 +170,7 @@
   outputs: [ { type: audit_report, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: assignment-ai-boundaries
 "GarethManning/education-agent-skills:skills/ai-literacy/ai-output-critical-audit-designer":
   name: AI answer critique activity builder
   summary: "Give it a subject. Get a worksheet that has students judge an AI answer on clarity, evidence and fairness."
@@ -179,6 +183,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: ai-answer-critique-lesson
 "GarethManning/education-agent-skills:skills/ai-literacy/ai-socratic-dialogue-designer":
   name: AI questioning sequence planner
   summary: "Give it a topic. Get rounds of questions students put to a chatbot, to see if it gives in or truly updates."
@@ -203,6 +208,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: ai-reliability-lessons
 "GarethManning/education-agent-skills:skills/ai-literacy/prompt-literacy-sequence-designer":
   name: Prompt quality lesson planner
   summary: "Give it a task. Get lessons where students compare vague and clear prompts and see why detail changes the result."
@@ -227,6 +233,7 @@
   outputs: [ { type: audit_report, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: curriculum-gap-check
 "GarethManning/education-agent-skills:skills/curriculum-assessment/assessment-validity-checker":
   name: Assessment fit and fairness checker
   summary: "Paste a quiz or task and its goals. Get a check that it tests the right things and marks fairly."
@@ -239,6 +246,7 @@
   outputs: [ { type: audit_report, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: assessment-fairness-check
 "GarethManning/education-agent-skills:skills/curriculum-assessment/backwards-design-unit-planner":
   name: Backwards unit planner
   summary: "Give it your standards. Get a unit planned from the end result, then the proof of learning, then the activities."
@@ -263,6 +271,7 @@
   outputs: [ { type: copy_draft, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: success-criteria-writer
 "GarethManning/education-agent-skills:skills/curriculum-assessment/criterion-referenced-rubric-generator":
   name: Marking rubric writer
   summary: "Describe the task and its goal. Get a rubric with clear descriptions for each level of work."
@@ -287,6 +296,7 @@
   outputs: [ { type: copy_draft, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: task-adapter-learners
 "GarethManning/education-agent-skills:skills/curriculum-assessment/discipline-specific-critical-thinking-task-designer":
   name: Subject thinking task writer
   summary: "Give it a subject topic. Get tasks that build thinking using that subject's own facts and methods."
@@ -371,6 +381,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: course-scope-sequence
 "GarethManning/education-agent-skills:skills/eal-language-development/academic-language-sentence-frame-generator":
   name: Sentence frame writer for language learners
   summary: "Give it a classroom task. Get sentence starters at several English levels so every student can join in."
@@ -383,6 +394,7 @@
   outputs: [ { type: copy_draft, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: ell-sentence-frames
 "GarethManning/education-agent-skills:skills/eal-language-development/language-demand-analyser":
   name: Task language demand checker
   summary: "Paste a task or text. Get the words and sentence types that may block students still learning English."
@@ -407,6 +419,7 @@
   outputs: [ { type: copy_draft, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: ell-task-scaffolds
 "GarethManning/education-agent-skills:skills/eal-language-development/sheltered-instruction-lesson-modifier":
   name: Lesson adapter for language learners
   summary: "Paste your lesson plan. Get a version that supports students learning English in reading, writing, speaking and listening."
@@ -419,6 +432,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: ell-lesson-adapter
 "GarethManning/education-agent-skills:skills/eal-language-development/vocabulary-tiering-tool":
   name: Vocabulary tier sorter
   summary: "Paste a text or topic. Get its words sorted into everyday, school and subject words, with what to teach first."
@@ -455,6 +469,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: nature-inquiry-unit
 "GarethManning/education-agent-skills:skills/environmental-experiential-learning/experiential-learning-cycle-designer":
   name: Field trip learning cycle planner
   summary: "Describe a trip, simulation or practical. Get the before, during and after steps that turn it into lasting learning."
@@ -467,6 +482,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: field-trip-learning-plan
 "GarethManning/education-agent-skills:skills/environmental-experiential-learning/interdisciplinary-real-world-connection-mapper":
   name: Cross-subject project mapper
   summary: "Name a real-world problem. Get which subjects connect to it and what each one can teach."
@@ -515,6 +531,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: lesson-understanding-check
 "GarethManning/education-agent-skills:skills/explicit-instruction/explicit-instruction-sequence-builder":
   name: Direct teaching lesson builder
   summary: "Give it a skill. Get a lesson that moves from you showing it, to practice together, to practice alone."
@@ -575,6 +592,7 @@
   outputs: [ { type: plan, required: true } ]
   author: Gareth Manning
   author_url: https://github.com/GarethManning
+  slug: concrete-to-abstract-maths
 "GarethManning/education-agent-skills:skills/ai-learning-science/cognitive-tutoring-architecture-designer":
   skip: "software design for building tutoring systems, not something a teacher uses in class"
 "GarethManning/education-agent-skills:skills/ai-learning-science/individual-spacing-algorithm-explainer":

@@ -47,7 +47,7 @@ The claim. The six questions with the person's answers, each marked real, partia
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Decide what to do** with the [Client fee and cap setter](https://useaiblocks.com/skills/client-fee-and-cap-setter). It takes the question and audit report.
-- **Test the idea with real people** with the [Customer success leading-sign definer](https://useaiblocks.com/skills/customer-success-leading-sign-definer). It takes the audit report and question.
+- **Test the idea with real people** with the [Customer success leading-sign definer](https://useaiblocks.com/skills/customer-success-signals). It takes the audit report and question.
 - **Check the money** with the [Business value range calculator](https://useaiblocks.com/skills/business-value-range-calculator). It takes the audit report and question.
 - **Plan your strategy** with the [Counter-positioning finder](https://useaiblocks.com/skills/counter-positioning-finder). It takes the question and audit report.
 - **Shape the product** with the [Launch scope cutter](https://useaiblocks.com/skills/launch-scope-cutter). It takes the question.

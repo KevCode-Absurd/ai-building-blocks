@@ -1,0 +1,85 @@
+# Design things people love: AI Blocks
+
+> 81 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Aesthetic direction brief writer](https://useaiblocks.com/skills/aesthetic-direction-brief-writer): Answer four questions about tone and feel. Get a brief that keeps copy, design and images in one style.
+- [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
+- [AI-look design reviewer](https://useaiblocks.com/skills/ai-look-design-reviewer): Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a ranked fix list.
+- [Apple app design checker](https://useaiblocks.com/skills/apple-app-design-checker): Show it your iPhone, iPad or Mac app design. Get what to fix to match Apple's design rules.
+- [Apple interface reviewer](https://useaiblocks.com/skills/apple-interface-reviewer): Describe or share your iOS or Mac screen. Get fixes checked against Apple's design rules, including Liquid Glass.
+- [Bento grid style guide writer](https://useaiblocks.com/skills/bento-grid-style-guide-writer): Describe your product. Get a style guide for a tidy card-grid look, with tokens, states and checks.
+- [Bold-border style guide writer](https://useaiblocks.com/skills/bold-border-style-guide-writer): Describe your product. Get a style guide with thick borders and vivid colour, plus rules for each part.
+- [Brand mark system planner](https://useaiblocks.com/skills/brand-mark-system-planner): Paste your brief and brand file. Get a mark plan that starts from the brief and tests small.
+- [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker): Give it your colour tokens. Get light and dark theme pairs checked for readability, with the closest passing colours.
+- [Conversion page style guide writer](https://useaiblocks.com/skills/conversion-page-style-guide): Describe the action you want. Get a style guide for a page that removes friction and builds trust.
+- [Creative shoot briefer](https://useaiblocks.com/skills/creative-shoot-briefer): Give it your brand and campaign goal. Get a brief for a photographer, illustrator or video team.
+- [Design a brand mark and test that it holds up](https://useaiblocks.com/workflows/brand-mark-design): Describe the design job. Get a tight brief, a mark plan and a strength test for your finished ideas.
+- [Design brief rules writer](https://useaiblocks.com/skills/design-brief-rules-writer): Describe the design job. Get a brief with tight limits that leave room to play.
+- [Design feedback giver](https://useaiblocks.com/skills/design-feedback-giver): Share a mockup or Figma link. Get feedback on usability, hierarchy and consistency, with fixes.
+- [Design rules file writer](https://useaiblocks.com/skills/design-rules-file-writer): Point it at your project. Get a DESIGN.md that lists the colours, type, spacing and parts your product really uses.
+- [Design style analyst](https://useaiblocks.com/skills/design-style-analyst): Share screenshots or links of designs you like. Get their colors, type, feel and effects as a profile you can reuse.
+- [Design system auditor](https://useaiblocks.com/skills/design-system-auditor): Point it at your components. Get naming and hardcoded value problems, docs for variants, or a new pattern.
+- [Design system file writer](https://useaiblocks.com/skills/design-system-file-writer): Describe your product's feel. Get a DESIGN.md with type, colour, layout, motion and rules against generic UI.
+- [Design ten-principles reviewer](https://useaiblocks.com/skills/design-ten-principles-reviewer): Describe or attach your product or page. Get a ten-principle design review, what to remove and a score.
+- [Design token builder](https://useaiblocks.com/skills/design-token-builder): Give it your brand colours and fonts. Get design tokens, component notes, responsive sizes and a developer handoff.
+- [Developer handoff spec writer](https://useaiblocks.com/skills/developer-handoff-spec-writer): Share a finished design. Get a spec for layout, tokens, component props, states, breakpoints and edge cases.
+- [Diagram maker](https://useaiblocks.com/skills/diagram-maker): Describe a system, process or idea. Get a clean dark-themed SVG diagram you can open and reuse.
+- [Dot-pattern style guide writer](https://useaiblocks.com/skills/dot-pattern-style-guide-writer): Describe your product. Get a style guide with a dithered, limited-colour look and high-contrast rules.
+- [Emotion-led design brief writer](https://useaiblocks.com/skills/emotion-led-design-brief-writer): Name the feeling you want. Get colour, type, imagery and layout choices that support it.
+- [Error message rewriter](https://useaiblocks.com/skills/error-message-rewriter): Paste your error messages. Get each rewritten with what went wrong and what to do next.
+- [Everyday usability reviewer](https://useaiblocks.com/skills/everyday-usability-reviewer): Give it a product or screen. Get what confuses people and fixes for clues, limits and feedback. Uses Don Norman's principles.
+- [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner): Paste your feature list and the users' main job. Get what to keep, cut and merge so it explains itself.
+- [Frosted glass style guide writer](https://useaiblocks.com/skills/frosted-glass-style-guide-writer): Describe your product. Get a style guide for a frosted, see-through look, with blur levels and contrast checks.
+- [Hand-drawn style guide writer](https://useaiblocks.com/skills/hand-drawn-style-guide-writer): Describe your product. Get a style guide with a sketchy, handwritten, playful look and rules for each part.
+- [Hard-to-use thing diagnoser](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser): Describe a thing people get wrong, or paste support complaints. Get what misleads them and the smallest fix.
+- [Hypothesis-first design planner](https://useaiblocks.com/skills/hypothesis-first-design-planner): Describe a design problem. Get hypotheses, quick sketching steps and small experiments in place of heavy design documents.
+- [Icon set planner](https://useaiblocks.com/skills/icon-set-planner): Paste the actions or objects you need icons for. Get a plan for a small, clear icon set with a reading test.
+- [Identity system planner](https://useaiblocks.com/skills/identity-system-planner): Paste your client facts and where the brand appears. Get a three-phase plan and hand-off guide.
+- [Interactive visual builder](https://useaiblocks.com/skills/interactive-visual-builder): Describe what to show. Get a chart, diagram or explainer with sliders and toggles, ready to open in a browser.
+- [Interface microcopy writer](https://useaiblocks.com/skills/interface-microcopy-writer): Give it a screen. Get button labels, error messages, empty states and toasts in a friendly, polite voice.
+- [Interface polish reviewer](https://useaiblocks.com/skills/interface-polish-reviewer): Give it a screen or component. Get notes on animation, feel and small details that make it feel finished.
+- [Interface principles checker](https://useaiblocks.com/skills/interface-principles-checker): Describe or share an interface. Get it scored against 168 research-backed UX principles, with common mistakes flagged.
+- [iPhone screen designer](https://useaiblocks.com/skills/iphone-screen-designer): Describe your app screens. Get native-feeling iPhone screens, checked on small and large sizes.
+- [Layout default breaker](https://useaiblocks.com/skills/layout-default-breaker): Paste a page or layout and its readers. Get the choices software made for you, plus three hand-made alternatives.
+- [Loading and error state designer](https://useaiblocks.com/skills/loading-and-error-state-designer): Give it a component or page. Get loading, success, error and empty states added, so users always know what is happening.
+- [Logo and brand kit designer](https://useaiblocks.com/skills/logo-and-brand-kit-designer): Describe your brand. Get logo directions with colors, type, file formats and usage rules.
+- [Logo concept generator](https://useaiblocks.com/skills/logo-concept-generator): Describe your brand. Get several logo directions, from wordmarks to symbols, each with the reasoning and how to use it.
+- [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester): Paste your logo ideas. Get each scored out of 100 on seven tests, with a keep or drop call.
+- [Look tuning studio builder](https://useaiblocks.com/skills/look-tuning-studio-builder): Name what to tune. Get a local page with sliders and pickers to adjust the look by eye.
+- [Magazine layout style guide writer](https://useaiblocks.com/skills/magazine-layout-style-guide): Describe your product. Get a style guide with a magazine feel: serif type, tidy grids and easy reading.
+- [Minimal style guide writer](https://useaiblocks.com/skills/minimal-style-guide-writer): Describe your product. Get a style guide built on space, plain type and few colours, with checks.
+- [Mobile app designer](https://useaiblocks.com/skills/mobile-app-designer): Describe the app screen. Get a touch-first design that fits iOS or Android, with a risk score before you build.
+- [Mood colour palette planner](https://useaiblocks.com/skills/mood-colour-palette-planner): Name the feeling a space, page or brand should give. Get a small palette where every colour has a job.
+- [One-symbol concept finder](https://useaiblocks.com/skills/one-symbol-concept-finder): Paste what your poster, video opening or cover is about. Get one symbol, the feeling it sets and what to leave out.
+- [Packaging brief writer](https://useaiblocks.com/skills/packaging-brief-writer): Describe your product and brand. Get a packaging brief a designer can follow, from materials to unboxing.
+- [Page design standards checker](https://useaiblocks.com/skills/page-design-standards-checker): Give it a page or component. Get checks on colour contrast, spacing, hierarchy and mobile, with fixes.
+- [Page grid and type planner](https://useaiblocks.com/skills/page-grid-and-type-planner): Paste your content and page type. Get a grid, a short type list and a white-space plan.
+- [Place principles writer](https://useaiblocks.com/skills/place-principles-writer): Describe your space or service. Get a statement of who it serves and what it must never be.
+- [Plain page type checker](https://useaiblocks.com/skills/plain-page-type-checker): Paste your page text and where it is read. Get type and spacing fixes, a readability check and a score.
+- [Plain words interface rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter): Paste a form, screen text or process steps. Get a rewrite in your users' own words, with a read-aloud test.
+- [Poster designer](https://useaiblocks.com/skills/poster-designer): Describe the poster or artwork. Get a finished PNG or PDF design with its own clear look.
+- [Premium interface designer](https://useaiblocks.com/skills/premium-interface-designer): Describe the page or app. Get a polished design with premium type, depth and smooth motion, not a template look.
+- [Product-true UI designer](https://useaiblocks.com/skills/product-true-ui-designer): Give it your product and screen. Get an interface built from your own design system, with every state covered.
+- [Raw brutalist style guide writer](https://useaiblocks.com/skills/raw-brutalist-style-guide-writer): Describe your product. Get a style guide for a raw, blunt look, with type, colour, states and checks.
+- [Real feeling checker](https://useaiblocks.com/skills/real-feeling-checker): Paste a story or ad. Get a score out of 100, the fakes it uses and a fix.
+- [Real-world texture style guide writer](https://useaiblocks.com/skills/texture-style-guide): Describe your product. Get a style guide that copies real objects and textures, with rules for each part.
+- [Retro throwback style guide writer](https://useaiblocks.com/skills/retro-style-guide): Describe your product. Get a style guide with a vintage look, nostalgic type and bold colour pairs.
+- [Review a product against ten principles, then cut extras](https://useaiblocks.com/workflows/ten-principles-review): Describe your product or page. Get a ten-principle review and a list of what to keep, cut and merge.
+- [Risograph print style guide writer](https://useaiblocks.com/skills/risograph-style-guide): Describe your product. Get a style guide with a two-colour print look on warm paper, plus rules for each part.
+- [Ruthless simplicity reviewer](https://useaiblocks.com/skills/ruthless-simplicity-reviewer): Give it a product or feature. Get a blunt review on focus, simplicity and end-to-end quality, with what to cut.
+- [Slide and page styler](https://useaiblocks.com/skills/slide-and-page-styler): Pick one of ten themes or ask for a new one. Get your slides, docs or page restyled to match.
+- [Small interface details designer](https://useaiblocks.com/skills/small-interface-details-designer): Give it a screen or feature. Get the triggers, rules, feedback and loops for its small moments, so it feels polished.
+- [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner): Name what people should do. Get a one-morning test plan with tasks, a script and a fix list.
+- [Soft clay style guide writer](https://useaiblocks.com/skills/soft-clay-style-guide-writer): Describe your product. Get a style guide for a puffy, rounded look, with shapes, colour and states.
+- [Soft shadow style guide writer](https://useaiblocks.com/skills/soft-shadow-style-guide-writer): Describe your product. Get a style guide for a soft, pressed-in look, with shadow rules and contrast fixes.
+- [Standout website designer](https://useaiblocks.com/skills/standout-website-designer): Describe your site. Get a bold, award-level design plan with motion, layout and effects.
+- [Story-led page style guide writer](https://useaiblocks.com/skills/story-page-style-guide): Describe your story. Get a style guide for a page that walks visitors through it, with clear steps and tone.
+- [Type-led poster planner](https://useaiblocks.com/skills/type-led-poster-planner): Paste your event and where the poster hangs. Get a type-only poster plan that reads from far away.
+- [Unlikely pairing idea generator](https://useaiblocks.com/skills/unlikely-pairing-idea-generator): Name two fields or styles. Get ten odd pairings, one limiting rule and a shortlist that passes a not-safe check.
+- [Usability heuristic reviewer](https://useaiblocks.com/skills/usability-heuristic-reviewer): Paste a page or form. Get a score out of 100, each usability break and ranked fixes.
+- [User flow designer](https://useaiblocks.com/skills/user-flow-designer): Describe a goal. Get a step-by-step user flow and navigation layout built on proven patterns.
+- [Visual hierarchy fixer](https://useaiblocks.com/skills/visual-hierarchy-fixer): Give it a web page or screen. Get fixes for spacing, color, type and depth so it looks professional.
+- [Visual system rules writer](https://useaiblocks.com/skills/visual-system-rules-writer): Describe your brand or event. Get the feeling first, then firm rules for colour, type and grid.
+- [Wayfinding sign planner](https://useaiblocks.com/skills/wayfinding-sign-planner): Describe your place and its routes. Get a sign plan a first-time visitor can follow, with one lead mark.
+- [Wireframe drafter](https://useaiblocks.com/skills/wireframe-drafter): Describe the screens. Get text wireframes at three detail levels, with parts, behavior and screen sizes.
+- [Wordmark sketch planner](https://useaiblocks.com/skills/wordmark-sketch-planner): Paste a name and its meaning. Get five letter-shape ideas that act it out, with a pick.

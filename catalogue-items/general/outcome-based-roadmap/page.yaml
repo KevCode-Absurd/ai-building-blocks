@@ -1,0 +1,117 @@
+new_slug: outcome-based-roadmap
+name: "Feature roadmap to outcomes rewriter"
+summary: "Paste your list of features and dates. Get a short list of problems to solve, each with a result to measure."
+job: plan-strategy
+thinking: medium
+thinking_why: "It judges what each item is really for and groups them, but follows a fixed rewrite pattern."
+
+headline: "Feature roadmap to outcomes rewriter"
+subhead: Give it your list of things to build and when. It sorts each item into a feature, a problem or a result, asks who wanted it and why, and rewrites the list as no more than five problems, each with a result you can measure and an owner.
+
+explain: |
+  A list of features with dates tells a team what to ship, not what to fix. The team is judged on delivery, and nobody asks whether the change helped. When the date moves, the whole plan feels broken.
+
+  This skill turns the list into problems for named customers, with one number for each that shows it got better. It groups the items into three to five problems, notes who owns whether people want it and whether the business can run it, and swaps fixed dates for review points that say what evidence you need before moving on.
+
+when:
+  - Your plan is a long list of features ranked by a deadline.
+  - Your team ships on time and nothing seems to improve.
+  - A boss or client has handed you a list of requests and you need to find the goals behind them.
+
+you_give:
+  - Your list of features, tasks or requests, with any dates
+  - Who asked for each item, if you know (optional)
+  - Findings from earlier checks on the ideas (optional)
+you_get:
+  - Each item marked as a feature, a problem or a result
+  - Three to five problems, each for a named customer
+  - One measurable result per problem
+  - Review points in place of dates, with the evidence each needs
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your list as it is, dates and all. Add who asked for each item if you know.
+  - Name the customers you serve. If you are not sure, say so.
+  - Pick the results it suggests and make sure someone can pull each number.
+  - Take the problems to your next planning meeting in place of the old list.
+
+how_it_works:
+  - title: Sorts the list
+    text: Marks each item as a feature, a problem or a result.
+  - title: Finds who asked
+    text: Notes who wanted each item and what they hope will change.
+  - title: Turns features into problems
+    text: Rewrites each feature as a problem a named customer has.
+  - title: Adds a measure
+    text: Gives each problem one result that someone can pull as a number.
+  - title: Groups to five or fewer
+    text: Merges the items into three to five problems.
+  - title: Names the owners
+    text: Notes who owns whether people want it and whether the business can run it.
+  - title: Replaces dates
+    text: Swaps fixed dates for a review point and the evidence needed to continue.
+
+output_shape: |
+  YOUR LIST, SORTED
+  <item> | <feature / problem / result> | Asked by: <who> | Hopes to change: <what>
+
+  PROBLEMS TO SOLVE (3 to 5)
+  1. <customer> struggles to <problem>
+     Result: <one number> from <now> to <target>, pulled from <source>
+     Owner of "do they want it": <role>   Owner of "can the business run it": <role>
+     Replaces: <items from your list>
+     Review point: <when> | Evidence needed: <what>
+  2. ...
+
+  DROPPED OR PARKED
+  <item | why>
+
+  MISSING
+  <facts that would sharpen the list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Who the customers are
+    how: Name the groups you serve. A problem for "users" is too loose to measure.
+  - what: How you measure today
+    how: Say what numbers you can already pull. Results are tied to those.
+  - what: Who asked
+    how: Say if an item came from a client, a boss or the team. That changes the question it asks.
+  - what: Fixed dates
+    how: Mark which dates are real, such as a trade show. Those are kept with the reason.
+
+judge:
+  - No line is left as a feature or a solution.
+  - Every result can be measured by a number someone can pull.
+  - The list has no more than five problems.
+  - Each problem names a customer.
+  - Dates are replaced by review points, not hidden.
+
+test:
+  - Run it on a list you shipped last quarter. See if the problems match what you wish you had fixed.
+  - Show the result to someone who asked for an item. Ask if their goal is in it.
+  - Run it twice. The problems should group the same way.
+  - Check that you can pull each result number today.
+
+improve:
+  - Add the customer groups you serve to step 3.
+  - Add your real fixed dates and the reasons, so it keeps those and drops the rest.
+  - Save the problem list as your plan and update it at each review point.
+  - Pair it with "Product idea risk checker" for any problem that needs a new build.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and rewriting a list is text work that any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Holds the result numbers you track at each review point."}
+  inputs:
+    - "Customer complaints or support tickets"
+    - "Last quarter's numbers for each result"
+    - "Notes on why each item was added"
+
+terms:
+  - term: Outcome
+    meaning: A change in what customers do or how a number moves, not a thing you ship.
+  - term: Review point
+    meaning: A moment to check the evidence and decide, in place of a fixed delivery date.

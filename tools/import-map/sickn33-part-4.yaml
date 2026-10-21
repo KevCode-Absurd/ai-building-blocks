@@ -465,6 +465,7 @@
   thinking_why: "Rules vary by country and each answer needs careful reasoning."
   inputs: [ { type: question, required: true } ]
   outputs: [ { type: plan } ]
+  slug: import-export-paperwork
 "sickn33/agentic-awesome-skills:skills/cv-generator":
   name: CV writer
   summary: "Give it your background and a job post. Get a paste-ready CV that passes applicant filters, plus a flaw report."

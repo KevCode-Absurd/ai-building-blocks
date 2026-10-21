@@ -1,0 +1,35 @@
+slug: india-earnings-preview
+renamed_from: earnings-preview-report-builder-for-india
+name: "Earnings preview report builder for India"
+summary: "Name an Indian stock. Get a short HTML earnings preview with consensus, past surprises and peers. It collects data from websites."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: web_page
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/market-data/spglobal/earnings-preview-beta
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/market-data/spglobal/earnings-preview-beta
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: earnings-preview-beta
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: earnings-preview-beta skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/market-data/spglobal/earnings-preview-beta
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

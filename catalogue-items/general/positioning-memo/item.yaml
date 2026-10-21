@@ -1,0 +1,20 @@
+slug: positioning-memo
+renamed_from: outcome-first-positioning-memo-writer
+name: "Outcome-first positioning memo writer"
+summary: "Paste your product facts. Get a team memo that names the outcome you sell, who users become and a relatable example user."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stewart-butterfield, seth-godin]
+credits:
+  - {title: "We Don't Sell Saddles Here (memo to staff, July 2013)", by: "Stewart Butterfield", used: "Naming what customers think they are shopping for, translating it into the outcome they get, who they become, and a relatable example user"}

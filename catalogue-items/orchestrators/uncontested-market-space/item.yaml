@@ -1,0 +1,28 @@
+slug: uncontested-market-space
+name: "Find a space no rival holds and win buy-in"
+summary: "Paste your rivals and what buyers value. Get a white-space map, a one-line only-ness statement and a buy-in plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: brand_brain, required: true}
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: script}
+uses: [competitor-white-space-mapper, onliness-statement-writer, idea-buy-in-pitch-planner]
+steps:
+  - {uses: competitor-white-space-mapper, note: "A grid that shows where nobody is strong and where to stop fighting"}
+  - {uses: onliness-statement-writer, note: "One sentence on what only you do, with a rival swap test. Reads the audit report from the step before"}
+  - {uses: idea-buy-in-pitch-planner, note: "A story, a vision picture and a plan through four stages. Reads the brief from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [marty-neumeier]
+credits:
+  - {title: "The Brand Gap", by: "Marty Neumeier", used: "The order of the steps: competitor white space mapper, onliness statement writer, idea buy-in pitch planner"}
+generated_from: intake/the-brand-gap/skeleton.yaml

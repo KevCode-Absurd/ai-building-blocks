@@ -1,0 +1,28 @@
+slug: job-based-product-design
+name: "Design the experience, name and measures around your customer's job"
+summary: "Give it your job spec. Get the key moments, features to keep, a name for the job and measures of progress."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: question, required: true}
+  - {type: audit_report, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+uses: [job-experience-mapper, feature-cutting-planner, job-name-picker, customer-progress-measure-picker]
+steps:
+  - {uses: job-experience-mapper, note: "A moment-by-moment list of obstacles and the experience that clears each one."}
+  - {uses: feature-cutting-planner, note: "Uses the job as the filter for a long list of customer requests."}
+  - {uses: job-name-picker, note: "Names that tell the customer what to hire."}
+  - {uses: customer-progress-measure-picker, note: "Replaces easy numbers with a few that show the job is getting done."}
+origin: rebuilt
+version: 1.0.0
+minds: [clayton-christensen]
+credits:
+  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan", used: "The order of the steps: map the moments and remove the obstacles, cut features that do not serve the job, name the product after the job, pick the measures that show progress"}
+generated_from: intake/jobs-to-be-done-experience/skeleton.yaml

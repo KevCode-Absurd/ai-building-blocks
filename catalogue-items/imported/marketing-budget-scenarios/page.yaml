@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It fits curves and weighs uncertainty, so it needs careful maths.
+new_slug: marketing-budget-scenarios
+name: Marketing budget scenario planner
+summary: Give it past spend and results by channel. Get low and high forecasts for a new budget, with diminishing returns built in.
+job: track-numbers
+headline: Marketing budget scenario planner
+subhead: Give it past spend and results by channel. Get low and high forecasts for a new budget, with diminishing returns built in.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your spreadsheet.

@@ -1,0 +1,101 @@
+new_slug: personal-mission-statement
+name: "Personal mission statement writer"
+summary: "Paste your roles, goals and values. Get a mission statement in three lengths, and a one-line version you can say from memory."
+job: think-and-decide
+thinking: medium
+thinking_why: "It turns your own notes into tight wording and checks it against fixed rules."
+headline: "Personal mission statement writer"
+subhead: "Give it your roles, goals and values. It writes a mission statement in three lengths in the present tense, cuts anything that will not last, and checks that every role is covered. You get a long, a medium and a one-sentence version, with a date to review them."
+explain: |
+  Many mission statements read like a poster and change nothing. A useful one is short, specific to you and ready to hand when a request lands. It says what you want to be and what you want to do, and it holds the line on what you will not trade.
+
+  This skill starts from your own roles, goals and values. It sorts them into being, doing and limits, then drafts a long version with a line per role. It cuts job titles, tools and empty adjectives, since those will change. It writes a medium and a one-sentence version, checks that every role has a line, and reads the short one for ease. It also sets a review date. You can use it for a family or a small team.
+when:
+  - You have a roles-and-goals map and need it in a few lines.
+  - You want a standard to say yes or no against.
+  - A family or team wants one shared statement everyone helped write.
+you_give:
+  - Your roles and long-term goals, for example from "Roles and long-term goals mapper"
+  - Your top values (optional)
+  - Who it is for, such as you, a family or a team (optional)
+  - Phrases you already use about yourself or your work (optional)
+you_get:
+  - A long, a medium and a one-sentence mission statement
+  - Your being, doing and limits piles
+  - A map of each role to the line that covers it
+  - A review date and a place to keep it
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your roles, goals and values. Say if it is for you, a family or a team.
+  - Read the three versions aloud. Mark any line that sounds like someone else.
+  - Ask for a rewrite of any line you would not say. Keep going until you could say the short one from memory.
+  - Take the final version to "Mission choice tester".
+how_it_works:
+  - title: Gathers raw lines
+    text: Pulls every role, goal and value into being, doing and limits.
+  - title: Picks a form
+    text: Offers a list of rules, a paragraph by roles or one sentence, and suggests the one that suits you.
+  - title: Drafts the long version
+    text: One or two present-tense lines per role, in your words.
+  - title: Cuts to the core
+    text: Removes job titles, tools, numbers and adjectives with nothing behind them.
+  - title: Writes shorter versions
+    text: A paragraph and a sentence that keep your limits.
+  - title: Covers every role
+    text: Matches each role to a line and flags roles left out.
+  - title: Reads it aloud
+    text: Checks breath length and flags phrases that sound borrowed.
+  - title: Adds how it lives
+    text: Sets where to keep it, when to review it and how a family or team writes it together.
+output_shape: |
+  RAW LINES
+  Being: <list>   Doing: <list>   Limits: <list>
+  LONG VERSION
+  <one or two lines per role>
+  MEDIUM VERSION
+  <60 to 100 words>
+  SHORT VERSION
+  <one sentence>
+  ROLE MAP
+  <role> -> <line>
+  KEEP IT
+  Where: <place>   Review: <date>   Rule: core stays, details update
+  MISSING
+  <what would sharpen the statement>
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Limits
+    how: Say what you would not do for money, praise or ease. Without limits the statement says nothing hard.
+  - what: The form
+    how: Ask for the list form if you like rules and the paragraph form if you think in roles.
+  - what: Who it is for
+    how: For a family or team, say who will help write it. The skill adds a step for everyone to edit.
+  - what: Your own words
+    how: Paste phrases you really use. The draft will sound like you and not like a poster.
+judge:
+  - Every line is in the present tense and in your words.
+  - No line depends on a job title, a tool or a number.
+  - Every role has a line.
+  - You can say the short version after reading it twice.
+  - There is at least one limit, something you would refuse.
+test:
+  - Read the short version to someone who knows you. Ask if it sounds like you.
+  - Take one hard choice from last month and see if the statement would have settled it.
+  - Wait a week, then write the short version from memory and compare.
+improve:
+  - Add your own taboo words to the skill file, such as "passionate", so they never appear.
+  - Save the final version in your about-me file and in your calendar's weekly review.
+  - Add a family or team version with a step for each person to edit.
+  - Pair it with "Mission choice tester" right after.
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Shaping and cutting your own wording is text work any strong chat AI does well."}
+    - {name: "A printed card or wall note", why: "A statement you see weekly gets used. One in a file does not."}
+  inputs:
+    - "A roles-and-goals map from Roles and long-term goals mapper"
+    - "A ranked values list from Eulogy values finder"
+    - "Three phrases you often use about your work"
+terms:
+  - term: Core
+    meaning: The part of the statement that should hold for years, as opposed to details that will change with jobs and seasons.

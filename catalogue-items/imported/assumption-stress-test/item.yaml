@@ -1,0 +1,33 @@
+slug: assumption-stress-test
+renamed_from: business-assumption-stress-tester
+name: "Business assumption stress tester"
+summary: "Give it a plan and its key bets. Find which assumptions break first and what to test."
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/executive-mentor/skills/stress-test
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/executive-mentor/skills/stress-test
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: stress-test
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: stress-test skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/executive-mentor/skills/stress-test
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

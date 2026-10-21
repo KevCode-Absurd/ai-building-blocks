@@ -1,0 +1,86 @@
+# Check contracts and rules: AI Blocks
+
+> 82 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Describe your site or app. Get WCAG gaps by level, what to fix first and notes for an accessibility statement.
+- [AI impact assessment writer](https://useaiblocks.com/skills/ai-impact-assessment-writer): Describe an AI use at work. Get risks, rules that apply and conditions to meet. Not legal advice.
+- [AI risk framework planner](https://useaiblocks.com/skills/ai-risk-framework-planner): Describe your AI system. Get risks mapped, measured and managed under the NIST AI framework, with a plan.
+- [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker): Give it an AI tool's terms or addendum. Get data-training, liability and model-change risks flagged. A first check, not legal advice.
+- [Australian government security checker](https://useaiblocks.com/skills/australia-gov-security-check): Describe your system and its data level. Get which ISM controls apply, your gaps and what assessors will ask.
+- [Bank capital rules checker](https://useaiblocks.com/skills/bank-capital-rules-checker): Give it a bank's balance sheet. Get its Basel III capital and liquidity ratios checked against the limits.
+- [Bank messaging security checker](https://useaiblocks.com/skills/bank-messaging-security-checker): Describe how you connect to SWIFT. Get your architecture type, control gaps and what your yearly attestation needs.
+- [Board written consent drafter](https://useaiblocks.com/skills/board-written-consent-drafter): Describe the decision your directors must approve. Get a written consent to sign instead of a meeting. Have a lawyer check it.
+- [Brazil data privacy checker](https://useaiblocks.com/skills/brazil-data-privacy-checker): Describe how you handle data about people in Brazil. Get your LGPD duties, gaps and a plan to fix them.
+- [California privacy law checker](https://useaiblocks.com/skills/california-privacy-law-checker): Describe how you use customer data. Get California privacy duties, gaps and a plan for consumer requests.
+- [Car supplier security checker](https://useaiblocks.com/skills/car-supplier-security-checker): Describe your work for car makers. Get the right TISAX level, labels and gaps before the assessment.
+- [Card payment security checker](https://useaiblocks.com/skills/card-payment-security-checker): Describe how you take card payments. Get your PCI level, the right self-check form and gaps to fix.
+- [Cease-and-desist letter helper](https://useaiblocks.com/skills/cease-and-desist-letter-helper): Describe an infringement or paste a letter you got. Get a draft demand or options. Have a lawyer review.
+- [Company filing deadline tracker](https://useaiblocks.com/skills/company-filing-deadline-tracker): List your companies and where they are registered. Get annual filings and due dates. Not legal advice.
+- [Contract and proposal drafter](https://useaiblocks.com/skills/contract-and-proposal-drafter): Say the deal and where you work. Get a contract, proposal, SOW or NDA draft with the right clauses.
+- [Contract and term sheet reviewer](https://useaiblocks.com/skills/contract-and-term-sheet-reviewer): Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer.
+- [Contract batch review grid builder](https://useaiblocks.com/skills/contract-review-grid): Give it contracts and points to find. Get one cited spreadsheet row per contract. Verify before relying on it.
+- [Contract change tracer](https://useaiblocks.com/skills/contract-change-tracer): Give it a contract and its amendments. Get what changed and each clause's latest wording. Not legal advice.
+- [Contract plain-words summary writer](https://useaiblocks.com/skills/contract-plain-summary): Give it a reviewed contract. Get a two-minute summary of what to know before signing. A first check, not legal advice.
+- [Contract reviewer](https://useaiblocks.com/skills/contract-reviewer): Give it a contract and your rules. Get a clause by clause review and suggested edits. Have a lawyer check it.
+- [Contract risk reviewer](https://useaiblocks.com/skills/contract-risk-reviewer): Give it a contract. Get key clauses, duties and risks rated by severity. Not legal advice.
+- [Copyright takedown notice helper](https://useaiblocks.com/skills/copyright-takedown-notice-helper): Describe a copy of your work online, or paste a notice. Get a draft or options. Have a lawyer review.
+- [Data processing agreement reviewer](https://useaiblocks.com/skills/dpa-review): Give it a data processing agreement. Get each term checked, with edits to ask for. First check, not legal advice.
+- [Data request reply drafter](https://useaiblocks.com/skills/data-request-reply-drafter): Paste a request for someone's data. Get steps to find it and a draft reply. First check, not legal advice.
+- [Defense contractor security checker](https://useaiblocks.com/skills/defense-contractor-security): Describe your defense work and systems. Get your CMMC level, gaps and the plan papers an assessor expects.
+- [Defense export rules checker](https://useaiblocks.com/skills/defense-export-rules-checker): Describe your defense product or data. Get whether it is controlled, which licences apply and how to stay compliant.
+- [Demand letter drafter](https://useaiblocks.com/skills/demand-letter-drafter): Give it your finished fact sheet. Get a demand letter draft and a send checklist. A first draft, not legal advice.
+- [Demand letter fact gatherer](https://useaiblocks.com/skills/demand-letter-fact-gatherer): Answer its questions about a dispute. Get a fact sheet ready for a demand letter. First check, not legal advice.
+- [Dispute timeline builder](https://useaiblocks.com/skills/dispute-timeline-builder): Give it your emails and documents. Get a dated timeline of what happened, with key events marked. First check, not legal advice.
+- [EU network security rules checker](https://useaiblocks.com/skills/eu-network-security-check): Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps.
+- [EU sustainability report checker](https://useaiblocks.com/skills/eu-sustainability-report-checker): Describe your company. Get whether EU sustainability reporting applies, what to disclose and the gaps to close.
+- [Feature legal risk assessor](https://useaiblocks.com/skills/feature-legal-risk-assessor): Name a risky feature. Get what could go wrong, how likely, how bad and fixes. First check, not legal advice.
+- [Federal accessibility checker](https://useaiblocks.com/skills/federal-accessibility-checker): Describe your site, app or documents. Get Section 508 gaps, a fix plan and notes for an accessibility report.
+- [Federal cloud approval planner](https://useaiblocks.com/skills/federal-cloud-approval-planner): Describe your cloud service. Get a FedRAMP path, the papers you need and the gaps to close first.
+- [Financial IT resilience checker](https://useaiblocks.com/skills/financial-it-resilience-checker): Describe your finance firm and IT suppliers. Get DORA gaps, incident reporting steps and supplier contract checks.
+- [Health data privacy checker](https://useaiblocks.com/skills/health-data-privacy-checker): Describe your health data use or app. Get HIPAA gaps, safeguards to add and draft notices or agreements.
+- [Import and export paperwork advisor](https://useaiblocks.com/skills/import-export-paperwork): Describe your goods and route. Get tariff codes, duty options and the papers customs will ask for.
+- [Incoming demand letter reviewer](https://useaiblocks.com/skills/incoming-demand-letter-reviewer): Give it a demand letter you got. Get the claims, how strong they look and your reply options. Not legal advice.
+- [India data privacy checker](https://useaiblocks.com/skills/india-data-privacy-checker): Describe how you handle personal data in India. Get your duties, gaps and a plan under the DPDP Act.
+- [Infringement first-look sorter](https://useaiblocks.com/skills/infringement-first-look-sorter): Describe a possible copy or a claim against you. Get a flag list of factors. Not legal advice.
+- [Internal controls testing planner](https://useaiblocks.com/skills/internal-controls-testing): Give it your key controls. Get a test plan, sample sizes and a way to rate any control gaps.
+- [Invention idea screener](https://useaiblocks.com/skills/invention-idea-screener): Describe your invention. Get a first screen on novelty, deadlines and value, and whether to see a patent lawyer. Not legal advice.
+- [IP clause checker](https://useaiblocks.com/skills/ip-clause-checker): Give it a contract. Get ownership, assignment, licence and indemnity clauses checked and flagged. A first check, not legal advice.
+- [IT controls audit planner](https://useaiblocks.com/skills/it-controls-audit-planner): Describe your finance systems. Get controls matrix rows, test steps and a rating for any IT control gaps.
+- [Lab and device standards checker](https://useaiblocks.com/skills/lab-and-device-standards-checker): Name the standard and share your records. Get an evidence gap list for ISO 13485, 14971 or 17025.
+- [Launch legal reviewer](https://useaiblocks.com/skills/launch-legal-reviewer): Give it your product plan. Get a memo that checks each legal area before you ship. First check, not legal advice.
+- [Legal daily and incident briefer](https://useaiblocks.com/skills/legal-daily-and-incident-briefer): Pick a daily scan, a topic or an incident. Get a short briefing from your email, calendar and files. Not legal advice.
+- [Legal inquiry reply drafter](https://useaiblocks.com/skills/legal-inquiry-reply-drafter): Name the request, such as a data access request. Get a draft reply and a flag when a lawyer must review.
+- [Legal meeting briefer](https://useaiblocks.com/skills/legal-meeting-briefer): Name a negotiation or review meeting. Get background, key issues, questions to ask, then action items. Not legal advice.
+- [Legal risk rater](https://useaiblocks.com/skills/legal-risk-rater): Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
+- [Marketing claims checker](https://useaiblocks.com/skills/marketing-claims-checker): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording. Not legal advice.
+- [NDA drafter](https://useaiblocks.com/skills/nda-drafter): Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check.
+- [NDA quick checker](https://useaiblocks.com/skills/nda-quick-checker): Give it an NDA. Get a green, yellow or red rating and the odd clauses. Have a lawyer check yellow or red.
+- [New AI rule gap checker](https://useaiblocks.com/skills/new-ai-rule-gap-checker): Give it a new AI law. Get gaps against what you do now and a fix plan. Not legal advice.
+- [New data use screener](https://useaiblocks.com/skills/new-data-use-screener): Describe a new use of customer data. Get a quick call on whether it needs full privacy review. Not legal advice.
+- [New Zealand government security checker](https://useaiblocks.com/skills/nz-gov-security-check): Describe your agency system. Get which NZISM controls apply, your gaps and what certification needs.
+- [Patent launch-risk scanner](https://useaiblocks.com/skills/patent-launch-risk-scanner): Describe a product or feature. Get patents that might block it and a first claim comparison. Not a legal opinion.
+- [Policy page drafter](https://useaiblocks.com/skills/policy-page-drafter): Give your business facts and country. Get a draft privacy policy, terms or cookie notice to send to a lawyer.
+- [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer): Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice.
+- [Privacy impact assessment writer](https://useaiblocks.com/skills/privacy-impact-assessment-writer): Describe a new feature that uses personal data. Get a privacy impact assessment with conditions and owners. First check, not legal advice.
+- [Privacy management audit planner](https://useaiblocks.com/skills/privacy-management-audit-planner): Describe how you handle personal data. Get gaps against ISO 27701, a privacy control list and an audit plan.
+- [Privacy policy drafter](https://useaiblocks.com/skills/privacy-policy-drafter): Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it.
+- [Privacy policy drift checker](https://useaiblocks.com/skills/privacy-policy-drift-checker): Describe a data plan. Get where your privacy policy no longer matches, with fix wording. Not legal advice.
+- [Quick legal sanity checker](https://useaiblocks.com/skills/quick-legal-sanity-checker): Ask a quick question, like using customer logos. Get fine, needs a look or hold, with a reason. Not legal advice.
+- [Records preservation notice drafter](https://useaiblocks.com/skills/legal-hold-notice): Tell it about a dispute. Get a notice telling staff which records to keep. A first draft, not legal advice.
+- [Rule change policy comparer](https://useaiblocks.com/skills/rule-change-policy-comparer): Paste a rule that changed. Get which of your policies it touches and what to change. First check, not legal advice.
+- [Rules and approvals checker](https://useaiblocks.com/skills/rules-and-approvals-checker): Describe a new feature or plan. Get the rules that may apply, approvals needed and risk areas. Not legal advice.
+- [Saudi rules finder](https://useaiblocks.com/skills/saudi-rules-finder): Describe your business in Saudi Arabia. Get which Saudi cyber and data rules apply, then the steps for each.
+- [Software subscription terms checker](https://useaiblocks.com/skills/saas-terms-check): Give it a software subscription contract. Get renewal traps, price rises, uptime and data terms flagged. A first check, not legal advice.
+- [Store policy checker](https://useaiblocks.com/skills/store-policy-checker): Give it your store link or policy text. Get gaps, clashes and unclear wording, with fixes to paste in.
+- [Subpoena first-look reviewer](https://useaiblocks.com/skills/subpoena-first-look-reviewer): Give it a subpoena. Get what it asks for, the deadline and a plan for your lawyer. Not legal advice.
+- [Supplier contract manager](https://useaiblocks.com/skills/supplier-contract-manager): Give it your supplier deals. Get a renewal calendar, terms to push for and a way to track broken promises.
+- [Team AI use policy drafter](https://useaiblocks.com/skills/team-ai-use-policy-drafter): Describe how your team uses AI. Get a first-draft AI use policy based on public model policies. Have a lawyer review it.
+- [Terms of service drafter](https://useaiblocks.com/skills/terms-of-service-drafter): Describe your web app or marketplace. Get a Terms of Service draft to review with a lawyer.
+- [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist): Give it what you make, import and export. Get a checklist of the rules that apply and who owns each.
+- [Trademark name first-check](https://useaiblocks.com/skills/trademark-name-first-check): Give it a name you want to use. Get a flag list of similar marks and risk factors. Not a clearance opinion.
+- [Transport cyber rules checker](https://useaiblocks.com/skills/transport-cyber-rules-checker): Describe your pipeline or rail operation. Get which TSA security rules apply, your gaps and required plans.
+- [UAE rules finder](https://useaiblocks.com/skills/uae-rules-finder): Describe where your business sits in the UAE. Get which data and cyber rules apply, then the steps for each.
+- [US export rules checker](https://useaiblocks.com/skills/us-export-rules-checker): Describe your product and buyer. Get its export class, whether you need a licence and which exceptions fit.
+- [Vendor agreement status checker](https://useaiblocks.com/skills/vendor-agreement-status-checker): Name a vendor. Get what you signed, what is missing and what expires soon. Verify against the originals.
+- [Vendor risk reviewer](https://useaiblocks.com/skills/vendor-risk-reviewer): Give it a vendor and what they handle. Get a risk tier, tailored questions and a review of their SOC 2 report.
+- [Vietnam data privacy checker](https://useaiblocks.com/skills/vietnam-data-privacy-checker): Describe how you handle Vietnamese personal data. Get your duties, transfer checks and a plan under the new law.

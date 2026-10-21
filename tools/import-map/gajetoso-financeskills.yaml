@@ -22,6 +22,7 @@
   thinking_why: "It follows accounting rules with a few judgment calls."
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: spreadsheet } ]
+  slug: cleanup-liability-calculator
 
 "GAJETOso/financeskills:skills/audit-checklist":
   name: Audit readiness checker
@@ -211,6 +212,7 @@
   thinking_why: "It computes standard ratios, then interprets them."
   inputs: [ { type: source_text, required: true } ]
   outputs: [ { type: audit_report } ]
+  slug: company-financial-health
 
 "GAJETOso/financeskills:skills/fixed-asset-accounting":
   name: Fixed asset register keeper
@@ -245,6 +247,7 @@
   inputs: [ { type: spreadsheet, required: true } ]
   outputs: [ { type: spreadsheet }, { type: document } ]
   needs: run code and read your files
+  slug: claims-reserve-calculator
 
 "GAJETOso/financeskills:skills/intercompany-accounting":
   name: Intercompany balance matcher
@@ -414,6 +417,7 @@
   thinking_why: "It sets a test method and rates findings."
   inputs: [ { type: brief, required: true } ]
   outputs: [ { type: plan } ]
+  slug: internal-controls-testing
 
 "GAJETOso/financeskills:skills/startup-valuation":
   name: Early-stage valuation estimator
@@ -475,6 +479,7 @@
   thinking_why: "It applies standard variance formulas."
   inputs: [ { type: spreadsheet, required: true } ]
   outputs: [ { type: audit_report } ]
+  slug: production-cost-variance
 
 "GAJETOso/financeskills:skills/venture-debt":
   name: Venture loan terms reviewer

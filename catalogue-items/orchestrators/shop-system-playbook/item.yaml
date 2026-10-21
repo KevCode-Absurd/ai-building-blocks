@@ -1,0 +1,25 @@
+slug: shop-system-playbook
+name: "Turn one working shop into a system others can copy"
+summary: "Describe your best location. Get written standards, a manual a stranger can follow, a readiness check and a go or no-go."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: [standards-sheet-writer, operations-manual-writer, second-location-check, go-or-no-go-launch-checker]
+steps:
+  - {uses: standards-sheet-writer, note: "Standards with numbers, the never-cut lines and one job for each person."}
+  - {uses: operations-manual-writer, note: "A job card for each role, a missed-standard rule and a trial sheet for a newcomer."}
+  - {uses: second-location-check, note: "The gaps the trial showed, and whether the first location makes money without you."}
+  - {uses: go-or-no-go-launch-checker, note: "A go or no-go on the second location, with a halfway check."}
+origin: rebuilt
+version: 1.0.0
+minds: [ray-kroc]
+credits:
+  - {title: "Grinding It Out: The Making of McDonald's (a book summary)", by: "Ray Kroc with Robert Anderson", used: "The order of the steps: write the standards, turn the standards into a manual, check the system is ready to copy, make the go or no-go call"}
+generated_from: intake/grinding-it-out-copyable-system/skeleton.yaml

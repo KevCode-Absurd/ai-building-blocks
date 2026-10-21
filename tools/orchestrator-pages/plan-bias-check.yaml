@@ -1,0 +1,87 @@
+new_slug: plan-bias-check
+name: Check a plan for bias, bad incentives and failure
+summary: Describe a decision. Get the pressures behind it, who is rewarded for what, and how the plan could fail.
+job: think-and-decide
+thinking: high
+thinking_why: It has to catch pressures you can't see in your own thinking. Give it your strongest model.
+headline: Test a big decision for hidden pressure before you commit to it
+subhead: Describe the decision and your reasons. It writes your clear case first, then finds the mind tricks pushing you and counts how many stack up. Next it checks who is paid for what in the plan, then lists the ways the plan could fail and the changes that avoid them.
+explain: |
+  When you are about to commit, the plan feels sensible. But several quiet pressures can push the same way at once: a reward for someone to say yes, a promise you already made, the crowd, the fear of losing what you have. Together they can turn good judgment to mush, and you won't feel it happen.
+
+  This workflow checks the decision three ways. First, it separates your clear reasons from the pressures. Second, it looks at who gains from each outcome. Third, it starts from failure: what would guarantee it, and which standard mistakes in your field your plan makes. The ideas come from Charlie Munger's talk on the psychology of human misjudgment and his other writing on incentives and avoiding failure.
+when:
+  - You are about to sign, hire, invest or launch and want the plan attacked before you commit.
+  - A deal feels urgent, and you want to know whether the urgency is real.
+  - Your team's pay or targets might be pulling people the wrong way and you can't tell.
+you_give:
+  - The decision, and the date you must make it
+  - Your reasons for it, in your own words
+  - Who is involved, what each person gains and what you have already said or paid (optional)
+  - How each person or party is paid or rewarded
+  - What the plan depends on, such as money, people or one big customer (optional)
+you_get:
+  - Your clear case, written before the pressure check
+  - The pressures at work, each tied to a fact in your situation, and a calmer version of the choice
+  - A table of who is rewarded for what, where it pulls the wrong way and a fix
+  - A list of ways the plan could fail, survival risks first, with a change for each
+  - The bet stated, and a set of attacks for the people you pick to argue against it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the decision and your reasons. It works step by step and saves each result.
+  - Wait a day before you act on the calmer version, and give the attacks to the people you chose.
+how_it_works:
+  - title: Writes your clear case
+    text: Writes your reasons first, then checks them for incentives, past promises, the crowd and fear of loss.
+  - title: Counts the pile-up
+    text: Counts how many pressures push the same way and names the strongest one or two, with a step to cool them down.
+  - title: Checks the rewards
+    text: Takes the calmer plan and lists how each person is paid, what that really encourages and where it differs from what you want.
+  - title: Tests the fix
+    text: Finds a small change to the reward that pays for the outcome you want, and checks it can't be gamed.
+  - title: Starts from failure
+    text: Asks what would guarantee failure and checks the revised plan against the standard mistakes in your field.
+  - title: Sets up the attacks
+    text: States the bet and who pushes it, then lists attacks on market, timing and team for the people you pick to argue against it.
+output_shape: |-
+  STEP 1: DECISION PRESSURE CHECK
+    The decision: <one line, who decides, by when>
+    Clear case: <your reasons, written first>
+    Pressures present: <pressure> | fact in your situation | strength
+    Pile-up: <count and which agree> | strongest <one or two> | cooling-off step <what>
+
+  STEP 2: INCENTIVE CHECK
+    Who is rewarded for what: <person> | reward | what it encourages
+    Where it pulls the wrong way: <mismatch> | example
+    The fix: <change to the reward> | how it could be gamed
+
+  STEP 3: FAILURE-FIRST CHECK
+    Goal: <one line>
+    What would guarantee failure: <list>
+    Survival risks and other ways to fail: <risk> | change
+    The bet and the attacks: <who attacks> | <attack>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your reasons, in your own words
+    how: Write them before you read anything else it says. If the reasons are vague, the check can't tell clear thought from pressure.
+  - what: What each person gains
+    how: Say who benefits if you say yes, even if it feels rude to write down. That is where the incentive check does its best work.
+  - what: Who attacks the plan
+    how: Pick one or two people who will argue against it on purpose. Their attacks carry more weight than you reading the list alone.
+judge:
+  - Your clear case comes before any pressure is named.
+  - Each pressure is tied to a fact in your situation, not a general warning.
+  - The incentive fix pays for the outcome you want, and says how it could be gamed.
+  - The failure list is specific to your plan, not a generic list of risks.
+  - Nothing about the people or deal is invented.
+test:
+  - Use a decision you already made that went badly. The pressure check should show the pile-up you missed.
+  - Make up a plan where the sales team is paid on number of deals. The incentive check should flag the pull toward small, quick deals.
+  - Run the same plan twice. The strongest pressures should match, even if the wording differs.
+improve:
+  - Keep a log of decisions you ran through it and what happened, so you learn which pressures hit you most.
+  - Add the failures common in your field to the failure-first step.
+  - Run a decision through it before a meeting, and again a day later, to see what changes.

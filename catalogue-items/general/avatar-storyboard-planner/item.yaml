@@ -1,0 +1,34 @@
+slug: avatar-storyboard-planner
+renamed_from: video-avatar-and-storyboard-planner
+name: "Video avatar and storyboard planner"
+summary: "Paste your script, attach product photos. Get an avatar, angle sheets and a storyboard ready for the clips."
+category: general
+type: skill
+role: render
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: avatar_sheet, required: false}
+  - {type: product_photos, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: script}
+  - {type: avatar_sheet}
+  - {type: image_prompt}
+  - {type: shot_list}
+uses: [pre-launch-ad-checker]
+origin: rebuilt
+source_ids: [CES-081]
+old_name: character-consistent storyboard
+version: 2.1.0
+credits:
+  - {title: "Character Sheets (2026): The Blueprint for Consistent Animation", by: "Gwénaëlle Dupré, CGWire", url: "https://blog.cg-wire.com/character-sheet-animation", used: "Model sheet views that keep a character on model"}
+  - {title: "What is continuity editing? 12 techniques you should know", by: "Alec Chillingworth, Epidemic Sound", url: "https://www.epidemicsound.com/blog/what-is-continuity-editing/", used: "Facing direction, eyeline and matching action between shots"}
+  - {title: "Introducing Gemini 2.5 Flash Image, our state-of-the-art image model", by: "Google for Developers", url: "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/", used: "Keeping a character the same across prompts and edits"}
+tested:
+  on: 2026-10-20
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

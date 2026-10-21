@@ -25,6 +25,7 @@
   outputs: [ { type: audit_report, required: true }, { type: plan, required: false } ]
   author: Matt Berman
   author_url: https://github.com/TheMattBerman
+  slug: meta-pixel-capi-fix
 "TheMattBerman/meta-ads-kit:skills/ad-copy-generator":
   skip: "Copy for Meta image ads. Our Image ad copy writer and Meta ad copywriter do the same job."
 "TheMattBerman/meta-ads-kit:skills/ad-creative-monitor":

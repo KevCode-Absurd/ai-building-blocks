@@ -1,0 +1,80 @@
+new_slug: give-criticism-well
+name: Give criticism that changes behaviour without resentment
+summary: Describe the person and the problem. Get a message with true praise, an easy fix and a plan to praise progress.
+job: lead-people
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Say what has to change so the person fixes it and does not dig in
+subhead: Tell it who has a problem and what keeps going wrong. It writes notes on the one behaviour and the smallest fix, a message with true praise and a way to keep their pride, a rewrite of any orders, and a plan to praise each step of progress.
+explain: |
+  Most criticism fails in one of two ways. It is so soft the person never hears it, or it points at their faults and they defend themselves. The behaviour stays and the relationship gets worse. Orders add to the damage, because people obey a brisk command once and then resent it.
+
+  This workflow keeps the whole matter on one behaviour and one small fix. It checks first if the matter is worth raising, finds a fair reason for the behaviour and lists what the person does well. It writes a message that opens with true praise, joins it to the change with "and", owns your part and leaves a way out. It turns every order into a question or a request that shows their gain. After you speak, it plans how to notice and praise each step. The order comes from the fourth part of Dale Carnegie's How to Win Friends and Influence People, on leading people without giving offence.
+when:
+  - Someone's work or conduct has slipped and you have put off saying so.
+  - You have asked for the same change more than once and nothing happened.
+  - You must correct a senior person, a peer or someone who takes things hard.
+you_give:
+  - Who the person is and how you work together
+  - What keeps going wrong, with one or two real, dated examples
+  - The result you want instead
+  - What you honestly value in them (optional)
+you_get:
+  - One behaviour written so anyone could watch it, with their likely reason and the smallest fix
+  - A message with true praise, the plain request and a way for them to save face
+  - The same message with every order turned into a question or request with their gain
+  - A plan to notice and praise each step in the right direction
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the person, what keeps going wrong and the result you want. It works step by step and saves each result.
+  - Say or send the message. Then watch for the first small improvement and start the praise plan.
+how_it_works:
+  - title: Gets the behaviour and the fix clear
+    text: Decides if it is worth raising, names one behaviour anyone could watch, checks your part, finds a fair reason and lists true strengths.
+  - title: Writes the message
+    text: Opens with true praise, joins it to the change with "and", points at the mistake gently, owns your part and leaves a way to save face.
+  - title: Turns orders into requests
+    text: Finds every command and blame line and rewrites each as a question or a request with the person's gain, a good name and a small first step.
+  - title: Plans the praise
+    text: Splits the change into stages and writes specific, honest praise for each, with the setting and a plan for a slip.
+output_shape: |-
+  STEP 1: BEHAVIOUR AND FIX NOTES
+    The behaviour | The result wanted | Why they may do it | True strengths | The smallest fix | Keep, change, leave out
+
+  STEP 2: THE MESSAGE
+    Praise joined to the change | The plain request | What you own | How they save face
+
+  STEP 3: ORDERS INTO REQUESTS
+    Each changed line with their gain | The good name used | The first step
+
+  STEP 4: THE PRAISE PLAN
+    Three stages | The praise for each | Where and how | If they slip | Review date
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The example
+    how: Give a recent, dated moment. A real event lets the message point at the behaviour without blaming the person.
+  - what: How they react
+    how: Say if they get defensive, go quiet or take it hard. The tone of the message and the setting change with that.
+  - what: Your part
+    how: Tell it what you left unclear or let slide. It becomes your opening line if it is true.
+  - what: What you value in them
+    how: List real strengths with examples. The praise can then name something true and close to the problem.
+judge:
+  - The behaviour could be filmed and has no word about character.
+  - The praise is true and names a specific thing.
+  - No order is left, even in question form.
+  - The person has a real way to save face.
+  - The praise plan has a first sign you will really notice.
+test:
+  - Run it on a talk that went badly. Compare the message with what you said.
+  - Give the message to a colleague and ask what they think you want. It should be the exact behaviour.
+  - Run it twice on the same case. The praise and the fix should stay close.
+  - After a month, check if the behaviour held.
+improve:
+  - Keep a list of what you value in each person you lead, so praise is ready.
+  - Add your own words for the behaviour, so the message sounds like you.
+  - Save each message and what happened in a file per person.
+  - Add your team's standards, so the result you want matches them.

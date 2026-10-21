@@ -7,8 +7,8 @@ description: Use when buyers like your offer but hesitate, or you are tempted to
 
 A discount tells the buyer your price was a guess. A bonus tells them they get more. This skill builds a set of bonuses that each answer one reason a buyer says maybe, with a name, a short pitch, proof and a value you can defend. It leaves your price alone.
 
-Use [Honest scarcity and urgency planner](https://useaiblocks.com/skills/honest-scarcity-and-urgency-planner) instead when buyers like the offer but you need a real deadline or cap to make them decide.
-Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder-that-answers-buyer-doubts) instead when you need one whole offer for one buyer, with a profit check, not a set of bonuses.
+Use [Honest scarcity and urgency planner](https://useaiblocks.com/skills/honest-urgency-planner) instead when buyers like the offer but you need a real deadline or cap to make them decide.
+Use [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder) instead when you need one whole offer for one buyer, with a profit check, not a set of bonuses.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -58,7 +58,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Make an offer people want** with the [Commodity trap checker](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.
 - **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the offer.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the offer.
+- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the offer.
 - **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

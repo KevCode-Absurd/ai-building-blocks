@@ -1,0 +1,132 @@
+new_slug: customer-interview-questions
+name: "Customer interview question writer"
+summary: "Paste your idea and draft questions. Get fixed questions about their life, your top three and a plan for the scary one."
+job: test-an-idea
+thinking: medium
+thinking_why: "It judges each question and picks what matters, but the rules are fixed."
+
+headline: "Customer interview question writer"
+subhead: Give it your idea, the type of person you'll talk to and any questions you have. It rewrites bad ones into questions about their life and past actions, picks the three that matter most and plans how you'll ask the one you're afraid of. You get a conversation guide.
+
+explain: |
+  Ask "would you use this?" and nearly everyone says yes. People want to be kind, they guess badly about their own future, and your idea puts your ego in the room. You then leave with praise and no facts, which is worse than knowing nothing.
+
+  This skill applies three rules: ask about their life, not your idea; ask about specific past events, not opinions about the future; and listen more than you talk. It also finds the question you're avoiding by asking how the plan could fail and what would have to be true for it to win. It keeps your top three questions for this type of person, and writes recovery lines for when the talk drifts into praise, vague claims or feature requests.
+
+when:
+  - You're about to talk to customers and your questions start with "would you".
+  - You have a long list of questions and don't know which ones matter.
+  - You keep avoiding one question because the answer might hurt.
+
+you_give:
+  - Your idea in a sentence, and the type of person you'll talk to
+  - Your draft questions, good or bad (optional)
+  - What you already know and what you're unsure of (optional)
+  - A group from "First customer group picker" (optional)
+you_get:
+  - Your questions rewritten, each with what was wrong and what the new one tests
+  - Your top three questions for this type of person
+  - A plan for the scariest question, including what answer would change your mind
+  - Short lines for pulling a drifting conversation back
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your idea and who you'll talk to. Paste any draft questions as they are, even the bad ones.
+  - Say what you are most afraid someone will tell you.
+  - Take the top three into your next conversation. Keep the recovery lines on a card.
+  - After the talk, bring your notes to "Customer conversation notes sorter".
+
+how_it_works:
+  - title: Steers back to their life
+    text: If your question is about your idea or asks for an opinion, it says why that gets a polite answer and reframes it.
+  - title: Finds the real risks
+    text: Asks how the plan could fail and what must be true for success, and splits risks into market risk and product risk.
+  - title: Picks the big three
+    text: Chooses the three unknowns that matter most for this type of person right now.
+  - title: Writes questions about their life
+    text: Questions about the last time something happened, what they did, what it cost and what else they tried.
+  - title: Rewrites your drafts
+    text: Shows each bad question, what is wrong with it and a fixed version that passes the three rules.
+  - title: Tests the problem
+    text: Adds questions that show whether the problem matters, such as what they spend, what they've tried and how it ranks.
+  - title: Plans the scary question
+    text: Writes how to ask it, what answers to expect and what each would change.
+  - title: Adds recovery lines
+    text: Short lines to deflect praise, pin down vague claims and dig under requests, and one to apologise for pitching.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHO AND WHAT
+  <the person you'll talk to and the stage you're at>
+
+  THE BIG THREE
+  1. <question> | Would change: <what it could change>
+  2. ...
+  3. ...
+
+  THE SCARY ONE
+  <the question, how to ask it, what each answer means>
+
+  YOUR QUESTIONS, FIXED
+  <n>. Was: <original>
+     Problem: <why it fails>
+     Now: <rewritten question>
+
+  MORE QUESTIONS ABOUT THEIR LIFE
+  <5 to 8 questions, last time, how they cope, cost, what else tried>
+
+  IF THE TALK DRIFTS
+  Praise: <line>  Vague claim: <line>  Idea or request: <line>  Pitching: <line>
+
+  MISSING
+  <what would sharpen the questions>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The type of person
+    how: Be specific. Questions for "a landlord with five flats" come out sharper than for "property people".
+  - what: How sure you are the problem matters
+    how: If you're not sure it matters to them, say so. It starts broad and only zooms in if they raise it.
+  - what: Your riskiest unknown
+    how: Name the thing that would kill the plan. It goes into the scary question.
+  - what: Draft questions
+    how: Paste them untouched. Seeing the originals lets it explain what each one does wrong.
+
+judge:
+  - No question mentions your idea or asks for an opinion on it.
+  - Every question asks about the past or what they do now, not what they would do.
+  - The top three are things that could change your plan.
+  - One question makes you a little afraid to ask it.
+  - Each rewrite says what was wrong with the original.
+
+test:
+  - Run it on a set of questions you used before. See if it flags the ones that got you only praise.
+  - Ask the questions out loud to a friend who plays the customer. Watch for "yes" answers with no detail.
+  - Run it twice. The big three should stay close even if the wording changes.
+  - Use it in a real conversation and count how many facts you wrote down, compared with your last batch.
+
+improve:
+  - Add your industry's common bad questions to step 5, so it catches them every time.
+  - Add the phrase your customers use for the problem, so questions sound like them.
+  - Keep your big three at the top of your notes and update them after each batch.
+  - Pair it with "Customer conversation request writer" for the message that gets the talk.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting and ranking questions is text work any strong chat AI does well with this skill."}
+    - {name: "A pocket notebook or index cards", why: "Easier than a laptop for keeping your three questions in view during a casual chat."}
+  inputs:
+    - "A group from the First customer group picker, so questions fit one type of person"
+    - "Notes from earlier talks, so you skip what you already know"
+    - "A list of what you believe about this person, so questions can test it"
+
+terms:
+  - term: Big three
+    meaning: The three things you most need to learn from this type of person right now.
+  - term: Fluff
+    meaning: Vague claims, promises and maybes such as "I always" or "I would", which tell you little.
+  - term: Market risk and product risk
+    meaning: Market risk is whether people want it and will pay. Product risk is whether you can build and grow it.

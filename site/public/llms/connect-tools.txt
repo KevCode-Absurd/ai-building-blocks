@@ -1,0 +1,26 @@
+# Connect AI to your tools: AI Blocks
+
+> 22 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer): Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools.
+- [AI tool definition writer](https://useaiblocks.com/skills/ai-tool-definition-writer): Describe what a tool does. Get a clear, safe definition your AI can call without guessing.
+- [AI tool designer](https://useaiblocks.com/skills/ai-tool-designer): Describe what your AI needs to do. Get clear tool definitions it can call without guessing or failing silently.
+- [API connector builder](https://useaiblocks.com/skills/api-connector-builder): Name the service you need to reach. Get working code with sign-in, error handling and retries.
+- [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder): Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
+- [ChatGPT app builder](https://useaiblocks.com/skills/chatgpt-app-builder): Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
+- [Google Workspace command-line operator](https://useaiblocks.com/skills/google-workspace-cli): Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you.
+- [Market data connector](https://useaiblocks.com/skills/market-data-connector): Name the data source and series. Get MATLAB code that pulls Bloomberg, FRED, Haver or Datastream data.
+- [MATLAB to Python bridge](https://useaiblocks.com/skills/matlab-to-python-bridge): Say which Python library you need. Get MATLAB code that calls it, with setup and errors fixed.
+- [MCP server sign-in builder](https://useaiblocks.com/skills/mcp-server-sign-in-builder): Say how people will connect to your MCP server. Get correct OAuth sign-in built into it.
+- [MCP tool server builder](https://useaiblocks.com/skills/mcp-tool-server-builder): Say what tools your AI should reach. Get a safe MCP server with clear tool rules and tests.
+- [MCP tool set designer](https://useaiblocks.com/skills/mcp-tool-set-designer): Say what your AI should do through MCP. Get a small set of clearly named tools with plain descriptions.
+- [Microsoft 365 admin helper](https://useaiblocks.com/skills/microsoft-365-admin-helper): Say what your company needs. Get Microsoft 365 setup scripts for users, mail, Teams and security.
+- [n8n AI agent builder](https://useaiblocks.com/skills/n8n-ai-agent-builder): Say what your n8n agent should do. Get the agent, tools, memory and review steps set up the right way.
+- [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler): Give it an n8n workflow that breaks quietly. Get clear errors, retries and alerts so you see and fix failures.
+- [n8n sub-workflow builder](https://useaiblocks.com/skills/n8n-sub-workflow-builder): Give it a long n8n workflow. Get reusable sub-workflows with clear inputs that your agents can also call.
+- [n8n workflow designer](https://useaiblocks.com/skills/n8n-workflow-designer): Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
+- [No-code automation planner](https://useaiblocks.com/skills/no-code-automation-planner): Describe a task to automate. Get the right Zapier or Make setup, built to hold up, and when to switch to code.
+- [Python vision model connector](https://useaiblocks.com/skills/python-vision-model-connector): Give it a vision model repo on GitHub. Get a MATLAB function that runs it on your images.
+- [Sign-in flow setup helper](https://useaiblocks.com/skills/sign-in-flow-setup-helper): Say which app and service. Get a secure OAuth sign-in flow, with the right steps for your case.
+- [Tool connector builder](https://useaiblocks.com/skills/tool-connector-builder): Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.
+- [Webhook receiver builder](https://useaiblocks.com/skills/webhook-receiver-builder): Say which events to catch. Get a webhook receiver that checks signatures and handles repeats safely.

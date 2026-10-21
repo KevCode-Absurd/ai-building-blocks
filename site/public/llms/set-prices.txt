@@ -1,0 +1,27 @@
+# Set your prices: AI Blocks
+
+> 23 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Bulk price changer](https://useaiblocks.com/skills/bulk-price-changer): Pick products and a percent or amount. Get every price changed at once, within limits. Changes live prices, so preview first.
+- [Clearance discount planner](https://useaiblocks.com/skills/clearance-discount-planner): Give it your slow stock and past sales. Get when and how much to cut prices to sell out.
+- [Digital product pricer](https://useaiblocks.com/skills/digital-product-pricer): Tell it what you sell, such as a course or ebook. Get the price digits, labels and launch discount to use.
+- [Discount wording planner](https://useaiblocks.com/skills/discount-wording-planner): Give it the discount you plan. Get the percent or amount form, sale price display and banner wording that look biggest.
+- [ETF price gap calculator](https://useaiblocks.com/skills/etf-price-gap-calculator): Give it an ETF ticker. Get how far its price sits above or below its holdings, and why. Collects data from websites.
+- [Event ticket pricer](https://useaiblocks.com/skills/event-ticket-pricer): Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates.
+- [Fake sale price cleaner](https://useaiblocks.com/skills/fake-sale-price-cleaner): Get strikethrough prices removed where there is no real discount. Changes live prices and the old values are not kept.
+- [Free-to-paid flow designer](https://useaiblocks.com/skills/free-to-paid-flow-designer): Describe your SaaS plans. Get upgrade moments, paywall design, win-back flows and churn prevention steps.
+- [Hotel room pricing planner](https://useaiblocks.com/skills/hotel-room-pricing-planner): Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
+- [Membership plan pricer](https://useaiblocks.com/skills/membership-plan-pricer): Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades.
+- [Price digits and placement planner](https://useaiblocks.com/skills/price-display-planner): Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it.
+- [Price position planner](https://useaiblocks.com/skills/price-position-planner): Give it your costs and rival offers. Get a price for each product, response rules for rival discounts, and a rollout plan.
+- [Price presentation planner](https://useaiblocks.com/skills/price-presentation-planner): Give it your product and prices. Get a tier and anchor layout that makes value clear without tricks.
+- [Price sensitivity analyst](https://useaiblocks.com/skills/price-sensitivity-analyst): Get which products sell more or less as price changes, plus price points worth testing.
+- [Price test planner](https://useaiblocks.com/skills/price-test-planner): Give it your costs and sales data. Get the best price to try, three outcome cases, and a test you can undo.
+- [Pricing model designer](https://useaiblocks.com/skills/pricing-model-designer): Give it your product and price survey data. Get a pricing model, price points and good, better, best tiers.
+- [Pricing strategist](https://useaiblocks.com/skills/pricing-strategist): Describe your product and buyers. Get tiers, a value metric and a test plan for your prices.
+- [Repricing rules designer](https://useaiblocks.com/skills/repricing-rules-designer): Give it your margins and stock. Get safe automatic price rules, test cases, and a kill switch you can trust.
+- [Revenue model picker](https://useaiblocks.com/skills/revenue-model-picker): Describe your product and users. Get three to five ways to earn from it, with risks and tests.
+- [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer): Give it your product and customers. Get a value metric, tier layout and pricing tests to run.
+- [Usage pricing designer](https://useaiblocks.com/skills/usage-pricing-designer): Describe your product. Get a pay-as-you-go pricing model users understand, accept and can predict, with no surprise bills.
+- [Willingness to pay pricing planner](https://useaiblocks.com/skills/willingness-to-pay-pricing): Describe your product. Get a pricing survey, plan tiers and a price built on what buyers will actually pay.
+- [Willingness-to-pay survey designer](https://useaiblocks.com/skills/willingness-to-pay-survey): Tell it what you sell. Get two survey questions to send customers and a way to turn answers into a best price.

@@ -437,6 +437,7 @@
   needs: run code and read your project files
   author: "chaunsin"
   author_url: https://github.com/chaunsin
+  slug: db-migration-conflicts
 "sickn33/agentic-awesome-skills:skills/drizzle-orm-expert":
   skip: "Only useful for one niche stack, product or language."
 "sickn33/agentic-awesome-skills:skills/dropbox-automation":
@@ -641,8 +642,8 @@
   level: intermediate
   thinking: low
   thinking_why: It fetches listed facts and tabulates them.
-  inputs: [{type: question, required: true}]
-  outputs: [{type: spreadsheet}]
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet } ]
   needs: run code and use your Apify token
   paid: "Apify"
   author: GeminiGeorge22

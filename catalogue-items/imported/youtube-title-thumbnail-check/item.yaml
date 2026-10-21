@@ -1,0 +1,39 @@
+slug: youtube-title-thumbnail-check
+renamed_from: youtube-title-and-thumbnail-checker
+name: "YouTube title and thumbnail checker"
+summary: "Give it your video idea. Get ten titles checked for length and repeats, plus a thumbnail brief for the best."
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+    required: true
+uses: []
+origin: imported
+source:
+  by: Jake Schincariol
+  repo: Jakeschincariol/youtube-agent-skill
+  path: skills/yt-package
+  url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-package
+  licence: MIT
+  licence_file: LICENSE
+  commit: a2feb21
+  original_name: yt-package
+  author: Jake Schincariol
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: yt-package skill
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-package
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol
+    used: Wrote the skill; Jake Schincariol shared it in their collection.

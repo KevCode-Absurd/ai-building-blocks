@@ -1,0 +1,19 @@
+slug: income-floor-calculator
+renamed_from: independent-income-floor-calculator
+name: "Independent income floor calculator"
+summary: "Paste your costs and ways to earn. Get a monthly income floor, the steady streams and what a sick month costs."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: question}
+origin: rebuilt
+version: 1.0.0
+minds: [wolfgang-amadeus-mozart]
+credits:
+  - {title: "The Letters of Wolfgang Amadeus Mozart (1769-1791), Volume II", by: "Wolfgang Amadeus Mozart, collected by Ludwig Nohl, translated by Lady Wallace", url: "https://archive.org/details/lettersofwolfgan02moza", used: "Working out a quiet-life monthly budget, counting lessons as the steady income and operas, concerts and publishing as extras, and noting that illness would stop the income"}

@@ -1,0 +1,33 @@
+slug: concept-contrast-task
+renamed_from: confusing-concept-contrast-task-designer
+name: "Confusing concept contrast task designer"
+summary: "Name two ideas your learners mix up. Get a task of contrasting examples that shows what sets them apart."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/global-cross-cultural-pedagogies/variation-theory-task-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/global-cross-cultural-pedagogies/variation-theory-task-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: variation-theory-task-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: variation-theory-task-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/global-cross-cultural-pedagogies/variation-theory-task-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

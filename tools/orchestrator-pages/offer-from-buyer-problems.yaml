@@ -1,0 +1,84 @@
+new_slug: offer-from-buyer-problems
+name: Build an offer from your buyer's problems
+summary: Give it your product and buyer. Get every problem they face turned into a stacked, scored, priced offer.
+job: make-offer
+thinking: high
+thinking_why: It runs five skills in a row, and the trim, score and price steps do real sums. Give it your strongest model.
+headline: Build an offer from your buyer's problems
+subhead: Give it your product and who buys it. It lists every problem the buyer meets on the way to the result, finds many ways to solve each one, cuts the list to what is worth keeping, scores the offer on what the buyer would value, and sets a price from that value.
+explain: |
+  Most offers are built from what the owner already does. The buyer is weighing something else: will it work for me, how long will it take, and how much will it cost me in effort. Every worry you leave unanswered is a reason to wait. So the offer ends up looking like everyone else's, and the buyer compares on price.
+
+  The steps fix this by building from the buyer's side. First it lists every problem between the buyer and the result and turns each into a promise. Then it finds many ways to deliver each promise and cuts the list by cost and value, so nothing important is left unanswered and nothing costs too much. The bundles are scored on the four things buyers value and given a price that is a small share of what the result is worth. The order follows Alex Hormozi's $100M Offers.
+when:
+  - Your product sells like everyone else's and buyers compare you on price.
+  - You have many ideas for what to include and cannot tell which to keep.
+  - You are about to set or raise a price and want it tied to the value.
+you_give:
+  - Who your buyer is and what they want, or a buyer profile
+  - Your product facts (optional)
+  - Reviews or call notes in the buyer's words (optional)
+  - Your brand file (optional)
+  - Sales numbers (optional)
+you_get:
+  - A table of problems by stage, each turned into a promise, with the evidence for it
+  - Delivery options for each promise, rated for your cost and the buyer's value
+  - A trimmed offer of named bundles, each with a value, and a total
+  - A score on the four value drivers, the weakest one and the cheapest fix
+  - A price set from what the result is worth, with a gap check and two price tests
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Share your buyer and product. It lists the problems. Fix any that are wrong before it moves on.
+  - Tell it the hours and cash you can give. It trims the offer to fit.
+  - Check the worth figure in the price step. It uses your buyer's numbers, so correct any you doubt.
+how_it_works:
+  - title: List every problem and its solution
+    text: Follows the buyer from today to the result, finds the reasons they might stall or quit at each stage, and turns each into a promise.
+  - title: Find ways to deliver each solution
+    text: Writes many ways to deliver each promise, from one-to-one to one-to-many, and rates each for cost and value.
+  - title: Trim and stack the offer
+    text: Cuts what costs a lot for little value, keeps an answer for every problem, and groups the rest into named bundles with a value.
+  - title: Score the offer on the four value drivers
+    text: Scores the outcome, the likelihood, the delay and the effort as the buyer sees them, and names the cheapest fix.
+  - title: Set the price from the value
+    text: Estimates what the result is worth to the buyer and sets a price as a small slice of it, with two tests.
+output_shape: |-
+  STEP 1: PROBLEMS AND PROMISES
+    The place they arrive | stages | problem, driver, promise and evidence for each
+
+  STEP 2: DELIVERY OPTIONS
+    Options per promise in three groups | cost and value ratings | candidates
+
+  STEP 3: THE STACK
+    Cut and keep with reasons | named bundles with values | total, price ratio and margin
+
+  STEP 4: VALUE SCORE
+    Four scores with evidence | index | weakest part | cheapest fixes
+
+  STEP 5: THE PRICE
+    What the result is worth | price band and pick | gap and cost multiple | two tests
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How much of your buyer's own words you give it
+    how: Reviews and call notes make step 1 specific. Without them, the problems are guesses and marked that way.
+  - what: Hours and cash you can spend delivering
+    how: Step 3 cuts to fit your limits. Without them it uses a default line of one hour per buyer.
+  - what: The buyer's real numbers
+    how: Step 5 sets the price from what the result is worth to your buyer. Their own hourly rate or what a lost sale costs them makes the price firm.
+judge:
+  - Every promise in step 1 traces to a buyer problem, and quotes are separated from guesses.
+  - After trimming, every problem still has an answer.
+  - Every stated value has a basis, and none is padded.
+  - The price is shown as a share of what the result is worth, not copied from rivals.
+  - No fact is invented, and gaps are listed.
+test:
+  - Run step 1 on a buyer you know well. You should recognise most problems and learn a few new ones.
+  - Remove the answer to one problem before step 3. It should catch the gap.
+  - Redo the sums in steps 3 and 5 by hand. The totals and ratios should match.
+improve:
+  - Keep the problems list. Each time a buyer raises a new doubt, add it and rerun from step 2.
+  - Save the stack in your brand file, so later offers reuse your assets.
+  - Run "Make your offer harder to refuse" on the result, to add limits, bonuses, a guarantee and a name.

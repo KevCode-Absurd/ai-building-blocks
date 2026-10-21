@@ -293,7 +293,7 @@ const urls = ["/", "/how-it-works", "/minds", "/from-a-source", "/tools", ...TOO
 // the only dates we have are file times, and a wrong date teaches search engines to ignore it.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs.
 const urlset = (us) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${us.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`;
-const SITEMAPS = { pages: urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
+const SITEMAPS = { pages: [...urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), "/traction"], skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
 const aiToolsRoot = path.join(ROOT, "ai-tools");
 if (fs.existsSync(aiToolsRoot)) SITEMAPS["ai-tools"] = ["/ai-tools", ...fs.readdirSync(aiToolsRoot).filter((f) => f.endsWith(".yaml") && !f.startsWith("_")).map((f) => `/ai-tools/${f.slice(0, -5)}`)];
 for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(f))) fs.rmSync(path.join("public", f));

@@ -31,6 +31,7 @@ const PAGES = {
   guide: () => import("./HowItWorks"),
   tools: () => import("./tools/ToolsPage"),
   aitools: () => import("./aitools/AiToolsPage"),
+  traction: () => import("./TractionPage"),
   apps: () => import("./apps/AppsPage"),
   space: () => import("./space/SpacePage"),
   minds: () => import("./MindsPage"),
@@ -42,6 +43,7 @@ function sectionOf(to: string): keyof typeof PAGES | null {
   const path = to.split(/[?#]/)[0];
   if (path === "/tools" || path.startsWith("/tools/")) return "tools";
   if (path === "/ai-tools" || path.startsWith("/ai-tools/")) return "aitools";
+  if (path === "/traction") return "traction";
   if (path === "/apps" || path.startsWith("/apps/")) return "apps";
   if (path === "/space" || path === "/people" || path.startsWith("/s/")) return "space";
   if (path === "/minds") return "minds";
@@ -53,6 +55,7 @@ const BlockPage = lazy(PAGES.block);
 const HowItWorks = lazy(PAGES.guide);
 const ToolsPage = lazy(PAGES.tools);
 const AiToolsPage = lazy(PAGES.aitools);
+const TractionPage = lazy(PAGES.traction);
 const AppsPage = lazy(PAGES.apps);
 const SpacePage = lazy(PAGES.space);
 const MindsPage = lazy(PAGES.minds);
@@ -176,6 +179,7 @@ function Header({ onKits }: { onKits: () => void }) {
             <button type="button" className="nav-more-btn" aria-expanded={more} aria-controls="nav-more-list" onClick={() => setMore((m) => !m)} data-testid="nav-more">More <span aria-hidden="true">▾</span></button>
             <span className="nav-more-list" id="nav-more-list" onClick={() => { setMore(false); setMenu(false); }}>
               <Link to="/ai-tools" data-testid="nav-ai-tools">AI tools</Link>
+              <Link to="/traction">Growth channels</Link>
               <Link to="/from-a-source" data-testid="nav-intake">From a source</Link>
               <Link to="/space" data-testid="nav-space">My space</Link>
             </span>
@@ -422,11 +426,12 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
 }
 
 export default function App() {
-  const c = useCatalogue();
   useIdlePrefetch();
   useHashLanding();
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
+  const needsCatalogue = !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction"].some((p) => path === p || path.startsWith(`${p}/`));
+  const c = useCatalogue(needsCatalogue || kitsOpen);
   const [bizOpen, setBizOpen] = useState(false);
   const closeBiz = useCallback(() => setBizOpen(false), []);
   const [tailor, setTailor] = useState<string | null>(null);
@@ -469,7 +474,9 @@ export default function App() {
   return (
     <>
       <Header onKits={() => setKitsOpen(true)} />
-      {path === "/tools" || path.startsWith("/tools/") ? (
+      {path === "/traction" ? (
+        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><TractionPage /></Suspense>
+      ) : path === "/tools" || path.startsWith("/tools/") ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><ToolsPage path={path} toast={setToast} /></Suspense>
       ) : path === "/ai-tools" || path.startsWith("/ai-tools/") ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AiToolsPage path={path} /></Suspense>
@@ -494,6 +501,7 @@ export default function App() {
           <nav aria-label="More">
             <Link to="/tools">Mini tools</Link>
             <Link to="/ai-tools">AI tools</Link>
+            <Link to="/traction">Growth channels</Link>
             <Link to="/from-a-source">Turn a source into a workflow</Link>
             <Link to="/apps">Apps</Link>
             <Link to="/apps/starter-pack">App starter pack</Link>

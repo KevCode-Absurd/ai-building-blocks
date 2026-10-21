@@ -1,0 +1,30 @@
+category: general
+boards:
+  - saas
+type: skill
+role: check
+job: strategy
+level: intermediate
+uses: []
+slug: traction-experiment-reviewer
+name: Traction experiment result reviewer
+summary: Share your test results. Get a checked comparison and a focus, revise,
+  stop or wait decision.
+inputs:
+  - type: business_profile
+    required: true
+  - type: channel_experiment
+    required: false
+  - type: experiment_results
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: "Traction: A Startup Guide to Getting Customers (2014)"
+    by: Gabriel Weinberg and Justin Mares
+    used: The 19 acquisition channels, Bullseye testing and a measurable traction
+      goal. Rebuilt in original words with SaaS-specific operating guidance.
+example_pending: true

@@ -1,0 +1,32 @@
+category: general
+boards:
+  - saas
+type: skill
+role: make
+job: strategy
+level: intermediate
+uses: []
+slug: traction-email-marketing
+name: Lifecycle email experiment planner
+summary: Paste your product link. Get a focused growth test, its costs, measures
+  and decision rules.
+description: Plan a email marketing acquisition experiment from a product URL or
+  business brief. SaaS first, with a general-business mode. Use for this channel
+  specifically; use the Traction workflow to compare all 19.
+inputs:
+  - type: web_page
+    required: false
+  - type: business_profile
+    required: false
+  - type: traction_shortlist
+    required: false
+outputs:
+  - type: channel_experiment
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: "Traction: A Startup Guide to Getting Customers (2014)"
+    by: Gabriel Weinberg and Justin Mares
+    used: The 19 acquisition channels, Bullseye testing and a measurable traction
+      goal. Rebuilt in original words with SaaS-specific operating guidance.
+example_pending: true

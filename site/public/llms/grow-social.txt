@@ -1,6 +1,6 @@
 # Grow on social: AI Blocks
 
-> 97 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 98 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker): Give it your accounts and posts. Get a score out of 100 and a fix per rule.
 - [Clipper program planner](https://useaiblocks.com/skills/clipper-program-planner): Give it a brief and budget cap. Get pay-on-approval terms, a review checklist and a seeding plan.
@@ -43,6 +43,7 @@
 - [Monthly content repurposer](https://useaiblocks.com/agents/monthly-content-repurposer): Give it last month's content results. Get your best pieces picked and turned into posts, emails and clips to approve.
 - [Multi-platform post planner](https://useaiblocks.com/skills/multi-platform-post-planner): Say what you want to share. Get posts made for each platform, with hooks and a posting plan.
 - [Network launch distribution planner](https://useaiblocks.com/skills/network-launch-plan): Describe the product and who already hosts your audience. Get a launch route that borrows an existing network.
+- [Niche publication experiment planner](https://useaiblocks.com/skills/traction-targeting-blogs): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Open source promoter](https://useaiblocks.com/skills/open-source-promoter): Give it your open source project. Get a plan to win stars, users and contributors without sounding pushy.
 - [Organic format tester](https://useaiblocks.com/skills/organic-format-tester): Give it 20 posts and their numbers. Get a score out of 100, winning formats and a test.
 - [Organic post to ad promoter](https://useaiblocks.com/skills/organic-post-to-ad-promoter): Give it your posts and views. Get outliers ranked and each marked run-as-is or reshoot the hook.

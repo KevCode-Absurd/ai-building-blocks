@@ -1,6 +1,6 @@
 # Get found in search and AI answers: AI Blocks
 
-> 94 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 95 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI answer visibility tracker](https://useaiblocks.com/agents/ai-answer-visibility-tracker): Run the same shopper questions through AI assistants each month. Get your share against last month and the fix for the gap.
 - [AI brand mention scanner](https://useaiblocks.com/skills/ai-brand-mention-scanner): Give it a brand name. Get a score for where it is mentioned online. Collects data from websites.
@@ -68,6 +68,7 @@
 - [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer): Give a topic and target keyword. Get a long post with an answer first, FAQs and internal links.
 - [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder): Paste Search Console queries and pages. Get pages to push this month and a score out of 100.
 - [Search Console traffic drop diagnoser](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser): Paste a Search Console export. Get pages that lost clicks, the cause and a score out of 100.
+- [Search growth experiment planner](https://useaiblocks.com/skills/traction-search-engine-optimization): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Search intent keyword mapper](https://useaiblocks.com/skills/search-intent-keyword-mapper): Give it your topic. Get keywords sorted by search intent, grouped into themes and ranked for what to write first.
 - [Search page brief writer](https://useaiblocks.com/skills/search-page-brief-writer): Give it a keyword and the pages that rank. Get a brief with search intent, gaps to fill, and an outline.
 - [Search title and snippet writer](https://useaiblocks.com/prompts/search-title-and-snippet-writer): Paste your page topic, search phrase and benefit. Get three titles and descriptions within the length limits.

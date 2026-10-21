@@ -1,0 +1,91 @@
+new_slug: traction-content-marketing
+name: Content growth experiment planner
+summary: Paste your product link. Get a focused growth test, its costs, measures
+  and decision rules.
+job: write-and-tell-stories
+thinking: high
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
+  strongest model.
+headline: Content growth experiment planner
+subhead: Paste your product link and add your goal, budget and time limits if
+  you have them. Get advice tied to your business, a small test with clear
+  limits, and the facts still needed before you act.
+explain: >-
+  A focused content marketing plan for your product. It reads the buyer and
+  offer, checks why this channel might work and writes a small test. The default
+  is SaaS; you can ask for general-business mode.
+
+
+  Draft one original article, tutorial or research brief and test its usefulness
+  with a small relevant audience before committing to a publishing calendar.
+
+
+  Publishing volume and page views do not show buyer value. Compounding
+  readership needs a longer horizon than an initial usefulness test.
+when:
+  - You need a practical way to find customers for a software business.
+  - You want to test a growth idea before committing more time or money.
+you_give:
+  - A public product link or pasted product and pricing text
+  - Your growth goal, stage and buyer, if known
+  - Cash and time limits, past tests and results, if available
+you_get:
+  - A recommendation with its evidence and missing facts
+  - A small test with an owner, cost cap and decision rule
+  - The next action and what needs approval
+how_to_use:
+  - Add the skill or whole workflow pack to your AI.
+  - Paste your product URL and any facts you already know.
+  - Ask it to follow the skill and cite what it can verify.
+  - Review the plan and approve any external action separately.
+how_it_works:
+  - title: Check 1
+    text: Choose a costly buyer problem and a reader role. Draw topic ideas from
+      real support questions, discovery notes or original product data with
+      permission.
+  - title: Check 2
+    text: Plan one substantial piece with evidence, a useful takeaway and a natural
+      path into the product. Separate the owned content asset from the channels
+      used to distribute it.
+  - title: Check 3
+    text: Specify how the piece reaches its first readers through relevant
+      communities, partners or an existing list, then how follow-up content
+      builds on demonstrated demand.
+output_shape: |
+  Recommendation: <test now / later / weak fit, with reason>
+  Evidence: <source URL, access date, fact, implication>
+  Buyer and useful action: <...>
+  Channel mechanism: <how the buyer reaches value>
+  Pilot: <hypothesis, audience, offer, deliverable, owner>
+  Limits: <cash, hours, date, proposed or approved>
+  Measurement: <events, cohort, denominators, attribution>
+  Decision: <continue / revise / stop rule>
+  Risks and next action: <...>
+  MISSING: <unknowns>
+tweaks:
+  - what: Your growth goal
+    how: Give a target and deadline so the advice has something concrete to work
+      towards.
+  - what: Your real limits
+    how: State your cash cap and available hours. Missing limits remain proposed
+      assumptions.
+judge:
+  - Facts link to evidence, and guesses are marked.
+  - The proposed action fits the buyer, budget and stage.
+  - A lead or trial is never counted as a paid customer.
+  - The result gives a clear next step and missing inputs.
+test:
+  - An article gets broad traffic unrelated to the product. Identify the
+    mismatch and change topic or distribution before scaling output.
+  - Give no budget or results. The output must mark limits as proposed and
+    withhold a success claim.
+improve:
+  - Save results with the cohort and date window, then rerun the review.
+  - Replace assumptions with your own observed numbers.
+terms:
+  - term: Traction
+    meaning: Evidence that real customers want and use what you sell.
+  - term: Activation
+    meaning: The first useful action a new customer completes with your product.
+  - term: CAC
+    meaning: The cost to win a new paying customer, with the included costs stated.

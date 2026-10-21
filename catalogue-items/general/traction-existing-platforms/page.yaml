@@ -1,0 +1,90 @@
+new_slug: traction-existing-platforms
+name: Platform growth experiment planner
+summary: Paste your product link. Get a focused growth test, its costs, measures
+  and decision rules.
+job: connect-tools
+thinking: high
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
+  strongest model.
+headline: Platform growth experiment planner
+subhead: Paste your product link and add your goal, budget and time limits if
+  you have them. Get advice tied to your business, a small test with clear
+  limits, and the facts still needed before you act.
+explain: >-
+  A focused existing platforms plan for your product. It reads the buyer and
+  offer, checks why this channel might work and writes a small test. The default
+  is SaaS; you can ask for general-business mode.
+
+
+  Validate demand for one integration with relevant platform users, then prepare
+  a narrow prototype and listing before a large build.
+
+
+  Installs may never activate. Do not invent marketplace acceptance, reviews or
+  current API permissions.
+when:
+  - You need a practical way to find customers for a software business.
+  - You want to test a growth idea before committing more time or money.
+you_give:
+  - A public product link or pasted product and pricing text
+  - Your growth goal, stage and buyer, if known
+  - Cash and time limits, past tests and results, if available
+you_get:
+  - A recommendation with its evidence and missing facts
+  - A small test with an owner, cost cap and decision rule
+  - The next action and what needs approval
+how_to_use:
+  - Add the skill or whole workflow pack to your AI.
+  - Paste your product URL and any facts you already know.
+  - Ask it to follow the skill and cite what it can verify.
+  - Review the plan and approve any external action separately.
+how_it_works:
+  - title: Check 1
+    text: Find platforms, app stores or integration directories used by the target
+      buyer. Research current listing rules, fees and discovery mechanics from
+      official sources.
+  - title: Check 2
+    text: Define one unmet workflow, integration or extension with a clear product
+      advantage and a permission scope proportionate to the job.
+  - title: Check 3
+    text: Prepare a listing, onboarding path, support plan and exit route if
+      distribution rules change. Separate directory exposure from useful
+      platform adoption.
+output_shape: |
+  Recommendation: <test now / later / weak fit, with reason>
+  Evidence: <source URL, access date, fact, implication>
+  Buyer and useful action: <...>
+  Channel mechanism: <how the buyer reaches value>
+  Pilot: <hypothesis, audience, offer, deliverable, owner>
+  Limits: <cash, hours, date, proposed or approved>
+  Measurement: <events, cohort, denominators, attribution>
+  Decision: <continue / revise / stop rule>
+  Risks and next action: <...>
+  MISSING: <unknowns>
+tweaks:
+  - what: Your growth goal
+    how: Give a target and deadline so the advice has something concrete to work
+      towards.
+  - what: Your real limits
+    how: State your cash cap and available hours. Missing limits remain proposed
+      assumptions.
+judge:
+  - Facts link to evidence, and guesses are marked.
+  - The proposed action fits the buyer, budget and stage.
+  - A lead or trial is never counted as a paid customer.
+  - The result gives a clear next step and missing inputs.
+test:
+  - An integration gets many installs but few completed setups. Treat onboarding
+    as an unproven step and withhold a scale verdict.
+  - Give no budget or results. The output must mark limits as proposed and
+    withhold a success claim.
+improve:
+  - Save results with the cohort and date window, then rerun the review.
+  - Replace assumptions with your own observed numbers.
+terms:
+  - term: Traction
+    meaning: Evidence that real customers want and use what you sell.
+  - term: Activation
+    meaning: The first useful action a new customer completes with your product.
+  - term: CAC
+    meaning: The cost to win a new paying customer, with the included costs stated.

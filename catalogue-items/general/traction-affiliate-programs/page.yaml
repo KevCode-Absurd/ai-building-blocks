@@ -1,0 +1,91 @@
+new_slug: traction-affiliate-programs
+name: Affiliate experiment planner
+summary: Paste your product link. Get a focused growth test, its costs, measures
+  and decision rules.
+job: plan-strategy
+thinking: high
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
+  strongest model.
+headline: Affiliate experiment planner
+subhead: Paste your product link and add your goal, budget and time limits if
+  you have them. Get advice tied to your business, a small test with clear
+  limits, and the facts still needed before you act.
+explain: >-
+  A focused affiliate programs plan for your product. It reads the buyer and
+  offer, checks why this channel might work and writes a small test. The default
+  is SaaS; you can ask for general-business mode.
+
+
+  Prepare a small invite-only affiliate offer and draft terms. Test with a few
+  approved partners and pay only on the agreed qualified outcome.
+
+
+  Paying for existing demand or refunded customers can erase margin. Do not
+  assume recurring commissions are affordable from headline subscription
+  revenue.
+when:
+  - You need a practical way to find customers for a software business.
+  - You want to test a growth idea before committing more time or money.
+you_give:
+  - A public product link or pasted product and pricing text
+  - Your growth goal, stage and buyer, if known
+  - Cash and time limits, past tests and results, if available
+you_get:
+  - A recommendation with its evidence and missing facts
+  - A small test with an owner, cost cap and decision rule
+  - The next action and what needs approval
+how_to_use:
+  - Add the skill or whole workflow pack to your AI.
+  - Paste your product URL and any facts you already know.
+  - Ask it to follow the skill and cite what it can verify.
+  - Review the plan and approve any external action separately.
+how_it_works:
+  - title: Check 1
+    text: Choose a verified audience or customer base with buyer overlap.
+      Distinguish independent affiliates from users referring friends and from
+      strategic distribution partners.
+  - title: Check 2
+    text: Model one-time versus recurring commissions using collected revenue, gross
+      margin, expected retention and support cost. State unknown retention
+      instead of promising lifetime payments.
+  - title: Check 3
+    text: Define the attribution window, payout trigger, refunds, self-referrals,
+      brand bidding, disclosures, fraud review and dispute handling.
+output_shape: |
+  Recommendation: <test now / later / weak fit, with reason>
+  Evidence: <source URL, access date, fact, implication>
+  Buyer and useful action: <...>
+  Channel mechanism: <how the buyer reaches value>
+  Pilot: <hypothesis, audience, offer, deliverable, owner>
+  Limits: <cash, hours, date, proposed or approved>
+  Measurement: <events, cohort, denominators, attribution>
+  Decision: <continue / revise / stop rule>
+  Risks and next action: <...>
+  MISSING: <unknowns>
+tweaks:
+  - what: Your growth goal
+    how: Give a target and deadline so the advice has something concrete to work
+      towards.
+  - what: Your real limits
+    how: State your cash cap and available hours. Missing limits remain proposed
+      assumptions.
+judge:
+  - Facts link to evidence, and guesses are marked.
+  - The proposed action fits the buyer, budget and stage.
+  - A lead or trial is never counted as a paid customer.
+  - The result gives a clear next step and missing inputs.
+test:
+  - An affiliate claims a customer who already had an active deal. Apply
+    explicit attribution rules and flag possible cannibalization.
+  - Give no budget or results. The output must mark limits as proposed and
+    withhold a success claim.
+improve:
+  - Save results with the cohort and date window, then rerun the review.
+  - Replace assumptions with your own observed numbers.
+terms:
+  - term: Traction
+    meaning: Evidence that real customers want and use what you sell.
+  - term: Activation
+    meaning: The first useful action a new customer completes with your product.
+  - term: CAC
+    meaning: The cost to win a new paying customer, with the included costs stated.

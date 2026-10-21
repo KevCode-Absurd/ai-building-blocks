@@ -167,12 +167,16 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   // An agent runs workflows and skills in order like a workflow, and is added to your AI like a skill.
   const isAgent = kindOf(b) === "agent";
   const isFlow = (kindOf(b) === "workflow" || isAgent) && b.steps.length > 0;
+  // These coordinators choose branches and resume from saved state. Preserve
+  // their governing skill when exporting or opening them in the canvas.
+  const keepCoordinator = ["find-your-saas-growth-channel", "find-your-business-growth-channel", "traction-research-agent", "traction-experiment-keeper"].includes(b.slug);
   const p = page ?? null;
   const give = p?.you_give?.length ? p.you_give : b.inputs.map((x) => x.type.replace(/_/g, " "));
   const get = p?.you_get?.length ? p.you_get : b.outputs.map((x) => x.type.replace(/_/g, " "));
   const handoff = () => {
-    const nodes = b.steps.map((s, i) => ({ id: `s${i + 1}`, slug: s.uses, x: i * 300, y: 0 }));
-    const edges = wireSteps(c, b.steps.map((s) => s.uses)).map(([a, z], i) => ({ id: `e${i}`, from: nodes[a].id, to: nodes[z].id }));
+    const slugs = keepCoordinator ? [b.slug] : b.steps.map((s) => s.uses);
+    const nodes = slugs.map((slug, i) => ({ id: `s${i + 1}`, slug, x: i * 300, y: 0 }));
+    const edges = wireSteps(c, slugs).map(([a, z], i) => ({ id: `e${i}`, from: nodes[a].id, to: nodes[z].id }));
     setDl({ id: b.slug, name: b.name, updated: 0, nodes, edges });
   };
   const dlOrder = dl ? orderFlow(dl) : null;
@@ -255,7 +259,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           {isFlow && !isAgent ? (
             <>
               <button className="btn btn-primary" onClick={handoff} data-testid="download-handoff">Download the workflow</button>
-              <button className="btn btn-dark" onClick={() => toBuilder(b.steps.map((s) => s.uses), b.name)}>Open in the builder</button>
+              <button className="btn btn-dark" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map((s) => s.uses), b.name)}>Open in the builder</button>
             </>
           ) : (
             <>

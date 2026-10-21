@@ -1,0 +1,89 @@
+new_slug: traction-targeting-blogs
+name: Niche publication experiment planner
+summary: Paste your product link. Get a focused growth test, its costs, measures
+  and decision rules.
+job: grow-social
+thinking: high
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
+  strongest model.
+headline: Niche publication experiment planner
+subhead: Paste your product link and add your goal, budget and time limits if
+  you have them. Get advice tied to your business, a small test with clear
+  limits, and the facts still needed before you act.
+explain: >-
+  A focused targeting blogs plan for your product. It reads the buyer and offer,
+  checks why this channel might work and writes a small test. The default is
+  SaaS; you can ask for general-business mode.
+
+
+  Prepare a small publisher shortlist and one contribution or sponsorship
+  proposal, then test a limited approved placement.
+
+
+  Do not merge paid placements with earned press. Current publication audiences
+  and prices require fresh evidence.
+when:
+  - You need a practical way to find customers for a software business.
+  - You want to test a growth idea before committing more time or money.
+you_give:
+  - A public product link or pasted product and pricing text
+  - Your growth goal, stage and buyer, if known
+  - Cash and time limits, past tests and results, if available
+you_get:
+  - A recommendation with its evidence and missing facts
+  - A small test with an owner, cost cap and decision rule
+  - The next action and what needs approval
+how_to_use:
+  - Add the skill or whole workflow pack to your AI.
+  - Paste your product URL and any facts you already know.
+  - Ask it to follow the skill and cite what it can verify.
+  - Review the plan and approve any external action separately.
+how_it_works:
+  - title: Check 1
+    text: Research specialist blogs, newsletters and creators by recent
+      audience-relevant work. Record evidence of buyer fit rather than treating
+      follower counts as buying intent.
+  - title: Check 2
+    text: Compare a guest contribution, a useful early product preview and a
+      disclosed sponsorship. State what the publisher and reader receive.
+  - title: Check 3
+    text: Choose a specific placement and landing page. Treat current rates,
+      availability and publisher contacts as unknown until verified.
+output_shape: |
+  Recommendation: <test now / later / weak fit, with reason>
+  Evidence: <source URL, access date, fact, implication>
+  Buyer and useful action: <...>
+  Channel mechanism: <how the buyer reaches value>
+  Pilot: <hypothesis, audience, offer, deliverable, owner>
+  Limits: <cash, hours, date, proposed or approved>
+  Measurement: <events, cohort, denominators, attribution>
+  Decision: <continue / revise / stop rule>
+  Risks and next action: <...>
+  MISSING: <unknowns>
+tweaks:
+  - what: Your growth goal
+    how: Give a target and deadline so the advice has something concrete to work
+      towards.
+  - what: Your real limits
+    how: State your cash cap and available hours. Missing limits remain proposed
+      assumptions.
+judge:
+  - Facts link to evidence, and guesses are marked.
+  - The proposed action fits the buyer, budget and stage.
+  - A lead or trial is never counted as a paid customer.
+  - The result gives a clear next step and missing inputs.
+test:
+  - A large creator has a broad audience while a smaller newsletter reaches
+    buyers. Evaluate buyer fit and customer cost before reach.
+  - Give no budget or results. The output must mark limits as proposed and
+    withhold a success claim.
+improve:
+  - Save results with the cohort and date window, then rerun the review.
+  - Replace assumptions with your own observed numbers.
+terms:
+  - term: Traction
+    meaning: Evidence that real customers want and use what you sell.
+  - term: Activation
+    meaning: The first useful action a new customer completes with your product.
+  - term: CAC
+    meaning: The cost to win a new paying customer, with the included costs stated.

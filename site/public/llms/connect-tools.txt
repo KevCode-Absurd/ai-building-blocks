@@ -1,6 +1,6 @@
 # Connect AI to your tools: AI Blocks
 
-> 26 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 27 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer): Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools.
 - [AI tool definition writer](https://useaiblocks.com/skills/ai-tool-definition-writer): Describe what a tool does. Get a clear, safe definition your AI can call without guessing.
@@ -23,6 +23,7 @@
 - [n8n sub-workflow builder](https://useaiblocks.com/skills/n8n-sub-workflow-builder): Give it a long n8n workflow. Get reusable sub-workflows with clear inputs that your agents can also call.
 - [n8n workflow designer](https://useaiblocks.com/skills/n8n-workflow-designer): Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
 - [No-code automation planner](https://useaiblocks.com/skills/no-code-automation-planner): Describe a task to automate. Get the right Zapier or Make setup, built to hold up, and when to switch to code.
+- [Platform growth experiment planner](https://useaiblocks.com/skills/traction-existing-platforms): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Python vision model connector](https://useaiblocks.com/skills/python-vision-model-connector): Give it a vision model repo on GitHub. Get a MATLAB function that runs it on your images.
 - [Sign-in flow setup helper](https://useaiblocks.com/skills/sign-in-flow-setup-helper): Say which app and service. Get a secure OAuth sign-in flow, with the right steps for your case.
 - [Tool connector builder](https://useaiblocks.com/skills/tool-connector-builder): Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.

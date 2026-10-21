@@ -1,6 +1,6 @@
 # Lead and manage people: AI Blocks
 
-> 75 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 74 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Anger pause and repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner): Describe a fight or hurt at work or home. Get a pause routine and a calm first message.
 - [Announce a change of direction and keep the team](https://useaiblocks.com/workflows/announce-a-change-of-direction-and-bring-the-team-with-you): Give it the change and why. Get the memo, a rollout plan, the announcement script and listening talks.
@@ -62,7 +62,6 @@
 - [Sales hiring scorecard builder](https://useaiblocks.com/skills/sales-hiring-scorecard-builder): Describe your sale and past hires. Get a 1 to 10 scorecard with a test for each trait.
 - [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker): Paste your commission plan and churn by rep. Get what it rewards and ignores, plus one change to test.
 - [Sales role splitter](https://useaiblocks.com/skills/sales-role-splitter): List who does which sales job. Get which job to split out first, who owns it and what to track.
-- [Set team goals, run one-on-ones and settle decisions](https://useaiblocks.com/workflows/set-team-goals-run-one-on-ones-and-settle-decisions): Describe your team and the quarter. Get goals with dated key results, a one-on-one plan and a way to settle disputes.
 - [Set team goals, run one-on-ones and settle decisions](https://useaiblocks.com/workflows/team-goals-one-on-ones): Describe your team and the quarter. Get goals with dated key results, a one-on-one plan and a way to settle disputes.
 - [Small win praise planner](https://useaiblocks.com/skills/small-win-praise-planner): Describe the change you want from someone. Get what counts as a win, the exact praise to give and when.
 - [Sprint coach](https://useaiblocks.com/skills/sprint-coach): Give it your sprint data. Get velocity trends, retro themes and fixes for your team's habits.

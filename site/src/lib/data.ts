@@ -142,7 +142,7 @@ export const portLabel = (t: string) => PORT_NAMES[t] ?? cap(t.replace(/_/g, " "
 let catalogue: Promise<Catalogue> | null = null;
 export function loadCatalogue(): Promise<Catalogue> {
   catalogue ??= fetch("/data/blocks.json")
-    .then((r) => r.json())
+    .then((r) => { if (!r.ok) throw new Error(`Catalogue: ${r.status}`); return r.json(); })
     .then((d) => {
       migrateSlugs(d.renamed ?? {});
       // A mind's face is sent once, on the roster, and copied onto its block here.
@@ -150,12 +150,12 @@ export function loadCatalogue(): Promise<Catalogue> {
       const blocks: Block[] = (d.blocks as Wire[]).map(unwire);
       for (const b of blocks) if (b.type === "mind" && !b.face) b.face = faces.get(b.slug);
       return { ...d, blocks, bySlug: Object.fromEntries(blocks.map((b) => [b.slug, b])) };
-    });
+    }).catch((e) => { catalogue = null; throw e; });
   return catalogue;
 }
-export function useCatalogue() {
+export function useCatalogue(enabled = true) {
   const [c, setC] = useState<Catalogue | null>(null);
-  useEffect(() => { loadCatalogue().then(setC); }, []);
+  useEffect(() => { if (!enabled) return; let live = true; loadCatalogue().then((c) => { if (live) setC(c); }).catch(() => {}); return () => { live = false; }; }, [enabled]);
   return c;
 }
 const textCache = new Map<string, Promise<string | null>>();

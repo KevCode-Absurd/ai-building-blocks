@@ -757,6 +757,11 @@
 /skills/youtube-description-and-tags-writer /skills/youtube-description-tags 301
 /skills/youtube-title-and-thumbnail-checker /skills/youtube-title-thumbnail-check 301
 /skills/youtube-transcript-and-channel-reader /skills/youtube-transcript-reader 301
+/workflows/review-a-page-for-ease-of-use-and-plan-a-one-morning-test /workflows/page-usability-review 301
+/workflows/review-a-product-against-ten-principles-then-cut-what-it-does-not-need /workflows/ten-principles-review 301
+/workflows/sort-decisions-by-how-reversible-they-are-and-fund-long-shots /workflows/reversible-decisions 301
+/workflows/test-a-story-idea-check-every-scene-turns-and-strip-the-voice-over /workflows/story-idea-test 301
+/workflows/work-back-from-a-low-price-to-a-cheaper-way-of-making-it /workflows/target-cost-production 301
 
 # App pages with no page file of their own.
 /space /index.html 200

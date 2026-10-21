@@ -1,6 +1,6 @@
 # Plan what ads to test: AI Blocks
 
-> 43 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 42 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad angle multiplier](https://useaiblocks.com/skills/ad-angle-multiplier): Give it one winning ad idea. Get 10 to 15 different angles with hooks and a test order.
 - [Ad concept matrix builder](https://useaiblocks.com/skills/ad-concept-matrix-builder): Give it your product and reviews. Get 30 to 40 personas with angles and offers in test order.
@@ -44,4 +44,3 @@
 - [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder): Paste your past ads and brand file. Get a gap map and five untried ad ideas to test.
 - [What you really sell finder](https://useaiblocks.com/skills/what-you-really-sell-finder): Paste your product and buyer. Get ten or more reasons to buy, scored, and the best three as test angles.
 - [Write headlines and pick the winner with a small test](https://useaiblocks.com/workflows/headline-test): Give it your brief and product facts. Get checked headlines and a small keyed test that picks the winner.
-- [Write headlines and pick the winner with a small test](https://useaiblocks.com/workflows/write-headlines-and-pick-the-winner-with-a-small-test): Give it your brief and product facts. Get checked headlines and a small keyed test that picks the winner.

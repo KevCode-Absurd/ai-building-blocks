@@ -21,6 +21,7 @@
 - [Find where new users leave and prove the fix works](https://useaiblocks.com/workflows/find-where-new-users-leave-and-prove-the-fix-works): Give it your funnel numbers. Get the biggest leak, a one-morning test and a result check.
 - [First-run wizard designer](https://useaiblocks.com/skills/first-run-wizard-designer): Describe your product's first minutes. Get a step-by-step setup wizard with skip options, rewards and drop-off tracking.
 - [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer): Describe your product and its first win. Get an onboarding flow that cuts setup and builds a habit.
+- [Free tool experiment planner](https://useaiblocks.com/skills/traction-engineering-as-marketing): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Free tool idea planner](https://useaiblocks.com/skills/free-tool-idea-planner): Describe your buyers. Get free calculator or tool ideas that bring leads, with a build plan.
 - [Habit loop designer](https://useaiblocks.com/skills/habit-loop-designer): Describe your product. Get a four step loop that brings users back, with the weak steps scored.
 - [Hardware project mentor](https://useaiblocks.com/skills/hardware-project-mentor): Describe your sensor or device idea. Get a board pick, where readings go and a phased build plan.
@@ -29,7 +30,6 @@
 - [In-app tour designer](https://useaiblocks.com/skills/in-app-tour-designer): Describe your product and what new users must learn. Get a short tour plan with triggers, tips and completion tracking.
 - [Job story writer](https://useaiblocks.com/skills/job-story-writer): Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done.
 - [Launch a feature through a beta and read the numbers](https://useaiblocks.com/workflows/launch-a-feature-through-a-beta-and-read-the-numbers): Give it the feature. Get a launch plan, a beta, pre-set metrics, release notes and a results read.
-- [Launch a smaller product on the date you set](https://useaiblocks.com/workflows/launch-a-smaller-product-on-the-date-you-set): Give it your launch plan, date and budget. Get half the scope, a screened request list and a teaser plan.
 - [Launch a smaller product on the date you set](https://useaiblocks.com/workflows/smaller-product-launch): Give it your launch plan, date and budget. Get half the scope, a screened request list and a teaser plan.
 - [Launch scope cutter](https://useaiblocks.com/skills/launch-scope-cutter): Paste your launch plan, date and budget. Get the same date with half the scope, the core first and the rest parked.
 - [Launch scope halver](https://useaiblocks.com/prompts/launch-scope-halver): Paste your launch list, date and budget. Get the same date with half the scope: a core and a parked list.

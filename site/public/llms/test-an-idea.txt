@@ -1,6 +1,6 @@
 # Test an idea before you build it: AI Blocks
 
-> 67 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-fit problem checker](https://useaiblocks.com/skills/ai-fit-problem-checker): Describe a problem. Get a three-test verdict on whether AI suits it, and the data you would need.
 - [Assumption test ranker](https://useaiblocks.com/skills/assumption-test-ranker): Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
@@ -59,13 +59,11 @@
 - [Test if your idea can own its market](https://useaiblocks.com/workflows/idea-market-test): Give it your idea. Get an honest market size, a ten-times test, a ten-year check and a go, fix or stop call.
 - [Test your idea's riskiest risk and decide what next](https://useaiblocks.com/workflows/test-your-ideas-riskiest-risk-and-decide-what-next): Give it your idea. Get its worst risk found, one small test to run, and a keep or change call.
 - [Test your riskiest guess and measure what counts](https://useaiblocks.com/workflows/guess-test-metrics): Give it your product idea. Get the riskiest guess, the smallest test, honest numbers and the root cause of a miss.
-- [Test your riskiest guess and measure what counts](https://useaiblocks.com/workflows/test-your-riskiest-guess-and-measure-what-counts): Give it your idea and results. Get a small test, useful measures and the cause of a miss.
 - [Thirty day launch planner](https://useaiblocks.com/skills/thirty-day-launch-planner): Paste your idea, budget and tools. Get a 30-day plan to launch, take payment and decide to keep, kill or change.
 - [Thought experiment planner](https://useaiblocks.com/skills/thought-experiment-planner): Describe a plan or belief. Get a what-if scene to run in your head, and a check that could prove it wrong.
 - [Three-buyer idea test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner): Paste your business idea. Get the one-minute math and a weekend plan to ask ten people to pay.
 - [Trial log planner](https://useaiblocks.com/skills/trial-log-planner): Paste what you want to get working. Get many cheap trials, a log for each and what each failure ruled out.
 - [Turn your plan into guesses and test them with customers](https://useaiblocks.com/workflows/plan-assumption-tests): Give it your business plan. Get testable guesses, an interview plan and the smallest test of the riskiest guess.
-- [Turn your plan into guesses and test them with customers](https://useaiblocks.com/workflows/turn-your-plan-into-guesses-and-test-them-with-customers): Give it your business plan. Get testable guesses, an interview plan and the smallest test of the riskiest guess.
 - [Two-day paid ask planner](https://useaiblocks.com/prompts/two-day-paid-ask-planner): Paste your idea, buyer and price. Get the buyer-count math, ten people to ask and a go or change rule.
 - [Usability test runner](https://useaiblocks.com/skills/usability-test-runner): Give it a design or prototype. Get a test plan, task scripts, moderator notes and a findings summary.
 - [Would people miss your product? Then pick growth tests](https://useaiblocks.com/workflows/product-miss-growth-tests): Give it your product and users. Get a short survey, the 40 percent test and ranked growth ideas.

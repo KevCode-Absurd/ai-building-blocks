@@ -1,6 +1,6 @@
 # Write emails that get read: AI Blocks
 
-> 60 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 61 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Name a company or contact. Get an email, call script and LinkedIn message built from real signals.
 - [Browse abandonment flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Give it your best sellers and proof. Get a site-visit email and a browse flow that offers a discount last.
@@ -37,6 +37,7 @@
 - [Inbox delivery fixer](https://useaiblocks.com/skills/inbox-delivery-fixer): Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to stop emails landing in spam.
 - [Inbox placement recovery planner](https://useaiblocks.com/skills/inbox-placement-recovery-planner): Give it your open rates and engaged counts. Get a score out of 100 and a recovery plan.
 - [Launch email sequence planner](https://useaiblocks.com/skills/launch-email-sequence-planner): Give it your product, list and close date. Get a 10-email launch plan with resends and a triple close.
+- [Lifecycle email experiment planner](https://useaiblocks.com/skills/traction-email-marketing): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Monthly email flow keeper](https://useaiblocks.com/agents/monthly-email-flow-keeper): Give it last month's email numbers. Get the weakest flow found and rebuilt, with the copy checked.
 - [New inquiry reply drafter](https://useaiblocks.com/skills/new-inquiry-reply-drafter): Give it new inquiries. Get each one qualified and answered with a draft reply and real meeting times. You send it.
 - [No-oriented question email rewriter](https://useaiblocks.com/prompts/no-question-email-rewriter): Paste an email that pushes for yes. Get it rewritten so a 'no' moves things forward.

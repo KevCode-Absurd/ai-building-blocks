@@ -1,0 +1,44 @@
+category: general
+boards:
+  - saas
+type: skill
+role: check
+job: strategy
+level: intermediate
+uses:
+  - traction-viral-marketing
+  - traction-public-relations
+  - traction-unconventional-pr
+  - traction-search-engine-marketing
+  - traction-social-and-display-ads
+  - traction-offline-ads
+  - traction-search-engine-optimization
+  - traction-content-marketing
+  - traction-email-marketing
+  - traction-engineering-as-marketing
+  - traction-targeting-blogs
+  - traction-business-development
+  - traction-sales
+  - traction-affiliate-programs
+  - traction-existing-platforms
+  - traction-trade-shows
+  - traction-offline-events
+  - traction-speaking-engagements
+  - traction-community-building
+slug: traction-channel-ranker
+name: Traction channel test picker
+summary: Share your product facts. Get all 19 channels compared and a short list
+  of small tests.
+inputs:
+  - type: business_profile
+    required: true
+outputs:
+  - type: traction_shortlist
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: "Traction: A Startup Guide to Getting Customers (2014)"
+    by: Gabriel Weinberg and Justin Mares
+    used: The 19 acquisition channels, Bullseye testing and a measurable traction
+      goal. Rebuilt in original words with SaaS-specific operating guidance.
+example_pending: true

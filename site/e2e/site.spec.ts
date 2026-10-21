@@ -331,13 +331,24 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   const names = Object.keys(files);
   expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/accurate-product-image-ad-maker/SKILL.md"]));
   expect(names, "no about-me file was given").not.toContain("about-me.md");
-  expect(names.filter((n) => n.startsWith("skills/"))).toHaveLength(5);
+  const wf = JSON.parse(strFromU8(files["workflow.json"]));
+  const catalogue = await (await page.request.get("/data/blocks.json")).json();
+  const bySlug = new Map<string, { uses?: string[]; steps?: (string | [string, string])[] }>(catalogue.blocks.map((b: { slug: string }) => [b.slug, b]));
+  const needed = new Set<string>();
+  const visit = (slug: string) => {
+    if (needed.has(slug)) return;
+    needed.add(slug);
+    const block = bySlug.get(slug);
+    for (const child of [...(block?.uses ?? []), ...(block?.steps ?? []).map((s) => Array.isArray(s) ? s[0] : s)]) visit(child);
+  };
+  wf.steps.forEach((s: { skill: string }) => visit(s.skill));
+  expect(names.filter((n) => n.endsWith("/SKILL.md"))).toHaveLength(needed.size);
+  for (const slug of needed) expect(files[`skills/${slug}/SKILL.md`], `dependency ${slug} is bundled`).toBeTruthy();
   const handoff = strFromU8(files["HANDOFF.md"]);
   expect(handoff).toContain("## Before you start");
   for (let i = 1; i <= 5; i++) expect(handoff).toContain(`### Step ${i}:`);
   expect(handoff).toContain("Write `MISSING: <what>`");
   expect(handoff).not.toContain("Role:");
-  const wf = JSON.parse(strFromU8(files["workflow.json"]));
   expect(wf.steps.map((s: { skill: string }) => s.skill)[0]).toBe("website-brand-brain-builder");
 });
 
@@ -374,17 +385,16 @@ test("phone width: no sideways scroll on home, a block page or the guide @mobile
   }
 });
 
-test("phone width: card descriptions write themselves as you scroll @mobile", async ({ page }) => {
+test("phone width: full card descriptions stay readable while scrolling @mobile", async ({ page }) => {
   await page.goto("/");
   const peek = page.locator(".card .peek").first();
-  const shown = () => peek.evaluate((p) => { const t = p.querySelector("[aria-hidden]")!; return t.textContent!.length - t.querySelector(".ghost")!.textContent!.length; });
-  const total = (await peek.locator(".visually-hidden").textContent())!.length;
-  // Card just below the screen: nothing written yet.
+  await expect(peek).not.toBeEmpty();
+  const full = await peek.textContent();
   await peek.evaluate((p) => scrollTo(0, p.getBoundingClientRect().top + scrollY - innerHeight));
-  await expect.poll(shown).toBe(0);
-  // Halfway up the screen: all of it.
+  await expect(peek).toHaveText(full!);
   await peek.evaluate((p) => scrollTo(0, p.getBoundingClientRect().top + scrollY - innerHeight / 2));
-  await expect.poll(shown).toBe(total);
+  await expect(peek).toHaveText(full!);
+  await expect(peek.locator(".ghost, .cursor")).toHaveCount(0);
 });
 
 test("each job has its own hover pattern on the cards", async ({ page }) => {

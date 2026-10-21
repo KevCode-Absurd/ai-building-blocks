@@ -1,6 +1,6 @@
 # Launch and scale Meta and TikTok ads: AI Blocks
 
-> 19 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 20 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Clean up your Meta account and rebuild it to scale](https://useaiblocks.com/workflows/clean-up-your-meta-account-and-rebuild-it-to-scale): Give it your campaigns and results. Get campaigns kept or cut, a simpler layout and a spend ladder.
 - [Existing customer ad budget sizer](https://useaiblocks.com/skills/existing-customer-ad-budget-sizer): Give customer count, CPM and frequency. Get a monthly dollar cap and a test to prove it.
@@ -14,6 +14,7 @@
 - [Retargeting ad sequence planner](https://useaiblocks.com/skills/retargeting-ad-sequence-planner): Give your products and why visitors do not buy. Get retargeting ads in order, ending with a cross-sell.
 - [Scale Meta spend while it still pays](https://useaiblocks.com/workflows/scale-meta-spend-while-it-still-pays): Give it your ad results and costs. Get your true return, a spend ladder and a budget split.
 - [SKU ad money planner](https://useaiblocks.com/skills/sku-ad-money-planner): Give it sales, stock days and costs per SKU. Get each one's grade, ad target and clearance plan.
+- [Social ads experiment planner](https://useaiblocks.com/skills/traction-social-and-display-ads): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [TikTok ads account setup checker](https://useaiblocks.com/skills/tiktok-ads-account-setup-checker): Say what you set up on TikTok. Get missing steps and a score out of 100.
 - [TikTok Ads weekly account keeper](https://useaiblocks.com/agents/tiktok-ads-weekly-account-keeper): Give it your weekly TikTok Ads exports. Get each ad called keep, fix or kill and a change list to approve.
 - [TikTok Spark ad picker](https://useaiblocks.com/skills/tiktok-spark-ad-picker): Give your organic or creator posts and their results. Get which to boost as Spark ads, and how.

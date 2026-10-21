@@ -1,0 +1,91 @@
+new_slug: traction-sales
+name: Sales channel experiment planner
+summary: Paste your product link. Get a focused growth test, its costs, measures
+  and decision rules.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
+  strongest model.
+headline: Sales channel experiment planner
+subhead: Paste your product link and add your goal, budget and time limits if
+  you have them. Get advice tied to your business, a small test with clear
+  limits, and the facts still needed before you act.
+explain: >-
+  A focused sales plan for your product. It reads the buyer and offer, checks
+  why this channel might work and writes a small test. The default is SaaS; you
+  can ask for general-business mode.
+
+
+  Research a small account set and prepare relevant discovery outreach. Test
+  problem urgency and willingness to take a paid next step before building a
+  sales team.
+
+
+  Meetings and demonstrations are not paying customers. A low-priced self-serve
+  product may not support expensive outbound sales.
+when:
+  - You need a practical way to find customers for a software business.
+  - You want to test a growth idea before committing more time or money.
+you_give:
+  - A public product link or pasted product and pricing text
+  - Your growth goal, stage and buyer, if known
+  - Cash and time limits, past tests and results, if available
+you_get:
+  - A recommendation with its evidence and missing facts
+  - A small test with an owner, cost cap and decision rule
+  - The next action and what needs approval
+how_to_use:
+  - Add the skill or whole workflow pack to your AI.
+  - Paste your product URL and any facts you already know.
+  - Ask it to follow the skill and cite what it can verify.
+  - Review the plan and approve any external action separately.
+how_it_works:
+  - title: Check 1
+    text: Define a narrow account profile, buying trigger, user, champion and
+      economic buyer. Check whether contract value can support the proposed
+      sales effort.
+  - title: Check 2
+    text: Map discovery, qualification, demonstration, security or procurement, paid
+      pilot and close with explicit exit criteria.
+  - title: Check 3
+    text: Draft discovery questions about current behaviour and cost, an
+      evidence-led demonstration and a mutual next-step plan. Record objections
+      and losses as learning.
+output_shape: |
+  Recommendation: <test now / later / weak fit, with reason>
+  Evidence: <source URL, access date, fact, implication>
+  Buyer and useful action: <...>
+  Channel mechanism: <how the buyer reaches value>
+  Pilot: <hypothesis, audience, offer, deliverable, owner>
+  Limits: <cash, hours, date, proposed or approved>
+  Measurement: <events, cohort, denominators, attribution>
+  Decision: <continue / revise / stop rule>
+  Risks and next action: <...>
+  MISSING: <unknowns>
+tweaks:
+  - what: Your growth goal
+    how: Give a target and deadline so the advice has something concrete to work
+      towards.
+  - what: Your real limits
+    how: State your cash cap and available hours. Missing limits remain proposed
+      assumptions.
+judge:
+  - Facts link to evidence, and guesses are marked.
+  - The proposed action fits the buyer, budget and stage.
+  - A lead or trial is never counted as a paid customer.
+  - The result gives a clear next step and missing inputs.
+test:
+  - Many meetings but no paid commitments occur. Diagnose qualification, urgency
+    and buying friction rather than declare the channel proven.
+  - Give no budget or results. The output must mark limits as proposed and
+    withhold a success claim.
+improve:
+  - Save results with the cohort and date window, then rerun the review.
+  - Replace assumptions with your own observed numbers.
+terms:
+  - term: Traction
+    meaning: Evidence that real customers want and use what you sell.
+  - term: Activation
+    meaning: The first useful action a new customer completes with your product.
+  - term: CAC
+    meaning: The cost to win a new paying customer, with the included costs stated.

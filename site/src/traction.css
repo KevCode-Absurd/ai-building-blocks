@@ -1,0 +1,18 @@
+.traction-page { padding-bottom: 72px; }
+.traction-page .bp-hero { padding-left: 0; padding-right: 0; }
+.traction-form { border: 1px solid var(--line); padding: clamp(20px, 4vw, 40px); max-width: 900px; box-shadow: 5px 5px 0 var(--line); }
+.traction-form h2 { margin-top: 0; }
+.traction-form label { display: block; margin: 20px 0 8px; font-weight: 600; }
+.traction-form input, .traction-form textarea { width: 100%; box-sizing: border-box; padding: 14px; background: var(--bg); color: var(--text); border: 1px solid var(--line); font: inherit; }
+.traction-form details { margin: 24px 0; }
+.traction-form summary { cursor: pointer; }
+.traction-options { display: flex; flex-wrap: wrap; gap: 16px; margin: 20px 0; }
+.traction-options .sel { max-width: 100%; }
+.traction-options .sel-list { max-height: 320px; overflow-y: auto; }
+.traction-form [role="alert"] { border-left: 3px solid currentColor; padding-left: 12px; }
+.traction-method { max-width: 900px; margin: 56px 0; line-height: 1.7; }
+.traction-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.traction-grid .card { min-width: 0; }
+.traction-grid .peek { display: block; }
+@media (max-width: 850px) { .traction-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .traction-grid { grid-template-columns: minmax(0, 1fr); } .traction-options { display: grid; } .traction-form .bp-actions { display: grid; } }

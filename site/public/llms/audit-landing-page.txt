@@ -1,6 +1,6 @@
 # Audit a landing page: AI Blocks
 
-> 36 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 35 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker): Paste visits, orders and revenue. Get the test size, weeks needed and a readiness score out of 100.
 - [Advertorial readiness checker](https://useaiblocks.com/skills/advertorial-readiness-checker): Give it your live ads. Get a go or no-go, a score out of 100 and page length.
@@ -29,7 +29,6 @@
 - [Product page auditor](https://useaiblocks.com/skills/product-page-auditor): Give it a product page. Get ranked changes to variants, social proof, buttons and price, each with the research behind it.
 - [Product page screenshot auditor](https://useaiblocks.com/skills/product-page-screenshot-auditor): Attach product page screenshots. Get what blocks shoppers, changes to test and a score out of 100.
 - [Redirect chain finder](https://useaiblocks.com/skills/redirect-chain-finder): Get redirects that chain from one to another or share a target, so shoppers and search get there fast.
-- [Review a page and plan a morning usability test](https://useaiblocks.com/workflows/review-a-page-for-ease-of-use-and-plan-a-one-morning-test): Give it a page or screen. Get its usability problems, every unclear choice rated, and a one-morning test plan for three people.
 - [Review a page's ease of use, then plan a test](https://useaiblocks.com/workflows/page-usability-review): Give it a page or screen. Get its usability problems, every unclear choice rated, and a one-morning test plan for three people.
 - [Sales funnel drop-off finder](https://useaiblocks.com/skills/sales-funnel-drop-off-finder): Paste step numbers and screenshots. Get the worst drop-off step, fixes and a score out of 100.
 - [Site search basics checker](https://useaiblocks.com/skills/site-search-basics-checker): Paste your site address and page list. Get a short fix list for duplicate titles, a missing sitemap and dead-end 404 pages.

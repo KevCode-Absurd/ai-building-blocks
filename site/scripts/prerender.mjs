@@ -18,6 +18,7 @@ const shell = fs.readFileSync(path.join(DIST, "index.html"), "utf8")
 const plainShell = shell.replace(/<script type="module"[^>]*><\/script>\s*/g, "").replace(/<link rel="modulepreload"[^>]*>\s*/g, "").replace(/<link rel="preload" href="\/data\/blocks.json"[^>]*>\s*/, "");
 const cat = JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8"));
 const aiTools = JSON.parse(fs.readFileSync("public/data/ai-tools.json", "utf8"));
+const { TRACTION_CHANNELS: tractionChannels, tractionSlug } = await import("../../tools/lib/traction-channels.mjs");
 const bySlug = Object.fromEntries(cat.blocks.map((b) => [b.slug, b]));
 const { TOOLS } = await import("../../mini-tools/index.mjs");
 const TASK_NAMES = Object.fromEntries([...fs.readFileSync("src/lib/data.ts", "utf8").split("export const TASKS")[1].split("];")[0].matchAll(/\{ id: "([^"]+)", name: "([^"]+)" \}/g)].map((m) => [m[1], m[2]]));
@@ -71,6 +72,11 @@ const list = (items) => (items.length ? `<ul>${items.map((x) => `<li>${x}</li>`)
 const link = (b) => `<a href="${hrefOf(b)}">${esc(b.name)}</a>`;
 
 function pageFor(url) {
+  if (url === "/traction") return {
+    title: "Find your next growth channel", h1: "Find your next source of customers", collection: true,
+    desc: "Paste your product link and take a 19-channel Traction skill pack into your AI. Compare channels, plan small tests and review measured results. SaaS and general-business modes.",
+    body: `<p class="bp-sub">19 standalone growth skills, SaaS and general-business workflows, and research and review agents. The site prepares your pack; your AI reads the product and writes the advice.</p><h2>Explore, test, then focus</h2><p>Read your business, compare every channel, prepare up to three affordable pilots, then choose a focus from observed customer quality and economics.</p>${list(tractionChannels.map((c) => `<a href="/skills/${tractionSlug(c.id)}">${esc(c.channel)}</a>: ${esc(c.decision)}`))}<p><a href="/workflows/find-your-saas-growth-channel">SaaS workflow</a> · <a href="/workflows/find-your-business-growth-channel">General-business workflow</a> · <a href="/agents/traction-research-agent">Research agent</a> · <a href="/agents/traction-experiment-keeper">Review agent</a></p>`,
+  };
   if (url === "/ai-tools") return {
     title: "AI tools for your work", h1: "Find the right AI product for the job", collection: true,
     desc: `${aiTools.tools.length} AI products with their uses, pricing notes, sources and related skills. Find a product for the work you need done.`,

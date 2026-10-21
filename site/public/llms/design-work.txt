@@ -1,6 +1,6 @@
 # Design things people love: AI Blocks
 
-> 89 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 88 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Aesthetic direction brief writer](https://useaiblocks.com/skills/aesthetic-direction-brief-writer): Answer four questions about tone and feel. Get a brief that keeps copy, design and images in one style.
 - [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
@@ -71,7 +71,6 @@
 - [Real-world texture style guide writer](https://useaiblocks.com/skills/texture-style-guide): Describe your product. Get a style guide that copies real objects and textures, with rules for each part.
 - [Retro throwback style guide writer](https://useaiblocks.com/skills/retro-style-guide): Describe your product. Get a style guide with a vintage look, nostalgic type and bold colour pairs.
 - [Review a product against ten principles, then cut extras](https://useaiblocks.com/workflows/ten-principles-review): Describe your product or page. Get a ten-principle review and a list of what to keep, cut and merge.
-- [Review a product and cut features it does not need](https://useaiblocks.com/workflows/review-a-product-against-ten-principles-then-cut-what-it-does-not-need): Describe your product or page. Get a ten-principle review and a list of what to keep, cut and merge.
 - [Risograph print style guide writer](https://useaiblocks.com/skills/risograph-style-guide): Describe your product. Get a style guide with a two-colour print look on warm paper, plus rules for each part.
 - [Ruthless simplicity reviewer](https://useaiblocks.com/skills/ruthless-simplicity-reviewer): Give it a product or feature. Get a blunt review on focus, simplicity and end-to-end quality, with what to cut.
 - [Slide and page styler](https://useaiblocks.com/skills/slide-and-page-styler): Pick one of ten themes or ask for a new one. Get your slides, docs or page restyled to match.

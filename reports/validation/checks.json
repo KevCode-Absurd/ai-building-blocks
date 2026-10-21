@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-21",
+  "skill_packages_validated": 26,
+  "page_lint": {
+    "pages": 1682,
+    "issues": 0
+  },
+  "unit_tests": {
+    "passed": 12
+  },
+  "mini_tool_tests": {
+    "passed": 259
+  },
+  "browser": {
+    "full_run": {
+      "cases": 122,
+      "passed": 117,
+      "failed": 5
+    },
+    "isolated_final_regression": {
+      "cases": 10,
+      "passed": 10,
+      "failed": 0
+    },
+    "current_distinct_case_inventory": 123,
+    "unresolved_failures": 0,
+    "note": "Updated stale export-count, calculator-count and animation expectations; reran two cases affected by a concurrent trace-output collision; added a coordinator export case."
+  },
+  "production_smoke": {
+    "routes": 35,
+    "problems": 0
+  },
+  "build": {
+    "prerendered_pages": 4332,
+    "job_hubs": 63,
+    "files": 15817
+  },
+  "seo": {
+    "unique_titles": 4386,
+    "unlinked_catalogue_pages": 0,
+    "non_blocking_title_length_warnings": 6
+  },
+  "privacy_masking": {
+    "files_clean": 489
+  },
+  "live_model_quality_tested": false,
+  "raw_source_pdf_published": false
+}

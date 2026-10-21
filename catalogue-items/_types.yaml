@@ -1,4 +1,9 @@
 # Shared input/output types. When one item's output type matches another's input, the two items connect.
+traction:
+  business_profile: {desc: "A sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown."}
+  traction_shortlist: {desc: "All 19 channels assessed, with up to three selected small tests and combined cash and time limits."}
+  channel_experiment: {desc: "A channel-specific pilot with hypothesis, audience, artifact, owner, caps, tracking and decision rules."}
+  experiment_results: {desc: "Observed dated results with cohort definitions, costs, account identities, activation, paid outcomes and retention."}
 # Version 1 (2026-10-17). Field-level schemas are added as items need them.
 brand_and_product:
   brand_brain:   {desc: "The brand's facts, voice, products, offers (with effective dates), claims register, personas and look.", schema: "planned: brand-brain v2 (Zod), backward compatible with CE v1"}

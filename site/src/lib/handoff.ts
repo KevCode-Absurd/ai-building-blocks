@@ -214,7 +214,7 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   if (!flow.nodes.length && !flow.goal?.trim()) return { error: "Say what the team should work on: open Start and fill in what it's for." };
   const order = orderFlow(flow);
   if (!order) return { error: "This workflow loops back on itself. Remove one connection so it runs from start to finish." };
-  const { strToU8, zipSync } = await import("fflate");
+  const { strToU8, zipSync, unzipSync } = await import("fflate");
   const files: Zippable = {};
   const put = (p: string, text: string) => { files[p] = [strToU8(text), { mtime: FIXED_TIME }]; };
   const about = businessText(business);
@@ -232,10 +232,31 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   const leads = leadsOf(c, flow, order);
   const lead = (step: number) => (leads[step] ? { name: mindName(c, leads[step].mind), slug: leads[step].mind } : null);
   const extra = flow.team?.mode === "together" && hasTeam && c.bySlug[COUNCIL] ? [COUNCIL] : [];
-  for (const slug of [...new Set([...order.map((o) => o.node.slug), ...crewSlugs(c, flow, order), ...extra])].sort()) {
-    const skill = await loadSkillText(slug);
-    if (skill) put(`skills/${slug}/SKILL.md`, withNotes(skill, order.filter((o) => o.node.slug === slug), lead));
-  }
+  const bundled = new Set<string>();
+  const collect = (slug: string) => {
+    if (bundled.has(slug)) return;
+    bundled.add(slug);
+    const b = c.bySlug[slug];
+    for (const child of new Set([...(b?.uses ?? []), ...(b?.steps ?? []).map((s) => s.uses)])) collect(child);
+  };
+  [...order.map((o) => o.node.slug), ...crewSlugs(c, flow, order), ...extra].forEach(collect);
+  try {
+    // Fetch independent skill assets together, then assemble in stable order.
+    const assets = await Promise.all([...bundled].sort().map(async (slug) => {
+      const b = c.bySlug[slug];
+      if (!b) throw new Error(`The pack needs an unknown block: ${slug}.`);
+      const [skill, zip] = await Promise.all([loadSkillText(slug), b.hasFiles ? loadSkillZip(slug) : Promise.resolve(null)]);
+      if (!skill || (b.hasFiles && !zip)) throw new Error(`Couldn't load the complete files for ${b.name}. Check your connection and try again.`);
+      return { slug, skill, zip };
+    }));
+    for (const { slug, skill, zip } of assets) {
+      if (zip) for (const [name, bytes] of Object.entries(unzipSync(zip))) {
+        if (!name.startsWith(`${slug}/`) || name.includes("\\") || name.split("/").includes("..")) throw new Error(`Invalid file path in ${slug}'s pack.`);
+        if (!name.endsWith("/") && name !== `${slug}/SKILL.md`) files[`skills/${name}`] = [bytes, { mtime: FIXED_TIME }];
+      }
+      put(`skills/${slug}/SKILL.md`, withNotes(skill, order.filter((o) => o.node.slug === slug), lead));
+    }
+  } catch (e) { return { error: e instanceof Error ? e.message : "The complete pack could not be loaded. Please try again." }; }
   const zipped = zipSync(files, { level: 6 });
   return { blob: new Blob([zipped], { type: "application/zip" }), filename: zipName(flow.name) };
 }

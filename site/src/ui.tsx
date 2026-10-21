@@ -1,6 +1,5 @@
 import { memo, useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
 import { B8, ICONS } from "./lib/pixel";
-import { useScrollTyped, useSeen, useTyped } from "./lib/typing";
 import { type Block, formatOf, kindInfo, loadPage, paidService, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { ThinkBars } from "./Gauge";
@@ -110,22 +109,9 @@ export function PixelIcon({ id }: { id: string }) {
   );
 }
 
-/** The card's description, in a box. It types itself out the first time the card is on screen, and again on every hover.
- *  On a phone it writes itself as you scroll the card up the screen. */
-function Peek({ text, round }: { text: string; round: number }) {
-  const [ref, seen] = useSeen<HTMLSpanElement>(0.6);
-  const [box, scrolled] = useScrollTyped<HTMLSpanElement>(text.length);
-  const go = seen && scrolled === null ? round + 1 : 0;
-  const { n, done } = useTyped(text, go > 0, Math.min(1100, 300 + text.length * 6), go);
-  const k = scrolled ?? (go > 0 ? n : text.length);
-  const typing = scrolled !== null ? k < text.length : go > 0 && !done;
-  const both = (el: HTMLSpanElement | null) => { (ref as { current: HTMLSpanElement | null }).current = el; (box as { current: HTMLSpanElement | null }).current = el; };
-  return (
-    <span className="peek typed" ref={both} data-done={String(!typing)}>
-      <span className="visually-hidden">{text}</span>
-      <span aria-hidden="true">{text.slice(0, k)}{typing && <span className="cursor" />}<span className="ghost">{text.slice(k)}</span></span>
-    </span>
-  );
+/** Card summaries remain readable while hovering and scrolling. */
+function Peek({ text }: { text: string }) {
+  return <span className="peek" data-done="true">{text}</span>;
 }
 
 /** Text that flickers through 0s and 1s and settles, left to right. */
@@ -172,7 +158,7 @@ export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
       style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>
       <span className="meta"><span className="kind">{kind.name}</span>{b.thinking && <ThinkBars level={b.thinking} />}{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}{b.warnings?.includes("scrapes") && <span className="from warn" data-testid="scrapes-label" title="Collects data from websites">Scrapes sites</span>}{paidService(b) && <span className="from warn" data-testid="paid-label" title={`Needs a paid ${paidService(b)} account`}>Needs a paid account</span>}<span className="type">{fmt ? (fmt === "image" ? "Image ad" : "Video ad") : taskOf(b).name}</span></span>
       <span className="nm">{b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={32} className="card-face" />}{b.name}</span>
-      <Peek text={b.summary} round={round} />
+      <Peek text={b.summary} />
       <span className="view"><Decode text={view} round={round} /><ArrowIcon size={12} /></span>
     </Link>
   );

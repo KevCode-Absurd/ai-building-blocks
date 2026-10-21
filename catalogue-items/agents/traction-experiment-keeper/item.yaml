@@ -1,0 +1,43 @@
+slug: traction-experiment-keeper
+name: Traction experiment review agent
+summary: Share your channel tests and results. Get a dated decision log and the
+  next test worth running.
+category: agent
+boards:
+  - saas
+type: agent
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - type: web_page
+    required: false
+  - type: business_profile
+    required: false
+  - type: experiment_results
+    required: false
+outputs:
+  - type: plan
+uses:
+  - find-your-saas-growth-channel
+  - traction-experiment-reviewer
+steps:
+  - uses: find-your-saas-growth-channel
+    note: Run when required by the agent's saved state and conditions.
+  - uses: traction-experiment-reviewer
+    note: Run when required by the agent's saved state and conditions.
+asks_before:
+  - sending outreach
+  - spending money
+  - booking events
+  - publishing material
+  - changing a live account
+  - activating a recurring schedule
+origin: rebuilt
+version: 1.0.0
+credits:
+  - title: "Traction: A Startup Guide to Getting Customers (2014)"
+    by: Gabriel Weinberg and Justin Mares
+    used: The 19 acquisition channels, Bullseye testing and a measurable traction
+      goal. Rebuilt in original words with SaaS-specific operating guidance.
+example_pending: true

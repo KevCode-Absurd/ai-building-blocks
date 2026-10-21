@@ -1,6 +1,6 @@
 # Sell and negotiate: AI Blocks
 
-> 104 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 107 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account catch-up brief writer](https://useaiblocks.com/skills/account-catch-up-brief-writer): Name a customer. Get a one-page brief from your CRM, email, docs and calls, each fact linked.
 - [Account plan builder](https://useaiblocks.com/skills/account-plan-builder): Name an account. Get a written plan with goals, key people, open deals, risks and next steps.
@@ -63,6 +63,7 @@
 - [Paid-work case writer](https://useaiblocks.com/skills/paid-work-case-writer): Describe work people expect free. Get a short case for charging, a fair price model and a reply to 'it spreads anyway'.
 - [Partner deal evaluator](https://useaiblocks.com/skills/partner-deal-evaluator): Describe a partner who approached you. Get a sign or pass call, the right tier and terms to ask for.
 - [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester): Paste your offer, fees and partner costs. Get what the partner keeps, at forecast and weaker sales, and a call.
+- [Partnership experiment planner](https://useaiblocks.com/skills/traction-business-development): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Payment reminder letter writer](https://useaiblocks.com/skills/payment-reminder-letter-writer): Paste the invoice facts and your history with the customer. Get a reminder that starts where they are and keeps their goodwill.
 - [Pick the one way to reach customers and plan it](https://useaiblocks.com/workflows/one-channel-plan): Give it your product and price. Get one sales route, a plan for it and a pitch for hires.
 - [Pipeline stage health reviewer](https://useaiblocks.com/skills/pipeline-stage-health-reviewer): Ask for a pipeline review. Get coverage, aging, conversion and at-risk deals stage by stage.
@@ -86,6 +87,7 @@
 - [Sales battlecard builder](https://useaiblocks.com/skills/sales-battlecard-builder): Name your rival. Get a battlecard with comparisons, reply scripts, positioning and win themes.
 - [Sales call prep assistant](https://useaiblocks.com/agents/sales-call-prep-assistant): Name the deal before a call. Get a one-page plan built on your last call notes, and a follow-up draft after.
 - [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner): Paste what you know about the buyer. Get the order of questions that finds their problem, its cost and the fix's value.
+- [Sales channel experiment planner](https://useaiblocks.com/skills/traction-sales): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Sales collateral writer](https://useaiblocks.com/skills/sales-collateral-writer): Name the deal or buyer. Get a pitch deck outline, one-pager, objection sheet or demo script.
 - [Sales opener trio writer](https://useaiblocks.com/prompts/sales-opener-trio-writer): Paste what you sell and who you meet. Get a ten-word opener, two spares and a test.
 - [Sales proposal writer](https://useaiblocks.com/skills/sales-proposal-writer): Give it the prospect needs. Get a proposal or RFP reply with value, price, timeline and proof.
@@ -98,6 +100,7 @@
 - [Supplier partner terms planner](https://useaiblocks.com/skills/supplier-partner-terms-planner): Paste what you buy and your growth plan. Get terms for your suppliers, with give-backs, shared savings and no side payments.
 - [Supplier rights pitch planner](https://useaiblocks.com/skills/supplier-rights-pitch-planner): Paste the product you want to sell and the maker you want. Get a pitch to win local selling rights.
 - [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer): Paste what you sell and who you are about to meet. Get a ten-second opener and two spares, as short honest questions.
+- [Trade show experiment planner](https://useaiblocks.com/skills/traction-trade-shows): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Trust deposit planner](https://useaiblocks.com/skills/trust-deposit-planner): Name a relationship that matters. Get where trust stands and two small deposits to make before a hard talk.
 - [Turn a sales call into a checked proposal](https://useaiblocks.com/workflows/turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature): Give it the call notes. Get the follow-up, a costed proposal, a margin check and a dated plan.
 - [Weekly sales pipeline reviewer](https://useaiblocks.com/agents/weekly-sales-pipeline-reviewer): Give it your weekly deal export. Get what changed, the deals to act on today and a fix list to approve.

@@ -1,6 +1,6 @@
 # Run Google Ads: AI Blocks
 
-> 39 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 40 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Add YouTube and Demand Gen and check they pay](https://useaiblocks.com/workflows/add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays): Give it your Google data and best video ads. Get a yes or wait, a cold campaign, an ad scorecard and remarketing.
 - [Bestseller Shopping campaign builder](https://useaiblocks.com/skills/bestseller-shopping-campaign-builder): Give it your bestsellers and brand name. Get Shopping settings, product group steps and brand negatives.
@@ -32,6 +32,7 @@
 - [Performance Max launch planner](https://useaiblocks.com/skills/performance-max-launch-planner): Give it your catalogue, budget and break-even numbers. Get a fit verdict and a Performance Max build.
 - [Performance Max routine keeper](https://useaiblocks.com/skills/performance-max-routine-keeper): Give it your Performance Max exports. Get this week's checks, exclusions, a budget move and a waste score.
 - [Problem-aware Search campaign builder](https://useaiblocks.com/skills/problem-aware-search-campaign-builder): Give it your product and the problem it solves. Get a problem-led Search campaign with matched ads.
+- [Search ads experiment planner](https://useaiblocks.com/skills/traction-search-engine-marketing): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Search term junk sorter](https://useaiblocks.com/prompts/search-term-junk-sorter): Paste a search terms report. Get winners to promote, negatives to add and a waste score.
 - [Search term sorter](https://useaiblocks.com/skills/search-term-sorter): Paste your search terms reports. Get winners to promote, negatives to add, where each goes and a waste score.
 - [Shopify Google tracking builder](https://useaiblocks.com/skills/shopify-google-conversion-tracking-builder): Give it your Shopify and Tag Manager access. Get a build checklist for purchase tracking and enhanced conversions.

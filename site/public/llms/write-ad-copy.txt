@@ -1,6 +1,6 @@
 # Write ad copy: AI Blocks
 
-> 66 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner): Name your ad's buyer. Get a short brief on how it opens, argues and asks.
 - [Ad ask line writer](https://useaiblocks.com/prompts/ad-ask-line-writer): Paste your ad and offer. Get two clear asks, each with a true reason to act and the doubts removed.
@@ -64,7 +64,6 @@
 - [Winning ad variant writer](https://useaiblocks.com/skills/winning-ad-variant-writer): Paste your winning ad and top customer groups. Get same-voice variants and a launch plan.
 - [Winning hook rubric builder](https://useaiblocks.com/skills/winning-hook-rubric-builder): Paste your top ads and a rival's. Get a hook rubric from the winners and your drafts graded.
 - [Write a flaw-first ad from the drive behind the sale](https://useaiblocks.com/workflows/flaw-first-ad): Paste your product facts and buyer words. Get a brief on why people buy, a flaw-first ad and fresh wording.
-- [Write a flaw-first ad from the drive behind the sale](https://useaiblocks.com/workflows/write-a-flaw-first-ad-from-the-drive-behind-the-sale): Paste your product facts and buyer words. Get a brief on why people buy, a flaw-first ad and fresh wording.
 - [Write a headline that fits what your buyers already know](https://useaiblocks.com/workflows/buyer-aware-headline): Give it your product and buyers. Get their awareness and claim fatigue read, stage-matched headlines, a promise check and a test plan.
 - [Write an ad and a page with the same promise](https://useaiblocks.com/workflows/write-an-ad-and-a-landing-page-that-keep-the-same-promise): Give it your product facts and reviews. Get an ad and a matching page that repeat the promise, each checked.
 - [Write an ad in five parts, from hook to ask](https://useaiblocks.com/workflows/five-part-ad): Give it your product facts. Get an ad that grabs attention, shows a gain, proves it, sums up and asks for action.

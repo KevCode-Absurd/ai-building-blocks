@@ -18,6 +18,7 @@
 - [Cold re-read marker](https://useaiblocks.com/skills/cold-reread-marker): Paste a rested draft. Get every page that needs a change, the big holes, and a score out of 100.
 - [Commit message humaniser](https://useaiblocks.com/skills/commit-message-humaniser): Give it a commit message. Get a plain version that sounds like a careful engineer, with no AI filler.
 - [Company story aligner](https://useaiblocks.com/skills/company-story-aligner): Give it what you tell each group. Find contradictions and get one story framed for each audience.
+- [Content growth experiment planner](https://useaiblocks.com/skills/traction-content-marketing): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Customer-as-hero message planner](https://useaiblocks.com/skills/customer-as-hero-message-planner): Describe your brand. Get a clear message with the customer as the hero, plus a website and elevator pitch. Uses StoryBrand.
 - [Customer-hero message writer](https://useaiblocks.com/skills/customer-hero-message-writer): Paste your offer and buyer. Get a one-line message, a short page script and a first step, with the customer as hero.
 - [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner): Say your length and writing days. Get a daily word count, a finish date and a closed-door routine for one first draft.
@@ -83,7 +84,6 @@
 - [Teaching story writer](https://useaiblocks.com/skills/teaching-story-writer): Give it a lesson you want to teach. Get a short funny story that carries it, with a turn to the reader.
 - [Technical writer](https://useaiblocks.com/skills/technical-writer): Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers.
 - [Ten percent cutter](https://useaiblocks.com/skills/ten-percent-cutter): Paste your draft. Get it cut to 90% of its length, with a log of every cut and a story check.
-- [Test a story and fix its scenes and narration](https://useaiblocks.com/workflows/test-a-story-idea-check-every-scene-turns-and-strip-the-voice-over): Paste your story idea. Get a premise verdict, every scene marked for what changes, and a line-by-line voice-over test.
 - [Test a story idea and make every scene turn](https://useaiblocks.com/workflows/story-idea-test): Paste your story idea. Get a premise verdict, every scene marked for what changes, and a line-by-line voice-over test.
 - [Translator](https://useaiblocks.com/skills/translator): Give it text and a language. Get a natural translation with local tone and consistent terms.
 - [Two-audience brief writer](https://useaiblocks.com/skills/two-audience-brief-writer): Paste your project and its audience. Get a brief with two audiences, two ways to fail and a promise to each.

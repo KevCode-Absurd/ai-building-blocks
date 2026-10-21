@@ -144,10 +144,13 @@ for (const r of roster.minds) {
   fs.mkdirSync(path.join(OUT_SKILLS, r.slug), { recursive: true });
   fs.copyFileSync(skillPath, path.join(OUT_SKILLS, r.slug, "SKILL.md"));
   // The parts go too, so a mind's pack can carry its playbook, personality, knowledge and sources as their own files.
+  // Like a skill's files, they ship as one zip (skills/<slug>.zip: <slug>/SKILL.md plus the parts), not one file each.
   const mindFiles = ["playbook.md", "personality.md", "knowledge.md"].filter((f) => fs.existsSync(path.join(folder, f)));
-  for (const f of mindFiles) fs.copyFileSync(path.join(folder, f), path.join(OUT_SKILLS, r.slug, f));
   const srcList = (m.sources ?? []).filter((s) => s.title).map((s) => `${s.n}. ${s.title}${s.by ? `, ${s.by}` : ""} (${s.kind ?? "source"})${s.url ? `: ${s.url}` : ""}`);
-  fs.writeFileSync(path.join(OUT_SKILLS, r.slug, "sources.md"), [`# Sources: ${m.name}`, "", "The public work this mind was built from. knowledge.md cites them as [S1], [S2] and so on.", "", ...srcList, ""].join("\n"));
+  const mindTree = { [`${r.slug}/SKILL.md`]: new TextEncoder().encode(skill.replace(/\r\n?/g, "\n")) };
+  for (const f of mindFiles) mindTree[`${r.slug}/${f}`] = fs.readFileSync(path.join(folder, f));
+  mindTree[`${r.slug}/sources.md`] = new TextEncoder().encode([`# Sources: ${m.name}`, "", "The public work this mind was built from. knowledge.md cites them as [S1], [S2] and so on.", "", ...srcList, ""].join("\n"));
+  fs.writeFileSync(path.join(OUT_SKILLS, `${r.slug}.zip`), zipSync(mindTree, { level: 6, mtime: ZIP_DATE }));
   mindFiles.push("sources.md");
   const first = m.name.split(" (")[0];
   const knowledge = fs.existsSync(path.join(folder, "knowledge.md")) ? fs.readFileSync(path.join(folder, "knowledge.md"), "utf8").replace(/\r\n?/g, "\n") : "";
@@ -275,7 +278,7 @@ const wire = (b) => {
 };
 fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new Date().toISOString().slice(0, 10), portTypes, renamed, minds, blocks: blocks.map(wire) }));
 // Every page, for search engines: the home page, each block, the mini tools and the apps. The saved example app
-// (public/example-app) is left out: it's a copy of another app, marked noindex.
+// (example-app-site, its own Pages project) is left out: it's a copy of another app, marked noindex.
 const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");

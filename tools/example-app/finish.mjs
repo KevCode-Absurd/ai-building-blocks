@@ -1,7 +1,7 @@
 // Turns the raw snapshot (snapshot.mjs) into the tour: every saved page gets the tour script and bar, links and
 // pictures point at saved files, large pictures are made smaller, and a page for screens that aren't in the tour.
 //
-//   node tools/example-app/finish.mjs --raw <snapshot folder> --out site/public
+//   node tools/example-app/finish.mjs --raw <snapshot folder> --out example-app-site
 //
 // Only HTML outside <script> tags is changed. The page data Next.js keeps inside its scripts is left exactly as
 // it was, so each screen starts up as the real app does.
@@ -11,7 +11,7 @@ import { createRequire } from "node:module";
 
 const arg = (k, d) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ? process.argv[i + 1] : d; };
 const RAW = path.resolve(arg("raw", "example-app-raw"));
-const OUT = path.resolve(arg("out", "site/public"));
+const OUT = path.resolve(arg("out", "example-app-site"));
 const BASE = "/example-app";
 const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Z]:)/, "$1"));
 const require = createRequire(new URL("../../site/package.json", import.meta.url));

@@ -15,7 +15,7 @@ const BLOCKED = new Set([
 const PLAIN = ["₹", "rupee", " rs.", "inr "];
 const SCAN = ["site/src/apps", "app-starter", "docs/APPS-PRD.md"];
 // The saved example app (tools/example-app) is a real brand's study data, so only the client words are checked there.
-const WORDS_ONLY = ["site/public/example-app"];
+const WORDS_ONLY = ["example-app-site"];
 
 const walk = (p) => {
   const abs = path.join(ROOT, p);

@@ -117,7 +117,7 @@ test("every page has its own address on useaiblocks.com, and the saved app stays
   for (const p of ["/apps", "/apps/starter-pack"]) expect(map).toContain(`<loc>https://useaiblocks.com${p}</loc>`);
   expect(map).not.toContain("example-app");
   expect(fs.readFileSync("public/robots.txt", "utf8")).toContain("Sitemap: https://useaiblocks.com/sitemap.xml");
-  expect(fs.readFileSync("public/example-app/index.html", "utf8")).toContain('<meta name="robots" content="noindex">');
+  expect(fs.readFileSync("../example-app-site/example-app/index.html", "utf8")).toContain('<meta name="robots" content="noindex">');
 });
 
 test("@mobile the Apps page fits a phone: no sideways scroll", async ({ page }) => {

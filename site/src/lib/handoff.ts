@@ -2,7 +2,7 @@
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
 // The zip library loads only when someone downloads.
 import type { Zippable } from "fflate";
-import { type Catalogue, loadFiles, loadSkillText, loadSkillZip, portLabel, taskOf } from "./data";
+import { type Catalogue, loadSkillText, loadSkillZip, portLabel, taskOf } from "./data";
 import type { Flow, FlowNode } from "./store";
 import { type Business, businessText } from "./business";
 import { crewSlugs, isMind, leadsOf, mindName } from "./crew";
@@ -287,10 +287,9 @@ export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: 
   const root = `${mindSlug}-pack`;
   const tree: Zippable = {};
   tree[`${root}/${mindSlug}/SKILL.md`] = strToU8(mindSkill);
-  for (const f of await loadFiles(m)) {
-    const t = await loadSkillText(mindSlug, f);
-    if (t) tree[`${root}/${mindSlug}/${f}`] = strToU8(t);
-  }
+  // Their playbook, personality, knowledge and sources come out of the mind's zip as they are.
+  const mindZip = m.hasFiles ? await loadSkillZip(mindSlug) : null;
+  if (mindZip) for (const [name, bytes] of Object.entries(unzipSync(mindZip))) if (name.startsWith(`${mindSlug}/`) && name !== `${mindSlug}/SKILL.md` && !name.endsWith("/")) tree[`${root}/${name}`] = bytes;
   const got: { slug: string; name: string; summary: string }[] = [];
   for (const s of skillSlugs) {
     const b = c.bySlug[s];

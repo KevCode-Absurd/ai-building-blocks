@@ -46,17 +46,19 @@ function devSpaces(): Plugin {
 }
 
 /**
- * The saved example app (public/example-app, made by tools/example-app) served the way Cloudflare Pages serves it:
+ * The saved example app (../example-app-site, made by tools/example-app, deployed as its own Pages project) served the way
+ * Cloudflare Pages serves it:
  * /example-app/scripts is scripts.html, a folder is its index.html, and anything missing gets the tour's 404 page.
  */
 function exampleApp(): Plugin {
-  const root = path.resolve("public");
+  const root = path.resolve("../example-app-site");
+  const TYPES: Record<string, string> = { ".js": "text/javascript", ".mjs": "text/javascript", ".css": "text/css", ".json": "application/json", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp", ".gif": "image/gif", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".woff2": "font/woff2", ".woff": "font/woff", ".txt": "text/plain; charset=utf-8", ".mp4": "video/mp4", ".webm": "video/webm" };
   const serve = (req: { url?: string }, res: import("node:http").ServerResponse, next: () => void) => {
     const url = new URL(req.url ?? "/", "http://x");
     const p = decodeURIComponent(url.pathname);
-    if (!p.startsWith("/example-app") || !fs.existsSync(path.join(root, "example-app"))) return next();
+    if (!/^\/example-app(\/|$)/.test(p) ||!fs.existsSync(path.join(root, "example-app"))) return next();
     const file = [p, `${p.replace(/\/$/, "")}.html`, path.posix.join(p, "index.html")].map((f) => path.join(root, f)).find((f) => f.startsWith(root) && fs.existsSync(f) && fs.statSync(f).isFile());
-    if (file && !file.endsWith(".html")) return next(); // pictures, scripts and styles: Vite serves public files itself
+    if (file && !file.endsWith(".html")) { res.setHeader("content-type", TYPES[path.extname(file).toLowerCase()] ?? "application/octet-stream"); return res.end(fs.readFileSync(file)); }
     res.setHeader("content-type", "text/html; charset=utf-8");
     if (!file) res.statusCode = 404;
     res.end(fs.readFileSync(file ?? path.join(root, "example-app", "404.html")));

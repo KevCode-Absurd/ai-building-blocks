@@ -1,0 +1,23 @@
+slug: store-rebrand-planner
+name: "Store rebrand planner"
+summary: "Give it your store, name and goals. Get a keep-or-rename score out of 100 and a phased plan."
+category: ecommerce
+type: skill
+role: check
+job: brand
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "We named a billion dollar startup with the man behind BlackBerry, Febreze and Swiffer (podcast)", by: "David, founder of a naming agency, interviewed by two business-podcast hosts", used: "The reasons to rename, the friction cost of a bad name, the claim that equity loss does not show up when the launch has a story, and the 6 to 9 month window for young brands"}
+  - {title: "Building a Brand: Redesigning a Business Start to Finish", by: "a chief design officer rebranding a direct-to-consumer hardware store", used: "The four phases (discover, define, develop, deliver), the exercises, design challenges, the site-first order with a sitemap and two placeholder pages, and delivery"}

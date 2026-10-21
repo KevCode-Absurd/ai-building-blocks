@@ -1,0 +1,118 @@
+new_slug: concrete-copy-rewriter
+name: "Concrete copy rewriter"
+summary: "Paste a line or product copy. Get pass or fail on three tests and a true, picturable rewrite."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It must keep every rewrite tied to a true fact, so it needs care, but the steps are short and clear."
+
+headline: "Concrete copy rewriter"
+subhead: Paste an ad line, headline or product description, plus true facts about your product. It tests each line three ways, then rewrites vague words into things a shopper can picture and check. You get pass or fail per test, two or three rewrites and the fact behind each.
+
+explain: |
+  Words like "premium", "smooth" and "high quality" give a shopper nothing to see. They skim past, and any rival could print the same line. Specific copy is believed more, because it can be checked.
+
+  This skill puts each line through three tests: can you picture it, can it be proved true or false, and could nobody else say it. A line that fails gets walked from the vague word down to something you could point at, such as a place, a number, a material or a step. Every rewrite rests on a fact you gave it. If you didn't give a detail, the skill marks it "confirm" and never makes it up. Short lines get the three tests. Whole product descriptions get a sense-by-sense rewrite as well.
+
+when:
+  - Your headline or product page says "better", "easy" or "high quality" and you can't say what that means.
+  - An ad line could be word for word on a rival's page.
+  - You have true facts about your product (materials, process, numbers) that your copy doesn't use yet.
+
+you_give:
+  - The line, ad or product description to improve
+  - "True product facts: materials, sizes, process, numbers, how it is made and used"
+  - One real customer, or a few rival lines (optional)
+  - Claims you must not make (optional)
+you_get:
+  - Pass or fail on each of the three tests, with the reason
+  - A zoom ladder from each vague word down to something concrete
+  - Two or three rewrites, each with the fact it rests on
+  - A side-by-side table (vague line, specific line, fact behind it) and a list of details to confirm
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the copy you want improved.
+  - Paste the true facts you have. Add the source for every number, such as a lab report, a spec sheet or a supplier email.
+  - List any claims you can't make, for example health or earnings claims.
+  - Check every item marked "confirm". Fix or delete it before the copy goes live.
+
+how_it_works:
+  - title: Runs the three tests
+    text: Can you picture it, can it be proved true or false, can nobody else say it. Three fails means the line needs a rewrite. Three passes means keep it.
+  - title: Zooms from vague to concrete
+    text: For each abstract word it asks what you really mean, again and again, until it reaches something you could point at.
+  - title: Swaps opinions for facts
+    text: Opinions become things you can point to. A plain fact with a number beats a superlative.
+  - title: Checks the rival test
+    text: Swaps a rival's name into the line to see if they could sign it, then looks for a fact only you can state.
+  - title: Paints the use
+    text: For whole descriptions it walks the buyer through opening, holding, using and seeing the result, with the senses that are real for the product.
+  - title: Reads it in two seconds
+    text: Checks a stranger would get the line at a glance, and prefers the true claim that speaks to the most buyers.
+  - title: Flags what it can't prove
+    text: Every detail you didn't supply is marked "confirm". Nothing is invented.
+
+output_shape: |
+  LINE: <original line>
+  T1 picture it:       <pass/fail, why>
+  T2 true or false:    <pass/fail, why>
+  T3 nobody else:      <pass/fail, swap-in result>
+
+  ZOOM LADDER
+  <vague word> > <closer> > <closer> > <thing you can point at>
+
+  REWRITES
+  1. <rewrite>  | fact: <fact it rests on> | source: <where it came from>
+  2. <rewrite>  | fact: <...>
+  3. <rewrite>  | fact: <...>
+
+  SIDE BY SIDE
+  <vague line> | <specific line> | <fact behind it>
+
+  SENSES: covered <...> | missing but real <...> | not relevant <...>
+  CONFIRM: <each detail you did not supply>
+  CHECKS MISSED: <none, or the check and why>
+
+tweaks:
+  - what: The facts you paste
+    how: The rewrite can only be as specific as your facts. A spec sheet, a process note or a test result gives it far more to work with than a one-line description.
+  - what: A real customer
+    how: A line can pass all three tests and still miss the buyer. Add words from your reviews so the rewrite uses language this buyer already uses.
+  - what: Rival lines
+    how: Paste two or three rival headlines. The "could they sign it" test then runs against real lines, not guesses.
+  - what: Claims you can't make
+    how: List health, safety and earnings claims you're not allowed to use, so no rewrite drifts into them.
+
+judge:
+  - Every rewrite names the fact it rests on, and that fact came from you.
+  - No new number, material, test result or sensation appears that you didn't supply.
+  - Each vague word was replaced by something you can point at, not by another adjective.
+  - A rival's name can't be swapped into the new line without it becoming false.
+  - Details you didn't give are marked "confirm", not written as fact.
+
+test:
+  - Paste a line you know is vague, such as "premium quality". It should fail at least two tests and ask for facts, not invent them.
+  - Give it a line that already has a real number and a real detail. It should mostly pass and change little.
+  - Run it twice on the same line with the same facts. The wording may differ, but the rewrites should rest on the same facts.
+  - Show the new line to someone for two seconds, then ask what it said. If they can't tell you, simplify it.
+
+improve:
+  - Add your brand voice rules to the skill file, such as words you never use, so rewrites sound like you.
+  - Keep a list of true facts about your products (process steps, counts, materials) and paste it each time.
+  - Add your compliance rules for health, safety and earnings words as a line near the top.
+  - Test each rewrite in a feed mock-up among other ads, not on a blank page, and keep the version that wins.
+  - Pair it with a buyer research skill so the facts and the words come from real customers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the tests and write the rewrites. Paste your facts in the same message."}
+  inputs:
+    - "Customer review quotes, so rewrites use the words buyers already use"
+    - "A spec sheet or supplier notes with real numbers and materials"
+    - "Two or three rival headlines for the could-they-sign-it test"
+
+terms:
+  - term: Zoom ladder
+    meaning: A list that starts at a vague word and gets more concrete one step at a time, until you reach something you could point at.
+  - term: Mental movie
+    meaning: The picture a reader sees in their head when the words are specific enough to picture.

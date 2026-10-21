@@ -1,0 +1,20 @@
+slug: turn-a-dispute-into-a-checked-demand-letter-draft
+name: "Turn a dispute into a checked demand letter draft"
+summary: "Answer questions about a dispute. Get a fact sheet, a dated timeline from your emails and a demand letter draft."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+uses: [demand-letter-fact-gatherer, dispute-timeline-builder, demand-letter-drafter]
+steps:
+  - {uses: demand-letter-fact-gatherer, note: "Starts from your answers. Makes the fact sheet the next steps check and write from."}
+  - {uses: dispute-timeline-builder, note: "Checks the fact sheet against your records. Every date and amount in the letter should match this timeline."}
+  - {uses: demand-letter-drafter, note: "Writes the letter from the fact sheet and the timeline, and flags any quote or date it cannot match."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-a-dispute-into-a-checked-demand-letter-draft/skeleton.yaml

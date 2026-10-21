@@ -1,0 +1,24 @@
+slug: payments-and-checkout-settings-checker
+name: "Payments and checkout settings checker"
+summary: "Give it your payment and checkout settings. Get a score out of 100, ranked risks and fixes."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Official Shopify 2026 Tutorial (four-part series)", by: "Kylie Maher, Learn with Shopify", used: "Name matching, individual versus business, bank types, capture, wallets, checkout fields, shipping visibility, trust and recovery settings"}
+  - {title: "WooCommerce Tutorial for Beginners 2026", by: "Daryl Wilson", used: "PayPal business account, third-party Stripe plugin, test then live"}
+  - {title: "How to Create an Ecommerce Website with WordPress 2026 (step by step)", by: "Dale, Creator Pro Website", used: "The connection test and switching Stripe to live"}
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients", used: "Consent, pre-ticked versus unticked, rules by country, contact method, abandoned checkout, order limits and customer accounts"}
+  - {title: "Shopify Store Setup Full Tutorial 2026: Step by Step", by: "Unnamed presenter", used: "Turning on the email and SMS opt-in boxes at checkout"}

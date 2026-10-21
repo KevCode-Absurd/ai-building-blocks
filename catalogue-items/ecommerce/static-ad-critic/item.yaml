@@ -1,0 +1,25 @@
+slug: static-ad-critic
+name: "Static ad critic"
+summary: "Attach a static ad and its page. Get a score out of 100, fixes and two rewrites."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: intermediate
+inputs:
+  - {type: image, required: true}
+  - {type: copy_draft, required: true}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: ad_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "How to make static image ads that scale", by: "Agency lead (name not given in the video)", used: "The clarity to curiosity spectrum, visual hierarchy, sending curiosity ads to an educational page, and matching awareness across the ad"}
+  - {title: "How To Make Better Meta Ads: 8 Static Creatives Analysed", by: "Australian paid social creative strategist (name not given in the video)", used: "The clarity-or-curiosity rule, image and headline pairing, eye path, simple benefit first, awareness fit and an illustration for sensitive problems"}
+  - {title: "How to make Meta Ad Creatives (in 2026)", by: "Jared Robinson, creative agency founder", used: "Four quick checks: attention, curiosity, emotion and connection"}
+  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", used: "Stages of awareness, matched across image, copy and page"}

@@ -1,0 +1,127 @@
+new_slug: product-and-variant-setup-planner
+name: "Product and variant setup planner"
+summary: "List what you sell. Get each product type, a variant table and a fill-in checklist."
+job: set-up-store
+thinking: low
+thinking_why: "It lays out facts you give it in a fixed format, so a fast, cheap model is enough."
+
+headline: "Product and variant setup planner"
+subhead: List your products, their options, prices, stock and photos, and say whether each ships, downloads or is a service. It picks a product type for each, builds a variant table with SKU, price, stock, weight and image per option, and gives you one sheet per product to fill in.
+
+explain: |
+  Products entered one by one in a hurry end up with gaps. A variation with no price cannot be bought. A colour has no photo, so the picture never changes. Nothing is preselected, so the page looks empty. A service lets a buyer put two in the cart.
+
+  This skill plans each product before you enter it. It picks the product type, builds shared options such as Size and Colour once, then lists every variation as a row with its own SKU, price, stock, weight and photo. It sets the stock rule, the sale price with an end date, categories, and the upsells and cross-sells. It marks what is still missing. It works for a small catalogue entered by hand. Writing the title and description is a different job, so it leaves that to a product copy skill.
+
+when:
+  - You are about to add your first products and want a plan so nothing is missed.
+  - You have a product with sizes and colours and do not know how to set up the variations.
+  - You sell a service, an ebook or an affiliate item and are not sure which product type to pick.
+
+you_give:
+  - Your products with their options (size, colour, weight, with or without an extra)
+  - Prices, sale prices and stock for each
+  - Photos for each option (optional, but needed for the picture swap)
+  - Whether each item ships, downloads or is a service, and whether stock is held or dropshipped
+  - Your platform (Shopify or WooCommerce)
+you_get:
+  - A product type for each item and a shared option list
+  - "A variant table: option combination, SKU, price, stock, weight and image"
+  - Categories, tags, and upsell and cross-sell links
+  - One sheet per product to fill in, and a list of what is still missing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your products with their options, prices, stock and what each one is (ships, downloads or service).
+  - Attach or list your photos by option.
+  - Work through the sheet for one product at a time in your admin, then check it in the storefront.
+  - Send back what is still missing and ask for an updated table.
+
+how_it_works:
+  - title: Picks the type
+    text: Simple, variable, virtual, downloadable or external, depending on what the item is and how it is delivered.
+  - title: Builds shared options
+    text: Size and Colour made once and reused, not made again inside each product.
+  - title: Lists every variation
+    text: Four sizes by three colours gives 12 rows. Each row needs its own price, SKU, stock, weight and photo.
+  - title: Sets stock and price rules
+    text: Stock tracking, backorders, a low-stock alert, and a sale price with an end date.
+  - title: Sets service and download rules
+    text: Sold individually, a purchase note, and a download file with its limit and expiry.
+  - title: Organises the catalogue
+    text: Categories with parents, tags, a short and a long description, and upsells and cross-sells.
+  - title: Lists what is missing
+    text: Anything you did not give it is marked, not made up.
+
+output_shape: |
+  PRODUCT <name>
+  type: <simple | variable | virtual | downloadable | external>
+  options: <Size: ...; Colour: ...>
+  category: <parent > child> | tags: <...>
+  price: <regular> | sale: <price, end date> | compare-at: <price>
+  stock rule: <track | backorders | low-stock alert>
+  weight and package: <weight, size | blank because flat rate>
+  media: <3 to 5 images by angle; alt text for each>
+
+  VARIANT TABLE
+  <option combination> | SKU <...> | price <...> | stock <...> | weight <...> | image <file>
+
+  LINKS
+  upsells (product page): <...> | cross-sells (cart): <...>
+
+  ENTRY CHECKLIST
+  [ ] <step in your admin>
+
+  STILL MISSING
+  <what, and who has it>
+  MISSING: <prices | stock | photos by option | weights>
+
+tweaks:
+  - what: Platform
+    how: Say Shopify or WooCommerce. WooCommerce has five product types and global attributes. Shopify uses variants with a limit on option count.
+  - what: Stock held or dropshipped
+    how: For dropshipping you may allow selling past zero. Check the supplier's stock rules before you do.
+  - what: Photos by option
+    how: Without a photo per option, keep to one image and skip the picture swap.
+  - what: Catalogue size
+    how: For hundreds of products use a bulk import and check completeness afterwards, not this by-hand plan.
+
+judge:
+  - Every variation row has a price, a SKU and a stock figure, or is marked missing.
+  - Shared options are listed once, not per product.
+  - Services and ebooks are set to be sold one at a time.
+  - Nothing is made up for a field you did not give it.
+  - A default option is chosen so the page is not empty.
+
+test:
+  - Give it a product with four sizes and three colours. It should return 12 rows.
+  - Leave one price out. It should mark that row as missing and say it cannot be bought without one.
+  - Give it an ebook. It should pick a downloadable type and set it to sold individually.
+  - Enter one product from the sheet in your store and check the storefront shows the picture change.
+
+improve:
+  - Add your SKU pattern, such as product name plus a number, so every run follows it.
+  - Add your stock rules, such as your low-stock number and when you allow backorders.
+  - Add your image size so the grid lines up.
+  - Pair it with a product title and description writer, and a completeness checker after a bulk import.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Variants, compare-at price and a continue-selling stock setting are built in."}
+    - {name: "WooCommerce", why: "Global attributes, five product types and bulk actions on variations are built in."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the table from your list."}
+  inputs:
+    - "A spreadsheet of your products and costs"
+    - "Photos named by option"
+    - "Your supplier's stock rules, if you dropship"
+    - "Your size chart or product specs"
+
+terms:
+  - term: Variant
+    meaning: One version of a product, such as a medium in blue.
+  - term: SKU
+    meaning: A short code you give each item or variant so you can track it.
+  - term: Compare-at price
+    meaning: The old price shown crossed out beside the sale price.
+  - term: Cross-sell
+    meaning: A product suggested in the cart. An upsell is suggested on the product page.

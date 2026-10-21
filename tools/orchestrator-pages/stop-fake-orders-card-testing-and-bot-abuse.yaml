@@ -1,0 +1,74 @@
+new_slug: stop-fake-orders-card-testing-and-bot-abuse
+name: Stop fake orders, card testing and bot abuse
+summary: Give it your orders and payment setup. Get fraud rules, a review routine and a bot access plan.
+job: protect-your-store
+thinking: high
+thinking_why: It sets rules that can block real buyers if they are too tight. Give it your strongest model.
+headline: Stop fake orders and bot abuse before they cost you
+subhead: Give it your order numbers, chargebacks and payment setup. It writes rules for risky orders, a routine for reviewing held ones, and a plan for which bots and AI shopping agents may visit, with limits and alerts for sign-in, reset and checkout.
+explain: |
+  Fraud shows up as chargebacks, a burst of small card charges, fake sign-ups or odd traffic. Owners react in one of two ways. They do nothing until the processor flags the account, or they block too much and turn away real buyers. Bots and AI shopping agents add a new question: who may visit, and what may they do?
+
+  These steps set the rules in two parts. First it builds on the risk rating your platform already gives each order. It sets what happens at each level and a chargeback watch line, and it fits the rules to the hours you have to review. You run them for two to four weeks. Then it uses what you saw to name the attack, split people, bots and agents, and set a policy and limits for each page.
+when:
+  - You see chargebacks, repeated small card charges, fake sign-ups or odd traffic, and want rules in place before they cost you.
+  - Your processor has warned you about your dispute rate.
+  - You want to decide whether AI shopping assistants may browse and buy from your store.
+you_give:
+  - Your orders per month and average order value
+  - Your chargebacks over the last 3 months (count and rate)
+  - Your payment setup, such as Shopify Payments or another gateway
+  - How many hours a week someone can review held orders
+  - Which pages bots can reach (cart, checkout, sign-in, sign-up, reset, gift card check)
+  - After two to four weeks, your blocked, held and disputed orders, failed sign-ins and repeated small card charges
+you_get:
+  - A chargeback watch line, with the rates that matter to your processor
+  - Rules by order risk level, saying what to do with low, medium and high risk orders and when to cancel
+  - A review checklist for held orders and a monthly loop to tune the rules
+  - A policy to permit, verify, challenge or prevent each type of visitor, with limits per account and per address
+  - Alerts on simple signals, and the exact wording for sign-in and reset messages
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your order numbers, chargebacks and how much review time you have. It will not hold orders nobody can review.
+  - Turn the rules on and run them for two to four weeks. Export the blocked, held and disputed orders, failed sign-ins and repeated small card charges.
+  - Bring those back, and say if you want AI shopping assistants allowed, partly allowed or blocked.
+how_it_works:
+  - title: Set the fraud rules
+    text: Checks you have enough orders to tune rules, sets a chargeback watch line, writes a rule for each risk level, uses an extra card check only for higher-risk orders, and adds a review checklist.
+  - title: Plan bot and agent access
+    text: Names the attack from your data, such as stolen passwords or card testing, sets alerts, lists which bots and agents reach each page, and gives an allow, check or block policy with limits at the edge.
+output_shape: |-
+  STEP 1: FRAUD RULES
+    Inputs read | chargeback watch line | rules by risk level | extra card check settings | review checklist | monthly loop
+
+  STEP 2: BOT AND AGENT ACCESS
+    Your size and setup | permit, verify, challenge and prevent lists | limits by flow | alerts | sign-in and reset wording | monthly review
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Review hours
+    how: Tell it how many hours a week you can spend on held orders. Rules that hold more than you can review will be left out.
+  - what: Order volume
+    how: With very few orders a month there is too little data to tune rules. Step 1 tells you so, and keeps the rules simple.
+  - what: Your goal for AI agents
+    how: Say allow, allow some or block. The policy and limits follow it.
+  - what: Real buyers who share a network
+    how: Name any office, support team or wholesale buyer with a shared address, so limits do not block them.
+judge:
+  - The chargeback line shows your rate now and the warning and processor levels.
+  - Every rule names an action you can take in your platform, and holds nothing that nobody can review.
+  - The extra card check applies to higher-risk orders only.
+  - Each page in the access plan has a limit and a next action, not just "monitor".
+  - The plan defends your store and gives no steps for attacking anyone.
+test:
+  - Look at three recent orders you know were fine. None should land in a block rule.
+  - Look at three orders you know were fake. Each should land in a hold or block rule.
+  - Check that every limit would not stop a real customer on a busy sale day.
+  - After a month, compare the number of held orders to the review hours you set.
+improve:
+  - Review the rules monthly with your blocked and disputed lists, and loosen any that block real buyers.
+  - Save your chargeback watch line in your brand file.
+  - Add a second reviewer or an hour of review time before you tighten rules.
+  - Pair it with a login and account security checker for your store.

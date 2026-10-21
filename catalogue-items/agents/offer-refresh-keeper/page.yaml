@@ -1,0 +1,104 @@
+new_slug: offer-refresh-keeper
+name: Offer refresh keeper
+summary: Give it your offers and their numbers each quarter. It finds the profit winner, tests what is weak, and plans one change.
+job: make-offer
+thinking: high
+thinking_why: It does cost sums across offers, compares with last quarter and picks its checks from the result. Give it your strongest model.
+headline: Offer refresh keeper
+subhead: Give it your live offers, costs and results each quarter. It compares the offers on profit per session, finds what is weak, and plans one change to test. It logs each quarter so the next one can compare. You approve every change.
+explain: |
+  Offers go stale. A bundle that worked last year loses to a rival's cheaper pack. A discount you run every month trains buyers to wait. And most stores judge an offer by revenue, which can rise while profit falls.
+
+  This agent keeps the check for you each quarter. It compares every live offer on profit per session, with full costs, and tells you if the numbers are strong enough to call a winner. If not, it says what is missing and plans a clean test. It then checks only what the numbers point to: free-shipping lines against your real order sizes, a planned sale against the ROAS it needs, whether buyers can tell you from rivals, whether the lead offer passes a tested checklist. It picks one change, not five, and plans the test. It writes each quarter in a log. It never changes a price or sends an offer.
+when:
+  - You run more than one offer, or the same offer for months, and want to know what is earning.
+  - A sale is planned and you want to know if the maths hold before you announce it.
+  - Buyers compare you with cheaper rivals and you want a plan that is not a price cut.
+you_give:
+  - Your live offers with price, tiers, gifts, discounts and guarantee
+  - Product cost, shipping, handling and payment fees
+  - Sessions and orders for each offer for a closed date window, and order sizes
+  - Reviews and rivals, and any sale or deadline you plan (optional)
+you_get:
+  - Each offer's profit per session, with the sums, this quarter and last
+  - A keep, switch or no-call verdict, with what is missing if there is no call
+  - What is weak, from the sale, threshold, rival and checklist checks that ran
+  - One change to test, with the test design and the read-out rule
+  - A log that grows each quarter
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this quarter's offer check.
+  - Give it a closed date window for each offer, and say if offers ran at different times.
+  - Include every cost line. Costs left out make every offer look better than it is.
+  - Read the one change it proposes and the test plan. Set the test up yourself, or say yes to each step.
+  - Run it again next quarter. It reads its own log.
+how_it_works:
+  - title: Read the log
+    text: Finds last quarter's lead offer, its numbers and the change that was planned.
+  - title: Set the menu
+    text: The first time, it picks the offer types worth testing for your margins and order mix.
+  - title: Compare on profit
+    text: Works out profit per session for each offer with full costs, and scores how safe the comparison is.
+  - title: Choose the path
+    text: If the safety score is low, no winner is called. If one offer clearly leads, it proposes a switch. Otherwise it holds.
+  - title: Check what moved
+    text: Runs the threshold, discount and rival checks only when order sizes shifted, a sale is planned or profit is slipping.
+  - title: Review a weak lead offer
+    text: Checks the offer against a tested list and takes the three changes most worth making.
+  - title: Pick one change and plan the test
+    text: Chooses one change, designs the test and writes the quarter into the log.
+output_shape: |-
+  OFFERS
+    <offer> | profit per session <$> (last quarter <$>) | margin <x%> | safety score <n>/100
+
+  THE CALL
+    <keep | switch to <offer> | no call>: <why, or what is missing>
+
+  WHAT IS WEAK
+    <order thresholds | sale maths | rival comparison | checklist>: <finding>
+
+  ONE CHANGE TO TEST
+    <change> | why: <reason> | test: <design> | read-out rule: <rule> | time: <weeks>
+
+  SALE CHECK
+    <required ROAS, verdict, honest urgency lines, or "no sale planned">
+
+  LOOK AGAIN
+    <date> | bring: <numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Costs, rounded up
+    how: Include product cost, shipping, handling, payment fees, gifts and discounts. Round each up. A missing line makes every offer look better.
+  - what: Dates and traffic for each offer
+    how: Offers that ran in different seasons or on different traffic cannot be fairly compared. Tell it, and it lowers the safety score.
+  - what: The safety score bar
+    how: It will not call a winner under 70. Raise it if you are about to move a lot of traffic.
+  - what: Repeat orders
+    how: Add 90-day repeat revenue if you have it. A winner on first-order profit can lose over a quarter.
+judge:
+  - Every offer is compared on profit per session, with the sums shown.
+  - Cost lines include shipping, handling, fees, gifts and discounts.
+  - No winner is called when the safety score is under 70.
+  - Only one change is proposed, with a test and a read-out rule.
+  - Nothing was changed or sent without your clear yes.
+test:
+  - Give it two offers where one has higher revenue and lower profit. See if it picks the other.
+  - Leave out shipping cost. It should flag the missing line and lower the safety score.
+  - Run it twice on the same numbers. The call and the one change should match, apart from wording.
+improve:
+  - Add your past offers and their results to the log so the first comparison has a trend.
+  - Set your own bar for the safety score and the number of sessions you trust.
+  - Keep a record of each deadline or limit you announced, to check it was true.
+  - Add your repeat-order data after 90 days, so winners are confirmed on repeat revenue.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the offers folder and read the log each quarter.
+    - name: Shopify
+      why: Export orders and order sizes by offer, discount code and date range.
+    - name: Google Analytics
+      why: Export sessions by landing page for each offer's window.
+  inputs:
+    - Your sale and campaign dates for the next quarter
+    - Reviews that mention price, value or rivals

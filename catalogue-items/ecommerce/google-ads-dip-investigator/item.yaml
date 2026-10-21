@@ -1,0 +1,20 @@
+slug: google-ads-dip-investigator
+name: "Google Ads dip investigator"
+summary: "Give it your results and recent changes. Get the likely cause and a fix-or-wait call."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: meeting_notes, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How To Fix An Underperforming Google Ads Account", by: "Performance agency lead (name not given in the video)", used: "The whole investigation order, the three rules before touching anything, the failure modes by campaign type and the formulas"}
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "Agency co-founder who runs Google and YouTube ads for DTC brands (name not given)", used: "Conversion lag and the conversions by conversion time view"}

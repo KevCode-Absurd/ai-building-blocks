@@ -1,0 +1,121 @@
+new_slug: store-test-verdict-maker
+name: "Store test verdict maker"
+summary: "Give it test numbers and dates. Get valid or not, the lift as a range, a ship call and a trust score."
+job: test-store-changes
+thinking: high
+thinking_why: "It judges whether a result is real and weighs several checks together, so a stronger model catches more."
+
+headline: "Store test verdict maker"
+subhead: Give it your finished test's numbers, dates and what else happened on the store. It checks the result can be trusted, shows the lift as a range in money, and tells you to ship, not ship, re-test or call it inconclusive, with a trust score out of 100.
+
+explain: |
+  A test that finished with a green "winner" banner is not yet a result. Many winners come from stopping early, an uneven traffic split, an email send that spiked sales, or a tracking bug. If you check a test every day and stop at the first good look, a 5 percent chance of a false alarm can grow to about 26 percent.
+
+  This skill checks the test before it reads the result. It tests the split, the run length, early stopping, tracking and anything else that changed. Then it gives the lift as a range, turns both ends into gross profit per month, and checks that order value, margin and returns did not get worse. It ends with one call and a log entry, so the lesson is saved. It is the store version of the general A/B test verdict maker.
+
+when:
+  - Your testing tool shows a winner and you are about to roll it out.
+  - A test ended with no clear result and you want to know what that means.
+  - A lift looks too good to be true and you want to check it before you plan around it.
+
+you_give:
+  - Visitors and conversions for each version, the planned split, and the planned sample and dates
+  - The main metric and your guardrails, such as order value, margin and returns
+  - Any sale, email send, outage, price change or tracking change during the run
+  - Gross profit per order and the smallest gain worth shipping (optional)
+  - Monthly visitors to the page (optional)
+
+you_get:
+  - Pass or fail on the split, run length, early stopping and tracking checks
+  - The lift as a range, and what it is worth per month in gross profit
+  - "One call: ship, do not ship, re-test or inconclusive"
+  - A trust score out of 100 with the sum shown, and a test log entry
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the numbers for each version from your testing tool, with the start and end dates.
+  - List anything that changed during the test, such as sales, email sends or site changes.
+  - Add your gross profit per order and the smallest gain worth shipping, if you know them.
+  - Save the log entry it gives you, then act on the call.
+
+how_it_works:
+  - title: Checks the split
+    text: A chi-square check on users, not page views, flags an uneven split at p under 0.001.
+  - title: Checks how it ended
+    text: Planned sample reached, two full weeks run, and no daily checking with an early stop.
+  - title: Checks for a bug or a bump
+    text: Surprising lifts, bots, flicker, sales, email sends, tracking breaks and overlapping tests.
+  - title: Reads the range
+    text: The difference with its confidence range, set against the smallest gain worth shipping.
+  - title: Turns it into money
+    text: Gross profit per month at the low, middle and high end of the range.
+  - title: Checks the guardrails
+    text: Order value, margin and returns. A conversion win that hurts them is not a win.
+  - title: Allows agreed splits only
+    text: Mobile versus desktop, paid versus organic and new versus returning count only if you chose them before the test.
+  - title: Makes the call and scores trust
+    text: Ship, do not ship, re-test or inconclusive, a trust score out of 100, and a log entry.
+
+output_shape: |
+  CALL     <SHIP | DO NOT SHIP | RE-TEST | INCONCLUSIVE>
+  TRUST    <n>/100 (<sum shown>)
+  CHECKS   split <pass/fail, numbers> | length <pass/fail> | stopping <pass/fail>
+           tracking and contamination <pass/fail, what> | flicker and bots <pass/fail>
+  RESULT   main metric: <control> vs <variant> | difference <x> with range <low> to <high>
+           smallest lift worth shipping <y>
+  MONEY    per month at low / middle / high: <$> / <$> / <$> (gross profit)
+  GUARDRAILS  <order value, margin, returns: each ok or hurt>
+  SEGMENTS <agreed splits only, or none agreed>
+  WHY      <two sentences>
+  LOG      hypothesis | evidence | metrics | planned sample and dates | result with range
+           split check | call | lesson
+  MISSING: <what was not given>
+
+tweaks:
+  - what: The planned sample and dates
+    how: Paste them as you wrote them before the test. Without them, early stopping cannot be checked.
+  - what: Gross profit, not revenue
+    how: Give your margin or gross profit per order, so the money range counts discounts and costs.
+  - what: What else changed
+    how: List every sale, email send and site change by date. This is where most false winners come from.
+  - what: Agreed splits
+    how: Name the splits you chose before the test. Any others are treated as ideas, not results.
+
+judge:
+  - The split check comes first and uses users.
+  - The lift is a range, never one number.
+  - Money is shown at both ends of the range.
+  - A surprising lift gets a re-test call, not a ship call.
+  - The call agrees with the trust score and the range.
+  - Early stopping and unplanned splits are named, not hidden.
+
+test:
+  - Give it a test you stopped early on purpose. The trust score should drop and the call should lean to re-test.
+  - Give it a lift that looks too big, such as plus 300 percent. It should call it a likely bug and not ship.
+  - Run it twice on the same numbers. The call and the score should match.
+  - Compare its range with the one your testing tool shows. The ends should be close.
+
+improve:
+  - Add your usual guardrails, such as return rate and page speed, to the skill file so it always asks for them.
+  - Add your own trust rules, such as no shipping a winner from a test under three weeks.
+  - Keep the log entries in one file and attach it, so the skill can warn you when you repeat an old idea.
+  - Pair it with the readiness checker before a test and the idea ranker to choose the next one.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the checks and the money sums from your pasted numbers."}
+    - {name: "Your testing tool's export", why: "Users per version, conversions and dates come straight from its results page or a CSV."}
+  inputs:
+    - "The test plan you wrote before the test"
+    - "A calendar of sales and email sends for the test dates"
+    - "Gross margin by product for the tested page"
+
+terms:
+  - term: Sample ratio mismatch
+    meaning: The traffic split that came back differs from the split you designed, such as 50.3 to 49.7 on a large test. It means something is wrong with the test.
+  - term: Peeking
+    meaning: Checking results over and over and stopping when they look good. It raises the chance of a false winner.
+  - term: Twyman's law
+    meaning: A surprising result is usually a mistake, not a discovery.
+  - term: Flicker
+    meaning: The old page flashes on screen before the new version loads, which can bend a test.

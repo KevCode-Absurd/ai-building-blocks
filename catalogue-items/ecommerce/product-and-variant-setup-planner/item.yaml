@@ -1,0 +1,25 @@
+slug: product-and-variant-setup-planner
+name: "Product and variant setup planner"
+summary: "List what you sell. Get each product type, a variant table and a fill-in checklist."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: product_data}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "WooCommerce Tutorial 2026: Complete MasterClass for Beginners", by: "Tim Nishad", used: "Global attributes first, variation rows, a price for every variation, and virtual, downloadable and affiliate types"}
+  - {title: "How To Start an Online Store That Runs on Autopilot (WooCommerce Tutorial)", by: "Ferdy", used: "The 12-row example, bulk actions, a picture per colour, default selection, sold individually, purchase note, upsells versus cross-sells"}
+  - {title: "Shopify Tutorial for Beginners 2026 - Full Store Setup Guide", by: "Simon", used: "Compare-at price, the stock rule, shipping fields, variants and collections"}
+  - {title: "The Official Shopify 2026 Tutorial (four-part series)", by: "Kylie Maher, Learn with Shopify", used: "Starting small, the media list, search listing and collection steps"}
+  - {title: "How to Create an Ecommerce Website with WordPress 2026 (step by step)", by: "Dale, Creator Pro Website", used: "Variable product mechanics, the low-stock threshold, upsells and cross-sells"}
+  - {title: "WooCommerce Tutorial for Beginners 2026", by: "Daryl Wilson", used: "A price required per variation, scheduled sales and default values"}
+  - {title: "How to Build a Full Shopify Store using AI (Claude Code)", by: "Unnamed presenter", used: "Adding products first, an AI draft from a photo and manual collections"}

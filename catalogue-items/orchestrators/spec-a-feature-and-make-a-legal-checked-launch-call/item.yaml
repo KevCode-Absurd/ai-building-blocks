@@ -1,0 +1,21 @@
+slug: spec-a-feature-and-make-a-legal-checked-launch-call
+name: "Spec a feature and make a legal-checked launch call"
+summary: "Give it a feature idea and launch plan. Get a spec, a legal risk memo and a go or no-go call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: true}
+outputs:
+  - {type: audit_report}
+uses: [feature-spec-writer, launch-legal-reviewer, go-or-no-go-launch-checker]
+steps:
+  - {uses: feature-spec-writer, note: "Turns the idea into a spec with goals, non-goals and acceptance checks."}
+  - {uses: launch-legal-reviewer, note: "Reads the spec as the product document and flags legal risks by area. A first check, not legal advice."}
+  - {uses: go-or-no-go-launch-checker, note: "Weighs the legal memo against your updated launch plan and makes the call."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/spec-a-feature-and-make-a-legal-checked-launch-call/skeleton.yaml

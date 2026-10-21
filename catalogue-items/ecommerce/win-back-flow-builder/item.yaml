@@ -1,0 +1,26 @@
+slug: win-back-flow-builder
+name: "Win-back flow builder"
+summary: "Give it your order gaps and discount room. Get a win-back flow timed to how your buyers actually reorder."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "The trigger at about twice the usual gap, the three-email shape, and the 90 to 150 day win-back segment"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores (name not given)", used: "The win-back delay, the email order and the longer gaps"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Using median and average days between purchases to set the timing"}
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "The twice-the-gap rule and the two-text SMS win-back"}
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Nathan and Angus Cowan", used: "Triggering from each customer's own buying rhythm and how to use at-risk groups"}
+  - {title: "Customer delight across the e-commerce journey: a retention playbook", by: "Research write-up (author not given)", used: "The incentive ladder, fast-cycle timing, benchmark ranges and the check before sending"}
+  - {title: "The $100M Subscription Brand Playbook", by: "An email and retention agency founder (name not given)", used: "Win-back timing 30 to 60 days after a subscriber cancels and the depth of the restart offer"}

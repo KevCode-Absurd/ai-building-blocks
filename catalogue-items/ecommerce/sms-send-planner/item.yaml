@@ -1,0 +1,24 @@
+slug: sms-send-planner
+name: "SMS send planner"
+summary: "Give it your launches, sales and list size. Get a month of texts and a frequency test."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: product_data, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "The exclusion rule for texts with no clicks, the frequency range, the five-text month and big sends to the whole list"}
+  - {title: "Everything you need to know about SMS marketing in 2025", by: "An agency founder (email and SMS for ecommerce)", used: "The launch and flash sale patterns in a sample month"}
+  - {title: "The only ecommerce SMS marketing video you'll ever need", by: "An agency owner who runs SMS for ecommerce clients", used: "Send windows, quiet hours and spacing a text 5 to 6 hours after the email"}
+  - {title: "Rethinking SMS marketing for ecommerce: AI, RCS and subscriber LTV", by: "An SMS platform's chief customer officer, with two DTC operator hosts (podcast)", used: "The 8 to 10 texts a month range, the hold-out test, adding a question to flows and the view on RCS"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "The sparing-use view of SMS, which sits against the higher-frequency view"}

@@ -1,0 +1,21 @@
+slug: ai-recommendation-gap-finder
+name: "AI recommendation gap finder"
+summary: "Paste your AI panel results. Get six gaps ranked into fix, build or influence, and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "AI SEO Course for Beginners: Complete AEO Tutorial", by: "Sam Oh", used: "The six gaps (visibility, narrative, topic, format, web mentions and demand) and the fix, build or influence ranking"}
+  - {title: "Learn 80% of AEO in 19 Minutes", by: "Sam Oh", used: "Filters for missed citations, competitor gaps and topic gaps"}
+  - {title: "The Head of Growth at a $100M Company Explains AEO", by: "Ravish Agrawal, consumer software growth lead, on a distribution podcast", used: "Platforms differ in what they favour, with only partial overlap between them"}

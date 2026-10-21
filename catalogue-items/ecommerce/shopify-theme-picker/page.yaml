@@ -1,0 +1,116 @@
+new_slug: shopify-theme-picker
+name: "Shopify theme picker"
+summary: "Describe your store. Get a theme shortlist, each scored out of 100 on your must-haves."
+job: set-up-store
+thinking: medium
+thinking_why: "It weighs a few options against your list, so a mid-size model is enough."
+
+headline: "Shopify theme picker"
+subhead: Describe what you sell and the features you need. It gives you the filters to use in the theme store, a shortlist of 3 to 5 themes, a pass or fail table on features, developer and mobile, a score out of 100 for each and a trial plan.
+
+explain: |
+  A theme is a long-lived choice. One consultant treats it as a four-to-five-year decision, because switching later means setting the store up again. Many owners pick on looks alone, then find the theme has no swatches, no size guide or weak search.
+
+  This skill starts from your must-have features, not from screenshots. It sets filters for the theme store, then checks each theme on features, the developer, the mobile demo and your catalogue size. It scores each theme out of 100 on the checks it could run. It shows both views on free and paid themes, since the sources disagree. It ends with a plan to try the theme before you pay.
+
+when:
+  - You are starting a Shopify store and need to choose a theme.
+  - You are thinking of changing theme and want to know what you would lose.
+  - You have found a theme you like and want it checked against your needs.
+
+you_give:
+  - What you sell and how many products
+  - Features you must have, such as swatches, before and after, a mega menu, right-to-left or an age check
+  - Your budget, and stores you admire (optional)
+  - Links or screenshots of themes you are weighing (optional)
+
+you_get:
+  - Filters to apply in the theme store
+  - A shortlist of 3 to 5 themes
+  - A pass or fail table on features, developer and mobile, and a score out of 100 for each
+  - A trial plan, including a backup step
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Write your must-have features first. Look at two or three competitor stores to get ideas.
+  - Paste what you sell, your product count and your budget.
+  - Look at each theme's demo on your phone, then check the table.
+  - Try your top pick free before you pay. Back up your live theme before big changes.
+
+how_it_works:
+  - title: Lists features first
+    text: Builds your must-have list from competitor research and the sections you want.
+  - title: Sets the store filters
+    text: Industry, catalogue size and features. In the source, filters cut the list from many themes to about 51, then about 20.
+  - title: Fits the catalogue size
+    text: Stores with 500 or more products need strong search and menus. A small catalogue does not.
+  - title: Weighs free and paid
+    text: Free themes (Dawn, Horizon, Trade) are fast and fine to start. Paid themes cost about 100 to 400 once. It gives both views.
+  - title: Checks the developer
+    text: How many themes they sell, for how long, reviews and support. New themes from unknown developers are a risk.
+  - title: Reads the demo on mobile
+    text: Reads the full feature list, all the presets and the mobile demo, plus variant image grouping and the size guide.
+  - title: Scores and plans the trial
+    text: Scores each theme out of 100 on the checks run and shows the sum. Then plans a free trial and a backup.
+
+output_shape: |
+  THEME SHORTLIST for <store>, <products>, <budget>
+  MUST-HAVES  <feature> ...
+
+  STORE FILTERS  <industry> | <catalogue size> | <features>
+
+  THEME | features (pass/fail) | developer | mobile demo | cost | SCORE
+  (3 to 5 rows)
+
+  SCORE  <n>/100 per theme (<must-haves> / 50 + <developer> / 15 + <mobile> / 15 + <catalogue fit> / 10 + <cost fit> / 10)
+  FREE OR PAID  <both views and which fits you>
+  TRIAL PLAN  <steps, backup, what to keep>
+  NOT RUN  <check, and what is needed>
+  MISSING: <what you need to give>
+
+tweaks:
+  - what: Your must-have features
+    how: Name each one. Each is a pass or fail line, so a vague "nice look" gives nothing to check.
+  - what: Catalogue size
+    how: Say how many products. At 500 or more, search and menu strength carry more weight.
+  - what: Your budget
+    how: Give a ceiling. Paid themes cost about 100 to 400 once, but prices change, so check the store.
+  - what: How long you plan to keep the store
+    how: A brand you plan to keep is worth a day of research. A quick test store is not.
+
+judge:
+  - Each theme has a pass or fail on every must-have, not a general opinion.
+  - Both free and paid views appear, with the conditions that favor each.
+  - Theme names and prices are marked as things to check.
+  - A theme with no developer details is flagged, not scored full marks.
+  - The score shows its sum and says which checks were run.
+
+test:
+  - Give it a must-have a theme does not have, such as right-to-left. That theme should fail it.
+  - Run it twice on the same input. The shortlist should hold the same themes, even if the order differs slightly.
+  - Check one theme's demo on your phone and see if the table matches what you see.
+  - Start the free trial of the top pick and test one product page with variants.
+
+improve:
+  - Add your own weights, such as making swatches worth more than the developer check.
+  - Save your must-have list so the next store starts from it.
+  - Add the themes you have already used and what you disliked about each.
+  - Pair it with the skills that plan your product page, so you pick a theme that fits the page you want.
+
+works_best_with:
+  tools:
+    - {name: "Shopify Theme Store", why: "Filters, demos and the feature lists the table is built from are all here."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the table from your list and the theme pages."}
+  inputs:
+    - "Links to two or three competitor stores you admire"
+    - "Screenshots of sections you want, such as the hero or the product display"
+    - "Your product count and how many have variants"
+    - "The theme pages you are comparing, saved as text or screenshots"
+
+terms:
+  - term: Preset
+    meaning: A ready-made look inside a theme. Anything in any preset is available in that theme.
+  - term: Swatches
+    meaning: Small colour or pattern squares a shopper clicks to pick a variant.
+  - term: Mega menu
+    meaning: A wide menu that shows many categories at once.

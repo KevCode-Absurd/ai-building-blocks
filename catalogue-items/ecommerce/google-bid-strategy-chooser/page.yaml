@@ -1,0 +1,122 @@
+new_slug: google-bid-strategy-chooser
+name: "Google bid strategy chooser"
+summary: "Give it campaign results and targets. Get the right bid strategy, a target, a ROAS spiral check and a score."
+job: run-google-ads
+thinking: high
+thinking_why: "The sources disagree on timing and the answer depends on conversion counts and trends, so a stronger model picks the right rule."
+
+headline: "Google bid strategy chooser"
+subhead: Give it each campaign's type, bid strategy, spend, conversions and conversion value for 30 days, plus 12 weeks of ROAS against target and your break-even ROAS. It says keep, move up or loosen for each campaign, checks for a ROAS spiral and scores the fit out of 100.
+
+explain: |
+  Google bid strategies fall into two groups. Maximize Conversions and Maximize Conversion Value are expansive: by one speaker's model about 30 percent of spend explores new audiences, which unlocks scale. Target CPA and Target ROAS are restrictive: close to no testing, so more efficient but able to shrink. Pick the wrong one at the wrong time and spend either runs wild or dries up.
+
+  This skill reads your numbers and picks the strategy by conversion count, with the stage rules from several operators who disagree on timing. It checks for a ROAS spiral, where a target set above what you actually get starves the campaign, and for the ROAS trap, where a high target turns a prospecting campaign into a retargeting one. It gives each campaign a verdict, a target with the guardrail applied and a schedule of budget and target changes.
+
+when:
+  - You are not sure whether to use Maximize Clicks, Maximize Conversion Value or Target ROAS yet.
+  - A campaign's spend fell after you raised the target, and you are not sure why.
+  - You have a Shopping or Performance Max campaign and want to know when to add a target.
+
+you_give:
+  - Each campaign's type, bid strategy, spend, conversions and conversion value for the last 30 days
+  - Target and actual ROAS by week for 12 weeks
+  - Your break-even ROAS and recent changes to targets or budgets
+  - Your product price spread (optional)
+you_get:
+  - A strategy verdict for each campaign (keep, move to the next strategy, or loosen the target)
+  - A spiral and trap check with a step to fix
+  - A target number with the guardrail applied, and a feeder plan if it fits
+  - A schedule for budget and target changes, and a score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each campaign's last 30 days, plus weekly ROAS against target for 12 weeks.
+  - Add your break-even ROAS and the changes you made in the last month.
+  - Apply the changes in the schedule it gives, one campaign at a time.
+  - Wait for each change to settle before judging it.
+
+how_it_works:
+  - title: Counts the conversions
+    text: Under 15 a month the skill keeps you on click bidding and sends you to fix traffic quality first.
+  - title: Picks by stage
+    text: No conversions means Maximize Clicks. 10 to 15 for Search or 15 or more for Shopping means Maximize Conversion Value. 30 or more with steady ROAS allows a Target ROAS.
+  - title: Sets the starting target
+    text: 10 to 15 percent below your current actual ROAS, then small steps up while watching impression share and conversions.
+  - title: Shows the timing views
+    text: Stepped Target ROAS from 30 conversions, or no target for the first 3 months. It says which fits the campaign.
+  - title: Checks spiral and trap
+    text: A target above actual ROAS starves spend. A high target on prospecting turns it into retargeting.
+  - title: Plans the pair
+    text: A feeder pair of a low-target Shopping campaign and a high-target Performance Max, for mid to large accounts.
+  - title: Sets change rules
+    text: Bids move 5 to 10 percent, never above 15, every 5 to 7 days. Budgets move in steps of about 20 percent.
+  - title: Scores the fit
+    text: The share of 30-day spend in campaigns that already match the verdict.
+
+output_shape: |
+  DATA CHECK  <conversions per campaign last 30 days> | <data ok? yes/no>
+
+  CAMPAIGNS
+  <campaign> | <type> | <current strategy> | <30-day spend> | <conversions>
+    verdict <keep | move to <strategy> | loosen the target>
+    target <n> (<how the guardrail was applied>)
+    rule used <stage rule | late-target view> because <reason>
+
+  SPIRAL CHECK  <campaign> | <actual vs target by week> | <spiral? yes/no> | fix <cut the target hard to <n>>
+  TRAP CHECK    <campaign> | <cold or warm?> | <fix>
+  FEEDER PLAN   <fits? yes/no> | <low-target campaign> + <high-target campaign> | judge on <blended backend revenue>
+
+  SCHEDULE  <date> | <campaign> | <bid or budget change, with percent>
+
+  SCORE  <n>/100 (<spend in matching campaigns> / <total spend> = <n>)
+  MISSING: <campaign data | weekly ROAS | break-even>
+
+tweaks:
+  - what: Conversions per campaign
+    how: This sets the stage. Give a 30-day count for each campaign, not the account total.
+  - what: Weekly ROAS history
+    how: 12 weeks of actual against target shows the spiral. A single week can hide it.
+  - what: Your product price spread
+    how: A wide spread, such as a $40 tee and a $200 jumper, is why value bidding is used for most stores.
+  - what: Your recent changes
+    how: Say what you changed and when. A change still settling should not be judged yet.
+
+judge:
+  - Each campaign has a verdict that names its stage and conversion count.
+  - Every target is worked from actual ROAS or break-even, with the sum shown.
+  - A spiral is only called when the weekly numbers show actual ROAS under target.
+  - Where operators disagree, the skill names both rules and says which it applied.
+  - Bid changes stay within 15 percent and spaced 5 to 7 days.
+
+test:
+  - Give it a campaign with under 15 conversions. It should say stay on click bidding.
+  - Give it a campaign whose actual ROAS is below target for several weeks. It should call the spiral and cut the target hard, not a little.
+  - Run it twice on the same data. The verdicts should match.
+  - Apply one change and wait two to four weeks. Check spend, conversions and impression share before the next change.
+
+improve:
+  - Put your break-even ROAS and your usual conversion counts in the skill file.
+  - Add which timing view you prefer for strong campaigns, stepped Target ROAS or a late target, and the skill follows it.
+  - Add campaigns that share a goal, so portfolio bidding can be considered.
+  - Pair it with the Performance Max routine keeper for weekly moves, and the Break-even ROAS and CPA calculator for your floor.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Bid strategy, target and conversion history by campaign and week come from here."}
+    - {name: "Shopify", why: "Backend revenue lets you check blended results for a feeder pair."}
+    - {name: "Any good chat AI", why: "Any current chat AI can read pasted campaign tables."}
+  inputs:
+    - "12 weeks of ROAS by campaign, not just the latest week"
+    - "Your backend revenue and spend, for a blended check"
+    - "A note of any Google screen renames, since labels such as Target CPA and Target ROAS changed in 2026"
+
+terms:
+  - term: Target ROAS
+    meaning: A bid goal for revenue per dollar spent. A target of 2.5 aims for $2.50 back for each $1.
+  - term: Smart bidding
+    meaning: Bid strategies where Google sets the bid for each auction, such as Maximize Conversion Value.
+  - term: ROAS spiral
+    meaning: A target set above actual ROAS cuts spend, which gives less data, which makes results worse.
+  - term: Feeder strategy
+    meaning: Two campaigns where a low-target one gathers cold shoppers and a high-target one converts the warm ones that follow.

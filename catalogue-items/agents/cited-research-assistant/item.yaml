@@ -1,0 +1,24 @@
+slug: cited-research-assistant
+name: "Cited research assistant"
+summary: "Give it a question. Get a report where every claim has a source, or is marked unsourced after three rounds of checking."
+category: agent
+type: agent
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: document}
+  - {type: audit_report}
+uses: [deep-research-reporter, unsupported-claim-spotter, scholarly-database-searcher, study-claim-checker]
+steps:
+  - {uses: deep-research-reporter, note: "Once per topic: the first cross-checked report with its sources. Later rounds: only on the open claims, as a narrow question."}
+  - {uses: unsupported-claim-spotter, note: "Every round: lists each claim in the report that still needs a source, ranked by risk. This is the claim ledger."}
+  - {uses: scholarly-database-searcher, note: "Only when an open claim is a science, health or academic claim: papers and full text to settle it."}
+  - {uses: study-claim-checker, note: "Only when a claim rests on a single study or a study number: the study's flaws and evidence grade, before the claim stays in."}
+asks_before: [paying for a database, report or API access, logging in to a site, publishing or sending the report, citing a source you could not open]
+origin: own
+version: 1.0.0
+example_pending: true

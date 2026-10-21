@@ -1,0 +1,85 @@
+new_slug: cut-a-raw-recording-and-get-chapters-and-short-clips
+name: Cut a raw recording and get chapters and short clips
+summary: Give it a raw recording. Get clean speech, a timed cut list, video chapters and five short clips.
+job: work-with-audio
+thinking: medium
+thinking_why: Each step transforms one file with set rules. A mid-level model is enough.
+headline: Turn a raw recording into a tight cut with chapters and clips
+subhead: Give it a rambling recording. It cleans the sound and writes a timed transcript. Then it lists every pause, filler and retake to cut, writes chapters that YouTube accepts and finds the five best moments to clip.
+explain: |
+  A raw recording hides three jobs. The sound has noise. The talk has pauses, ums and restarts. And the good moments are buried in an hour, so nobody finds them to share. Each job usually means a separate tool and a separate afternoon.
+
+  The first step removes background noise and music and leaves clean speech. The second writes a transcript with timing from that clean file. The transcript then feeds three steps. One makes a cut list with timecodes. One makes a chapter list. One finds the best five short clips, each with a new first line. You apply the cuts in your editor. Nothing is published for you.
+when:
+  - You recorded a talk, podcast, lesson or interview and it needs tightening.
+  - The room was noisy and you need clear speech first.
+  - You want chapters and short clips out of one long recording.
+you_give:
+  - The raw recording, as an audio or video file
+  - An ElevenLabs account and key, for cleaning and transcribing
+  - The length of pause you want cut (optional)
+  - Your channel's tone (optional)
+you_get:
+  - A clean speech file with the noise and music removed
+  - A timed transcript with who spoke, ready for subtitles
+  - A cut list with timecodes for dead air, fillers and retakes, and the time saved
+  - A chapter list that starts at 00:00 and follows YouTube's rules
+  - Five short clips, each with a new first line, on-screen text and a loop point
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Point it at your recording and set up your ElevenLabs key when asked.
+  - Listen to the cleaned file before the rest runs.
+  - Apply the cut list in your editor and publish the chapters and clips yourself.
+how_it_works:
+  - title: Clean the sound
+    text: Sends the recording to a voice isolation tool that removes background noise and music, then checks the voice is not damaged.
+  - title: Write a timed transcript
+    text: Transcribes the clean file, labels who spoke and keeps timing for each word.
+  - title: List the cuts
+    text: Finds gaps longer than the pause you set, filler lines and restarted sentences. Lists each cut with a timecode and the time saved.
+  - title: Write the chapters
+    text: Finds section breaks from pauses and topic shifts, checks the list meets YouTube's rules and retitles each chapter as a short promise.
+  - title: Find the clips
+    text: Picks spans of 20 to 55 seconds that open on a full thought and end on a line. Ranks five and writes a new first line for each.
+output_shape: |-
+  STEP 1: CLEAN AUDIO
+    Clean speech file | notes on any damage
+
+  STEP 2: TIMED TRANSCRIPT
+    Words with timing | speakers | subtitle file
+
+  STEP 3: CUT LIST
+    Dead air, fillers, retakes with timecodes | time saved
+
+  STEP 4: CHAPTERS
+    Chapter list from 00:00 | rule check
+
+  STEP 5: SHORT CLIPS
+    Top five with timecodes | new first line | on-screen text | loop point
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Pause length
+    how: Set the gap that counts as dead air. A shorter gap cuts harder and can sound rushed.
+  - what: Recording type
+    how: Say talk, interview or lesson. Clip picks and chapter titles change with it.
+  - what: Skip the cleaning
+    how: If the sound is already clean, start at step 2 with the original file.
+  - what: Clip length
+    how: Ask for shorter or longer clips if your platform wants them.
+judge:
+  - The cuts leave a breath on both sides, so the edit does not sound gasping.
+  - The time saved is for speech only. Long silent parts of a video are not counted.
+  - The first chapter starts at 00:00 and there are at least three, each at least ten seconds.
+  - Each clip opens on a complete thought and has a new first line.
+  - Nothing is published without you.
+test:
+  - Listen to the cleaned file for pumping or a robotic voice.
+  - Check three cut timecodes against the footage.
+  - Paste the chapters into a private upload and see that they show as chapters.
+improve:
+  - Keep a list of your own fillers and add it to the cut rules.
+  - Review which clips did best and tell step 5 what worked.
+  - Record in a quieter room next time. Cleaning helps but it is not free.

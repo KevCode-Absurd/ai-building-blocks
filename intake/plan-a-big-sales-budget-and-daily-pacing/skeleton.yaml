@@ -1,0 +1,79 @@
+# Workflow skeleton that chains library skills (docs/INTAKE.md). Our words.
+id: plan-a-big-sales-budget-and-daily-pacing
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: plan-a-big-sales-budget-and-daily-pacing
+  name: Plan a big sale's budget, offers and daily pacing
+  summary: Give it your margin, discount depth and last year's sale data. Get a CAC limit, an offer ladder and a pacing sheet.
+  when: you run a Black Friday or other big sale and want it to make money, not just revenue.
+  job: plan-ad-tests
+  level: advanced
+steps:
+  - name: Sale break-even and CAC allowance modeler
+    skill: sale-break-even-and-cac-allowance-modeler
+    job: analysis
+    from: library
+    method:
+      - Recompute margin after the discount
+      - Set break-even ROAS and a separate sale CAC limit
+      - Run the cohort check
+      - Build the table and score it
+    inputs:
+      - product_data
+      - performance_sheet!
+      - question!
+    outputs:
+      - audit_report
+    note: Starts with what the discount leaves, so every later choice stays inside a CAC limit.
+  - pause: Agree the discount depth and the sale CAC limit with whoever signs off the budget.
+  - name: Sale offer ladder planner
+    skill: sale-offer-ladder-planner
+    job: offer
+    from: library
+    method:
+      - State the goal and choose what to discount
+      - Write the offer ladder with backups before the sale
+      - Set a trigger and a stock limit for each rung
+      - Plan a quiet window and a subscriber plan
+    inputs:
+      - product_data
+      - performance_sheet!
+    outputs:
+      - plan
+    note: With the discount and CAC limit agreed, plans the main offer, the backups and when to switch.
+  - name: Sale season pacing sheet builder
+    skill: sale-season-pacing-sheet-builder
+    job: ads
+    from: library
+    method:
+      - Measure the lag between spend and sales
+      - "Build the rules on marginal numbers: scale, hold or cut"
+      - Set pre-sale spend and a base and stretch plan
+      - Treat the budget as a ceiling and lay out the calendar
+    inputs:
+      - performance_sheet
+      - plan!
+    outputs:
+      - spreadsheet
+      - plan
+    note: Reads the offer ladder to set spend by day, with scale, hold and cut rules.
+  - pause: Run the first days of the sale, then export spend, sales, emails and discounts for the week.
+  - name: Weekly store ad pulse checker
+    skill: weekly-store-ad-pulse-checker
+    job: analysis
+    from: library
+    method:
+      - Check the data
+      - Read the numbers in order and add the second numbers
+      - Pick the lever, retention first
+      - Judge spend changes over a week and score the health
+    inputs:
+      - performance_sheet
+      - spreadsheet!
+    outputs:
+      - audit_report
+    note: Reads the week against the pacing sheet to say what to pull or push next.

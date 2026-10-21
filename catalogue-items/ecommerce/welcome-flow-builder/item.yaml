@@ -1,0 +1,28 @@
+slug: welcome-flow-builder
+name: "Welcome flow builder"
+summary: "Give it your offer, best sellers and brand story. Get a welcome flow with timing, filters, email outlines and tests."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "The eight-email welcome order, the filters and exit rule, the 10 and 20 percent buying targets, and the real-deadline rule for discount reminders"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "Treating the welcome flow as a first-72-hours conversion system, and the same-day plain-text note eight hours after email 1"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores (name not given)", used: "Delays between the first emails, and using a code that really expires instead of faking a deadline"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Reminding new subscribers about the offer in every email and the order of the first emails"}
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "The three-text SMS welcome timing on day 1, day 3 and day 5"}
+  - {title: "Secrets of a seven-figure copywriter (copywriting 101 talk)", by: "Jamie, marketing consultant", used: "The welcome series shape, an offer email with three best sellers, and tutorial-style emails"}
+  - {title: "8 Hour Copywriting Course For Beginners", by: "A freelance copywriting YouTuber (name not given)", used: "Welcome and revive sequence logic, with branching on engagement"}
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic", used: "Testing the welcome discount in steps, testing cash back, free shipping as a nudge in email 3, and the 120-day long-gap rule"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford", used: "Judging a flow by revenue per recipient"}

@@ -1,0 +1,80 @@
+new_slug: write-a-post-that-beats-the-pages-ranking-today
+name: Write a post that beats the pages ranking today
+summary: Give it a keyword and the pages that rank. Get a brief, a full post and fixes for its page.
+job: get-found-in-search
+thinking: low
+thinking_why: Each step is a clear, bounded job. A small model can run them. Put your own effort into the edit between steps 2 and 3.
+headline: Write one post built to beat the pages ranking today
+subhead: Give it a keyword and the three to five pages that rank for it. It reads what they cover and miss, writes a brief, writes the full post with the answer first, and checks the published draft for title, headings and markup fixes.
+explain: |
+  Most posts are written from a keyword and a guess. They repeat what every page already says, or miss what searchers came for, so they sit on page three.
+
+  The steps write from what ranks. First it reads each top page, names the search intent with evidence, and lists what every page covers and what none of them do. That becomes a brief with an outline, questions to answer and a meta description. Then it writes the full post from the brief, with the answer first, an FAQ and link slots. You edit it so it is true and sounds like you, and publish it as a draft. Last it checks that live page against your keyword and lists the fixes as critical, important or nice to have.
+when:
+  - You want one post to rank for a search and need to know what it must include.
+  - Your last post went nowhere and you suspect it missed what searchers wanted.
+  - You write for a site or a client and need a repeatable way to start from the search results, not a blank page.
+you_give:
+  - The keyword or question the post should rank for
+  - Three to five links to the pages that rank for it, copied from a search
+  - What your site is and who the post is for
+  - Your facts, examples and any numbers you can share (optional)
+you_get:
+  - A brief with the search intent, a coverage table, gaps to fill and an outline
+  - A full post with the answer first, an FAQ and internal link slots
+  - A title and meta description draft
+  - A ranked list of fixes for the published page, covering title, description, headings, links, images, address and markup
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the keyword and the links to the top pages. If it cannot open them, paste each page's title and headings.
+  - Edit the post before you publish. Add your own facts and cut anything you cannot stand behind.
+  - Publish it as a draft page, give the link back to step 3, and apply the fixes.
+how_it_works:
+  - title: Read what ranks and write the brief
+    text: Records each top page's title, headings, length and format, names the search intent with evidence, and lists the topics every page covers and the gaps none of them fill.
+  - title: Write the post
+    text: Takes the keyword, outline and questions from the brief, opens with the answer, then writes the sections, FAQ and link slots.
+  - title: Edit and publish a draft
+    text: This step is yours. Make the post true and in your voice, add your own facts, and publish it as a draft page.
+  - title: Check the live page
+    text: Confirms the keyword, reads the page as served, scores title, description, headings, body, links, images, address and markup, and ranks the fixes.
+output_shape: |-
+  STEP 1: BRIEF
+    Search intent with evidence | coverage table | gaps | outline | questions | meta description
+
+  STEP 2: POST
+    Answer-first introduction | sections | FAQ | link slots | call to action
+
+  (YOU: EDIT AND PUBLISH A DRAFT PAGE)
+
+  STEP 3: PAGE FIXES
+    Scores across eight areas | fixes ranked critical, important, nice to have
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The pages you give it
+    how: Choose pages that rank on page one for the exact keyword, not the biggest brands. Smaller sites show what a new page can win.
+  - what: Your own proof
+    how: Add real numbers, photos or examples the other pages lack. Gaps filled with your own facts are what beat them.
+  - what: The page type
+    how: Say if it is a guide, a comparison, a service page or a product page. The outline changes with it.
+  - what: Your target keyword for step 3
+    how: Say it again when you give the live link. The tuner will not check a page without one.
+judge:
+  - The brief names the search intent and gives evidence, such as "four of five results are step-by-step guides".
+  - Gaps are tied to something missing from the pages it read, and are marked as judgement, not data.
+  - The post opens with the answer in the first few lines.
+  - Claims in the post come from your facts or a source, not from the model.
+  - Fixes are ranked, and each says what to change and where.
+test:
+  - Check the coverage table against two of the ranking pages by eye. The counts should match.
+  - Read only the first 100 words of the post. Does it answer the question?
+  - Search a section heading from the brief on the ranking pages. It should be a real gap, not a topic they already cover.
+  - After the fixes, look at the page in Search Console in a few weeks and note where it starts.
+improve:
+  - Keep the brief for every post. Reuse the intent and gap lines when you write the next one on the same topic.
+  - Add your house style rules to the writing step so the post needs fewer edits.
+  - Repeat on the next keyword. Link the new post to the first one from the link slots.
+  - Pair it with the SEO change tracker to see if rankings hold.

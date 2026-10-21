@@ -1,0 +1,22 @@
+slug: bundle-tier-layout-planner
+name: "Bundle tier layout planner"
+summary: "Give it your product and costs. Get a 3-tier bundle layout, savings wording and a test plan."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: page_layout_spec}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "11 landing page tricks to get more sales", by: "CRO agency founder", used: "Cutting five bundle options to three, savings in the tier title, compare-at pricing and the middle option test, with their reported results"}
+  - {title: "I studied 1,000 landing pages: what stops them making money", by: "CRO agency founder", used: "Showing the saved amount in money so buyers do not do the maths"}

@@ -1,0 +1,121 @@
+new_slug: creative-portfolio-mix-planner
+name: "Creative portfolio mix planner"
+summary: "Give it your live ads. Get a target mix across sources, stages and formats."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It sorts a list of ads into groups and sets targets, so a mid-size model is enough."
+
+headline: "Creative portfolio mix planner"
+subhead: Give it your list of live ads with their format, source, stage and spend. It shows where your spend is bunched, sets a target mix by source, stage and format, and tells you which formats to add and which to retire. You get 10 to 15 format and angle slots.
+
+explain: |
+  When two or three ads hold nearly all your spend, one tired format can pull the whole account down. A healthier account runs 10 to 15 truly different formats and angles at once, so spend is spread and one fading ad does little harm.
+
+  This skill looks at what you have live and sorts it three ways. By source: AI-made, made by creators, or made in-house. By stage: how much the buyer already knows, from top to bottom of the funnel. And by format. It then sets a target mix and fills the gaps. The sources suggest making new formats for other stages of awareness rather than variants of a winner. The splits are one masterclass's starting mix, so adjust them to what you can make and trust.
+
+when:
+  - Most of your spend sits on two or three ads and you want to spread the risk.
+  - You have only made variants of your best ad and want new kinds of ad.
+  - "You are deciding where to put your team's time: AI, creators or in-house."
+
+you_give:
+  - A list of live ads with format, source, stage and spend
+  - Your team capacity and budget
+  - Brand story assets you can use, such as founder and behind-the-scenes content (optional)
+  - What buyers already know about your problem and product (optional)
+you_get:
+  - A target mix by source, stage and format
+  - Which formats to add and which to retire
+  - 10 to 15 distinct format and angle slots
+  - An ad set layout across stages, and a pain-versus-desire balance
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your live ads as a list or table with format, source, stage and spend.
+  - Say what your team can make and what it costs. Small stores should say so.
+  - Add the story assets you have, such as a founder or behind-the-scenes footage.
+  - Fill the gaps in order, and check again after a month.
+
+how_it_works:
+  - title: Reads the spend spread
+    text: Shows how much spend sits on the top two or three ads. If they hold nearly all of it, one format fading can pull the account down.
+  - title: Counts distinct formats
+    text: Aims for 10 to 15 truly different formats and angles live at once, not variations.
+  - title: Applies the one-third split
+    text: A third of ads from AI for fast, cheap angle tests, a third from creators for volume and authenticity, a third in-house for founder and behind-the-scenes trust.
+  - title: Sets stage balance
+    text: A third each at top, middle and bottom of the funnel, with 70 to 90 percent of assets at the early stages and about 20 percent at product aware and most aware.
+  - title: Balances pain and desire
+    text: Many brands are 90/10 desire. The source moves toward 60/40 and perhaps 70/30 pain-led ads.
+  - title: Sets the production mix
+    text: 50 to 60 percent replicating winners, 20 to 30 percent iterating weak ones, 20 to 30 percent net new concepts.
+  - title: Lays out ad sets
+    text: Puts all stages inside the same ad set so Meta can sequence them.
+  - title: Names adds and retires
+    text: Lists the formats to add, the ones to retire, and the AI use to keep and avoid.
+
+output_shape: |
+  CURRENT SPREAD: top 2-3 ads hold <n>% of spend | distinct formats live: <n>
+
+  TARGET MIX (starting point, adjust to your capacity)
+  Source: AI <n>% | creators <n>% | in-house <n>%
+  Stage: early <n>% | middle <n>% | late <n>%
+  Pain vs desire: <n>/<n>
+  Production: replicate <n>% | iterate <n>% | net new <n>%
+
+  FORMAT AND ANGLE SLOTS (10 to 15)
+  <slot> | source <...> | stage <...> | status <live | add | retire>
+
+  ADD: <formats>   RETIRE: <formats>
+  AD SET LAYOUT: <stages in one set, with names>
+  AI USE: <where to use, where to be careful>
+  CHECKS MISSED: <none, or list>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: Your team and budget
+    how: Say what each source costs and who makes it. If a source cannot be made, adjust the split and the plan says so.
+  - what: Stage labels
+    how: Mark each live ad by how much the buyer knows. Without it, the stage balance is a guess.
+  - what: Creator turnaround
+    how: Say how long creators take. The test cadence may differ if it takes 1 to 4 weeks.
+  - what: Your size
+    how: A small store should start with 3 core concepts. The 10 to 15 slots need enough budget to fill them.
+
+judge:
+  - The current spread is measured, with the share on the top ads.
+  - Each slot is a truly different format or angle, not a variant.
+  - Source, stage and format targets add up to 100 percent each.
+  - The plan says where it differs from the one-third rule and why.
+  - Adds and retires follow from the gaps found.
+
+test:
+  - Check by hand that the top two or three ads hold the share it says.
+  - Check no two slots are the same idea with a new colour or model.
+  - Fill the first three added slots and watch if spend spreads over the next month.
+  - Run it again after a month and compare the spread.
+
+improve:
+  - Add your real production costs by source, so the split is set by cost and not by rule.
+  - Add the stages your products sit in, using your buyer awareness work.
+  - Add your retired formats and why, so they are not added back.
+  - Add any trust rules about AI, such as no AI faces.
+  - Pair it with the ad concept matrix builder and the ad sameness checker.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can sort a pasted list of ads and set targets."}
+    - {name: "Meta Ads Manager", why: "Source of your live ads and spend by ad."}
+  inputs:
+    - "An export of live ads with spend, by ad"
+    - "Your buyer awareness stages"
+    - "Your creator roster and their turnaround"
+    - "Founder and behind-the-scenes assets"
+
+terms:
+  - term: Funnel stage
+    meaning: How much the buyer knows about the problem and about you, from not at all to ready to buy.
+  - term: Format
+    meaning: The shape of the ad, such as a talking head, a demo, a list or a text-on-screen image.
+  - term: Partnership ad
+    meaning: An ad that runs through another account's handle, with that account's agreement.

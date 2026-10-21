@@ -1,0 +1,21 @@
+slug: find-what-is-slow-fix-it-and-show-the-numbers
+name: "Find what is slow, fix it and show the numbers"
+summary: "Give it what feels slow. Get the cause ranked by cost, a fix, and before and after timings in a pull request."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: codebase, required: true}
+outputs:
+  - {type: document}
+uses: [measure-first-slowdown-finder, slow-code-fixer, pull-request-writer]
+steps:
+  - {uses: measure-first-slowdown-finder, note: "Names the slowest stage and ranks what to fix, so the fix goes where the time is."}
+  - {uses: slow-code-fixer, note: "Fixes the stage the ranking named, with a before and after number."}
+  - {uses: pull-request-writer, note: "Describes the speed fix with its before and after timings."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/slow-code-fix/skeleton.yaml

@@ -1,0 +1,88 @@
+id: make-every-touchpoint-say-the-same-thing
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: make-every-touchpoint-say-the-same-thing
+  name: Make every touchpoint say the same thing
+  summary: Give it your store link and reviews. Get a ranked list of where your touchpoints disagree and a brand guide.
+  when: your site, emails and packaging feel like different companies and new writers keep sounding off-brand.
+  job: brand-file
+  level: intermediate
+steps:
+  - name: Website brand brain builder
+    skill: website-brand-brain-builder
+    job: brand
+    from: library
+    method:
+      - Read the site
+      - Tag every fact
+      - One check-in
+      - Map the market
+      - Cross-check
+      - Write the diagnosis
+      - Check the result before you hand it on
+    inputs:
+      - web_page
+      - voc_reviews!
+      - performance_sheet!
+      - product_data!
+    outputs:
+      - brand_brain
+    note: Reads your store and reviews into one brand file.
+  - name: Store brand signal auditor
+    skill: store-brand-signal-auditor
+    job: brand
+    from: library
+    method:
+      - Scan each asset for three seconds
+      - Check price fit
+      - Switch test
+      - List every touchpoint
+      - Check the moments of truth
+      - Score it
+      - Confirm the ranked list before acting
+    inputs:
+      - store_capture
+      - copy_draft!
+      - brand_brain!
+    outputs:
+      - audit_report
+    note: Scores and ranks where homepage, pack and emails drift from the brand file. Reads the brand file from the step before.
+  - name: Brand voice editor
+    skill: brand-voice-editor
+    job: copy
+    from: library
+    method:
+      - Read the voice rules
+      - Check each line
+      - Leave these alone
+      - Rewrite the weak lines
+      - Keep the order of priority
+      - Score it
+    inputs:
+      - script!
+      - ad_copy!
+      - brand_brain
+    outputs:
+      - audit_report
+    note: Checks sample copy against the voice and rewrites the weak lines. Reads the brand file from the first step.
+  - name: Brand guide builder
+    skill: brand-guide-builder
+    job: brand
+    from: library
+    method:
+      - Check the minimum
+      - Check every colour pair you plan to show
+      - Quick sheet
+      - Type
+      - Voice
+      - Build `brand-tokens.md`
+      - Hand over
+    inputs:
+      - brand_brain
+    outputs:
+      - brand_guide
+    note: Packages the voice, look and do and don't into a guide for new writers. Reads the brand file from the first step.

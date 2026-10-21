@@ -1,6 +1,6 @@
 # Write and tell stories: AI Blocks
 
-> 89 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 91 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-written text detector](https://useaiblocks.com/skills/ai-written-text-detector): Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it.
 - [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer): Point it at your app's code history. Get plain "What's New" notes users can read, based on real changes.
@@ -43,6 +43,7 @@
 - [Interview transcript trimmer](https://useaiblocks.com/skills/interview-transcript-trimmer): Paste a long interview transcript. Get it cut in passes to the few truly interesting passages, with the order to use them.
 - [Invented society planner](https://useaiblocks.com/skills/invented-society-planner): Paste your world idea. Get a working society: food, homes, quarrels, customs and one strange rule, all fitted together.
 - [Layered draft writer](https://useaiblocks.com/skills/layered-draft-writer): Paste your two-audience brief. Get a draft with a plain surface anyone enjoys and marked touches only experts catch.
+- [Long-form draft editor](https://useaiblocks.com/agents/long-form-draft-editor): Give it a finished draft. Get it checked, edited and checked again until it passes, with every change logged.
 - [Long-form piece structurer](https://useaiblocks.com/skills/long-form-piece-structurer): Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
 - [Make a daily writing habit that lasts](https://useaiblocks.com/workflows/daily-writing-habit): Tell it your hours. Get a daily word count, a reading plan, a restart rule and a weekly check on your log.
 - [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer): Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist.
@@ -88,6 +89,7 @@
 - [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker): Paste your world notes and drafts. Get every clash between details, a fix for each and a score.
 - [Write a first draft fast with the door closed](https://useaiblocks.com/workflows/fast-first-draft): Tell it your idea. Get a what-if situation, a daily word plan, scene details and a first draft written without an outline.
 - [Write something experts admire and newcomers enjoy](https://useaiblocks.com/workflows/expert-and-newcomer-writing): Give it what you are making and who it is for. Get a trimmed draft that works for both experts and newcomers.
+- [Write your founder story and cut it to what moves](https://useaiblocks.com/workflows/write-your-founder-story-and-cut-it-to-what-moves): Give it the true facts of how you started. Get a shaped, trimmed story in plain words.
 - [Writer's reading plan builder](https://useaiblocks.com/skills/writers-reading-plan-builder): Tell it your free minutes and goal. Get a weekly reading schedule with the sums and a book mix that teaches.
 - [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer): Paste your plan and your daily log. Get days hit, pace, finish date, a score out of 100 and one change.
 - [YouTube script writer](https://useaiblocks.com/skills/youtube-script-writer): Give it a video idea. Get scored hook options and a full spoken script with what shows on screen.

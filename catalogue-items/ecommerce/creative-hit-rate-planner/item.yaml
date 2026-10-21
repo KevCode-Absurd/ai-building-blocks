@@ -1,0 +1,22 @@
+slug: creative-hit-rate-planner
+name: "Creative hit rate planner"
+summary: "Paste a prospecting ad export. Get your hit rate, concepts above your profit line and what to iterate."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: ad_breakdowns, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The ONLY 2 Ad Creative Formats You Need to Scale Facebook Ads", by: "Agency owner (says $500M managed)", used: "The creative hit rate formula, the 5 in 100 example, why volume only works when quality holds, and the warning about low-quality traffic mis-training delivery"}
+  - {title: "The Best Facebook Ad Creative Strategy for 2026", by: "Agency owner (same as the AI creative video)", used: "Reading a prospecting campaign with incremental attribution, sorting by spend, the return line, leaving near-line ads alone and running every concept that clears the line"}
+  - {title: "The Best AI Ad Creative Strategy for 2026", by: "Agency owner (DTC ad community lead)", used: "An iteration is a real swing, not a one-word change"}

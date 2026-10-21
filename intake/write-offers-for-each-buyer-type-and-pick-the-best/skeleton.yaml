@@ -1,0 +1,45 @@
+# Workflow skeleton: chains library skills (docs/INTAKE.md). Our words.
+id: write-offers-for-each-buyer-type-and-pick-the-best
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+minds: []
+workflow:
+  slug: write-offers-for-each-buyer-type-and-pick-the-best
+  name: "Write offers for each buyer type and pick the best"
+  summary: "Give it one product and its reviews. Get an offer per buyer type, a profit check and a test plan."
+  when: "one product sells to more than one kind of buyer and you want to know which offer earns the most."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: "Hero product repositioner"
+    skill: hero-product-repositioner
+    job: offer
+    from: "skill: hero-product-repositioner"
+    method: ["List the angles buyers already use from review language", "Keep the four to six with real support", "Build one offer around each angle without changing the product", "List every claim to check"]
+    inputs: [product_data, voc_reviews, brand_brain!]
+    outputs: [angle_library, offer]
+    note: "Starts the chain: one angle and one offer per buyer type."
+  - name: "Offer checklist reviewer"
+    skill: offer-checklist-reviewer
+    job: strategy
+    from: "skill: offer-checklist-reviewer"
+    method: ["Write the offer in one line and check it sells one thing", "Check the reason for any deal and the guarantee", "Look for a deluxe version and compare discount framing", "Score it and pick the three changes worth testing"]
+    inputs: [angle_library, offer, product_data!]
+    outputs: [offer, plan]
+    note: "Reads the angles and offers from the step before and returns a stronger offer with its three best changes."
+  - name: "Offer profit-per-session checker"
+    skill: offer-profit-per-session-checker
+    job: offer
+    from: "skill: offer-profit-per-session-checker"
+    method: ["Round every cost up", "Build a table per offer with price, costs, gifts and discount", "Work out profit per visitor for each", "Flag offers where order value rises but profit falls", "Pick the winner and say how safe the call is"]
+    inputs: [offer, product_data, performance_sheet]
+    outputs: [audit_report]
+    note: "Checks the revised offers from the step before against your costs and visit numbers."
+  - pause: "Run each offer on its own page for the same dates and traffic. Then export visits and orders for each one."
+  - name: "Offer test planner"
+    skill: offer-test-planner
+    job: offer
+    from: "skill: offer-test-planner"
+    method: ["Give each offer its own page and keep one control", "Split new and returning buyers", "Check there are enough visits per test", "Set a read-out table and a rule for moving spend"]
+    inputs: [offer, voc_reviews!, performance_sheet!]
+    outputs: [plan]
+    note: "Turns the winning offers into a funded test with a control and a spend rule."

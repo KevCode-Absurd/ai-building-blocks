@@ -1,0 +1,21 @@
+slug: youtube-readiness-checker
+name: "YouTube readiness checker"
+summary: "Tell it your AOV, ad stack and Meta winners. Get a yes or wait on YouTube, with a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: video_ads, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "Agency co-founder who runs Google and YouTube ads for DTC brands (name not given)", used: "Fit and timing checks, Demand Gen setup, audiences to test, creative rules, retargeting and the bidding path"}
+  - {title: "Ecommerce Google Ads Free Course (4+ Hours) | Google & Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given in the video)", used: "The budget split for Meta-heavy brands, what to skip, the page order and the reporting rule that cold traffic is not branded conversions"}

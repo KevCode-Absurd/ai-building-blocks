@@ -1,0 +1,124 @@
+new_slug: winning-product-scorer
+name: "Winning product scorer"
+summary: "Give it a product idea and its costs. Get a score out of 100 and a verdict."
+job: find-products
+thinking: medium
+thinking_why: "It applies a fixed rule list and checks sums, so a mid-size model is enough."
+
+headline: "Winning product scorer"
+subhead: Give it a product idea, what it costs you landed and the price you plan. It works out your margin, marks 11 rules pass, warn or fail, and hands back a score out of 100, a verdict and the one thing to fix first.
+
+explain: |
+  Most failed product tests were doomed before the first ad ran. The margin was too thin to pay for ads, the product solved nothing, or it was too heavy to ship cheaply. Finding that out after you have paid for stock and ads is the expensive way.
+
+  This skill checks the idea first. It works out the price-to-cost multiple and the gross profit per unit, then marks 11 rules from creator videos and a Shopify guide: price band, problem, shop availability, content, shipping, rules and permits, repeat buying, SKU count and test cash. The score shows how well the idea fits the rules. A pass means the idea is worth a small test. It never means the product will sell.
+
+when:
+  - You found a product on TikTok, an ad spy tool or a supplier site and want a quick yes or no before you spend.
+  - You have three ideas and want to rank them on the same rules.
+  - A product has thin margin and you want to know the price or bundle that would fix it.
+
+you_give:
+  - The product, or a link, and the problem it solves in your buyer's words
+  - Landed cost per unit (product plus shipping) and the price you plan
+  - Size, weight, material and shelf life (optional)
+  - Whether local shops sell it (optional)
+  - Links to videos or ads that show it, and your cash for tests (optional)
+you_get:
+  - The margin sums, with the multiple and the gross profit per unit
+  - Each of the 11 rules marked pass, warn or fail, with the points
+  - A score out of 100 with the sum shown, and a verdict of go, test small or drop
+  - The one thing to fix first, and a one-line record for your shortlist
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the product, your landed cost, your price and the problem it fixes. Say which currency.
+  - Add size, weight, shop availability and video links if you have them. Each one removes a gap.
+  - Read the margin sums first. If a margin rule fails, fix the price or the cost before anything else.
+  - Run the 2 to 3 day test only on a go. Paste the shortlist line into your sheet.
+
+how_it_works:
+  - title: Works out the margin
+    text: Price divided by landed cost must be 3 or more, and gross profit per unit must be at least $30. It shows both sums and the most you can spend on ads per sale.
+  - title: Marks 11 rules
+    text: Each rule is pass, warn or fail with points. Price band, problem, shops, content, shipping, rules, repeat buying, SKUs and test cash.
+  - title: Lets strong proof bend soft rules
+    text: With high recent revenue or fresh videos, one soft rule can bend. The margin rules and the problem rule never do.
+  - title: Scores and decides
+    text: It adds the points to a score out of 100. Go needs 75 and no failed margin, problem or shipping rule.
+  - title: Names the first fix
+    text: It picks the change that wins back the most points, with the number to reach.
+
+output_shape: |
+  PRODUCT <name>  <evergreen | trend | seasonal>
+
+  MARGIN SUMS
+  Price <p> / landed cost <c> = <x> times (rule: 3.0 or more)
+  Gross profit <p - c> per unit (rule: $30 or more)
+  Break-even ad cost per sale: <gross profit>
+
+  RULES
+  R1 <pass/warn/fail> <points>/15  <why>
+  (one line per rule, R1 to R11)
+
+  SCORE  <n>/100 (R1 <a> + R2 <b> + ... = <n>)
+  VERDICT  <GO | TEST SMALL | DROP>
+  FIX FIRST  <one change and the number to reach>
+  BENT RULES  <rule and proof | none>
+
+  SHORTLIST LINE
+  <product> | cost | price | profit | problem | score | verdict
+
+  CHECKS MISSED: <rule and what is needed | none>
+  MISSING: <what>
+
+tweaks:
+  - what: Your real landed cost
+    how: Include shipping to the customer, not only the supplier price. The two margin rules use landed cost, so a cost left out makes every pass look better than it is.
+  - what: Your currency and ad costs
+    how: The $30 floor and the $50 to $150 band are US-dollar levels from 2025 and 2026 videos. Tell the skill your market and your usual cost per sale, and scale the floors to match.
+  - what: Evergreen or trend
+    how: Say which it is. A trend product with a 2 to 4 week life gets a small test budget and no brand build. An evergreen product needs more ad testing.
+  - what: Proof you want to lean on
+    how: Paste the revenue or fresh video links that make you want to bend a rule. The skill states the proof next to the bent rule so you can see what you leaned on.
+
+judge:
+  - The multiple and the gross profit match a quick sum on your own calculator.
+  - Every rule shows a mark, points and a one-line reason.
+  - The points add up to the score shown.
+  - A product with a failed margin rule, no clear problem or a failed shipping rule is not a go.
+  - The verdict says "worth a small test" and promises no sales.
+
+test:
+  - Score a product you already sold. Compare the verdict with what really happened, and note which rule would have warned you.
+  - Score a product you know has thin margin, such as a $9 item. It should fail R1, R2 or R3 and say drop.
+  - Run the same product twice. The score should match. If it moves, one of your inputs was vague.
+  - Score three ideas and rank them. Check that your gut favourite is not the only one that passes.
+
+improve:
+  - Change the $30 gross profit floor and the 3 times multiple in the skill file to match your own ad costs and fees.
+  - Add rules your store cannot break, such as a maximum shipping time or a banned product type, as extra lines with their own points.
+  - Add your supplier's real shipping costs by weight, so the landed cost is worked out the same way each time.
+  - Save each shortlist line into one sheet, then read the passes next to your test results to see which rules mattered.
+  - Pair it with the competitor saturation checker and the revenue estimator, so the score is backed by rival checks.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the sums and the rule marks. Paste your costs and links."}
+    - {name: "Meta Ad Library", why: "Free. Use it to find videos or ads for the content rule and to see if rivals run the product."}
+    - {name: "Google Trends", why: "Free. Check the search line for the exact product to see if it is a trend or evergreen."}
+  inputs:
+    - "Your supplier quote with shipping, so the landed cost is exact"
+    - "Your earlier cost per sale, so the skill can show the gap to break-even"
+    - "A rival's price and bundle, so the price band check uses real market prices"
+    - "Your rules and permit notes for your country, for food, cosmetics, supplements or baby products"
+
+terms:
+  - term: Landed cost
+    meaning: What one unit costs you by the time it reaches the customer, product plus shipping.
+  - term: Gross profit
+    meaning: The price minus the landed cost. It is before returns, payment fees and refunds.
+  - term: SKU
+    meaning: One version of a product, such as one size or one colour.
+  - term: Evergreen
+    meaning: A product that sells all year and can support a brand for years.

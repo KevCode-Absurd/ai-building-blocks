@@ -1,0 +1,95 @@
+new_slug: process-doc-freshness-keeper
+name: Process doc freshness keeper
+summary: Give it your process docs each month. Get stale or ownerless ones found, rewrite drafts checked and a fix list to approve.
+job: document-work
+thinking: medium
+thinking_why: It checks many docs, ranks them and re-checks its own drafts up to two times. A mid-size model works. Use a stronger one for long runbooks.
+headline: Process doc freshness keeper
+subhead: Give it your SOPs and runbooks once a month. It finds the ones with no owner, an old review date or vague steps, drafts rewrites for the worst five, re-checks each draft, and hands you a fix list to approve.
+explain: |
+  Process docs go stale without anyone noticing. The person who wrote the doc left, a tool changed, and a new hire follows steps that no longer work. Nobody reviews the folder because nobody owns the folder.
+
+  This agent keeps a register of your processes with an owner and a review date for each. Every month it checks the docs, ranks the worst, and drafts rewrites for the top five. It checks each draft against the same checks, fixes what fails, and tries up to twice more before it hands the draft to the owner. It cannot know if a process really changed, so every draft is marked for the owner to confirm. It replaces, archives and publishes nothing. For docs about pay, leave, safety or legal matters, check with a qualified person.
+when:
+  - Your team has SOPs or runbooks that nobody has reviewed in a year.
+  - New hires keep asking questions the docs should answer.
+  - You want a short, ranked fix list each month, not a long audit.
+you_give:
+  - An export or folder of your process docs, SOPs or runbooks
+  - A short description of the business, the first time, so it can build the register
+  - What changed since last month, such as new tools, new rules or people who left (optional)
+you_get:
+  - A register of your processes, with an owner and a review date for each
+  - The top five docs to fix this month, with the problem in each
+  - Rewrite drafts, each re-checked, marked for the owner to confirm
+  - A list of docs that need an owner, or that may no longer be needed
+  - A comparison with last month
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents.
+  - Put your docs in one folder, or paste them in. The first time, add a short note about your business.
+  - Read the fix list. Ask each owner to confirm the drafts that touch their work.
+  - Say yes to any one named action you want the agent to take, such as saving a draft. Replacing or archiving stays with you.
+  - Run it on the first working day of next month. It reads last month's report.
+how_it_works:
+  - title: Get the register
+    text: Builds a list of the processes you run, who owns each and how often to review, once, then reuses it.
+  - title: Check the docs
+    text: Finds docs with no owner, an old review date, vague steps, no way to undo, or no links in. Marks each finding new, open or fixed.
+  - title: Rank and pick five
+    text: Puts risky and often-used processes first and keeps the top five for the month.
+  - title: Choose the path for each
+    text: A missing owner gets a question. A short task gets exact steps. A longer process gets owners and edge cases. A rule about people, money or safety goes to a qualified person.
+  - title: Loop until the draft passes
+    text: Re-checks each draft, fixes only what fails, and stops after two rounds. A draft that still fails goes to its owner as is.
+  - title: Hand back a fix list
+    text: Lists the five fixes, questions for owners and any docs to archive. You approve before anything changes.
+output_shape: |-
+  THIS MONTH
+    Docs checked <n> | failed <n> | new problems <n> | fixed since last month <n>
+
+  FIX LIST FOR APPROVAL (most important first)
+    1. <doc> | problem: <what> | path: <rewrite | owner needed | flag> | draft: <file> | check: <pass | needs the owner, rounds used>
+
+  QUESTIONS FOR OWNERS
+    <doc> | <name needed | confirm steps are still true | qualified person to look>
+
+  PROPOSED ARCHIVES
+    <doc> | reason: <process no longer runs>
+
+  LEFT FOR LATER
+    <docs not in the top five>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: How many docs per month
+    how: Five is the starting point. Fewer for a small team that reviews slowly, more if you have time to confirm drafts.
+  - what: How old counts as stale
+    how: The check uses twelve months. For fast-changing work such as software or a store, tell it to use six.
+  - what: Which processes matter most
+    how: Name the three that cost you most when they go wrong. They go to the top of the ranking.
+  - what: Your country and industry
+    how: Say where you work. Docs on pay, leave, safety or records may need a qualified person's check.
+judge:
+  - Each draft was re-checked and the result is shown, with the rounds used.
+  - No draft states a step, tool or name that was not in the doc or from the owner.
+  - Docs about pay, leave, safety or legal matters were flagged, not rewritten alone.
+  - Nothing was replaced, archived or published without your yes.
+  - Last month's findings are marked new, open or fixed.
+test:
+  - Run it on a folder where you know two docs are out of date. Check that both land in the top five.
+  - Give it a doc with a step you know is wrong. The draft should mark that step to confirm and not invent a fix.
+  - Run it twice on the same folder. The ranking should match.
+improve:
+  - Fill in the owner and review date for every doc in the register, and the next run gets shorter.
+  - After you confirm a draft, save it as the new doc and tell the agent, so next month shows it as fixed.
+  - Add the questions new hires ask most. Docs that answer them move up the ranking.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read a whole folder of docs, keep the register and report, and run on a monthly timer.
+    - name: Notion
+      why: Export your SOP pages as Markdown. Publishing the rewrites stays with you.
+  inputs:
+    - A list of the five processes that hurt most when they go wrong
+    - The names of the people who actually do each process

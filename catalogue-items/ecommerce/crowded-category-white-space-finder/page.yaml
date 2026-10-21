@@ -1,0 +1,126 @@
+new_slug: crowded-category-white-space-finder
+name: "Crowded category white space finder"
+summary: "Name a crowded category and its leaders. Get the gaps in price, reach, taste or buyer."
+job: find-products
+thinking: high
+thinking_why: "It weighs many gaps against real prices and reviews and must avoid inventing any, so a stronger model helps."
+
+headline: "Crowded category white space finder"
+subhead: Name a category that is already crowded and its top three to five brands, with their prices, where they sell and what reviews complain about. It finds the gaps in price, reach, taste and buyer. You get ranked gaps, a one-line position for each and a short test.
+
+explain: |
+  Entering a crowded category can be smart. Buyers already know what the product is, so you pay to say why yours is better, not to explain what it is. The hard part is finding a gap that is real, and changing only as much as buyers will accept.
+
+  This skill compares the leaders on price, where they sell, taste or quality and who they ignore. It also checks if the category looks the same everywhere, and whether a wider shift in how people live has not reached it. It adds a one-change rule: change one big thing, not three. The output is a ranked gap list, a one-line position for each, the first proof you need and a short test. It uses real review and price data you give it, and it will not make up a gap.
+
+when:
+  - You want to start a product line in a big category and need a point of difference.
+  - Your category looks the same everywhere, with the same packs, claims and colors.
+  - You have a product idea and want to know which single change would matter most to buyers.
+
+you_give:
+  - Your category and the top three to five brands in it
+  - Their prices, where they sell and the common complaints in their reviews
+  - Your strengths, such as price, distribution, taste or brand (optional)
+  - Photos or lists of the top ten products (optional)
+  - Who buys and where they buy (optional)
+you_get:
+  - A list of gaps, ranked by how much money you could win
+  - A one-line position for each gap
+  - The first proof you need for the top gap
+  - A sea-of-sameness report, shifts the category has missed, and ideas borrowed from far away
+  - A one-change product idea and a short test plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the category and the top brands, with price, where each sells and review complaints. Add photos of the top products if you can.
+  - Say what you are good at, such as price or reach. A small store needs a smaller version of any big gap.
+  - Read the ranked gaps and the proof needed for the top one. Check the facts yourself.
+  - Run the short test before you order stock.
+
+how_it_works:
+  - title: Checks the category is worth it
+    text: Prefers a big category that buyers already understand and that is growing or stale. It skips a falling category and checks a category page already exists on Amazon.
+  - title: Compares the leaders
+    text: Lines up price, where each sells, taste or quality and which buyer each ignores. Gaps come only from the data you gave.
+  - title: Checks for sameness
+    text: Looks for a category where every rival looks the same, or where it is over-serious or over-complicated, which can hide an insecurity buyers have.
+  - title: Finds a missed shift
+    text: Looks for a change in how people live that the category has not caught up with. The gap lies between that shift and the category.
+  - title: Borrows from far away
+    text: Takes an idea from a distant field, because the further apart two ideas are, the stronger the mix can be.
+  - title: Applies the one-change rule
+    text: Picks one big change. Two or three at once make the product too new, and buyers drop it.
+  - title: Ranks, positions and tests
+    text: Ranks the gaps, writes a one-line position for each, names the first proof and sets a short test.
+
+output_shape: |
+  CATEGORY CHECK
+  big and understood: <yes/no, evidence>
+  growing or stale, not falling: <...>
+  category page exists on Amazon: <yes/no/not checked>
+
+  GAPS (ranked by how much money you could win)
+  1. <gap: price | reach | taste | buyer | other> | evidence: <...>
+     position: <one line>
+     first proof needed: <...>
+  2. ...
+
+  SAMENESS REPORT: <what every rival copies>
+  MISSED SHIFTS (2 or 3): <...>
+  IDEAS FROM FAR AWAY: <idea, and where it comes from>
+
+  ONE-CHANGE IDEA
+  change: <the one thing>   keep: <everything else>
+  benefit on the pack: <benefit, not ingredient>
+
+  SHORT TEST: <steps, who sees it, what result moves you on>
+  MISSING: <prices | reviews | brands | where they sell>
+
+tweaks:
+  - what: The data you paste
+    how: Real prices, real review complaints and real places of sale. The gaps are only as good as these.
+  - what: Your strengths
+    how: Say if you can win on price, reach, taste or brand. It ranks gaps you can actually reach higher.
+  - what: Your cash
+    how: Say what you can fund. The talk behind this skill came from a team with retail access and a creator machine, so a small store gets a smaller version of the gap.
+  - what: Who really pays
+    how: Say who buys. The household shopper often buys for the family, so a product made for her can also reach the other buyers at home.
+
+judge:
+  - Each gap is backed by a price, place of sale, review or other fact you gave it.
+  - The one-change idea changes exactly one big thing.
+  - The benefit on the pack is a benefit, not an ingredient.
+  - It says which gaps need money or retail access you may not have.
+  - Nothing is invented. Missing data is marked.
+
+test:
+  - Run it on a category you know well. Check that it finds the gaps you already see, and not a gap that does not exist.
+  - Give it only two brands instead of five. The gaps should get fewer or less certain, not stay the same.
+  - Run it twice. The top gap should be the same both times.
+  - Show the one-change idea to a few people who buy in the category. Ask what they would pick instead of A or B, then change the idea from what they say.
+
+improve:
+  - Add your real strengths and limits to the skill file, such as cash, supplier terms or retail access, so it ranks reachable gaps first.
+  - Add any category you will never enter, such as one with strict rules, so it skips it.
+  - Add your own sameness examples from your shelf or feed so it learns what to look for.
+  - Pair it with a category name writer for the name, and with a review reader for the complaints.
+  - Save the chosen gap and position in your brand file.
+
+works_best_with:
+  tools:
+    - {name: "Amazon best-seller lists", why: "Free. Show if a category page exists and how it is growing."}
+    - {name: "Google Trends", why: "Free. Shows if the category is rising, steady or falling over years."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the comparison if you paste the data in."}
+  inputs:
+    - "Photos of the top ten products on one shelf or one search page"
+    - "The one-star and three-star reviews of each leader"
+    - "A note on where each leader sells and at what price"
+
+terms:
+  - term: White space
+    meaning: A part of a market that rivals do not serve well.
+  - term: Sea of sameness
+    meaning: A category where every product looks and sounds the same.
+  - term: Position
+    meaning: The one-line reason a buyer should pick you over the others.

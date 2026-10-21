@@ -1,0 +1,121 @@
+new_slug: untapped-buyer-finder
+name: "Untapped buyer finder"
+summary: "Give it a crowded product. Get the buyer groups nobody targets, ranked, with a test for each."
+job: find-products
+thinking: medium
+thinking_why: "It compares what rivals show with who could buy, so it needs some judgment, but the steps are clear."
+
+headline: "Untapped buyer finder"
+subhead: Give it a product that many stores already sell, plus what rivals show in their ads. It maps who they sell to and who they miss. You get three to five buyer groups nobody targets, each with the problem it has and a small test plan.
+
+explain: |
+  A crowded product is not a bad sign. It proves people want it. The gap is usually who you sell to, not what you sell. If every rival shows young, fit buyers, nobody is talking to older buyers, or to people who just want it to work for them.
+
+  This skill looks at what rivals show: who is in their ads and clips, and what problem each ad names. It lists the groups that appear a lot and the groups that are missing. A group with very few ads is open ground. Then it ranks the missing groups, checks each one against the rival search so it doesn't invent a gap, and writes a hook, a creative and a landing page line to test each. It tests a few groups at a time, so your budget isn't spread thin.
+
+when:
+  - Your product has strong rivals and your ads sound like theirs.
+  - You sell one product that could help several kinds of people, and you don't know which to lead with.
+  - You want a new angle for a store that is flat, without changing the product.
+
+you_give:
+  - Your product and what it does
+  - Rival ads or short video clips (who they show, what they promise)
+  - Your budget for tests (optional)
+  - Anything you know about your current buyers (optional)
+you_get:
+  - A map of who rivals target and who they miss
+  - Three to five untapped buyer groups, each with the problem it has
+  - "One test plan per group: a hook, a creative idea and a landing page line"
+  - A note on which groups to test first for your budget
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your product in a few lines. Say what it does and who buys it today.
+  - Search the product on TikTok and in the Meta Ad Library. Paste or attach what rivals show. Note who is in each ad and what it promises.
+  - Read the map and the ranked groups. Check the ones you like by searching them yourself.
+  - Pick up to three groups for a first test, or fewer if your budget is small. Run one ad per group and see which one takes off.
+
+how_it_works:
+  - title: Reads the rival ads
+    text: Lists who each rival shows, such as age, body type, job or hobby, and what problem the ad promises to fix.
+  - title: Maps who is missing
+    text: Counts how often each group appears. A group that shows up in only about 10% of ads is a possible open space. That figure is one creator's rule of thumb.
+  - title: Generates ten groups
+    text: Lists ten possible buyer groups for your product, beyond the ones rivals already show.
+  - title: Checks each against rivals
+    text: Searches each group in the rival results. Any group that rivals already serve well is dropped, so no gap is made up.
+  - title: Ranks the survivors
+    text: Orders the groups by how clear the problem is, how big the group looks from search volume, and how few ads aim at it.
+  - title: Writes one test per group
+    text: Gives a hook, a creative idea and a landing page line for each group, with a different person and different proof from any rival ad.
+  - title: Caps the test
+    text: Suggests at most three groups on a small budget, because spend multiplies with each group.
+
+output_shape: |
+  WHO RIVALS TARGET
+  <group> | seen in <n of n ads> | problem they name: <...>
+
+  WHO THEY MISS (checked against the rival search)
+  1. <group> | problem: <...> | size signal: <search volume or note>
+  2. <group> | ...
+  (3 to 5 groups; each checked, with the evidence)
+
+  TEST PLAN (one per group)
+  <group>
+    hook: <first line or first three seconds>
+    creative: <what the ad shows; a different person and proof from any rival>
+    landing line: <the line on the page that names their problem>
+    kill rule: <what result ends this test>
+
+  START WITH: <up to 3 groups, with the budget reason>
+  NOT CHECKED: <anything you could not see, such as a missing search>
+  MISSING: <rival ads | product facts | budget>
+
+tweaks:
+  - what: Real rival ads
+    how: Paste what you actually saw in the Ad Library and on TikTok, with the count. The map is only as honest as the sample you give it.
+  - what: Your budget
+    how: Say how much you can spend per group. On a small budget it keeps the test to three groups or fewer.
+  - what: One product, several uses
+    how: Name every real use you know. A product with only one use or one user may have no second group worth testing.
+  - what: Group size
+    how: Add search volume for each group if you have it. A very small group may be easy to win and still cap your sales.
+
+judge:
+  - Every missing group has a reason it is missing, tied to what rivals showed, not a guess.
+  - No group is kept that a rival already serves well.
+  - Each test plan names a hook, a creative idea and a landing line.
+  - The creative idea changes the person and the proof, so it doesn't copy a rival ad.
+  - The number of groups to test fits your budget.
+
+test:
+  - Run it on a product you already sell and know well. Check that at least one group it finds is one you have wondered about, and one it drops is one you know is crowded.
+  - Search two of its missing groups yourself in the Ad Library. If you find strong ads for them, the check step was too loose.
+  - Run it twice with the same rival ads. The ranking may shift a little, but the top two groups should mostly match.
+  - Run one ad per group on a small budget for a few days and compare your own results with its ranking.
+
+improve:
+  - Add the groups you have already tried to the skill file, so it never suggests them again.
+  - Add your real customer groups from your orders or reviews, so the map starts from facts.
+  - Change the "about 10% of ads" line if your own searches show a different cut-off for open ground.
+  - Pair it with the white space finder for the product itself, and with a review reader for the words each group uses.
+  - Save the winning group and its hook in your brand file for later ads.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ad Library", why: "Free. Shows which rivals run ads and who those ads speak to."}
+    - {name: "TikTok search", why: "Shows the clips rivals post and who appears in them."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the steps if you paste the rival ads in."}
+  inputs:
+    - "A count of how many rival ads you reviewed, so the map says how big the sample was"
+    - "Search volume for each buyer group from a free keyword tool"
+    - "Your reviews, so real buyer groups are named from facts"
+
+terms:
+  - term: Buyer group
+    meaning: A set of people who share one problem or one reason to buy, such as parents of soccer players.
+  - term: Blue ocean
+    meaning: A buyer group or market where few rivals compete.
+  - term: Ad Library
+    meaning: Meta's free public list of ads that are running now.

@@ -1,0 +1,104 @@
+new_slug: pre-launch-store-checker
+name: Pre-launch store checker
+summary: Tell it your store setup. It checks go-live, re-checks after each fix, and stops at a clear go or a no-go.
+job: set-up-store
+thinking: medium
+thinking_why: It runs the same check up to four times and routes each problem to the right skill. A mid-level model is enough.
+headline: Pre-launch store checker
+subhead: Tell it how your store is set up. It checks if you can take real orders, sends each problem to the right check, waits while you fix things, and checks again. It stops at a clear go, or after four rounds.
+explain: |
+  Launching a store means a long list of small things that each can stop a sale: a payout hold, a missing policy, a shipping rate that is wrong, a tax setting, a password left on. People fix a few, hope, and find out about the rest when the first customer cannot pay.
+
+  This agent turns that list into a loop. It runs the go-live check and a payments check, then puts every blocker on one list with the fix and any waiting time. You fix what you can and tell it. It checks again and only closes an item when the new check passes it. Shipping and tax problems go to their own planners. Once the blockers are clear, it runs a security check before you place real orders. It stops at a clear go with your test orders done, or after four rounds, and then tells you who to ask. It never changes a setting or switches your store live.
+when:
+  - You are about to open a store and want to know if it can take real orders.
+  - You have fixed some items and want to check again without starting over.
+  - Your payment account is on hold, or checkout shows a wrong tax or shipping price.
+you_give:
+  - Your platform, country and the countries you sell to
+  - What is set up, such as products, payments, shipping, tax, policies and domain
+  - Screenshots of checkout or settings you are unsure about (optional)
+  - What each test order showed, from the second round
+you_get:
+  - A go or no-go with a score out of 100 and the round count
+  - Blockers and warnings, each with the one fix and any waiting time
+  - A test order plan, and the safe order to switch to live
+  - Who to ask for anything still open after two rounds
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to check your store before launch.
+  - Describe your setup. Never paste payment keys, card numbers or bank details.
+  - Fix what is on the list, start the slow items first, then tell the agent what you fixed.
+  - It checks again. Place the test orders it plans and tell it what each showed.
+  - When it says GO, follow the switch-to-live steps yourself, with the password last.
+how_it_works:
+  - title: Run the first full check
+    text: Runs the go-live check and a payments and checkout check, because a payout hold can take days.
+  - title: Route each problem
+    text: Shipping problems go to the shipping planner and tax problems to the tax planner. Slow items are marked start today.
+  - title: Hand back one list
+    text: Blockers first, each with one fix. It stops until you tell it you have fixed items.
+  - title: Check again
+    text: Closes an item only when the new check passes it or you show a screenshot or a test order result.
+  - title: Choose what next
+    text: Go with test orders left, still no-go, or a blocker open for two rounds. In that case it names who to ask.
+  - title: Check security
+    text: Once the blockers are clear, it checks staff sign-in and apps before real-money orders.
+  - title: Stop
+    text: Stops at a clear go with test orders done, or after four rounds.
+output_shape: |-
+  VERDICT
+    <GO | NO-GO> | round <n> of 4 | <one-line reason>
+
+  SCORE
+    <n>/100 (100 - 15 x <blockers> - 5 x <warnings> = <n>)
+
+  BLOCKERS
+    <n>. <area>: <what is wrong> | fix: <one change> | waiting time: <none or days>
+
+  WARNINGS
+    <n>. <area>: <what is wrong> | fix: <one change>
+
+  CLOSED SINCE LAST ROUND
+    <items the new check passed>
+
+  TEST ORDERS TO PLACE
+    <order>: <address, product, payment mode> | confirm: <tax, shipping price, policy links, email>
+
+  WHO TO ASK
+    <item open for two rounds> | <who>
+
+  FILES AND MISSING
+    <each round's files> | MISSING: <every line>
+tweaks:
+  - what: Where you sell
+    how: Name every country and shipping zone. Tax and duty problems hide in the countries you forget to name.
+  - what: Every place orders ship from
+    how: A warehouse or fulfilment app needs its own real test order. The built-in test order does not prove the link.
+  - what: Your platform
+    how: Shopify and WooCommerce have different payment and test mode steps. Say which one, and the plan or gateway.
+  - what: How many rounds
+    how: It stops at four. If you are not done by then, the open items usually need someone else, and it says who.
+judge:
+  - No item is closed without a new check or your evidence.
+  - Slow items, such as payment verification, are flagged on day one.
+  - No key, card number or bank detail is in any file.
+  - The password is removed last.
+  - Nothing was switched live without your clear yes.
+test:
+  - Give it a store set up in test mode with a policy page missing and a tax rate wrong. See if both come up as blockers with fixes.
+  - Fix one item and say you fixed two. See if it refuses to close the one it cannot check.
+  - Run it twice on the same setup. The blockers should match, apart from wording.
+improve:
+  - Save your list of countries, rates and policies in your brand brain so each round starts from it.
+  - Add a launch date, so slow items are ranked by how late they would make you.
+  - After launch, keep the test order results as a record of what worked.
+  - Have an accountant check your tax settings once, and note what they said.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the launch folder and the open items list between rounds.
+    - name: Shopify
+      why: Test mode, the payments settings, markets and the duplicate preview to check.
+  inputs:
+    - Screenshots of your checkout, shipping rates and policy pages
+    - The countries you sell to and where each order ships from

@@ -1,0 +1,124 @@
+new_slug: welcome-popup-offer-tester
+name: "Welcome pop-up offer tester"
+summary: "Give it AOV, margin and site offers. Get four to eight pop-up offers to test, ranked by cost."
+job: make-offer
+thinking: medium
+thinking_why: "It does cost sums and ranks options from your numbers. A mid-size model is enough."
+
+headline: "Welcome pop-up offer tester"
+subhead: Give it your average order value, margin, current pop-up results and the discounts already on your site. It ranks four to eight pop-up offers by cost per redemption and gives you a test plan with equal traffic, the numbers to record and a rule for picking the winner.
+
+explain: |
+  Most stores put up a 10 percent off pop-up and never change it. The offer in that box decides how many visitors give you their email and how many of them buy. Changing only the offer can move both numbers a lot, and it is one of the quickest tests to run.
+
+  This skill picks offers that fit your order value, such as dollar off, percent off, a free gift, a mystery discount or store credit. It prices each one so you know what it costs you per order. It tells you how to run all of them at once on equal traffic, what to record, and how long to wait before you call a winner. It also checks that your pop-up offer and your site offer do not clash, and combines them into one clear saving. It only plans the offer. Timing and wording of the pop-up are a separate job.
+
+when:
+  - Your pop-up has said "10% off" for a year and you have never tested another offer.
+  - You get sign-ups but few of them place an order.
+  - Your site already runs a sale, and you are not sure how to add a welcome offer on top.
+
+you_give:
+  - Your average order value and gross margin
+  - Your current pop-up offer, opt-in rate and placed order rate
+  - Any discounts or subscribe offers that always run on your site
+  - Gifts you could give, with what each costs you
+  - Your pop-up tool and weekly traffic
+
+you_get:
+  - Four to eight pop-up offers, ranked, each with its cost per redemption
+  - Stacked offer wording that adds up your site and welcome discounts
+  - A test plan with an equal traffic split, the numbers to record and a decision rule
+  - A 90-day follow-up check, and a list of any checks it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your order value, margin, current pop-up results and site discounts.
+  - List any gifts you could give and what each costs you.
+  - Build the top offers in your pop-up tool and send equal traffic to each at the same time.
+  - Record the numbers it lists, then check repeat orders at 90 days before you pick the winner.
+
+how_it_works:
+  - title: Sets the baseline
+    text: It uses your own opt-in and order rates first. If you have none, it uses the source ranges and labels them as one brand's numbers.
+  - title: Chooses offer types
+    text: It picks from dollar off, percent off, free gift, mystery discount, store credit and cash back. It skips giveaways and free guides.
+  - title: Picks dollar or percent
+    text: It tests dollar off first when order value is above $100, and percent off first when it is below $100.
+  - title: Stacks what exists
+    text: It adds your site discount and welcome discount into one saving, and checks they really combine at checkout.
+  - title: Prices each offer
+    text: It works out what each offer costs you per redemption and per sign-up, and ranks them.
+  - title: Writes the test plan
+    text: Equal traffic, all variants at once, and the numbers to record for each.
+  - title: Sets the decision rule
+    text: The winner is the offer with the most gross profit per visitor that does not lower 90-day repeat orders.
+
+output_shape: |
+  WELCOME POP-UP TEST  <store>  AOV <amount>  margin <percent>
+  Baseline: <your opt-in and placed order rate, or "none given">
+  Site offers already live: <list>  Combined saving to advertise: <wording>
+
+  RANKED OFFERS (cheapest to run first)
+  <n>. <offer type>: <wording>
+     Cost per redemption: <amount>  Cost per sign-up: <amount>
+     Why test it: <one line>
+
+  TEST PLAN
+  Run all <n> at once, equal traffic, for <period or sign-ups>.
+  Record: opt-in rate | placed order rate | revenue per visitor | gross profit after gift or credit cost
+  Winner rule: <highest gross profit per visitor, repeat rate not lower>
+  90-day check: <what to compare>
+
+  CHECKS MISSED: <list, or none>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Average order value
+    how: It decides whether dollar off or percent off goes first. Give your real number, not a guess.
+  - what: Gift costs
+    how: Give the landed cost of each gift. A gift that costs little and looks valuable ranks high.
+  - what: Site discounts
+    how: List every code and sale that is always on. The skill stacks them into one clear saving.
+  - what: Traffic
+    how: Weekly visits tell it how many offers you can test at once. Low traffic means two at a time.
+
+judge:
+  - Every offer has a cost per redemption, not only a headline.
+  - The dollar versus percent choice matches your order value.
+  - The wording adds up your real site and welcome discounts and no more.
+  - The plan runs all variants at the same time on equal traffic.
+  - The winner rule includes profit and 90-day repeat orders, not only email count.
+
+test:
+  - Give it an order value of $50, then $200. The first offer it suggests should switch between percent and dollar.
+  - Check one cost by hand. Add the gift cost plus extra shipping, or discount times average order value.
+  - Run it twice. The ranking order may shift for close offers, but the rules should stay the same.
+  - Build the top two offers and check that the stacked saving shows correctly in your cart before you send traffic.
+
+improve:
+  - Add your pop-up tool's offer types and limits to the skill file so the plan only suggests what you can build.
+  - Add your real opt-in and order rates after each test, so the baseline becomes yours.
+  - Add a rule for your margin floor, such as "never test an offer that costs more than X percent of average order value".
+  - Pair it with the Offer profit-per-session checker to read results, and a pop-up timing and wording skill for the box itself.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the cost sums and writes the test plan from the numbers you paste."}
+    - {name: "Klaviyo", why: "Sign-up forms there can split traffic between versions and report sign-ups and placed orders."}
+    - {name: "Shopify admin reports", why: "Orders and revenue by discount code show what each offer earned."}
+  inputs:
+    - "Your gross profit by product, so cost per redemption is exact"
+    - "How many sign-ups you get per week today"
+    - "Your welcome flow, so you can see what comes after the offer"
+    - "Past discount codes and their results"
+
+terms:
+  - term: Opt-in rate
+    meaning: The share of visitors who give you their email or phone number.
+  - term: Placed order rate
+    meaning: The share of sign-ups who go on to buy.
+  - term: Mystery discount
+    meaning: An offer where the saving is revealed after sign-up, such as a spin the wheel or scratch-off.
+  - term: Store credit
+    meaning: Money added to the shopper's account to spend later, instead of a discount code.

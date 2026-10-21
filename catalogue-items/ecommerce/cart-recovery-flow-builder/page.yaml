@@ -1,0 +1,125 @@
+new_slug: cart-recovery-flow-builder
+name: "Cart recovery flow builder"
+summary: "Give it your margin, shipping terms and proof. Get cart and checkout recovery flows with filters, timing and a code rule."
+job: write-emails
+thinking: medium
+thinking_why: "It follows a fixed method with clear rules for who gets which email. A mid-size model is enough."
+
+headline: "Cart recovery flow builder"
+subhead: Give it your products, shipping and returns terms, proof and discount policy. It checks which trigger your cart flow uses, then builds an added-to-cart flow and a checkout flow. You get the filters, delays, a code rule and an outline for each email.
+
+explain: |
+  Many stores send emails only to people who reached checkout. Shoppers who add to cart and leave are never followed up. Others get a discount in the first email, which teaches buyers to wait for a code.
+
+  This skill starts by checking which event triggers your current flow. It then builds two flows from the same emails with different triggers, so each shopper gets one flow only. Email 1 is a plain reminder with no discount. Doubts are answered next. A code, if you can afford one, comes late and goes only to people who have never bought. Past buyers get a support note instead.
+
+when:
+  - Your "abandoned cart" flow only fires after checkout starts.
+  - Your cart emails give a code in the first message and you want to protect margin.
+  - You have one abandonment flow and want a separate checkout flow with its own wording.
+
+you_give:
+  - Products or collections, so the middle emails can be split
+  - Shipping, returns, warranty and guarantee facts
+  - Reviews and facts for your main products
+  - Your discount policy, margin, and whether past buyers can get a code
+  - Access to your theme, if the added-to-cart event needs installing (optional)
+
+you_get:
+  - A check of which trigger your current flow uses
+  - Install and test steps for the added-to-cart event, if it is missing
+  - Two flow specs, cart and checkout, with filters, delays and exit rules
+  - An outline for each email with subject ideas and notes on the product block
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it what trigger your cart flow uses today, and paste your shipping, returns and discount facts.
+  - Install the added-to-cart event if it is missing, and test it on your own store before you build.
+  - Build the two flows from the outlines, and preview every email with a real profile.
+  - Run one test at a time, starting with the delay on email 1.
+
+how_it_works:
+  - title: Checks the trigger
+    text: If the flow named "abandoned cart" fires on checkout started, you only have a checkout flow. The skill says so and tells you how to add the cart event.
+  - title: Splits into two flows
+    text: Same emails, different triggers. Cart shoppers who reach checkout move to the checkout flow, and anyone who orders leaves both.
+  - title: Times the emails
+    text: Email 1 goes out 15 to 60 minutes after the event, then one to two days between emails over about ten days. Smart sending is off.
+  - title: Orders the emails by job
+    text: Reminder, check-in, doubts, differences, then a code for first-time buyers only. Past buyers get support and a smaller offer, if any.
+  - title: Writes for checkout doubts
+    text: The checkout flow answers shipping cost, payment trust and returns. If shipping cost is the likely reason, free shipping is tried before a percentage off.
+  - title: Adds the text message rule
+    text: One text per abandonment, sent within 48 hours, only to people who agreed. Email and text go out together or close together.
+
+output_shape: |
+  CART RECOVERY  <store>
+  Current trigger: <added to cart | checkout started | unknown>  -> <gap or ok>
+  EVENT FIX: <install and test steps, or "not needed">
+
+  FLOW A  Added to cart
+  Trigger <event> | filters: <not checkout started, not ordered, not in flow last 30 days>
+  FLOW B  Checkout started
+  Trigger <event> | filters: <not ordered since start, not in flow last 2 to 3 days>
+
+  EMAILS  (send time | purpose | sections | subject ideas | product block used)
+  1  <15 to 60 min> | reminder | no code
+  2  <+1 day> | founder check-in
+  3  <+1 day> | doubts: price, trust, comparison
+  4  split: <never bought> code, 48 hours  |  <past buyer> support note
+  5+ ...
+  CODE RULE   <who, how much, when, expiry>
+  SMS         <one text, time, consent>
+  TESTS       <first three>
+  CHECKS MISSED: <none or the list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your margin
+    how: Give the real figure. The code only goes to first-time buyers and comes late, but a thin margin means skipping the discount ladder and using proof and free shipping instead.
+  - what: Whether past buyers get a code
+    how: Say yes or no. The default is a support note with no code for past buyers. If margin allows, it adds a smaller code (one source gave 5 to 10 percent against more for first-time buyers).
+  - what: Your shipping fee
+    how: If shoppers often leave at checkout, say what shipping costs. The skill tries free shipping before a percentage off. At an order value of 200, a 10 percent code costs 20.
+  - what: How many emails you can build
+    how: A team of one starts with email 1, the doubts email and the founder note. Each flow with a split runs to 10 or 11 emails when complete.
+
+judge:
+  - The two flows have different triggers and the filters keep one shopper in one flow.
+  - Email 1 has no discount and goes out within 15 to 60 minutes.
+  - A code appears only from about email 4 or 5 and always has a real deadline.
+  - Each email uses the product block that matches its trigger.
+  - Percentage claims about abandoned carts are left out or marked as third-party numbers to check.
+
+test:
+  - Give it a store whose current flow fires on checkout started. It should say the cart gap, not praise the flow.
+  - "Run the added-to-cart test yourself: open the store with an email tracking tag, add an item and look for the event on that profile."
+  - Preview each email with a real profile. The product block must show the right item in both flows.
+  - Run it twice with the same facts. The filters and email order should match.
+
+improve:
+  - Add your real shipping, returns and warranty wording so the doubts email states facts you can prove.
+  - Put your margin floor in the skill file, so it never proposes a code below it.
+  - Add the two or three doubts your support inbox hears most, and make each one an email.
+  - Pair it with the browse abandonment flow builder, the SMS send checker and the email segment builder.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Its added-to-cart and checkout events, dynamic product blocks and flow filters match the steps."}
+    - {name: "Shopify", why: "The theme code, saved checkout link and order events feed both flows."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the skill from your pasted facts."}
+  inputs:
+    - "Your support emails about shipping, sizing and returns"
+    - "Product reviews that answer a price or trust doubt"
+    - "Last 90 days of cart and checkout flow results"
+    - "Your free shipping threshold"
+
+terms:
+  - term: Abandoned cart
+    meaning: A shopper added something to the cart and left without starting checkout.
+  - term: Abandoned checkout
+    meaning: A shopper started checkout, often with an email address, and left without paying.
+  - term: Dynamic block
+    meaning: A part of an email that fills in the exact product the shopper left behind.
+  - term: Smart sending
+    meaning: A setting that skips anyone who got another email recently. Turn it off for flows.

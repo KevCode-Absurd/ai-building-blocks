@@ -1,0 +1,21 @@
+slug: inbox-placement-recovery-planner
+name: "Inbox placement recovery planner"
+summary: "Give it your open rates and engaged counts. Get a score out of 100 and a recovery plan."
+category: ecommerce
+type: skill
+role: check
+job: email
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (agency case results, not independent data)", used: "The six-week schedule, the expansion rule and the one-brand case"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder", used: "The two-week engaged ramp, why engagement drives placement, live-text advice and target rates"}

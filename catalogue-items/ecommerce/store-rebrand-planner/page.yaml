@@ -1,0 +1,132 @@
+new_slug: store-rebrand-planner
+name: "Store rebrand planner"
+summary: "Give it your store, name and goals. Get a keep-or-rename score out of 100 and a phased plan."
+job: brand-file
+thinking: high
+thinking_why: "It weighs name problems against search traffic and customers, then plans a long project. A stronger model keeps the trade-offs straight."
+
+headline: "Store rebrand planner"
+subhead: Give it your store, its name and age, your branded search and repeat customers, and your goals. It scores the case for renaming out of 100, makes a keep, tweak or rename call, then plans the rebrand in four phases with a customer message and a rollout order.
+
+explain: |
+  Many owners dislike their name long before they act. Others rename on a whim and lose search traffic. The real question is whether the name costs you more than a change would. A name that is hard to spell, hard to search or close to a bigger brand adds friction to every sale. A name with years of branded search, reviews and repeat buyers has value that a rename puts at risk.
+
+  This skill counts both sides. It looks for hard triggers first, then lists friction and what you would lose, and gives a score from 0 to 100 where a higher score means a stronger case to rename. The score is a decision aid built from one agency's view and a design team's process, not a standard. If you rename, it plans four phases and the message to tell customers. If you keep, it fixes the friction.
+
+when:
+  - You dislike or doubt your store name and want to know if a rename is worth it.
+  - You got a trademark letter or found a bigger brand with a name close to yours.
+  - You are changing what the store stands for and need a plan for the brand, the products and the site.
+
+you_give:
+  - Current name, age of the brand and customer count
+  - Share of traffic from branded search and direct visits
+  - Problems with the name, such as spelling, trademark, meaning or domain
+  - Where the name appears, such as marketplaces and retail partners
+  - Your goals for the next five years, and sales, traffic and survey data (optional)
+
+you_get:
+  - A rename score out of 100 with the reasons, and a keep, tweak or rename call
+  - A message to customers and a redirect list, if you rename
+  - A four-phase plan with tasks and owners, and design challenges as questions
+  - A keep, change and drop list for brand, products and site, and a rollout order
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your name, store age, branded search share, repeat customers and review counts. Real numbers matter more than guesses.
+  - Add the problems you see with the name and where it appears, including marketplaces.
+  - Read the score and call, then the plan. If it says tweak, start with the pilot suggestion before any full rename.
+  - Do the trademark and domain checks yourself, with a lawyer for trademarks.
+
+how_it_works:
+  - title: Looks for hard triggers
+    text: A trademark claim or lawsuit risk means rename, and the score is 100.
+  - title: Lists friction
+    text: Spelling, search, saying, wrong meaning in a key market, and clash with a bigger brand. Each adds points.
+  - title: Counts equity
+    text: Branded search, repeat customers and reviews under the name. These reduce the score.
+  - title: Applies size and age rules
+    text: Young brands can switch in a 6 to 9 month window. A giant brand needs a much stronger reason.
+  - title: Makes the call
+    text: Keep and fix the friction, tweak and run a pilot, or rename with a plan.
+  - title: Plans the four phases
+    text: Discover, define, develop and deliver, with the website built first.
+  - title: Plans the customer message
+    text: We were X, now Y, and here is what you get. The old name stays findable and the old domain redirects.
+  - title: Shrinks it for a solo owner
+    text: A solo founder does discover and define in a few days.
+
+output_shape: |
+  HARD TRIGGER: <none | trademark claim | lawsuit risk>
+  RENAME SCORE: <n>/100   CALL: <KEEP | TWEAK | RENAME>
+  Friction points: <list: spelling, search, saying, meaning, clash> = <a>
+  Equity offset: <branded search, repeat customers, reviews> = -<b>
+  Age bonus: <+0 or +10>
+  Sum: <a> - <b> + <c> = <n>
+  Scoring is this skill's own starting point, adjust it.
+
+  IF RENAME
+  Customer message: "We were <X>, now <Y>, and here is what you get: <...>"
+  Keep old name findable: <search, redirect old domain, marketplace listings>
+  Budget window: <6 to 9 months extra spend>
+  Review carryover: <marketplace plan>
+  IF KEEP: friction fixes: <tagline, spelling help in ads>
+  PILOT: <rename one product line, watch branded search trend>
+
+  FOUR PHASES
+  Discover / Define / Develop / Deliver: <tasks, owners, dates>
+  HOW MIGHT WE: <challenges>
+  KEEP / CHANGE / DROP: <brand, products, site>
+  ROLLOUT ORDER: <sitemap, two pages, rest>
+  CHECK WITH A LAWYER: trademark and domain
+  CHECKS MISSED: <none, or list>
+
+tweaks:
+  - what: Real numbers for branded search and repeat buyers
+    how: Paste actual figures from your analytics. The equity offset uses them. Without them the score is a guess.
+  - what: How old the brand is
+    how: Say the age. Young brands switch more easily than old ones, and the skill uses age to set how strong a reason must be.
+  - what: Where the name is listed
+    how: List every marketplace, retailer and partner. Reviews and listings need a carry-over plan.
+  - what: Your team size
+    how: A solo founder gets the short version. Say who will join the workshop if there is a team.
+  - what: Hard triggers you know about
+    how: Say if you have had a trademark letter or a rival has a near-identical name. This can set the score to 100.
+
+judge:
+  - It checks for a hard trigger before anything else.
+  - The score shows its sum, and says the weights are this skill's own starting point.
+  - It does not treat one agency's no-loss claim as fact. It points you to a pilot and your own branded search data.
+  - A marketplace seller gets a review carry-over plan.
+  - The plan says what to keep, because a working logo with equity should stay.
+  - It does not run on guesses. It asks for real data or says what is missing.
+
+test:
+  - Give it a store with a clean name and strong branded search. The score should be low and the call should be keep.
+  - Give it a store with a trademark claim. The score should be 100 with the claim named as the reason.
+  - Run it twice on the same facts. The call should match.
+  - Compare the call with what you were already thinking. If they differ, check which numbers it weighed.
+
+improve:
+  - Change the point values for friction and equity in the skill file as you learn what matters in your category.
+  - Add your marketplaces and their listing rules to the skill file so the carry-over plan is complete.
+  - Save the keep, change and drop list to your brand file for later work.
+  - Pair it with the Positioning grid builder in the define phase and the Brand stylescape planner in the develop phase.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can weigh the numbers and write the plan. Paste real analytics figures."}
+    - {name: "Google Search Console", why: "Shows branded search clicks, so the equity count rests on your data and not a guess."}
+    - {name: "Your country's trademark office search", why: "For example the USPTO search in the US or TMview from EUIPO in Europe. Use it, and a lawyer, to check trademarks."}
+  inputs:
+    - "Customer survey results and interview notes on why people buy or pass"
+    - "A list of marketplace listings with review counts"
+    - "Your current logo, product list and site map"
+
+terms:
+  - term: Branded search
+    meaning: People who search for your store name, not for a product type.
+  - term: Equity
+    meaning: The value a name has built up, such as people searching for it, repeat buyers and reviews.
+  - term: Stylescape
+    meaning: A wide mood board that shows how the brand could look across pack, screen and product.

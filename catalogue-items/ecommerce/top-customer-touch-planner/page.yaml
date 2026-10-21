@@ -1,0 +1,123 @@
+new_slug: top-customer-touch-planner
+name: "Top customer touch planner"
+summary: "Give it your customer list and budget. Get a top-50 touch plan and a control group."
+job: keep-customers
+thinking: low
+thinking_why: "It ranks a list and writes short notes, so a small fast model is enough if you give it real spend data."
+
+headline: "Top customer touch planner"
+subhead: Give it your customers with lifetime spend, your monthly budget and the hours you can give. It picks your top 50 to 100, chooses a personal touch for each with its cost, writes the notes and scripts, and holds back a control group so you can see if it worked.
+
+explain: |
+  A small number of customers give you most of your sales, yet they often get the same emails as everyone else. A short, real note from a person can mean more to them than another discount. It also teaches you things no survey will.
+
+  This skill ranks your customers by lifetime spend and picks the top 50 to 100. It matches each to a touch you can afford: a handwritten note, a 60-second founder video, a gift that is a good item and not branded swag, or a call. Notes name a real past purchase and carry no discount code. Then it splits the list into touched and untouched groups and tells you when to expand or stop. It does not scale by design, and no source gives an expected lift, so you read the result only against the untouched group.
+
+when:
+  - You have loyal buyers who have never heard from a person at your store.
+  - You want to try something personal before you pay for a loyalty app.
+  - You have a small budget and a few hours a week to spend on your best customers.
+
+you_give:
+  - Your customer list with lifetime spend, order count and last order date
+  - Your monthly budget and the hours the founder or team can give
+  - Your product category and any personal detail you hold, such as a pet, a home or a hobby (optional)
+  - Notes on your brand voice (optional)
+you_get:
+  - A ranked list of the top 50 to 100 customers to touch
+  - A touch for each, with its cost
+  - A note and video script for each tier, with no discount code in them
+  - A control group split, a reorder check and a rule to expand or stop
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste or attach your customer list with lifetime spend, and say your budget and weekly hours.
+  - Add any personal details you hold about the top customers, such as a pet's name or a trip they mentioned.
+  - Do the touches yourself where you can. Send a few and check how they feel before you send the rest.
+  - Check reorders for the touched group against the untouched group after 90 days.
+
+how_it_works:
+  - title: Checks the base
+    text: A gift does not fix a week on hold or a slow refund, so it asks if delivery, returns and support work first.
+  - title: Ranks by lifetime spend
+    text: It picks the top 50 to 100, and keeps the biggest gestures for the top 1 percent.
+  - title: Runs the 20 customers exercise
+    text: If you had only 20 customers, where would a person fit in every step from discovery to after the sale?
+  - title: Picks the touch by cost
+    text: A note is about $1 to $3 plus time, direct mail $1 to $5, a founder video costs time, and custom art $20 to $40.
+  - title: Writes by hand
+    text: Each note names a past purchase and holds no discount code. Printed text posing as handwriting is out.
+  - title: Plans the gift
+    text: A good item they would be proud to own, with no logo, sent at a random time and not at Christmas or a birthday.
+  - title: Adds community only if staffed
+    text: Invite only the most engaged, put the product team in the room and close the loop when an idea ships.
+  - title: Holds back a control group
+    text: It splits the ranked list, then compares reorder rates and sets the expand or stop rule.
+
+output_shape: |
+  FIT CHECK  delivery ok: <yes | no>  returns ok: <yes | no>  capacity: <notes per month you can write>
+
+  TOP <50-100> CUSTOMERS  (ranked by lifetime spend)
+    <rank> <customer> | spend <$> | orders <n> | last order <date> | personal detail: <...>
+
+  TOUCH MENU
+    top 1%: <call | artifact gift | note + video>  cost <$>
+    next tier: <note | 60-second video>  cost <$>
+
+  NOTE SCRIPT   names <past purchase>  no discount code
+  VIDEO SCRIPT  <60-second outline>
+
+  TOUCHED / CONTROL SPLIT  <how split>  touched <n>  untouched <n>
+  CHECK  reorder rate or 90-day reorder rate, touched versus untouched
+  RULE   if touched is higher, expand to the top 200; if not, stop
+  CHECKS MISSED: <none | list>
+  MISSING: <what was needed>
+
+tweaks:
+  - what: Your weekly capacity
+    how: A solo founder can write about 50 notes a month as a starting figure. Past 200, plan for a handwriting service or an assistant.
+  - what: Your price point
+    how: For high-priced items, add a gift for the buyer's inner circle, such as a partner or an assistant, as well as the buyer.
+  - what: Personal details
+    how: Give anything real you know about the top customers. A note that names a pet or a trip works, and a generic one does not.
+  - what: Your budget
+    how: State the monthly limit. The skill drops touches that cost more than it allows and keeps the free ones.
+
+judge:
+  - The top list comes from your lifetime spend, and each touch has a cost.
+  - Each note names a past purchase and has no discount code in it.
+  - Nothing pretends to be handwritten when it is printed.
+  - There is a control group and a clear rule for expand or stop.
+  - Nothing promises a lift. The skill says no source gives an expected one.
+
+test:
+  - Give it a list where you know your best customer. They should be near the top of the ranked list.
+  - Send five notes and ask one recipient how it felt. Fix the wording before you send more.
+  - Run it twice on the same list. The ranking and costs should match.
+  - After 90 days, compare the reorder rate of the touched and untouched groups before you spend more.
+
+improve:
+  - Add your voice rules and a sample note to the skill file, so each note reads like you.
+  - Add your real cost per note, video and gift, so the touch menu uses your numbers.
+  - Add a rule on gifts, such as nothing food-related without allergen details, and nothing tied to a review or a post.
+  - Save the winning note and gift to your brand file.
+  - Pair it with the best customer finder and the VIP customer finder for the ranking, and with the loyalty and VIP program designer when you want it to scale.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can rank a list and write notes. Attach your customer list."}
+    - {name: "Handwrytten", why: "A service that writes real notes with a pen machine, for when you pass the number you can write yourself."}
+    - {name: "Loom", why: "Records a 60-second personal video you can send by link, at the cost of your time."}
+  inputs:
+    - "Your customer list with lifetime spend and order count"
+    - "What you know about each top customer, such as a pet or a hobby"
+    - "Support emails from the top customers"
+    - "The budget and hours you can spare"
+
+terms:
+  - term: Control group
+    meaning: A group of customers who do not get the touch, kept so you can compare results.
+  - term: Artifact gift
+    meaning: A good item the person would be proud to own, with no logo on it.
+  - term: Lifetime spend
+    meaning: The total a customer has spent with you across all orders.

@@ -1,0 +1,20 @@
+slug: search-console-traffic-drop-diagnoser
+name: "Search Console traffic drop diagnoser"
+summary: "Paste a Search Console export. Get pages that lost clicks, the cause and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Google Search Console Tutorial (2026)", by: "SEO consultant presenting for a content-optimisation tool (first name only in the transcript)", used: "Sorting pages by click loss, finding what the losers share including pages competing with each other, reading click rate against position, the limits of the generative AI report, and making more of pages that are read in AI answers"}

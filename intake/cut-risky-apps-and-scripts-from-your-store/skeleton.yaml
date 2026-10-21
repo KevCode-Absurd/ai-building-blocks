@@ -1,0 +1,32 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md). Our words.
+id: cut-risky-apps-and-scripts-from-your-store
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: cut-risky-apps-and-scripts-from-your-store
+  name: "Cut risky apps and scripts from your store"
+  summary: "Give it your app list. Get keep, swap or cut for each app, then the scripts left ranked by risk."
+  when: "your store has collected apps over the years and you do not know which ones can read your checkout."
+  job: protect-your-store
+  level: intermediate
+steps:
+  - name: "Sort your apps into keep, swap or cut"
+    skill: store-app-stack-picker
+    job: ops
+    from: "skill: store-app-stack-picker"
+    method: ["List every installed app with its cost and what it does", "Mark the dead and unused apps as cut", "Check the free built-in tools before any paid app", "Vet every app that stays and score the stack out of 100"]
+    inputs: [spreadsheet, store_capture!, question!]
+    outputs: [audit_report]
+    note: "Starts from your app list and makes the verdict on each app and the list of what to export before you cut."
+  - pause: "Remove the apps marked cut. Then open your home, product, cart and account pages, and save the list of scripts each one loads, from the network tab or the page source."
+  - name: "Rank the scripts and apps that are left by risk"
+    skill: store-script-and-app-risk-auditor
+    job: ops
+    from: "skill: store-script-and-app-risk-auditor"
+    method: ["Record each script and app: who runs it, why, and whether it sits on checkout or account pages", "Flag plain http, unknown or expired domains and vendors with no security contact", "Score the set out of 100, doubling the weight on pages with card or login fields", "Write the clean-up list: remove, revoke keys, move widgets off checkout"]
+    inputs: [store_capture, question!]
+    outputs: [audit_report, plan]
+    note: "Works on what is left after the cuts in step 1, using the saved script list and the keep list from the app check."

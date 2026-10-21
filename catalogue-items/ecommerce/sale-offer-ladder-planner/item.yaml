@@ -1,0 +1,21 @@
+slug: sale-offer-ladder-planner
+name: "Sale offer ladder planner"
+summary: "Give it stock, margin, subscribers and a sale goal. Get a main offer, backups and a subscriber plan."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Black Friday 2026 strategy: spend, creative, offers, pacing", by: "Nathan, head of paid media at an agency (public video)", used: "The offer ladder, profit versus inventory goals, preloading backup creative, rotating offers and the low-cost window after Christmas"}
+  - {title: "The Most Valuable Subscription Video You'll Watch in 2026 (with Matthew Holman)", by: "Matthew Holman, interviewed by an email and SMS marketer", used: "Sale logic for subscribers, a stacked first-order headline, subscriber-only offers and add-to-next-order offers"}

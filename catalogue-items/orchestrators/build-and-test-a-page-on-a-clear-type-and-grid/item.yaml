@@ -1,0 +1,21 @@
+slug: build-and-test-a-page-on-a-clear-type-and-grid
+name: "Build a page on a clear grid and test it"
+summary: "Describe your site. Get font pairs, a grid and type plan, a built page that follows them and a real browser test."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: test_report}
+uses: [web-font-pairing-picker, page-grid-and-type-planner, website-art-director, web-app-tester]
+steps:
+  - {uses: web-font-pairing-picker, note: "Picks fonts and sizes that fit the site's tone."}
+  - {uses: page-grid-and-type-planner, note: "Keeps the fonts from the step before and sets a grid and layout around them."}
+  - {uses: website-art-director, note: "Builds the page from the brief, following the type and grid you added."}
+  - {uses: web-app-tester, note: "Opens the built page and clicks through it to find what is broken."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-and-test-a-page-on-a-clear-type-and-grid/skeleton.yaml

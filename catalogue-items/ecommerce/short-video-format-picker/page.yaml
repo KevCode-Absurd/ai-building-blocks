@@ -1,0 +1,130 @@
+new_slug: short-video-format-picker
+name: "Short video format picker"
+summary: "Give it your product and who is on camera. Get a format pick, a script outline and 10 hooks."
+job: grow-social
+thinking: medium
+thinking_why: "It matches formats to a product and writes varied hooks, which a mid-size model does well."
+
+headline: "Short video format picker"
+subhead: Give it your product, its price and key benefit, and who can be on camera. It picks the short video formats that fit, with a script outline for each. You get 10 hooks across formats, a narrow version of each, a tutorial shot plan and a two-part video script.
+
+explain: |
+  Most store videos fail at the same place: the first seconds. They show the product, not a reason to keep watching. A few short video formats come up again and again in videos that sell, such as reactions, myth-busting, comparisons and teasers. Each has a structure you can follow.
+
+  This skill matches those formats to your product and your people. It picks the ones that fit, writes a script outline for each, then writes 10 hooks across formats. It also adds a narrow version of each hook that names a small group so the right people stay. The same video can run as an organic post, a creator post and an ad. The view and sales numbers in the sources are one presenter's picks, not benchmarks.
+
+when:
+  - You have a product and a phone and want a plan for what videos to film this week.
+  - Your videos get few views and you think the opening is the problem.
+  - You want one video to work as a post, a creator post and an ad.
+
+you_give:
+  - Your product, price and key benefit
+  - Who can be on camera (you, a team member, creators, a real expert who backs the product)
+  - Your set and props
+  - Who you serve and one real story from your team (optional)
+you_get:
+  - A format pick with a script outline for each video
+  - 10 hooks across formats
+  - A narrower version of each hook
+  - A shot plan for a tutorial that shows the product being used
+  - A script for a video that carries a second story
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your product facts and who can be on camera. Be honest about what you cannot film.
+  - Add one real story from your team or a customer, if you have one.
+  - Pick two or three formats from its list and film them as simply as you can.
+  - Check each hook against your claims. Cut any line you cannot back up.
+
+how_it_works:
+  - title: Reads your product
+    text: Looks at price, key benefit, who is on camera and what you can film.
+  - title: Picks the fitting formats
+    text: Chooses from don't-do-this-if, problem and solution, transformation tease, reaction, misconception, comment reply, free tip, versus, and tutorial in action.
+  - title: Writes a script outline
+    text: Hook first, a story or demo in the middle, the product and a call to action at the end.
+  - title: Writes 10 hooks
+    text: Spreads them across formats, so you are not testing one idea ten times.
+  - title: Adds a qualifier
+    text: Narrows each hook in the first 3 seconds to a small group, such as "best floss for people who hate flossing".
+  - title: Opens a curiosity gap
+    text: Gives viewers a reason to stay to see the end result.
+  - title: Plans the tutorial
+    text: Shows the product being used while the person does the thing it is for.
+  - title: Adds a second story
+    text: Delivers the promised video, then adds a related story in the back half to build trust.
+  - title: Sets the weekly mix
+    text: Out of 5 posts a week, 2 to 3 aim wide and the rest aim at people closer to buying.
+
+output_shape: |
+  FORMAT PICKS
+  1. <format> | why it fits: <reason> | on camera: <who> | claim check: <ok | needs proof>
+     Outline: Hook <...> / Middle <story or demo> / Product and call to action <...>
+
+  10 HOOKS
+  <n>. [<format>] <hook> | narrow version: <hook with a qualifier>
+
+  TUTORIAL SHOT PLAN
+  <shot> | <what the product does on screen> | <line said while doing it>
+
+  TWO-PART VIDEO
+  Part 1: <the promised format>  Part 2: <a related real story from the team>
+
+  WEEKLY MIX (5 posts)
+  <post> | <wide | middle | bottom>
+
+  USE THE SAME VIDEO
+  Organic: <how>  Creator: <how>  Ad: <how, with the claim check>
+  CHECKS MISSED: <none, or the list>
+  MISSING: <what was not supplied>
+
+tweaks:
+  - what: Who is on camera
+    how: Say exactly who. A real expert (a nurse or a dermatologist) can be more believable than a founder, but only if they truly back the product.
+  - what: Price
+    how: Low-price items can be sold in packs to lift order value. The source gives a $4.99 item sold in packs of about $25 to $30.
+  - what: Your audience
+    how: Name the small group you serve. The narrow version of each hook uses it.
+  - what: What you can film
+    how: Tell it if you cannot do a reaction video or a street test. It will pick formats you can make.
+
+judge:
+  - Each hook names a format, and no two hooks repeat the same idea.
+  - Every claim in a hook or outline is one you can prove or show on camera.
+  - The script has a hook, a middle and a call to action.
+  - The picks only need people and props you said you have.
+  - No script copies another creator's video word for word.
+
+test:
+  - Film two of the picks and compare views and watch time after a week. Do not judge on one video.
+  - Run it twice on the same product. The format picks should be close. If they swing widely, your input is too thin.
+  - Read the hooks out loud to someone outside the business. Ask which one makes them want to keep watching.
+  - Check each demo against the real product. Does it show the real result, not a staged or exaggerated one?
+
+improve:
+  - Add your claim rules to the skill file, such as words you may not use for health or beauty.
+  - Add a list of the formats you have already filmed so it picks new ones.
+  - Save your best-performing hook and its format in your brand file.
+  - Pair it with an ad copy checker for the version that runs as an ad.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching formats to your product and writing hooks works in any current chat AI."}
+    - {name: "TikTok", why: "Shows the formats on the platform where they started, and lets you test them for free as organic posts."}
+    - {name: "CapCut", why: "A simple editor for the cuts, text and sound a short video needs."}
+  inputs:
+    - "Customer reviews that describe a strong reaction to the product"
+    - "A real expert who uses and backs the product"
+    - "Comments on your earlier posts, for comment reply videos"
+    - "One real story from your team"
+
+terms:
+  - term: Hook
+    meaning: The first line or first two seconds that make someone stop scrolling.
+  - term: Qualifier
+    meaning: A few words at the start that name a small group, so the right people stay.
+  - term: Curiosity gap
+    meaning: A reason to keep watching, because the viewer wants to see how something ends.
+  - term: Transformation tease
+    meaning: A video that hints at the result without showing it.

@@ -1,0 +1,20 @@
+slug: subscriber-retention-calendar
+name: "Subscriber retention calendar"
+summary: "Give it your products and sending habits. Get gift timing, send rules and a monthly subscriber calendar."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The $100M Subscription Brand Playbook", by: "An email and retention agency founder (name not given)", used: "Gifts on the high-churn months, no same-product gifts, three kinds of subscriber messages, leaving active subscribers out of sales, one to three campaigns a month, and a subscriber-only add-on offer for sale days"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, head of retention at a drinks brand", used: "The day-28 billing peak, a monthly giveaway for subscribers, and the churn drop one brand reported from 24 to 17 percent in a quarter"}

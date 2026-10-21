@@ -1,0 +1,123 @@
+new_slug: amazon-fee-and-margin-checker
+name: "Amazon fee and margin checker"
+summary: "Give it price, landed cost and size. Get profit per unit, all fees and a score out of 100."
+job: sell-on-amazon
+thinking: high
+thinking_why: "It adds many fees and must get the arithmetic exactly right, so a stronger model is safer."
+
+headline: "Amazon fee and margin checker"
+subhead: Give it your price, landed cost, size and weight, plus months in stock, return rate and ad spend per sale. It lists every Amazon fee and works out profit per unit. You get break-even ad cost, a start-up cash estimate, a price check and a score out of 100.
+
+explain: |
+  Amazon's fees stack up: a referral fee on every sale, pick and pack by size, storage by volume, returns, disposal and the seller account. It is easy to price a product and find later that the profit is gone. A general Amazon profit calculator covers the basics. This version adds the sources' rules of thumb, such as a third to product, a third to fees and a third to profit with a 30 percent floor, and the cash you need to start.
+
+  The fee numbers in the source are from the video's date and some are garbled, so the skill uses them only to show the method. It tells you to check current fees in Seller Central or Amazon's own calculator and to paste those in. The score is ours: it measures how well your numbers meet the sources' rules, and it shows the sum.
+
+when:
+  - You have a product, a price and a supplier quote, and want the real profit per unit.
+  - You are checking whether a price rise would be safer than running out of stock.
+  - You need to know how much cash you need before the first order.
+
+you_give:
+  - Price, landed cost, size and weight
+  - Expected months in stock and share of sales in Q4
+  - Return rate and ad spend per sale
+  - Current fee figures from Seller Central (optional, but best)
+you_get:
+  - Profit per unit with every fee listed
+  - Break-even ad cost per sale, a start-up cash estimate and a price check
+  - A score out of 100 for how well the numbers meet the rules, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Get today's fee figures for your size and weight from Amazon's revenue calculator in Seller Central, and paste them in.
+  - Paste your price, landed cost, size, weight, months in stock, return rate and ad spend per sale.
+  - Read the profit per unit and the break-even ad cost. If the score is low, change the price or the cost and run it again.
+
+how_it_works:
+  - title: Lists the costs
+    text: Adds product cost, the referral fee, pick and pack for your size tier, storage, returns, disposal and account cost.
+  - title: Works out storage
+    text: Turns cubic inches into cubic feet and multiplies by the monthly rate for the months in stock.
+  - title: Applies the thirds rule
+    text: Checks that about a third goes to product, a third to fees and a third to profit, with a 30 percent net floor.
+  - title: Checks the price
+    text: Checks the price is at least 3 times landed cost, and compares a price rise with running out of stock.
+  - title: Finds break-even ad cost
+    text: Shows how much you can pay per sale in ads before profit hits zero.
+  - title: Estimates start-up cash
+    text: Adds the first order and about 1,000 dollars of ads, and compares with the 5,000 dollars the source advises you can afford to lose.
+  - title: Scores it
+    text: Adds four parts to 100 and shows the sum.
+  - title: Flags dated numbers
+    text: Marks every fee that came from a source and tells you to check Seller Central.
+
+output_shape: |
+  PROFIT PER UNIT (fees are your pasted figures, or dated examples marked as such)
+  Price: <...>
+  - Product and freight (landed cost): <...>
+  - Referral fee (<% of price>): <...>
+  - Pick and pack (<size tier>): <...>
+  - Storage (<cubic inches / 1,728 x rate x months>): <...>
+  - Returns (<rate x cost>): <...>
+  - Disposal, labelling, account share: <...>
+  = Profit before ads: <...> (<%>)
+  - Ads per sale: <...>
+  = Profit after ads: <...> (<%>)
+
+  BREAK-EVEN AD COST PER SALE: <equals profit before ads>
+  PRICE CHECK: <price vs 3x landed cost; effect of a price rise>
+  START-UP CASH: <first order + about 1,000 ads> vs <cash you can lose>
+
+  SCORE <n>/100: margin <n>/40, price vs landed cost <n>/20, thirds rule <n>/20, cash <n>/20
+  MISSING: <current fee figures | size and weight>
+  CHECK IN SELLER CENTRAL: <referral rate, size tier, pick and pack, storage, brand bonus>
+
+tweaks:
+  - what: Current fee figures
+    how: Paste today's figures from Amazon's revenue calculator. Without them the skill shows the method with dated examples only.
+  - what: Months in stock and Q4 share
+    how: Storage costs more from October to December. Give both and the skill splits the cost.
+  - what: Return rate
+    how: Give your real rate. A return costs a fee on top of the first pick and pack.
+  - what: Ad spend per sale
+    how: Give it from your reports, or leave it blank for profit before ads. The skill says which it used.
+
+judge:
+  - Every fee is listed on its own line, and the lines add up to the profit per unit.
+  - Fee figures from the source are marked as dated, with a line to check Seller Central.
+  - Storage is worked from cubic inches, not guessed.
+  - Where the sources disagree (the brand referral bonus), both are shown.
+  - The score's four parts add to the total, and each says what it measured.
+
+test:
+  - Run your own product through Amazon's revenue calculator and compare each fee line with the skill's.
+  - Change the price by 5 dollars and see profit and score move the way you expect.
+  - Check the storage math by hand, with cubic inches divided by 1,728, times the monthly rate.
+  - Run it with and without ad spend. Profit after ads should be lower by the ad cost per sale.
+
+improve:
+  - Save today's fee figures in the skill file, with the date, so every run starts from them.
+  - Add your real return rate and average months in stock per product.
+  - Add your own margin floor if 30 percent is wrong for your product.
+  - Pair it with the Amazon product viability scorer before it, and the Amazon PPC launch builder after it, since ads need unit profit.
+
+works_best_with:
+  tools:
+    - {name: "Seller Central revenue calculator", why: "Amazon's own calculator gives the current referral fee, pick and pack and storage for your size and weight."}
+    - {name: "A spreadsheet", why: "Lets you save the sum and test price changes quickly."}
+  inputs:
+    - "Today's fee figures from Seller Central, with the date"
+    - "A supplier quote with unit cost, freight and duties"
+    - "Your advertising report, to get ad spend per sale"
+    - "Measured size and weight of the packed unit"
+
+terms:
+  - term: Landed cost
+    meaning: What one unit costs you once it reaches Amazon, counting product, freight, duties and taxes.
+  - term: Referral fee
+    meaning: Amazon's cut of every sale, set as a percent of the price. The source says 15 percent for most items.
+  - term: Pick and pack
+    meaning: The fee Amazon charges to pick your unit from the shelf and ship it, based on size and weight.
+  - term: Break-even ad cost
+    meaning: The most you can pay in ads per sale before the sale makes no profit.

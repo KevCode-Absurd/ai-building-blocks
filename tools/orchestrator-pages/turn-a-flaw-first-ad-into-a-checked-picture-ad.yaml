@@ -1,0 +1,79 @@
+new_slug: turn-a-flaw-first-ad-into-a-checked-picture-ad
+name: Turn a flaw-first ad into a checked picture ad
+summary: Give it your product's real weaknesses. Get a flaw-first ad, a matching picture and a check.
+job: make-image-ads
+thinking: medium
+thinking_why: Three steps with clear rules. Use a stronger model if you have many weaknesses to sort.
+headline: An ad that names your flaw, with a picture that proves the point
+subhead: Give it your product and what buyers dislike. It picks the one weakness buyers already see, writes an ad that names it and turns it, picks the kind of picture that fits the story, and checks the words and picture together before you make anything.
+explain: |
+  Buyers often know your flaw before they see your ad: it is small, plain, slow or costs more. Hiding it makes them trust you less. Naming it plainly and showing what it says about the product can make the ad stand out. But the words alone are not enough, and a stock photo can undo the point.
+
+  The steps handle both. First it writes the ad from your real weaknesses, never an invented one, and checks that the line still holds in use. Then it takes that story and picks a picture that shows it, such as a room, a thing or a note, plus a runner-up from a different kind of evidence. Last it checks words and picture together against your proof and the ad rules. You pause to make both pictures and run them as a small test.
+when:
+  - Buyers keep raising the same flaw in reviews and your ads avoid it.
+  - You want a picture ad that stands out without any new claim.
+  - You want to test two picture ideas for the same story.
+you_give:
+  - A brief with your buyer and goal
+  - Your product facts, including what it does not do well
+  - Review lines that mention the flaw (optional)
+  - Rival claims (optional)
+  - Your brand file and buyer notes (optional)
+you_get:
+  - A flaw-first ad and a set of hooks that name the flaw and turn it
+  - A picture brief and image prompt that match the story, with a runner-up to test
+  - A caption line for the picture
+  - A check of the words and picture together, with a verdict
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your product facts and the weaknesses buyers mention. Do not hide any.
+  - Read the check before you make the pictures.
+  - When it pauses, make both pictures in your image tool and run them as a small test.
+how_it_works:
+  - title: Write the flaw-first ad
+    text: Lists your true weaknesses, picks the one buyers see, writes the flat claim and then the plain version, and checks the line holds in real use.
+  - title: Pick the picture that fits the story
+    text: Quotes the moment the old way stopped working, asks where it shows and writes the image prompt, a caption and a runner-up.
+  - title: Check the ad and picture together
+    text: Reads shape, first second, claims and proof, and gives a verdict on the words and picture as one ad.
+  - title: Pause to make the pictures
+    text: You make the first picture and the runner-up in your image tool and run both as a small test.
+output_shape: |-
+  STEP 1: FLAW-FIRST AD
+    Weaknesses found | the one chosen | flat and plain versions | ad copy | hooks
+
+  STEP 2: PICTURE
+    The quoted moment | picture type | image prompt | caption | runner-up
+
+  STEP 3: CHECK
+    Findings | claims against proof | verdict
+
+  PAUSE: make both pictures and test them
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Which flaw
+    how: Name the one you want to use. Step 1 will still say if it is one buyers truly see.
+  - what: Where the ad runs
+    how: Name the placement. Step 3 checks the size and safe zones for it.
+  - what: Body or health topics
+    how: Say so. The picture step will check body safety and may suggest a safer idea.
+  - what: Number of tests
+    how: Say how many pictures you can test. The runner-up is always a different kind of evidence.
+judge:
+  - The flaw is one buyers already see, and it came from your facts or reviews.
+  - The ad names the flaw plainly before it turns.
+  - The picture shows the same point as the words and needs few words on it.
+  - The runner-up uses a different kind of evidence from the first picture.
+  - The check names any claim that goes beyond your proof.
+test:
+  - Show the ad without the picture to a stranger and ask what they think the flaw is.
+  - Run the picture and the runner-up with the same words and compare results after a set spend.
+  - Check that the product in the picture is true to your photos.
+improve:
+  - Save the winning flaw line in your brand file for other channels.
+  - Run the same steps for your second most common flaw.
+  - Add the reviews that backed the flaw to your proof list.

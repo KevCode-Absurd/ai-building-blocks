@@ -1,0 +1,21 @@
+slug: store-promise-writer
+name: "Store promise writer"
+summary: "Give it your product and best customers. Get a three-line promise and a not-for-you list."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+minds: [seth-godin]
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "This Is Marketing (book)", by: "Seth Godin (author)", used: "The three-sentence promise, the smallest viable market, worldviews instead of demographics, the not-for-you idea, why non-buyers are often right, advice instead of feedback, and the true fans idea"}

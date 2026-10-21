@@ -1,0 +1,43 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md).
+id: decide-whether-to-quit-a-project-and-set-the-evidence-bar
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: decide-whether-to-quit-a-project-and-set-the-evidence-bar
+  name: "Decide whether to quit and set the evidence bar"
+  summary: "Give it the project you want to quit. Get a push, change or stop call and a date to decide."
+  when: "you are tempted to quit a project, job or venture and cannot tell a hard stretch from a dead end."
+  job: think-and-decide
+  level: intermediate
+steps:
+  - name: "Call it: dip or dead end"
+    skill: dip-or-dead-end-checker
+    job: strategy
+    from: "skill: dip-or-dead-end-checker"
+    method: ["Get the facts: start date, hours, money and results so far", "Test whether more effort ever raised results", "Split evidence from fear in your reasons", "Make one call with a date"]
+    inputs: [question]
+    outputs: [plan]
+    note: "Starts with a push, change or stop call and the step that goes with it"
+  - name: "Argue the case against the call"
+    skill: case-against-writer
+    job: analysis
+    from: "skill: case-against-writer"
+    method: ["Pick the sharpest person who would disagree", "Write their three best arguments in their words", "Answer each, marking open points", "Set what would change your mind"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "Tests the call from step one against its strongest opponent"
+  - name: "Cap what you can lose"
+    skill: ruin-risk-stress-tester
+    job: analysis
+    from: "skill: ruin-risk-stress-tester"
+    method: ["List what the plan depends on", "Find the outcome you could not recover from", "Add a fix that caps each such loss and price it", "Name the sign that means act early"]
+    inputs: [plan]
+    outputs: [audit_report, plan]
+    note: "Looks for the loss that would end you under the call that survived the argument"
+  - name: "Set the evidence bar and a date to decide"
+    skill: decision-evidence-bar-setter
+    job: strategy
+    from: "skill: decision-evidence-bar-setter"
+    method: ["Say whether the choice can be undone and how fast", "List the facts you wish you had and weight each one", "Set how much evidence is enough", "Name the cheapest fact to get first and the date to decide"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "Takes the capped plan and says what you must see, and by when, to stay or leave"

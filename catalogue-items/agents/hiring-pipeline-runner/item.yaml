@@ -1,0 +1,30 @@
+slug: hiring-pipeline-runner
+name: "Hiring pipeline runner"
+summary: "Give it a role and each batch of resumes. Get a fair ranked shortlist and draft replies. You decide on every person."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: document, required: true}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+  - {type: document}
+uses: [hiring-packet-builder, applicant-shortlist-builder, candidate-message-drafter, candidate-sourcing-planner, job-ad-campaign-planner, fair-candidate-comparer, hiring-progress-reporter]
+steps:
+  - {uses: hiring-packet-builder, note: "Once per role: the job post and the scoring guide every later step uses. Skipped if they are already saved."}
+  - {uses: applicant-shortlist-builder, note: "Every time new applications arrive: scores only the new ones against the scoring guide and adds them to the ranking."}
+  - {uses: candidate-message-drafter, note: "After each screen: drafts invites for strong fits and replies for the rest, saved as drafts. Nothing is sent."}
+  - {uses: candidate-sourcing-planner, note: "Only when too few strong fits turn up: where else to look for people."}
+  - {uses: job-ad-campaign-planner, note: "Only when too few strong fits turn up and many applicants miss the same must-have: a plan to reach the right people."}
+  - {uses: fair-candidate-comparer, note: "Only after interviews, when you add your notes: compares finalists against the scoring guide. You make the call."}
+  - {uses: hiring-progress-reporter, note: "Every Friday: counts by stage, what is stuck and what to do next week."}
+schedule: "Each time a new batch of applications arrives, and a short update every Friday"
+asks_before: [sending any message to a candidate, rejecting or moving a candidate out of the process, booking interviews, posting or changing a job ad, making or sending an offer]
+origin: own
+version: 1.0.0
+example_pending: true

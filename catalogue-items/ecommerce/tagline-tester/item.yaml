@@ -1,0 +1,20 @@
+slug: tagline-tester
+name: "Tagline tester"
+summary: "Paste your tagline and key messages. Get a score out of 100 from ten tests and sharper versions."
+category: ecommerce
+type: skill
+role: check
+job: brand
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Designing Brand Identity (4th edition, Part 1 only)", by: "Alina Wheeler (book)", used: "The five tagline types, the ten traits of a good tagline, one big idea backed by three key messages, and the list of places where the same words must appear"}

@@ -1,0 +1,78 @@
+new_slug: reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l
+name: Match bank to books and issue a clean P&L
+summary: Give it a bank statement and your ledger. Get matches, causes for the gaps and clean statements.
+job: money-and-investing
+thinking: high
+thinking_why: Matching and tracing need careful reading of many rows. Give it your strongest model.
+headline: Make your bank and your books agree, then report from them
+subhead: Give it a bank statement and your ledger. It matches what it can, traces every leftover item to a cause and an action, and after you fix the books it builds an income statement, balance sheet and cash flow with the big swings flagged.
+explain: |
+  When the bank and the books disagree, every number built on the books is in doubt. Chasing the gap by hand means scanning two long lists for a payment that was split, a fee nobody booked or a date that landed in the next month. Reports built before the gap is closed quietly carry the error.
+
+  The steps close the gap first. The matcher pairs exact items and near items, handles one payment that covers several entries, and lists what is left on each side with draft entries for fees and interest. The tracer then takes each leftover and finds the entry behind it, lines up date, amount, sign and account, and states the cause in one sentence with an action. You pause to make the corrections. The last step builds the statements from the corrected books and flags large swings. Have an accountant review them.
+when:
+  - Your bank balance and your ledger balance do not match.
+  - You are about to send numbers to an investor, lender or tax adviser.
+  - You have not reconciled for a few months and the list of differences has grown.
+you_give:
+  - A bank statement for the period, as a file
+  - Your ledger or cash book export for the same period
+  - After the pause, the corrected ledger and the figures for the last period
+  - Your tolerance for rounding, and any special accounts to leave out (optional)
+you_get:
+  - Matched items, near matches and a list of what is left on each side
+  - Draft entries for bank fees and interest missing from the books
+  - A cause and an action for each leftover item
+  - An income statement, balance sheet and cash flow, with swings flagged
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach the bank statement and the ledger for the same dates.
+  - Pause. Work through the causes and fix the books. Export the corrected ledger and the figures for the last period.
+  - Give the statements to your accountant to review.
+how_it_works:
+  - title: Match bank to ledger
+    text: Cleans names and dates, matches exact items, then near items within a small tolerance, resolves payments that cover several entries and lists what is left.
+  - title: Trace each leftover
+    text: Takes each unmatched item, finds the entry behind it on both sides, lines up date, amount, sign and account, and writes the cause with an action.
+  - title: Fix the books
+    text: Pause. You make the corrections and export the updated ledger and the figures for the last period.
+  - title: Build the statements
+    text: Builds the income statement with variances, the balance sheet and the cash flow from the corrected books, and flags large swings.
+output_shape: |-
+  STEP 1: MATCHES
+    Match rate | exact | near | unmatched on each side | draft entries for fees and interest
+
+  STEP 2: CAUSES
+    Each leftover: cause in one sentence | owner | when it clears | action
+
+  PAUSE: fix the books, export again
+
+  STEP 3: STATEMENTS
+    Income statement | balance sheet | cash flow | swings flagged | review note
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Tolerance
+    how: Say how far apart two amounts may be and still match, such as 5 cents or 2 days. A wider rule matches more but needs more checking.
+  - what: Common IDs
+    how: Tell it which columns carry reference or check numbers. Matching on an ID is safer than matching on names.
+  - what: Period and basis
+    how: Give the dates, and say if the books use cash or accrual. Timing breaks depend on this.
+  - what: Large files
+    how: For tens of thousands of rows, ask it to write a script for the matching and bring only the unclear items to you.
+judge:
+  - Each match shows the reason it was matched, and near matches are marked as near.
+  - Every leftover has a cause in one sentence and an action, not just a label.
+  - It never makes up an entry ID. A gap it cannot trace stays marked as untraced.
+  - The balance sheet balances, and the cash line agrees with the bank after the fixes.
+  - Statements are labelled a draft for an accountant to review.
+test:
+  - Pick five matched pairs and confirm the amounts and dates by eye.
+  - Take two traced causes and find the entries yourself.
+  - Add the unmatched amounts on each side. The difference should explain the gap between bank and books.
+improve:
+  - Keep the rules that matched well and reuse them next month.
+  - Ask your bank for a feed or reference numbers so next month needs less matching.
+  - Not worth running if the books are not up to date. Enter the bills and sales first.

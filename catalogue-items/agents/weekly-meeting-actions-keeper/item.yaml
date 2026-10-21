@@ -1,0 +1,25 @@
+slug: weekly-meeting-actions-keeper
+name: "Weekly meeting actions keeper"
+summary: "Give it this week's meeting notes. Get minutes, last week's open actions checked and an agenda for the next meeting."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: meeting_notes, required: true}
+  - {type: transcript, required: false}
+outputs:
+  - {type: meeting_notes}
+  - {type: plan}
+uses: [meeting-minutes-writer, task-list-keeper, meeting-pre-read-writer, meeting-agenda-and-cost-planner]
+steps:
+  - {uses: meeting-minutes-writer, note: "Every week: turns rough notes into decisions, actions with an owner and a date, and open questions."}
+  - {uses: task-list-keeper, note: "Every week: sets this week's actions against last week's open ones, closes what is done and flags what is late or has slipped again."}
+  - {uses: meeting-pre-read-writer, note: "Every week: the agenda for the next meeting, led by the late and carried-over actions."}
+  - {uses: meeting-agenda-and-cost-planner, note: "Only when the same actions have slipped three weeks running, or two meetings in a row ended with no decision: a go or no-go on whether to hold the next meeting at all."}
+schedule: "Right after each weekly meeting"
+asks_before: [sending the minutes or agenda to attendees, assigning an action to a person who did not agree to it, cancelling or moving a meeting, adding or removing attendees, posting to a shared channel or wiki]
+origin: own
+version: 1.0.0
+example_pending: true

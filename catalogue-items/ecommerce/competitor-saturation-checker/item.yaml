@@ -1,0 +1,21 @@
+slug: competitor-saturation-checker
+name: "Competitor saturation checker"
+summary: "Give it a product name. Get store counts, rival strength, a score out of 100 and a go."
+category: ecommerce
+type: skill
+role: check
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Full Product Research Course for Dropshipping (Find Winning Products FAST)", by: "A dropshipping YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=cRQripx7qXM", used: "Store and serious-rival limits, the fewer-than-5-advertisers-in-a-week test, and the free-shipping search that surfaces dropshipping advertisers"}
+  - {title: "This Product Research Method Made Me $2.3M Dropshipping (LIVE HUNTING)", by: "Ben, dropshipping YouTuber", url: "https://www.youtube.com/watch?v=sCUEN4htx-0", used: "Searching the exact product and the wider niche, checking each rival page, and skipping ads in another language"}
+  - {title: "The Only Product Research Video You Need to Start Dropshipping", by: "An e-commerce YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=JqbVCW14g5o", used: "Active ad volume as proof, and the point that a crowded product proves demand"}

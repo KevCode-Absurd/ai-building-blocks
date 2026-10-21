@@ -1,0 +1,117 @@
+new_slug: process-fact-finder
+name: "Process fact finder"
+summary: "Paste maker, supplier and test notes. Get true facts rivals never state, as specific ad claims."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It reads long notes and must keep every claim tied to proof, which takes care but not deep reasoning."
+
+headline: "Process fact finder"
+subhead: Paste your maker's or supplier's notes, spec sheets, test results and a few rival claims. It lists every step, check and standard in how your product is made, then picks the true facts rivals never state. You get a fact table, your top five claims and questions for your maker.
+
+explain: |
+  Most shops sell on the same words as everyone else: "high quality", "carefully made". Meanwhile the real story sits in a supplier email or a factory spec, and nobody reads it. A fact that every maker in your field could state, but none has, can still be yours to claim first. The old brewing ad that told buyers how the bottles were washed and filtered is the classic case.
+
+  This skill reads your notes in full and lists every step, check and standard, even the ones that feel ordinary. For each one it asks: does the buyer know this, would it surprise them, does it show care. The good ones become claims with a number or something visible. Each claim is marked true or unproven, with the proof next to it.
+
+when:
+  - Your product page says "premium quality" and you can't say why it is.
+  - You have a factory visit, a supplier PDF or lab results sitting unused.
+  - A rival says the same things you do, and you need a fact that makes your page different.
+
+you_give:
+  - Maker or supplier notes, spec sheets, test results and process steps
+  - A few things rivals say on their pages (optional)
+  - The buyer's main doubt (optional)
+you_get:
+  - "A table of facts: what it is, true or not, whether a rival says it, and the proof"
+  - Your top five facts as ad and page claims, each with a number or something to picture
+  - Claims that need proof before you use them
+  - Questions to ask your maker to find more
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste everything you have about how the product is made and tested. Long is fine.
+  - Paste two or three things your rivals say about the same product, and the one doubt your buyers raise most.
+  - Check the table. Send the "ask your maker" questions and run the skill again with the answers.
+  - Use only the claims marked as backed. Show the proof beside any bold one.
+
+how_it_works:
+  - title: Reads every step
+    text: Goes through the notes in full and lists every step, check and standard, including the ones that feel too ordinary to mention.
+  - title: Asks three questions
+    text: Does the buyer know this, would they be surprised, does it show care. Facts that pass are kept.
+  - title: Turns facts into claims
+    text: Each kept fact gets a number or something visible, such as how many tests, how deep, how many steps or how fast.
+  - title: Checks the proof
+    text: Each claim is marked true and backed, or unproven. Bold claims get their evidence placed beside them.
+  - title: Compares with rivals
+    text: Marks which facts rivals already state, so you lead with the ones nobody does.
+  - title: Finds the anchor
+    text: Picks the one fact strong enough to carry a campaign, and says what an expert should check.
+  - title: Lists what to ask
+    text: Writes the questions that would turn up more facts when you next talk to your maker.
+
+output_shape: |
+  FACT TABLE
+  # | fact | true? (source) | rival says it? | buyer knows it? | proof
+
+  TOP FIVE CLAIMS
+  1. <claim with a number or something to picture>
+     fact: <...>  proof: <...>  use on: <ad | product page | both>
+  2. ...
+
+  ANCHOR FACT: <the one fact to build on, and why>
+
+  NEEDS PROOF BEFORE USE
+  - <claim> : <proof needed, who can supply it>
+
+  EXPERT CHECK: <technical claims a subject expert should read>
+
+  ASK YOUR MAKER
+  - <question>
+
+  MISSING: <maker notes | proof for a claim | rival lines>
+
+tweaks:
+  - what: How much you paste
+    how: Paste the full notes, not a summary. The ordinary-looking steps are where the unclaimed facts hide.
+  - what: Rival lines
+    how: Paste what rivals say. Without them, the skill can't tell which of your facts are already taken.
+  - what: The buyer's main doubt
+    how: Name the doubt, such as "will it last" or "is it safe". The skill then ranks facts that answer it higher.
+  - what: Dropshipping with no maker access
+    how: Paste lab tests, certifications and review quotes instead of factory notes, and say so.
+
+judge:
+  - Every fact in the table came from your notes, with the source named.
+  - Each top-five claim has a number or something you could picture.
+  - Anything without proof sits under "needs proof before use", not in the claims.
+  - The questions to your maker are specific, not "tell me more".
+  - No claim holds your product to a higher standard than your rivals' that you can't back up.
+
+test:
+  - Paste notes where you know one fact is false or unproven. The skill should put it under "needs proof" and not make it a claim.
+  - Paste notes with one fact every rival also states. It should mark it as already taken.
+  - Run it twice on the same notes. The top fact should be the same or very close.
+  - Show your top claim to a stranger and ask whether it surprised them. If not, pick the next fact.
+
+improve:
+  - Add the standards your category must meet, such as safety or labeling rules, so those facts get checked first.
+  - Save the table to your brand file, so product page and ad writers share one list of proven facts.
+  - Add a line saying who signs off on technical claims in your business.
+  - Pair it with the skill that matches claims to proof, and with the skill that turns the top five into ad lines.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can read long notes and build the fact table. Paste the full notes in the message."}
+  inputs:
+    - "Test reports and certifications from your supplier"
+    - "Photos or a video from a factory visit, written out as notes"
+    - "Your last ten customer questions about how it is made"
+    - "A line saying what you can and can't claim in your category"
+
+terms:
+  - term: Anchor fact
+    meaning: The one true fact strong enough to carry a whole campaign.
+  - term: Spec sheet
+    meaning: A page from your maker listing the product's exact materials, sizes and standards.

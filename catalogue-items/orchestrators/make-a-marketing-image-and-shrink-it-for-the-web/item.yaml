@@ -1,0 +1,21 @@
+slug: make-a-marketing-image-and-shrink-it-for-the-web
+name: "Make a marketing image and shrink it for the web"
+summary: "Say what the image is for. Get a prompt and size plan, the finished picture and a smaller file."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image}
+uses: [marketing-image-maker, multi-provider-image-maker, image-compressor]
+steps:
+  - {uses: marketing-image-maker, note: "Starts the chain: a prompt, size and file plan."}
+  - {uses: multi-provider-image-maker, note: "Draws the picture from the prompt in the step before."}
+  - {uses: image-compressor, note: "Shrinks the picture so the page loads faster."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-marketing-image-to-small-file/skeleton.yaml

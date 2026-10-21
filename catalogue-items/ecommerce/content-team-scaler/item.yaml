@@ -1,0 +1,21 @@
+slug: content-team-scaler
+name: "Content team scaler"
+summary: "Give it your posts, weekly sales and budget. Get a sales check, hire plan and editor pay plan."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Secret to Making Viral Content That Actually Sells", by: "An e-commerce founder and YouTuber (name not given in the source)", used: "Checking whether sales follow posting, choosing formats that repeat, hiring people who already get views, the shared footage drive, paying editors per view, and re-posting winners in changed forms"}
+  - {title: "How to start brand social media from scratch in 2026", by: "A creative strategist for large brands (name not given in the source)", used: "Batch filming about every two weeks with one person on camera"}
+  - {title: "The Right Way To Write With AI", by: "A writer and creator-education founder, guest, with a host", used: "The view that high volume needs a library of source material behind it"}

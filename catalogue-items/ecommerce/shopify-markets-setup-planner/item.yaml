@@ -1,0 +1,19 @@
+slug: shopify-markets-setup-planner
+name: "Shopify Markets setup planner"
+summary: "Give it your countries and gateway. Get market groups, currency rules, catalogs, languages and tax settings."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients (name not given)", used: "Grouping markets, local currency and its payment limit, rounding, catalogs, theme per market, languages, tax-inclusive prices, duties note"}

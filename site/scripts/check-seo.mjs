@@ -4,7 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const kinds = ["skills", "workflows", "minds", "prompts", "tools", "jobs"];
+const kinds = ["skills", "workflows", "agents", "minds", "prompts", "tools", "jobs"];
 const stats = {}, titles = new Map(), inbound = {}, problems = [], warnings = [];
 const pages = [];
 for (const k of kinds) {

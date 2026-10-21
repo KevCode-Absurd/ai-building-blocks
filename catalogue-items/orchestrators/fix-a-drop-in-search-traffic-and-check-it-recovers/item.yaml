@@ -1,0 +1,24 @@
+slug: fix-a-drop-in-search-traffic-and-check-it-recovers
+name: "Fix a drop in search traffic and check it recovers"
+summary: "Give it your Search Console export. Get the pages that lost clicks, a ranked fix list and a recovery report."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: theme_files, required: true}
+  - {type: store_capture, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [search-console-traffic-drop-diagnoser, store-seo-fix-prioritiser, shopify-duplicate-page-fixer, organic-search-report-builder]
+steps:
+  - {uses: search-console-traffic-drop-diagnoser, note: "Finds the pages and queries that lost clicks and the likely causes."}
+  - {uses: store-seo-fix-prioritiser, note: "Ranks the faults behind the drop so you fix crawl and index problems before content. Reads the diagnosis from the step before."}
+  - {uses: shopify-duplicate-page-fixer, note: "Fixes the duplicate and thin pages the ranked list put first. Reads the findings from the step before."}
+  - {uses: organic-search-report-builder, note: "Reports non-branded clicks, branded trend and organic sales for the new window, so you can see whether the drop is recovering."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/fix-a-drop-in-search-traffic-and-check-it-recovers/skeleton.yaml

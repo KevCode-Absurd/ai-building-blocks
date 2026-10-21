@@ -1,0 +1,23 @@
+slug: advertorial-story-and-belief-checker
+name: "Advertorial story and belief checker"
+summary: "Paste your advertorial. Get each spot the story turns pitchy, fixes and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: page
+level: intermediate
+inputs:
+  - {type: landing_page, required: true}
+  - {type: persona, required: false}
+  - {type: brief, required: false}
+  - {type: ad_copy, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How I write advertorial landing pages only using AI", by: "Mark, DTC funnel operator (as named in the talk)", used: "Reviewing a finished draft against the foundation documents, and checking that copy flows without bumps"}
+  - {title: "3 things every winning advertorial has", by: "A health and wellness advertorial writer", used: "Marking every sentence where the story stops and selling starts, the soft call to action and the image tips"}
+  - {title: "The ultimate Advertorial Blueprint to scale past $1m/month", by: "An agency operator, in a teardown of a public golf-equipment brand's advertorial", used: "Matching each testimonial to one buyer objection"}

@@ -1,0 +1,21 @@
+slug: fix-api-security-gaps-with-tests-and-a-clear-pull-request
+name: "Fix API security gaps with tests and a pull request"
+summary: "Give it your API code. Get its sign-in, access and input gaps fixed, tests for each fix and a reviewed pull request."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: codebase, required: true}
+outputs:
+  - {type: document}
+uses: [api-security-checker, test-gap-finder, pull-request-risk-reviewer, pull-request-writer]
+steps:
+  - {uses: api-security-checker, note: "Finds the gaps in your API routes and writes a fix for each one."}
+  - {uses: test-gap-finder, note: "Reads the fixes from the step before and lists the ones no test would catch, with the tests to add."}
+  - {uses: pull-request-risk-reviewer, note: "Reviews the finished change, fixes plus tests, for harm the fixes could cause."}
+  - {uses: pull-request-writer, note: "Turns the fixes into a pull request a reviewer can follow, with the security gaps as the story."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/fix-api-security-gaps-with-tests-and-a-clear-pull-request/skeleton.yaml

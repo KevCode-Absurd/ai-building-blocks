@@ -1,0 +1,115 @@
+new_slug: reddit-answer-planner
+name: "Reddit answer planner"
+summary: "Give it your category and cited Reddit threads. Get which to answer and what to say."
+job: get-found-in-search
+thinking: low
+thinking_why: "It sorts a short list and drafts an answer template, so a quick model is enough."
+
+headline: "Reddit answer planner"
+subhead: Give it your product category and the Reddit threads that AI tools cite on your buyer questions. It picks the open threads and the 5 to 10 communities worth joining, and writes an honest answer template that says who you are and where you work.
+
+explain: |
+  Reddit is often one of the sources AI assistants use when they answer "what's the best X?" A helpful, honest answer from a real person at your store can put your product into the conversation buyers read. But fake accounts get banned, and a locked eight-year-old thread can't be changed by anything you post.
+
+  This skill starts from the threads AI actually cites on your questions, not from a guess about where your buyers hang out. It drops locked and very old threads, picks the communities where your buyer or the problem you solve is discussed, and gives you an answer template that discloses your link to the brand. It also sets alerts and a weekly routine, and tells you how long to wait before you see any effect.
+
+when:
+  - AI answers on your category cite Reddit and you want to know what to do about it.
+  - You want a person on your team to answer questions honestly, with a clear routine.
+  - Someone told you to "do Reddit" and you want a plan that won't get your brand banned.
+
+you_give:
+  - Your buyer questions and the Reddit links AI tools cited for them
+  - Facts about your product and what you can say openly about rivals
+  - Who will post, and how many hours a week they have
+  - Any subreddits you already know (optional)
+you_get:
+  - 5 to 10 communities and the specific open threads worth answering
+  - An answer template that says who you are and where you work
+  - Alert keywords and a weekly routine
+  - What to expect, and how long it takes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your buyer questions and the Reddit links AI tools gave as sources.
+  - Say who will post (a real team member using their own account) and their weekly hours.
+  - Read each subreddit's rules before you post anything.
+  - Post a real, useful answer in your own words, using the template as a guide.
+
+how_it_works:
+  - title: Lists the cited threads
+    text: Starts from the Reddit pages and subreddits AI cites on your questions, not from a general guess.
+  - title: Checks each thread
+    text: Drops locked or very old threads that AI keeps citing, since new posts will not replace them, and keeps the ones still open.
+  - title: Picks the communities
+    text: "Chooses 5 to 10 subreddits two ways: where your buyer spends time, and where the problem your product solves is discussed."
+  - title: Writes the answer template
+    text: The poster says who they are and where they work, then gives a useful answer. A few good comments can be enough.
+  - title: Builds in the rules
+    text: Reads each community's rules first, because some ban any brand mention, and helps in nearby threads before the brand is named.
+  - title: Plans honest comparisons
+    text: Where your product works with others, compares fairly against a chosen rival rather than only praising yourself.
+  - title: Sets alerts and a routine
+    text: Keyword alerts for your category and brand so you can reply in the first hours, and a watch on negative comments.
+
+output_shape: |
+  CATEGORY  <category>   POSTER  <name, role>   HOURS/WEEK  <n>
+  THREADS AI CITES
+  <thread URL> | <subreddit> | <open / locked / very old> | <answer it? yes/no, why>
+  COMMUNITIES (5 to 10)
+  <subreddit> | <why: buyer is here / problem is discussed here> | <brand mentions allowed?>
+  ANSWER TEMPLATE
+  <who I am and where I work> / <useful answer to the question> / <honest limits> / <product mention only if the rules allow>
+  HONEST COMPARISON TEMPLATE  <where we work with X, where X is better>
+  ALERTS  <keywords for category and brand>
+  WEEKLY ROUTINE  <what, how long>
+  EXPECTATIONS  <delay, what Reddit does and doesn't do>
+  DO NOT  <list>
+  CHECKS MISSED: <none, or list>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: The cited links
+    how: Paste the exact Reddit links AI tools gave. The plan is only as good as this list.
+  - what: Who posts
+    how: Name a real person who knows the product and can speak for the brand. The template uses their name and role.
+  - what: What you can say about rivals
+    how: List facts you can prove. The comparison template uses only those.
+  - what: Hours a week
+    how: Say 2 or 4. The routine and the number of communities shrink to fit.
+
+judge:
+  - Every thread has a status (open, locked or very old) and a clear yes or no.
+  - The answer template discloses who is speaking and where they work.
+  - Nothing in the plan uses a fake, aged or second account.
+  - Subreddit rules are checked before any brand mention.
+  - The timing claims are labelled as one account's experience.
+
+test:
+  - Run it on a category where you know a Reddit thread that AI cites. That thread should appear with the right status.
+  - Read the answer template aloud. If it sounds like an ad, rewrite it until it would help a stranger who has never heard of you.
+  - Check two subreddits' rules yourself. The plan should match them.
+  - After a month, look at your replies' scores and any negative replies, and compare with the plan.
+
+improve:
+  - Add the exact lines your team may and may not say about your product.
+  - Add a rule such as "never mention price in the first reply" if your communities dislike it.
+  - Keep a log of threads answered and what happened, and give it back to the skill each month.
+  - Pair it with the AI citation source finder, which finds the cited threads, and the best-of page writer for your own site.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It drafts the answer template and the weekly routine once you paste the cited threads."}
+    - {name: "Reddit keyword alerts", why: "Free alerts for your category and brand words let you reply early, when a thread is still open."}
+  inputs:
+    - "A list of AI answers on your buyer questions with their sources"
+    - "A short note on what your team may say about rivals"
+    - "The names of subreddits where your customers already talk"
+
+terms:
+  - term: Subreddit
+    meaning: A topic community on Reddit with its own rules, such as one for a hobby or a product type.
+  - term: Locked thread
+    meaning: A thread where nobody can add new comments, so you can't change what AI reads there.
+  - term: Citation
+    meaning: A page an AI answer names as a source for what it says.

@@ -1,0 +1,22 @@
+slug: creator-pay-planner
+name: "Creator pay planner"
+summary: "Give it a creator's views, audience mix and your Meta CPM. Get a flat fee or floor offer."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How Bloom Built the Playbook Every Founder Will Copy in 2026", by: "Greg, co-founder of Bloom, in an interview", used: "Setting the creator target at half your Meta CPM, using the average of the creator's last 10 videos, and cutting the fee for the share of the audience you cannot sell to"}
+  - {title: "How Bloom built an empire", by: "Greg Lavecchia, Bloom co-founder, in a podcast interview", used: "A flat fee agreed before posting, worked back from half of the Meta CPM, with no tracking for reach campaigns"}
+  - {title: "How Comfrt made $500M in 3 years", by: "Hudson, Comfrt founder, interviewed by a YouTube ecommerce educator", used: "The floor-or-commission offer for shop sales, the recruiter ladder, sharing numbers with top creators, repost payments and post volume"}

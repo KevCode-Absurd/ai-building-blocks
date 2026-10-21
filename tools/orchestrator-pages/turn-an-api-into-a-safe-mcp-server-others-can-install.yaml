@@ -1,0 +1,90 @@
+new_slug: turn-an-api-into-a-safe-mcp-server-others-can-install
+name: Turn an API into a safe, installable MCP server
+summary: Give it an API spec. Get an MCP server with sign-in, a security review and a package.
+job: connect-tools
+thinking: high
+thinking_why: It builds, secures and ships a server across four skills. Give it your strongest model.
+headline: Put your API in an MCP server that is signed in, checked and ready to share
+subhead: Give it an API spec. It builds an MCP server, adds sign-in, reviews the server for attack risks, then hosts and packages it so other people and their AI can install it.
+explain: |
+  An MCP server is easy to build and easy to get wrong. A quick wrapper has no sign-in, hands the model every endpoint, and trusts whatever a client sends. Once other people connect to it, those gaps are your gaps.
+
+  The steps add safety in the order that matters. First it builds the server from your API spec. You save and run it. Then it adds OAuth sign-in so only people you allow can connect. You commit that. Next it reviews the finished server for risks in the connection, sign-in, tool permissions and logging, and lists fixes. You apply the must-fix ones. Last it hosts and packages the server so it can be installed and updated without breaking users.
+when:
+  - You want your AI, or other people's, to use your API through MCP.
+  - You built a quick MCP server and now others need to connect to it.
+  - You are about to publish a server and want it checked first.
+you_give:
+  - Your API spec (OpenAPI or similar), or the API code
+  - Which calls should be exposed, and which must not be
+  - Who should be allowed to connect, and how they sign in
+  - Where you want to host it (optional)
+you_get:
+  - An MCP server in Python or TypeScript, with checked tool definitions
+  - OAuth sign-in built into the server
+  - A ranked checklist of security fixes, with the riskiest first
+  - A hosted and packaged server, with health checks, logging and a plan for new versions
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Use a test account and test data for the API while you build.
+  - Do all three of your steps. Each one makes the next check read the real code.
+how_it_works:
+  - title: Build the server
+    text: Reads the API spec, picks the calls to expose, generates the server, checks each tool definition and schema and picks how it will run.
+  - title: Save it and run it once
+    text: This one is yours. Save the server in your repo and run it once to confirm it starts.
+  - title: Add sign-in
+    text: Picks a sign-in model for how people connect, publishes the details clients look for, checks every token on every request and tests the flow end to end.
+  - title: Commit it and run again
+    text: This one is yours. Commit the sign-in code and run the server so the review reads the final code.
+  - title: Review the server for attack risks
+    text: Maps the threats, checks the connection, sign-in and tool permissions, checks logging and what each tool can touch, and lists fixes riskiest first.
+  - title: Apply the must-fix items
+    text: This one is yours. Fix everything marked must-fix and run the server again.
+  - title: Host and package it
+    text: Chooses remote hosting, a local package or both, adds health checks and per-tool logging, publishes it and plans versions so clients do not break.
+output_shape: |-
+  STEP 1: SERVER
+    Calls exposed | tool definitions | how it runs
+
+  YOUR STEP: save it, run it once
+
+  STEP 2: SIGN-IN
+    Model chosen | discovery details | token checks | test of the flow
+
+  YOUR STEP: commit, run again
+
+  STEP 3: SECURITY REVIEW
+    Threats | checks on connection, sign-in, permissions, logging | fixes ranked
+
+  YOUR STEP: apply the must-fix items
+
+  STEP 4: PUBLISH
+    Hosting | package | health and logging | version plan
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Which calls to expose
+    how: List the calls that must stay private in step 1. A smaller set of tools is easier for a model to use well and safer.
+  - what: Who connects
+    how: Say whether it is only you, your team or the public. Step 2 picks the sign-in model from that.
+  - what: Language
+    how: Pick Python or TypeScript in step 1, whichever your team already runs.
+  - what: Local only
+    how: If nobody else will connect over the network, tell step 4 to skip remote hosting and package for local install.
+judge:
+  - Each tool has a plain name, a clear description and a checked schema.
+  - Every request checks the token, not only the first one.
+  - Tools that write or delete are separate from tools that only read, and are limited by who is signed in.
+  - Each must-fix item is fixed or has a written reason.
+  - The package can be installed by someone who has not seen your code.
+test:
+  - Connect with no sign-in. The server should refuse.
+  - Connect as a user who may not use a tool. That tool should refuse.
+  - Install it on a clean machine from the package and make one call.
+improve:
+  - Log every tool call so you can see how it is used.
+  - Remove tools nobody calls.
+  - Run the security review again before each major version.

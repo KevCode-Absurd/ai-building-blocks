@@ -1,0 +1,24 @@
+slug: new-customer-onboarding-sequence-writer
+name: "New customer onboarding sequence writer"
+summary: "Give it your product and its use. Get a 14-day email and SMS plan and a 100-day map."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: email_flow}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The $100M Subscription Brand Playbook", by: "An email and retention agency founder (name not given)", used: "Heavy education in days 0 to 7, the quiet window in days 7 to 14, the email list and SMS rhythm, and the survey-to-habit method for finding how customers fit the product into a day"}
+  - {title: "Strategic Unorthodoxy: a framework for wild bets and unscalable actions in e-commerce", by: "Unknown (research write-up that draws on Joey Coleman's Never Lose a Customer Again, among others)", used: "Treating the first 100 days as the churn zone and filling the wait between order and arrival"}
+  - {title: "Wild bets folder: unconventional offer, retention and CX plays for e-commerce owners", by: "Unknown (compiled research write-up)", used: "Low-cost inserts in first orders that feel personal, with a cost of cents to a few dollars"}
+  - {title: "Customer delight across the e-commerce journey: a retention playbook", by: "Unknown (research write-up)", used: "Timing review and referral asks from the delivered event and after a good moment"}

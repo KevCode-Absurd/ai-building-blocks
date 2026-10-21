@@ -1,0 +1,24 @@
+slug: browse-abandonment-flow-builder
+name: "Browse abandonment flow builder"
+summary: "Give it your best sellers and proof. Get a site-visit email and a browse flow that offers a discount last."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "The site abandon and browse abandon triggers and filters, the 45-minute first email, holding the discount back to email 4, and the delay test"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "Browsing as mid-funnel evaluation, the four-email structure with filters and a cool-down, and the no new-versus-returning split"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores (name not given)", used: "Site abandonment design and where the discount sits in the order"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Triggers, re-entry block, exit rules and the add-to-cart filter the template misses"}
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "The single browse text about 60 minutes after the view and the one-text rule"}

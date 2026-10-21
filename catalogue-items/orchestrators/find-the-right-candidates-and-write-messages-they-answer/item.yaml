@@ -1,0 +1,22 @@
+slug: find-the-right-candidates-and-write-messages-they-answer
+name: "Find the right candidates and write messages they answer"
+summary: "Give it a job description. Get a profile of who fits, a week-by-week search plan, first messages and a pipeline update."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: document}
+uses: [ideal-candidate-profiler, candidate-sourcing-planner, candidate-outreach-drafter, hiring-progress-reporter]
+steps:
+  - {uses: ideal-candidate-profiler, note: "Turns the job description into a picture of the person who fits, beyond skills on paper."}
+  - {uses: candidate-sourcing-planner, note: "Reads the profile from the step before and turns it into where to look and when."}
+  - {uses: candidate-outreach-drafter, note: "Reads the profile from the first step and writes messages for the places the search plan picked. You send them yourself."}
+  - {uses: hiring-progress-reporter, note: "Turns your pipeline counts into an update that says what to change in the plan and the messages."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/find-the-right-candidates-and-write-messages-they-answer/skeleton.yaml

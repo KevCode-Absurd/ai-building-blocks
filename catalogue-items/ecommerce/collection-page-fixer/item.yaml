@@ -1,0 +1,23 @@
+slug: collection-page-fixer
+name: "Collection page fixer"
+summary: "Paste your collection page and stock by size. Get which products to feature and a daily check."
+category: ecommerce
+type: skill
+role: check
+job: page
+level: intermediate
+inputs:
+  - {type: store_capture, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Alo Yoga teardown: creative, offers, landers and acquisition", by: "A head of paid media (speaker not named)", used: "Keeping the best graded products in the top six, size curves and stock, one owner for the page and a custom page for a collab"}
+  - {title: "I studied 1,000 landing pages: what stops them making money", by: "CRO agency founder", used: "The seven item limit, image navigation and the homepage's job"}
+  - {title: "The best conversion rate optimization tutorial for ecommerce", by: "Arsh, CRO agency founder (as named in the talk)", used: "Quick add to cart on the collection page, filter fixes and mobile first checks"}
+  - {title: "11 landing page tricks to get more sales", by: "CRO agency founder", used: "Fewer items on the page"}

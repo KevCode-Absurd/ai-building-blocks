@@ -1,0 +1,28 @@
+slug: write-an-advertorial-that-turns-cold-traffic-into-sales
+name: "Write an advertorial that turns cold traffic into sales"
+summary: "Give it your product facts and customer reviews. Get an advertorial built on one big idea and checked for story and claims."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+  - {type: ad_copy, required: false}
+  - {type: persona, required: false}
+  - {type: design_direction, required: false}
+outputs:
+  - {type: audit_report}
+uses: [big-idea-and-mechanism-builder, store-advertorial-writer, advertorial-story-and-belief-checker, store-social-proof-placer, landing-page-30-point-checker]
+steps:
+  - {uses: big-idea-and-mechanism-builder, note: "Builds one big idea, a root cause and a named mechanism from your product facts and reviews."}
+  - {uses: store-advertorial-writer, note: "Writes the advertorial from the big idea brief."}
+  - {uses: advertorial-story-and-belief-checker, note: "Reads the draft page and flags where the story breaks or a belief is not yet earned."}
+  - {uses: store-social-proof-placer, note: "Places reviews and proof where the checked draft raises a doubt."}
+  - {uses: landing-page-30-point-checker, note: "Scores the finished page on 30 points before it goes live."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-an-advertorial-that-turns-cold-traffic-into-sales/skeleton.yaml

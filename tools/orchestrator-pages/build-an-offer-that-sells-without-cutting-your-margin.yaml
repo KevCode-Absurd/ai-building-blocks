@@ -1,0 +1,87 @@
+new_slug: build-an-offer-that-sells-without-cutting-your-margin
+name: Build an offer that sells without cutting your margin
+summary: Give it your product, buyer and costs. Get a priced offer with a gift or tier, and the ad return it needs.
+job: make-offer
+thinking: high
+thinking_why: It runs five skills in a row, and four of them do profit sums that the next one depends on. Give it your strongest model.
+headline: An offer that lifts profit, not just sales
+subhead: Give it your product, your buyer's biggest doubt and your costs. It builds an offer, adds a gift or spend tier and a guarantee with the costs counted, tests it against a plain discount, and compares profit per visitor with your current offer.
+explain: |
+  Percent-off sales lift revenue, but each one gives away margin, and buyers learn to wait for the next one. A sale that doubles orders can still lose money once ad spend, shipping and fees are counted. Most stores never run the sum before they launch.
+
+  The steps build an offer that answers one buyer doubt instead of cutting the price. A gift or spend tier follows, with the margin checked at every tier. Then a guarantee is added, with the cost of refunds and returns counted. The offer is then tested against a plain discount to show the ad return it must hit to keep your profit. Last, it compares profit per visitor with your current offer, before you launch it. No step pauses, so bring your costs and numbers first.
+when:
+  - You run percent-off sales and want an offer that lifts profit instead of only revenue.
+  - Your average order value is flat, and you want a gift or spend tiers to lift it without a discount.
+  - You are about to launch a sale and want to know the ad return it needs before you spend.
+you_give:
+  - Your product, price and one buyer's main doubt in their words
+  - Your cost per unit, shipping and fulfilment cost per order, and payment fees
+  - Your average order value and how order sizes spread
+  - Your guarantee and return terms, with return rate and cost to take a return back
+  - The discount you are thinking of, and your target ad return
+  - Order history, past sales and your current offer's sessions and orders (optional)
+you_get:
+  - An offer built on one buyer doubt, with a profit check
+  - Gift options, two to four spend tiers, margin and break-even at each tier, store lines and a stop rule
+  - A guarantee with net sales and net profit before and after
+  - The ad return you must hit for the offer to beat a discount, a safety score out of 100 and a verdict
+  - Profit per order and per visitor for each offer, a winner, and a score for how far the read-out can be trusted
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it all your costs per order. Product cost alone makes every discount look safe, so add shipping, fulfilment and fees.
+  - Name your buyer's biggest doubt in their own words, from reviews or calls.
+  - Run the final comparison on real traffic numbers if you have them. Then launch the winner and keep the stop rule.
+how_it_works:
+  - title: Build the offer
+    text: Puts the buyer's main doubt on one lever of value, such as result, certainty, time, effort or price. Builds the offer, checks profit and runs five checks.
+  - title: Add a gift or tier
+    text: Picks the gift first, then sets spend tiers above your average order value. Checks margin at each tier and writes banner and cart lines.
+  - title: Add a guarantee
+    text: Tests net sales and profit with and without it, counting return shipping and lost stock. Sets the terms and where to show it.
+  - title: Test it against a discount
+    text: Works out the ad return you must hit to keep the same profit per order. Scores the plan out of 100 and gives a verdict.
+  - title: Compare profit per visitor
+    text: Builds a cost table for each offer and works out profit per order and per session. Flags offers that raise order value but lose profit per visitor.
+output_shape: |-
+  STEP 1: OFFER
+    Buyer doubt | lever | offer with terms | profit check | five checks
+
+  STEP 2: GIFT OR TIER
+    Gift pick | spend tiers | margin and break-even per tier | banner, product page and cart lines | stop rule
+
+  STEP 3: GUARANTEE
+    Net sales and profit before and after | length and conditions | name | where to show it
+
+  STEP 4: DISCOUNT TEST
+    Ad return needed | low and high case | score out of 100 | verdict
+
+  STEP 5: PROFIT PER VISITOR
+    Cost table per offer | profit per order and per session | break-even ad return | winner | trust score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your costs per order
+    how: Include shipping, fulfilment and fees. If any is missing, the profit sums are marked as incomplete.
+  - what: Your expected sales lift
+    how: Give a range for the guarantee and the discount. The steps run a low and a high case when you have no estimate.
+  - what: Your cash
+    how: Thin cash cannot fund a sale that needs a big jump in ad efficiency. Say how much you can risk.
+  - what: Your sessions and orders per offer
+    how: Step 5 needs them for each offer. Small counts lower the trust score.
+judge:
+  - The offer answers one named doubt and does not cut the core price.
+  - Margin and break-even are shown at every tier.
+  - The guarantee sums include return shipping and lost stock.
+  - The ad return needed is shown for both a low and high case.
+  - The winner is picked on profit per visitor, and the trust score is explained.
+test:
+  - Redo the break-even sum for one tier by hand. It should match.
+  - Compare the ad return needed with your last three months. If you never reach it, the discount fails.
+  - Run the offer to a small slice of traffic first and check its profit per visitor against step 5.
+improve:
+  - Add your real return and refund rates to the guarantee skill after one quarter.
+  - Save the winning offer and its stop rule in your brand file for your ad and email skills.
+  - Re-run step 4 before every sale, with that sale's discount and costs.

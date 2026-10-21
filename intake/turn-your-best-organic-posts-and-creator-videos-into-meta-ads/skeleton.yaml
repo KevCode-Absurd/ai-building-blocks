@@ -1,0 +1,55 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: turn-your-best-organic-posts-and-creator-videos-into-meta-ads
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: turn-your-best-organic-posts-and-creator-videos-into-meta-ads
+  name: "Turn your best organic posts and creator videos into Meta ads"
+  summary: "Give it your posts with views and your product facts. Get ranked posts, checked scripts, creator briefs and a test layout."
+  when: "some of your posts beat your normal views and you want to run them as ads."
+  job: launch-and-scale-ads
+  level: intermediate
+steps:
+  - name: "Organic post to ad promoter"
+    skill: organic-post-to-ad-promoter
+    job: ads
+    from: "library"
+    method: ["Find your normal views per post","Rank the posts that beat it","Mark each one run-as-is or keep-the-hook-and-reshoot","Clear the rights and rules"]
+    inputs: [performance_sheet, brand_brain!]
+    outputs: [shortlist, script!]
+    note: "Starts by choosing the posts worth putting money behind."
+  - name: "Video script bridge checker"
+    skill: video-ad-bridge-checker
+    job: ads
+    from: "library"
+    method: ["Map the sections of the script","Check when the product enters","Check the bridge to the offer","Rewrite the weak spots"]
+    inputs: [script]
+    outputs: [audit_report, script]
+    note: "Checks the promo half of each reshoot script, so the hook leads somewhere."
+  - name: "Meta ads compliance checker"
+    skill: meta-ads-compliance-checker
+    job: ads
+    from: "library"
+    method: ["Pick the policy groups that matter","Judge what the script shows and says","Rate each finding","Rewrite with fixes in"]
+    inputs: [script!]
+    outputs: [audit_report]
+    note: "Checks the scripts against ad rules before creators film them."
+  - name: "Creator filming brief writer"
+    skill: creator-filming-brief-writer
+    job: video
+    from: "library"
+    method: ["State the idea in two or three sentences","Write the run order for the shoot","List the must-haves and the maybes","Add the file-naming pattern"]
+    inputs: [script, product_data]
+    outputs: [brief]
+    note: "Turns the approved scripts into briefs a creator can film from."
+  - name: "Meta test campaign planner"
+    skill: meta-test-campaign-planner
+    job: ads
+    from: "library"
+    method: ["Size the test to your budget","Group ads by pack and name each one","Set the read rules and minimum spend"]
+    inputs: [brief, performance_sheet!]
+    outputs: [plan]
+    note: "Lays out the test so the new ads face your current best ad."

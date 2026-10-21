@@ -1,0 +1,124 @@
+new_slug: google-ads-dip-investigator
+name: "Google Ads dip investigator"
+summary: "Give it your results and recent changes. Get the likely cause and a fix-or-wait call."
+job: run-google-ads
+thinking: high
+thinking_why: "It follows a causal chain across business and campaign data and must avoid false causes, so a stronger model reasons better."
+
+headline: "Google Ads dip investigator"
+subhead: Give it your store results, spend by channel, your change history and weekly Google data for 90 to 180 days. It works from the business level down to one cause. You get ordered findings, a fix, wait or ignore call, and one sentence naming the root cause.
+
+explain: |
+  When Google results drop, most people change many things at once. They look at yesterday, blame the budget, or rebuild the account. A rebuild resets learning and often makes things worse.
+
+  This skill investigates in a fixed order. It reads the change history first, uses long time windows, and uses conversions by conversion time, because Google credits a sale to the day of the click, so the last 3 to 4 days always look poor. It then splits revenue into sessions, conversion rate and order value, finds which moved, and checks other channels and your site before Google. In Google, it looks at the top five campaigns by cost, finds the date things changed, and drills into the metric behind the drop. It ends with one sentence naming the cause, or it tells you to wait.
+
+when:
+  - Revenue or ROAS from Google fell and you do not know why.
+  - You changed several things and cannot tell which one hurt.
+  - You are about to rebuild an account and want to be sure that is needed.
+
+you_give:
+  - The change history for the last 30 days
+  - Store revenue, orders, sessions, AOV and conversion rate over time
+  - Spend by channel, such as Meta, Google and others
+  - Google campaign data by week for 90 to 180 days, with conversions by conversion time
+you_get:
+  - Findings in order, from the business level down to the root cause
+  - A fix, wait or ignore decision
+  - One sentence stating the root cause
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export the Google change history for the last 30 days and paste or attach it.
+  - Attach weekly Google campaign data for 90 to 180 days, with the conversions by conversion time columns.
+  - Add your store numbers and spend by channel for the same weeks.
+  - Change one thing at a time, using the fix it gives, and check again after the learning period.
+
+how_it_works:
+  - title: Applies three rules
+    text: Read change history first, use 90 to 180 day weekly windows, and use conversions by conversion time.
+  - title: Checks the business
+    text: Splits revenue into sessions, conversion rate and AOV. Checks other channels, the site, and what changed in the offer.
+  - title: Compares real KPIs
+    text: Checks platform numbers against MER or store revenue, and seasonality against your forecast.
+  - title: Finds the campaign
+    text: Sorts Google campaigns by cost. The cause is almost always in the top five. Finds the date, then the ad group or asset group.
+  - title: Names the failure modes
+    text: Looks for the known failures of Performance Max, Shopping or Search, as they differ.
+  - title: Drills into metrics
+    text: CPA equals CPC divided by conversion rate. Clicks equal impressions times click-through rate. Finds the sub-metric that moved.
+  - title: Chooses the action
+    text: Fix, wait or ignore. A fix, not a rebuild, one change at a time.
+  - title: Writes one sentence
+    text: States what fell, which sub-metric drove it, and the cause, or says no action yet.
+
+output_shape: |
+  DIP INVESTIGATION  <store>, <window>, dip started <date>
+  RULES  change history: <findings> | window: <weeks> | basis: conversions by conversion time
+  LEVEL 1, BUSINESS
+    revenue = sessions x conversion rate x AOV: <which moved, by how much>
+    other channels and site: <findings>   platform vs real KPIs (MER, store revenue): <...>
+    seasonality vs forecast: <...>
+  LEVEL 2, GOOGLE
+    top campaigns by cost: <list>   inflection date: <date>   campaign type: <PMax / Shopping / Search>
+    sub-metric drill: <CPA = CPC / conversion rate, clicks = impressions x CTR, which moved>
+    candidate causes checked: <list, with evidence>
+  DECISION  <FIX / WAIT / IGNORE>   because <reason>
+  ROOT CAUSE  This is down because <metric X> fell, driven by <sub-metric Y>, caused by <Z>.
+  FIX  <one change>   then check after <days>
+  NOT CHECKED: <item, and what is needed>
+  MISSING: <item>
+
+tweaks:
+  - what: Time window
+    how: Give 90 to 180 days of weekly data. Do not shorten it. Short windows turn noise into a story.
+  - what: Conversion time view
+    how: Include the by-conversion-time columns. Without them the latest 3 to 4 days look poor even when they are fine.
+  - what: Your change log
+    how: Include what you or others changed, with dates. Most dips follow a change.
+  - what: Campaign type
+    how: Name the type of the campaign that dropped. The failure modes differ by type.
+  - what: Other channels
+    how: Add spend by channel. If Google is only 10 to 35% of spend, other channels and the site get checked first.
+
+judge:
+  - Findings go in order, from business to root cause.
+  - It names an inflection date and a campaign, not a general problem.
+  - It uses conversions by conversion time, and says so.
+  - The decision is fix, wait or ignore, and a fix is one change.
+  - "The last line fills in the sentence: down because X fell, driven by Y, caused by Z. If it cannot, it says no action yet."
+
+test:
+  - Give it a case where only the last 3 days look low and the earlier weeks are fine. It should say wait, citing conversion lag.
+  - Give it a dip that follows a price change on your site. It should find the change in the history or business level before Google.
+  - Run it twice on the same data. The root cause should match.
+  - Check the inflection date against your own memory of what changed.
+
+improve:
+  - Add your own known causes to the failure list, such as a stock issue you have seen before.
+  - Add your forecast and seasonality notes so the seasonality check uses them.
+  - Add the report columns you export, so every run asks for the same data.
+  - Save each root cause and fix in your notes, so you learn which causes repeat.
+  - Pair it with the account auditor, which finds standing problems rather than a drop.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Holds the change history, weekly campaign data and the by-conversion-time columns."}
+    - {name: "Shopify", why: "Shows real revenue, orders, sessions and conversion rate for the business-level check."}
+    - {name: "Google Analytics 4", why: "Shows sessions and conversion rate by source."}
+  inputs:
+    - "Your Meta or TikTok spend by week"
+    - "Your sales calendar and promotions, with dates"
+    - "Your site changes, such as price or page edits, with dates"
+    - "Merchant Center diagnostics for the dip dates"
+
+terms:
+  - term: Conversion lag
+    meaning: The delay between an ad click and the sale it leads to.
+  - term: Conversions by conversion time
+    meaning: A view that counts a sale on the day it happened instead of the day of the click.
+  - term: MER
+    meaning: Marketing efficiency ratio. Your total revenue divided by your total ad spend, across all channels.
+  - term: Inflection date
+    meaning: The date a trend turned.

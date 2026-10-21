@@ -1,0 +1,116 @@
+new_slug: shopify-test-setup-picker
+name: "Shopify test setup picker"
+summary: "Give it your Shopify plan and test idea. Get what you can test, the right route, and a setup score."
+job: test-store-changes
+thinking: low
+thinking_why: "It sorts ideas by plan and gives a short list of questions, so a fast model is enough."
+
+headline: "Shopify test setup picker"
+subhead: Give it your Shopify plan, your test ideas and who builds the changes. It tells you what you can test on your plan, which kind of testing route fits each idea, and what to ask about flicker, speed and stats before you pick a tool. You also get a setup score out of 100.
+
+explain: |
+  Many Shopify owners buy a testing app, plan a checkout test, and find out later that it cannot run. Since Shopify rebuilt checkout (general rollout in August 2024), apps can no longer inject scripts into checkout to split-test it. On Basic, Shopify and Advanced plans you can test everything before checkout. Checkout tests need Plus.
+
+  This skill sorts your ideas by what your plan allows. For each one it picks a route: a browser-based tool for front-end changes, or a server-side or theme test for pricing, speed-sensitive and checkout-adjacent work. It lists what to ask every tool about flicker, page weight and the stats engine, and warns about price tests. Tool names and prices change fast, so it gives you questions to ask rather than a ranked list. It is the Shopify version of the general experiment tool picker.
+
+when:
+  - You want to A/B test checkout and are not sure your plan allows it.
+  - You are about to pay for a testing app and need the right questions to ask.
+  - You have several test ideas and need to know which can run side by side.
+
+you_give:
+  - "Your Shopify plan: Basic, Shopify, Advanced or Plus"
+  - The pages and logic you want to test, such as product page, cart, checkout or pricing
+  - "Who builds the changes: you, an app or a developer"
+  - Your monthly orders (optional)
+  - Tests already running (optional)
+
+you_get:
+  - What is testable on your plan and what is not
+  - "A route for each idea: browser-based, or server-side and theme tests"
+  - Flicker, speed and stats engine notes, and a list of questions to ask every tool
+  - A setup score out of 100, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it your Shopify plan and list each test idea in one line.
+  - Say who will build the changes.
+  - Take its questions to any tool you are thinking of buying, and write down the answers.
+  - Check Shopify's own checkout rules once a year, as they keep changing.
+
+how_it_works:
+  - title: Places each idea
+    text: Before checkout or in checkout. About 80 percent of high-impact store tests happen before checkout.
+  - title: Applies the checkout rule
+    text: Apps cannot split-test checkout on standard plans. Plus has checkout blocks, extensions and native theme tests.
+  - title: Picks the route
+    text: Browser-based tools for front-end tests. Server-side or theme tests for pricing, speed and checkout-adjacent work.
+  - title: Deals with flicker
+    text: The hide-the-page fix can hold the page back for up to 3 to 4 seconds, so you choose that cost or go server-side.
+  - title: Checks the stats engine
+    text: Sequential, Bayesian or both. You need to know before trusting a winner banner.
+  - title: Warns about price tests
+    text: Two prices for one product at the same time is a brand risk. Test presentation, tiers and bundles instead.
+  - title: Prevents clashes
+    text: No two tests on one product page. A home test and a cart test can run together.
+  - title: Scores the setup
+    text: Five fit checks, 20 points each, with the sum shown.
+
+output_shape: |
+  PLAN     <Shopify plan> | builder: <owner / app / developer> | orders: <n a month>
+  IDEA 1   <idea> | where: <before checkout / checkout> | testable: <yes / no / limited, why>
+           route: <browser-based / server-side or theme> | flicker: <note> | speed: <note>
+  IDEA 2   ...
+  NOT TESTABLE  <ideas and what to do instead>
+  ASK EVERY TOOL  <questions on free limits, where the split happens, flicker, stats, plan fit>
+  STATS    <what to check, and how to read the result>
+  CONFLICTS  <tests that clash on one page, or none>
+  SCORE    <n>/100 (<sum shown>)
+  NEXT     <one step>
+  MISSING: <plan | ideas | builder | orders>
+
+tweaks:
+  - what: Your plan
+    how: Say it exactly. Plus unlocks checkout blocks and extensions that other plans do not have.
+  - what: Who builds
+    how: If you have no developer, browser-based tools and theme tests are the likely routes.
+  - what: Page speed worries
+    how: Say if speed matters to you. It pushes the route to server-side or theme tests.
+  - what: Tools you are weighing
+    how: Name them. The skill turns their pages into questions and checks the answers fit your plan.
+
+judge:
+  - Checkout ideas are sorted by plan, with a reason.
+  - Nothing is called the best tool.
+  - Flicker, speed and stats are covered for each browser-based test.
+  - No price test shows two prices for one product at once.
+  - The checkout rule carries a note to check it again within a year.
+
+test:
+  - Give it a Basic plan and a checkout test. It should say that checkout cannot be split-tested with a script tool and name what to test instead.
+  - Give it two tests on one product page. It should flag the clash.
+  - Ask it for the best testing app. It should answer with questions, not a pick.
+  - Check its checkout answer against Shopify's current help pages today.
+
+improve:
+  - Add the tools you already pay for, so it checks them first.
+  - Add your page speed numbers to the skill file, so the route reflects them.
+  - Write down each answer a vendor gives, with the date, and attach it next time.
+  - Pair it with the readiness checker to size the test and the verdict maker to read the result.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its help pages show what your plan allows in checkout today. Check them before you buy anything."}
+    - {name: "Any good chat AI", why: "It sorts your ideas and turns vendor pages into the questions to ask."}
+  inputs:
+    - "Your current theme name and whether you use a custom theme"
+    - "Your page speed scores for the product page and cart"
+    - "Vendor pricing pages saved on the day you compare"
+
+terms:
+  - term: Flicker
+    meaning: The old page flashes on screen before the new version loads in a browser-based test.
+  - term: Server-side test
+    meaning: A test where the server picks the version before the page is sent, so nothing flashes.
+  - term: Checkout blocks
+    meaning: Parts you can add to Shopify Plus checkout without custom code.

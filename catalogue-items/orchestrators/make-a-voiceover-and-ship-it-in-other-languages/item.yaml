@@ -1,0 +1,20 @@
+slug: make-a-voiceover-and-ship-it-in-other-languages
+name: "Make a voiceover and ship it in other languages"
+summary: "Give it your script. Get a spoken voiceover, dubbed versions that keep the voice, and subtitles for each."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: transcript}
+uses: [voiceover-maker, video-dubbing-editor, subtitle-and-transcript-maker]
+steps:
+  - {uses: voiceover-maker, note: "Turns your script into a voiceover file."}
+  - {uses: video-dubbing-editor, note: "Makes a version per language. Reads the voiceover from the step before."}
+  - {uses: subtitle-and-transcript-maker, note: "Makes subtitles for each corrected version. Reads the dubbed audio from the step before."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/make-a-voiceover-and-ship-it-in-other-languages/skeleton.yaml

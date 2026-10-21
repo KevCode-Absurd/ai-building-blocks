@@ -1,0 +1,57 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: run-one-store-test-and-know-whether-to-ship-the-change
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: run-one-store-test-and-know-whether-to-ship-the-change
+  name: "Run one store test and know whether to ship the change"
+  summary: "Give it your orders and visits. Get a readiness call, a test plan for your Shopify plan, and a ship verdict."
+  when: "you want a clear answer to whether a store change worked, not a green banner from a tool."
+  job: test-store-changes
+  level: intermediate
+steps:
+  - name: "Store test readiness checker"
+    skill: store-test-readiness-checker
+    job: analysis
+    from: "library"
+    method: ["Decide repair or test", "Pick the stage by orders per month", "Set the smallest lift worth shipping", "Size the test and work out the weeks"]
+    inputs: [performance_sheet, question]
+    outputs: [audit_report]
+    note: "Checks your traffic can prove a test at all and how long it takes."
+  - name: "Big swing test picker"
+    skill: big-swing-test-picker
+    job: page
+    from: "library"
+    method: ["Place the store by size", "Pick bold areas your traffic can prove", "Choose five tests and order them", "Say what not to test at this size"]
+    inputs: [performance_sheet, audit_report!, question!]
+    outputs: [shortlist, plan]
+    note: "Picks the tests your readiness result says you can prove."
+  - pause: "Choose the one test you will run first."
+  - name: "Shopify test setup picker"
+    skill: shopify-test-setup-picker
+    job: ops
+    from: "library"
+    method: ["Place the idea before or in checkout", "Apply the checkout rule for your plan", "Pick the route: browser, server-side or theme", "Ask about flicker and the stats engine"]
+    inputs: [question, performance_sheet!]
+    outputs: [audit_report]
+    note: "Picks how to run the chosen test on your Shopify plan without flicker or speed cost."
+  - name: "One-change experiment planner"
+    skill: one-change-experiment-planner
+    job: research
+    from: "library"
+    method: ["Write the question in plain terms", "Pick the one thing to change and fix the rest", "Say what counts as no effect", "Write what each result means"]
+    inputs: [question, plan!]
+    outputs: [plan]
+    note: "Turns the picked test into a one-change plan with dates and decision rules."
+  - pause: "Run the test to the planned sample and dates without stopping early, and export the numbers."
+  - name: "Store test verdict maker"
+    skill: store-test-verdict-maker
+    job: analysis
+    from: "library"
+    method: ["Check the traffic split and how the test ended", "Check what else changed", "Read the lift as a range and turn it into money", "Give a ship call and a log entry"]
+    inputs: [performance_sheet, plan!]
+    outputs: [audit_report]
+    note: "Judges the finished test against the plan, then gives the call and a log entry."

@@ -1,0 +1,19 @@
+slug: wholesale-margin-checker
+name: "Wholesale margin checker"
+summary: "Give it shelf price and costs. Get your margin per unit after retailer cut, promos and freight, scored."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Premium isn't about price, it's about positioning", by: "Founder of a canned sports-hydration brand, in a podcast interview", used: "The retailer margin and price waterfall, trade spend as a share of sales, the cost of promotions, distributor margin, direct versus distributor, velocity measures, the readiness rule and the advice to win an anchor customer before relying on a broker"}

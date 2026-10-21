@@ -1,0 +1,129 @@
+new_slug: store-navigation-planner
+name: "Store navigation planner"
+summary: "Give it your collections. Get a menu, homepage feature list, sub-collection links and breadcrumbs."
+job: get-found-in-search
+thinking: low
+thinking_why: "It applies fixed rules to a list of collections, so a fast, cheap model is enough."
+
+headline: "Store navigation planner"
+subhead: Give it your collections with their search volume, revenue and product counts, plus your current menu and homepage. It plans the main menu, the collections to feature on the homepage, links from parent to sub-collections, a filter decision and breadcrumbs, with click counts before and after.
+
+explain: |
+  If shoppers need four clicks to reach a product, many will not get there. Search engines also crawl deep pages less often. Meanwhile your homepage, which usually has the most links, may feature collections that nobody searches for.
+
+  This skill plans the paths through your store. It picks a menu style for your range size, puts your best collections near the top of the homepage so link value flows to them, shows sub-collections on their parent pages, and decides whether you need filters. Shopify filter pages do not rank, so it lists which filter values deserve a real collection. It counts clicks to your top 10 collections before and after, so you can see the change.
+
+when:
+  - Your menu has grown messy and top products take three or more clicks to reach.
+  - You are adding many collections and need to place them.
+  - Your homepage features collections by taste, not by what people search and buy.
+
+you_give:
+  - Your collections with search volume, revenue and product counts
+  - Your current main menu and homepage sections
+  - Your theme name and how many products you sell (optional)
+you_get:
+  - A main menu structure with the style explained
+  - Homepage featured collections in order
+  - A plan for sub-collection links and breadcrumbs
+  - A filter decision and the filter values that need their own collection
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your collections with volume and revenue, plus your current menu and homepage sections.
+  - Count the clicks from your homepage to your top 10 collections and add the numbers.
+  - Make the changes in your theme, starting with the menu and the homepage.
+  - Count the clicks again and paste the new numbers so it can fill the after table.
+
+how_it_works:
+  - title: Measures click depth
+    text: Counts clicks from the homepage to the top 10 collections before any change.
+  - title: Picks a menu style
+    text: One Shop menu for a small range. Sub-collections in the menu for a big one. A shop-by menu when buyers choose by feature.
+  - title: Plans the homepage
+    text: Puts high-volume, high-revenue collections near the top, since the homepage usually holds the most links.
+  - title: Decides on filters
+    text: Filters only with hundreds of products. Filter pages do not rank on Shopify, so wanted filter values get a real collection.
+  - title: Links down the tree
+    text: Shows sub-collections on parent pages, with images where possible.
+  - title: Sets grid and product links
+    text: A grid without JavaScript, 36 to 48 products per page, breadcrumbs, tag-style links and related products.
+  - title: Measures again
+    text: Compares the new click counts with the old ones in a table.
+
+output_shape: |
+  CLICK DEPTH TODAY
+  <collection> -> <n> clicks via <path>
+
+  MAIN MENU
+  <style and why>
+  <top item> > <child> > <grandchild>
+
+  HOMEPAGE FEATURED COLLECTIONS (in order)
+  1. <collection> | volume <n> | revenue <n> | shown as <banner | section>
+
+  FILTERS
+  <keep | skip> because <catalogue size>
+  Filter values that need their own collection: <...>
+
+  SUB-COLLECTION LINKS
+  <parent> -> <children>
+
+  PRODUCT PAGE LINKS AND GRID
+  <breadcrumbs | tag-style | related> | <36 to 48 per page>
+
+  CLICK DEPTH AFTER
+  <collection> -> <n> clicks
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Catalogue size
+    how: Say how many products you sell. It changes the menu style and whether filters make sense.
+  - what: Volume and revenue
+    how: Add both for each collection. They set the homepage order and the menu.
+  - what: Your theme
+    how: Name it. Menu depth and mega menu options depend on the theme.
+  - what: Mobile use
+    how: Say what share of visits are on phones. Large menus hurt phone use, so it will keep the menu shorter.
+  - what: Filter values shoppers use
+    how: List filters that bring searches, such as a skin type or a room. It plans a real collection for each.
+
+judge:
+  - There are before and after click counts for the top 10 collections.
+  - The menu style matches your catalogue size.
+  - Homepage order follows volume and revenue.
+  - Filters are only recommended for hundreds of products.
+  - Filter values you want to rank for have their own collection.
+
+test:
+  - Give it a store with 10 products. It should say a simple Shop menu and no filters.
+  - Count the clicks yourself for three collections and compare them with its table.
+  - Move one high-volume collection to the top of the homepage and check Search Console impressions after a few weeks.
+  - Run it twice on the same input. The menu should be the same.
+
+improve:
+  - Add your theme's menu limits to the skill file so plans always fit.
+  - Add your seasonal collections and when they swap in on the homepage.
+  - Save the finished plan and review it every quarter.
+  - Pair it with the Collection page planner to decide what collections to have, and with the Collections and menu planner for tags and filter setup.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Menus can nest, and the homepage sections and breadcrumbs depend on your theme."}
+    - {name: "Shopify Search & Discovery", why: "Free Shopify app for filters and a product grid that loads without JavaScript."}
+    - {name: "Google Search Console", why: "Free. Shows impressions for featured collections before and after the change."}
+  inputs:
+    - "Search volume per collection from a keyword tool"
+    - "Revenue per collection from your store report"
+    - "Screenshots of your homepage on a phone"
+    - "Competitor menus you like"
+
+terms:
+  - term: Click depth
+    meaning: The number of clicks it takes to reach a page from the homepage.
+  - term: Faceted navigation
+    meaning: A sidebar of filters, such as size and colour, next to the product grid.
+  - term: Breadcrumbs
+    meaning: Small links at the top of a page that show where you are, such as Home > Protein > Whey.

@@ -1,0 +1,74 @@
+new_slug: plan-a-year-of-hiring-and-what-it-will-cost
+name: Plan a year of hiring and what it will cost
+summary: Give it past headcount and goals. Get a forecast, a hiring plan and a monthly cost budget.
+job: hire-people
+thinking: high
+thinking_why: The forecast and the budget are sums that must agree with each other. Give it your strongest model and check the maths.
+headline: Know who to hire this year, in what order, and what it will cost each month
+subhead: Give it your past hires and exits and your growth goals. It forecasts the hires you need and the people you will lose, turns that into a role-by-role plan in priority order, and prices each role in a budget by team and by month.
+explain: |
+  Hiring plans usually start from a wish list. Leaders ask for roles, finance asks for a number, and nobody can say why the list is in that order or what happens if two people leave. The budget gets cut and the plan stays the same.
+
+  The steps start from the numbers. First it forecasts hires and exits from your history and states how far off the forecast could be. Then it turns your growth goals and that forecast into named roles in the order to hire them, with a monthly report for leaders. Last it prices each role into a budget by team and by month, with notes that explain the gaps to finance.
+when:
+  - You are planning next year's team and have no written hiring plan.
+  - Finance asks for a people budget and you only have a list of roles.
+  - You want to know how many hires you need just to stand still.
+you_give:
+  - Your headcount history, with hires and exits by month if you have them (optional)
+  - Your growth goals for the year
+  - Pay by role, or your best guess, and any budget limit
+  - Your starting headcount by team
+you_get:
+  - A forecast of hires and exits, with the method and the range of error
+  - A hiring plan in priority order, with a monthly report for leaders
+  - A people-cost budget by team and by month
+  - Notes that explain the gaps to finance
+how_to_use:
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your past headcount and your goals. A spreadsheet export works.
+  - Read the forecast first. If the exit numbers look wrong, correct them before the plan is built.
+  - Check the budget totals by hand against your pay figures before you share them.
+how_it_works:
+  - title: Forecast hires and exits
+    text: Projects the hires you need and the people likely to leave, month by month, and states the method and how far off it could be.
+  - title: Build the hiring plan
+    text: Turns your goals and the forecast into named roles, puts them in priority order and sets a monthly report for leaders.
+  - title: Price the plan
+    text: Prices each role, builds the budget by team and by month, and adds notes that explain the gaps to finance.
+output_shape: |-
+  STEP 1: FORECAST
+    Hires needed by month | likely exits by month | method | range of error
+
+  STEP 2: HIRING PLAN
+    Roles in priority order | why each one | start month | monthly report layout
+
+  STEP 3: PEOPLE-COST BUDGET
+    Cost by team and month | assumptions | notes on gaps for finance
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How much history you give
+    how: Two years of hires and exits by month gives a tighter range than one year. With little history, the forecast says so and widens the range.
+  - what: Pay by role
+    how: Give real pay figures for each role. Guesses make the budget look exact when it is not, and the notes flag every guess.
+  - what: Planned changes
+    how: Tell it about a new product, a closing site or a hiring freeze. These change the forecast more than the history does.
+  - what: Cost beyond pay
+    how: Say whether pay figures include taxes and benefits. If not, give a rate so the budget does not run low.
+judge:
+  - The forecast states its method and a range, not a single number.
+  - Every role in the plan ties to a goal or to a forecast gap.
+  - The order of the roles has a reason you can say out loud.
+  - Budget totals match the plan, with every pay assumption listed.
+  - Gaps and guesses show up as MISSING lines, not as quiet numbers.
+test:
+  - Run the forecast on last year's history alone and see how close it lands to what happened.
+  - Add up the budget by hand for three roles and compare it with the sheet.
+  - Ask a manager to name the first role they would cut. The plan's order should make that call easy.
+improve:
+  - Save the finished forecast and budget, then compare them with actuals each quarter and tell the AI where they differ.
+  - Add your own hiring rules, such as no more than two hires a month, to the plan step.
+  - Add a scenario check for a slower and a faster year before you present the plan to leaders.

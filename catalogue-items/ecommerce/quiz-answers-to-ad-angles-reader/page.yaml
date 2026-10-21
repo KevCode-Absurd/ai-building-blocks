@@ -1,0 +1,100 @@
+new_slug: quiz-answers-to-ad-angles-reader
+name: "Quiz answers to ad angles reader"
+summary: "Paste your quiz answers. Get who buys, how aware they are and ranked ad angles."
+job: understand-customers
+thinking: medium
+thinking_why: "It counts shares and reads patterns in answers, so a mid-size model works if you check the counts."
+headline: "Quiz answers to ad angles reader"
+subhead: "Paste the answers people gave in your quiz. It counts who they are, their main pains and what they tried, reads how much they already know, and ranks the ad angles and frames to test. It also lists changes to your quiz or offer and scores how solid the data is."
+explain: |
+  A quiz collects what buyers say about themselves, in numbers. Most stores never read it as a whole. They look at sales and ignore what 100 people told them about their pain, their goals and what they tried before.
+  This skill reads that data. It waits for about 100 submissions, counts the share of each age group, pain, goal and past solution, and reads how aware the buyers already are from what they have tried. If 70% choose one specific pain over a general one, your ads should be about that pain. It picks the angle and the frame to test from your buyers' stated doubts. It uses your own data, not competitor ads. The source's view is that copying a competitor's concept is about 20% of the work and the frame and message are about 80%. It works only for people who clicked your ads, so it reads one group, not all buyers.
+when:
+  - Your quiz has reached about 100 submissions and you have not read the answers as a whole.
+  - Your ads are not landing and you do not know which pain or goal to lead with.
+  - You want to update your brand file with what buyers actually said.
+you_give:
+  - The quiz submissions export (one row per person, one column per question)
+  - The ad sets that sent the traffic (optional)
+  - What each quiz question asks, if the column names are not clear
+you_get:
+  - A report with age mix, top pains, past solutions and goals
+  - "An awareness read: top, middle or bottom of the funnel"
+  - Ranked angles and frames to test, each with its evidence
+  - Changes to the quiz or offer the answers point to, and a data strength score out of 100
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export the answers from your quiz tool and attach the file, or paste the rows. Wait until you have about 100 submissions, not purchases.
+  - Say which ad sets sent the traffic, if you know.
+  - Pick the top two angles and write one test ad for each, using the buyers' own words.
+  - Add the report to your brand file and run it again each month, as the mix changes with the ads.
+how_it_works:
+  - title: Checks the sample
+    text: Waits for about 100 submissions. Under that, the shares are not steady and the skill says so.
+  - title: Writes the report
+    text: Share by age, main pains, goals and past solutions, with counts shown.
+  - title: Reads awareness
+    text: Mostly nothing tried points to the top of the funnel. Many past products point to the middle or bottom.
+  - title: Finds the biggest pains
+    text: Pains are ranked as shares. If most pick one specific pain over a general one, ads are about that pain.
+  - title: Picks the frame
+    text: The frame, such as a doctor led message, raw proof or a plain logical statement, comes from the buyer's stated doubts. A frame needs real proof or a real expert.
+  - title: Prefers your own data
+    text: Your answers come before competitor ads, since the frame and message count for more than the concept.
+  - title: Lists quiz and offer changes
+    text: Questions that are not working, missing answers and offer gaps the answers point to.
+output_shape: |
+  DATA CHECK: <submissions> from <ad sets> | window <dates>
+  REPORT
+  Age mix: <group | share>
+  Top pains: <pain | share>
+  Past solutions: <solution | share>
+  Goals: <goal | share>
+  AWARENESS READ: <top / middle / bottom of funnel> because <evidence>
+  RANKED ANGLES
+  1. <angle> | evidence: <share and buyer words> | frame to test: <...> | proof needed: <...>
+  2. ...
+  CHANGES TO THE QUIZ OR OFFER: <list>
+  FOR YOUR BRAND FILE: <what to update>
+  RERUN: monthly, or when the ad mix changes
+  DATA STRENGTH <n>/100 (submissions 40 + pain question 20 + past-solutions question 20 + ad source known 20)
+  CHECKS MISSED: <none or list>
+tweaks:
+  - what: Number of submissions
+    how: About 100 is the point where shares start to settle. With fewer, use the report as a rough guide and rerun when you have more.
+  - what: Ad sets
+    how: Tell it which ad set sent each person. Without that, the report mixes groups that may want different things.
+  - what: Quiz questions
+    how: If your column names are short codes, add a line saying what each one asks. Without it the skill may misread a column.
+  - what: Frames you can support
+    how: Say whether you have an expert, real proof or neither. It will only suggest a frame you can back.
+judge:
+  - Every share has the count it came from.
+  - The awareness read points to the answers that led to it.
+  - Each angle has evidence in numbers and in the buyers' own words, not just a label.
+  - Any frame that needs an expert or proof says so, and none invents one.
+  - The data strength score shows its sum.
+test:
+  - Count one pain share by hand from the export and compare it with the report.
+  - Write one ad for the top angle and one for the second, run them against each other, and see if the order holds.
+  - Run the skill again on a second batch of 100 answers. The top pains should stay broadly the same. If they flip, the sample is too thin or the ad mix changed.
+  - Compare the awareness read with what you see in your sales and returning buyers.
+improve:
+  - Add your quiz questions, in order, to the skill file so it knows what each column means.
+  - Add your product list and which pain each one solves, so the angles name the right product.
+  - Save each monthly report in your brand file with the date, so you can see the mix change.
+  - Pair it with the store quiz funnel builder, to fix questions the report shows are weak.
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reads a spreadsheet export and writes the report. The source feeds the export to a chat AI."}
+    - {name: "Heyflow", why: "A quiz tool that exports answers per question. The source describes the quiz tool as Heyflow-type."}
+    - {name: "Google Sheets", why: "Lets you check the counts yourself with a pivot table."}
+  inputs:
+    - Ad set names or IDs for each submission
+    - Your quiz questions in order
+    - Your product list
+    - Your current brand file, to update
+terms:
+  - {term: "Submission", meaning: "One person finishing the quiz and sending their answers."}
+  - {term: "Awareness", meaning: "How much the buyer already knows about the problem and about solutions."}
+  - {term: "Frame", meaning: "The way a message is put, such as led by a doctor, by raw proof or by a plain statement."}

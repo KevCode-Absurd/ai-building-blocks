@@ -1,0 +1,84 @@
+new_slug: make-matching-photos-for-a-product-sheet-and-check-them
+name: Make matching photos for a product sheet and check them
+summary: Give it a product sheet. Get matching photos, a faults report and a marketplace rules check.
+job: product-photos
+thinking: medium
+thinking_why: The checks are one picture at a time. A mid-level model is enough.
+headline: One matching photo for every product on your sheet
+subhead: Give it a sheet of products. It makes one photo per product in the same look with a cost limit, you approve a test batch first, then it checks the photos for AI faults and against marketplace rules.
+explain: |-
+  Photographing fifty products takes weeks, and photos from different days never match. Making them with an image model fixes the time but brings new risks: photos that drift in style, run past your budget, or warp the product so a customer gets something that does not look like the picture.
+
+  The steps keep the batch under control. First it fixes one look in words and changes only the product line for each row, with a cost limit and a small test run. You pause to approve the test batch. Then it inspects the full set for faults. You redo flagged photos. Last it checks the final photos against marketplace rules.
+
+  Not worth it for a few products. Shoot those, since real photos beat drawn ones for trust.
+when:
+  - You have a long product list and no photos for most of it.
+  - You want one consistent look across the whole shop.
+  - You list on a marketplace that rejects photos for small faults.
+you_give:
+  - A sheet of products with names, descriptions and a reference photo for each
+  - The look you want in one sentence
+  - A spending limit for the batch
+  - An image model that can draw pictures, such as ChatGPT or Gemini
+you_get:
+  - One matching photo per product
+  - A contact sheet to pick from
+  - A fault report with a use, retry or retouch call per photo
+  - A pass or reject check per marketplace rule, with a fix
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach your product sheet and a reference photo for each product. Set your cost limit.
+  - Approve the test batch before the full run. Ask for changes to the look at this point, not later.
+  - Redo any flagged photo with the fix lines, then save the final set for the rules check.
+how_it_works:
+  - title: Make the batch
+    text: Reads your sheet, keeps one look word for word the same, changes only the product line for each row, runs a small test first and builds a contact sheet.
+  - title: "Pause: approve and save"
+    text: You check the test batch, approve the look and save the finished photos.
+  - title: Inspect for faults
+    text: Rates the risk of each photo, runs eight checks and says use, retry or retouch.
+  - title: "Pause: redo flagged photos"
+    text: You redo the flagged photos with the fix lines, then save the final set.
+  - title: Check marketplace rules
+    text: Checks background, size and framing for your marketplace and marks each rule pass or reject with a fix.
+output_shape: |-
+  STEP 1: PHOTO BATCH
+    One photo per row | contact sheet | cost used against the limit
+
+  PAUSE: you approve the look and save the photos
+
+  STEP 2: FAULT REPORT
+    Risk rating per photo | eight checks | use, retry or retouch | fix lines
+
+  PAUSE: you redo flagged photos
+
+  STEP 3: MARKETPLACE CHECK
+    Pass or reject per rule | fix for each reject
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The reference photos
+    how: A clear photo per product keeps colour and shape true. Missing photos mean invented shapes.
+  - what: The look
+    how: Write it once, with backdrop, light and angle. It stays the same for every row.
+  - what: Batch size
+    how: Start with five to ten products. Check them before you run the rest.
+  - what: The marketplace
+    how: Name it. Rules for white backgrounds and framing differ.
+judge:
+  - Every photo shows the right product, in the right colour.
+  - Backdrop, light and angle match across the set.
+  - The cost stayed under your limit.
+  - No photo with garbled text or warped parts was kept.
+  - Each marketplace reject has a fix.
+test:
+  - Lay five photos side by side. They should look like one shoot.
+  - Check the three most complex products against the real item.
+  - Rerun one row. The look should match the rest.
+improve:
+  - Keep the one-sentence look in your brand file so later batches match.
+  - Save the fix lines that worked and add them to the look.
+  - Add each new product to the sheet and run only the new rows.

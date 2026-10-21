@@ -1,0 +1,74 @@
+new_slug: set-fair-pay-bands-and-a-pay-and-benefits-plan
+name: Set fair pay bands and a pay and benefits plan
+summary: Give it your roles and budget. Get market pay, explainable pay bands and a bonus and benefits plan.
+job: hire-people
+thinking: high
+thinking_why: Market pay data is patchy and the sums feed real pay decisions. Give it your strongest model and check the maths yourself.
+headline: Set pay bands for your roles that you can explain to your team
+subhead: Give it your roles, levels, place and budget. It finds what the market pays for each role and where your pay sits, sets a low, middle and high for each band with a method you can explain, and builds a bonus and benefits plan on top.
+explain: |
+  Pay set one offer at a time drifts. People doing the same job end up on different pay, and nobody can explain why. New hires cost more than the people already there, and the first question you cannot answer is "how did you set my pay?"
+
+  The steps give pay a method. First it gathers what the market pays for each role and flags where your pay is far off. Then it sets a band for each role that fits that data, with the method written in plain words. Last it builds a pay philosophy, a bonus plan and a benefits list that fit the bands and your budget. You check the maths and decide.
+when:
+  - You are about to make offers and have no pay ranges.
+  - Two people do the same job on very different pay.
+  - Someone asks how their pay was set and you have no clear answer.
+you_give:
+  - The roles, levels and place for each
+  - What you pay now, if you have people in those roles (optional)
+  - Your total budget or a limit per role
+  - Any market pay data you already have (optional)
+you_get:
+  - Market pay ranges for each role, with outliers flagged
+  - Pay bands with a low, middle and high and a method in plain words
+  - A pay philosophy, a bonus plan and a benefits list that fit your budget
+  - Equity grant models if you offer equity
+how_to_use:
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - List each role with its level and place. Add what you pay now if you can.
+  - Check the market ranges against one source you trust before the bands are set.
+  - Check every sum in the plan by hand and have an adviser review it before you share it.
+how_it_works:
+  - title: Benchmark the market
+    text: Lists the roles, gathers market pay for each, flags where your pay is far from it and models equity grants if you offer them.
+  - title: Build the pay bands
+    text: Matches each role to its market data, sets a low, middle and high, checks the bands still compete and writes the method in plain words.
+  - title: Plan pay and benefits
+    text: States a pay philosophy, fits bonus ideas to the bands, lists the benefits your budget allows and shows the maths to check.
+output_shape: |-
+  STEP 1: MARKET BENCHMARKS
+    Pay range by role | sources | outliers against your pay | equity models
+
+  STEP 2: PAY BANDS
+    Low, middle and high by role | method in plain words | where bands overlap
+
+  STEP 3: PAY AND BENEFITS PLAN
+    Pay philosophy | bonus plan | benefits list | total cost and the maths
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Place and level
+    how: Pay changes a lot by city and level. Name both for every role, or the ranges will be too wide to use.
+  - what: Your pay stance
+    how: Say whether you aim to pay at, above or below the market. The bands move up or down from the data to match.
+  - what: Market data you bring
+    how: Survey results or offers you have seen carry more weight than general data. Paste them in and name their source.
+  - what: Budget limit
+    how: A hard limit makes the plan trade bonus against base pay. Without one, the plan shows the full cost of each choice.
+judge:
+  - Every market range names where it came from and its date or says it is unknown.
+  - Each band has a low, middle and high that sit inside the market range or explain why not.
+  - The method can be said in three sentences to an employee.
+  - The plan's total cost fits your budget, with the sums shown.
+  - The result is labelled as a draft for you to check, not as pay or tax advice.
+test:
+  - Check the middle of two bands against a recent offer you made. They should be close or you should know why.
+  - Ask a team member to read the method and say if they can see why their own role sits where it does.
+  - Add up the benefits cost for one role by hand and compare it with the plan.
+improve:
+  - Save the final bands in a file and refresh the market step once a year.
+  - Add your own rules, such as no band wider than 40 percent, to the band step.
+  - Pair it with a headcount budget so each planned hire is priced from the new bands.

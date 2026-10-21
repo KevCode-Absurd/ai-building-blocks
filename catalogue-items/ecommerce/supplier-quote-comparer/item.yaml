@@ -1,0 +1,19 @@
+slug: supplier-quote-comparer
+name: "Supplier quote comparer"
+summary: "Paste supplier quotes. Get price, minimum order, lead time and risk side by side, a deposit-safety score and terms."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Complete E-commerce Operations Guide", by: "Davey, founder of a large blanket-hoodie brand (YouTube talk)", used: "Compare minimum order, price and manufacturing lead time, check price against retail early, agree terms before a deposit, keep one paper trail, and use an independent inspector on first runs"}

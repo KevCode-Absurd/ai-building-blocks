@@ -1,0 +1,24 @@
+slug: google-bid-strategy-chooser
+name: "Google bid strategy chooser"
+summary: "Give it campaign results and targets. Get the right bid strategy, a target, a ROAS spiral check and a score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The only Google Ads strategy you need for 2026", by: "Agency founder who works with mid to large e-commerce brands (name not given)", used: "Expansive and restrictive bidding, the feeder pair, the target ROAS spiral and the ROAS trap"}
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "The Maximize Clicks to conversion value thresholds and the Target ROAS trigger"}
+  - {title: "Complete Google Ads architecture and operations manual (2026 edition)", by: "Compiled written guide, author not named", used: "Starting the target below actual ROAS, the 50 conversion level, the bid change rate, seasonality and portfolio bidding"}
+  - {title: "The whole Google Ads algorithm explained in 24 minutes", by: "Store operator and agency owner (name not given)", used: "The view that a target should come late"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands", used: "Expansive versus restrictive bidding, the target ROAS spiral and portfolio bidding"}

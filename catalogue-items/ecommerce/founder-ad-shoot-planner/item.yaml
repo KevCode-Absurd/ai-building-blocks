@@ -1,0 +1,21 @@
+slug: founder-ad-shoot-planner
+name: "Founder ad shoot planner"
+summary: "Give it your hooks and story bank. Get a hook-by-body matrix and a shoot list."
+category: ecommerce
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: script, required: true}
+  - {type: hooks, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: shot_list}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to create founder ads that scale", by: "Agency lead (name not given in the video)", used: "The hook-by-body matrix, the short shoot, fixed and renewable story parts, shooting in several locations and partnership ads through the founder's handle"}

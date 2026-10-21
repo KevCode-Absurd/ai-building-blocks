@@ -1,0 +1,23 @@
+slug: comment-keyword-dm-funnel-builder
+name: "Comment keyword DM funnel builder"
+summary: "Give it your offer and posts. Get a comment-keyword plan, DM copy, a follow-up and email capture."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: email_flow}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Instagram Expert Explains How to Grow from Zero Followers in 2026", by: "Instagram growth educator (guest) with a host", used: "Asking for a keyword comment instead of a link in bio, reading DM open and click data, following up with people who clicked, and the plain welcome DM"}
+  - {title: "the ONLY way to BEAT the Instagram algorithm in 2026", by: "Instagram growth coach", used: "A free resource behind a keyword comment that moves viewers onto an email list"}
+  - {title: "How to start brand social media from scratch in 2026", by: "Creative strategist for large brands", used: "Waiting for traction before any call to action, and replying to every comment and DM"}
+  - {title: "5 Proven Social Media Marketing Strategies to Grow ANY Business", by: "Marketing educator", used: "A middle step between discovery and an offer"}

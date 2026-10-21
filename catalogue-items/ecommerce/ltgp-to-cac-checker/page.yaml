@@ -1,0 +1,118 @@
+new_slug: ltgp-to-cac-checker
+name: "Lifetime gross profit to CAC checker"
+summary: "Give it ad spend, new customers and cohort revenue. Get your ratio, its band and a score."
+job: track-numbers
+thinking: high
+thinking_why: "It works with several numbers and time windows and must say which side of the ratio is moving, so a stronger model avoids mistakes."
+
+headline: "Lifetime gross profit to CAC checker"
+subhead: Give it your ad spend, new customers per month, gross profit after product and delivery costs, and cohort revenue. It works out your LTGP to CAC ratio, shows its band (scale, hold or fix), says which side is moving, and gives a score out of 100.
+
+explain: |
+  Most stores watch the return on ad spend shown inside the ad platform. That number does not say whether a new customer pays back. The ratio of lifetime gross profit (LTGP) to customer acquisition cost (CAC) does. CAC is total ad spend divided by new customers. LTGP is the gross profit after product cost and delivery cost over a fixed time window.
+
+  This skill sets the time window from how often your customers reorder, reads LTGP from a cohort table, and places the ratio in a band. It also checks the pattern where CAC creeps up, fewer customers arrive and spend rises to hold revenue. The bands are rules of thumb from an agency operator who works with large stores, not laws. A store with under a year of orders gets a shorter window and a flagged estimate.
+
+when:
+  - Revenue is flat or falling while ad spend rises.
+  - You want to know if you can raise your ad budget safely.
+  - You judge ads by platform ROAS and suspect it hides a payback problem.
+
+you_give:
+  - Ad spend and new customers per month
+  - Gross profit per order after product cost and delivery cost
+  - Cohort revenue at day 30, 90, 180 and 365, by month of first purchase (from the Shopify cohort report)
+  - Your product category, and a list of big changes with dates (optional)
+
+you_get:
+  - CAC and LTGP by month, with the time window used and why
+  - "The LTGP to CAC ratio and its band: scale, hold or fix"
+  - Which side is moving, CAC or LTGP
+  - A list of changes to timestamp, and a score out of 100 with its sum
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste ad spend and new customers by month, and your cohort table.
+  - Add your cost of goods and delivery cost per order. Real figures work better than a guessed percentage.
+  - Read the band, then the side that is moving, and fix that side first.
+  - Write down every big change with its date, and run the check again in a month.
+
+how_it_works:
+  - title: Defines CAC
+    text: Total ad spend divided by new customers in the same period. Platform ROAS is not used as a stand-in.
+  - title: Sets the time window
+    text: First order only (30 days) for low-repeat items, 90 to 180 days for repeat items, up to 365 days for consumables or subscriptions.
+  - title: Reads LTGP from cohorts
+    text: Uses a cohort table by first-purchase month with real cost of goods, not returning-customer revenue.
+  - title: Finds the band
+    text: Under 1 loses money on the first order. 1 to 2 needs very lean costs. 2 to 3 is the scale zone. Over 3 means you may be under-investing.
+  - title: Adjusts for the category
+    text: Low-repeat categories such as furniture judge on first-order profit and keep CAC flat.
+  - title: Looks for the spiral
+    text: Checks if CAC, new customers and revenue are moving the wrong way month on month.
+  - title: Scores it
+    text: Takes points off for the band and the warning signs, and shows the sum.
+
+output_shape: |
+  LTGP TO CAC CHECK for <store>, window <30 / 90 / 180 / 365 days> because <repeat rate>
+
+  MONTH | ad spend | new customers | CAC | LTGP (window) | ratio
+  (one row per month)
+
+  BAND      <under 1 | 1 to 2 | 2 to 3 | over 3> -> <fix | hold | scale>
+  WHICH SIDE <CAC up | LTGP down | both | neither>
+  SPIRAL    <CAC, new customers, revenue: month-on-month pattern>
+  CASH SIDE <operating costs, debt and stock: any risk>
+  TIMESTAMP <change> | <date> | <ratio before and after>
+
+  SCORE  <n>/100 (100 - <band points> - <warnings> = <n>)
+  NOT RUN  <check, and what is needed>
+  MISSING: <what you need to give>
+
+tweaks:
+  - what: Your product category
+    how: Say what you sell. It sets the time window, and a low-repeat category judges on first-order profit.
+  - what: Real cost of goods and delivery
+    how: Give them per product. A guessed percentage gives a less reliable LTGP.
+  - what: How many months of orders you have
+    how: With under 12 months, the check uses a 30 or 90 day window and flags the result as an estimate.
+  - what: Dated changes
+    how: List every new agency, platform, product or ad push with its date, so the ratio can be read before and after.
+
+judge:
+  - CAC is ad spend divided by new customers, not platform ROAS.
+  - LTGP is after product cost and delivery cost, over a stated window.
+  - The band matches the ratio and the advice matches the band.
+  - It says which side of the ratio is moving before blaming ads or season.
+  - Every number from a source is labelled as a rule of thumb.
+
+test:
+  - Use a month where you know the numbers. Work out the ratio by hand and compare.
+  - Give it a ratio of 0.8. It should say you lose money on order one and flag the spiral risk.
+  - Give it a furniture store. It should judge on first-order gross profit.
+  - Run it twice on the same data. The band should match.
+
+improve:
+  - Put your real cost of goods and delivery cost per product in the skill file.
+  - Add your own target band if you have strong repeat sales.
+  - Add the dates of past changes so each check starts with a timeline.
+  - Pair it with the skills that read cost by source and customer cohorts.
+
+works_best_with:
+  tools:
+    - {name: "Shopify cohort report", why: "Gives revenue by first-purchase month at day 30, 90, 180 and 365."}
+    - {name: "Your ad platforms' spend export", why: "Total spend per month for CAC."}
+    - {name: "A spreadsheet", why: "Lets you check the sum by hand."}
+  inputs:
+    - "Cost of goods and delivery cost per product"
+    - "Your Shopify new customer count by month"
+    - "A dated list of changes you made"
+    - "Your operating costs and any loans"
+
+terms:
+  - term: CAC
+    meaning: "Customer acquisition cost: total ad spend divided by new customers in the same period."
+  - term: LTGP
+    meaning: "Lifetime gross profit: gross profit after product and delivery cost over a fixed time window."
+  - term: Cohort
+    meaning: A group of customers who first bought in the same month.

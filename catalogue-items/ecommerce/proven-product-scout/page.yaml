@@ -1,0 +1,124 @@
+new_slug: proven-product-scout
+name: "Proven product scout"
+summary: "Name your market. Get ad spy filters, a reading routine and a short list of proven products."
+job: find-products
+thinking: medium
+thinking_why: "It reads ads and pages you give it and judges proof, so a mid-size model is a good fit."
+
+headline: "Proven product scout"
+subhead: Name your market and the tool you have. It gives you the filter settings, a routine for reading each ad, proof checks and a way to find the supplier cost. You get a short list of five to ten products that others already prove, each marked winner or fluke.
+
+explain: |
+  Picking a product by gut means guessing. Picking one that another store has advertised for 46 days, with over 100 ads running, means someone else already paid to learn it sells. The work is finding those ads and reading them well.
+
+  This skill combines routes from creator videos. A paid ad spy tool with set filters (US, video, running 14 days or more, brands with over 50 active ads). The free Ad Library with an image filter. Offers on news-site widgets that show what works for older buyers. And viral videos, where you check that the seller has at least 3 videos over 1,000,000 views and run a reverse image search to find the supplier cost. Sources disagree on feed scrolling, so it is treated as an idea source, not proof.
+
+when:
+  - You have a market in mind and need products that others already sell with ads.
+  - You found a viral product video and want to know if it is a winner or a one-off.
+  - You have no ad spy tool and want to use the free Ad Library.
+
+you_give:
+  - Your market or buyer, such as adults over 50 or new parents
+  - Which tool you have, the free Ad Library or a paid ad spy tool
+  - Your price and margin rules (optional)
+  - Links to viral product clips, the seller's profile or the store (optional)
+  - Your country (optional)
+you_get:
+  - Filter settings you can copy into your tool, or the free searches to run
+  - A list of 5 to 10 candidates with advertiser, ad age, ad count, price and angle
+  - The longest-running ad to study for each, and what to change so you are not a clone
+  - A winner or fluke call for each, a supplier cost check and the rivals to look at
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it your market and your tool. Apply the filter settings it gives, then paste or attach the ads you find.
+  - For a viral video, paste the seller's profile and store link, and a photo of the product.
+  - Read the winner or fluke calls. Look at the supplier listing yourself and confirm the cost.
+  - Run the short list through the saturation checker, the revenue estimator and the winning product scorer.
+
+how_it_works:
+  - title: Gives the filter settings
+    text: A paid tool, a second tool or the free Ad Library, matched to what you have. Settings are in plain words.
+  - title: Reads each ad
+    text: Does it fix a daily pain or deep desire, is it hard to find in shops, can you source it, and is the brand generic enough to adapt.
+  - title: Checks the proof
+    text: Ad age, active ads, impressions and spend, and whether the ads have run over a week.
+  - title: Studies the longest ad
+    text: It names the avatar and angle, and what to change so you are not a clone.
+  - title: Scouts native offers
+    text: Refreshing news-site paid-content widgets shows what works for buyers aged 60 and over.
+  - title: Checks viral sellers
+    text: Three videos over 1,000,000 views, a reverse image search for supplier cost, and the seller's ad volume.
+  - title: Makes the short list
+    text: Candidates that fit the margin and problem rules, each marked winner or fluke by how many signals back it.
+
+output_shape: |
+  MARKET <market or buyer>  TOOL <free Ad Library | paid ad spy tool>
+
+  FILTER SETTINGS
+  <one setting per line>
+
+  CANDIDATES (5 to 10)
+  <product> | advertiser | ad age | active ads | price | angle | page type | call winner or fluke because <signals>
+
+  LONGEST-RUNNING AD TO STUDY
+  <product> | avatar | angle | what to change
+
+  SUPPLIER CHECK
+  <product> | supplier link | cost | margin at your price | rivals and estimated sales
+
+  POLICY NOTE
+  <health, pain or body claims | none needed>
+
+  NEXT  saturation checker, revenue estimator, winning product scorer
+  CHECKS MISSED: <check and what is needed | none>
+  MISSING: <what>
+
+tweaks:
+  - what: The tool you have
+    how: Say whether you use the free Ad Library or a paid tool. The free route needs more manual searching and image filtering, and the skill adjusts its steps.
+  - what: Your buyer
+    how: Older buyers, parents or another group changes the channel and the filters. The Facebook channel is used for older buyers in one source.
+  - what: Your margin rules
+    how: Paste your price and cost limits so weak candidates are cut at the start, not at the end.
+  - what: Viral route or ad route
+    how: Ask for only the route you want. The viral route is an idea source with a known caveat, and the ad route gives stronger proof.
+
+judge:
+  - Every candidate has a source you can open, such as an ad, a profile or a store.
+  - A winner call lists at least two signals. One signal is a fluke.
+  - No candidate is a huge branded company or fails your margin rules.
+  - The supplier cost comes from a listing you can see.
+  - Health or pain products carry a policy note.
+
+test:
+  - Pick a candidate and open its ad and store yourself. The ad age and ad count should match what the skill wrote.
+  - Run a reverse image search on a product photo and compare the supplier price with the skill's cost.
+  - Run the same market twice with the same ads. The candidate calls should match.
+  - Test a winner call by running it through the saturation checker. It should not look empty.
+
+improve:
+  - Change the filter settings in the skill file for your tool, with the numbers you actually use.
+  - Add your own skip list, such as brands you will not compete with or product types you cannot ship.
+  - Keep a sheet of calls and test results, then add the signals that predicted well to the winner rule.
+  - Pair it with the competitor saturation checker, the competitor revenue estimator and the winning product scorer.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ad Library", why: "Free. It shows active ads, start dates and image or video formats for any advertiser."}
+    - {name: "A paid ad spy tool", why: "Needed for the filters on days running, active ads per brand and impressions. Any tool with those filters works."}
+    - {name: "Google Lens", why: "Free. It runs the reverse image search that finds the supplier listing for a product photo."}
+  inputs:
+    - "Screenshots of the ads, with the start date and the ad count visible"
+    - "The seller's profile page showing their top videos and view counts"
+    - "Your margin limits, so cheap or thin products are cut early"
+    - "Your own landed cost from a supplier quote, once you have one"
+
+terms:
+  - term: Ad spy tool
+    meaning: A paid tool that lists the ads other stores run, with how long and how often.
+  - term: Avatar
+    meaning: The kind of person an ad speaks to, such as a mother of two or a retired walker.
+  - term: Native ad
+    meaning: An ad made to look like a normal article or post, not like an ad.

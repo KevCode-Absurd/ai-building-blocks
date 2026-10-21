@@ -1,0 +1,81 @@
+new_slug: find-a-product-that-sells-and-a-gap-rivals-leave-open
+name: "Find a product that sells in a gap rivals miss"
+summary: Give it your market. Get proven products, a gap rivals leave open, a score out of 100 and a small first test.
+job: find-products
+thinking: high
+thinking_why: It runs five skills in a row, with margin sums and a score that decide if you order stock. Give it your strongest model.
+headline: Pick a product with proof of demand and room to win
+subhead: Give it the market or buyer you want to sell to. It finds products other sellers already prove, finds the gap one crowded rival leaves open, scores your pick on margin and risk out of 100, and plans a small test with a pass number set before you spend.
+explain: |
+  Most new products fail for one of three reasons. Nobody wanted them, rivals had already filled the space, or the margin could not pay for ads. Stores find that out after ordering stock. A product that looks good on a supplier site tells you none of the three.
+
+  The steps check all three before you buy. First it finds products that other sellers back with long-running ads or repeated viral videos. Then it compares the crowded rivals and finds a gap one of them leaves open. You pick one product, get a supplier quote and work out its landed cost and price. Then it scores your pick on margin, price, rules and test cash. The last step plans the smallest test, with a pass number written down first. It only suits physical products.
+when:
+  - You want a product to sell and need proof of demand, room to win and a margin before you order stock.
+  - You are eyeing a crowded category and want to know if a gap is really open.
+  - You have a product idea and want a cheap test with a clear pass or fail.
+you_give:
+  - Your market or buyer, such as adults over 50
+  - Which tool you have for ads, such as the free Facebook Ad Library or a paid ad spy tool
+  - Your price and margin rules
+  - Your strengths, such as price, distribution or taste (optional)
+  - After the pause, a supplier quote, landed cost per unit and your planned price
+  - Your 90-day cash for tests
+you_get:
+  - A short list of five to ten products, each with proof checks, supplier cost and a winner or fluke call
+  - Ranked gaps in a crowded category, a position for each and a short test
+  - A score out of 100 for your pick, a verdict and the one thing to fix first
+  - A small test plan with the guess it checks, the pass numbers set before it runs and a pivot or persevere rule
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Tell it the market, your tool and your margin rules. It checks ad lengths and repeats, which you read and paste in.
+  - When it pauses, pick one product from the shortlist, get a supplier quote, work out landed cost per unit and decide the price you would charge.
+  - Set the pass number for the test before you run it, and keep to it.
+how_it_works:
+  - title: Find proven products
+    text: Gives you filter settings or free Ad Library searches, a routine for reading each ad and checks for proof. Lists five to ten candidates with a winner or fluke call.
+  - title: Find the gap
+    text: Compares the leaders on price, reach, taste and buyer. Checks for sameness and a missed shift, then ranks the gaps and gives a position and a test for each.
+  - title: Score your pick
+    text: Does the margin sums first, then checks price, the problem solved, shop sales, content, shipping, rules and test cash. Gives a score out of 100.
+  - title: Plan the first test
+    text: Lists the guesses your idea depends on, picks the riskiest and designs the smallest test. Sets pass numbers before the test and a pivot or persevere rule.
+output_shape: |-
+  STEP 1: PROVEN PRODUCTS
+    Filter settings or searches | per candidate: proof checks, supplier cost, winner or fluke | short list
+
+  STEP 2: GAPS
+    Leaders compared | ranked gaps | position for each | short test
+
+  STEP 3: PRODUCT SCORE
+    Margin sums | checks by area | score out of 100 | verdict | first fix
+
+  STEP 4: FIRST TEST
+    Guesses | riskiest guess | smallest test | pass numbers | pivot or persevere rule
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your price and margin rules
+    how: Without them it uses a $30 gross profit and three times cost as a starting point, and says so. The dollar floors are starting points, so scale them to your own ad costs.
+  - what: Your market country
+    how: Proof in one country may not carry to another.
+  - what: Whether shops sell it
+    how: A product anyone can pick up in a local shop scores lower.
+  - what: Your test cash
+    how: It sets how big the test can be. Be honest about what you can lose.
+judge:
+  - Each candidate shows how long its ads have run or how often the videos repeat.
+  - Landed cost and price are in one currency, and every sum is shown.
+  - The gap is real in the reviews and prices, not just a guess.
+  - The score lists what it could not check because you did not give it.
+  - The pass numbers are written before the test runs.
+test:
+  - Check one candidate's proof by hand, in the Ad Library, before you trust the list.
+  - Redo the margin sum for your pick with your own quote.
+  - Check that the test's pass number is one you would accept even if you disliked the result.
+improve:
+  - Keep your own list of winner and fluke calls, and feed it back to the scout.
+  - Add your margin rules and country to your brand file.
+  - Run the first-test planner again after each result, with the next riskiest guess.

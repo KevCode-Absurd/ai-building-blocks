@@ -1,0 +1,23 @@
+slug: meta-test-campaign-planner
+name: "Meta test campaign planner"
+summary: "Give it your products, concepts and spend. Get a test campaign layout, ad pack names and scale rules."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead (about 8 years on Meta)", used: "Matching account complexity to the business, the testing, scaling and retargeting layout, not adding ads to winners, CBO versus ABO risk, funnel budget split and dynamic product ad limits"}
+  - {title: "The Best AI Ad Creative Strategy for 2026", by: "Agency owner (DTC ad community lead)", used: "Launching each batch as a new pack of four to eight ads grouped by avatar, and the seven-day minimum budget"}
+  - {title: "The Best Facebook Ad Creative Strategy for 2026", by: "Agency owner (same as the AI creative video)", used: "The minimum spend equal to 1x target CPA, a new ad set per batch and the seven-day reminder"}
+  - {title: "The ONLY 2 Ad Creative Formats You Need to Scale Facebook Ads", by: "Agency owner (says $500M managed)", used: "Pack naming, campaign settings and excluding 180-day buyers"}
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge", used: "Naming every ad by concept, hook, first frame and edit, testing ten hooks with everything else held the same, and why concepts must differ"}

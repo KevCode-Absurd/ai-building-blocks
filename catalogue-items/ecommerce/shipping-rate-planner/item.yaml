@@ -1,0 +1,28 @@
+slug: shipping-rate-planner
+name: "Shipping rate planner"
+summary: "Give it your parcels, costs and countries. Get shipping zones, rates and a free-shipping line to enter."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients", used: "Flat rates, a free threshold in each zone, a fulfilment location per zone and delivery-time text"}
+  - {title: "Shopify Store Setup Full Tutorial 2026: Step by Step", by: "Unnamed presenter", used: "Starting with one zone, flat rates for beginners, the threshold lifting order value and a handling buffer for calculated rates"}
+  - {title: "The Official Shopify 2026 Tutorial (four-part series)", by: "Kylie Maher, Learn with Shopify", used: "Default package weights, one zone per country and the quiet loss from undercharging"}
+  - {title: "WooCommerce Tutorial for Beginners 2026", by: "Daryl Wilson", used: "Shipping classes and the per-class setting"}
+  - {title: "How to Create an Ecommerce Website with WordPress 2026 (step by step)", by: "Dale, Creator Pro Website", used: "Free-shipping order above the flat rate and the coupon rule"}
+  - {title: "Shopify Tutorial for Beginners 2026 - Full Store Setup Guide", by: "Simon", used: "Removing the default zone and adding standard and express flat rates"}
+  - {title: "How to Build a Full Shopify Store using AI (Claude Code)", by: "Unnamed presenter", used: "A free standard shipping minimum and deleting zones you will not serve"}
+  - {title: "WooCommerce Tutorial 2026: Complete MasterClass for Beginners", by: "Tim Nishad", used: "Per-order versus per-item rates, shipping classes and free shipping at a minimum for one state"}
+  - {title: "How To Start an Online Store That Runs on Autopilot (WooCommerce Tutorial)", by: "Ferdy", used: "Free-shipping threshold, price brackets, the remaining-amount notice, US and Canada zones and the boundary test"}

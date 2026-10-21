@@ -1,0 +1,21 @@
+slug: creator-scouting-team-planner
+name: "Creator scouting team planner"
+summary: "Say what you sell and who buys. Get scouting roles, a finding method and a weekly routine."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How Bloom Built the Playbook Every Founder Will Copy in 2026", by: "Greg, co-founder of Bloom, in an interview", used: "Scouts who look like the buyer, a three-level team, changing location and resetting feeds to find varied creators, starting with the creators your buyer already follows, a light brief, and reading the halo on other channels"}
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge, in a podcast interview", used: "The shop fit checklist of an impulse price, a female-first audience and spillover to other channels, and the story of turning off spend in one place"}

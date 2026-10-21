@@ -1,0 +1,117 @@
+new_slug: order-threshold-planner
+name: "Order threshold planner"
+summary: "Paste your order sizes. Get free-shipping and bundle thresholds set at your real order peaks."
+job: make-offer
+thinking: medium
+thinking_why: "It reads a spread of numbers and does simple profit maths, so a mid-size model is enough."
+
+headline: "Order threshold planner"
+subhead: Paste your order totals, your margins and your shipping costs. It reads where your orders really cluster, sets a free-shipping or discount threshold just above each cluster, builds a multipack ladder and shows the profit change per order for every tier.
+
+explain: |
+  Most stores set a free-shipping threshold from the average order value. That puts the line in the gap between two groups of buyers. Many stores have two peaks: people who buy one item, and people who buy several. A line set from the average gives free shipping to buyers who already spend more, and asks the single-item group to nearly double their spend. So it changes little and costs margin.
+
+  This skill sorts your orders into value buckets and finds the peaks. It puts one offer just above each peak, within a stretch a buyer will reach. For a hero product it builds a three-tier multipack ladder. It counts the shipping you save in each tier, and shows the profit change per order, so you can check each tier before it goes live.
+
+when:
+  - You want to set or fix a free-shipping threshold and don't want to guess from the average.
+  - You sell one hero product and want a multipack ladder that raises AOV without giving margin away.
+  - You are about to run a free-shipping offer on a low-priced item and want to see if it loses money.
+
+you_give:
+  - A list or export of order totals and units per order
+  - Gross margin by product
+  - Shipping cost per order at one, two and three units
+  - Your current thresholds and discount tiers
+you_get:
+  - "A read of your order spread: one peak or two, and where each sits"
+  - A threshold for each peak, set as a small stretch and not a jump
+  - A multipack ladder with the default option marked
+  - A choice of dollar off or percent off for each price range, and the profit change per order for each tier
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste or attach your order totals and units per order. A few hundred orders is a good start.
+  - Paste your margins, your shipping cost at one, two and three units, and your current thresholds.
+  - Read the peaks first, then the thresholds and ladder. Check each tier with the discount impact checker.
+  - Test the dollar versus percent choice on your own store before you keep it.
+
+how_it_works:
+  - title: Bucket your orders
+    text: Groups order values into buckets and finds the peaks, instead of using the average.
+  - title: Set a threshold per peak
+    text: Puts one offer just above each peak, within a reachable stretch.
+  - title: Build the multipack ladder
+    text: For a hero product, makes three tiers, pre-selects the middle one and prices it against the single-unit cost.
+  - title: Frame the deal
+    text: Uses free items where you can, and picks dollar off or percent off by price range, as tests.
+  - title: Count the shipping saving
+    text: Uses your shipping cost at one, two and three units to see how much margin each tier frees up.
+  - title: Guard low-priced items
+    text: Blocks free shipping on a very low order value unless there is a basket-building tier.
+  - title: Plan the cart bar
+    text: Suggests a progress bar with more than one reward, such as free shipping and then a gift.
+
+output_shape: |
+  ORDER SPREAD (<n> orders)
+  peaks: <one at $ / two at $ and $> | average <$> sits <in the gap / at the peak>
+  verdict: <what the average-based line would do wrong>
+
+  THRESHOLDS
+  peak 1 at <$> -> offer at <$> (stretch <+$>) | profit change per order <$>
+  peak 2 at <$> -> offer at <$> (stretch <+$>) | profit change per order <$>
+
+  MULTIPACK LADDER (hero <product>)
+  1 unit <$> | 2 units <$> | 3 units <$> | default <middle>
+  shipping per tier <$ / $ / $> | profit per order <$ / $ / $>
+
+  OFFER WORDING  <dollar off | percent off | free item> for <price range>
+  CART BAR  <step 1 reward> then <step 2 reward>
+  CHECKS  <low-ticket free shipping | stacking | history used>
+  MISSING: <orders | margins | shipping costs>
+
+tweaks:
+  - what: Number of orders
+    how: Give at least a few hundred orders. Below that, treat the thresholds as a first guess.
+  - what: Shipping at one, two and three units
+    how: Give all three. The saving per tier is what pays for the bigger packs.
+  - what: Current tiers
+    how: List every code, tier and threshold live now. The skill checks that they do not stack into a bigger discount than you meant.
+  - what: Single price point
+    how: If you sell one product at one price, say so. The curve is flat, so it goes straight to the multipack ladder.
+
+judge:
+  - It shows the order spread and says how many peaks it found.
+  - Each threshold sits just above a peak, not at the average.
+  - Each tier shows the shipping saving and the profit change per order.
+  - No very low-priced item gets free shipping without a tier that builds the basket.
+  - The dollar versus percent choice is worded as a test, not a rule.
+
+test:
+  - Check the peaks against your own sales report. They should match what you see in the order list.
+  - Move one threshold up by $10 and run it again. The profit change should move in a way you can explain.
+  - Run it twice on the same orders. The peaks should match.
+  - Run each tier through the discount impact checker with your own units per order.
+
+improve:
+  - Save your shipping cost at one, two and three units in your brand file.
+  - Add the thresholds you tried before and what happened, so the skill does not repeat them.
+  - Edit the stretch rule in the skill file to match how far your buyers will really go.
+  - Pair it with a gift planner for the second reward in the cart bar.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its order export gives order totals and units per order, and its settings let you set free-shipping rates by order value."}
+    - {name: "Google Sheets", why: "Use a histogram chart to see the peaks before and after the skill reads them."}
+  inputs:
+    - "At least a few hundred recent orders"
+    - "Your shipping rate table by weight or unit count"
+    - "Your current discount codes and tiers"
+
+terms:
+  - term: Order spread
+    meaning: How your order values are distributed, for example how many orders are near $40 and how many near $110.
+  - term: Multipack ladder
+    meaning: Three pack sizes of the same product, each cheaper per unit than the last.
+  - term: Threshold
+    meaning: The order value where a perk starts, such as free shipping.

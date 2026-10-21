@@ -1,0 +1,24 @@
+slug: publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote
+name: "Publish comparison and best-of pages that shoppers and AI quote"
+summary: "Give it your rivals and product facts. Get a comparison page plan and a fair best-of page rewritten to answer first."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: organic
+level: intermediate
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: question, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+uses: [comparison-page-set-planner, best-of-page-writer, answer-first-page-rewriter]
+steps:
+  - {uses: comparison-page-set-planner, note: "Plans the versus, alternative and best-of pages worth building and their order."}
+  - {uses: best-of-page-writer, note: "Writes the first page from the facts you gathered, fairly and with sources."}
+  - {uses: answer-first-page-rewriter, note: "Rewrites the draft so each section opens with the answer, ready to be quoted. Reads the draft from the step before."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote/skeleton.yaml

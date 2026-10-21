@@ -1,0 +1,21 @@
+slug: best-and-worst-customer-profiler
+name: "Best and worst customer profiler"
+summary: "Give it order and discount data. Get your best and worst buyers' traits, the ads behind them and a score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: persona}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Nathan (paid media and finance) and Angus Cowan (email and SMS retention), video", used: "Comparing the top 20 percent of customers with the bottom 20 percent by persona, angle and offer; the discount-cohort check; zero-party answers for personas; judging a sale by 90-day gross profit, not first-order ROAS"}
+  - {title: "Wild bets folder: unconventional offer, retention and CX plays for e-commerce owners", by: "Compiled research write-up (author not named)", used: "Ranking customers by lifetime spend before doing anything for the best ones"}

@@ -1,6 +1,6 @@
 # Sell and negotiate: AI Blocks
 
-> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 89 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account catch-up brief writer](https://useaiblocks.com/skills/account-catch-up-brief-writer): Name a customer. Get one brief from your CRM, email, docs and calls on what is going on with them.
 - [Account plan builder](https://useaiblocks.com/skills/account-plan-builder): Name an account. Get a plan with goals, key people, open deals, risks and next steps, ready for your CRM.
@@ -37,6 +37,7 @@
 - [Forecast narrative writer](https://useaiblocks.com/skills/forecast-narrative-writer): Ask for your forecast. Get a commit, best case and pipeline story: what is closing, at risk and changed.
 - [Franchise and reseller terms writer](https://useaiblocks.com/skills/partner-deal-terms-writer): Paste your offer and the partner's profit sum. Get a one-page term sheet for people who run your business: duties, fees, exits.
 - [Freight carrier manager](https://useaiblocks.com/skills/freight-carrier-manager): Describe your shipping lanes and carriers. Get a bid plan, rate talking points and a carrier scorecard.
+- [Get a quiet deal moving again without pressure](https://useaiblocks.com/workflows/get-a-quiet-deal-moving-again-without-pressure): Give it notes on a stalled deal. Get the cause, a firm recommendation, easy-yes questions and calm replies.
 - [Grant and bid response writer](https://useaiblocks.com/skills/grant-and-bid-response-writer): Say who you are. Get grants and bids worth chasing, a go or no-go call, and a draft response. Scrapes sites.
 - [Lead grader](https://useaiblocks.com/skills/lead-grader): Paste your prospects. Get each graded A, B or C by how soon they need to act, with a follow-up.
 - [Lead handoff designer](https://useaiblocks.com/skills/lead-handoff-designer): Describe your sales process. Get lead scoring, stages and handoff rules from marketing to sales.
@@ -61,6 +62,7 @@
 - [Plan a sales conversation from first line to close](https://useaiblocks.com/workflows/sales-call-plan): Give it your product and buyer. Get the lead argument, a ten-second opener, answers to doubts and a close.
 - [Post-sale follow-up planner](https://useaiblocks.com/skills/post-sale-follow-up-planner): Paste what you sell and a customer's details. Get a thank-you note and a plan to keep them: schedule, records, referral ask.
 - [Pre-sales proof of concept planner](https://useaiblocks.com/skills/proof-of-concept-plan): Give it a buyer request. Get a requirement gap score, a rival feature table and a trial plan.
+- [Prepare a price talk with a sum they can pay](https://useaiblocks.com/workflows/prepare-a-price-talk-with-a-sum-they-can-pay): Give it the deal. Get your stance, their side, a sum they can meet and your opening lines.
 - [Prospect list builder](https://useaiblocks.com/skills/prospect-list-builder): Describe your ideal customer. Get a qualified list of accounts and the reason each one fits.
 - [Prospect outreach drafter](https://useaiblocks.com/skills/prospect-outreach-drafter): Name a prospect. Get a short personal email or sequence saved as a draft for you to review. You send it.
 - [Prospecting block planner](https://useaiblocks.com/skills/prospecting-block-planner): Paste your week and target list. Get a protected call block, a two-minute research batch and one reason to call each lead.
@@ -72,6 +74,7 @@
 - [RFP response builder](https://useaiblocks.com/skills/rfp-response-builder): Paste an RFP or security questionnaire. Get requirements sorted by must have, a fit score and draft answers.
 - [Sales agent training planner](https://useaiblocks.com/skills/sales-agent-training-planner): Describe your product and who could sell it. Get a short course, a pay and prize plan and a first-month schedule.
 - [Sales battlecard builder](https://useaiblocks.com/skills/sales-battlecard-builder): Name your rival. Get a battlecard with comparisons, reply scripts, positioning and win themes.
+- [Sales call prep assistant](https://useaiblocks.com/agents/sales-call-prep-assistant): Name the deal before a call. Get a one-page plan built on your last call notes, and a follow-up draft after.
 - [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner): Paste what you know about the buyer. Get the order of questions that finds their problem, its cost and the fix's value.
 - [Sales collateral writer](https://useaiblocks.com/skills/sales-collateral-writer): Name the deal or buyer. Get a pitch deck outline, one-pager, objection sheet or demo script.
 - [Sales proposal writer](https://useaiblocks.com/skills/sales-proposal-writer): Give it the prospect needs. Get a proposal or RFP reply with value, price, timeline and proof.

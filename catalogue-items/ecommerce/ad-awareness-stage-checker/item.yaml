@@ -1,0 +1,21 @@
+slug: ad-awareness-stage-checker
+name: "Ad awareness stage checker"
+summary: "Attach your ad. Get its awareness stage, mismatches, a score out of 100 and rewrites."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: static_ads, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "How To Make Your Meta Ads Scale (five stages of awareness in ads)", by: "Paid social strategist who runs a creative breakdown channel (name not given)", used: "The five stages with ad examples, the mismatch rule, the 80/10/10 volume split and the awareness curve"}

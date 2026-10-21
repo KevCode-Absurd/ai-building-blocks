@@ -1,0 +1,20 @@
+slug: amazon-ppc-launch-builder
+name: "Amazon PPC launch builder"
+summary: "Give it your product, keywords and daily budget. Get auto, keyword and competitor campaigns with bids and negatives."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: shortlist, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "The automatic campaign with four ad groups, manual campaigns by match type, one ad group per competitor, negative keywords, the review habit and a seller's first-month loss on ads"}

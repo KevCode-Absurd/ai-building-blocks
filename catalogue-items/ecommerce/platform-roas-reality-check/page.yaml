@@ -1,0 +1,127 @@
+new_slug: platform-roas-reality-check
+name: "Platform ROAS reality check"
+summary: "Give it platform ROAS and store totals. Get a truer return and trust level, scored out of 100."
+job: read-ad-results
+thinking: high
+thinking_why: "It weighs many signals that can disagree, such as attribution windows, audiences and tests. A stronger model keeps them straight."
+
+headline: "Platform ROAS reality check"
+subhead: "Give it your ad platform's ROAS and your store's own totals. It strips view credit and existing customers, compares each platform with new-customer revenue per ad dollar, checks your top ad on its own, and gives a trust level and a score out of 100."
+
+explain: |
+  Ad platforms grade their own work. Meta may say 17 for every dollar while your store banks 3 to 7. The gap usually comes from three places: sales credited to people who only saw an ad, ads shown to existing customers who would have bought anyway, and credit taken for sales that another channel started.
+
+  This skill starts from your store's own numbers: new-customer revenue divided by total ad spend. It then steps each platform's ROAS down, from the default setting, to 7-day click, to the incremental column, and compares it with that base. It checks your top ad by itself, scans for the usual traps, and ranks the evidence behind each budget decision, from opinion up to a true holdout test. The cases come from agency operators, not studies. Use them as examples, and use your own numbers.
+
+when:
+  - Your platform ROAS looks great but your bank balance does not.
+  - You are about to move budget between channels, or raise spend on the ad with the best ROAS.
+  - A new channel looks weak while Meta suddenly looks better, and you wonder why.
+
+you_give:
+  - Platform ROAS with its attribution setting, plus the same ROAS on 7-day click, for set dates
+  - Store new-customer revenue, total ad spend and new-customer count for the same dates
+  - The audience breakdown (new, engaged, existing) and spend by campaign type
+  - Your top ads with ROAS, spend and frequency (optional)
+  - Holdout test results, daily ROAS data or post-purchase survey answers (optional)
+you_get:
+  - A ROAS ladder per platform, from reported to 7-day click, the incremental estimate and your store's own number
+  - The top ad's real new-customer ROAS and the traps found, with their effect
+  - The evidence level behind each budget decision, and a keep, cut or test call per channel
+  - A trust level and a score out of 100, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Pull the platform export twice for the same dates, once with default attribution and once on 7-day click. Add the audience breakdown.
+  - Paste your new-customer revenue and total ad spend for the same dates, from a first-time-customer view.
+  - Read the ladder first, then the traps, then the top ad check.
+  - Do the one next step it gives you before you move any budget.
+
+how_it_works:
+  - title: Sets your base
+    text: New-customer revenue divided by total ad spend for the same dates, with returning orders left out.
+  - title: Steps the ROAS down
+    text: Reported ROAS, then 7-day click, then the incremental column, then your base. The gap is the story.
+  - title: Measures view credit
+    text: Shows how much of the reported return comes from people who only saw the ad.
+  - title: Finds existing-customer leaks
+    text: Uses the audience breakdown to see spend that reached people who would have bought anyway.
+  - title: Checks the top ad
+    text: Breaks the best ad down by audience and attribution, and scores it before you scale it.
+  - title: Scans for traps
+    text: Cross-platform comparisons, brand search, halo from other channels, tiny channels and ads you cannot measure.
+  - title: Ranks the evidence
+    text: Opinion, simple correlation, models, near-experiments or a true holdout, named for each decision.
+  - title: Scores and advises
+    text: Five parts with the sum shown, then keep, cut or test for each channel and one next step.
+
+output_shape: |
+  ROAS REALITY CHECK  <store>  <dates>
+  STORE BASE  new-customer revenue <$> / ad spend <$> = <x>
+  LADDER      platform | reported <x> | 7-day click <x> | incremental <x> | view share <%> | vs store <x>
+  TOP AD      <ad> | headline <x> | new-customer <x> | incremental <x> | on existing <%> | frequency <n> | score <n>/100
+  TRAPS FOUND <list: channel, what, effect>
+  EVIDENCE    <decision> rests on rung <1-5>: <name>
+  FACTOR      <platform>: <x> (from <test>) | none yet
+  SURVEY      where did you first hear about us? | gap vs platform: <...>
+  SCORE       <n>/100 = window <pts> + existing <pts> + match <pts> + traps <pts> + evidence <pts>
+  TRUST       <high | medium | low> per channel
+  KEEP / CUT / TEST  <per channel>
+  NEXT        <one fix or one test, and the rung it reaches>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Same dates on both sides
+    how: Use the same dates for the platform export and the store totals. Different dates make the gap look larger or smaller than it is.
+  - what: First-time customers only
+    how: Take returning orders out of the store totals. Mixing them in makes the platform look better than it is.
+  - what: The audience breakdown
+    how: It shows how much spend reached existing customers. Without it the skill cannot score that part.
+  - what: Daily data
+    how: With a daily series for 7-day click ROAS and new-customer revenue, the skill can test whether the platform tracks real sales.
+  - what: Other places you sell
+    how: Say if you sell on Amazon or in stores. Ads that look weak on the website may lift those too.
+
+judge:
+  - The base is new-customer revenue divided by total ad spend for the same dates.
+  - View share comes from your own numbers. The 30 to 50 percent figure is marked as an operator's claim.
+  - Meta's current click definition was checked, not assumed.
+  - No ROAS is compared across platforms, margins or funnel stages.
+  - Each budget decision names its evidence level.
+  - The score shows its sum and says its weights are the skill's own.
+
+test:
+  - Run it on a month where you know the platform overstated. The gap it finds should match what you saw in your bank.
+  - Run it twice with the same inputs. The ladder and the score should match.
+  - Change only the attribution setting in the export and see that the ladder and score change as you expect.
+  - Check the store base by hand, as new-customer revenue divided by ad spend.
+
+improve:
+  - Save your usual platforms, your attribution settings and your margin in the skill file.
+  - Add your own bands for trust, such as the score you want before moving more than 10 percent of budget.
+  - After a holdout test, add the factor you found, so each future run applies it.
+  - Pair it with the LTGP to CAC checker for your anchor number and the Incrementality test planner for the next test.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can run the ladder and the score. Check the store base by hand."}
+    - {name: "Meta Ads Manager", why: "Lets you compare attribution settings and break results down by new, engaged and existing audiences."}
+    - {name: "Shopify", why: "Gives new-customer revenue and orders, and a cohort report for your own repeat data."}
+    - {name: "A post-purchase survey app", why: "Collects where buyers say they first heard of you, so you can compare it with platform data."}
+  inputs:
+    - "Daily 7-day click ROAS and daily new-customer revenue per ad dollar for the last 60 days"
+    - "Results from any past holdout or lift test"
+    - "Your Meta, Google and TikTok exports with attribution columns"
+    - "Sales on Amazon or in stores by week"
+
+terms:
+  - term: View-through
+    meaning: Credit a platform takes for a sale when the buyer only saw the ad and did not click.
+  - term: 7-day click
+    meaning: Counts a sale only if the buyer clicked the ad and bought within 7 days.
+  - term: Incremental
+    meaning: Sales the ads really caused, beyond those that would have happened anyway.
+  - term: Acquisition MER
+    meaning: New-customer revenue divided by total ad spend. It is a store-level check on what the platforms report.
+  - term: Halo effect
+    meaning: A lift in one channel's numbers that really came from something else, such as another channel or a store event.

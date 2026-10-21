@@ -1,0 +1,35 @@
+# Workflow skeleton chaining existing library skills (docs/INTAKE.md).
+id: get-a-quiet-deal-moving-again-without-pressure
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: get-a-quiet-deal-moving-again-without-pressure
+  name: "Get a quiet deal moving again without pressure"
+  summary: "Give it your notes on a stalled deal. Get the cause, a firm recommendation, safety nets, easy-yes questions and calm replies."
+  when: "a buyer keeps asking for more time or more information and the deal has gone quiet."
+  job: sell-and-negotiate
+  level: intermediate
+steps:
+  - name: "Stalled-deal indecision checker"
+    skill: stalled-deal-indecision-checker
+    job: ops
+    from: "skill: stalled-deal-indecision-checker"
+    method: ["Read your notes for signs of indecision", "Name the cause: unsure what to choose, always more to learn, or doubting the result", "Write a firm recommendation, limit what you offer to explore and add safety nets"]
+    inputs: [question, offer!]
+    outputs: [plan, copy_draft]
+    note: "Finds why the deal stopped and what to offer the buyer next."
+  - name: "Yes-ladder question writer"
+    skill: yes-ladder-question-writer
+    job: ops
+    from: "skill: yes-ladder-question-writer"
+    method: ["State your request and what the buyer must already believe", "Collect shared ground and pick a starting point that cannot draw a no", "Write four to seven short questions, each with an honest yes, ending at your ask"]
+    inputs: [plan, objection_map!]
+    outputs: [plan]
+    note: "Takes the recommendation and safety nets from the step before and turns them into questions leading to the decision."
+  - name: "Disagreement-calming line writer"
+    skill: disagreement-calming-line-writer
+    job: copy
+    from: "skill: disagreement-calming-line-writer"
+    method: ["List the moments the talk could turn", "Write a welcome, a listening line and a line that agrees where it is true", "Hold your view gently and write a line that buys time"]
+    inputs: [plan, objection_map!]
+    outputs: [copy_draft]
+    note: "Takes the question ladder and writes short true lines for the moments the buyer pushes back."

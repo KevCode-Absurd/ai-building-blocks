@@ -1,0 +1,124 @@
+new_slug: new-and-returning-pl-splitter
+name: "New and returning P&L splitter"
+summary: "Paste your monthly P&L and order tags. Get one P&L for first-time and one for returning customers, scored."
+job: track-numbers
+thinking: high
+thinking_why: "It splits shared costs by a stated rule and reads the trend across months, so a stronger model keeps the allocation honest."
+
+headline: "New and returning P&L splitter"
+subhead: Paste one month of your profit and loss and your orders tagged first-time or returning. It builds one P&L for each group, shows which group is paying for the other, and tracks the trend. You get a score out of 100 for acquisition health.
+
+explain: |
+  A single profit and loss hides a common problem. Returning customers are cheap to serve and carry no ad cost, so they can cover for new customers who lose money. In the source's example, first-time customers went from a $20,000 profit a month to a $70,000 loss while the overall P&L still showed a profit. Returning customers covered it, and nobody noticed that winning new customers had stopped paying.
+
+  This skill splits every P&L line by the first-time or returning tag on the order. It puts all ad spend on the first-time P&L, because ads buy new customers. It splits shared costs by a rule you state. The bottom line of the first-time P&L is your real acquisition result. A first-time loss that grows month on month means older customers are hiding acquisition decay. It also says how a first-time loss might be funded.
+
+when:
+  - Your overall P&L is positive but cash feels tight.
+  - Ad spend is rising and you suspect new customers cost more than they bring.
+  - You want to know how much of your profit comes from customers you already have.
+
+you_give:
+  - Your P&L lines for one month, with cost of goods and delivery split out
+  - Orders tagged first-time or returning
+  - Earlier months, if you have them (optional)
+  - How you want shared costs, such as software and team, split
+
+you_get:
+  - A first-time customer P&L with its profit contribution
+  - A returning customer P&L with its profit contribution
+  - Who is subsidising whom, and the monthly trend
+  - A score out of 100 for acquisition health
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the month's P&L and attach the order list with first-time and returning tags.
+  - Say how shared costs should be split, and keep that rule the same each month.
+  - Read the first-time bottom line first. Then check the trend against earlier months.
+  - Run it again monthly and save each result.
+
+how_it_works:
+  - title: Tags every line
+    text: Every P&L line is filtered by the first-time or returning tag on the order.
+  - title: Allocates shared costs
+    text: Software and team costs are split by an explicit rule you state, and it stays the same each month.
+  - title: Puts ad spend on first-time
+    text: All ad spend sits on the first-time P&L, since it buys new customers.
+  - title: Reads each bottom line
+    text: The first-time bottom line is your real acquisition result.
+  - title: Reads the trend
+    text: A first-time loss that keeps growing means retention is hiding acquisition decay.
+  - title: Compares to the unit view
+    text: The profit to CAC ratio shows the same thing per customer. This split shows it in total money.
+  - title: Scores and names funding
+    text: A score out of 100, then the three ways to fund a loss (returning-customer profit, investor capital or debt).
+
+output_shape: |
+  MONTH <month> | orders: <first-time n> first-time, <returning n> returning
+  allocation rule for shared costs: <rule>
+
+  FIRST-TIME P&L          RETURNING P&L
+  net revenue   <$>       <$>
+  cost of goods <$>       <$>
+  delivery      <$>       <$>
+  gross profit  <$>       <$>
+  ad spend      <$>       0
+  other direct  <$>       <$>
+  profit contribution <$> <$>
+
+  WHO PAYS FOR WHOM  <returning profit covers first-time loss by $X, or first-time stands alone>
+  TREND  first-time contribution: <month, $> ... (direction)
+
+  SCORE <n>/100 now: <what was measured>
+  first-time result <n>/50 | trend <n>/30 | funding <n>/20
+
+  FUNDING OPTIONS  returning profit | investor capital | debt   (view: <note>)
+  NEXT <first change>
+  MISSING: <input>
+
+tweaks:
+  - what: The allocation rule for shared costs
+    how: Pick one rule, such as by share of orders or by share of revenue, and keep it each month. A rule that changes hides the trend.
+  - what: How far back you go
+    how: Give three months or more. One month shows the level, and three show the direction.
+  - what: How orders are tagged
+    how: Say how first-time is decided. Check that gift buyers and guest checkouts are not tagged returning by mistake.
+  - what: Cost lines
+    how: Split cost of goods and delivery out before you start. The split is weak if they are lumped with overhead.
+
+judge:
+  - Every P&L line appears on both statements, with ad spend on first-time only.
+  - The allocation rule is stated and used the same way for every month.
+  - The first-time bottom line is called out in one sentence.
+  - Both P&Ls add up to the whole-store P&L.
+  - The score shows its sum and says what it measures.
+
+test:
+  - Add the two P&Ls together. They should match your whole-store P&L line by line.
+  - Run it on a month where you know acquisition was hard. The first-time result should show it.
+  - Run it on two different allocation rules. The first-time result should shift a little, not flip.
+  - Tag ten orders by hand and check the tags match the skill's counts.
+
+improve:
+  - Put your allocation rule in the skill file so it never changes by accident.
+  - Add your funding limits, such as the most loss you will carry for three months.
+  - Add a monthly note on what changed, such as price or product launches, so the trend step can explain shifts.
+  - Pair it with the CAC payback checker for the per-customer view.
+  - Money figures are planning numbers. Check them with your accountant.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It can filter lines and add them up if you attach the tagged order list and show its sums."}
+    - {name: "Google Sheets", why: "Pivot tables split a P&L by order tag well, and you can keep a month-by-month history."}
+  inputs:
+    - "Three or more months of tagged P&Ls"
+    - "Your ad spend by month from every channel"
+    - "A note of what changed each month"
+
+terms:
+  - term: Profit contribution
+    meaning: Revenue minus cost of delivery minus marketing.
+  - term: First-time customer
+    meaning: A buyer placing their first order with your store.
+  - term: Allocation rule
+    meaning: The fixed way you split shared costs, such as by share of orders.

@@ -1,0 +1,126 @@
+new_slug: loyalty-and-vip-program-designer
+name: "Loyalty and VIP program designer"
+summary: "Give it your spend tiers and margins. Get a loyalty design with non-discount perks and a test."
+job: keep-customers
+thinking: medium
+thinking_why: "It makes a go or wait call and costs each perk, so a mid-size model is enough if you give it your spend data."
+
+headline: "Loyalty and VIP program designer"
+subhead: Give it your spend by customer, your margins and the time your team has. It first says go or wait, then designs tiers and perks based on access and status, costs each perk per member, writes the invite and sets up a test that does not fool you.
+
+explain: |
+  Most loyalty programs hand out points that are just discounts in disguise. They cost margin and give your best customers no reason to feel special. Another common mistake is building a program before the basics work, when the real problem is that customers don't make a second order.
+
+  This skill checks the bottleneck first. If first-to-second order conversion is weak, or the store does under about $10 to $20 million a year, it says to fix that before putting effort into VIP revenue. If it is a go, it sets tiers from your own spend data and favors access, early drops, events and recognition over money off. It costs each perk per member and per person who uses it, adds a leak guard, and sets a 90-day test. Most results quoted online are reported by the brands themselves, so it treats them as ideas, not forecasts.
+
+when:
+  - Your top customers get the same experience as someone who bought once.
+  - You have points or a discount club and want a version that costs less margin.
+  - You want to know if a VIP tier is worth building now or if something else comes first.
+
+you_give:
+  - Customers by spend tier, and their share of revenue and profit
+  - Repeat rate and how much of it depends on discounts
+  - Your margin limits and the hours your team can give each week
+  - Upcoming drops or new products, and your current program if any
+you_get:
+  - A go or wait call, with the reason
+  - Tier thresholds, a name and perks, each with its cost per member
+  - A reward mix that favors access and recognition over discounts
+  - An invite message, a leak guard and a 90-day test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your customer list with lifetime spend, order count and discount use, or the summary of it.
+  - Say what your team can do each week and what you can spend per member.
+  - Read the go or wait call first. If it says wait, do that fix before anything else.
+  - Run the test for 90 days against a group that does not get the perks.
+
+how_it_works:
+  - title: Checks the bottleneck
+    text: If first-to-second order conversion is weak, or the store is small, it says to fix that first and stops there.
+  - title: Checks the basics
+    text: Delivery, returns and support must be reliable before tiers are built on top.
+  - title: Measures the top 20 percent
+    text: One source expects them to deliver 50 percent or more of revenue and about 80 percent of profit. If yours do not, the VIP lever has more room.
+  - title: Sets tiers from your data
+    text: It uses your own spend spread. One example uses a free entry tier and paid-in steps at $350 and $1,000.
+  - title: Picks access over discounts
+    text: Early access, exclusive products, events, a private group, a line to the founder and recognition.
+  - title: Costs every perk
+    text: Cost per member and per user, since experiences and access usually cost less than points.
+  - title: Adds guards
+    text: A single-use link or queue so bots and resellers cannot take early access, and a fairness rule.
+  - title: Designs the test
+    text: Compare repeat rate and 12-month gross profit for people who use perks with those who do not, using a holdout.
+
+output_shape: |
+  GO OR WAIT  <go | wait>: <reason from the bottleneck check>
+
+  YOUR TOP 20 PERCENT  <share of revenue>  <share of profit>
+
+  CLUB  name: <name>  invite: top <1% | tier> by lifetime spend
+  TIERS
+    <tier>: <threshold> | perks: <list> | cost per member: <$>
+  REWARD MIX   access <%>  experiences <%>  recognition <%>  discounts <%>
+
+  GATING   <open | application | spend>  leak guard: <single-use link | queue | other>
+  PAID TIER?   <test with a small group | not now>
+
+  INVITE MESSAGE  <short text>
+  FLOWS AND CAMPAIGNS   perk reminders | early access | win-back for lapsed champions
+
+  TEST   <holdout or before-and-after> | 90-day checks: <repeat rate, AOV, retention>
+  CHECKS MISSED: <none | list>
+  MISSING: <what was needed>
+
+tweaks:
+  - what: Your size
+    how: Under about 10 to 20 million a year in sales, VIP revenue is rarely the biggest constraint. Say your size and the skill will say wait when it should.
+  - what: Perk cost limits
+    how: Give a maximum cost per member. It will drop perks that go over, and cost every perk that stays.
+  - what: Team time
+    how: A private group or events need people. Say how many hours a week you have and it will scale the program to match.
+  - what: Your product calendar
+    how: Early access only works if there are drops or new items to open early. List what is coming.
+
+judge:
+  - It starts with a go or wait call and says why.
+  - Tiers come from the store's own spend data, not from an example.
+  - Most perks are access, events or recognition, and each has a cost per member.
+  - Brand-reported results, such as 5x or 15x return, are called marketing claims.
+  - The test names a holdout and warns about selection bias.
+
+test:
+  - Give it a store with weak second-order conversion. It should say wait and name that fix.
+  - Run it twice on the same data. The go or wait call and the tier thresholds should match.
+  - Compare two tiers it designed with your real spend list, and count how many customers land in each.
+  - After 90 days, compare VIP retention and order value with non-VIPs before you add a second tier.
+
+improve:
+  - Add your real spend tiers and the thresholds that make sense for your margins to the skill file.
+  - Add perks you can really deliver, and the ones you have tried and dropped.
+  - Add rules for paid memberships, auto-renewal and prize or promotion rules where you sell, and ask a qualified person to check them.
+  - Save the club name, tiers and invite text to your brand file.
+  - Pair it with the VIP customer finder, the customer spend tier tagger and the loyalty claim checker, which do the list and sums this skill builds on.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can set tiers from a spend list and write the invite."}
+    - {name: "Smile.io", why: "A loyalty app for Shopify that can run tiers and perks. Check fees against your member count."}
+    - {name: "LoyaltyLion", why: "A loyalty app that can run tiers and VIP perks. Check fees against your member count."}
+  inputs:
+    - "Your customer list with lifetime spend and order count"
+    - "Your margin by product, so perks are costed right"
+    - "Dates of your next drops or launches"
+    - "Any current loyalty data on who redeems"
+
+terms:
+  - term: Gross profit
+    meaning: What is left of a sale after the cost of the goods, shipping, fees and refunds.
+  - term: Redeemer
+    meaning: A member who uses a reward or perk, as opposed to one who only joins.
+  - term: Selection bias
+    meaning: When the people who use perks were already your best buyers, so the perks look better than they are.
+  - term: Holdout
+    meaning: A group that does not get the perks, so you can compare.

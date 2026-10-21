@@ -1,0 +1,22 @@
+slug: build-shopping-by-margin-tune-it-weekly-and-fix-titles
+name: "Build Shopping by margin, tune it weekly and fix titles"
+summary: "Give it your products with margins and ROAS history. Get Shopping tiers with targets, weekly product calls and search-led titles."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: copy_draft}
+uses: [margin-tier-shopping-builder, shopping-campaign-tuner, shopping-feed-title-writer]
+steps:
+  - {uses: margin-tier-shopping-builder, note: "Sets up the tiers and targets the rest of the work tunes."}
+  - {uses: shopping-campaign-tuner, note: "Reads the first two weeks and says which products to cut, feed, bid up or fund."}
+  - {uses: shopping-feed-title-writer, note: "Fixes the weak titles the weekly read pointed to."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-shopping-by-margin-tune-it-weekly-and-fix-titles/skeleton.yaml

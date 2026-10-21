@@ -1,0 +1,21 @@
+slug: shopify-theme-picker
+name: "Shopify theme picker"
+summary: "Describe your store. Get a theme shortlist, each scored out of 100 on your must-haves."
+category: ecommerce
+type: skill
+role: check
+job: page
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients (name not given)", used: "Treating the theme as a long-lived choice, features first, theme store filters, catalogue size, developer check, demo and presets, mobile view, free trial, backup"}
+  - {title: "Shopify Store Setup Full Tutorial 2026: Step by Step", by: "Tutorial author (name not given)", used: "Free theme fits (Dawn, Horizon, Trade) and previewing before install"}

@@ -1,0 +1,21 @@
+slug: landed-cost-allocator
+name: "Landed cost allocator"
+summary: "Paste freight, duty and supplier invoices. Get the true landed cost per unit for each product."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: document, required: false}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Calculating COGS: what ecommerce businesses get wrong", by: "Phil, accountant at a UK accounting integrator for Amazon and Shopify brands", used: "Starting from purchase price and adding every cost to reach the shelf, attaching each invoice to its purchase, pushing lump freight and duty down to unit cost, rerunning when prices, currency or tariffs change, and when to move to stock software"}
+  - {title: "Why CFOs obsess over COGS", by: "Bill, financial controller and accounting teacher", used: "Freight in is part of the cost of stock and freight out is not"}
+  - {title: "Finance for e-commerce: a set of finance lectures and Excel walk-throughs", by: "Eric, startup finance educator", used: "Keeping product cost apart from fulfilment cost"}

@@ -1,0 +1,20 @@
+slug: store-name-generator
+name: "Store name generator"
+summary: "Give it your brief and rivals. Get 200 raw names, a shortlist of 15 and a clearance list."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "We named a billion dollar startup with the man behind BlackBerry, Febreze and Swiffer (podcast)", by: "David, founder of a naming agency, interviewed by two business-podcast hosts", used: "The four strategy questions, the 200-plus first pass, the three frames, the comfort-trap zones, turning rejections into problems, and the generate-then-judge split"}

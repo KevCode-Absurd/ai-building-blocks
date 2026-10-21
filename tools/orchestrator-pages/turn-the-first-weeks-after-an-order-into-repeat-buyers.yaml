@@ -1,0 +1,82 @@
+new_slug: turn-the-first-weeks-after-an-order-into-repeat-buyers
+name: Turn the first weeks after an order into repeat buyers
+summary: Give it your products and order data. Get post-order emails, delivery updates, a customer stage map and a test plan.
+job: keep-customers
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Turn the first weeks after an order into repeat buyers
+subhead: Give it your products, delivery times and email results. It builds the emails that follow a first order, adds delivery updates without sending anything twice, maps each buyer to one flow at a time, and ranks the tests to run first.
+explain: |
+  For most stores the email stops at the order confirmation. The buyer then waits days for a parcel with no news, asks support where it is, and forgets you before the second order is even a thought.
+
+  The steps fill those weeks. First it builds the post-purchase flow, with six email outlines and a split by how many orders the buyer has made. Then it adds delivery messages, reusing that flow so nobody gets two emails about the same parcel. It maps your flows by customer stage, so a buyer sits in one place at a time. Last it ranks tests, one change at a time, where your volume is high enough to read them. Nothing in this run waits on you.
+when:
+  - Your only email after an order is the receipt, and nothing brings buyers back.
+  - Customers write to ask where their parcel is, and you want to answer before they ask.
+  - You have several flows, and some buyers get emails from two of them at once.
+you_give:
+  - Your products, and what pairs well with each
+  - Your delivery times, and how many order-status tickets you get a month
+  - Your email results, such as flow revenue and recipients per month
+  - Your current flows, with their triggers and delays
+  - Your brand file and offer rules (optional)
+you_get:
+  - A post-purchase flow with a trigger, a split by order count and six email outlines with subject lines
+  - A delivery date rule, a four-message update flow and a tracking page plan
+  - A map of your flows by new, returning and loyal buyer, with a build order
+  - A ranked test queue with sample sizes and a rule for calling each result
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your product list, delivery times and email results. Add how you define a new, returning and loyal buyer.
+  - Build the flows in your email tool in the order the map gives.
+  - Run the first test it ranks, and read the result only when the sample size is reached.
+how_it_works:
+  - title: Post-purchase flow builder
+    text: Builds the emails after a first order. It starts with a plain founder note, then adds more products, a shipping update and how to get the most from what they bought.
+  - title: Delivery update flow builder
+    text: Rates your order-status tickets and delivery accuracy, sets a delivery date rule, and writes four update messages. It reuses the post-purchase flow so nothing goes out twice.
+  - title: Customer stage flow mapper
+    text: Puts a new, returning and loyal branch at the top of each flow, with a goal, tone and offer rule for each, so a buyer is in one place at a time.
+  - title: Email test planner
+    text: Ranks the tests on your mapped flows, with a hypothesis, a sample size and a winning metric for each. It skips tests your volume cannot read.
+output_shape: |-
+  STEP 1: POST-PURCHASE FLOW BUILDER
+    Trigger and filters | split by order count | six email outlines with subject lines | timing | campaign winners to add later
+
+  STEP 2: DELIVERY UPDATE FLOW BUILDER
+    Order-status rate and delivery accuracy | delivery date rule | four update messages | tracking page plan | late parcel script
+
+  STEP 3: CUSTOMER STAGE FLOW MAPPER
+    Flow map by stage | goal, tone and offer rule per branch | flows to build or merge, in order
+
+  STEP 4: EMAIL TEST PLANNER
+    Ranked test queue | hypothesis, sample size and run time | winning metric | tests to skip and why
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your delivery time
+    how: Give real times by region. The delivery date rule pads them, so a late parcel stays rare.
+  - what: How you define each buyer stage
+    how: Say what counts as new, returning and loyal. Step 3 splits every flow with these lines.
+  - what: Your discount room
+    how: Give your margin. The map sets which stage may get an offer, and keeps loyal buyers off discounts.
+  - what: Your email volume
+    how: Step 4 sizes each test from recipients per month. A small list gets fewer, bigger tests.
+judge:
+  - Each email has one job, a timing and a subject line.
+  - The delivery messages do not repeat the post-purchase emails.
+  - A buyer lands in one stage branch at a time, with no overlap.
+  - Every test has a sample size and a winning metric chosen before it starts.
+  - Tests your volume cannot read appear in the skip list, not the queue.
+test:
+  - Place yourself as a new buyer in the map. You should end up in one branch only.
+  - Place an order with your own email and check the timing of each message against the plan.
+  - Count last month's order-status tickets, then compare after the delivery flow is live.
+  - Compare the sample sizes with your monthly recipients. A test needing more than a month is too slow.
+improve:
+  - Add the real texts of your best past emails to step 1, so new ones match your voice.
+  - Save your delivery times by region in your brand file, so step 2 starts from them.
+  - Add your flow results each quarter, so step 4 ranks tests on fresh numbers.
+  - Pair it with the win-back workflow once these flows have run for a few months.

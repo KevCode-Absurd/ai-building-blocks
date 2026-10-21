@@ -1,0 +1,122 @@
+new_slug: google-ads-store-account-auditor
+name: "Google Ads store account auditor"
+summary: "Give it your exports and settings. Get brand leakage, a score out of 100 and a 90-day fix order."
+job: run-google-ads
+thinking: high
+thinking_why: "It weighs many settings and numbers against each other and must tell a real problem from a normal one, so a stronger model catches more."
+
+headline: "Google Ads store account auditor"
+subhead: Give it your Google Ads exports, settings screens and Merchant Center view. It runs the checks that matter for an online store, works out how much of your "cold" results really come from brand searches, and gives a score out of 100 with a 90-day order of fixes.
+
+explain: |
+  Most store accounts leak money in the same few places. Brand searches get counted as new customers. Performance Max shows brand queries. Search Partners and the Display Network are left on. Add to cart is set as a goal. Nobody notices, because the reported ROAS still looks fine.
+
+  This skill is an audit written for stores that run a Merchant Center feed. It starts with a sweep for the common mistakes, then measures brand leakage: how much of your spend and conversions in cold campaigns comes from people who already know your name. It checks settings traps, structure traps, Performance Max assets, Quality Score parts, wasted spend and the feed. You get a score out of 100, and the fixes in the order that costs you least to get wrong. The numbers come from large accounts, so treat them as directional.
+
+when:
+  - Your Google results look fine but sales growth does not match what Google reports.
+  - You took over an account, or an agency or freelancer built it, and you want an independent look.
+  - You are about to raise budget and want to know what you would be scaling.
+
+you_give:
+  - Campaign report with spend, conversions and conversion value for the last 90 days
+  - Search terms report and product report (optional but strongly advised)
+  - Screenshots or a list of campaign settings, goals and Performance Max asset groups
+  - Merchant Center screenshots, and a list of your brand names and spellings (optional)
+you_get:
+  - A score out of 100 with the points per area, so you can see how it was worked out
+  - Your brand leakage share, and every trap found with the evidence
+  - The 90-day order of fixes, with what to leave alone
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export the campaign report for the last 90 days and attach it. Add the search terms report if you can.
+  - Attach screenshots of the settings screens, the conversion goals and one Performance Max asset group.
+  - Type your brand names, including misspellings, so brand queries can be counted.
+  - Fix in the order it gives you, one area at a time, and run it again after 30 days.
+
+how_it_works:
+  - title: Sweeps for common mistakes
+    text: Looks for GA4 events as the main goal, one asset group, broad match on max clicks, Display on in Search, no negatives, no brand exclusion and auto-apply recommendations on.
+  - title: Measures brand leakage
+    text: Works out the share of spend and conversions in cold campaigns that come from brand queries, and flags low brand impression share and Meta overlap.
+  - title: Checks settings and structure
+    text: Search Partners, location option, suggested keywords, goals, mixed brand traffic, PMax serving brand, Shopping priority and oversized campaigns.
+  - title: Checks Performance Max
+    text: Ranks what matters in order (feed, brand exclusions, structure, bidding, signals) and counts assets, unless the setup is feed-only on purpose.
+  - title: Checks quality and waste
+    text: Reads Quality Score parts as a diagnosis, and finds small campaigns to roll up, losing search terms and stale promotions.
+  - title: Scores and orders the fixes
+    text: Gives points by area, then lists fixes in the 90-day order, one change at a time.
+
+output_shape: |
+  GOOGLE ADS STORE AUDIT  <store>, <date range>
+  SCORE  <n>/100  (<points by area, with what each counts>)
+  BRAND LEAKAGE
+    cold campaigns: <x>% of conversions and <y>% of spend from brand queries
+    brand spend share: <z>% of Google spend (over 10% is over)
+    brand impression share: <n>%  Meta overlap: <n>% (if known)
+  TRIPWIRES FOUND
+    <area> | <what> | <evidence> | <severity>
+  AREA RATINGS
+    tracking | structure | settings | PMax | brand | feed | waste: <points of max>
+  90-DAY ORDER
+    1 tracking  2 structure map  3 PMax check  4 bidding review
+    5 waste sweep  6 ad asset health  7 feed (slow batches)
+  LEAVE ALONE: <what is fine and why>
+  NOT CHECKED: <area, and what is needed>
+  MISSING: <item>
+
+tweaks:
+  - what: Your brand names and spellings
+    how: List every spelling, with and without spaces. Brand leakage can only count what it can recognise.
+  - what: Whether you run Meta or TikTok too
+    how: Say so and give rough spend. With heavy Meta, a lot of Google brand search is Meta demand, and the brand impression share target changes.
+  - what: The date range
+    how: Use 90 days or more. Short windows make normal swings look like problems.
+  - what: Feed-only Performance Max
+    how: Say if it is on purpose. The asset count checks are then skipped instead of failed.
+  - what: Store size
+    how: Under about 30 conversions a month, ask it to keep to tracking, brand and settings. Rankings and asset counts come from large accounts.
+
+judge:
+  - Every tripwire names the campaign or setting it came from, not a general warning.
+  - "Brand leakage shows the sum: brand conversions over all conversions, in cold campaigns only."
+  - The score shows points by area and what each area counted.
+  - An area it could not see is marked not checked, not passed.
+  - The fix order puts tracking first and the feed last, and does not tell you to rebuild everything.
+
+test:
+  - Give it an account where you already know one mistake, such as Display on in a Search campaign. It should find it and name where.
+  - Run it twice on the same files. The tripwires and score should match. If they move, your settings screenshots are unclear.
+  - Check the brand leakage sum by hand on one campaign. Add up its brand-query conversions in the search terms report and compare.
+
+improve:
+  - Add your own brand names, misspellings and product line names to the skill file so leakage counts are exact every time.
+  - Edit the brand spend line if your category needs more brand search, and write the reason in the skill.
+  - Add the rules your team follows, such as a naming scheme, so the audit checks them too.
+  - Save each audit and its date in your brand file, so the next one can show what changed.
+  - Pair it with the scale gate checker before you raise budget.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "The campaign, search terms, change history and settings reports come straight from here."}
+    - {name: "Google Merchant Center", why: "Its Diagnostics page shows feed problems the audit needs."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini can all read exports and screenshots; attach the files rather than retyping them."}
+  inputs:
+    - "The change history for the last 30 days, so you do not audit changes you just made"
+    - "Your break-even ROAS, so results can be judged against profit"
+    - "Your Meta or TikTok spend by month, for the overlap check"
+    - "The ads and asset groups themselves, as screenshots"
+
+terms:
+  - term: Brand leakage
+    meaning: Sales from people who searched your brand name that are counted inside campaigns meant to find new customers.
+  - term: Performance Max
+    meaning: A Google campaign type that runs across Search, Shopping, YouTube and more from one set of assets and your product feed.
+  - term: Asset group
+    meaning: A bundle of images, videos, headlines and descriptions that a Performance Max campaign mixes into ads.
+  - term: Impression share
+    meaning: The share of times your ad could have shown and did.
+  - term: Quality Score
+    meaning: Google's rating of how well your keyword, ad and landing page fit together. It helps you diagnose, but it is not part of the auction itself.

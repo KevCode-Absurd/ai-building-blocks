@@ -1,0 +1,20 @@
+slug: competitor-revenue-estimator
+name: "Competitor revenue estimator"
+summary: "Give a rival's visits and price. Get low, mid and high monthly revenue, a score and a verdict."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "I asked Claude to find me a $1k/day product", by: "Mark, e-commerce YouTuber", url: "https://www.youtube.com/watch?v=1KrsOagtWgM", used: "The revenue formula, the cautious conversion rates, the conservative order value, the worked example and the minimum monthly revenue bar"}
+  - {title: "The Only Product Research Video You Need to Start Dropshipping", by: "An e-commerce YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=JqbVCW14g5o", used: "Using a store revenue tracker to confirm that viral views turn into sales"}

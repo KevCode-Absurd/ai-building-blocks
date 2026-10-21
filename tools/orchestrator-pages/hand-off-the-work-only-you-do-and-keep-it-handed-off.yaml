@@ -1,0 +1,70 @@
+new_slug: hand-off-the-work-only-you-do-and-keep-it-handed-off
+name: Hand off work only you do and stop it returning
+summary: Describe your week. Get what to hand off, a one-page agreement and a meeting plan.
+job: lead-people
+thinking: medium
+thinking_why: Each step plans from the step before and none needs heavy reasoning. A mid-size model does it well.
+headline: Hand off work you keep doing and stop it drifting back to you
+subhead: Describe how your week is spent. It sorts what only you can do from what others can take, writes a one-page agreement for the person who takes the first job, and plans the one-on-ones that keep the handover from sliding back.
+explain: |
+  Most people who say they delegate hand over a task, not a result. The other person does not know what good looks like or when to come back to you, so the work returns to your desk, half done. You end up doing it yourself and wondering why you are still the bottleneck.
+
+  The steps start from your actual week. First it audits where your time goes and picks the work to hand off first. Then it writes a one-page agreement for that job: the results wanted, the limits, the help they get and when you will review. Last it plans the one-on-one meetings around that agreement, so the check-ins are about the result and the work does not creep back.
+when:
+  - You are on every decision and your calendar is full of work others could do.
+  - You have handed off work before and it came back.
+  - A new lead or senior hire needs a clear first job and a clear way to check in.
+you_give:
+  - How you spend a typical week, with the main jobs and hours
+  - The people who could take on more, with what they do now
+  - What worries you about handing off (optional)
+you_get:
+  - A delegation plan, a view of your calendar and your blind spots
+  - A one-page agreement for the first job you hand off
+  - A one-on-one plan with agenda rules, timing and follow-up
+how_to_use:
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe a real week. Add the hours if you can, and name who could take work on.
+  - Choose which job on the plan to hand off first, and tell it who gets the job.
+  - Read the agreement with that person before you start the one-on-ones.
+how_it_works:
+  - title: Audit your week
+    text: Looks at how you spend your time, separates what only you can do, writes a delegation plan and names your blind spots.
+  - title: Write the agreement
+    text: Takes the first job on the plan and writes a one-page agreement with the results wanted, the limits, the help they get and how you will review.
+  - title: Plan the one-on-ones
+    text: Sets how often you meet based on their experience with the task, writes the agenda rules and plans the follow-up so the check-ins stay on the result.
+output_shape: |-
+  STEP 1: DELEGATION PLAN
+    Your week by job | what only you can do | what to hand off first | blind spots
+
+  STEP 2: RESULTS AGREEMENT
+    Results wanted | limits | help and resources | review dates | what happens if it slips
+
+  STEP 3: ONE-ON-ONE PLAN
+    How often | agenda rules | follow-up | the hard case
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Honest hours
+    how: Real hours per job give a sharper plan than a rough picture. A week of calendar notes is enough.
+  - what: Who takes the job
+    how: Say how much experience they have with the task. The agreement and the meeting rhythm change a lot between a first-timer and an expert.
+  - what: What you will not give up
+    how: Name jobs you want to keep and why. The plan will respect them and say what it costs you.
+judge:
+  - Each job on the plan is sorted with a reason, not only by how much you dislike it.
+  - The agreement states results you can check, not tasks.
+  - The agreement says what help the person gets and when you will review.
+  - The meeting plan gives the person the agenda, not you.
+  - Your blind spots are specific and tied to your week.
+test:
+  - Read the agreement to the person taking the job. They should be able to say what done looks like.
+  - Check after two weeks whether the first one-on-one stayed on results.
+  - Count the hours you spent on the handed-off job before and after one month.
+improve:
+  - Save each agreement you write as a template for the next handover.
+  - Add the jobs you hand off to a list and review the list every quarter with the same audit.
+  - Add your own review rules, such as a weekly written update, to the agreement step.

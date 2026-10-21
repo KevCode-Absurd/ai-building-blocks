@@ -1,0 +1,102 @@
+new_slug: store-friction-checker
+name: "Store friction checker"
+summary: "Attach screenshots of your store pages. Get a ranked cut list and a score out of 100."
+job: audit-landing-page
+thinking: high
+thinking_why: "It judges many page elements against many rules, and a stronger model sees more in screenshots."
+headline: "Store friction checker"
+subhead: "Attach phone screenshots of your menu, homepage, collection page, product page with bundles and cart. It finds what slows or confuses a shopper, ranks what to cut or change, gives the reason to expect a lift and scores the pages out of 100."
+explain: |
+  Every extra menu item, bundle option, link and block on a store page makes the shopper work harder to decide. When they work too hard they leave. Stores grow pages over the years, so most carry things nobody clicks.
+  This skill is the store version of the general decision friction auditor. It adds the store rules: the homepage has one job, getting shoppers to a product page. It checks the first screen, the menu, links that let shoppers leave, bundle choices, badges, images, headlines and the cart. It judges phone screenshots first, since most store traffic is on mobile. You get a ranked cut list, a keep list, and a test order that changes one thing at a time. Every lift figure in the sources is a single test from one store, so the skill treats them as ideas to test, not promises.
+when:
+  - Your store has grown over the years and you suspect it is cluttered.
+  - Shoppers reach product pages but few add to cart.
+  - You are planning a redesign and want to know what to cut before you add anything.
+you_give:
+  - "Screenshots from a phone: menu, homepage, collection page, product page with bundles, and the cart"
+  - Number of products and your mobile share of traffic
+  - Your current bundle options and prices
+  - Heatmap, scroll or click data, or session recordings (optional)
+you_get:
+  - A ranked cut list and a keep list
+  - Each friction point with a fix and the reason to expect a lift
+  - A test order, one change at a time
+  - A score out of 100 and how it was worked out
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach screenshots as image files, taken on a phone or at phone width, not described in words.
+  - Tell it how many products you have, your mobile share and your bundle prices.
+  - Pick the top item on the cut list and change only that. Wait for enough orders to compare.
+  - Run the skill again on new screenshots and compare the score.
+how_it_works:
+  - title: Judges the homepage by its job
+    text: The homepage gets shoppers to a product page. Each block is judged on that, as if you started from a blank page and added back only what is needed.
+  - title: Checks the first screen
+    text: A benefit headline, an image that shows the result, and one clear button. A product on white is not the first image for a product page.
+  - title: Counts menu items
+    text: More than 7 gives diminishing returns. Home goes (the logo covers it), and about, contact, blog and FAQ move to the footer. Items with almost no clicks go.
+  - title: Finds exits and extra choices
+    text: Links that give shoppers more ways to leave, and bundle choices beyond three. Both are things to test, not assume.
+  - title: Checks badges, images and text
+    text: Best Seller or Most Popular badges, infographic images with benefits and proof, and long text chunked into icons, bullets and subheads.
+  - title: Checks headlines and the cart
+    text: Headlines state a benefit, not who you are. The cart is a slide-out drawer with a progress bar and only a few upsells.
+  - title: Ranks and scores
+    text: Ten checks worth 10 points each. Pass earns 10, partly 5, fail 0. The score is shown with its sum and the order to test in.
+output_shape: |
+  STORE FRICTION CHECK  (judged from <phone / desktop> screenshots)
+  Pages seen: <menu, homepage, collection, product, cart>
+  Not seen: <pages missing>
+  CUT LIST (ranked by impact on getting a shopper to a product page)
+  1. <what to remove or change> | <page> | why: <reason> | evidence: <seen / click data>
+  KEEP LIST
+  - <what works and why>
+  CHECKS (10 points each: pass 10, partly 5, fail 0)
+  C1 Homepage job <pts>   C2 First screen <pts>   C3 Menu count <pts>
+  C4 Menu looks and order <pts>   C5 Exits and extra links <pts>
+  C6 Bundle choices <pts>   C7 Badges <pts>   C8 Images and text <pts>
+  C9 Headlines <pts>   C10 Cart <pts>
+  SCORE <n>/100 (<points> of <points possible> on the checks run, scaled)
+  TEST ORDER (one change at a time)
+  1. <change> | measure: <conversion, AOV> | needs: <traffic or app or theme edit>
+  CHECKS MISSED: <none or list>
+tweaks:
+  - what: Phone screenshots
+    how: Send phone-width screenshots. A desktop screenshot hides the real mobile layout and some checks cannot run.
+  - what: Click or scroll data
+    how: Add heatmap, scroll or click data so menu items with almost no clicks can be cut with evidence. Without it, the skill marks those cuts as guesses.
+  - what: Number of products
+    how: A few products means the homepage should act like a landing page. Many products means offer, then top packs, then categories.
+  - what: Bundle details
+    how: Paste each bundle option and price. The skill checks the count and whether the saving is in the headline.
+judge:
+  - Every cut or change points to something visible on a screenshot or in click data.
+  - The cut list is ranked and has one change per line.
+  - Lift figures are labelled as single tests from other stores, not promised.
+  - The score shows its sum and says which checks were run.
+  - The test order changes one thing at a time.
+test:
+  - Take one cut it recommends and check on the screenshot that the thing is really there and really not clicked.
+  - Run it twice on the same screenshots. The top three cuts should match.
+  - Make the top change alone and compare conversion and AOV across equal periods. Do not change anything else.
+  - Show the first screen to someone for five seconds and ask what you sell. Compare their answer with check C2.
+improve:
+  - Add the rules your brand must keep, such as a legal footer link or a required menu item, so the skill does not tell you to cut them.
+  - Add your own click data thresholds, such as the share of clicks below which a menu item is cut.
+  - Add checks for the pages your store has that this skill does not cover, such as a quiz or a membership page.
+  - Pair it with the collection page fixer for the collection page and the bundle tier layout planner for bundle layout.
+works_best_with:
+  tools:
+    - {name: "Microsoft Clarity", why: "Free heatmaps, scroll maps and click data to show which menu items and blocks nobody uses."}
+    - {name: "Shopify", why: "Theme editor and sections let you cut or reorder blocks without code."}
+    - {name: "Any good chat AI", why: "Needs to read images, so you can attach phone screenshots."}
+  inputs:
+    - Heatmap, scroll map and click map for the homepage and product page
+    - Session recordings of shoppers using the menu and the cart
+    - Mobile share of traffic from GA4
+    - Your best-selling products and categories
+terms:
+  - {term: "Friction", meaning: "Anything that makes a shopper stop, think hard or leave before buying."}
+  - {term: "Above the fold", meaning: "What shows on screen before the shopper scrolls."}
+  - {term: "Cart drawer", meaning: "A cart that slides in from the side so the shopper stays on the page."}

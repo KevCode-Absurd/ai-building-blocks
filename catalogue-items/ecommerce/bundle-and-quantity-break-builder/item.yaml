@@ -1,0 +1,24 @@
+slug: bundle-and-quantity-break-builder
+name: "Bundle and quantity-break builder"
+summary: "Give it a hero product, cost and price. Get bundle tiers, a default, gifts and price lines."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: offer}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "I Studied Every $100M Ecommerce Offer So You Don't Have To", by: "An email and retention agency founder (public video)", used: "Bundling the same product, the pre-selected middle option, free versus percent off, and a flash-deal page beside the core bundle"}
+  - {title: "How To Create Winning Offers In Ecom", by: "A dropshipping and DTC coach (public video)", used: "Tier reasons tied to real use, price per unit or per day, and shipping spread across pack sizes"}
+  - {title: "$10,000,000 per year on Shopify: Insane Offer and Conversion Rate Strategy", by: "Jordan Hayes (agency owner)", used: "Gifts that grow with quantity and a starter kit layered on a quantity break"}
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic, interviewed on a podcast", used: "Pack logic, a pack builder and order value rising with many conversion changes"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, interviewed on a podcast", used: "The entry offer, which pack size repeats fastest, secondary products and offers per channel"}

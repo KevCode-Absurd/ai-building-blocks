@@ -1,0 +1,118 @@
+new_slug: ad-awareness-stage-checker
+name: "Ad awareness stage checker"
+summary: "Attach your ad. Get its awareness stage, mismatches, a score out of 100 and rewrites."
+job: check-ads
+thinking: medium
+thinking_why: "It judges one ad against a clear framework, so a mid-size model is enough."
+
+headline: "Ad awareness stage checker"
+subhead: "Attach your ad image or video with its copy. It names how much the viewer knows (the awareness stage), finds where the image, copy and video disagree, scores the ad out of 100 and writes fixes. Give it your other live ads and it checks your mix against a target split."
+
+explain: |
+  Most store ads are written as if everyone already knows the product. They lead with features, ingredients and price. But most people who see a cold ad are only problem aware at best, and many do not know they have a problem. An ad that doesn't meet them where they are gets ignored, and your frequency climbs as it keeps going to the same warm people.
+
+  This skill puts every ad on a five-step scale: unaware, problem aware, solution aware, product aware and most aware. It rates the hook, the visual and the copy separately and flags a mismatch, such as a brand-only image over copy that explains the category. For video it checks when the product first appears and whether the viewer's sense of being sold to rises slowly. The score weights are the source's own, shown in full.
+
+when:
+  - An ad is not reaching new people and your frequency is high.
+  - You are about to launch ads and want to know if the image and the copy tell the same story.
+  - You want to check whether your live ads are all aimed at people who already know you.
+
+you_give:
+  - The ad's copy, script or captions
+  - The image or video, attached as a file
+  - Your product and what buyers already know about the problem
+  - Your other live ads (optional), for the mix check
+you_get:
+  - The stage of each ad, with the evidence
+  - Mismatches between image, copy and video
+  - A score out of 100, with each part shown, and rewrites
+  - A mix check against the target split, if you gave your other ads
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the ad as an image or video file, and paste its copy or script.
+  - Tell it what the product is and what a cold buyer already knows about the problem.
+  - Add a list of your other live ads if you want the mix check.
+  - Fix the mismatches first, then run it again on the new version.
+
+how_it_works:
+  - title: Classifies the hook
+    text: Unaware, problem aware, solution aware, product aware or most aware, each with its own mark.
+  - title: Compares visual and copy
+    text: It rates them separately. If the image only makes sense to someone who knows the brand while the copy explains the category, the ad fails for both.
+  - title: Checks the walk
+    text: An ad may start at one stage and move down in order, or sit at one stage. It must not jump back and forth.
+  - title: Times the product reveal
+    text: For video, the second the product first appears. A 9-second reveal reads as solution aware, not unaware.
+  - title: Reads the awareness curve
+    text: Sense of being sold to should start near zero and rise slowly to the call to action. It flags the staircase pattern.
+  - title: Allows unaware statics
+    text: A curiosity image plus a long story in the primary text that leads to an article-style page can work.
+  - title: Checks your mix
+    text: Target about 80 percent of new ads at unaware and problem aware, 10 percent solution aware and 10 percent product and most aware.
+  - title: Scores and rewrites
+    text: Stage clarity 30, copy and visual agree 25, curve shape 20, hook fits the stage 25, with a rewrite for each failing part.
+
+output_shape: |
+  AD <name>
+  Stage: <unaware | problem aware | solution aware | product aware | most aware> | evidence: <hook words or first seconds>
+  Visual stage: <stage> | Copy stage: <stage> | Match: <yes | no, what clashes>
+  Video: product first appears at <second> | curve: <slow rise | staircase | other>
+
+  SCORE <n>/100
+  Stage clarity <n>/30 + Copy and visual agree <n>/25 + Curve shape <n>/20 + Hook fits the stage <n>/25
+  (weights come from the source group; they are a guide, not Meta's rules)
+
+  FIXES
+  1. <what to change> | <rewrite>
+
+  MIX CHECK (if other ads given)
+  Unaware + problem aware: <%> (target about 80) | Solution aware: <%> (about 10) | Product + most aware: <%> (about 10)
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: The attached creative
+    how: Attach the real image or video. Without it, the visual and curve checks are marked not run.
+  - what: What buyers know
+    how: Say what a cold buyer already knows about your problem. It decides whether a hook is stage one or two.
+  - what: Your other live ads
+    how: A list with each ad's hook lets it check the 80/10/10 mix.
+  - what: Weak retargeting
+    how: If retargeting is your weak spot, say so. It flexes the lower stages up.
+
+judge:
+  - Each stage call quotes the words or the second that show it.
+  - Image and copy are rated separately.
+  - The score shows its four parts that add to 100.
+  - Each fix includes a rewrite you can use.
+  - It says the 80/10/10 split is a starting point, not a rule.
+
+test:
+  - Give it an ad you know leads with price and features. It should call it product aware or most aware.
+  - Mix an unaware hook with product-aware copy and check that it flags the mismatch.
+  - Run it twice on the same ad. The stage should match both times.
+  - Use one of its rewrites and run the new version. The score should rise.
+
+improve:
+  - Add your brand's voice rules to the skill file so rewrites sound like you.
+  - Add your own hooks that worked at each stage as examples.
+  - Change the 80/10/10 split in the skill file if your own results say otherwise.
+  - Pair it with the buyer awareness stage mapper to find where your buyers sit first.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images and video can do this. Attach the file itself."}
+    - {name: "Meta Ads Library", why: "It lets you see competitor ads and judge their stage the same way."}
+  inputs:
+    - "The ad file itself, not a screenshot of your ad account"
+    - "A list of your live ads with hooks, for the mix check"
+    - "What customers said about the problem before they found you"
+
+terms:
+  - term: Awareness stage
+    meaning: How much the buyer already knows about the problem and about you.
+  - term: Pattern interrupt
+    meaning: A line or image that breaks what a person expects, so they stop scrolling.
+  - term: Staircase pattern
+    meaning: An ad that starts with no pitch, suddenly pitches, goes back to teaching, then pitches again.

@@ -1,0 +1,39 @@
+# Workflow skeleton built from existing AI Blocks library skills (docs/INTAKE.md).
+id: compare-a-list-of-options-and-get-one-checked-report
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: compare-a-list-of-options-and-get-one-checked-report
+  name: "Compare a list of options and get one checked report"
+  summary: "Name a topic. Get a list of items and questions, each item researched, and one report that leaves out unsure answers."
+  when: "you must compare many tools, vendors, papers or markets and trust each answer."
+  job: research-topics
+  level: advanced
+steps:
+  - name: "Build the research outline"
+    skill: research-outline-builder
+    job: ops
+    from: library
+    method: ["Give the topic and the time range you care about", "Get a first list of items and the questions to answer for each", "Search the web for items and questions that are missing", "Confirm and trim the list"]
+    inputs: [question]
+    outputs: [plan]
+    note: "Starts from your topic. Makes the list of items and the fields to fill in for each."
+  - name: "Research each item"
+    skill: item-by-item-researcher
+    job: ops
+    from: library
+    method: ["Read the outline: items and fields", "Skip items already done", "Research a batch at a time and approve each batch", "Save one file per item, with unsure answers marked"]
+    inputs: [plan]
+    outputs: [shortlist]
+    note: "Works through the outline one item at a time. It can use a lot of time and searches, so start with a small batch."
+  - name: "Build the report"
+    skill: research-results-report-builder
+    job: ops
+    from: library
+    method: ["Read every item file", "Choose which numbers show in the contents list", "Build a report with a contents list and a section per item", "Leave out any answer marked unsure"]
+    inputs: [shortlist]
+    outputs: [document]
+    note: "Turns the item files into one report. Unsure answers are left out, so gaps show as gaps."

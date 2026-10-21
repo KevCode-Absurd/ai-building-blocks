@@ -1,0 +1,62 @@
+# Workflow skeleton: chain of existing library skills (docs/INTAKE.md).
+id: lib-photos-for-every-product-in-a-sheet
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: make-matching-photos-for-a-product-sheet-and-check-them
+  name: Make matching photos for a product sheet and check them
+  summary: Give it a sheet of products. Get one matching photo per product, a faults report, and a marketplace rules check.
+  when: you have dozens of products and no time to shoot each one.
+  job: product-photos
+  level: advanced
+steps:
+  - name: Product photo batch maker
+    skill: product-photo-batch-maker
+    job: ops
+    from: "skill: product-photo-batch-maker"
+    method:
+      - Read the product sheet
+      - Fix one look that stays word for word the same
+      - Change only the product line per row
+      - Set a cost limit and run a small test batch first
+      - Build a contact sheet to pick from
+    inputs:
+      - product_data
+    outputs:
+      - photo_set
+    note: "Starts the chain: one matching photo per row of your sheet."
+  - pause: Look at the test batch and approve it before the full run, then save the finished photos.
+  - name: AI product photo inspector
+    skill: ai-product-photo-inspector
+    job: ops
+    task: check-ads
+    from: "skill: ai-product-photo-inspector"
+    method:
+      - Rate the risk of each picture
+      - Run eight checks, from warped products to garbled text
+      - Say use, retry or retouch
+      - Write lines to add to the prompt for a retry
+    inputs:
+      - product_photos
+    outputs:
+      - audit_report
+    note: Checks the saved batch for AI faults and says which to redo.
+  - pause: Redo the flagged photos with the fix lines, then save the final set.
+  - name: Marketplace photo rule checker
+    skill: marketplace-photo-rule-checker
+    job: ops
+    task: check-ads
+    from: "skill: marketplace-photo-rule-checker"
+    method:
+      - Pick the marketplace
+      - Check background, size and framing
+      - Mark pass or reject for each rule
+      - Give a fix for each reject
+    inputs:
+      - product_photos
+    outputs:
+      - audit_report
+    note: Checks the photos that passed against the rules of the shop you list on.

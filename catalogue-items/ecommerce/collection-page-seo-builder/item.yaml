@@ -1,0 +1,26 @@
+slug: collection-page-seo-builder
+name: "Collection page SEO builder"
+summary: "Give it a collection and keyword. Get the title, H1, URL, two-part copy, FAQ and links."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: pdp_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two co-founders of a Shopify SEO agency", used: "The whole collection template: title, H1 and URL, product grid rules, 36 to 48 products, split description, FAQ, featured reviews and sub-collection links"}
+  - {title: "Shopify speed and image optimization (about 15 videos in one file)", by: "Christian, a Shopify developer", used: "One main and two supporting keywords, title and description lengths, the one-H1 rule, handle changes with a redirect and internal links"}
+  - {title: "Shopify SEO Optimization Guide for Beginners 2026", by: "Christian, a Shopify consultant", used: "A single H1, title and description limits, alt text, and moving the description below the product grid"}
+  - {title: "Complete Shopify SEO Optimization Masterclass For Beginners in 2025", by: "A Shopify and e-commerce educator running a live workshop", used: "A collection description built around a hero keyword and cluster keywords, and a listing written to win the click"}
+  - {title: "Learn Everything About SEO & AI SEO in 50 Minutes!", by: "An SEO educator from an SEO software company's channel", used: "Title, meta description, URL and alt text rules"}
+  - {title: "Claude Code + SEO Masterclass", by: "An AI-automation freelancer and community owner", used: "On-page checklist items: keyword in the first 100 words, link counts and exactly one H1"}
+  - {title: "$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes", by: "An e-commerce SEO agency owner", used: "Why meta descriptions are a low priority for ranking"}

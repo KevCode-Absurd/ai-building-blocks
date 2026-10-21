@@ -1,0 +1,128 @@
+new_slug: answer-first-page-rewriter
+name: "Answer-first page rewriter"
+summary: "Give it a blog, guide or FAQ page. Get sections rewritten answer first, with a list of facts still needing a source."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It rewrites text under many rules while keeping your meaning and facts. A mid-level model is enough. Read the result for tone."
+
+headline: "Answer-first page rewriter"
+subhead: Give it a blog post, buying guide or FAQ page, the questions it should answer and your own data. It rewrites each section with the answer first, adds a short summary, FAQ and comparison table where they fit, and lists the facts that still need a number or a source.
+
+explain: |
+  AI assistants pull short passages from a page. If your answer sits in the fifth paragraph behind a warm-up, the assistant takes someone else's. In one report about 44% of AI citations came from the first third of a page. A section that only makes sense with the paragraphs before it cannot be lifted out.
+
+  This skill rewrites a page so each section stands on its own. The answer comes first, in 2 to 4 sentences at the top and about 20 to 25 words under each question heading. Things are named in full. Vague claims get a number and a source, and you add your own data and experience. It cannot invent those. It works on blogs, guides and FAQ pages. Product pages use the AI-ready product page editor. It builds on the library's AI search visibility optimiser and adds the exact rewrite rules. Figures here are from sources collected in October 2026 and change quickly.
+
+when:
+  - A guide or blog post of yours should be quoted by AI assistants when shoppers ask the question it answers.
+  - Your FAQ page rambles and you want short answers that stand alone.
+  - A page ranks but never gets named in AI answers.
+
+you_give:
+  - The page text
+  - The questions it should answer
+  - Your own data, experience and sources
+  - A tone sample and a list of words to avoid (optional)
+
+you_get:
+  - Rewritten sections with an answer-first opening
+  - A list of facts that still need a source or number
+  - An FAQ block and a comparison table where they fit
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the page text and the questions it should answer.
+  - Paste your own data, a customer result or what you learned yourself, with the source.
+  - Read the rewrite and the list of facts that need a source. Fill those in yourself.
+  - Add a real person's edit before you publish.
+
+how_it_works:
+  - title: Puts the answer first
+    text: A direct 2 to 4 sentence answer at the top, then a short summary.
+  - title: Writes answer capsules
+    text: Under each question heading, a self-contained answer of about 20 to 25 words with no links inside.
+  - title: Runs the stand-alone test
+    text: Read any section alone. If it needs the paragraphs before it, rewrite it.
+  - title: Names things in full
+    text: The full product and brand name and what it does. No pronouns standing in for names.
+  - title: Keeps sentences plain
+    text: One idea per sentence, subject then verb then object. Split any sentence that needs two reads.
+  - title: Replaces vague claims
+    text: Numbers and a linked source. You add original data, an expert quote and your experience.
+  - title: Adds lists and tables
+    text: Lists, comparison tables and X vs Y formats where they fit.
+  - title: Adds the FAQ and labels
+    text: 3 to 5 FAQ questions at the bottom and a brand name on your own ideas.
+
+output_shape: |
+  PAGE  <title> | TYPE  <blog | guide | FAQ>
+
+  TOP OF PAGE
+  Answer (2 to 4 sentences): <...>
+  Summary: <...>
+
+  SECTIONS
+  H2: <question heading>
+  Answer capsule (about 20 to 25 words): <...>
+  Detail: <...>
+  (one block per section)
+
+  COMPARISON TABLE (if it fits)
+  <item> | <attribute> | <attribute>
+
+  FAQ (3 to 5)
+  Q: <question>  A: <answer>
+
+  LABELLED IDEA  <your brand name> + <the idea>, to repeat across channels
+
+  FACTS THAT STILL NEED A SOURCE OR NUMBER
+  1. <claim> | needs: <number or source>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your own data
+    how: Paste a result, a test, a customer count or a lesson you learned. Original data is the one thing AI cannot find elsewhere.
+  - what: Page type
+    how: Say blog, guide or FAQ. A transactional page stays light on information and may belong with the product page editor.
+  - what: Your tone and avoid list
+    how: Paste a sample you like and your banned words. The rewrite follows them.
+  - what: Questions to answer
+    how: Give the real questions, ideally from the shopper question mapper. Each becomes a heading with a capsule.
+
+judge:
+  - Each section reads alone, with no need for the paragraph before it.
+  - The first lines of the page answer the question directly.
+  - Vague claims are replaced with a number and a source, or listed as needing one.
+  - Names are written in full, with few pronouns.
+  - No fact, quote or result was added that you did not give.
+
+test:
+  - Cut any one section out and read it alone. It should still make sense.
+  - Ask an AI assistant the question after the page is live and ranked. See if your page is cited.
+  - Compare the old and new first third of the page. The new one should hold the answer.
+  - Run it twice. The facts list should name the same gaps.
+
+improve:
+  - Add your avoid-word list and tone rules to the skill file.
+  - Add the label for your own ideas, such as "the Brand X sizing rule", and use it everywhere.
+  - Save your original data and sources in your brand file so each page can use them.
+  - Pair it with the shopper question and fan-out mapper (the questions) and the AI-ready product page editor (product pages).
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewrites and checks sections under the rules. Always edit the result in your own voice."}
+    - {name: "Google Search", why: "People Also Ask boxes give the FAQ questions to add at the bottom."}
+  inputs:
+    - "A customer result or test you ran, with numbers"
+    - "A quote from a real expert or your own founder"
+    - "Your best-performing page for tone"
+
+terms:
+  - term: Answer capsule
+    meaning: A short, self-contained answer sitting right under a question heading.
+  - term: Fan-out
+    meaning: The smaller searches an AI runs behind one question.
+  - term: Original data
+    meaning: A number or finding that comes from you, such as a test or customer count, not found elsewhere.

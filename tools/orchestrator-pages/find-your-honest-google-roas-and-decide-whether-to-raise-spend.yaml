@@ -1,0 +1,81 @@
+new_slug: find-your-honest-google-roas-and-decide-whether-to-raise-spend
+name: "Find your real Google ROAS and decide on spend"
+summary: Give it your margins and 30 days of Google data. Get break-even targets, true non-brand ROAS and a go or wait call.
+job: run-google-ads
+thinking: high
+thinking_why: The break-even sums feed every later step, and a wrong figure leads to a wrong spend call. Give it your strongest model.
+headline: Learn what Google really earns you before you raise the budget
+subhead: Give it your prices, costs and 30 days of Google Ads data. It works out your break-even ROAS, strips out brand traffic to show true non-brand ROAS, and checks five gates before giving a go or wait call with a safe step size.
+explain: |
+  Google can show a strong ROAS while sales stay flat. The usual reason is brand traffic: people who already knew your name and would have bought anyway. Shopping and Performance Max campaigns often pick up those searches and take the credit, so the blended number flatters the ads. Raising the budget on that number buys more of the same weak return.
+
+  The first step works out the lowest ROAS and the highest cost per sale you can afford, from your price and margin. Then it pauses and asks you to export the last 30 days from Google Ads with campaigns, search terms and conversions, and mark which terms are your brand. The second step measures how much brand traffic lifts the headline number, finds true non-brand ROAS and lists the campaigns that leak brand terms. The third checks feed, tracking, structure, creative and bid maturity, compares ROAS with break-even and gives a go or wait call. It needs real margins and about 30 days of data. With very few conversions, the numbers are too noisy to act on.
+when:
+  - Google shows a good ROAS but sales are flat.
+  - You are thinking of raising the budget and want to know it is safe.
+  - Your Shopping or Performance Max campaigns seem to claim sales you would have made anyway.
+you_give:
+  - Prices, product costs, shipping and fees, so margin can be worked out
+  - The last 30 days exported from Google Ads, with campaigns, search terms, spend and conversions
+  - Which search terms are your brand, including misspellings
+  - Your planned new spend (optional)
+  - Your brand file (optional)
+you_get:
+  - Break-even ROAS and cost per sale for your margin, targets for any product with a different margin, and a score out of 100 on whether ads can pay
+  - Brand share of spend and conversions, true non-brand ROAS against break-even, and the campaigns leaking brand terms
+  - A split plan with exact-match negatives, a role and target per campaign and a separation score out of 100
+  - A pass, fail or unknown result for five gates, a score out of 100, a go or wait call and a safe step size
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it order value, product cost and fees first. It will not guess your margin.
+  - When it pauses, export 30 days from Google Ads with search terms. Mark your brand terms.
+  - Read the non-brand ROAS before the go or wait call. If it is below break-even, fix that before spending more.
+how_it_works:
+  - title: Work out break-even
+    text: Checks your price, cost and margin inputs, then works out break-even ROAS and cost per sale. It gives separate targets where margins differ and says whether ads can pay at your clicks and conversion rate.
+  - title: Export 30 days
+    text: A pause. You export the last 30 days from Google Ads with campaigns, search terms and conversions, and mark which terms are your brand.
+  - title: Split brand from non-brand
+    text: Measures how much brand traffic flatters ROAS, works out true non-brand ROAS against break-even, and lists the leaks in Search, Shopping and Performance Max. It sets different targets for each.
+  - title: Check the scale gates
+    text: Checks feed, tracking, structure, creative and bid maturity, then runs the profit check against break-even. It gives a go or wait call and a stepped plan for any rise.
+output_shape: |-
+  STEP 1: BREAK-EVEN
+    Order value and margin with sources | break-even ROAS and CPA | target by segment | can ads pay | score out of 100
+
+  PAUSE: export 30 days from Google Ads (campaigns, search terms, conversions) and mark brand terms
+
+  STEP 2: BRAND SPLIT
+    Brand share of spend and conversions | non-brand ROAS vs break-even | leaks | negatives | Performance Max exclusions | campaign map | separation score out of 100
+
+  STEP 3: SCALE GATES
+    Five gates with evidence | ROAS vs break-even | stepped plan | score out of 100 | go or wait | safe step size | fix list in order
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How exactly you state your margin
+    how: Include shipping, payment fees and returns. A margin that leaves these out makes break-even look easier than it is.
+  - what: Which terms you mark as brand
+    how: Include misspellings, names with no space and your brand plus a product line. Missed terms leave brand traffic in the non-brand number.
+  - what: Different margins by product
+    how: Give them. Break-even differs by product, and one blended target sends spend to the wrong place.
+  - what: How big a rise you plan
+    how: Give the new monthly spend, and step 3 judges the step size and the days between steps against it.
+judge:
+  - Break-even shows its sum, margin and order value, with the source of each figure.
+  - The brand share is stated for spend and for conversions.
+  - Non-brand ROAS is compared with break-even and called above or below.
+  - Each gate says pass, fail or unknown with the evidence, and unknown counts as zero in the score.
+  - The wait call comes with a fix list in order, and a go call comes with a step size.
+test:
+  - Work out break-even by hand for one product. Check it matches step 1.
+  - Search one brand term in your search terms export. Check it landed in the brand count.
+  - Compare the brand share with what you see in the Google Ads search terms report.
+  - After a stepped rise, check that non-brand ROAS stayed above break-even before making the next step.
+improve:
+  - Save your break-even figures in your brand file, so you can skip step 1 next month.
+  - Add your full brand term list, with misspellings, to the splitter skill.
+  - Edit the step size in the gate checker if your account is much smaller or larger than the default allows.
+  - Pair it with a feed or tracking check when a gate fails on those.

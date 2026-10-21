@@ -1,0 +1,132 @@
+new_slug: small-budget-ad-test-planner
+name: "Small-budget ad test planner"
+summary: "Give it your price, product and test cash. Get a staged plan: image test, then video, then people."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It builds a staged plan with decision rules from a few inputs, which a mid-size model handles well."
+
+headline: "Small-budget ad test planner"
+subhead: Give it your product, price, how much cash you can risk and three reasons to buy. It treats the cash as a pot of learning. You get a staged plan of an image test, then a video, then new people. Each stage has stop and go rules, a diagnosis table and a doubling schedule.
+
+explain: |
+  With little cash, the common mistake is to spread it over too many ads or to change the ad when the real problem is the price. You spend your pot and learn nothing you can act on.
+
+  This skill gives the cash one question to answer: price, channel, product or message. It checks price first. Then it plans a cheap image test where only the one-line reason to buy changes, a video for the angle that wins, and a wider test across people, creators and places. It tells you how to read the first days (does the ad get spend, and does the spend come back) and when to double the budget. It works at small spend. It does not suit stores already spending six figures.
+
+when:
+  - You have a small test budget and one product and want a plan for what to try first.
+  - Your ads get clicks but few buy and you do not know if the problem is the ad, the page or the price.
+  - You want to know when it is safe to raise a $20 a day test to $100.
+
+you_give:
+  - Your product, price and cost
+  - How much cash you can risk on testing (your pot)
+  - Three reasons to buy, each in a few words
+  - A photo of the product on a plain background (optional)
+you_get:
+  - A staged plan of an image test, then a video, then people, creators and places
+  - Stop and go rules for each stage
+  - A table that says what to do if the ad gets spend but no sales, or gets no spend
+  - A budget doubling schedule and when to stop doubling
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your product, price, cost, test pot and three reasons to buy. Make each reason a claim you can back up.
+  - Attach a clean photo of the product on white if you have one.
+  - Check that your tracking and store page work before you spend a dollar.
+  - Follow the stages in order and write down each result.
+
+how_it_works:
+  - title: Frames the pot
+    text: Asks what you want to learn with this cash. The answer is price, channel, product or message.
+  - title: Checks price first
+    text: If clicks and views cost a normal amount for your niche and many people reach the cart and leave, change the price before you change the ad.
+  - title: Plans the image test
+    text: Same product photo on white each time, with a plain bar of text naming one reason to buy. The one that draws the most clicks or interest points to the angle.
+  - title: Plans the video
+    text: Makes a longer video for the winning angle that explains why it works. Tests a man and a woman, or hands only, so more buyers can see themselves.
+  - title: Sets the test campaign
+    text: Runs $10 to $50 a day and adds 1 to 3 new ads every few days.
+  - title: Reads two things
+    text: Does it get spend, and does the spend come back. Spend with no sales and no spend point to different fixes.
+  - title: Doubles while it holds
+    text: Goes $50, $100, $200 a day until the return falls, then asks if you need more ads or the audience is used up.
+  - title: Grows the tree
+    text: After image and video, branches into creators, colours and regions.
+
+output_shape: |
+  THE QUESTION FOR THIS POT
+  <price | channel | product | message> with <$ pot>
+
+  PRICE CHECK
+  Cost per click: <$>  CPM: <$>  Reach cart: <n%>  Leave at cart: <n%>
+  Verdict: <price first | ad first> because <reason>
+
+  STAGE 1: IMAGE SMOKE TEST
+  Same photo, 3 text bars: <reason 1> | <reason 2> | <reason 3>
+  Budget: <$ a day> for <days>
+  Go if: <winner by clicks or interest>  Stop if: <rule>
+
+  STAGE 2: VIDEO FOR THE WINNER
+  <length, who is on camera: man | woman | hands only>  Budget: <$ a day>
+  Go if: <rule>  Stop if: <rule>
+
+  STAGE 3: MORE PEOPLE
+  <creators | colours | regions> in this order: <list>
+
+  WHAT THE FIRST DAYS MEAN
+  Gets spend + no sales -> <fix>   No spend -> <fix>   Spend + sales -> <double>
+
+  DOUBLING SCHEDULE
+  <$50 -> $100 -> $200> until <the return falls>  Then: <more ads or audience used up>
+  Time to a first read: <days> at <$ a day>
+  CHECKS MISSED: <none, or the list>
+  MISSING: <what was not supplied>
+
+tweaks:
+  - what: Size of the pot
+    how: A smaller pot teaches the same things but more slowly. Give the plan a longer read time, not a bigger daily spend.
+  - what: Price
+    how: Say your price and typical click costs. A $150 product at $10 a day may take about two weeks to read, which is one example, not a rule.
+  - what: Your three reasons to buy
+    how: Use claims you can prove, not hopes. Weak or vague reasons give a weak test.
+  - what: Tracking state
+    how: Tell the skill if your purchase tracking is not yet working. It will put the fix before the first dollar.
+
+judge:
+  - Price is checked before any ad change is suggested.
+  - The image test changes only the text bar, with the same photo each time.
+  - Each stage has a go rule and a stop rule.
+  - The diagnosis table covers both "spend but no sales" and "no spend".
+  - The plan warns that doubling does not work at six figures and is for small spend.
+
+test:
+  - Give it a product where you already know the problem was price. It should say to change price first.
+  - Run it twice on the same input. The stages and rules should match.
+  - Check the plan against your tracking. Can you read spend and sales for each ad? If not, fix that before starting.
+  - Run stage 1 and see if one text bar clearly leads. If none does, the plan should say to try new reasons to buy, not to move to video.
+
+improve:
+  - Add your price floor and margin to the skill file so it never suggests a price below your costs.
+  - Add the words your buyers use for each reason to buy, so the text bars read like them.
+  - Add the claim rules for your category, such as health or money, so the text bars stay within them.
+  - Pair it with a test budget calculator and a creative brief writer for the video stage.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning and diagnosis from a few inputs works in any current chat AI."}
+    - {name: "Canva", why: "Makes the plain-text-bar image test in minutes, with no designer."}
+    - {name: "Meta Ads Manager", why: "Gives the clicks, spend and sales that the diagnosis table reads."}
+  inputs:
+    - "A clean product photo on white"
+    - "Customer reviews, to word the three reasons to buy"
+    - "Your cost per click and CPM from any earlier ads"
+    - "Posts of yours that got more views than usual, as ideas for the video"
+
+terms:
+  - term: Pot of learning
+    meaning: The test cash treated as the price of an answer to one question, not as money you expect back.
+  - term: Smoke test
+    meaning: A cheap first test that shows whether any interest exists before you spend on better ads.
+  - term: CPM
+    meaning: What you pay to show your ad 1,000 times.

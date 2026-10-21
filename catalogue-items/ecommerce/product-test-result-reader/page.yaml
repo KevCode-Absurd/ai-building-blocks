@@ -1,0 +1,121 @@
+new_slug: product-test-result-reader
+name: "Product test result reader"
+summary: "Paste product test numbers. Get ad, page or checkout as the cause, and the next fix."
+job: read-ad-results
+thinking: low
+thinking_why: "It compares numbers to fixed benchmarks, so a fast model is enough."
+
+headline: "Product test result reader"
+subhead: "Paste the numbers from a short product test: cost per click, click rate, cost per 1,000 views, page to cart rate, cart to purchase rate and order value. It calls the problem as the ad, the page or the checkout, gives a score out of 100 and names the next fix."
+
+explain: |
+  A product test that does not sell rarely means the product is bad. Most of the time the ad, the page or the checkout is at fault. If you blame the product too early, you drop a good one. If you blame the ad too late, you keep paying for one that cannot work.
+
+  This skill reads your test numbers against simple benchmarks, in the order a shopper moves: the ad, then the page, then checkout. Each number gets a pass or a miss, and the first miss points to the cause. The score is a tally of benchmarks met, not a forecast. The benchmarks are US, cold-traffic, 2026 figures from two creators who sell low-cost goods. It is a variant of the general ad performance diagnoser, with product-test numbers added.
+
+when:
+  - You ran a short test on a new product and sales did not come.
+  - You want to know whether to fix the ad, the page or the checkout before you drop the product.
+  - You are comparing two test products and want a quick, fair read of each.
+
+you_give:
+  - Link cost per click, click rate and cost per 1,000 views
+  - Rate of landing page visits that add to cart, and cart to purchase rate
+  - Average order value and the base price
+  - How many days it ran, how many ads, and your country (optional)
+you_get:
+  - "A call: ad issue, page issue or checkout issue"
+  - A score out of 100, with what it measured
+  - The next fix, with the number that triggered it
+  - A note when the test ran too briefly or has too little data
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the numbers from your ads manager and your store. Give the price of the product too.
+  - Say how many days it ran, how many ads and where you sell.
+  - Read the call and the next fix. Make one change, not three.
+  - Run the test again and paste the new numbers.
+
+how_it_works:
+  - title: Asks why first
+    text: Rarely is it the product alone. One creator says about 90% of failures are the ads or the funnel. That is one person's claim.
+  - title: Reads the ads
+    text: Link cost per click about $1.50 in the US is the target. $2 to $4 is a problem. Click rate under 3% is weak creative, with about 4% as the aim. Cost per 1,000 views over about $80 is high.
+  - title: Reads the page
+    text: Landing page to add-to-cart should be at least 10%, or 8% to 9% for pricier items. Below that, the page, the offer or the traffic is weak.
+  - title: Reads the checkout
+    text: Add-to-cart to purchase should be about 30%. Lower means checkout friction or payment approval trouble.
+  - title: Reads order value
+    text: Order value should be 20% to 40% above the base price. Repeat sales should lift lifetime value well above that.
+  - title: Checks the test itself
+    text: A fair test is 2 to 3 days on Meta with 5 to 8 ads per product. Too few clicks make the numbers noise.
+  - title: Calls the cause and scores it
+    text: Finds the first miss in the shopper's path, names the fix and shows the score sum.
+
+output_shape: |
+  TEST: <product>   PRICE: <price>   RAN: <days>, <ads> ads, <country>
+
+  AD
+  link CPC          <value>  target about $1.50   <pass | miss>
+  click rate        <value>  target near 4%      <pass | partial | miss>
+  cost per 1,000    <value>  high over about $80 <pass | miss>
+  PAGE
+  page to cart      <value>  at least 10% (8 to 9% if pricier)  <pass | miss>
+  CHECKOUT
+  cart to purchase  <value>  about 30%  <pass | miss>
+  ORDER VALUE
+  order value       <value>  20 to 40% above base price  <pass | miss>
+
+  CALL: <AD ISSUE | PAGE ISSUE | CHECKOUT ISSUE | NO CLEAR ISSUE>
+  SCORE <n>/100 (<points earned> of <points available>, scaled to 100)
+  NEXT FIX: <one change>, because <number that triggered it>
+  DATA WARNING: <too few clicks or too short a test, if so>
+  MISSING: <numbers not given>
+
+tweaks:
+  - what: Your price
+    how: A pricier product needs a lower page to cart rate, so give the price. The 8% to 9% allowance is for pricier items.
+  - what: Your country
+    how: The benchmarks are US. Say where you sell, and treat other countries as rough guides.
+  - what: Test length
+    how: Give days and ad count. A test that ran for hours is flagged, not scored hard.
+  - what: One metric at a time
+    how: If you only have two numbers, give those. It scores what it has and says what it could not check.
+
+judge:
+  - The call follows the first miss on the shopper's path.
+  - Every miss is tied to a number you gave and the benchmark it missed.
+  - The score shows its sum and what it left out.
+  - It does not chase click rate alone. Curiosity clicks that do not sell are flagged.
+  - It warns you when the data is too thin to judge.
+
+test:
+  - Give it numbers from a test you know was a good ad and a weak page. It should call the page, not the ad.
+  - Change only the cart to purchase rate to 10%. The call should move to checkout.
+  - Run it twice on the same numbers. The call and score should match.
+  - Compare its next fix with what you would do. If it differs, check which number triggered it.
+
+improve:
+  - Edit the benchmark numbers in the skill file once you have your own results. The ones here are two creators' US figures for low-cost goods.
+  - Add your own price band and set the page to cart target for it.
+  - Add the ad count and test length you use.
+  - Pair it with the general ad performance diagnoser and the store profit margin calculator.
+  - Save each test and call in your brand file.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "Where link cost per click, click rate and cost per 1,000 views come from."}
+    - {name: "Shopify analytics", why: "Where add to cart, checkout and order value come from."}
+    - {name: "Any good chat AI", why: "Any current chat AI can read the numbers you paste."}
+  inputs:
+    - "An export of the test as a spreadsheet, so the numbers are exact"
+    - "Screenshots of the ad and the landing page"
+    - "Your cost per unit and shipping, so a fix can be checked against margin"
+
+terms:
+  - term: Link CPC
+    meaning: What you pay for each click that goes to your page.
+  - term: CPM
+    meaning: What you pay for every 1,000 times your ad is shown.
+  - term: AOV
+    meaning: Average order value. The average amount a customer spends in one order.

@@ -1,0 +1,88 @@
+new_slug: write-an-advertorial-that-turns-cold-traffic-into-sales
+name: Write an advertorial that turns cold traffic into sales
+summary: Give it your product facts and customer reviews. Get an advertorial built on one big idea and checked for story and claims.
+job: write-landing-page
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Write an advertorial that turns cold traffic into sales
+subhead: Give it your product facts, customer reviews and rival claims. It builds one big idea with a named mechanism, writes a story-led advertorial from it, flags where the story turns into a pitch, places your proof, and scores the finished page on 30 checks.
+explain: |
+  Cold visitors do not know your product or why they should care. A normal product page asks for the sale too soon. They need a reason to read first, and a story that makes them believe the product works before they see a price.
+
+  The steps build that page. First it finds the one idea the page stands on, with a root cause the buyer already pictures and a named mechanism. The writer turns that idea into a long, story-led page, labelled as an ad. The story checker marks every sentence where the story turns into a pitch and rewrites it. The proof placer puts real reviews next to the doubts the draft raises. The last checker scores the page on 30 checks. Nothing in this run waits on you, but you should read the big idea first, because everything stands on it.
+when:
+  - Your ads send cold visitors to a page that does not explain the product well enough to sell it.
+  - Your product needs explaining, such as a new type of product or one with a real mechanism.
+  - Your ads get clicks from people who do not know the problem your product solves.
+you_give:
+  - Product facts, such as parts or materials, how it works, price and guarantee
+  - Customer reviews or support questions, each with its source
+  - Three to five rival products and the claims they make (optional)
+  - The ad that sends traffic to this page (optional)
+  - Proof you hold, such as studies, test results and review counts (optional)
+you_get:
+  - A one-line big idea, ranked pain points, a root cause, a named mechanism and a why-now line
+  - A list of claims that still need proof before the page goes live
+  - A story-led advertorial with an ad label, a button plan and an image list
+  - Every spot where the story turns into a pitch, with a rewrite, and a story score out of 100
+  - A proof map and a 30-point page check with a score out of 100
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your product facts and reviews. Add rival claims if you know them.
+  - Read the big idea after step 1. Everything is written from it, so change it now if it feels wrong.
+  - Find proof for every claim on the list, then make the five fixes the last check gives.
+how_it_works:
+  - title: Big idea and mechanism builder
+    text: Lists what is truly unique about the product, ranks the pain points, names a mechanism that matches what the product does, writes the why-now and lists claims needing proof.
+  - title: Store advertorial writer
+    text: Writes a long page for one named person from the big idea, with the pains, the mechanism, two closing options and an image list.
+  - title: Advertorial story and belief checker
+    text: Marks every sentence where the story turns into a pitch, checks the mechanism, the risk and the honesty, and rewrites the weak spots.
+  - title: Store social proof placer
+    text: Matches each real review or press quote to a doubt in the draft, puts proof where readers hesitate and lists what it dropped.
+  - title: Landing page 30-point checker
+    text: Runs 30 yes-or-no checks on the finished page and lists the five fixes to make first.
+output_shape: |-
+  STEP 1: BIG IDEA AND MECHANISM BUILDER
+    Ranked pain points | one-line big idea | root cause | mechanism name and how it works | why-now line | claims needing proof
+
+  STEP 2: STORE ADVERTORIAL WRITER
+    Advertorial copy with ad label | pains and desires used | testimonial table | button plan | image list | claims to check
+
+  STEP 3: ADVERTORIAL STORY AND BELIEF CHECKER
+    Pitch-turn sentences with rewrites | pass, part or fail on eight checks | button and image fixes | score out of 100
+
+  STEP 4: STORE SOCIAL PROOF PLACER
+    Proof matched to doubts | layout map | hot-spots | dropped proof
+
+  STEP 5: LANDING PAGE 30-POINT CHECKER
+    Two-line verdict | 30 checks with evidence | five fixes first | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your reviews
+    how: Real customer words give the pains the page repeats. Few reviews means a weaker page, and the steps will say so.
+  - what: What makes the product different
+    how: Give the real parts, specs and how it works. The mechanism has to match what the product truly does.
+  - what: Rival claims
+    how: List them. The idea then stands apart from what rivals already say.
+  - what: The ad that sends traffic
+    how: Paste it. The page then opens on the same promise the reader just clicked.
+judge:
+  - The big idea fits in one line and rests on a pain customers name in their reviews.
+  - The mechanism matches what the product really does.
+  - Every claim is backed by proof you hold, or is marked as needing it.
+  - The page is labelled as an ad and has an honest author line.
+  - The story holds from the first line to the buttons, with no early pitch.
+test:
+  - Read the first three paragraphs to someone who has not heard of your product. Ask what they think it does.
+  - Check each fact and number on the page against your product data.
+  - Compare the pains on the page with the top pains in your last fifty reviews.
+  - Send some cold traffic to the page and your product page, and compare sales.
+improve:
+  - Save the big idea and mechanism in your brand file, so ads and pages reuse them.
+  - Add an advertorial you admire to step 2, so the new page follows its structure.
+  - Add your banned claims to step 3, so honesty checks use your own rules.
+  - Re-run step 1 when a rival changes its claims.

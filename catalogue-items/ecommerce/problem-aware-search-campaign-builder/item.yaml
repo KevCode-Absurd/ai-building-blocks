@@ -1,0 +1,22 @@
+slug: problem-aware-search-campaign-builder
+name: "Problem-aware Search campaign builder"
+summary: "Give it your product and the problem it solves. Get a problem-led Search campaign with matched ads."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: plan}
+  - {type: ad_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads Free Course (4+ Hours) | Google & Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given in the video)", used: "Cold Search settings, mixed exact and broad keywords, keyword insertion headlines and a page for each top query"}
+  - {title: "The Only Google Ads Strategy You Need for 2026", by: "Agency founder who works with mid to large e-commerce brands (name not given in the video)", used: "Split testing two landing pages per ad group over 30 to 60 days, and topic ad groups"}

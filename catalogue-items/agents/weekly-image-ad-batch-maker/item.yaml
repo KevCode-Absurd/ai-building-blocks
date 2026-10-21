@@ -1,0 +1,32 @@
+slug: weekly-image-ad-batch-maker
+name: "Weekly image ad batch maker"
+summary: "Give it last week's ad results. Get a checked batch of new image ad plans, words and prompts to approve."
+category: agent
+type: agent
+role: orchestrate
+job: ads
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: product_photos, required: true}
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: image_prompt}
+  - {type: ad_copy}
+  - {type: plan}
+uses: [winning-image-ad-style-finder, scroll-stopping-image-ads, image-ad-settings-picker, single-image-ad-planner, ad-first-line-writer-and-scorer, accurate-product-image-ad-maker, pre-launch-ad-checker]
+steps:
+  - {uses: winning-image-ad-style-finder, note: "When six or more ads are measured: the style your winners share and new ad plans that each change one thing."}
+  - {uses: scroll-stopping-image-ads, note: "Only when fewer than six ads are measured: a set of image ads from your reviews and photos, each with a different reason to buy."}
+  - {uses: image-ad-settings-picker, note: "Once per batch: locks the size, look and rules so every ad in the batch is made the same way."}
+  - {uses: single-image-ad-planner, note: "For each planned ad: the layout, the words on the image and the feed text."}
+  - {uses: ad-first-line-writer-and-scorer, note: "For each ad: scores the first line. A line under 3 of 4 is fixed and scored once more."}
+  - {uses: accurate-product-image-ad-maker, note: "For each ad that passes: a prompt that keeps your real product, then a check on the first picture that comes back."}
+  - {uses: pre-launch-ad-checker, note: "For each ad before hand-back, and again after each fix: stop-ship items are fixed and checked again, two rounds at most."}
+schedule: "Every Monday, after the weekend's ad results are in"
+asks_before: [making pictures with an image tool that bills credits, uploading or publishing any ad, changing a live ad account, spending any ad budget]
+origin: own
+version: 1.0.0
+example_pending: true

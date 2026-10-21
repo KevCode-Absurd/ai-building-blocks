@@ -1,0 +1,102 @@
+new_slug: order-page-and-upsell-funnel-planner
+name: "Order page and upsell funnel planner"
+summary: "Give it your product and margin. Get the page flow, order bump, one-time offers and what to measure."
+job: make-offer
+thinking: high
+thinking_why: "It weighs offers against your margin and sets up a sequence where a wrong price or claim costs money, so a stronger model is safer."
+headline: "Order page and upsell funnel planner"
+subhead: "Give it your front-end product, price, cost and the other products you sell. It plans the flow from ad to confirmation, an order bump, quantity breaks and one-time offers, shows the profit each step adds, and lists what to measure and test in order."
+explain: |
+  Most stores send ad traffic to a product page, then to checkout, and stop. The moment right after payment is when buyers are most committed. A good offer then can raise your average order value (AOV) without raising your ad cost.
+  This skill plans a funnel of an ad, a sales page that sells the outcome, an order page, one or two one-time offers, a downsell and the confirmation. It judges each step by profit added per customer, after the cost of the goods, not by how many people say yes. It picks the offer using one of two rules, more of the same or solve one problem and create another. It also sets the order page rules: no friction, quantity breaks and one or two bumps. The source's numbers come from one operator's low-priced products. The skill uses them as starting points to test.
+when:
+  - You sell a low-priced product and want to raise AOV so ads are easier to scale.
+  - You use Shopify checkout and want to know what an order page tool would let you add.
+  - You have an upsell idea and want to know whether it adds profit after cost of goods.
+you_give:
+  - Your front-end product, its price and its cost
+  - Your other products and what they cost you
+  - The funnel or checkout tool you use
+  - Your current AOV and conversion rate (optional)
+you_get:
+  - A funnel map with the sales page, order page, one-time offer 1, offer 2 and a downsell
+  - Order bump and quantity break ideas
+  - An offer for each step with a price and a profit-per-step estimate
+  - A test list in order, with what to measure
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your front-end product with price and cost, your other products with cost, and your checkout tool.
+  - Add your AOV and conversion rate if you know them.
+  - Build the order page first, then offer 1. Add the next step only after the earlier one is stable.
+  - Check refunds and chargebacks after each change, and stop any step that raises them.
+how_it_works:
+  - title: Maps the flow
+    text: Ad, sales page that sells the outcome, order page for payment, one-time offer 1, offer 2, then confirmation. A buyer who declines offer 1 goes to a downsell.
+  - title: Judges by profit
+    text: Each step is judged by profit it adds per customer after cost of goods, not by take rate. A $500 offer taken by 10% adds $50 per customer.
+  - title: Prices the first offer
+    text: The source sells it at up to about 10 times a $50 front end. This skill tests lower multiples first if your margin or trust is thin.
+  - title: Picks the offer
+    text: Either more of the same, such as extra months of supply, or solve one problem and create another, where the offer fills the gap the first product leaves.
+  - title: Sets the offer page
+    text: A video sales letter or a text sales letter. The top line states the order is placed and what the offer is, in true words.
+  - title: Sets the order page
+    text: Plain, fast, with an obvious card field and button. Quantity breaks and one or two order bumps. A $10 to $20 bump taken by 50% adds about $5 to AOV.
+  - title: Plans the tests
+    text: The order page first, since its drop-off is usually the largest. Then each offer. Review conversion at each step, AOV, refund rate and profit per customer after each change.
+output_shape: |
+  FUNNEL MAP: ad -> sales page -> order page -> offer 1 -> offer 2 (or downsell) -> confirmation
+  ORDER PAGE
+  Quantity breaks: <tiers, price, saving>
+  Bump 1: <offer, price, cost to fulfil, expected take rate>
+  Bump 2: <offer, price, cost to fulfil, expected take rate or none>
+  OFFER 1: <product> | rule: <more of the same / solve one, create another> | price <$> (<n>x front end)
+  Profit per customer = take rate x (price - cost) = <$> at <n>% take rate
+  OFFER 2 or DOWNSELL: <product, price, profit at a take rate>
+  Offer page type: <video sales letter / text sales letter> | top line: "<true wording>"
+  RECOVERY: <email and SMS at each step where buyers drop off>
+  AOV MATH: front end <$> + bump <$> + offer 1 <$> = <$> (at the take rates shown)
+  MEASURE after each change: step conversion, AOV, refund rate, profit per customer
+  TEST ORDER: 1 order page, 2 offer 1, 3 downsell or offer 2
+  LIMITS: <checkout tool limits, processor rules, price caveat>
+  CHECKS MISSED: <none or list>
+tweaks:
+  - what: Front-end price
+    how: The source's 10 times rule is for low-priced products around $50. For a higher front end, ask for a lower multiple and expect it to carry less.
+  - what: Costs
+    how: Give the cost of every product you might offer. Profit per step needs it, and without it the skill marks the profit as missing.
+  - what: Checkout tool
+    how: Say whether you use standard Shopify checkout. It limits what you can add, which is why the source uses an order page tool.
+  - what: Take rate guesses
+    how: Give take rates you have seen. If none, the skill shows the maths at 5% and 10% and labels both as guesses.
+judge:
+  - Every step shows profit per customer after cost of goods, not only the take rate.
+  - Offer prices are tied to your front-end price and margin, and the 10 times rule is flagged as one source's.
+  - Any bump you chose that costs nothing to fulfil is a real service you can deliver.
+  - The top line of each offer page is true and does not suggest the order is at risk.
+  - The test list starts with the order page, then the offers, in order.
+test:
+  - "Check the profit sum for one step by hand: take rate x (price minus cost)."
+  - Build the order page and bump alone and compare AOV and conversion for two weeks against before.
+  - Watch refund rate and chargebacks for 30 days after launching the first offer. If they rise, stop that step.
+  - Ask the skill again with a lower front-end price and see if the offer 1 multiple moves with it.
+improve:
+  - Add your payment processor's rules on post-purchase offers and one-click charges to the skill file, so the plan stays inside them.
+  - Add a maximum refund rate that stops a step, such as a set percentage you choose.
+  - Save your best performing offer and its take rate to your brand file for the next plan.
+  - Pair it with the bundle tier layout planner for the order page tiers and the store friction checker for the cart.
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "The standard checkout limits what you can add, so check what your plan allows."}
+    - {name: "Any good chat AI", why: "Runs the profit sums and drafts the offer page copy."}
+    - {name: "Klaviyo", why: "Email and SMS flows to win back buyers who drop off at each step."}
+  inputs:
+    - Your AOV, conversion rate and refund rate by month
+    - The shipping cost of each add-on product
+    - Your customer research and top buyer doubts
+    - Your payment processor's rules on post-purchase charges
+terms:
+  - {term: "One-time offer", meaning: "An offer shown right after payment that the buyer can accept or decline, often once."}
+  - {term: "Order bump", meaning: "A small add-on the buyer ticks on the order page."}
+  - {term: "AOV", meaning: "Average order value: total revenue divided by the number of orders."}
+  - {term: "Take rate", meaning: "The share of buyers who accept an offer."}

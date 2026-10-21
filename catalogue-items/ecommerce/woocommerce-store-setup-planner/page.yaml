@@ -1,0 +1,124 @@
+new_slug: woocommerce-store-setup-planner
+name: "WooCommerce store setup planner"
+summary: "Give it your products and country. Get a WooCommerce build plan from hosting to first test order."
+job: set-up-store
+thinking: medium
+thinking_why: "It orders known steps and fills in settings values, so a mid-size model is enough."
+
+headline: "WooCommerce store setup planner"
+subhead: Tell it what you sell, where you sell and how much upkeep you can take on. It gives you an ordered build plan with a check after each phase, a sheet of settings to enter, a site title and tagline, a cleanup list and a test-order script.
+
+explain: |
+  A fresh WooCommerce site comes with demo content, spare plugins and settings that decide your tax and shipping. Set them in the wrong order and you redo work. Order emails often fail to send, and nobody finds out until the first real customer waits for a receipt.
+
+  This skill turns what you sell and where you sell it into a build plan in the right order: hosting and domain, cleanup, theme and builder, store settings before products, then emails, phones, a test order and going live. Each phase ends with a check. It also writes the site title the way a buyer would search for it. It plans the build and does not touch your site. It leaves out price advice for hosting.
+
+when:
+  - You are about to start a WooCommerce store on WordPress and want the steps in the right order.
+  - Your store is half built and you are not sure which settings you skipped.
+  - You want a test-order script, so your first real order is not your first attempt.
+
+you_give:
+  - What you sell, how many products and variants, and who buys
+  - The country you run the store from, the currency and the countries you sell and ship to
+  - Your store address and your refund and return rules
+  - Your budget and how much upkeep you can take on (hosting, updates, backups)
+
+you_get:
+  - An ordered build plan with a check after each phase
+  - A settings sheet, one line per setting with the value to enter
+  - A site title and tagline, a cleanup list and an email plan
+  - A test-order script to run before you go live
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you sell, your country, your currency and the countries you ship to.
+  - Add your store address and your refund text, and say how much upkeep you can take on.
+  - Work through the plan one phase at a time. Do the check at the end of each phase before moving on.
+  - Run the test-order script, then switch the store from Coming Soon to Live.
+
+how_it_works:
+  - title: Plans hosting and domain
+    text: Starts with hosting for at least 12 months (one creator's advice) and a domain. Reminds you that a new domain can take up to 24 hours to work and that unverified emails can get the account closed.
+  - title: Writes the cleanup list
+    text: Lists the spare plugins to remove (keeping the cache plugin), what to turn off, and how to stop comment spam.
+  - title: Picks theme and builder
+    text: Suggests a starter-template theme with Elementor chosen first, a free store template, and what to switch off while building.
+  - title: Sets store settings first
+    text: Writes the settings sheet before products. It covers address, countries, currency, units, taxes, coupons, accounts, guest checkout, placeholder image and permalinks.
+  - title: Plans emails and the policy page
+    text: Lists which order emails to enable, adds an SMTP plugin step and a test email, and points the policy field at your return text.
+  - title: Plans phones and the coupon
+    text: Edit each device view, hide sections per device, and set a one-use welcome coupon that cannot stack.
+  - title: Writes the test order
+    text: Test card, free shipping check, mark the order complete, then change Coming Soon to Live.
+
+output_shape: |
+  WOOCOMMERCE BUILD PLAN for <store>, <country>, <currency>
+  Upkeep you take on: <hosting, updates, backups>
+
+  PHASE 1  <hosting and domain>
+    do: <steps>
+    check: <what proves it is done>
+  PHASE 2 to <n>  <cleanup, theme, settings, emails, phones, coupon>
+
+  SETTINGS SHEET
+  <setting> | <value to enter> | <why>
+
+  SITE TITLE   <what buyers search> | <brand>
+  TAGLINE      <what you deliver and where>
+  CLEANUP      <plugins, sample content, comments>
+  EMAILS       <email> | <goes to> | <on/off>
+  TEST ORDER   <numbered script>
+
+  NOT COVERED  <tax, shipping, payments: which skill to use>
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you need to give>
+
+tweaks:
+  - what: How much upkeep you can take on
+    how: Say who handles updates, security and backups. WooCommerce leaves these to you, so a small team may be better served by a hosted platform.
+  - what: Where you sell and ship
+    how: List every country. The plan sets selling and shipping countries from this list and flags tax and shipping work for each.
+  - what: The theme you already use
+    how: Name it. The plan keeps your theme and only fixes the order of steps and the settings.
+  - what: Your refund and return rules
+    how: Paste the text. It goes in the policy field and the plan checks the pages are linked.
+
+judge:
+  - Store settings come before products in the plan.
+  - Every phase has a check that you can tick off.
+  - The settings sheet gives a value for each line, not just a setting name.
+  - Tax, shipping and payment details point to other skills and are not made up.
+  - Hosting price and plan advice is left out.
+
+test:
+  - Give it a store you already built. The plan should show which steps you did out of order, such as products before settings.
+  - Run it twice with the same facts. The phases and their order should match both times.
+  - Follow the test-order script on a staging copy. Order emails should arrive, or the plan should have told you to fix them first.
+  - Check the site title against a search your buyer would type. It should use their words, not "My Website".
+
+improve:
+  - Add your own cleanup list for the plugins your host pre-installs.
+  - Save the settings sheet from one store and reuse it as the starting point for the next.
+  - Add your own rules for the welcome coupon, such as the discount size, to the coupon step.
+  - Pair it with the skills for shipping, tax and payments, which this plan points to.
+
+works_best_with:
+  tools:
+    - {name: "WooCommerce on WordPress", why: "This plan is written for it. Screens for themes and builders change quickly, so check the current ones."}
+    - {name: "Stripe", why: "Its test mode and test cards are used in the test-order script."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the plan from your facts."}
+  inputs:
+    - "A list of your products with prices and variants"
+    - "Your return and refund text"
+    - "Your current theme and plugin list, if the store exists"
+    - "Screenshots of your settings pages, so it can check what is already set"
+
+terms:
+  - term: SMTP plugin
+    meaning: A plugin that sends your store emails through a proper mail service, so they reach inboxes.
+  - term: Permalinks
+    meaning: The shape of your page addresses. Post name makes the shop page read /shop.
+  - term: Starter template
+    meaning: A ready-made site design you import, then change.

@@ -1,0 +1,122 @@
+new_slug: star-rating-review-miner
+name: "Star-rating review miner"
+summary: "Paste rivals' reviews by star. Get broken trust markers, product gaps and hot-lead phrases."
+job: understand-customers
+thinking: medium
+thinking_why: "It reads reviews you paste, one star level at a time, and sorts them into three lists. A mid-size model does this well."
+
+headline: "Star-rating review miner"
+subhead: Paste your rivals' reviews with their star ratings. It reads 1-star reviews for broken promises, 3-star reviews for gaps in the product, and 1-star and 5-star reviews for buyers who tried and failed. You get three lists you can use on your page, your product and your ad hooks.
+
+explain: |
+  Most people read reviews as one pile. But each star level tells you something different. A 1-star review shows exactly where a rival let buyers down, and which promises buyers no longer believe. A 3-star review shows what the product left out. And a line like "I spent thousands of dollars and it did not work" shows a buyer who has already tried, paid and failed, and is looking for something better.
+
+  This skill keeps the star levels apart and applies one rule to each. It copies the buyers' exact words, counts how often each point repeats, and sorts what it finds into three lists. Broken trust markers go on your page as things to answer. Product gaps go to your product and offer. Hot-lead phrases go to your ad hooks. It also tells you which complaints to set aside because the reviewer is not in your market.
+
+when:
+  - You are about to write a product page and want to know what promises buyers no longer believe in your category.
+  - You are choosing or improving a product and want to know what rivals' products leave out.
+  - You are looking for ad hook lines from buyers who have already tried something and are still stuck.
+
+you_give:
+  - Reviews of rival products, pasted with the star rating on each and the names removed
+  - At least 100 reviews across the products you study, if you can
+  - A line about who you sell to
+  - Your own reviews (optional)
+you_get:
+  - A list of broken trust markers, each with exact words and a count, and how to answer it on your page
+  - A list of product gaps with evidence and whether the reviewer is in your market
+  - A list of hot-lead phrases for ad hooks
+  - Splits it noted between buyers who disagree, and the complaints it set aside
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Copy reviews of three to five rival products. Keep the star rating on each one, and remove the reviewer names.
+  - Paste them in groups. First all the 1-star reviews, then the 3-star, then some 5-star.
+  - Tell it who you sell to, in one line, so it can tell which complaints matter to you.
+  - Read the three lists. Use the first on your page, the second in your product and offer, and the third in your hooks.
+
+how_it_works:
+  - title: Keeps star levels apart
+    text: Each level gets its own rule, so a 1-star complaint and a 3-star gap are never mixed.
+  - title: Mines the 1-star reviews
+    text: It logs exact failure points and physical friction, such as something a buyer could not remove or use fast enough.
+  - title: Finds broken trust markers
+    text: Promises that many buyers say did not hold are claims you should avoid or answer with proof.
+  - title: Reads the 3-star reviews
+    text: It looks only for structural gaps and level problems, such as a product that suits beginners but is too basic.
+  - title: Spots hot leads
+    text: In 1-star and 5-star reviews, buyers who say they spent a lot and it did not work are hunting for a better fix.
+  - title: Handles contradictions
+    text: When two reviews disagree, it notes the split and picks your group. It does not try to please both.
+  - title: Sets complaints aside
+    text: A reviewer outside your market does not shape your product.
+  - title: Sorts into three lists
+    text: Trust markers for your page, gaps for your product, phrases for your hooks, each with a count.
+
+output_shape: |
+  REVIEWS READ: <n> | 1-star: <n> | 3-star: <n> | 5-star: <n>
+  Enough to see repeats (100 or more): <yes | no, so findings are leads>
+
+  BROKEN TRUST MARKERS  (answer on your page)
+  1. "<exact words>" | seen in <n> reviews | answer with: <proof or a different claim>
+
+  PRODUCT GAPS  (feed product and offer)
+  1. <gap> | evidence: "<exact words>" | seen in <n> | in my market: <yes / no / unsure>
+
+  HOT-LEAD PHRASES  (feed ad hooks)
+  1. "<exact words>" | signals: <tried and failed, still looking>
+
+  SPLITS NOTED
+  <contradiction> | group I pick: <...>
+  SET ASIDE
+  <complaints not in my market>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: How many reviews you paste
+    how: Use at least 100 across the products you study. With fewer, the findings are leads, not patterns, and the skill says so.
+  - what: Which products you pick
+    how: Choose the top rivals and a couple of smaller ones. Smaller products often have sharper complaints.
+  - what: Keeping the star rating
+    how: Paste the rating with each review. Without it the skill cannot apply the star rules.
+  - what: Who you sell to
+    how: Name your buyer in a line. The skill uses it to set aside complaints from people outside your market.
+  - what: Your own reviews
+    how: Paste your own 1-star and 3-star reviews too. If they repeat a rival's problem, it is an industry problem, not yours alone.
+
+judge:
+  - Every item is an exact quote from the pasted reviews, with a count and no names.
+  - Single mentions are marked as singles, not listed as patterns.
+  - Each item says where it goes, to your page, your product or your hooks.
+  - Contradictions are noted and one group is chosen.
+  - Nothing is on a list that was not in the reviews you gave it.
+
+test:
+  - Pick one broken trust marker and search the reviews yourself. You should find it in about the number of reviews it claims.
+  - Run it on reviews you already know well. The items should match what you would have noticed yourself, and add a few you missed.
+  - Run it twice on the same set. The lists should match, with small differences in order.
+  - Show a hot-lead phrase to a customer and ask if it sounds like them.
+
+improve:
+  - Add the claims you can back with proof to the skill file, so each trust marker is answered with something you can really show.
+  - Add the groups you do not serve, so complaints from them are set aside early.
+  - Add the way your product differs, so the gaps list marks the ones your product already fills.
+  - Save the three lists to your brand file and update them each quarter.
+  - Pair it with the Forum and review avatar digger for the story behind the complaints, and with the Amazon product edge finder for a wider rival comparison.
+
+works_best_with:
+  tools:
+    - {name: "Amazon reviews", why: "The largest source of star-rated reviews for physical products, sortable by star."}
+    - {name: "Any good chat AI", why: "Reads the pasted reviews and applies the star rules to each group."}
+  inputs:
+    - "Reviews of three to five rival products, with the star rating on each"
+    - "Your own reviews, especially the 1-star and 3-star ones"
+    - "A one-line description of who you sell to"
+    - "Your product's key claims, so each trust marker is checked against what you promise"
+
+terms:
+  - term: Broken trust marker
+    meaning: A promise buyers say they heard and no longer believe because products in the category did not deliver it.
+  - term: Hot-lead phrase
+    meaning: A line from a buyer who has already spent money and time and still has the problem. They are looking for a better fix.

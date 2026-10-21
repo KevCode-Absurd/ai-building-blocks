@@ -1,0 +1,20 @@
+slug: ad-sameness-checker
+name: "Ad sameness checker"
+summary: "Paste your live ads with persona, angle, offer. Get idea groups and a sameness score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: intermediate
+inputs:
+  - {type: ad_breakdowns, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead with about 8 years on Meta (name not given in the video)", used: "Similar ads bundled into one idea, the frequency check on cold ads and the drop in buying after two views"}
+  - {title: "How to make static image ads that scale", by: "Agency lead (name not given in the video)", used: "Tiny changes do not count as variations"}

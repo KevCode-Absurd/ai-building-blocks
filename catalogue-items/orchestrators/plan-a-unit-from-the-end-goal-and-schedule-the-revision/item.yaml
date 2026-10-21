@@ -1,0 +1,20 @@
+slug: plan-a-unit-from-the-end-goal-and-schedule-the-revision
+name: "Plan a unit from its end goal and schedule revision"
+summary: "Give it your standards. Get a unit planned from the end result, practice mixed through it and a spaced revision schedule."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: plan}
+uses: [backwards-unit-planner, mixed-practice-unit-planner, revision-schedule-planner]
+steps:
+  - {uses: backwards-unit-planner, note: "Starts from the standards and works back from the end result to the lessons."}
+  - {uses: mixed-practice-unit-planner, note: "Reads the unit plan from the step before and mixes related topics through it for stronger recall."}
+  - {uses: revision-schedule-planner, note: "Reads the mixed unit plan from the step before and sets the dates to bring each topic back."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-a-unit-from-the-end-goal-and-schedule-the-revision/skeleton.yaml

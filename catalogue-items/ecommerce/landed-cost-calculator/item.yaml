@@ -1,0 +1,22 @@
+slug: landed-cost-calculator
+name: "Landed cost calculator"
+summary: "Give it your quote and freight. Get cost per sellable unit and margin, scored out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: document, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Ultimate Guide To Product Sourcing In 2026", by: "Founder of a heated-hoodie and blanket brand (video guide)", used: "The layers a factory quote leaves out, margin collapse from hidden costs, testing the idea before the order, air versus sea, and paying a little more early to keep options"}
+  - {title: "What I learnt from sourcing e-commerce products from China (forum post and comments)", by: "A jewelry seller moving from drop shipping to bulk import, with one comment from a US sourcing agent", used: "Defect share on a 10,000 unit order, the 10 percent spare rule, air versus sea for a heavy item, and asking for premium courier on large orders"}
+  - {title: "Complete E-commerce Operations Guide", by: "Operations video guide", used: "Profit per unit by line, duties as a sunk cost, taking sales tax out, loading landed cost into Shopify cost per item, daily profit, and showing the gain from each cost line"}

@@ -1,0 +1,25 @@
+slug: tighten-a-video-ad-script-before-you-film-it
+name: "Tighten a video ad script before you film it"
+summary: "Give it your video ad script. Get a tighter script, a sound-off check, a viewer test and a ship call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: script, required: true}
+  - {type: persona, required: false}
+  - {type: product_data, required: false}
+  - {type: copy_draft, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [video-ad-bridge-checker, sound-off-commercial-checker, ad-distraction-checker, pre-launch-ad-checker]
+steps:
+  - {uses: video-ad-bridge-checker, note: "Starts the chain: scores the script and returns a tighter version."}
+  - {uses: sound-off-commercial-checker, note: "Reads the tighter script from the step before and checks the picture alone carries the claim."}
+  - {uses: ad-distraction-checker, note: "Compares what the ten viewers said with the one claim in the fixed script."}
+  - {uses: pre-launch-ad-checker, note: "Runs the last check on the script after the fixes from the earlier reports."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/tighten-a-video-ad-script-before-you-film-it/skeleton.yaml

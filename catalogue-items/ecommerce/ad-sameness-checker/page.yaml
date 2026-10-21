@@ -1,0 +1,121 @@
+new_slug: ad-sameness-checker
+name: "Ad sameness checker"
+summary: "Paste your live ads with persona, angle, offer. Get idea groups and a sameness score out of 100."
+job: check-ads
+thinking: medium
+thinking_why: "It sorts a list of ads into groups by four fields, so a mid-size model is enough, and a stronger one handles long lists better."
+
+headline: "Ad sameness checker"
+subhead: Paste your live ads with the persona, angle, offer and format of each, plus frequency for cold ads. It groups ads that are really one idea and counts the distinct ideas. You get a sameness score out of 100, which ads to replace, and what to change in each.
+
+explain: |
+  Fifty ads can be five ideas. If your ads match on persona, angle, offer and format, they are one ad as far as Meta is concerned. One agency says Meta's system groups similar ads under one ID, and that tiny changes such as a new background colour or a different model pose are too small to count. That is the speaker's reading of Meta's system and not a published rule. Viewers who see the same ad more than twice buy less often, and a different ad in third or fourth place keeps that chance up.
+
+  This skill groups your ads by the four fields and counts the distinct clusters. The sameness score is the share of your ads that repeat an idea already in the account. Lower is better: 0 means every ad is a different idea. It also flags cold ads with a frequency above 2, and ads that call out the whole audience.
+
+when:
+  - You have launched many ads but results are flat, and you suspect they are all the same idea.
+  - Cold ads show a frequency above 2 and you want to know if it is a variety problem.
+  - Before you brief new creative, you want to see which ideas you already cover.
+
+you_give:
+  - Your live ads with persona, angle, offer, format and hook text for each
+  - Images or video links for each ad (optional)
+  - Frequency per ad for your cold campaigns over the last 30 to 60 days
+  - A creative similarity score, if a Meta rep gave you one (optional)
+you_get:
+  - Clusters of ads that are really one concept
+  - A sameness score out of 100, with the sum shown
+  - Which ads to replace, and what to change in each (persona, angle or offer)
+  - A list of cold ads with a frequency above 2
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - "Paste your ads as a table: name, persona, angle, offer, format, hook."
+  - Add the frequency for each cold ad from the last 30 to 60 days.
+  - Replace or change the ads in the biggest clusters first.
+  - Run it again after the new ads go live.
+
+how_it_works:
+  - title: Groups by four fields
+    text: Persona, angle, offer and format. Ads that match on all four are one cluster.
+  - title: Applies the change test
+    text: A background colour or model pose change is not a variation. Same visuals, same audience and small script tweaks stay in the same cluster.
+  - title: Counts distinct clusters
+    text: Counts ideas, not ads. Fewer than ten distinct ideas in a 50-ad account is a warning.
+  - title: Checks frequency
+    text: On cold campaigns, over 30 to 60 days, a frequency above 2 points to a fatigue or variety problem.
+  - title: Notes hook swaps
+    text: A new hook counts as new at the hook level, though the body still overlaps with the original.
+  - title: Flags whole-audience calls
+    text: Ads that speak to everyone give Meta nothing to find. They are listed for a rewrite.
+  - title: Scores the sameness
+    text: Ads minus distinct clusters, divided by ads, times 100. The share of ads that repeat an idea.
+  - title: Names the replacements
+    text: For each repeating ad, says which of persona, angle or offer to change.
+
+output_shape: |
+  ADS: <n>   DISTINCT CLUSTERS: <n>   VERDICT: <fewer than 10 ideas in a 50-ad account = warning | ok>
+
+  CLUSTERS
+  C1 (<n> ads): persona <...> | angle <...> | offer <...> | format <...>
+     ads: <ids>   keep: <id>   replace: <ids>, change <persona | angle | offer>
+  C2 ...
+
+  SCORE  <n>/100 sameness (higher = more repeats)
+         (<ads> - <clusters>) / <ads> x 100 = <n>
+         <n>/100 after the replacements (if each replaced ad were a new idea)
+
+  COLD ADS WITH FREQUENCY ABOVE 2 (30 to 60 days): <ids and values>
+  WHOLE-AUDIENCE CALLS: <ids>
+  HOOK-LEVEL NEW (body overlaps): <ids>
+  NOT RUN: <check, and what is needed>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: How you label ads
+    how: Use your own persona, angle, offer and format labels. The groups are only as good as these labels.
+  - what: Frequency window
+    how: Pull cold campaign ads for 30 to 60 days. Retargeting runs higher, so leave it out.
+  - what: Image variants
+    how: Do not count AI image variants as separate ideas. Sort them by your own fields.
+  - what: Account size
+    how: The warning level is the source's example for a 50-ad account. For smaller accounts, compare against the 10 to 15 target in the portfolio mix planner.
+
+judge:
+  - Every ad sits in exactly one cluster.
+  - Each cluster shows the four fields that match.
+  - The score shows its sum from ads and clusters.
+  - Replacement advice names which field to change.
+  - Frequency flags are limited to cold ads.
+
+test:
+  - Count the clusters by hand for ten of your ads. It should match.
+  - Check that two ads you think are different are not in the same cluster.
+  - Replace the ads in the largest cluster with new concepts and run it again. The score should fall.
+  - Compare the frequency flags with Ads Manager.
+
+improve:
+  - Add your labelling rules to the skill file, so personas and angles are named the same each time.
+  - Add what counts as a real change for your products, such as a new buyer problem.
+  - Save each run's score and cluster count to your brand file, to track variety over time.
+  - Add your own warning level once you know how many ideas your account needs.
+  - Pair it with the ad concept matrix builder to fill the gaps it finds.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can group a pasted table of ads."}
+    - {name: "Meta Ads Manager", why: "Source of ad-level frequency over 30 to 60 days for cold campaigns."}
+  inputs:
+    - "A table of live ads with persona, angle, offer, format and hook"
+    - "Frequency per ad for cold campaigns"
+    - "Screenshots of the ads"
+    - "A creative similarity score from a Meta rep"
+
+terms:
+  - term: Cluster
+    meaning: A group of ads that share the same persona, angle, offer and format, so they count as one idea.
+  - term: Frequency
+    meaning: How many times, on average, each person saw an ad.
+  - term: Cold campaign
+    meaning: Ads shown to people who do not know your brand yet.

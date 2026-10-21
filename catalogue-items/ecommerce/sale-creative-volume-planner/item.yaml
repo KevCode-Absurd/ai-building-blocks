@@ -1,0 +1,20 @@
+slug: sale-creative-volume-planner
+name: "Sale creative volume planner"
+summary: "Give it last year's top ads and your sale target. Get winners needed, ad count and phases."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: offer, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Black Friday 2026 strategy: spend, creative, offers, pacing", by: "Nathan, head of paid media at a performance marketing agency", used: "Working back from a peak spend target to the number of winning ads, how spend spreads across ads, the share of spend by ad type, offer ad rules, the page limit, phases and the way a sale distorts results"}

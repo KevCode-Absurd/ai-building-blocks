@@ -1,0 +1,22 @@
+slug: get-a-quiet-deal-moving-again-without-pressure
+name: "Get a quiet deal moving again without pressure"
+summary: "Give it your notes on a stalled deal. Get the cause, a firm recommendation, safety nets, easy-yes questions and calm replies."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: offer, required: false}
+  - {type: objection_map, required: false}
+outputs:
+  - {type: copy_draft}
+uses: [stalled-deal-indecision-checker, yes-ladder-question-writer, disagreement-calming-line-writer]
+steps:
+  - {uses: stalled-deal-indecision-checker, note: "Finds why the deal stopped and what to offer the buyer next."}
+  - {uses: yes-ladder-question-writer, note: "Takes the recommendation and safety nets from the step before and turns them into questions leading to the decision."}
+  - {uses: disagreement-calming-line-writer, note: "Takes the question ladder and writes short true lines for the moments the buyer pushes back."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/get-a-quiet-deal-moving-again-without-pressure/skeleton.yaml

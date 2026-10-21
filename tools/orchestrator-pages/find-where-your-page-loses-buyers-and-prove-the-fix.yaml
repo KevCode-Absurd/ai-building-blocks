@@ -1,0 +1,91 @@
+new_slug: find-where-your-page-loses-buyers-and-prove-the-fix
+name: Find where your page loses buyers and prove the fix
+summary: Give it page captures and your funnel numbers. Get a ranked test list and a clear verdict on the first fix.
+job: audit-landing-page
+thinking: high
+thinking_why: Five steps carry findings forward, and the last two do the sums that decide whether to ship. Give it your strongest model.
+headline: Find why visitors leave your page, then prove your fix worked
+subhead: Give it heatmaps, recordings and your funnel numbers. It lists what visitors do instead of buying, sorts the issues, ranks the tests worth running, checks you had enough traffic to trust a result, and gives a ship, stop or keep-running call.
+explain: |
+  A store with steady traffic and few orders is tempting to redesign. But changing the page on a guess often changes nothing, or hurts, and without a proper test you cannot tell which. Many teams also call a winner too early, on a handful of orders, and ship a change that only looked good by luck.
+
+  The first step reads your heatmaps and recordings and lists the friction by money at stake. The second sorts every issue into one of four buckets: tracking faults, obvious fixes to make now, causes to investigate, and test ideas. The third ranks the tests by evidence and likely gain and picks the one or two to run. Then it pauses: you run the top test on live traffic until it has enough orders and export the results. The fourth checks whether the traffic was enough to trust. The fifth checks the split, turns the result into a money range and gives a ship, do not ship, re-test or inconclusive call. If your store gets only a few orders a week, a test will not finish in a useful time, so make the obvious fixes and watch the numbers.
+when:
+  - Your store has steady traffic but few orders, and you want evidence before you change the page.
+  - You ran a test and want to know whether you can trust the result.
+  - Someone on the team wants to redesign a page and you want a ranked reason to change one thing first.
+you_give:
+  - Heatmap, scroll map and recording notes for the page, or screenshots of them
+  - Your funnel numbers, from visits, add to cart, checkout and orders, with traffic sources if you have them
+  - Customer reviews or survey comments (optional)
+  - After the pause, the exported results of the test you ran
+you_get:
+  - A friction list ranked by page and money at stake, with a friction score out of 100
+  - Every page issue sorted into fix now, investigate or test, with its proof
+  - A ranked list of tests with the one or two to run first and the reasons the rest wait
+  - A test readiness score out of 100, the visitors needed and whether it can finish in about four weeks
+  - A call on the finished test (ship, do not ship, re-test or inconclusive), a result as a money range and a log entry
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it the heatmaps, recording notes and funnel numbers for one key page.
+  - Make the obvious fixes it lists before you test anything.
+  - Run the top test until the traffic check says it has enough orders, export the results and give them back.
+how_it_works:
+  - title: Read the heatmaps
+    text: Reads clicks, scroll depth and recordings, weights friction by money and not raw clicks, and writes a friction list with a score out of 100.
+  - title: Sort the page issues
+    text: Lists every issue with its proof. It tags tracking faults and obvious fixes, marks unclear causes to investigate and turns the rest into test ideas, ranked by gain and effort.
+  - title: Rank the tests
+    text: Counts the evidence for each test idea, picks honest chances of winning and names the top one or two to run. The rest are parked with what would move them up.
+  - title: Run the test
+    text: A pause. You run the top test on live traffic until it has enough orders, then export the results.
+  - title: Check the traffic
+    text: Works out revenue per visitor by source, sizes a fair test with the standard sample formula, and says whether it could finish in about four weeks. It scores test readiness.
+  - title: Give the verdict
+    text: Checks the traffic split, run length and early stopping, reads the result as a range in money, and gives a ship, do not ship, re-test or inconclusive call with a log entry.
+output_shape: |-
+  STEP 1: FRICTION LIST
+    Friction by page and money at stake | evidence kind | test idea for each | watch plan | friction score out of 100
+
+  STEP 2: SORTED ISSUES
+    Tracking faults | obvious fixes | investigate | test ideas with reasons | ranked order
+
+  STEP 3: TEST RANKING
+    Leaderboard | run first | run next | parked ideas with what would move them up
+
+  PAUSE: run the top test until it has enough orders, then export the results
+
+  STEP 4: TRAFFIC CHECK
+    Revenue per visitor by source | smallest lift worth finding | visitors needed | days at current traffic | verdict | readiness score out of 100
+
+  STEP 5: TEST VERDICT
+    Call | trust score out of 100 | split and length checks | result with range | money per month | guardrails | log entry
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The page you pick
+    how: Start with the page that has the most traffic and the biggest drop to the next step. A low-traffic page cannot finish a test.
+  - what: Traffic sources in your funnel numbers
+    how: Cold and warm visitors convert at different rates. With sources split out, the traffic check can show whether a change in mix explains the drop.
+  - what: Your margin
+    how: With it, the verdict states the gain in profit, not just revenue. Without it, the money range is revenue only and says so.
+  - what: How long you let the test run
+    how: Stopping early is the most common way to ship a false winner. The verdict checks run length and says so if you stopped too soon.
+judge:
+  - Each friction item names its page, its evidence and the money at stake.
+  - Every issue sits in exactly one bucket, and test ideas say why they might work.
+  - The traffic check shows the sample sum, the lift it used and the days needed.
+  - The verdict reports the split, the length and early stopping, and gives a money range, not one number.
+  - Segments in the verdict are only ones you agreed on before the test.
+test:
+  - Take one issue you already know is real. Check that the sorter puts it in the right bucket.
+  - Compare the visitors the traffic check asks for with your real weekly traffic, and check the days it states.
+  - Give the verdict step a test you already shipped. The call should match what you saw afterwards.
+  - Run the first test on a page, then check that the log entry has enough detail to repeat the test.
+improve:
+  - Add your usual weekly traffic and margin to your brand file, so the traffic check starts from real numbers.
+  - Edit the smallest lift you care about in the traffic checker, to match how much a win must be worth to you.
+  - Keep the log entries from every test in one file and feed it back, so you do not repeat settled tests.
+  - Pair it with a page copy rewrite when the winning idea is about wording.

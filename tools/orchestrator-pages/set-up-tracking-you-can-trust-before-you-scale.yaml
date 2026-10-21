@@ -1,0 +1,83 @@
+new_slug: set-up-tracking-you-can-trust-before-you-scale
+name: "Set up tracking you can trust before scaling"
+summary: Give it your GA4, Meta and campaign setup. Get fix lists, tagged links and a truer ROAS.
+job: track-numbers
+thinking: high
+thinking_why: It runs four skills in a row, and each fix list depends on the one before. Give it your strongest model.
+headline: Trust your ad numbers before you spend more
+subhead: Give it how GA4 and Meta are set up. It scores each one, lists the fixes, writes a tagged link sheet so every sale maps to a campaign, then compares what the platforms claim with what your store counted.
+explain: |
+  GA4, Meta and Shopify rarely agree. Events are missing, Meta counts a sale twice or not at all, and links carry no tags, so nobody can say which campaign sold what. Owners then raise spend on a number they cannot check.
+
+  These steps fix the base first. It checks your GA4 setup against the day-one settings and the store events it must send. You fix those and place a test order. Next it picks a server route for Meta and proves each event counts once. Then it writes tagged links for every channel, so orders match to a campaign. After two weeks of tagged campaigns, it puts each platform's return next to your store totals and shows what to trust.
+when:
+  - You are about to raise ad spend and the numbers in GA4, Meta and Shopify do not agree.
+  - Meta reports more sales than your store shows, or the same sale appears twice.
+  - You launch on several channels and cannot tell which one sold.
+you_give:
+  - How GA4 is installed (Shopify Google channel, an app, Tag Manager or custom code) and which domains customers pass through
+  - Your GA4 settings and the events you can see in its live view
+  - How Meta events are sent now, and who can build changes
+  - Your campaign names, dates, channels and the page each link points to
+  - After two weeks, platform ROAS and store totals for the same dates
+you_get:
+  - A GA4 score out of 100, with each fix and its click path
+  - A Meta tracking score out of 100, the server route that fits you and the steps to set it up
+  - A tagged link sheet and naming rules, so Shopify can match sales to each campaign
+  - A return ladder per platform and a score out of 100 for how far to trust each one
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your GA4 setup. Never paste a password, a token or a secret key. If one slips in, remove it and make a new one.
+  - Fix the GA4 gaps, place a test order and check it appears in GA4 the next day.
+  - Apply the Meta route and check in Events Manager that one test purchase shows once. Then use the tagged links and run the campaigns for two weeks.
+  - Pull platform ROAS and store totals for the same dates and bring them back.
+how_it_works:
+  - title: Check GA4
+    text: Checks the day-one settings, the store events and the thank-you page key event, and gives the click path for each fix. Menu names change, so confirm each on screen.
+  - title: Check Meta tracking
+    text: Compares an app, the Conversions API Gateway and server Tag Manager, then proves browser and server events share one ID so a sale counts once.
+  - title: Tag every link
+    text: Writes naming rules and a link sheet for each channel, plus the rules that let Shopify's marketing area match orders to a campaign.
+  - title: Compare with your store
+    text: Puts each platform's reported return next to your own new-customer revenue, finds why they differ and says how much to trust each channel.
+output_shape: |-
+  STEP 1: GA4 CHECK
+    Score out of 100 | each setting with pass or fail and click path | choices that are yours to make
+
+  STEP 2: META TRACKING CHECK
+    Score out of 100 | recommended route and why | setup steps | duplicate and consent checks
+
+  STEP 3: LINK SHEET
+    Naming rules | one tagged link per channel and page | auto-match rules | starting attribution model
+
+  STEP 4: RETURN CHECK
+    Store base | return ladder per platform | traps found | trust per channel | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who can build
+    how: Say if you have a developer. The Meta route changes. An app suits no developer, and server Tag Manager needs one.
+  - what: Your channels
+    how: List every channel you run, such as Instagram, TikTok, email and creators. Each gets its own tagged link.
+  - what: Consent banner
+    how: Say how your consent banner works. Meta events must follow what visitors agreed to.
+  - what: Other places you sell
+    how: Tell it about Amazon, shops or wholesale. Those sales can be mistaken for ad sales in step 4.
+judge:
+  - Every GA4 item says pass, fail or not sure, with a click path for each fail.
+  - The Meta route has a reason tied to your platform and who can build it.
+  - One test purchase shows once in Meta, with the same ID on the browser and server events.
+  - Every link in the sheet has the same source and campaign names you set in the rules.
+  - The return check uses new-customer revenue from your store, not Shopify's own attribution report.
+test:
+  - Place a test order and follow it. It should appear in GA4 and once in Meta.
+  - Click three tagged links yourself and check each lands in Shopify's marketing area under the right campaign.
+  - Compare the platform's reported sales with your order count for one day. The gap should match the traps it names.
+  - Run step 4 on two different weeks. The trust levels should not swing wildly.
+improve:
+  - Save the naming rules in your brand file, so every new campaign uses the same tags.
+  - Re-run step 1 after any theme or app change. Setups drift.
+  - Add your post-purchase survey answers ("where did you first hear about us") and compare them with the platform numbers.
+  - Pair it with a lift test planner once the numbers are clean.

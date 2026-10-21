@@ -1,0 +1,123 @@
+new_slug: ai-store-build-planner
+name: "AI store build planner"
+summary: "Give it your products and sections you like. Get a Claude Code kickoff prompt and safe build plan."
+job: set-up-store
+thinking: high
+thinking_why: "It plans a multi-step build with safety rules and writes a prompt another AI will follow, so a stronger model is safer."
+
+headline: "AI store build planner"
+subhead: Give it your Shopify store, your products and screenshots of sections you like. It writes an asset folder checklist, a kickoff prompt for Claude Code, a section-by-section plan with a review point after each, and the safe steps to publish.
+
+explain: |
+  Claude Code can change Shopify theme files, not just single sections. That is powerful, and it is also how a live store gets broken. Most trouble comes from giving one giant instruction, building on a theme that is live, or building before the real products are in the store.
+
+  This skill plans the session. You collect the right files first. Then you duplicate the live theme and tell Claude Code to work only on the copy. The kickoff prompt asks Claude Code to read your theme and screenshots and ask you questions before it builds. You build one section at a time, review each, then push the result as an unpublished theme. It plans the session. It does not write theme code.
+
+when:
+  - You want to build or restyle a Shopify store with Claude Code and are comfortable approving commands in a terminal.
+  - You have tried one big prompt and the result was a mess.
+  - You want a safe way to try a new design without touching your live store.
+
+you_give:
+  - Your store domain and current theme name
+  - The products already in the store
+  - Logos, product photos and lifestyle photos
+  - Screenshots of sections you like, and a few words about your brand style (optional)
+
+you_get:
+  - An asset folder checklist
+  - A kickoff prompt for Claude Code
+  - An ordered section plan with a review checkpoint after each
+  - A final polish prompt, publish steps and a log of which copy was edited
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Add your real products to the store first. Then paste your domain, theme name and style words.
+  - Make the inspiration folder as the checklist says, with screenshots, logos and photos.
+  - Follow the plan in order. Sign in to Shopify yourself when the command asks for a code.
+  - Review each section before asking for the next, and publish only after a phone check.
+
+how_it_works:
+  - title: Lists the tools
+    text: A paid Claude plan with Claude Code, Node, Git and the Shopify CLI. It checks them with the shopify version command.
+  - title: Sets up the assets
+    text: Real products first, then an inspiration folder with section screenshots, logo versions, product photos and lifestyle photos.
+  - title: Makes the safe copy
+    text: Duplicate the live theme and tell Claude to work only on the copy. Pull the theme into a fresh empty folder.
+  - title: Writes the kickoff prompt
+    text: Brand name, read the theme and inspiration, ask about style, sections, fonts and preview, and show a plan before building.
+  - title: Orders the sections
+    text: Hero first, then shop by category, featured products, reviews and story, with a review after each.
+  - title: Keeps the data real
+    text: Tells Claude the store already has products and sections must use them, and asks for a quality check when something looks off.
+  - title: Plans the finish
+    text: One polish pass, a batch of small fixes, then push as an unpublished theme and check on a phone before publishing.
+
+output_shape: |
+  AI BUILD PLAN for <store domain>, theme <name>
+
+  BEFORE YOU START  <tools: Claude plan, Node, Git, Shopify CLI; check: shopify version>
+  ASSET FOLDER      inspiration/ <screenshots> | <logos> | <product photos> | <lifestyle photos>
+  SAFE COPY         <duplicate the live theme; work only on the copy>
+
+  KICKOFF PROMPT
+  <prompt for Claude Code>
+
+  SECTION PLAN
+  1 <section> | ask: <what to say> | review: <what to check>
+  2 ... (one line per section)
+
+  POLISH PROMPT   <small fixes batch>
+  PUBLISH STEPS   <push unpublished, edit in theme editor, phone check, publish, remove password>
+  LIMITS          <usage limits, fewer instructions per prompt>
+  COST AND TIME   <Shopify plan + Claude plan; hours>
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you need to give>
+
+tweaks:
+  - what: Products first
+    how: Add your real products to the store before the build. The design is built around them, and the featured section can use them.
+  - what: Screenshots of sections you like
+    how: Take them from free theme demos or stores. Copy the idea of a section, never a competitor's logo or artwork.
+  - what: Instructions per prompt
+    how: Give Claude Code fewer instructions at once. In one video, a cart-icon animation was missed when too many were bundled.
+  - what: Your comfort with a terminal
+    how: Say if commands are new to you. The plan then adds more detail on installing and signing in.
+
+judge:
+  - The plan makes a copy of the live theme before any build.
+  - The kickoff prompt asks Claude Code to ask you questions and show a plan first, not to build everything at once.
+  - Sections come one at a time, with a review after each.
+  - The result is pushed as an unpublished theme, not straight to live.
+  - Costs, times and usage limits are called examples from a video, not promises.
+
+test:
+  - Run the plan on a development store first. Check that your live store never changes.
+  - Do the hero section only, then stop. Check you can ask for a change in plain English.
+  - After the build, view the unpublished theme on a phone and in the theme editor.
+  - Write down which copy Claude edited, then check it against the log in the plan.
+
+improve:
+  - Add your brand style words and font choices to the kickoff prompt.
+  - Save your best inspiration folder as a template for the next build.
+  - Add your own section order if you sell something that needs a different layout, such as a size guide near the top.
+  - Pair it with a skill that writes the copy and one that checks the page for mistakes.
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "It reads the theme files and builds sections from your plan."}
+    - {name: "Shopify CLI", why: "It pulls the theme to your computer, previews it and pushes it back as unpublished."}
+    - {name: "Shopify theme editor", why: "Where you edit text, images and section order after the build and check mobile view."}
+  inputs:
+    - "Logo in three versions: with background, transparent dark and transparent light"
+    - "Product photos on plain backgrounds, plus lifestyle photos"
+    - "Your storefront password from Online Store preferences, for the local preview"
+    - "A list of policy pages your footer must link to"
+
+terms:
+  - term: Shopify CLI
+    meaning: A command line tool that pulls your theme to your computer and pushes it back.
+  - term: Unpublished theme
+    meaning: A theme saved in your store that visitors do not see until you publish it.
+  - term: Kickoff prompt
+    meaning: The first message you give Claude Code, which sets the brand, the files to read and the rules.

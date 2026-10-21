@@ -32,7 +32,7 @@ const clip = (s, n = 160) => {
   return end > 60 ? cut.slice(0, end + 1) : `${cut.replace(/\s+\S*$/, "")}…`;
 };
 const words = (s, n) => { const w = String(s).split(/\s+/); return w.length > n ? `${w.slice(0, n).join(" ")}…` : s; };
-const kindPath = (b) => (b.type === "mind" ? "minds" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
+const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const hrefOf = (b) => `/${kindPath(b)}/${b.slug}`;
 const hasPage = (b) => b.headline !== "";
 const portName = (p) => String(p).replace(/\?$/, "").replace(/_/g, " ");
@@ -122,7 +122,7 @@ function pageFor(url) {
 
   // Skills, prompts and workflows: a unique section built from the page's own facts, not only the template.
   const isFlow = kindPath(b) === "workflows";
-  const noun = isFlow ? "AI workflow" : b.type === "prompt" ? "AI prompt" : "AI skill";
+  const noun = b.type === "agent" ? "AI agent" : isFlow ? "AI workflow" : b.type === "prompt" ? "AI prompt" : "AI skill";
   const give = (Array.isArray(page.you_give) && page.you_give.length ? page.you_give : (page.plan?.needed ?? []).map((n) => n.what ? `${n.label}: ${n.what}` : n.label)).concat((page.plan?.helps ?? []).map((n) => `${n.label} (optional)`)).slice(0, 8);
   const get = Array.isArray(page.you_get) && page.you_get.length ? page.you_get : (b.outputs ?? []).map((o) => portName(o).replace(/^./, (c) => c.toUpperCase()));
   const steps = isFlow ? (b.steps ?? []).map((x) => bySlug[Array.isArray(x) ? x[0] : x]).filter(Boolean) : [];
@@ -250,10 +250,13 @@ fs.writeFileSync(path.join(DIST, "404.html"), render("/404", { title: "Page not 
 // The hub addresses go into their own sitemap, read by build-index's sitemap index.
 fs.writeFileSync(path.join(DIST, "sitemap-jobs.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${hubUrls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`);
 console.log(`prerender: ${wrote} pages, ${hubUrls.length} job hubs, a 404 page${problems.length ? `\n  ${problems.slice(0, 20).join("\n  ")}` : ""}`);
-// Cloudflare Pages takes at most 20,000 files on the free plan. Stop well before that, so a growing library never fails a deploy.
-const MAX_FILES = 19000;
+// Cloudflare Pages takes at most 20,000 files on the free plan and 100,000 on Workers Paid ($5 a month), which we use.
+// Stop well before the limit, so a growing library never fails a deploy. CF_PLAN=free checks against the free plan.
+const FREE = process.env.CF_PLAN === "free";
+const MAX_FILES = FREE ? 19000 : 95000;
 const count = (d) => fs.readdirSync(d, { withFileTypes: true }).reduce((n, e) => n + (e.isDirectory() ? count(path.join(d, e.name)) : 1), 0);
 const files = count(DIST);
-console.log(`dist: ${files.toLocaleString("en-US")} files (the limit here is ${MAX_FILES.toLocaleString("en-US")})`);
+console.log(`dist: ${files.toLocaleString("en-US")} files (the limit here is ${MAX_FILES.toLocaleString("en-US")}, ${FREE ? "free plan" : "Workers Paid plan"})`);
+if (!FREE && files > 19000) console.log("  over the free plan's 20,000 files: the Pages project needs Workers Paid");
 if (files > MAX_FILES) { console.error(`  dist has ${files} files, over ${MAX_FILES}: bundle more files, or move to a plan that takes more`); process.exitCode = 1; }
 if (problems.length) process.exitCode = 1;

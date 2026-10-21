@@ -1,0 +1,129 @@
+new_slug: vsl-ad-scripter
+name: "VSL ad scripter"
+summary: "Give it your product, mechanism and reviews. Get a 7-part VSL script, hooks and short cuts."
+job: make-video-ads
+thinking: high
+thinking_why: "It builds a long argument in a set order from your facts, so a stronger model writes a tighter script."
+
+headline: "VSL ad scripter"
+subhead: Give it your product facts, mechanism, buyer reviews and proof. It writes a video sales letter script in seven parts with timings. You get 3 to 6 hooks, cuts for 45 seconds, 2 minutes and 5 minutes, editor notes and a matching landing page brief.
+
+explain: |
+  Some products can't be sold in 15 seconds. They are hard to explain, they are new, or buyers don't trust the category. A video sales letter (VSL) ad solves this. It is a sales argument in video that removes doubt in a set order. Good ones run from 45 seconds to 20 minutes.
+
+  This skill writes that argument for your store in seven parts: hook, problem, mechanism, objection handling, proof, risk reversal and call to action. It uses your customers' own words from reviews and support tickets. Because most viewers leave before the body, it also writes 3 to 6 hooks. And because the parts are modular, it plans shorter cuts and reordered versions to test. It ends with a landing page brief, so the story carries on after the click. It will not invent proof, and health claims are flagged for a check.
+
+when:
+  - Your product needs explaining, and short ads are not getting the sales you want.
+  - You sell in a low-trust or brand-new category and need to educate buyers first.
+  - You have reviews and proof ready and want one script that you can cut into several lengths.
+
+you_give:
+  - Your product facts and the mechanism, meaning why it works
+  - Reviews, support tickets or survey answers on why people almost didn't buy
+  - Your proof, such as studies, customer videos, customer counts and ratings
+  - Your offer and guarantee terms
+  - The length and look you want to start with (optional)
+you_get:
+  - A seven-part VSL script with timings
+  - 3 to 6 alternative hooks and reordered versions to test
+  - A cut-down plan for 45 seconds, 2 minutes and 5 minutes
+  - Editor notes and a landing page brief
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts, mechanism, reviews and proof. Add your offer and guarantee.
+  - Start with a 1 to 3 minute script before trying longer ones.
+  - Have your health or compliance contact read the claims before you film.
+  - Film the master edit, cut the shorter versions, test the hooks and send the ad to a page built for it.
+
+how_it_works:
+  - title: Checks the fit
+    text: A VSL suits complex, new or low-trust products. For a simple item, a short demo is enough.
+  - title: Picks the length
+    text: Starts at 1 to 3 minutes. Longer cuts cost more to edit.
+  - title: Writes seven parts
+    text: Hook, problem, mechanism, objection handling, proof, risk reversal and call to action, with timings.
+  - title: Uses buyer words
+    text: Problem and objection lines come from your reviews, tickets and survey answers.
+  - title: Completes the bridge
+    text: Explains the full why before the product appears, so the pitch doesn't feel rushed.
+  - title: Writes the hooks
+    text: 3 to 6 options, since about 80% of viewers leave before the body.
+  - title: Plans the cuts
+    text: One master edit becomes 45-second, 2-minute and 5-minute versions, with reordered variants to test.
+  - title: Adds notes and a page brief
+    text: Footage mix, look, text size and a landing page that continues the story.
+
+output_shape: |
+  FIT CHECK   <suits | short demo is enough> because <product type>
+  LENGTH      master <min:sec> | cuts: 45 s, 2 min, 5 min
+
+  VSL SCRIPT
+  00:00 HOOK            <line> | visual | on-screen text
+  00:__ PROBLEM         <lines in the customer's words>
+  00:__ MECHANISM       <why it works> | backed by <fact>
+  00:__ OBJECTIONS      <what almost stopped buyers and why past fixes failed>
+  00:__ PROOF           <customer video, number, count, study (source)>
+  00:__ RISK REVERSAL   <guarantee terms>
+  00:__ CALL TO ACTION  <offer and next step>
+
+  ALTERNATIVE HOOKS (3 to 6) <hook> | who it calls out | first frame
+  MODULAR VERSIONS  A <order> | B <mechanism before problem> | C <problem agitation earlier>
+  CUT-DOWN PLAN     45 s | 2 min | 5 min
+  EDITOR NOTES      footage mix | look | text size | pacing
+  LANDING PAGE BRIEF  page type | parts to repeat | offer and guarantee
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what would sharpen this>
+
+tweaks:
+  - what: Buyer words
+    how: Paste real reviews, tickets and survey answers. The problem and objection parts use them, so thin input gives generic lines.
+  - what: Proof you can show
+    how: Give studies with their conditions, real customer counts and ratings. The skill won't invent any.
+  - what: Starting length
+    how: Start at 1 to 3 minutes. Ask for a 10-minute master only when you have the editing budget.
+  - what: Part order
+    how: Ask for a version with objection handling before the mechanism, and test it against the standard order.
+  - what: Look of the footage
+    how: Pick one look, such as mostly customer video or all animation. Mixed looks make the ad feel stitched together.
+
+judge:
+  - All seven parts appear in order, with timings.
+  - The script doesn't open with your brand story.
+  - The mechanism explains why the product works, not only what it is.
+  - Every number, study and count has a source you can show.
+  - Health claims carry a note to check ad rules and a qualified person.
+
+test:
+  - Read the problem part to a customer. They should say "that's me" before the product appears.
+  - Mute the hook and read only the on-screen text. It should still make the right person stop.
+  - Film the 45-second cut first and test it against your best short ad.
+  - Ask your compliance contact or a lawyer to read every claim, before you spend on filming.
+
+improve:
+  - Add your approved claims and your banned claims to the skill file, so every script stays inside them.
+  - Add your brand voice to the problem part so the lines sound like your customers.
+  - Save each VSL's hooks and results in your brand file, to see which kind of hook wins for you.
+  - Pair it with the advertorial angle and format picker for the landing page, and the creative test reader to read the cuts.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can write the script from your facts. Paste your reviews rather than describing them."}
+    - {name: "A video editor you trust", why: "The cuts need an editor who can reorder parts and make 45-second, 2-minute and 5-minute versions."}
+  inputs:
+    - "Real reviews, support tickets and survey answers on why people almost did not buy"
+    - "Studies and customer counts with their sources"
+    - "Customer videos you have the rights to use"
+    - "Your approved and banned claims"
+
+terms:
+  - term: VSL
+    meaning: A video sales letter, a video that makes a full sales argument in a set order.
+  - term: Mechanism
+    meaning: Why your product works, such as the ingredient and how it acts.
+  - term: Risk reversal
+    meaning: A guarantee that takes the risk off the buyer, such as a 90-day trial.
+  - term: Bridge
+    meaning: The step in the script that moves from the problem you explained to your product.

@@ -1,0 +1,27 @@
+slug: name-and-position-a-new-brand
+name: "Name and position a new brand"
+summary: "Give it your category and rivals. Get a position to own, a tested name and a check that it fits later."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: brand
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+uses: [positioning-grid-builder, positioning-statement-writer, store-name-generator, store-name-tester, brand-name-stretch-checker]
+steps:
+  - {uses: positioning-grid-builder, note: "Maps your rivals on two extreme axes and picks the corner to own."}
+  - {uses: positioning-statement-writer, note: "Writes the one-line position and a brief from the corner you picked. Reads the grid from the step before."}
+  - {uses: store-name-generator, note: "Generates and cuts names against the brief and the rivals' naming patterns. Reads the brief from the step before."}
+  - {uses: store-name-tester, note: "Tests the shortlist for sound, spelling, meaning and fit. Reads the shortlist from the step before."}
+  - {uses: brand-name-stretch-checker, note: "Checks the winning name still works when the range grows. Reads the position plan and rivals from earlier steps."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/name-and-position-a-new-brand/skeleton.yaml

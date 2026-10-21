@@ -1,0 +1,100 @@
+new_slug: monthly-competitor-watcher
+name: Monthly competitor watcher
+summary: Give it this month's rival ads and pages. Get what changed since last month and the one or two moves worth answering.
+job: study-competitors
+thinking: medium
+thinking_why: It counts, compares with last month and runs deeper checks only where a rival moved. A mid-size model works. Use a stronger one if you watch more than six rivals.
+headline: Monthly competitor watcher
+subhead: Give it the ads you collected from your rivals this month. It counts them, sets each rival against its own last month, looks deeper only where something moved, and hands back the one or two moves worth answering, or tells you there are none.
+explain: |
+  Most competitor research is a one-time project. It goes stale, and nobody notices when a rival changes its offer, adds a new kind of ad or lowers its price. Reacting to every small change is just as bad, because most months a rival does nothing that matters.
+
+  This agent keeps a short file on each rival and compares this month's ads with last month's. It uses set bars for what counts as a move. If no rival moved, it says so and stops. If one did, it compares messages, finds the ad gaps your proof can fill, and checks any cheaper newcomer for real threat. It counts structure only and never guesses a rival's spend. It never changes your ads, prices or pages.
+when:
+  - You have three to six rivals you want to keep an eye on without a big monthly project.
+  - You want to know when a rival changes its offer, message or ad mix.
+  - You need a reason to act, or a reason to leave things alone.
+you_give:
+  - Your three to six rivals, with their sites, the first time
+  - This month's ads from each rival, collected by hand from the public ad library, with the date
+  - Your brand file, for your claims and proof (optional)
+  - Your customer reviews (optional)
+you_get:
+  - Counts by format, age and ad type for each rival, against its own last month
+  - A list of rivals that moved and rivals that did not
+  - Message and position changes for the rivals that moved
+  - Ad gaps your proof can fill
+  - Up to two moves worth answering, or a clear "none this month"
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's watch.
+  - Collect each rival's current ads from the public ad library on the same day each month, and put them in one folder.
+  - The first run builds the base for each rival and compares nothing. The second run is the first real comparison.
+  - Read the hand-back. Act on a move you agree with yourself, or ask for a brief for it.
+  - Run it again next month. It reads each rival's history file.
+how_it_works:
+  - title: Count the ads
+    text: Counts each rival's ads by format, age, landing page and ad type.
+  - title: Compare with last month
+    text: Sets those counts and each rival's price and offer claims against its own last month. Counts show structure, not spend.
+  - title: Choose where to look deeper
+    text: A rival counts as moved on a big change in live ads, a shift in format mix, or a new offer or landing page. If none moved, it stops here.
+  - title: Compare messages and find gaps
+    text: For rivals that moved, it compares their message with yours and finds ad gaps your proof can fill.
+  - title: Check newcomers and words
+    text: Checks a cheaper or simpler newcomer for real threat, and every third month maps the words rivals own.
+  - title: Pick the moves
+    text: Proposes at most two moves, each tied to a rival's change, or says to watch and what would change that.
+output_shape: |-
+  THIS MONTH
+    Moved: <rivals> | Did not move: <rivals>
+
+  WHAT CHANGED, PER RIVAL
+    <rival> | live ads <n> vs <n> | format mix <change> | new offers or prices <what> | new landing pages <n>
+
+  GAPS YOU CAN FILL
+    <gap> | proof you have: <proof>
+
+  NEWCOMERS
+    <rival> | threat: <nuisance | real threat> | why: <reason>   (or: none)
+
+  MOVES WORTH ANSWERING (at most 2)
+    1. <move> | answers: <rival and change> | proof: <proof>   (or: none this month)
+
+  WHAT WOULD CHANGE THE CALL
+    <1 to 3 signals>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: When you collect the ads
+    how: Collect on the same day each month with the same filters. Different days or filters make months hard to compare.
+  - what: How many rivals
+    how: Three to six is enough. More rivals make a long report and little action.
+  - what: Your bars for a move
+    how: The starting bars are a third change in live ads or 15 points in a format. Lower them for a small market, raise them for a busy one.
+  - what: Your brand file
+    how: Add the claims you can prove. The agent only proposes gaps your proof can fill.
+judge:
+  - Every change is set against that rival's own last month.
+  - No claim is made about a rival's spend or results.
+  - Each proposed move ties to a named change.
+  - Moves your proof cannot support were dropped.
+  - Nothing of yours was changed and no rival was contacted without your clear yes.
+test:
+  - Run it on two months you collected by hand. Check the changes it lists against the ads yourself.
+  - Run it twice on the same files. The moved and not-moved lists should match.
+  - Pick one rival it says did not move and look at its ads for anything it missed.
+improve:
+  - Set your own bars for a move to suit how fast your market changes.
+  - Add the claims you never make to your brand file, so no gap is proposed against them.
+  - Keep a note of each move you made, so next month can check whether rivals reacted.
+  - Drop a rival that never moves, and add one that grows.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the watch folder, read each rival's history and run every step on a schedule.
+    - name: Meta Ad Library
+      why: Collect each rival's live ads by hand here, on the same day each month.
+  inputs:
+    - A screenshot or export of each rival's pricing page
+    - Your own month of ad changes, for context

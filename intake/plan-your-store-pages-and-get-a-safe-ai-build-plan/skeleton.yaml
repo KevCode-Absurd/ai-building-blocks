@@ -1,0 +1,47 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md). Our words.
+id: plan-your-store-pages-and-get-a-safe-ai-build-plan
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: plan-your-store-pages-and-get-a-safe-ai-build-plan
+  name: "Plan store pages and get a safe AI build plan"
+  summary: "Give it your products. Get variant tables, collections, page sections and a Claude Code kickoff prompt that spares your live theme."
+  when: "you want an AI to build your Shopify theme but have not set up the products, menus and page sections it will build around."
+  job: set-up-store
+  level: intermediate
+steps:
+  - name: "Set up products and variants"
+    skill: product-and-variant-setup-planner
+    job: ops
+    from: "skill: product-and-variant-setup-planner"
+    method: ["Pick a product type for each item", "Set shared options such as size and colour first", "Build a variant table with price, stock, weight and photo for each row", "Add stock rules, links to related products and a fill-in checklist"]
+    inputs: [product_data]
+    outputs: [product_data]
+    note: "Starts from your product list and makes the clean product facts every later step reads."
+  - name: "Plan collections, filters and the menu"
+    skill: collections-and-menu-planner
+    job: page
+    from: "skill: collections-and-menu-planner"
+    method: ["Fix product type names and tags", "Make a collection for each way shoppers look", "Choose filters and order them by importance", "Build a short menu and check every product is two or three clicks away"]
+    inputs: [product_data]
+    outputs: [plan]
+    note: "Reads the product facts from step 1 and groups them into collections, filters and a menu."
+  - name: "Plan the product page sections"
+    skill: product-page-section-planner
+    job: page
+    from: "skill: product-page-section-planner"
+    method: ["List the doubts a buyer has about the product", "Match each doubt to a section and the proof that settles it", "Order the sections and the buy area", "List the settings to switch on and the proof still to collect"]
+    inputs: [product_data, objection_map!, voc_reviews!]
+    outputs: [page_layout_spec]
+    note: "Takes the product facts from step 1 and plans the page that answers each buyer doubt."
+  - name: "Get the safe AI build plan"
+    skill: ai-store-build-planner
+    job: ops
+    from: "skill: ai-store-build-planner"
+    method: ["Check the tools and copy the live theme so the build never touches it", "Gather the asset folder and the screenshots of sections you like", "Write the kickoff prompt, then one section at a time with a review after each", "Add the polish prompt and the steps to push as an unpublished theme"]
+    inputs: [product_data, reference_set!, store_capture!]
+    outputs: [plan]
+    note: "Uses the product facts from step 1 and tells the build to follow the menu and page sections from steps 2 and 3."

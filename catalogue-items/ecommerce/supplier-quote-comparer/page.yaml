@@ -1,0 +1,127 @@
+new_slug: supplier-quote-comparer
+name: "Supplier quote comparer"
+summary: "Paste supplier quotes. Get price, minimum order, lead time and risk side by side, a deposit-safety score and terms."
+job: plan-supply-chain
+thinking: high
+thinking_why: "It weighs several quotes against your cash, price and risk, so a stronger model makes fewer slips."
+
+headline: "Supplier quote comparer"
+subhead: Paste two or more supplier quotes, your planned retail price and the cash you can tie up in stock. It lays out price, minimum order, lead time, cash needed and weeks to stock, and lists the terms to settle before you pay. Each supplier gets a deposit-safety score out of 100.
+
+explain: |
+  The cheapest quote is often the riskiest one. A low price can hide a big minimum order that drains your cash, a long lead time that misses your launch, or a supplier who will not put refunds in writing. And a product that costs too much cannot sell at the price your market pays.
+
+  This skill puts the quotes side by side on cash up front, weeks to stock and margin at your retail price. It lists what to agree in writing before any deposit, plans an independent inspection of the first run, and scores each supplier on how safe a deposit is today. The ten safety checks are the skill's own checklist, built from one operations talk. Contracts need a lawyer.
+
+when:
+  - You have quotes from two or three factories and need to choose.
+  - You are about to send a large first deposit.
+  - A higher quote offers a lower minimum order and you want to know if it frees enough cash.
+
+you_give:
+  - Two or more quotes with unit price, minimum order and manufacturing lead time
+  - Your planned retail price and the cash you can tie up in stock
+  - Freight and duty per unit, if you know them (optional)
+  - Your tech pack, and whether the product is unique or a catalogue item (optional)
+you_get:
+  - A side-by-side table of cash up front, weeks to stock, landed unit cost and margin before ads
+  - A safety score out of 100 for each supplier, with the sum shown
+  - A list of terms to agree in writing before a deposit
+  - A first-run inspection plan and a go, renegotiate or walk-away note
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each quote as the supplier sent it, then your retail price and cash limit.
+  - Add freight and duty per unit if you have them, so landed cost is complete.
+  - Settle the listed terms with each supplier before you pay a deposit.
+  - Ask a lawyer to check any contract before you sign.
+
+how_it_works:
+  - title: Compares three numbers
+    text: Minimum order, unit price and manufacturing lead time, with shipping time kept separate.
+  - title: Tests cash and time
+    text: Cash up front is minimum order times price. Weeks to stock is lead time plus shipping.
+  - title: Tests the retail price
+    text: Margin before ads from your retail price. A product that costs more than your market pays is out.
+  - title: Lists the terms
+    text: Refunds, quantity variance, short shipments and design ownership, all in writing before a deposit.
+  - title: Plans the paper trail
+    text: One channel with buyer protection, so messages, spec and order form one record.
+  - title: Plans quality checks
+    text: An independent inspector weighs, measures and checks colour on the first run, and the second and third.
+  - title: Scores and decides
+    text: Ten checks of 10 points give a safety score. Each supplier is a go, renegotiate or walk away.
+
+output_shape: |
+  QUOTE TABLE
+  Supplier | Unit price | MOQ | Lead time | Cash up front | Weeks to stock | Landed cost | Margin before ads
+
+  SAFETY SCORE (can I send a deposit?)
+  <supplier>: <n>/100 (<sum>)
+
+  TERMS TO SETTLE IN WRITING
+  Refunds / Quantity variance / Short-shipment / Design ownership
+
+  PAPER TRAIL
+  <channel with buyer protection>
+
+  CONTRACT
+  <now | later>. Check with a lawyer.
+
+  QUALITY CHECK PLAN
+  <first run, runs 2 and 3>
+
+  VERDICT
+  <supplier>: GO | RENEGOTIATE | WALK AWAY
+  NOT RUN / MISSING: <...>
+
+tweaks:
+  - what: Your cash limit
+    how: Give the real number you can tie up in stock. The cash check marks quotes over it.
+  - what: Freight and duty per unit
+    how: Add them. Without them the landed cost is just the unit price.
+  - what: Your minimum margin
+    how: Tell it the margin you need before ads. The retail check uses your number, not a guess.
+  - what: Unique or catalogue item
+    how: A unique product needs a contract sooner, because a factory may share a working design.
+  - what: Your launch date
+    how: Give it. The lead time check compares weeks to stock with the date.
+
+judge:
+  - There are at least two quotes in the table.
+  - Lead time is production only, with shipping shown on its own.
+  - Cash up front and weeks to stock show the formula used.
+  - Margin uses your retail price.
+  - All four pre-deposit terms are listed.
+  - The score shows the sum and names any check it could not run.
+
+test:
+  - Give it one cheap quote with a huge minimum order and one dearer quote with a small one. It should show the dearer one frees cash.
+  - Give it a quote that costs more than your retail price allows. It should rule it out.
+  - Run it twice on the same quotes. The verdicts should match.
+  - Check one figure by hand, such as cash up front.
+
+improve:
+  - Add your own minimum margin and cash limit to the skill file so you do not retype them.
+  - Add the terms your lawyer wants in every supplier deal.
+  - Save each score so you can compare suppliers over time.
+  - Pair it with the landed cost calculator, the supplier payment terms planner and the pre-shipment inspection brief writer.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It only needs your quotes and numbers."}
+    - {name: "A marketplace or inspection firm with inspection services", why: "An independent inspector can weigh, measure and check colour against your spec."}
+  inputs:
+    - "Your tech pack, so quotes cover the same spec"
+    - "A customs broker's duty estimate for your product and import route"
+    - "Your freight quotes per unit"
+
+terms:
+  - term: MOQ
+    meaning: Minimum order quantity. The fewest units a supplier will make in one order.
+  - term: Lead time
+    meaning: How long the factory takes to make the order, not counting shipping.
+  - term: Landed cost
+    meaning: What one unit costs once it reaches your warehouse, including freight and duty.
+  - term: Tech pack
+    meaning: A document that tells a factory exactly what to make.

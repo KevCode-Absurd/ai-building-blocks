@@ -1,0 +1,20 @@
+slug: amazon-keyword-picker
+name: "Amazon keyword picker"
+summary: "Give it your product and a keyword export. Get the phrases for your title, bullets and backend."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "The keyword filter thresholds for a new brand, keeping or dropping phrases by whether they are true and specific, borrowing phrases from similar products and the backend keyword field"}

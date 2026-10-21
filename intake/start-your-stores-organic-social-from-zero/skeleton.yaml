@@ -1,0 +1,49 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: start-your-stores-organic-social-from-zero
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: start-your-stores-organic-social-from-zero
+  name: "Start your store's organic social from zero"
+  summary: "Give it your accounts and product. Get a setup fix list, formats and hooks to film, and a read on what works."
+  when: "you are starting social for your store, or your posts get almost no views."
+  job: grow-social
+  level: beginner
+steps:
+  - name: "Brand social account checker"
+    skill: brand-social-account-checker
+    job: organic
+    from: "library"
+    method: ["List each account with its type, country and publishing method","Check eight setup rules","Order the fixes by points","Name the one platform to keep for six months"]
+    inputs: [question, plan!]
+    outputs: [audit_report]
+    note: "Starts with the account setup, because a wrong setup caps reach."
+  - pause: "Make the fixes, starting with the biggest. Decide who will be on camera."
+  - name: "Short video format picker"
+    skill: short-video-format-picker
+    job: organic
+    from: "library"
+    method: ["Check what you can film with the people and props you have","Pick formats and say why each fits","Write a script outline for each pick","Write ten hooks across formats"]
+    inputs: [product_data, question]
+    outputs: [hooks, script]
+    note: "Chooses formats and hooks for the focus you set after the account check."
+  - name: "Video hook scorer"
+    skill: video-hook-scorer
+    job: ads
+    from: "library"
+    method: ["Split each hook into layers","Rate clarity and relevance","Check who the hook attracts","Rewrite the weak hooks"]
+    inputs: [hooks, persona, script!]
+    outputs: [audit_report, hooks]
+    note: "Scores the hooks from the format picker before you film."
+  - pause: "Post your best 10 to 15 videos by hand over three weeks. Export views and watch time."
+  - name: "Organic format tester"
+    skill: organic-format-tester
+    job: organic
+    from: "library"
+    method: ["Review the posts in groups, not one by one","Make a list of hits, flat posts and flops","Give each format a verdict","Set the next test loop"]
+    inputs: [performance_sheet, question!]
+    outputs: [test_report, plan]
+    note: "Reads which of the formats you picked earned views and sets the next round."

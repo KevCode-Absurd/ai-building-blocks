@@ -1,0 +1,21 @@
+slug: pre-shipment-inspection-brief-writer
+name: "Pre-shipment inspection brief writer"
+summary: "Give it your order and tech pack. Get an inspector's brief, a pass rule and payment release terms."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: document, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Ultimate Guide To Product Sourcing In 2026", by: "Founder of a heated-hoodie and blanket brand (video guide)", used: "Booking a third-party check before the container leaves, what the inspector tests, and paying the balance only after the report passes"}
+  - {title: "What I learnt from sourcing e-commerce products from China (forum post and comments)", by: "A jewelry seller moving from drop shipping to bulk import, with one comment from a US sourcing agent", used: "Ordering 10 percent extra when inspection is skipped, the 30 and 70 deposit split, and the debate over payment routes"}

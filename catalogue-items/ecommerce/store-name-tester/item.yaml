@@ -1,0 +1,23 @@
+slug: store-name-tester
+name: "Store name tester"
+summary: "Paste your shortlisted names. Get each scored out of 100 with a keep, fix or drop call."
+category: ecommerce
+type: skill
+role: check
+job: brand
+level: beginner
+inputs:
+  - {type: shortlist, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+minds: [al-ries, jack-trout]
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "We named a billion dollar startup with the man behind BlackBerry, Febreze and Swiffer (podcast)", by: "David, founder of a naming agency, interviewed by two business-podcast hosts", used: "The spelling and search test, the ease-of-saying test, the surprise test, the comfort-trap split, sound feel, and showing names in context with one rule, is it believable"}
+  - {title: "Positioning: The Battle for Your Mind", by: "Al Ries and Jack Trout (book)", used: "Names are heard before they are read, the almost-but-not-quite generic rule, the coined-name rule and the initials trap"}
+  - {title: "Designing Brand Identity (4th edition, Part 1 only)", by: "Alina Wheeler (book)", used: "The seven qualities of a name, the name types with their trade-offs, and checking names by market, language and dialect"}

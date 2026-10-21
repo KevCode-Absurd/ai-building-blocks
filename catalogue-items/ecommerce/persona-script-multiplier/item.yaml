@@ -1,0 +1,22 @@
+slug: persona-script-multiplier
+name: "Persona script multiplier"
+summary: "Give it one winning video script. Get a version and a page brief for each buyer group."
+category: ecommerce
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: persona, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: script}
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "I scraped 700 IM8 ads and read their P&L", by: "An agency head of paid media (video)", used: "One timeline-style script structure, kept fixed while only the buyer group changes, with scenes in place of claims, mechanism first and proof last"}

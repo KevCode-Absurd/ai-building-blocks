@@ -1,0 +1,127 @@
+new_slug: fatigued-ad-reviver
+name: "Fatigued ad reviver"
+summary: "Give it a fading winner's numbers. Get the cause, ranked revival moves and 10 hook briefs."
+job: launch-and-scale-ads
+thinking: medium
+thinking_why: "It reasons over your numbers and writes many short briefs, which a mid-size model does well."
+
+headline: "Fatigued ad reviver"
+subhead: Give it a fading ad's weekly numbers, its transcript and your stock. It works out whether the ad is spent or the audience too small, ranks revival moves and writes 10 or more hook briefs. Each keeps the winning body and names the lever it changes.
+
+explain: |
+  Every ad runs out of road. Spend climbs, hits a limit, then slides as the same people see it again or the ad was too like your others. Most stores push harder or make a brand new ad, which is slow and costly. Often the body of the ad is still fine. What wore out is the first few seconds.
+
+  This skill finds the cause first: a stale ad, or an audience that is too small. It sets a pace that fits your stock and cash, so a fading winner isn't squeezed past what you can ship. Then it ranks the revival moves and writes new hooks for the same body. Each hook changes one of four things: the angle, the offer, who says it or the format. Ten hooks cost far less than ten new ads, because a hook is a few seconds of a long video.
+
+when:
+  - Your best ad's spend or return is dropping and you don't want to start from zero.
+  - An agency or a teammate wants to push one winner harder and you're unsure it is wise.
+  - You have a strong ad body and need a batch of new openers to film in one session.
+
+you_give:
+  - Spend and ROAS by week for the ad, plus frequency and audience size if you have them
+  - The ad's transcript and metrics, so it can keep the body that earned the spend (optional)
+  - Hooks you have already used (optional)
+  - Your stock, cash cycle and backup ads
+  - Who can film, such as staff, customers or creators (optional)
+you_get:
+  - A cause call, with the numbers behind it
+  - Ranked revival moves and a pacing plan that fits your stock
+  - 10 or more hook briefs, each tagged with the lever it changes (3 for a small budget)
+  - A shoot list, a test plan with names, and a log of what changed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the ad's weekly spend and ROAS, its transcript and the hooks you've used. Add your stock position.
+  - Pick the hook briefs you can film in one session, using different people on camera.
+  - Put a little spend behind each hook, or post them as trial reels first if the feature is available to you.
+  - Add budget to the best thumb-stop and hold, and log which lever changed.
+
+how_it_works:
+  - title: Reads the ad's life
+    text: Every ad has a daily spend limit and a total spend. It says where yours sits and whether it is climbing, at its limit or falling.
+  - title: Calls the cause
+    text: The ad is stale or too like your others, or the audience is too small.
+  - title: Sets the pace
+    text: Squeeze a winner only if you have stock to sell. With limited stock or slow cash, run it lower for longer.
+  - title: Ranks revival moves
+    text: New hooks first, then a format change, a cost cap and a scaling campaign copy.
+  - title: Keeps the winning body
+    text: Finds the body that got the most spend before it faded and reworks only the first 3 to 5 seconds.
+  - title: Writes the hooks
+    text: Ten or more briefs, each changing the angle, offer, avatar or format, filmed with a visibly different person.
+  - title: Plans the test
+    text: A little spend behind each opener, then more behind the best thumb-stop and hold.
+  - title: Logs and backs up
+    text: Records which lever changed on each ad and lines up backups so one ad never carries the account.
+
+output_shape: |
+  CAUSE CALL  <ad is spent | audience too small | both> because <number>
+  LIFE STAGE  <climbing | at limit | falling>; daily limit about <$>; weeks live <n>
+  PACING      <squeeze | run lower for months>, because <stock and cash>
+
+  REVIVAL MOVES (ranked)
+  1. <move> | why first | risk
+
+  HOOK BRIEFS (keep the body, change the first 3 to 5 seconds)
+  <n> | lever: <angle | offer | avatar | format> | who is on camera | first line | first frame | what is shown
+
+  SHOOT LIST   <people, places, clips for one session>
+  TEST PLAN    names: <body>_<lever>_<hook number> | spend per hook <$> | read at <days>
+  LOG          lever changed on each ad
+  BACKUPS      <ads in line to replace this one>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what would sharpen this>
+
+tweaks:
+  - what: Stock and cash
+    how: Say how much stock you hold and how fast cash returns. It flips the advice between squeezing the winner and running it low for months.
+  - what: The transcript
+    how: Paste the full ad script. The skill keeps the body that earned the spend and writes hooks that fit it.
+  - what: Who is on camera
+    how: List the people you can film. Hooks work best with a visibly different person from the old ad.
+  - what: Budget per hook
+    how: Say what you can spend. With a small budget it plans 3 hooks, not 10.
+  - what: Hooks already used
+    how: List them so no new brief repeats an opener that people already scrolled past.
+
+judge:
+  - The cause is named and tied to a number in your data.
+  - The pace follows your stock and cash, not an agency's reporting.
+  - Every hook keeps the body and changes one lever.
+  - The hooks look different on screen, not just in wording.
+  - Every claim in every hook is true and you can prove it.
+
+test:
+  - Give it an ad you know faded for a clear reason, such as a narrow audience. It should name that cause.
+  - Remove your stock details and run again. It should write MISSING and not pick a pace.
+  - Film two of the briefs and run them against the old hook for a week with the same body.
+  - Check the log after the test. You should be able to say which lever won.
+
+improve:
+  - Add your stock rule to the skill file, such as "never raise daily spend while stock cover is under 6 weeks".
+  - Add your brand's must-keep lines to the check, so no hook drops a required claim.
+  - Save each winning hook and its lever in your brand file to see which lever works best for you.
+  - Pair it with the creative portfolio mix planner for backups and the creative test reader to read the new hooks.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "It shows spend, frequency and hook and hold rate for the fading ad, and runs the opener tests."}
+    - {name: "Instagram trial reels", why: "A cheap way to read how far a hook travels and where viewers drop, if the feature is open to your account."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write hook briefs from a transcript and a list of levers."}
+  inputs:
+    - "The full transcript of the winning ad"
+    - "Weekly spend and ROAS by ad"
+    - "Your stock levels and restock dates"
+    - "A list of people you can film"
+
+terms:
+  - term: Hook
+    meaning: The first 3 to 5 seconds of a video ad, written to make someone stop scrolling.
+  - term: Body
+    meaning: The middle of the ad after the hook, where the product and proof are shown.
+  - term: Frequency
+    meaning: The average number of times each person has seen your ad.
+  - term: Trial reel
+    meaning: An Instagram reel shown first to people who don't follow you, used as a cheap test.

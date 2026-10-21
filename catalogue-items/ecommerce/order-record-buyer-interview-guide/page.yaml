@@ -1,0 +1,119 @@
+new_slug: order-record-buyer-interview-guide
+name: "Order-record buyer interview guide"
+summary: "Paste recent orders. Get a pre-filled interview sheet per buyer, gap questions and a timeline pattern note."
+job: understand-customers
+thinking: medium
+thinking_why: "It fills a fixed sheet from order facts and writes questions for the gaps. A mid-range model does this well."
+
+headline: "Order-record buyer interview guide"
+subhead: Paste a list of recent orders with date, time, device, items and order value, and say what your product replaced. It builds one interview sheet per buyer, pre-filled from the order and set up for a buying-story call. It adds gap questions and a note for the patterns across buyers after the calls.
+
+explain: |
+  Buyers remember a purchase better when you start with what they did, not with what they think. An order record already holds some of it: the day, the time, the device, what else was in the basket, and what it cost. If you read those facts to the buyer first, they correct you and fill in around them, and the memory comes back.
+
+  This is the store version of the Buying story interview guide. The call is built like a short documentary: when did you first think about this, what happened that day, who else was involved, what did you do next. It never asks about features. Before each call, the sheet is pre-filled from the order and lists the gaps to ask about. After five to eight calls, it helps you group the stories by similar struggle.
+
+when:
+  - You want to know why people bought, and the reviews you have are short.
+  - You have a list of recent buyers and time for five to eight 20 to 30 minute calls.
+  - You want to go into each call with the facts in front of you, and not ask the same plain questions every time.
+
+you_give:
+  - A list of recent buyers who agreed to a call, with a buyer code, order date, time, device, items and order value (no names, emails or phone numbers in this sheet)
+  - Your product and what it replaced
+  - Your reward, such as a small gift card (optional)
+you_get:
+  - A pre-filled interview sheet per buyer, with the order facts to read out and gap questions
+  - A timeline template per buyer to fill in during the call
+  - A pattern note to complete after five to eight calls, grouping stories by similar struggle
+  - A short consent line to read at the start of each call
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Ask buyers first. Only buyers who agreed to a call go on your list. Keep names and contact details in your own mail, not in this chat.
+  - Paste the order list using a buyer code for each, such as B1 and B2. Say what the product replaced.
+  - Run the calls within a few weeks of the purchase. Fill in the timeline as you talk.
+  - After five to eight calls, paste your timelines back and ask for the pattern note.
+
+how_it_works:
+  - title: Picks fresh buyers
+    text: Uses buyers from the last few weeks so they remember. The book's example buyer was interviewed 45 days after buying.
+  - title: Pre-fills the facts
+    text: Writes the order date, weekday, device, items bought together and price on each sheet, for you to read out first.
+  - title: Frames a timeline
+    text: Sets the call up as building a timeline, like filming a short documentary. It does not ask about features.
+  - title: Asks about the day
+    text: Adds questions about what else was in the cart or tab, who was there, what else they did that day and what they almost bought.
+  - title: Finds the long wait
+    text: Asks when they first thought of it and why they did not buy sooner. The answer is usually habit or worry.
+  - title: Probes the old product
+    text: Asks how long the old one worked, when it failed them and what they tried instead.
+  - title: Asks about other people
+    text: Asks who else had a say, what that person needed to see, and when the last worry went away.
+  - title: Asks about use now
+    text: Asks what happened on arrival and whether they still use it, then groups the stories after five to eight calls.
+
+output_shape: |
+  CONSENT LINE (read first)
+  "<Thank you for agreeing. This is a <20 to 30> minute call to learn how you decided. I will take notes, not record, unless you say yes. You can skip any question or stop. I will not share your name.>"
+
+  BUYER <code>
+  Order facts to read out: <date, weekday, time, device, items together, price>
+  Timeline to fill in: first thought <when> > long wait <how long, why> > the day <what happened> > who else <say> > last worry removed <what> > arrival <what> > use now <what>
+  Gap questions (only where the order facts leave a gap):
+  - <question>
+  Old product: <how long it worked | when it failed | what they tried>
+  Rivals they used instead: <...>
+  Notes (their words): "<...>"
+
+  (one sheet per buyer)
+
+  PATTERN NOTE (after 5 to 8 calls)
+  Stories grouped by similar struggle: <group> = <buyer codes>
+  What repeats: <...> | Longest waits: <...> | Worries that held buyers back: <...>
+  Leads, not proof: <one-line caution>
+  MISSING: <order fact | product | what it replaced>
+
+tweaks:
+  - what: Which orders you pick
+    how: Pick buyers who ordered in the last few weeks. Memory fades fast, and the order facts only help if they remember the day.
+  - what: What you pre-fill
+    how: Date, weekday, time, device, items bought together and price. Anything not needed for the call stays off the sheet.
+  - what: Reward
+    how: A small gift card is the usual thank-you and it costs you cash. Say what you can offer and it goes into the invite line.
+  - what: Length of the call
+    how: Twenty to thirty minutes is the working range. Say if you need a shorter call and it drops the optional questions.
+
+judge:
+  - The sheet holds only order facts, no names, emails, phone numbers or addresses.
+  - The consent line is there, and the call can be done with notes only.
+  - Questions are about what happened and when, not about features or what to improve.
+  - Each sheet shows only the gap questions that the order facts leave open.
+  - The pattern note says its findings are leads, not proof.
+
+test:
+  - Run one call with a buyer you know. Check that reading the order facts first brings back details they would not have given otherwise.
+  - Ask the skill for two sheets for orders of the same item. The questions should differ where the order facts differ.
+  - Read your questions aloud. If any of them asks about features or about what they would improve, cut it.
+  - After the first three calls, ask for a draft pattern note and see whether any group has only one buyer.
+
+improve:
+  - Add your own consent wording and privacy rules to the skill file, so every sheet starts with them.
+  - Add questions about your own product's setup, so the "use now" step covers it.
+  - Add the way you store notes (a shared sheet, a folder) and delete them on a set date.
+  - Pair it with the Switch story mapper to map each call after it, and with the Job-based avatar builder to turn the groups into cards.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can fill the sheets from your order list and write the pattern note."}
+    - {name: "Shopify admin", why: "Its order export gives date, time, device and items for the buyer list."}
+  inputs:
+    - "Notes from the calls, in the buyer's words"
+    - "The buyer's first-week support emails, if they agree to you using them"
+    - "Your delivery dates for each order"
+
+terms:
+  - term: Buying-story interview
+    meaning: A call that builds a timeline of how and why someone bought, starting from the first thought.
+  - term: Buyer code
+    meaning: A label like B1 used on the sheet in place of a name.

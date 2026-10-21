@@ -1,0 +1,20 @@
+slug: google-ratings-and-store-badge-planner
+name: "Google ratings and store badge planner"
+summary: "Tell it your reviews and policies. Get a score and a plan for star ratings and the top store badge."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "An agency co-founder who runs Google and YouTube ads for direct-to-consumer brands (name not given)", used: "Product ratings eligibility and wait time, the routes to send reviews to Google, the five store quality areas and the badge lift claim"}
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "An agency owner who runs Google Ads for Shopify brands (name not given)", used: "Adding promotions with correct end dates, switching on product ratings from the review feed and working through the store quality scorecard"}

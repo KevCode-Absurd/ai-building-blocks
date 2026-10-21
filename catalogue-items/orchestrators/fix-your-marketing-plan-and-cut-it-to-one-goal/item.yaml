@@ -1,0 +1,21 @@
+slug: fix-your-marketing-plan-and-cut-it-to-one-goal
+name: "Fix your marketing plan and cut it to one goal"
+summary: "Give it your marketing plan. Get it in order, checked against the rules, and cut to one goal."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: [marketing-plan-order-checker, marketing-plan-law-checker, one-goal-marketing-plan-builder]
+steps:
+  - {uses: marketing-plan-order-checker, note: "Starts by sorting your plan into diagnosis, strategy and tactics and naming the gaps"}
+  - {uses: marketing-plan-law-checker, note: "Reads the rebuilt plan and returns the lines that break a rule, with a fix for each"}
+  - {uses: one-goal-marketing-plan-builder, note: "Takes the fixed plan's tactics and keeps only the few that serve one goal"}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/fix-your-marketing-plan-and-cut-it-to-one-goal/skeleton.yaml

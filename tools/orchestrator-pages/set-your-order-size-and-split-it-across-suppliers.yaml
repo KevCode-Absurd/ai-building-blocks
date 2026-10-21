@@ -1,0 +1,74 @@
+new_slug: set-your-order-size-and-split-it-across-suppliers
+name: Set your order size and split it across suppliers
+summary: Give it past sales and supplier quotes. Get a forecast, the cheapest order size and a split by supplier.
+job: plan-supply-chain
+thinking: high
+thinking_why: It runs three skills in a row and does cost sums at each step. Give it your strongest model.
+headline: Know how much to buy at once, and from which supplier
+subhead: Give it your past sales and what each supplier quotes. It forecasts demand, finds the order size with the lowest total cost, and splits that order across your suppliers within their minimums and lead times.
+explain: |
+  Most buyers order a round number, or whatever the supplier's price break suggests. Big orders tie up cash and fill the shelf. Small ones cost more in freight and admin. Putting it all with one supplier is cheap until that supplier is late.
+
+  The steps replace the round number with a sum. It forecasts your yearly demand from past sales. It then finds the order size where ordering cost and holding cost balance, and checks it against each price break. Last it splits that order across your suppliers for the lowest total cost, within each minimum order, and shows how risky it is to lean on one. The first step asks for sales history. The last step asks for the quote, minimum and lead time from each supplier.
+when:
+  - You buy stock in batches and pick the quantity by feel or by the supplier's price break.
+  - You have two or more suppliers for the same product and no rule for who gets what.
+  - A supplier offers a discount for a bigger order and you cannot tell if it pays.
+you_give:
+  - Past sales for the product, by week or month
+  - Your cost to place one order, such as freight, admin and checks
+  - Your cost to hold one unit for a year, or the cash and space it ties up
+  - Each supplier's price, price breaks, minimum order and lead time
+you_get:
+  - A demand forecast with the method used and how far off it was
+  - The order size with the lowest total cost, with each price break compared
+  - How much to buy from each supplier, and what each choice costs in total
+  - A note on the risk of relying on one supplier
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Do one product at a time. The sums change with each product's price and demand.
+  - Give real supplier quotes. If a cost is missing it is marked, not guessed.
+  - Check the holding cost with your accountant if you are unsure. It moves the answer most.
+how_it_works:
+  - title: Forecast demand
+    text: Reads your sales history, picks the method that fits the pattern, tests it on held-back months and gives the yearly demand the next step needs.
+  - title: Find the cheapest order size
+    text: Balances your cost per order against your cost to hold stock, finds the lowest-cost quantity and compares it with each supplier's price breaks.
+  - title: Split the order across suppliers
+    text: Lists each quote, minimum order and lead time, splits the order for the lowest total cost within those limits and shows the risk of leaning on one supplier.
+output_shape: |-
+  STEP 1: FORECAST
+    Pattern | method | forecast by period | yearly demand | miss on held-back months
+
+  STEP 2: ORDER SIZE
+    Inputs used | lowest-cost quantity | total cost at each price break | the pick
+
+  STEP 3: SUPPLIER SPLIT
+    Supplier | quantity | cost | lead time | limit hit | total cost | single-supplier risk
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Holding cost
+    how: Give it as a share of unit cost per year if you can. If you do not know it, step 2 uses a stated assumption and says so.
+  - what: Short shelf life
+    how: Tell it the product expires. A big order that spoils costs more than the sum shows, so cap the quantity.
+  - what: Supplier limits
+    how: Add any cap on what a supplier can make per month. Step 3 will not place more than that.
+  - what: Cash limit
+    how: Give the most you can pay at once. A cheap large order you cannot fund is not a plan.
+judge:
+  - The order size comes from your demand and costs, not from a round number.
+  - Each supplier price break is compared on total cost, not only on unit price.
+  - The split respects every minimum order and lead time.
+  - The risk of a single supplier is stated, with the cost of spreading the order.
+  - Any cost you did not supply is marked as an assumption.
+test:
+  - Redo the order-size sum by hand with your numbers. It should land close to the figure in step 2.
+  - Add the cost of the split by supplier. It should equal the total step 3 reports.
+  - Change the holding cost by a third and rerun step 2. See if the pick moves. If it moves a lot, the pick is fragile.
+improve:
+  - Keep your order cost and holding cost in your brand file so the next run starts from step 2.
+  - Rerun when a supplier changes price or lead time.
+  - After each order, note the real lead time. Late supplies change the split.

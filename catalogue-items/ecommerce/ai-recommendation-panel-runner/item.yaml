@@ -1,0 +1,24 @@
+slug: ai-recommendation-panel-runner
+name: "AI recommendation panel runner"
+summary: "Give it your store and shopper questions. Get a record of who AI names, sources cited and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: research
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The ultimate guide to AEO: how to get ChatGPT to recommend your product", by: "Ethan Smith, SEO agency CEO, on a product-growth podcast", used: "Control and test groups of questions, repeat runs, question variants, and share of voice across assistants"}
+  - {title: "Generative Engine Optimization: Is It Safe and How to Do It the Right Way", by: "Harpreet Singh, SEO practitioner, interviewed on a daily SEO show", used: "Comparing a logged-out search with a logged-in one, and why runs with no web search give no citations"}
+  - {title: "AI SEO Course for Beginners: Complete AEO Tutorial", by: "Sam Oh", used: "Cited, mentioned and absent as three states, and link rates by assistant"}
+  - {title: "Learn Everything About SEO & AI SEO in 50 Minutes!", by: "An SEO educator from an SEO software company's channel", used: "Manual tests in a fresh private window and logging rivals"}
+  - {title: "Semrush Tutorial 2026 - Master SEO & AEO with Semrush One", by: "A tool vendor's tutorial presenter", used: "Tracking mentions and citations per AI tool and acting on the weakest tool"}

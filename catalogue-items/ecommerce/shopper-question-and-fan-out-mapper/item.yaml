@@ -1,0 +1,23 @@
+slug: shopper-question-and-fan-out-mapper
+name: "Shopper question and fan-out mapper"
+summary: "Give it your products and customer questions. Get the questions shoppers ask AI, the sub-questions it runs and your gaps."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The ultimate guide to AEO: how to get ChatGPT to recommend your product", by: "Ethan Smith, SEO agency CEO, on a product-growth podcast", used: "Turning paid search money terms into questions, mining sales and support questions, and the long tail of chat prompts"}
+  - {title: "AI SEO Course for Beginners: Complete AEO Tutorial", by: "Sam Oh", used: "Fan-out numbers and the caveat that fan-out queries are synthetic with no search volume"}
+  - {title: "Generative Engine Optimization: Is It Safe and How to Do It the Right Way", by: "Harpreet Singh, SEO practitioner, interviewed on a daily SEO show", used: "How to read ChatGPT's own searches in the browser"}
+  - {title: "The Complete AI SEO Course 2026", by: "An SEO community founder", used: "People Also Ask and fan-out as two sets of informational questions"}

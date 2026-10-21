@@ -1,0 +1,131 @@
+new_slug: inbox-placement-recovery-planner
+name: "Inbox placement recovery planner"
+summary: "Give it your open rates and engaged counts. Get a score out of 100 and a recovery plan."
+job: write-emails
+thinking: medium
+thinking_why: "It reads numbers, picks a cause and builds a staged plan. A mid-size model does this reliably."
+
+headline: "Inbox placement recovery planner"
+subhead: Give it your open and click rates, spam complaints and the size of your engaged groups. It finds the likely cause of low opens, scores your inbox health out of 100 and builds a staged plan, with gates for when to widen or hold.
+
+explain: |
+  When opens fall below about 40 percent, your emails may be landing in spam or the promotions tab. Inbox providers watch how people react to your mail. If few open it, they send more of it to spam. If most of your sends go to people who ignore you, the problem grows.
+
+  This skill diagnoses first, because a technical fault needs a different fix. Then it builds a recovery ramp. You pause the flows people rarely open, send strong campaigns only to the people who opened or clicked in the last 14 days, and widen the audience step by step when opens reach about 50 percent. The ramp costs sales for two to six weeks, since you email fewer people, and the plan says so.
+
+when:
+  - Your opens dropped and your emails seem to land in spam or promotions.
+  - Your open rate is under 40 percent on your best segment.
+  - Your email tool shows spam complaints rising, or a new sending domain is not performing.
+
+you_give:
+  - Open and click rates for your last 8 campaigns
+  - Engaged counts at 14, 30, 60 and 90 days
+  - A list of your live flows
+  - Your sending domain status and spam complaint and unsubscribe rates (optional)
+
+you_get:
+  - A health score out of 100, with what was measured and how
+  - The likely cause, set-up or engagement
+  - A weekly plan with gates for each stage, and which flows stay on
+  - A tracker of open rate by segment, with rules to widen or hold
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your last 8 campaign results and your engaged counts at 14, 30, 60 and 90 days.
+  - List your live flows and say whether your email tool shows a domain warning.
+  - Start with the set-up fixes if the skill finds any, then begin the ramp.
+  - Fill in the tracker after each stage and follow the gates.
+
+how_it_works:
+  - title: Diagnoses the cause
+    text: With no domain warning in your tool, low opens usually mean weak emails or a poor sender reputation. Open rates under 30 to 35 percent on engaged sends point to an inbox problem.
+  - title: Checks set-up
+    text: A branded sending domain, a default sender on it and a DMARC record. These rarely cause the problem alone, so they are checked, not assumed.
+  - title: Scores inbox health
+    text: Six measures, each against a target, add up to 100. The score shows its sum so you can check it.
+  - title: Builds the segments
+    text: Engaged groups for 14, 30, 60 and 90 days, made of people who opened or clicked and are still subscribed with no bounces.
+  - title: Plans the ramp
+    text: Pause all flows except welcome, browse, cart, checkout and post-purchase. Send 3 strong campaigns a week to the 14-day group for two weeks.
+  - title: Sets the gates
+    text: Widen to 30, 60, then 90 days when opens reach about 50 percent. If not, repeat the stage for two more weeks, then drop site activity from the segment.
+  - title: Improves the emails
+    text: Live text, real product blocks, conversational subject lines and short copy, so the emails earn the opens.
+
+output_shape: |
+  INBOX HEALTH  <n>/100
+  Open <n>/30 | Click <n>/15 | Complaints <n>/20 | Unsubscribes <n>/10
+  Engaged share <n>/15 | Set-up <n>/10
+  Measured: <the last 8 campaigns, or what was given>
+
+  DIAGNOSIS
+  <likely cause: set-up | engagement | both | not enough data>
+
+  FIX FIRST (set-up)
+  <missing branded domain, default sender, DMARC>
+
+  RECOVERY PLAN
+  Stage 1 (weeks 1-2): flows on <list>. Send <n> a week to the 14-day group.
+  Gate: open rate <n>% or higher? Yes -> stage 2. No -> repeat 2 weeks.
+  Stage 2, 3, 4: 30, 60, 90 days (same gate)
+  Then: 90-day group is the base list. One send a month to everyone still subscribed.
+
+  EMAIL FIXES
+  <live text, alt text, subject lines, button, product grid>
+
+  TRACKER
+  <stage | segment | sends | open | click | complaints | decision>
+  MISSING: <results | engaged counts | flow list>
+
+tweaks:
+  - what: Your engaged counts
+    how: Give counts for all four windows. The plan needs them to know where to start and how much room it has to widen.
+  - what: Your gate
+    how: The source gates at 50 percent opens. A store with a lower normal rate can set its own gate, but should say why.
+  - what: Flows you keep on
+    how: List every live flow. The skill keeps the ones people open and pauses the rest during the ramp.
+  - what: Clicks and revenue
+    how: Add clicks and revenue per send. Mail privacy features inflate opens, so the plan reads them together.
+  - what: Timing
+    how: Give your sales dates. A ramp costs sales for 2 to 6 weeks, so it should not run into a peak.
+
+judge:
+  - The score shows its sum and what it measured, and says which measures were not given.
+  - The diagnosis names a cause and the numbers behind it.
+  - Every stage has a gate with a number and an action for both outcomes.
+  - The plan says what it costs, a dip in sales for a few weeks.
+  - Nothing in it asks you to buy, rent or scrape a list, or to email people who opted out.
+  - Source results are labeled as one brand's case.
+
+test:
+  - Give it numbers you know point to engagement, with a working domain. It should not tell you to rebuild your DNS first.
+  - Run it twice on the same data. The score and the first stage should match.
+  - Work out the score by hand from the table. The sum should match.
+  - Follow stage 1 and compare your real result with its gate after two weeks.
+
+improve:
+  - Put your real open, click and complaint targets in the skill file once you know your normal.
+  - Add your sale dates so the ramp is planned around them.
+  - Add your email tool's segment names for the 14, 30, 60 and 90 day groups.
+  - Save each stage's result to your brand file so the next recovery starts from it.
+  - Pair it with the email setup health checker for the technical side and the engaged list expander for the long-term widening.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Its segments build the 14 to 90 day groups, and its delivery reports show opens by inbox provider."}
+    - {name: "Google Postmaster Tools", why: "It shows your domain reputation and spam rate for Gmail, which tells you if the problem is real."}
+  inputs:
+    - "Delivery reports by inbox provider and country"
+    - "Results of a seed test, if you run one"
+    - "Your last 8 campaign emails, to check the layout and the subject lines"
+
+terms:
+  - term: DMARC
+    meaning: A DNS record that tells inbox providers how to treat mail that claims to come from your domain.
+  - term: Engaged segment
+    meaning: The people who opened or clicked within a set number of days.
+  - term: Inbox placement
+    meaning: Whether your email lands in the inbox, the promotions tab or spam.
+  - term: Seed test
+    meaning: Sending to test addresses at different inbox providers to see where the mail lands.

@@ -1,0 +1,131 @@
+new_slug: brand-playbook-fit-checker
+name: "Brand playbook fit checker"
+summary: "Name a big brand and its tactic. Get a fit score out of 100, a verdict per tactic and a small test."
+job: study-competitors
+thinking: high
+thinking_why: "It judges what is hidden behind public data and must separate fact from guess, so a stronger model reasons more carefully."
+
+headline: "Brand playbook fit checker"
+subhead: Name a big brand and the tactic you want to copy, and paste its ads and pages. It finds what sits outside the ad account that makes the tactic work. You get a fit score out of 100 for your store, a yes, adapt or skip for each tactic, and one small test.
+
+explain: |
+  When a big brand's ads look great, it is easy to copy them and see nothing happen. The ads may be working because people already know the brand, because it has shops and famous faces, or because outside funding pays for acquisition. Your ads have none of that.
+
+  This skill separates the ad account from what surrounds it. It asks if the ads would work from a cold start with no awareness, how many ads are aimed at people who already know the brand, what you cannot see (spend per ad, margins, funding), and whether a headline number is observed or modelled. It lists what the brand depends on, what carries over, and what claim risk comes with it. Each tactic gets a verdict and a fit score shows how much still works for you. Public data hides spend, so it judges structure, not performance.
+
+when:
+  - You saw a big brand's ad library and want to copy what it does.
+  - A founder or agency says "do what that brand does" and you want to know if it will work for you.
+  - A public company quotes a strong number and you want to know how much of it is observed.
+
+you_give:
+  - The brand and the tactic you want to copy
+  - Screenshots or links of its ad library and landing pages
+  - Public financials, if the company is listed (optional)
+  - Your own price, cash, team size and how well known your brand is
+you_get:
+  - A fit score out of 100, with what was measured and how
+  - What sits outside the ad account that makes it work
+  - What carries over now, with changes
+  - What to skip and why
+  - One small test to try
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name the brand and the one tactic. Say why you want it.
+  - Attach screenshots of its ads and pages, or paste links.
+  - Tell it your price, cash, team and how well known you are.
+  - Read the verdicts, then run the small test before you copy anything.
+
+how_it_works:
+  - title: Splits account from surroundings
+    text: Asks what carries the brand outside the ad account, such as celebrity seeding, shops, press, brand search and loyalty.
+  - title: Runs the cold start test
+    text: Asks if these same ads would work with no brand awareness. The source says the same ads would likely return about 0.4 for a new brand.
+  - title: Checks the awareness mix
+    text: If over 90 percent of ads aim at people who already know the brand, the account is a way to reach known buyers, not to find new ones.
+  - title: Lists what you cannot see
+    text: Spend per ad, offer margin and funding are hidden. Ad library "winners" are guesses.
+  - title: Checks observed against modelled
+    text: For listed companies, asks about the time horizon, cohort age, cash after outside funding and whether one strong month was annualised.
+  - title: Lists dependencies and what travels
+    text: Dependencies are things you cannot copy. What travels can be started today.
+  - title: Marks claim risk
+    text: Aggressive health claims may cut cost to win a customer but add legal and ad account risk.
+  - title: Scores and decides
+    text: Gives yes, adapt or skip for each tactic, a fit score, and the smallest test.
+
+output_shape: |
+  VERDICT  <good fit | partial fit | poor fit> for <your store>: <one reason>
+
+  WHAT SITS OUTSIDE THE AD ACCOUNT
+  <celebrities | shops | press | brand search | loyalty | funding> | evidence: <seen | inferred>
+
+  COLD START TEST
+  Would these ads work with no awareness? <yes | no | unknown>  Share of ads aimed at known buyers: <n%>
+
+  WHAT YOU CANNOT SEE
+  <spend per ad | margin | funding | other>
+
+  OBSERVED OR MODELLED (listed company only)
+  <number> | <observed | modelled> | <horizon and cohort age>
+
+  TACTICS
+  <tactic> | <depends | travels | adapt> | verdict: <yes | adapt | skip> | change: <what to change>
+
+  SCORE  <n>/100 = average of tactic scores (travels 100, adapt 50, depends 0) = (<sum>) / <count>
+  Unknown tactics: <list>, not counted
+
+  SMALL TEST
+  <the one test, cost, how long, what result means go>
+  CLAIM RISK: <note and a line to check with a qualified person>
+  MISSING: <what was not supplied>
+
+tweaks:
+  - what: How many tactics you list
+    how: Name each tactic on its own. A fit score for one tactic is clearer than a score for the whole brand.
+  - what: Evidence you attach
+    how: Ad library screenshots, landing pages and the shareholder letter give the most. Spend per ad is not public, so the skill treats winners as guesses.
+  - what: Your situation
+    how: Price, cash, team and how well known you are decide what carries over. Be exact about them.
+  - what: Weights
+    how: By default each tactic counts equally. If one tactic carries most of the result, tell it and it will weight that one more.
+
+judge:
+  - Each tactic has a verdict and a reason tied to your store.
+  - Every claim about the brand is marked as seen or inferred.
+  - Hidden numbers (spend, margin, funding) are listed as unknown.
+  - The score shows how it was worked out, with the sum.
+  - There is one small test with a cost and a go rule.
+
+test:
+  - Give it a brand you know well. Does the list of outside advantages match what you know?
+  - Run it twice on the same input. Verdicts should match. If they flip, the evidence is thin and the skill should say so.
+  - Pick a tactic marked "travels" and run the small test. Did it work at your scale?
+  - Check one quoted number against the source it came from.
+
+improve:
+  - Add your own price, cash and team to the skill file so every check starts from them.
+  - Add the brands you follow and the tactics you already tried.
+  - Add your claim rules, such as words you will never use for health.
+  - Pair it with an ad library teardown counter first, then a test planner for the small test.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ad Library", why: "Free and public. Shows a brand's live ads, their start dates and formats, but not their spend."}
+    - {name: "Any good chat AI", why: "Reasoning over screenshots and pasted pages works in any current chat AI that reads images."}
+  inputs:
+    - "A count of the brand's active ads by format, from an ad library teardown"
+    - "The brand's shareholder letter or annual report, if it is listed"
+    - "Its landing pages and offer pages, saved with dates"
+    - "Your own price, cash and team"
+
+terms:
+  - term: Ad library
+    meaning: A public list of ads a brand is running, such as Meta's Ad Library.
+  - term: Observed or modelled
+    meaning: Observed means it happened and was counted. Modelled means it was worked out by a forecast.
+  - term: LTGP to CAC
+    meaning: Lifetime gross profit from a customer divided by what it cost to win them.
+  - term: Cold start
+    meaning: Starting with no one knowing your brand.

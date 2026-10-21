@@ -1,0 +1,36 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md).
+id: spec-a-feature-and-make-a-legal-checked-launch-call
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: spec-a-feature-and-make-a-legal-checked-launch-call
+  name: "Spec a feature and make a legal-checked launch call"
+  summary: "Give it a feature idea and launch plan. Get a spec, a legal risk memo and a go or no-go call."
+  when: "you are about to build or ship a feature that touches data, claims or new users, and want the risks named before the date is locked."
+  job: build-product
+  level: advanced
+steps:
+  - name: "Feature spec writer"
+    skill: feature-spec-writer
+    job: ops
+    from: "skill: feature-spec-writer"
+    method: ["Pin down the feature, the user problem and who has it", "Write goals, non-goals and success measures", "List requirements with acceptance checks", "Note constraints, open questions and risks"]
+    inputs: [question]
+    outputs: [document]
+    note: "Turns the idea into a spec with goals, non-goals and acceptance checks."
+  - name: "Launch legal reviewer"
+    skill: launch-legal-reviewer
+    job: ops
+    from: "skill: launch-legal-reviewer"
+    method: ["State what is launching and who will use it", "Flag any AI use, new data, new vendors, claims or places", "Walk each legal area and rate the risk", "List what to fix before launch and who should sign off"]
+    inputs: [document]
+    outputs: [audit_report]
+    note: "Reads the spec as the product document and flags legal risks by area. A first check, not legal advice."
+  - pause: "Fix what the memo flags, or ask a lawyer about the high-rated items, then update your launch plan."
+  - name: "Go or no-go launch checker"
+    skill: go-or-no-go-launch-checker
+    job: strategy
+    from: "skill: go-or-no-go-launch-checker"
+    method: ["Read the launch plan and quote what it says", "Test it against six common faults", "Ask whether pride or anger is driving the plan", "Run three checks on readiness, the other side and timing", "Give a go, wait or no-go call with the reason"]
+    inputs: [audit_report, plan]
+    outputs: [audit_report]
+    note: "Weighs the legal memo against your updated launch plan and makes the call."

@@ -1,6 +1,6 @@
 # Research a topic properly: AI Blocks
 
-> 72 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 75 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [16S microbiome read processor](https://useaiblocks.com/skills/16s-microbiome-read-processor): Give it paired 16S reads. Get checked sequence variants and species labels, with the steps kept so you can repeat them.
 - [AI answer doubt check](https://useaiblocks.com/skills/ai-answer-doubt-check): After any AI explanation, you name one place it could be wrong, one thing to check and one source to try.
@@ -15,10 +15,13 @@
 - [Cancer imaging data finder](https://useaiblocks.com/skills/cancer-imaging-data-finder): Describe the scans you need. Get public cancer images found, licence-checked and ready to download.
 - [Carbon-13 flux estimator](https://useaiblocks.com/skills/carbon-13-flux-estimator): Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit checks and a profile you can trust.
 - [Cell direction velocity analyst](https://useaiblocks.com/skills/cell-direction-velocity-analyst): Give it single-cell counts with spliced reads. Get cell direction arrows, timing and the genes that drive them.
+- [Cited research assistant](https://useaiblocks.com/agents/cited-research-assistant): Give it a question. Get a report where every claim has a source, or is marked unsourced after three rounds.
 - [Cited research report writer](https://useaiblocks.com/skills/cited-research-report-writer): Ask a question. Get a cited report with each claim checked against its source quote. Uses many tokens. Scrapes sites.
 - [Clinical research evidence packager](https://useaiblocks.com/skills/clinical-evidence-package): Give it study data that is safe to share. Get evidence profiles, cohort and survival summaries and privacy notes.
+- [Compare a list of options and get one checked report](https://useaiblocks.com/workflows/compare-a-list-of-options-and-get-one-checked-report): Name a topic. Get a list of items to compare, each one researched, and one report without unsure answers.
 - [Conference talk slide maker](https://useaiblocks.com/skills/conference-talk-slide-maker): Give it your finished paper. Get talk slides, speaker notes and a script for a conference talk.
 - [CRISPR screen hit ranker](https://useaiblocks.com/skills/crispr-screen-hit-ranker): Give it guide read counts. Get quality checks and a ranked gene hit list with effect sizes.
+- [Draft a paper, review it and fit your journal's rules](https://useaiblocks.com/workflows/draft-a-paper-review-it-and-fit-your-journals-rules): Name your topic and bring your results. Get sources, a draft, a fair review and a paper fitted to the journal.
 - [Drug docking pose ranker](https://useaiblocks.com/skills/drug-docking-pose-ranker): Give it a protein and a molecule. Get predicted binding poses ranked by confidence, with checks on each.
 - [Drug exposure model builder](https://useaiblocks.com/skills/drug-exposure-model-builder): Give it concentration-over-time data. Get fitted drug exposure models, dose estimates and a clear write-up of what holds.
 - [Flow cytometry gating analyst](https://useaiblocks.com/skills/flow-cytometry-gating-analyst): Give it flow cytometry files. Get compensated, gated cell populations and a gating plan you can repeat.

@@ -1,0 +1,128 @@
+new_slug: store-keyword-validator
+name: "Store keyword validator"
+summary: "Paste products and keyword data. Get keywords worth a page, page types and a score out of 100."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It checks each term against clear thresholds, so a mid-size model is enough."
+
+headline: "Store keyword validator"
+subhead: Paste your products and keyword data from a tool or Google's free Keyword Planner. It tests each term for buying intent, volume, difficulty and what ranks, picks a page type and an owner page, and gives you the terms to track and a score out of 100.
+
+explain: |
+  Ranking first for the wrong search brings visitors who never buy. A keyword with big volume may be a how-to search. A term with low difficulty may have no buyers behind it. Teams then build pages for words that look good in a sheet.
+
+  This skill tests every term four ways: does the searcher want to buy, is the volume high enough, is the difficulty low enough for your site, and does the results page show a page type you can build. It uses the thresholds from the sources and says which ones it used, because the sources do not agree. It keeps one keyword per page, names the page that owns each term, picks three to five to track, and scores the list.
+
+when:
+  - You have a pile of keyword ideas and need to know which are worth a page.
+  - You are about to build new collections and want proof each one can rank.
+  - You only have the free Keyword Planner and want to know how far to trust it.
+
+you_give:
+  - Your products and collections, and what each page is about
+  - Keyword data from a tool, or free Keyword Planner ranges
+  - Words a buyer would type to find you (optional)
+  - Two or three rival store addresses (optional)
+  - How old your site is (optional)
+you_get:
+  - A keyword table with intent, volume, difficulty, what ranks, page type and owner page
+  - One main and two supporting keywords per page, and rejected terms with reasons
+  - Three to five terms to track this month
+  - A score out of 100 for the list, with how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your products and the keyword export. For free Keyword Planner data, paste the volume and bid ranges as they appear.
+  - Say how old your site is, since a new site uses lower thresholds.
+  - Check the terms it marks as keep by searching them yourself and looking at page one.
+  - Set up rank tracking for the three to five terms it picks, and build the owner pages.
+
+how_it_works:
+  - title: Finds ideas
+    text: Free routes first, such as Keyword Planner, Google Trends, autocomplete and a rival's web address.
+  - title: Reads the gap
+    text: With a paid tool, it separates keywords rivals rank for that you do not (missing) from ones where you rank far lower (weak).
+  - title: Tests intent
+    text: Keeps buying terms, rejects how-to terms, and uses the top 10 results as a 30-second test.
+  - title: Applies thresholds
+    text: Picks the row that fits the page type and site age, and shows its choice. It never averages the sources.
+  - title: Checks the results page
+    text: Collections ranking means a collection can win. Blogs mean write a blog. A big brand in the top spots means skip.
+  - title: Assigns owners
+    text: One keyword per page, with one main and two supporting terms. No product page and collection on one term.
+  - title: Scores the list
+    text: Counts the tests passed out of the tests run, and shows the sum.
+
+output_shape: |
+  KEYWORD TABLE
+  <term> | intent: <...> | volume: <n or range> | difficulty: <n or n/a>
+    CPC or bid: <...> | what ranks: <...>
+    page type: <...> | owner page: <...> | verdict: <keep | reject: reason>
+
+  PER PAGE
+  <page> | main: <...> | supporting: <...>
+
+  TRACK THIS MONTH
+  <3 to 5 terms>
+
+  THRESHOLDS USED
+  <row and why>
+
+  SCORE  <n>/100 (<tests passed> of <tests run> x 100)
+         <n>/100 with rejected terms removed
+  NOT RUN: <test, and the data needed>
+  CLASHES: <pages on one term>
+  MISSING: <what>
+
+tweaks:
+  - what: Site age
+    how: Say if the site is new. A very new site starts at difficulty 30 or less and volume of 100 or more. An older one uses difficulty under 40 for money pages.
+  - what: Page type
+    how: Say whether the term is for a collection variant or a product page. Collection variants use difficulty under 35.
+  - what: Where your data comes from
+    how: Name the tool. Free Keyword Planner gives ranges only, so it relies more on the bid range and the results page.
+  - what: Terms you know are real
+    how: Tell it which low-volume terms your buyers use. It keeps them and marks them as a judgement call.
+  - what: Country and ad costs
+    how: Say where you sell. In places where ads are cheap, a cost per click over $1 drops good terms, so it treats the figure as a signal only.
+
+judge:
+  - Every term has a verdict with a reason, including the rejected ones.
+  - It states which thresholds it used and why.
+  - Each page has exactly one main keyword, and no two pages share one.
+  - Page types match what the results page shows.
+  - The score line shows the sum, and tests with no data are listed as not run.
+
+test:
+  - Give it a how-to term and a "buy" term for the same product. It should reject the first and keep the second.
+  - Give it a term where a big brand holds the top results. It should mark it skip.
+  - Paste the same list twice. The verdicts should match.
+  - Search three of its kept terms yourself. The top 10 should look like the page type it chose.
+
+improve:
+  - Put your own thresholds into the skill file once you know what your site can rank for.
+  - Add your product names and buyer words to the seed phrases.
+  - Save the table and rerun the skill monthly, comparing tracked terms to see which pages moved.
+  - Pair it with the Store keyword map builder to turn kept terms into a page-by-page map.
+
+works_best_with:
+  tools:
+    - {name: "Google Keyword Planner", why: "Free inside a Google Ads account. Gives volume ranges, bid ranges and ideas from a rival's web address."}
+    - {name: "Semrush", why: "Gives difficulty scores, intent labels and a gap view that shows missing and weak keywords."}
+    - {name: "Google Trends", why: "Free. Its related searches help find terms buyers use."}
+    - {name: "Any good chat AI", why: "Runs the tests on a pasted list and explains each verdict."}
+  inputs:
+    - "A keyword gap export against two or three rivals"
+    - "Your Search Console queries, if the store is live"
+    - "Customer words from reviews and support emails"
+    - "A rank tracking sheet from earlier months"
+
+terms:
+  - term: Keyword difficulty
+    meaning: A tool's estimate of how hard it is to rank on page one for a term. Each tool scores it differently.
+  - term: Cost per click
+    meaning: What advertisers pay for one click on an ad for that term. A higher figure often means the term earns money.
+  - term: Commercial intent
+    meaning: The searcher is comparing options before buying.
+  - term: Transactional intent
+    meaning: The searcher is ready to buy now.

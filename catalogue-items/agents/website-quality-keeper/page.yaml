@@ -1,0 +1,98 @@
+new_slug: website-quality-keeper
+name: Website quality keeper
+summary: Check your site each week. See what got slower or harder to find since last time, with a ranked fix list.
+job: build-websites
+thinking: medium
+thinking_why: It runs up to six checks and compares them with last time, but each check is a read-and-report job. A mid-range model is enough.
+headline: Website quality keeper
+subhead: Give it your key pages, and your site code and speed reports if you have them. It checks speed, access, page tags and search indexing, compares each with last run, looks first at what got worse, and hands back one ranked fix list for you to approve.
+explain: |
+  Websites slide. A new image makes a page slow. A new page goes up with no title. A button loses its label. A link breaks after a move. None of it is loud, and each one costs visitors or search traffic until someone notices.
+
+  This agent checks the same things every week and after each release, and keeps the numbers. It tells you what is new, what is old and what you fixed, not just a long list. If a page got clearly slower, a new access problem appeared or a page dropped out of search, it puts that first. It cannot measure speed on its own, so it asks for your PageSpeed report and says plainly when it did not have one. It never edits your site. You get a ranked fix list and say yes to each fix.
+when:
+  - You run a site that changes often and want the same quality checks every week.
+  - You just released something and want to know what it broke.
+  - Search traffic or page speed dipped and you want the likely cause ranked.
+you_give:
+  - The addresses of your home page and 3 to 8 pages that matter most
+  - A PageSpeed Insights or Lighthouse report for each of them (best)
+  - Your site code, if you want the access scan (optional)
+  - A Search Console Pages export (optional)
+you_get:
+  - Scores and counts against last run, with new, old and fixed problems apart
+  - An alarm line if speed, access or indexing got clearly worse
+  - One ranked fix list, each with its gain and effort
+  - A list of the checks it could not run, and what would let it run them
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to check your site.
+  - Give it your key pages, and attach your speed reports and code if you have them.
+  - The first run sets the base. From the second run on it says what changed.
+  - Read the fix list. Say yes to the fixes you want, and it makes only those, then rechecks them up to two times.
+  - Run it again next Monday and after each release.
+how_it_works:
+  - title: Load the memory
+    text: Reads last run's scores, the open problems with their dates and the problems you chose to leave.
+  - title: Check speed
+    text: Reads each key page and your speed report for the score, the three Core Web Vitals and the main cause.
+  - title: Check access
+    text: Scans your code for access problems and counts them by severity. Fixes wait for your yes.
+  - title: Check tags and search
+    text: Finds missing titles and share cards, pages not indexed, broken links and redirect chains.
+  - title: Compare and choose the path
+    text: Marks each problem new, old or fixed. A clear speed drop, a new critical access problem or a lost page goes to the top.
+  - title: Sort and hand back
+    text: Puts every finding in one bucket, ranks by gain and effort, and stops for your yes. After fixes it rechecks, up to two times.
+output_shape: |-
+  THIS RUN
+    Speed <score> (last <score>) | Access: <c> critical, <m> major | Not indexed <n> | Broken links <n> | New <n> | Old <n> | Fixed <n>
+
+  ALARM
+    <what got worse and by how much> or none
+
+  FIX LIST TO APPROVE (most important first)
+    1. <fix> | page: <page> | bucket: <fix now | look into | test> | gain: <gain> | effort: <effort> | from: <step>
+
+  NOT MEASURED
+    <check> | needs: <what to supply>
+
+  WATCH NEXT RUN
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: A speed report for each key page
+    how: Without it the agent cannot give scores. It names likely causes only and marks the numbers missing.
+  - what: Your list of key pages
+    how: Pick the pages that bring in visitors or sales. Eight is plenty. More pages make the run long and the list noisy.
+  - what: What changed since last run
+    how: A new app, a new theme or a redesign explains many drops. Tell it and it checks those first.
+  - what: The size of a speed drop that counts
+    how: The starting point is 10 points. Raise it if your scores jump around from run to run.
+judge:
+  - Every number is shown against the last run, or the first run is named as the base.
+  - Speed numbers come from a report, not a guess.
+  - New problems are kept apart from old ones.
+  - No fix is called done unless a recheck showed it gone.
+  - Nothing on your live site was changed without your clear yes.
+test:
+  - Run it on a site you know, then add a large image to one page and run it again. It should flag the page as slower.
+  - Remove the title from a test page. The next run should list it as new.
+  - Run it twice on the same data. The fix list should match, apart from wording.
+improve:
+  - Move problems you decided to leave into the accepted file with a reason, so they stop coming back.
+  - Keep a note of each release in the folder, so a drop can be tied to a date.
+  - If you have no code, leave out the access scan and use a browser access checker beside it.
+  - Add a real person test now and then. A scan finds code problems, not every barrier a visitor meets.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the folder, read your site code and run after each release.
+    - name: PageSpeed Insights
+      why: Free reports for each key page, with the scores and Core Web Vitals the agent needs.
+    - name: Google Search Console
+      why: The Pages report shows which pages are not indexed and why.
+  inputs:
+    - A list of releases with dates
+    - Your top pages by visits

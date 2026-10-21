@@ -1,0 +1,22 @@
+slug: email-draft-reviewer
+name: "Email draft reviewer"
+summary: "Paste an email. Get cuts, a pacing map, subject fixes, a score out of 100 and a verdict."
+category: ecommerce
+type: skill
+role: check
+job: email
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [claude-hopkins]
+credits:
+  - {title: "8 Hour Copywriting Course For Beginners", by: "A freelance copywriting YouTuber (video)", used: "Rules of thumb from email critiques: lead length, email length, subject line length, filler words, pacing and one call to action"}
+  - {title: "Secrets of a seven-figure copywriter (copywriting 101 talk)", by: "Jamie, a marketing consultant (conference talk)", used: "Writing to the reader with you instead of I and we, one idea per sentence, and resting a draft before reading it aloud"}
+  - {title: "Scientific Advertising", by: "Claude C. Hopkins (book)", used: "Cutting boasting and self-serving phrases"}

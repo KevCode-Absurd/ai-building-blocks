@@ -1,0 +1,23 @@
+slug: untapped-avatar-finder
+name: "Untapped avatar finder"
+summary: "Give it a crowded product. Get rivals' buyers, three or four unserved groups and a ranked pick."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: persona}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Scale to $100k a month with untapped avatars", by: "Anthony, a drop shipping YouTuber", used: "The four-step pipeline: map rivals' buyers in the Meta Ad Library, find other groups in Amazon review stories, check size on Reddit, then choose"}
+  - {title: "8 years of marketing advice in 70 minutes", by: "Mark, a paid ads operator and mentor", used: "Carving a small segment inside a proven market and owning all of it, selling into proven demand, and asking what the opposite of the top rivals would be"}
+  - {title: "$1B Marketer Explains: How to Scale an Ecommerce Brand in 2026", by: "Eddie, an agency owner", used: "Layering a group by pain and buying power to make the message sharper, and the example of narrowing to raise what buyers will pay"}

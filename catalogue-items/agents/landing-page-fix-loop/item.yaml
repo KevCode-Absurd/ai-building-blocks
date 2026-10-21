@@ -1,0 +1,28 @@
+slug: landing-page-fix-loop
+name: "Landing page fix loop"
+summary: "Give it your page, ad and facts. It audits, rewrites what fails, checks again, and stops when the page passes."
+category: agent
+type: agent
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: landing_page, required: true}
+  - {type: brand_brain, required: true}
+  - {type: ad_copy, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: landing_page}
+  - {type: audit_report}
+uses: [landing-page-auditor, landing-page-30-point-checker, customer-question-finder, ad-matched-landing-page-writer, marketing-copy-sweeper]
+steps:
+  - {uses: landing-page-auditor, note: "Round one, and again after any rewrite of the first screen: the page read three ways, ranked findings and a score."}
+  - {uses: landing-page-30-point-checker, note: "Every round: the gate. Thirty yes-or-no checks, deal-breakers named and a checks score."}
+  - {uses: customer-question-finder, note: "Only when customer reviews or questions are given: which doubts the page leaves unanswered, round one and after the rewrite."}
+  - {uses: ad-matched-landing-page-writer, note: "Only when the first screen does not match the ad, a deal-breaker is open, or customer doubts are unanswered: rewrites the failing sections from the facts given."}
+  - {uses: marketing-copy-sweeper, note: "After each rewrite: tightens the new copy for clarity, voice, proof and calls to action without adding claims."}
+asks_before: [publishing or replacing the live page, editing a page in a page builder or theme, changing a price, offer or guarantee on the page, adding a claim, review or rating that is not in the facts given]
+origin: own
+version: 1.0.0
+example_pending: true

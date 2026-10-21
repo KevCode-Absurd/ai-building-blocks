@@ -1,0 +1,128 @@
+new_slug: factory-shortlist-vetter
+name: "Supplier shortlist vetter"
+summary: "Give it your spec and factory answers. Get each scored out of 100, red flags and a pick."
+job: plan-supply-chain
+thinking: high
+thinking_why: "It weighs many small signals and spots gaps in what factories say, so a stronger model catches more red flags."
+
+headline: "Supplier shortlist vetter"
+subhead: "Give it your product spec, the factories you found and their answers. It plans the outreach and video-call questions, checks documents, scores each factory out of 100, and maps where one supplier could sink you. You get a pick, red flags and a backup plan."
+
+explain: |
+  A factory listing is a sales page. Anyone can claim to make your product, hold the right certificates and have capacity to spare. Founders in the sources lost money by trusting a contract manufacturer before vetting it, or by depending on one plant until a bigger customer bought its capacity.
+
+  This skill treats every listing claim as something to check. It tells you how to build a shortlist of factories, what to ask on a video call, and which documents to request. It scores each factory on four things: how fast and clearly they answer, how much similar work they have done, whether their documents check out, and how complete their quote is. A second pass maps your suppliers and the share of volume each carries, so you know where one failure would stop sales.
+
+when:
+  - You need a first factory for a new product and have a list of listings to sort.
+  - Your current factory is slow, raises prices, or you rely on it for most of your volume.
+  - You are signing a supply deal and want terms that protect you.
+
+you_give:
+  - Your tech pack or product spec
+  - The factories you found, with links, their answers and any certificates
+  - Your target order size and budget
+  - Your products by supplier and each supplier's share of volume (optional)
+  - Contract terms, such as price, capacity and payment terms (optional)
+you_get:
+  - A shortlist of factories to contact and the message to send
+  - Video-call questions and a red-flag list
+  - A score out of 100 for each factory, and how it was worked out
+  - A dependency map with a risk rating, a backup supplier plan and terms to ask for
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your spec and the list of factories with everything they have said so far. Say your order size and budget.
+  - Send the outreach message, hold the video calls, and paste the answers back.
+  - Read the scores and red flags. Ask finalists for samples, and score those with the sample approval gatekeeper.
+  - If one supplier carries most of your volume, run the dependency check and start on the backup plan.
+
+how_it_works:
+  - title: Builds the shortlist
+    text: Searches for your exact product type, filters to verified suppliers with trade protection, and messages 10 to 15 factories (6 to 8 for a solo seller).
+  - title: Plans the video calls
+    text: Asks each finalist for a site walk-through or samples, and lists the red flags.
+  - title: Checks documents
+    text: Checks how long they have been active, which countries they export to, and ISO or BSCI certificates.
+  - title: Asks for a standard quote
+    text: Sends the spec and asks for price per variant, minimum order, lead time, packaging and payment terms.
+  - title: Scores each factory
+    text: Scores out of 100 on responsiveness, similar past work, documents and quote completeness.
+  - title: Sets up a backup
+    text: Gets a second contact channel, keeps two suppliers alive, and says so openly.
+  - title: Maps dependency
+    text: Lists every product and ingredient by supplier and share of volume, and rates the risk.
+  - title: Lists terms to ask for
+    text: Continued supply if the supplier is sold, first right to open inventory, and a best-price match.
+
+output_shape: |
+  SHORTLIST  <product>  <n> factories to contact
+  <factory> | link | why shortlisted
+  MESSAGE TO SEND  <text>
+
+  VIDEO CALL QUESTIONS  <list>
+  RED FLAGS  <list>
+
+  SCORES (house scale, 25 points each)
+  <factory> | Responsiveness <n> | Similar work <n> | Documents <n> | Quote complete <n> | TOTAL <n>/100
+  Why: <one line each>
+
+  PICK  <factory>  next step <samples / second call>
+  BACKUP  <factory>  how to open that talk
+
+  DEPENDENCY MAP
+  <product or ingredient> | supplier | share of volume | risk <low / medium / high>
+  TERMS TO ASK FOR  <continued supply on a sale | first right to open inventory | best-price match>
+
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Your order size and budget
+    how: A small order or one product changes the plan. The skill starts a solo seller at 6 to 8 factories and a tight spec instead of 10 to 15.
+  - what: Where you consider moving
+    how: "Name countries to compare. The skill runs a simple test: if lead time rises 30 percent and cost falls 30 percent, which matters more to you."
+  - what: Certificates you need
+    how: Name the ones your market requires, such as ISO or BSCI. The documents score depends on them.
+  - what: Contract terms
+    how: Paste the draft. The skill checks for change of control, price, capacity and payment terms.
+
+judge:
+  - Every factory has a score with all four parts and a one-line reason for each.
+  - The red flags name what was said or not said, not a feeling.
+  - Nothing in a listing is treated as true until it has a document or a call behind it.
+  - The pick has a backup and a way to open that talk.
+  - The dependency map shows share of volume for every supplier.
+
+test:
+  - Add a factory you already know is poor to the list. It should score low, with reasons you recognize.
+  - Run it twice on the same answers. The ranking should hold.
+  - Check one red flag yourself, such as a certificate number or an export claim.
+  - Ask two finalists the same question and compare. The skill should score the clearer answer higher.
+
+improve:
+  - Add your own must-haves (a certificate, a minimum quality system, a country) as standing checks.
+  - Save each factory's answers, scores and call notes in your supplier record, so next time starts from there.
+  - Change the weights if one part matters more to you, for example documents for a regulated product.
+  - Pair it with the sample approval gatekeeper and the pre-shipment inspection brief writer.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can score the answers and draft the messages. Paste what each factory said."}
+    - {name: "Alibaba", why: "Supports filters for verified suppliers and trade protection. Treat it as research, not the final choice."}
+    - {name: "A sourcing agent or inspection platform", why: "Can visit a factory for you when you cannot go. Check the agent first."}
+  inputs:
+    - "Copies of each factory's certificates"
+    - "A video recording or notes from each call"
+    - "Samples from every finalist"
+    - "A list of brands each factory makes for, if they will tell you"
+
+terms:
+  - term: Contract manufacturer
+    meaning: A factory that makes products for other brands under their names.
+  - term: ISO or BSCI certificate
+    meaning: Proof from an outside body that a factory meets a quality or work-conditions standard.
+  - term: Most-favoured-nation terms
+    meaning: A promise that you get the best price or first claim on stock that the supplier gives to anyone.
+  - term: Dependency
+    meaning: A supplier you rely on so much that losing it would stop your sales.

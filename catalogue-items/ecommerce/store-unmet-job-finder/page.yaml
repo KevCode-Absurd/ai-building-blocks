@@ -1,0 +1,120 @@
+new_slug: store-unmet-job-finder
+name: "Store unmet job finder"
+summary: "Paste reviews, tickets, returns and searches. Get ranked unmet-job leads in five groups, each with a test."
+job: understand-customers
+thinking: medium
+thinking_why: "It searches many messages for five kinds of clue and ranks leads by a fixed rule. A mid-range model does this well."
+
+headline: "Store unmet job finder"
+subhead: Paste your reviews, support tickets, return notes, on-site search terms and abandoned checkout notes, and say what you sell. It searches five places for jobs your buyers need done and nobody serves well, ranks the leads by evidence and ease of test, and gives each a cheap test.
+
+explain: |
+  Asking buyers what they want tends to bring back small tweaks to what you already sell. The better openings sit in your own data: people who visit and buy nothing, fixes buyers build themselves, tasks they hate, and odd ways they use your product.
+
+  This is the store version of the Job hunting spot finder. The method is the same five places. This version points each one at store data: orders, on-site search, wishlists and abandoned carts, returns and tickets. It checks the emotional and social side of every lead, ranks the leads, and picks one to test with an ad angle or landing page before you build or buy any stock. It finds leads, not proven demand.
+
+when:
+  - Growth feels stuck and every idea is a tweak to the current range.
+  - You have reviews, tickets and search terms, and no list of what people are trying to do that you do not serve.
+  - You want a cheap test for a new angle or bundle before you order stock.
+
+you_give:
+  - Reviews, support tickets, returns notes, on-site search terms and abandoned checkout notes, pasted (at least 50 together)
+  - What you sell and who buys it today
+  - Wishlist or "notify me" counts, and "I wish it came in" lines (optional)
+you_get:
+  - "Ranked leads in five groups: your own life, people who buy nothing, workarounds, things people hate doing, and unusual uses"
+  - For each lead, where to watch or ask, and the cheapest test (a page, an ad angle or a bundle)
+  - The emotional and social side of each lead, or a note that it is missing
+  - A note on which leads need cash for samples or stock before they can be tested
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you sell and who buys it today. Paste the reviews, tickets, returns, search terms and checkout notes. Remove names and contact details.
+  - Read the leads from the top. Check the evidence quotes before you trust a rank.
+  - "Take the top lead's cheapest test: build a page or ad angle, not the product."
+  - Watch the result for a few weeks before you order samples or stock.
+
+how_it_works:
+  - title: Starts with your own life
+    text: Lists jobs you or your team struggle with in this category, then checks each against the reviews before trusting it.
+  - title: Finds people who buy nothing
+    text: Looks for repeat visitors with no order, wishlist and abandoned-cart users, "I wish it came in" lines, and questions that end without a sale.
+  - title: Reads for workarounds
+    text: Searches for "I use it with", "I had to", homemade fixes and two-product combinations.
+  - title: Finds hated tasks
+    text: Searches for "hate", "hassle", "no more" and for waiting, assembling, going to a store or asking permission.
+  - title: Lists unusual uses
+    text: Collects uses in reviews, customer photos and tickets that differ from your page.
+  - title: Checks the feeling
+    text: For each lead, notes what the buyer feels and who sees them. A lead with only a practical reason is weak.
+  - title: Ranks and picks a test
+    text: Ranks by evidence count and ease of test, then picks the cheapest test for the top leads.
+  - title: Checks the size
+    text: Flags a market judged "no room to grow" as a job defined too narrowly.
+
+output_shape: |
+  DATA READ: <n> items (reviews <n>, tickets <n>, returns <n>, searches <n>, checkout notes <n>)   (50 or more needed)
+
+  RANKED LEADS
+  1. <short lead> | group: <own life | buys nothing | workaround | hated task | unusual use>
+     evidence: <n> items  "<quote>" (<source type>, <date>)
+     what they do now: <workaround or nothing> | feels: <...> | who sees them: <...>
+     where to watch or ask: <e.g. on-site search, wishlist, review tag, support tag>
+     cheapest test: <page | ad angle | bundle> | needs cash before test: <yes/no, what>
+  2. ...
+
+  GROUP NOTES
+  own life: <...> | buys nothing: <...> | workarounds: <...> | hated tasks: <...> | unusual uses: <...>
+
+  TOO WEAK TO RANK
+  <leads with a practical reason only, or one mention>
+  MISSING: <data source | what you sell | dates>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: Which data you paste
+    how: Searches and abandoned carts feed the "buys nothing" group. Reviews and tickets feed workarounds and unusual uses. Leave one out and that group will say "no data".
+  - what: How much you paste
+    how: At least 50 items in all gives a useful read. With fewer, the skill gives hunches and marks every lead low.
+  - what: Your own list first
+    how: Write down jobs you struggle with in this category before you paste data. It checks each against the reviews and drops the ones with no proof.
+  - what: What you can spend
+    how: Say your test budget. It prefers a page or ad angle over a new product when cash is short.
+
+judge:
+  - Each lead sits in one of the five groups and has at least two quotes with a source type and a date.
+  - Each lead has the emotional and social side, or says it is missing.
+  - Leads that need a new product are flagged as needing cash for samples and stock.
+  - The cheapest test is a page, an ad angle or a bundle, not a build.
+  - Large-company numbers from the book are not quoted as store benchmarks.
+
+test:
+  - Take your top lead and search your own reviews for it. You should find the quotes it lists.
+  - Run it on data from last quarter and from this quarter. The strongest leads should appear in both.
+  - Show the top three leads to the person who answers your support inbox. Ask which they have heard before.
+  - Run the cheapest test for one lead for a few weeks and note the result before you ask for another.
+
+improve:
+  - Add your own search terms and ticket tags to the skill file, so the "hate" and "workaround" searches use your customers' words.
+  - Add your test rules (how many visits, how long) so the cheapest test comes with a stop line.
+  - Save the leads you tested, and the result, in your brand file, so you do not test the same lead twice.
+  - Pair it with the Job-based avatar builder to turn a proven lead into an avatar card, and with the Job spec writer to write it up in full.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can search pasted text for the five groups. Paste with dates and source types."}
+    - {name: "Shopify admin", why: "Its search terms and abandoned checkout views give the 'buys nothing' data."}
+    - {name: "GA4", why: "Its site-search report shows what visitors look for and do not find."}
+  inputs:
+    - "Wishlist, back-in-stock and notify-me counts by product"
+    - "Photos and videos customers send, which often show unusual uses"
+    - "Your helpdesk's top ten tags for the last quarter"
+
+terms:
+  - term: Nonconsumer
+    meaning: Someone who wants the result but buys nothing, such as a visitor who adds to the wishlist and never orders.
+  - term: Workaround
+    meaning: A fix a buyer builds themselves because nothing on the market does the job well enough.
+  - term: Negative job
+    meaning: Something people do not want to do, such as wait, assemble or ask permission.

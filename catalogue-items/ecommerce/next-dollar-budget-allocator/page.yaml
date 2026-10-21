@@ -1,0 +1,129 @@
+new_slug: next-dollar-budget-allocator
+name: "Next-dollar budget allocator"
+summary: "Give it spend and new-customer returns by channel. Get where the next $10,000 goes and a test plan."
+job: launch-and-scale-ads
+thinking: high
+thinking_why: "It weighs weak evidence across channels and must say how sure it is, so a stronger model reasons more carefully."
+
+headline: "Next-dollar budget allocator"
+subhead: Give it your spend and new-customer revenue by channel, plus any lift test results. It asks where the next $10,000 would earn the most. You get a ranking of channels, a stop point for each, a test plan to measure the gaps, and a rule for backing out.
+
+explain: |
+  Platforms each report their own return, and the number nearest the checkout always looks best. Product ads and retargeting claim sales that would have happened anyway. So adding budget where the report looks best often brings no new customers, and the top of the funnel, which feeds everything else, starves.
+
+  This skill asks a harder question for each channel. If I add $10,000 next month, how much new-customer revenue does it bring? And what happens if I move $10,000 from one channel to another? It ranks channels on that, tells you when to stop adding to each one (when the extra new-customer return falls to break-even), and checks that product ads and retargeting are not eating the budget. Where you have no lift test, it says the plan is a guess and moves in small steps.
+
+when:
+  - You can add budget next month and are not sure which channel should get it.
+  - One platform shows a great return and you suspect it is mostly claiming sales that were coming anyway.
+  - Your product ads or retargeting hold most of the spend and the account feels like it is slowly declining.
+
+you_give:
+  - Monthly spend by channel, and new-customer revenue by channel
+  - Lift test or holdout results, if you have any (optional)
+  - Which part of the funnel each campaign sits in, and spend by ad type (optional)
+  - Your break-even return on new customers, and your weekly profit and loss (optional)
+you_get:
+  - A ranking of where the next $10,000 goes, and what a $10,000 move between channels would do
+  - A stop point for each channel
+  - A test plan to measure the return on the next dollar
+  - A rule for how much to put into brand content and how to judge it, if you want that shift
+  - A fallback rule and a loss limit
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste last month's spend and new-customer revenue per channel. Say which numbers come from a lift test and which come from the platform.
+  - Add your break-even return on new customers. If you do not have it, say so and the skill will mark it MISSING.
+  - Read the ranking, then run the test plan before moving more than a small share of budget.
+  - Come back with the test results and ask it to update the ranking.
+
+how_it_works:
+  - title: Asks the marginal question
+    text: For each channel it asks what new-customer revenue the next $10,000 would bring, and what a $10,000 move from one channel to another would do.
+  - title: Grades the evidence
+    text: Controlled lift tests are strong. Marketing mix models help at higher spend. A good buyer's judgement may do for a smaller store. Platform reports alone are weak.
+  - title: Finds each stop point
+    text: Keeps adding to a channel until the extra new-customer return reaches break-even, then moves to the next channel.
+  - title: Orders the channels
+    text: Works the main three channels to their stop point before adding smaller ones.
+  - title: Checks the funnel bias
+    text: Bottom-of-funnel campaigns always report the best return. It checks that product ads and retargeting are not holding most of the spend.
+  - title: Caps existing customers
+    text: Sizes spend on past buyers from a count, how often to reach them and your CPM, not from a percentage.
+  - title: Plans the tests
+    text: Lists the lift tests or controlled budget steps that would measure the next-dollar return for each channel.
+  - title: Sets the guardrails
+    text: Gives success measures that are not daily return, a loss limit, a review date and a way back.
+
+output_shape: |
+  NEXT-DOLLAR RANKING
+  <rank> <channel> | next $10,000 -> <new-customer revenue> | evidence: <lift test | model | judgement | platform report only>
+  Move test: <$10,000 from channel A to channel B -> expected change>
+
+  STOP POINT PER CHANNEL
+  <channel>: stop when extra new-customer return reaches <break-even>; now at <figure or MISSING>
+
+  FUNNEL AND PRODUCT-AD CHECK
+  Share of spend on product ads and retargeting: <n%>  Verdict: <ok | too high> because <reason>
+  Creative production split: <share high-awareness | middle | bottom>
+
+  EXISTING CUSTOMERS
+  <customers> x <views a month> x <CPM> / 1,000 = <monthly spend>; frequency now <n>
+
+  TEST PLAN
+  <channel> | <controlled step or lift test> | <how long> | <what result changes the ranking>
+
+  GUARDRAILS
+  Judge by: <weekly profit and loss, not daily return>  Loss limit: <figure>  Review date: <date>  Fallback: <move back to what worked>
+  CHECKS MISSED: <none, or the list>
+  MISSING: <what was not supplied>
+
+tweaks:
+  - what: Evidence you supply
+    how: Lift test or holdout results change the ranking the most. Without them the plan is a guess, so the skill moves only small steps.
+  - what: Break-even return on new customers
+    how: Give it a real figure from your costs. A wrong break-even moves every stop point.
+  - what: Store size
+    how: A small store should move 10 to 20 percent of spend first, then read the result. This is a starting point to adjust, not a rule from a source.
+  - what: Daily spend
+    how: One agency says the return gets weaker once ad spend passes about $30,000 to $40,000 a day, so brand building needs its own budget line. Check this against your own numbers.
+
+judge:
+  - Every channel is ranked by new-customer revenue per extra $10,000, not by the platform's reported return.
+  - Each ranking line says what kind of evidence stands behind it.
+  - Any number the skill added itself is marked as a starting point.
+  - There is a stop point for each channel, a loss limit and a way back.
+  - Nothing in the plan needs daily return to look good.
+
+test:
+  - Give it a store where you already know one channel is over-spent. It should flag that channel and say what evidence it would need to be sure.
+  - Run it twice on the same numbers. The ranking should match. If it flips, the evidence is too thin and the skill should say so.
+  - Try one small move from the plan, such as shifting 10 percent, and read the result on 7-day click for new customers only.
+  - Check your weekly profit and loss after the move. If the week nets out worse than your loss limit, use the fallback.
+
+improve:
+  - Add your real break-even return and your cash limits to the skill file so every plan respects them.
+  - Add the lift tests you have run, with dates, and tell the skill which ones are still fresh.
+  - Add a rule for how often you re-run the plan, such as monthly.
+  - Pair it with a sizer for existing-customer ad spend, a holdout test planner and a platform return reality check.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The ranking is arithmetic and reasoning on numbers you paste, so any current chat AI can do it."}
+    - {name: "Meta Ads Manager", why: "Its audience breakdown shows your CPM and frequency on existing customers, and it runs lift studies."}
+    - {name: "GA4", why: "Gives a second view of new-customer revenue to set beside the platform reports."}
+  inputs:
+    - "A holdout or geo test result for your biggest channel"
+    - "Post-purchase survey answers on where new customers heard about you"
+    - "Your weekly profit and loss for the last 8 weeks"
+    - "Spend by ad type, such as product ads, retargeting and new-audience ads"
+
+terms:
+  - term: Next best dollar
+    meaning: The question of where one more dollar of ad spend would bring the most new-customer revenue.
+  - term: aMER
+    meaning: New-customer revenue divided by ad spend on those customers. It is a blended store figure, not a platform report.
+  - term: Profit frontier
+    meaning: The spend level where one more dollar no longer brings back a profit.
+  - term: Product ads
+    meaning: Ads that show people the exact products they looked at, often called dynamic product ads or DPAs.

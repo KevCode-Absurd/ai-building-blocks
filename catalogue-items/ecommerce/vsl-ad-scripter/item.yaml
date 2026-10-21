@@ -1,0 +1,22 @@
+slug: vsl-ad-scripter
+name: "VSL ad scripter"
+summary: "Give it your product, mechanism and reviews. Get a 7-part VSL script, hooks and short cuts."
+category: ecommerce
+type: skill
+role: make
+job: video
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: script}
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The 7-Part VSL Framework for eCommerce (With Examples)", by: "Australian ecommerce ad strategist", used: "The seven-part order, hook testing, modular edits and lengths, mapping reviews and tickets into objection handling, matching landing pages and where VSLs fit"}
+  - {title: "How To Make A Winner Meta Video Ad", by: "Australian creative strategist (same as the VSL framework video)", used: "A hook that calls out several related people, completing the bridge to the product slowly and avoiding AI-sounding contrast lines"}

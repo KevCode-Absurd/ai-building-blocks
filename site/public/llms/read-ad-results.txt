@@ -1,8 +1,10 @@
 # Read your ad results: AI Blocks
 
-> 39 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 52 free AI skills and workflows for this job. Each page links its SKILL.md.
 
+- [Ad account bottleneck auditor](https://useaiblocks.com/skills/ad-account-bottleneck-auditor): Give store and ad numbers. Get the growth bottleneck, a fix order and a score out of 100.
 - [Ad dashboard reader](https://useaiblocks.com/skills/ad-dashboard-reader): Paste your ad numbers. Get what each metric really means, where platforms disagree, and whether to scale or cut.
+- [Ad fatigue watcher](https://useaiblocks.com/agents/ad-fatigue-watcher): Give it your ad results twice a week. Get tired ads caught early and a brief for each replacement.
 - [Ad performance diagnoser](https://useaiblocks.com/skills/ad-performance-diagnoser): Give it your underperforming campaign. Get the main cause across offer, audience, creative, funnel and sales, plus the fix.
 - [Ad recall and pull calculator](https://useaiblocks.com/skills/ad-recall-and-pull-calculator): Paste your survey answers. Get recall, buyers in each group, the pull as a number and what it means.
 - [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer): Paste two periods of ad totals. Get the one-line answer, what changed and three ranked actions.
@@ -16,12 +18,16 @@
 - [Conversion tracking fixer](https://useaiblocks.com/skills/conversion-tracking-fixer): Say what counts as a sale or lead. Get tracking set up or repaired across GA4, Meta, Google Ads and more.
 - [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator): Paste ad costs, samples and orders. Get what a customer really costs, how soon it pays back and which ads to keep.
 - [Coupon and form fixer](https://useaiblocks.com/skills/coupon-and-form-fixer): Paste your coupon or form and offer. Get a version that sells the offer and asks only what you need.
+- [Creative hit rate planner](https://useaiblocks.com/skills/creative-hit-rate-planner): Paste a prospecting ad export. Get your hit rate, concepts above your profit line and what to iterate.
+- [Creative test reader](https://useaiblocks.com/skills/creative-test-reader): Paste ad results by ad set. Get keep, leave or replace calls, false winners and a score.
 - [Data warehouse query reviewer](https://useaiblocks.com/skills/data-warehouse-query-reviewer): Share your business question or SQL. Get a safe, read-only analysis plan and a check for join and privacy errors.
 - [Find why sales dropped and brief your next ads](https://useaiblocks.com/workflows/sales-drop-diagnosis): Give it your ad results. Get the reasons sales fell, ideas you haven't tried, a test brief and headlines.
+- [Find why your ad test lost and plan the next](https://useaiblocks.com/workflows/find-out-why-your-ad-test-did-not-win-and-plan-the-next-round): Give it your test results and the ads. Get a verdict per ad, a next-round brief and where the next dollar goes.
 - [Get more and better leads from an ad](https://useaiblocks.com/workflows/better-leads-from-ads): Give it your ad and lead results. Get raise-or-cut fixes, a better form, and a record of what each ad pulled.
 - [Google Ads account auditor](https://useaiblocks.com/skills/google-ads-account-auditor): Give it your Google Ads exports. Get a checked audit of tracking, search terms, Shopping, Performance Max, bids and budgets.
 - [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor): Paste one Google Ads export and your target. Get changes worth making and a score out of 100.
 - [Growth health checker](https://useaiblocks.com/skills/growth-health-checker): Connect your sales and marketing data. Get a plain read on what is working and three actions for this week.
+- [Holdout test planner](https://useaiblocks.com/skills/holdout-test-planner): Name the channel or change you doubt. Get a holdout design, run time and how to read it.
 - [Inquiry problem diagnoser](https://useaiblocks.com/skills/inquiry-problem-diagnoser): Paste your ad results. Get a call on whether you need more leads or better ones, with the sums.
 - [Keyed ad results log keeper](https://useaiblocks.com/skills/keyed-ad-results-log-keeper): Paste what an ad did. Get a log entry that records its key, conditions and results, and what to try next.
 - [Know which ads to keep, cut and make next](https://useaiblocks.com/workflows/know-which-ads-to-make-next): Give it your ad results and brand details. You get what to keep and cut, plus briefs for three new ideas.
@@ -32,11 +38,18 @@
 - [Marketing results reporter](https://useaiblocks.com/skills/marketing-results-reporter): Give it your marketing numbers. Get a report on trends, funnel drop-offs and what to do next.
 - [Marketing scorecard builder](https://useaiblocks.com/skills/marketing-scorecard-builder): Paste the numbers you track now. Get a balanced scorecard with short-term and long-term measures and what each tells you.
 - [Meta ads daily checker](https://useaiblocks.com/skills/meta-ads-daily-checker): Connect your Meta ad account read-only. Get a daily check of spend, winners, money wasters and tired ads.
+- [Meta campaign purpose checker](https://useaiblocks.com/skills/meta-campaign-purpose-checker): List your Meta campaigns. Get each kept or cut, setup errors and a score out of 100.
+- [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter): Describe what Meta is doing with your ads. Get the failing delivery step and what to change first.
 - [Microsoft ads account auditor](https://useaiblocks.com/skills/microsoft-ads-account-auditor): Give it your Microsoft Ads exports. Get a checked audit of tracking, keywords, Google imports, audiences, bids and budgets.
+- [Move budget by buyer answers, then catch fading channels](https://useaiblocks.com/workflows/move-budget-by-buyer-answers-then-catch-fading-channels): Give it survey answers and spend by channel. Get over-credited channels, a budget move and a fade check.
 - [Online media buy auditor](https://useaiblocks.com/skills/online-media-buy-auditor): Paste your online ad plan and reports. Get a list of where the money may leak and what to ask each supplier.
 - [Organic traffic drop detective](https://useaiblocks.com/skills/organic-traffic-drop-detective): Connect Ahrefs and Search Console. Get the likely cause of a traffic drop or stall and an action plan.
+- [Platform ROAS reality check](https://useaiblocks.com/skills/platform-roas-reality-check): Give it platform ROAS and store totals. Get a truer return and trust level, scored out of 100.
+- [Post-purchase survey reader](https://useaiblocks.com/skills/post-purchase-survey-reader): Give survey answers and channel spend. Get over-credited channels, budget moves and a trust score out of 100.
+- [Product test result reader](https://useaiblocks.com/skills/product-test-result-reader): Paste product test numbers. Get ad, page or checkout as the cause, and the next fix.
 - [Recall and pull survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner): Paste your ad and your buyers. Get a short survey that shows who remembers it and whether they buy more.
 - [Split-run result reader](https://useaiblocks.com/skills/split-run-result-reader): Paste counts for two versions. Get the percentage gap, a luck check, a keep, rerun or stop call and a lesson.
+- [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader): Paste TikTok test numbers. Get keep, fix or kill for each ad, and a score out of 100.
 - [TikTok ads account auditor](https://useaiblocks.com/skills/tiktok-ads-account-auditor): Give it your TikTok Ads exports. Get a checked audit of your pixel, creative, audiences, Smart+ and Shop campaigns, bids and budgets.
 - [TikTok Shop results reader](https://useaiblocks.com/skills/tiktok-shop-results-reader): Give it your shop numbers. Get what is working across video, live sales, affiliates and ads, and what to change.
 - [Twelve-platform ad account auditor](https://useaiblocks.com/skills/ad-account-audit): Give it your ad exports and goal. Get an evidence-based audit across Google, Meta, TikTok, LinkedIn and more, with next steps.

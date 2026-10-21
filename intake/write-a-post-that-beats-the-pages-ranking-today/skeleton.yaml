@@ -1,0 +1,40 @@
+# Workflow skeleton built from library skills (docs/INTAKE.md).
+id: write-a-post-that-beats-the-pages-ranking-today
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: write-a-post-that-beats-the-pages-ranking-today
+  name: "Write a post that beats the pages ranking today"
+  summary: "Give it a keyword and the pages that rank. Get a brief, a full post and fixes for its page."
+  when: "you want one post to rank for a search and you do not want to guess what it needs."
+  job: get-found-in-search
+  level: beginner
+steps:
+  - name: "Search page brief writer"
+    skill: search-page-brief-writer
+    job: ops
+    from: "skill: search-page-brief-writer"
+    method: ["Record each ranking page's title, headings, length and format", "Name the search intent and show the evidence", "List what every page covers and what none of them do", "Write the outline, questions and a meta description"]
+    inputs: [web_page]
+    outputs: [brief]
+    note: "Starts the chain: reads the top pages for your keyword and writes a brief with the gaps to fill."
+  - name: "Search blog post writer"
+    skill: search-blog-post-writer
+    job: ops
+    from: "skill: search-blog-post-writer"
+    method: ["Take the keyword, outline and questions from the brief", "Open with the answer", "Write the sections, the FAQ and the internal link slots", "Add a call to action and notes on sharing it"]
+    inputs: [brief]
+    outputs: [copy_draft]
+    note: "Writes the full post from the brief's outline, questions and gaps."
+  - pause: "Edit the post so it is true and sounds like you. Publish it as a draft page on your site and keep the link."
+  - name: "On-page SEO tuner"
+    skill: on-page-seo-tuner
+    job: ops
+    from: "skill: on-page-seo-tuner"
+    method: ["Confirm the keyword the page targets", "Read the page as served, including title, headings and markup", "Score title, description, headings, body, links, images, address and markup", "List fixes as critical, important or nice to have"]
+    inputs: [web_page]
+    outputs: [audit_report, copy_draft]
+    note: "Checks the published draft against the keyword and gives the last fixes before it goes live."

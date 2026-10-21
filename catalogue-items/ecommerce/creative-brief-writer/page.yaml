@@ -1,0 +1,136 @@
+new_slug: creative-brief-writer
+name: "Creative brief writer"
+summary: "Give it reviews and product facts. Get one problem, a one-line angle, a proof list and a brief."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It reads many customer quotes and must pick one problem, so a mid-size model with room to think does well."
+
+headline: "Creative brief writer"
+subhead: Paste your reviews, support tickets or survey answers, plus your product facts. It finds what buyers want, what stops them and what they tried. You get one problem, a one-sentence angle, a proof list with a shot for every claim, a brief and two test versions.
+
+explain: |
+  Most stores make ads by picking a format first, such as a customer video or a plain image. Then they cram every feature in. The ad turns into a sales sheet, and when it fails nobody can say what it taught them.
+
+  This skill starts with the customer. It reads your reviews and other customer words for three things: what they want, what stops them, and what they already tried. It lists the reasons to buy, picks one problem and writes the angle as one sentence. It then picks the format that can show that value, checks that every claim has a shot that proves it, and fills in a brief your designer, editor or creator can follow. It also writes two versions that change one thing, so the test teaches you something.
+
+when:
+  - You have a pile of reviews and no clear idea what the next ad should say.
+  - Your ads list every feature and you suspect one clear reason to buy would work better.
+  - A test just finished and you need the next brief to build on what it showed.
+
+you_give:
+  - Customer words, such as reviews, support tickets, post-purchase survey answers, sales call notes, ad comments, competitor reviews or Reddit threads
+  - Your product facts (price, what it does, sizes, proof you really have)
+  - Results of your last test (optional)
+  - Who it is for, if you already know (optional)
+you_get:
+  - A short research summary of what they want, what blocks them and what they tried, with quotes
+  - Up to ten reasons to buy, each a possible angle
+  - One problem and a one-sentence angle
+  - A proof list pairing every claim with the shot that shows it
+  - A brief (concept, ad type, angle, who it is for, headline, call to action, visual direction) and two versions that change one thing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your customer words with their source and date. A few hundred reviews is best. A new store can paste competitor reviews instead.
+  - Paste your product facts, and only the proof you can show, such as a real number or a real photo.
+  - Read the one problem and angle it picks. If it picked the wrong one, tell it which reason to buy to use instead.
+  - Hand the brief to whoever makes the ad, and run the two versions side by side.
+
+how_it_works:
+  - title: Reads the customer
+    text: Sorts the quotes into what they want, what stops them and what they already tried. It keeps the real words.
+  - title: Lists reasons to buy
+    text: One product can have ten reasons, such as quiet, compact or fits a small flat. Each one is its own angle.
+  - title: Picks one problem
+    text: Chooses one reason and writes the angle as a single sentence. Features that do not back it up wait for the product page.
+  - title: Picks the format
+    text: Asks five questions in order. What is the idea, does it need teaching, can one frame show it, does it need a demo, how much does the buyer already know. It also compares what each format costs to make with what it earns.
+  - title: Matches proof to claims
+    text: Every claim gets a named shot, such as showing the item slide under a desk. A number appears only if you have data for it.
+  - title: Writes the brief
+    text: Fills in concept, ad type, angle, who it is for, headline, button and visuals. It names the ad type so a batch does not repeat one idea.
+  - title: Adds two versions
+    text: Same angle and product, one change, such as a customer video against a story carousel.
+  - title: Sets up the next brief
+    text: Says what result would tell you to keep the angle, change it or move to another reason to buy.
+
+output_shape: |
+  RESEARCH SUMMARY
+  Wants: <what buyers want, with 2 to 3 quotes and their source>
+  Stops them: <what blocks them, with quotes>
+  Already tried: <what else they tried, with quotes>
+
+  REASONS TO BUY (up to 10)
+  1. <reason> (<how many quotes mention it>)
+
+  ONE PROBLEM AND ANGLE
+  Problem: <one problem in the buyer's words>
+  Angle: <one sentence; everything in the ad must back it>
+  Left out on purpose: <features that go on the product page instead>
+
+  FORMAT CHOICE
+  <idea> | <needs teaching?> | <one frame?> | <demo?> | <buyer knowledge> | pick: <format and why>
+
+  PROOF LIST
+  <claim> -> <shot that proves it> | <number and where it comes from, or none>
+
+  BRIEF
+  Concept / Ad type / Angle / Who it is for / Headline / Call to action / Visual direction
+
+  TWO VERSIONS
+  A: <what stays the same, the one thing that changes>
+  B: <...>
+
+  NEXT BRIEF RULE
+  <what result means keep, change or switch reason to buy>
+  CHECKS MISSED: <none, or the list>
+  MISSING: <anything you did not supply>
+
+tweaks:
+  - what: How much customer text you paste
+    how: A few hundred reviews or tickets give a safe pick. With only a few dozen, treat the angle as a guess and test two reasons to buy, not one.
+  - what: Competitor reviews
+    how: Paste them when you are new. They show what buyers of rival products complain about, which is often your opening.
+  - what: Your last test results
+    how: Paste what won and lost. The skill picks the next angle from what the result showed, not from a fresh guess.
+  - what: Production cost per ad
+    how: Give your cost to make an image and a video, and what an average ad earns after costs. It then compares formats by profit, not by habit.
+
+judge:
+  - The angle is one sentence and every part of the brief backs it.
+  - Every quote in the research summary is a real line from what you pasted, with its source.
+  - Every claim in the proof list has a named shot, and any number has a source from your facts.
+  - The two versions differ by exactly one thing.
+  - Features that do not support the angle are listed as left out, not squeezed in.
+
+test:
+  - Give it reviews from a product where you already know the main reason people buy. The one problem it picks should match, or it should tell you why not.
+  - Run it twice on the same reviews. The angle should stay the same or move to a close neighbour. A wild change means the quotes do not point to one problem.
+  - Pick one claim from the proof list and ask your editor if the named shot is easy to film or make.
+  - Run the two versions as a small test and see if the one change you made is the thing that moved the result.
+
+improve:
+  - Add your rules for claims to the skill file, such as which words you may never use, so every brief respects them.
+  - Add the ad types you already run, so it names a type you are not yet using.
+  - Save each winning angle and the quote behind it in your brand file, and paste that file next time.
+  - Pair it with a skill that builds your buyer profiles, and one that checks the finished ad against the platform rules.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading and sorting hundreds of pasted quotes is the heavy part, and any current chat AI handles it."}
+    - {name: "Shopify", why: "Product reviews and support emails can be exported from your store apps to paste in."}
+    - {name: "Meta Ads Manager", why: "Ad comments and your last test results come from here."}
+  inputs:
+    - "Post-purchase survey answers that ask why they bought"
+    - "Competitor reviews from Amazon or their own store"
+    - "Reddit or forum threads where buyers talk about the problem"
+    - "Photos or clips you already have, so the proof list can name real shots"
+
+terms:
+  - term: Angle
+    meaning: The reason someone buys, written in one sentence, such as "get more steps in while you work without a bulky treadmill".
+  - term: Proof list
+    meaning: A list that pairs every claim in the ad with the shot or number that shows it is true.
+  - term: Creative type
+    meaning: The kind of ad, such as a curiosity image ad, an us-versus-them ad, a feature call-out or a review ad.

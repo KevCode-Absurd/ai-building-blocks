@@ -1,0 +1,23 @@
+slug: turn-a-free-checker-into-leads-and-a-paid-first-step
+name: "Turn a free checker into leads and a first sale"
+summary: "Give it your business and buyer. Get a free checker, a cost-per-lead rule and a paid first step."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: offer, required: true}
+  - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: offer}
+uses: [free-diagnostic-tool-planner, lead-cost-and-friction-planner, paid-first-step-planner]
+steps:
+  - {uses: free-diagnostic-tool-planner, note: "Starts the chain: the free checker, its score and the sign-up step."}
+  - {uses: lead-cost-and-friction-planner, note: "Reads the checker plan from the first step and your campaign numbers, then sets the cost rule."}
+  - {uses: paid-first-step-planner, note: "Takes the lead plan from the step before and turns those leads into a paid first piece and a booked second meeting."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-a-free-checker-into-leads-and-a-paid-first-step/skeleton.yaml

@@ -1,0 +1,21 @@
+slug: theme-script-and-style-loader
+name: "Theme script and style loader"
+summary: "Give it your theme.liquid, apps and fonts. Get scripts delayed or deferred, styles unblocked and fonts set safely."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: theme_files, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: code_change}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify speed and image optimization (a video series on images, app scripts, layout shift, largest content and store audits)", by: "Christian, a Shopify developer (YouTube channel)", used: "Delaying app scripts until the first visit action, defer then async, rebuilding the header scripts, delaying the dynamic checkout script, loading non-critical styles late, and font display rules"}
+  - {title: "Website Speed Optimization Tips for Shopify Stores", by: "Shopify Plus blog, quoting agency owners", used: "Why scripts placed straight in the head block the page, and serving local files through the asset URL filter with version numbers"}

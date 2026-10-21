@@ -1,0 +1,117 @@
+new_slug: launch-email-sequence-planner
+name: "Launch email sequence planner"
+summary: "Give it your product, list and close date. Get a 10-email launch plan with resends and a triple close."
+job: write-emails
+thinking: medium
+thinking_why: "It follows a fixed launch shape, but the content of each email needs judgement about your product and doubts."
+
+headline: "Launch email sequence planner"
+subhead: Give it your product, offer, list size and the date the offer closes. It plans a 10-email launch with a day-by-day calendar, resends to people who did not open, an outline for every email and three sends on the final day.
+
+explain: |
+  A launch is a short window to sell, and one email rarely does it. Most readers miss it, so a good launch sends several emails with different jobs, and sends each again to people who did not open it. Without a plan, every email turns into "buy now".
+
+  This skill plans 10 new emails in three phases. Email 1 introduces the product. Emails 2 to 7 give value in four ways, including answers to real doubts. Emails 8 to 10 all go out on the closing day, in the morning, afternoon and late evening. Each email has one job, either give value or sell. Every new email gets a resend with a new subject line. The numbers in the sources are one seller's results from course and subscription launches, so tie your close to a real date or real stock.
+
+when:
+  - You are launching a new product, a drop or a limited offer with a real end date.
+  - You have a list of a few thousand or more and want more of it to see the launch.
+  - You want a plan that mixes value and selling instead of daily sales emails.
+
+you_give:
+  - Your product or drop, price, offer and the date it closes
+  - Your list size and usual open rate
+  - Content you can reuse, such as guides, tutorials, blog posts and videos (optional)
+  - The questions and doubts buyers raise most (optional)
+  - Reviews and testimonials, noted by which doubt each answers (optional)
+
+you_get:
+  - A day-by-day send calendar with new sends and resends marked
+  - An outline for each email, with its goal, subject, preview text, story, content, button and P.S.
+  - A closing-day plan with three sends and their subject lines
+  - A second subject line and preview text for each resend
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, offer, close date and list size, and add content you can reuse.
+  - "Choose a pace: about 10 days if you need the cash soon, about 20 if you can wait."
+  - Read the outlines, then write each email from its outline and rest it for a day.
+  - Check that the end date and what happens after it are true before you send email 1.
+
+how_it_works:
+  - title: Checks the fit
+    text: You need a real close date and a list big enough for resends. Under 1,000 contacts it cuts the plan to 5 or 6 emails and one resend.
+  - title: Gives each email one job
+    text: Either give value or sell, never both. The goal sits at the top of each outline before any copy.
+  - title: Plans resends
+    text: Each new email is sent again to people who did not open it, with a new subject and preview. A small list can change the subject only.
+  - title: Sets the pace
+    text: About 10 days if you want cash sooner, about 20 days with breathing days for openers. One seller saw no clear revenue difference.
+  - title: Builds the three phases
+    text: Email 1 introduces. Emails 2 to 7 mix a quick lesson, reused content, customer stories and an FAQ. Emails 8 to 10 close.
+  - title: Plans the close
+    text: Three sends on the last day, in the morning, afternoon and late evening, so time zones do not decide who sees it. The last one is short and casual.
+  - title: Writes the outlines
+    text: Each has a goal, subject, preview, story, content, call to action and a P.S. that restates the promise and links to the page.
+
+output_shape: |
+  LAUNCH PLAN  <product>
+  Close: <real date and what happens after> | list: <size> | pace: <about 10 | about 20 days>
+  CALENDAR
+  | Day | Send | New or resend | Goal | Subject | Second subject |
+  | 1 | Email 1 | new | introduce | <...> | |
+  | 2 | Email 1 | resend (unopens) | | <new subject> | |
+  EMAIL OUTLINES (one block each)
+  Email <n> | goal: <give value | sell> | type: <intro | lesson | content | story | FAQ | close>
+    subject <...> | preview <...> | story <...> | content <...> | call to action <...> | P.S. <...>
+  CLOSING DAY: morning <subject> | afternoon <subject> | late evening <subject>
+  PROOF USED: <review, and the doubt it answers>
+  CHECKS MISSED: <none | list>   MISSING: <what was not given>
+
+tweaks:
+  - what: Pace
+    how: Pick about 10 days when you need the cash soon and about 20 when you can wait. The source saw no clear revenue gap between them.
+  - what: List size
+    how: Under 1,000 contacts, ask for 5 or 6 emails and one resend. Above a few thousand, the full plan fits.
+  - what: Real doubts
+    how: Paste the questions your buyers ask. The customer story and FAQ emails then answer real doubts.
+  - what: Physical stock
+    how: For physical goods, say whether the close is a sale end or real stock. The close must match one of them.
+
+judge:
+  - Every email has one stated goal, either value or sell.
+  - The close date is real, and the plan says what happens after it.
+  - Customer stories answer one named doubt each, and every story is a real review.
+  - Each new email has a resend with a new subject and preview.
+  - Source results are marked as one seller's, not a promise.
+
+test:
+  - Give it a launch with no close date. It should ask for one and refuse to invent a countdown.
+  - Give it a list of 800. It should cut the plan to 5 or 6 emails.
+  - Check that emails 2 to 7 cover all four types.
+  - After the launch, compare revenue from resends and from the closing-day sends with the rest.
+
+improve:
+  - Add your real doubts and the proof that answers each to the skill file.
+  - Add your brand voice rules so the casual last email sounds like you.
+  - Save the outline template in your brand file.
+  - Pair it with the campaign email writer to write each email, and the email draft reviewer to check it.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Send to people who did not open, schedule three sends on one day and track revenue by campaign."}
+    - {name: "Shopify", why: "Stock levels and a scheduled sale end give you a close date that is true."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the calendar and outlines from your product facts."}
+  inputs:
+    - "Real reviews, marked with the doubt each one answers"
+    - "Tutorials, guides or blog posts you can reuse"
+    - "Support questions from the last 90 days"
+    - "Your last launch's results by email"
+
+terms:
+  - term: Resend to unopens
+    meaning: Sending the same email again, with a new subject line, to people who did not open it the first time.
+  - term: Triple close
+    meaning: Three strong sales emails sent on the last day of a launch, in the morning, afternoon and late evening.
+  - term: P.S.
+    meaning: A short line after the sign-off that restates the promise and links to the page.

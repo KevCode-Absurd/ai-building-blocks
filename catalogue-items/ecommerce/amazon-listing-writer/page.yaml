@@ -1,0 +1,125 @@
+new_slug: amazon-listing-writer
+name: "Amazon listing writer"
+summary: "Give it product facts and keyword tiers. Get an Amazon title, five benefit bullets and backend keywords."
+job: sell-on-amazon
+thinking: medium
+thinking_why: "It writes copy to a fixed pattern from facts you give it, so a mid-size model is enough."
+
+headline: "Amazon listing writer"
+subhead: Give it your product facts, the keyword tiers from the keyword picker and competitor titles. It writes a title with the main phrase first, five benefit-first bullets with a money-back note last, a short description, backend keywords, and a launch date and price check.
+
+explain: |
+  On Amazon, a shopper in the results sees only your main image, title, price and review count. If the title is slow to say what the product is, the click goes to someone else. A general product listing writer covers any marketplace. This Amazon version follows the patterns of one seller: the search phrase buyers type goes first, bullets lead with the benefit, and the listing form is set up to launch on a planned day.
+
+  The skill writes for the buyer, not the algorithm. It keeps the keyword phrases but makes each bullet readable, and it uses only facts you give it. Claims that need proof, such as health claims, are flagged. Amazon changes its title rules and category style guides, so check the current guide for your category.
+
+when:
+  - You have a product, a keyword list and a listing form open, and need the words.
+  - Your listing gets views but few clicks, and you suspect the title or main image.
+  - You are about to launch and need the listing set up so it goes live on your chosen day.
+
+you_give:
+  - Product facts, benefits and proof you can show
+  - The tiered keyword list from the Amazon keyword picker
+  - Competitor titles and main images (optional)
+  - Your landed cost and planned price (optional)
+you_get:
+  - A title with the main phrase first
+  - Five benefit-first bullets, the last one a plain money-back note
+  - A short description, a backend keyword list, and notes on category, price and launch date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts and the keyword tiers. Add two or three competitor titles.
+  - Check every fact and number in the draft against your product. Remove anything you cannot prove.
+  - Check your category's current style guide for title length, then paste the copy into the listing form.
+  - Test the money-back bullet. It rests on one seller's belief, not proven results.
+
+how_it_works:
+  - title: Writes the title
+    text: Puts the product phrase people search in the first words, then supporting phrases, and does not start with a brand unless it is famous.
+  - title: Writes five bullets
+    text: Starts bullet 1 with the main phrase and a true quality number, and gives the benefit first, then the feature, in every bullet.
+  - title: Adds the money-back note
+    text: Ends with a plain money-back bullet to ease doubt, and marks it as a test.
+  - title: Writes the description
+    text: A short selling paragraph with the main phrases, or a note to use A+ content once the brand is registered.
+  - title: Fills the backend
+    text: Uses leftover true phrases, misspellings and synonyms.
+  - title: Sets up the form
+    text: Names the category to copy from the closest top sellers and tells you when to leave the brand field blank.
+  - title: Checks price and date
+    text: Checks price against 3 times landed cost, and sets the offer start date in the future for a planned launch.
+
+output_shape: |
+  TITLE
+  <main phrase first> <supporting phrases>  (<n> characters)
+
+  BULLETS
+  1. <main phrase + true quality number>: <benefit>, then <feature>
+  2. <benefit>, then <feature>
+  3. <benefit>, then <feature>
+  4. <benefit>, then <feature>
+  5. <plain money-back note>   [test this]
+
+  DESCRIPTION
+  <short selling paragraph with the main phrases>
+
+  BACKEND KEYWORDS
+  <leftover true phrases, misspellings, synonyms>
+
+  LISTING FORM
+  Category: <same as the closest top sellers>
+  Brand field: <name | blank if no brand>
+  Price check: <price vs 3x landed cost>
+  Offer start date: <future launch date>
+
+  MISSING: <product facts | keyword tiers>
+  CHECKS MISSED: <none | which>
+
+tweaks:
+  - what: Keyword tiers
+    how: Paste the keyword picker output. The main phrase leads the title and the secondary phrases fill the bullets.
+  - what: Proof you can show
+    how: Give real numbers and certificates. A true quality number in bullet 1, such as 100 percent natural, is only used if you give it.
+  - what: Competitor titles
+    how: Paste two or three. The skill shows where yours is clearer and wins the click at a glance.
+  - what: Brand and registry
+    how: Say whether you have a brand and whether it is registered. This decides the brand field and A+ content.
+
+judge:
+  - The first words of the title are the product phrase a buyer would type.
+  - Each bullet gives the benefit first, then the feature, and reads like a person wrote it.
+  - Every fact and number in the copy is one you gave it.
+  - No medical, diet or other claim you cannot prove appears in the copy.
+  - The money-back bullet is marked as a test, not a proven lift.
+
+test:
+  - Read the title aloud as a shopper would see it in the results. Is it clear what the product is?
+  - Show the bullets to someone who has never heard of your product and ask what it does for them.
+  - Compare your title with the top three results. Yours should name the product faster.
+  - After launch, compare click-through and sales with and without the money-back bullet.
+
+improve:
+  - Add your brand voice rules to the skill file, such as words you never use.
+  - Add your category's style limits (title length, banned words) so the draft fits first time.
+  - Add your real proof lines (tests, awards, review counts) to your brand file so bullets use them.
+  - Pair it with the Amazon keyword picker before it, and the Amazon launch week planner after it.
+
+works_best_with:
+  tools:
+    - {name: "Seller Central", why: "Where you paste the listing, pick the category and set the offer start date. Its category style guides show current title limits."}
+    - {name: "Any good chat AI", why: "Writes and trims the copy from your facts and keyword tiers."}
+  inputs:
+    - "The keyword tiers and volumes from the Amazon keyword picker"
+    - "Your main image, so the title and image say the same thing"
+    - "Your category's current style guide and title limit"
+    - "Real proof: test results, certificates, review quotes you own"
+
+terms:
+  - term: Backend keywords
+    meaning: A hidden field in the listing for search phrases that do not need to show on the page.
+  - term: A+ content
+    meaning: Extra pictures and text blocks on the listing, open to brand-registered sellers.
+  - term: Offer start date
+    meaning: The day the listing goes live. Set it in the future to launch on a planned day.

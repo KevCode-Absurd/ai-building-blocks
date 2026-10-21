@@ -1,0 +1,120 @@
+new_slug: advertorial-readiness-checker
+name: "Advertorial readiness checker"
+summary: "Give it your live ads. Get a go or no-go, a score out of 100 and page length."
+job: audit-landing-page
+thinking: medium
+thinking_why: "It compares ads against a short set of rules, so a mid-size model is enough."
+
+headline: "Advertorial readiness checker"
+subhead: Give it your live ads, their spend and whether they break even. It checks that four things are proven, rates how much each ad sells and finds mismatches between ad and page. You get a go or no-go, a score out of 100, the page length and the style.
+
+explain: |
+  An advertorial is an ad written like an article. It is a lot of work, and it only helps when your ads already work. It repeats and deepens a message that people clicked on and bought from. It rarely saves a message that nobody wanted.
+
+  This skill reads each live ad and finds four things: who it speaks to, the problem and desire, the angle and the reason it works. A thing counts as proven only if the ad that carries it breaks even or better. The skill then rates how much the ad sells on its own. The less the ad sells, the more the page must sell, so the page runs longer. The more the ad sells, the shorter the page. It also checks that the person, promise and tone stay the same from ad to headline to first image.
+
+when:
+  - You have a winning ad and want to know whether a long article-style page is worth building.
+  - You are about to brief a writer or an AI and need to know how long the page should be.
+  - An advertorial is live but converts below your product page, and you suspect the ad and page don't match.
+
+you_give:
+  - Your current ads (text or screenshots), with spend and whether each breaks even
+  - Product type, either an improvement on a known product or a new gadget (optional)
+  - The draft or planned advertorial (optional)
+
+you_get:
+  - A go or no-go with the reason, and a score out of 100
+  - The four proven or unproven things found in each ad
+  - Recommended page length, style and where the product should appear
+  - A list of mismatches between ad and page
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your live ads as files or paste their text, and add spend and break-even status for each.
+  - Say whether the product improves on something known or is a new gadget.
+  - If you have a draft page, paste it in too.
+  - If the answer is no-go, test the message on a plain product page first, then come back.
+
+how_it_works:
+  - title: Finds four variables
+    text: In each ad, finds who it speaks to, the problem and desire, the angle and the unique mechanism.
+  - title: Marks what is proven
+    text: A variable counts only if the ad carrying it converts at break-even or better.
+  - title: Applies the first gate
+    text: No ad converted means no-go. One operator's default is break-even after about $1,000 of spend.
+  - title: Rates how much the ad sells
+    text: Places each ad on a line from clickbait image to a 1,000 to 3,000 word story ad.
+  - title: Sets the page length
+    text: The less the ad sells, the longer the lead on the page. The more it sells, the sooner the product shows.
+  - title: Picks the style
+    text: A personal story of failed fixes for an improvement product. A news-style reveal in tone only for a new gadget.
+  - title: Checks congruence
+    text: Same person, promise and tone from ad to headline to first image.
+  - title: Scores and decides
+    text: 25 points for each proven variable on the best ad. Go needs a break-even ad and 75 or more.
+
+output_shape: |
+  VERDICT: <GO | GO, fix first | NO-GO>  Reason: <one line>
+  SCORE: <n>/100 = 25 x <proven variables> on <best ad>
+
+  AD <name> | spend <$> | break-even or better: <yes / no>
+    avatar: <...> [proven / not]
+    problem and desire: <...> [proven / not]
+    angle: <...> [proven / not]
+    unique mechanism: <...> [proven / not]
+    how much it sells: <place on the line>
+    page: <length; product appears at about <n>% of the page>
+    style: <personal story | news-style reveal>
+
+  AWARENESS: <advertorial or product page fits?>
+  MISMATCHES: <ad -> headline -> first image>
+  LABEL: label as an ad where the platform or law requires
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Break-even status
+    how: Say exactly which ads break even. Without it, nothing counts as proven and the answer is no-go.
+  - what: How long the ads have run
+    how: Give spend per ad. A day-old ad has no proof yet, a three-month ad does.
+  - what: Product type
+    how: Say improvement or new gadget. It decides the story style and how fast the page reaches the product.
+  - what: Draft page
+    how: Add it to get the draft checks, such as the product shown too early or lines that contradict the ad.
+
+judge:
+  - Every proven mark names the ad and its break-even status.
+  - The score equals 25 times the number of proven variables, and the sum is shown.
+  - The page length follows the ad, so a thin clickbait ad gets a long lead.
+  - Mismatches name the exact ad line, headline and image that disagree.
+  - The report reminds you to label the page as an ad where required.
+
+test:
+  - Give it an ad you know breaks even. The four variables it finds should match what you would say the ad is about.
+  - Give it an ad with no results. The answer should be no-go and tell you to test on a product page.
+  - Run it twice on the same ads. The verdict and score should match.
+  - Compare its page length advice with a page that already converts for you.
+
+improve:
+  - Change the 75 go line in the skill file if your margins are thin or your ticket is high.
+  - Replace the $1,000 break-even default with your own cost per purchase times a number you trust.
+  - Add your brand's tone rules, so the congruence check also flags tone breaks.
+  - Save each confirmed ad and its four variables into your brand file.
+  - Pair it with the Store advertorial writer to build the page once it says go.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can run the checks. Attach ads as files."}
+    - {name: "Meta Ads Manager", why: "Its export of spend and results by ad gives the break-even status the check needs."}
+  inputs:
+    - "An export of results by ad for the last 30 days"
+    - "Your cost per purchase and margin, so break-even is exact"
+    - "Screenshots of the first screen of the planned page"
+
+terms:
+  - term: Advertorial
+    meaning: An ad written like an article. Label it as an ad where the platform or law requires.
+  - term: Break-even
+    meaning: An ad that earns back what it cost, before other costs of running the store.
+  - term: Unique mechanism
+    meaning: The reason the product works, told as a short story.

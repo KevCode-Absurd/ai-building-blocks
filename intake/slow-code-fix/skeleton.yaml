@@ -1,0 +1,35 @@
+id: slow-code-fix
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: find-what-is-slow-fix-it-and-show-the-numbers
+  name: "Find what is slow, fix it and show the numbers"
+  summary: "Give it what feels slow. Get the cause ranked by cost, a fix, and before and after timings in a pull request."
+  when: "something feels slow and people are guessing why."
+  job: test-and-fix-code
+  level: intermediate
+steps:
+  - name: "Rank the slow parts by cost"
+    skill: measure-first-slowdown-finder
+    job: analysis
+    from: "skill: measure-first-slowdown-finder"
+    method: ["Write the slow moment in one line", "Plan real timings and look at the worst runs", "Compare each stage with the best it could be", "Rank fixes by the time they save and list ideas the numbers kill"]
+    inputs: [question]
+    outputs: [audit_report]
+    note: "Names the slowest stage and ranks what to fix, so the fix goes where the time is."
+  - pause: "Run the timings it planned and note the numbers for the top stage."
+  - name: "Fix the bottleneck and measure again"
+    skill: slow-code-fixer
+    job: ops
+    from: "skill: slow-code-fixer"
+    method: ["Measure the slow part before changing it", "Find the bottleneck with a profiler or query plan", "Fix the biggest cost first", "Measure again to prove it is faster"]
+    inputs: [codebase]
+    outputs: [code_change]
+    note: "Fixes the stage the ranking named, with a before and after number."
+  - name: "Write the pull request"
+    skill: pull-request-writer
+    job: ops
+    from: "skill: pull-request-writer"
+    method: ["Sketch what changed in the smallest clear view", "Show the before and after timings", "Say how hard the change is to undo and what it could touch", "Keep the prose short"]
+    inputs: [code_change]
+    outputs: [document]
+    note: "Describes the speed fix with its before and after timings."

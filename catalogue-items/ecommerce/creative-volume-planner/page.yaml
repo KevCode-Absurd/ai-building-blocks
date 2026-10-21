@@ -1,0 +1,125 @@
+new_slug: creative-volume-planner
+name: "Creative volume planner"
+summary: "Give it your spend, target and hit rate. Get ads needed per month and a weekly quota."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It does a few sums and sets a plan, so a mid-size model works as long as it shows its sums."
+
+headline: "Creative volume planner"
+subhead: Give it your monthly ad spend, your revenue target and your hit rate. It works out how many new ads you need a month by three methods, how much to spend on making them and what mix to make. You get a monthly total and a weekly quota.
+
+explain: |
+  Ad accounts need a steady flow of new ads, because winners fade. Too few and sales slide. Too many weak ones and money goes to waste. In one case, an account making 2,000 ads a month at about 4M in spend lost money. Volume only counts above a quality bar, and each ad must differ in concept from the others.
+
+  This skill gives you the number three ways so you can see a range. The first is a quick rule: about one new ad per 1,000 of monthly spend. The second works back from your revenue target. The third counts how many winners died last month and divides by your hit rate. It then sets the creative budget for your spend band, compares profit per ad by format, and gives a weekly quota. The numbers come from large accounts, so small stores should use the ratios and not the totals.
+
+when:
+  - You are setting next month's creative plan and need to know how many ads to make.
+  - Your winners keep fading and you suspect you are not making enough.
+  - You need to decide whether to hire an editor, film more or make more image ads.
+
+you_give:
+  - Monthly ad spend and your new-customer revenue target
+  - Ad count, spend and revenue for the last 12 months, on a 7-day click basis
+  - Winners live now, how many ended last month, and your hit rate
+  - What a static, a video and a creator video cost you to make
+  - Contribution margin per sale (optional)
+you_get:
+  - Ads needed per month by three methods, with the range
+  - The creative budget for your spend band
+  - Cost per ad and profit per ad by format
+  - Who to hire or hold at your stage, a content mix and a weekly quota
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your spend, target and the last 12 months of ad counts and revenue.
+  - Add your winners now, winners lost last month and your hit rate, if you track them.
+  - Add what each type of ad costs to make.
+  - Use the lowest sensible number first, hold the quality bar, and check the weekly quota against your team.
+
+how_it_works:
+  - title: Uses the quick rule
+    text: About one new ad per 1,000 of monthly spend. 30K a month is 30 ads. 100K and above should give at least 100 a month. The dollar rule was stated in Australian dollars, so treat it as a ratio.
+  - title: Works back from revenue
+    text: Average spend per ad times average return gives revenue per ad. Revenue target divided by that gives ads needed. 1,000 spend at 3x is 3,000 per ad, so 300K needs 100 ads.
+  - title: Uses winners lost
+    text: Winners that died last month divided by your hit rate. 2 lost at a 5 percent hit rate means 40 ads a month. Hit rates usually run 5 to 15 percent.
+  - title: Sets the creative budget
+    text: Sets a share of spend for your band, from mostly founder time at small spend, to about 25 percent of media at 30K to 100K, to about 10 percent above 100K.
+  - title: Compares formats
+    text: Expected profit per ad is average revenue less ad spend less making cost. A 20 static and a 200 video give different profit at the same return.
+  - title: Sets the mix
+    text: Suggests 50 to 60 percent replicating winners, 20 to 30 percent iterating fixes and 20 to 30 percent net new concepts.
+  - title: Sets the weekly quota
+    text: Turns the monthly number into concepts and ads per concept for each week, and plans about 30 days ahead.
+  - title: Guards quality
+    text: Caps the plan for a small store at 3 core concepts and checks each ad differs in concept.
+
+output_shape: |
+  INPUTS: spend <...> | target <...> | hit rate <...> | winners now <...> | lost last month <...>
+
+  ADS NEEDED PER MONTH
+  Rule (1 per 1,000 spend): <n>
+  Back-solved from revenue: <target> / (<spend per ad> x <return>) = <n>
+  Winners lost: <lost> / <hit rate> = <n>
+  RANGE: <low> to <high>   START AT: <n>, because <why>
+
+  CREATIVE BUDGET (<band>): <share> of media = <amount>
+  PROFIT PER AD  static <...> | video <...> | creator <...>
+  TEAM FOR THIS BAND: <who to hire or hold>
+  MIX: replicate <n>% | iterate <n>% | net new <n>%
+  SPEND SPLIT: <n>% proven / <n>% testing
+  WEEKLY QUOTA: <concepts> x <ads per concept> = <ads>
+  WATCH: <weekend cycle | out of stock | lopsided account>
+  CHECKS MISSED: <none, or list>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: Your hit rate
+    how: Use your own tracked rate. If you do not track one, it uses 5 to 15 percent and says so, which gives a wide range.
+  - what: Your spend band
+    how: State your monthly spend. Budget share and team advice change by band.
+  - what: Your margin
+    how: Add contribution margin, and it shows profit per ad on margin as well as on revenue.
+  - what: Your capacity
+    how: Say how many ads your team can really make. The plan caps there and says what to hire first.
+
+judge:
+  - All three methods are shown, each with its sum.
+  - The range is stated, and a start number is chosen with a reason.
+  - Profit per ad is shown by format with the cost to make it.
+  - A small store is capped at 3 core concepts with founder content.
+  - No figure is shown without its source or its sum.
+
+test:
+  - Recompute one method by hand from your own numbers. The skill's answer should match.
+  - Compare its monthly number with the ads you made last month and see if the gap is believable.
+  - Run it twice. The range should hold.
+  - Follow the weekly quota for four weeks, then check if hit rate and winners match what you entered.
+
+improve:
+  - Add your real hit rate and cost per ad type to the skill file, so every run starts from your numbers.
+  - Add your sale calendar, so the quota rises in busy weeks.
+  - Add a quality bar, such as the minimum a new ad must hit to count as a win.
+  - Save each month's plan and result to your brand file.
+  - Pair it with the creative portfolio mix planner and the ad sameness checker.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can do the sums. Check them yourself."}
+    - {name: "Meta Ads Manager", why: "Source of your ad count, spend, return and winners lost."}
+  inputs:
+    - "A 12-month export of ad count and spend"
+    - "A list of winners with start and end dates"
+    - "Quotes or costs for editors, designers and creators"
+    - "Your promotion calendar"
+
+terms:
+  - term: Hit rate
+    meaning: The share of new ads that reach your cost target and win spend.
+  - term: Contribution margin
+    meaning: What is left from a sale after product, shipping and other direct costs.
+  - term: Churn
+    meaning: Winners that stop working and fall out of use.
+  - term: 7-day click
+    meaning: A way to count sales that happened within 7 days of someone clicking an ad.

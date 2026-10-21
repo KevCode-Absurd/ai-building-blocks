@@ -1,0 +1,96 @@
+new_slug: weekly-meeting-actions-keeper
+name: Weekly meeting actions keeper
+summary: Give it this week's meeting notes. Get minutes, last week's open actions checked and an agenda for the next meeting.
+job: organise-work
+thinking: low
+thinking_why: It sorts notes into actions and compares two lists. A fast, cheap model does this well. Use a stronger one if your notes are very rough.
+headline: Weekly meeting actions keeper
+subhead: Give it your meeting notes each week. It writes the minutes, checks them against last week's open actions, shows what is late or keeps slipping, and drafts an agenda that starts with those items.
+explain: |
+  Most weekly meetings lose their actions. Someone writes them down, then next week nobody checks. The same item comes back a third time, and the meeting turns into a repeat of the last one.
+
+  This agent keeps one running list of actions. After each meeting it turns your notes into minutes, then sets them against last week's list: done, still open, dropped or not mentioned. It counts how many weeks each item has been open. If items keep slipping, it puts them first on the next agenda and asks what would unblock them. If a meeting keeps ending with no decisions, it asks whether the meeting should be held at all. It sends nothing. You do.
+when:
+  - You run a weekly team or project meeting and actions keep getting lost.
+  - You want to see which items have slipped for weeks, without reading old notes.
+  - You want the next agenda ready, led by what is still open.
+you_give:
+  - This week's rough notes or transcript, with who was there
+  - Last week's action list (from the second week on)
+  - What the meeting is for (optional, the first time)
+you_get:
+  - Short minutes with decisions, actions and open questions
+  - Every action from last week marked done, open, dropped or not mentioned
+  - A list of what is late or has slipped, with the likely reason
+  - A draft agenda for the next meeting, led by the late items
+  - A question about the meeting itself, only if it keeps ending with no decisions
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents.
+  - After the meeting, paste your notes or the transcript and ask it to run this week.
+  - Read the late list and the questions. Fill in any missing owner or date.
+  - Send the minutes and agenda yourself, or say yes to one named send.
+  - Run it again after next week's meeting. It reads the saved action list.
+how_it_works:
+  - title: Write the minutes
+    text: Turns the notes into a bottom line, decisions, actions and open questions. A missing owner or date is marked, never invented.
+  - title: Compare with last week
+    text: Sets each old action to done, still open, dropped or not mentioned, adds the new ones and counts weeks open.
+  - title: Choose the path
+    text: Healthy goes straight to the agenda. Slipping puts the stuck items first and asks what would unblock them. Not working asks whether to hold the meeting.
+  - title: Check the meeting itself
+    text: Only when items slip three weeks running or two meetings end with no decision, it works out a go or no-go and shows it to you.
+  - title: Draft the next agenda
+    text: Opens with the late items, then open questions, then new topics. Anything already decided is dropped.
+output_shape: |-
+  THIS WEEK
+    Done <n> | Still open <n> | Dropped <n> | New <n> | path <healthy | slipping | not working>
+
+  MINUTES
+    Bottom line: <up to 3 lines>
+    Decisions: <list>
+    Actions: <action | owner | date>
+    Open questions: <list>
+
+  LATE AND SLIPPING
+    <action> | owner: <name> | weeks open: <n> | likely reason: <reason from the notes>
+
+  QUESTIONS FOR THE OWNER
+    <missing owners or dates, go or no-go on the meeting>
+
+  NEXT AGENDA (not sent)
+    <items, late ones first>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: What counts as slipping
+    how: The starting point is any action open three weeks or more. Lower it for a fast weekly team, raise it for a monthly meeting.
+  - what: Who is in the room
+    how: List attendees in the notes. Without names, owners come out as unassigned.
+  - what: How rough your notes are
+    how: Rough notes work. Say what was decided in your own words if you can, and the minutes will be sharper.
+  - what: Where your actions live
+    how: If you already track tasks in another tool, paste its list in each week instead of using the file.
+judge:
+  - Every action has an owner and a date, or is marked unassigned or to be set.
+  - Every action from last week has a status. None went missing.
+  - Nothing appears that was not in the notes.
+  - The late items lead the next agenda.
+  - Nothing was sent or cancelled without your yes.
+test:
+  - Run it on two past weeks of notes you still have. Check that it finds the action you remember slipping.
+  - Leave one old action out of this week's notes. It should say not mentioned, not done.
+  - Run the same week twice. The minutes and list should match.
+improve:
+  - Add your meeting's standing agenda so the draft keeps its usual order.
+  - Set your own number of weeks that counts as slipping.
+  - Every month, look at which kinds of action slip most and fix the cause in how you assign them.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the actions file and the folder of past weeks, and run after each meeting.
+    - name: Google Meet
+      why: Use a transcript from the call as the input. Sending the result stays with you.
+  inputs:
+    - The meeting's standing agenda
+    - A list of attendees and their roles

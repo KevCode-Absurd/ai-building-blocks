@@ -1,0 +1,22 @@
+slug: cut-a-raw-recording-and-get-chapters-and-short-clips
+name: "Cut a raw recording and get chapters and short clips"
+summary: "Give it a raw recording. Get clean speech, a timed cut list, video chapters and the best five short clips."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: audio, required: true}
+outputs:
+  - {type: shot_list}
+uses: [noisy-audio-cleaner, subtitle-and-transcript-maker, dead-air-and-retake-cutter, youtube-chapter-writer, shorts-clip-finder]
+steps:
+  - {uses: noisy-audio-cleaner, note: "Gives you clean speech to work from."}
+  - {uses: subtitle-and-transcript-maker, note: "Writes a timed transcript of the clean audio. Reads the audio from the step before."}
+  - {uses: dead-air-and-retake-cutter, note: "Lists every cut with timecodes. Reads the timed transcript from the step before."}
+  - {uses: youtube-chapter-writer, note: "Writes the chapter list from the same transcript."}
+  - {uses: shorts-clip-finder, note: "Picks five clips from the transcript and rewrites each opening."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/cut-a-raw-recording-and-get-chapters-and-short-clips/skeleton.yaml

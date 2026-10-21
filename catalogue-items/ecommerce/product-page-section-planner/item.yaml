@@ -1,0 +1,21 @@
+slug: product-page-section-planner
+name: "Product page section planner"
+summary: "Give it your product and buyers' doubts. Get the page sections and settings that answer them."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: objection_map, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: page_layout_spec}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients", used: "Researching buyer questions, mapping each doubt to a section and proof, saying key claims twice, a sticky add-to-cart, variant pre-selection, media grouping, size guides, collapsible tabs, one or two recommended products and metafields versus templates"}
+  - {title: "Shopify Store Setup Full Tutorial 2026: Step by Step", by: "Unnamed presenter", used: "Image size, benefit-led copy and a realistic compare-at price"}

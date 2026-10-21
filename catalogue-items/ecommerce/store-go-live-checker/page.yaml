@@ -1,0 +1,127 @@
+new_slug: store-go-live-checker
+name: "Store go-live checker"
+summary: "Give it your store setup. Get a score out of 100, the blockers and a test-order plan."
+job: set-up-store
+thinking: medium
+thinking_why: "It works through a long checklist and weighs what blocks a sale, so a middle model is enough. Use a stronger one for a store with many warehouses."
+
+headline: "Store go-live checker"
+subhead: Tell it what you have set up and what your test orders showed. It checks your settings, policies, payments, shipping, tax and domain. You get a go or no-go, a score out of 100, the blockers first, a fix list in order, and the test orders to place.
+
+explain: |
+  Most new stores open with a gap that costs sales. A policy page still has a bracketed placeholder. The payment account is still being verified. Tax was never tested on a real address. The first real order becomes your first test, and the buyer sees the mistake.
+
+  This skill goes through everything that must work before you take the password off. It starts with settings, then products, policies, payments, test orders and fulfilment, the phone view, the domain and analytics. It grades each item pass, fix or block, and puts the problems that stop you taking money or shipping first. It works from what you tell it and cannot see your admin, so it also gives you the exact test orders to place and what to confirm on each. A test order proves your checkout flow. It does not prove your tax registrations are right.
+
+when:
+  - Your store is built and you are about to remove the password or switch from coming soon to live.
+  - You changed payments, shipping or tax and want to be sure checkout still works.
+  - You sell from more than one place or use a warehouse app and need to prove orders reach it.
+
+you_give:
+  - Your platform (Shopify or WooCommerce) and a store link or preview link
+  - "What you have set up: products, payments, shipping, tax, policies, domain"
+  - The countries you sell to and the shipping zones and rates
+  - Whether a warehouse or fulfilment app is connected
+  - The results of any test order you have already placed (optional)
+you_get:
+  - A go or no-go and a score out of 100, with how it was worked out
+  - Blockers listed before warnings, each graded pass, fix or block
+  - A test-order script with the addresses and products to use and what to confirm
+  - A fix list in order, and the safe order to switch to live
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List what is set up in your store, and mark anything you are unsure about.
+  - Paste the results of any test orders you have placed. Never paste live payment keys, card numbers or bank details.
+  - Fix the blockers first, place the test orders it lists, and tell it what you saw.
+  - Run it again until there are no blockers, then switch to live in the order it gives you.
+
+how_it_works:
+  - title: Sweeps settings
+    text: Store name, billing address, currency and units, because tax and shipping are built from them.
+  - title: Checks products and policies
+    text: Every product has a description, price and image. Contact, shipping, return, privacy and terms pages are published, linked and free of placeholders.
+  - title: Checks payments
+    text: Payment verification is finished, or the gateway is connected and its connection test passes.
+  - title: Plans the test orders
+    text: Orders in test mode with different addresses, then a fulfilled order, and a real low-value order for each fulfilment location.
+  - title: Checks the buyer's view
+    text: The whole path on a phone, the menu, logo, favicon, footer, domain and analytics.
+  - title: Plans the switch to live
+    text: Test mode off, live keys matched to live mode, a small real purchase and a refund, and the password last.
+  - title: Scores and ranks
+    text: Starts at 100 and takes off 15 for each blocker and 5 for each warning. Any blocker means no-go.
+
+output_shape: |
+  VERDICT  <GO | NO-GO>  <one-line reason>
+  SCORE    <n>/100 (100 - 15 x <blockers> - 5 x <warnings> = <n>; not tested takes nothing off)
+
+  BLOCKERS
+  <n>. <area>: <what is wrong>  fix: <one change>
+
+  WARNINGS
+  <n>. <area>: <what is wrong>  fix: <one change>
+
+  CHECKLIST
+  <area> | <PASS | FIX | BLOCK | NOT TESTED> | <note>
+
+  TEST ORDERS TO PLACE
+  <order>: <address, product, payment mode> -> confirm <tax, shipping price, policy links, email>
+
+  SAFE SWITCH TO LIVE (in order)
+  <step 1 ... last step: remove password>
+
+  NOT TESTED
+  <item, and what is needed to test it>
+  MISSING: <platform | setup list | test results>
+
+tweaks:
+  - what: Platform
+    how: Say Shopify or WooCommerce. The checks are the same, but the test-mode steps and the live switch differ.
+  - what: Where you ship from
+    how: List every fulfilment location and any warehouse app. Each one gets its own real test order.
+  - what: Test results
+    how: Paste what each test order showed, with the tax and shipping price. The checker can only grade what you report.
+  - what: Catalogue type
+    how: Say if you sell digital items, bundles or use coupons. Those add download, bundle and discount-maths tests.
+
+judge:
+  - Every blocker says what is wrong and the one change that fixes it.
+  - Items it could not see are marked not tested, not passed.
+  - The score line shows the sum, so you can check it.
+  - Anything that stops you taking money, shipping or showing policies is a blocker.
+  - It never asks you to paste payment keys, card numbers or bank details.
+
+test:
+  - Leave a placeholder such as a bracketed return address in one policy on purpose. It should list it as a fix and name the page.
+  - Say payment verification is still pending. It should call that a blocker and put it first.
+  - Run it twice on the same setup list. The blockers should match. If they flip, your list is too vague.
+  - Place one of its test orders yourself and check that what it told you to confirm matches what you see.
+
+improve:
+  - Add your own go-live items to the checklist, such as an age gate or a cookie banner your country needs.
+  - Add your shipping zones and tax settings to the skill file so it can check test-order totals against them.
+  - Save your list of fulfilment locations in your brand file so each run covers all of them.
+  - Pair it with the shipping, tax and payments skills so each setting is planned before it is checked.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its test mode for Shopify Payments and its built-in assistant, which can list products with a missing description, price or image."}
+    - {name: "Stripe", why: "Its test mode and test cards let you place orders without moving real money, and its webhook shows whether orders are reported back."}
+    - {name: "Google Analytics 4", why: "Connect it before launch so day-one data is not lost."}
+  inputs:
+    - "Screenshots of your checkout on a phone"
+    - "Your shipping zones and rates"
+    - "Your tax settings and where the business is registered"
+    - "A list of your policy pages with their links"
+
+terms:
+  - term: Test mode
+    meaning: A setting that lets you place orders with fake cards so no real money moves.
+  - term: Webhook
+    meaning: A message your payment provider sends your store to say a payment went through.
+  - term: Fulfilment
+    meaning: Packing and sending an order, and telling the buyer.
+  - term: Blocker
+    meaning: A problem that stops you taking money, shipping orders or showing the policies you need.

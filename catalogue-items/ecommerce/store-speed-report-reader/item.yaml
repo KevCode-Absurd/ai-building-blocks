@@ -1,0 +1,21 @@
+slug: store-speed-report-reader
+name: "Store speed report reader"
+summary: "Paste your PageSpeed report. Get a field score out of 100, each page read, three fixes."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Google PageSpeed Insights: Step-by-Step tutorial to Boost Site Speed", by: "Jack, Rank Math (video)", used: "Real-user (field) data against lab data, page against whole-site results, the 28-day window and the metric bands"}
+  - {title: "Shopify speed and image optimization (a video series on images, app scripts, layout shift, largest content and store audits)", by: "Christian, a Shopify developer (YouTube channel)", used: "How Shopify builds its speed score from three page types, why every template needs a test, the 24-hour lag, and averaging three runs"}
+  - {title: "Ecommerce Site Speed Optimization: Complete Guide for 2026", by: "Jakub Rusniok (article)", used: "Why a simulated lab test and real-user data disagree"}

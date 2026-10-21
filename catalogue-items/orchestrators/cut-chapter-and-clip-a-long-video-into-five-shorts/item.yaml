@@ -1,0 +1,22 @@
+slug: cut-chapter-and-clip-a-long-video-into-five-shorts
+name: "Cut, chapter and clip a long video into five shorts"
+summary: "Give it your recording transcript. Get a cut list, working chapters and five short clips with new first lines."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: transcript, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: shot_list}
+uses: [dead-air-and-retake-cutter, youtube-transcript-reader, youtube-chapter-writer, shorts-clip-finder]
+steps:
+  - {uses: dead-air-and-retake-cutter, note: "Starts from the transcript of your raw recording and gives a timed list of cuts."}
+  - {uses: youtube-transcript-reader, note: "Fresh start after the edit: reads the link to the cut version, so chapters and clips match the final timing. You can paste the captions yourself instead."}
+  - {uses: youtube-chapter-writer, note: "Reads the transcript from the step before and writes the chapter block for the description."}
+  - {uses: shorts-clip-finder, note: "Reads the same transcript and picks five moments that stand alone, with a new first line for each."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/cut-chapter-and-clip-a-long-video-into-five-shorts/skeleton.yaml

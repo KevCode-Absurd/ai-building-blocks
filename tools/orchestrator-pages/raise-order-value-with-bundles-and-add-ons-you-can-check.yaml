@@ -1,0 +1,89 @@
+new_slug: raise-order-value-with-bundles-and-add-ons-you-can-check
+name: Raise order value with bundles and add-ons you can check
+summary: Give it your sales export and product list. Get a free-shipping line, bundles and an after-sale offer that keeps profit.
+job: make-offer
+thinking: high
+thinking_why: It runs five skills in a row and does profit sums on each offer. Give it your strongest model.
+headline: Raise your average order with offers that keep profit per visitor
+subhead: Give it your order export and product costs. It sets a free-shipping line where your orders cluster, builds bundles around it, adds an after-sale offer, checks the full set earns more profit per visitor, and reads your test results to keep, change or stop.
+explain: |
+  When ad costs rise, a flat average order leaves little room. Many stores set free shipping near the average, add a bundle with a big discount and call it done. The average moves, yet profit per visitor can fall because shipping, discounts and gifts cost more than the extra items bring in.
+
+  The steps raise order value and check the sums. First it reads where your real orders cluster and sets a threshold just above each cluster. Then it builds bundles and quantity breaks that fit around it, and an offer right after the sale that goes with what the buyer picked. It checks that the whole set earns more profit per session, not only more revenue. It pauses while you run the offers for two to four weeks. You export the results and it says keep, change or stop.
+when:
+  - Your average order has stayed flat for months and ad costs leave little room to grow.
+  - You offer free shipping or a bundle and are not sure it makes money.
+  - You sell something people use more than once and want a bigger first order.
+you_give:
+  - An export of your orders with order values and dates
+  - Your product list with prices, costs and shipping costs
+  - Your current offers, codes and free-shipping rule (optional)
+  - Session and conversion numbers for the same dates (optional)
+  - An export of orders and profit after the test, which it asks for halfway through
+you_get:
+  - A read of where your orders cluster, with a free-shipping or gift line set just above each cluster
+  - A multipack ladder for your hero product with shipping and profit per order at each tier
+  - A bundle table with the default tier, the price per unit and the margin after discount, shipping and gift
+  - Two to four after-sale offers, each with its ask and extra profit per order
+  - A profit-per-session comparison, with a trust score out of 100
+  - A verdict on your test results, as ship, do not ship, re-test or inconclusive, with a score out of 100
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Start with your order export and product costs. Say which shipping cost you pay on each order.
+  - Check each bundle's margin against your floor before you publish any of it.
+  - Run the offers for two to four weeks. Then export orders and profit for the same dates and give them to the last step.
+how_it_works:
+  - title: Set the threshold
+    text: Order threshold planner puts your orders in value buckets and sets one line just above each peak. It builds a multipack ladder for your hero product and shows the profit change per order at each tier.
+  - title: Build the bundles
+    text: Bundle and quantity-break builder makes a tier table for one product, such as 1, 3 and 6. It picks a middle tier as the default and counts shipping savings against the discount. It checks each tier clears your margin floor.
+  - title: Plan the after-sale offer
+    text: After-sale offer planner lists what buyers need once they have bought. It picks add-ons that fit and cost little, writes each as an easy yes and works out extra profit per order.
+  - title: Check profit per session
+    text: Offer profit-per-session checker builds a cost table for each variant. It flags offers that raise order value but lower profit per visitor, picks a winner and scores how far you can trust the read.
+  - title: Read the test
+    text: Store test verdict maker checks the traffic split, run length and tracking, then reads the result as a range in money. It gives a call and a log entry.
+output_shape: |-
+  STEP 1: THRESHOLDS
+    Order spread | threshold per peak with profit change | multipack ladder | offer wording | cart bar
+
+  STEP 2: BUNDLES
+    Tier table with price, per-unit price, shipping and margin | default tier | price lines | entry offer
+
+  STEP 3: AFTER-SALE OFFERS
+    What buyers need next | offers with ask and extra profit per order | follow-up message | test plan
+
+  STEP 4: PROFIT PER SESSION
+    Variant table | flags | winner | next test | score out of 100
+
+  STEP 5: TEST VERDICT
+    Call | trust score out of 100 | split and length checks | result range | money per month | log entry
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How many orders you give it
+    how: More orders show the clusters clearly. With a small store the buckets are rough and flagged.
+  - what: Your shipping cost per order
+    how: Give the real figure by size or weight. Free shipping and bundles are only as good as the shipping sum.
+  - what: Your margin floor
+    how: State the lowest margin you will accept on any tier, so no bundle falls below it.
+  - what: How long you run the test
+    how: Two to four weeks, longer if you have few orders. A short test can show a false win.
+judge:
+  - Each threshold sits just above a peak in your orders, not on the average.
+  - Every bundle tier uses the same product and clears your margin floor after discount, shipping and gift.
+  - No low-priced item gets free shipping without a basket-building tier.
+  - The winner is picked by profit per session, and you can redo the sums.
+  - No ship call is made when the traffic split fails or the trust score is under 60.
+test:
+  - Check the order buckets against a quick filter of your own order export.
+  - Redo the margin on one bundle tier by hand.
+  - Run each new offer on its own for a week before you combine them.
+  - After the test, check the money figure against your payout report, not just your store's dashboard.
+improve:
+  - Save your order clusters and margin floor in your brand file, so a rerun starts from them.
+  - Edit the bundle skill to name your repeat-purchase sizes once you know which one reorders fastest.
+  - Add the after-sale follow-up question to your delivery email and log the answers.
+  - Keep each test log entry, so the next round starts from what you learned.

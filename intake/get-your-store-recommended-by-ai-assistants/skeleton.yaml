@@ -1,0 +1,91 @@
+id: get-your-store-recommended-by-ai-assistants
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: get-your-store-recommended-by-ai-assistants
+  name: Get your store recommended by AI assistants
+  summary: Give it your products and rivals. Get a baseline of who AI names, the gaps, and product pages rewritten to be quoted.
+  when: shoppers ask ChatGPT, Gemini or Perplexity what to buy and you want your store named in the answers.
+  job: get-found-in-search
+  level: intermediate
+steps:
+  - name: Shopper question and fan-out mapper
+    skill: shopper-question-and-fan-out-mapper
+    job: research
+    from: library
+    method:
+      - Start from money terms
+      - Add the long tail
+      - See the fan-out where you can
+      - Use fan-out as topics, not keywords
+      - Group into topics
+      - Apply the AI filter
+      - Mark gaps
+    inputs:
+      - product_data
+      - voc_reviews!
+      - performance_sheet!
+    outputs:
+      - plan
+    note: Builds the 30 to 60 questions shoppers ask about your category.
+  - name: AI recommendation panel runner
+    skill: ai-recommendation-panel-runner
+    job: research
+    from: library
+    method:
+      - Fix the panel
+      - Run on each assistant that matters
+      - Compare free and logged in
+      - Work out share of voice
+      - Rank the sources
+      - Repeat before you believe it
+      - Rhythm
+    inputs:
+      - plan
+      - competitor_set!
+    outputs:
+      - audit_report
+      - spreadsheet
+    note: Runs those questions on the main assistants and logs who is named and cited. Reads the question list from the step before.
+  - name: AI recommendation gap finder
+    skill: ai-recommendation-gap-finder
+    job: analysis
+    from: library
+    method:
+      - List the brand entities
+      - Tie entities to topics
+      - Check six gaps
+      - Tag each opportunity
+      - Quick wins first
+      - Weigh the platforms
+      - Repeat on a rival
+    inputs:
+      - audit_report
+      - competitor_set!
+    outputs:
+      - audit_report
+    note: Turns the panel results into the gaps that keep you out of answers, with fix, build or influence actions.
+  - name: AI-ready product page editor
+    skill: ai-ready-product-page-editor
+    job: page
+    from: library
+    method:
+      - Apply the 2-second rule
+      - Plain facts in the first screen
+      - Collection pages
+      - Add schema
+      - Real photos and your own use cases
+      - One source of truth
+      - Health, money and legal claims
+    inputs:
+      - web_page
+      - product_data
+      - voc_reviews!
+      - plan!
+    outputs:
+      - pdp_copy
+      - plan
+    note: Rewrites your key product pages with facts, spec tables and FAQs for the gaps found. Reads the question plan and the gap findings.

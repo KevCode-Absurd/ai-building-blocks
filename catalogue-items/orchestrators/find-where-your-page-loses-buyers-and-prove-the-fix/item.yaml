@@ -1,0 +1,24 @@
+slug: find-where-your-page-loses-buyers-and-prove-the-fix
+name: "Find where your page loses buyers and prove the fix"
+summary: "Give it page captures and your funnel numbers. Get a ranked test list and a clear verdict on the first fix."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: store_capture, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: audit_report}
+uses: [heatmap-and-recording-reader, page-issue-sorter, test-idea-ranker, ab-test-traffic-checker, store-test-verdict-maker]
+steps:
+  - {uses: heatmap-and-recording-reader, note: "Reads heatmaps and recordings and lists what visitors do instead of buying."}
+  - {uses: page-issue-sorter, note: "Sorts what the reading found into a plan, worst leak first."}
+  - {uses: test-idea-ranker, note: "Turns the sorted issues into a short ranked list of tests worth running first."}
+  - {uses: ab-test-traffic-checker, note: "Checks the exported results had enough traffic to trust before anyone calls a winner."}
+  - {uses: store-test-verdict-maker, note: "Gives a ship, stop or keep-running verdict on the test the traffic check cleared."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/find-where-your-page-loses-buyers-and-prove-the-fix/skeleton.yaml

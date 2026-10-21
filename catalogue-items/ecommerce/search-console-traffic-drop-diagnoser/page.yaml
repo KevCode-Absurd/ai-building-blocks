@@ -1,0 +1,116 @@
+new_slug: search-console-traffic-drop-diagnoser
+name: "Search Console traffic drop diagnoser"
+summary: "Paste a Search Console export. Get pages that lost clicks, the cause and a score out of 100."
+job: get-found-in-search
+thinking: high
+thinking_why: "It weighs several possible causes against the evidence, so a stronger model reasons more carefully."
+
+headline: "Search Console traffic drop diagnoser"
+subhead: Paste your Search Console pages and searches for the drop and for the period before. It ranks the pages that lost the most clicks, finds what they share, reads click rate against position, and hands back the likely cause, the order to fix things and a score out of 100 for how clear the cause is.
+
+explain: |
+  When search traffic falls, the usual reaction is to rewrite everything. That can make it worse, especially right after a Google update. The faster path is to find which pages lost the clicks and ask what they have in common: the same topic, the same page type, thin content, or two pages competing for the same search.
+
+  This skill sorts your pages by clicks lost and looks for the shared cause. If rankings held but clicks fell, it compares click rate with position to tell a stale title from an answer placed above you, such as an AI overview. It reads Google's generative AI report where you have it, orders the fixes, and checks store basics like tracking, stock and ads before it blames search. It adds Search Console steps and store checks to the general traffic drop investigator.
+
+when:
+  - Organic clicks dropped and you want to know which pages and why.
+  - Rankings look steady but fewer people click, and you suspect an AI answer above you.
+  - Sales fell and you need to know whether search is the cause or something else in the store.
+
+you_give:
+  - Search Console pages and searches for the drop window and the period before
+  - Dates of site changes and known Google updates (optional)
+  - Your top page links (optional)
+  - Whether sales fell overall, and your ad and stock status (optional)
+you_get:
+  - Pages ranked by clicks lost, with what the losers share
+  - The likely cause and a fix for each group
+  - The order to fix things in
+  - A score out of 100 for how clear the cause is, and what would make it clearer
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In Search Console, compare the drop window with the period before, sort the pages by click difference (smallest first), and paste the top rows.
+  - Paste the same view for searches, or for the biggest losers.
+  - Add your site change dates and any known Google updates.
+  - Fix in the order the skill gives, one group at a time.
+
+how_it_works:
+  - title: Finds the losers
+    text: Sorts pages by click difference, ascending, so the biggest losers come first, over two comparable periods.
+  - title: Finds what they share
+    text: Looks for the same topic cluster, page type, thin content or two pages competing for the same search.
+  - title: Checks if the results changed
+    text: If pages were outranked, the results page may now favour another format, depth or intent. It compares the live results.
+  - title: Reads click rate against position
+    text: If position holds but click rate falls, the cause is a stale title and description or an answer above you.
+  - title: Reads the AI report
+    text: Uses Google's generative AI report where available, which has no click data, and spots pages read inside answers.
+  - title: Orders the fixes
+    text: Indexing first, then thin or competing pages, then retargeting, then rewriting the snippet.
+  - title: Checks the store
+    text: If the whole store lost sales, it checks tracking, stock and ads before blaming search.
+  - title: Scores clarity
+    text: Scores how clear the cause is from the evidence you gave.
+
+output_shape: |
+  WINDOW  <drop period> vs <before>   SITE-WIDE?  <store sales also down? tracking, stock, ads checked>
+  LOSERS (ranked by clicks lost)
+  <page> | clicks <before> to <after> | position <before> to <after> | CTR <before> to <after>
+  WHAT THEY SHARE  <topic / page type / thin / competing for same search>
+  LIKELY CAUSE BY GROUP
+  <group> | <cause> | <evidence> | <fix>
+  AI REPORT  <pages with heavy AI impressions and falling clicks, or not available>
+  FIX ORDER  1 indexing  2 thin or competing pages  3 retarget  4 snippet rewrite
+  SCORE  <n>/100  measures: how clear the cause is
+    losers found <n>/25 | shared trait <n>/25 | cause backed by evidence <n>/25 | store checks <n>/25
+  NOT RUN  <check, why>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: The comparison window
+    how: Cover the whole drop, for example last 6 months against the previous period. A window that is too short hides the trend.
+  - what: Dates of updates and changes
+    how: List site changes and known Google updates so the timing of the drop can be matched.
+  - what: Store sales
+    how: Say if sales fell too. If they did, the skill checks tracking, stock and ads first.
+  - what: Page types
+    how: Tell it which pages are collections, products and blog posts, so losers can be grouped.
+
+judge:
+  - Pages are ranked by clicks lost, with before and after numbers.
+  - The shared trait is stated and visible in the pages listed.
+  - Each cause names the evidence, such as stable position with a falling click rate.
+  - The fix order puts indexing first and snippet rewrites last.
+  - The skill does not advise rewriting everything at once.
+
+test:
+  - Run it on a drop you already understand. The cause it names should match yours.
+  - Check the top three losers in Search Console. The numbers should match.
+  - Open the live results for one lost search and see whether the format changed, as the skill said.
+  - Run it twice. The group causes and fix order should match.
+
+improve:
+  - Add your page types and the order you want fixes done in.
+  - Add your known update calendar so timing matches are automatic.
+  - Save each diagnosis in your brand file, so a repeat drop shows what worked last time.
+  - Pair it with the organic search report builder for the trend and the quick-win finder for pages to push once the drop is fixed.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "Gives the pages and searches table, the click difference sort and Google's generative AI report where available."}
+    - {name: "GA4", why: "Shows whether store sales fell too, which points away from search."}
+  inputs:
+    - "A dated list of site changes"
+    - "Known Google update dates"
+    - "Your ad spend and stock status over the same period"
+    - "The pages table and the searches table for the same window"
+
+terms:
+  - term: Cannibalisation
+    meaning: Two of your pages competing for the same search, so neither ranks as well as one would.
+  - term: AI overview
+    meaning: An answer Google places above the usual results, built by AI from several pages.
+  - term: Click rate (CTR)
+    meaning: The share of people who saw your result and clicked it.

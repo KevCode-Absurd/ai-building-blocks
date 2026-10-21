@@ -1,0 +1,35 @@
+# Workflow skeleton that chains library skills (docs/INTAKE.md). Our words.
+id: plan-a-unit-from-the-end-goal-and-schedule-the-revision
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: plan-a-unit-from-the-end-goal-and-schedule-the-revision
+  name: "Plan a unit from its end goal and schedule revision"
+  summary: "Give it your standards. Get a unit planned from the end result, practice mixed through it and a spaced revision schedule."
+  when: "you are planning a new unit or term and want students to still remember it weeks later."
+  job: teach-and-train
+  level: intermediate
+steps:
+  - name: Backwards unit planner
+    skill: backwards-unit-planner
+    job: ops
+    from: library
+    method: ["Write what students should be able to do at the end", "Decide what proof of learning you will accept", "Plan the lessons that lead to the proof", "Check each lesson serves the end goal"]
+    inputs: [source_text]
+    outputs: [plan]
+    note: "Starts from the standards and works back from the end result to the lessons."
+  - name: Mixed practice unit planner
+    skill: mixed-practice-unit-planner
+    job: ops
+    from: library
+    method: ["Take the topic order from the unit plan", "Spot related topics that students confuse", "Spread practice of old topics through later lessons", "Keep new teaching in blocks and mix the practice"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "Reads the unit plan from the step before and mixes related topics through it for stronger recall."
+  - name: Revision schedule planner
+    skill: revision-schedule-planner
+    job: ops
+    from: library
+    method: ["List the topics and the dates from the plan", "Set the gaps between returns to each topic", "Place the returns on the calendar", "Add a short retrieval task for each"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "Reads the mixed unit plan from the step before and sets the dates to bring each topic back."

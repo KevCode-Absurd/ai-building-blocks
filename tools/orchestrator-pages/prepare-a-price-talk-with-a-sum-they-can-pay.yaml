@@ -1,0 +1,79 @@
+new_slug: prepare-a-price-talk-with-a-sum-they-can-pay
+name: Prepare a price talk with a sum they can pay
+summary: Give it the deal. Get your stance, their side, a sum they can meet and your opening lines.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It runs four skills in a row, and the sum step does real arithmetic on what the other side can pay. Give it your strongest model.
+headline: Go into a price talk with a sum the other side can actually pay
+subhead: Give it a price, fee, debt or settlement you are about to discuss. It sets your stance and walk-away line, maps the other person's side, tests your ask against what they can pay, and writes the lines you open with.
+explain: |
+  Most price talks go wrong before they start. You aim for a number because you want it, not because the other side can meet it. You guess at what they think. Then you open with your ask, they feel pushed, and the talk becomes a fight or a quick give-in.
+
+  The steps fix that in order. First it sets your stance, what a win looks like for each side and the point where you walk away. Next it maps the other person: what they want, the pressure on them and a way for them to save face. Then it splits your ask into parts and tests it against what they can pay, ending on one sum or set of terms inside that range. Last it writes your opening, your questions and what to listen for. You tell it what you know of their money, and it marks every guess as a guess.
+when:
+  - You are setting a price, fee, rent, debt or settlement and fear it is more than they can pay.
+  - The other side has more power, or you will deal with them again.
+  - You want a fair number you can defend, not a split in the middle.
+you_give:
+  - The deal, who is involved, what you want and what is at stake
+  - Your terms, split into parts if you can (price, fees, dates)
+  - What you know of their means, income, cash, costs, what they have said about money
+  - Your must-haves and your walk-away point, if you have them
+  - What the other side has said so far, in their words (optional)
+you_get:
+  - Your stance, what a win is for each side and a kind way to say your walk-away line
+  - A map of their side, wants, pressures, where they are right and how they can save face
+  - A range of what they can pay, how your ask compares and one sum or set of terms to propose
+  - An opening that names their fears first, questions to ask and a safe-no question
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste what you know of their money, even rough numbers. Without it the sum step has to guess, and it will say so.
+  - Read the sum and the walk-away line before you open the talk. They are yours to change.
+how_it_works:
+  - title: Set your stance and walk-away line
+    text: Names the stance each side is likely to take, what a win means to each, and the point where you would rather have no deal.
+  - title: Map their side
+    text: Writes what they want, why a fair person in their place would act as they do, and how they can change course without losing face.
+  - title: Test the ask against what they can pay
+    text: Splits your ask into parts, gives each a low, middle and high figure, and works out what they can pay and still keep something to run on. It ends on one sum or set of terms.
+  - title: Write the opening and the questions
+    text: Says their likely fears out loud first, adds how and what questions, a safe-no question and a plan for a fast yes.
+output_shape: |-
+  STEP 1: STANCE
+    Stances | what a win is for each side | walk-away line
+
+  STEP 2: THEIR SIDE
+    Wants | why they act so | where they are right | face-saving way | questions
+
+  STEP 3: THE SUM
+    Parts with ranges | what they can pay | gap | one proposed sum | what would change it
+
+  STEP 4: THE CALL
+    Opening | feeling labels | questions | safe-no question | what to learn
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How often you will deal with them again
+    how: Tell step 1 once, now and then or for years. It changes how hard it pushes and how much weight it gives to the relationship.
+  - what: Your terms
+    how: Give the parts (base price, fees, penalties, dates). Step 3 sets a range for each part instead of one lump.
+  - what: Salary or rent talks
+    how: Say so in the first input. The sum step then works from their budget and your market, not from a debt.
+  - what: Written or spoken
+    how: Say whether the talk is a call or an email, so the opening lines suit it.
+judge:
+  - Your walk-away line is written down before the talk, with what you would do instead.
+  - Every figure for their means has a source or is marked as a guess.
+  - The proposed sum sits inside their range, or the report says plainly that your ask is above it.
+  - The opening names a fear of theirs and makes no promise you cannot keep.
+  - The other side's view includes at least one point where they are right.
+test:
+  - Check each figure for their means against something you know. Cross out any you cannot source.
+  - Read the opening aloud. If you would not say it to their face, change it.
+  - Ask a friend to play them. The safe-no question should get an honest answer.
+improve:
+  - After the talk, note the sum agreed and what they said about money. Use it as the "means" input next time.
+  - Keep the questions that got a long answer. Reuse them.
+  - If the deal fell through, check if the walk-away line was right and update it.

@@ -1,0 +1,28 @@
+slug: plan-a-sale-across-email-and-sms
+name: "Plan a sale across email and SMS"
+summary: "Give it your offer and list. Get a text plan, a send calendar, written emails, checked texts and a results read."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: email
+level: advanced
+inputs:
+  - {type: offer, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: true}
+  - {type: brief, required: true}
+  - {type: product_data, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: audit_report}
+uses: [sms-send-planner, email-campaign-calendar-planner, campaign-email-writer, sms-send-checker, email-and-sms-performance-reader]
+steps:
+  - {uses: sms-send-planner, note: "Plans how many texts the sale can bear and when each goes out."}
+  - {uses: email-campaign-calendar-planner, note: "Places the emails around the text plan so the two channels do not repeat each other."}
+  - {uses: campaign-email-writer, note: "Writes the sale email from the brief."}
+  - {uses: sms-send-checker, note: "Checks the text copy and timing against the email draft and the plan."}
+  - {uses: email-and-sms-performance-reader, note: "Reads the sale results by channel against the plan."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-a-sale-across-email-and-sms/skeleton.yaml

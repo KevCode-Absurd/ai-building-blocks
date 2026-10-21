@@ -1,0 +1,88 @@
+new_slug: shoot-a-batch-of-founder-ads-in-one-afternoon
+name: Shoot a batch of founder ads in one afternoon
+summary: Give it your reviews, product facts and founder story. Get checked scripts, scored hooks and a shoot list.
+job: make-video-ads
+thinking: high
+thinking_why: It runs five skills in a row, and the scripts must stay true to your real story and proof. Give it your strongest model.
+headline: Film a month of founder ads in one afternoon
+subhead: Give it your customer reviews, product facts and founder story. It finds the buyer problems worth talking about, writes founder scripts that only use what you can prove, scores the hooks, checks each script holds to the offer, and plans one shoot.
+explain: |
+  Founder ads fail for one reason. The founder talks about themselves, and viewers care about their own problem. Owners also film one ad at a time, so every new ad costs a new shoot, and the scripts reach the camera with weak openings and a rushed offer.
+
+  These steps do the work before the camera. First it reads your reviews and turns each buyer into a problem and an angle. It writes a script for the top angles that opens on the viewer's problem and uses your story as proof. It scores the hooks and checks each script from opening to offer. Then it turns the approved scripts and hooks into one shoot list, so a few takes make many ads.
+when:
+  - You or your founder will go on camera, and you want a batch of ads from one session.
+  - Your ads get views but few sales, and you suspect the opening or the flow is the problem.
+  - You want a month of new ads without a new shoot every week.
+you_give:
+  - Your product facts (what it is, price, who uses it and what it solves)
+  - Your customer reviews, survey answers or support emails (at least 20 real lines is best)
+  - Your brand file, with the founder's origin story, how the product works, and proof such as test results, certificates and reviews
+  - Who the ad is for and what they already know
+  - Where you can film, and how many hours you have (optional)
+you_get:
+  - A grid of buyer problems and angles, ranked in test order, with a first line for each
+  - Founder scripts that run claim, proof, how it works, proof and call to action, with two to four hooks each
+  - Every hook scored out of 100, with the best ones to film and rewrites for the weak ones
+  - A script check with a score out of 100 and rewrites for weak spots from hook to offer
+  - A shoot list by location and outfit, a hook by body matrix that shows how many ads you get, and edit notes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your reviews and product facts. With fewer than about 20 real lines, it marks personas that rest on a guess.
+  - Give it the founder's real story and your proof. It will not invent a result, a customer or an expert.
+  - Read the shoot list and film one afternoon from it. Check any health, weight or money claim with a qualified person before the ads run.
+how_it_works:
+  - title: Find the problems to talk about
+    text: Reads your buyer words, writes each buyer as a problem, gives each an angle and offer, ranks them in test order and writes a first line for each.
+  - title: Write the founder scripts
+    text: Starts from the viewer's problem, picks a claim you can prove, and writes the script using only what the founder can truly say, with two to four hooks.
+  - title: Score the hooks
+    text: Rates each hook for clarity, relevance, novelty, specificity and credibility, checks who it attracts, and rewrites the weak ones.
+  - title: Check the flow
+    text: Maps each script from hook to body to offer, checks when the product comes in, and rewrites any spot where the viewer would leave.
+  - title: Plan the shoot
+    text: Sizes the shoot to your hours, groups the takes by place and outfit, writes edit notes and says whether a partnership ad suits you.
+output_shape: |-
+  STEP 1: AD IDEAS
+    Buyer problems with angle and offer | proof needed | first line | test order
+
+  STEP 2: FOUNDER SCRIPTS
+    Viewer problem | claim | script in five parts | two to four hooks | other narrators
+
+  STEP 3: HOOK SCORES
+    Each hook out of 100 with its sum | who it attracts | rewrites | the ones to film
+
+  STEP 4: FLOW CHECK
+    Where the viewer knows they are being sold to | hook to body and body to offer | score out of 100 | rewritten spots
+
+  STEP 5: SHOOT LIST
+    Hooks times bodies equals ads | takes by place and outfit | story parts to collect each month | edit notes
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your real buyer words
+    how: Reviews, survey answers and support emails beat guesses. The more real lines you give, the sharper each buyer problem is.
+  - what: The founder's proof
+    how: Test results, certificates and factory photos let the script back its claim. With no proof, the script has to stay modest.
+  - what: Hours on the day
+    how: Say how long you can film. The plan sizes the shoot to it, and trims to the strongest angles if time is short.
+  - what: Rules on claims
+    how: Tell it your platform and field, so scripts avoid claims that need a check.
+judge:
+  - Every script opens on the viewer's problem, not on the founder.
+  - Every claim in a script points to a proof item you gave it.
+  - Each hook score shows its sum, and a hook weak on clarity or relevance is marked fail.
+  - The flow check finds where the product enters, and the bridge to the offer is smooth.
+  - The shoot list ties each take to a hook or body ID and shows how many ads it makes.
+test:
+  - Read each script aloud. If the founder would not say a line, change it.
+  - Check each proof item against what you actually hold. Remove any you cannot show.
+  - Film the top-scored hook and one the scorer rated low on the same body. See if the order holds in your results.
+  - Run step 1 twice on the same reviews. The top problems should match.
+improve:
+  - Add the founder's voice and phrases to your brand file, so scripts sound like them.
+  - Collect new story parts each month from one-star reviews and support emails. The shoot planner gives a checklist.
+  - Edit the script skill's five parts if your product needs a demo earlier.
+  - Pair it with a video hook scorer on ads you already run, to find weak openers.

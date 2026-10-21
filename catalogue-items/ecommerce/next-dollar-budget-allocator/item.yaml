@@ -1,0 +1,22 @@
+slug: next-dollar-budget-allocator
+name: "Next-dollar budget allocator"
+summary: "Give it spend and new-customer returns by channel. Get where the next $10,000 goes and a test plan."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public masterclass)", url: "https://www.youtube.com/watch?v=LSFsNbsDL3E", used: "The next best dollar question, spending each channel up to break-even on new-customer returns, the funnel split expressed as ad production, and the warning about too much spend on product ads"}
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (public masterclass)", used: "The profit frontier, how to size spend on existing customers from a count, a view rate and a CPM, and reporting on 7-day click"}
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic, interviewed on a podcast", url: "https://www.youtube.com/watch?v=l6BpG8ff3Qc", used: "One large brand's bet to move spend toward brand content: judge by the week's profit and loss, open the attribution window, and keep a way back"}

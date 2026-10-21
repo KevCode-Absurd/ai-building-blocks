@@ -1,0 +1,21 @@
+slug: email-design-checker
+name: "Email design checker"
+summary: "Paste an email design. Get a score out of 100 and fixes for layout, links and weight."
+category: ecommerce
+type: skill
+role: check
+job: email
+level: intermediate
+inputs:
+  - {type: image, required: true}
+  - {type: copy_draft, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "Buttons high in the email and centred, underlined product names or shop-now buttons, footer category buttons and changing the look between sends"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores (name not given)", used: "What belongs above the fold, the three to four product limit and the fifth-grade reading level for copy"}

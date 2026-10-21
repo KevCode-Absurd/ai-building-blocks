@@ -1,0 +1,134 @@
+new_slug: growth-bottleneck-finder
+name: "Growth bottleneck finder"
+summary: "Give it your numbers and changes. Get the one growth limit, the work order and a score out of 100."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to weigh several layers against each other and pick one limit, and a wrong pick sends weeks of work the wrong way."
+
+headline: "Growth bottleneck finder"
+subhead: Give it your revenue, ad spend, margin, funnel rates and the changes you are considering. It finds the one limit holding growth back, from data, funnel, creative, structure, outside levers or cash, and hands back the work order, what to ignore this quarter and a score out of 100.
+
+explain: |
+  Stores that feel stuck often work harder on the wrong thing. They tune ad sets while the numbers they trust are wrong, or they rewrite pages while the real problem is that too few people click. A growth bottleneck is the one step that limits everything after it. Fix a different step and nothing moves.
+
+  This skill goes in order. First, do your metrics match profit? Then the funnel: what you pay per click, how many clicks buy, and how much they spend. Then creative, account structure, levers outside the ad account, and last, cash. It picks one bottleneck, gives it a number and a date to re-test, and checks the real size of each change you planned. If the answer is cash or stock, it hands you to the online store bottleneck finder.
+
+when:
+  - Revenue or profit has been flat for months even though you keep making changes.
+  - You have a list of ideas, such as new ad sets, new pages and budget moves, and cannot tell which matters.
+  - You are not sure whether the problem is your ads, your site, your product or your cash.
+
+you_give:
+  - Monthly revenue, ad spend and gross margin
+  - The metrics you use to decide, such as ROAS and conversion rate
+  - CPM, click-through rate, CPC, conversion rate and order value for 3 to 6 months
+  - Funnel drop-off by step, from product page to cart to checkout (optional)
+  - Creative volume and ad age, and a summary of your account structure
+  - Levers outside ads, such as creators, retail, PR and email (optional)
+  - Cash and stock position (optional)
+you_get:
+  - The one bottleneck, with the evidence and the number that must move
+  - The order of work and an impact check on each change you planned
+  - What to ignore this quarter and a date to re-test
+  - A score out of 100 for how many growth layers hold up
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste 3 to 6 months of CPM, click-through rate, CPC, conversion rate, order value and CAC. Add your margin and your list of planned changes.
+  - Say what outside the ad account might have moved sales, such as a creator deal or a press hit.
+  - Read the one bottleneck first. Do not start the second until the first has its re-test date.
+  - Run it again on the re-test date with new numbers.
+
+how_it_works:
+  - title: Checks the data first
+    text: Do your metrics match profit? If the numbers you decide on are wrong, nothing else is worth tuning.
+  - title: Runs the treadmill check
+    text: If you keep improving a metric while profit and revenue stay flat, it suspects the metric before the tactic.
+  - title: Reads the funnel left to right
+    text: Splits CAC into click cost and conversion rate, checks revenue per 100 visitors, and finds the step where people drop off.
+  - title: Checks creative, then structure
+    text: Creative volume, variety and spend per ad come before account structure.
+  - title: Looks outside the ad account
+    text: Creators, retail, PR and events can lift sales and confuse your ad numbers.
+  - title: Checks cash
+    text: If stock is tied up, an ad fix cannot be funded. It hands off to the cash side.
+  - title: Sizes each change
+    text: Estimates the real revenue or profit effect of every idea, scaled to your size.
+  - title: Names one bottleneck
+    text: Gives it a number, a date to re-test, the order of work and what to ignore.
+
+output_shape: |
+  BOTTLENECK <one limit, in one line>
+  Evidence: <the numbers that show it>
+  Move: <metric> from <now> to <target> by <date> | re-test on <date>
+
+  LAYER CHECK (20 points each)
+  1. Data matches profit: <pass|part|fail|not checked> | <why>
+  2. Funnel: <pass|part|fail|not checked> | CAC = CPC / conversion rate = <$> | revenue per 100 visitors = <$>
+  3. Creative: <...> | volume <n> | variety <...> | spend per ad <...>
+  4. Account structure: <...>
+  5. Cash and stock: <...>
+  Outside-account levers: <what may have moved sales; not credited to ads>
+
+  SCORE <n>/100 (sum of the five layers; the lowest layer is the first place to look)
+
+  ORDER OF WORK
+  1. <data> 2. <funnel or creative> 3. <structure>
+
+  CHANGES YOU PLANNED
+  <change> | real effect on revenue or profit: <size> | do, drop or later
+
+  IGNORE THIS QUARTER
+  <short list>
+
+  MISSING: <metrics | funnel rates | creative data | margin | cash position>
+
+tweaks:
+  - what: Your size
+    how: Give monthly revenue and ad spend. The impact check scales to it, since a budget move that matters at a small store is noise at a large one.
+  - what: How far back your numbers go
+    how: Give 3 to 6 months of rates. One bad week points at the wrong limit.
+  - what: Your planned changes
+    how: List each idea with what you expect it to do. The skill sizes each one against the gap it needs to close.
+  - what: Outside-ad events
+    how: Add dates for creator posts, press, retail launches and email pushes so they are not credited to ads.
+
+judge:
+  - It names one bottleneck, not a list of five.
+  - The bottleneck has a number to move and a date to re-test.
+  - The order is data first, then funnel and creative, then structure.
+  - Each planned change has a size in revenue or profit, not just a label.
+  - If cash is the answer, it hands off instead of rebuilding the cash diagnosis.
+
+test:
+  - Give it a store whose ROAS looks great but profit is flat. It should flag the data layer first.
+  - Check the CAC split by hand. CPC divided by conversion rate should match the CAC it shows.
+  - Give it a conversion rate times order value below 300 with a CPC around $3. It should say cold traffic will not scale at that point.
+  - Give it a list of small ad tweaks. It should say which can close the gap and which cannot.
+
+improve:
+  - Add your own scale gate to the skill file if your CPC is far from $1 to $3, using revenue per 100 visitors against your ad cost per 100 visitors.
+  - Add the metrics you actually trust, such as new-customer MER, so the data check has your own bar.
+  - Save your last bottleneck and re-test date in your brand file so each run starts with what you decided.
+  - Add a list of outside levers you run each quarter, so they are not credited to ads.
+  - Pair it with the online store bottleneck finder for cash, the platform ROAS reality check for data and the incrementality test planner for proof.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the splitting and the comparison. Paste your numbers as a table."}
+    - {name: "Google Analytics 4", why: "Shows funnel drop-off by step, so the skill can find where visitors leave."}
+    - {name: "Shopify", why: "Order and margin data to check your ad numbers against real profit."}
+  inputs:
+    - "An export of last quarter's orders with product cost, so margin is real"
+    - "A screenshot of your checkout funnel report"
+    - "A list of changes made in the last 90 days, with dates"
+
+terms:
+  - term: Bottleneck
+    meaning: The one step that limits everything after it.
+  - term: Scale gate
+    meaning: Conversion rate times order value, which is revenue per 100 visitors. About 300 is the source's pass mark at a CPC near $3.
+  - term: MER
+    meaning: Total revenue divided by total marketing spend across all channels.
+  - term: CPM
+    meaning: What you pay per 1,000 ad views.

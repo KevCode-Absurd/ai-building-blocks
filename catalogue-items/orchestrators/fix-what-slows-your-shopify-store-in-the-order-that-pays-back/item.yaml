@@ -1,0 +1,29 @@
+slug: fix-what-slows-your-shopify-store-in-the-order-that-pays-back
+name: "Fix what slows your Shopify store, biggest wins first"
+summary: "Give it your PageSpeed report and theme. Get fixes priced in orders and applied: apps cut, first-screen image and layout shifts fixed."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: source_text, required: true}
+  - {type: question, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: store_capture, required: true}
+  - {type: theme_files, required: true}
+  - {type: image, required: false}
+outputs:
+  - {type: code_change}
+  - {type: plan}
+uses: [store-speed-report-reader, speed-fix-ranker, app-script-auditor, leftover-app-code-finder, hero-image-loading-fixer, layout-shift-fixer]
+steps:
+  - {uses: store-speed-report-reader, note: "Reads the report page by page and names what is slow."}
+  - {uses: speed-fix-ranker, note: "Prices each fix from the report in orders and ranks them by gain per hour."}
+  - {uses: app-script-auditor, note: "Marks each app keep, remove or delay, using the ranked fixes and your store capture."}
+  - {uses: leftover-app-code-finder, note: "Finds the code the removed apps left behind and lists the lines to delete."}
+  - {uses: hero-image-loading-fixer, note: "Fixes the first-screen image the report flagged so the largest paint comes sooner."}
+  - {uses: layout-shift-fixer, note: "Stops widgets and fonts moving the page, using the audit and your theme."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/fix-what-slows-your-shopify-store-in-the-order-that-pays-back/skeleton.yaml

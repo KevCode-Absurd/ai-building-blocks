@@ -1,0 +1,22 @@
+slug: turn-a-messy-spreadsheet-into-a-clean-slide-deck
+name: "Turn a messy spreadsheet into a clean slide deck"
+summary: "Give it a messy data file. Get it cleaned and checked, then a written story and slides built from it."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: slide_deck}
+uses: [data-cleaner, data-quality-auditor, data-story-writer, presentation-builder]
+steps:
+  - {uses: data-cleaner, note: "Starts from your raw file. Makes a clean copy and keeps the original."}
+  - {uses: data-quality-auditor, note: "Reads the clean copy and tells you what is still not safe to present."}
+  - {uses: data-story-writer, note: "Reads the cleaned file, and leaves out anything the quality check marked as unsafe."}
+  - {uses: presentation-builder, note: "Turns the written story into slides."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-a-messy-spreadsheet-into-a-clean-slide-deck/skeleton.yaml

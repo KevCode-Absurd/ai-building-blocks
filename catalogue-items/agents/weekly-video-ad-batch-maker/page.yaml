@@ -1,0 +1,107 @@
+new_slug: weekly-video-ad-batch-maker
+name: Weekly video ad batch maker
+summary: Give it last week's video ad results. Get a checked batch of new scripts and clip prompts to approve.
+job: make-video-ads
+thinking: high
+thinking_why: It chooses script types, loops each script until it passes, and checks every ad before hand-back. Give it your strongest model.
+headline: Weekly video ad batch maker
+subhead: Give it last week's video ad results and your customers' words. It learns what your best openings do, picks script types that differ, writes each script and fixes it until it passes the line check, then makes clip prompts and holds back any ad that still fails.
+explain: |
+  A weekly video batch usually repeats last week's idea in a new coat. The same talking-head script comes out five times, nobody checks the lines against the facts, and the clips get made before anyone finds a claim that cannot run.
+
+  This agent runs the same steps every Monday. If you have enough past videos with results and words, it learns what your winning openings do. It then picks three or four script types that really differ, writes each one from your customers' own words, and checks it line by line. A script that scores under 85 or has a wrong fact gets fixed and checked again, up to three rounds. The ones that pass get timed clip prompts and a pre-launch check. The rest are held out with their reasons.
+
+  It writes scripts and prompts. It cannot make video, so it tells you how the clips get made and asks before anything uses credits.
+when:
+  - You run video ads and want a new batch of scripts each week.
+  - You have customer reviews but your scripts all sound the same.
+  - You want every line checked against your facts before you pay for clips.
+you_give:
+  - An export of your video ads with dates, spend and your result
+  - The product and offer, with what you may claim
+  - Customer reviews or call notes, with where each came from
+  - Transcripts of your past videos, if you have them (optional)
+  - Product photos for the clip prompts (advised)
+  - Your founder's own words, if you want a founder video (optional)
+you_get:
+  - A batch of about 3 or 4 scripts, each a different type, with a source on every customer line
+  - A line-check score for each script, before and after the fixes
+  - Timed clip prompts and an edit list for each script that passed
+  - A pre-launch result for every ad, and the reasons for any held out
+  - How to get the clips made, and what it costs
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to make this week's batch.
+  - Attach last week's export, your customer words and the product name. Add transcripts and photos if you have them.
+  - Read the batch. Say yes or no to each script.
+  - If you want clips made, pick a tool. The agent asks before it uses any credits.
+  - Run it again next Monday. It reads its memory folder to see which types did well.
+how_it_works:
+  - title: Read the memory
+    text: Opens the opening rubric, the script types from earlier batches and the never-again list.
+  - title: Learn from the winners
+    text: With six or more past videos that have results and words, it builds a rubric of what your best openings do. With fewer, it skips this and says so.
+  - title: Pick the script types
+    text: Chooses three or four types that differ, from customer quotes, a creator on camera, a two-person talk and a founder.
+  - title: Write each script
+    text: Uses the writer for each type. A founder script is only written from the founder's own words.
+  - title: Check and loop
+    text: Scores each script line by line. Under 85, or any wrong fact, and it fixes and checks again, three rounds at most.
+  - title: Make the clip prompts
+    text: Times each passing script into clips with one prompt per clip and an edit list.
+  - title: Check before launch
+    text: Runs the pre-launch check. A stop-ship fault gets two fix rounds, then the ad is held out.
+output_shape: |-
+  PATH
+    <with winners rubric | without> | why: <reason>
+
+  THE BATCH
+    1. <script type> | answers: <doubt or belief> | opening: <line>
+       script: <beats with spoken lines, screen text, pictures, source of each customer line>
+       line check: <score before> -> <score after> | clips: <timed prompts> | pre-launch: <result>
+
+  HELD OUT
+    <script>: <reason> | fix: <what would fix it>
+
+  TYPES LEFT OUT
+    <type>: <what it lacked>
+
+  HOW THE CLIPS GET MADE
+    <tools, cost, first step>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: The pass score
+    how: The agent starts at 85 after the fixes, with no wrong fact. Raise it if you want a stricter batch, but the Truth rule should stay.
+  - what: Your customer words
+    how: Real quotes with sources make the best scripts. Ten good lines beat a hundred vague ones.
+  - what: How long the videos are
+    how: Say the length every week. The script types and the clip count change with it.
+  - what: Who is on camera
+    how: Say if a real founder or creator will film it, or if it will be made with AI. The checks differ for each.
+judge:
+  - Every script in the batch is a different type.
+  - Every customer line has a source, and nothing was made up for a founder or creator.
+  - Every script passed the line check with no wrong fact, or is listed as held out.
+  - Every ad passed the pre-launch check.
+  - Nothing was made with credits or published without your yes.
+test:
+  - Give it no past transcripts. It should skip the rubric and say the openings were not shaped by winners.
+  - Give it no founder words and ask for a founder video. It should drop that type and say why.
+  - Put a claim you cannot prove into a script. The line check should flag it as a Truth problem.
+improve:
+  - Add your own pass score and round cap if your scripts run long.
+  - Add the claims you may never make to your brand brain, so the checks catch them.
+  - Save the types that won in the memory folder, so the next batch leans on them.
+  - If you only film with creators, remove the AI clip prompt step and keep the creator brief.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the video-batch folder, read last week's files and run on a schedule.
+    - name: Higgsfield
+      why: Paste a clip prompt in and pick Seedance, Kling or Veo. It runs on paid credits.
+    - name: Meta Ads Manager
+      why: Export your video ads with dates, spend and results from here.
+  inputs:
+    - Transcripts of your best and worst videos
+    - A note of what changed in your offer this week

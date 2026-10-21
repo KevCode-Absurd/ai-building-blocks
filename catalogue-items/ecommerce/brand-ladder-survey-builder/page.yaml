@@ -1,0 +1,129 @@
+new_slug: brand-ladder-survey-builder
+name: "Brand ladder survey builder"
+summary: "Give it your category and rivals. Get a short buyer survey that shows where you rank."
+job: understand-customers
+thinking: medium
+thinking_why: "It writes a survey, a scoring sheet and a read-out layout from a few facts. A mid-size model does this well, and you check the attributes yourself."
+
+headline: "Brand ladder survey builder"
+subhead: Give it your category, your rivals and a way to reach 50 to 200 buyers. It writes a short survey where buyers name brands in order and rate you and each rival on six things, plus a scoring sheet, a read-out of where you lead, and a repeat plan.
+
+explain: |
+  Buyers keep a short ladder of brands in their heads for each kind of product, often fewer than seven. Where your store sits on that ladder decides who gets considered. Most stores guess their place, and push the claims the owner prefers rather than the ones buyers already believe.
+
+  This skill builds the survey that finds out. First buyers name every brand they can think of, in order, before any brand is shown. Then they rate you and each rival from 1 to 10 on six attributes: four usual reasons to buy and one or two from your own story. The scoring sheet ranks you on each, rather than averaging, so you can see where you lead even if you trail on the usual ones. It also plans a theme test and a repeat survey. Small samples give wide errors, so only large gaps count.
+
+when:
+  - You want to know where your store ranks against rivals before you choose a brand claim.
+  - You are choosing between two ways to position the store and want evidence, not opinion.
+  - You rebranded or changed your message and want to know if buyers noticed.
+
+you_give:
+  - Your category and the three to seven rivals buyers would think of
+  - A way to reach 50 to 200 buyers, such as an email list or a post-purchase survey
+  - Six attributes buyers care about (optional, it can propose them)
+  - Two candidate themes to compare (optional)
+you_get:
+  - A survey script with a recall question first, then ratings from 1 to 10 on six attributes
+  - A scoring sheet that ranks you on each attribute, not only averages
+  - A read-out of where you rank, where you lead and what you can claim
+  - A theme test plan and a repeat plan for the same survey a year later
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your category, your rivals and how you will reach buyers. If you have no attributes, ask it to propose six.
+  - Edit the survey so it sounds like you, and check the first question comes before any brand name.
+  - Send it to 50 to 200 buyers, then paste the answers back for the scoring sheet and read-out.
+  - Put the repeat date in your calendar so you can run the same survey again and see if your rank moved.
+
+how_it_works:
+  - title: Sets the rival list
+    text: Three to seven brands buyers would know, since people rarely hold more than about seven in their heads.
+  - title: Asks for recall first
+    text: Buyers name every brand they can think of, in order, before any brand appears. This gives the ladder.
+  - title: Chooses six attributes
+    text: Usual reasons to buy, such as range, service, quality and size, plus one or two from your own story, such as local or specialist.
+  - title: Writes the ratings
+    text: Buyers rate you and each rival from 1 to 10 on each attribute, with a choice for brands they do not know.
+  - title: Ranks, does not average
+    text: It finds the attributes where you rank first, even if you are last on the usual ones.
+  - title: Starts with what buyers give you
+    text: Claims rest on where buyers already rank you high, or on proof you hold.
+  - title: Plans a theme test
+    text: Two themes in matched audiences for about 13 weeks, or one after the other for a small store, with awareness measured before and after.
+  - title: Plans the repeat
+    text: The same survey about 12 to 15 months later, to see whether the rank moved.
+
+output_shape: |
+  SURVEY SCRIPT
+  Q1 (unprompted): Name every brand you can think of in <category>, in order.
+  Q2 to Q7 (ratings 1 to 10 plus "don't know this brand"):
+    <attribute 1> ... <attribute 6> for <your store> and each rival
+  Q8 to Q10 (about the buyer): <how often they buy> | <last brand bought>
+  Sample: <50 to 200 buyers from email list | post-purchase | panel>
+
+  SCORING SHEET
+  Ladder: brand | named first | named at all | average position
+  Ratings: attribute | you | rank | first-ranked brand | gap
+  Rank, don't average: <attributes where we rank first>
+
+  READ-OUT
+  Where we rank: <...>   Where we lead: <...>
+  What to claim (and proof): <...>   What not to claim: <...>
+  Sample: <n>  (error is wide, only large gaps count)
+
+  THEME TEST: Theme A <...> vs Theme B <...> | about 13 weeks | measure awareness and sales
+  REPEAT PLAN: same survey in 12 to 15 months
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: The six attributes
+    how: Mix four usual reasons to buy with one or two from your story. If all six are usual ones, the survey will show you trailing the leader.
+  - what: The rival list
+    how: Use brands your buyers truly know. A rival nobody has heard of adds noise.
+  - what: Where the survey is sent
+    how: Email list and post-purchase survey reach people who already know you. A paid panel reaches people who may not. Say which one you used.
+  - what: The sample size
+    how: Aim for 50 to 200. With fewer, only very large gaps mean anything.
+  - what: The theme test
+    how: With enough volume, run both themes in matched regions or channels. A small store can run them one after the other and compare.
+
+judge:
+  - The recall question comes before any brand name is shown.
+  - There are six attributes, and at least one is tied to your own story.
+  - Each rating question has a "don't know" choice.
+  - The scoring sheet ranks, and the read-out names the attributes where you lead.
+  - The read-out states the sample size and says only large gaps count.
+  - Every claim rests on where buyers rank you, or on proof you hold.
+
+test:
+  - Send the survey to ten people first and ask where they got stuck.
+  - Check that your ladder result roughly matches what your sales and search data suggest. Large differences are worth a closer look.
+  - Run it twice with two different groups of buyers. The top ranks should be similar.
+  - Test the claim the read-out suggests in one small ad and compare with your usual one.
+
+improve:
+  - Add your category's usual reasons to buy to the skill file so the attributes start from a good list.
+  - Add words to avoid and claims you cannot support, so the "what to claim" part is safe.
+  - Save each year's result to your brand file, with the sample size and date.
+  - Add the survey to your post-purchase flow so you collect answers all year.
+  - Pair it with the Say-do gap checker to check how far ratings match real buying, and with the Positioning statement writer to turn the lead into a statement.
+
+works_best_with:
+  tools:
+    - {name: "Google Forms", why: "A free way to build and send the survey and collect answers in a sheet."}
+    - {name: "Shopify post-purchase survey apps", why: "Ask the survey right after an order so you reach real buyers."}
+    - {name: "Any good chat AI", why: "Writes the survey and works out the ranks on the answers you paste in."}
+  inputs:
+    - "Your email list or post-purchase flow, to reach 50 to 200 buyers"
+    - "Your rivals' names and what buyers say about them in reviews"
+    - "The reasons buyers give for choosing you, from reviews or calls"
+    - "Two candidate themes you are weighing"
+
+terms:
+  - term: Brand ladder
+    meaning: The order in which buyers think of brands in a category, often fewer than seven.
+  - term: Semantic differential
+    meaning: A survey method where people rate brands on a scale, here 1 to 10, across several attributes.
+  - term: Attribute
+    meaning: A reason to buy, such as range, service, quality or being local.

@@ -1,0 +1,102 @@
+new_slug: store-test-program-runner
+name: Store test program runner
+summary: Give it your store numbers and test results. It ranks ideas, plans one test, reads it, and picks the next.
+job: test-store-changes
+thinking: high
+thinking_why: It keeps a test log, picks its path from the state of your testing and reads statistics. Give it your strongest model.
+headline: Store test program runner
+subhead: Give it your store numbers every two weeks. It keeps your test log, ranks your ideas by evidence and profit, plans one test your traffic can prove, reads the result when it ends, and picks the next one. You approve every change.
+explain: |
+  Most stores test in bursts. Someone has an idea, runs a test, calls it a win after four days, and forgets what they learned. Without a log, the same ideas come back, a test that clashed with a sale gets trusted, and a store with too few orders keeps testing things it can never measure.
+
+  This agent runs the program for you. It starts with a baseline of gross profit per visitor. It checks the state of your testing: nothing running, one running, or one that just ended. A running test is left alone. A finished test gets a full read: is the split clean, did it run long enough, what is the lift as a range, what is it worth, did the guardrails hold. The result goes in the log. Then it picks the next test from your ranked ideas, checks your traffic can prove it, and plans the setup for your Shopify plan. It never starts or publishes anything.
+when:
+  - You run tests on your store and want a log, a ranked list and one test at a time.
+  - A test just ended and you want to know if you can trust it before you ship the change.
+  - You are not sure if your store gets enough orders to test, or what to test first.
+you_give:
+  - Orders, sessions, conversion rate, average order value and gross margin for the page and the store
+  - Your Shopify plan, who builds changes, and the ideas you have
+  - Numbers from a finished test, with planned sample and dates, and what else happened during it
+  - Heatmap notes, recordings, survey answers or review quotes (optional)
+you_get:
+  - A call on a finished test, with the lift as a range and the monthly gain in profit
+  - The next test, with its sample, weeks, main metric and guardrails
+  - A ranked list of ideas and a list of things to repair instead of test
+  - A test log that grows each run
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this fortnight's check.
+  - The first time, give it your numbers and your ideas. It sets your baseline and builds the backlog.
+  - Set up the test it plans in your testing tool. Tell it the start date.
+  - When the test ends, bring the numbers and anything that happened during the run. It reads the result and picks the next test.
+  - Run it again every two weeks. It reads its own log.
+how_it_works:
+  - title: Read the folder
+    text: Finds out if no test is running, one is running, or one just ended. A running test is left alone.
+  - title: Set the baseline
+    text: Works out gross profit per visitor once a quarter. Every test is judged against it.
+  - title: Read a finished test
+    text: Checks the split, the length and any early stop, gives the lift as a range, turns it into money, and makes a ship, do not ship, re-test or inconclusive call.
+  - title: Fill a thin backlog
+    text: If fewer than two ideas have two kinds of evidence, it reads your recordings and heatmap notes for more.
+  - title: Pick the next test
+    text: Ranks the ideas by evidence and profit. At 30 to 300 orders a month it picks bold tests only.
+  - title: Check it can run
+    text: Sends broken things to a fix list. If the test would take more than about four weeks, it tries the next idea, up to three.
+  - title: Plan the setup
+    text: Says what your Shopify plan allows and which route fits, then writes the plan and stops for your yes.
+output_shape: |-
+  STATE
+    <no test | running | just ended>: <what was done>
+
+  RESULT (if a test ended)
+    <SHIP | DO NOT SHIP | RE-TEST | INCONCLUSIVE> | trust <n>/100 | lift <low> to <high> | gross profit per month at low / middle / high
+
+  NEXT TEST
+    <hypothesis> | page: <page> | smallest lift worth shipping: <x> | sample: <n> per version | weeks: <n> | main metric: <metric> | guardrails: <list>
+
+  FIX LIST
+    <broken things, not tests>
+
+  BACKLOG (top five, then parked with reasons)
+
+  LOOK AGAIN ON
+    <date> | bring: <numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your real order count
+    how: Use orders per month, not visits. It sets how small a lift you can find. Under about 30 a month, it will tell you to research instead of test.
+  - what: What else happened during a test
+    how: A sale, an email send or a price change can ruin a result. Tell it the dates and it checks.
+  - what: The smallest lift worth shipping
+    how: Give the gain that would pay for the work. If you do not, it works one out before looking at your traffic.
+  - what: How often you run it
+    how: Every two weeks suits most stores. A slow store can run it monthly, since a test takes two to four weeks anyway.
+judge:
+  - Only one test is planned per page, and none while another runs there.
+  - Every ranked idea has at least two kinds of evidence behind it.
+  - The sample and weeks come from the readiness check.
+  - A surprising win is marked for a re-test, not shipped.
+  - Nothing was started, stopped or published without your clear yes.
+test:
+  - Give it a finished test you remember well, with the dates of a sale inside it. See if it flags the sale.
+  - Run it twice on the same numbers. The ranking and the call should match, apart from wording.
+  - Give it a store with 20 orders a month. It should tell you to research, not test.
+improve:
+  - Add the tests you ran before this agent, with their results, to the log so it does not repeat them.
+  - Set your own smallest lift worth shipping for each page.
+  - Keep the evidence behind each idea in the backlog so new findings can move ideas up.
+  - Note which testing tool you use, so the setup step can be shorter.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the tests folder and read the log each run.
+    - name: Google Analytics
+      why: Export sessions, orders and conversion rate by page. GA4 sessions are cleaner than Shopify's, which include bots.
+    - name: Shopify
+      why: Theme tests and order exports for the gross profit baseline.
+  inputs:
+    - A note of every sale, email send and ad change during the test
+    - Heatmap or recording notes for the pages you want to test

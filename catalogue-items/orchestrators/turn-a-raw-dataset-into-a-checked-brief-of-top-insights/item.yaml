@@ -1,0 +1,23 @@
+slug: turn-a-raw-dataset-into-a-checked-brief-of-top-insights
+name: "Turn a dataset into a checked brief of top insights"
+summary: "Give it a data file and a question. Get a checked analysis and a ranked brief of insights with actions."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: question, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: document}
+uses: [dataset-profiler, data-analyst, analysis-checker, insight-brief-writer]
+steps:
+  - {uses: dataset-profiler, note: "Shows what is in the file and what is broken before anyone draws a conclusion from it."}
+  - {uses: data-analyst, note: "Answers your question from the cleaned file, using what the profile said to trust."}
+  - {uses: analysis-checker, note: "Reviews the analysis from the step before and lists what to fix before it is shared."}
+  - {uses: insight-brief-writer, note: "Turns the checked analysis into a short ranked brief, and lets the checker's doubts lower each insight's confidence."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-a-raw-dataset-into-a-checked-brief-of-top-insights/skeleton.yaml

@@ -1,0 +1,97 @@
+new_slug: weekly-stock-and-cash-reorder-watcher
+name: Weekly stock and cash reorder watcher
+summary: Give it your stock and sales each week. Get what to reorder, what it costs and whether cash can cover it.
+job: plan-supply-chain
+thinking: high
+thinking_why: It runs up to seven skills, picks a path for each product and tests cash week by week. Give it your strongest model.
+headline: Weekly stock and cash reorder watcher
+subhead: Give it your stock and sales each week. It finds what is near its reorder point, sizes each order, checks that cash can carry it, and hands back an order list for you to approve.
+explain: |
+  Running out of stock costs sales. Ordering too much ties up cash you need for the next order. Most owners check one or the other, by eye, when something looks low. The two are linked: the order you need most can be the one you can't pay for.
+
+  This agent looks at both once a week. It keeps your forecast and your supplier facts, and tests the forecast against the last four weeks. For each product it works out days of cover and decides: reorder now, watch, slow or fine. It adds the cash for each order to your 13-week view. If cash falls short, it tries better payment terms first, then asks whether cash or ads limit your growth. It never places an order or pays anyone. You get a list to approve.
+when:
+  - You hold stock and reorder every few weeks or months.
+  - You've run out of a best seller, or been stuck with stock that doesn't sell.
+  - Your orders are big enough that cash decides what you can buy.
+you_give:
+  - Units on hand, units sold per week and stock already on order, by product
+  - Supplier lead time, unit cost, minimum order and payment terms, the first time
+  - Cash in the bank and bills due in the next 13 weeks
+  - What changed this week, such as a sale or a late shipment (optional)
+you_get:
+  - A reorder list with units, order-by dates and cost, most urgent first
+  - The lowest cash point with and without the new orders
+  - Payment terms to ask for if cash falls short
+  - Slow products and the cash a markdown would free
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's check.
+  - The first time, give it your supplier facts and at least 8 weeks of sales. It saves a forecast and your supplier file.
+  - Each Monday, add the new stock counts and sales to the same folder.
+  - Read the list. Place the orders you agree with yourself, and tell the agent what you placed so it can track them.
+  - Take any loan or credit question to your lender or accountant.
+how_it_works:
+  - title: Get the base
+    text: Saves your supplier facts and builds a forecast from past sales, with a way to track how far off it is.
+  - title: Test the forecast
+    text: If the last four weeks are a quarter or more away from the forecast, it builds a new one and tells you what changed.
+  - title: Sort each product
+    text: Works out days of cover and marks each product reorder now, watch, slow or fine. Reorders get a cost-minimising order size.
+  - title: Test the cash
+    text: Adds each order to your 13-week cash view. If the lowest point is too low, it tries supplier terms, up to two rounds.
+  - title: Check the limit
+    text: If cash is still short, it tests whether cash or ads cap your growth, ranks cash levers and puts the orders in priority order.
+  - title: Hand back one list
+    text: Gives you the order list, the cash check and the slow stock, then stops for your yes.
+output_shape: |-
+  THIS WEEK
+    Reorder now <n> | Watch <n> | Slow <n> | Lowest cash <amount> in week <n>
+
+  REORDER LIST (most urgent first)
+    1. <product> | units: <n> | order by: <date> | cost: <amount> | cover: <days> vs lead time <days> | from: <step>
+
+  CASH CHECK
+    Lowest point with new orders <amount> | without <amount> | cushion <amount>
+    Terms to ask for: <list, or none needed>
+
+  SLOW STOCK
+    <product> | cover <days> | cash a markdown would free <amount>
+
+  WATCH NEXT WEEK
+    <products that cross their reorder point within 30 days>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your safety margin
+    how: The starting point is 14 days on top of lead time. Use more for a late or unreliable supplier, and less for a quick one.
+  - what: Your slow-stock limit
+    how: The starting point is 180 days of cover. Use a shorter limit for items that go out of date or season.
+  - what: Your cash cushion
+    how: Use the amount you'd want left in the bank after every order. One month of fixed costs is a starting point.
+  - what: Stock on order
+    how: Give arrival dates. Without them the agent can't tell a real shortage from an order that is already on the way.
+judge:
+  - Every order date sits a full lead time before the stock-out date, with the sums shown.
+  - Every order's cash is in the 13-week view.
+  - Orders respect the maker's minimum.
+  - Slow stock is listed with the cash a markdown would free.
+  - No order, payment or loan was made without your clear yes.
+test:
+  - Run it on a past week where you ran out of a product. See if it would have flagged the reorder in time.
+  - Run it twice on the same data. The reorder list should be the same, apart from wording.
+  - Compare its order sizes with what you actually bought, and look at where they differ.
+improve:
+  - Set your own safety margin and slow-stock limit for each supplier or product group.
+  - Save the orders you place each week, so the next run knows what is on the way.
+  - If you only buy one or two products, remove the clearance step from the run.
+  - Add a note of the sales you plan, so the forecast can include them.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the watch folder, read last week's files and run every Monday.
+    - name: Your stock or store system
+      why: Export units on hand and units sold by product, for the same dates.
+  inputs:
+    - Supplier quotes with lead times and minimum orders
+    - A list of bills and payments due in the next 13 weeks

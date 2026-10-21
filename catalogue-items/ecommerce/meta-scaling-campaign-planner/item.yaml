@@ -1,0 +1,21 @@
+slug: meta-scaling-campaign-planner
+name: "Meta scaling campaign planner"
+summary: "Give your winning ads, margins and cash. Get a break-even ROAS, spend ladder and scaling campaign plan."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Only Video You Need On Meta Ads In 2026", by: "Agency operator who runs Meta for large online stores (name not given)", used: "When a scaling campaign pays off ($60 a day versus $400 a day), the CBO and ABO swap by season, and why Meta spends on a lower-ROAS ad"}
+  - {title: "Learn 97% of Meta Ads in Under 19 Minutes (eight scaling hacks)", by: "Agency owner (name not given)", used: "Scaling to the break-even ROAS, judging on blended results and net cash, and the monthly numbers review"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "Scaling campaign shape and the rule to scale on business-level numbers"}

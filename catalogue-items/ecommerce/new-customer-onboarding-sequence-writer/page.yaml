@@ -1,0 +1,127 @@
+new_slug: new-customer-onboarding-sequence-writer
+name: "New customer onboarding sequence writer"
+summary: "Give it your product and its use. Get a 14-day email and SMS plan and a 100-day map."
+job: keep-customers
+thinking: medium
+thinking_why: "It writes a set of emails and texts from facts you give it and a fixed timing plan, so a mid-size model is enough."
+
+headline: "New customer onboarding sequence writer"
+subhead: Give it your product, how long results take and how customers use it. It writes about six emails and four texts for days 0 to 14, a touch map out to day 100, a review and referral timing rule, and a survey that finds the habit linked to people staying.
+
+explain: |
+  Most cancels and lost second orders happen early. Customers wait for the box, feel unsure, and then either forget the product or stack up more than they use. One source says most churn happens in the first 100 days. The common fix is to send more emails, which backfires. In the supplement example, cancels cluster just after delivery, days 7 to 14, and every extra email in that window reminds people they could cancel.
+
+  This skill teaches first, then goes quiet at the right time. It is heavy on education in days 0 to 7, backs off in days 7 to 14, and sends a short check-in after that. It uses a survey of how people fit the product into their day, because the habit linked to staying becomes the thing every email teaches. It branches for subscribers and one-time buyers.
+
+when:
+  - Your product needs regular use to show results, or there is a delivery wait or a learning curve.
+  - Cancels or returns cluster in the first two weeks after a first order.
+  - You want a plan for the whole first 100 days, not only a welcome email.
+
+you_give:
+  - Your product, how long results take and how to use it correctly
+  - Survey answers on how customers fit it into their day, with retention by answer if you have it (optional)
+  - A founder story and a photo or short video (optional)
+  - Your gift schedule, delivery time and upcoming perks
+  - Your first-to-second order data, current post-purchase emails, and email and SMS platforms (optional)
+you_get:
+  - A day-by-day send plan for days 0 to 14 (email and SMS) and a touch map out to day 100
+  - Full copy for about six emails and four texts
+  - A pre-arrival sequence and a welcome insert
+  - A review and referral timing rule for each product, and a survey to find the habit linked to staying
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say whether this is for subscribers, one-time buyers or both, and paste your product facts and delivery time.
+  - Paste survey answers if you have them. With few customers, say how people actually use it and refresh later.
+  - Check every claim about results and timing before you send. Only keep the "90 to 120 days" line if it is true for your product.
+  - Build it in your email and SMS platforms, then compare the second-order rate and cancels by day with the quiet window on and off.
+
+how_it_works:
+  - title: Finds the habit
+    text: Uses a survey of how customers take or use the product and compares retention by answer. The best habit becomes what the emails teach.
+  - title: Treats 100 days as the risk zone
+    text: Fills the gap between order and arrival with education that confirms the choice, and holds cross-sells and review asks back.
+  - title: Teaches in days 0 to 7
+    text: Sends a daily email, or every other day at the least, before the product even arrives.
+  - title: Backs off in days 7 to 14
+    text: Sends an order-delivered tip, then a one- or two-week check-in, because every extra email prompts a cancel.
+  - title: Writes the emails and texts
+    text: A founder thank-you, a live-subscription note, use steps, week-one expectations and a consistency tip. Texts mirror email, every other day.
+  - title: Sets review and referral timing
+    text: Triggers asks from the delivered event, and asks for referrals right after a good moment.
+  - title: Adds the long map
+    text: An insert, a community name, a reward after the second purchase, and a measure of second-order rate within 60 to 100 days.
+
+output_shape: |
+  BRANCH: <subscriber | one-time buyer>
+  HABIT TO TEACH: <habit and why, from survey or your own knowledge>
+
+  DAYS 0 TO 14
+  Day <n> | email or SMS | <purpose> | <subject line>
+  (one line per send; quiet window marked)
+
+  EMAILS
+  E1 <subject> | <full copy>
+  ... (about 6)
+
+  SMS
+  S1 <day> | <text under 160 characters>
+  ... (about 4)
+
+  BEFORE ARRIVAL: <pre-arrival sequence and welcome insert>
+  DAY 100 MAP: <touches by phase>
+  REVIEW AND REFERRAL RULE: <trigger, delay, reason>
+  SURVEY: <questions to find the habit linked to staying>
+  MEASURE: <second-order rate in 60 to 100 days; cancels by day; refunds and contacts per order>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Subscriber or one-time buyer
+    how: Say which. Subscribers get the "your subscription is live" email and gift notes. One-time buyers get use steps and a reason to return.
+  - what: Time to result
+    how: Say how long results really take. The pacing line is only honest if it matches your product. For one-time-use products, the skill drops it.
+  - what: Survey data
+    how: Paste answers and retention by answer. The habit step is only as good as this data.
+  - what: Delivery time
+    how: Give the shipping time. The quiet window starts from delivery, so a slow carrier changes the plan.
+
+judge:
+  - Days 0 to 7 are heavy on teaching, not selling.
+  - Days 7 to 14 carry only the delivered tip and one check-in.
+  - No result is promised faster than your product delivers it.
+  - Review requests fire from the delivered event, not the order date.
+  - Every claim in the copy is one you gave it.
+
+test:
+  - Compare cancels by day since the first order, before and after the quiet window starts. Read the quiet window as a test, not a law.
+  - Check the second-order rate within 60 to 100 days against the last cohort.
+  - Check refunds and support contacts per order before and after.
+  - Send the sequence to yourself and a friend. Ask if anything felt like pressure or nagging.
+
+improve:
+  - Run the survey every quarter and swap the habit when the data changes.
+  - Add the real founder story and photo. The sequence reads better in your own voice.
+  - Save your time-to-result and use steps to your brand file so every flow uses the same facts.
+  - Pair it with the Welcome flow builder for people who join your list before they buy, and with the Post-purchase survey builder for the survey.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "It can send on the delivered event, branch subscribers from one-time buyers and run email and SMS from one flow."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the copy once you give it the facts."}
+    - {name: "A subscription app such as Skio or Recharge", why: "It tells you who is a subscriber and when the next order ships."}
+  inputs:
+    - "Cancels by day since the first order"
+    - "Retention by survey answer"
+    - "Your best true customer quotes about results"
+    - "Support tickets from the first two weeks"
+
+terms:
+  - term: Habit stacking
+    meaning: Tying a new habit to one a person already has, such as taking a daily product with morning coffee.
+  - term: Quiet window
+    meaning: A stretch of days when you send little or nothing, so you do not remind people they can cancel.
+  - term: Delivered event
+    meaning: The signal from your shipping tool that the package arrived. It is a better trigger than the order date.

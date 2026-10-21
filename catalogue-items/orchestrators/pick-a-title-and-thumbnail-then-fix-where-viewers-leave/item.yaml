@@ -1,0 +1,24 @@
+slug: pick-a-title-and-thumbnail-then-fix-where-viewers-leave
+name: "Pick a title and thumbnail, then fix where viewers leave"
+summary: "Give it your video idea. Get the best title and thumbnail pairs, then the one change that holds viewers longer."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: lessons_register, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: audit_report}
+uses: [thumbnail-and-title-planner, headline-cover-test-ranker, youtube-transcript-reader, youtube-retention-reader]
+steps:
+  - {uses: thumbnail-and-title-planner, note: "Starts from your video idea and channel and makes the pairs to choose from."}
+  - {uses: headline-cover-test-ranker, note: "Reads the titles from the step before and cuts them to three that are different enough to test."}
+  - {uses: youtube-transcript-reader, note: "Fresh start after publishing: gets the words of the live video so the drop-off points can be matched to what you said. You can paste the captions instead."}
+  - {uses: youtube-retention-reader, note: "Reads the transcript from the step before, so each drop shows what you were saying then."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/pick-a-title-and-thumbnail-then-fix-where-viewers-leave/skeleton.yaml

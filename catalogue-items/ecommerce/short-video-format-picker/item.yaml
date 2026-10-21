@@ -1,0 +1,22 @@
+slug: short-video-format-picker
+name: "Short video format picker"
+summary: "Give it your product and who is on camera. Get a format pick, a script outline and 10 hooks."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: hooks}
+  - {type: script}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The TOP TikTok Ad Creatives That Convert (STEAL THESE)", by: "Chase Chapel", used: "Seven short video formats with their structure: a don't-do-this-if hook, problem and solution against rivals, a transformation tease, a reaction video, a misconception video, a comment reply video and a free tip"}
+  - {title: "Every Level of Marketing", by: "Orin, creator and marketing consultant, in conversation with a host", url: "https://www.youtube.com/watch?v=nEOjyNF-fbQ", used: "The versus format, a qualifier in the first seconds, the curiosity gap, the in-action tutorial, a second story in the back half, and the weekly mix of wide and narrow posts"}

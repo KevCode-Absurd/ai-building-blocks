@@ -1,0 +1,47 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md). Our words.
+id: hand-tasks-to-ai-without-losing-what-the-job-quietly-does
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: hand-tasks-to-ai-without-losing-what-the-job-quietly-does
+  name: "Give AI tasks and keep what the job quietly does"
+  summary: "Give it a job. Get the tasks AI takes on, what each hides, safe handoffs and a failure check."
+  when: "you want AI to take work off a role and not break something no one wrote down."
+  job: set-up-ai
+  level: intermediate
+steps:
+  - name: "Break the job into tasks"
+    skill: role-task-breakdown-for-ai-help
+    job: strategy
+    from: "skill: role-task-breakdown-for-ai-help"
+    method: ["Split a normal week into tasks", "Mark tasks that drain, tire or endanger people", "Choose what AI takes, what AI assists and what stays with people", "Name a person in charge of each decision"]
+    inputs: [question]
+    outputs: [plan]
+    note: "Lists the tasks and which ones AI could take on."
+  - name: "Check what each task quietly does"
+    skill: hidden-value-check
+    job: analysis
+    from: "skill: hidden-value-check"
+    method: ["Name the task's stated job", "List the unseen things it does", "Ask who gains and what breaks without it", "Decide cut, keep or replace"]
+    inputs: [question, plan!]
+    outputs: [audit_report]
+    note: "Looks at each task chosen for AI in the plan before it goes, and flags what must be kept or replaced."
+  - name: "Plan the handoffs between steps"
+    skill: ai-workflow-handoff-planner
+    job: ops
+    from: "skill: ai-workflow-handoff-planner"
+    method: ["Lock the facts that must travel whole", "Write a card for each step: needs, returns, must never lose", "Give each step only what it needs", "Set rules for retries, limits and resuming"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "Turns the task plan into step cards that carry forward what the hidden-value check said to keep."
+  - name: "Try to break the plan"
+    skill: failure-first-plan-check
+    job: strategy
+    from: "skill: failure-first-plan-check"
+    method: ["State the goal in one line", "List what would guarantee failure", "Check the plan against each failure", "Write one change for each gap"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "Reads the handoff plan from the step before and lists how it could fail, with fixes."

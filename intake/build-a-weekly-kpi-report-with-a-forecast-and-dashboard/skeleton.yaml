@@ -1,0 +1,39 @@
+# Workflow skeleton chaining AI Blocks library skills (docs/INTAKE.md).
+id: build-a-weekly-kpi-report-with-a-forecast-and-dashboard
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: build-a-weekly-kpi-report-with-a-forecast-and-dashboard
+  name: "Build a weekly KPI report with a forecast and dashboard"
+  summary: "Describe the numbers you need each week. Get a report you can rerun, a trend and forecast, and a shareable dashboard."
+  when: "you check the same numbers every week and want one report, one forecast and one page to share."
+  job: track-numbers
+  level: intermediate
+steps:
+  - name: "Recurring KPI report maker"
+    skill: recurring-kpi-report-maker
+    job: ops
+    from: "skill: recurring-kpi-report-maker"
+    method: ["Turn your description into metrics, groups, comparisons and a period", "Ask only about what is unclear, like the period each run covers", "Pull the numbers from your file or connected source", "Write the workbook and a short summary", "Save the report definition so it reruns the same way"]
+    inputs: [spreadsheet!, brief]
+    outputs: [spreadsheet]
+    note: "Fixes the metric definitions once, so every later step reads the same numbers."
+  - name: "Trend and forecast analyst"
+    skill: trend-and-forecast-analyst
+    job: ops
+    from: "skill: trend-and-forecast-analyst"
+    method: ["Check the dates are regular and fill gaps", "Split each metric into trend, season and leftover", "Flag spikes and dips and match them to events", "Fit a forecast and test it on held-back weeks", "Write the trend, the forecast with ranges and plain insights"]
+    inputs: [spreadsheet]
+    outputs: [audit_report, spreadsheet!]
+    note: "Reads the weekly series from the report and adds trend, seasons and a forecast table."
+  - name: "Dashboard builder"
+    skill: dashboard-builder
+    job: ops
+    from: "skill: dashboard-builder"
+    method: ["Name the audience and the few numbers that matter", "Put the headline numbers in cards at the top", "Chart the trend and the forecast range below them", "Add filters for group and period", "Save it as one page you can open and share"]
+    inputs: [spreadsheet]
+    outputs: [web_page]
+    note: "Takes the report and forecast table from the steps before and shows them on one page."

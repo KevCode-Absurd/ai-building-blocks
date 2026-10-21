@@ -1,0 +1,79 @@
+new_slug: pick-a-sale-offer-check-profit-set-an-honest-deadline
+name: Pick a sale offer, check profit, set an honest deadline
+summary: Give it your margins. Get a sale offer, its needed ad return and a real deadline.
+job: make-offer
+thinking: high
+thinking_why: It runs four skills in a row and the profit step does cost sums. Give it your strongest model.
+headline: A sale offer that pays, with a reason buyers believe and a deadline you keep
+subhead: Give it your margins and order mix. It picks the offer type that fits them, writes the deal with a reason a stranger will believe, works out the ad return you need to stay in profit, and sets a limit and date you can really keep.
+explain: |
+  Most sales start with a percent off, then a banner with a countdown. The percent often loses money once ads and shipping are counted. The reason is thin ("Big sale!"), so buyers wonder what is wrong with the product. And the deadline is fake, so it stops working the second time.
+
+  The steps fix each problem in order. First it picks the offer type that fits your margin, order spread and repeat rate, and shows the sums. Then it writes the deal with a true reason, in three versions. It runs the deal through your costs and tells you the ad return you must hit to keep the profit, and whether that jump is believable from your own past sales. Last it sets a cap and an end date based on what you can really serve, with lines for the page, ad, email and calls.
+when:
+  - You plan a sale and are not sure what kind of offer to run.
+  - Your last discount sold well but you are not sure it made money.
+  - You want a deadline that is true, so it still works next time.
+you_give:
+  - Your products, prices and costs per order
+  - Your order sizes and repeat rate (optional)
+  - Reviews that show what buyers worry about (optional)
+  - Past sales at different discounts (optional)
+  - How many orders you can handle well in the sale
+you_get:
+  - A ranked list of offer types to test, with the sums behind it
+  - The deal in three versions, each with a reason you can prove
+  - The ad return you need to hold your profit, a score out of 100 and a verdict
+  - A cap, an end date and true lines for each channel
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your costs per order ready, with shipping and fees. Without them the profit step cannot score.
+  - Say how many orders you can ship well. It will not write a cap you cannot keep.
+how_it_works:
+  - title: Pick the offer type
+    text: Names what each offer type trades away, checks your margin floor and order spread, and ranks the types worth testing with the sums.
+  - title: Write the deal with a reason
+    text: Takes the top offer type and states the deal with real numbers. Lists the doubts a stranger has, picks a reason you can prove and writes three versions with the claim steps.
+  - title: Check the deal against your costs
+    text: Takes the deal, models it on retail value and works out the ad return needed to hold profit. Checks the jump against your own past sales and scores it.
+  - title: Set the cap and the deadline
+    text: Takes the checked deal. Finds your real capacity, sets the cap a little under demand and writes true lines for the page, ad, email and calls.
+output_shape: |-
+  STEP 1: OFFER TYPES
+    Margin floor | order spread | ranked offer types | sums
+
+  STEP 2: THE DEAL
+    Plain proposition | doubts | chosen reason | three versions | claim steps
+
+  STEP 3: PROFIT CHECK
+    Cost waterfall | break-even return | return needed to hold profit | score and verdict
+
+  STEP 4: CAP AND DEADLINE
+    Capacity | limit type | date | lines per channel | honesty check
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Single hero product or many
+    how: Say which. Step 1 leans toward a gift or new angle for one product and toward bundles for many.
+  - what: Why the sale exists
+    how: Give the true reason (clear-out, new version, anniversary). Step 2 will not make one up.
+  - what: Past discount results
+    how: Paste them. Step 3 uses them to check whether the jump is believable and to find the best depth.
+  - what: How you serve orders
+    how: A drop, a cohort or a weekly cap each give a different limit type in step 4.
+judge:
+  - The offer type fits your margin floor and order spread, with the sums shown.
+  - The reason is true, provable and not an overstated saving.
+  - Required ad return is worked from your costs, and the jump is checked against your past sales.
+  - Every cap and date is one you can keep and matches across channels.
+  - No step cuts the price deeper than the profit check allows.
+test:
+  - Redo the required ad return for one offer by hand. It should match.
+  - Ask a friend to read the three versions. They should be able to say why the deal exists.
+  - Check the cap against your real shipping and support capacity.
+improve:
+  - After the sale, record the real return and compare it with the needed one.
+  - Keep the reasons that worked and rotate them so no one reads the same line twice.
+  - Run a gift or bundle version next to the percent-off version and compare profit, not orders.

@@ -1,0 +1,43 @@
+# Workflow skeleton chaining existing library skills (docs/INTAKE.md).
+id: prepare-a-price-talk-with-a-sum-they-can-pay
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: prepare-a-price-talk-with-a-sum-they-can-pay
+  name: "Prepare a price talk with a sum they can pay"
+  summary: "Give it the deal and what you know of them. Get your stance, their side, a payable sum and opening lines."
+  when: "you are about to agree a price, fee, debt or settlement and want a figure both sides can live with."
+  job: sell-and-negotiate
+  level: intermediate
+steps:
+  - name: "Win-win stance planner"
+    skill: win-win-stance-planner
+    job: ops
+    from: "skill: win-win-stance-planner"
+    method: ["Read who is involved, what is at stake and how often you will deal again", "Name the stance each side will likely take", "Write what a win is for each side and the line where you walk away"]
+    inputs: [question]
+    outputs: [plan, question]
+    note: "Sets your stance, what a win is for each side and your walk-away line. Hands on the question to settle."
+  - name: "Other-person view mapper"
+    skill: other-person-view-mapper
+    job: ops
+    from: "skill: other-person-view-mapper"
+    method: ["List what they want and why a fair person would act as they do", "Find where they are right and weigh what they gain and lose", "Pick a way for them to save face and write the questions to check each guess"]
+    inputs: [question]
+    outputs: [persona]
+    note: "Takes the question from the step before and maps the other side: wants, pressures and a way to save face."
+  - name: "Can-they-pay deal checker"
+    skill: can-they-pay-deal-checker
+    job: ops
+    from: "skill: can-they-pay-deal-checker"
+    method: ["Split your ask into parts with a low, middle and high figure", "Estimate what they can pay and still keep something to run on", "Propose one fixed sum or set of terms inside that range"]
+    inputs: [question, brief!]
+    outputs: [plan]
+    note: "Tests your ask against what they can pay and proposes one sum. Reads the question and your terms from the steps before."
+  - name: "Negotiation call prep planner"
+    skill: negotiation-call-prep-planner
+    job: ops
+    from: "skill: negotiation-call-prep-planner"
+    method: ["Write what they may fear about you and say it first in an opening", "Write feeling labels and how or what questions", "Plan a safe-no question and a follow-up if they say yes fast"]
+    inputs: [question, persona!]
+    outputs: [plan]
+    note: "Turns their side and the proposed sum into the lines you open with, the questions you ask and what to listen for."

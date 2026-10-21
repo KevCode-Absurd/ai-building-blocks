@@ -1,0 +1,22 @@
+slug: set-up-tracking-you-can-trust-before-you-scale
+name: "Set up tracking you can trust before scaling"
+summary: "Give it your GA4, Meta and campaign set-up. Get fixed tracking, tagged links and a truer ROAS."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: [ga4-store-setup-checker, meta-server-tracking-checker, campaign-link-tracker, platform-roas-reality-check]
+steps:
+  - {uses: ga4-store-setup-checker, note: "Starts with the base layer: what GA4 is missing before anything else is measured."}
+  - {uses: meta-server-tracking-checker, note: "Fresh start after the GA4 fix: gets Meta counting each sale once."}
+  - {uses: campaign-link-tracker, note: "With both sets of events working, tags every link so orders can be matched to a campaign."}
+  - {uses: platform-roas-reality-check, note: "Reads the tagged-link sheet from the step before to compare what platforms claim with what the store counts."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/set-up-tracking-you-can-trust-before-you-scale/skeleton.yaml

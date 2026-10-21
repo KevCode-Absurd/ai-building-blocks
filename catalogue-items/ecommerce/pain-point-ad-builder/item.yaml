@@ -1,0 +1,20 @@
+slug: pain-point-ad-builder
+name: "Pain-point ad builder"
+summary: "Give it a real problem you solve. Get an honest pain-point ad and an answer to rival claims."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: ad_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Cashvertising", by: "Drew Eric Whitman (book)", used: "The four conditions that make a fear appeal work, answering rival claims in advance with a weak attack, and two-sided messages"}

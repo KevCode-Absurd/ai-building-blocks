@@ -1,0 +1,24 @@
+slug: turn-your-best-organic-posts-and-creator-videos-into-meta-ads
+name: "Turn your best posts and creator videos into ads"
+summary: "Give it your posts with views and your product facts. Get ranked posts, checked scripts, creator briefs and a test layout."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: [organic-post-to-ad-promoter, video-ad-bridge-checker, meta-ads-compliance-checker, creator-filming-brief-writer, meta-test-campaign-planner]
+steps:
+  - {uses: organic-post-to-ad-promoter, note: "Starts by choosing the posts worth putting money behind."}
+  - {uses: video-ad-bridge-checker, note: "Checks the promo half of each reshoot script, so the hook leads somewhere."}
+  - {uses: meta-ads-compliance-checker, note: "Checks the scripts against ad rules before creators film them."}
+  - {uses: creator-filming-brief-writer, note: "Turns the approved scripts into briefs a creator can film from."}
+  - {uses: meta-test-campaign-planner, note: "Lays out the test so the new ads face your current best ad."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-your-best-organic-posts-and-creator-videos-into-meta-ads/skeleton.yaml

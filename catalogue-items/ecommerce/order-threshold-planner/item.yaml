@@ -1,0 +1,22 @@
+slug: order-threshold-planner
+name: "Order threshold planner"
+summary: "Paste your order sizes. Get free-shipping and bundle thresholds set at your real order peaks."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: offer}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "Why a threshold set from the average fails, the two-peak order spread, and one offer per peak"}
+  - {title: "I Studied Every Ecommerce Offer So You Don't Have To", by: "DTC offer consultant (public video)", used: "The multipack ladder, the free-shipping trap on a low-priced item, and the dollar versus percent test"}
+  - {title: "$10,000,000 per year on Shopify: Insane Offer and Conversion Rate Strategy", by: "Jordan Hayes (agency owner)", used: "A cart progress bar with more than one reward"}

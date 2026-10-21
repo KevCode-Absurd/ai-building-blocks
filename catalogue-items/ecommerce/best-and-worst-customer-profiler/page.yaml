@@ -1,0 +1,124 @@
+new_slug: best-and-worst-customer-profiler
+name: "Best and worst customer profiler"
+summary: "Give it order and discount data. Get your best and worst buyers' traits, the ads behind them and a score."
+job: understand-customers
+thinking: medium
+thinking_why: "It sorts a lot of rows and has to separate real patterns from noise, so a mid-size model is enough if you show the sums."
+
+headline: "Best and worst customer profiler"
+subhead: Give it your order export with discount codes and refunds. It splits your buyers into the top 20 percent and bottom 20 percent by profit, finds the ad angle and offer behind each group, and scores how much of your new-customer intake lands in the good group.
+
+explain: |
+  A sale can look great in your ad report and still lose money. A buyer who came in on a weak angle, took a deep discount, then refunded, counts as a win for return on ad spend (ROAS) and a loss for your bank account. Most stores only find out months later.
+
+  This skill ranks customers by gross profit over a fixed window, then compares the best fifth with the worst fifth. For each group it finds who they are, which angle they came in on and which first-order offer they took. It also splits customers by discount code, because in the source's client mix discounted buyers often turned out worse. The result tells you which angles to scale, which offers to stop and which product page promises to fix. It adds to the best customer finder, which only finds the top group.
+
+when:
+  - Your ads show a strong ROAS but repeat orders and profit are weak.
+  - You run big sales and want to know if those buyers ever come back.
+  - You are about to move ad budget and want the buyers you want more of to guide it.
+
+you_give:
+  - "Your order export: customer, order date, order value, discount code, refund or return flag, cost of goods"
+  - First-order source, campaign or ad angle, if you track it (optional)
+  - Post-purchase survey answers (optional)
+  - Support ticket reasons (optional)
+you_get:
+  - The top 20 percent and bottom 20 percent of customers by profit, with the traits of each
+  - The angle and first-order offer behind each group, and repeat rate and 90-day profit for discounted versus full-price first orders
+  - Angles to scale, angles and offers to stop, and page promises to fix
+  - An acquisition fit score out of 100, with what it measures and the sum
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export your orders for a window that is at least 90 days old, and attach the file.
+  - Add your first-order source or ad angle for each customer, even if it is rough, and say which discount codes you ran.
+  - Read the data limits first, then the two groups. Test any change with a small ad test before you move big spend.
+
+how_it_works:
+  - title: Checks the data fits
+    text: It needs a few hundred customers and 90 days of history. If you have less, it says what it can't tell you.
+  - title: Ranks by profit
+    text: It works out gross profit per customer over a fixed window, after refunds and discounts.
+  - title: Splits top and bottom
+    text: It compares the top 20 percent with the bottom 20 percent, whose buyers often return, refund or spend little.
+  - title: Finds the angle and offer
+    text: For each group it names the persona, the ad angle and the first-order offer.
+  - title: Checks angle fit
+    text: It flags ads that sell a benefit your product does not deliver, where buyers refund or never reorder.
+  - title: Splits by discount code
+    text: It compares repeat rate and 90-day profit for discounted and full-price first orders, using your numbers only.
+  - title: Scores and hands over
+    text: It gives the fit score, then lists angles to keep, offers to stop and promises to fix.
+
+output_shape: |
+  DATA CHECK  <customers> customers, <days> days of history, <what is missing>
+
+  TOP 20 PERCENT  <n> customers, <share> of gross profit
+    who: <persona in the customers' own words>
+    came in on: <angle> | first offer: <offer> | repeat rate: <%>
+  BOTTOM 20 PERCENT  <n> customers, <share> of gross profit
+    who: <persona>
+    came in on: <angle> | first offer: <offer> | refund rate: <%>
+
+  DISCOUNT COHORTS
+    full price: <repeat %>, <90-day profit per customer>
+    discounted (<code>): <repeat %>, <90-day profit per customer>
+
+  ANGLE FIT  <angle that sells a benefit the product does not deliver>
+
+  DO NEXT
+    scale: <angle + offer>   stop: <angle + offer>   fix: <page promise>
+
+  SCORE  <n>/100 = 100 x <new customers in angle-and-offer pairs at or above your average 90-day profit> / <all new customers>
+  MISSING: <what was needed>
+
+tweaks:
+  - what: The window
+    how: Use 90 days of profit for fast-repeat products and a longer window for slow ones. A window that is too short makes every buyer look bad.
+  - what: How well you tag the angle
+    how: The more exactly each customer is tied to the ad angle and offer they came in on, the more the groups mean. Say which tags are guesses.
+  - what: Survey answers
+    how: Add what buyers said they were solving, so the groups are described in their words and not your guesses.
+  - what: Discount codes
+    how: List every code and its depth. The code split only works if codes are named the same way each time.
+
+judge:
+  - Every number is something it worked out from your data, and the sums are shown.
+  - The two groups are described by a persona, an angle and an offer, not just a spend figure.
+  - It says plainly that the findings are correlations and need a small ad test.
+  - It does not call a sale good because of ROAS alone.
+  - Any claim about discounts uses your cohort numbers, not the source's client mix.
+
+test:
+  - Give it a short export where you already know your best customer. That person should land in the top group.
+  - Run it twice on the same file. The groups and the score should match.
+  - Check one group by hand. Pull ten customers from it and see if the persona fits them.
+  - Run one small ad test on an angle it said to stop and one it said to scale before you move budget.
+
+improve:
+  - Add your own list of angles and offers to the skill file, so it uses your names and not its own.
+  - Add your return and refund reasons, so a high refund rate is tied to a cause.
+  - Save the persona each run produces to your brand file, and update it each quarter.
+  - Pair it with the best customer finder, then with a skill that turns the winning angles into ads.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads spreadsheets can run the ranking. Attach the export and check one group by hand."}
+    - {name: "Shopify", why: "Its order and customer exports carry discount codes, refunds and first-order source, which this skill needs."}
+    - {name: "Klaviyo", why: "It can send a post-purchase survey, which gives the customer's own words for each group."}
+  inputs:
+    - "A post-purchase survey that asks what problem they are solving"
+    - "Ad account angle names matched to the orders they brought in"
+    - "Your cost of goods per product, so profit is real"
+    - "Support ticket reasons by customer"
+
+terms:
+  - term: Gross profit
+    meaning: What is left of a sale after the cost of the goods, shipping, fees and refunds.
+  - term: ROAS
+    meaning: Return on ad spend, or revenue brought in for each dollar spent on ads.
+  - term: Angle
+    meaning: The reason to buy that an ad leads with.
+  - term: Zero-party data
+    meaning: Facts a customer tells you on purpose, such as what they want to fix.

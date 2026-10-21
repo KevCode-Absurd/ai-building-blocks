@@ -1,0 +1,20 @@
+slug: amazon-listing-writer
+name: "Amazon listing writer"
+summary: "Give it product facts and keyword tiers. Get an Amazon title, five benefit bullets and backend keywords."
+category: ecommerce
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: shortlist, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: pdp_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "Putting the main phrase first in the title, benefit-first bullets, the money-back note, category choice, the 3 times landed cost price rule and setting a future offer start date"}

@@ -1,0 +1,28 @@
+slug: ad-fatigue-watcher
+name: "Ad fatigue watcher"
+summary: "Give it your ad results twice a week. Get tired ads caught early and a brief for each replacement."
+category: agent
+type: agent
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+  - {type: transcript, required: false}
+outputs:
+  - {type: plan}
+  - {type: hooks}
+uses: [meta-ads-daily-checker, fatigued-ad-reviver, ad-sameness-checker, untried-ad-idea-finder, ad-test-brief-writer, creative-portfolio-mix-planner]
+steps:
+  - {uses: meta-ads-daily-checker, note: "Every run, if the account is connected read-only: spend, tired ads and money wasters. Without a connection, work from the export."}
+  - {uses: fatigued-ad-reviver, note: "Only for a proven winner that is fading: the cause, the pace, and 10 or more new hook briefs on the same body."}
+  - {uses: ad-sameness-checker, note: "Only when several ads fade together or the reviver blames sameness: the idea groups and what to replace."}
+  - {uses: untried-ad-idea-finder, note: "Only when the sameness score is high: five ideas the account has not tried."}
+  - {uses: ad-test-brief-writer, note: "Only after new ideas were found: designer-ready versions of each idea."}
+  - {uses: creative-portfolio-mix-planner, note: "Only when one ad holds more than half of spend: the backups to make now."}
+schedule: "Twice a week, Tuesday and Friday mornings"
+asks_before: [pausing or turning on ads, changing budgets, launching replacement ads, paying creators or filming, copying posts into other campaigns]
+origin: own
+version: 1.0.0
+example_pending: true

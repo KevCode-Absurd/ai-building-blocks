@@ -1,0 +1,24 @@
+slug: read-a-finished-store-test-and-pick-the-next-one
+name: "Read a finished store test and pick the next one"
+summary: "Give it your test numbers and dates. Get a ship call, a ranked list of ideas and the next bold tests."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+uses: [store-test-verdict-maker, test-idea-ranker, big-swing-test-picker]
+steps:
+  - {uses: store-test-verdict-maker, note: "Starts from your test numbers and says whether the result can be trusted and whether to ship."}
+  - {uses: test-idea-ranker, note: "Takes what step 1 learned and writes each next idea as a hypothesis with the evidence behind it."}
+  - {uses: big-swing-test-picker, note: "Fits the ideas and the step 1 verdict to what your traffic can prove, in order."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/read-a-finished-store-test-and-pick-the-next-one/skeleton.yaml

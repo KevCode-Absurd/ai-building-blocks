@@ -1,0 +1,23 @@
+slug: buyer-research-plan-with-survey
+name: "Buyer research plan with survey"
+summary: "Give it your customer list and reward budget. Get a call plan, recruiting email and objection survey."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Best buyer personas podcast interview", by: "Adrienne Barnes, a buyer persona researcher, guest on a marketing podcast", used: "The four-part research method: about 20 short calls, a survey after the calls, audience tools and social listening; paying people for their time; grouping by job to be done"}
+  - {title: "How to define your ideal customer profile", by: "two marketers on a software company's marketing show", used: "Five customer calls of 30 minutes with transcripts put in one AI project"}
+  - {title: "How I find avatars that scale creatives to $100k a day", by: "an ecom brand scaling coach (name not given)", used: "Keep calling and messaging buyers as a team habit"}
+  - {title: "$1B Marketer Explains: How to Scale an Ecommerce Brand in 2026", by: "Eddie, an agency owner", used: "Written open-ended surveys where everyone wins, sent to buyers and non-buyers, counting requests for new products, and why email tests do not prove cold-traffic results"}

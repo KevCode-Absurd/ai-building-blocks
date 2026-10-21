@@ -1,0 +1,19 @@
+slug: mechanism-namer
+name: "Mechanism namer"
+summary: "Give it your product and rivals. Get a named, true mechanism and three pillars that sell the reason."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: true}
+outputs:
+  - {type: angle_library}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "8 Hour Copywriting Course For Beginners", by: "A freelance copywriting YouTuber (video)", used: "What a unique mechanism is, selling the thing that sells the thing, and building an offer on two or three pillars"}

@@ -1,0 +1,22 @@
+slug: prepare-a-price-talk-with-a-sum-they-can-pay
+name: "Prepare a price talk with a sum they can pay"
+summary: "Give it the deal and what you know of them. Get your stance, their side, a payable sum and opening lines."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: plan}
+uses: [win-win-stance-planner, other-person-view-mapper, can-they-pay-deal-checker, negotiation-call-prep-planner]
+steps:
+  - {uses: win-win-stance-planner, note: "Sets your stance, what a win is for each side and your walk-away line. Hands on the question to settle."}
+  - {uses: other-person-view-mapper, note: "Takes the question from the step before and maps the other side: wants, pressures and a way to save face."}
+  - {uses: can-they-pay-deal-checker, note: "Tests your ask against what they can pay and proposes one sum. Reads the question and your terms from the steps before."}
+  - {uses: negotiation-call-prep-planner, note: "Turns their side and the proposed sum into the lines you open with, the questions you ask and what to listen for."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/prepare-a-price-talk-with-a-sum-they-can-pay/skeleton.yaml

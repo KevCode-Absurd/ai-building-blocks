@@ -1,0 +1,121 @@
+new_slug: creative-hit-rate-planner
+name: "Creative hit rate planner"
+summary: "Paste a prospecting ad export. Get your hit rate, concepts above your profit line and what to iterate."
+job: read-ad-results
+thinking: medium
+thinking_why: "It follows a fixed formula on an export, so a mid-size model is enough. Use a stronger one if the export is large or messy."
+
+headline: "Creative hit rate planner"
+subhead: Paste a two-week prospecting ad export and your profit line. It counts how many ads won, marks the concepts that clear your line and writes what to iterate. You get your hit rate, a ranked concept list, iteration briefs and how many ads to make next.
+
+explain: |
+  Making more ads only helps if some of them win. Many stores launch dozens of ads, see one carry the spend and have no idea if that is normal. The number that answers it is your creative hit rate: the share of ads launched that spent a fair part of the budget and hit your target cost per sale.
+
+  This skill works it out from your own export. It uses incremental results where Ads Manager offers them, so retargeting-style inflation doesn't flatter the numbers. It marks which concepts clear your profit line, leaves the near-line ads alone, and keeps every profitable concept running, even a small one. For each winner it writes real swings to try next, then sizes the next batch from your hit rate. There is no score out of 100: the hit rate is the measure.
+
+when:
+  - You launched a batch of ads and want to know whether one winner in twenty is normal for your store.
+  - You are deciding how many ads to make next month and want a number tied to your own results.
+  - You have a few winners and want briefs for the next round that aren't just a new headline.
+
+you_give:
+  - A prospecting ad export for a closed window of about 14 days or more (spend, purchases, ROAS or CPA, standard and incremental if you have them)
+  - Your target CPA, or the lowest ROAS that still makes money on new customers
+  - Your concept list and launch dates (optional)
+you_get:
+  - Your creative hit rate, with the sum shown
+  - A concept list ranked by spend, with keep, leave alone, iterate or drop
+  - An iteration brief for each winning concept
+  - A volume plan for the next batch
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In Ads Manager, open your prospecting campaign, add the incremental attribution columns, sort by spend and export the last 14 days.
+  - Paste or attach the export and tell it your target CPA or lowest ROAS. If you don't know it, ask the skill to help you work out break-even.
+  - Pick the concepts to iterate and brief your team or your AI maker on the swings it listed.
+  - Run it again after the next batch, using the same window length.
+
+how_it_works:
+  - title: Sets your line
+    text: Uses your own target CPA or lowest ROAS, and says whether it is standard or incremental.
+  - title: Adds incremental view
+    text: Compares attribution settings and sorts every ad by spend, so the real earners show first.
+  - title: Counts the hits
+    text: An ad is a hit if it spent over 5% of the campaign budget and hit your target. Hit rate is hits divided by ads launched.
+  - title: Marks the concepts
+    text: Flags high-spend ads above your line, and leaves ads just above it alone.
+  - title: Keeps every earner
+    text: A small concept at a high return and a big one at a modest return both add profit, so both stay.
+  - title: Plans iterations
+    text: Writes real swings for each winner, such as the same layout for each product, not a one-word change.
+  - title: Sizes the next batch
+    text: Uses your hit rate to say how many ads to make, and warns against more volume if quality drops.
+
+output_shape: |
+  HIT RATE  <hits> of <ads launched> = <n>%   (window <dates>, line <...>, view <standard | incremental>)
+  TOO NEW   <ads launched too recently to count>
+  SAMPLE    <enough ads | under about 20 ads, rough guide only>
+
+  CONCEPT LIST (by spend)
+  <concept> | ads | spend | return | <above line | near line | below line> | <keep running | leave alone | iterate | drop>
+
+  ITERATION BRIEFS
+  <winning concept>: <real swing 1> | <real swing 2>
+
+  VOLUME ADVICE
+  <ads to make next>, because <hit rate x target winners>.
+  Quality check before raising volume: <what to confirm>.
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what would sharpen this>
+
+tweaks:
+  - what: Your profit line
+    how: Use your real break-even or target, on new customers if you can. The source's 1.1 line belongs to one brand and will mislead you.
+  - what: The window
+    how: Use at least 14 days of closed data, and several ad packs. Short windows give a rate that swings.
+  - what: Incremental columns
+    how: Add them if Ads Manager shows them. Standard ROAS flatters ads that mostly reach people who would have bought anyway.
+  - what: Concept labels
+    how: Group ads by concept before you paste. The concept list and iteration briefs are only as good as the grouping.
+  - what: Launch dates
+    how: Include them so brand-new ads are listed as too new instead of counted as misses.
+
+judge:
+  - The hit rate shows its sum, with the window and the line used.
+  - The profit line is yours, not a number from a video.
+  - Ads just above your line are left alone, not cut.
+  - Every concept above your line is kept, whatever its ratio.
+  - Each iteration is a real swing, such as a new layout for each product, not a one-word edit.
+
+test:
+  - Count the hits by hand on a small export. Your count should match the skill's.
+  - Change your target to a stricter number and run it again. The hit rate should fall.
+  - Give it an export with fewer than 20 ads. It should say the rate is a rough guide.
+  - Take one iteration brief and ask whether your team could make it next week without more questions.
+
+improve:
+  - Save your break-even ROAS and CPA in the skill file, so you never paste them.
+  - Add your own hit rate history to your brand file each month, so you can see if quality is slipping as volume grows.
+  - Add a rule for how many ads a concept needs before you judge it, so it matches your budget.
+  - Pair it with the creative test reader for ad-by-ad calls and the creative volume planner for how many ads to make.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "Its Columns menu has the compare attribution settings and incremental view the skill reads, and it exports by ad."}
+    - {name: "Any good chat AI", why: "Any current chat AI can count hits and rank concepts from a pasted export."}
+  inputs:
+    - "Your break-even ROAS or CPA from margin"
+    - "A concept tag on each ad name"
+    - "Launch dates for every ad"
+    - "The same export from the last window, to compare hit rates"
+
+terms:
+  - term: Creative hit rate
+    meaning: The share of ads launched that spent over 5% of the campaign budget and hit your target cost per sale.
+  - term: Prospecting
+    meaning: Ads shown to people who have not bought from you yet.
+  - term: Incremental
+    meaning: Sales the ad caused, found by comparing people who saw it with a held-back group.
+  - term: Concept
+    meaning: One core idea for an ad, such as a persona, angle and offer together, that can be made in many versions.

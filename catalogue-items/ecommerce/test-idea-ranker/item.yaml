@@ -1,0 +1,24 @@
+slug: test-idea-ranker
+name: "Test idea ranker"
+summary: "Paste your research findings. Get each test written as a hypothesis and ranked by evidence and profit."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [peep-laja]
+credits:
+  - {title: "CRO as testing and experimentation for DTC ecommerce", by: "Written research review of A/B testing for online stores", used: "Evidence gating, profit-weighted ranking, the hypothesis shape and win-rate ranges"}
+  - {title: "PXL: A Better Way to Prioritize Your A/B Tests", by: "Peep Laja, CXL", url: "https://cxl.com/blog/better-way-prioritize-ab-tests/", used: "Scoring ideas with yes or no evidence points instead of gut scores"}
+  - {title: "Conversion Rate Optimization Framework Revealed - Step By Step Breakdown", by: "Ali Kenyon (Conversion Wise), hosted by Ezra Firestone", used: "The change, expected outcome and rationale format, and the leaderboard of scored test ideas"}
+  - {title: "eCommerce CRO Masterclass 2026: The Full System", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "List, score and sort with the ICE method, and the page order of clarity, copy, offer, proof and friction"}

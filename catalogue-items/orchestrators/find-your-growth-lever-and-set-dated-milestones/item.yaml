@@ -1,0 +1,22 @@
+slug: find-your-growth-lever-and-set-dated-milestones
+name: "Find your growth lever and set dated milestones"
+summary: "Give it your sales numbers. Get the growth lever to pull, ranked ideas with tests, and dated milestones with predictions."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: [growth-lever-audit, growth-idea-ranker, learning-milestone-planner]
+steps:
+  - {uses: growth-lever-audit, note: "Finds the lever worth pulling first from your own numbers"}
+  - {uses: growth-idea-ranker, note: "Scores ideas against the lever and the weak steps the audit found"}
+  - {uses: learning-milestone-planner, note: "Takes the ranked tests and puts a date and a predicted figure on each"}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/find-your-growth-lever-and-set-dated-milestones/skeleton.yaml

@@ -1,0 +1,98 @@
+new_slug: quarterly-strategy-reviewer
+name: Quarterly strategy reviewer
+summary: Give it last quarter's plan and results. Get what to keep, cut or change, and next quarter's goals with dated results.
+job: plan-strategy
+thinking: high
+thinking_why: It compares two quarters, picks its own path from the gap and judges the direction. Give it your strongest model.
+headline: Quarterly strategy reviewer
+subhead: Give it last quarter's plan and this quarter's results. It scores the plan, checks what your last decisions did, marks every project keep, change or cut, and writes next quarter's goals with dated key results for you to approve.
+explain: |
+  Most quarterly reviews drift. The old plan is half remembered, wins are counted by effort, and every project is carried into the next quarter because nobody wants to cut it. The same list of ten things returns each time.
+
+  This agent runs the review the same way every quarter and compares with the last one. It scores each goal against its target, shows the sums, and checks what last quarter's decisions did to the numbers. Each project gets keep, change or cut. If the main goal was missed by a wide margin, or two quarters running, it asks the harder question about the direction. If you have too many projects, it helps you say no. Then it writes next quarter's goals and checks them by working back from the end date. It hands you a list of decisions to approve and does not act on any of them.
+when:
+  - It is the end of the quarter and you want a review you can compare with the last one.
+  - You keep carrying the same projects forward and want an honest keep, change or cut.
+  - You missed your main goal and want to know if the plan or the direction is the problem.
+you_give:
+  - Last quarter's plan, with goals, projects, key results and dates
+  - This quarter's results for each, with numbers
+  - What changed, such as the market, the team or a lost customer (optional)
+you_get:
+  - Each goal scored against its target, with the sums
+  - What last quarter's decisions did to the numbers
+  - A keep, change or cut call for every project, with the reason
+  - A harder look at the direction, only when the numbers call for it
+  - Next quarter's goals with dated key results, and a list of decisions for you to approve
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it your plan and results.
+  - The first time, write down last quarter's goals as you remember them. The agent saves them.
+  - Read the keep, change or cut calls first. Argue with any you disagree with, using the numbers.
+  - Say yes or no to each decision on the list. It records only the ones you approve.
+  - Run it again in the last week of next quarter. It compares with this one.
+how_it_works:
+  - title: Read last quarter
+    text: Reads last quarter's plan, review and decisions. With none, it says there is nothing to compare with.
+  - title: Score the plan
+    text: Sets each target against its result, shows the gap and marks hit, missed or not measured.
+  - title: Check last quarter's decisions
+    text: Says whether each decision happened and what it did to the numbers.
+  - title: Keep or cut
+    text: Marks every project keep, change or cut from its results.
+  - title: Choose the path for the direction
+    text: A big miss, or two misses in a row, gets a persevere-or-pivot check. Too many projects, or no list of what you will not do, gets a trade-off plan.
+  - title: Write and check next quarter
+    text: Writes a few goals with dated key results, then rebuilds the plan from the end date to look for gaps.
+output_shape: |-
+  THE QUARTER
+    Goals hit <n> | missed <n> | not measured <n> | main goal: <target> vs <result>
+
+  LAST QUARTER'S DECISIONS
+    <decision>: <happened or not> | effect: <number>
+
+  KEEP, CHANGE OR CUT
+    1. <project> | <keep | change | cut> | why: <reason>
+
+  DIRECTION
+    <carry on | look harder | pivot-or-persevere call> | triggered by: <condition>
+
+  NEXT QUARTER'S GOALS
+    <objective> | key results: <result by date> | carried over: <what and why>
+
+  DECISIONS TO APPROVE
+    1. <decision>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Numbers in the plan
+    how: Give every goal a number and a date. A goal without a number is marked not measured and cannot be called a win.
+  - what: What counts as a big miss
+    how: The starting point is missing the main goal by more than a third. Set your own, to match how much your numbers move.
+  - what: How many projects is too many
+    how: The starting point is five. Set it to what your team can really run.
+  - what: What changed
+    how: Tell it about a lost customer or a new rival. It checks whether the plan or the world changed.
+judge:
+  - Each goal has a target, a result and a gap, with the sums shown.
+  - Nothing is called a win without a number that reached its target.
+  - Last quarter's decisions were checked against the numbers.
+  - Every project has a call and a reason.
+  - Nothing was announced, funded, dropped or changed without your yes.
+test:
+  - Give it a past quarter you know well. See if the keep, change or cut calls match what you now think you should have done.
+  - Give it a plan with one goal that has no number. It should mark it not measured.
+  - Run it twice on the same inputs. The calls should be the same, apart from wording.
+improve:
+  - Set your own thresholds for a big miss and too many projects.
+  - Add a short list of things you will not do, so the review can check it each quarter.
+  - Share the review with a partner or adviser before you approve the decisions.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep a folder per quarter and read last quarter's files each time.
+    - name: A spreadsheet
+      why: Keep each goal's target and result in one sheet, so the sums are easy to check.
+  inputs:
+    - Last quarter's plan with dates and numbers
+    - A note of what changed in your market or team

@@ -1,0 +1,71 @@
+new_slug: fix-your-marketing-plan-and-cut-it-to-one-goal
+name: Fix your marketing plan and cut it to one goal
+summary: Give it your marketing plan. Get it put in order, its rule-breaks fixed, and one goal with a test calendar.
+job: plan-strategy
+thinking: high
+thinking_why: It scores your plan twice and then picks what to cut. Give it your strongest model.
+headline: Cut your marketing plan to one goal you can follow
+subhead: Give it a marketing plan full of tactics. It sorts every line into diagnosis, strategy or tactic, finds where the plan breaks the rules of marketing, then keeps only the tactics that serve one numbered goal.
+explain: |
+  Most marketing plans are a list of things to try. There is no clear target, no position and no reason for the order. Everything looks urgent, so a small team does a bit of all of it and none of it gets a fair test.
+
+  The steps work like an editor. First your plan is sorted by what each line is for, and the lines that serve no target are marked. Then the rebuilt plan is checked against thirteen tests of how plans work in a buyer's mind, with a score and a fix list, worst first. Last, the wish is rewritten as one goal with a number and a date, each tactic is scored for impact and ease, and the top few get start dates, stop dates and a rule for when each one ends.
+when:
+  - Your plan has twenty tactics and no clear order.
+  - You are about to add another channel and have not tested the ones you run.
+  - You must hand a short plan to a team or a boss.
+you_give:
+  - Your current marketing plan, pasted as it is
+  - Your brand facts (optional)
+  - Your goal for the quarter, with a number if you have one
+you_get:
+  - Your plan rebuilt as diagnosis, target, position, objective and tactics, with gaps named
+  - A score out of 100 for the order, and a score for how well it fits the rules of marketing
+  - A fix list, worst first, and what already works
+  - One goal with a number and a date, and three to five tactics with start dates and stop rules
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the plan as it is. Do not tidy it first, because the gaps are what it looks for.
+  - Say the goal in your own words at the start. Step 3 turns it into one number.
+  - Keep the fix list. Check the stop rules against your calendar before you start.
+how_it_works:
+  - title: Put the plan in order
+    text: Sorts every line as diagnosis, strategy or tactic, finds the target and position, marks tactics that serve neither, and rebuilds the plan in order with a score.
+  - title: Check the plan against the marketing laws
+    text: Asks what you are first at in the buyer's mind, runs the tests, scores the plan and writes a fix list, worst first, plus what to keep.
+  - title: Cut it to one goal and a test calendar
+    text: Rewrites your wish as one number and a date, works back to the sales you need, scores each tactic for impact and ease, and time-boxes the top few with stop rules.
+output_shape: |-
+  STEP 1: PLAN IN ORDER
+    Lines sorted | target | position | objective | orphan tactics | what to find out first | score
+
+  STEP 2: LAW CHECK
+    Where you sit in the buyer's mind | each test with verdict | score | fix list, worst first | what to keep
+
+  STEP 3: ONE GOAL
+    The goal | sales needed | tactic sheet with scores | start and stop dates and rules | daily and weekly check
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your brand facts
+    how: Add them so step 2 judges the name and position against what you really sell.
+  - what: How much time and money you have
+    how: Tell it your hours and budget so step 3 scores ease honestly.
+  - what: What already brings customers
+    how: Name it. Step 3 keeps about 80 percent of effort there and 20 percent on new tests.
+judge:
+  - Every tactic in the final list points to a target, a position and an objective.
+  - The goal has one number, one thing counted and one date.
+  - Every kept tactic has a start date, a stop date and a stop rule.
+  - The fix list names the line that breaks each rule, not a general warning.
+  - Something was cut. If nothing was, the plan was not edited.
+test:
+  - Take the top three tactics. For each, ask what number would tell you it failed by its stop date.
+  - Redo the sales needed in step 3 by hand from your profit per sale.
+  - Ask someone outside the team to say in one sentence what the plan is for. It should match the goal.
+improve:
+  - Run it again after each stop date with the results added, and let it re-score the tactics.
+  - Save the fixed plan in your brand file so later campaigns start from it.
+  - Add rival plans in step 2 to see where you are second in the buyer's mind.

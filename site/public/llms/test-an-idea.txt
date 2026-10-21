@@ -1,6 +1,6 @@
 # Test an idea before you build it: AI Blocks
 
-> 57 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 60 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-fit problem checker](https://useaiblocks.com/skills/ai-fit-problem-checker): Describe a problem. Get a verdict on whether AI suits it, using three tests, and the data or simulator you would need.
 - [Assumption test ranker](https://useaiblocks.com/skills/assumption-test-ranker): Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
@@ -8,6 +8,7 @@
 - [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test): Give it a plan and its key bets. Find which assumptions break first and what to test.
 - [Business idea killer](https://useaiblocks.com/skills/business-idea-killer): Give it a business idea. Get the one fact that kills it, or the cheapest test it still has to pass.
 - [Business model guess tester](https://useaiblocks.com/skills/business-model-guess-tester): Paste your plan. Get it rewritten as testable guesses on one page, with a test and a pass line for each.
+- [Check demand for your idea, then run one cheap test](https://useaiblocks.com/workflows/check-real-demand-for-your-idea-then-run-one-cheap-test): Give it your idea. Get real buyer words, the fact that could kill it and a cheap test.
 - [Commitment ask planner](https://useaiblocks.com/skills/commitment-ask-planner): Say where you are and what people said. Get the next step to ask for and which leads are real.
 - [Contrarian belief tester](https://useaiblocks.com/skills/contrarian-belief-tester): Paste your big idea. Get the true-but-unpopular belief behind it, who disagrees and the smallest market where it could win.
 - [Customer conversation request writer](https://useaiblocks.com/skills/customer-interview-request): Say who you want to talk to. Get a warm intro note, a cold message and an opening line.
@@ -24,6 +25,7 @@
 - [Idea sharpener](https://useaiblocks.com/skills/idea-sharpener): Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
 - [Idea stress-test panel](https://useaiblocks.com/skills/idea-stress-test-panel): Give it your idea. Get a blunt panel review of what is weak, with what to fix before you build.
 - [Idea to business guide](https://useaiblocks.com/skills/idea-to-business-guide): Describe your idea. Get a tested customer, a position, a price and a first market to win, step by step.
+- [Idea validation analyst](https://useaiblocks.com/agents/idea-validation-analyst): Give it your idea. It picks the riskiest guess, plans the test, reads the result and says keep, change or stop.
 - [Investor panel pitch tester](https://useaiblocks.com/skills/investor-panel-pitch-tester): Pitch a business idea. Get a panel of tough investors who grill it and vote in or out.
 - [Lean canvas builder](https://useaiblocks.com/skills/lean-canvas-builder): Describe your idea. Get a one-page lean canvas with problem, solution, channels, costs and revenue.
 - [Leap-of-faith assumption finder](https://useaiblocks.com/skills/leap-of-faith-assumption-finder): Paste your plan. Get the few guesses it stands on, each with a number, ranked so you test the riskiest first.
@@ -51,6 +53,7 @@
 - [Ten-times-better checker](https://useaiblocks.com/skills/ten-times-better-checker): Paste your product and what buyers use today. Get a measured gap to the closest substitute and a ten-times verdict.
 - [Ten-year durability checker](https://useaiblocks.com/skills/ten-year-durability-checker): Paste your business and its edge. Get how much value sits past year five and what could end the edge.
 - [Test if your idea can own its market](https://useaiblocks.com/workflows/idea-market-test): Give it your idea. Get an honest market size, a ten-times test, a ten-year check and a go, fix or stop call.
+- [Test your idea's riskiest risk and decide what next](https://useaiblocks.com/workflows/test-your-ideas-riskiest-risk-and-decide-what-next): Give it your idea. Get its worst risk found, one small test to run, and a keep or change call.
 - [Test your riskiest guess and measure what counts](https://useaiblocks.com/workflows/guess-test-metrics): Give it your product idea. Get the riskiest guess, the smallest test, honest numbers and the root cause of a miss.
 - [Thirty day launch planner](https://useaiblocks.com/skills/thirty-day-launch-planner): Paste your idea, budget and tools. Get a 30-day plan to launch, take payment and decide to keep, kill or change.
 - [Thought experiment planner](https://useaiblocks.com/skills/thought-experiment-planner): Describe a plan or belief. Get a what-if scene to run in your head, and a check that could prove it wrong.

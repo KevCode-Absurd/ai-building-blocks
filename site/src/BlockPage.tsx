@@ -164,7 +164,9 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   const renders = rendersOf(b);
   const oldNames = Object.entries(c.renamed ?? {}).filter(([, to]) => to === b.slug).map(([from]) => from);
   const twin = b.twin ? c.bySlug[b.twin] : null;
-  const isFlow = kindOf(b) === "workflow" && b.steps.length > 0;
+  // An agent runs workflows and skills in order like a workflow, and is added to your AI like a skill.
+  const isAgent = kindOf(b) === "agent";
+  const isFlow = (kindOf(b) === "workflow" || isAgent) && b.steps.length > 0;
   const p = page ?? null;
   const give = p?.you_give?.length ? p.you_give : b.inputs.map((x) => x.type.replace(/_/g, " "));
   const get = p?.you_get?.length ? p.you_get : b.outputs.map((x) => x.type.replace(/_/g, " "));
@@ -200,8 +202,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["seats", "On a council", has(p?.seats)],
     ["io", "What you give it, what you get", give.length > 0 || get.length > 0 || !!renders],
     ["before", "Before you start", !!p?.plan && (has(p.plan.needed) || has(p.plan.helps))],
-    ["steps", "The steps", isFlow],
-    ["install", "Add it to your AI", !isFlow],
+    ["steps", isAgent ? "What it runs" : "The steps", isFlow],
+    ["install", "Add it to your AI", !isFlow || isAgent],
     ["helped", "Who can help with this", has(b.minds)],
     ["flows", "Part of these workflows", b.type !== "mind" && inFlows.length > 0],
     ["make", renders === "video" ? "Make the video" : "Make the picture", !!renders],
@@ -210,7 +212,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["test", "Test it", has(p?.judge) || has(p?.test)],
     ["best", "Works best with", has(p?.works_best_with?.tools) || has(p?.works_best_with?.inputs)],
     ["improve", "Make it fit your work", has(p?.improve)],
-    ["file", isFlow ? "The workflow file" : "The skill file", true],
+    ["file", isAgent ? "The agent file" : isFlow ? "The workflow file" : "The skill file", true],
     ["next", "What to do next", has(p?.plan?.next)],
   ];
 
@@ -250,7 +252,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         )}
         {renders && <MakeNote kind={renders} />}
         <div className="bp-actions">
-          {isFlow ? (
+          {isFlow && !isAgent ? (
             <>
               <button className="btn btn-primary" onClick={handoff} data-testid="download-handoff">Download the workflow</button>
               <button className="btn btn-dark" onClick={() => toBuilder(b.steps.map((s) => s.uses), b.name)}>Open in the builder</button>
@@ -371,7 +373,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
 
           {isFlow && (
-            <Section id="steps" title="The steps" lead="Each step is a skill. It saves its result, and the next step picks it up.">
+            <Section id="steps" title={isAgent ? "What it runs" : "The steps"} lead={isAgent ? "It runs these in order, reads each result, and decides what to do next. It stops and asks you before anything that spends, sends or goes live." : "Each step is a skill. It saves its result, and the next step picks it up."}>
               <ol className="flow-steps">
                 {b.steps.map((s, i) => {
                   const sb = c.bySlug[s.uses];
@@ -391,7 +393,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </Section>
           )}
 
-          {!isFlow && (
+          {(!isFlow || isAgent) && (
             <Section id="install" title="Add it to your AI once, then start it by name" lead="It takes about two minutes, once. Pick the AI you use.">
               <Install b={b} skill={skill} toast={toast} />
             </Section>
@@ -481,9 +483,9 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </section>
           )}
 
-          <Section id="file" title={isFlow ? "The workflow file" : "The skill file"} lead={`This is what your AI follows. It's saved as ${b.slug}/SKILL.md, the name Claude, Claude Code and our workflows call it by.`}>
+          <Section id="file" title={isAgent ? "The agent file" : isFlow ? "The workflow file" : "The skill file"} lead={`This is what your AI follows. It's saved as ${b.slug}/SKILL.md, the name Claude, Claude Code and our workflows call it by.`}>
             <details className="skill-file" open={!p}>
-              <summary>Read the full {isFlow ? "workflow" : "skill"}</summary>
+              <summary>Read the full {isAgent ? "agent" : isFlow ? "workflow" : "skill"}</summary>
               {p ? <div className="prose" dangerouslySetInnerHTML={{ __html: p.html.skill }} /> : skill ? <pre className="prose">{skill}</pre> : <p className="small">Loading…</p>}
             </details>
           </Section>

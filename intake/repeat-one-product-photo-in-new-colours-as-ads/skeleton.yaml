@@ -1,0 +1,44 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md).
+id: repeat-one-product-photo-in-new-colours-as-ads
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: repeat-one-product-photo-in-new-colours-as-ads
+  name: "Repeat one product photo in new colours as ads"
+  summary: "Give it one product photo. Get matching image ads with exact words, checked, then sized for print."
+  when: "you have one clean product photo and want a family of matching image ads without a photo shoot."
+  job: make-image-ads
+  level: intermediate
+steps:
+  - name: "Plan the set"
+    skill: repeated-image-campaign-planner
+    job: creative
+    from: "skill: repeated-image-campaign-planner"
+    method: ["Pick the thing buyers already know on sight", "Use one plain photo as the only source", "Lay out the set so only the colour changes", "Keep the surface flat with nothing hidden", "Set a price that fits the volume"]
+    inputs: [product_photos, brand_brain!]
+    outputs: [image_plan]
+    note: "Starts from your one photo and your brand file."
+  - name: "Write the exact-text prompts"
+    skill: image-ad-maker-with-exact-text
+    job: image
+    from: "skill: image-ad-maker-with-exact-text"
+    method: ["Lock every fixed word, subject, scene and size", "Keep ratio and quality in the tool settings, not the words", "Give each photo one job", "Write the scene, then the layout, then each word in quotes", "Write one fix for each fault"]
+    inputs: [image_plan, product_data!, brand_brain!]
+    outputs: [image_prompt]
+    note: "Turns each piece in the plan into a prompt with every word spelled out."
+  - name: "Check the ads before you make them"
+    skill: pre-launch-ad-checker
+    job: ads
+    from: "skill: pre-launch-ad-checker"
+    method: ["Check shape, size and safe zones", "Look at the first second with the sound off", "Check every claim against your proof", "Check that each version changes one nameable thing", "Give a verdict: approve, fix or remake"]
+    inputs: [image_prompt, brand_brain!]
+    outputs: [audit_report]
+    note: "Reads the prompts from the step before and names anything to fix before you spend on images."
+  - pause: "Make the images in your image tool with the settings from step 2. Pick the ones you approve."
+  - name: "Get the picked images to full size"
+    skill: image-upscale-checker
+    job: image
+    from: "skill: image-upscale-checker"
+    method: ["Fix any fault in the original first", "Work out the real pixel size the use needs", "Pick a faithful upscaler and set it to stay true", "Protect small words and logos", "Lay the original over the result to find changes"]
+    inputs: [approved_image]
+    outputs: [upscaled_image]
+    note: "Takes the images you approved after the pause."

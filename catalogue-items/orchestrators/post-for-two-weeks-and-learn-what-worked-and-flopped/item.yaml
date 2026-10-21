@@ -1,0 +1,24 @@
+slug: post-for-two-weeks-and-learn-what-worked-and-flopped
+name: "Post for two weeks and learn what worked and flopped"
+summary: "Give it your platforms and goal. Get ready posts checked for sharing, then a read of what worked and why one flopped."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: feedback_notes}
+uses: [social-post-planner, shareable-content-checker, social-media-results-analyst, flop-post-diagnoser]
+steps:
+  - {uses: social-post-planner, note: "Starts from your platforms and goal and writes the posts you will publish."}
+  - {uses: shareable-content-checker, note: "Reads the posts from the step before, so you fix the weakest before they go out."}
+  - {uses: social-media-results-analyst, note: "Fresh start after the two weeks: reads your real numbers and ranks the posts."}
+  - {uses: flop-post-diagnoser, note: "Takes the worst post from the ranking, which started as one of the drafts from step one, and says why it failed."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/post-for-two-weeks-and-learn-what-worked-and-flopped/skeleton.yaml

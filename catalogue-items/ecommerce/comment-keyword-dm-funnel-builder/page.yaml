@@ -1,0 +1,119 @@
+new_slug: comment-keyword-dm-funnel-builder
+name: "Comment keyword DM funnel builder"
+summary: "Give it your offer and posts. Get a comment-keyword plan, DM copy, a follow-up and email capture."
+job: grow-social
+thinking: medium
+thinking_why: "It writes short messages and a path with rules to follow. A mid-size model handles it well."
+
+headline: "Comment keyword DM funnel builder"
+subhead: Give it your free guide or offer and the posts it sits under. It writes the keyword and call to action, the first automatic DM, a follow-up for people who clicked, a plain welcome DM, the email handoff and the numbers to watch.
+
+explain: |
+  "Link in bio" tells viewers to leave your post. A comment-keyword funnel does the opposite. You ask people to comment one word, and a messaging tool sends them the link by direct message. The post gets comments, and you get a list of who opened and who clicked.
+
+  This skill builds the whole path. It picks a keyword and a free thing worth commenting for, writes the first DM, a short follow-up for people who clicked but did not buy, and a no-sell welcome DM for new followers. It ends in an email sign-up, so people move from a rented platform to a list you own. The figures in the source are one educator's single case. Check your platform's current rules on automated messages before you switch anything on.
+
+when:
+  - Your videos get views but few people reach your store or email list.
+  - You have a guide, checklist, size guide or code that is worth a comment.
+  - You want to follow up with people who clicked but did not buy.
+
+you_give:
+  - The free thing or offer you will give away
+  - The post it sits under
+  - The email tool you use
+  - A discount you can afford (optional)
+you_get:
+  - A keyword and call-to-action line for the post
+  - The first automatic DM and a follow-up DM
+  - A plain welcome DM for new followers
+  - The email handoff and the numbers to watch
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you will give away, the post it goes under and your email tool.
+  - Check your platform's current rules for automated DMs and pick a tool it approves.
+  - Set up the keyword in the tool, and test it from a second account.
+  - After 30 days, look at who opened, who clicked and who bought, then decide if the tool is worth paying for.
+
+how_it_works:
+  - title: Replaces link in bio
+    text: People comment a keyword, and the tool sends the link by DM. The post stays the place where people act.
+  - title: Picks something worth a comment
+    text: A guide, checklist, size guide, quote or code. Attach one to a post once or twice a week.
+  - title: Writes the first DM
+    text: It gives the thing and asks for an email, or links to a page that does. It does not pitch.
+  - title: Reads the numbers
+    text: Opened, clicked, bought. One educator saw 98 percent open and 37 percent click, with 3 of 10 buyers. That is a single case, not a promise.
+  - title: Follows up
+    text: A short note to people who clicked and did not buy, about a real sale end or a question that blocks them.
+  - title: Adds a welcome DM
+    text: A thank-you with no sale, so a DM thread already exists when you ask for the next keyword.
+  - title: Moves to email
+    text: DM, then email, then nurture emails, then an offer. Not DM to a hard sale.
+
+output_shape: |
+  KEYWORD: <one easy word> | POST: <which post> | THE GIVE: <what they get>
+  POST LINE: <call to action in one line>
+
+  DM 1 (sent on comment): <short message that gives the link or asks for the email>
+  DM 2 (follow-up, to people who clicked and did not buy): <short note, one question>
+  WELCOME DM (on follow, no sale): <thank-you>
+
+  EMAIL HANDOFF
+  <sign-up page promise> | welcome email 1: <subject and purpose>
+  next emails: <2 to 3 nurture steps> | then offer: <what, price, end date if real>
+
+  WHEN TO START: <views or traction rule>
+  NUMBERS TO WATCH: <comments, opens, clicks, email sign-ups, sales by keyword>
+  RULES TO CHECK: <platform terms, consent, unsubscribe>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <free thing | post | email tool | discount>
+
+tweaks:
+  - what: The give
+    how: Pick something a buyer values, such as a size guide, a care guide or a code. If you have nothing free, the funnel has nothing to ask for.
+  - what: The post
+    how: Pair each keyword with one post and one give, so you can tell which one works.
+  - what: Your email tool
+    how: Name it, and the skill writes the email handoff to match what it supports.
+  - what: Your discount
+    how: State the most you can give, such as 10 percent. Real end dates only; the skill will not invent urgency.
+
+judge:
+  - The keyword is one easy word, tied to one post and one give.
+  - DM 1 is short, gives value first and does not pitch.
+  - The follow-up goes only to people who clicked and did not buy, and asks one question or names a real sale end.
+  - The welcome DM has no sale in it.
+  - The plan says when to start, with a views rule, and says to check platform terms and consent rules.
+
+test:
+  - Set up one keyword on one post. Comment from a second account and check that the DM arrives.
+  - Check that the email sign-up page works on your phone and that the first welcome email sends.
+  - After 30 days, compare opens, clicks and sales to your link-in-bio results.
+  - Reply to every comment yourself for a week and see how many are real buyer questions.
+
+improve:
+  - Add your brand voice rules to the skill file so the DMs sound like you.
+  - Add the questions buyers ask most, and use them in the follow-up DM.
+  - Save the keyword, post and give that worked, with the numbers, as examples.
+  - Add legal text you need, such as consent wording and an unsubscribe line, after checking with a qualified person.
+
+works_best_with:
+  tools:
+    - {name: "Any Meta-approved DM automation tool", why: "It sends the link by DM and shows who opened and who clicked. Check its plan cost and the current Meta rules first."}
+    - {name: "Your email tool", why: "Klaviyo, Shopify Email or any list tool can hold the sign-ups and send the welcome and nurture emails."}
+  inputs:
+    - "Your best-performing post, as a link"
+    - "The free guide or code, ready to send"
+    - "Your three most common buyer questions"
+    - "Your privacy and consent wording"
+
+terms:
+  - term: Keyword comment
+    meaning: A viewer comments one agreed word, and a tool replies with a DM that holds the link or free item.
+  - term: Welcome DM
+    meaning: A thank-you message sent when someone follows you, with no sale in it.
+  - term: Rented to owned
+    meaning: Moving people from a platform you don't control to a list you own, such as email.

@@ -1,0 +1,127 @@
+new_slug: retail-buyer-approach-planner
+name: "Retail buyer approach planner"
+summary: "Give it your product and retailer. Get a plan to make the buyer call and keep the shelf."
+job: plan-strategy
+thinking: high
+thinking_why: "It joins your sales proof, cash and a long relationship plan, and it must be honest about what a small store can and cannot do. A stronger model handles the trade-offs."
+
+headline: "Retail buyer approach planner"
+subhead: "Give it your product, price, online sales proof and the retailer you want. It plans how to get the buyer to come to you, what stock and cash you need to never miss an order, and a routine to keep the relationship. You get a step-by-step plan."
+
+explain: |
+  A buyer at a big retailer gets pitched all day. The founder behind the source brand says the best position is the one where the buyer calls you. His team found the people the buyer followed on Instagram and worked with those creators, so the buyer saw the product everywhere before any meeting. Then they kept the shelf by never missing a purchase order.
+
+  This skill plans that for your product. It checks if retail suits you first: you need stock, cash and online sales proof. It then plans how to find the person who decides, what to build around them, what stock to hold so you can fill every order, and a routine for staying known. Retail judges what you did lately, so it also sets a monthly proof sheet. The brand in the source had a large following and a distribution partner; a small store should not expect the same access.
+
+when:
+  - Your product sells well online and you are thinking about a major retailer.
+  - A retailer already asked about your product and you want a plan before the meeting.
+  - You are in one retailer and want to keep your place and open another.
+
+you_give:
+  - Your product, price and online sell-through
+  - The retailer you want, and the buyer's name if you know it
+  - Your stock and cash position
+  - Your recent sales by month (optional)
+you_get:
+  - A buyer approach sequence, in order
+  - A stock and supply checklist so you never miss a purchase order
+  - A relationship routine with a monthly proof sheet
+  - A note on whether retail suits you now
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, price, sales by month and your stock and cash.
+  - Name the retailer and, if you know, the buyer or category lead.
+  - Read the fit check first. If cash is short, fix that before any outreach.
+  - Follow the sequence one retailer at a time, and update your proof sheet each month.
+
+how_it_works:
+  - title: Checks the fit
+    text: Needs stock, cash and online proof. Bulky or fresh goods may not suit Shopify or retail at all.
+  - title: Finds who decides
+    text: Names the buyer and the person inside the retailer who wants to be known for backing a digital brand.
+  - title: Makes the buyer find you
+    text: Finds the creators the buyer follows and plans honest, disclosed partnerships so the buyer sees your product.
+  - title: Plans meetings
+    text: Attends in person where you can, and builds first-name relationships with each decision maker.
+  - title: Gives the buyer real options
+    text: Offers real choices so the buyer helps shape the product, with your recommendation first.
+  - title: Plans supply
+    text: Overproduces so no purchase order is missed, and checks the cash this needs.
+  - title: Builds the proof sheet
+    text: Tracks what you did for the buyer in the last three months.
+  - title: Plans the next retailer
+    text: Proves one retailer first, then uses the result to open others while keeping the same products everywhere.
+
+output_shape: |
+  FIT CHECK  <suits retail now / not yet>  because <stock, cash, proof, product type>
+
+  APPROACH SEQUENCE
+  1 <step> | when | what you need | what good looks like
+  (in order)
+
+  WHO DECIDES  <retailer> | <role or name> | how to learn their name
+  CREATORS THE BUYER FOLLOWS  <how to find them> | disclosure rule: <...>
+  BUYER OPTIONS  <2 or 3 real options> | your pick and why
+
+  STOCK AND SUPPLY CHECKLIST
+  <item> | amount | cash needed | where the cash comes from
+  Rule: never miss a purchase order; extra units <n> = <$>
+
+  RELATIONSHIP ROUTINE  <monthly steps>
+  PROOF SHEET (last 3 months)  <sales | sell-through | on-time fill rate | what you did for the buyer>
+  SPREAD THE RISK  <channels and creators; no one account or one retailer can sink you>
+  NEXT RETAILER  <after the first one proves out>
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Your cash
+    how: Overproducing needs cash. With little, the skill sends you to the PO funding options planner and the growth cash limit checker first.
+  - what: Your following
+    how: Say how many followers you have and if you have a distribution partner. The source brand had both, and the skill adjusts what it promises.
+  - what: Product type
+    how: Bulky or fresh goods may not suit Shopify or retail at all. Say yours, and the skill checks it.
+  - what: Retailer size
+    how: A regional chain has different buyers from a national one. Name it, and the skill adjusts who decides.
+
+judge:
+  - The fit check comes first and names a reason.
+  - Every step has a time and an outcome.
+  - Creator work includes disclosure of sponsorship.
+  - The stock checklist has a cash figure for each line.
+  - It does not promise a meeting or a listing.
+
+test:
+  - Show the sequence to someone who has sold to a retailer and ask what is missing.
+  - Check the stock checklist against your real cash. Can you fund the extra units?
+  - Test the proof sheet on last quarter. Does it show something a buyer would want?
+  - Run it twice and see if the steps stay in the same order.
+
+improve:
+  - Add the retailers you know and who decides at each.
+  - Add your own on-time fill rate target.
+  - Add your sell-through by region, so the proof sheet names where you sell best.
+  - Pair it with the supplier terms and float planner and the growth cash limit checker for the cash side.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can plan the sequence from your numbers."}
+    - {name: "Instagram", why: "Shows which creators a buyer follows, when the account is public."}
+    - {name: "Shopify", why: "Shows your sell-through by product, which is the base for your proof sheet."}
+  inputs:
+    - "Your online sales by month for the last year"
+    - "Your cash and what a large order would cost"
+    - "The retailer's category and who runs it"
+    - "A list of creators who already sell your product"
+
+terms:
+  - term: Buyer
+    meaning: The person at a retailer who decides what products go on the shelf.
+  - term: Purchase order
+    meaning: A retailer's written order for your product, with units, price and date.
+  - term: Sell-through
+    meaning: The share of stock you sold in a period.
+  - term: Fill rate
+    meaning: The share of a purchase order you deliver in full and on time.

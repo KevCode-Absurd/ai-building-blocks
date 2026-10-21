@@ -1,0 +1,24 @@
+slug: store-quiz-funnel-builder
+name: "Store quiz funnel builder"
+summary: "Give it your customer research and offer. Get a quiz, info cards, summary page and a drop-off check."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: advanced
+inputs:
+  - {type: persona, required: true}
+  - {type: offer, required: true}
+  - {type: product_data, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: landing_page}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Best ecommerce quiz funnel structure, taken apart step by step", by: "A funnel builder (speaker not named)", used: "Info steps every few questions, varied inputs, the dynamic summary page and buy box"}
+  - {title: "How I scale past $100k a day with quiz funnels", by: "A performance agency operator (speaker not named)", used: "Quiz length for app and subscription offers, testing the first three questions, routing by pain point and the email trade-off"}
+  - {title: "How I build quiz funnels that make $1,073,966/mo", by: "Mark, agency operator", used: "The three jobs of every question, length for most stores, the 30 percent finish target, the drop-off spike method and friction rules"}

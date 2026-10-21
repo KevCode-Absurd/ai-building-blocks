@@ -1,0 +1,21 @@
+slug: turn-your-lessons-into-funny-stories-and-a-short-talk
+name: "Turn your lessons into funny stories and a short talk"
+summary: "Give it two or three lessons you have learned. Get a funny story for each and a short talk built on them."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: script}
+uses: [teaching-story-writer, single-effect-draft-checker, lesson-talk-writer]
+steps:
+  - {uses: teaching-story-writer, note: "Writes a one-minute funny story that carries one lesson."}
+  - {uses: single-effect-draft-checker, note: "Reads the story from the step before and checks every line serves the one point."}
+  - {uses: lesson-talk-writer, note: "Builds the talk on the stories you just checked, each ending on a next step for the room."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-your-lessons-into-funny-stories-and-a-short-talk/skeleton.yaml

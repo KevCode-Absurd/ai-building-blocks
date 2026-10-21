@@ -1,0 +1,19 @@
+slug: merchant-center-suspension-checker
+name: "Merchant Center suspension checker"
+summary: "Walk through your Merchant Center and store. Get a pass or fail list by suspension risk and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: store_capture, required: true}
+  - {type: web_page, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "An agency owner who runs Google Ads for Shopify brands (name not given)", used: "The four setup phases, the checklist areas and how often to check each, manual shipping settings, the return policy link, and editing price and availability only in Shopify"}

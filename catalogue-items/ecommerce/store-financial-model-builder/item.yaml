@@ -1,0 +1,19 @@
+slug: store-financial-model-builder
+name: "Store financial model builder"
+summary: "Give it ad budget, CAC, prices and costs. Get a 36-month store model with cash and runway."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Finance for e-commerce: a set of about 16 finance lectures and Excel walk-throughs (contribution margin P&L, unit economics, LTV and CAC, cohorts, churn, discounts, Black Friday, prepaid subscriptions, subscription model, inventory cash, Amazon launch model)", by: "Eric, startup finance educator (one channel; a few segments co-presented by a subscription-software company's strategy director)", used: "The ad spend divided by CAC build, one-time and subscription customer streams, the trailing six-month return rate, churn on the prior month, revenue and cost lines, post-marketing contribution margin, the simple payroll line, the unknown-costs line, run rate and the tax-loss offset"}

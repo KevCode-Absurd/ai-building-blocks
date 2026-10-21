@@ -1,0 +1,21 @@
+slug: first-use-gap-checker
+name: "First-use gap checker"
+summary: "Paste returns, tickets and reviews. Get where buyers stall before first real use, a fix each and a score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [clayton-christensen]
+credits:
+  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)", used: "The Big Hire (the order) versus the Little Hire (each use); the failed uses of the old product that push a buyer to switch; measuring delivery against the promise; fixes that remove the worry of switching, such as free removal of the old item and a trial period"}

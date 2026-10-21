@@ -1,0 +1,21 @@
+slug: turn-an-api-into-a-safe-mcp-server-others-can-install
+name: "Turn an API into a safe, installable MCP server"
+summary: "Give it an API spec. Get an MCP server with sign-in, a security check and a published package others can add."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: codebase, required: true}
+outputs:
+  - {type: deploy_url}
+uses: [api-to-mcp-server-builder, mcp-server-sign-in-builder, mcp-server-hardener, mcp-server-publisher]
+steps:
+  - {uses: api-to-mcp-server-builder, note: "Builds the first version of the server from your API spec."}
+  - {uses: mcp-server-sign-in-builder, note: "Adds OAuth sign-in to the server you saved."}
+  - {uses: mcp-server-hardener, note: "Reviews the server with its sign-in in place and lists what to fix before anyone installs it."}
+  - {uses: mcp-server-publisher, note: "Hosts and packages the hardened server so others can install it."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-an-api-into-a-safe-mcp-server-others-can-install/skeleton.yaml

@@ -1,0 +1,126 @@
+new_slug: positioning-grid-builder
+name: "Positioning grid builder"
+summary: "Give it your product and rivals. Get an XY map and the one corner you can own."
+job: brand-file
+thinking: high
+thinking_why: "It weighs many options against each other and tests each gap in the shopper's mind. A stronger model gives sharper, more honest picks."
+
+headline: "Positioning grid builder"
+subhead: Give it your product, five to ten alternatives shoppers compare, and what shoppers say they care about. It draws XY maps, finds the crowded and empty spots, tests each gap against the buyer's mind, and gives you one corner to own with a claim and three actions that make it true.
+
+explain: |
+  If your store looks like the others, shoppers pick on price or do nothing. Positioning means taking a clear place in the shopper's mind that the other choices do not hold. The hard part is finding a place that is real, not just a slogan.
+
+  This skill lists every real alternative a shopper has, including the cheap one, the premium one and doing nothing. It puts them on an XY grid with two things shoppers feel, such as speed against status. It then swaps an axis and plots again, so you can see where each option fits someone. It scans for gaps by size, price, who it is for, time of day, where it is sold and heavy users, and tests each gap with pass or fail checks. You end with one corner, one claim, who it is for and who it puts off, and the sacrifice it needs.
+
+when:
+  - You are picking a store or product angle and need a place rivals do not hold.
+  - Your products look like everyone else's and you need a reason to be chosen.
+  - You are deciding on voice and look and want to see where your category is crowded.
+
+you_give:
+  - Your product, its price and who it is for
+  - Five to ten alternatives shoppers really compare, including stores, brands and doing nothing
+  - What shoppers say they care about, from reviews, support tickets or ad comments
+  - Your brand traits and price tier, and your monthly marketing budget and team size
+  - Three to five brands from other industries you admire (optional)
+
+you_get:
+  - Ten candidate axis pairs and two or three plotted XY maps
+  - The crowded zones and the open zones, and each gap tested pass or fail
+  - One recommended corner, who it serves, who it puts off, and what you give up to own it
+  - A one-line claim, three actions that make it true, and a 30-day check
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product and your five to ten alternatives with a line on each. Add shopper words from reviews.
+  - Say if you want a claim grid (what to say) or a voice and look grid (how to sound), or both.
+  - Ask two people to place the brands on the map separately, then compare. The AI cannot see data, only the descriptions you give.
+  - Test the claim on five target shoppers for a few seconds, and run the 30-day check.
+
+how_it_works:
+  - title: Lists real alternatives
+    text: Every real choice a shopper has, including the cheap one, the premium one and doing nothing. They are not called competitors yet.
+  - title: Picks the axes
+    text: One attribute with two extremes for each axis, taken from things shoppers feel. It avoids the two axes everyone picks.
+  - title: Plots and swaps
+    text: Places each alternative, then swaps one axis and plots again. The winner on one map should lose on another.
+  - title: Adds voice and look maps
+    text: Opposing pairs for voice and look, with brands from outside your category, to find where you are crowded.
+  - title: Scans for gaps
+    text: Size, high price, low price, who it is for, age, time of day, where sold and heavy user.
+  - title: Tests each gap
+    text: Is it a gap in the mind, true to the buyer, narrow enough, not too narrow, and can you outlast the leader.
+  - title: Picks one corner
+    text: A corner you can claim with a true statement and keep proving, plus who it is not for.
+  - title: Writes the claim and checks
+    text: A one-line claim, three actions that make it true, the sacrifice, and a 30-day check.
+
+output_shape: |
+  ALTERNATIVES (<n>): <cheap> | <premium> | <doing nothing> | <others>
+  AXIS PAIRS (10): <pair 1: extreme A vs extreme B> ... <pair 10>
+
+  MAP 1 <X axis> by <Y axis>
+  <alternative>: <position>   (crowded cell: <...>   open cell: <...>)
+  MAP 2 (one axis swapped): <...>
+  VOICE / LOOK MAP (if asked): <pairs and brands, including outside brands>
+
+  GAP SCAN
+  <gap type> | In the mind? | True to buyer? | Narrow enough? | Not too narrow? | Outlast leader? | Pass / Fail
+
+  CORNER TO OWN: <corner>, for <who>, not for <who>
+  SACRIFICE: <what you give up>
+  CLAIM (one line, readable in seconds): <...>
+  PROOF ACTIONS: <price move> | <pack change> | <guarantee or service>
+  THEME (2 to 3 words): <...>
+  30-DAY CHECK: do new shoppers describe you in these words? <words>
+  CHECKS MISSED: <none, or list>
+
+tweaks:
+  - what: Which map you ask for
+    how: Say "claim" for what to say, "voice and look" for how to sound, or both. The axes change with the job.
+  - what: How many real alternatives you list
+    how: At least five. With fewer the grid is a guess, so treat the result as something to test in ads and landing pages.
+  - what: Shopper words from reviews
+    how: Paste real lines. The axes should come from what shoppers say they feel, not from what you wish they said.
+  - what: Your budget and team size
+    how: A thin budget points to the narrowest gap. Spend in one city, channel or niche first, not thinly across many.
+  - what: Brands from outside your category
+    how: Add three to five you admire. It stops you copying your own category's look.
+
+judge:
+  - You can see at least five real alternatives plotted, including the cheap one, the premium one and doing nothing.
+  - The axes are things shoppers feel, such as speed or status, not only price against features.
+  - The chosen corner can be backed with product, price, pack or service, and says so.
+  - It names who the corner is not for.
+  - Each gap has a pass or fail on every test, not a general opinion.
+  - It says placement is judgement, not data.
+
+test:
+  - Ask two people to place your brand and three rivals on the same map separately. Compare. Where they differ, the map is soft.
+  - Show the claim to five target shoppers for a few seconds and ask what it means to them.
+  - Check the three proof actions are things you can start this month.
+  - After 30 days, ask new shoppers to describe you in a sentence. Do they use the words in the claim?
+
+improve:
+  - Add your category's usual axes to the skill file so the ten pairs start with ones that fit.
+  - Add rivals' names and what shoppers say about them, so the grid starts from your real market.
+  - Re-run it each year, or when a rival moves.
+  - Pair it with the Store promise writer for the homepage promise and the Store brand signal auditor to check your touchpoints say the same thing.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can build the grid. Give it descriptions or links to rivals' pages."}
+    - {name: "Miro or Google Sheets", why: "A whiteboard or sheet makes it easy to move brands around and have two people place them."}
+  inputs:
+    - "Reviews of your rivals, since they show what shoppers care about"
+    - "Rivals' sites, packaging or ads, as links or screenshots"
+    - "A short survey asking shoppers which brands they name first in your category"
+
+terms:
+  - term: XY grid
+    meaning: A map with two axes, each running between two extremes, where you place every choice a shopper has.
+  - term: Gap in the mind
+    meaning: A spot shoppers do not yet link to any brand, as opposed to a hole in your own product range.
+  - term: Sacrifice
+    meaning: What you give up on purpose, such as a customer group, so you can own one position.

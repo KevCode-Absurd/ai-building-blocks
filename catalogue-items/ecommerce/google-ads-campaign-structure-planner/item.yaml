@@ -1,0 +1,20 @@
+slug: google-ads-campaign-structure-planner
+name: "Google Ads campaign structure planner"
+summary: "Give it your catalogue and markets. Get the fewest campaigns, each with a reason, and a rollout."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The only Google Ads strategy you need for 2026", by: "An Australian agency founder who works with mid to large stores (name not given)", used: "Start from one campaign, the four reasons to split, why one-keyword ad groups starve responsive ads, and portfolio bidding to share learning"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public masterclass)", used: "The consolidation rule and its exceptions, asset group rules, the feeder structure and the 90-day rollout"}

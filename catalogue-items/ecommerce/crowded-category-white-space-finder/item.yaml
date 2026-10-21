@@ -1,0 +1,22 @@
+slug: crowded-category-white-space-finder
+name: "Crowded category white space finder"
+summary: "Name a crowded category and its leaders. Get the gaps in price, reach, taste or buyer."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: advanced
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How Bloom Built the Playbook Every Founder Will Copy in 2026", by: "Greg, co-founder of Bloom", used: "Choosing a crowded category that buyers already understand, improving an existing product instead of inventing one, and finding the gap in price, reach, taste or buyer"}
+  - {title: "How I Start $1 Billion Companies from Boring Products", by: "Eric Ryan, interviewed on a business podcast", url: "https://www.youtube.com/watch?v=6ivM8DwXB7Q", used: "The sea of sameness check, finding a shift the category has missed, borrowing ideas from far away, and changing only one major thing"}

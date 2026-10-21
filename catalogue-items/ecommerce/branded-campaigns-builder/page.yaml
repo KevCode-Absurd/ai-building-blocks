@@ -1,0 +1,129 @@
+new_slug: branded-campaigns-builder
+name: "Branded Search and Shopping builder"
+summary: "Give it your brand name and offer. Get branded Search and Shopping campaigns with settings, keywords and ads."
+job: run-google-ads
+thinking: medium
+thinking_why: "It follows set rules and writes short ads, so a mid-size model does well. Use a stronger one when the sources' two views need weighing for your account."
+
+headline: "Branded Search and Shopping builder"
+subhead: Give it your brand name, spellings and current offer. It builds a branded Search campaign and a branded Shopping campaign with settings, an exact-match keyword list, ads, a customer exclusion and monthly check rules, and shows both views where the sources disagree.
+
+explain: |
+  When someone types your store's name into Google, you want your ad, your sitelinks and your products at the top of the page, before a rival gets the click. A branded campaign does that for a few dollars a day, and the conversion data it gathers is cheap.
+
+  This skill builds two campaigns. Branded Search uses exact-match keywords, a pinned brand headline and a trust and offer headline. Branded Shopping uses Standard Shopping with the setup and exclusions that keep it to brand terms and away from your existing customers. Where the sources differ, such as on bidding and daily budget, you get both views and the conditions for each. Most of this revenue would have come anyway, so the skill also tells you how to report it apart from acquisition.
+
+when:
+  - Your brand name is searched and a rival or a reseller shows above you.
+  - You run Performance Max or Shopping and want brand clicks in their own campaign.
+  - You are new to Google Ads and want cheap early sales data to feed the algorithm.
+
+you_give:
+  - Your brand name, common misspellings and site address
+  - Your current offer or discount code, if you run one (optional)
+  - Your logo and brand colours (optional)
+  - A customer list exported from your store (optional, for the exclusion)
+  - Whether Merchant Center is connected and your products are approved
+you_get:
+  - A campaign settings sheet for Search and for Shopping
+  - An exact-match keyword list
+  - Ad headlines and descriptions with the pinned brand headline
+  - Monthly check rules and the product group plan for the Shopping campaign
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your brand name, every misspelling, your site address and any live offer.
+  - Say if brand searches are low, since a brand nobody searches gets almost no volume.
+  - Build the Search campaign first, then the Shopping campaign once your feed is clean.
+  - Check impression share and search terms monthly with the rules it gives you.
+
+how_it_works:
+  - title: Checks the fit
+    text: A brand that people search pays off. A brand nobody searches gets almost no volume. Brand spend should be about 3 to 8 percent of Google spend.
+  - title: Sets Search bidding
+    text: Shows both views, target impression share at the absolute top, or manual CPC aiming for over 90 percent. Max conversions is not used.
+  - title: Sets the Search basics
+    text: Sales goal on purchase, Search network only, presence-only location, customer lists as observation and a daily budget.
+  - title: Lists keywords
+    text: Exact match only. The brand name, a misspelling, the name without a space, and brand plus main product.
+  - title: Writes the ads
+    text: Brand name pinned as headline 1, a trust headline and an offer headline, plus logo, sitelinks, callouts, prices and images.
+  - title: Builds the Shopping campaign
+    text: Standard Shopping on manual CPC, high priority, with non-brand terms kept out and existing customers excluded.
+  - title: Adds monthly rules
+    text: Raise the cap only when impression share is low. Keep the absolute-top strategy on. Report apart from cold campaigns.
+  - title: Runs its checks
+    text: Settings, budgets, ad rules and claims are checked, and any check it could not run is listed.
+
+output_shape: |
+  FIT  <brand searched? volume note> | brand spend cap <3 to 8% of Google spend>
+
+  SEARCH CAMPAIGN SETTINGS
+  goal <sales: purchase> | network <Search only> | location <presence only>
+  bidding <view A or view B, and why> | budget <view and number>
+  audiences <customer list as observation>
+
+  KEYWORDS (exact)  [<brand>] [<misspelling>] [<no-space>] [<brand + product>]
+
+  ADS
+  H1 (pinned) <brand> | H2 <trust> | H3 <offer> | <more headlines>
+  D1 <...> | D2 <...>
+  assets <logo, sitelinks, callouts, prices, images>
+
+  SHOPPING CAMPAIGN SETTINGS
+  type <Standard Shopping> | bidding <manual CPC> | priority <...>
+  budget <view and number> | network <off> | location <presence only>
+  non-brand terms <excluded how> | customers <list excluded>
+
+  MONTHLY CHECKS  <rules>
+  CHECKS MISSED: <none | list>
+  MISSING: <brand terms | offer | customer list | feed status>
+
+tweaks:
+  - what: Your daily budget
+    how: Branded campaigns rarely spend a high budget. Start low and raise it only if the full budget is spent and the terms are on brand.
+  - what: Your offer
+    how: A real, current offer gives you the third headline. Leave it out if you have none.
+  - what: Rival activity on your name
+    how: Auction insights show who bids on you. A rival makes the campaign more worth running.
+  - what: Impression share target
+    how: Aim for 78 percent or more when you run Meta heavily, and near full when rivals bid on your name.
+
+judge:
+  - Every keyword is in exact match and the list is short, around four.
+  - The brand name is pinned as headline 1 in every ad.
+  - Bidding and budget advice names both views and says which one fits your account.
+  - The Shopping campaign excludes non-brand terms and existing customers.
+  - Nothing promises a result, and every ad line is a claim you can back.
+
+test:
+  - Check the keyword list against your search terms report. Every keyword should be a real way people type your name.
+  - Build the Search campaign first with the lower budget. After a week, read impression share and search terms.
+  - Search for your own brand on a phone and a laptop. Your ad should be at the top.
+  - Run it twice with the same input. The settings should match, and only the ad wording may differ.
+
+improve:
+  - Put your brand name, misspellings and current offer in the skill file so every run starts from them.
+  - Add your approved trust lines, such as a guarantee you really offer, so the second headline is always true.
+  - Add your own budget cap and impression share target once you know your numbers.
+  - Pair it with the Brand and non-brand splitter to keep other campaigns off your brand terms.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Where the campaigns, keyword lists, customer list exclusion and advertiser verification live."}
+    - {name: "Google Merchant Center", why: "Your feed must be clean for the Shopping campaign to run."}
+    - {name: "Shopify", why: "Export your customer list from the store to exclude buyers from the Shopping campaign."}
+  inputs:
+    - "Your customer list export from the store"
+    - "Auction insights for your brand campaign"
+    - "Your best sales copy, which the descriptions are pulled from"
+
+terms:
+  - term: Impression share
+    meaning: The share of searches where your ad could have shown and did.
+  - term: Absolute top
+    meaning: The very first spot on the results page, above the organic results.
+  - term: Max CPC
+    meaning: The most you will pay for one click.
+  - term: Observation
+    meaning: A setting that watches how an audience performs without limiting who sees your ad.

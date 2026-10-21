@@ -33,7 +33,7 @@ export function planFromGoal(c: Catalogue, goal: string): Plan | null {
     .sort((x, y) => y.h - x.h || y.b.steps.length - x.b.steps.length)[0];
   if (wf) return { slugs: wf.b.steps.map((s) => s.uses).filter((s) => c.bySlug[s]), name, from: { workflow: wf.b } };
 
-  const pool = c.blocks.filter((b) => b.category !== "orchestrator");
+  const pool = c.blocks.filter((b) => b.category !== "orchestrator" && b.type !== "agent");
   const scoreOf = (b: Block) => hits(toks, b.name) * 3 + hits(toks, `${b.headline} ${b.summary}`) + hits(toks, `${b.outputs.map((p) => portLabel(p.type)).join(" ")} ${taskOf(b).name}`) * 2;
   const ranked = pool.map((b) => ({ b, s: scoreOf(b) + (kindOf(b) === "skill" ? 0.5 : 0) + b.usedIn * 0.05 })).sort((x, y) => y.s - x.s);
   const topical = toks.filter((t) => !GENERIC.has(t));

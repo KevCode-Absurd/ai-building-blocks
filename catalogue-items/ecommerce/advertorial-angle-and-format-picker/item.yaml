@@ -1,0 +1,24 @@
+slug: advertorial-angle-and-format-picker
+name: "Advertorial angle and format picker"
+summary: "Give it your pain points and buyers. Get ranked angles, an awareness mix and a format for each."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: angle_library}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Copy my $20k/day advertorial structure", by: "A dropshipping YouTuber who goes by Alex", used: "Testing five angles in one campaign before building the page, building the page for the winner in its own campaign, and the warning list of crowded niches"}
+  - {title: "The Most Valuable 60 Minutes on Advertorials You'll Ever Watch", by: "A direct-response copy teacher reviewing a viewer's advertorial", used: "Picking the buyer first, ranking pains by urgency, the awareness mix, the ten advertorial identities and keeping one identity per piece"}
+  - {title: "Advertorial formula: six types, how to pick one, structure and KPIs", by: "Alex, ecommerce advertiser (as named in the talk)", used: "The three-minute rule, six formats matched to the buyer's main obstacle, the click-through targets and the test order"}

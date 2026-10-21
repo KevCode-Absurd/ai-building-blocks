@@ -1,0 +1,74 @@
+new_slug: compare-a-list-of-options-and-get-one-checked-report
+name: Compare a list of options and get one checked report
+summary: Name a topic. Get a list of items to compare, each one researched, and one report without unsure answers.
+job: research-topics
+thinking: high
+thinking_why: It runs many searches and keeps track of unsure answers, so it needs your strongest model and time.
+headline: Compare many options and trust each answer in the report
+subhead: Name a topic. It builds a list of items and the questions to answer for each, researches them one at a time, and builds one report with a contents list. Answers it is unsure of are left out.
+explain: |
+  Comparing many things, such as tools, vendors, papers or markets, takes days. You open twenty tabs, lose track of what you checked and end up with a table of guesses mixed with facts. One search prompt cannot do it, because it skims each item and fills gaps with plausible words.
+
+  The workflow plans first. It lists the items and the fields to answer for each, adds items it finds online and lets you trim the list. It then researches one item at a time in batches, saving a file per item and marking unsure answers. Last it builds one report with a contents list and a section per item, leaving out anything marked unsure. This uses many searches and takes time, so start with a small batch. It is not worth running for a list of three items.
+when:
+  - You must compare ten or more tools, vendors or competitors.
+  - You need a market or literature map with the same questions asked of each item.
+  - You want a report where every answer has a source and gaps are visible.
+you_give:
+  - The topic, such as "AI note-taking apps for small teams"
+  - The time range that matters, such as since 2024
+  - Any items you already know must be included (optional)
+  - The fields you care about most, such as price, users or limits (optional)
+you_get:
+  - An outline with the items to compare and the fields to answer for each
+  - One research file per item, with unsure answers marked
+  - One report with a contents list and a section per item
+  - Gaps shown as gaps, since unsure answers are left out
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the topic and time range. Trim the list of items and fields when it asks.
+  - Approve the first small batch before it does the rest.
+  - Choose which numbers show in the contents list of the report.
+how_it_works:
+  - title: Build the research outline
+    text: Builds a first list of items and the questions to answer for each, searches the web for items and fields that are missing and asks you to confirm.
+  - title: Research each item
+    text: Works through the outline in batches, skipping items already done, saving a file per item and marking answers it could not confirm. You approve each batch.
+  - title: Build the report
+    text: Reads every item file, lets you choose the numbers for the contents list, then builds one report with a section per item and leaves out unsure answers.
+output_shape: |-
+  STEP 1: OUTLINE
+    Topic | time range | items | fields to answer for each
+
+  STEP 2: ITEM FILES
+    One file per item | answers with sources | unsure answers marked
+
+  STEP 3: REPORT
+    Contents list with chosen numbers | section per item | no unsure answers
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Number of items
+    how: Start with five to ten. Add more once the first batch looks right.
+  - what: Fields
+    how: Keep fields to what you will decide on. Each extra field adds work for every item.
+  - what: Time range
+    how: A short range suits fast-moving topics. A long one suits history or slow fields.
+  - what: Batch size
+    how: Use a small batch first so you can check the quality before it runs the whole list.
+judge:
+  - Every item is in scope, and every field has an answer or a clear gap.
+  - Answers have sources you can open.
+  - Unsure answers are marked in the item files and left out of the report.
+  - The contents list shows numbers that let you compare items at a glance.
+  - Items that matter to you are not missing.
+test:
+  - Open the source for five answers and check they say what the report says.
+  - Pick one item you know well. The report should match what you know.
+  - Count the gaps. A report with many gaps means the fields were too hard to confirm.
+improve:
+  - Cut fields that were unsure for most items and rerun with better ones.
+  - Re-run the outline in three months to catch new items.
+  - Do not use it for a short list. Search each item yourself.

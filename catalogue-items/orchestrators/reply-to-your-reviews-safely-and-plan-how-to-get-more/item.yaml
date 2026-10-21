@@ -1,0 +1,21 @@
+slug: reply-to-your-reviews-safely-and-plan-how-to-get-more
+name: "Reply to reviews safely and plan how to get more"
+summary: "Give it your reviews. Get themes, safe replies and a plan to get more reviews."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+uses: [customer-review-reply-writer, angry-customer-reply-checker, review-request-and-reply-planner]
+steps:
+  - {uses: customer-review-reply-writer, note: "Starts from your reviews and makes the themes and the draft replies the next step checks."}
+  - {uses: angry-customer-reply-checker, note: "Reads the drafts and the reviews from step 1 and repairs any reply that promises too much or sounds defensive."}
+  - {uses: review-request-and-reply-planner, note: "Uses the themes from step 1 and the tone settled in step 2 to set the ask and the reply templates."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/reply-to-your-reviews-safely-and-plan-how-to-get-more/skeleton.yaml

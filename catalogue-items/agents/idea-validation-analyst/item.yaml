@@ -1,0 +1,27 @@
+slug: idea-validation-analyst
+name: "Idea validation analyst"
+summary: "Give it your idea. It picks the riskiest guess, plans the test, reads the result and says keep, change or stop."
+category: agent
+type: agent
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: feedback_notes, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [business-idea-killer, riskiest-guess-test, idea-evidence-review, one-change-experiment-planner, pivot-or-persevere]
+steps:
+  - {uses: business-idea-killer, note: "Once, on the first run: the one fact that would kill the idea, or the cheapest test it still has to pass."}
+  - {uses: riskiest-guess-test, note: "At the start of each round: the guesses the idea rests on, the smallest test for the riskiest one still untested, and pass lines set before the run."}
+  - {uses: idea-evidence-review, note: "When customer talk notes come back: beliefs against what people did, graded, with a keep, change or stop call."}
+  - {uses: one-change-experiment-planner, note: "Only after a failed test where one change might fix it: the same test with one thing changed."}
+  - {uses: pivot-or-persevere, note: "Only after two failed tests on the same guess, or after four tests with no pass: honest progress measures and a keep, change or stop call."}
+schedule: "After each test finishes"
+asks_before: [spending money on ads, tools or a build, contacting people on your behalf, publishing a page or taking payments, calling the idea dead or ready without your read of the result]
+origin: own
+version: 1.0.0
+example_pending: true

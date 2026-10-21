@@ -1,0 +1,123 @@
+new_slug: meta-scaling-campaign-planner
+name: "Meta scaling campaign planner"
+summary: "Give your winning ads, margins and cash. Get a break-even ROAS, spend ladder and scaling campaign plan."
+job: launch-and-scale-ads
+thinking: medium
+thinking_why: "It is mostly arithmetic and rules, so a mid-size model is enough."
+
+headline: "Meta scaling campaign planner"
+subhead: "Give it your winning ad sets with daily spend and results, your costs, your blended numbers and the cash you can put into ads. It works out your break-even ROAS, a spend ladder with stop rules, whether a scaling campaign is worth it yet, and a monthly review checklist."
+
+explain: |
+  Scaling goes wrong in two ways. Some stores push spend until profit disappears. Others stop at a ROAS that looks safe and leave money on the table. A scaling campaign, a second campaign that takes your best ads and tries to push more spend through them, also adds work. Moving a $60 a day winner into one adds about $10 a day, which is not worth the complexity.
+
+  This skill starts with the number that matters, the most you can pay to win a customer, which gives your break-even ROAS. It then judges scale on blended results across the business and on net cash over 30 days, not on one platform's ROAS. It sets a spend ladder with stop rules, says whether a scaling campaign pays off at your spend, and picks ABO or CBO for your risk and order volume.
+
+when:
+  - Some ads are winning and you want to spend more without losing money.
+  - Your ROAS fell as you raised spend and you can't tell if that is fine or a problem.
+  - Someone says you need a scaling campaign and you want to know if it is worth it yet.
+
+you_give:
+  - Winning ad sets or post IDs with daily spend and ROAS or CPA
+  - Average order value, product cost, shipping, fees and returns rate
+  - Blended revenue and total ad spend
+  - Daily sales and the cash you can put into ads
+you_get:
+  - Your break-even ROAS and the most you can pay for a customer
+  - A spend ladder with stop rules
+  - A scaling campaign design, or a clear "not yet", and an ABO or CBO choice
+  - A monthly review checklist
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your winners with their daily spend and results, plus your costs per order.
+  - Add blended revenue, total ad spend, daily sales and the cash you can fund ads with.
+  - Run the ladder one step at a time and write down the 30-day cash after each step.
+  - Come back each month with new numbers to re-run the review checklist.
+
+how_it_works:
+  - title: Finds break-even ROAS
+    text: It divides 1 by your contribution margin after product cost, shipping and fees. This is a plain formula, not a source's claim.
+  - title: Judges on business numbers
+    text: Blended ROAS across the whole business first, then net free cash over 30 days, not one platform's ROAS.
+  - title: Checks if cash rises
+    text: A falling ROAS is fine if cash rises. Two source examples fell from 15 to 11 and 10 to 5 while monthly spend rose from $1,000 to $100,000.
+  - title: Builds the spend ladder
+    text: Raise 20 percent a day per ad set, or in 20 to 30 percent steps held 7 days. The ceiling is where ROAS drops below profitable.
+  - title: Decides on a scaling campaign
+    text: Only worth it when winners spend well above trivial. At $60 a day it adds about $10. At $400 a day, about $80.
+  - title: Designs the campaign
+    text: One CBO, one ad set, cost caps, no tests, existing customers excluded, top ads copied in by post ID every 1 to 2 weeks.
+  - title: Picks ABO or CBO
+    text: ABO forces spend into every ad. CBO sends most spend to the top ads. It avoids CBO when order value is high and orders are few.
+  - title: Matches the push to stock and cash
+    text: Push hard with plenty of stock and cash. Hold at a lower spend when either is tight.
+
+output_shape: |
+  BREAK-EVEN
+  Order value <$>, contribution after cost, shipping, fees, returns <$> (<%>)
+  Break-even ROAS = 1 / <margin> = <x>. Highest CAC = <$>
+  Profit target to add: <ask>
+
+  SCALE OR HOLD: <call, with the blended ROAS and 30-day cash it rests on>
+
+  SPEND LADDER
+  Ad set | now | step | hold | stop if
+  <name> | <$/day> | +<%> | <days> | <ROAS below x, or new-customer sales flat>
+
+  SCALING CAMPAIGN: <worth it now | not yet, with the reason>
+  Design: <1 CBO, 1 ad set, cost caps, exclusions, copy by post ID every N weeks>
+  ABO OR CBO: <choice and why>
+  MONTHLY REVIEW (about 3 hours): <checklist>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: Costs per order
+    how: Include product cost, shipping, fees and returns. A missing cost makes break-even look too easy.
+  - what: Profit target
+    how: A 1x break-even leaves nothing for rent and salaries. Tell it your profit target and it adds it to the break-even.
+  - what: Cash on hand
+    how: Ads are paid before customers pay you back. Repeat buyers or subscriptions lower the first-order break-even. Tell it which applies.
+  - what: Daily spend of each winner
+    how: Below about $400 a day on a winner, the plan says to make better ads and fix the page or offer first.
+  - what: Order value and orders per day
+    how: Under about 5 orders a day with a very high order value, it steers you away from CBO.
+
+judge:
+  - The break-even ROAS shows its arithmetic with your numbers.
+  - The scale call rests on blended ROAS and 30-day cash, not only a platform number.
+  - Each ladder row has a stop rule you can check in Ads Manager.
+  - The $400 a day line is applied, so a $60 a day winner gets "not yet".
+  - Any step size or threshold that is not from a source says so.
+
+test:
+  - Check the break-even yourself on paper with one product. It should match to the cent.
+  - Give it a $60 a day winner and ask for a scaling campaign. It should say not yet and tell you what to fix.
+  - Give it numbers where ROAS falls and cash rises, and check that it says to keep going.
+  - Run it twice on the same numbers. The ladder should match both times.
+
+improve:
+  - Put your contribution margin and profit target in your brand file so the break-even line is always right.
+  - Edit the ladder step in the skill file if your own tests show a different step works for you. The 20 to 30 percent step is our suggestion.
+  - Add your cash limit, such as the most you can lose on a first order, as a stop rule.
+  - Pair it with the Meta account structure planner for the layout and the Meta delivery troubleshooter when spend stalls.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It works from numbers you paste, so any current chat AI will do."}
+    - {name: "Shopify", why: "Its reports show new-customer sales and sales by product, which you need for the stop rules."}
+  inputs:
+    - "A Meta Ads Manager export with the audience segment and attribution columns"
+    - "Your P&L for the last 3 months, for contribution margin"
+    - "Sales by product before and after each spend step"
+
+terms:
+  - term: Break-even ROAS
+    meaning: The return on ad spend where you make no profit and no loss on a sale. It is 1 divided by your margin after costs.
+  - term: Blended ROAS
+    meaning: Total store revenue divided by total ad spend across all channels, not one platform's number.
+  - term: Scaling campaign
+    meaning: A second campaign that takes your best ads and tries to push more spend through them.
+  - term: Post ID
+    meaning: The code of an existing ad post. Copying by post ID keeps its likes and comments.

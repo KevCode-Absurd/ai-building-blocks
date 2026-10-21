@@ -1,0 +1,127 @@
+new_slug: organic-format-tester
+name: "Organic format tester"
+summary: "Give it 20 posts and their numbers. Get a score out of 100, winning formats and a test."
+job: grow-social
+thinking: high
+thinking_why: "It reads a table of numbers, groups it two ways and makes keep or drop calls. A stronger model makes fewer mistakes with the sums and groups."
+
+headline: "Organic format tester"
+subhead: Give it your last 20 posts with format, hook, topic and numbers. It groups them by format and hook type, finds winners and flops by your goal, and gives keep, change or drop for each format, a test for next month and a score out of 100 for how sound your testing is.
+
+explain: |
+  Most store owners judge a post by its own numbers and then give up on the format. One flop tells you very little. A whole month of posts, grouped by format and hook, tells you a lot.
+
+  This skill reads your posts in groups. It makes three lists: top by views, top by followers gained, and top by deep comments, because these are often different posts. It studies the flops, picks the metric that fits your goal, checks how many viewers stay past three seconds, and sets one test: one idea in several versions, posted close together. The score measures how sound your testing is, not how good your posts are. Growth figures in the sources come from single coaches, not studies.
+
+when:
+  - You have posted for a few weeks and cannot tell which kind of post works.
+  - One post did well and you do not know how to repeat it.
+  - You are about to change your plan and want data behind the change.
+
+you_give:
+  - Your last 20 or more posts, each with format, hook, topic and date
+  - Views, 3-second hold or watch rate, shares, comments, follows, and link or DM clicks
+  - Your goal this month, growth or sales
+  - Which platform the numbers come from (optional)
+you_get:
+  - Winners and flops grouped by format and hook type
+  - The metric to chase for your goal
+  - One idea set up as a test in several versions
+  - Keep, change or drop for each format, and a score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your posts as a simple table with one row per post. Export it from your analytics or type it in.
+  - Say your goal this month, growth or sales.
+  - Read the three lists first, then the flops, then the keep, change or drop calls.
+  - Post the test it sets up, all close together, and run this skill again next month.
+
+how_it_works:
+  - title: Groups, not single posts
+    text: It compares weeks of posts by format and hook type before it judges any single flop.
+  - title: Makes three lists
+    text: Top by views, top by followers gained and top by deep comments. These are often different posts.
+  - title: Studies the flops
+    text: What the weakest posts have in common shows what to stop doing.
+  - title: Picks the metric
+    text: Shares and early hold for growth. Comments and story or link activity for a sales period.
+  - title: Checks retention
+    text: How many watch past the first three seconds, and where viewers leave.
+  - title: Sets a five-step test
+    text: One strong idea, several versions, posted close together, measured on completion, saves, comments, replays and clicks, then the winner is scaled.
+  - title: Refines and extends the winner
+    text: Shorten it, strengthen the hook, tweak the call to action, then post it again in a new form. Turn a winning format into a named series.
+  - title: Scores your testing
+    text: Ten checks, ten points each, with the sum shown.
+
+output_shape: |
+  GOAL: <growth | sales>   POSTS READ: <n>   PLATFORM: <...>
+
+  THREE LISTS
+  top by views:     <posts> | common: <format, hook>
+  top by followers: <posts> | common: <...>
+  top by comments:  <posts> | common: <...>
+  FLOPS: <posts> | common: <what to stop>
+
+  BY FORMAT
+  <format> | posts: <n> | <goal metric> avg: <...> | 3-sec hold: <...> | VERDICT: <KEEP | CHANGE | DROP | TOO EARLY>
+  BY HOOK TYPE
+  <hook type> | posts: <n> | <goal metric> avg: <...> | note: <...>
+
+  METRIC TO CHASE: <...> because <goal>
+
+  NEXT TEST
+  idea: <one strong idea> | versions: <3 to 10> | post: <same day or close together>
+  measure: <completion, saves, comments, replays, clicks> | scale the winner to: <platforms, formats>
+
+  SCORE <n>/100 (<sum of the ten checks>) | the score measures how sound your testing is
+  TESTING CHECKS: T1 <pass/fix> ... T10 <pass/fix>
+  CHECKS MISSED: <none | list>
+  MISSING: <format | hook | numbers | goal>
+
+tweaks:
+  - what: The goal
+    how: Say growth or sales. Growth looks at shares and early hold. Sales looks at comments and story or link activity. The verdicts change with it.
+  - what: Hook type column
+    how: Tag each post with a hook style, such as curiosity gap or contrarian. Without it, the skill can only group by format.
+  - what: 3-second hold
+    how: Add it for every post. Without retention numbers the skill cannot tell a weak hook from a weak topic.
+  - what: Team time
+    how: Say how many versions you can really post. A solo owner may test three, not ten.
+
+judge:
+  - It groups posts by format and hook type and does not judge single posts.
+  - The three lists are separate, and it says if they point to different posts.
+  - Every KEEP, CHANGE or DROP has the numbers behind it.
+  - Formats with fewer than three posts are marked too early.
+  - The score line shows its sum and what it measures.
+
+test:
+  - Check one format's average yourself with a calculator. It should match the skill's number.
+  - Run it twice on the same table. The verdicts and score should match.
+  - Post the test it sets up, with all versions close together, and see if the winner in the data is the one you expected.
+  - Run it again after a month on the new posts, and compare the verdicts with this month's.
+
+improve:
+  - Add your own bar for a KEEP, such as a minimum 3-second hold, once you know your normal.
+  - Add format names you use, so the grouping matches how you think about your posts.
+  - Save winning formats and hooks in the skill file as your series list.
+  - Pair it with the hook writer to make new openings for the test.
+
+works_best_with:
+  tools:
+    - {name: "Instagram Insights and TikTok analytics", why: "They give views, shares, saves, comments and the 3-second hold for each post."}
+    - {name: "Google Sheets", why: "A plain table with one row per post is the easiest input."}
+    - {name: "Any good chat AI", why: "It does the grouping and writes the test from the table."}
+  inputs:
+    - "A month of analytics exported by week"
+    - "Screenshots of the retention graph for your top and worst posts"
+    - "Your link and DM click counts by post"
+
+terms:
+  - term: 3-second hold
+    meaning: The share of viewers who are still watching after the first three seconds of a video.
+  - term: Format
+    meaning: The repeatable shape of a post, such as a talking head, a ranking, a carousel or a street interview.
+  - term: Series
+    meaning: A winning format with its own name, look and promise, so viewers know what to expect.

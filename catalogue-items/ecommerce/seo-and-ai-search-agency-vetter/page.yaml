@@ -1,0 +1,130 @@
+new_slug: seo-and-ai-search-agency-vetter
+name: "SEO and AI search agency vetter"
+summary: "Paste an agency proposal. Get red flags, questions to send, a keep-or-walk verdict and a score out of 100."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It weighs a sales pitch against a list of known warning signs, so a mid-level model is enough. Use a stronger one if the proposal is long."
+
+headline: "SEO and AI search agency vetter"
+subhead: Paste an agency's proposal, price and customer stories. It marks each point red, yellow or green, lists the questions to send before you sign, and gives a keep, renegotiate or walk verdict with a score out of 100.
+
+explain: |
+  Many store owners pay an SEO or AI search agency for months before they see one extra order. The pitch is hard to judge. Reports full of rankings, long audits full of warnings and "AI mention" charts all look like work. None of them is revenue.
+
+  This skill reads the proposal against a checklist taken from two practitioners who sell SEO themselves. It looks at what share of the work goes to money pages (collections and products), how the agency builds links, whether it scales content, and whether it can show organic revenue. Each point is marked red, yellow or green. You get the questions to send, a verdict, and a small paid test with a stop rule if you decide to try them.
+
+when:
+  - An agency or freelancer has sent you a proposal and you are about to sign.
+  - You already pay for SEO or "GEO" (AI search) and cannot tell if it works.
+  - A salesperson promises AI visibility, links or hundreds of pages.
+
+you_give:
+  - The proposal, pricing page or your notes from the sales call
+  - The monthly price and the contract length
+  - Their customer stories and logos (optional)
+  - Your organic search revenue for the last 6 to 12 months (optional)
+
+you_get:
+  - Red, yellow or green for each point, with the line that earned it
+  - Questions to send before you sign, with what a good answer looks like
+  - A keep, renegotiate or walk verdict and a score out of 100
+  - A small paid test with a control and a stop rule
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the proposal or your call notes, then the price and contract length.
+  - Add your organic revenue for the last 6 to 12 months if you have it. Without it the skill cannot set a baseline.
+  - Send the questions it lists to the agency and paste their answers back. Ask for the score again.
+  - Sign only on month-to-month terms, with accounts in your name and one agreed number.
+
+how_it_works:
+  - title: Reads the plan
+    text: Records price, contract length, what ships in the first 90 days and the share of work for money pages versus blogs.
+  - title: Checks the technical pitch
+    text: Flags long audits full of warnings. Only fixes that change crawling, indexing, broken links or navigation count.
+  - title: Checks the reporting
+    text: Flags rankings and traffic reports with no organic revenue by landing page, and AI mention charts with no sales.
+  - title: Checks links and scale
+    text: Flags bulk link packages, promises of hundreds of links, content generators and plans to grow from about 100 to 1,000 pages in weeks.
+  - title: Checks the AI search claims
+    text: Flags llms.txt, chunking your whole site or a special AI info page as the main fix, and comparison pages for rivals nobody searches.
+  - title: Reads the customer stories
+    text: Asks for starting revenue, ending revenue, months and monthly cost, and treats the numbers as claims until shown.
+  - title: Writes the questions
+    text: Five core questions plus one for each flag, each with what a good answer sounds like.
+  - title: Scores and gives a verdict
+    text: Starts at 100 and takes off points per flag. Adds contract terms and a small paid test.
+
+output_shape: |
+  PROPOSAL  <agency> | <price per month> | <contract length>
+  FIRST 90 DAYS  <what ships, with counts>
+
+  POINTS
+  <point> | <RED / YELLOW / GREEN> | <the line that earned it>
+    ask: <question>  good answer: <what you want to hear>
+
+  (one block per point)
+
+  SCORE  <n>/100 (100 - 15 x <reds> - 7 x <yellows> = <n>)
+  VERDICT  <KEEP | RENEGOTIATE | WALK>, because <reason>
+
+  QUESTIONS TO SEND
+  1. <question> | good answer: <...>
+
+  TERMS TO ASK FOR
+  <accounts in your name | month-to-month | the one number and baseline>
+
+  SMALL PAID TEST
+  <scope> | <control> | <stop rule>
+
+  NOT CHECKED
+  MISSING: <what was not in the proposal>
+
+tweaks:
+  - what: Your organic revenue
+    how: Paste monthly organic search revenue for the last 6 to 12 months. The skill uses it to set the baseline the agency is judged against.
+  - what: The customer stories
+    how: "Paste the stories as text. The skill asks the same four questions of each: starting revenue, ending revenue, months and monthly cost."
+  - what: Which kind of agency
+    how: Say if they sell classic SEO, AI search (GEO) or both. The red flags differ a little, such as content generators and llms.txt for AI search.
+  - what: Your budget
+    how: Give your monthly limit. The skill then says what a first quarter should ship at that price.
+
+judge:
+  - Every flag quotes the line in the proposal that earned it, never a general feeling.
+  - Every red flag has a question and a description of a good answer.
+  - The score sum is shown, so you can redo it.
+  - The skill says these rules come from practitioners who sell SEO, so they are a checklist and not proof.
+  - Nothing is marked green that the proposal did not actually say.
+
+test:
+  - Paste a proposal you already know was bad. It should find at least two red flags. If it finds none, do not trust its greens.
+  - Run it twice on the same proposal. The verdict should match both times.
+  - Send the questions to the agency. A sound agency answers in plain words within a few days. A vague reply is an answer too.
+  - Compare the verdict with your own gut feel before the call. Note where the skill saw something you missed.
+
+improve:
+  - Add your own red lines to the skill file, such as "no contract over 3 months" or "must report in Shopify orders, not clicks".
+  - Save your organic revenue baseline in your brand file so every future proposal is judged against the same number.
+  - Add your market. Some link and content rules differ by country and by language.
+  - Pair it with the SEO worth-it checker first, to decide if you should hire anyone at all.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can read a proposal and run the checklist. Paste the text, not a screenshot."}
+    - {name: "Google Search Console", why: "Free, and the account must be in your name. It shows the real organic clicks and pages the agency reports on."}
+    - {name: "GA4", why: "Shows organic search revenue by landing page, which is the number to hold the agency to."}
+  inputs:
+    - "Your last three agency reports, to see what they measured"
+    - "A list of your top 10 collection and product pages"
+    - "Your contract, if you already have one"
+
+terms:
+  - term: Money pages
+    meaning: The pages where people buy, such as collection and product pages. A blog post is not a money page.
+  - term: GEO
+    meaning: Getting your store named by AI assistants like ChatGPT and Gemini. Some agencies sell it as a separate service.
+  - term: Rank and tank
+    meaning: Traffic that jumps after a burst of new pages, then falls a few months later.
+  - term: Scaled content abuse
+    meaning: The name Google's spam policy gives to publishing many pages made mainly to rank, often with AI.

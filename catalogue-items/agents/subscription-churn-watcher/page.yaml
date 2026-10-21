@@ -1,0 +1,103 @@
+new_slug: subscription-churn-watcher
+name: Subscription churn watcher
+summary: Give it your monthly cancels. Get where subscribers leave, whether last month's fix worked and one fix to make.
+job: keep-customers
+thinking: high
+thinking_why: It scores four parts, compares two months, picks one fix from the scores and runs the matching writer. Give it your strongest model.
+headline: Subscription churn watcher
+subhead: Give it last month's cancels each month. It shows where subscribers leave, checks whether last month's fix worked, picks the one weakest part, and runs the skill that fixes it. You get a list of changes to approve.
+explain: |
+  Subscribers leave for different reasons at different times. Some cancel on day one, some at the billing reminder, some after a campaign, some in the cancel portal. A monthly churn number hides all of that, so owners often fix the wrong thing. Or they fix five things and cannot tell which one helped.
+
+  This agent reads your cancels the same way every month. It charts them by days since the first order, scores four parts, and compares each with last month. It checks whether the part you fixed last month moved. Then it picks the single weakest part and runs the skill built for it: billing emails, a cancel flow, send rules, onboarding or the subscription page. It saves a short summary so next month it can say whether the fix worked. It never contacts a subscriber or changes your subscription app. You get one fix to approve.
+when:
+  - You sell subscriptions and want one monthly check on where people leave.
+  - Churn moved and you do not know which part changed.
+  - You made a change last month, such as new billing emails, and want to know if it helped.
+you_give:
+  - Last month's cancels with date, order number and reason
+  - Revenue per customer by month and a first-order subscription flag, if you have them
+  - Each email you sent to subscribers, with the cancels and starts that followed
+  - Your save rate from the cancel portal
+  - Your products, brand file and offer limits, for the emails
+you_get:
+  - A score out of 100 in four parts, against last month
+  - Cancels by days since the first order, with the biggest spike named
+  - A verdict on last month's fix, helped, no change or worse
+  - One fix, written and ready for you to approve
+  - The one number to watch next month
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Export last month's cancels and your sends to subscribers from your subscription app and email tool. Put them in one folder, or attach them in the chat.
+  - Add your cancel reasons in your customers' own words if you can. A cancel flow needs them.
+  - Read the fix and the change list. Make the changes you agree with in your tools. Nothing goes out until you do.
+  - Run it again next month. It compares against its saved summary.
+how_it_works:
+  - title: Check it is worth running
+    text: With fewer than a few hundred subscribers the day-by-day chart is too thin, so it marks its findings as guesses.
+  - title: Read last time
+    text: Opens last month's saved scores and the fix it chose.
+  - title: Run the audit
+    text: Scores where subscribers leave in four parts and shows the change in each.
+  - title: Check the last fix
+    text: Says whether the part you fixed moved the right way. A small move counts as no change.
+  - title: Choose the one fix
+    text: Takes the weakest part and runs the matching skill. Billing emails, a cancel flow, send rules or a page check.
+  - title: Add early-days help
+    text: If most cancels come in the first 14 days, it also writes an onboarding plan.
+  - title: Save and hand back
+    text: Saves a summary and stops for your yes.
+output_shape: |-
+  THIS MONTH
+    Churn score <n>/100 vs last month <n>/100
+    Reminder and receipt <pts>/25 | Save rate <pts>/25 | Campaign cancels <pts>/25 | Value gap <pts>/25
+
+  LAST MONTH'S FIX
+    <part fixed>: <helped | no change | worse> | <numbers>
+
+  WHERE SUBSCRIBERS LEAVE
+    day 0-1: <n> | days 2-6: <n> | days 7-14: <n> | around 28: <n> | first rebill: <n> | biggest spike: <label>
+
+  THE FIX CHOSEN
+    <part> | skill run: <name> | why this part
+
+  CHANGES TO APPROVE
+    1. <change> | where: <tool or flow> | why: <reason>
+
+  WATCH NEXT MONTH
+    <one number>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Cancel reasons in your customers' words
+    how: A cancel flow with one save per reason needs them. Without them the agent asks and does not guess.
+  - what: Your discount limit
+    how: Tell it the most you can give as a save. Saves above your margin lose money.
+  - what: How long a subscription usually lasts
+    how: A product used daily and a quarterly box cancel at different times, so say which you sell.
+  - what: Two or more months of data
+    how: The last-fix check needs a month to compare against. The first run only sets the base.
+judge:
+  - Every score change shows both months and the sum.
+  - The part fixed last month was checked before a new one was chosen.
+  - Only the weakest part was fixed, plus onboarding when most cancels fall in the first 14 days.
+  - No saving or result was promised for the fix.
+  - Nothing was sent or changed without your clear yes.
+test:
+  - Run it on a past month where you remember what drove the cancels. See if it names the same part.
+  - Run it twice on the same data. The part chosen should be the same.
+  - Give it a month with a campaign that lost more subscribers than it gained. It should name that send.
+improve:
+  - Set your own cut-off for a large value gap, to suit your store, and tell it in step 5.
+  - Add your save limits and your policy on pausing to your brand file.
+  - Save which fixes you approved each month, so the next run can check whether they worked.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the keeper folder, read last month's files and run on a monthly schedule.
+    - name: Your subscription app
+      why: Export cancels with date, order number and reason, and the save rate from the cancel portal.
+  inputs:
+    - A note of every change you made to subscription emails or settings last month
+    - The dates and contents of every campaign sent to subscribers

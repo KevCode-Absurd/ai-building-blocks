@@ -1,0 +1,39 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: build-an-n8n-automation-that-reports-failures-and-can-be-reused
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: build-an-n8n-automation-that-reports-failures-and-can-be-reused
+  name: "Build an n8n automation that reports failures and is reusable"
+  summary: "Describe the task. Get an n8n workflow laid out, failures that show and retry, and parts other workflows and agents can call."
+  when: "you are automating a task in n8n and need it to run unattended without failing in silence."
+  job: connect-tools
+  level: intermediate
+steps:
+  - name: "n8n workflow designer"
+    skill: n8n-workflow-designer
+    job: ops
+    from: "library"
+    method: ["Pick the pattern: webhook, request, database, AI agent or schedule", "Lay out trigger, data, change and output", "Plan the checks for building and deploying", "List the nodes in order"]
+    inputs: [brief]
+    outputs: [tool_connection]
+    note: "Lays out the automation from your task description."
+  - name: "n8n failure handler"
+    skill: n8n-failure-handler
+    job: ops
+    from: "library"
+    method: ["Turn on retries for steps that fail now and then", "Wire the error path on each risky step", "Check inputs and send clear error replies", "Add one catch-all workflow that alerts you"]
+    inputs: [tool_connection]
+    outputs: [tool_connection]
+    note: "Takes the workflow from the step before and makes its failures visible and recoverable."
+  - name: "n8n sub-workflow builder"
+    skill: n8n-sub-workflow-builder
+    job: ops
+    from: "library"
+    method: ["Decide which parts deserve their own sub-workflow", "Search for an existing one before building", "Give each a typed input list and a clear return", "Name them so agents can find and call them"]
+    inputs: [tool_connection]
+    outputs: [tool_connection]
+    note: "Splits the hardened workflow into parts that carry their own error handling and can be called by other workflows."

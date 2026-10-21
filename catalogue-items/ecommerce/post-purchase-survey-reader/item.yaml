@@ -1,0 +1,22 @@
+slug: post-purchase-survey-reader
+name: "Post-purchase survey reader"
+summary: "Give survey answers and channel spend. Get over-credited channels, budget moves and a trust score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic (apparel brand), interviewed on a podcast", used: "Comparing a channel's share of spend with its share of survey answers, trusting the survey for where buyers first heard, and moving budget when the mix is off"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford (agency founder and head of retention at a drinks brand), podcast interview", used: "The three checkout survey questions, piping answers to a team chat, and flagging big-quantity buyers"}

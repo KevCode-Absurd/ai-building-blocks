@@ -1,0 +1,129 @@
+new_slug: brand-and-non-brand-splitter
+name: "Brand and non-brand splitter"
+summary: "Give it your campaigns and brand terms. Get the brand leaks, your true non-brand ROAS, a split plan and a score."
+job: run-google-ads
+thinking: medium
+thinking_why: "The sums are simple but the campaign map needs care, so a mid-size model is the right fit."
+
+headline: "Brand and non-brand splitter"
+subhead: Give it your Google Ads campaign export, search terms and brand names. It finds which campaigns are collecting brand sales, works out your true non-brand ROAS against break-even, and hands back a split plan with negatives, settings per campaign and a separation score out of 100.
+
+explain: |
+  People who search your brand name were already going to buy. Their sales are cheap, so when they land in Performance Max or Shopping, your ROAS looks great while new customers cost more than you think. One manual's example had brand at about 11 percent of search spend but 34 percent of conversions. That is one account, not an average.
+
+  This skill pulls brand and non-brand spend and sales apart. It shows your non-brand ROAS alone and checks it against break-even. Then it lists every campaign that should block brand terms, the negatives to add, the Performance Max exclusions to check, and the settings for each campaign in the split. The score shows how clean the separation is now.
+
+when:
+  - Your Performance Max or Shopping ROAS looks strong but new customers are not growing.
+  - You want to know if your non-brand campaigns are profitable on their own.
+  - You are about to add a branded campaign and need to stop other campaigns from stealing its traffic.
+
+you_give:
+  - A campaign export with spend, conversions and conversion value
+  - A search terms or search category report, ideally by campaign
+  - Your brand name, misspellings and product lines
+  - Your break-even ROAS (optional, the skill can work it out from margin)
+  - Auction insights showing who bids on your name (optional)
+you_get:
+  - A pre-split report showing the share of spend and sales that is brand
+  - Your non-brand ROAS compared with break-even
+  - A list of campaigns that get brand traffic and should not, with an exact-match brand negative list
+  - A campaign map with priority and target ROAS settings, and a separation score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the campaign export and the search terms report for the last 30 to 60 days.
+  - Add your brand name with every misspelling, plus your break-even ROAS if you know it.
+  - Add the negatives and Performance Max exclusions it lists, then change nothing else for two weeks.
+  - Run it again after two to four weeks and compare the scores.
+
+how_it_works:
+  - title: Measures the distortion
+    text: Pulls brand and non-brand spend and conversions from the search terms and shows each share before any change.
+  - title: Finds the real ROAS
+    text: Works out non-brand ROAS alone and compares it with break-even. If it is below, brand is hiding the gap.
+  - title: Lists the leaks
+    text: Names every campaign that gets brand traffic and should not, with the brand terms it caught.
+  - title: Builds the negatives
+    text: Gives exact-match brand negatives for Search and Shopping, and tells you what to check for Performance Max brand exclusions.
+  - title: Maps the split
+    text: Brand Search, brand Shopping, non-brand Shopping, non-brand Search and Performance Max, with a priority and a target for each.
+  - title: Protects brand budget
+    text: Sets enough budget for the branded campaigns to keep nearly all brand impression share, and warns when non-brand Shopping could run dry.
+  - title: Scores the split
+    text: Five checks worth 20 points each, with partial credit by share of campaigns covered.
+  - title: Plans the re-check
+    text: Sets a date two to four weeks out and says what should change.
+
+output_shape: |
+  PRE-SPLIT  brand <x>% of spend, <y>% of conversions
+  NON-BRAND ROAS  <n> vs break-even <n>  <above / below>
+
+  LEAKS
+  <campaign> | <brand terms caught> | <spend>
+
+  NEGATIVES  (exact match)
+  [<brand>] [<misspelling>] [<no-space version>] [<brand + product line>]
+  add to: <campaign list>
+
+  PMAX  <brand exclusions available in your account? yes/no/unknown> | <how to add>
+
+  CAMPAIGN MAP
+  <campaign> | <role> | <priority> | <target ROAS or bid> | <budget note>
+
+  SCORE  <n>/100
+    brand negatives in non-brand Search   <points>
+    brand negatives in non-brand Shopping <points>
+    Performance Max brand exclusions      <points>
+    branded campaign holds brand traffic  <points>
+    brand and non-brand reported apart    <points>
+  RE-RUN ON  <date>
+  MISSING: <campaign export | search terms | brand names>
+
+tweaks:
+  - what: Search terms by campaign
+    how: Leaks only show when each term is linked to the campaign that served it. Export with the campaign column.
+  - what: Every brand spelling
+    how: List the name, misspellings, the name with no space and each product line, so brand terms are caught.
+  - what: Your break-even ROAS
+    how: Give it or give your gross margin. The non-brand verdict depends on this number.
+  - what: Whether competitors bid on your name
+    how: Auction insights decide if a branded Search campaign is worth running.
+
+judge:
+  - The brand share of spend and sales comes from your own export, not from the example numbers in the sources.
+  - Non-brand ROAS is worked out alone and compared with break-even.
+  - Every leak names the campaign and the brand term.
+  - Each negative is exact match and covers the brand, misspellings and product lines.
+  - The score shows its five parts and adds up to the total.
+
+test:
+  - Pick one campaign you know serves brand terms and check it is on the leak list.
+  - Work out brand share by hand from the search terms for one week. It should land close to the pre-split report.
+  - Add the negatives to one non-brand campaign only, and watch its brand clicks fall to near zero in the search terms report.
+  - Run it again after two to four weeks. Non-brand ROAS should now be the honest figure, and the score should rise.
+
+improve:
+  - Put your brand names and misspellings in the skill file so every run uses the same list.
+  - Add your break-even ROAS and the target you want per campaign role.
+  - Note if you choose to let Performance Max serve brand queries. Some brands do better that way, and the skill then judges it from the split numbers.
+  - Pair it with the Branded Search and Shopping builder for the campaign settings, and the Search term sorter for the weekly clean-up.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Campaign export, search terms, search category report and auction insights all come from here."}
+    - {name: "Any good chat AI", why: "Any current chat AI can work from pasted exports."}
+  inputs:
+    - "A weekly search terms report for the last 4 weeks, so the split is steady"
+    - "Auction insights for your brand campaigns, to see who bids on your name"
+    - "Your backend revenue by new and returning customer, to check the split against real sales"
+
+terms:
+  - term: Non-brand ROAS
+    meaning: Revenue from shoppers who did not search your brand name, divided by what you spent to reach them.
+  - term: Break-even ROAS
+    meaning: The return you need to cover your costs. 100 divided by your gross margin percent.
+  - term: Campaign priority
+    meaning: A Shopping setting. When two campaigns have the same product, the higher priority one serves it first.
+  - term: Impression share
+    meaning: The share of searches where your ad could have shown and did.

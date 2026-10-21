@@ -1,0 +1,21 @@
+slug: performance-max-routine-keeper
+name: "Performance Max routine keeper"
+summary: "Give it your Performance Max exports. Get this week's checks, exclusions, a budget move and a waste score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given)", used: "The daily, weekly and monthly Performance Max routine, and the cut-fast scale-slow budget rule with the 80 percent under-spend test"}
+  - {title: "The only Google Ads strategy you need for 2026", by: "Agency founder who works with mid to large e-commerce brands (name not given)", used: "Why to check Performance Max against backend revenue, since much of its credit can be warm traffic"}

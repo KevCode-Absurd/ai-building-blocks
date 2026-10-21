@@ -1,0 +1,24 @@
+slug: returns-policy-designer
+name: "Returns policy designer"
+summary: "Give it your returns data and costs. Get refund timing, keep-it rules and a recovery budget."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [alex-hormozi]
+credits:
+  - {title: "Engineering Customer Delight Across the E-Commerce Journey (deep research)", by: "Research write-up (author not named)", used: "The three returns metrics to audit, the instant-refund case, and the recovery playbook"}
+  - {title: "Customer delight across the e-commerce journey: a retention playbook", by: "Research write-up (author not named)", used: "Measuring the refund clock from the request, keep-it refunds with caps, the limits of the service recovery paradox, and the 90-day check"}
+  - {title: "Wild bets folder: unconventional offer, retention and CX plays for e-commerce owners", by: "Compiled research write-up (author not named)", used: "Keep-it refund cost range, price line, fraud rate and risks, lifetime and repair-first guarantees, results-based guarantee"}
+  - {title: "Strategic Unorthodoxy: a framework for wild bets and unscalable actions in e-commerce", by: "Research report (author not named)", used: "Refunding without a return and asking the customer to donate the item"}
+  - {title: "The service recovery paradox: true but overrated?", by: "Michel and Meuter, Journal of Service Management", used: "How rarely an over-the-top fix wins more loyalty than no problem at all, which sets the recovery budget"}

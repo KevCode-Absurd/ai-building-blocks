@@ -1,0 +1,72 @@
+new_slug: build-an-n8n-automation-that-reports-failures-and-can-be-reused
+name: Build an n8n automation that reports failures and is reusable
+summary: Describe the task. Get an n8n workflow that retries, alerts you on failure and splits into reusable parts.
+job: connect-tools
+thinking: medium
+thinking_why: Each step reshapes the same workflow. A mid-size model does it well.
+headline: Build an n8n automation that tells you when it breaks
+subhead: Describe the task. It lays out an n8n workflow with a proven pattern, adds retries and error paths so failures show, then splits the workflow into named parts that other workflows and agents can call.
+explain: |
+  An n8n workflow that works in a test can fail in silence once it runs on its own. A step times out, a service returns an error and nobody hears until a customer asks where their order went. Long workflows are also hard to fix and impossible to reuse.
+
+  The steps build in that order. First it picks a pattern and lays out the trigger, data, changes and output. Next it takes that workflow and adds retries for steps that fail now and then, error paths for risky steps, clear error replies and a catch-all workflow that alerts you. Last it splits the finished workflow into sub-workflows with typed inputs, a clear return and names an agent can find. Each sub-workflow keeps the error handling from step 2.
+when:
+  - You are building an n8n automation that will run without you watching it.
+  - An n8n workflow fails quietly or sends no alert.
+  - Your workflow has grown long and you copy parts of it into other workflows.
+you_give:
+  - A plain description of the task (what starts it, what it reads, what it should do)
+  - The services it touches
+  - Who should be told when it fails, and how (optional)
+you_get:
+  - An n8n workflow laid out step by step, with the right pattern
+  - Retries, error paths, clear error replies and a catch-all alert
+  - Reusable sub-workflows with typed inputs and clear returns
+  - Names an AI agent can find and call as tools
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Build on a test copy in n8n. Do not point it at live data until the run is clean.
+  - Say where failure alerts should go, such as email or chat.
+how_it_works:
+  - title: Lay out the workflow
+    text: Picks the pattern that fits (webhook, request, database, AI agent or schedule), lays out trigger, data, change and output, and lists the nodes in order.
+  - title: Make failures visible and recoverable
+    text: Reads the workflow from step 1, turns on retries for flaky steps, wires error paths on risky ones, checks inputs, sets clear error replies and adds a catch-all alert workflow.
+  - title: Split into reusable parts
+    text: Decides which parts deserve their own sub-workflow, looks for an existing one first, gives each a typed input list and a clear return, and names them for agents.
+output_shape: |-
+  STEP 1: WORKFLOW LAYOUT
+    Pattern and why | trigger | nodes in order | checks
+
+  STEP 2: FAILURE HANDLING
+    Retries | error paths | error replies | catch-all alert
+
+  STEP 3: SUB-WORKFLOWS
+    Parts split out | inputs and returns | names
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How you want to be told
+    how: Say email, chat or a ticket in step 2, so the alert goes where you look.
+  - what: Which steps can be retried
+    how: Tell step 2 which calls are safe to repeat. A step that charges a card should not be retried blindly.
+  - what: Agent use
+    how: If an AI agent will call your sub-workflows, say so in step 3 so names and descriptions suit an agent.
+  - what: Workflow size
+    how: For a short workflow, ask step 3 to say whether it needs splitting at all. Sometimes the answer is no.
+judge:
+  - The pattern fits the task and the reason is written down.
+  - Every step that can fail has either a retry or an error path, and the alert reaches a person.
+  - Error replies say what went wrong in plain words, with a sensible status.
+  - Each sub-workflow has typed inputs and a clear return.
+  - A sub-workflow that was not worth splitting is left alone.
+test:
+  - Break one step on purpose on the test copy, such as a wrong key. You should get an alert.
+  - Send a bad input. You should get a clear error, not a silent stop.
+  - Call a sub-workflow on its own with a sample input and check its return.
+improve:
+  - Read the alerts for a week and add retries or checks where they repeat.
+  - Move each fix into the shared sub-workflow, so every workflow gets it.
+  - Keep a short list of your sub-workflows with what each takes and returns.

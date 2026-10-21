@@ -1,0 +1,104 @@
+new_slug: shopper-doubt-survey-planner
+name: "Shopper doubt survey planner"
+summary: "Say what you sell. Get two on-site surveys, a user test script and a doubt tally."
+job: understand-customers
+thinking: medium
+thinking_why: "It sets timing, wording and a tally sheet from your numbers, so a mid-size model is enough if you check the maths."
+headline: "Shopper doubt survey planner"
+subhead: "Tell it what you sell and how long shoppers stay on your pages. It writes a post-purchase survey, a product page survey with its trigger time, a user test script and a tally sheet that turns answers into ranked doubts and one page fix for each."
+explain: |
+  Your store numbers show where shoppers leave. They do not show why. The only way to find out is to ask, at the right moment, in words that get a straight answer. Most stores never ask, or ask too late, or ask a question so broad that the answers are useless.
+  This skill plans three ways to ask. A short survey right after the order, when buyers are in a good mood and will tell you what almost stopped them. A one-question survey on the product page that fires at about 60% of the time shoppers normally stay. And a user test script for 3 to 5 strangers who think out loud while they use your store. It also gives you a sheet to tally the answers into 5 to 8 doubts, each tied to one fix at one place on the page.
+when:
+  - Your product page gets visits but few add-to-carts, and you do not know why.
+  - You are about to rewrite a page and want the shopper's own words to write it from.
+  - You want a before and after read on a redesign, using the same test twice.
+you_give:
+  - What you sell, your store platform and the survey tool you use (if any)
+  - How long a typical visit lasts, from your analytics
+  - Your top products and any objections your support team hears
+  - Who buys, such as country, age range and device (optional)
+you_get:
+  - A post-purchase survey with its two questions and when it appears
+  - A product page survey with the exact trigger time for your store
+  - A user test setup, screener, script and log sheet
+  - A tally sheet that ranks doubts and pairs each with one fix and its place on the page
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your platform, survey tool, average visit length, top products and the doubts your support team hears most.
+  - Add the surveys and set the trigger time it gives you. Book the user test if you want one.
+  - Come back with the answers pasted in (or the tester notes). The skill tallies them into ranked doubts.
+  - Make one fix per top doubt, then run the same test again to compare.
+how_it_works:
+  - title: Checks your volume
+    text: A post-purchase survey needs a few orders a day to give a useful month of answers. If you have fewer, it leans on user tests and support tickets instead.
+  - title: Writes the post-purchase survey
+    text: Two questions right after the order, one on what made them buy and one on what almost stopped them. The first stays open text while your data is thin.
+  - title: Writes the page survey
+    text: A yes or no on whether anything holds them back, then a short follow-up for yes only. It fires at about 60% of your average visit time.
+  - title: Sets up the user test
+    text: Panel filters, up to two screener questions that are not yes or no, and 3 to 5 testers. The script starts with a first-impression task, then search, add to cart and checkout.
+  - title: Tags the answers
+    text: Each open answer is tagged as a motivation, a value or an anxiety. Topics are counted for positive and negative answers separately.
+  - title: Ranks the doubts
+    text: It groups answers into 5 to 8 doubts, such as fit, trust, price, shipping time or will it work for me, and checks the top three against your support tickets.
+  - title: Pairs each doubt with a fix
+    text: One fix and one page location per doubt, such as a testimonial under the add-to-cart button, a guarantee line, an FAQ answer or a new image.
+output_shape: |
+  FIT CHECK: <orders per day, what that means for survey volume>
+  POST-PURCHASE SURVEY
+  Q1 <what motivated them to buy today> (open text)
+  Q2 <what almost stopped them> (open text)
+  Shown: <when, and where>
+  PRODUCT PAGE SURVEY
+  Q1 <anything holding you back right now?> yes / no
+  Q2 (yes only) <options> + something else (open text)
+  Fires at: <60% of <average visit time> = <time>
+  USER TEST
+  Panel filters: <device, country, age, gender>  Testers: <3 to 5>
+  Screener: <up to 2 questions, not yes or no>
+  Script: <intro> / Task 1 first impression / Tasks 2 to n / closing opinion
+  Log sheet columns: <tester, device, task, finished?, quote, where stuck>
+  TALLY SHEET
+  Doubt | Count | Where it came from | Fix | Place on page
+  SUPPORT CROSS-CHECK: <top 3 support objections vs the tally>
+  CHECKS MISSED: <none or list>
+tweaks:
+  - what: Average visit time
+    how: The page survey trigger is 60% of this number. Use the average for the product page, not the whole store, if you can get it.
+  - what: Order volume
+    how: Under a few orders a day, a month of post-purchase answers will be thin. Say so and the skill puts more weight on user tests and support tickets.
+  - what: Which products
+    how: Name your top one or two products. A survey on every page spreads the answers too thin to rank.
+  - what: Answer format
+    how: Keep the first post-purchase question as open text while you have little data. Switch to multiple choice once the same answers keep repeating.
+judge:
+  - Both surveys ask about doubts in a neutral way and do not hint at the answer you want.
+  - The page survey trigger is a real time worked out from your number, not a guess.
+  - The user test first task asks the tester to look at the top of the page only and say what it is and who it is for.
+  - The tally has 5 to 8 doubts, ranked by count, each with one fix in one place.
+  - Nothing is counted until real answers are pasted in. The sheet starts empty.
+test:
+  - Run the post-purchase survey on 20 orders and read every answer yourself before tallying. Check the skill's tags match how you would tag them.
+  - Compare its top three doubts with what your support team says. If they agree, the survey is picking up real doubts.
+  - Run the same user test before and after one page change. The task that confused testers should now go smoothly.
+  - Ask the skill for the plan twice with the same input. The questions and timing should match.
+improve:
+  - Add the doubts you already know about (sizing, delivery time, trust in a new brand) as preset answers for the page survey.
+  - Save the tally in your brand file so later skills can use the doubts and the words shoppers used.
+  - Add a rule for products where health or safety worries come up, so those answers go to a person before any claim is written.
+  - Pair it with the product page section planner, so each ranked doubt gets a place on the page.
+works_best_with:
+  tools:
+    - {name: "Okendo", why: "Shopify reviews app with survey features and ready-made question templates. The source uses it for both surveys."}
+    - {name: "Userbrain", why: "A panel tool for paid user tests, filtered by device, country, age and gender. The source quotes about $45 per tester; check the current price."}
+    - {name: "Microsoft Clarity", why: "Free session recordings and heatmaps to watch what testers and shoppers did."}
+  inputs:
+    - Your average visit time from GA4 or your store analytics
+    - Support tickets or chat logs from the last 90 days
+    - Existing reviews, positive and negative
+    - Heatmap or recording notes for the product page
+terms:
+  - {term: "Post-purchase survey", meaning: "A short survey shown right after someone orders."}
+  - {term: "User test", meaning: "A recorded session where a stranger uses your store and says out loud what they think."}
+  - {term: "Anxiety (in a review)", meaning: "A worry the shopper had before buying, such as fit or trust."}

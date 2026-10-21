@@ -1,0 +1,23 @@
+slug: post-purchase-flow-builder
+name: "Post-purchase flow builder"
+summary: "Give it your products and delivery times. Get a six-email flow: thank-you, add-on, how-to, social ask and check-in."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "The six-email order, the split by number of orders, the how-to email and what the early window is for"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "The 30-day window, the first-to-second order focus, the plain-text thank-you timing and the buyer's remorse reasoning"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores (name not given)", used: "Buyer's remorse as the goal of email 1, the timing, and the review request"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Post-purchase content and the rule to time emails from the order instead of a fixed hour"}
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "Keeping offers out of the early window and handing win-back timing to its own flow"}

@@ -1,0 +1,118 @@
+new_slug: tiktok-ad-test-reader
+name: "TikTok ad test reader"
+summary: "Paste TikTok test numbers. Get keep, fix or kill for each ad, and a score out of 100."
+job: read-ad-results
+thinking: low
+thinking_why: "It compares numbers to set lines and applies fixed rules, so a fast model works."
+
+headline: "TikTok ad test reader"
+subhead: Paste the numbers from your first days of TikTok test ads. It reads each ad against clear lines, says whether the problem is the hook or the audience, calls keep, fix or kill, and scores each ad and the whole test out of 100.
+
+explain: |
+  The first days of a TikTok test are full of noise. One ad has a low CTR (the share of viewers who click), another has a high CPM (the cost of 1,000 views), and it's hard to know what to change. Judge too soon and you cut ads that needed more data.
+
+  This skill waits until an ad has spent $50 or reached 1,000 impressions. Then it checks it against lines for the first 24 hours and for day 3. It tells a creative problem from an audience problem, and calls keep, fix the hook, fix the audience or kill. After 3 days it kills the bottom half, moves the budget to the winners and plans the next test. The lines come from one agency's US-market practice, so give it your break-even cost per sale and it resets the cost lines.
+
+when:
+  - Your TikTok test ads have run for a day or three and you don't know which to cut.
+  - An ad has views but no sales, and you can't tell if the hook, audience or page is the cause.
+  - You want to plan your next batch of creative from what this one showed.
+
+you_give:
+  - "Per ad: spend, impressions, CTR, watch time, CPM, CPC, cost per add to cart and cost per purchase"
+  - How long each ad has run
+  - The audience each ad group used
+  - Your break-even cost per sale (optional, strongly advised)
+you_get:
+  - "A call for each ad: keep, fix hook, fix audience, kill or too early"
+  - The likely cause of each problem
+  - A score out of 100 for each ad and for the test
+  - A plan for the next test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each ad's numbers and say how long it has run. Wait for $50 of spend or 1,000 views.
+  - Add your break-even cost per sale so it can reset the cost lines to your store.
+  - "Do what it says after day 3: cut the bottom half, move the budget and launch the next variations."
+
+how_it_works:
+  - title: Checks the data is enough
+    text: Under $50 spend or 1,000 impressions, an ad is marked too early and not judged.
+  - title: Reads the first 24 hours
+    text: CTR above 1 percent, watch time above 25 percent, CPM under $15, with a cross-check on typical ranges.
+  - title: Reads day 3
+    text: CPC under $2, add to cart under $10, purchase under $30, reset to your break-even.
+  - title: Finds the cause
+    text: Low CTR points to the creative. Watch time under 20 percent means the first 3 seconds need work. CPM over $20 points to the audience.
+  - title: Makes the call
+    text: Keep, fix hook, fix audience, kill or too early, for each ad.
+  - title: Acts after 3 days
+    text: It kills the bottom 50 percent, puts budget on the winners and starts new variations. It waits longer for pricey products.
+  - title: Plans the next test
+    text: Three creatives across two audiences, or 3 hooks by 3 angles by 3 calls to action, then a warm-audience retest.
+  - title: Scores each ad
+    text: Creative lines count for 60 points and audience lines for 40. The sum is shown.
+
+output_shape: |
+  TIKTOK TEST READ  (as of <date or hours since launch>)
+  Break-even cost per sale: <$ or "not given: used $30 from the source">
+
+  AD <name> | audience <...> | spend $<n> | impressions <n>
+    CTR <x%> <pass/fail> | watch time <x%> <pass/fail> | CPM $<n> <pass/fail>
+    CPC $<n> | add to cart $<n> | purchase $<n> (day 3 lines, if reached)
+    Cause: <creative | audience | page or offer | none>
+    Call: KEEP | FIX HOOK | FIX AUDIENCE | KILL | TOO EARLY
+    Score: <n>/100 (creative <n>/60 + audience <n>/40; not yet measured: <lines>)
+
+  TEST SCORE  <n>/100 (average of the ads above)
+  AFTER DAY 3
+  Kill: <ads> | Put budget on: <ads> | New variations: <plan>
+  Retest on warm: <ads>
+
+  MISSING: <break-even | day-3 numbers | audience>
+
+tweaks:
+  - what: Your break-even cost per sale
+    how: Give it and the purchase line resets to it. The $30 in the source suits only some prices and margins.
+  - what: Hours since launch
+    how: Say how long each ad has run. It uses 24-hour lines on day one and adds day-3 lines after that.
+  - what: Product price
+    how: Say if your product costs a lot or takes time to decide on. It waits longer than 3 to 4 days before killing ads.
+  - what: Number of ads
+    how: Paste every ad in the test. With only 2 or 3 ads, it kills the weakest one and not half.
+
+judge:
+  - No ad is called a winner or a loser before $50 spend and 1,000 impressions.
+  - Each call names a cause, such as the hook, the audience or the page.
+  - Your break-even is used for the cost lines, or the skill says it used the source's number.
+  - The score shows how it was worked out and which lines were not measured yet.
+  - The next test changes the hook or the audience, not both at once.
+
+test:
+  - Paste an ad with CTR 0.5 percent and normal CPM. It should say fix hook.
+  - Paste an ad with a high CPM and good CTR. It should say fix audience.
+  - Paste an ad with $20 spend. It should say too early.
+  - Run it twice on the same numbers. The calls should match.
+
+improve:
+  - Change the cost lines in the skill file to your own numbers once you have a few weeks of results.
+  - Add your own watch time and CTR lines from your best past ads, so they replace the source's.
+  - Save which hooks passed to your brand file, so the next 3 hooks build on them.
+  - Pair it with the TikTok starter campaign builder for the layout, and the TikTok Spark ad picker for posts that won on their own.
+
+works_best_with:
+  tools:
+    - {name: "TikTok Ads Manager", why: "Export the ad-level report with CTR, CPM, CPC and cost per result for the days you want."}
+    - {name: "Google Sheets", why: "Keep one row per ad and per day to see how the lines move."}
+  inputs:
+    - "Your break-even cost per sale from a break-even calculator"
+    - "The video itself for each ad, so the hook can be judged by what it says"
+    - "Your product price and the usual days between first visit and purchase"
+
+terms:
+  - term: CTR
+    meaning: Click-through rate. The share of people who saw an ad and clicked it.
+  - term: CPM
+    meaning: Cost for 1,000 times your ad is shown.
+  - term: Hook
+    meaning: The first seconds of a video, which decide whether someone keeps watching.

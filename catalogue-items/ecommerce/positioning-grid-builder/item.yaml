@@ -1,0 +1,25 @@
+slug: positioning-grid-builder
+name: "Positioning grid builder"
+summary: "Give it your product and rivals. Get an XY map and the one corner you can own."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: competitor_set}
+uses: []
+minds: [seth-godin, al-ries, jack-trout]
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "This Is Marketing (book)", by: "Seth Godin (author)", used: "The XY grid method, axes shoppers feel, avoiding crowded quadrants, claims that are true and proven in action, and saying who it is not for"}
+  - {title: "Premium isn't about price, it's about positioning (founder interview)", by: "Founder of a canned sports-hydration brand, in a podcast interview", used: "A position must be readable fast and remove confusion from a category"}
+  - {title: "Building a Brand: Redesigning a Business Start to Finish", by: "a chief design officer rebranding a direct-to-consumer hardware store", used: "XY maps with opposing voice and look pairs, plotting outside brands, and finding crowded pools"}
+  - {title: "Positioning: The Battle for Your Mind", by: "Al Ries and Jack Trout (book)", used: "Gap types, the tests for a gap in the buyer's mind, the everybody trap, the high-price conditions, the outgun test, and the money and stamina gates"}

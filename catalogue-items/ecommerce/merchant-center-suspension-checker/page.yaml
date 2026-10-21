@@ -1,0 +1,128 @@
+new_slug: merchant-center-suspension-checker
+name: "Merchant Center suspension checker"
+summary: "Walk through your Merchant Center and store. Get a pass or fail list by suspension risk and a score out of 100."
+job: run-google-ads
+thinking: medium
+thinking_why: "It checks many items across your store and Merchant Center and has to rank them by risk."
+
+headline: "Merchant Center suspension checker"
+subhead: Give it screenshots of your Merchant Center settings, your store address and your shipping and return terms. It walks through setup and a checklist by area, ranks every gap by suspension risk and hands back a fix list, a weekly and monthly schedule and a score out of 100.
+
+explain: |
+  Google Merchant Center holds your product feed. If Google suspends it, your Shopping ads and the feed part of Performance Max stop. Google does not say exactly why. Most suspensions come from a mismatch: the price on the page is not the price in the feed, shipping or returns differ from your site, a checkout payment fails, or claims are exaggerated.
+
+  This skill sweeps your setup and store against best practice and ranks what it finds by risk. It is a best-practice check, not a guarantee. Google's policies decide, so read the stated reason on any warning. If Google suspends you, fix the issue it names and use Google's own review process. The skill never suggests a way around a suspension.
+
+when:
+  - You are setting up Merchant Center for the first time.
+  - Google warned you about a mismatch, or your products show "needs attention".
+  - You are about to scale Shopping ads and want to remove avoidable risks first.
+
+you_give:
+  - Merchant Center access, or screenshots of settings, shipping and returns, and products that need attention
+  - Your store URL and links to your policy pages
+  - The shipping and return terms you really offer
+  - The kinds of product you sell and the claims you make about them (optional)
+you_get:
+  - A pass or fail for each area, from payment and checkout to contact details and the site
+  - A fix list ranked by suspension risk
+  - A weekly, monthly and one-off schedule
+  - A score out of 100 and how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach screenshots of Merchant Center business info, shipping and returns, and the Products needs attention page.
+  - Paste your store link, policy page links and the shipping and return terms you really offer.
+  - Fix the high-risk items first, then run it again.
+  - Put the schedule in your calendar and stick to it.
+
+how_it_works:
+  - title: Checks setup
+    text: Programmes, business info, claimed store, logos and colours, and for the US the small business attribute.
+  - title: Checks shipping and returns
+    text: Shopify shipping on manual in the Google and YouTube app, shipping for every country, ship-from location and a return policy linked to the real page.
+  - title: Checks product data
+    text: The primary feed and any supplemental feeds, and everything under Products needs attention.
+  - title: Checks checkout
+    text: HTTPS, every payment method working, the final price shown before payment and discount codes that apply.
+  - title: Checks claims and proof
+    text: Factual claims only, real reviews and stock status that matches the page.
+  - title: Checks business details
+    text: Terms and privacy in the footer, matching address and phone, a branded email and a fast site.
+  - title: Checks price match
+    text: Price on the page, at checkout and in the feed should be the same. Price is edited in Shopify only.
+  - title: Ranks and scores
+    text: High, medium and low risk, with points off, and a schedule to repeat it.
+
+output_shape: |
+  AREA RESULTS
+  payment and checkout: <pass | fail>  <gaps>
+  product listings:     <pass | fail>  <gaps>
+  branding:             <pass | fail>  <gaps>
+  shipping:             <pass | fail>  <gaps>
+  returns:              <pass | fail>  <gaps>
+  legal:                <pass | fail>  <gaps>
+  contact:              <pass | fail>  <gaps>
+  site:                 <pass | fail>  <gaps>
+
+  FIX LIST (by risk)
+  HIGH   <gap | where | fix>
+  MEDIUM <gap | where | fix>
+  LOW    <gap | where | fix>
+
+  SCHEDULE  weekly: <...>  monthly: <...>  on each promotion: <...>  once: <...>
+  SCORE  <n>/100 (100 - 20 x <High> - 10 x <Medium> - 5 x <Low> = <n>)
+  NOT RUN  <check | what is needed>
+  MISSING: <what would sharpen it>
+
+tweaks:
+  - what: Product type
+    how: Say if you sell health, supplement or other claim-heavy products. Claims are the highest risk there, so the skill reads them closely.
+  - what: Country
+    how: Name the countries you ship to. Shipping and returns must exist for each one.
+  - what: Screenshots
+    how: Attach the real pages, not a description. A check that needs a screenshot is listed as not run without one.
+  - what: Store age
+    how: Say if the store is new or thin, with a default theme or copied reviews. That is a high risk whatever the checklist says.
+  - what: Promotions
+    how: List current promotions with dates, so end dates and site terms can be matched.
+
+judge:
+  - Every area has a pass or fail, and every fail has a fix.
+  - Fixes are ranked high, medium and low by suspension risk.
+  - It states that Google does not name the exact reason for a suspension.
+  - It never suggests creating a new account or site to get around a suspension.
+  - Price, shipping and return mismatches are ranked high.
+  - The score shows its sum and what it counted.
+
+test:
+  - Show it a Merchant Center where the price in the feed differs from the page. It should rank this high.
+  - Remove your return policy link from the input. It should fail returns.
+  - Run it twice on the same screenshots. The fix list should match.
+  - Compare one of its high-risk items with Google's own Merchant Center warning, if there is one.
+  - After you fix the high items, run it again and see if the score rises.
+
+improve:
+  - Add the exact shipping and return terms you offer to your brand file, so the check matches them.
+  - Add a list of claims you may and may not make for your products, so claim checks use it.
+  - Add your own schedule if you review weekly on a set day.
+  - Add Google's current policy pages to the skill file with the date you read them.
+  - Pair it with the feed health checker, which covers product data, and the ratings planner.
+
+works_best_with:
+  tools:
+    - {name: "Google Merchant Center", why: "Shows diagnostics, business info, shipping and returns, and the store quality scorecard."}
+    - {name: "Shopify", why: "Where price, availability and shipping come from. Edit them here, not in Merchant Center."}
+    - {name: "Any good chat AI", why: "Reads your screenshots and ranks the gaps."}
+  inputs:
+    - "Screenshots of Merchant Center diagnostics"
+    - "Your return and shipping policy pages"
+    - "Your current promotions with start and end dates"
+
+terms:
+  - term: Merchant Center
+    meaning: Google's tool where you upload your product feed so your products can show in Shopping.
+  - term: Feed
+    meaning: The list of your products and their details that you send to Google.
+  - term: Supplemental feed
+    meaning: An extra feed that adds or changes details of products in your main feed.

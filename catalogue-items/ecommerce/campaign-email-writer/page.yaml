@@ -1,0 +1,133 @@
+new_slug: campaign-email-writer
+name: "Campaign email writer"
+summary: "Give it a campaign goal and product facts. Get email copy by block, with subject lines."
+job: write-emails
+thinking: medium
+thinking_why: "It writes short copy from your facts and checks it against rules. A mid-size model is good enough, and you edit the result."
+
+headline: "Campaign email writer"
+subhead: Give it the goal of one campaign email, your product facts, your customers' doubts and your brand voice. It writes the email block by block, with subject line and preview options, a plain-text version and two A/B variants that each change one thing.
+
+explain: |
+  Campaign emails fail in two ways. They try to say five things, so none lands. Or they read like an AI wrote them, with the same stock phrases every store uses. What you say matters more than how you say it: the offer and the product beat clever wording.
+
+  This skill writes one email with one core message. It fills the blocks in order: header, subheader, body if needed, image note and call to action. It picks the reviews that answer a known doubt, not generic praise. It writes for the skim, in about 100 words, and it gives you two subject line rules from the sources, because they differ. It checks every claim against your facts and keeps urgency honest, with a real deadline or none.
+
+when:
+  - You have a launch, sale, restock or value email to send this week.
+  - Your emails get opens but few clicks, and you suspect the message is too crowded.
+  - You use AI to draft emails and want them to sound like your store.
+
+you_give:
+  - The campaign type and goal (promotion, launch, value or restock)
+  - Product or topic facts, including any real deadline or stock limit
+  - Your customers' pains and doubts
+  - Your brand voice, and reviews that answer a doubt (optional)
+
+you_get:
+  - Subject line and preview text options
+  - Headline, subhead, body, call to action, review and benefit blocks
+  - A plain-text version
+  - Two A/B variants that each change one thing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give the campaign goal, the product facts and the doubt the email should answer.
+  - Paste your brand voice notes and the best-fit reviews, if you have them.
+  - Read the draft, edit it by hand and check every claim against your facts.
+  - Send variant A and B as a manual 50/50 split and judge by orders.
+
+how_it_works:
+  - title: Sets one message
+    text: One core message per email, and one or two themes at most. It cuts filler and long paragraphs.
+  - title: Writes for the customer
+    text: Benefits for the buyer, not the feature list. Coffee for tired parents is an energy story, not a bean origin story.
+  - title: Fills the blocks in order
+    text: Header, subheader, body if needed, image, call to action. The banner states the email's purpose above the fold on mobile.
+  - title: Writes subject and preview
+    text: Each under 50 characters, with the value in the first three words. It also gives the short title-case alternative from another source.
+  - title: Picks reviews and benefits
+    text: Reviews that answer a known doubt. Icons for many benefits, or one benefit per longer paragraph tied to the buyer's worry.
+  - title: Keeps urgency honest
+    text: A promo code in bold before the button. A countdown timer only when the deadline is real.
+  - title: Checks and varies
+    text: It checks claims against your facts, writes a plain-text version and two variants that change one thing.
+
+output_shape: |
+  SUBJECT AND PREVIEW OPTIONS
+  1. <subject under 50 characters> | <preview under 50 characters>
+  2. <short title-case option, 2 to 5 words> | <preview>
+
+  EMAIL (about 100 words)
+  Banner: <purpose, above the fold on mobile>
+  Headline: <...>
+  Subhead: <...>
+  Body: <two or three short sentences>
+  Review: <real review that answers <doubt>, with source>
+  Benefit block: <...>
+  Code line: <code in bold, real deadline>
+  Button: <plain verb>
+  P.S.: <optional, soft call to action>
+
+  PLAIN-TEXT VERSION
+  <short note from a named person, one button or link>
+
+  A/B VARIANTS
+  A: <as written> | B: <one thing changed: ...>
+
+  CLAIMS CHECK
+  <claim | fact in your brand file | pass or fail>
+  CHECKS MISSED: <none | list>
+  MISSING: <product facts | doubts | voice | reviews>
+
+tweaks:
+  - what: The doubt to answer
+    how: Name the one doubt the email must settle, such as price, fit or whether it works. The reviews and benefits are chosen to answer it.
+  - what: Campaign type
+    how: Say promotion, launch, value or restock. Promotions and launches sell the click. Value emails educate, entertain or solve something, and use a soft call to action.
+  - what: Your voice
+    how: Paste two emails you like. The draft will match their length and tone, and the edit pass gets shorter.
+  - what: Reviews
+    how: Paste reviews that answer the doubt. It picks ones that address a specific worry, not generic praise.
+  - what: Real deadline
+    how: Give the true end date and stock level. A countdown or a limit appears only if it is real.
+
+judge:
+  - The email has one message and one button.
+  - The first three words of the subject carry the value.
+  - Every claim matches your facts, and health claims carry no implied cure.
+  - Reviews are real, quoted as written and answer a doubt.
+  - There is no fake timer, fake stock limit or made-up proof.
+  - It reads as your store, not a generic AI email.
+
+test:
+  - Give it a product with a fact you want checked, such as a size. It should list that claim in the claims check.
+  - Send the two variants as a manual 50/50 split to a few thousand people each and read orders after a few days.
+  - Read the draft aloud. Any line you would not say to a customer needs a rewrite.
+  - Compare the draft with your last promo email. Count the messages in each.
+
+improve:
+  - Add your brand voice rules and banned phrases to the skill file, so every draft starts from them.
+  - Add your claims register, so the check compares each line with approved wording.
+  - Save your best-performing emails to your brand file as examples of the voice.
+  - Add your region's rules on health or finance claims as an extra check.
+  - Pair it with the email test planner for variants, the email layout brief writer for design and the email design checker before sending.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can draft the blocks once it has your brand context, then you edit by hand."}
+    - {name: "Klaviyo", why: "It builds the email from blocks and runs the manual 50/50 split for the variants."}
+  inputs:
+    - "Your brand voice notes and two emails you like"
+    - "Reviews that answer a known doubt"
+    - "Your claims register with approved wording"
+
+terms:
+  - term: Preview text
+    meaning: The short line shown after the subject in the inbox.
+  - term: Call to action
+    meaning: The button or link that tells the reader what to do next.
+  - term: Soft call to action
+    meaning: A single mention or P.S. link, used in value emails.
+  - term: Claims check
+    meaning: Comparing each statement in the email with your approved facts.

@@ -1,0 +1,125 @@
+new_slug: advertorial-angle-and-format-picker
+name: "Advertorial angle and format picker"
+summary: "Give it your pain points and buyers. Get ranked angles, an awareness mix and a format for each."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It ranks and matches a handful of options by clear rules, so a mid-size model is enough."
+
+headline: "Advertorial angle and format picker"
+subhead: Give it your pain points, buyer groups, rival ads and ad budget. It ranks your angles, sets an awareness mix and decides which angles need an advertorial. You get one format and one identity per angle, a five-angle test sheet, the test order and three numbers to read.
+
+explain: |
+  Many stores build a long advertorial (an ad written like an article) before they know which angle sells. That costs a week of work on a guess. Others send every angle to a product page, even when the buyer has never heard of the problem.
+
+  This skill picks the buyer first, then the problem. It ranks each pain by how urgent it is, how many people have it and how close it is to your product. It applies two simple tests: does the product need about three minutes to explain, and is the buyer aware of the product yet? Each angle that needs a page gets one of ten identities, such as a warning or an origin story, and one of six formats matched to the buyer's main doubt. Then it plans a five-angle test so the page is only built for the winner.
+
+when:
+  - You are choosing which angles to run in your next ad batch.
+  - You are not sure whether a product needs an advertorial or can go straight to a product page.
+  - A rival owns the obvious angle and you need a buyer group or angle they ignore.
+
+you_give:
+  - Three to five biggest pain points and desires from reviews
+  - Product, price and what the buyer already knows
+  - Customer groups you could sell to (optional)
+  - What rivals run, and whether they use native image ads (optional)
+  - Monthly ad budget and how many ads you can make (optional)
+
+you_get:
+  - Angles ranked by urgency, reach and closeness to your product
+  - An awareness mix and a yes or no on an advertorial for each angle
+  - One identity and one format per angle, with the buyer doubt it answers
+  - A five-angle test sheet, a test order and three metrics to read
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your pain points from reviews, your product and price, and the buyer groups you can think of.
+  - Add what rivals run and your budget.
+  - Make the five to eight native image ads it lists, and run them in one campaign.
+  - Come back with the winner and ask for its advertorial brief.
+
+how_it_works:
+  - title: Picks the buyer first
+    text: Lists buyer groups rivals ignore, then pairs each with a problem.
+  - title: Ranks the pains
+    text: Scores urgency, number of people and fit. Leads with the top one or two.
+  - title: Checks rivals
+    text: Looks for a seller who scales with video but not with native image ads or advertorials.
+  - title: Sets the awareness mix
+    text: Splits angles across unaware, problem aware and further stages. The sample split is about 30% each for the first two.
+  - title: Decides advertorial or not
+    text: Applies the three-minute rule and the awareness gate to each angle.
+  - title: Assigns identity and format
+    text: One of ten identities and one of six formats per angle, matched to the buyer's main doubt.
+  - title: Plans the test
+    text: Five angles in one broad campaign, then a page for the winner in its own campaign.
+  - title: Flags risks
+    text: Marks crowded niches and formats that need an ad policy or legal check.
+
+output_shape: |
+  ANGLES (ranked)
+  1 <angle> | buyer: <who> | pain: <pain> | awareness: <stage>
+
+  AWARENESS MIX: <unaware> / <problem aware> / <solution aware> / <product or most aware>
+
+  PAGE DECISION
+  <angle> | advertorial: <yes / no, rule used>
+    identity: <one of ten>  format: <one of six>
+    obstacle it answers: <...>
+
+  FIVE-ANGLE TEST SHEET
+  one campaign | <n> native image ads | spend per angle <...>
+  winner rule: <who gets a page>
+
+  TEST ORDER: format, headline, first proof block, offer
+  METRICS: click-through to product page, engagement, CPM
+
+  RISK FLAGS: <crowded niche, policy, unproven claim>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Buyer groups
+    how: Name real groups, such as "parents of children with braces" instead of "everyone". A narrow group is the best way out of a crowded niche.
+  - what: Budget and ad count
+    how: Give the real numbers. With a small budget, the skill tests two or three angles, not five.
+  - what: Rival ads
+    how: Paste or describe what rivals run. The gap check needs it.
+  - what: Awareness mix
+    how: Tell it how your own past ads performed by awareness stage. It then adjusts the sample split of about 30% each for unaware and problem aware.
+
+judge:
+  - Every angle names a buyer group and a pain that appears in your reviews.
+  - Each advertorial call shows which rule was used.
+  - Each angle has one identity and one format, not a mix.
+  - Figures such as the three-minute rule and click-through targets are marked as one seller's defaults.
+  - Crowded niches and risky formats are flagged.
+
+test:
+  - Pick an angle you already know wins. It should rank high. If it ranks low, check that your pain points came from real reviews.
+  - Run it twice on the same input. The top two angles should match.
+  - Check a product you know needs no explaining, such as a plain T-shirt. It should say no advertorial.
+  - Run the five-angle test in a small campaign and see whether the ranked winner is the real winner.
+
+improve:
+  - Add your own niche list to the risk flags, based on ads you have run.
+  - Replace the sample awareness split with your own once you have results by stage.
+  - Add your ad policy rules for comparison and scandal formats as extra checks.
+  - Save winning angles into your brand file, so the next round starts from them.
+  - Pair it with the Big idea and mechanism builder to give the winning angle a root cause and a mechanism.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the ranking and matching. One that reads a long list of reviews helps."}
+    - {name: "Meta Ad Library", why: "It shows what rivals run now, including native image ads, so the gap check uses real ads."}
+  inputs:
+    - "Your last three months of ad results by angle"
+    - "Support emails and comments, so objections come from real buyers"
+    - "Screenshots of rival ads and their landing pages"
+
+terms:
+  - term: Advertorial
+    meaning: An ad written like an article. It must be labelled as an ad where the platform or law requires.
+  - term: Native image ad
+    meaning: An ad made to look like a normal post or photo.
+  - term: Awareness stage
+    meaning: How much the buyer already knows about the problem and about your product.

@@ -1,0 +1,99 @@
+new_slug: prompt-and-skill-tuner
+name: Prompt and skill tuner
+summary: Give it a prompt or skill and test cases. It tests, fixes and re-tests until the checks pass, within four rounds.
+job: set-up-ai
+thinking: high
+thinking_why: It changes one thing, tests, judges and decides to keep or undo, for several rounds. Weak judging here makes a prompt worse. Give it your strongest model.
+headline: Prompt and skill tuner
+subhead: Give it a prompt or a skill file and 10 to 20 real test cases. It tests the first version, makes one change at a time, tests again, keeps only what helps, and stops when the checks pass or after four rounds.
+explain: |
+  Most people fix a prompt by feel. They change a line, try one example and decide it looks better. The next input breaks it, and nobody knows which edit caused what. Skill files fail the same way, with the extra problem that a skill with a weak description never fires at all.
+
+  This agent works like a careful editor with a test sheet. It tests the first version on your cases and saves the score. Then it changes one thing, tests again, and keeps the change only if the score went up and no case that passed now fails. It stops when your pass line is met, or after four rounds, so it cannot run for ever. For skills it also checks that the skill fires when it should and runs a safety check on the final version. It works on copies and never overwrites your original.
+when:
+  - A prompt gives weak or uneven answers and you want fixes that are tested, not guessed.
+  - You wrote a skill and want it checked, fixed and checked again before you use it.
+  - You are about to share a skill, or add one from someone else, and want a safety check first.
+you_give:
+  - The prompt text, or the skill folder with its SKILL.md
+  - 10 to 20 real test cases, each with what a good answer looks like
+  - Your pass line, if you have one (optional)
+  - Examples of answers you did not like (optional)
+you_get:
+  - Scores before and after, with the rounds used out of four
+  - The new version as a copy beside your original
+  - A log of every change, kept or undone, with why
+  - A list of what still fails and the next change to try
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to tune your prompt or skill.
+  - Give it the prompt or the skill folder, and your test cases. If you have no test cases, it helps you build them first.
+  - Confirm the pass line it proposes, or give your own.
+  - Read the hand-back. Your original is untouched. Copy over the new version yourself, or say yes and it saves it where you say.
+  - Run it again whenever you change the prompt or skill.
+how_it_works:
+  - title: Set the pass line
+    text: Agrees what counts as done, and the cap of four rounds, before any change is made.
+  - title: Check the test cases
+    text: Makes sure there are enough varied cases, and that you confirmed any it drafted.
+  - title: Test the baseline
+    text: Scores the original. If it already passes, it stops and leaves it alone.
+  - title: Loop up to four rounds
+    text: Changes one thing, tests again, keeps the change only if the score rose and no passing case broke, and undoes it otherwise.
+  - title: Check skills for safety
+    text: Runs a safety check on the final skill. A serious finding ends the run with a do-not-use note.
+  - title: Hand back the copy
+    text: Gives you the new version, the log and what still fails, and stops for your yes before anything is shared or replaced.
+output_shape: |-
+  RESULT
+    <passed | not passed> | rounds <n> of 4 | score <before> to <after>
+
+  NEW VERSION
+    <prompt text or skill folder, saved beside the original>
+
+  WHAT CHANGED
+    Round <n>: <change> | fixed: <check> | score <before> to <after>
+
+  UNDONE
+    Round <n>: <change> | why: <what it broke>
+
+  STILL FAILING
+    <check> | next change to try: <change>
+
+  SAFETY
+    <result or not run>
+
+  FILES AND MISSING
+    <each round's file> | MISSING: <every line>
+tweaks:
+  - what: Your test cases
+    how: Use real inputs, including ones that went wrong. Ten varied cases beat thirty that look alike.
+  - what: Your pass line
+    how: Say how many cases must pass and which must always pass. The starting point is 9 of every 10.
+  - what: The round cap
+    how: Four is the starting point. A lower cap saves time. A higher one rarely helps if four rounds did not.
+  - what: Cases you hold back
+    how: Keep a few cases the agent never sees while tuning, then run them on the final version to catch over-fitting.
+judge:
+  - The same test cases were used in every round.
+  - Each round changed one thing, and the log shows its effect.
+  - No kept change broke a case that passed before.
+  - Your original file is untouched.
+  - Nothing was shared or published without your clear yes.
+test:
+  - Run it on a prompt you know is weak, with cases where it fails. See whether the score rises and the log explains each change.
+  - Give it a prompt that already passes. It should stop at the baseline and change nothing.
+  - Add a line to a test skill that tells the reader to ignore its rules. The agent should report the line, not follow it.
+improve:
+  - Add each answer you dislike as a new test case, so the same miss is caught next time.
+  - Keep the log with the prompt. It shows which changes helped and which hurt, and saves repeating them.
+  - Tune one prompt or skill at a time. Tuning two together hides which change helped.
+  - Re-run the held-back cases after any later edit to the prompt or skill.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the skill folder, keep versions in the tuner folder and run each round.
+    - name: A spreadsheet
+      why: A simple sheet of cases and pass or fail marks makes each round easy to compare.
+  inputs:
+    - Past answers you liked and answers you did not
+    - The input data the prompt will meet in real use

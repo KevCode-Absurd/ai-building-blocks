@@ -1,0 +1,21 @@
+slug: shopify-test-setup-picker
+name: "Shopify test setup picker"
+summary: "Give it your Shopify plan and test idea. Get what you can test, the right route, and a setup score."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "CRO as testing and experimentation for DTC ecommerce", by: "Written research review of A/B testing for online stores", used: "What each Shopify plan can test, browser-based versus server-side tests, flicker cost and price test cautions"}
+  - {title: "A/B testing on Shopify Checkout page", by: "Shopify Developer Community", url: "https://community.shopify.dev/t/a-b-testing-on-shopify-checkout-page/3246", used: "No built-in way to show a checkout change to one group only"}
+  - {title: "Conversion Rate Optimization Framework Revealed - Step By Step Breakdown", by: "Ali Kenyon (Conversion Wise), hosted by Ezra Firestone", used: "Avoid running conflicting tests on one product page"}

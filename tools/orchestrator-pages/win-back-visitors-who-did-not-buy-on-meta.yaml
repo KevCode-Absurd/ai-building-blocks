@@ -1,0 +1,77 @@
+new_slug: win-back-visitors-who-did-not-buy-on-meta
+name: Win back visitors who did not buy on Meta
+summary: Give it your reviews and store results. Get an ad for each objection, a three-ad sequence and a retargeting budget cap.
+job: launch-and-scale-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Win back visitors who did not buy on Meta
+subhead: Give it your reviews, the reasons visitors left and your channel results. It splits the visitors who left by objection, writes one ad concept for each, orders three ads as objection, proof, then cross-sell, and caps retargeting spend so it does not starve ads that find new buyers.
+explain: |
+  Most visitors leave without buying, and most stores answer them all with one ad that says "come back". That ad repeats what the visitor already saw. It does not touch the real reason they left, which may be price, trust, quality or timing.
+
+  The steps give each reason its own answer. First it splits the visitors who left into those four groups and marks each share as measured or a guess. It writes one ad per objection, each with one claim and its proof. Then it orders the ads into a short sequence with a cross-sell. Last it checks how much retargeting your budget can take before it pulls money from ads that bring in new buyers. Nothing in this run waits on you.
+when:
+  - People visit your store, leave without buying, and your retargeting ads all say the same thing.
+  - Your retargeting looks cheap on paper, but your new customer numbers have stopped growing.
+  - You have reviews and survey answers that explain why people hesitate, but no ads that use them.
+you_give:
+  - Your store conversion rate
+  - Why visitors left, from surveys, reviews, chat, calls or your own list
+  - Your product list with margins, and your proof, offer and guarantee
+  - Your spend and new-customer revenue by channel
+  - How many visitors you can retarget (optional)
+you_get:
+  - The visitors who left split into price, trust, quality and not ready yet, each marked measured or guess
+  - One ad concept per objection, with one claim and its proof, a test order and what to measure
+  - A three-ad sequence of an objection ad, a proof ad and a cross-sell, with the audience and window
+  - A ranking of where the next dollar earns most, a stop point for retargeting and a cap
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your reviews, survey answers and support questions. Add your conversion rate and spend by channel.
+  - Mark which numbers are measured and which are guesses. The plan labels shares the same way.
+  - Build the ads in the order it gives and keep the spend under the cap.
+how_it_works:
+  - title: Retargeting objection ad planner
+    text: Splits the visitors who left into price, trust, quality and not ready yet, and maps one ad concept to each, with one claim and its proof.
+  - title: Retargeting ad sequence planner
+    text: Orders the ads into an objection ad, a proof ad and a cross-sell, with a pairing table and the audience and window to use.
+  - title: Next-dollar budget allocator
+    text: Ranks channels by new-customer revenue for each extra dollar, checks the plan is not too heavy on retargeting, and sets a stop point.
+output_shape: |-
+  STEP 1: RETARGETING OBJECTION AD PLANNER
+    Visitors split by objection (measured or guess) | one ad concept per objection | test order | what to measure
+
+  STEP 2: RETARGETING AD SEQUENCE PLANNER
+    Objection ad, proof ad, cross-sell ad | cross-sell pairing table | audience and window
+
+  STEP 3: NEXT-DOLLAR BUDGET ALLOCATOR
+    Ranking of channels for the next dollar | stop point per channel | test plan | fallback rule and loss limit
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Where the reasons come from
+    how: Post-purchase surveys and support chats give real reasons. A guess is labelled as one and ranked lower.
+  - what: Your proof
+    how: Give the review count, guarantee and any real discount. Each ad uses one claim, so only proof you hold can back it.
+  - what: Your product margins
+    how: The cross-sell pairs high-margin products with what the visitor viewed. Margins keep it from pushing the cheap item.
+  - what: Lift test results
+    how: If you ran a holdout, paste it. The budget step then uses a measured return, not a platform report.
+judge:
+  - Every objection share is labelled measured or guess.
+  - Each ad makes one claim, and you hold the proof for it.
+  - The sequence moves from objection to proof to cross-sell, not three copies of one ad.
+  - The cap on retargeting spend comes from your channel numbers.
+  - No ad promises a discount or guarantee you do not offer.
+test:
+  - Check the top objection against the last fifty reviews or support chats. It should appear often.
+  - Run only the objection ads first, one at a time, and see which one earns the most sales.
+  - Look at your new-customer numbers four weeks after the sequence goes live. They should not fall.
+  - Show the three ads to someone who has not seen your store. They should understand each one alone.
+improve:
+  - Run a short post-purchase survey asking why they hesitated, so your next run uses measured shares.
+  - Save the winning objection ad in your brand file, and the objection it answered.
+  - Add your real guarantee and return terms to step 1, so trust ads quote them exactly.
+  - Re-run step 3 each quarter, when channel costs shift.

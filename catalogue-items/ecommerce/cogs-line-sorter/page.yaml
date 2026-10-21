@@ -1,0 +1,125 @@
+new_slug: cogs-line-sorter
+name: "COGS line sorter"
+summary: "Paste your cost lines. Get each sorted into COGS or expense, with the rule used, scored out of 100."
+job: track-numbers
+thinking: medium
+thinking_why: "It applies a short set of accounting rules line by line and asks when your setup decides the answer. A mid-level model is enough. Review the result with your accountant."
+
+headline: "COGS line sorter"
+subhead: "Paste your cost lines and tell it how you sell. It sorts each line into cost of goods sold or expense, says which rule decided it, and asks where your setup changes the answer. You get gross margin before and after the fixes, and a score out of 100."
+
+explain: |
+  Cost of goods sold, or COGS, is what it cost to get the product to the point where it sits ready to sell. Stores often get this wrong in both directions. Freight and duty on stock coming in are left out, or shipping to the customer and ad spend are put in. Gross margin then looks better or worse than it is, and every decision made from it is off.
+
+  This skill uses one rule: any cost paid to get the product ready to sell is COGS, and costs after the sale are expenses. It tests each line against that rule, splits mixed invoices such as retail boxes and shipping cartons, and asks when your setup decides the answer, such as free shipping or dropshipping. It shows gross margin before and after, and a score for how many lines you had in the right place. It is a draft to review with your accountant. Local tax rules can differ.
+
+when:
+  - Your gross margin looks too good or too bad and you suspect costs are in the wrong place.
+  - You are building a profit and loss statement and need cost lines sorted.
+  - A new accountant or bookkeeper asks how you classify freight, packaging and fees.
+
+you_give:
+  - A list of cost lines from invoices, your ledger or a profit and loss export
+  - "How you sell: own stock, dropship, 3PL or Amazon FBA"
+  - Whether shipping is charged to customers or built into the price
+  - Revenue for the period, if you want gross margin worked out (optional)
+  - "Which view you want: accounting or contribution margin (optional)"
+you_get:
+  - A table of each line, its bucket, the rule used and a confidence mark
+  - The lines in the wrong place and what to do about each
+  - Gross margin before and after the fixes
+  - Questions where the rule depends on your setup, and a score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste or attach your cost lines. Add the bucket each one sits in today if you know it.
+  - Say how you sell and how shipping is charged.
+  - Answer its setup questions, then read the lines in the wrong place.
+  - Take the result to your accountant before changing your books.
+
+how_it_works:
+  - title: Applies the main rule
+    text: Cost paid to get stock ready to sell is COGS. Cost after the sale is an expense.
+  - title: Runs the second test
+    text: Would you still have paid this if you had not bought this stock? Warehouse rent passes, so it is an expense. Container, duty and freight fail, so they are COGS.
+  - title: Splits packaging
+    text: The retail box on the shelf is COGS. The mailer or carton for shipping is an expense. Mixed invoices are split.
+  - title: Places shipping and fees
+    text: Freight in is COGS, freight out is an expense. Platform and payment fees, ads, 3PL storage and rent are expenses.
+  - title: Handles discounts and returns
+    text: Coupons reduce revenue. Supplier credits reduce COGS. Return shipping is overhead, and repacking to resell may be COGS.
+  - title: Checks waste
+    text: Expired, lost or written-down stock hits COGS. It asks if you count stock on a schedule.
+  - title: Offers a second view
+    text: Product cost in one bucket, fulfilment in another, which shows contribution margin. It says which view each number uses.
+  - title: Scores the sort
+    text: The share of lines you had in the right bucket.
+
+output_shape: |
+  COGS SORT  <business>  <period>  model: <own stock / dropship / 3PL / FBA>  view: <accounting / contribution>
+
+  LINES
+  <cost line> | <amount> | <now in> | <should be in> | <rule used> | <confidence>
+
+  WRONG PLACE
+  <line>: move from <bucket> to <bucket>, effect <amount>
+
+  SETUP QUESTIONS
+  <line> depends on <setup fact>. Which applies?
+
+  GROSS MARGIN
+  Before <n>%  After <n>%  (revenue <amount>, COGS <amount>)
+
+  WASTE CHECK
+  <expired / lost / written-down stock found: yes / no / not given>  <stock counted on a schedule: yes / no>
+
+  SCORE  <n>/100  (<lines in the right place> of <lines with a known bucket>)
+  CHECKS NOT RUN
+  MISSING: <what>
+  Review with your accountant before changing your books.
+
+tweaks:
+  - what: Sales model
+    how: Say if you hold stock, dropship, use a 3PL or sell with Amazon FBA. Outbound freight and some fees are placed differently in each.
+  - what: Shipping charged or built in
+    how: Say if shipping is charged or free. Free shipping built into the price can change where outbound freight goes.
+  - what: The view you want
+    how: Pick accounting for your books, or contribution margin if you run the store by margin per order.
+  - what: Current bucket for each line
+    how: Add where each line sits now. Without it the skill can sort but not score.
+
+judge:
+  - Every line has a bucket and the rule that put it there.
+  - Mixed invoices, such as boxes, are split and not forced into one bucket.
+  - Freight in and freight out are never in the same bucket.
+  - The lines that depend on your setup are asked about, not guessed.
+  - Margin before and after can be redone from the amounts.
+
+test:
+  - Include one invoice with both retail boxes and shipping cartons and check that it splits them.
+  - Put freight in and freight out on the list and confirm they land in different buckets.
+  - Say you dropship and check it asks about the supplier's outbound fee.
+  - Run it twice on the same lines. The placement should match.
+
+improve:
+  - Add your accountant's rulings to the skill file, such as how they treat return repacking.
+  - Add your supplier names so repeat invoices are sorted the same way each time.
+  - Save the final bucket list to your brand file so every month uses one list.
+  - Pair it with the landed cost allocator to spread freight and duty across your products.
+
+works_best_with:
+  tools:
+    - {name: "Your accounting tool", why: "Source of the cost lines. Xero, QuickBooks and similar tools export a profit and loss to paste."}
+    - {name: "Any good chat AI", why: "Any current chat AI can sort pasted lines and ask the setup questions."}
+  inputs:
+    - "Your supplier invoices for the last stock order"
+    - "Your inbound freight and duty invoices"
+    - "Your stock count dates and any write-offs"
+
+terms:
+  - term: COGS
+    meaning: Cost of goods sold. What it cost to get the product ready to sell.
+  - term: Freight in
+    meaning: The cost of getting stock to your warehouse. It goes in COGS.
+  - term: Contribution margin
+    meaning: Revenue minus product cost and the costs of fulfilling the order.

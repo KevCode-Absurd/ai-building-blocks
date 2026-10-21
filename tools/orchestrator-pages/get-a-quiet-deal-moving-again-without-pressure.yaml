@@ -1,0 +1,71 @@
+new_slug: get-a-quiet-deal-moving-again-without-pressure
+name: Get a quiet deal moving again without pressure
+summary: Give it notes on a stalled deal. Get the cause, a firm recommendation, easy-yes questions and calm replies.
+job: sell-and-negotiate
+thinking: medium
+thinking_why: Three skills in a row on text. A mid-size model is fine. Use your strongest one if the deal is large.
+headline: Find out why a deal went quiet and what to say next
+subhead: Give it your notes on a buyer who keeps asking for more time or more information. It tells you whether they doubt you or fear a mistake, writes a firm recommendation with safety nets, builds a ladder of easy questions to the decision, and writes calm lines for pushback.
+explain: |
+  A quiet deal usually does not mean no. The buyer is often afraid to choose, or keeps researching because there is always more to learn. Sending another demo or a deadline makes it worse. They feel pushed and go quiet again.
+
+  The steps start by reading your notes for the sign and cause of the stall, then write what you would choose in their place and the safety nets that remove each fear. Next they turn that into four to seven short questions, each with an honest yes, that end at the decision. Last they write short true lines for the moments the buyer pushes back or says you are wrong. Nothing in it adds a fake deadline or an expiring discount.
+when:
+  - A buyer keeps asking for more information, another demo or more time.
+  - A deal went quiet after a good meeting and you do not know why.
+  - You want to follow up without pushing or inventing urgency.
+you_give:
+  - Your notes on the deal, what was said, asked for and left unanswered
+  - What you offered and at what price (optional but helpful)
+  - What you want the buyer to decide, and by when it is real
+  - Doubts or objections the buyer has said out loud (optional)
+you_get:
+  - The cause of the stall, how deep it runs and whether to count the deal in a forecast
+  - A personal recommendation, a stop to extra exploring and a safety net for each fear
+  - Four to seven short questions, each with an honest yes, ending at your ask
+  - Short, true lines for each moment the talk could turn
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the buyer's own words from emails and calls, not your summary of them.
+  - Say if a deadline is real. If it is not, the steps leave urgency out.
+how_it_works:
+  - title: Name the cause of the stall
+    text: Reads your notes for repeated requests, vague worries and delays, sorts the cause, rates how deep it goes and writes a firm recommendation with a safety net for each fear.
+  - title: Build the ladder of easy questions
+    text: Starts from what you and the buyer already agree on and writes short questions, each with an honest yes, that end at the decision. It plans a move for each no.
+  - title: Write calm lines for pushback
+    text: Writes a welcome, a listening line and a line that agrees where the buyer is right. It holds your view gently and buys time when needed.
+output_shape: |-
+  STEP 1: WHY IT STALLED
+    Signs | cause | depth | recommendation | what to stop offering | safety nets
+
+  STEP 2: THE QUESTIONS
+    End point | shared ground | four to seven questions with a move for each no | stopping line
+
+  STEP 3: THE REPLIES
+    Moments | welcome | listening line | agree line | own your part | hold your view | buy-time line
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Written or spoken
+    how: Say if you will use the questions on a call or in an email, so they fit the way you will ask.
+  - what: Your offer
+    how: Paste it with its price. The safety nets then use what you can really give, such as a trial or a refund.
+  - what: Your mistakes
+    how: List anything the buyer may bring up against you. Step 3 writes a line that owns it first.
+judge:
+  - The cause is named with evidence from your notes, not a guess.
+  - Every safety net answers one named fear and is something you can deliver.
+  - Each question can be answered yes honestly, and the last one is your ask.
+  - No line adds a fake deadline, a made-up discount or a hint of a threat.
+  - You could say each reply to the buyer's face.
+test:
+  - Check each quoted sign against the original email or call note.
+  - Ask a colleague to answer the questions as the buyer. Where they say no, the rung is too steep.
+  - Read the replies aloud. Cut any that sound like a script.
+improve:
+  - Save the questions that got a yes. Reuse them on the next stalled deal.
+  - Note which fear came up most across your stalled deals, and fix it in your offer.
+  - If the deal still does not move, ask the buyer what would have to be true to say no.

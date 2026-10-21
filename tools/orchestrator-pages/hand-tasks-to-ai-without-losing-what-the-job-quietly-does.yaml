@@ -1,0 +1,79 @@
+new_slug: hand-tasks-to-ai-without-losing-what-the-job-quietly-does
+name: Give AI tasks and keep what the job quietly does
+summary: Give it a job. Get the tasks AI takes on, what each hides, safe handoffs and a failure check.
+job: set-up-ai
+thinking: high
+thinking_why: Spotting what a task quietly does needs judgment, and the last step hunts for ways the plan fails. Use your strongest model.
+headline: Give AI the right tasks and keep what the job quietly does
+subhead: Give it a job and who does it. It picks the tasks that wear people down, checks what each one does that nobody wrote down, plans the handoffs and tries to break the plan before you start.
+explain: |
+  Teams often hand AI whatever is easiest to automate. Then something goes wrong that nobody saw coming. The weekly report that was tedious was also how the manager spotted a problem. The email check was slow, but it was the only time anyone read the claims.
+
+  The steps start with the people. First it splits the job into tasks and marks the ones that drain, tire or put people at risk. Then it asks of each task AI would take: what else does this do, who gains, and what breaks without it? Next it writes a card for each handoff so no fact is lost on the way. Last it works backward from what would make the plan fail and lists a change for each gap.
+when:
+  - You want AI to take work off a role, such as support, reporting or admin.
+  - You are about to automate a task and have a feeling it does more than it seems.
+  - You are setting up several AI steps and want to know where a fact could get lost.
+you_give:
+  - The job, who does it and a typical week
+  - Which tasks people dislike or find tiring
+  - What AI tools you can use (optional)
+  - Anything the job must never get wrong (optional)
+you_get:
+  - A task list with the ones AI takes, the ones it assists and the ones that stay with people
+  - For each task AI takes, what it quietly does and a call to cut, keep or replace it
+  - A card for each handoff with what the step needs, returns and must never lose
+  - A list of ways the plan could fail, with a change for each
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the job and a normal week. Ask two or three of the people who do it which tasks they dislike.
+  - Read the hidden-value step before you automate anything. Keep or replace whatever it flags.
+  - Run one small task first, and check the failure list before you add more.
+how_it_works:
+  - title: Break the job into tasks
+    text: Splits a normal week into tasks, marks the ones that drain, tire or endanger people, and picks what AI takes, what it assists and what stays with people.
+  - title: Check what each task quietly does
+    text: Names each task's stated job, lists what it does unseen, asks who gains and what breaks without it, and calls it cut, keep or replace.
+  - title: Plan the handoffs
+    text: Writes a card for each step with what it needs, returns and must never lose, locks key facts so they travel whole, and sets rules for retries and limits.
+  - title: Try to break the plan
+    text: Lists what would guarantee failure, checks the plan against each one, puts anything that could end it first and writes a change for each gap.
+output_shape: |-
+  STEP 1: TASKS
+    Task list | drain, tire or risk marks | AI takes, AI assists, stays with people | person in charge
+
+  STEP 2: HIDDEN VALUE
+    Each task's unseen effects | who gains | what breaks | cut, keep or replace
+
+  STEP 3: HANDOFFS
+    A card per step | facts that must travel whole | retry and limit rules
+
+  STEP 4: FAILURE CHECK
+    Ways it fails | covered or exposed | changes
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How risky a mistake is
+    how: If an error could hurt a customer or break a rule, say so. Step 1 then keeps a person in charge of more of the work.
+  - what: How many people do the job
+    how: A one-person job needs fewer handoffs. A team job needs a named owner for each card.
+  - what: Tools you already use
+    how: Name them. The handoff cards then say which tool does which step.
+  - what: How long the job has been done this way
+    how: A job done for years is more likely to hide value. Step 2 looks harder at it.
+judge:
+  - Every task AI takes on is one where a mistake is cheap to catch.
+  - Each hidden effect names who gains and what is lost without it.
+  - Every decision that matters has a named person in charge.
+  - No fact in a handoff card is shortened so it loses its limit.
+  - The failure list names the plan's own parts, not general risks.
+test:
+  - Ask the people who do the job if the task list matches their week.
+  - Pick one task marked cut. Ask someone who has done it for years what it was for.
+  - Run the first task with a person checking every result for a week.
+improve:
+  - Add each surprise from the trial to the hidden-value list.
+  - Review the plan again after a month and after any change in the tools.
+  - Not worth it for a task nobody depends on. It pays off for work other people rely on.

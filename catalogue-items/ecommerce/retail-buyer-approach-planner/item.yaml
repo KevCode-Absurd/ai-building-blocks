@@ -1,0 +1,20 @@
+slug: retail-buyer-approach-planner
+name: "Retail buyer approach planner"
+summary: "Give it your product and retailer. Get a plan to make the buyer call and keep the shelf."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How Bloom Built the Playbook Every Founder Will Copy in 2026", by: "Greg, co-founder of Bloom, a consumer drinks and supplements brand", used: "Making the buyer come to you through creators they follow, knowing who decides, never missing a purchase order, judging by recent results, and proving one retailer first"}

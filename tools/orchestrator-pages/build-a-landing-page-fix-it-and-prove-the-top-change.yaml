@@ -1,0 +1,83 @@
+new_slug: build-a-landing-page-fix-it-and-prove-the-top-change
+name: Build a landing page, fix it, prove the top change
+summary: Give it your offer and buyer. Get a page, a review, a test design and a ship or stop call.
+job: audit-landing-page
+thinking: high
+thinking_why: The test design and the result sums must be exact. Use your strongest model.
+headline: Build a page that sells, then prove the next change helps
+subhead: Give it your offer and buyer. It plans and writes the page, reviews it, designs a fair test of the top fix and reads your results into a ship, wait or stop call.
+explain: |
+  A new page is a set of guesses. You change the headline, sales go up, and you cannot say if the change did it or the week did. After a few such guesses you cannot trust any of them.
+
+  The steps build, review, then prove. The first step plans the page from headline to final call and writes the copy. The second reviews it at a glance, skimmed and with doubt, and ranks fixes. The first pause asks you to fix quick wins, publish, pick the one top change, and note your recent visits and conversions. The third step writes a hypothesis, the numbers to watch, the sample size and the run time. The second pause asks you to run the test without stopping early and export the counts. The last step checks the split, works out each rate with its range and gives a call. If you get under a few hundred visits a week, the test may take too long to be worth running.
+when:
+  - You are about to launch a page and want it right.
+  - You have a list of page fixes and no way to tell which ones work.
+  - You get enough visits to test (a few hundred a week or more).
+you_give:
+  - Your offer, price and buyer
+  - What counts as success on the page (a sale, a signup or a call)
+  - Your brand file (optional)
+  - Visits and conversions for the last few weeks, at the first pause
+  - The counts for each version, at the second pause
+you_get:
+  - A page plan with copy, layout rules and one clear button
+  - A ranked list of fixes with a score
+  - A test design with the claim, the numbers to watch, the sample size and the run time
+  - A ship, wait or stop call with the numbers behind it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - At the first pause, publish the page and pick one change to prove.
+  - At the second pause, let the test run its full time before you export the counts.
+how_it_works:
+  - title: Plan and write the page
+    text: Takes your offer, buyer and goal, sets the page order from headline to final call and writes the copy section by section.
+  - title: Review the page
+    text: Reads it at a glance, skimmed and with doubt, checks the phone view and ranks each fix by how much it hurts.
+  - title: Publish and pick one change (your step)
+    text: You fix the quick wins, publish and choose the one change to prove. You also note your recent visits and conversions.
+  - title: Design the test
+    text: Writes the hypothesis, picks the main, side and guard numbers, and works out sample size and run time.
+  - title: Run the test (your step)
+    text: You run it as planned and export the counts for the control and the new version.
+  - title: Read the result and make the call
+    text: Checks the setup and the visitor split, works out each rate with its range and gives a ship, wait or stop call.
+output_shape: |-
+  STEP 1: PAGE PLAN
+    Page order | copy by section | design rules | button
+
+  STEP 2: PAGE REVIEW
+    Page job | glance, skim and doubt notes | ranked fixes | score
+
+  STEP 3: TEST DESIGN
+    Hypothesis | main, side and guard numbers | sample size | run time | control and new version
+
+  STEP 4: RESULT
+    Setup check | split check | rates and ranges | side numbers | ship, wait or stop
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Page goal
+    how: Say sale, signup or booking. The review and the main test number follow it.
+  - what: Your traffic
+    how: Give weekly visits. Step 3 sizes the test and warns you if it will take too long.
+  - what: Which change to test
+    how: Name it at the pause, or let step 3 argue for the top fix in the review.
+  - what: Brand file
+    how: Add it so the copy uses your voice and facts.
+judge:
+  - The page has one job and one main button.
+  - The test changes one thing only.
+  - The sample size and run time are set before the test starts.
+  - The split check ran before the result was read.
+  - The call mentions the side numbers, not only the main one.
+test:
+  - Check the quick wins you made are not part of the change you test.
+  - Redo the main rate for each version by hand from your counts.
+  - Ask if you would have made the same call without the numbers.
+improve:
+  - Keep a log of each test, its call and the lift you saw.
+  - Test the next fix from the review, one at a time.
+  - Re-run the review after three wins.

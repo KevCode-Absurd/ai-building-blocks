@@ -1,0 +1,129 @@
+new_slug: customer-wow-budget-planner
+name: "Customer wow budget planner"
+summary: "Give it your weekly cash and support cases. Get a wow budget and delight-versus-fix rules."
+job: keep-customers
+thinking: low
+thinking_why: "It sorts moments into fix or delight and writes short rules, so a small fast model is enough if you describe the moments clearly."
+
+headline: "Customer wow budget planner"
+subhead: Tell it your average order, your weekly support cases and who on your team can decide. It sorts each customer moment into fix the effort or add delight, sets a weekly wow budget, writes five to eight trigger rules and a script for the surprise note or call.
+
+explain: |
+  When a customer has a problem, a gift does not repair it. Studies of tens of thousands of service contacts found that loyalty stops rising once expectations are met, and that a hard fix makes customers leave about four times more often than an easy one makes them stay. Delight belongs in the good moments, not in the broken ones.
+
+  This skill sorts each moment first. Late, broken, wrong item, billing and returns get fast, low-effort fixes. A loyal buyer, a life event or a quiet week gets a small, specific surprise. It then sets a fixed weekly amount your support team can spend without asking, with trigger rules like a damaged item, an angry customer who reached the founder, or a high-value buyer in your CRM. Many numbers come from vendors or one brand's story, so it labels them. The dollar ranges it suggests are starting points, not source figures.
+
+when:
+  - Support has to ask before sending a replacement or a small gift.
+  - You are about to send a freebie to someone with a late or broken order.
+  - You want to reward top buyers without a discount.
+
+you_give:
+  - Your average order value and cost of goods
+  - How many support cases you get a week, and who can decide
+  - The customer moment you plan for, and what you do now
+  - Support numbers such as time to resolve, contacts per issue and first-contact resolution (optional)
+  - Your top customers by lifetime value (optional)
+you_get:
+  - A verdict for each moment, either remove effort or delight
+  - A weekly wow budget and who controls it
+  - Five to eight trigger rules with a gift for each
+  - A script for the surprise note or call, and a tracking sheet
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List the customer moments you want to handle, such as late parcel, damaged item, repeat buyer or birthday.
+  - Give your average order, cost of goods and weekly support volume, and name the person who can decide without approval.
+  - Fix the problem moments first. Then pilot the wow budget for a month.
+  - Track effort and word of mouth, and refresh the surprises each year.
+
+how_it_works:
+  - title: Sorts the moment
+    text: Routine problems get a quick fix. Good or neutral moments get delight.
+  - title: Checks effort first
+    text: No gift to make up for a wait. Fix high-effort steps before any surprise.
+  - title: Cuts perceived effort
+    text: The customer should not explain twice, switch channels or be passed around. Aim for first-contact resolution.
+  - title: Sets the wow budget
+    text: A fixed weekly amount support can spend without asking, with a suggested start for you to adjust.
+  - title: Writes trigger rules
+    text: A damaged or crushed item, an angry customer, a high-value customer in your CRM, plus a gift for each.
+  - title: Picks small and specific
+    text: A gesture that fits the person beats a big generic one.
+  - title: Costs each idea
+    text: Each has a cost per order and an expected effect on repeat rate, or it is dropped.
+  - title: Sets the tracking
+    text: Effort, first-contact resolution and resolution time for problems; repeat rate, lifetime value and word-of-mouth share for delight.
+
+output_shape: |
+  FIT CHECK  strong margin: <yes | no>  a person who can decide without approval: <name | none>
+
+  MOMENT VERDICTS
+    <moment> -> <remove effort | delight> | because <reason> | action: <...>
+
+  WOW BUDGET  <$> per week, controlled by <role>   (suggested start, not from a source)
+    per incident cap: <$>
+
+  TRIGGER RULES
+    <trigger> -> <gift or action> | cost <$> | expected effect: <...>
+    (five to eight rules)
+
+  SURPRISE NOTE / CALL SCRIPT   <short text>
+
+  TRACKING SHEET
+    problems: effort score, first-contact resolution, time to resolve
+    delight: repeat rate, lifetime value, NPS, word-of-mouth share in the post-purchase survey
+  REFRESH   <date to review the surprises>
+  CHECKS MISSED: <none | list>
+  MISSING: <what was needed>
+
+tweaks:
+  - what: Your gross margin
+    how: The wow budget needs a margin that can take free items. Give your cost of goods so the gift is costed at what it costs you, not at its price.
+  - what: Who decides
+    how: Name the person or role who can spend without approval. The idea only works with someone who is trusted to act.
+  - what: Your top customers
+    how: Add a list of high lifetime value customers. The skill will use them for the second trigger.
+  - what: Case volume
+    how: More cases a week means a larger pool and a lower cap per case. Give a real weekly count.
+
+judge:
+  - Every problem moment gets an effort fix first and no gift to cover the wait.
+  - The wow budget is a fixed weekly amount with a named owner and a per-incident cap.
+  - Dollar figures are labelled as suggestions, not as numbers from a source.
+  - Each trigger has a gift, a cost and an expected effect on repeat rate.
+  - No gift is linked to a review, a rating or a post.
+
+test:
+  - Give it a late parcel and a loyal buyer's birthday. It should say fix the delay and delight the birthday.
+  - Run it twice on the same moments. The verdicts should match.
+  - Pilot the budget for four weeks with a log of each gift, its cost and what happened next.
+  - After 90 days, compare repeat rate for people who got a surprise with similar people who did not.
+
+improve:
+  - Add your real weekly cap and your gift list with costs to the skill file.
+  - Add your brand voice and a sample surprise note.
+  - Add your own rule on what support may never offer.
+  - Save the trigger rules to your brand file and review them each year.
+  - Pair it with the after-purchase experience planner, which covers the full build order this skill leaves out.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can sort moments and write rules. Describe your moments and numbers."}
+    - {name: "Gorgias", why: "A helpdesk that can tag cases and let you log each wow gift against a customer."}
+    - {name: "Shopify", why: "Shows a customer's order history and lifetime value, so a high-value buyer is easy to spot."}
+  inputs:
+    - "Your help desk tags for the types of problems you see"
+    - "A list of high lifetime value customers"
+    - "Your cost for each gift you might send"
+    - "Your post-purchase survey, with a word-of-mouth question"
+
+terms:
+  - term: Wow budget
+    meaning: A fixed amount per week that support can spend on a surprise or a fix without asking.
+  - term: Perceived effort
+    meaning: How hard a customer feels it was to get a problem solved.
+  - term: First-contact resolution
+    meaning: Solving the problem in the first conversation.
+  - term: Delight decay
+    meaning: What once surprised people becomes expected over time.

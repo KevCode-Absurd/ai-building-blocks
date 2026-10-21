@@ -1,0 +1,22 @@
+slug: plan-ad-tests-run-them-and-keep-what-they-teach
+name: "Plan ad tests, run them and keep what they teach"
+summary: "Give it your past ads. Get five untried ideas, a test campaign layout, and after the run, what the results taught."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: ad_copy, required: false}
+outputs:
+  - {type: lessons_register}
+uses: [untried-ad-idea-finder, meta-test-campaign-planner, winners-and-losers-ad-comparer]
+steps:
+  - {uses: untried-ad-idea-finder, note: "Starts the chain: reads your past ads and finds five ideas nobody has tested."}
+  - {uses: meta-test-campaign-planner, note: "Takes the five ideas from the step before and sets how many ads go in each pack and when to scale."}
+  - {uses: winners-and-losers-ad-comparer, note: "Reads the test results against the ideas and plan, and records what they teach."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-ad-tests-run-them-and-keep-what-they-teach/skeleton.yaml

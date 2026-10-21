@@ -1,0 +1,21 @@
+slug: founder-ad-script-builder
+name: "Founder ad script builder"
+summary: "Give it your founder story and proof. Get a claim-first script, 2 to 4 hooks and narrator-swap versions."
+category: ecommerce
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+  - {type: angle_library, required: false}
+outputs:
+  - {type: script}
+  - {type: hooks}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to create founder ads that scale", by: "Agency lead (name not given in the video)", used: "The claim, proof, mechanism, proof, call to action order; narrator roles; the involvement ladder; telling the story for the viewer"}

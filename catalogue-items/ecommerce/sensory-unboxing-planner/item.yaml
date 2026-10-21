@@ -1,0 +1,19 @@
+slug: sensory-unboxing-planner
+name: "Sensory unboxing planner"
+summary: "Describe your product and pack. Get matched sense cues with costs and an unboxing script."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Buyology", by: "Martin Lindstrom (book)", used: "Matched sight and smell, weight as a sign of quality, an annoying sound harming a brand, and unboxing videos as shared pleasure"}

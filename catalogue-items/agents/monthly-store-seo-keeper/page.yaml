@@ -1,0 +1,100 @@
+new_slug: monthly-store-seo-keeper
+name: Monthly store SEO keeper
+summary: Give it your monthly Search Console numbers. Get a search report, the pages to push and a short fix list to approve.
+job: get-found-in-search
+thinking: high
+thinking_why: It runs up to six skills, compares months, picks its own path and fits the work to your hours. Give it your strongest model.
+headline: Monthly store SEO keeper
+subhead: Give it your Search Console export each month. It checks whether search is earning customers, looks into a sharp drop before anything else, picks the pages worth pushing, checks whether last month's changes worked, and hands back a fix list that fits your hours.
+explain: |
+  Store SEO is slow, and most owners do it in bursts. They change titles, wait a week, see nothing, and forget what they changed. Branded searches make the numbers look better than they are, and a real drop can hide for weeks.
+
+  This agent does the same monthly cycle every time. It takes branded searches out, compares non-branded clicks with the last period, and checks the changes you made earlier. If clicks fell sharply with no clear reason, it investigates the cause before it suggests anything new. If not, it picks up to five pages worth pushing and writes copy for the product pages that need it. It keeps its list to the hours you have, and it never changes your store without your yes.
+when:
+  - Your store already gets some search traffic and you want one steady monthly routine.
+  - You change titles and pages but never find out if it worked.
+  - Clicks dropped and you want the cause before you touch anything.
+you_give:
+  - Search Console queries and pages for the last 3 months and the 3 months before
+  - GA4 organic sessions and orders, if you have them
+  - Your store name and spellings, and the hours you can spend each month, the first time
+  - A note of what you changed on the site last month (optional)
+  - A crawl or indexing report, product facts and theme files (optional)
+you_get:
+  - Non-branded clicks against the last period, with a score and the sums
+  - A verdict on each change from last month, as worked, no effect, worse or too early
+  - A drop investigation, or up to five pages to push
+  - A change list to approve that fits your hours
+  - The numbers to watch next month
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Put the exports in one folder, or attach them in the chat.
+  - The first time, give it your store name and monthly hours. It saves the plan and the first baseline.
+  - Read the change list. Make the changes you agree with, or say yes to each and let it make only those if it is connected.
+  - Run it again next month. It reads last month's files and checks what your changes did.
+how_it_works:
+  - title: Get the plan
+    text: Builds the monthly cycle and sizes it to your hours once, then reuses it.
+  - title: Measure search
+    text: Takes branded searches out and compares non-branded clicks with the last period.
+  - title: Check last month's changes
+    text: Looks at each page you changed four or more weeks ago and marks it worked, no effect or worse. Newer changes are marked too early.
+  - title: Choose the path
+    text: If clicks fell sharply with no logged cause, it runs the drop fix first and holds back new pushes. Otherwise it goes on to the quick wins.
+  - title: Pick the pages to push
+    text: Finds pages close to a better position or with views but few clicks, and keeps at most five.
+  - title: Fix the basics and write copy
+    text: Ranks crawl fixes if you gave a report, and writes copy for up to three product pages that need it.
+  - title: Fit the hours and hand back
+    text: Moves the lowest items to next month if the work is over your hours, then stops for your yes.
+output_shape: |-
+  SEARCH THIS MONTH
+    Non-branded clicks <n> vs <n> last period (<change>) | score <n>/100 | sums shown
+
+  LAST MONTH'S CHANGES
+    <page> | changed <date> | <worked | no effect | worse | too early> | clicks <n> to <n> | position <x> to <x>
+
+  PATH TAKEN
+    <drop fix | page push>: <why>
+
+  CHANGES TO APPROVE (most important first)
+    1. <change> | where: <page or setting> | from: <step> | why: <reason> | hours: <n>
+
+  NEXT MONTH
+    Moved out: <items> | Watch: <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Three full months of data
+    how: The comparison needs a recent 3 months and the 3 before. With less, it cannot tell a real change from normal ups and downs.
+  - what: Your brand spellings
+    how: Include misspellings and short names. Missed brand terms make search look better than it is.
+  - what: Your change log
+    how: Write down every site change with its date. It lets the agent explain a drop and judge your changes fairly.
+  - what: Your monthly hours
+    how: Be honest. The agent cuts the list to fit, so a high number gives a list you will not finish.
+judge:
+  - Branded searches were taken out before any comparison.
+  - Changes under four weeks old were not judged.
+  - The proposed work fits your monthly hours.
+  - A sharp unexplained drop was looked into before any page push.
+  - Nothing on your store was changed without your clear yes.
+test:
+  - Run it on a past month where you know a change went live. See whether it gives that change the right verdict.
+  - Run it twice on the same exports. The change list should match, apart from wording.
+  - Check one pushed page yourself in Search Console. The position and clicks it quotes should match.
+improve:
+  - Set your own size of drop that counts as sharp, to suit how much your traffic moves month to month.
+  - Add the pages you never change, such as legal pages, so they stay off the push list.
+  - If your store has under about 1,000 search clicks a month, ask it to compare quarters instead of months.
+  - Keep a note of each approved change in the keeper folder so next month's verdicts are exact.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the keeper folder, read last month's files and run every step on a schedule.
+    - name: Google Search Console
+      why: Export queries and pages for the last 6 months, with clicks, impressions and position.
+  inputs:
+    - GA4 organic sessions and orders by month
+    - A crawl report from the last 30 days

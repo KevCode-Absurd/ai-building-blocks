@@ -1,0 +1,78 @@
+new_slug: publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote
+name: Publish comparison and best-of pages that shoppers and AI quote
+summary: Give it your rivals and product facts. Get a comparison page plan and a fair best-of page that answers first.
+job: get-found-in-search
+thinking: high
+thinking_why: It runs three skills in a row and the fairness checks need care. Give it your strongest model.
+headline: Get on the comparison pages shoppers and AI assistants read
+subhead: Give it your rivals and the real facts about your products. It plans which versus, alternatives and best-of pages to build, writes the first best-of page fairly with sources, and rewrites it so each section opens with the answer an AI assistant can quote.
+explain: |
+  Shoppers search "best X for Y" and "A vs B" before they buy, and AI assistants answer those questions by quoting pages. If your store is not on those pages, rivals and review sites tell the story for you. Stores that do write them often write a sales page in disguise, which readers and search engines both distrust.
+
+  The steps build pages you can stand behind. First it lists the page types worth building for each rival, checks which searches are open, and sets a build order sized to your team. It pauses and asks you to pick the first page and gather real prices and specs for you and each rival. Then it writes that page with the same block for every item, honest pros and cons, and a table. Last it rewrites each section so the answer comes first and can be quoted on its own.
+when:
+  - Shoppers compare you with rivals before they buy, and you are not on the pages they read.
+  - You want AI assistants to name your product when someone asks for the best option.
+  - You have written a best-of page that reads like an ad and want it to be fair and useful.
+you_give:
+  - Your category and the five to ten rivals you want to cover
+  - Your product facts, including prices and specs
+  - The real prices and specs of each rival, which it asks you to collect halfway through
+  - Your brand file (optional)
+  - Search results or sales results by page (optional)
+you_get:
+  - A page table by rival and type with the search, what the shopper wants and whether the search is open
+  - A build order in batches, with fairness rules for every page and a legal check note
+  - A best-of page brief and draft with the same block for each item, a comparison table and a proof checklist
+  - A list of claims held back because they had no support
+  - The page rewritten answer first, with a short summary, a FAQ and a list of facts that still need a source
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Name your category and your rivals. Add your brand file if you have one.
+  - When it pauses, pick the first page from the plan and collect the real price and specs for you and each rival. Note the date you checked them.
+  - Before you publish, fill in the proof checklist and cut any claim you cannot back.
+how_it_works:
+  - title: Plan the page set
+    text: Comparison page set planner lists the five page types for each rival (best-of, review, alternatives, rival versus rival and you versus rival). It checks which searches are open, sets fairness rules and a legal check, and orders the pages in batches.
+  - title: Write the best-of page
+    text: Best-of page writer checks the page type against what ranks, then writes a brief and a draft. Every item gets the same block with real pros and cons. It holds back any claim that you tested something without notes to show for it.
+  - title: Rewrite answer first
+    text: Answer-first page rewriter opens each section with the answer in a short capsule that makes sense alone. It adds a summary, FAQ and table, and lists the facts that still need a number or a source.
+output_shape: |-
+  STEP 1: PAGE PLAN
+    Page table by rival, type and search | build order | fairness rules | legal check | next batch trigger
+
+  STEP 2: BEST-OF PAGE
+    Page type check | brief | draft with table and item blocks | proof checklist | claims held back | refresh plan
+
+  STEP 3: ANSWER-FIRST REWRITE
+    Answer and summary at the top | section answers | table | FAQ | labelled idea | facts that still need a source
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Which rivals you include
+    how: Choose rivals shoppers really compare you with. A page about two other brands with no role for your store is skipped.
+  - what: How fair you are willing to be
+    how: Say where a rival beats you. The pages show it, and your store ranks first only where it fits best.
+  - what: The facts you collect at the pause
+    how: Use prices and specs from rival sites with the date checked. Facts it cannot verify are marked as missing.
+  - what: Your team's time
+    how: Batch one is sized to the time you have. Tell it how many pages you can write a month.
+judge:
+  - Every row in the plan names its search and what the shopper wants.
+  - Every item on the page has the same block, with at least one real con.
+  - Every rival fact comes from the facts you supplied and carries a checked date.
+  - No claim that you tested or used something stays in without notes to back it.
+  - Each section opens with a plain answer that makes sense when quoted alone.
+test:
+  - Search your target phrase and check that the page type matches what already ranks.
+  - Send the draft to a friend who has not seen your product and ask if the ranking feels fair.
+  - Check every rival price and spec against the rival's own page on the day you publish.
+  - Ask an AI assistant your target question after the page has been live a few weeks and see whether it names you.
+improve:
+  - Add a note to the page writer on how you test products, such as your standard test steps, so more claims can stay.
+  - Keep the rival facts sheet in your brand file and re-check it each quarter.
+  - Add a rule to the planner about which rivals you never name, if your lawyer advises it.
+  - Log each page's search clicks and use them to pick the next batch.

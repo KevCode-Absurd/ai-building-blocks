@@ -1,0 +1,55 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: make-visitors-who-hesitate-at-the-price-say-yes
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: make-visitors-who-hesitate-at-the-price-say-yes
+  name: "Make visitors who hesitate at the price say yes"
+  summary: "Give it your offer and what buyers say about price. Get a value case, a guarantee, honest urgency and a closing line."
+  when: "people reach your product but leave at the price, and cutting the price would eat your margin."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: "Value equation scorer"
+    skill: value-equation-scorer
+    job: analysis
+    from: "library"
+    method: ["Brand brain", "When they say go ahead,", "Score the likelihood (1 to 10)", "Find the weakest part", "Check it"]
+    inputs: [offer, persona!, voc_reviews!]
+    outputs: [audit_report]
+    note: "Scores the offer on what the buyer gets against what it asks of them, and finds the weak part."
+  - name: "Price against value checker"
+    skill: price-against-value-checker
+    job: analysis
+    from: "library"
+    method: ["Look first", "List what you get", "Set the walk-away price", "Count the friction", "Check it"]
+    inputs: [audit_report, question!]
+    outputs: [plan]
+    note: "Compares the price with that value score and says whether to change the price or the story."
+  - name: "Guarantee designer"
+    skill: guarantee-designer
+    job: strategy
+    from: "library"
+    method: ["Look first", "Name the fears", "Write it with teeth", "Consider stacking", "Check it"]
+    inputs: [offer, plan!, performance_sheet!]
+    outputs: [offer, plan]
+    note: "Designs a guarantee aimed at the weak part the checks found."
+  - name: "Honest scarcity and urgency planner"
+    skill: honest-urgency-planner
+    job: strategy
+    from: "library"
+    method: ["Brand brain", "If something is missing, advise, don't block", "Set the number under demand", "Write the lines", "Check it"]
+    inputs: [offer, performance_sheet!]
+    outputs: [plan]
+    note: "Plans a true reason to act now that fits the offer and the guarantee."
+  - name: "Call-to-action writer"
+    skill: call-to-action-writer
+    job: copy
+    from: "library"
+    method: ["Your offer", "When they say go ahead,", "List the barriers", "Write version A", "Check it"]
+    inputs: [copy_draft, offer!]
+    outputs: [ad_copy]
+    note: "Writes the closing line that states the offer, the guarantee and the deadline together."

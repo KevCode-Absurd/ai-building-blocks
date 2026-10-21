@@ -1,0 +1,123 @@
+new_slug: offer-test-planner
+name: "Offer test planner"
+summary: "Give it your offers and buyer types. Get separate funnel tests, tags to track and a read-out rule."
+job: make-offer
+thinking: medium
+thinking_why: "It plans tests and sets rules from your numbers, which a mid-size model does well. Use a stronger one for a store with many products."
+
+headline: "Offer test planner"
+subhead: Give it your current offer, what buyers say and your weekly traffic. It plans two to four offer tests, each on its own page, with the question to ask, the tag to store, a table to fill in and a rule for when to move ad spend.
+
+explain: |
+  Most stores test one thing: the discount. They try 10 percent, then 20 percent, and learn very little. The bigger lever is the offer itself, and who it is for. The same product sold for two different reasons can convert and repeat very differently.
+
+  This skill plans the tests so each result stays clean. Every offer goes on its own page. A one-question pop-up sorts visitors into buyer types and stores the answer as a tag. You get a table to fill in with front-end conversion, opt-in and 90-day repeat, and a rule for when to move ad spend. It also warns you when a test is too small to trust, and it does not call a winner on first-order conversion alone, because repeat buying shows up months later.
+
+when:
+  - You run one offer all year and want to find out whether a different one sells better.
+  - Your growth is stuck and you suspect the first offer is the limit, not your ads.
+  - You have a few buyer types and want to know which one deserves more of your ad spend.
+
+you_give:
+  - Your current offer and the page it lives on
+  - What buyers say, from reviews, surveys or support (optional)
+  - Visits per week to the page you want to test
+  - Tools you have, such as a pop-up tool, a post-purchase survey or a subscription app
+  - Who builds your pages
+
+you_get:
+  - Two to four offer or buyer-type tests, each on its own page
+  - The pop-up or survey question to ask and the tag to store the answer
+  - A table to fill in per test, plus a rule for moving ad spend
+  - A survey to send 90 to 120 days later, and a list of checks it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your current offer, your weekly visits and a few lines of buyer language.
+  - Say who builds your pages and how many pages that person can make this month.
+  - Build the pages, add the tag question, and run all tests at the same time.
+  - Fill in the table each week. Come back at 90 to 120 days with the survey answers.
+
+how_it_works:
+  - title: Finds the real limit
+    text: It checks whether growth is capped by new buyers coming in, and works the churn sum if you sell subscriptions.
+  - title: Picks the tests
+    text: It builds two to four funnels by use case or buyer type, not just by discount depth.
+  - title: Sorts buyers by tag
+    text: It writes a one-question pop-up and the tag to store, so you can compare conversion by buyer type after a week.
+  - title: Gives each offer a page
+    text: Every offer gets its own page so results never mix. New and returning buyers get separate offers.
+  - title: Sets a control
+    text: One offer stays live as the control while the others run on side pages.
+  - title: Checks the size
+    text: It flags any test with too few visits and marks the result as direction only.
+  - title: Writes the read-out rule
+    text: It gives a table to fill in, a rule for moving ad spend and a survey for day 90 to 120.
+
+output_shape: |
+  OFFER TEST PLAN  <store>  <date>
+  Growth limit: <where growth is capped, with the sum if used>
+  CONTROL: <current offer> on <page>
+
+  TEST <n>: <name>
+    For: <use case or buyer type>
+    Offer: <what the buyer gets>
+    Page: <its own page and title>
+    Ask: <one pop-up or survey question>  Tag: <tag>
+    Visits needed: <per week>  Read as: <result | direction only>
+
+  TABLE (fill in weekly)
+  <test> | <visits> | <orders> | <first-order conversion> | <opt-in> | <profit per session> | <90-day repeat>
+
+  SPEND RULE: <when to move spend, in steps>
+  SURVEY (day 90 to 120): <the question>
+  CHECKS MISSED: <list, or none>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Weekly visits
+    how: Give your real number. Under about 1,000 visits per test per week, the plan marks results as direction only and cuts the number of tests.
+  - what: Who builds the pages
+    how: A solo founder with no builder gets two tests at a time. A team gets three or four.
+  - what: Buyer language
+    how: Paste real review lines. The tests then split on reasons your buyers already give, not on guesses.
+  - what: Whether you sell subscriptions
+    how: Say yes or no. The churn sum and the opt-in tests only apply if you do.
+
+judge:
+  - Every test sits on its own page with its own title.
+  - One control offer stays live and is named.
+  - The plan says which results are only direction because of low visits.
+  - No winner is named on first-order conversion alone.
+  - The pop-up asks one question, and the tag name is written down.
+
+test:
+  - Give it an offer you already know converts poorly. The plan should still test a different offer, not only a different percentage.
+  - Give it 400 visits a week. It should mark every test as direction only.
+  - Run it twice on the same input. The test names may change, but the rules (own page, control, 90-day check) should not.
+  - Build one test it plans and check that the tag really lands in your email tool.
+
+improve:
+  - Add your pop-up tool's field names to the skill file so the tag it writes matches your setup.
+  - Add your own limit for visits per test, once you know how long a readable test takes on your store.
+  - Save each finished test and result in your brand file so the next plan skips offers that already lost.
+  - Pair it with the Offer profit-per-session checker for the read-out and the Welcome pop-up offer tester for the first test.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It plans the tests and builds the table from the numbers you paste."}
+    - {name: "Klaviyo", why: "Sign-up forms there can store a quiz answer as a profile property and split-test forms."}
+    - {name: "Shopify admin reports", why: "Sessions, orders and conversion by landing page feed the table."}
+  inputs:
+    - "Your last year of sale periods, so tests avoid the weeks that distort results"
+    - "Repeat purchase rate by first product"
+    - "Cancel reasons, if you sell subscriptions"
+    - "A short founder note on who your best customers are"
+
+terms:
+  - term: Control
+    meaning: The offer you leave running unchanged so you have something fair to compare the new offers against.
+  - term: Tag
+    meaning: A label saved on a customer's profile, such as "coach", so you can compare groups later.
+  - term: Churn
+    meaning: Customers who cancel in a given month.

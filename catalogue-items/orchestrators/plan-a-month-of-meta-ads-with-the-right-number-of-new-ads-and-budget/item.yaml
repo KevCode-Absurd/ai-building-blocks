@@ -1,0 +1,25 @@
+slug: plan-a-month-of-meta-ads-with-the-right-number-of-new-ads-and-budget
+name: "Plan a month of Meta ads and the budget"
+summary: "Give it your spend, results, reviews and product facts. Get a monthly ad quota, a budget split and test-ready briefs."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+outputs:
+  - {type: plan}
+uses: [creative-volume-planner, next-dollar-budget-allocator, ad-concept-matrix-builder, creative-brief-writer, meta-test-campaign-planner]
+steps:
+  - {uses: creative-volume-planner, note: "Starts the month by sizing the work: a quota of new ads for your spend and hit rate."}
+  - {uses: next-dollar-budget-allocator, note: "Reads the quota plan and decides where the money for it goes."}
+  - {uses: ad-concept-matrix-builder, note: "Turns your reviews and facts into ranked ad concepts to fill the quota."}
+  - {uses: creative-brief-writer, note: "Writes a brief for each chosen concept, one problem and one angle at a time."}
+  - {uses: meta-test-campaign-planner, note: "Puts the briefs into a test layout that fits the monthly plan."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-a-month-of-meta-ads-with-the-right-number-of-new-ads-and-budget/skeleton.yaml

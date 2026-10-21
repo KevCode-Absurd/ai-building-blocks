@@ -1,0 +1,23 @@
+slug: build-a-vip-program-for-your-best-customers
+name: "Build a VIP program for your best customers"
+summary: "Give it your order history and brand file. Get a best-customer profile, a VIP program and personal touches."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+uses: [best-and-worst-customer-profiler, loyalty-and-vip-program-designer, top-customer-touch-planner]
+steps:
+  - {uses: best-and-worst-customer-profiler, note: "Shows what your best customers have in common."}
+  - {uses: loyalty-and-vip-program-designer, note: "Designs the tiers and perks for the group the profile described."}
+  - {uses: top-customer-touch-planner, note: "Plans the personal touches for the VIPs, using how they responded to the program."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-a-vip-program-for-your-best-customers/skeleton.yaml

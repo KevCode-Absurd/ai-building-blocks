@@ -1,0 +1,55 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: write-an-ad-and-a-landing-page-that-keep-the-same-promise
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: write-an-ad-and-a-landing-page-that-keep-the-same-promise
+  name: "Write an ad and a landing page that keep the same promise"
+  summary: "Give it your product facts and reviews. Get an ad and a matching page that repeat the promise, each checked for truth."
+  when: "paid clicks arrive but buyers bounce because the page does not match the ad that brought them."
+  job: write-ad-copy
+  level: intermediate
+steps:
+  - name: "Pain-point ad builder"
+    skill: pain-point-ad-builder
+    job: ads
+    from: "library"
+    method: ["Check the fix is real", "Do not overdo it", "To answer a rival, use inoculation", "Check price fit", "List policy and truth flags"]
+    inputs: [product_data, voc_reviews!, competitor_set!]
+    outputs: [ad_copy]
+    note: "Writes the ad around the real customer problem found in your reviews."
+  - name: "Five-part ad checker"
+    skill: five-part-ad-checker
+    job: copy
+    from: "library"
+    method: ["Brand brain", "If something is missing, advise, don't block", "Test advantage (20 points)", "Test action (20 points)", "Check it"]
+    inputs: [ad_copy, brief!]
+    outputs: [audit_report]
+    note: "Checks the ad has all five parts and keeps one idea, and fixes weak lines."
+  - name: "Ad-matched landing page writer"
+    skill: ad-matched-landing-page-writer
+    job: page
+    from: "library"
+    method: ["Brand brain", "If something is missing, advise, don't block", "List the doubts", "Offer", "Check it"]
+    inputs: [brand_brain, offer, ad_copy!, voc_reviews!, persona!]
+    outputs: [landing_page]
+    note: "Writes a page that repeats the ad's promise in its first screen, using the checked ad copy."
+  - name: "Store social proof placer"
+    skill: store-social-proof-placer
+    job: page
+    from: "library"
+    method: ["Tie each testimonial to a job", "Prefer short phone video testimonials", "Put proof where visitors are unsure", "Give an honest steer", "List what you dropped"]
+    inputs: [voc_reviews, persona!, landing_page!]
+    outputs: [objection_map]
+    note: "Places reviews on the page where they answer the doubts its copy raises."
+  - name: "Landing page 30-point checker"
+    skill: landing-page-30-point-checker
+    job: page
+    from: "library"
+    method: ["Brand brain", "If something is missing, advise, don't block", "Verdict", "First five fixes", "Can't tell"]
+    inputs: [landing_page, brand_brain!, design_direction!]
+    outputs: [audit_report]
+    note: "Scores the finished page on 30 points before the ad and page go live together."

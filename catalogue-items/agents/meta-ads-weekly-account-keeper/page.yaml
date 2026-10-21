@@ -1,0 +1,109 @@
+new_slug: meta-ads-weekly-account-keeper
+name: Meta Ads weekly account keeper
+summary: Give it your weekly Meta Ads exports. Get a true-return check, a scale-or-hold call and a change list to approve.
+job: launch-and-scale-ads
+thinking: high
+thinking_why: It picks its own path from the numbers, runs up to seven skills and does budget and break-even sums. Give it your strongest model.
+headline: Meta Ads weekly account keeper
+subhead: Give it this week's and last week's Meta exports, your store totals and your margin. It checks the week against break-even, looks into any sharp drop first, tests how far to trust Meta's ROAS, and hands back one change list for you to approve.
+explain: |
+  A Meta Ads account needs the same checks every week. Is the drop real, and which part broke? Is Meta's ROAS telling the truth? Is a test ad really a winner? Is it safe to spend more? Most owners skip weeks, or change many things at once, so Meta restarts learning and nobody can tell what worked.
+
+  This agent runs those checks once a week, in the right order. It works out your break-even numbers once and measures every week against them. If sales fell, it finds the link that broke before it proposes a cut. Every fourth week it compares Meta's ROAS with your own new-customer numbers. It only looks at scaling when nothing is broken and the numbers can be trusted. It never touches your account on its own. You get one short list of changes to approve, and next week it checks whether the last ones worked.
+when:
+  - You run Meta ads for your store and want the weekly checks done the same way every Monday.
+  - Results dropped and you want to know which part broke before you change anything.
+  - Meta says your ROAS is great but your bank balance does not agree.
+  - You want to raise spend, but only when your own numbers say it is safe.
+you_give:
+  - Meta results for this week and last week, at campaign, ad set and ad level, with spend, purchases, purchase value and frequency
+  - Your store totals for the same dates, with new-customer revenue
+  - Your order value, product cost, shipping, fees and margin, the first time
+  - Cash free for ads and stock levels (advised)
+  - What changed this week, such as a sale or a new offer (optional)
+you_get:
+  - This week against last week and against break-even, with the sums
+  - The link that broke, if results fell, and what to check
+  - How far to trust Meta's ROAS, as a score out of 100
+  - One ranked list of changes to approve, each with its size and reason
+  - A raise, hold or cut call on spend, with the numbers behind it
+  - A check on whether last week's changes worked
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's check.
+  - Put this week's and last week's exports in one folder, or attach them in the chat.
+  - The first time, give it your order value and costs. It saves your break-even numbers and reuses them.
+  - Read the change list. Make the changes you agree with in Ads Manager, or say yes to each one and let it make only those if it is connected.
+  - Run it again next Monday. It reads its memory file and checks last week's changes.
+how_it_works:
+  - title: Get the base numbers
+    text: Works out break-even ROAS and cost per sale from your margin once, then reuses them every week.
+  - title: Read last week's notes
+    text: Opens its memory file for the changes you approved and the numbers it said to watch.
+  - title: Compare the two weeks
+    text: Sets this week's spend, sales, ROAS and cost per sale against last week, on seven-day click and on your own new-customer numbers.
+  - title: Choose the path
+    text: If results fell sharply, it runs the drop analysis first. Views and clicks get a delivery check. Buyers per click point to the page, stock or tracking, so it holds off ad cuts.
+  - title: Test Meta's number
+    text: Every fourth week, or sooner if Meta and your store drift apart, it checks how far to trust Meta's ROAS. A low score means no budget raise.
+  - title: Check structure and tests
+    text: Monthly it keeps, merges or cuts campaigns. Any week a creative test ran, it reads the test.
+  - title: Check before scaling
+    text: Only when nothing is broken and trust is not low does it run the scaling plan, and it proposes only the first step.
+  - title: Hand back one list
+    text: Merges the changes, removes repeats, checks last week's changes, saves memory and stops for your yes.
+output_shape: |-
+  THIS WEEK
+    Spend <amount> | Purchases <n> | 7-day click ROAS <x> vs break-even <x> | Cost per sale <amount> vs break-even <amount> | change vs last week | trust <n>/100
+
+  PATH TAKEN
+    <drop analysis | delivery check | routine | scale check>: <why>
+
+  CHANGES TO APPROVE (most important first)
+    1. <change> | where: <campaign or ad set> | size: <amount> | from: <step> | why: <reason>
+
+  SCALE CALL
+    <raise | hold | cut> | blended ROAS <x> | 30-day cash <amount>
+
+  LAST WEEK'S CHANGES
+    <change>: <worked | too early | did not work> | <numbers>
+
+  WATCH NEXT WEEK
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Two full weeks of data
+    how: The path depends on the change from last week. With one week alone it cannot tell a real drop from normal ups and downs.
+  - what: Your store totals
+    how: Meta grades its own work. Your new-customer revenue is what lets the agent check it.
+  - what: Your real margin
+    how: Use margin after product cost, shipping, fees and returns. A margin that is too high makes every week look better than it is.
+  - what: Your own drop size
+    how: The agent calls a drop sharp at one fifth. Set your own size to suit how much your account moves week to week.
+judge:
+  - Every call is measured against your break-even numbers, and the sums are shown.
+  - A sharp drop was traced to a link before any cut was proposed.
+  - No spend raise is proposed in a week with an unexplained drop or a low trust score.
+  - Each change says which step proposed it and why.
+  - Nothing in your account was changed without your clear yes.
+test:
+  - Run it on a past week you know well, where you remember what went wrong. See if it finds the same cause.
+  - Run it twice on the same exports. The change list should be the same, apart from wording.
+  - Compare its change list with what you or your agency did that week, and look at where they differ.
+improve:
+  - Save the changes you approve each week in the memory file, so the next run can check whether they worked.
+  - Add your store totals every week, so the trust check can run as soon as Meta and your numbers drift apart.
+  - If you run no creative tests, remove that step so the run is shorter.
+  - Connect the account read-only if you can, so the exports pull themselves.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the memory folder, read last week's files and run every step on a schedule.
+    - name: Meta Ads Manager
+      why: Export campaign, ad set and ad results with frequency, and show the incremental column if your account has it.
+    - name: Shopify
+      why: Gives new-customer revenue and order counts for the same dates.
+  inputs:
+    - A note of every change you made in the account last week
+    - Cash free for ads over the next 30 days

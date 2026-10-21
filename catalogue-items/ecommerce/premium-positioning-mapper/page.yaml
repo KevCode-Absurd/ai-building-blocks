@@ -1,0 +1,129 @@
+new_slug: premium-positioning-mapper
+name: "Premium positioning mapper"
+summary: "Give it your product and buyer groups. Get exclusivity, identity and story angles per group to test."
+job: brand-file
+thinking: medium
+thinking_why: "It writes angles for several buyer groups and checks the price sums, so a mid-size model works and a stronger one finds sharper angles."
+
+headline: "Premium positioning mapper"
+subhead: Give it your product, price and buyer groups. It writes what feels exclusive to each group, the identity they want to show and the story that ties the product to their life. You get three lines to test per group, ad ideas without a discount, and a price check.
+
+explain: |
+  Shoppers pay more when the product says something about who they are. A discount does the opposite: it teaches them to wait for the next sale. Many stores know this and still lack a clear way to say what is special, so they fall back on cutting the price.
+
+  This skill goes group by group, from shoppers who have never heard of you to those who know every rival. For each group it asks what exclusive means to them, finds a true quality your rivals do not claim, and writes who the buyer wants to be seen as and the moment in their life the product belongs to. It then writes three lines to test and checks your price against the claim with profit-per-unit sums. It also lists what not to say.
+
+when:
+  - You want to raise prices or stop relying on sales, and need a reason a buyer will accept.
+  - You sell the same product to different kinds of buyers and one message does not fit them all.
+  - You are about to brief creators or write ads and want a story that does not lean on a discount.
+
+you_give:
+  - Your product and current price
+  - Two to four buyer groups, with how well each knows you and your rivals
+  - Reviews or buyer interview notes (optional)
+  - Your landed cost and fulfilment cost per unit, and up to two higher test prices
+  - Rival prices and what rivals claim (optional)
+you_get:
+  - Per group, what feels exclusive, the identity they want and the story that links product to life
+  - Three lines to test per group, each passed or failed on want, see myself and remember
+  - Ad ideas that carry the story without a discount, and a list of what not to say
+  - A price table with profit per unit and units needed, a verdict, and a test plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, price and buyer groups. Add real review lines or interview notes for each group if you have them.
+  - Add your landed cost, fulfilment cost and the higher prices you want to test.
+  - Test the best line per group with 2 or 3 buyers before you spend on ads.
+  - Keep a control at your old price when you try a higher one.
+
+how_it_works:
+  - title: Checks the fit
+    text: Stops early when the product sells on price alone or the store cannot control its brand.
+  - title: Maps what exclusive means
+    text: One line per buyer group, in their own words. The same product feels exclusive for different reasons.
+  - title: Finds the unused angle
+    text: A true quality rivals do not claim, with proof. Exclusivity comes from the story, not from running out of stock.
+  - title: Writes identity and story
+    text: Who the buyer wants to be seen as, and the life moment that puts the product in a world.
+  - title: Picks real people
+    text: Instructors, customers, community leaders or the founder, with consent. No made-up experts.
+  - title: Tests three lines per group
+    text: Each line must make them want it, let them see themselves in it and be easy to remember.
+  - title: Plans ads without a discount
+    text: Ad ideas, a do-not-say list and a rule for when a sale is allowed.
+  - title: Checks the price
+    text: Stays inside the price band shoppers know, then compares profit per unit at each test price and keeps a control.
+
+output_shape: |
+  PREMIUM MAP: <product> at <price> | fit: <good | weak, why>
+
+  GROUP <name> | awareness: <unaware ... highly aware>
+    exclusive means:   <in their words>
+    angle nobody uses: <true quality, with proof>
+    identity:          <who they want to be seen as>
+    story moment:      <the moment in their life>
+    real people:       <who, and what they would say>
+    lines to test:     1 <line> want <P/F> | sees self <P/F> | remember <P/F>
+    ad ideas:          <idea>, <idea>
+  (one block per group)
+
+  DO NOT SAY: <list, with the reason>
+  DISCOUNT RULE: <when a sale is allowed>
+
+  PRICE CHECK
+  <price> | profit per unit <n> | units to match today's profit <n>
+  Verdict: <consistent | not consistent, why>
+
+  FREE IDEA + PAID KEEPSAKE: <free idea> -> <product>
+  TEST PLAN: <2 or 3 buyer talks per group>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: How well you know each buyer group
+    how: Paste real review lines or interview notes for each group. With none, the groups are guesses and are marked [inferred]. Talk to 2 or 3 buyers before you use any line.
+  - what: The proof behind your angle
+    how: Give test results, materials, make process, awards or numbers you can show. The angle is only as strong as the proof you can put next to it.
+  - what: The test prices
+    how: Give the exact prices you are willing to try and your true landed and fulfilment costs. The price table is only as good as these numbers.
+  - what: Your category's price band
+    how: Add the prices of four or five rivals. The skill stays inside the band shoppers know and looks for the premium in content, pack and where you sell.
+  - what: Who is allowed to appear
+    how: Say which real people (customers, staff, the founder, local experts) agree to appear. The skill builds the story around them and nobody invented.
+
+judge:
+  - Each group has its own idea of exclusive, written the way that group talks.
+  - The unused angle is true and has proof named beside it.
+  - Every test line shows a pass or fail on all three questions.
+  - No line uses fake scarcity, a made-up expert or a health, money or legal claim without a check note.
+  - The price table shows the sums, and you can redo them with a calculator.
+
+test:
+  - Pick one buyer group you know well and read its block. If you would not recognise your own customer in it, add real quotes and run it again.
+  - Show the three lines for one group to 2 or 3 people who buy from you. Ask which they would repeat to a friend, and keep the one they pick.
+  - Run it twice on the same input. The groups and angles should stay close. If they swing a lot, the buyer descriptions are too thin.
+  - Try the higher price on a small share of traffic and keep a control at the old price. Compare orders and profit, not only conversion rate.
+
+improve:
+  - Add the claims you may never make (health, income, before and after) to the "do not say" step so every run starts with them.
+  - Save the group blocks you keep to your brand file, so ads, emails and product pages use the same identity and story.
+  - Add your own test of "will they remember it", such as asking five people to repeat the line a day later.
+  - Pair it with the Store promise writer to write the homepage promise, and with the Brand stylescape planner to turn the story into a look.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run this. Paste your reviews and notes into the chat."}
+    - {name: "Google Sheets or Excel", why: "Keeps the price table so you can change costs and test prices and see profit per unit move."}
+  inputs:
+    - "Interview notes from five buyers who paid full price"
+    - "Reviews that mention why the buyer picked you over a rival"
+    - "A list of four or five rivals with their prices and main claim"
+    - "Photos or video of the real people who could appear in the story"
+
+terms:
+  - term: Landed cost
+    meaning: What one unit costs you once it is in your hands, including the product, shipping in and duties.
+  - term: Control price
+    meaning: A group of shoppers who still see your old price, so you can tell what the higher price really did.
+  - term: Price band
+    meaning: The range of prices shoppers in a category already expect to pay.

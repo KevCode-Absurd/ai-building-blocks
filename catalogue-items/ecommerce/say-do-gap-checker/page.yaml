@@ -1,0 +1,130 @@
+new_slug: say-do-gap-checker
+name: "Say-do gap checker"
+summary: "Paste survey answers. Get a trust score out of 100 and a behaviour test to run first."
+job: understand-customers
+thinking: high
+thinking_why: "It judges how each answer was collected and spots small flaws in the wording and the sample. A stronger model catches more of them."
+
+headline: "Say-do gap checker"
+subhead: Paste your survey answers, how you collected them and the decision you plan to make. It separates what people said from what they did, flags polite and flattering answers, gives a trust score out of 100 and names the cheapest test of real behaviour to run first.
+
+explain: |
+  Customers are not lying when they say they would buy and then do not. They want to look healthy, kind or smart. They answer to please the person asking. They taste a drink with the brand showing and like it more. A survey records what people say, and a store lives on what they do.
+
+  This skill sorts every answer into what people said and what they did, and counts what they did about three times as much. It flags polite or flattering answers, taste tests that showed the brand, one-sip tests of products used over time, tiny samples and non-buyers. It starts at 100 and takes points off for each problem, so you see how far you can trust the set. Then it picks a cheap test of real behaviour, such as a pre-order page or a split-test ad, with the pass line set first.
+
+when:
+  - You ran a poll or survey and are about to launch, rename or reprice from it.
+  - People said they love an idea, but sales or clicks do not match.
+  - You are choosing between two names, packs or flavours and want to know what to test.
+
+you_give:
+  - The survey, poll or interview answers
+  - How they were collected, who was asked, how many, and the exact questions
+  - The decision you plan to make
+  - Clicks, add-to-carts, pre-orders or orders you already have (optional)
+you_get:
+  - A split of said versus did, with the did answers weighted about three times higher
+  - A list of answers likely to be polite, flattering or untrue, with the reason for each
+  - A trust score out of 100, with every deduction shown
+  - A behaviour test with a pass line, and the decision to make now and what result would change it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the answers and the exact survey questions. Say who answered and how many.
+  - Tell it the decision you want to make, in one line.
+  - Add any clicks, pre-orders or sales you have for the same idea, with the dates.
+  - Read the score and the flagged answers, then run the test it picks before you spend on stock or ads.
+
+how_it_works:
+  - title: Sorts said and did
+    text: A said answer is an opinion. A did answer is an action with money, time or a click, and it counts about three times more.
+  - title: Flags polite answers
+    text: Answers that make the person look healthy, green, kind or thrifty, or that please the asker, are marked.
+  - title: Flags brand-visible tests
+    text: Preferences given with the brand showing are separated from blind ones, and the two are run as different tests.
+  - title: Flags one-sip tests
+    text: A first taste or glance for something used over time can mislead, so it is marked.
+  - title: Reads stated dislike with care
+    text: It never kills an idea on a stated dislike alone if early clicks or time on the page say otherwise.
+  - title: Picks the cheapest test
+    text: A pre-order page, a split-test ad on two names or packs, or a small run sold at a price, with the pass line written first.
+  - title: Keeps the test honest
+    text: A pre-order must be clear about price, ship date and refunds, and take money only for what you can deliver.
+  - title: Scores the trust
+    text: It starts at 100, takes off points for each problem, and shows the sum.
+
+output_shape: |
+  DECISION: <what will be decided>
+  ANSWERS READ: <n> | asked: <who, how many> | wording seen: <yes / no>
+
+  SAY OR DO
+  Said: <n> | Did: <n>
+  Weighted view: <what did answers say vs said answers>
+
+  LIKELY POLITE, FLATTERING OR UNTRUE
+  1. "<answer>" | why flagged: <reason>
+
+  TRUST SCORE  <n>/100  (100 - <items> = <n>)
+  Did not apply: <items>
+
+  BEHAVIOUR TEST TO RUN FIRST
+  Test: <pre-order page | split-test ad | small run>
+  Setup: <what is shown, to whom, for how long>
+  Pass line (set now): <...>
+  Honesty note: <price, ship date, refund or waitlist wording>
+
+  DECISION NOW: <what to do today>
+  WHAT WOULD CHANGE IT: <result that flips the call>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: The exact survey questions
+    how: Paste the wording, not a summary. Leading questions take 15 points off, and the skill cannot see them otherwise.
+  - what: Behaviour data
+    how: Add any clicks, add-to-carts or orders for the same idea. Did answers raise the score and may change the decision.
+  - what: Sample size
+    how: Say how many people answered in each group. Fewer than about 30 in a group takes 20 points off.
+  - what: Who answered
+    how: Say whether they were buyers. Non-buyers in the sample take points off.
+  - what: Your traffic
+    how: Under about 1,000 visits a month, a click test is weak. The skill will point you to pre-orders from 20 real buyers or direct talks.
+
+judge:
+  - Every flagged answer says why it was flagged.
+  - The score line shows a sum that adds up, and names the items taken off.
+  - The test has a pass line, written before it runs.
+  - No old study figure is used as a planning number.
+  - The test wording is honest about price, ship date and refunds.
+
+test:
+  - Give it a survey with leading questions only. The score should fall and the reason should be named.
+  - Give it a set with order data that disagrees with the answers. It should trust the order data more and say why.
+  - Run it twice on the same set. The flags should match, with the score within a few points.
+  - Run the test it picks, then check whether the result matched the answers. That tells you how far your own customers say one thing and do another.
+
+improve:
+  - Change the point values to fit your store. They are a starting set, not measured figures.
+  - Add your usual pass lines, such as your normal click-through rate, so the test starts from your numbers.
+  - Add your pre-order terms and refund rules, so the honesty note matches your store.
+  - Save each test result to your brand file, so over time you learn how much your customers' words are worth.
+  - Pair it with the Taster event planner for products people can sample, and with the Buyer research plan with survey to write better questions.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorts and flags the answers and works out the score with the sum shown."}
+    - {name: "Shopify", why: "Can host a pre-order page or a waiting list page without a full build."}
+    - {name: "Meta Ads Manager", why: "Lets you split-test two names or packs with the same budget and read the click-through."}
+  inputs:
+    - "The exact wording of every survey question"
+    - "Clicks, add-to-carts, pre-orders or sales for the same idea"
+    - "The date range of the survey and of the behaviour data"
+    - "Your normal click-through rate, to set a pass line"
+
+terms:
+  - term: Say versus do
+    meaning: Said is what people tell you. Done is what they paid, clicked or spent time on. Done is the stronger sign.
+  - term: Pre-order test
+    meaning: A page where people can order before you make the product, with a clear ship date and refund, to see if they will really pay.
+  - term: Blind test
+    meaning: A taste or preference test where the brand is hidden.

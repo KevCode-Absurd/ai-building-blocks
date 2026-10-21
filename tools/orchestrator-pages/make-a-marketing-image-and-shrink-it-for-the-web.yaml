@@ -1,0 +1,72 @@
+new_slug: make-a-marketing-image-and-shrink-it-for-the-web
+name: Make a marketing image and shrink it for the web
+summary: Say what the image is for. Get a prompt, the picture and a smaller file.
+job: make-images
+thinking: low
+thinking_why: Three short, defined steps. A fast model is enough.
+headline: A marketing image made, sized and ready to load fast
+subhead: Say what the image is for and where it goes. It writes the prompt and a size and file plan, an image service you choose draws the picture, then it shrinks the file so your page loads fast without a visible drop in quality.
+explain: |-
+  A blog header, social graphic or banner needs three things people forget until the page is live: the right size, a picture that fits the message, and a file small enough to load. A huge image slows the page, and a wrong size gets cropped.
+
+  The steps cover all three. First it asks what the image is for and writes the prompt, the size and the file names. Then it sends that prompt to the image service you pick and saves the picture. Last it compresses the file to a lighter format and tells you how much it saved.
+
+  It needs an image service key or a chat AI that can draw. Claude alone writes the prompt but cannot draw it.
+when:
+  - You need a header image for a blog post or page.
+  - You want a social graphic in the right size on the first try.
+  - Your images are big and your page is slow.
+you_give:
+  - What the image is for and where it will appear
+  - Your brand colours, style or logo (optional)
+  - An API key for an image service, or a chat AI that draws
+you_get:
+  - A prompt, size and file-name plan
+  - The finished picture in the size you need
+  - A smaller WebP or PNG file with the size saved
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Say what the image is for and where it goes. Add your brand style if you have one.
+  - Pick the image service you have a key for.
+  - Check the picture. Ask for a new one before you compress it.
+how_it_works:
+  - title: Plan the image
+    text: Says what the image is for and where it goes, picks how to make it, and writes the prompt with style, size and file names.
+  - title: Draw the picture
+    text: Sends the prompt to the image service you chose, at the size you set, and saves the picture.
+  - title: Shrink the file
+    text: Compresses the picture to WebP or PNG at a quality you set, keeps the original and reports the size saved.
+output_shape: |-
+  STEP 1: IMAGE PLAN
+    Purpose | prompt | size and shape | file names
+
+  STEP 2: THE PICTURE
+    Saved image | service used | size
+
+  STEP 3: SMALLER FILE
+    Compressed file | format and quality | size before and after
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The placement
+    how: Name it, such as blog header or social card. Size and crop differ for each.
+  - what: The image service
+    how: Some draw text better, some draw faces better. Pick for the job.
+  - what: Quality
+    how: Try 80 first. Lower it for speed and raise it if you see blur.
+judge:
+  - The picture matches what you asked for and the placement.
+  - Any text in the picture is spelled right.
+  - The compressed file looks the same at normal size.
+  - The file is clearly smaller than the original.
+  - Names and sizes match the plan.
+test:
+  - Place the image on your page at real size and check the crop.
+  - Compare the original and the compressed file side by side.
+  - Check your page speed before and after.
+improve:
+  - Save your brand style as a few lines in your brand file so prompts match.
+  - Keep the prompts that gave the best pictures as templates.
+  - Add a compression setting that you like as your default.

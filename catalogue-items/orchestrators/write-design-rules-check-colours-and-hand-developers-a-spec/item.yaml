@@ -1,0 +1,22 @@
+slug: write-design-rules-check-colours-and-hand-developers-a-spec
+name: "Write design rules, check colours and hand developers a spec"
+summary: "Give it your brand or event brief. Get firm design rules, colours checked for reading, design tokens and a developer spec."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: document}
+uses: [visual-system-rules-writer, colour-contrast-checker, design-token-builder, developer-handoff-spec-writer]
+steps:
+  - {uses: visual-system-rules-writer, note: "Sets the feeling, colours, type and grid as short rules."}
+  - {uses: colour-contrast-checker, note: "Checks the colours from the rules for readability. Reads the design direction from the step before."}
+  - {uses: design-token-builder, note: "Builds tokens from the brand guide, using the colours that passed the check."}
+  - {uses: developer-handoff-spec-writer, note: "Writes the spec a developer builds from. Reads the tokens from the step before."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-design-rules-check-colours-and-hand-developers-a-spec/skeleton.yaml

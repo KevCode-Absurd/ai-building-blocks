@@ -1,0 +1,36 @@
+slug: weekly-video-ad-batch-maker
+name: "Weekly video ad batch maker"
+summary: "Give it last week's video ad results. Get a checked batch of new scripts and clip prompts to approve."
+category: agent
+type: agent
+role: orchestrate
+job: video
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: transcript, required: false}
+  - {type: product_photos, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: script}
+  - {type: shot_list}
+  - {type: video_prompt}
+  - {type: plan}
+uses: [winning-hook-rubric-builder, video-ad-script-type-picker, quote-video-ad-script, selfie-style-ad-script, podcast-style-ad-script, founder-video-ad-script-writer, video-ad-script-line-checker, video-ad-shot-list-maker, pre-launch-ad-checker]
+steps:
+  - {uses: winning-hook-rubric-builder, note: "Only when six or more of your own videos have results and their words are on file: what the winners' openings do, and a grade for this week's draft openings."}
+  - {uses: video-ad-script-type-picker, note: "Every week: picks three or four script types that differ, from the buyer, the proof and the length."}
+  - {uses: quote-video-ad-script, note: "Only when the type is built on real customer words: a sourced script with checked openings."}
+  - {uses: selfie-style-ad-script, note: "Only when the type is a creator talking to camera about a doubt."}
+  - {uses: podcast-style-ad-script, note: "Only when the type is a two-person talk that answers a doubt."}
+  - {uses: founder-video-ad-script-writer, note: "Only when the founder's own words are on file."}
+  - {uses: video-ad-script-line-checker, note: "For each script: weak lines and a score out of 100. Fixed and checked again until it passes, three rounds at most."}
+  - {uses: video-ad-shot-list-maker, note: "For each script that passes: timed clips, one prompt per clip and an edit list."}
+  - {uses: pre-launch-ad-checker, note: "For each script and shot list before hand-back: stop-ship items are fixed and checked again, two rounds at most."}
+schedule: "Every Monday, after last week's video results are in"
+asks_before: [making clips with a video tool that bills credits, uploading or publishing any ad, changing a live ad account, spending any ad budget, using a customer's words or a founder's name when no source is on file]
+origin: own
+version: 1.0.0
+example_pending: true

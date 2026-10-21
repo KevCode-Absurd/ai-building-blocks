@@ -1,0 +1,116 @@
+new_slug: email-topic-bank-builder
+name: "Email topic bank builder"
+summary: "Give it your product and customer questions. Get 10 topics, 100 one-point email ideas and formats."
+job: write-emails
+thinking: medium
+thinking_why: "It sorts a lot of facts into topics, but each idea is short and the method is fixed."
+
+headline: "Email topic bank builder"
+subhead: Give it your product facts, customer questions and reviews. It builds 10 broad topics, then 10 one-point email ideas under each, and tags every idea with a format. You get a bank of 100 emails you can write without starting from a blank page.
+
+explain: |
+  Most stores run out of things to say after a few sales emails. So every email becomes a discount, and the list learns to wait for one. The fix is a bank of topics that teach something about your product or your customers' lives, so you can send useful emails between the sales.
+
+  This skill follows one rule: one email, one topic, one takeaway. It first collects what you already know (questions, sayings, stories, reviews). Then it builds 10 broad topics that tie your product to your customer's life, and 10 narrow ideas under each. Every idea gets a format, such as a myth versus fact email or a how-to-use email, so you know how to write it.
+
+when:
+  - You send the same sale email every week and want useful emails between the sales.
+  - You are about to plan next month's emails and have no list of ideas.
+  - You want a year of email ideas drawn from your own product, reviews and support questions.
+
+you_give:
+  - Your product facts, such as what it is made of, how it is made and how it is used
+  - Questions customers ask your support team (optional)
+  - Reviews and testimonials (optional)
+  - Dates and seasons that matter to your buyers (optional)
+  - How people usually join your list, such as a pop-up, a free guide or a first order (optional)
+
+you_get:
+  - 10 broad topics tied to your customer's life
+  - 10 narrow, one-takeaway email ideas under each topic, 100 in all
+  - A format tag on every idea, plus a list of claims to check before sending
+  - Your support questions and holiday hooks turned into email ideas
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts, and add customer questions, reviews and the way people join your list.
+  - Read the 10 broad topics first. Ask for a swap if one does not fit your customers.
+  - Pick 10 ideas for the next two months. Mix problem, process and solution emails.
+  - Write each email in your own words and have someone read it for claims before it goes out.
+
+how_it_works:
+  - title: Sets the one-topic rule
+    text: Each email gets one topic and one takeaway. Readers give an email only seconds, so six points in one email means none are remembered.
+  - title: Compiles what you know
+    text: It gathers sayings, angles, hooks, stories, support questions and reviews, and notes how people joined your list, since a buyer and a freebie downloader want different emails.
+  - title: Builds 10 broad topics
+    text: Each topic ties your product to a part of your customer's life, such as sleep or gut health for a supplement.
+  - title: Adds 10 ideas under each
+    text: Every idea is narrow and teaches something. It is a problem, a process or a solution, and it quietly shows your product as the answer.
+  - title: Tags a format for each
+    text: Formats include one benefit, one ingredient, one FAQ, how it is made, myth versus fact, a blog teaser and a holiday email.
+  - title: Marks claims and true urgency
+    text: Health or result claims are flagged to check. Back-in-stock and trending emails are only used when they are true.
+  - title: Hands back a plan
+    text: A bank of 100 ideas, the first 10 to send, and the support-question and holiday lists.
+
+output_shape: |
+  EMAIL TOPIC BANK  <store>
+  List type: <newsletter | free guide | buyers> | what they want: <...>
+  COMPILED: <sayings> | <angles> | <hooks> | <stories and the belief each shifts>
+  TOPIC 1 <broad topic> | link to customer's life: <...>
+    1.1 <idea> | <problem | process | solution> | format: <tag>
+        takeaway: <one sentence> | claim to check: <none | what>
+    1.2 ... (10 per topic)
+  (10 topics, 100 ideas)
+  SUPPORT QUESTIONS AS EMAILS: <question> -> <format>
+  HOLIDAY AND SEASON HOOKS: <date> -> <link to the product>
+  FIRST 10 TO SEND: <mix of problem, process, solution>
+  CHECKS MISSED: <none | list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Real customer questions
+    how: Paste support tickets and review lines. The ideas then answer real doubts, not guesses, and the FAQ emails write themselves.
+  - what: How people join your list
+    how: Say whether they came from a pop-up, a free guide or a first order. A newsletter reader wants news and fun, a freebie downloader wants the freebie, and a buyer wants help using what they bought.
+  - what: How many products you sell
+    how: A store with one product reuses a smaller set more often. Ask for fewer topics and plan repeats on purpose.
+  - what: Claims you can make
+    how: Paste what you are allowed to say about the product. Health and result claims then stay inside it.
+
+judge:
+  - Every idea has one takeaway you can say in a sentence.
+  - The 10 broad topics are about your customer's life, not a list of your products.
+  - Ideas mix problem, process and solution, not all "why you need it".
+  - Each idea has a format you could write today.
+  - Health, result and study claims are flagged, and nothing says a product is trending or back in stock unless that is true.
+
+test:
+  - Pick five ideas and write one line for each. If you cannot name the takeaway, the idea is too wide.
+  - Show the 10 broad topics to a customer or a team mate. Ask which they would open an email about.
+  - "Run it twice. The topics can differ, but the rules should hold: one takeaway and a format on every idea."
+  - Send the two best ideas as emails and compare clicks and placed orders with your usual sale email.
+
+improve:
+  - Add a line to the skill file listing topics you never cover, such as competitors or politics.
+  - Paste your approved claims into the skill file, so every health or result line is checked against them.
+  - Save your best-performing formats in your brand file and ask for more of those first.
+  - Pair it with the email campaign calendar planner to place the ideas on dates, and the campaign email writer to draft them.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can build the first pass. A person should edit it, because raw output repeats stock phrases."}
+    - {name: "Klaviyo", why: "Its campaign calendar and past campaign reports show which topics your list already clicks."}
+  inputs:
+    - "Your last 90 days of campaign results, so ideas avoid topics that did not get clicks"
+    - "Your best-selling product pages, for facts the emails can use"
+    - "A short list of what your competitors say that you disagree with"
+
+terms:
+  - term: Takeaway
+    meaning: The one thing a reader should remember after the email.
+  - term: Macro topic
+    meaning: A broad topic that ties your product to your customer's life, such as sleep.
+  - term: Micro topic
+    meaning: A narrow idea under a broad topic that fits one email.

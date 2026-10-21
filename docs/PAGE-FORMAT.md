@@ -23,6 +23,20 @@ Each block is filed under the one job a visitor hires it for. Use the id.
 | `make-offer` | Make an offer people want | Offers, bundles, guarantees from real buyer doubts |
 | `grow-social` | Grow on social | Organic videos, founder series, creator seeding |
 | `set-up-ai` | Set up AI to work for you | How to pass work between AI steps, context files |
+| `find-products` | Find products that sell | Product scoring, gaps rivals leave, trend and category risk |
+| `set-up-store` | Set up your store | Shopify or WooCommerce setup, shipping, tax, payments, go-live checks |
+| `speed-up-store` | Speed up your store | Speed reports, app scripts, images, layout shift |
+| `test-store-changes` | Test store changes | Test ideas, readiness, verdicts, holdouts, surveys |
+| `run-google-ads` | Run Google ads | Search, Shopping, Performance Max, YouTube, tracking, feeds |
+| `launch-and-scale-ads` | Launch and scale ads | Meta and TikTok account setup, budgets, scaling, delivery fixes |
+| `keep-customers` | Keep customers coming back | Subscriptions, loyalty, returns, onboarding, win-back |
+| `sell-on-amazon` | Sell on Amazon | Product gaps, listings, PPC launch, fees, stock, claims |
+| `protect-your-store` | Protect your store | Logins, fraud rules, bots, scripts, phishing |
+| `write-emails` | Write emails and texts | Email flows, campaigns, SMS, inbox placement |
+| `track-numbers` | Track your numbers | Tracking setup, P&L, margins, CAC, cash, forecasts |
+| `get-found-in-search` | Get found in search | Store SEO, collection pages, AI assistant answers |
+| `plan-supply-chain` | Plan your supply chain | Factories, tech packs, landed cost, inspections, 3PLs |
+| `set-prices` | Set your prices | Price ladders, discounts, wholesale margins |
 
 ## Page order
 
@@ -84,6 +98,16 @@ Claude writes image and video prompts but can't draw them. Every skill that hand
 Every skill, prompt and workflow says what comes before it and after it, so nobody starts without what makes the result good. `node tools/add-needs.mjs` (run after the index) writes two marked sections into each SKILL.md from the blocks' inputs and outputs (`tools/lib/needs.mjs`): **Before you start** (what's needed and what helps, each linked to the block that makes it on useaiblocks.com; the steps before this one, in order; which brand brain files to read; how to check in Claude Code and in a chat; what to do if one is missing; the tools that do it best) and **After this** (the AI asks what to do next and offers the paths from here, a check first after anything people will see). The page shows the same as "Before you start" and "What to do next". Don't write these by hand: to change a label, a maker or a path, edit `tools/lib/needs.mjs`.
 
 A visual skill can show one finished picture under "What you get". Add the image to `site/public/examples/` (webp, about 720 px wide, no brand names showing) and map it in `catalogue-items/example-images.yaml`, with alt text that says what's in it. Only use a picture that really matches what the skill makes.
+
+## Agents
+
+An agent is an AI that runs skills and workflows on its own, reads each result and decides what to run next. It lives in `catalogue-items/agents/<slug>/` with the same three files. The model to copy is `catalogue-items/agents/google-ads-weekly-account-keeper/`.
+
+- **item.yaml:** `category: agent`, `type: agent`, `role: orchestrate`, real `inputs` and `outputs`, `uses` and `steps` (each an existing skill or workflow slug, with a `note` saying when it runs: always, once, or only when a condition holds). Add `schedule` when it is meant to run on a timer ("Every Monday morning"), `asks_before` (the actions it never takes without a clear yes) and `example_pending: true` until it has a tested run.
+- **SKILL.md:** the agent file. What you need, then **How you work** (numbered: the base it builds once and reuses, the decisions with their conditions, which skill runs on each path, where each result is saved), **Stop and ask before** (spending, sending, publishing, changing a live account), **What you hand back**, checks, `MISSING:` and avoid. It is installed like a skill; in Claude Code it can also go in `.claude/agents/`.
+- **page.yaml:** the usual fields. `name` and `headline` are the job title ("Google Ads weekly account keeper"). `how_it_works` follows the agent's steps and names its decisions.
+
+An agent earns its place only where a workflow is not enough: it repeats on a schedule and compares with last time, it chooses between paths from the numbers, or it loops until a check passes. A fixed chain with no decisions is a workflow.
 
 ## boards/ecommerce.md
 

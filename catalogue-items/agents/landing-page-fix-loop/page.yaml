@@ -1,0 +1,100 @@
+new_slug: landing-page-fix-loop
+name: Landing page fix loop
+summary: Give it your page, ad and facts. It audits, rewrites what fails, checks again, and stops when the page passes.
+job: audit-landing-page
+thinking: high
+thinking_why: It judges a page, rewrites it from your facts and repeats up to three times. Give it your strongest model.
+headline: Landing page fix loop
+subhead: Give it your page, the ad that sends people to it, and your facts. It audits the page, rewrites only what fails, checks again, and repeats until there are no deal-breakers and the checks pass, or three rounds are used.
+explain: |
+  A page review ends with a list. Then the list sits there. Or someone rewrites the whole page, and a new problem appears where an old one was fixed. A review is a start, not a fix.
+
+  This agent does the fix, to a standard. It reads the page three ways and runs thirty yes-or-no checks. It rewrites only what failed: the first screen if it does not match your ad, the section with a deal-breaker, the answer to a doubt your customers raise. It uses only the facts you gave it. Then it runs the checks again and repeats, up to three rounds. If a check fails because a fact is missing, or because the problem is layout or speed, it says so and does not write around it. If the offer itself is the trouble, it stops and tells you which decisions are yours.
+when:
+  - Your page gets visits but few sales and you want it fixed, not just reviewed.
+  - A new ad sends people to a page that does not pick up the ad's promise.
+  - Customers keep asking questions the page should already answer.
+you_give:
+  - The page address, or its full text and phone screenshots
+  - Your prices, offer names, guarantee, delivery and returns terms, and the claims you may make
+  - The ad that sends people there (best)
+  - Reviews or customer questions, each with a source (optional)
+you_get:
+  - The page's new text for the sections that changed, ready to paste
+  - A change list with the check each change fixes and the fact it rests on
+  - Checks and coverage scores at the start and the end
+  - A list for a designer or developer of the problems copy cannot fix
+  - The facts it still needs from you
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it your page and facts.
+  - Attach phone screenshots of the first screen and the buy area, and the ad.
+  - Add your real facts. It will not guess a price, a delivery time or a guarantee.
+  - Read the change list, then paste the new text into your page yourself.
+  - Test the page against the old one if you have the traffic. A score is not a sales result.
+how_it_works:
+  - title: Audit the page
+    text: Reads the page as a five-second glance, a skim and a doubter's full read, then runs thirty yes-or-no checks.
+  - title: Check the page is the problem
+    text: If the offer is the problem, it stops and lists the decisions that are yours.
+  - title: Choose what to rewrite
+    text: Only what failed. Missing facts become questions. Layout, images and speed go to a designer list.
+  - title: Rewrite and tighten
+    text: Writes the failing sections from your facts and your customers' words, then tightens them without adding claims.
+  - title: Check again
+    text: Runs the thirty checks on the new text, and the full audit again if the first screen changed.
+  - title: Stop at the bar or the cap
+    text: Stops with no deal-breakers and a checks score of 85 or more, or after three rounds, or when nothing improves.
+output_shape: |-
+  RESULT
+    Rounds <n> of 3 | checks score <start> to <end> | coverage <start> to <end> | deal-breakers left: <none or list>
+
+  NEW PAGE TEXT
+    <changed sections, ready to paste> | UNCHANGED: <sections>
+
+  CHANGE LIST
+    <change> | fixes check: <n> | rests on: <fact given>
+
+  FOR A DESIGNER OR DEVELOPER
+    <items copy cannot fix>
+
+  FACTS I NEED
+    MISSING: <fact> | blocks check: <n>
+
+  TEST NEXT
+    <up to three tests, one-line hypothesis each>
+
+  FILES
+    <each round's files>
+tweaks:
+  - what: The ad
+    how: Give the ad's words and image. Without it, the three checks on matching the ad cannot be marked.
+  - what: The bar to stop at
+    how: It uses a checks score of 85 and no deal-breakers. Raise it for a page that gets heavy paid traffic.
+  - what: Customer words
+    how: Reviews and pre-sale questions with sources. They decide the order of the sections and what gets answered.
+  - what: Facts you can back
+    how: Prices, terms and proof you really hold. Everything it writes rests on these.
+judge:
+  - Every change traces to a fact you gave.
+  - No invented review, number, rating or claim is in the new text.
+  - The cost block is complete before the last button.
+  - Problems that copy cannot fix are on the designer list, not rewritten.
+  - Nothing was published without your clear yes.
+test:
+  - Give it a page you know has a mismatch with its ad. See if the first screen is the first thing it rewrites.
+  - Leave out your delivery terms. It should ask for them and not make them up.
+  - Run it twice on the same page. The failing checks should match, apart from wording.
+improve:
+  - Put your delivery, returns and guarantee terms in your brand brain so every page starts from the same facts.
+  - Save the final scores for each page, so you can see which pages need work next.
+  - After you publish, tell it the conversion rate before and after, so it can suggest tests.
+  - Add your real customer quotes with sources, so more doubts are answered with proof.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep each round's files and the change list.
+    - name: PageSpeed Insights
+      why: Check 30 needs a phone speed report for the page.
+  inputs:
+    - Phone screenshots of the first screen, the buy area and the checkout
+    - Your reviews and pre-sale questions, with sources and dates

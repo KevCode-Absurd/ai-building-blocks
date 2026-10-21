@@ -1,0 +1,81 @@
+new_slug: turn-a-static-ad-into-a-sale-with-a-matching-page
+name: "Turn a static ad into sales with a matching page"
+summary: Give it your image ad and offer. Get a stronger ad, a page that matches it and a rules check.
+job: make-image-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Turn a static ad into a sale with a matching page
+subhead: Give it your image ad, its copy and your offer. It scores the ad and rewrites its headlines, names how much the buyer knows, writes a landing page that repeats the ad's promise, then checks both against Meta's rules before you publish.
+explain: |
+  Your image ad earns clicks, but the page behind it says something else, so visitors leave. Often the ad itself is part of the problem. It may speak to the wrong buyer, or lead with a claim nobody believes.
+
+  The steps fix the ad first, because the page copies its promise. The critic scores the ad, finds what to fix and writes two stronger headlines. The awareness checker reads the fixed ad and says how much the buyer already knows. The writer builds a page whose first screen picks up where the ad stops, and answers each doubt in its own section. The last step checks the final ad and page together. Nothing in this run waits on you, but you should read the fixed ad before the page is written.
+when:
+  - Your image ad gets clicks, but few of those visitors buy from the page.
+  - You are about to launch a new static ad and want its page written to match from the start.
+  - You wrote the ad and the page at different times, and the promise has drifted.
+you_give:
+  - Your image ad, attached as a file
+  - The headline and primary text that go with it
+  - Your offer, price and what you sell
+  - Your brand file, if you have one (optional)
+you_get:
+  - A score for the ad out of 100, ranked fixes and two stronger headlines
+  - The awareness stage of the ad, with a score and the fixes
+  - Landing page copy whose first screen repeats the ad's promise, and a list of facts still missing
+  - A rules check on the ad and page together, and the ad rewritten so it passes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach your ad image and paste its headline and text. Add your offer, price and guarantee.
+  - Read the fixed ad after step 1. The page is written from it, so change it now if a fix is wrong.
+  - Make the fixes the last check lists, then publish the ad and page together.
+how_it_works:
+  - title: Static ad critic
+    text: Scores your ad across nine checks, traces what the eye sees first, and writes two stronger headlines. Its fixed ad copy feeds every later step.
+  - title: Ad awareness stage checker
+    text: Reads the fixed ad and names how much the buyer already knows when it starts. It flags where the picture and the words disagree.
+  - title: Ad-matched landing page writer
+    text: Writes a page whose first screen picks up the ad's promise, then answers each buyer doubt in its own section and states the full cost.
+  - title: Meta ads compliance checker
+    text: Checks the final ad and page against Meta's ad rules and rewrites the ad so it passes.
+output_shape: |-
+  STEP 1: STATIC AD CRITIC
+    Score out of 100 | eye path | ranked fixes | page match note | two headlines | fixed ad copy
+
+  STEP 2: AD AWARENESS STAGE CHECKER
+    Stage with evidence | picture and copy mismatches | score out of 100 | rewrites
+
+  STEP 3: AD-MATCHED LANDING PAGE WRITER
+    Page brief | first screen from the ad | doubts and answers | cost block | missing facts
+
+  STEP 4: META ADS COMPLIANCE CHECKER
+    Verdict | score out of 100 | findings with fixes | rewritten ad
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How much the ad says
+    how: A clear offer in the ad gives the page an easy promise to repeat. A curiosity ad needs a page that answers the question fast. Say which kind you made.
+  - what: The page type
+    how: Tell step 1 if the ad goes to a product page, an article-style page or a quiz. The critic judges the match against that page.
+  - what: Real customer words
+    how: Paste reviews and pre-sale questions. Step 3 turns them into the doubts each section answers, instead of guessing.
+  - what: Your prices and terms
+    how: Give the real price, shipping and returns. The page states the full cost, and cannot do so if you leave them out.
+judge:
+  - The page's first screen repeats the ad's promise in nearly the same words.
+  - The score on the ad has its sum shown, and each fix points to a spot in the ad.
+  - Every price, term and claim on the page comes from what you gave it.
+  - Each doubt on the page has a section that answers it.
+  - The rewritten ad still matches the page after the rules fixes.
+test:
+  - Run it on an ad you already know converts poorly. The fixes should name the problem you suspected.
+  - Show the page's first screen to someone who saw only the ad. Ask what the offer is.
+  - Check every price and claim on the page against your product page.
+  - Run it twice on the same ad. The scores and main fixes should be close.
+improve:
+  - Save the fixed ad copy and the awareness stage in your brand file, so later ads can skip step 1.
+  - Add your banned words and claims to the compliance step, so it checks your own rules.
+  - Add a page you are proud of to step 3, so new pages follow its layout.
+  - Pair it with a landing page checker to score the page once more after your edits.

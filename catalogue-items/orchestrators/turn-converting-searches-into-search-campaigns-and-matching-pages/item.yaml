@@ -1,0 +1,25 @@
+slug: turn-converting-searches-into-search-campaigns-and-matching-pages
+name: "Turn converting searches into Search campaigns and matching pages"
+summary: "Give it your Google search terms and products. Get winners and negatives sorted, new Search campaigns with ads, and a page plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: offer, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: page_layout_spec}
+  - {type: plan}
+uses: [search-term-sorter, non-brand-search-campaign-builder, page-type-and-layout-planner]
+steps:
+  - {uses: search-term-sorter, note: "Sorts the terms that already convert from the waste, ready to build on."}
+  - {uses: non-brand-search-campaign-builder, note: "Builds Search campaigns from the winning terms and writes the ads."}
+  - {uses: page-type-and-layout-planner, note: "Takes the ad copy and plans the page each ad group should land on, so the promise matches."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-converting-searches-into-search-campaigns-and-matching-pages/skeleton.yaml

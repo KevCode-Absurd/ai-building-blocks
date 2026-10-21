@@ -1,0 +1,120 @@
+new_slug: inbound-shipment-tracker-builder
+name: "Inbound shipment tracker builder"
+summary: "Give it your purchase orders and freight details. Get a shared tracker and a warehouse notice."
+job: plan-supply-chain
+thinking: low
+thinking_why: "It lays out columns and a notice from your details, so a smaller, faster model is enough."
+
+headline: "Inbound shipment tracker builder"
+subhead: Give it your purchase orders and freight details. It builds a shared tracker with the columns that matter, rules for keeping it true, a comparison of freight quotes, and an advance shipping notice for your warehouse. Everyone on your team can see when stock lands.
+
+explain: |
+  Stock that is late or short costs sales, and often the team finds out last. Marketing runs ads for a product still at sea, support tells buyers the wrong date, and the warehouse is surprised by a container.
+
+  This skill sets up two records for each purchase order: one in your accounting software that matches payments, and one shared sheet everyone can read. It lists the columns to fill, from PO number to bill of lading, and compares quotes from two or three freight forwarders. It drafts the notice your warehouse needs before arrival, and adds a same-day check for short deliveries. Suppliers report changes in your chat and never edit the sheet. It suits a handful of orders at a time.
+
+when:
+  - You have orders from overseas and the team keeps asking where they are.
+  - A warehouse receipt once came in short and you only found out weeks later.
+  - You are choosing a freight forwarder and want quotes side by side.
+
+you_give:
+  - Purchase orders with SKUs, quantities and PO numbers
+  - Freight forwarder details and two or three quotes (optional)
+  - Your warehouse's receiving requirements (optional)
+  - Who needs to see the tracker, such as marketing, support and finance (optional)
+you_get:
+  - A tracker layout with the columns to fill
+  - Update rules and a named owner
+  - A freight quote comparison
+  - An advance shipping notice for your warehouse
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each purchase order and say whether it ships by sea or air.
+  - Paste the freight quotes you have, and ask for two or three more.
+  - Copy the columns into a shared sheet and name one person to update it.
+  - Send the advance shipping notice to your warehouse before the container lands.
+
+how_it_works:
+  - title: Sets up two records
+    text: The purchase order in your accounting software matches payments. A shared sheet shows everyone the status.
+  - title: Lists the columns
+    text: PO number, items and quantities, supplier, forwarder, estimated dates, vessel number, bill of lading and actual dates.
+  - title: Compares forwarders
+    text: Two or three quotes at once, so they compete on rate, time and what is included.
+  - title: Keeps the sheet internal
+    text: Suppliers report in your chat. One person edits the sheet.
+  - title: Writes the notice
+    text: A summary of the order for the warehouse before arrival, to avoid extra storage and unloading fees.
+  - title: Adds a short-ship check
+    text: On arrival, received is compared with ordered at SKU level, and any gap is flagged the same day.
+  - title: Sets the update habit
+    text: A named person and a calendar time keep the sheet true.
+
+output_shape: |
+  TWO RECORDS
+  Accounting PO / Shared tracker
+
+  TRACKER COLUMNS
+  PO number | SKU | Quantity | Supplier | Forwarder | Est. departure | Est. arrival | Vessel no. | Bill of lading | Actual dates | Received qty | Difference
+
+  UPDATE RULES
+  Owner / When / Who is told when dates move
+
+  FREIGHT QUOTE COMPARISON
+  Forwarder | Rate | Transit | Included | Customs
+
+  ADVANCE SHIPPING NOTICE
+  PO / Items / Carrier / ETA / Handling
+
+  SHORT-SHIP CHECK
+  Received vs Quantity; flag same day
+  CHECKS MISSED: <none or list>
+
+tweaks:
+  - what: Sea or air
+    how: Say which for each order. Air needs a tracking number and dates, not a vessel number and bill of lading.
+  - what: Your warehouse's rules
+    how: Paste their receiving rules. The notice then carries exactly what they ask for.
+  - what: Who needs to see it
+    how: Name marketing, support and finance. The update rules say who is told when an arrival moves.
+  - what: Update rhythm
+    how: Daily on a live shipment and weekly otherwise keeps it true without much work.
+
+judge:
+  - It describes two records and says they must agree.
+  - Every column listed is in the sheet.
+  - One person edits the sheet and suppliers never do.
+  - The advance shipping notice is drafted before arrival.
+  - A same-day short-ship check is set.
+  - No vessel number, date or rate is invented.
+
+test:
+  - Fill the sheet with one real order and see if a stranger can tell where it is.
+  - Change an arrival date and check the rules say who must be told.
+  - Compare the notice with what your warehouse asked for on the last order.
+  - Count a real receipt against the order using the short-ship column.
+
+improve:
+  - Add your own columns, such as customs status or insurance.
+  - Add your warehouse's notice format to the skill file.
+  - Add a rule for who contacts the supplier on a short-ship, and by when.
+  - Pair it with the launch critical path builder, the reorder date planner and the 3PL bid and agreement builder.
+
+works_best_with:
+  tools:
+    - {name: "Google Sheets or Airtable", why: "A shared sheet or table that everyone can open is enough for a handful of orders."}
+    - {name: "Xero or QuickBooks", why: "Your accounting software holds the purchase order and matches the supplier payments."}
+  inputs:
+    - "Your supplier's shipping documents"
+    - "The warehouse's receiving rules and booking times"
+    - "Quotes from two or three forwarders in your own country"
+
+terms:
+  - term: Freight forwarder
+    meaning: A company that books space on a ship or plane and moves your goods from the factory to your warehouse.
+  - term: Bill of lading
+    meaning: The shipping paper that lists what is being carried and who it belongs to.
+  - term: Advance shipping notice
+    meaning: A message to the warehouse that says what is coming and when.

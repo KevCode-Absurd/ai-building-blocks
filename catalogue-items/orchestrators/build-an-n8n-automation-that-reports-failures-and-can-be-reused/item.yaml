@@ -1,0 +1,20 @@
+slug: build-an-n8n-automation-that-reports-failures-and-can-be-reused
+name: "Build an n8n automation that reports failures and is reusable"
+summary: "Describe the task. Get an n8n workflow laid out, failures that show and retry, and parts other workflows and agents can call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: tool_connection}
+uses: [n8n-workflow-designer, n8n-failure-handler, n8n-sub-workflow-builder]
+steps:
+  - {uses: n8n-workflow-designer, note: "Lays out the automation from your task description."}
+  - {uses: n8n-failure-handler, note: "Takes the workflow from the step before and makes its failures visible and recoverable."}
+  - {uses: n8n-sub-workflow-builder, note: "Splits the hardened workflow into parts that carry their own error handling and can be called by other workflows."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-an-n8n-automation-that-reports-failures-and-can-be-reused/skeleton.yaml

@@ -1,0 +1,21 @@
+slug: creative-test-reader
+name: "Creative test reader"
+summary: "Paste ad results by ad set. Get keep, leave or replace calls, false winners and a score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: ad_breakdowns, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead (about 8 years on Meta)", used: "Judging at ad set and campaign level, the metric order, leaving ad sets alone when they hit target, the incremental calculation, hook and hold rate as diagnosis, and the 10-ad concept rule"}
+  - {title: "How to create killer ad creatives (to blow up your business)", by: "Agency media buyer (500+ ecommerce accounts)", used: "Why the top-spending ad is not automatically the winner, small-budget test volume, impression caps, reading the path from view to purchase, false winners, one change per retest and turning results into the next brief"}

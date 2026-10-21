@@ -1,0 +1,22 @@
+slug: ad-test-budget-calculator
+name: "Ad test budget calculator"
+summary: "Give it your target CPA and test days. Get a test budget, a keep or cut rule and a read window."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public masterclass)", url: "https://www.youtube.com/watch?v=LSFsNbsDL3E", used: "The 3x and 5x target CPA spend rule, the daily test budget formula with its worked example, test length by store size, the 5 percent hit rate, and the common test mistakes"}
+  - {title: "The Only Video You Need On Meta Ads In 2026", by: "Agency operator (same masterclass author)", used: "The same test budget formula and the 143 against 714 dollars a day comparison with Meta's 50 conversions rule"}
+  - {title: "The entire Meta ads algorithm explained", by: "Mark, e-commerce media buyer", used: "Day-to-day swings at low spend, reading 7 days or more, and not obsessing over the learning label"}
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge", url: "https://www.youtube.com/watch?v=2eGds8kLszE", used: "Why a high order value leaves less purchase signal, testing hooks on separate organic accounts, and testing on add to cart for more signal"}

@@ -1,0 +1,76 @@
+new_slug: check-your-strategy-then-turn-it-into-a-90-day-plan
+name: Check your strategy, then turn it into a 90-day plan
+summary: Give it your strategy. Get its hollow parts, a marketing plan and a 90-day plan with owners.
+job: plan-strategy
+thinking: high
+thinking_why: The check has to be blunt and the plans have to stay consistent. Use your strongest model.
+headline: Turn a strategy that sounds good into a 90-day plan that holds
+subhead: Give it your strategy. It finds what is hollow, you fix it, then it builds a marketing plan from what is left and breaks it into weekly steps with owners.
+explain: |
+  A strategy often reads well and still gives your team nothing to do on Monday. It lists goals and wishes but never says what the real problem is or what you will not do. Plans built on it end up as a long list of tasks that do not fit together.
+
+  The steps check first and plan second. The first step looks for a clear diagnosis, a guiding policy and actions that back it, and flags the fluff. The pause asks you to fix the hollow parts and write a half-page brief: the problem, the policy you chose, who you sell to and your budget. The second step builds the marketing plan from that brief, by stage, with a 90-day roadmap. The last step splits it into workstreams with one owner each, weekly milestones, check-in times and a risk list.
+when:
+  - You have a strategy or goal on paper and no plan to carry it out.
+  - Your team nods at the strategy and then does different things.
+  - You need a 90-day plan with owners to share on Monday.
+you_give:
+  - Your strategy, goal or plan, as it stands today
+  - Your business, who you sell to and what you sell
+  - Your budget and team size
+  - What is already running (optional)
+  - Your brand file (optional)
+you_get:
+  - A blunt read of what is hollow in the strategy and what holds
+  - A clear problem, policy and set of actions that fit together
+  - A marketing plan by stage with a 90-day roadmap and a 12-month outlook
+  - A 90-day plan with workstreams, owners, weekly milestones, check-ins and risks
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the strategy as it is, even if it is messy. Do not tidy it first.
+  - At the pause, fix the hollow parts and write the half-page brief before you go on.
+how_it_works:
+  - title: Check the strategy for hollow parts
+    text: Looks for a clear diagnosis, a guiding policy that rules things out and actions that back it. Flags vague goals and wish lists.
+  - title: Fix it and write the brief (your step)
+    text: You repair what was called hollow, then write a half-page brief with the problem, the policy, the buyer and the budget.
+  - title: Write the marketing plan
+    text: Builds the plan from your brief for each stage from awareness to referral, with numbers to track and who owns what.
+  - title: Turn it into a 90-day plan
+    text: Splits the plan into workstreams with one owner each, works back from day 90 to weekly milestones and sets check-ins, risks and stop signs.
+output_shape: |-
+  STEP 1: STRATEGY CHECK
+    Diagnosis | guiding policy | actions | what is hollow | what holds
+
+  STEP 2: MARKETING PLAN
+    Strategic frame | plan by stage | 90-day roadmap | 12-month outlook | numbers to track
+
+  STEP 3: 90-DAY PLAN
+    Outcome | workstreams and owners | weekly milestones | check-ins | risks | stop signs
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your team
+    how: List who you have and their roles. Step 3 gives each workstream a real owner.
+  - what: Your budget
+    how: Give a number and a date. Step 2 cuts channels that do not fit it.
+  - what: A shorter plan
+    how: Ask for the 90-day roadmap only and skip the 12-month outlook.
+  - what: Your brand file
+    how: Add it so the marketing plan uses your voice and offers.
+judge:
+  - The diagnosis names the real problem, not a goal like grow sales.
+  - The guiding policy rules something out.
+  - Every action in the plan traces back to the policy.
+  - Every workstream has one owner and every week has a milestone.
+  - The risk list and stop signs are specific enough to act on.
+test:
+  - Read the policy aloud to your team and ask what it tells them not to do.
+  - Pick three actions in the plan and ask what each one has to do with the problem.
+  - Check that the weekly milestones add up to the day-90 outcome.
+improve:
+  - Run the check again at day 45 with what you have learned.
+  - Keep the brief from the pause. It is the base for the next quarter's plan.
+  - Review each check-in and write down what you changed.

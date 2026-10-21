@@ -1,0 +1,119 @@
+new_slug: video-hook-scorer
+name: "Video hook scorer"
+summary: "Paste your video hooks and who sees them. Get each scored out of 100, with rewrites."
+job: check-ads
+thinking: medium
+thinking_why: "It scores short lines against a fixed scale, so a mid-size model is enough, and a stronger one gives sharper rewrites."
+
+headline: "Video hook scorer"
+subhead: Paste your video ad hooks, the buyer they are for and the problem they solve. It scores each hook out of 100 on five points, says who it pulls in or turns away, and flags claims to check. You get 3 to 6 rewrites for each weak hook and the three hooks to film first.
+
+explain: |
+  A hook is the first line and the first seconds of a video ad. Its job is to attract the right buyer. Stopping the scroll is not enough, because Meta also learns from who watches. A hook that grabs everyone, such as a loud noise or a knife through the product, can train the system on the wrong people.
+
+  This skill rates each hook on five points: clarity, relevance, novelty, specificity and credibility. Each point gets 1 to 5. Add the five and multiply by 4 for a score out of 100. That scale is this skill's own, built from the order of importance the sources gave. It is not a Meta number and it does not predict sales. Clarity and relevance carry the verdict. It also checks all three layers (what is said, the words on screen and what is seen), fit with the body, and whether the hook qualifies the viewer.
+
+when:
+  - You have a batch of hook ideas and need to pick the few worth filming.
+  - A video has weak early retention and you want to know whether the hook is the cause.
+  - You are about to test hooks and want to cut a list of 20 down to 5.
+
+you_give:
+  - The hooks, each with the spoken line, the words on screen and what is seen in the first 3 seconds
+  - The buyer each hook is for and the problem it speaks to
+  - The body script, so hooks can be checked against it (optional)
+  - The product claims you may make (optional)
+you_get:
+  - A table with five scores per hook and a total out of 100
+  - Who each hook pulls in or turns away, and whether it qualifies the right viewer
+  - 3 to 6 rewrites for each weak hook, changing the audio, the words on screen or the visual one at a time
+  - The top three hooks to film, the rest to cut, and a note on any claim to check
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each hook with its spoken line, on-screen words and first-3-seconds visual.
+  - Say who is meant to see the ad and how much they already know about the problem and about you.
+  - Paste the body script if you have it, so the skill can check the hook matches.
+  - Film the top three, then use trial reels or a small test to see which really holds viewers.
+
+how_it_works:
+  - title: Reads each layer
+    text: Splits every hook into what is said, what shows as text and what is seen, because changing one layer can move results a lot.
+  - title: Rates five points from 1 to 5
+    text: Clarity, relevance, novelty, specificity and credibility. Clarity and relevance carry the verdict. The other three break ties.
+  - title: Turns it into a score
+    text: Adds the five ratings and multiplies by 4. 100 means all fives. A hook with clarity or relevance under 3 fails whatever its total.
+  - title: Checks who it attracts
+    text: Asks if the hook pulls in the right people or everyone. Gimmicks that grab attention without qualifying the viewer fail.
+  - title: Checks the product and body
+    text: Flags a hook that names the product in the first seconds, and a hook that does not match its body.
+  - title: Tests the authority
+    text: Asks if a named expert or number still works with a different person.
+  - title: Rewrites weak hooks
+    text: Gives 3 to 6 versions for each, changing one layer at a time. It also bans 'it's not X, it's Y' lines.
+  - title: Picks what to film
+    text: Ranks the hooks, names the top three and lists a claim to check before running.
+
+output_shape: |
+  SCALE  five ratings 1-5 (clarity, relevance, novelty, specificity, credibility), added, x 4 = score out of 100
+
+  HOOK <id>  <score>/100  <FILM | FIX | CUT>
+  clarity <n> | relevance <n> | novelty <n> | specificity <n> | credibility <n>
+  layers: say <...> | text <...> | see <...>
+  pulls in: <who>   turns away: <who>   qualifies the right viewer: <yes/no>
+  flags: <product-first | body mismatch | claim to check | AI tell | none>
+  rewrites (change one layer each):
+    1 <...>  2 <...>  3 <...>
+
+  FILM FIRST: <three ids>   CUT: <ids>
+  CLAIMS TO CHECK: <...>
+  CHECKS MISSED: <none, or list>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: How aware the viewer is
+    how: Say whether the ad is for people who do not know the problem or for ready-to-buy viewers. Without it, the score only judges the writing.
+  - what: The body script
+    how: Paste it so the hook-to-body match can be checked. A cold curiosity hook before a features-only body is a mismatch.
+  - what: The problem, not the label
+    how: Describe the problem the buyer has. A call-out works when it carries the problem, and falls flat as a label alone.
+  - what: Claims you may make
+    how: Paste them. Health and money claims in hooks need a policy check before they run.
+
+judge:
+  - Every hook has five ratings and a total, and the total equals the sum times 4.
+  - Each rating has one line of reason, not just a number.
+  - Gimmick hooks that do not qualify the viewer are marked as failing.
+  - Rewrites change one layer each, and none uses 'it's not X, it's Y'.
+  - The top three are named, and risky claims are listed.
+
+test:
+  - Score a hook you already know was a weak performer. It should land near the bottom or carry a clear flag.
+  - Run it twice on the same list. The order of the top three should hold even if one score moves by a few points.
+  - Film or mock up the top three and read their early retention against a hook that scored low.
+  - Show each hook to someone outside your business for 3 seconds and ask who it is for.
+
+improve:
+  - Add the hook types that worked for you to the skill file, so it rewrites in your proven style.
+  - Add your banned claims, so the claim flag matches your rules.
+  - Save winners and losers with their scores to your brand file, and see if the scale matches your results.
+  - Change the verdict lines to your own cut-offs once you have results. The 80 and 60 lines are a starting point.
+  - Pair it with the video script bridge checker for the body.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can score text hooks. Attach a screenshot of the first frame if you want the visual layer judged."}
+    - {name: "Meta Ads Manager", why: "Shows early retention for a running video, so you can check scores against results."}
+  inputs:
+    - "A screenshot of the first frame of each video"
+    - "Retention graphs from past videos"
+    - "The persona and problem from your concept plan"
+    - "The body script each hook will sit on"
+
+terms:
+  - term: Hook
+    meaning: The first line or first two seconds that make someone stop scrolling.
+  - term: Trial reel
+    meaning: An Instagram reel shown first to people who do not follow you, used to test a video before you pay to promote it.
+  - term: Body
+    meaning: The part of the video after the hook, where the main story and proof sit.

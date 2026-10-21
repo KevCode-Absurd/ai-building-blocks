@@ -1,0 +1,128 @@
+new_slug: store-keyword-map-builder
+name: "Store keyword map builder"
+summary: "Give it your catalogue and keywords. Get one topic per page, typed collection, product or blog."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It sorts many keywords into groups and weighs a few rules, so a mid-size model is enough."
+
+headline: "Store keyword map builder"
+subhead: Give it your products, a keyword list and, if your store is live, your Search Console pages. It groups keywords into topics, gives each topic one page, marks it as a collection, product or blog, and flags pages that compete. You get a keyword map and a build order.
+
+explain: |
+  Many stores aim two pages at the same search. A collection and a product page both go after "blackout curtains", or a blog post takes the term a collection should own. Google then has to guess which page to show, and often shows neither well.
+
+  This skill gives each search topic one owner. It groups keywords that one page could rank for, picks a main keyword and a few supporting ones, and chooses the page type from what Google already ranks. Collections get broad buying terms. Product pages get exact names. Blog posts get questions and guides. It lists the clashes, says which page to keep, and puts pages that earn sales ahead of blog posts.
+
+when:
+  - You are planning new collections or a rebuild and want to know what each page should target.
+  - Your pages seem to compete, or traffic is flat after you added more pages.
+  - You have a long keyword export and no order to work through it.
+
+you_give:
+  - Your product categories and top product names
+  - A keyword export with volume and difficulty, if you have one
+  - Search Console pages and queries, if the store is live (optional)
+  - Three to five competitor stores (optional)
+you_get:
+  - A keyword map with one topic per page, a main keyword, supporting keywords, page type and URL
+  - A list of clashing pages with the page to keep for each
+  - A build order with pages that earn sales first
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product categories and the keyword export. Say how many products you have.
+  - Add your Search Console pages sorted by impressions, and the names of three to five competitor stores, if you can.
+  - Read the clash list first and fix those pages before you build anything new.
+  - Build in the order it gives you, and rerun it when you add a new range.
+
+how_it_works:
+  - title: Sizes the job
+    text: A store with fewer than about 50 products gets a short map, not hundreds of collections.
+  - title: Groups keywords
+    text: Keywords that bring up the same results page go in one group, so one page can win them all.
+  - title: Picks main and extra keywords
+    text: One main keyword for the title, H1 and URL. Plural forms, misspellings and small variants go in as extras.
+  - title: Chooses the page type
+    text: It reads who ranks. Collections on top means build a collection. Guides on top means write a post. Mixed results follow positions 1 to 3.
+  - title: Splits and merges
+    text: Different colours or materials with different products get their own page. Near copies such as "top rated" and "most popular" get merged.
+  - title: Checks for clashes
+    text: Finds a product page and collection on one term, or a blog post aimed at a collection's term. Each topic gets one owner.
+  - title: Sets the order
+    text: Collections and products first, starting with pages that already show in Search Console. Blog posts come after.
+
+output_shape: |
+  STORE SIZE
+  <n products, n collections> | map size: <short | full>
+
+  KEYWORD MAP
+  <cluster> | primary: <...> | secondary: <...>
+    type: <collection | product | blog | homepage> | URL: <...>
+    volume: <n> | status: <exists | to build | to merge>
+    why this type: <what the live results show>
+
+  CLASHES
+  <page A> vs <page B> on <term> -> keep <page>, <action>
+
+  BUILD ORDER
+  1. <page> (<why first>)
+
+  KEPT ON JUDGEMENT
+  <low-volume term> | <why>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Store size
+    how: Say how many products you have. Under about 50, the map stays short. Over a few hundred keywords, ask for a clustering tool or work in batches.
+  - what: One data source
+    how: Export all volumes from the same tool. Mixing tools makes the numbers hard to compare.
+  - what: Search Console pages
+    how: Add them sorted by impressions. Pages that already show come first in the build order.
+  - what: Competitors
+    how: Name three to five. Tell it whether your links are stronger or weaker than theirs, since that changes which rival terms to copy.
+  - what: Terms you know are real
+    how: Mark terms with tiny tool volume that your buyers do use. It keeps them with a note.
+
+judge:
+  - Every group has one main keyword, and no two pages share one.
+  - Each page type says what the live results show.
+  - The homepage keyword is not used by another page.
+  - Each clash names the page to keep and what happens to the other.
+  - The map is the right size for your store, not a long list for a small one.
+  - Volumes are labelled as estimates.
+
+test:
+  - Give it a collection and a product page that target the same term. It should list them as a clash and name the page to keep.
+  - Give it a term whose top results are all guides. It should say blog post, not collection.
+  - Run it on a store with 20 products. It should keep the map short and say why.
+  - Search two of its grouped keywords yourself. The top results should overlap.
+
+improve:
+  - Add your own naming rules to the skill file, such as how you write colours and sizes in URLs.
+  - Add your core topic so it refuses to map terms outside it.
+  - Save the finished map and give it back next quarter so it only adds new pages.
+  - Pair it with the Store keyword validator to clean the list first, and the Collection page planner to turn collection rows into briefs.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "Free. Shows which pages and searches you already get impressions for."}
+    - {name: "Semrush", why: "Pulls every keyword containing a term, shows the keyword gap against rivals, and can group keywords."}
+    - {name: "Google Keyword Planner", why: "Free volume ranges and ideas, if you do not have a paid tool."}
+    - {name: "Any good chat AI", why: "Groups a keyword list and checks the logic of the map."}
+  inputs:
+    - "A competitor keyword gap export"
+    - "Your referring-domain count against each rival"
+    - "Your sitemap or page list"
+    - "A list of terms your buyers use that tools show as zero"
+
+terms:
+  - term: Collection
+    meaning: A page that lists many products of one kind, such as all blackout curtains.
+  - term: Keyword cannibalisation
+    meaning: Two of your pages going after the same search, so neither ranks well.
+  - term: Cluster
+    meaning: A group of keywords that one page can rank for together.
+  - term: Search intent
+    meaning: What the person typing the search wants to do, such as compare, learn or buy.

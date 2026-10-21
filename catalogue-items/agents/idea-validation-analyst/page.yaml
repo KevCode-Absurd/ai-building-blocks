@@ -1,0 +1,95 @@
+new_slug: idea-validation-analyst
+name: Idea validation analyst
+summary: Give it your idea. It picks the riskiest guess, plans the test, reads the result and says keep, change or stop.
+job: test-an-idea
+thinking: high
+thinking_why: It judges real test results against pass lines, picks its own path and decides when to stop. Give it your strongest model.
+headline: Idea validation analyst
+subhead: Give it your idea. It finds the riskiest guess it rests on, plans the smallest test and writes the pass line first. When the result comes back, it reads it against that line and tells you to keep going, change one thing or stop.
+explain: |
+  Most people test an idea once, get a mixed result and read it the way they hoped. Some keep testing for months. Others stop after one bad answer from the wrong people.
+
+  This agent runs the tests one round at a time and keeps a log. It looks for a fact that could kill the idea first. Then it picks the riskiest guess that is still untested and plans the cheapest test for it. The pass line is written down before the test runs, so a result cannot be bent to fit. When you bring the result back, it counts what people did and gave up, not what they said. A fail with an obvious fix gets one changed test. Two fails on the same guess, or four tests with no pass, get a keep, change or stop call. You decide.
+when:
+  - You have an idea and want to know if it is worth building before you spend on it.
+  - A test just finished and you are not sure what the result means.
+  - You have run a few tests and cannot tell whether to keep going.
+you_give:
+  - Your idea, who it is for, and any price or offer
+  - Results of the last test, such as notes from customer talks, sign-ups, pre-orders or replies
+  - What you can spend and how many weeks you will give each test (optional)
+you_get:
+  - The riskiest guess and why it is first
+  - The next test, who to try it on, the pass line, the cost and the time
+  - Your last result judged against the line you set before it ran
+  - A keep going, change one thing or stop call, with the evidence
+  - A log of every guess, its test and its result
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it your idea.
+  - Run the test it plans. Do not move the pass line while it runs.
+  - When the test finishes, run the agent again and give it the result. It reads the log and picks the next step.
+  - Read the call. If it says stop or change, check the evidence it lists before you decide.
+  - It stops planning after four tests with no pass. After that, you decide what is next.
+how_it_works:
+  - title: Read the log
+    text: Finds which round this is from the log of guesses and results.
+  - title: Look for a killer
+    text: In round 1, looks for the one fact that would end the idea, before any test is planned.
+  - title: Read the result
+    text: Counts facts and commitments from customer talks, or compares numbers with the pass line saved earlier. Praise does not count.
+  - title: Choose the path
+    text: A pass moves to the next guess. A fail with a clear fix gets one changed test. Two fails on one guess get a keep, change or stop call.
+  - title: Plan the next test
+    text: Picks the riskiest untested guess, the smallest test for it and a pass line, and saves them before anything runs.
+  - title: Hand back
+    text: Gives the result, the call, the next test and the log, then waits for the next result.
+output_shape: |-
+  ROUND <n>
+    Guess tested: <guess> | needed: <number> | got: <number>
+
+  RESULT
+    <passed | failed | open>: <evidence counted>
+
+  CALL
+    <keep going | change one thing | stop | not enough yet>: <reason>
+
+  NEXT TEST
+    Guess: <guess> | test: <smallest test> | try it on: <who> | pass line: <number> | cost: <amount> | time: <weeks>
+
+  LOG
+    Passed <n> | Failed <n> | Untested <n>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: What you give it
+    how: Give it the real numbers from the test, not a summary of how it felt. The call is only as good as the evidence.
+  - what: The pass line
+    how: Write what you would call a pass before the test runs. If you want to move it afterwards, that is a sign it was not a real line.
+  - what: Who you test on
+    how: Strangers who have the problem. Friends and family say yes to be kind.
+  - what: Budget and time
+    how: A smaller budget gives a smaller test. It is better to run a cheap test that can fail than a big one that cannot.
+judge:
+  - The pass line was set before the test ran, and the result is judged against it.
+  - Praise and promises were not counted as evidence.
+  - The next test is for the riskiest untested guess.
+  - The call to keep, change or stop names the evidence behind it.
+  - Nothing was spent, sent or published without your yes.
+test:
+  - Give it an old idea you dropped and the notes you have. See if its call matches what you now think.
+  - Give it the same result twice. The call should be the same.
+  - Give it a result made of compliments only. It should say there is not enough evidence.
+improve:
+  - Change the number of failed tests before it recommends a stop. The starting point is two on one guess or four in all.
+  - Add your own kill facts to the first round, such as a price your buyers cannot reach.
+  - Keep the log in a shared folder so a partner can check the calls.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the validation folder and log between rounds.
+    - name: A spreadsheet
+      why: Sign-ups, pre-orders and replies are easier to count in one place.
+  inputs:
+    - Notes from customer talks with who said what
+    - The numbers from any sign-up page, ad or pre-order test

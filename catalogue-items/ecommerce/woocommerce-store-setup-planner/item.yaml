@@ -1,0 +1,22 @@
+slug: woocommerce-store-setup-planner
+name: "WooCommerce store setup planner"
+summary: "Give it your products and country. Get a WooCommerce build plan from hosting to first test order."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "WooCommerce Tutorial for Beginners 2026", by: "Daryl Wilson", used: "Clearing pre-installed plugins, the Blocksy and Elementor setup, turning off the newer editor and sticky header, store settings, fixing order emails"}
+  - {title: "How to Create an Ecommerce Website with WordPress 2026 (step by step)", by: "Dale, Creator Pro Website", used: "Starter-template theme with Elementor, the welcome coupon settings, hiding sections per device, going live"}
+  - {title: "WooCommerce Tutorial 2026: Complete MasterClass for Beginners", by: "Tim Nishad, freelance WordPress developer", used: "Account and checkout settings, selling and shipping locations, units, placeholder image, moving the store from Coming Soon to live"}
+  - {title: "How To Start an Online Store That Runs on Autopilot (WooCommerce Tutorial)", by: "Ferdy, WordPress tutorial channel", used: "Site title and tagline rule, cleanup steps, post-name permalinks"}

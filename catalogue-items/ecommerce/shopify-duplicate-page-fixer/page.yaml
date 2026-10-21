@@ -1,0 +1,118 @@
+new_slug: shopify-duplicate-page-fixer
+name: "Shopify duplicate page fixer"
+summary: "Give it your Shopify theme and crawl. Get each duplicate-page fix and a score out of 100."
+job: get-found-in-search
+thinking: high
+thinking_why: "It reads theme code and judges which changes are safe, so a stronger model makes fewer mistakes."
+
+headline: "Shopify duplicate page fixer"
+subhead: Give it your Shopify theme files, your Search Console indexing report and a crawl if you have one. It finds where your store makes duplicate and thin pages, lists each fix with the exact theme, setting or redirect change, and scores your duplicate and crawl leaks out of 100.
+
+explain: |
+  Shopify can show the same product under more than one address, and it builds pages you never asked for: tag pages, vendor pages, product type pages and "all products" pages. Search engines then spend their limited crawling time on copies and thin pages instead of the pages that sell. This matters most when your store has hundreds or thousands of addresses.
+
+  This skill goes through the usual leaks one by one. It checks the product grid for links that carry the collection path, rebuilds breadcrumbs from a metafield, marks tag and auto-made pages noindex with follow, plans a custom robots file in the right order, handles variants and deleted products, and checks the sitemap and structured data. Each fix comes with a before-and-after check. A small store with about 20 products gains little from the robots edits, so the skill tells you when to skip.
+
+when:
+  - Search Console shows many "duplicate" or "crawled, not indexed" pages on your Shopify store.
+  - Your product links in collections carry a long path and the canonical points somewhere else.
+  - You have hundreds or thousands of pages and want to stop wasting crawling on copies.
+
+you_give:
+  - Your store address and theme name
+  - The theme files that build product links, headers and the robots file (paste them, or the skill tells you which to open)
+  - Your Search Console page indexing report (export or screenshot)
+  - A crawl export, and a list of deleted or discontinued products (optional)
+you_get:
+  - A ranked fix list, with the exact theme, setting or redirect change for each
+  - Copy-ready snippets for noindex and canonical rules, to test on a duplicate theme
+  - A before-and-after re-test checklist
+  - A score out of 100 for your duplicate and crawl leaks, with the working shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In Shopify, duplicate your live theme first. Do all the edits on the copy and test them before you publish.
+  - Paste the theme files the skill asks for, and your indexing report and crawl.
+  - Apply one fix at a time, in the order given, and re-test after each.
+  - Publish the copy only when the checklist passes.
+
+how_it_works:
+  - title: Fixes product links
+    text: Removes the "within collection" part from the product grid so every link goes to the plain product address.
+  - title: Rebuilds breadcrumbs
+    text: Builds them from a product metafield holding the parent collection address, since the link fix breaks the old ones.
+  - title: Noindexes tag pages
+    text: Sets product tag and blog tag pages to noindex, follow. A tag worth ranking becomes a real collection.
+  - title: Noindexes auto-made pages
+    text: Vendor, product type, all collections, all products and new products pages also get noindex, follow.
+  - title: Plans the robots file
+    text: Adds a custom robots template for low-value paths, only after the link fix.
+  - title: Handles variants and deleted products
+    text: Merges options with no search demand into one product, canonicals a variant that has its own page, and redirects deleted products.
+  - title: Fixes the sitemap
+    text: Removes pages from the sitemap through the theme, since Shopify keeps noindex and canonicalised pages in it.
+  - title: Checks markup and crawl
+    text: Confirms product, article and breadcrumb markup, then crawls and reads the Search Console report.
+
+output_shape: |
+  STORE  <address> | THEME  <name> | PAGES  <approx count>
+  BACKUP  duplicate theme made? <yes/no>
+  LEAKS FOUND (ranked)
+  <leak> | <where> | <fix: file, setting or redirect> | <risk> | <do now / skip for small store>
+  SNIPPETS  (test on the duplicate theme first)
+  <file>: <before> -> <after>
+  REDIRECTS  <old URL> -> <closest product or collection>
+  DO NOT NOINDEX  <pages with organic clicks>
+  RE-TEST CHECKLIST  <check, expected result>
+  SCORE  <n>/100  measures: duplicate and crawl leaks closed ÷ leaks that apply (<closed> of <applies>)
+  NOT RUN  <check, why>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: Store size
+    how: Say how many products and pages you have. A store with about 20 products gets a short list and skips the robots edits.
+  - what: Theme files
+    how: Paste the files the skill names. Theme names and file names differ, so the fix is only as exact as the file you paste.
+  - what: Search Console clicks
+    how: Include which pages bring organic clicks, so none of them gets noindex by mistake.
+  - what: Deleted products
+    how: List products you removed, so each gets a redirect to the closest product or collection.
+
+judge:
+  - It asks you to duplicate the theme before any edit.
+  - Each fix names the file, setting or redirect, and the risk.
+  - No page with organic clicks gets noindex.
+  - The robots file comes after the product link fix.
+  - The score shows leaks closed out of leaks that apply.
+
+test:
+  - Open a collection page on the duplicate theme, click a product, and check the address has no collection path.
+  - View the page source of a tag page and a vendor page on the copy, and look for the noindex tag.
+  - Open your sitemap address and check that pages you removed are gone.
+  - After publishing, check Search Console over the next weeks for the duplicate count to fall.
+
+improve:
+  - Add your theme name and the file names you found, so next time the skill names the right file.
+  - Add pages you never want noindexed, such as a tag page that brings sales.
+  - Add your rule for variants, such as which colours deserve their own page.
+  - Pair it with the Store SEO fix prioritiser for the wider crawl triage.
+
+works_best_with:
+  tools:
+    - {name: "Shopify theme editor", why: "Lets you duplicate the live theme and edit its code on the copy."}
+    - {name: "Google Search Console", why: "Shows the page indexing report, 404s, noindex pages and structured data errors."}
+    - {name: "A site crawler", why: "Set to mobile with JavaScript rendering, it lists broken links, orphan pages and missing titles and alt text."}
+  inputs:
+    - "A crawl export from a crawler that renders JavaScript"
+    - "A list of deleted or discontinued products"
+    - "The names of tags and collections that bring sales"
+
+terms:
+  - term: Canonical
+    meaning: A tag that tells Google which address of a page is the main one.
+  - term: Noindex, follow
+    meaning: A tag asking search engines to keep a page out of results while still following its links.
+  - term: Metafield
+    meaning: A custom piece of information you add to a product or collection in Shopify.
+  - term: Breadcrumbs
+    meaning: The small trail of links near the top of a page that shows where you are, such as Home, Collection, Product.

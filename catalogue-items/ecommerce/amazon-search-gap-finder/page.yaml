@@ -1,0 +1,124 @@
+new_slug: amazon-search-gap-finder
+name: "Amazon search gap finder"
+summary: "Give it an interest or category. Get Amazon product ideas people search for that page 1 misses."
+job: sell-on-amazon
+thinking: medium
+thinking_why: "It weighs several research methods against your own data, but each step is simple."
+
+headline: "Amazon search gap finder"
+subhead: Give it an interest, a hobby or an Amazon category, plus any keyword export you have. It looks for phrases buyers search that page 1 does not serve. You get 5 to 10 ranked gap ideas, the 3 worth a full check, and phrases to verify by hand.
+
+explain: |
+  Most new Amazon sellers pick a product because it looks popular. Popular means crowded. A better start is a gap: a phrase real people type into Amazon where page 1 has no product made for them. A diet-specific electrolyte powder or a narrow type of bar soap are the kind of gap the source shows.
+
+  This skill walks through eight ways to find one. The search-based ways come first: a keyword gap, bestseller lists, a filtered product database, a reverse lookup of a leader's keywords and the free autocomplete walk. A trend check and a sweep of your own daily life come last. It marks every volume as an estimate, tells you which ideas to drop, and treats each result as a hypothesis to test, not a promise of sales.
+
+when:
+  - You want to sell on Amazon but have no product yet, only an interest.
+  - You have a product category in mind and want to know which niche inside it is open.
+  - You have a keyword tool export and need it read line by line for gaps.
+
+you_give:
+  - An interest, hobby, diet, problem or Amazon category
+  - A keyword tool export for your idea (optional, but it gives the best result)
+  - Page 1 results for each idea, pasted or described (optional)
+  - Your budget, and whether you will make the product or only brand it (optional)
+you_get:
+  - A ranked list of 5 to 10 gap ideas, each with the phrase, the volume, what page 1 shows and the gap
+  - The 3 ideas worth a full viability check, and which ideas were dropped and why
+  - A short list of search phrases for you to verify by hand
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say your interest or category, how much cash you can put in, and whether you will make the product or only brand it.
+  - Paste a keyword export if you have one. Free tiers of keyword tools cap lookups, so run your best phrases first.
+  - Check the 3 top ideas by hand on Amazon, then run the Amazon product viability scorer on each.
+
+how_it_works:
+  - title: Sets the ground rules
+    text: Asks what you can make and spend, so ideas that need electronics, big cash or a copy of a best seller are dropped early.
+  - title: Reads the keyword gap
+    text: Reads your keyword list line by line for phrases with real searches and few listings that carry the exact phrase in the title.
+  - title: Checks the bestseller lists
+    text: Looks at new and low-review products that already sell, and asks how to make a better version, not a copy.
+  - title: Mines weak sellers
+    text: Filters for ungated products with low ratings and reads their 1 to 3 star reviews for fixable complaints.
+  - title: Reverse looks up leaders
+    text: Finds high-volume phrases a top seller leaves out of its own title.
+  - title: Runs the free checks
+    text: Uses the autocomplete walk and a trend check, and counts only Amazon searches.
+  - title: Falls back on your life
+    text: If nothing fits, sweeps your own day and spending for a product you would pay double for.
+  - title: Ranks and trims
+    text: Ranks the gaps, names the top 3 for a full check and lists what was dropped and why.
+
+output_shape: |
+  GAP IDEAS (ranked)
+  1. <phrase people search> | volume: <n a month, estimate or MISSING>
+     page 1 shows: <what is there now>
+     the gap: <what no listing serves>
+     how you would be better: <one change, not a copy>
+  (5 to 10 ideas)
+
+  TOP 3 FOR A FULL CHECK
+  <idea>: <why it leads>
+
+  DROPPED
+  <idea>: <reason: one brand owns it, electronics, one-month trend, copy only>
+
+  VERIFY BY HAND
+  <phrase to type into Amazon, and what to look for>
+
+  NOTE: volumes are tool estimates. A gap shows searches exist, not that buyers convert.
+  MISSING: <keyword export | page 1 results>
+  CHECKS MISSED: <none | which>
+
+tweaks:
+  - what: A keyword export
+    how: Paste the list with volumes and the number of listings with the phrase in the title. The skill then ranks real numbers, not guesses.
+  - what: A narrow starting interest
+    how: A niche like a diet or a hobby gives sharper gaps than a wide category. Name the group of buyers you know.
+  - what: Your cash and skills
+    how: Say what you can make or brand. Ideas that need electronics or lithium batteries are dropped, and ideas tied to a skill you hold rank higher.
+  - what: Page 1 detail
+    how: Paste prices, review counts and ratings for page 1. It spots weak photos, tight prices and low ratings that signal room for a better product.
+
+judge:
+  - Every idea shows a phrase, a volume marked as an estimate, what page 1 shows and the gap.
+  - Ideas are better or narrower than what exists, not copies of a best seller.
+  - Ideas that fit the drop rules (one brand owns the category, electronics, a one-month trend) are listed as dropped.
+  - Nothing is claimed to sell. Each idea is called a hypothesis to test.
+  - A missing keyword export is flagged as MISSING, not replaced with invented numbers.
+
+test:
+  - Pick one idea from the list and type the phrase into Amazon yourself. Page 1 should look the way the skill described it.
+  - Run it twice with the same input. The top 3 should mostly match. If they swing, give it a keyword export so it has data to rank.
+  - Give it a category you know well. Check whether it names the gaps you already suspected.
+  - Take the top idea and run a pre-sale or a simple social page before you buy stock, to see if buyers act.
+
+improve:
+  - Add a list of categories you will never sell in (gated, restricted or ones you do not care about), so the skill drops them at once.
+  - Add the groups of buyers or hobbies you already know and can make content for, so it ranks those ideas higher.
+  - Save the ideas that passed the viability scorer and why, then paste them in next time so the skill learns your taste.
+  - Pair it with the Amazon product viability scorer for the next step, and the Amazon keyword picker once you pick a product.
+
+works_best_with:
+  tools:
+    - {name: "Helium 10", why: "A keyword and product database with a title-competition filter and a reverse ASIN lookup, which the source uses. It has a free tier with capped lookups, so check current limits."}
+    - {name: "Google Trends", why: "Free. Shows whether interest in a topic is rising before you check the same phrase on Amazon."}
+    - {name: "Amazon search box", why: "Free. Type each letter of the alphabet after your seed word to read the autocomplete suggestions."}
+  inputs:
+    - "A keyword tool export with search volume and title counts for your seed phrases"
+    - "Page 1 prices, review counts and ratings for your top phrases"
+    - "A list of your skills, hobbies and the groups you can reach"
+    - "Your card history, Amazon browse history and wish list, to see what you already spend on"
+
+terms:
+  - term: Title density
+    meaning: How many listings carry the exact search phrase in their title. Few means little direct competition.
+  - term: Reverse lookup
+    meaning: Pasting a competitor's product code (ASIN) into a tool to see which phrases bring it traffic.
+  - term: Ungated
+    meaning: A category any new seller can list in without Amazon's approval.
+  - term: Long-tail phrase
+    meaning: A longer, more specific search phrase with fewer searches but clearer buying intent.

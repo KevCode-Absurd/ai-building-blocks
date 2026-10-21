@@ -1,0 +1,127 @@
+new_slug: meta-server-tracking-checker
+name: "Meta server tracking checker"
+summary: "Describe your Meta setup. Get the right server route, proof each event counts once and a score out of 100."
+job: track-numbers
+thinking: high
+thinking_why: "It weighs a route against your budget and skills and checks IDs and consent rules, so a stronger model avoids a wrong recommendation. Confirm every setup step on Meta's own pages."
+
+headline: "Meta server tracking checker"
+subhead: "Tell it how your store sends events to Meta and what you spend. It picks the server route that fits your team, checks that each event counts once, and flags consent rules and test-ID leaks. You get a route with a realistic gain, setup steps and a score out of 100."
+
+explain: |
+  When the Meta pixel runs only in the browser, blockers and privacy settings lose some sales events. The fix is to send the same event from your server too. But if both copies reach Meta without the same event ID, Meta can count one sale twice. Many stores also pick a route they do not need, or leave a test code in live tracking so real sales land on the test screen.
+
+  This skill compares the three routes: a store app that already sends both streams, the Conversions API Gateway, and your own server-side Tag Manager. It states the gain honestly, with both sources: the gateway author puts it at about 1 to 2 percent, while Meta claims up to 13 percent lower cost per result and about 7 percent more conversions. Then it checks that the browser and server events share an ID, that consent gates the tags, and that Meta purchases match store orders each week.
+
+when:
+  - You see fewer Meta purchases than store orders and want to know if server tracking would help.
+  - You added server tracking and want proof that each sale counts once.
+  - You are choosing between a gateway, server-side Tag Manager and a Shopify app.
+
+you_give:
+  - Your platform and who can build and maintain it
+  - Monthly Meta spend and purchases (optional)
+  - How pixel and server events are sent today
+  - A sample browser event ID and server event ID for one test purchase (optional)
+  - Your consent banner setup (optional)
+you_get:
+  - A recommended route with the reason, the realistic gain and the monthly cost to confirm
+  - Setup steps in order
+  - A pass or fail on matching event IDs
+  - Fixes for missing IDs, consent rules and test-ID leaks, a weekly check, and a score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what store platform you use, who can build, and your monthly Meta spend.
+  - Place one test order. In Events Manager, find the browser and the server event for it and paste both event IDs.
+  - Never paste an access token into the chat. Keep it in your tag settings.
+  - Fix what fails and run the check again after a day.
+
+how_it_works:
+  - title: Checks for an existing route
+    text: If a Shopify or other app already sends both pixel and server events, it does not add a second route. It checks the IDs instead.
+  - title: Compares the three routes
+    text: App, Gateway and server-side Tag Manager, with cost, skill needed, and likely gain.
+  - title: Shows both gain claims
+    text: The practitioner's 1 to 2 percent and Meta's up to 13 percent lower cost per result and 7 percent more conversions, with what decides which you see.
+  - title: Proves one event, once
+    text: The same event ID must appear on the browser event and the server event in Events Manager.
+  - title: Gates on consent
+    text: Marketing consent is required in the browser tag, and a consent-gated trigger fires the server tag.
+  - title: Keeps test codes out
+    text: The test code lives in a lookup table that is empty unless preview mode is on.
+  - title: Checks the server tag
+    text: In the server preview, the tag status should read succeeded.
+  - title: Sets a weekly check
+    text: Compare Meta purchases with store orders each week.
+
+output_shape: |
+  META SERVER TRACKING  <store>  <date>
+
+  ROUTE
+  Recommended: <app / gateway / server-side Tag Manager>
+  Why: <reason>  Realistic gain: <both claims and what decides it>
+  Cost to confirm: <hosting and time>
+
+  SETUP STEPS
+  <steps in order>
+
+  DEDUPE PROOF
+  Browser event ID <id>  Server event ID <id>  <match / mismatch / not run>
+
+  CONSENT  <no-consent test: blocked yes/no>  <allow-all test: fires on first page yes/no>
+  TEST ID LEAK  <pass / fail>
+  SERVER TAG STATUS  <succeeded / failed / not seen>
+  EVENT MATCH QUALITY  <score as shown in Events Manager>
+
+  WEEKLY CHECK  Meta purchases <n> vs store orders <n>
+
+  SCORE  <n>/100  (<points> of <possible>, checks run only)
+  CHECKS NOT RUN
+  MISSING: <what>
+
+tweaks:
+  - what: Who can build
+    how: Say if you have a developer or only yourself. Server-side Tag Manager needs hosting and skill; the Gateway suits stores with no developer.
+  - what: Monthly Meta spend
+    how: Give it so the gain can be set against the cost. The skill will not invent a spend level where a route pays off.
+  - what: Consent setup
+    how: Name your consent banner. The consent test needs to know when marketing consent is given.
+  - what: Sample event IDs
+    how: Paste the IDs of one test purchase. Matching IDs are the proof that each sale counts once.
+
+judge:
+  - It gives both gain claims, not just the bigger one.
+  - It says no second route if an app already sends both streams.
+  - Dedupe is marked pass only when two real IDs match.
+  - No access token or secret is asked for in the chat.
+  - Hosting cost is marked as something to confirm, not a quoted price.
+
+test:
+  - Give it two different IDs and check that it marks dedupe as a fail.
+  - Say you use a Shopify app that sends both streams and confirm it will not add a route.
+  - Leave out the consent setup and confirm the consent checks are listed as not run.
+  - Run it twice on the same facts. The recommended route should match.
+
+improve:
+  - Add your developer hours and hosting limit to the skill file, so the route fits what you can keep running.
+  - Add your consent banner's event names so the trigger advice is exact.
+  - Save the working event ID format to your brand file for future changes.
+  - Pair it with the store's purchase tracking check in Google, so both ad platforms agree with orders.
+
+works_best_with:
+  tools:
+    - {name: "Meta Events Manager", why: "Shows browser and server events, event IDs, the test events screen and event match quality."}
+    - {name: "Google Tag Manager (web and server)", why: "Preview mode shows whether tags fired, and the server container shows the tag status."}
+  inputs:
+    - "A screenshot of one test purchase in Events Manager"
+    - "Your consent banner's name and settings"
+    - "Weekly Meta purchases and store orders for the last 4 weeks"
+
+terms:
+  - term: Conversions API
+    meaning: A way to send events from your server to Meta, not through the visitor's browser.
+  - term: Event ID
+    meaning: A label on an event. If the browser and server copies share it, Meta counts them once.
+  - term: Event match quality
+    meaning: Meta's score for how well an event's customer details can be matched to a person.

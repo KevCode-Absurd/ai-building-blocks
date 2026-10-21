@@ -1,0 +1,128 @@
+new_slug: creator-scouting-team-planner
+name: "Creator scouting team planner"
+summary: "Say what you sell and who buys. Get scouting roles, a finding method and a weekly routine."
+job: grow-social
+thinking: medium
+thinking_why: "It builds a team plan from a few facts, so a mid-size model is enough."
+
+headline: "Creator scouting team planner"
+subhead: Say what you sell, who buys it and how many people you can put on creators. It plans the scouting roles, a way to find varied creators, a weekly routine and rules for briefs and tracking. If you plan to sell through a shop, it also checks fit.
+
+explain: |
+  A creator program fails when it relies on one person scrolling one feed. That person sees creators the algorithm already thinks they like, mostly from their own city. The result is a list of look-alikes that your buyer may not follow.
+
+  This skill plans a small in-house scouting team: scouts who find creators, relationship managers who keep deals going, and a lead. It gives scouts a method to break out of their own feed, start with the creators your buyer already follows, and widen only once you win one niche. It adds a fit check and a halo read for stores that sell through TikTok Shop. It differs from the general creator partnership planner by adding the team, the feed-breaking method and the halo read.
+
+when:
+  - You want to find creators in-house instead of paying an agency.
+  - Your creator list all looks the same, or comes from one city.
+  - You are weighing a TikTok Shop and want a clear fit check before you start.
+
+you_give:
+  - Who your buyer is and where they live
+  - Your budget and how many people you can put on it
+  - The platforms you will use
+  - Your sales by day and by channel (optional, for the halo read)
+you_get:
+  - Team roles and a weekly routine for each
+  - A scouting method that finds varied creators
+  - Brief, tracking and relationship rules
+  - A shop fit go or no-go and a halo read
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your buyer in two or three sentences and say where they live.
+  - Say how many people and how many hours a week you can give it.
+  - If you plan to use a shop, paste sales by day for each channel you sell in.
+  - Run the first week's routine, then test the fit rules on your first 10 posts.
+
+how_it_works:
+  - title: Sets the team
+    text: Scouts who look like your buyer, relationship managers, and one lead who can come from the scouts. A solo owner gets a one-scout version.
+  - title: Breaks the feed
+    text: Scouts browse from different regions and fresh sessions so they see varied creators, not one city's feed. They only browse, never post or like from those sessions.
+  - title: Starts with the buyer's follows
+    text: Find the creators your buyer already follows in one niche, then widen once you win that niche.
+  - title: Mixes creator sizes
+    text: A mix of sizes, and on a small budget about 5,000 to 50,000 followers.
+  - title: Sets relationship rules
+    text: Talk to creators directly, with no agency. Keep the brief light and leave the creative to the creator.
+  - title: Checks shop fit
+    text: Impulse price, a buyer who is female-first or likely to buy as a gift, and spillover to other channels.
+  - title: Reads the halo
+    text: Watch search and orders on other channels the week a video gets views, instead of relying on codes.
+  - title: Checks for local bias
+    text: The team must not favour its own city over your national buyer.
+
+output_shape: |
+  TEAM
+  Scout (<n>): <who, why they match the buyer> | weekly: <routine>
+  Relationship manager (<n>): <tasks> | weekly: <routine>
+  Lead: <name or role>
+
+  SCOUTING METHOD
+  <how scouts vary location and reset feeds, browse only>
+  Start niche: <creators the buyer follows>   Widen when: <rule>
+  Sizes: <mix>   Weekly list: <n creators>
+
+  BRIEF AND RELATIONSHIP RULES
+  <free product + basic guidelines>  Disclosure: #ad or paid-partnership label
+  Tracking: <codes or links | halo read>
+
+  SHOP FIT   <GO | NO-GO>
+  Price <$>   Buyer <fit>   Spillover <channels>
+  HALO READ  <channels watched> in the week a video lands
+
+  BIAS CHECK  <creators by region vs buyers by region>
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Team size
+    how: Say if you are alone. You get one scout and a list of about 20 creators a week, not three levels.
+  - what: Your buyer
+    how: Give age, place and what they already follow. Scouts are matched to the buyer, so a vague buyer gives a vague team.
+  - what: Where you sell
+    how: Name every channel. A store on its own site only keeps codes or links, because the halo read needs several channels.
+  - what: Shop or no shop
+    how: Say whether you plan a TikTok Shop. The fit check runs only if you do.
+  - what: Platform
+    how: Name TikTok or Instagram. The browsing steps are written for that app.
+
+judge:
+  - Scouts are matched to the buyer, not to the owner.
+  - The method gives a way to see varied creators, and says scouts only browse.
+  - A solo owner gets a small plan with a number of creators per week.
+  - The fit check shows each rule with your numbers, not just a verdict.
+  - Every brief carries the disclosure rule for #ad or the paid-partnership label.
+  - It says that fit numbers are the opinions of two operators and need a test on your first 10 posts.
+
+test:
+  - Describe a buyer in a place that is not your city. The plan should give scouts a way to see creators from that place.
+  - Say you sell only on your own site. It should keep codes or links and skip the no-attribution advice.
+  - Give a product that costs well above the impulse range. The shop fit check should say no-go.
+  - Run it twice. The roles and the go or no-go should match.
+
+improve:
+  - Add the creators your buyer follows that you already know, so scouts start with real names.
+  - Add your own fit numbers once you have 10 posts, and replace the price limit with what your data shows.
+  - Add a rule for how often relationship managers contact each creator.
+  - Pair it with the creator pay planner to price each creator you find.
+
+works_best_with:
+  tools:
+    - {name: "TikTok", why: "Creator search and the For You feed are where scouts find people. Its seller centre shows shop orders."}
+    - {name: "Instagram", why: "Scouts can find creators through Reels and hashtags your buyer follows."}
+    - {name: "Any good chat AI", why: "It writes the team plan and keeps the weekly routine in one place."}
+  inputs:
+    - "A list of creators your best customers follow"
+    - "Sales by day for each channel you sell on"
+    - "Your landed cost and price for the product you plan to put on the shop"
+
+terms:
+  - term: Halo
+    meaning: Sales that rise on other channels when a creator video gets views in one place.
+  - term: Scout
+    meaning: A person whose job is to find new creators who fit your buyer.
+  - term: Spillover
+    meaning: Buyers who see a video in one app and buy on another site or marketplace.

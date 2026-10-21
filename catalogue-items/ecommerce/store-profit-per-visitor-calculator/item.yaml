@@ -1,0 +1,19 @@
+slug: store-profit-per-visitor-calculator
+name: "Store profit per visitor calculator"
+summary: "Paste your Shopify and analytics numbers. Get corrected revenue and gross profit per visitor, and a trust score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "eCommerce CRO Masterclass 2026: The Full System", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "Revenue and gross profit per visitor, the Shopify number fixes, how cold traffic lowers blended conversion, and the link to the cost of getting a customer"}
+  - {title: "Conversion Rate Optimization Framework Revealed - Step By Step Breakdown", by: "Ali Kenyon (Conversion Wise), hosted by Ezra Firestone", used: "Revenue per visitor over conversion rate, and the halving-prices example"}

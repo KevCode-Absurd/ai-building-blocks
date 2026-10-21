@@ -1,0 +1,123 @@
+new_slug: email-segment-builder
+name: "Email segment builder"
+summary: "Give it your email tool and send rhythm. Get core segments with exact conditions, send rules and a clean-up plan."
+job: write-emails
+thinking: medium
+thinking_why: "The work is exact rules with AND and OR logic. A mid-size model can do it, but check each condition in your tool."
+
+headline: "Email segment builder"
+subhead: Give it your email tool, list size, send rhythm, region and what counts as a VIP. It builds the segments that matter, with exact conditions. You get engaged, unengaged and suppression groups, buyer and prospect groups, a send order and a list clean-up plan.
+
+explain: |
+  Sending every campaign to your whole list wears down your open rate and your inbox placement. Cutting the list into dozens of small groups does the opposite: each person gets fewer chances to buy, and you spend your week building groups instead of emails.
+
+  This skill builds a short set of segments that does the work. A main engaged group is the one you send to. An unengaged group feeds your sunset flow, and a suppression group holds people you stop sending to. A few groups of buyers and prospects handle special sends. It writes every condition out, shows where to use AND and where to use OR, and says which groups to skip if you are small.
+
+when:
+  - You send campaigns to your whole list and your open rate is falling.
+  - You want to know who counts as engaged and who to stop sending to.
+  - You want VIP, first-time buyer and high-intent groups without cutting your list into tiny pieces.
+
+you_give:
+  - Your email tool and how many people are on your list
+  - How many campaigns you send a month
+  - Your region, US or EU, since consent rules differ
+  - Your average order value and what counts as a VIP for you
+  - Your current open and click rates (optional)
+
+you_get:
+  - A set of segments, each with its exact conditions
+  - Exclusion and suppression groups
+  - A suggested send order by segment
+  - A list clean-up plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your tool's name, your list size, your send rhythm, your region and your average order value.
+  - Build the engaged group and the suppression group first, and send campaigns only to them.
+  - Add buyer and high-intent groups once the engaged group works.
+  - Clone a segment instead of rebuilding it when you need another window.
+
+how_it_works:
+  - title: Sets who can be emailed
+    text: Every segment starts with "can receive marketing". In the EU it means the person subscribed. It keeps subscribed apart from can receive marketing.
+  - title: Builds the engaged group
+    text: Opened or clicked, or ordered, or started checkout, or active on site in the window, joined with OR. Then it adds can receive marketing with AND.
+  - title: Builds unengaged and suppressed
+    text: Unengaged feeds the sunset flow. Suppressed holds spam reporters, hard bounces and long-silent profiles.
+  - title: Builds buyer and prospect groups
+    text: First-time buyers, returning buyers, non-buyers, VIPs, high-potential visitors, window shoppers and win-back.
+  - title: Sets the send order
+    text: Core campaigns go to the engaged group. Special sends go to the small groups, and the whole list gets only big news.
+  - title: Adds the resend trick
+    text: A group of people who got a key email and did not open it gets a resend a day or two later with a new subject.
+
+output_shape: |
+  SEGMENTS  <store> | <tool> | <list size> | region <US | EU>
+
+  CORE
+  Can receive marketing   <condition>
+  Engaged <n> days        <opened OR clicked OR ordered OR checkout started OR active on site in n days> AND can receive marketing
+  Unengaged <n> days      <zero opens, clicks, site activity, checkouts; no orders ever>
+  Suppress 180            <conditions>
+  All but suppressed      <excludes unengaged, spam-marked, bounced, bot-looking>
+
+  SPECIALTY
+  First-time | Returning | Non-buyers | VIP | High potential | Window shoppers | Last chance | Win-back
+    <exact conditions for each>
+
+  SEND ORDER   <segment | how often | what to send>
+  RESEND       <received and did not open> after <1 to 2 days>
+  CLEAN-UP     <steps, timing, region note>
+  CHECKS MISSED: <none or the list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your send rhythm
+    how: Tell it how often you send. A store sending three to four times a week uses a shorter engaged window than a store sending once a week.
+  - what: Your open rate
+    how: Give the current rate. If it keeps falling, the skill sends to the 30 or 60 day group until it recovers, then widens.
+  - what: Your size
+    how: Under about 20 million a year with one or two people on email, the skill keeps groups big and uses dynamic blocks for differences, instead of many small groups.
+  - what: What counts as a VIP
+    how: Give your rule, such as 4 or more orders, or spend near four times your average order value. The skill adapts it.
+
+judge:
+  - Every segment states its exact conditions with AND and OR in the right places.
+  - Every segment includes the "can receive marketing" condition, and the region note is included.
+  - The sources' different engaged windows are shown with when each fits.
+  - Quiet buyers are not suppressed by mistake.
+  - The skill says to adapt names to your tool.
+
+test:
+  - Build the engaged group in your tool and compare its size with your list. It should be a share of the list, not all of it.
+  - "Check the OR trap: if the group is nearly your whole list, an OR sits where an AND belongs."
+  - Check that a customer with an order but no opens is not in the suppression group.
+  - Run it twice on the same facts. The conditions should match.
+
+improve:
+  - Add your tool's exact filter names to the skill file, so conditions can be pasted straight in.
+  - Add your VIP rule and your average order value.
+  - Add the segments you already use, so the skill keeps what works.
+  - Pair it with the sunset flow and list cleaner, the win-back flow builder and the inbox placement recovery planner.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "The conditions in this skill follow its segment filters, so they can be copied across."}
+    - {name: "Shopify", why: "Order and customer data feed the buyer and VIP groups."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write and check the conditions."}
+  inputs:
+    - "Open and click rates for the last 30, 60 and 90 days"
+    - "Spam complaint and bounce counts"
+    - "Your campaign calendar, to match groups to sends"
+    - "Your VIP list, to check the rule picks the right people"
+
+terms:
+  - term: Segment
+    meaning: A saved group of people who match a set of conditions, such as "opened an email in the last 90 days".
+  - term: Suppressed
+    meaning: Kept on file but no longer sent marketing email.
+  - term: Apple privacy opens
+    meaning: Opens that Apple's mail app records automatically, so an open does not always mean a person read it.
+  - term: Bounce
+    meaning: An email that could not be delivered. Hard means the address is bad. Soft means a temporary problem.

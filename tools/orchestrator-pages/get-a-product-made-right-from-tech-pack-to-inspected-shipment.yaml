@@ -1,0 +1,88 @@
+new_slug: get-a-product-made-right-from-tech-pack-to-inspected-shipment
+name: "Get a product made right, from tech pack to shipment"
+summary: Give it product photos and facts. Get a tech pack, factory scores, landed cost and sample checks.
+job: plan-supply-chain
+thinking: high
+thinking_why: It runs five skills in a row and does cost sums at the end. Give it your strongest model.
+headline: Get a product made to spec, and paid for only after it passes
+subhead: Give it photos and facts about your product. It writes the tech pack, scores your factories, works out the true cost per sellable unit, checks each sample line by line, and briefs an inspector so you release the balance only on a pass.
+explain: |
+  Most problems with a made product start before the factory begins. The spec is vague, so each factory quotes for something different. The quote leaves out freight, duty and defects, so the margin is a surprise. The sample is waved through, and the bulk goods arrive worse.
+
+  The steps close those gaps in order. The tech pack is the single spec every factory quotes against, with each vague word turned into a measure. The same pack is used to judge the factories, price the quotes, check the samples and brief the inspector. You do the real-world work at two pauses: sending the pack to factories and ordering samples, then approving one sample and placing the order. It does not replace seeing the product in your hands.
+when:
+  - You are ordering a physical product from a factory for the first time and do not know what to ask for.
+  - You have quotes from three factories that all look different and cannot compare them.
+  - Production is finishing and you need to decide whether to pay the balance.
+you_give:
+  - Photos of the product from every angle, or a sample
+  - Materials, sizes, colors, finishes and packaging
+  - Quotes, order size, selling price and freight and duty costs (at the cost step)
+  - Photos and measures of the sample (at the sample step)
+  - Your purchase order and payment terms (at the last step)
+you_get:
+  - A tech pack with six sections, measured limits and a fixed quote request to send to every factory
+  - A factory shortlist scored out of 100, with red flags, document checks and a backup plan
+  - The landed cost per sellable unit, your margin and a go or no-go
+  - A pass or fail on every tech pack line for the sample, and a go or hold on bulk
+  - An inspection brief with a pass, rework or reject rule, and a payment plan tied to the result
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach your product photos and tell it what the photos do not show, such as materials and sizes.
+  - At the first pause, send the tech pack and the same quote request to your shortlisted factories, then order samples.
+  - At the second pause, approve one sample, place the order and keep that sample as your gold standard.
+how_it_works:
+  - title: Write the tech pack
+    text: Turns your photos and facts into six sections, replaces every vague word with a number, and drafts one quote request that asks every factory the same questions.
+  - title: Vet the factories
+    text: Plans the shortlist and the video call questions, checks documents and certificates, scores each factory out of 100, and plans a backup supplier.
+  - title: Work out the landed cost
+    text: Adds freight, duty, fees and defects to each quote, compares air and sea, divides by the units that pass inspection, and gives a go or no-go on margin.
+  - title: Judge the sample
+    text: Checks every tech pack line pass, fail or not checked, names the gold standard sample, and holds the order if a critical line fails.
+  - title: Brief the inspector
+    text: Writes what the inspector tests, sets the pass, rework and reject rule before the report arrives, and ties the balance payment to the result.
+output_shape: |-
+  STEP 1: TECH PACK
+    Six sections | measured limits | version and date | quote request to send
+
+  STEP 2: FACTORY SHORTLIST
+    Factory | score out of 100 | red flags | document checks | backup plan | contract terms to ask for
+
+  STEP 3: LANDED COST
+    Cost layers per unit | cost per sellable unit | air vs sea | margin and score | go or no-go
+
+  STEP 4: SAMPLE CHECK
+    Each tech pack line pass, fail or not checked | score | go or hold on bulk | gold standard sample
+
+  STEP 5: INSPECTION BRIEF
+    What the inspector tests | pass, rework or reject rule | payment plan | rule if inspection is skipped
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: What the photos do not show
+    how: A photo hides materials, weights and finishes. Tell the first step, or it marks them as missing.
+  - what: Order size and budget
+    how: The factory shortlist and the cost step both depend on them. A small first order changes which factories will even reply.
+  - what: Defects you have seen before
+    how: Give past defects or complaints. They become measured checks in the pack, the sample check and the inspection.
+  - what: Air or sea freight
+    how: Name the one you plan to use, and the cost step compares it against the other on the whole bill.
+judge:
+  - Every vague word in the pack, such as soft or durable, has become a number or a test.
+  - Each factory score shows what it rests on, and a factory with no documents is not scored high.
+  - The landed cost includes freight, duty, fees, spare units and defects, not only the quote.
+  - Sample lines the AI could not measure from a photo are marked not checked, not passed.
+  - The pass, rework and reject rule was written before any inspection report.
+test:
+  - Send the quote request to two factories and see whether their answers are easy to compare side by side.
+  - Rework the landed cost for one quote by hand. The cost per sellable unit should match.
+  - Run the sample check on a sample you already know has a fault. It should fail that line.
+  - Read the inspection brief to someone who has not seen the product. They should know what to check.
+improve:
+  - Add your quality standards and your usual defects to the skills, so every future product starts with them.
+  - Keep the approved tech pack and the gold standard photos in your brand file for the next order.
+  - Add your own freight forwarder and duty rates to the cost step so it stops asking each time.
+  - Use the scored shortlist for your next product too, and add factories you have worked with.

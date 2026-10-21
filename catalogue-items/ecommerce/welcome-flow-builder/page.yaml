@@ -1,0 +1,126 @@
+new_slug: welcome-flow-builder
+name: "Welcome flow builder"
+summary: "Give it your offer, best sellers and brand story. Get a welcome flow with timing, filters, email outlines and tests."
+job: write-emails
+thinking: medium
+thinking_why: "It follows a fixed method and writes outlines, so a mid-size model does it well. Use a stronger one if your offer and margins are complicated."
+
+headline: "Welcome flow builder"
+subhead: Give it your welcome offer, best sellers, proof and brand story. It builds the flow that runs when someone joins your list. You get the trigger, filters, timing, an outline for every email, a text message plan and the first three tests to run.
+
+explain: |
+  Most of your welcome revenue lands in the first three days after someone signs up. A flow that drips out over three weeks wastes that moment, and a flow that only sends a code leaves the other 90 percent of subscribers cold.
+
+  This skill builds a flow around that window. Email 1 delivers the offer at the very top. A short plain-text note follows the same day. Then each email has one job: your story, your best sellers, proof, how you compare, a real reminder and a founder note. It also sets who gets the flow, who drops out when they buy, and how to test the offer in steps without giving margin away.
+
+when:
+  - You collect emails with a pop-up and the welcome flow is still the tool's default, or missing.
+  - Your welcome flow gets opens but little revenue, and you want to know which email to change.
+  - You want to test a bigger or smaller welcome offer without guessing.
+
+you_give:
+  - Your brand story, founder or team details, guarantees and proof (review counts, ratings, press)
+  - The welcome offer and when it ends, or "no offer"
+  - Best sellers, average order value and how long buyers usually take to decide
+  - Your margin per product, so the offer can be checked
+  - Your current welcome flow and its results (optional)
+
+you_get:
+  - "The flow spec: trigger, filter, delays and exit rule"
+  - "An outline for each email: purpose, sections, button placement and the offer line"
+  - Subject line and preview ideas for each email, and a three-text SMS plan if you use SMS
+  - Targets to watch and the first three tests, with the offer-step test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer, your margin, your best sellers and a few lines on your brand story. Say how many emails you can design.
+  - Check the filters and delays against your email tool, then build the emails in the order given.
+  - Turn smart sending off for the flow, and use a code that really expires if you mention a deadline.
+  - Run one test at a time and compare revenue per recipient before you change anything else.
+
+how_it_works:
+  - title: Checks the offer first
+    text: Asks for your margin, then checks that the welcome offer leaves you a profit. With no offer, it swaps the code for free shipping or a gift and keeps the same email jobs.
+  - title: Sets who gets the flow
+    text: Trigger is joining the signup list. People who have ever ordered get no code, and anyone who orders during the flow drops out to the post-purchase flow.
+  - title: Times the first 72 hours
+    text: Email 1 goes out at once. A plain-text note follows eight hours later. Emails 2 to 4 follow about a day apart, then the gaps widen.
+  - title: Gives each email one job
+    text: Offer, story, best sellers, proof, how you compare, real reminder, last chance and a founder note. Each outline says where the offer line and button go.
+  - title: Sizes the flow to you
+    text: A solo owner ships emails 1, 1B and the founder note first. Late emails stay only if they earn. Slow decisions space the emails out.
+  - title: Plans SMS and tests
+    text: Three texts on day 1, 3 and 5 for people who agreed to texts, and tests for delay, offer size and email 1, one at a time.
+
+output_shape: |
+  WELCOME FLOW  <store name>
+  Offer: <incentive> | ends <real date or "n/a"> | margin check: <ok / too thin>
+
+  TRIGGER   <joins list name>  | re-entry: <once only>
+  FILTER    <placed order zero times over all time> and <zero times since flow start>
+  SETTINGS  smart sending off | tracking tags on | exit to post-purchase flow on order
+
+  EMAILS
+  1  <send time> | <purpose> | above the fold: <offer, code, button>
+     body: <brand line, proof line, 1 to 3 best sellers> | under 100 words
+     subject ideas: <3> | preview: <1>
+  1B <send time> | plain text, founder | <what it says>
+  2  <send time> | <story> | <sections>
+  ...one block per email, each with its offer line and button
+
+  SMS (only if consent): day 1 <code> | day 3 <reminder with a fact> | day 5 <last chance>
+
+  TARGETS    <share of recipients who buy> | revenue per recipient
+  FIRST 3 TESTS  <1> <2> <3>
+  CHECKS MISSED: <none or the list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your margin per product
+    how: Give the real number. The skill uses it to check the offer, and says if a 10 or 20 percent code leaves too little. Without it, it flags the offer as unchecked.
+  - what: How long buyers take to decide
+    how: Say "impulse buy", "a few days" or "weeks". Quick buys get the front-loaded 72-hour flow. Slow, high-priced buys get wider gaps and emails that answer doubts.
+  - what: How many emails you can design
+    how: A team of one can ship emails 1, 1B and the founder note first. Say how many you can build and the skill picks which ones to keep.
+  - what: Whether you have tutorials
+    how: Products that need showing (tools, beauty, food, gear) get tutorial emails. Without tutorials it uses review-led product stories.
+
+judge:
+  - Every email has one job and the offer line appears where the outline says.
+  - Email 1 has the offer and button at the very top, and under 100 words of body copy.
+  - Anyone who has ordered is kept out of the code, and buyers drop out of the flow.
+  - Any deadline in an email matches a code that really expires.
+  - The targets are labelled as one source's numbers, not a promise.
+
+test:
+  - Give it a store with no offer. It should swap the code for free shipping or a gift and keep the email jobs.
+  - Give it a very low margin. It should flag the offer and say so, not carry on.
+  - Run it twice with the same facts. The trigger, filter and email jobs should match.
+  - "Check one outline against your own pop-up: the offer you promised on the form must be what email 1 delivers."
+
+improve:
+  - Add your real review count, press names and guarantee wording to the skill file so every outline uses true proof.
+  - Save your winning welcome offer and its test result in your brand file, then reuse it as the starting point.
+  - Add the emails your current flow already has that earn well, so they stay in the plan.
+  - Pair it with the signup pop-up builder, the post-purchase flow builder and the email segment builder.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Flows, filters, dynamic coupons and revenue per recipient reports match the steps in this skill."}
+    - {name: "Shopify", why: "Order and customer data decide who drops out of the flow and who gets a code."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the skill from the pasted facts."}
+  inputs:
+    - "Your current flow's revenue and open rates by email"
+    - "Your reviews, so the proof email uses real customer words"
+    - "A photo of the founder or team for the story email"
+    - "Your pop-up wording, so email 1 matches the promise"
+
+terms:
+  - term: Flow
+    meaning: A set of emails that sends itself when someone does something, such as joining your list.
+  - term: Above the fold
+    meaning: The part of an email people see before they scroll.
+  - term: Revenue per recipient
+    meaning: Total sales from a flow divided by the number of people who got it.
+  - term: Smart sending
+    meaning: A setting that skips anyone who got another email recently. Turn it off for flows.

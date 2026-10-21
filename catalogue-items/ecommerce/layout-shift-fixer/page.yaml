@@ -1,0 +1,132 @@
+new_slug: layout-shift-fixer
+name: "Layout shift fixer"
+summary: "Give it your CLS report and page. Get the shifting element found and the fix for each cause."
+job: speed-up-store
+thinking: medium
+thinking_why: "It reasons about causes and writes small CSS and theme edits. A mid-size model does this well when it can see the report and the code."
+
+headline: "Layout shift fixer"
+subhead: "Give it the layout shift (CLS) part of your PageSpeed report, the page address and your theme code. It finds the element that jumps, names the cause, and writes the CSS or theme change, the test steps and the date to recheck. Use a duplicate theme."
+
+explain: |
+  You've seen it: you're about to tap a button and the page jumps because a bar or a banner loaded above it. Google calls this layout shift and scores it as CLS. A score of 0.1 or less is good, and above 0.25 is poor. Shifts cost sales when shoppers tap the wrong thing, and they can pull down your Core Web Vitals.
+
+  This skill finds the exact element that shifts, then works through the usual causes in order: an app that adds a bar or widget late, images with no size set, a font swap, and clashing style rules. For each it writes the fix. It reserves space for widgets and tools you need to keep, such as cookie banners, rather than removing them. It also tells you when to recheck, because real-user data takes about 28 days to catch up.
+
+when:
+  - "CLS is above 0.1 on mobile or desktop."
+  - "A bar, widget or image pushes the page down as it loads."
+  - "Search Console shows a Core Web Vitals warning for layout shift."
+
+you_give:
+  - "The PageSpeed CLS element list and loading filmstrip, mobile and desktop"
+  - "The page address and your theme code"
+  - "A list of apps that add visible widgets, such as bars, review stars and payment messages"
+  - "Screenshots of the page while loading (optional)"
+
+you_get:
+  - "The element that shifts and its cause"
+  - "CSS or theme changes: reserved space, image sizes, a closer fallback font"
+  - "Test steps and the date to recheck real-user data"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Duplicate your theme first: Online Store, Themes, the three dots, Duplicate. Edit only the copy."
+  - "Paste the layout shift section from PageSpeed (mobile and desktop) and attach the filmstrip."
+  - "Paste the theme code for the part of the page that moves, and list apps that add bars or widgets."
+  - "Apply the fixes on the copy, run PageSpeed three times, and look again at real-user data in 28 days."
+
+how_it_works:
+  - title: Finds the element
+    text: Gets the shifting element from the lab report, or by slowing the page to slow 3G with the cache off and comparing frames.
+  - title: Checks both devices
+    text: Mobile and desktop can differ. One store had no shift on mobile and a large one on desktop.
+  - title: Works through the causes
+    text: Late app bars and widgets first, then images without size, font swap, then clashing style rules.
+  - title: Reserves space
+    text: Gives injected widgets a fixed height and width, or replaces an app with the theme's own version.
+  - title: Sizes images
+    text: Sets width and height, or an aspect ratio, using the size shown in the browser inspector.
+  - title: Matches fonts
+    text: Adds font-display swap and styles the fallback font to the same size as the custom font.
+  - title: Fixes style clashes
+    text: Removes rules that set different heights, or moves a late style block into the head.
+  - title: Plans the recheck
+    text: Three-run average now, real-user data after about 28 days.
+
+output_shape: |
+  LAYOUT SHIFT FIX  <store>, <page>, theme copy
+  CLS now: mobile <n> | desktop <n> | target 0.1 or less
+
+  SHIFTING ELEMENT 1
+  What: <element> | Moves: <how far, when> | Cause: <app bar | no image size | font swap | clashing rules | late style>
+  Fix: <file> | Find: <original> | Replace with: <code>
+  Reserve: height <px> | width <px>
+
+  (one block per element)
+
+  NOT A SHIFT
+  <movement the shopper caused, such as a tapped menu>
+
+  LEGAL AND CONSENT NOTE
+  <cookie or consent banner: space reserved, not removed>
+
+  TEST STEPS
+  <slow 3G, cache off, frame-by-frame, three runs, mobile and desktop>
+
+  RECHECK
+  <date for real-user data, about 28 days>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what>
+
+tweaks:
+  - what: The filmstrip
+    how: Attach the loading screenshots. They show the exact moment the page jumps, which is faster than guessing from code.
+  - what: Mobile and desktop reports
+    how: Paste both. A shift can show on one and not the other.
+  - what: List of apps with visible widgets
+    how: Name every app that adds a bar, stars or message. Late app injection is one of the most common causes.
+  - what: Theme type
+    how: Say if the theme loads its CSS late on purpose. Those themes may need critical styles built for each template.
+
+judge:
+  - "Each shifting element is named, with its cause."
+  - "Cookie banners and consent tools get reserved space, not removal."
+  - "Movement the shopper caused is not counted as a shift."
+  - "Image fixes use real sizes from the page, not invented ones."
+  - "The recheck date is about 28 days out for real-user data."
+  - "It says to edit a duplicate theme."
+
+test:
+  - "Throttle to slow 3G with the cache off and watch the page. The element should stay still."
+  - "Run PageSpeed on mobile and desktop three times. CLS should be 0.1 or lower."
+  - "Check that the cookie banner still shows and works."
+  - "Look at real-user data after about 28 days. One case went from 0.13 to 0.1 to 0 over that window."
+
+improve:
+  - "Add the list of apps that add visible widgets, so each gets a fixed space the first time."
+  - "Add your design's heights for bars and banners, so reserved space matches the real size."
+  - "Add your legal rules for cookie and consent banners."
+  - "Pair it with the app script auditor, which can remove apps that do what your theme already does."
+
+works_best_with:
+  tools:
+    - {name: "Google PageSpeed Insights", why: "Lists the shifting elements and a loading filmstrip for each page."}
+    - {name: "Chrome DevTools", why: "The inspector shows each image's rendered size, and the performance trace shows when elements move."}
+    - {name: "Google Search Console", why: "Its Core Web Vitals report shows when real-user layout shift passes."}
+  inputs:
+    - "The store speed report reader's list of shifting elements"
+    - "Screenshots of the page loading, frame by frame"
+    - "The CSS file or section where the shifting element lives"
+    - "The names of your custom fonts"
+
+terms:
+  - term: CLS
+    meaning: Cumulative Layout Shift. A score for how much the page jumps around as it loads. Lower is better.
+  - term: Filmstrip
+    meaning: A row of screenshots from PageSpeed that shows the page as it loads, frame by frame.
+  - term: Aspect ratio
+    meaning: The width compared with the height of an image, such as 4 by 5.
+  - term: Critical CSS
+    meaning: The small set of styles the first screen needs, placed straight in the page.

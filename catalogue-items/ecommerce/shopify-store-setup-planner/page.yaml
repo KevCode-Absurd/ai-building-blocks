@@ -1,0 +1,128 @@
+new_slug: shopify-store-setup-planner
+name: "Shopify store setup planner"
+summary: "Tell it your country, team and catalogue. Get your plan, payments, domain and a build order."
+job: set-up-store
+thinking: low
+thinking_why: "It follows a fixed order and sorts your answers into a plan, so a fast, cheap model is enough."
+
+headline: "Shopify store setup planner"
+subhead: Tell it the country where your business is registered, how many staff need access, where you will sell and how big your catalogue is. It plans which Shopify plan to start on, which payment options you can use, what to prepare, your domain, and the order to build in.
+
+explain: |
+  Shopify is quick to start, but a few early choices are hard to undo. Sign up with the wrong email and you are not the owner. Pick a plan before you know what you need and you pay for features you do not use. Choose a brand name before checking the domain, and the .com may be taken. Where your business is registered also decides which payment options you get.
+
+  This skill puts those choices in order before you open the admin. It lists what to prepare, suggests the plan to start on and the trigger to upgrade, plans payments for your country, checks domain names against simple rules, and gives you the DNS steps if you buy the domain elsewhere. Plan prices and limits change often, and the figures here come from one tutorial, so check them on Shopify's own pricing page.
+
+when:
+  - You are about to open a Shopify account and want to do the early choices in the right order.
+  - You are choosing a brand name and a domain and want to check them before you commit.
+  - You are not sure which plan you need or whether Shopify Payments works in your country.
+
+you_give:
+  - The country where your business is registered
+  - The number of staff who need access
+  - The countries you will sell in
+  - Your catalogue size, and what you have ready (logo, colours, photos, product list)
+  - Brand name ideas, and where you might buy the domain (optional)
+you_get:
+  - A plan choice with the upgrade trigger
+  - The payment gateways likely to be available in your country
+  - A prep list and a build order from account to launch
+  - A domain shortlist with a pass or fail, connect steps and a DNS record list
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your country, team size, markets, catalogue size and what you already have ready.
+  - Add your brand name ideas so it can test them as domains.
+  - Check the plan and card rates on Shopify's own pricing page before you pay.
+  - Follow the build order, and use a launch checker before you remove the password.
+
+how_it_works:
+  - title: Lists what to prepare
+    text: A transparent PNG logo, a square favicon, four to five brand colours, fonts, product list, photos and about text.
+  - title: Picks the plan
+    text: Start on Basic. Upgrade when staff, market editing or card-rate savings call for it.
+  - title: Sets up the account
+    text: Sign up with your own email so you stay the owner, and give staff the least access they need.
+  - title: Plans payments
+    text: Where the business is registered decides if Shopify Payments is available. Add PayPal anyway.
+  - title: Tests domain names
+    text: Short, easy to spell and say, no hyphens or numbers, and the .com is free before you commit.
+  - title: Connects the domain
+    text: Buy through Shopify, or copy the records to another registrar's DNS page and wait for it to update.
+  - title: Orders the build
+    text: Settings, products, theme, menus, policies, payments, shipping, taxes, apps, then test and launch.
+
+output_shape: |
+  PREP LIST
+  [ ] <item to have ready>
+
+  PLAN
+  start on <plan> because <reason>. Upgrade when <trigger>. Check prices on Shopify's pricing page.
+
+  PAYMENTS
+  <country> -> <gateways likely available>; add PayPal; check Shopify's list for your country
+
+  ACCOUNT
+  owner email: <yours> | staff access: <least needed>
+
+  DOMAIN SHORTLIST
+  <name> | .com free: <yes | no> | passes name tests: <yes | no, why> | also protect: <country, .co>
+
+  CONNECT
+  <buy via Shopify | connect existing> -> <steps>
+  DNS RECORDS: <the records Shopify gives you, copied exactly>
+
+  BUILD ORDER
+  1. settings 2. products and collections 3. theme 4. menus and pages 5. policies 6. payments 7. shipping 8. taxes 9. apps 10. test and launch
+  MISSING: <country | staff | catalogue size | name ideas>
+
+tweaks:
+  - what: Country of registration
+    how: It decides which payment options you get. Say yours, and the plan lists other gateways if Shopify Payments is not there.
+  - what: Staff and freelancers
+    how: Say how many people need access. Use a staff or collaborator invite for freelancers, not your login.
+  - what: Catalogue size
+    how: A small catalogue starts on the basic plan. A large one or many markets may need more.
+  - what: Brand name ideas
+    how: Give several. Each is tested as a domain, and you can see which pass before you commit.
+
+judge:
+  - It starts you on Basic and names the trigger to upgrade.
+  - It says that you sign up with your own email so you stay the owner.
+  - Payments depend on the country where the business is registered.
+  - Each domain name has a pass or fail with a reason.
+  - Plan prices and card rates are marked as needing a check.
+
+test:
+  - Give it a country where Shopify Payments may not be available. It should plan other gateways and tell you to check Shopify's list.
+  - Give it a hyphenated name with a number. It should fail the name tests.
+  - Ask what Plus costs. It should give the figure as approximate and tell you to check it.
+  - Follow the build order for one step and see whether the order makes sense for your store.
+
+improve:
+  - Save your brand colours, fonts and logo files list in your brand file.
+  - Add your own upgrade trigger, such as the monthly sales at which the card-rate saving beats the extra cost.
+  - Add the domain endings you want to protect.
+  - Pair it with policy, shipping, tax and go-live skills for the later steps.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Where the store is built. Its pricing page has current plan prices and card rates."}
+    - {name: "Canva", why: "Brand colours and fonts are best chosen from ones that exist in both Shopify's font library and Canva."}
+    - {name: "Any good chat AI", why: "Any current chat AI can sort your answers into a plan and test domain names."}
+  inputs:
+    - "Your logo as a transparent PNG and your favicon as a square image"
+    - "Your product list with prices"
+    - "Your about text"
+    - "A list of apps that need DNS records, such as an email tool"
+
+terms:
+  - term: DNS
+    meaning: The settings that tell the internet where your domain points.
+  - term: Registrar
+    meaning: The company you buy a domain name from.
+  - term: Favicon
+    meaning: The tiny icon in a browser tab.
+  - term: Card rate
+    meaning: The percentage Shopify takes from card payments on your store.

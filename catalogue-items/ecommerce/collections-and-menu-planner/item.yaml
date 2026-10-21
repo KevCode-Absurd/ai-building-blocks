@@ -1,0 +1,23 @@
+slug: collections-and-menu-planner
+name: "Collections and menu planner"
+summary: "Give it your products. Get collections, filters, a menu and search settings so shoppers find things fast."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients", used: "Tag-driven smart collections, manual versus smart, other rule types, best sellers, product type spelling, choosing filters from competitors, the filter app and a menu by type, use and gender"}
+  - {title: "Shopify Store Setup Full Tutorial 2026: Step by Step", by: "Unnamed presenter", used: "Removing default links, keeping the menu short, and drawer versus dropdown versus mega menu by product count"}
+  - {title: "The Official Shopify 2026 Tutorial (four-part series)", by: "Kylie Maher, Learn with Shopify", used: "Click depth, plain names, mega menu, breadcrumbs, predictive search and synonyms"}
+  - {title: "Shopify Tutorial for Beginners 2026 - Full Store Setup Guide", by: "Simon", used: "Nested menus, a collection list and a featured collection on the homepage"}
+  - {title: "WooCommerce Tutorial for Beginners 2026", by: "Daryl Wilson", used: "WooCommerce categories and menu notes"}

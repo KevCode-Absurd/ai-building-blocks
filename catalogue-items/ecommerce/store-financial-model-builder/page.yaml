@@ -1,0 +1,127 @@
+new_slug: store-financial-model-builder
+name: "Store financial model builder"
+summary: "Give it ad budget, CAC, prices and costs. Get a 36-month store model with cash and runway."
+job: track-numbers
+thinking: high
+thinking_why: "Many linked numbers have to agree, and one wrong formula spoils the whole model. A stronger model catches more."
+
+headline: "Store financial model builder"
+subhead: "Give it your ad budget, CAC, prices and costs. It builds a 36-month plan with customers, revenue, profit after ads, cash and runway. You also get a cautious case and the one guess that moves the answer most."
+
+explain: |
+  A store plan is a chain. Ad spend divided by CAC (what you pay to win one new customer) gives new customers. They buy once or keep buying. That gives revenue, then costs, then profit. A wrong guess early in the chain spreads to every number after it, and most store owners never see how far.
+
+  This skill builds that chain in one sheet. All your guesses sit in one block, marked as your data, looked up, or a guess. It forecasts one-time buyers and subscribers separately, checks the margin against your unit costs, and shows profit after ads each month. If that number is negative, you cannot pay for staff. It runs a base case and a cautious case, then adds the stock bill to show the lowest cash point and how long your money lasts. It is a plan, not a promise.
+
+when:
+  - You are starting a store and want to know how much cash you need before it can pay for itself.
+  - You plan to raise ad spend and want to see when profit after ads turns positive.
+  - A lender, partner or buyer asks for a forecast and you want one that holds together.
+
+you_give:
+  - Your ad spend plan by month and the CAC you expect
+  - Price, refund rate, discount rate and the cost of each order (product, packaging, fulfilment, card fees)
+  - How many new buyers buy once and how many subscribe, with churn or return rates if you have them
+  - Team and running costs, and starting cash
+  - Your stock plan (optional)
+you_get:
+  - A month-by-month sheet plan with customers, revenue, costs, profit after ads, operating income and tax
+  - Run rate, lifetime value, LTV against CAC, and the lowest cash point with runway
+  - A base case, a cautious case and a best case
+  - The assumption that changes the result most
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your ad plan, CAC, prices and cost per order. Say which numbers are real and which are guesses.
+  - Add your repeat or churn data from the last six months if you have it. Without it the model is a hypothesis.
+  - Read the cautious case first. Then read which assumption matters most and get a real number for that one.
+  - Take the stock plan to the Inventory cash planner and bring back the cash view.
+
+how_it_works:
+  - title: Starts with ad spend
+    text: New customers equal ad spend divided by CAC. Every other line flows from that one.
+  - title: Splits the buyers
+    text: One-time buyers come back at a rate based on the last six months of customers. Subscribers drop off by a churn rate worked on last month's count.
+  - title: Builds revenue and costs
+    text: Orders times AOV, less refunds and discounts, then each cost line. The margin must match your unit costs, or a formula is wrong.
+  - title: Shows profit after ads
+    text: Contribution margin minus marketing each month. If it is negative, the business cannot pay for staff.
+  - title: Adds team and tax
+    text: Payroll is one line per function, plus a load for benefits. Past losses offset tax until profit pays them back.
+  - title: Works out the key numbers
+    text: Run rate is this month times 12. Lifetime value uses contribution margin, never revenue.
+  - title: Adds cash
+    text: The stock bill goes in, so you see the lowest cash point, the runway and the raise needed.
+  - title: Tests the guesses
+    text: Runs a cautious case and moves each key input up and down to find which one matters most.
+
+output_shape: |
+  STORE MODEL  <store>  <months> months  case: <base | conservative | best>
+  ASSUMPTIONS (marked: your data | looked up | guess)
+    ad spend <...> | CAC <...> | mix <...> | AOV <$> | refunds <%> | discounts <%>
+    cost lines <...> | return rate <%> or churn <%> | headcount <...> | starting cash <$>
+  CUSTOMERS  new | returning | subscribers (new, kept, churned) | orders
+  REVENUE    gross <$> - refunds - discounts = net <$>
+  CONTRIBUTION  net - cost lines = <$> (<%>)
+    Check: model margin <%> vs unit-economics margin <%>
+  AFTER MARKETING  first positive month: <n>
+  OPERATING INCOME  first positive month: <n>  tax starts: <n>
+  METRICS    run rate <$> | LTV one-time <$> | LTV subscriber <$> | LTV/CAC <x>
+  CASH       lowest cash <$> in month <n> | raise needed <$> | runway <months>
+  CASES      base | conservative | best
+  MATTERS MOST  <input> moves <result> by <amount>
+  CHECKS MISSED: <none or list>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Your own repeat and churn numbers
+    how: Use last month's returning customers divided by the customers in the last six months, and your real cancel rate. The sample rates in the skill are examples to replace.
+  - what: The CAC plan
+    how: Use your own trailing CAC. A falling CAC in the plan is a bet. Show it as a bet and run the cautious case with CAC flat or higher.
+  - what: One-time or subscription mix
+    how: Set it to what you sell today. A store with no subscription should leave that part out.
+  - what: Your country's payroll load and tax rate
+    how: The skill uses US figures as placeholders (about 25 percent on payroll). Replace them and ask your accountant to confirm.
+  - what: The cautious case
+    how: Say how bad it could get, such as CAC up and repeat down. The cash result tells you how much cushion you need.
+
+judge:
+  - Every assumption is marked as your data, looked up or a guess.
+  - New customers come from ad spend divided by CAC, and nowhere else.
+  - The model's margin matches the margin from your unit costs.
+  - LTV is built on contribution margin, not revenue.
+  - A cautious case sits next to the base case.
+  - Stock purchases appear in the cash view, not only in cost of goods.
+
+test:
+  - Feed it last year's real ad spend and CAC. The customers and revenue it gives should land near your actual books. If not, find the assumption that is off.
+  - Run it twice with the same inputs. The first profitable month and the lowest cash point should match.
+  - Change CAC by 20 percent and see that the result moves the way you expect.
+  - Check one month by hand in a sheet, from ad spend to profit after ads.
+
+improve:
+  - Save your real cost per order and fee rates in the skill file so you only type the ad plan.
+  - Add your own cutoffs, such as "never plan below one month of cash".
+  - Keep each model run, with its date, so you can compare plan against what happened.
+  - Pair it with the Inventory cash planner for stock and cash, and the Store P&L builder to compare plan with actuals.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can lay out the model and check the sums. Ask for a spreadsheet file or formulas in plain text."}
+    - {name: "Excel or Google Sheets", why: "Holds the model with live formulas, so you can change an assumption and see the result."}
+    - {name: "Shopify", why: "Gives order counts and repeat rates from your own store, so the model starts from real data."}
+  inputs:
+    - "A cohort report showing how many customers return, by month"
+    - "Your last three months of costs from your books"
+    - "Quotes from your 3PL or packer"
+    - "Supplier terms and lead times"
+
+terms:
+  - term: CAC
+    meaning: Customer acquisition cost. What you spend on marketing to win one new customer.
+  - term: Contribution margin
+    meaning: What is left from sales after the cost of the product and of getting it to the customer. It pays for ads and overhead.
+  - term: Churn
+    meaning: The share of subscribers who cancel in a month, worked out on the number you had at the start of that month.
+  - term: Run rate
+    meaning: This month's revenue times 12. It shows the pace you are on now.

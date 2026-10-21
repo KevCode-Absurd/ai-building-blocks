@@ -1,0 +1,22 @@
+slug: set-your-position-and-turn-it-into-a-checked-roadmap
+name: "Set your position and turn it into a checked roadmap"
+summary: "Give it what you offer and who you serve. Get a position, a roadmap of results and a failure review."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+uses: [strategy-trade-off-planner, outcome-based-roadmap, work-backwards-plan-checker, failure-first-plan-check]
+steps:
+  - {uses: strategy-trade-off-planner, note: "Starts the chain with a position, a not-do list and the activities that carry it"}
+  - {uses: outcome-based-roadmap, note: "Turns the position's activities into three to five problems with a measure each"}
+  - {uses: work-backwards-plan-checker, note: "Tests the roadmap by building it backwards and shows where it does not hold"}
+  - {uses: failure-first-plan-check, note: "Attacks the checked roadmap and writes the changes that close the gaps"}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/set-your-position-and-turn-it-into-a-checked-roadmap/skeleton.yaml

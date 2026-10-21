@@ -1,0 +1,125 @@
+new_slug: leftover-app-code-finder
+name: "Leftover app code finder"
+summary: "Give it your theme files and removed apps. Get each leftover script found and the lines to delete."
+job: speed-up-store
+thinking: medium
+thinking_why: "It searches many files for names and judges what is safe to remove. A mid-size model does this well if it can open the files."
+
+headline: "Leftover app code finder"
+subhead: "Give it your theme files and the list of apps and pixels you removed. It finds every file and line that still mentions them, plans a safe delete one change at a time, and gives your theme a cleanliness score out of 100."
+
+explain: |
+  Uninstalling an app does not always remove its code. Many apps leave script and style lines in your theme files, and those lines keep loading on every page. PageSpeed still shows a script from an app you dropped months ago, and nobody knows where it comes from.
+
+  This skill searches your downloaded theme for each removed app's name and short name. It checks the files where leftovers usually sit first: theme.liquid, head.liquid and footer.liquid. Then it checks snippets, sections and the settings data file. It reads theme.liquid for script and pixel tags nobody recognises. For each hit it says whether to delete it, comment it out to test first, or ask someone who set it up. All edits are planned on a duplicate of your theme, never the live one.
+
+when:
+  - "You just uninstalled an app, a pixel or a widget."
+  - "PageSpeed still shows a script from an app you no longer use."
+  - "You inherited a store and don't know what is in the theme."
+
+you_give:
+  - "Your theme folder (download it from Online Store, Themes, then unzip it) or the pasted theme.liquid, head and footer files"
+  - "The list of apps, pixels and services you removed or never used"
+  - "Your list of live ad and analytics pixels (optional, so they are never touched)"
+
+you_get:
+  - "A list of files and line numbers that mention each removed app"
+  - "A safe edit plan: delete or comment out, one change at a time"
+  - "Unknown scripts you should ask someone about"
+  - "A cleanliness score out of 100, now and after the edits, with the sum shown"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "In Shopify, go to Online Store, Themes, open the three dots on your theme and choose Duplicate. Work only on the copy."
+  - "Download the copy, unzip it and open the folder in your AI (in Claude Code) or paste the key files."
+  - "Give the list of removed apps and pixels you still use."
+  - "Make the edits one at a time on the copy, preview your homepage, a collection page, a product page and checkout, then publish the copy only when all work."
+
+how_it_works:
+  - title: Sets up a safe search
+    text: Opens the theme in a code editor so one search covers every file, and insists on a duplicate theme for any edit.
+  - title: Searches by name
+    text: Looks for each removed app's name and short name in theme.liquid, head.liquid and footer.liquid first.
+  - title: Searches the rest
+    text: Checks snippets, sections and the settings data file.
+  - title: Reads for strangers
+    text: Scans theme.liquid for script and pixel tags nobody recognises, including old pixels, unused fonts and abandoned library links.
+  - title: Judges each hit
+    text: Delete, or comment out with Liquid comment tags to test first.
+  - title: Protects live tags
+    text: Never marks an ad or analytics tag you still use. Unknown scripts go to the person who set them up.
+  - title: Plans the retest
+    text: One change at a time, a three-run speed average after, and a dated log.
+
+output_shape: |
+  LEFTOVER CODE REPORT  <store>, <date>
+  CLEAN SCORE  <n>/100 now (100 - <deductions> = <n>)
+               <n>/100 after the edits
+
+  REMOVED APP: <name>
+  <file>:<line> | <what the line is> | <delete | comment out | ask first> | risk <low | mid | high>
+
+  UNKNOWN SCRIPTS TO ASK ABOUT
+  <file>:<line> | <script or pixel> | <who might know>
+
+  LEFT ALONE (still in use)
+  <ad and analytics tags>
+
+  SAFE EDIT PLAN (on the duplicate theme)
+  1. <one change> | test: <pages to preview>
+  2. <...>
+
+  RETEST
+  <three-run speed average and the log line to write>
+
+  NOT RUN
+  <what could not be searched>
+  MISSING: <what>
+
+tweaks:
+  - what: Full theme folder
+    how: A full folder lets the skill search every file at once. Pasting only theme.liquid misses leftovers in snippets and sections.
+  - what: Short app names
+    how: Give the app's short name and its brand name. Code often uses a short name that is not on the app listing.
+  - what: Live pixels list
+    how: Tell it which ad and analytics pixels you use. It will leave those alone and flag duplicates.
+  - what: Speed report
+    how: Add the PageSpeed third-party list so a hit can be matched to a script that really loads.
+
+judge:
+  - "Every hit gives a file and a line number."
+  - "Every edit is planned on a duplicate theme, one change at a time."
+  - "No ad or analytics tag you still use is marked for deletion."
+  - "Unknown scripts are listed to ask about, not deleted."
+  - "The score sum matches the hits."
+  - "It tells you to check your sales channels and apps list before deleting an unknown script."
+
+test:
+  - "Remove a test app you do not need, then run the skill. It should find any leftover code the app left."
+  - "Add a pixel you still use to the 'live' list. It should be left alone."
+  - "Run it twice on the same files. The hits should match."
+  - "After one delete on the duplicate theme, preview your key pages and run PageSpeed three times. Nothing should break."
+
+improve:
+  - "Keep a dated list of every app you install or remove in your brand file, so the next search has names to use."
+  - "Add the file names that matter in your theme to the skill (for example a custom snippet your developer made)."
+  - "Add your own rule, such as 'comment out first, delete after a week'."
+  - "Pair it with the app script auditor, which makes the list of apps to remove."
+
+works_best_with:
+  tools:
+    - {name: "Shopify theme editor and code editor", why: "Lets you duplicate a theme, download it, and preview a copy before it goes live."}
+    - {name: "A code editor with search across files", why: "One search covers every file in the theme folder. Any free editor works."}
+  inputs:
+    - "The apps list from the app script auditor"
+    - "The Shopify sales channels and apps list, to check unknown scripts"
+    - "The PageSpeed third-party script list"
+
+terms:
+  - term: Liquid
+    meaning: The template language Shopify themes use. Code like {% comment %} is Liquid.
+  - term: Duplicate theme
+    meaning: A copy of your theme you can edit and preview without changing the live store.
+  - term: Pixel
+    meaning: A small piece of code that tells an ad or analytics service what visitors did.

@@ -1,0 +1,22 @@
+slug: sms-send-checker
+name: "SMS send checker"
+summary: "Paste a text and send plan. Get its cost, rule flags and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: email
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: plan, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "The image text break-even example, the exclusion rule for texts with no clicks, flow timings and the five key flows"}
+  - {title: "The only ecommerce SMS marketing video you'll ever need", by: "An agency owner who runs SMS for ecommerce clients", used: "The 160-character limit, the cost of image texts, one text per abandonment event, quiet hours and spacing a text after the email"}
+  - {title: "Everything you need to know about SMS marketing in 2025", by: "An agency founder (email and SMS for ecommerce)", used: "Launch and flash sale patterns and the five main SMS flows"}

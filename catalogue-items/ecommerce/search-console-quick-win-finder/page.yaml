@@ -1,0 +1,117 @@
+new_slug: search-console-quick-win-finder
+name: "Search Console quick-win finder"
+summary: "Paste Search Console queries and pages. Get pages to push this month and a score out of 100."
+job: get-found-in-search
+thinking: low
+thinking_why: "It sorts and filters tables you paste in, so a quick model is enough."
+
+headline: "Search Console quick-win finder"
+subhead: Paste your Search Console searches and pages, and optionally your analytics by landing page. It finds the pages sitting just short of page one, pages that get seen but not clicked, and questions no page answers, then hands back the next action for each and a score out of 100 for the traffic left on the table.
+
+explain: |
+  Some of your pages already show up in Google, just not high enough or with a title that earns the click. These are the cheapest wins in search, because the page is indexed and visible. Moving one from position 7 to position 3 takes a better title, richer content or a few links, not a new page.
+
+  This skill finds them. It sorts your pages by impressions, picks those at positions 4 to 10 and then 11 to 30, and starts with collections and products before blog posts. It spots pages whose title targets a weaker search than the one earning clicks, pages with thousands of impressions and almost no clicks, and questions your pages don't answer. It gives one next action per page and a score for how much traffic the list shows.
+
+when:
+  - You have a few months of Search Console data and want to know what to work on this month.
+  - A product or collection page gets plenty of impressions but few clicks.
+  - You want to turn what shoppers search into FAQs and new posts.
+
+you_give:
+  - A Search Console performance export of 28 days or longer (pages and searches)
+  - An analytics export of organic sessions and sales by landing page (optional)
+  - Your sitemap or page list, with your collections and key products (optional)
+you_get:
+  - A list of pages at positions 4 to 10, then 11 to 30
+  - Pages to retarget, with the search in the title now and the search that wins
+  - Questions with no direct answer, and a gap list
+  - One next action per page, and a score out of 100 for untapped traffic
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export your Search Console performance data (pages and searches) for at least 28 days and paste it in.
+  - Paste your collection and key product links so sales pages come first.
+  - Add analytics by landing page if you have it.
+  - Do the top five actions this month and run it again next month.
+
+how_it_works:
+  - title: Sorts the pages
+    text: By impressions, then by average position. Interface exports cap at 1,000 rows.
+  - title: Finds the quick wins
+    text: Pages at positions 4 to 10 first, then 11 to 30. Collections and products before blog posts.
+  - title: Retargets titles
+    text: Compares the search in a page's title and heading with the searches earning clicks, and retitles around the winner.
+  - title: Explains no-click pages
+    text: For pages with many impressions and few clicks, the cause is a page outside the top 20, a weak title or description, or slow loading.
+  - title: Mines questions
+    text: Filters searches that start with question words, and checks whether any page answers each one directly.
+  - title: Builds the gap list
+    text: Asks the AI where your sitemap has gaps compared with where people find you.
+  - title: Adds links and quality checks
+    text: Uses your most-linked pages to link to newer ones, checks your brand ranks first for itself, and compares sources and devices.
+  - title: Scores the opportunity
+    text: Gives the share of impressions that sit within reach, as a score out of 100.
+
+output_shape: |
+  DATA  <period> | <rows> | brand ranks first for itself? <yes/no>
+  PAGE-ONE EDGE
+  Positions 4 to 10: <page> | impressions <n> | position <x> | clicks <n> | action <title / content / links / indexing>
+  Positions 11 to 30: <page> | ...
+  RETARGET
+  <page> | title targets <search> (<clicks>) | winning search <search> (<clicks>) | new title idea
+  IMPRESSIONS, FEW CLICKS
+  <page> | <impressions> | <clicks> | likely cause
+  QUESTIONS NO PAGE ANSWERS
+  <question search> | <add FAQ block / new post>
+  GAP LIST  <topics missing>
+  LINK IDEAS  <from most-linked page to newer page>
+  SCORE  <n>/100  measures: share of impressions on pages at positions 4 to 30 (<impressions> of <total>)
+  NOT RUN  <check, why>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: Length of data
+    how: Use 28 days or longer. Searches with few impressions swing a lot, so more days steadies the list.
+  - what: Sales pages first
+    how: Paste your collection and product links so they are checked before blog posts.
+  - what: Analytics export
+    how: Add organic sessions and sales by landing page so the list can compare traffic quality, such as mobile against desktop.
+  - what: A monthly rerun
+    how: Run it each month and compare the new list with the last one to see what moved.
+
+judge:
+  - Pages are listed in the position bands with impressions, position and clicks.
+  - Each page has one next action, not a vague "improve SEO".
+  - A retarget row shows both searches with their clicks.
+  - The score shows the sum, from impressions, not an unexplained number.
+  - The list says when there is too little data to find quick wins.
+
+test:
+  - Check three listed pages in Search Console. Their position and impressions should match.
+  - Run it twice on the same export. The list and the score should be the same.
+  - Do one action, such as a title change, wait a few weeks, and check whether the page moved.
+  - Search your brand name in Google. It should rank first. If it doesn't, the skill should have flagged it.
+
+improve:
+  - Add your list of key products so they are marked as sales pages.
+  - Add your rule for how many actions you can do a month, so the list is cut to fit.
+  - Save last month's list in your brand file so the next run shows what moved.
+  - Pair it with the organic search report builder to see the trend, and a store keyword map if you have too little data.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "The source of searches, pages, impressions and position, plus the Links report and the Shopping and enhancements reports."}
+    - {name: "GA4", why: "Shows organic sessions and sales by landing page and compares mobile with desktop."}
+  inputs:
+    - "Your sitemap, so the AI can find gaps"
+    - "A list of your most-linked pages from the Links report"
+    - "A monthly reminder to repeat the check"
+
+terms:
+  - term: Impressions
+    meaning: How often your page showed in search results, whether or not anyone clicked.
+  - term: Average position
+    meaning: Where your page showed on average. Position 1 is the top of the results.
+  - term: Retarget
+    meaning: Change a page's title and content to aim at the search that is already earning it clicks.

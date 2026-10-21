@@ -1,0 +1,26 @@
+slug: get-your-store-recommended-by-ai-assistants
+name: "Get your store recommended by AI assistants"
+summary: "Give it your products and rivals. Get a baseline of who AI names, the gaps, and product pages rewritten to be quoted."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: web_page, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: pdp_copy}
+  - {type: plan}
+uses: [shopper-question-and-fan-out-mapper, ai-recommendation-panel-runner, ai-recommendation-gap-finder, ai-ready-product-page-editor]
+steps:
+  - {uses: shopper-question-and-fan-out-mapper, note: "Builds the 30 to 60 questions shoppers ask about your category."}
+  - {uses: ai-recommendation-panel-runner, note: "Runs those questions on the main assistants and logs who is named and cited. Reads the question list from the step before."}
+  - {uses: ai-recommendation-gap-finder, note: "Turns the panel results into the gaps that keep you out of answers, with fix, build or influence actions."}
+  - {uses: ai-ready-product-page-editor, note: "Rewrites your key product pages with facts, spec tables and FAQs for the gaps found. Reads the question plan and the gap findings."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/get-your-store-recommended-by-ai-assistants/skeleton.yaml

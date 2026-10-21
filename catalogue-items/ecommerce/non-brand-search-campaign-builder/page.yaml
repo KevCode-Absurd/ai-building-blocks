@@ -1,0 +1,128 @@
+new_slug: non-brand-search-campaign-builder
+name: "Non-brand Search campaign builder"
+summary: "Give it your products and search terms. Get themed ad groups, keywords, ad copy and extensions."
+job: run-google-ads
+thinking: medium
+thinking_why: "It organises keywords and writes short copy to fixed rules, which a mid-size model does well."
+
+headline: "Non-brand Search campaign builder"
+subhead: Give it your products, your offer and the search terms that already sell. It builds a Search campaign for people who do not know your name yet. You get themed ad groups, keywords with match types, headlines and descriptions, and the free extras to add.
+
+explain: |
+  Many stores put one keyword in each ad group, or toss hundreds of keywords into one. Both give Google little to learn from and make the ads less relevant to the search. A less relevant ad costs more per click.
+
+  This skill builds non-brand Search the way stores can afford it. You start with 20 to 30 short seed keywords, grow them into long-tail phrases and check the numbers against what you can pay for a sale. Then you sort them by intent, and group each theme into its own ad group with its own copy and landing page. It also builds a category version: one ad group per collection. Branded Search is a separate campaign and stays out of this one. The course examples are one agency's results.
+
+when:
+  - Your Shopping campaigns work and you want Search to catch people typing what you sell.
+  - You have converting search terms in a report and no Search campaign to use them.
+  - You want to push a popular collection with its own Search ad group and page.
+
+you_give:
+  - Your products and their key benefits
+  - Converting search terms from Shopping or Performance Max (optional but the best input)
+  - Your offers and landing pages, such as free shipping, a guarantee, collection pages
+  - Daily budget, and your bidding stage
+  - Your brand name and spellings, so they can be kept out
+you_get:
+  - Seed, long-tail and themed keyword groups with match types
+  - Ad groups of 2 to 8 keywords, each with headlines (30 characters) and descriptions (90)
+  - A category campaign plan, one ad group per collection, with negatives
+  - A list of the free assets to create once (sitelinks, callouts, snippets, promotions)
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your products, your offer and any converting search terms from your Shopping or Performance Max report.
+  - Say your daily budget and whether the account has conversion data yet.
+  - Check each ad group has one theme and one landing page that matches it.
+  - Build it in Google Ads, then check search terms weekly and add negatives.
+
+how_it_works:
+  - title: Finds seed keywords
+    text: 20 to 30 two or three word terms for what you sell, then long-tail phrases that mirror how people ask.
+  - title: Sorts by intent
+    text: Informational terms go to a blog or advertorial, commercial and buying terms go to Search, and brand terms go to branded Search.
+  - title: Mines converting terms
+    text: Adds queries that already sold in Shopping or Performance Max as exact match.
+  - title: Builds themed ad groups
+    text: One theme each, 2 to 8 keywords, with its own copy and landing page.
+  - title: Picks match types
+    text: Exact for efficiency and new accounts. Broad only with conversion data and a value-based bid.
+  - title: Writes the copy
+    text: 7 to 9 headlines and 2 to 4 descriptions that fit together, with a clear closing line.
+  - title: Adds free assets
+    text: Sitelinks, callouts, promotions, price and structured snippets.
+  - title: Plans the category campaign
+    text: One ad group per collection with 3 to 5 phrase-match keywords and brand terms as negatives.
+
+output_shape: |
+  NON-BRAND SEARCH PLAN  <store>, daily budget <$>
+  SEED KEYWORDS  <20 to 30 terms>
+  INTENT SORT  informational: <...> | buying: <...> | brand: <kept out>
+  AD GROUP <n>: <theme>   landing page: <url>
+    keywords: [exact] <...>   "phrase" <...>
+    headlines (<=30 characters): <7 to 9>
+    descriptions (<=90 characters): <2 to 4>
+  CATEGORY CAMPAIGN  (only if the category is popular)
+    ad group per collection: <collection> | 3 to 5 phrase keywords | <page>
+    negatives: <brand terms and wrong-fit terms>
+  ASSETS TO CREATE ONCE  sitelinks | callouts (<=25 characters) | promotions | snippets
+  BID AND MATCH  <exact / broad + value bid, and why>
+  REVIEW  search terms weekly; refresh weak headlines on a schedule
+  CHECKS MISSED: <none, or list>
+  MISSING: <item>
+
+tweaks:
+  - what: Converting search terms
+    how: Paste them from your Shopping or Performance Max report. Terms that already sold beat terms from a planner.
+  - what: Your daily budget
+    how: Small stores can start with 3 to 5 ad groups. Category Search suits a start budget of $20 to $30 a day, more for high order values.
+  - what: Account age
+    how: A new account should use mostly exact match. With conversion data, add broad match with a value bid to find new terms.
+  - what: Your offer
+    how: Add free shipping, a guarantee or a deadline. It goes into the descriptions and the promotion asset.
+  - what: Landing pages
+    how: Give a page for each theme. Message match between ad and page counts as much as the ad.
+
+judge:
+  - Each ad group has one theme, and every keyword fits it.
+  - Each headline is 30 characters or fewer and each description 90 or fewer.
+  - Brand terms are kept out of this campaign, and the category campaign lists them as negatives.
+  - No two collections share an ad group.
+  - Informational terms are not sent to a product page.
+
+test:
+  - Check one ad group by hand. Type one keyword into Google and see if the page you picked answers it.
+  - Run the skill twice. The themes should match, even if the wording differs.
+  - After two weeks, read the search terms report. If many terms do not fit a theme, add negatives and tighten the match types.
+  - Compare the cost per click of the new ad groups against your old broad ones.
+
+improve:
+  - Add your real offers and guarantee terms to the skill file so every description uses true claims.
+  - Add the words your reviews use, so headlines sound like your buyers.
+  - Edit the ad group size rule if your volume is higher, and write why.
+  - Save the winning headlines to your brand file and refresh the weak ones on a schedule.
+  - Pair it with the search term sorter, which feeds it winners.
+
+works_best_with:
+  tools:
+    - {name: "Google Keyword Planner", why: "Free inside Google Ads. It gives volume, competition and the top-of-page bid for each keyword."}
+    - {name: "Google Ads", why: "The search terms report from Shopping and Performance Max is the best source of keywords that already sold."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all group keywords and write short copy to a character limit."}
+  inputs:
+    - "Your break-even CPA, so keywords that fail the cost math are dropped"
+    - "Customer review phrases, so headlines use buyer words"
+    - "Your top collection pages and their URLs"
+    - "A list of competitor names you do or do not want to bid on"
+
+terms:
+  - term: Long-tail keyword
+    meaning: A longer, more specific search such as "waterproof trail running shoes for women".
+  - term: Exact match
+    meaning: A match type that shows your ad for searches very close in meaning to your keyword.
+  - term: Phrase match
+    meaning: A match type that shows your ad when the search includes the meaning of your phrase, with extra words around it.
+  - term: Negative keyword
+    meaning: A word you add so your ad does not show for searches that contain it.
+  - term: Sitelink
+    meaning: An extra link under your ad that goes to another page, such as best sellers.

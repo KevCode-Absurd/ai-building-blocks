@@ -1,0 +1,79 @@
+new_slug: plan-your-store-pages-and-get-a-safe-ai-build-plan
+name: Plan store pages and get a safe AI build plan
+summary: Give it your products. Get variant tables, menus, page sections and a Claude Code build prompt.
+job: set-up-store
+thinking: high
+thinking_why: It runs four skills in a row, and the last one needs the other three to be right. Give it your strongest model.
+headline: Get a Shopify theme built by Claude Code around your real products
+subhead: Give it your product list. It sets up each product and variant, plans your collections and menu, plans the sections that answer buyer doubts on each product page, then writes the Claude Code kickoff prompt and a section-by-section plan that never touches your live theme.
+explain: |
+  Telling an AI to build you a store theme goes wrong when the store is empty. It invents products, and the menu and the product page come out generic. A bad build can also overwrite the live theme.
+
+  The steps get the facts right first. It cleans up your products and builds the variant table for each. It plans collections, filters and a short menu from those products. Then it plans the product page sections from your buyers' doubts and the proof you have. Last it writes the Claude Code plan that builds a copy of your theme, one section at a time, using all of that. The last step asks for your store domain, theme name and any screenshots of sections you like.
+when:
+  - You want to try Claude Code on your Shopify theme but have never set up the products it would build around.
+  - Your last theme edit looked generic, with made-up products and a menu that did not fit.
+  - You are worried an AI edit could break the live store.
+you_give:
+  - Your product list with prices, options, stock and what ships
+  - Your catalogue size and platform
+  - The doubts buyers have, and any proof you hold (optional)
+  - Your store domain, theme name and screenshots of sections you like (optional)
+you_get:
+  - Each product's type, a variant table and a fill-in checklist
+  - Collections, filters and a short menu, with a click-depth check
+  - Product page sections matched to buyer doubts, with the settings to switch on
+  - A Claude Code kickoff prompt, a section-by-section plan and safe steps to publish
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give real products with real prices. Without them, the build will invent some.
+  - Before step 4, check that you have Claude Code, Node, Git and the Shopify CLI.
+  - Run the build on a copy of your theme only. Publish it yourself after you check it on your phone.
+how_it_works:
+  - title: Set up products and variants
+    text: Picks a type for each product, builds the shared options, makes a variant table with price, stock, weight and photo, and lists what is still missing.
+  - title: Plan collections, filters and the menu
+    text: Fixes product type names and tags, makes a collection for each way shoppers look, picks the filters in order and checks every product is two or three clicks away.
+  - title: Plan the product page sections
+    text: Lists each buyer doubt, matches it to a section and the proof that settles it, orders the page and lists the settings and proof still to collect.
+  - title: Get the safe AI build plan
+    text: Writes the Claude Code kickoff prompt, a section plan with a review after each, and steps that build on a copy of the theme and push it unpublished.
+output_shape: |-
+  STEP 1: PRODUCTS AND VARIANTS
+    Product type | options | variant table | stock rules | still missing
+
+  STEP 2: COLLECTIONS AND MENU
+    Tags | collections and rules | filters in order | menu | click-depth check
+
+  STEP 3: PRODUCT PAGE SECTIONS
+    Doubt | section | proof | have it or not | settings to switch on
+
+  STEP 4: AI BUILD PLAN
+    Tools check | safe copy | kickoff prompt | section plan | publish steps
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Platform
+    how: Say Shopify or WooCommerce. The variant clicks in step 1 are written for WooCommerce and carry over to Shopify with fewer options.
+  - what: Catalogue size
+    how: Under about 15 products, skip filters and use collections and a short menu. Filters pay off from about 30.
+  - what: Proof you hold
+    how: Paste reviews, test results and certificates. Step 3 only plans sections it can fill with real proof.
+  - what: Sections you like
+    how: Add screenshots from stores you admire. Step 4 uses them as the look to build toward and never copies a logo.
+judge:
+  - No product, price or variant is invented. Each gap is marked.
+  - The menu puts every sample product within two or three clicks of the home page.
+  - Every product page section answers a named buyer doubt and names its proof.
+  - The build plan works only on a copy of the theme and never on the live one.
+  - Each section in the build plan has a review point and fewer instructions per prompt.
+test:
+  - Pick three products and count the clicks from the home page to each one in the menu.
+  - Check that each proof the page plan needs exists, or is on the collect list.
+  - Run step 4's first section on the copy only. Compare the preview with your plan before you continue.
+improve:
+  - Add a section at a time and review each one on your phone before you ask for the next.
+  - Keep the product facts from step 1 in your brand file so the next build starts from them.
+  - Duplicate the live theme again before every new round of edits.

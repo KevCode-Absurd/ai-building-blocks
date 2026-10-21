@@ -1,0 +1,20 @@
+slug: brand-ritual-designer
+name: "Brand ritual designer"
+summary: "Give it your product and its use. Get three customer rituals and a launch plan for one."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Buyology", by: "Martin Lindstrom (book)", used: "Why small repeated acts make products stick, how a wait became a ritual, customer-made rituals that a brand named and taught, seasonal rituals, and the four daily rituals from a 26-country study"}

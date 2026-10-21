@@ -1,0 +1,21 @@
+slug: shopify-duplicate-page-fixer
+name: "Shopify duplicate page fixer"
+summary: "Give it your Shopify theme and crawl. Get each duplicate-page fix and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: theme_files, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: code_change}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two agency co-founders (names not given), a Shopify SEO agency", used: "The product link fix in the theme, breadcrumbs from a metafield, noindexing tag and auto-made pages, a custom robots file, variants, redirects for deleted products, sitemap exclusions, structured data checks and the crawl and Search Console review"}

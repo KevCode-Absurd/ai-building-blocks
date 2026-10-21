@@ -1,0 +1,126 @@
+new_slug: supplier-quote-request-writer
+name: "Supplier quote request writer"
+summary: "Give it your product and buyer complaints. Get a quote request in maker terms and checks to run."
+job: plan-supply-chain
+thinking: low
+thinking_why: "It turns clear facts into a search prompt and an email, so a fast model is enough."
+
+headline: "Supplier quote request writer"
+subhead: Give it your product, what buyers complain about or wish for, and the order size, price and certificates you need. It writes a supplier search prompt, a quote request email in manufacturing words, and a list of technical questions and checks to run.
+
+explain: |
+  A vague request gets vague quotes. If you ask a factory for "matte paint" or "a good sound", you may get a price for the wrong thing. Makers use their own words for how a product is built, and the right word saves weeks.
+
+  This skill turns buyer wishes into the maker's terms. A wish for a matte finish becomes a question about e-coating. A wish for good sound becomes a question about the internal structure. It writes the search prompt, the first email with specs, customization, packaging and delivery, and the questions to ask. It asks for a sample, prices at several volumes and lead time, and it tells you to order small first and check the supplier yourself. It is for branded or private-label goods, not pure dropshipping.
+
+when:
+  - You have a product idea or a bestseller and want to make your own version.
+  - Reviews of a rival product show a repeat complaint and you want a supplier who can fix it.
+  - You have a shortlist of makers and need a clear first email to each.
+
+you_give:
+  - Your product and who buys it
+  - Complaints or wishes from reviews
+  - Your target order size, price and any certificates you need
+  - Packaging and delivery needs (optional)
+you_get:
+  - A supplier search prompt (OEM, private label, minimum order, certificates)
+  - A quote request email in manufacturing terms
+  - A list of technical questions and checks to run
+  - What to compare across at least three quotes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your product, the complaints from reviews, your target order size and price, and the certificates you need.
+  - Use the search prompt to find makers. Check that each one is real on the marketplace.
+  - Send the email to your shortlist. Ask each for a sample, prices at several volumes and lead time.
+  - Compare at least three quotes. Order a small first batch, not a big one.
+
+how_it_works:
+  - title: Writes the search prompt
+    text: Asks for makers of your product with OEM service, private label, a low minimum order and the right certificates, with strong reviews and reorder rates.
+  - title: Translates wishes into maker terms
+    text: Turns "matte" into "e-coating" and "sounds good" into a named internal structure, so the quote matches what you meant.
+  - title: Fills the first email
+    text: Puts specs, customization, packaging and delivery terms in the first message.
+  - title: Asks for the right numbers
+    text: Asks for a sample, price at several volumes, and lead time.
+  - title: Lists the checks
+    text: Lists the technical questions and the proof to ask for, including certificates.
+  - title: Says to order small
+    text: Suggests a small first order to test quality, such as 50 units, not thousands.
+  - title: Sets up the comparison
+    text: Compares at least three quotes on unit price at each volume, lead time, sample cost and certificates, then points to a supplier scorer.
+
+output_shape: |
+  SEARCH PROMPT
+  <one prompt for finding makers: product, OEM, private label, minimum order, certificates, reviews, reorder rate>
+
+  QUOTE REQUEST EMAIL
+  Subject: <...>
+  <short intro>
+  Specs: <in maker terms>
+  Customization: <...>
+  Packaging: <...>
+  Delivery: <...>
+  Please send: a sample, unit price at <volumes>, lead time, certificates.
+
+  WORDS I CHANGED
+  <buyer wish> -> <maker term>
+
+  QUESTIONS AND CHECKS
+  1. <technical question>
+  2. <...>
+  CHECK THE SUPPLIER YOURSELF: <call, read reviews, check reorder rate>
+  COMPARE: <price at each volume | lead time | sample cost | certificates>
+  FIRST ORDER: <small quantity>
+  NOT CHECKED: <...>
+  MISSING: <product facts | order size | certificates needed>
+
+tweaks:
+  - what: Buyer words
+    how: Paste the exact review lines. The better the complaint, the better the maker term it finds.
+  - what: Order size
+    how: Give the first order you can afford. It asks for prices at that size and at several larger ones.
+  - what: Certificates
+    how: Name the ones your market needs. For food, cosmetics, supplements or baby goods, ask a qualified person what applies where you sell.
+  - what: Customization
+    how: Say what must be yours, such as logo, color or packaging, so the email asks for it in the first message.
+
+judge:
+  - Each buyer wish is turned into a maker term, and you can see the pair.
+  - The email asks for specs, a sample, prices at several volumes and lead time.
+  - It tells you to order small and to check the supplier yourself.
+  - It does not claim a supplier is real or good.
+  - It compares at least three quotes on the same terms.
+
+test:
+  - Give it a product you already make or buy. Check that the maker terms are ones your supplier would use.
+  - Send the email to one supplier you already trust and see if they understand it with no extra questions.
+  - Run it twice. The maker terms and questions should be about the same.
+  - Look up each supplier it names in the search results. Confirm each is real before you contact any.
+
+improve:
+  - Add your own product's parts and finishes to the skill file so it uses your exact terms.
+  - Add your required certificates and test reports for your country.
+  - Add a line for your usual shipping terms.
+  - Pair it with a supplier scorer to rank the quotes.
+  - Save the best email and the winning supplier's answers in your brand file.
+
+works_best_with:
+  tools:
+    - {name: "Alibaba", why: "A large marketplace to search for makers with private label and low minimum orders."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the prompt and email from your facts."}
+  inputs:
+    - "Photos or a sample of the product you want to match"
+    - "Review lines about what buyers dislike"
+    - "Your target cost per unit"
+    - "Certificates your market requires"
+
+terms:
+  - term: OEM
+    meaning: A maker that builds a product to your design or specs.
+  - term: Private label
+    meaning: A product made by one company and sold under your brand.
+  - term: Minimum order
+    meaning: The smallest number of units a maker will make for you, also called MOQ.

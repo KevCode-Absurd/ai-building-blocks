@@ -1,0 +1,83 @@
+new_slug: launch-a-subscription-offer-you-can-afford-to-fund
+name: Launch a subscription offer you can afford to fund
+summary: Give it your product and order data. Get a subscription offer, its payback time and a cancel flow that saves sign-ups.
+job: make-offer
+thinking: high
+thinking_why: It does cash and payback sums across four skills. Give it your strongest model.
+headline: Launch a subscription offer your cash can carry, with a way to save sign-ups
+subhead: Give it your product costs, order data, reviews and a capture of your page. It designs the discount and plans, checks the payback and the cash you need, builds the cancel flow, then checks the live page to see whether first orders choose the offer.
+explain: |
+  A subscription discount is a bet. You give up margin on the first order and wait months to earn it back. If the discount is too big, or people cancel too early, the cash runs out before the payback arrives. If the page hides the offer, few people take it.
+
+  The steps size the bet before you place it. It checks your cash first and designs the discount, cadence and first-order deal. Then it works out the payback time and the most you can pay to win one subscriber. It builds the cancel and pause steps for the same offer. At the pause you put it live for a few weeks. Then it checks your page against seven rules to see why too few first orders pick the subscription. It needs real cohort numbers to score the plan.
+when:
+  - You sell something people reorder and want subscriptions without running short of cash.
+  - Your subscribe discount was a guess and you do not know what it costs you per sign-up.
+  - You launched a subscription and few first orders choose it.
+you_give:
+  - Price, product cost, landed cost and shipping by pack size
+  - How long one unit lasts
+  - Cash available and the months you can wait for payback
+  - Value of subscribers and one-time buyers at month 3 and month 6
+  - Cancel reasons or reviews
+  - After a few weeks live, screenshots of your product page on phone and desktop
+you_get:
+  - A subscription offer with first-order and repeat discounts, gifts and a prepaid plan, and the most you can pay per subscriber
+  - The payback time, the loss on order one and the cash needed, a safety score out of 100, and a go, slow down or bundles call
+  - A cancel flow with a save for each reason and a pause, built inside your margin
+  - A page check scored out of 100, with the conflicts found and tests for the top two fixes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your real cohort values for month 3 and month 6. Without them it will not score the payback.
+  - At the pause, put the offer live and let it run until you have a few weeks of sign-up data. Take phone screenshots of the product page.
+  - Try the page on your own phone and tell it what you see, because a screenshot cannot show every pop-up.
+how_it_works:
+  - title: Design the offer
+    text: Checks your cash first, then designs the discount, how often it ships and the first-order deal, with bulk tiers, gifts and a prepaid plan. Models the margin.
+  - title: Check the payback
+    text: Works out the payback time, the loss on order one and the most you can pay to win a subscriber. Scores the plan out of 100.
+  - title: Build the cancel flow
+    text: Writes the cancel and pause steps for the same offer, with one save per reason that stays within your margin.
+  - title: Check the live page
+    text: Checks the product page, pop-up and cart against seven rules, lists conflicts between them, and plans tests for the top two fixes.
+output_shape: |-
+  STEP 1: SUBSCRIPTION OFFER
+    Discounts | cadence | first-order deal | bulk tiers | gifts | prepaid plan | margin | most you can pay per subscriber
+
+  STEP 2: PAYBACK CHECK
+    Payback time | loss on order one | cash needed | safety score out of 100 | go, slow down or bundles
+
+  STEP 3: CANCEL FLOW
+    Start screen | save for each reason | pause | win-back and failed-payment emails | save-rate sheet
+
+  STEP 4: PAGE CHECK
+    Seven rules pass or fail | conflicts | score out of 100 | tests for the top two fixes
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Cash and the months you can wait
+    how: The discount is sized to these. Give real numbers and the offer stays inside what you can fund.
+  - what: Cohort values at month 3 and month 6
+    how: Use your own data. Without it the payback check writes NOT SCORED rather than guess.
+  - what: How long one unit lasts
+    how: It sets how often the order ships. A 30-day pack and a 60-day pack need different plans.
+  - what: Your current take rate
+    how: Tell the page check the share of first orders choosing subscription, so it can say how far off you are.
+judge:
+  - The offer was checked against cash before any discount was chosen.
+  - The payback shows its sums, and without cohort data it says NOT SCORED.
+  - Each save in the cancel flow fits inside the margin room you gave.
+  - Cancelling is still easy to do.
+  - The page check names the conflicts, such as a pop-up discount that contradicts the page.
+test:
+  - Redo the payback sum by hand for the pack you sell most. It should match.
+  - Make a test subscription and go through the cancel flow on your phone.
+  - Run one of the two page tests for at least a few weeks and compare take rate.
+  - Ask a friend to find the subscribe option on your product page in ten seconds.
+improve:
+  - Add your maximum discount and your cash floor to the offer skill.
+  - Save the payback result in your brand file and re-run it when costs change.
+  - Add real cancel reasons to the cancel flow skill once you have them.
+  - Pair it with the longer subscription workflow when you want billing emails and a retention calendar.

@@ -1,0 +1,23 @@
+slug: store-revenue-forecast-builder
+name: "Store revenue forecast builder"
+summary: "Give it past spend, cohorts and a calendar. Get daily new and returning revenue and the target gap."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: spreadsheet}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital public masterclass)", used: "Forecasting new and returning revenue apart, cohort decay for returning revenue, and the line fitted to new-customer efficiency against spend"}
+  - {title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, agency founder, interviewed on a business podcast", used: "The three-model forecast, the event effect model and the calendar layer"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "The split forecast and fitting a log or linear line to spend and new-customer efficiency"}

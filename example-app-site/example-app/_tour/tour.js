@@ -132,10 +132,12 @@
 
   function bar() {
     if (document.getElementById("tour-bar")) return;
+    // On its own address (example.useaiblocks.com) the links go back to the main site; locally they stay on this one.
+    var HOME = /^example\./.test(location.hostname) ? "https://useaiblocks.com" : "";
     var b = document.createElement("div");
     b.id = "tour-bar";
     b.innerHTML = '<span><b>Example app.</b> Click anything. Nothing here runs or saves.</span>' +
-      '<a href="/apps/starter-pack">Build your own</a><a href="/apps">Back to AI Blocks</a><button type="button" aria-label="Hide this bar">×</button>';
+      '<a href="' + HOME + '/apps/starter-pack">Build your own</a><a href="' + HOME + '/apps">Back to AI Blocks</a><button type="button" aria-label="Hide this bar">×</button>';
     b.querySelector("button").onclick = function () { b.remove(); };
     document.body.appendChild(b);
   }

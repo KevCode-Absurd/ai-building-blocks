@@ -1,0 +1,121 @@
+new_slug: sale-offer-ladder-planner
+name: "Sale offer ladder planner"
+summary: "Give it stock, margin, subscribers and a sale goal. Get a main offer, backups and a subscriber plan."
+job: make-offer
+thinking: high
+thinking_why: "It weighs a goal, stock, margin and two kinds of buyer against each other, so a stronger model reasons through the trade-offs better."
+
+headline: "Sale offer ladder planner"
+subhead: Give it your products with margin and stock, your sale goal, your dates and your subscriber count. It ranks a main offer and backup offers, sets when to switch, lists the pages and ads to prepare, and writes a plan for subscribers.
+
+explain: |
+  A big sale is hard to change once it starts. If the main offer falls short, you scramble for a new page, new ads and new emails in a busy week. A ladder fixes that. You write the main offer and the backups in order before the sale, and you build the pages and ads for each backup ahead of time. Switching becomes a toggle.
+
+  This skill also asks the question that shapes every choice: is the goal to make the most profit, or to move stock? It sets how much stock each offer may burn. If you sell subscriptions, it plans for subscribers as their own group, since a sitewide 20 percent means little to someone already on 20 percent off. It suits a team that can react fast and must hit a number. It does not suit constant last-minute changes.
+
+when:
+  - You are planning a Black Friday, end-of-season or other big sale.
+  - You need to clear slow stock without hurting profit on your best sellers.
+  - You sell subscriptions and do not want a sale to make subscribers cancel.
+
+you_give:
+  - Products with margin and stock depth (A, B or C grade)
+  - The sale goal, profit or clearing stock
+  - Sale dates, the planned sitewide discount and your current offer and pages
+  - Subscriber count, current subscribe discount and subscription products (optional)
+  - Your ad and email capacity
+
+you_get:
+  - A ranked offer ladder, with a main offer and then backups
+  - A trigger for each switch, based on pacing numbers you supply
+  - The pages and ads to build in advance, and the stock each offer may burn
+  - A subscriber-only offer and a headline that stacks site and subscribe discounts
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say whether the goal is profit or clearing stock, and paste your products, margin and stock.
+  - Paste your dates, your planned discount and your subscriber details if you have them.
+  - Build every page and ad on the ladder before the sale starts.
+  - Switch steps only when a trigger on the plan is hit.
+
+how_it_works:
+  - title: States the goal
+    text: Profit or clearing stock. One will be better, and the plan says which it follows.
+  - title: Picks what to discount
+    text: It marks the slow, grade C stock as the usual target and limits depth to what margin can carry.
+  - title: Writes the ladder
+    text: The main offer first, then ordered backups such as gift tiers, free shipping, a bundle or a deeper discount.
+  - title: Preloads the backups
+    text: Pages and ads for every step are built ahead, so a switch is a toggle.
+  - title: Sets switch triggers
+    text: Each step has a trigger tied to your pacing sheet, judged on a rolling average.
+  - title: Plans for subscribers
+    text: Subscribers get their own offer and a reason to stay.
+  - title: Cost-checks each step
+    text: Each rung goes through the Discount impact checker.
+
+output_shape: |
+  SALE LADDER  <store>  <dates>  GOAL: <profit | clear stock>
+  OFFER LADDER
+  1. MAIN: <offer> | stock allowed to burn <units> | page <...> | ads <...>
+  2. BACKUP A: <offer> | trigger <pacing rule> | stock allowed <units> | page/ads <...>
+  3. BACKUP B: <offer> | trigger <...>
+  (more rungs as needed)
+  DEEPEST SALE LIMIT: <depth margin can carry, by product>
+  PRELOAD LIST: <page and ad list per rung>
+  LOW-COST WINDOW PLAN: <offer for the days after Christmas, if used>
+  SUBSCRIBERS
+  Do you mind if subscribers cancel to take the sale? <yes | no>
+  Subscriber offer: <...>  Stacked headline: <...>  Where it appears: <email, portal>
+  CHECKS MISSED: <list, or none>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Sale goal
+    how: Say profit or clear stock. It changes which offers rank first and how hard you push spend.
+  - what: Stock grades
+    how: Mark each product A, B or C. Discounts go to grade C first.
+  - what: Pacing numbers
+    how: Give daily revenue targets. Triggers need them, or the plan marks the trigger as yours to set.
+  - what: Subscriber details
+    how: Give the count and current discount. Without them the subscriber plan is skipped.
+
+judge:
+  - The goal is stated and every offer follows it.
+  - Each backup has a trigger and a stock limit.
+  - Pages and ads for every rung are on a preload list.
+  - Any "up to X% off" headline equals the real stack at checkout.
+  - Subscribers have their own plan or a clear note that you do not mind if they cancel.
+
+test:
+  - Give it a goal of profit, then clearing stock. The ladder order should change.
+  - Check the deepest sale limit for one product against its margin by hand.
+  - Take a stacked headline it writes and add the items to a test cart. The total should match.
+  - Run it twice. The goal, the stock limits and the preload list should stay the same.
+
+improve:
+  - Add your real stock grades and margin floors to the skill file.
+  - Add the past sale dates and results you have, so triggers reflect your own pace.
+  - Add your subscription tool's limits, such as whether it can give subscriber-only discounts.
+  - Pair it with the Discount impact checker for each rung and the Subscription offer designer for the long-term plan.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It builds the ladder and the preload list from the numbers you paste."}
+    - {name: "Shopify", why: "Discounts, bundles and gift rules can be set up ahead and switched on when a trigger hits."}
+    - {name: "Klaviyo", why: "Email flows and segments can send the subscriber-only offer."}
+  inputs:
+    - "Last year's daily sales and ad spend for the same sale"
+    - "A pacing sheet with daily revenue targets"
+    - "Stock counts by product and size"
+    - "Your subscription portal's list of actions people take"
+
+terms:
+  - term: Offer ladder
+    meaning: A main offer and ordered backups, written before the sale.
+  - term: Pacing sheet
+    meaning: A table of the daily revenue you need to hit your sale target.
+  - term: Grade C stock
+    meaning: Slow-moving stock you are happy to discount deeply.
+  - term: Subscriber cohort
+    meaning: The group of customers who already buy on a repeat plan.

@@ -1,0 +1,24 @@
+slug: store-keyword-map-builder
+name: "Store keyword map builder"
+summary: "Give it your catalogue and keywords. Get one topic per page, typed collection, product or blog."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two co-founders of a Shopify SEO agency", used: "Topic map, clustering by results page, primary and secondary keywords, picking a page type, the homepage keyword, cannibalisation, expand versus consolidate, the core-topic rule, bottom-of-funnel first and the keyword gap"}
+  - {title: "How to Rank #1 in Google in 2026: The 3-Step SEO Playbook", by: "An SEO consultant (video sponsored by a content tool)", used: "Reading the live results page for the format Google expects, and what to do when intent is mixed"}
+  - {title: "Complete SEO Course (3 Hours): Rank in AI Search", by: "An SEO consultant who runs a paid community", used: "Treating tool volume as a guide, not as truth"}
+  - {title: "Learn Everything About SEO & AI SEO in 50 Minutes!", by: "An SEO educator from an SEO software company's channel", used: "The 30-second intent test on the top 10 results"}

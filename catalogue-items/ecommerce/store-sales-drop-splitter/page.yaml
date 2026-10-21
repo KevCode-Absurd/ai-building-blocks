@@ -1,0 +1,129 @@
+new_slug: store-sales-drop-splitter
+name: "Store sales drop splitter"
+summary: "Tell it sales fell. Get the drop split into sessions, conversion and AOV, the likely cause and a score out of 100."
+job: track-numbers
+thinking: high
+thinking_why: "It has to trace a cause through several levels and decide what is noise, so a stronger model gives a sounder chain. Redo the percentage changes yourself once."
+
+headline: "Store sales drop splitter"
+subhead: "Give it two periods of store numbers and your ad spend. It splits the drop into sessions, conversion rate and order value, says which one moved and by how much, and tells you what to check next. You get a noise call, an act or wait decision and a score out of 100."
+
+explain: |
+  When store sales fall, the cause sits in one of three places. Sales equal sessions times conversion rate times average order value. If all three held or rose, sales cannot fall, except through returns. So the first job is to find which of the three moved. Returns come first, because refunds land on the day they are processed and can fake a dip after a big month.
+
+  This skill works out the percent change in each lever, then follows the one that moved. Fewer sessions send you to paid media: spend cut, CPM up or CPC up, or a campaign type that lost budget. A lower conversion rate sends you to the funnel step that moved. A lower AOV sends you to price mix, bundles and thresholds. Small dips are often noise, and it tells you so. It adds a top-down check for Google and Meta ads. It scores how well the cause is backed by data.
+
+when:
+  - Your daily or weekly sales dropped and you do not know why.
+  - Ad partners say the ads are fine but revenue is down.
+  - You are about to change ads, pages or prices and want to know which lever actually moved first.
+
+you_give:
+  - Net sales plus shipping for both periods
+  - Sessions, conversion rate and AOV for both periods
+  - Ad spend, CPM and CPC for both periods
+  - Returns processed in each period
+  - Change history, spend by channel, and last year's numbers for the same dates (optional)
+you_get:
+  - The percent change in each of the three levers
+  - Which lever drove the drop and by how much
+  - A cause chain and the next check for that lever
+  - A noise call, an act or wait decision, and a score out of 100 with its sum
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the same Shopify report for the good period and the bad period, and your ad spend, CPM and CPC for both.
+  - "Add what changed: ads, page edits, prices, stock-outs, promotions."
+  - Read which lever moved, then do the one check it names before changing anything.
+  - Run it again after a week to see whether the lever recovered.
+
+how_it_works:
+  - title: Separates returns
+    text: Takes refunds processed this period out of the comparison, so late returns do not look like weak demand.
+  - title: Splits the drop in three
+    text: Net sales plus shipping equals sessions times conversion rate times AOV. It works out the change in each.
+  - title: Confirms sessions
+    text: Checks GA4, so a bot spike does not hide the real session count.
+  - title: Follows the lever that moved
+    text: Fewer sessions go to paid media. Lower conversion goes to the funnel. Lower AOV goes to mix, bundles and thresholds.
+  - title: Calls noise
+    text: Small moves compound. A 5 percent AOV dip and a 4 percent conversion dip make about a 10 percent drop, which is normal swing.
+  - title: Drills down
+    text: Checks other channels first, then the top five campaigns by cost, and finds the date the line bent.
+  - title: Completes the cause sentence
+    text: Acts only when it can say this is down because this metric changed, caused by this sub-metric, triggered by this.
+  - title: Scores the diagnosis
+    text: Gives a score out of 100 for how well data supports the cause.
+
+output_shape: |
+  SALES DROP  <store>  <period A> vs <period B>
+
+  RETURNS
+  <refunds processed in A> <refunds processed in B>  <effect on the comparison>
+
+  THREE LEVERS (net sales plus shipping)
+  Sessions   <A> -> <B>  <change %>  (GA4: <n>)
+  Conv. rate <A> -> <B>  <change %>
+  AOV        <A> -> <B>  <change %>
+  Sales      <A> -> <B>  <change %>
+
+  WHICH LEVER  <lever> drove about <share> of the drop
+
+  CAUSE CHAIN
+  Down because <metric> changed, caused by <sub-metric>, triggered by <trigger or unknown>
+
+  NEXT CHECK  <one check, with where to look>
+  NOISE CALL  <ignore / investigate>, because <reason>
+  DECISION    <act: what / wait: until when>
+
+  SCORE  <n>/100  (<points> of <possible>, checks run only)
+  CHECKS NOT RUN
+  MISSING: <what>
+
+tweaks:
+  - what: The two periods
+    how: Compare the same weekdays and a long enough window. A single day against a single day is mostly noise.
+  - what: Change history
+    how: List every ad, page, price and stock change with its date. The inflection date is then easy to match to a cause.
+  - what: Seasonality
+    how: Give last year's numbers for the same dates, or your forecast, so a normal seasonal fall is not read as a fault.
+  - what: Traffic level
+    how: Tell it your weekly sessions. A single-digit move on a few hundred sessions is mostly noise and it will say so.
+
+judge:
+  - The three percent changes can be redone from the numbers you gave.
+  - Only one or two levers are named as the cause, not all three.
+  - The cause chain ends in a trigger, or says the trigger is unknown.
+  - Returns are checked before ads are blamed.
+  - It says wait when the move is small, and says why.
+
+test:
+  - Give it two periods where you know what changed, such as a stock-out. It should land on the right lever.
+  - Give it two periods with a 4 percent and a 5 percent dip and check it calls noise.
+  - Remove the GA4 sessions and confirm the bot check is listed as not run.
+  - Run it twice on the same numbers. The lever it names should match.
+
+improve:
+  - Add your usual weekly swing in sessions, conversion and AOV, so the noise call fits your store.
+  - Add your sales calendar to the skill file, with sale dates and email sends.
+  - Save past drops and their real causes to a lessons file so the same cause is checked first next time.
+  - Pair it with the Shopify dashboard reader for the numbers, and the ad sales drop analyst for the ad side.
+
+works_best_with:
+  tools:
+    - {name: "Shopify Analytics", why: "Gives net sales, shipping, sessions, conversion rate and AOV for both periods."}
+    - {name: "Google Analytics 4", why: "Confirms sessions with bot traffic filtered out."}
+    - {name: "Meta Ads Manager and Google Ads", why: "Give spend, CPM, CPC, change history and campaign detail."}
+  inputs:
+    - "A change log with dates"
+    - "Last year's numbers for the same dates"
+    - "Spend by channel for both periods"
+    - "Stock-out dates by product"
+
+terms:
+  - term: Lever
+    meaning: "One of the three numbers that multiply into sales: sessions, conversion rate and AOV."
+  - term: Conversion latency
+    meaning: The delay between an ad click and the sale. An ad platform may date the sale to the click, so recent days look low until they fill in.
+  - term: Inflection date
+    meaning: The day a line stops rising or falling flat and bends.

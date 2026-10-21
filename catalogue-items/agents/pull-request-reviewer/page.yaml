@@ -1,0 +1,98 @@
+new_slug: pull-request-reviewer
+name: Pull request reviewer
+summary: Point it at each new pull request. Get a risk rating, ranked findings and a review to post once you say yes.
+job: test-and-fix-code
+thinking: high
+thinking_why: It runs up to six reviews, picks which ones the change needs and compares with past pull requests. Give it your strongest model.
+headline: Pull request reviewer
+subhead: Point it at each new pull request. It rates the risk, runs only the review checks that change needs, spots problems you have seen before, and hands back one review with draft comments for you to post.
+explain: |
+  Reviews pile up, and the same few mistakes come back in pull request after pull request. A rushed review misses a security hole in a small change. A long review wastes time on a change that is safe.
+
+  This agent reads each pull request, rates the risk first and then picks the checks to run. A change to sign-in gets a security review. A change to shared code gets an impact check. A change with no test gets a test-gap check. It keeps a history, so a problem it has flagged before is marked as a repeat, and one that keeps coming back becomes a suggestion for a rule or a test. It never posts, approves or merges. You read the review and decide.
+when:
+  - Your team opens pull requests faster than you can review them in depth.
+  - You want the same checks on every change, with extra care where the risk is higher.
+  - The same mistakes keep coming back and you want them tracked.
+you_give:
+  - The pull request, as a link or the pasted diff, with its description
+  - The repository, so it can read the code around the change
+  - Your coding standards and what to ignore, the first time (optional)
+you_get:
+  - A risk rating with the reasons and the size
+  - Findings ranked by severity, each with file, line and the smallest fix
+  - Repeat problems marked from past pull requests
+  - Draft comments ready to post, and a suggested verdict
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it a pull request.
+  - The first time, tell it your standards and what to ignore. It saves them.
+  - Read the verdict and the findings. Edit the draft comments if you like.
+  - Say yes to post them, or post them yourself. It will not approve or merge.
+  - When the author pushes changes, run it again. It lists what is fixed, still open and new.
+how_it_works:
+  - title: Read its memory
+    text: Opens your standards, the history of past reviews and the problems that keep repeating.
+  - title: Rate the risk
+    text: Scores size and risk first. A very large change gets a note to split it.
+  - title: Review the change
+    text: Runs the pull request review on every change and ranks the issues by severity.
+  - title: Choose the extra checks
+    text: Adds a security review, an impact check or a test-gap check only when the change touches that kind of code.
+  - title: Check against last time
+    text: Marks repeat problems, and suggests a rule or test when one shows up in three pull requests.
+  - title: Sign-off for high risk
+    text: For a high-risk change or a blocker, adds a one-page review for you to sign before it counts as done.
+output_shape: |-
+  VERDICT
+    <approve | approve with comments | changes needed> (a suggestion for you)
+
+  RISK
+    <low | medium | high> | <lines and files> | <why>
+
+  FINDINGS (most serious first)
+    1. <file:line> | <blocker or note> | <repeat?> | why: <reason> | fix: <smallest fix>
+
+  TESTS
+    <behaviour with no test>
+
+  SINCE LAST PUSH
+    fixed: <list> | open: <list> | new: <list>
+
+  DRAFT COMMENTS
+    <one per finding>
+
+  SKIPPED AND MISSING
+    <checks skipped and why> | MISSING: <every line>
+tweaks:
+  - what: Your standards and what to ignore
+    how: Without them it flags style points your team has already agreed to leave. Write them once and it keeps them.
+  - what: The size that counts as too big
+    how: It starts at 400 lines or 15 files. Set your own number to match how your team works.
+  - what: Files that always need extra care
+    how: Name them, such as payments or permissions, and it runs the security review whenever they change.
+  - what: How many findings you want
+    how: Ask for blockers only on a busy day, or the full list for a new teammate.
+judge:
+  - Every finding points to a file and line, or says why it cannot.
+  - A real blocker is in the verdict and not buried.
+  - Each skipped check has a reason.
+  - Repeats come from the saved history.
+  - Nothing was posted, approved or merged without your clear yes.
+test:
+  - Run it on a past pull request that caused a bug later. See if it would have caught it.
+  - Run it twice on the same pull request. The blockers should be the same.
+  - Compare its findings with what your best reviewer said on the same change.
+improve:
+  - Add every rule you keep repeating in reviews to the standards file.
+  - When it flags something you disagree with, tell it why. Add that to the standards so it stops.
+  - After a month, read the repeats file. Turn the top three into lint rules or tests.
+  - Add the files that must never change without a second reviewer.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the whole repository, keep the reviewer folder and run on each new pull request.
+    - name: GitHub
+      why: It can read the pull request and, with your yes, post the comments you approved.
+  inputs:
+    - Your team's coding standards
+    - A list of files that need extra care

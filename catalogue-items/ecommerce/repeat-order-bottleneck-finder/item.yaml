@@ -1,0 +1,21 @@
+slug: repeat-order-bottleneck-finder
+name: "Repeat order bottleneck finder"
+summary: "Give it your order export. Get a repeat health score out of 100 and the one stage to fix first."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Two practitioners: a paid media and finance operator (Nathan) and an email and SMS retention agency founder (Angus Cowan)", used: "The top-down order of retention causes with owned media last, the three-stage customer path and the metric for each, cohort value windows, and why Shopify's returning-customer percent is a poor repeat metric"}
+  - {title: "Engineering Customer Delight Across the E-Commerce Journey (deep research)", by: "Unknown (research write-up with brand case studies)", used: "Repeat purchase rate bands: below 20 percent is a retention problem, 20 to 30 average, 30 to 40 good, over 40 excellent"}

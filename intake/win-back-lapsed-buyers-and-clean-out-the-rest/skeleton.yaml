@@ -1,0 +1,57 @@
+# Workflow skeleton chaining skills already in the AI Blocks library (docs/INTAKE.md).
+id: win-back-lapsed-buyers-and-clean-out-the-rest
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: win-back-lapsed-buyers-and-clean-out-the-rest
+  name: "Win back lapsed buyers and clean out the rest"
+  summary: "Give it your order history. Get a win-back flow, a map of who gets what, a clean list and a results read."
+  when: "customers buy once and go quiet, and you want them back before they are gone for good."
+  job: keep-customers
+  level: intermediate
+steps:
+  - name: "Repeat order bottleneck finder"
+    skill: repeat-order-bottleneck-finder
+    job: analysis
+    from: "library"
+    method: ["Split the customer path into three stages", "Measure value as lifetime gross profit over a fixed window", "Do not use Shopify's \"percentage of returning customer orders\" as a repeat rate", "Read email-platform revenue as direction only", "Diagnose top down before touching email", "Check the VIP rule"]
+    inputs: [spreadsheet, voc_reviews!, performance_sheet!]
+    outputs: [audit_report]
+    note: "Finds where buyers stop coming back."
+  - pause: "Pick the group the finder says matters most (one-time buyers or lapsed regulars) and export their orders."
+  - name: "Win-back flow builder"
+    skill: win-back-flow-builder
+    job: email
+    from: "library"
+    method: ["Check the list first", "Find the trigger day", "Exit and filter", "Short version, three emails", "Longer version, for a store that has earned it", "Offer ladder"]
+    inputs: [performance_sheet, offer!, product_data!]
+    outputs: [email_flow]
+    note: "Builds the win-back flow for that group."
+  - name: "Customer stage flow mapper"
+    skill: customer-stage-flow-mapper
+    job: email
+    from: "library"
+    method: ["List the flows", "Define the three stages", "Set the branch rules", "Map lifecycle groups", "Set the post-purchase focus", "Apply the split to each flow"]
+    inputs: [email_flow, offer!, brand_brain!, performance_sheet!]
+    outputs: [email_flow]
+    note: "Maps which customer stage gets the win-back flow and which gets other emails."
+  - pause: "Run the flows for about four weeks, then export the quiet subscribers and the flow results."
+  - name: "Sunset flow and list cleaner"
+    skill: sunset-flow-and-list-cleaner
+    job: email
+    from: "library"
+    method: ["Define unengaged", "Guard against false signals", "Sending rules", "Sunset flow", "Be true to the notice", "End of flow"]
+    inputs: [performance_sheet, offer!]
+    outputs: [email_flow, plan]
+    note: "Writes the clean-out rule for the buyers the flows did not wake up."
+  - name: "Email and SMS performance reader"
+    skill: email-and-sms-performance-reader
+    job: analysis
+    from: "library"
+    method: ["Check nothing is broken", "List growth", "Campaigns", "Flows", "Deliverability", "Other reads"]
+    inputs: [performance_sheet, email_flow!]
+    outputs: [audit_report]
+    note: "Reads the flow results to show what the win-back earned."

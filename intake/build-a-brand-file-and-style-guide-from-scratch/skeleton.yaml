@@ -1,0 +1,55 @@
+# Workflow skeleton built from library skills (docs/INTAKE.md).
+id: build-a-brand-file-and-style-guide-from-scratch
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: build-a-brand-file-and-style-guide-from-scratch
+  name: "Build a brand file and style guide from scratch"
+  summary: "Give it your product and buyers. Get a brand file with messages and voice rules, a visual direction and a style guide."
+  when: "you have no website to read yet, or your brand lives only in your head."
+  job: brand-file
+  level: intermediate
+steps:
+  - name: "Product context builder"
+    skill: product-context-builder
+    job: ops
+    from: "skill: product-context-builder"
+    method: ["Draft from what exists, or ask section by section", "Capture the product, buyer, rivals, proof and voice", "Show the draft and fix what is wrong", "Save it as one file other skills read first"]
+    inputs: [brief]
+    outputs: [brand_brain]
+    note: "Starts the chain: your answers become the one brand file every later step reads."
+  - name: "Brand messaging builder"
+    skill: brand-messaging-builder
+    job: ops
+    from: "skill: brand-messaging-builder"
+    method: ["Read the position, buyers and best benefit", "Write one core message and a value line", "Write tagline options, key messages and proof for each audience", "Check every claim has a fact behind it"]
+    inputs: [brand_brain, persona!]
+    outputs: [brand_brain]
+    note: "Reads the brand file and adds the core message, tagline options and proof points."
+  - name: "Brand voice rules writer"
+    skill: brand-voice-rules-writer
+    job: ops
+    from: "skill: brand-voice-rules-writer"
+    method: ["Describe the brand as a person and rate its tone", "Write voice qualities with a do and a don't each", "List words to use and words to avoid", "Write short style rules any writer can follow"]
+    inputs: [brand_brain, persona!]
+    outputs: [brand_brain]
+    note: "Reads the messages in the brand file and adds tone, word choices and writing rules."
+  - name: "Brand stylescape planner"
+    skill: brand-stylescape-planner
+    job: brand
+    from: "skill: brand-stylescape-planner"
+    method: ["Turn values into rules for what may be shown", "Make three different visual directions", "Score each against your values and your buyer", "Merge the best parts and write photo rules you can test"]
+    inputs: [brand_brain, persona!]
+    outputs: [design_direction]
+    note: "Reads the traits, messages and voice in the brand file and settles on one visual direction."
+  - name: "Brand style guide writer"
+    skill: brand-style-guide-writer
+    job: ops
+    from: "skill: brand-style-guide-writer"
+    method: ["List what is finished and what is missing", "Draft story, logo, colour, type, imagery, voice and examples", "Add a real example for every rule", "Add dos and don'ts"]
+    inputs: [brand_brain, design_direction]
+    outputs: [brand_guide]
+    note: "Combines the brand file and the visual direction into one guide others can follow."

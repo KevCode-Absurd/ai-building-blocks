@@ -1,0 +1,21 @@
+slug: sale-break-even-and-cac-allowance-modeler
+name: "Sale break-even and CAC allowance modeler"
+summary: "Give it discount depth and margin. Get break-even ROAS, a CAC limit and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Black Friday 2026 strategy: spend, creative, offers, pacing", by: "Nathan, head of paid media at an ecommerce ad agency", used: "Break-even ROAS after a discount, the two-part CAC allowance error, the November against February repeat gap and the profit or stock-clearing choice"}
+  - {title: "The #1 bottleneck in 80% of ecommerce audits (data integrity)", by: "An agency founder who has run 1,000+ audits on 7 to 9 figure brands", used: "The worked example of gross margin shrinking during a sale"}

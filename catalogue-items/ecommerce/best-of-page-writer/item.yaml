@@ -1,0 +1,25 @@
+slug: best-of-page-writer
+name: "Best-of page writer"
+summary: "Give it a buyer question and your rivals. Get a fair best-of page with real numbers."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief}
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce SEO: The Definitive Guide for 2026", by: "Founder of an SEO software company (name not given in the transcript)", used: "The one-line goal and differentiators, the brief contents, three to five draft rounds, no vague filler such as contact for pricing, and the category page at the centre of the links"}
+  - {title: "How to Rank #1 in Google in 2026: The 3-Step SEO Playbook", by: "SEO consultant (name not given; video sponsored by a content tool)", used: "Using a roundup post when your own pages can't rank, showing first-hand experience, a consistent block per item, a byline with dates, and no word-count target"}
+  - {title: "The Ultimate AI Visibility Checklist (AEO/GEO for 2026)", by: "Agency owner (name not given)", used: "Comparing against 3 to 4 larger rivals shoppers search for, with the table at the top"}
+  - {title: "Generative Engine Optimization: Is It Safe and How to Do It the Right Way", by: "Harpreet Singh (SEO practitioner), interviewed on a daily SEO show", used: "Not building pages that compare two other brands, and that assistants add review-site searches to their answers"}

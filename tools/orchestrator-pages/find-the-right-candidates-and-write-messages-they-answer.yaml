@@ -1,0 +1,84 @@
+new_slug: find-the-right-candidates-and-write-messages-they-answer
+name: Find the right candidates and write messages they answer
+summary: Give it a job description. Get who fits, a search plan and first messages that get replies.
+job: hire-people
+thinking: medium
+thinking_why: Each step writes and plans from the step before. A mid-size model does it well. Use your strongest model for the messages if replies stay low.
+headline: Find the right people for a role and write first messages they answer
+subhead: Give it a job description. It profiles the person who fits, plans where to look week by week, and writes first messages and follow-ups for you to send. After two weeks, it turns your reply counts into a pipeline update.
+explain: |
+  A job post pulls in the people who are already looking. The best candidates are often not, so you have to find them and write to a stranger. Most first messages fail because they could go to anyone. They list the job and say nothing about why this person would care.
+
+  The steps fix that in order. First it describes who really fits: their motives, their habits and where they spend time. Then it turns that profile into a search plan with places, companies and search words. Then it writes short first messages and follow-ups built on what moves that person. You send them for two weeks and count the replies. The last step turns your counts into an update that says what to change.
+when:
+  - You have a role to fill and almost no applicants.
+  - You want a specific kind of person and do not know where they spend time.
+  - Your first messages to candidates get ignored.
+you_give:
+  - The job description or a short brief of the role
+  - What the hiring manager cares about most (optional)
+  - After two weeks of sending, your counts of messages sent, replies and calls booked
+you_get:
+  - A profile of the person who fits and what would make them reply
+  - A week-by-week search plan with places, target companies and search words
+  - First messages and follow-ups, plus replies for the usual answers
+  - A short update for the hiring manager that says what to change next
+how_to_use:
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the job description. Add what the hiring manager really wants if you know it.
+  - Read the profile and fix anything that is wrong before the plan and messages build on it.
+  - Send the messages yourself for two weeks, then come back with your counts for the last step.
+how_it_works:
+  - title: Profile the person who fits
+    text: Reads the job description and describes the candidate's motives, habits and what would make them listen to a stranger.
+  - title: Plan where to look
+    text: Turns the profile into ranked places to search, target companies, search words and a week-by-week plan.
+  - title: Write the first messages
+    text: Writes short messages that use what moves this person, with follow-ups on a set schedule and replies for common answers. You send them yourself.
+  - title: Send for two weeks
+    text: This part is yours. Send the messages and count how many you sent, how many replied and how many agreed to talk.
+  - title: Report and adjust
+    text: Turns your counts into a short update that shows what works, what is stuck and what to change in the plan and the messages.
+output_shape: |-
+  STEP 1: CANDIDATE PROFILE
+    Who fits | motives | habits and places | what moves them | what turns them off
+
+  STEP 2: SEARCH PLAN
+    Ranked places | target companies | search words | week-by-week work
+
+  STEP 3: FIRST MESSAGES
+    First message | follow-ups | replies to common answers
+
+  PAUSE: SEND FOR TWO WEEKS, THEN COUNT
+
+  STEP 4: PIPELINE UPDATE
+    Counts by stage | what works | what is stuck | changes for the next two weeks
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How well you describe the role
+    how: A job description with the real day-to-day work gives a sharper profile than a list of skills. Add what the hiring manager would never compromise on.
+  - what: Where you send from
+    how: Tell it which channels you can use and how many messages you can send a week, so the plan and the messages fit.
+  - what: The size of the market
+    how: A rare skill needs a longer plan with more follow-ups. A common one needs a shorter plan and a tighter profile.
+  - what: Your counts in the last step
+    how: Give counts for every stage, not only replies. The update can only point to the stage that is stuck if it can see all of them.
+judge:
+  - The profile describes a person's motives and habits, not only a list of skills.
+  - Every place in the search plan has a reason tied to the profile.
+  - Each first message has one real reason this person would reply, and it could not be sent to anyone else without changes.
+  - The messages do not promise pay, perks or a title you have not agreed.
+  - The update names the stage where candidates drop off and one change for it.
+test:
+  - Check the profile against the best person you have hired for a similar role. It should describe them.
+  - Send the first message to two friends in the field and ask if they would answer it.
+  - Run the profile step twice on the same job description. The motives should match even if the wording differs.
+  - After two weeks, check that the counts you gave the last step add up from stage to stage.
+improve:
+  - Save the profile of every good hire in a file. Next time, start from that profile.
+  - Add your own message rules to the outreach step, such as length, tone or words you never use.
+  - Keep the best-performing message in a file and ask for new versions that stay close to it.
+  - Pair it with a hiring packet and interview plan once the first candidates say yes.

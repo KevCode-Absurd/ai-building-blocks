@@ -1,0 +1,125 @@
+new_slug: speed-fix-ranker
+name: "Speed fix ranker"
+summary: "Give it your speed problems and store numbers. Get fixes ranked by orders gained per hour of work."
+job: speed-up-store
+thinking: medium
+thinking_why: "It does sums and weighs trade-offs across a list. A mid-size model handles that well when given the numbers."
+
+headline: "Speed fix ranker"
+subhead: "Give it the speed problems from your audit, plus your visits, conversion rate and order value. It ranks every fix by the orders it could add per hour of work, as a low and high range, and hands back a plan for this week, next month and later."
+
+explain: |
+  A speed audit can list twenty problems, and every one looks urgent. Most owners fix the easiest ones, or the ones a developer mentions first, and never learn whether any of it paid off.
+
+  This skill ranks the fixes the way a store owner should. Images come first, then apps and scripts, then hosting. It weights each fix by where your visits and money sit, so a small gain on a busy page beats a big gain on a quiet one. It turns seconds saved into orders and revenue as a range, never one number, and it marks who can do each fix. If your store already passes Google's speed checks on mobile, it will tell you that offer, copy or ads probably matter more.
+
+when:
+  - "An audit lists 20 problems and you don't know where to start."
+  - "You need to explain speed work to a partner or developer in orders and revenue, not milliseconds."
+  - "You have a small budget and a few hours to spend."
+
+you_give:
+  - "The speed problems you found (from an audit or the store speed report reader)"
+  - "Monthly visits by page type, your conversion rate and your average order value"
+  - "Who will do the work (you, a developer, an agency) and how many hours you have"
+  - "Your own mobile against desktop, or fast against slow, conversion and bounce numbers (optional)"
+
+you_get:
+  - "A ranked fix list with expected gain as a range, effort, risk and who does it"
+  - "The money at stake written as orders and revenue per month"
+  - "A plan: top three this week, next five next month, the rest parked with a reason"
+  - "What to measure before and after each fix"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your list of speed problems and say where each one shows up (which page types)."
+  - "Add monthly visits for your homepage, collections and product pages, plus conversion rate and order value."
+  - "Say who will do the work and how many hours you have."
+  - "Start with the top three. Do the three-run test on each page before and after."
+
+how_it_works:
+  - title: Applies the fix ladder
+    text: Images first, then third-party scripts and apps, then hosting and CDN. Other work ranks lower unless a Core Web Vital is failing.
+  - title: Weights by traffic
+    text: A page with 10,000 visits a month outranks one with 100. Order is top product pages and homepage landing traffic, collections, then checkout.
+  - title: Turns seconds into orders
+    text: Uses your visits, conversion rate and order value with a low and high effect, and labels outside figures as third-party.
+  - title: Checks your own data
+    text: Compares conversion and bounce on mobile against desktop, or fast against slow sessions, before promising a gain.
+  - title: Tags the type of work
+    text: Marks each fix as no-code, theme code or server. A solo owner starts with no-code.
+  - title: Adds a retest plan
+    text: Each fix gets a three-run average on the same page, then real-user data after 28 days.
+  - title: Splits the list
+    text: Top three become this week's plan, the next five next month's, and the rest are parked with a reason.
+
+output_shape: |
+  SPEED FIX PLAN  <store>, <date>
+  Basis: <sessions by page type>, CVR <x%>, AOV <$>
+  Money at stake: <low> to <high> extra orders a month (<$ low> to <$ high>)
+  Note: effect figures are third-party studies; treat as direction.
+
+  THIS WEEK
+  1. <fix> | page <name> | type <no-code | theme code | server> | effort <hours> | risk <low | mid | high>
+     Gain: <low> to <high> orders a month | who: <you | developer> | measure: <before> to <after>
+  2. <...>
+  3. <...>
+
+  NEXT MONTH
+  4. to 8. <same layout, shorter>
+
+  PARKED
+  <fix> | reason
+
+  CHECK AGAINST YOUR OWN DATA
+  <what to compare before promising a gain>
+
+  MISSING: <what>
+
+tweaks:
+  - what: Traffic by page type
+    how: Give visits for each page type, not only the total. The ranking depends on where the visits are.
+  - what: Who does the work
+    how: Say "just me" and the plan starts with no-code fixes such as compressing images, removing an app or turning off autoplay video.
+  - what: Hours available
+    how: A small number of hours pushes the plan to fixes with the best gain per hour, even if bigger ones exist.
+  - what: Your own comparison data
+    how: Add mobile against desktop conversion. If mobile converts far worse, speed is a stronger suspect.
+
+judge:
+  - "Every gain is a range with a low and a high, never one number."
+  - "Outside figures are labelled as third-party studies."
+  - "Images, then apps, then hosting, unless a vital is failing, and the plan says which."
+  - "A high-traffic page outranks a low-traffic page for the same gain."
+  - "Each fix has a type, effort, risk, owner and a measure."
+  - "Fixes it can't size are parked with a reason, not guessed."
+
+test:
+  - "Give it a list where you already know the right first move (for example a 6 MB hero image on your top page). It should put that first."
+  - "Change the traffic numbers so a quiet page has more visits. The ranking should change."
+  - "Give it only 500 visits a month. It should say your own data is too thin to measure small gains."
+  - "Run it twice on the same inputs. The top three should match."
+
+improve:
+  - "Write your real visits, conversion rate and order value into the skill so you don't paste them each time."
+  - "Add a rule for your own team, such as 'no theme code changes during a sale month'."
+  - "Save what each fix actually changed in your brand file, then replace the third-party range with your own."
+  - "Pair it with the speed budget and sale check to keep gains from slipping back."
+
+works_best_with:
+  tools:
+    - {name: "Google PageSpeed Insights", why: "Gives the problems and lab numbers to feed in, and the real-user data to measure against."}
+    - {name: "Shopify analytics", why: "Gives visits by page, conversion rate and order value, the inputs that turn seconds into orders."}
+    - {name: "Google Analytics (GA4)", why: "Splits mobile and desktop conversion and bounce, so you can check a speed gain against your own data."}
+  inputs:
+    - "The output of the store speed report reader"
+    - "A click or heatmap report, to see which features shoppers use"
+    - "Your last 90 days of conversion rate by device"
+
+terms:
+  - term: Third-party figure
+    meaning: A number from an outside study, often on a large site. Good as direction, not as a forecast for your store.
+  - term: CVR
+    meaning: Conversion rate, the share of visits that end in an order.
+  - term: AOV
+    meaning: Average order value, the average amount in one order.

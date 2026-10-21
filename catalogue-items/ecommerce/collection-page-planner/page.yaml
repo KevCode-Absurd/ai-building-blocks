@@ -1,0 +1,121 @@
+new_slug: collection-page-planner
+name: "Collection page planner"
+summary: "Give it your range and keyword data. Get a set of collection pages, each aimed at one search."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It applies a few clear rules to a product list, so a mid-size model is enough."
+
+headline: "Collection page planner"
+subhead: Give it your product list and keywords you have already checked. It splits your range into collection pages that each aim at one search, names them, links parents to children, writes a brief for each and puts them in batches of 5 to 10.
+
+explain: |
+  A store with one collection per product type bets on a few hard, broad searches. "Hoodies" is crowded. Yet the same hoodies could also be found as mens hoodies, oversized hoodies, zip hoodies or hoodies under $50, and each of those is a smaller, easier search.
+
+  This skill plans that set. It starts from your best-selling category, makes a collection for each real way people search, reuses the same products, and gives every page one keyword and a clear name. It links each main collection down to its sub-collections, skips thin ones with one or two products, and ships the work in small batches so you can check Search Console before the next. It plans the set. A separate skill, the Collection page SEO builder, writes each page.
+
+when:
+  - You sell a range of products but have only a few broad collections.
+  - You want more search entry points without adding new products.
+  - You are about to build many collections and need an order and a naming plan.
+
+you_give:
+  - Your product list with tags, price, type, use and audience
+  - Keywords you have already checked, ideally from the Store keyword validator
+  - Your current collections and their web addresses (optional)
+  - Your best-selling category (optional)
+you_get:
+  - A map of new and existing collections with keyword, products, handle, parent and children
+  - A short brief for each collection, ready for the Collection page SEO builder
+  - A build order in batches of 5 to 10
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product list and the keywords you checked, and name your best-selling category.
+  - Paste your current collections so it does not repeat them.
+  - Build the first batch, then check indexing and impressions in Search Console before the second.
+  - Take each brief to the Collection page SEO builder, one page at a time.
+
+how_it_works:
+  - title: Starts with sales
+    text: Picks your best-selling category first, then lists the ways people search for it, such as audience, style, use and price.
+  - title: Checks each variant
+    text: Needs buying intent, difficulty under about 35 and collection pages already ranking. Big brands holding page one rule a term out.
+  - title: Reuses products
+    text: Puts the same products in several collections. Only the framing and keyword change.
+  - title: Names and links
+    text: Gives each collection a search-based name and short handle. Links parents to children, and posts to collections.
+  - title: Drops thin pages
+    text: A collection with one or two products merges into its parent.
+  - title: Writes briefs
+    text: Gives each page a goal, the products, the links and notes for the page builder.
+  - title: Batches the work
+    text: Five to ten collections at a time, with a Search Console check before the next batch.
+
+output_shape: |
+  COLLECTION MAP
+  <collection> | keyword: <...> | handle: <...>
+    products: <n> | parent: <...> | children: <...>
+    status: <new | exists | merge>
+
+  BRIEF PER COLLECTION
+  <collection>: goal <...> | include <...> | link to <...>
+
+  BUILD ORDER AND BATCHES
+  Batch 1: <5 to 10 collections> | check after: <indexing, impressions>
+
+  NOT ADDED
+  <variant> | reason
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Your best-selling category
+    how: Name it. The plan starts there, since a win in your biggest category pays back first.
+  - what: Checked keywords
+    how: Paste only terms that passed the Store keyword validator. Unchecked terms are marked as such.
+  - what: Existing collections
+    how: Paste them with their addresses so the plan merges or renames them instead of repeating them.
+  - what: Number of products
+    how: Say how many. A collection with fewer than three products is flagged for merging.
+  - what: Your difficulty limit
+    how: A new site may need a limit lower than 35. Say so and it uses yours.
+
+judge:
+  - Each collection has one keyword, and no two share one.
+  - Every child collection has a parent and a link plan.
+  - No collection is made of one or two products.
+  - Names say what is in the collection, not a vague word like Bath.
+  - The batch plan is small enough to check between batches.
+
+test:
+  - Give it a store with one product. It should say this skill is not for you and point to the product page.
+  - Give it two variants that share the same products and keyword. It should keep one.
+  - Search three of its collection names. Collections should already rank for them.
+  - Build the first batch and compare Search Console impressions after a few weeks.
+
+improve:
+  - Add your own naming rules to the skill file, such as how handles handle sizes and colours.
+  - Add the variant types that suit your range, such as skin type or room.
+  - Save the finished map, so the next run only adds new ideas.
+  - Pair it with the Store keyword map builder before, the Collection page SEO builder per page, and the Collection page fixer (the conversion version) once the pages are live.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Smart collections let tags fill collections automatically, and handles can be renamed with a redirect."}
+    - {name: "Semrush", why: "Lists every keyword containing a term, with difficulty and volume, to find collection ideas."}
+    - {name: "Google Search Console", why: "Free. Shows which pages and searches already get impressions after each batch."}
+    - {name: "Any good chat AI", why: "Sorts a product list into collection ideas and drafts briefs."}
+  inputs:
+    - "Your best-seller list"
+    - "A keyword export for your main category"
+    - "Competitor store menus"
+    - "Your Search Console pages sorted by impressions"
+
+terms:
+  - term: Collection page
+    meaning: A page that lists many products of one kind, such as all zip hoodies.
+  - term: Handle
+    meaning: The last part of a page's web address, such as zip-hoodies.
+  - term: Search entry point
+    meaning: Any page that a shopper can land on from a search.

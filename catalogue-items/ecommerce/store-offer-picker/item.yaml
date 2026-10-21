@@ -1,0 +1,23 @@
+slug: store-offer-picker
+name: "Store offer picker"
+summary: "Give it margin, order mix and repeat rate. Get the offer types to test first, with the maths."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "The four questions, the five mechanics, single-product versus multi-product priorities, the AOV distribution and the seven ways offers fail"}
+  - {title: "I Studied Every Ecommerce Offer So You Don't Have To", by: "DTC offer consultant (public video)", used: "The three margin trades and which offer types are free, weak or worth paying for"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency (public long-form masterclass)", used: "The five offer mechanics, reading the AOV distribution and the seven failure modes"}

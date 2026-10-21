@@ -1,0 +1,25 @@
+slug: new-hire-onboarding-keeper
+name: "New hire onboarding keeper"
+summary: "Give it a name, role and start date. Get the plan, then a weekly check on progress and what to fix."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: [new-hire-plan-builder, 30-60-90-day-onboarding-planner, employee-survey-designer, task-list-keeper]
+steps:
+  - {uses: new-hire-plan-builder, note: "Once, before the start date: the pre-start checklist, the first day and the first week."}
+  - {uses: 30-60-90-day-onboarding-planner, note: "Once: goals for days 30, 60 and 90, which every weekly check is measured against."}
+  - {uses: employee-survey-designer, note: "Once: a short set of check-in questions the manager asks the new hire each week."}
+  - {uses: task-list-keeper, note: "Every week: keeps the new hire's task file up to date from the manager's check-in notes, so done, late and blocked items show."}
+schedule: "Every Friday for the first 90 days after the start date"
+asks_before: [sending anything to the new hire or the team, booking meetings, ordering equipment or giving access to any system, changing the plan or the role, writing anything about the person that goes in a file or review]
+origin: own
+version: 1.0.0
+example_pending: true

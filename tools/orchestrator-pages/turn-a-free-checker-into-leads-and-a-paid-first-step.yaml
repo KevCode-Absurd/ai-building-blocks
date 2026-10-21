@@ -1,0 +1,78 @@
+new_slug: turn-a-free-checker-into-leads-and-a-paid-first-step
+name: Turn a free checker into leads and a first sale
+summary: Give it your business and buyer. Get a free checker, a cost-per-lead rule and a paid first step.
+job: make-offer
+thinking: medium
+thinking_why: It runs three skills in a row and the sums are small. A mid-size model is enough.
+headline: A free score that brings in leads, and a cheap first step that turns them into clients
+subhead: Give it the service you sell and who buys it. It plans a short free checker that shows buyers a problem they may not know they have, sets what a qualified lead may cost once you have real numbers, and designs a cheap first piece with a booked second meeting.
+explain: |
+  Services are hard to sell cold. Buyers do not know they have the problem, so an ad for the fix gets ignored. A free score fixes that: five questions, a result, and a reason to want help. But a checker that brings in the wrong people costs more than it earns, and a lead who never pays anything rarely turns into a client.
+
+  The steps cover all three gaps. First it plans the checker: the problem, five questions at most, the score, what each band says and where the email ask goes. You then run it for a week or two and note spend, sign-ups and how many fit your buyer. The next step works out cost per qualified lead from those numbers, adds friction one lever at a time and sets a stop rule. The last step takes that lead plan and designs a cheap first piece of your main offer, a booked second meeting and the upsell.
+when:
+  - You sell a service or a high-ticket product and cold ads do not work.
+  - You have a free offer that brings in leads who never buy.
+  - You want a first step that is cheap but filters out bargain hunters.
+you_give:
+  - What you sell and who has the problem it fixes
+  - What a visitor could tell you that shows how big the problem is
+  - Your ad spend, sign-ups and how many leads fit your buyer, after a run
+  - Your main offer and its price
+  - Your brand file (optional)
+you_get:
+  - "A free checker with its questions, score, what each band says and where to ask for the email"
+  - Cost per qualified lead, which campaign wins and the friction to add, one lever at a time
+  - A stop rule and one qualifier line to use in the ad, page and form
+  - A cheap first piece, a booked second meeting and the pitch for your main offer
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your service and buyer. State one problem you can really fix.
+  - When it pauses, build the checker, run it for one to two weeks and bring back your spend and sign-ups.
+how_it_works:
+  - title: Plan the free checker
+    text: Names a problem the buyer may not know they have, cuts the questions to five, writes the score and what each band means, and puts the email ask after the result.
+  - title: Pause and run it
+    text: You build the checker and send ads or posts to it for one to two weeks. Note spend, sign-ups and how many fit your buyer.
+  - title: Set the cost per lead and the friction
+    text: Takes the checker plan and your numbers. Works out cost per qualified lead, says which campaign wins, adds friction one lever at a time and sets a stop rule.
+  - title: Design the paid first step
+    text: Takes the lead plan from the step before. Picks a part of your main offer that is useful alone, prices it low, books the second meeting and plans the pitch for the main offer.
+output_shape: |-
+  STEP 1: FREE CHECKER
+    Problem | five questions | score rule | what each band says | email ask | link to your service
+
+  PAUSE: run it, note spend, sign-ups and fits
+
+  STEP 2: LEAD COST
+    Cost per qualified lead | winner | friction by lever | stop rule | qualifier line
+
+  STEP 3: PAID FIRST STEP
+    The piece | price | sequence | no-show fee | numbers to watch
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: What the score measures
+    how: Pick something the visitor can recognise from a number, such as hours lost or money leaking. Step 1 builds the bands on it.
+  - what: Handling cost per lead
+    how: Give minutes per lead and your hourly cost. Step 2 includes it so the cheapest lead is not the best one.
+  - what: Field rules
+    how: Name your field. Health, money and legal checkers need extra care and the steps will say what to check with a qualified person.
+  - what: Whether you can take a card on a call
+    how: Say so. Step 3 changes the no-show fee and booking steps to fit.
+judge:
+  - The checker asks five questions or fewer, and each one changes the score.
+  - Each score band has one next step that does not depend on buying.
+  - Cost per qualified lead includes ad spend, handling and the cost of the free piece.
+  - Friction is added one lever at a time and has a stop rule.
+  - The first piece is useful alone and would sell at full price.
+test:
+  - Take the checker yourself with three made-up buyers. The three scores should differ.
+  - Redo the cost per qualified lead by hand.
+  - Read the qualifier line aloud. Someone who does not fit should know they do not.
+improve:
+  - Rewrite the bands once you see which answers real clients gave.
+  - Add friction only while the number of leads you can handle stays covered.
+  - Track how many first-piece buyers book the second meeting and buy the main offer.

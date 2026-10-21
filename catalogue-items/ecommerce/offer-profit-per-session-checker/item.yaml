@@ -1,0 +1,21 @@
+slug: offer-profit-per-session-checker
+name: "Offer profit-per-session checker"
+summary: "Give it offer variants, costs and sessions. Get profit per visitor for each, a winner and a trust score."
+category: ecommerce
+type: skill
+role: check
+job: offer
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How To Create Winning Offers In Ecom", by: "A dropshipping and DTC coach (public video)", used: "Profit per session as the test metric, rounding costs up, and the shipping spread across pack sizes"}
+  - {title: "$10,000,000 per year on Shopify: Insane Offer and Conversion Rate Strategy", by: "Jordan Hayes (agency owner)", used: "The flag that AOV times conversion rate should be above about 250"}

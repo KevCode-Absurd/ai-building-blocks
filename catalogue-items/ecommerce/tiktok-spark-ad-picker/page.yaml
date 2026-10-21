@@ -1,0 +1,118 @@
+new_slug: tiktok-spark-ad-picker
+name: "TikTok Spark ad picker"
+summary: "Give your organic or creator posts and their results. Get which to boost as Spark ads, and how."
+job: launch-and-scale-ads
+thinking: low
+thinking_why: "It ranks posts by a few numbers and writes a short request, so a fast model works."
+
+headline: "TikTok Spark ad picker"
+subhead: Give it your organic or creator TikTok posts with their views, engagement and sales. It picks the top posts to boost as Spark ads, lists what each creator must do to authorize theirs, drafts the request and sets up a test against your best ad.
+
+explain: |
+  Making a new TikTok ad costs time and money, and many fail. A post that already won free views is a safer bet. Boosting it as a Spark ad keeps its likes and comments, so it still looks like a normal post.
+
+  This skill follows a simple process. Post three or more videos, yours or from creators. Wait 5 to 7 days. Rank them by sales, follows, views and engagement, then boost the top 10 to 30 percent. For a creator's post, only the creator can give you the code that allows it, so the skill lists those steps and drafts your message. It then sets up a test of the boosted post against your best current ad.
+
+when:
+  - You have posted several TikTok videos, or creators did, and you aren't sure which deserve ad money.
+  - You sent products to creators and want to use their best videos as ads.
+  - Your made-for-ads videos aren't working and you want to try content that already won attention.
+
+you_give:
+  - Each post with its views, likes, comments, shares, follows and sales, and who posted it
+  - What each creator agreed to, such as paid use and how long
+  - Your current best ad and its results
+  - Your niche and the creators you follow (optional)
+you_get:
+  - A shortlist of the posts to boost, with the reason for each
+  - A list of posts held back and why
+  - The steps a creator follows to give you the code, and a draft message to send
+  - A test plan against your current best ad
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your posts with their numbers and how long ago each went up. Wait at least 5 days after posting.
+  - Add what each creator agreed to, and your best ad's results.
+  - Send the creator request it drafts, then add each code in Ads Manager under TikTok post.
+
+how_it_works:
+  - title: Checks the posts
+    text: It wants three or more posts and 5 to 7 days of organic life, since strong posts often show within 2 days.
+  - title: Ranks the posts
+    text: It ranks by sales first, then follows, then views and engagement, and picks the top 10 to 30 percent.
+  - title: Checks each pick
+    text: It checks for the creator's permission, claims that break ad rules, paid partnership labels and music that is allowed in ads.
+  - title: Lists the creator steps
+    text: The creator turns on ad authorization in the video's ad settings, sets a length of time and sends you the code.
+  - title: Adds the post
+    text: In Ads Manager, add it under TikTok post and paste the code. You can change the destination page.
+  - title: Sets the test
+    text: The boosted post runs against your current best ad with the same budget and audience, and you compare them.
+  - title: Finds new formats
+    text: With a separate research account, it notes which formats the feed pushes, to remake in your own way.
+
+output_shape: |
+  SPARK SHORTLIST
+  Posts reviewed: <n> | picked: <n> (top <10-30>%) | organic wait: <days>
+  1 <post / creator> | views <n> | engagement <n> | sales <n> | why: <reason> | permission: <yes / needs code>
+  2 ...
+  Held back: <post> | reason: <too new | claim problem | no permission | weak>
+
+  CREATOR REQUEST (draft for you to send)
+  <short message with the steps for ad authorization, duration and the code>
+
+  ADD IN ADS MANAGER
+  <steps: TikTok post, add post, paste code, destination URL>
+
+  TEST
+  Boosted post vs current best ad: <budget, audience, how long, what to compare>
+
+  NEXT BATCH
+  <how many new videos, from whom, and when to review>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <post results | creator agreement | best ad results>
+
+tweaks:
+  - what: Days since posting
+    how: Give the posting date of each. The skill holds back posts under 5 days old unless one is far ahead.
+  - what: Which result matters most
+    how: Say if you care most about sales, follows or reach. The ranking order follows your answer, with sales first by default.
+  - what: Creator agreements
+    how: Paste what each creator agreed to. Without it, every creator post is marked as needing permission before it can be boosted.
+  - what: How many posts
+    how: More posts give a wider pick. With 3 posts you boost 1 or 2. With 20 you boost 2 to 6.
+
+judge:
+  - "The picks match your numbers: the top posts by sales or engagement, not by taste."
+  - Each creator post has its permission noted or a step to get it.
+  - Any claim that could break ad rules is flagged before boosting.
+  - The test names what is compared, the budget and how long it runs.
+  - Held-back posts each have a reason.
+
+test:
+  - Give it three posts, one with far more views than the rest. That one should be picked first.
+  - Include a post posted yesterday. It should be held back as too new.
+  - Include a creator post with no agreement. It should be marked as needing permission.
+  - Run it twice on the same numbers. The shortlist should match.
+
+improve:
+  - Add your creator terms to the skill file, such as how long you ask them to authorize a post, so the request matches your agreements.
+  - Add your ad policy rules and the claims your brand can make, so step 4 checks against them.
+  - Save the posts that won as Spark ads to your brand file, so next batch's briefs build on them.
+  - Pair it with the TikTok ad test reader to read the test, and with a creator outreach skill to find more creators.
+
+works_best_with:
+  tools:
+    - {name: "TikTok Ads Manager", why: "Where you add a post under TikTok post and paste the creator's code."}
+    - {name: "TikTok Creator Marketplace", why: "A place to find creators and agree on terms before you ask for a code."}
+  inputs:
+    - "The creator's signed agreement or message thread showing what they agreed to"
+    - "A screenshot of each post's analytics"
+    - "Your ad policy and claims list"
+
+terms:
+  - term: Spark ad
+    meaning: A TikTok ad made from an existing post, yours or a creator's. Likes and comments stay on the post.
+  - term: Ad authorization code
+    meaning: A long string a creator generates in the video's ad settings, which lets you run their post as an ad.

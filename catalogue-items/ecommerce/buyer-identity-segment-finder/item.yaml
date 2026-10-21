@@ -1,0 +1,21 @@
+slug: buyer-identity-segment-finder
+name: "Buyer identity segment finder"
+summary: "Paste reviews and survey answers. Get buyer groups by self-description, their size and who to build for."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to create avatars that scale Facebook ads to $30k days", by: "Nick, an ads agency owner and mentor", used: "Searching reviews for I am and as a phrases, free-form buyer surveys, counting repeating groups, nesting-doll niches and watching new hobbies"}
+  - {title: "How I find avatars that scale creatives to $100k a day", by: "an ecom brand scaling coach (name not given)", used: "A post-purchase survey and email as a steady source of repeating groups"}

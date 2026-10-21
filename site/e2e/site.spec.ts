@@ -32,11 +32,11 @@ test("hero is the headline, the mono subhead, and two buttons, How it works a pl
   expect(await globe.evaluate((c: HTMLCanvasElement) => c.width > 0 && c.height > 0)).toBe(true);
 });
 
-test("no brands, no jargon labels, no business split, no agents", async ({ page }) => {
+test("no brands, no jargon labels, no business split", async ({ page }) => {
   await page.goto("/");
   await expect(cards(page).first()).toBeVisible();
   const text = await page.locator("body").innerText();
-  for (const word of ["Grüns", "Gruns", "AG1", "IM8", "Gehna", "Nourish", "Digest", "Orchestrate", "Ecommerce", "Any business", "Agents"]) expect(text).not.toContain(word);
+  for (const word of ["Grüns", "Gruns", "AG1", "IM8", "Gehna", "Nourish", "Digest", "Orchestrate", "Ecommerce", "Any business"]) expect(text).not.toContain(word);
   await expect(page.getByRole("button", { name: /^(Source|Digest|Make|Render|Check)\s*\d*$/ })).toHaveCount(0);
   await expect(page.locator("img")).toHaveCount(0);
 });
@@ -68,21 +68,31 @@ test("header links jump to the library and the builder", async ({ page }) => {
 
 test("the library opens on job functions, and is sorted into prompts, skills and workflows", async ({ page }) => {
   await page.goto("/#library");
-  await expect(page.locator(".fns .fn")).toHaveCount(30);
+  await expect(page.locator(".fns .fn")).toHaveCount(32);
   await expect(page.getByTestId("fn-media-buyer")).toContainText("Run Meta ads");
-  await expect(page.locator(".fns .fn .px")).toHaveCount(30); // every function has its pixel icon
-  await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/, /^Minds/]);
+  await expect(page.locator(".fns .fn .px")).toHaveCount(32); // every function has its pixel icon
+  await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/, /^Agents/, /^Minds/]);
   // Broad areas sit above the groups; picking one shows only its groups.
   await page.getByTestId("area-design").click();
   await expect(page.getByTestId("fn-photos")).toBeVisible();
   await expect(page.getByTestId("fn-copywriter")).toHaveCount(0);
   await page.getByTestId("area-design").click();
-  for (const kind of ["prompt", "skill", "workflow"]) {
+  for (const kind of ["prompt", "skill", "workflow", "agent"]) {
     await page.getByTestId(`tab-${kind}`).click();
     await expect(cards(page).first()).toHaveAttribute("data-kind", kind);
     const kinds = await cards(page).evaluateAll((els) => [...new Set(els.map((e) => e.getAttribute("data-kind")))]);
     expect(kinds).toEqual([kind]);
   }
+});
+
+test("an agent's page shows what it runs, how to add it, and what it asks before", async ({ page }) => {
+  await page.goto("/agents/google-ads-weekly-account-keeper");
+  await expect(page.locator("h1")).toHaveText("Google Ads weekly account keeper");
+  const runs = page.locator("#steps");
+  await expect(runs).toContainText("What it runs");
+  await expect(runs.locator(".flow-steps > li")).toHaveCount(6);
+  await expect(page.locator("#install")).toBeVisible();
+  await expect(page.locator("#file")).toContainText("Stop and ask before");
 });
 
 test("picking a function, a job and filters narrow the library; the choice is kept in the link", async ({ page }) => {
@@ -528,7 +538,7 @@ test("how it works: a plain guide to each kind and the builder, at grade 10 or b
     await expect(guide.getByRole("heading", { level: 2, name: new RegExp(`^${h}`) })).toBeVisible();
   }
   // Agents are explained and plainly marked as not in the library yet; apps lead to the example apps.
-  await expect(guide.locator("#agent")).toContainText("aren't in the library yet");
+  await expect(guide.locator("#agent")).toContainText("See the ready-made agents");
   await expect(guide.locator("#app")).toContainText("Take the tour of a finished app");
   // The contents links jump to their section.
   await guide.locator(".bp-toc").getByRole("link", { name: "Using the builder" }).click();

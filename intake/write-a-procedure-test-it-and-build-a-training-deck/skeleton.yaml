@@ -1,0 +1,48 @@
+# Workflow skeleton built from existing AI Blocks library skills (docs/INTAKE.md).
+id: write-a-procedure-test-it-and-build-a-training-deck
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: write-a-procedure-test-it-and-build-a-training-deck
+  name: "Write a procedure, test it and build a training deck"
+  summary: "Describe how a job gets done. Get a written procedure, a gap check, a proofread and a training deck."
+  when: "a job lives in one person's head and you want anyone to be able to do it."
+  job: document-work
+  level: beginner
+steps:
+  - name: "Write the procedure"
+    skill: process-and-sop-writer
+    job: ops
+    from: library
+    method: ["Describe the process, or paste any notes you have", "Answer questions about who does each step and what triggers it", "Get the purpose, scope, owners and steps in order", "Add the edge cases and how to measure that it worked"]
+    inputs: [question]
+    outputs: [document]
+    note: "Starts from how you describe the work. Makes the written procedure the later steps check and teach from."
+  - name: "Check it for gaps"
+    skill: sop-and-runbook-checker
+    job: ops
+    from: library
+    method: ["Check each step has an owner and a review date", "Check every step says how you know it worked", "Look for steps with no rollback and cases the happy path skips", "List the fixes in the order that matters most"]
+    inputs: [document]
+    outputs: [audit_report]
+    note: "Reads the procedure and lists what a new person would trip on."
+  - pause: "Fix the gaps. Then ask someone who has never done the job to follow the procedure with you watching, and write down every place they stall. Update the procedure and bring it back."
+  - name: "Proofread the fixed procedure"
+    skill: technical-doc-proofreader
+    job: ops
+    from: library
+    method: ["Read it once for tone and type", "List the terms used for the same thing and pick one", "Check typos, grammar and punctuation without rewriting", "Flag anything that looks like a factual error instead of fixing it"]
+    inputs: [document]
+    outputs: [feedback_notes]
+    note: "Reads the updated procedure and returns a list of slips, so the final version uses one name for each thing."
+  - name: "Build the training deck"
+    skill: presentation-builder
+    job: ops
+    from: library
+    method: ["Take the procedure as the outline and name the audience", "Pick a format: Marp, reveal.js or PowerPoint", "Turn each stage into a slide and add speaker notes", "Put the edge cases on their own slides"]
+    inputs: [document, brief!]
+    outputs: [slide_deck]
+    note: "Turns the finished procedure into slides a new starter can be taught from."

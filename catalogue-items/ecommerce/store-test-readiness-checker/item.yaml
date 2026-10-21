@@ -1,0 +1,22 @@
+slug: store-test-readiness-checker
+name: "Store test readiness checker"
+summary: "Paste your orders, visits and the page to test. Get test, research or fix, plus a readiness score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "CRO as testing and experimentation for DTC ecommerce", by: "Written research review of A/B testing for online stores", used: "Repair versus test, the order-volume stages, the sample size table, and why revenue per visitor needs about 6 times the traffic"}
+  - {title: "How Not To Run an A/B Test", by: "Evan Miller", url: "https://www.evanmiller.org/how-not-to-run-an-ab-test.html", used: "The 16 x variance / lift squared sample-size rule"}
+  - {title: "eCommerce CRO Masterclass 2026: The Full System", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "A plain-language check that most small stores cannot power a simple split test, and how email sends contaminate a test"}
+  - {title: "Conversion Rate Optimization Framework Revealed - Step By Step Breakdown", by: "Ali Kenyon (Conversion Wise), hosted by Ezra Firestone", used: "The 300,000 sessions line for big swings instead of small tests, and 2 to 4 week runs"}

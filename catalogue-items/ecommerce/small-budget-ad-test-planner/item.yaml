@@ -1,0 +1,21 @@
+slug: small-budget-ad-test-planner
+name: "Small-budget ad test planner"
+summary: "Give it your price, product and test cash. Get a staged plan: image test, then video, then people."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: question, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, agency founder and head of retention at a fast-growing drinks brand, on a podcast", url: "https://www.youtube.com/watch?v=mdqvLXm48aE", used: "Treating the budget as a pot of learning, checking price first, the image smoke test with a plain text bar, then a video, then more people and places"}
+  - {title: "Every Level of Marketing", by: "Orin, creator and marketing consultant, in conversation with a host", url: "https://www.youtube.com/watch?v=nEOjyNF-fbQ", used: "A $10 to $50 a day test campaign, reading whether an ad gets spend and whether the spend comes back, and doubling the budget while the return holds"}

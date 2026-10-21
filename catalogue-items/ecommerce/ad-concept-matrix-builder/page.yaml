@@ -1,0 +1,124 @@
+new_slug: ad-concept-matrix-builder
+name: "Ad concept matrix builder"
+summary: "Give it your product and buyer words. Get 30 to 40 personas with angles and offers in test order."
+job: plan-ad-tests
+thinking: high
+thinking_why: "It builds a large, connected plan from your buyer words, so a stronger model gives sharper personas and angles."
+
+headline: "Ad concept matrix builder"
+subhead: Give it your product, your reviews and your current offers. It builds 30 to 40 buyer personas written as a problem and a situation, an angle for each, and the offers to pair them with. You get a test order and an ad set name for every concept.
+
+explain: |
+  Many stores test ads by changing colours and models. Meta sees one idea, and you learn nothing. A concept is three things together: who the ad speaks to (the persona), the reason they should care (the angle) and what you offer them (the offer). Change at least one and you have a new ad. Change none and you have the same ad again.
+
+  This skill builds the grid. It turns your reviews and product facts into personas written as a problem in a real situation, never as an age and a gender. It pairs each with an angle built from named parts, such as problem agitation or a surprising truth. Then it adds the offers you can really run, ranks the concepts in a test order, and names each ad set so your results stay readable. The delivery claims inside it come from agency practice and are not Meta rules.
+
+when:
+  - You are about to brief creative for the month and need a list of different ideas, not more versions of one.
+  - Your best ad has stopped scaling and you need new people to speak to.
+  - You run one product and want to sell it to several kinds of buyer without mixing their messages.
+
+you_give:
+  - Your product facts and price
+  - Customer reviews or survey answers, in the buyers' own words
+  - Your current offers with their dates, such as a bundle, a subscription or a discount (optional)
+  - Past buyer data by group, and the formats you can make (optional)
+you_get:
+  - 30 to 40 personas, each a problem plus a situation
+  - An angle for each persona, built from named parts, and the offer options for each concept
+  - A test order and an ad set name for every concept
+  - A first-line hook idea per concept and the proof each one needs
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts and at least 20 real reviews or survey answers.
+  - Paste your live offers with their start and end dates, and say which formats you can make.
+  - Read the personas first and cut any that sound invented. Keep the ones your reviews back up.
+  - Brief the top concepts first, three or more ads for each, one concept per ad set.
+
+how_it_works:
+  - title: Reads your buyer words
+    text: Pulls the problems, situations, wording and proof needs out of your reviews and facts. If there are no real buyer words it says so and marks every persona as a guess.
+  - title: Writes problem-based personas
+    text: Each persona is a problem in a situation, such as a consultant who flies twice a week and needs a carry-on wardrobe. It never uses a demographic like 'women 25 to 45'.
+  - title: Runs the persona loop
+    text: Starts from your hand-written list or the reviews, adds 20 more, cuts to the best 4 or 5, then feeds those back for 10 to 20 more.
+  - title: Adds outcomes and facets
+    text: Crosses outcome, demographic and facet (a state, event or condition) to find the gaps where gains tend to sit.
+  - title: Picks an angle
+    text: Builds each angle from named parts. These are problem agitation, a contrarian truth, authority and proof, a curiosity gap, comparison or objection handling, and transformation.
+  - title: Pairs the offers
+    text: Uses only the live offers you gave it. With a small range it leans on angle and persona.
+  - title: Ranks the test order
+    text: Angle first, offer second, persona third, format last. Names each ad set with persona, angle, offer, content type and date.
+  - title: Guards against too narrow
+    text: Flags personas so tight that spend would cap out, and keeps a few broad concepts for scale.
+
+output_shape: |
+  PRODUCT  <name>  |  BUYER WORDS USED  <n>  |  OFFERS  <list with dates>
+
+  CONCEPTS (<n> rows)
+  <id> | persona: <problem + situation> | outcome/facet: <...>
+       angle: <angle part + one line> | offer: <offer>
+       proof needed: <...> | first line: <hook idea that names the problem>
+       ad set: <persona> | <angle> | <offer> | <content type> | <date>
+
+  TEST ORDER
+  Round 1 (angles): <ids>   Round 2 (offers): <ids>
+  Round 3 (personas): <ids> Round 4 (formats): <ids>
+
+  BROAD CONCEPTS KEPT FOR SCALE: <ids>
+  TOO NARROW: <ids and why>
+  POLICY WATCH: <claims to check>
+  CHECKS MISSED: <none, or list>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: How many real reviews you paste
+    how: More real buyer words give sharper, more different personas. Under about 20 reviews, expect generic rows and a warning.
+  - what: Your spend level
+    how: Tell it your yearly ad spend. Under 8 figures a year it keeps personas tight. Above that, it adds more broad concepts.
+  - what: The offers you can run
+    how: Paste each offer with its dates. With only one offer, the grid leans on angle and persona instead of offers.
+  - what: Your formats
+    how: Say which formats you can make. Format is ranked last, so it only shapes the briefs.
+
+judge:
+  - Every persona is a problem in a situation, with no bare age or gender.
+  - Each persona traces to a line in your reviews or facts, or is marked as a guess to test.
+  - No two concepts share the same persona, angle and offer.
+  - The test order puts angle first and format last.
+  - Health, weight, money or before-and-after angles carry a claims note.
+
+test:
+  - Pick one persona you know well. It should match a real kind of buyer you can name.
+  - Run it twice on the same inputs. The strongest concepts should repeat even if the wording changes.
+  - Take the top three concepts and write one line for each, then ask a buyer which one sounds like them.
+  - Launch three ads for one concept in their own ad set and check you can say what that ad set tested.
+
+improve:
+  - Add your own hand-written persona list to the skill file so the loop starts from your real knowledge.
+  - Save your top five concepts and their results to your brand file, so the next run avoids repeats.
+  - Add the claims you may not make, so angles stay inside them.
+  - After a few months, add which facets paid off, and ask for more like them.
+  - Pair it with the ad sameness checker, so your finished ads really are different ideas.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the persona loop. Paste your reviews in as plain text."}
+    - {name: "Meta Ads Manager", why: "Where you name ad sets and read results per concept."}
+  inputs:
+    - "A survey of recent buyers asking what problem made them buy"
+    - "Reviews exported from your store or review app"
+    - "Results by ad set from past tests"
+    - "Your claims list, so angles stay compliant"
+
+terms:
+  - term: Concept
+    meaning: A persona, an angle and an offer together. Change one and it is a new concept.
+  - term: Persona
+    meaning: A kind of buyer described by their problem and situation, not their age or gender.
+  - term: Angle
+    meaning: The reason someone should care, in their words.
+  - term: Facet
+    meaning: A state, event or condition that sets a buyer apart, such as being on a diet drug or being vegan.

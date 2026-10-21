@@ -1,0 +1,27 @@
+slug: pull-request-reviewer
+name: "Pull request reviewer"
+summary: "Point it at each new pull request. Get a risk rating, ranked findings and a review to post once you say yes."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: code_change, required: true}
+  - {type: codebase, required: true}
+outputs:
+  - {type: feedback_notes}
+  - {type: audit_report}
+uses: [pull-request-risk-scorer, pull-request-risk-reviewer, security-focused-change-reviewer, change-impact-checker, test-gap-finder, human-review-gate]
+steps:
+  - {uses: pull-request-risk-scorer, note: "Every pull request, first: size and risk, which sets how deep the rest goes."}
+  - {uses: pull-request-risk-reviewer, note: "Every pull request: issues ranked by severity, with clear review comments."}
+  - {uses: security-focused-change-reviewer, note: "Only when the change touches sign-in, permissions, user input, secrets, payments, dependencies or build workflows."}
+  - {uses: change-impact-checker, note: "Only when the change edits shared code, a public interface or a data shape that other parts rely on."}
+  - {uses: test-gap-finder, note: "Every pull request that is not low risk, or any that adds behaviour without touching a test."}
+  - {uses: human-review-gate, note: "Only when the risk is high or a blocker was found: a one-page sign-off before the change counts as done."}
+schedule: "On every new pull request, and again when its author pushes changes"
+asks_before: [posting comments on the pull request, approving it, requesting changes, merging or closing it, pushing commits to its branch]
+origin: own
+version: 1.0.0
+example_pending: true

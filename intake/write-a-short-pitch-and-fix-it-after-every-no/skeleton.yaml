@@ -1,0 +1,44 @@
+# Workflow skeleton chaining existing library skills (docs/INTAKE.md).
+id: write-a-short-pitch-and-fix-it-after-every-no
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: write-a-short-pitch-and-fix-it-after-every-no
+  name: "Write a short pitch and fix it after every no"
+  summary: "Give it your idea and who must back it. Get an honest pitch, hard objections answered and a rewrite after each no."
+  when: "you must pitch an idea, a business or a cause to people who can say no."
+  job: speak-and-persuade
+  level: intermediate
+steps:
+  - name: "Why-first message writer"
+    skill: why-first-message-writer
+    job: copy
+    from: "skill: why-first-message-writer"
+    method: ["Write your usual pitch as a baseline", "Find the belief behind the work", "Rebuild the message from belief to how to what you make"]
+    inputs: [question, brand_brain!, persona!]
+    outputs: [copy_draft]
+    note: "Writes the first short pitch, starting from what you believe."
+  - name: "Honest persuasion editor"
+    skill: honest-persuasion-editor
+    job: copy
+    from: "skill: honest-persuasion-editor"
+    method: ["Mark which persuasion lever each line uses", "Check each lever against facts you can prove", "Cut the fake ones and rewrite with at most two true ones"]
+    inputs: [copy_draft, voc_reviews!, brand_brain!]
+    outputs: [copy_draft, audit_report]
+    note: "Reads the pitch from the step before and strips out anything you cannot back up."
+  - name: "Hardest objections answer writer"
+    skill: hardest-objections-answer-writer
+    job: copy
+    from: "skill: hardest-objections-answer-writer"
+    method: ["List at least eight objections, silly ones too", "Answer the three strongest fairly with evidence you have", "Say what your evidence cannot show and rebuild the pitch around it"]
+    inputs: [copy_draft, objection_map!, plan!]
+    outputs: [copy_draft, audit_report]
+    note: "Takes the honest pitch and builds the hardest objections and answers into it."
+  - pause: "Give the pitch to five people who can say no. After each, write who said no and their words. Open each meeting by asking what they would change first."
+  - name: "Pitch revision log"
+    skill: pitch-revision-log
+    job: copy
+    from: "skill: pitch-revision-log"
+    method: ["Log each no and the real doubt behind it", "Sort doubts by problem, market, team and place and count repeats", "Rewrite the opening and keep what survived"]
+    inputs: [copy_draft, feedback_notes!]
+    outputs: [copy_draft, lessons_register]
+    note: "Takes the pitch from before and the nos you collected, and rewrites it around the doubts heard most."

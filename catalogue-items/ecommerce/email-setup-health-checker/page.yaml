@@ -1,0 +1,124 @@
+new_slug: email-setup-health-checker
+name: "Email setup health checker"
+summary: "Paste your email settings and DNS records. Get a score out of 100 and the exact fixes."
+job: write-emails
+thinking: medium
+thinking_why: "It compares your settings with a fixed list of checks. A mid-size model is enough if you paste the real values."
+
+headline: "Email setup health checker"
+subhead: Paste your sending domain records, DMARC record and key settings from your email tool. It checks them against a fixed list, scores your set-up out of 100 and gives the exact fix for each fault, with a table of current against recommended settings.
+
+explain: |
+  Most email problems in a new store start in the settings, not the emails. Without a branded sending domain and a DMARC record, Gmail and Yahoo may treat your mail as suspect. With the wrong smart sending or attribution settings, your abandoned cart emails can be skipped or your revenue numbers can be wrong.
+
+  This skill works through the checks one by one: sending domain, DMARC, smart sending, attribution, tracking, opt-in and pages, and your brand library. You paste what you can see. It scores what it was given, tells you which checks it could not see, and never invents DNS values. The email tool shows the real ones. The steps are written for Klaviyo and Shopify, and the DNS rules apply to any sender.
+
+when:
+  - You have just set up Klaviyo or a similar email tool and want to know nothing is missed.
+  - Your emails land in spam, or your email revenue numbers look too high.
+  - You are changing email tool or sending domain.
+
+you_give:
+  - Your sending domain and its DNS records (type, host and value)
+  - Your DMARC record, if you have one
+  - Screenshots or notes of smart sending, attribution, UTM and tracking settings
+  - Whether your list uses single or double opt-in
+  - Your store platform and how it connects to the email tool (optional)
+
+you_get:
+  - A score out of 100, with how it was worked out
+  - A list of failed checks with a fix for each
+  - A DMARC record to add and a plan to tighten it over time
+  - A table of current against recommended settings
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your DNS records and your DMARC record, or say that you have none.
+  - Paste or attach the settings screens, or describe each setting in a line.
+  - Fix the Stop items first, then run the skill again with the new records.
+  - Check the exact setting names against your live screen, because tools rename them.
+
+how_it_works:
+  - title: Checks the sending domain
+    text: A branded subdomain, such as send.yourdomain.com, with the tool's NS and TXT records added at your DNS host.
+  - title: Checks DMARC
+    text: A TXT record on host _dmarc. It starts at policy none with a separate inbox for reports, then moves up when reports show your mail passes.
+  - title: Checks sending rules
+    text: Smart sending on for campaigns and off for flows, so abandoned cart and post-purchase emails are never skipped.
+  - title: Checks attribution
+    text: The window, what counts as a touch, and exclusions for Apple privacy opens, bot clicks and transactional email.
+  - title: Checks tracking and pages
+    text: Anonymous visitor tracking, automatic UTM parameters, branded success and unsubscribe pages, and one sender name and address everywhere.
+  - title: Checks lists and brand
+    text: One master list for pop-up and checkout signups, a separate list for each import source, and a brand library with a web-safe font fallback.
+  - title: Scores and plans
+    text: It adds up the points, lists what it could not see, and gives the fixes in order.
+
+output_shape: |
+  EMAIL SETUP SCORE  <n>/100
+  Sending domain <n>/25 | DMARC <n>/25 | Smart sending <n>/15
+  Attribution <n>/10 | Tracking and UTM <n>/10 | Opt-in, lists and pages <n>/10
+  Brand library <n>/5
+  Scored on <n> points that could be seen. Not seen: <list>
+
+  FAILED CHECKS
+  <check> | <severity> | found: <...> | fix: <exact step>
+
+  DMARC
+  Add: host _dmarc, type TXT, value <from your tool, policy none to start>
+  Tighten: none -> quarantine -> reject, when reports show mail passes
+
+  SETTINGS TABLE
+  <setting | current | recommended | why>
+
+  MISSING: <DNS records | screens | opt-in type | platform>
+
+tweaks:
+  - what: Your attribution window
+    how: The default is 5 days for open and click. Use about 3 days for impulse products. Lengthen it only for big-ticket items people think about for weeks.
+  - what: Single or double opt-in
+    how: Say which you use and where your customers live. Single opt-in gives more subscribers. Double opt-in gives fewer, more engaged people, and some regions expect it.
+  - what: Your store platform
+    how: Say if you use Shopify, so the check includes the tracking embed and the sync of subscribers into your main list.
+  - what: Screens you attach
+    how: Attach each settings screen. The skill scores only what it can see and lists the rest as not seen.
+
+judge:
+  - Each failed check has a plain fix that you could do in one sitting.
+  - The score shows its sum and which checks were not seen.
+  - No DNS value was made up. It tells you where to copy the real ones from.
+  - It starts DMARC at policy none and does not push to quarantine early.
+  - Setting names are flagged as needing a check against your live screen.
+
+test:
+  - Give it a record you know is wrong, such as a missing _dmarc host. It should fail that check and say what to add.
+  - Run it twice on the same input. The score should match.
+  - Add up the points by hand from the table. The sum should match.
+  - Make one fix, send it the new record and see the score rise by the points of that check.
+
+improve:
+  - Add your sending domain name and your tool's name to the skill file so the fixes use your real hosts.
+  - Add your own attribution window once you know your days-to-buy.
+  - Add checks for any other tools that send mail from your domain, such as your helpdesk.
+  - Save the final settings table to your brand file as your record of what is correct.
+  - Pair it with the inbox placement recovery planner if your opens are low, and the email flow gap checker for your flows.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Its sending domain, smart sending and attribution screens hold most of the settings checked."}
+    - {name: "Google Postmaster Tools", why: "It shows your domain reputation and spam rate in Gmail after the set-up is fixed."}
+    - {name: "Your DNS host", why: "It is where the NS, TXT and DMARC records are added."}
+  inputs:
+    - "A DMARC lookup of your domain, so the record is read from the live DNS"
+    - "Your last 90 days of complaint and bounce rates"
+    - "The list of other tools that send email from your domain"
+
+terms:
+  - term: DNS records
+    meaning: Settings at your domain host that tell the internet which services may send mail as you.
+  - term: DMARC
+    meaning: A record that says what inbox providers should do with mail that fails your domain's checks.
+  - term: Smart sending
+    meaning: A setting that skips a person if they got an email from you in the last few hours.
+  - term: Attribution window
+    meaning: The days after an email in which an order is credited to it.

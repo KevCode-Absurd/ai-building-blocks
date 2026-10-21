@@ -1,0 +1,118 @@
+new_slug: tiktok-shop-breakout-finder
+name: "TikTok Shop breakout finder"
+summary: "Attach TikTok Shop product graphs. Get a score out of 100 for each, and test or drop."
+job: find-products
+thinking: medium
+thinking_why: "It reads graphs and lists across many products, so a mid-size model that reads images well is a good fit."
+
+headline: "TikTok Shop breakout finder"
+subhead: Attach screenshots or exports from a TikTok Shop research tool. It reads the graphs, the revenue source, video age, price and language, then scores each product out of 100 and tells you which to test, which to cross-check and which to drop.
+
+explain: |
+  TikTok Shop research tools show hundreds of products. Most are already dead, carried by one old video or live streams, or too crowded to test. Picking by revenue alone sends you to the products everyone else found first.
+
+  This skill uses one creator's step-by-step method. It looks for early breakouts in a revenue band of $33,000 to $97,000 over 30 days, checks the 30 and 180 day graphs, wants sales from video and not live streams, and wants the best video to be 7 to 14 days old with revenue spread over 3 to 5 videos. It drops items priced near $9.99 and ads in Spanish. These are one person's rules, and he bends them when the revenue is high. A TikTok win is a lead, not proof it will sell on Meta.
+
+when:
+  - You pulled a list of products from a TikTok Shop research tool and need to cut it to one to test.
+  - A product's graph looks good and you want to know if it is an early breakout or already fading.
+  - Your last tests lost money and you want to know if your revenue band is set wrong.
+
+you_give:
+  - Screenshots or exports of each product, with price, 30 day revenue and the 7, 30 and 180 day graphs
+  - The top videos for each product, with posting dates and revenue
+  - Whether the revenue came from video or live streams
+  - Your niche and your test results so far (optional)
+  - Your own revenue band and live-stream cutoff (optional)
+you_get:
+  - A score out of 100 for each product, with the ten checks shown
+  - Pass, maybe or drop for each, with the number that decided it
+  - One to three products to cross-check on Google Trends and the Ad Library
+  - A suggested change to your revenue band, and a 2 to 3 day test plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In your research tool, set the last 30 days, revenue from video, one category, and your band. Sort low to high.
+  - Attach a screenshot of each product's graphs and its top videos with dates.
+  - Read the hard drops first, then the passes. Cross-check the best one to three on Google Trends and the Ad Library.
+  - Test one product at a time with 5 to 8 ads for 2 to 3 days, using your own footage.
+
+how_it_works:
+  - title: Sets the filters
+    text: Last 30 days, video revenue, one category, a $33,000 to $97,000 band sorted low to high. Raise the floor if tests lose money, lower the cap if all are crowded.
+  - title: Reads both graphs
+    text: A flat, rising or recently rising 30 day line passes. The 180 day view drops products that peaked months ago.
+  - title: Checks the revenue source
+    text: Live-stream revenue of $25,000 or more is a drop. You need video-driven sales.
+  - title: Checks video age and spread
+    text: The best video should be 7 to 14 days old, with revenue over 3 to 5 videos. Drop one old video carrying 90% or more.
+  - title: Flags price, language and crowding
+    text: About $9.99, Spanish ads and long-running crowded items are drops unless there is a new angle.
+  - title: Scores and cross-checks
+    text: Ten checks add to 100. The best one to three go to Google Trends and the Ad Library.
+  - title: Plans the test
+    text: A hook idea from the winning clip, a longer creator-style body, 5 to 8 ads, 2 to 3 days, your own footage.
+
+output_shape: |
+  BAND USED  $<low> to $<high> in 30 days, live cutoff $<n>, category <cat>
+
+  PRODUCT <name>  price $<p>  30-day revenue $<n>
+  G1 <mark> | G2 <mark> | ... | G10 <mark>
+  SCORE  <n>/100 (G1 <a> + G2 <b> + ... = <n>)
+  VERDICT  <PASS | MAYBE | DROP>  <reason with the deciding number>
+  (one block per product)
+
+  CROSS-CHECK FIRST  <1 to 3 products>
+  BAND CHANGE  <raise the floor | lower the cap | keep>, because <why>
+  TEST PLAN  <product>: hook idea + creator-style body, 5 to 8 ads, 2 to 3 days
+
+  CHECKS MISSED: <check and what is needed | none>
+  MISSING: <what>
+
+tweaks:
+  - what: Your revenue band
+    how: The $33,000 to $97,000 band is one creator's. Raise the floor if tests lose money, and lower the cap if every product is crowded. Tell the skill your band.
+  - what: Your live-stream cutoff
+    how: The default is $25,000 of live revenue. Change it if your category sells mostly through live streams.
+  - what: Your market and language
+    how: Say who you sell to. Ads in Spanish are dropped for an English market and kept if you sell to Spanish speakers.
+  - what: Strong conviction
+    how: Tell the skill why you lean on one strong video. It marks that check warn and states the revenue, and it never excuses a falling graph.
+
+judge:
+  - Each product has ten marks, a score and a verdict with the deciding number.
+  - Hard drops are never passes.
+  - Cross-check picks are products that passed, not the highest revenue.
+  - Graph and video claims match what you attached.
+  - Your band and cutoffs are shown as numbers you can change.
+
+test:
+  - Give it a product you know has died. The 180 day view should drop it even if the 30 day line looks fine.
+  - Give it a product carried by one old video. It should flag the spread and not pass it.
+  - Run the same attachments twice. Scores and verdicts should match.
+  - Test one pass with 5 to 8 ads for 2 to 3 days and note the result next to the score.
+
+improve:
+  - Change the band, the live cutoff and the age window in the skill file to match your category.
+  - Add your own hard drops, such as banned product types or items you cannot ship.
+  - Save each score next to your test result, then change the points that did not predict well.
+  - Pair it with the winning product scorer for margin and the competitor saturation checker for Meta rivals.
+
+works_best_with:
+  tools:
+    - {name: "A TikTok Shop research tool", why: "Needed for the product graphs, revenue source and top videos. Any tool that shows 30 and 180 day graphs works."}
+    - {name: "Google Trends", why: "Free. Search the exact sub-niche over 12 months to see if it is rising now."}
+    - {name: "Meta Ad Library", why: "Free. Search the exact product to see who already runs ads for it."}
+  inputs:
+    - "The 180 day graph and the 7 day top-video list for each product, not only the 30 day view"
+    - "Your last three test results, so the band change fits what you lost or won"
+    - "A shortlist sheet with buy price and planned price"
+    - "Your own landed cost for the product, so the margin rules from the winning product scorer can be run next"
+
+terms:
+  - term: Breakout
+    meaning: A product whose sales are climbing fast but are not yet at the crowded level.
+  - term: Live revenue
+    meaning: Sales made during a live stream. This skill wants sales from videos instead.
+  - term: Hook
+    meaning: The first few seconds of a video that make someone keep watching.

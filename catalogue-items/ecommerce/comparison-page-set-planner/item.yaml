@@ -1,0 +1,22 @@
+slug: comparison-page-set-planner
+name: "Comparison page set planner"
+summary: "Name your category and rivals. Get the best-of, review, alternative and versus pages to build, in order."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: intermediate
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce SEO: The Definitive Guide for 2026", by: "Founder of an SEO software company (name not given in the transcript)", used: "The five comparison query types, the rival-versus-rival-plus-you idea, list size, the 19 intents that made 71 pages, and checking which versus searches are open"}
+  - {title: "The Ultimate AI Visibility Checklist (AEO/GEO for 2026)", by: "Agency owner (name not given)", used: "Comparing against 3 to 4 larger rivals shoppers search for, with the table at the top"}
+  - {title: "Generative Engine Optimization: Is It Safe and How to Do It the Right Way", by: "Harpreet Singh (SEO practitioner), interviewed on a daily SEO show", used: "Not building pages that compare two other brands, and not mass-producing lists"}

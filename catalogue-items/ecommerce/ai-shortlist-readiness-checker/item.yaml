@@ -1,0 +1,25 @@
+slug: ai-shortlist-readiness-checker
+name: "AI shortlist readiness checker"
+summary: "Give it your store address and product pages. Get a found, matched, chosen check with fixes and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Get Your Shopify Store AI-SEO-Ready in 5 Minutes", by: "Jan, developer educator", used: "The found, matched, chosen frame, the JavaScript-off test, schema checks and Shopify's product catalog"}
+  - {title: "Steal These Shopify SEO Hacks To Rank #1 Overnight", by: "Dave Fogerty, founder of a wearable blanket brand", used: "Which page types AI tools cite, and splitting broad collections into narrow ones"}
+  - {title: "Learn Everything About SEO & AI SEO in 50 Minutes!", by: "An SEO educator from an SEO software company's channel", used: "AI assistants lean on search indexes, so being indexed comes first"}
+  - {title: "AI SEO Course for Beginners: Complete AEO Tutorial", by: "Sam Oh", used: "Crawler block rate, bot names, the CDN default, which assistants run JavaScript, AI-made 404s and the status of llms.txt"}
+  - {title: "The Ultimate AI Visibility Checklist (AEO/GEO for 2026)", by: "An agency owner running an AI visibility community", used: "The JavaScript test and sitemap submission steps"}
+  - {title: "The ultimate guide to AEO: how to get ChatGPT to recommend your product", by: "Ethan Smith, SEO agency CEO, on a product-growth podcast", used: "Block training bots but allow search bots"}
+  - {title: "Ecommerce SEO: The Definitive Guide for 2026", by: "The founder of an SEO software company", used: "Crawler access for Common Crawl and the outdated code check"}

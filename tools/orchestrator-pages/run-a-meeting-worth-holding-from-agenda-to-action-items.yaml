@@ -1,0 +1,79 @@
+new_slug: run-a-meeting-worth-holding-from-agenda-to-action-items
+name: Run a meeting worth holding, from agenda to action items
+summary: Name a meeting. Get a call on whether to hold it, a pre-read, then notes with owners and dates.
+job: organise-work
+thinking: medium
+thinking_why: Each step is short and clear. A mid-size model works well, and the notes step needs a good transcript.
+headline: Hold fewer meetings and finish each one with decisions that have owners
+subhead: Name the meeting and what it must decide. It prices the meeting in dollars, says whether to hold it, builds a timed agenda and a pre-read, and after you record it turns the audio into notes with an owner and date for every action.
+explain: |
+  Most meetings should be an email. The rest start late, wander and end with no clear decision. After the call, nobody agrees on who does what, and notes come days later or never.
+
+  The workflow starts with a gate. It prices the meeting from who attends and for how long, and refuses it if there is no decision, no agenda or no owner. If it passes, you get a timed agenda with decisions first, then a pre-read. The pre-read step pulls background from your Notion pages, so connect Notion first, or skip that step. After a pause to hold and record the meeting, it turns the recording into a summary, the decisions and an action list with owners and dates.
+when:
+  - You are about to call a meeting and wonder if it needs one.
+  - Your meetings end without clear next steps.
+  - You need a record of what was decided and who owns what.
+you_give:
+  - The meeting idea, with the decision needed, who attends and how long
+  - Background you want in the pre-read (optional)
+  - Your Notion pages, if connected (optional)
+  - The meeting recording, after it is held
+you_get:
+  - A hold-or-skip call with the cost in dollars
+  - A timed agenda with decisions first
+  - A pre-read to send before the meeting
+  - A summary, the decisions and action items with owners and dates
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Tell it the decision the meeting must make, who comes and for how long.
+  - Send the pre-read, hold the meeting and record it. Make sure everyone knows it is recorded.
+  - Give it the audio file to get the notes.
+how_it_works:
+  - title: Decide if the meeting is worth holding
+    text: Prices the meeting in dollars, checks for a decision, an agenda and an owner, and says hold, not ready or send an email. Builds a timed agenda with decisions first.
+  - title: Write the pre-read
+    text: Uses the agenda and background from your notes to write a pre-read with owners and timings on each topic. It needs Notion connected to pull in background.
+  - title: Hold and record the meeting
+    text: Send the pre-read, hold the meeting and record the audio. Tell attendees it is being recorded.
+  - title: Turn the recording into action items
+    text: Writes out the talk by speaker, then gives a summary, the decisions made and action items with an owner and a date.
+output_shape: |-
+  STEP 1: GATE AND AGENDA
+    Cost in dollars | hold, not ready or email | timed agenda, decisions first
+
+  STEP 2: PRE-READ
+    Goal | background | questions for each topic | owners and timings
+
+  PAUSE
+    Hold the meeting and record it
+
+  STEP 3: NOTES
+    Transcript by speaker | summary | decisions | action items with owner and date
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Meeting type
+    how: Say if it is a status update, a decision, planning or a retro. The agenda and pre-read change with the type.
+  - what: Pay rates
+    how: Give an average hourly cost for attendees, or a range. Without it the price is a rough guess.
+  - what: Recording quality
+    how: A clear recording with one person speaking at a time gives much better notes.
+  - what: No Notion
+    how: Paste your background notes into the chat instead. The pre-read step works from what you give it.
+judge:
+  - The cost uses real attendee numbers and time.
+  - Every agenda topic has an outcome you want, and decisions come first.
+  - Each action item has one owner and a date.
+  - The notes match what was said, with decisions marked as decided or open.
+  - A meeting with no decision gets an email, not a calendar invite.
+test:
+  - Check three action items against the recording. Owner and date should match.
+  - Compare the decisions in the notes with the agenda. Each topic should be closed or marked open.
+  - Run the gate on a meeting you already know was a waste. It should say email.
+improve:
+  - Send the action list within an hour of the meeting while it is fresh.
+  - Look at the cost of a recurring meeting each month and cut the ones with no decisions.
+  - Do not record without telling people. Check your own rules on recording first.

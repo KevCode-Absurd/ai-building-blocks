@@ -166,7 +166,7 @@ export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
   const [round, setRound] = useState(0);
   // Pointing at a card starts fetching its page, so the click opens it without a wait.
   const wake = () => { setRound((r) => r + 1); void loadPage(b.slug); };
-  const view = b.category === "orchestrator" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
+  const view = b.category === "orchestrator" || b.type === "agent" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
   return (
     <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
       style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>

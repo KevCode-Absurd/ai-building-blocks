@@ -1,11 +1,12 @@
 # Speak and persuade: AI Blocks
 
-> 29 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 32 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer): Paste your principles, metrics and results. Get a plain letter to your team or owners with the year's honest numbers.
 - [Bad news update writer](https://useaiblocks.com/skills/bad-news-update-writer): Paste the facts of a setback. Get a short update with the loss, the numbers, what went right and the next step.
 - [Before-you-meet brief writer](https://useaiblocks.com/skills/before-you-meet-brief-writer): Name who you will meet and why. Get what they care about, what to admire and one question only they can answer.
 - [Board deck builder](https://useaiblocks.com/skills/board-deck-builder): Give it your quarter. Get a board or investor deck outline with the story, numbers and bad news placed right.
+- [Build a talk around one real case](https://useaiblocks.com/workflows/build-a-talk-around-one-real-case): Give it your topic and notes. Get one case, a pitch story and an order with stakes first.
 - [Contact memory card writer](https://useaiblocks.com/skills/contact-memory-card-writer): Paste your notes from a first meeting. Get a one-page card with name, facts, promises and the next contact date.
 - [Deliverer fit planner](https://useaiblocks.com/skills/deliverer-fit-planner): Paste your brief and who will present it. Get what suits them, what to avoid and where to put the showpiece.
 - [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner): Give one true story and the room. Get a deadpan speech with the wander, the dropped remark and the pause marked.
@@ -29,5 +30,7 @@
 - [Read-aloud speech shaper](https://useaiblocks.com/skills/read-aloud-speech-shaper): Paste your notes and the room. Get a speech or poem shaped to be heard, with a refrain.
 - [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer): Paste your release and questions. Get a six-page memo in full sentences and a realistic writing schedule.
 - [Talk tension planner](https://useaiblocks.com/skills/talk-tension-planner): Paste your talk or pitch outline. Get it reordered so the room knows the stakes early, with one saved twist.
+- [Turn your lessons into funny stories and a short talk](https://useaiblocks.com/workflows/turn-your-lessons-into-funny-stories-and-a-short-talk): Give it two or three lessons you have learned. Get a funny story for each and a talk.
 - [Why-first message writer](https://useaiblocks.com/skills/why-first-message-writer): Give your product or cause and who you want to reach. Get a short message: belief first, then how, then what.
 - [Witty line punch-up](https://useaiblocks.com/skills/witty-line-punch-up): Paste a toast, speech or bio. Get a few turned sayings that are sharp and true, with the rest left plain.
+- [Write a short pitch and fix it after every no](https://useaiblocks.com/workflows/write-a-short-pitch-and-fix-it-after-every-no): Give it your idea and who must back it. Get an honest pitch that learns from each no.

@@ -1,0 +1,24 @@
+slug: cut-caption-and-check-a-video-ad-before-launch
+name: "Cut, caption and check a video ad before launch"
+summary: "Give it your clips and script. Get a timed cut list, brand-font captions, and a launch check with fixes."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: video
+level: intermediate
+inputs:
+  - {type: footage, required: true}
+  - {type: script, required: true}
+  - {type: video_ads, required: true}
+  - {type: offer, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [video-ad-edit-planner, branded-video-captions, pre-launch-ad-checker]
+steps:
+  - {uses: video-ad-edit-planner, note: "Starts the chain: the cut list for your clips."}
+  - {uses: branded-video-captions, note: "Reads the cut you exported and the script, and adds timed captions."}
+  - {uses: pre-launch-ad-checker, note: "Checks the captioned video from the step before and gives a ship or fix verdict."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-cut-caption-and-check-a-video-ad/skeleton.yaml

@@ -1,0 +1,22 @@
+slug: store-security-checkup
+name: "Store security checkup"
+summary: "Describe your admin team and apps. Get a ranked security fix list, a score out of 100 and a quarterly routine."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Security: Threats and Best Practices", by: "Shopify (blog)", used: "Who secures what on a hosted store, two-step sign-in for every admin, the app review rules, and keeping card numbers out of notes, emails and sheets"}
+  - {title: "How to Make Your Shopify Store More Secure", by: "A Shopify agency (blog post)", used: "Least-privilege roles, time-limited contractor access, optional password rotation, backups in three places, two-developer approval of code changes, quarterly app review"}
+  - {title: "Ecommerce security: what it means, common threats, and best practices", by: "A web article on ecommerce security", used: "Removing a leaver's access to every system and the first steps if a checkout skimmer is found"}

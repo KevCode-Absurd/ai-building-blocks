@@ -1,0 +1,122 @@
+new_slug: landed-cost-allocator
+name: "Landed cost allocator"
+summary: "Paste freight, duty and supplier invoices. Get the true landed cost per unit for each product."
+job: track-numbers
+thinking: medium
+thinking_why: "The work is arithmetic across several products and layers, so a mid-level model is enough. Check the total of your allocations against the invoices once."
+
+headline: "Landed cost allocator"
+subhead: "Paste your purchase order lines and the freight, duty and other invoices for one shipment. It spreads each lump cost across your products on a stated basis and gives landed cost per unit with every layer shown, margin per unit and a late-cost checklist."
+
+explain: |
+  One container or shipment usually holds several products, but the freight and duty come as single lumps on a few invoices. Split them evenly and a small, cheap item carries the cost of a big, heavy one. Your margin per product is then wrong, and so are your prices and your ad budget for each.
+
+  This skill starts with the purchase price per unit and adds every cost to get stock to your shelf. Each lump cost is spread on a basis that fits it. Duty is a percentage of goods value, so by default it follows value. Freight is driven by weight or volume, so it follows those. This split is the skill's suggestion, not an accounting rule, and it states the basis it used. Landed cost per unit is each product's total divided by units received. For one product and a quote check, use the landed cost calculator. For which costs count as COGS, use the COGS line sorter.
+
+when:
+  - A shipment with several products arrived and you need a cost per unit for each one.
+  - Freight, duty or exchange rates changed and your cost per unit is out of date.
+  - You want margin per product after the true cost of getting it to your shelf.
+
+you_give:
+  - "Purchase order lines: product, units, unit price, and weight or volume per unit"
+  - Freight, container, duty, tariff and insurance invoices for the shipment
+  - Retail packaging cost per unit
+  - Selling price per product, and the lowest margin you accept (optional)
+you_get:
+  - Landed cost per unit for each product, with each layer shown
+  - The basis used for each lump cost, and why
+  - Margin per unit, and products below your floor
+  - A checklist of costs that often arrive late
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the order lines with units, price and weight or volume. Paste each freight and duty invoice with its amount and currency.
+  - Say your selling prices and the margin floor below which you would not sell.
+  - Check the basis it chose for each lump, and change it if your invoice says otherwise.
+  - Rerun it when prices, currency or tariffs change.
+
+how_it_works:
+  - title: Starts at purchase price
+    text: Unit price times units for each product, in one currency.
+  - title: Adds every layer
+    text: Container or freight, duties and tariffs, insurance and retail packaging, to get stock to your shelf.
+  - title: Ties each invoice to its purchase
+    text: Every freight and duty invoice is attached to the shipment it belongs to, not left in a pile.
+  - title: Picks a basis for each lump
+    text: Duty by goods value, freight by weight or volume, never an even split. It states each choice.
+  - title: Divides by units received
+    text: Each product's allocated total goes over the units that arrived, which gives landed cost per unit.
+  - title: Finds the margin
+    text: Compares landed cost with each selling price and flags products below your floor.
+  - title: Lists late costs
+    text: Reminds you of invoices and adjustments that can still arrive after the shipment.
+  - title: Suggests when to move to software
+    text: As the number of products grows, a spreadsheet gets heavy and stock software is the better tool.
+
+output_shape: |
+  LANDED COST  <shipment / PO>  <date>  currency: <currency>
+
+  ALLOCATION BASIS
+  <lump cost> <amount> | by <value / weight / volume / units> | why: <reason> | (skill's suggestion)
+
+  PER PRODUCT
+  <product> | units <n> | price <n> | freight <n> | duty <n> | insurance <n> | packaging <n> | total <n> | landed per unit <n>
+
+  CHECK  allocations add up to invoices: <yes / no, difference>
+
+  MARGIN
+  <product> | selling price <n> | landed <n> | margin per unit <n> | <%> | <above / below your floor>
+
+  LATE-COST CHECKLIST
+  <items that may still arrive>
+
+  CHECKS MISSED: <none / list>
+  MISSING: <what>
+  Check the treatment of duty and tax with your accountant.
+
+tweaks:
+  - what: Allocation basis
+    how: Tell it what your freight invoice is charged on, such as weight, volume or pallets. It then allocates freight on that basis.
+  - what: Weight or volume per unit
+    how: Give real figures for each product. Without them it can only spread by value or units and will say so.
+  - what: Currency and date
+    how: Say the exchange rate and the date used. Landed cost moves when rates and tariffs move.
+  - what: Margin floor
+    how: Give the lowest margin you accept so it can flag the products that fall below it.
+
+judge:
+  - The allocated amounts add up to the invoice totals exactly.
+  - Each lump cost shows the basis used and why.
+  - Duty follows value and freight follows weight or volume unless you said otherwise.
+  - Landed cost per unit divides by units received, not units ordered.
+  - It does not treat the allocation basis as an accounting rule.
+
+test:
+  - Use a shipment of two products where you know the right split, and compare.
+  - Give it one product only and check that it simply divides, with no allocation.
+  - Leave out the weights and confirm it says freight was spread by value or units, not by weight.
+  - Change the duty rate and check that landed cost moves for the products with the highest value.
+
+improve:
+  - Add your carriers' billing rules to the skill file, such as the weight limit or volume formula they use.
+  - Add your standard packaging costs per product so you do not repeat them.
+  - Save each shipment's result to your store's cost file and enter the landed cost into Shopify as cost per item.
+  - Pair it with the landed cost calculator for a quote check and the COGS line sorter for what counts as COGS.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet tool", why: "Holds the order lines and invoices and lets you check the allocation sums."}
+    - {name: "Shopify", why: "The landed cost per unit goes in as cost per item so profit reports use it."}
+  inputs:
+    - "The forwarder's freight invoice with weights and volumes"
+    - "The customs entry or duty invoice"
+    - "Your last shipment's result, to compare cost per unit"
+
+terms:
+  - term: Landed cost
+    meaning: The full cost of a unit once it sits in your warehouse, including freight, duty and packaging.
+  - term: Allocation basis
+    meaning: The measure used to spread a lump cost across products, such as value, weight or volume.
+  - term: Tariff
+    meaning: The import tax rate set by a country on a type of goods.

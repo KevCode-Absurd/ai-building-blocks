@@ -1,0 +1,20 @@
+slug: billing-reminder-and-confirmation-writer
+name: "Billing reminder and confirmation writer"
+summary: "Give it your subscription products and gift schedule. Get billing reminder and order confirmation emails that cut cancels."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The $100M Subscription Brand Playbook", by: "An email and retention agency founder (name not given)", used: "The reminder redesign and its audited result, the layout order with the delay link first, a version per rebill number, and the custom order confirmation after a cancel spike on the first rebill day"}

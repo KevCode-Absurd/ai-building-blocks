@@ -1,0 +1,132 @@
+new_slug: ad-test-budget-calculator
+name: "Ad test budget calculator"
+summary: "Give it your target CPA and test days. Get a test budget, a keep or cut rule and a read window."
+job: plan-ad-tests
+thinking: low
+thinking_why: "It is mostly simple arithmetic and clear rules, so a fast, small model is enough."
+
+headline: "Ad test budget calculator"
+subhead: Give it your target cost per sale, how many sales you need to call a test, and how many days you have. It works out the daily budget, how much to spend before you judge, and a keep or cut rule. Stores with a high order value get a plan for weak signal.
+
+explain: |
+  Most new-ad tests fail for money reasons, not creative reasons. The ad gets cut after a day, or the budget is sized to Meta's advice of 50 sales in 7 days. At a $100 cost per sale that is about $714 a day for one test, which almost no store can afford.
+
+  This skill sizes the test from your own numbers. It takes the sales you need to call a result, multiplies by what a sale costs you, and divides by the days you will wait. It also gives you a spend limit before you judge (3 times your target cost per sale, or 5 times if you want a clean yes or no), how long to read the results, and what to do with a winner and a loser. If your order value is high and orders are few, it adds ways to get more signal.
+
+when:
+  - You are about to launch a batch of new ads and do not know what to spend before judging them.
+  - Someone told you to wait for 50 sales in 7 days and that number is far too big for your budget.
+  - Your product costs hundreds of dollars and you only see a few sales a week, so tests never seem to finish.
+
+you_give:
+  - Your target cost per sale (or break-even cost per sale)
+  - How many sales you need before you call a result
+  - How many days you can wait
+  - Average order value, orders a week and monthly ad budget (optional)
+you_get:
+  - A total test budget and a daily budget, with the sum shown
+  - A keep, wait or cut rule at each spend checkpoint
+  - A read window and notes on day-of-week swings
+  - What to do with a winner and with a loser
+  - For high order values, a plan using cheaper signals and a rule for which ads move to paid
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your target cost per sale. If you do not have one, run a break-even calculation first.
+  - Say how many sales you need to call a test and how many days you have.
+  - Add your average order value and orders a week, so it can say if your store has enough signal.
+  - Use the checkpoints during the test and write down the result.
+
+how_it_works:
+  - title: Sizes the daily budget
+    text: Daily test budget = sales needed x expected cost per sale / test days. For 20 sales at $100 over 14 days, that is about $143 a day.
+  - title: Sets the spend limit
+    text: Spend 3 times your target cost per sale before judging, or 5 times if you want one clear yes or no.
+  - title: Writes the keep rule
+    text: At 3 times, 4 sales is good, 3 is fine, 2 earns another $50 to $100 of spend and 0 or 1 is cut.
+  - title: Picks the read window
+    text: About one week for most stores. Three to four days for large stable stores. Ten to fourteen days for tiny budgets or long buying paths.
+  - title: Guards against early cuts
+    text: Does not read results over fewer than five days at low volume, and matches the window to your sales.
+  - title: Plans winners and losers
+    text: A winner gets budget raised in steps. A loser gets its creative diagnosed, more ads made, then wound down.
+  - title: Counts the ads you need
+    text: With a hit rate near 5 percent, a new idea needs at least 10 ads and more like 20 to expect one winner.
+  - title: Adds a plan for weak signal
+    text: For a high order value, it suggests testing hooks on organic accounts and testing on add to cart, then confirming the winner on purchase.
+
+output_shape: |
+  INPUTS USED
+  Target cost per sale: <$>  Sales needed: <n>  Days: <n>  Order value: <$ or MISSING>  Orders a week: <n or MISSING>
+
+  TEST BUDGET
+  Daily budget = <sales needed> x <cost per sale> / <days> = <$ a day>
+  Total for the test: <$>
+  Compare: Meta's 50 sales in 7 days would be <$ a day> for this test
+
+  JUDGE AT (pick 3x or 5x)
+  Spend limit: <3 or 5> x <target> = <$>
+  3x rule: <4+ sales good | 3 fine | 2 add $50 to $100 | 0 or 1 cut>
+  5x rule: yes or no at the limit, no wait
+
+  READ WINDOW
+  <days> because <your store size and buying path>  Do not read before day 5 at low volume
+  Number of ads for this idea: <10 to 20> because the hit rate is about 5%
+
+  AFTER THE TEST
+  Winner: <budget steps, new ads in a new ad set>  Loser: <diagnose, new ads, wind down>
+
+  LOW SIGNAL PLAN (high order value only)
+  <cheaper event | organic test accounts | rule for what moves to paid | final check on purchase>
+  CHECKS MISSED: <none, or the list>
+  MISSING: <what was not supplied>
+
+tweaks:
+  - what: Spend limit rule
+    how: The 3 times rule has a yellow light (2 sales). The 5 times rule is a flat yes or no and gives delivery more room to find buyers. One agency prefers 5 times when the client agrees.
+  - what: Test days
+    how: More days lowers the daily budget but delays the answer. Short windows need a bigger daily budget. Pick the fastest window that still covers a full week's swings.
+  - what: Target sales
+    how: Twenty sales is the source's example. A lower number is cheaper but less certain. Say how sure you need to be.
+  - what: Order value
+    how: At $1,000 you may see about a tenth of the sales you would at $100. Add a cheaper signal and run a final check on purchase.
+
+judge:
+  - The daily budget shows its sum, and the sum is right.
+  - The spend limit is stated as a number of dollars, not just a multiple.
+  - The keep or cut rule is clear at each checkpoint.
+  - The read window gives a reason tied to your store.
+  - Any number the skill adds itself is marked as a starting point.
+
+test:
+  - Use the source example of 20 sales, $100 cost per sale and 14 days. You should get about $143 a day. If not, the formula is off.
+  - Run the same inputs twice. The numbers should match to the dollar.
+  - Change the days from 14 to 7. The daily budget should roughly double, and the skill should say the answer comes sooner but costs more per day.
+  - Check one live test against the rule. Did the ad you cut get its full spend limit first?
+
+improve:
+  - Add your real target cost per sale and typical order value to the skill file so you do not type them each time.
+  - Add your own rule for your store, such as "never cut before day 5", with the reason.
+  - Save each test result with its spend, sales and days so next time the skill can check its hit rate against yours.
+  - Pair it with a break-even calculator, a small-budget test planner and a creative brief writer.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The sums are simple, and any current chat AI can run them and explain each step."}
+    - {name: "Meta Ads Manager", why: "Your spend, sales and cost per sale for each ad set come from here."}
+    - {name: "Shopify", why: "Your real order value and orders a week come from store reports."}
+  inputs:
+    - "Your break-even cost per sale from a profit calculation"
+    - "The last 4 weeks of sales by day, to see your day-of-week swings"
+    - "Your last tests, with spend, sales and the cut-off you used"
+    - "Your buying path in days, from first ad view to purchase"
+
+terms:
+  - term: Cost per sale
+    meaning: What you pay in ads for one order. Also called CPA or cost per acquisition.
+  - term: Hit rate
+    meaning: The share of new ads that turn out to be real winners. The source says about 5 percent is common.
+  - term: Ad set
+    meaning: A group of ads in Meta that share a budget and an audience setting.
+  - term: Learning phase
+    meaning: Meta's label for the early period when delivery is still settling. The source says ads keep learning, so read the window, not the label.

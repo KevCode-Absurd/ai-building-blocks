@@ -1,0 +1,129 @@
+new_slug: ai-recommendation-panel-runner
+name: "AI recommendation panel runner"
+summary: "Give it your store and shopper questions. Get a record of who AI names, sources cited and a score out of 100."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It sorts many answers into a table and counts them. A mid-level model is enough. The questions must be run by you or by an AI that can browse."
+
+headline: "AI recommendation panel runner"
+subhead: Give it your store name, your rivals and a fixed list of shopper questions. It sets up a repeatable test on each AI assistant and records who gets named, linked and cited. You get a results table, share of voice, a visibility score out of 100 and the sources AI cites instead of you.
+
+explain: |
+  Ask an AI assistant "best running shoes for flat feet" three times and you may get three different lists. One run proves nothing. To know if your store is gaining or losing ground, you need the same questions, asked the same way, on a schedule.
+
+  This skill builds that panel. It fixes the questions, runs each one several times plus reworded versions, on each assistant that matters, in a fresh private window. It records three states for each run: named and linked, named without a link, and not there. It then works out your share of voice, lists the sites AI cited instead of you, and plans a fair test of any tactic with a control group. It shows whether you are visible. It does not show how many people found you through AI. See the AI traffic tracking set-up for that. Figures come from sources collected in October 2026 and change quickly.
+
+when:
+  - You want to know if AI assistants name your store at all, and compare with rivals.
+  - You did something to get named, such as Reddit answers or a video, and want to know if it worked.
+  - You need a monthly report on AI visibility without buying a tracker.
+
+you_give:
+  - Your store name, domain and three to five closest rivals
+  - A fixed list of shopper questions (from the shopper question mapper)
+  - Which assistants you can run, and whether you are logged in or not
+  - A spreadsheet to record the runs (optional)
+
+you_get:
+  - "A results table: question, assistant, run, named, linked, position, rivals"
+  - Share of voice by assistant and by question group
+  - A ranked list of sites AI cited when it did not name you
+  - A test plan with a control group and a test group
+  - A visibility score out of 100, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your question list. If you have none, start with 15 questions closest to a purchase.
+  - Run each question in a fresh private window on each assistant, and paste the answers back. The skill records them.
+  - Ask for the table, share of voice and the sources list.
+  - Rerun the same questions weekly. Review monthly.
+
+how_it_works:
+  - title: Fixes the panel
+    text: Freezes the wording of 40 to 60 questions for a small catalogue, or 15 for a solo owner, so weeks can be compared.
+  - title: Plans the runs
+    text: Each question several times, plus 2 to 3 reworded versions, on each assistant, in a private window.
+  - title: Compares free and logged in
+    text: Free versions often skip web search, so they give no citations. The skill marks those runs.
+  - title: Records three states
+    text: Cited and linked, named but not linked, or not there. Logs position, rivals and sources.
+  - title: Works out share of voice
+    text: Percent of runs where you are named, average list position, per assistant and per question group.
+  - title: Ranks the sources
+    text: Lists every domain cited on questions where you were missing, counted by how many questions it appears on.
+  - title: Plans a fair test
+    text: Splits the panel into control and test questions, tracks two weeks before and two weeks after.
+  - title: Scores visibility
+    text: The share of runs where you are named, shown per assistant, with the sum.
+
+output_shape: |
+  PANEL  <number of questions> | <assistants> | <runs per question> | <date range>
+
+  RESULTS
+  <question> | <assistant> | <run> | <NAMED + LINKED / NAMED / ABSENT> | <position> | <rivals named>
+  (one row per run)
+
+  SHARE OF VOICE
+  <assistant> | named in <n> of <runs> (<percent>) | linked in <n> | average position <n>
+  <question group> | named in <percent>
+
+  SOURCES AI CITED INSTEAD OF YOU
+  <domain> | appears on <n> questions | action: <outreach idea>
+
+  TEST PLAN
+  Control (leave alone): <questions>
+  Test (act on): <questions> | action: <tactic>
+  Compare: <two weeks before vs two weeks after>
+
+  SCORE  <n>/100 (<named runs> of <total runs> x 100 = <n>)
+
+  NOT RUN  <what, and why>
+  FIGURES  dated <month year>, from <source>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: The number of questions
+    how: A solo owner can start with 15. Ask an AI for 30 and keep the 10 to 20 nearest a purchase. The 40 to 60 for a larger catalogue is a working rule, not a source's number.
+  - what: Which assistants
+    how: List the ones your shoppers use, such as ChatGPT, Gemini, Perplexity, and Google for AI Overviews. A rare assistant is not worth the time.
+  - what: Logged in or not
+    how: Say which you can run. Paid accounts usually search the web. Free ones often do not, so their runs say little about citations.
+  - what: Your rivals
+    how: Name three to five. The table then logs when they are named and you are not.
+
+judge:
+  - The question wording is frozen and shown, so next week's run is comparable.
+  - Every question has several runs, not one.
+  - Named without a link is counted as visibility, not as a miss.
+  - Runs with no web search are marked and left out of the citation counts.
+  - The skill says answers vary by person, place and chat memory, so the numbers are a trend and not a ranking.
+
+test:
+  - Run the same five questions twice in a row. Note how much the answers change. That is your noise level.
+  - Compare one question in a private window and in your logged-in account. See if the lists differ.
+  - Pick one question where a rival is named and you are not. Check that the sources list shows where the rival gets named.
+  - After you act on the test questions, check the control questions did not rise too. If they did, the tactic did nothing.
+
+improve:
+  - Add your own question groups to the skill file, such as best of, versus, fit and worth it.
+  - Add the assistants you care about and a rule for how many runs each gets.
+  - Save the table in a spreadsheet and the top cited sources in your brand file.
+  - Pair it with the AI recommendation gap finder, which reads this output, and the brand facts accuracy fixer.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Records and counts the runs you paste in, and sorts the sources."}
+    - {name: "A spreadsheet", why: "Enough for a small panel. A paid answer tracker only pays off at hundreds of questions."}
+    - {name: "Ahrefs Brand Radar or Semrush", why: "Paid trackers can run large panels. Pick the cheapest one that does the job."}
+  inputs:
+    - "Questions from the shopper question and fan-out mapper"
+    - "Your rivals' product pages"
+    - "Last month's table, so changes show"
+
+terms:
+  - term: Share of voice
+    meaning: The share of AI answers in which your store is named.
+  - term: Citation
+    meaning: A link to your site shown in an AI answer.
+  - term: Control group
+    meaning: Questions you leave alone, so you can tell if a change came from your action or from the usual swings.

@@ -1,0 +1,24 @@
+slug: plan-collection-pages-that-rank-for-buying-searches
+name: "Plan collection pages that rank for buying searches"
+summary: "Give it your products and a keyword export. Get validated keywords, a collection page plan and written page copy."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: competitor_set, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: pdp_copy}
+uses: [store-keyword-validator, collection-page-planner, collection-page-seo-builder]
+steps:
+  - {uses: store-keyword-validator, note: "Tests your keyword ideas for buying intent, volume and difficulty, and names the page type and owner page for each keeper."}
+  - {uses: collection-page-planner, note: "Turns the chosen keywords into a build order for collection pages, with handles and links. Reads the keyword sheet you saved after the last step."}
+  - {uses: collection-page-seo-builder, note: "Writes the page text and search listing for that collection, using the keyword and products you chose from the plan."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-collection-pages-that-rank-for-buying-searches/skeleton.yaml

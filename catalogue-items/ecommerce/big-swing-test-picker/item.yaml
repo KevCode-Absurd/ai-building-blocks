@@ -1,0 +1,22 @@
+slug: big-swing-test-picker
+name: "Big swing test picker"
+summary: "Give it your store size and page data. Get five bold tests your traffic can prove, in order."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: audit_report, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Conversion Rate Optimization Framework Revealed - Step By Step Breakdown", by: "Ali Kenyon (Conversion Wise), hosted by Ezra Firestone", used: "The 300,000 sessions line, the bold test areas for smaller stores, the idea bank of menu, product page, cart and collection tests, and the 13 wins in 135 tests"}
+  - {title: "CRO as testing and experimentation for DTC ecommerce", by: "Written research review of A/B testing for online stores", used: "Test fewer, bigger things on busier pages"}

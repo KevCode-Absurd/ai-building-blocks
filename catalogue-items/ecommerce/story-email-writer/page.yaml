@@ -1,0 +1,131 @@
+new_slug: story-email-writer
+name: "Story email writer"
+summary: "Give it your list and one true story. Get three personal email drafts."
+job: write-emails
+thinking: medium
+thinking_why: "It writes short personal copy in set structures from your true story. A mid-size model does this well, and you edit for voice."
+
+headline: "Story email writer"
+subhead: Give it who is on your list, the one action you want and one true story or customer result. It writes three personal emails of 200 to 300 words, each in a different structure, with subject lines, one call to action each and a pick for which to send first.
+
+explain: |
+  Store emails are often a discount and a picture. They get opens when a sale runs, and little the rest of the time. A personal email from one named person, with a real story and one action, can earn attention between sales, because it reads like a friend writing.
+
+  This skill drafts three versions from the same facts. One challenges a common belief you can back with proof. One names a problem and shows what waiting costs. One tells a story that moves a belief and then makes an offer. Each has one call to action, a P.S. and preview text. The skill does not invent a founder story or a result. If you have no true story, it says so and asks for one. These emails suit a list that already knows you, so use them one to three times a month beside your promos.
+
+when:
+  - Your emails are all sales, and you want a few that build trust between them.
+  - You want a founder email for your welcome or post-purchase flow.
+  - Your list is warm, and you want to answer the doubts that stop a second purchase.
+
+you_give:
+  - Your product and its main benefit
+  - "Who is on the list: bought before, took a discount, or reads your newsletter"
+  - "The one action you want: shop, read or reply"
+  - A common belief in your category you can challenge honestly (optional)
+  - One true story or customer result (optional)
+
+you_get:
+  - Three drafts of 200 to 300 words, one per structure
+  - A subject line and preview text for each
+  - One call to action per email, with a teaser line
+  - Which structure to send first, and why
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say who is on the list and the one action you want.
+  - Paste a true story or customer result. If you have none, say so.
+  - Read the three drafts aloud and edit them in your own voice.
+  - Send the first pick and compare it with a normal promo email on clicks and revenue per send.
+
+how_it_works:
+  - title: Starts with the list
+    text: Store lists are mostly buyers or people who saw the ad and the page. It does not explain what the product is.
+  - title: Names the doubts
+    text: Risk, price and whether it works. Each doubt gets an answer, such as a small starter size, a real discount or a plain explanation.
+  - title: Challenge, justify, need
+    text: A claim that goes against a common belief, reasons the reader can follow, then the need as the call to action.
+  - title: Problem, promise, agitate, solution
+    text: Name one problem, promise a fix, show what waiting costs without scaring anyone, then point to the solution.
+  - title: Hook, story, offer
+    text: A line that makes people read on, one story that moves a belief, then an offer that follows from it.
+  - title: Writes like a friend
+    text: Short lines, a named sender, one call to action and a P.S. If you would not say it out loud to a friend, it is rewritten.
+  - title: Checks the facts
+    text: Every claim, result and guarantee must match your facts. Health, weight and money claims are flagged.
+
+output_shape: |
+  WHO IS ON THE LIST
+  <bought | took a discount | newsletter> | doubts to answer: <risk | price | works>
+
+  DRAFT 1  Challenge, justify, need
+  Subject: <...> | Preview: <first 150 characters>
+  <200 to 300 words>
+  Call to action: <one link> | Teaser line: <...>
+  P.S.: <...>
+
+  DRAFT 2  Problem, promise, agitate, solution
+  (same layout; problem 3 to 4 lines, benefit 2 to 3, agitate 7 to 8, solution plus call to action about 7)
+
+  DRAFT 3  Hook, story, offer
+  (same layout; lesson in one sentence at the end)
+
+  SEND FIRST
+  Draft <n> because <reason>. Test against your normal promo on open rate, click rate and revenue per send.
+
+  CLAIMS CHECK
+  <claim | source | pass or fail>
+  CHECKS MISSED: <none | list>
+  MISSING: <story | list type | action | proof for the belief>
+
+tweaks:
+  - what: Your true story
+    how: Give a real founder moment or customer result with details. The more real the detail, the less the draft sounds like AI.
+  - what: Who is on the list
+    how: Say if they bought, took a discount or only read. The first email to buyers answers a different doubt than one to new subscribers.
+  - what: The belief to challenge
+    how: Name a belief you can back with facts. The skill will not challenge one it cannot justify.
+  - what: Your sender
+    how: Name the person who will sign and answer replies. The email only works if a real person stands behind it.
+  - what: Your guarantee and offer
+    how: Give the exact terms. The call to action names the guarantee only as you really offer it.
+
+judge:
+  - It reads like one named person writing to a friend.
+  - Each draft has one idea and one call to action.
+  - The reveal comes late, so the open loop works.
+  - Every claim, result and guarantee matches your facts.
+  - There is no invented founder story, result or customer.
+  - The agitate section shows a real cost of waiting and does not scare or shame.
+
+test:
+  - Give it no true story. It should ask for one or build from the product facts only, and say so.
+  - Read each draft aloud. Mark any line you would not say to a friend and rewrite it.
+  - Send the first pick to half the list and your usual promo to the other half. Compare revenue per send.
+  - Check each claim against your product page, the guarantee and your policy.
+
+improve:
+  - Add your voice rules and a sample of your real writing to the skill file.
+  - Add your common customer doubts, in their words from reviews.
+  - Add your platform's rules on health, weight and money claims as a check.
+  - Save the draft that worked to your brand file as a model.
+  - Pair it with the campaign email writer for promos, and the email campaign calendar planner to fit story emails into the month.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can draft the three structures once it has your story and facts. You edit for your own voice."}
+    - {name: "Klaviyo", why: "It sends plain-text emails and handles a manual 50/50 split to compare a story email with a promo."}
+  inputs:
+    - "Customer reviews or messages that show the doubt in their own words"
+    - "A founder story or customer result you can prove"
+    - "Your guarantee and return policy"
+
+terms:
+  - term: Open loop
+    meaning: A hint at something the reader wants to know, answered a few lines later.
+  - term: Call to action
+    meaning: The one link or reply that tells the reader what to do next.
+  - term: P.S.
+    meaning: A line after the signature, often one of the most read parts of an email.
+  - term: Preview text
+    meaning: The short line shown after the subject in the inbox.

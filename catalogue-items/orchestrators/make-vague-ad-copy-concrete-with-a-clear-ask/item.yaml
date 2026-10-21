@@ -1,0 +1,24 @@
+slug: make-vague-ad-copy-concrete-with-a-clear-ask
+name: "Make vague ad copy concrete with a clear ask"
+summary: "Give it a draft that sounds like every other ad. Get concrete lines, a believable how-it-works and a clear ask."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [concrete-copy-rewriter, how-it-works-copy-writer, call-to-action-writer, sales-copy-editor]
+steps:
+  - {uses: concrete-copy-rewriter, note: "Starts from your draft and product facts."}
+  - {uses: how-it-works-copy-writer, note: "Takes the concrete draft and adds the cause-and-effect that backs the promise."}
+  - {uses: call-to-action-writer, note: "Ends the draft from the step before with a clear ask."}
+  - {uses: sales-copy-editor, note: "Reads the draft and the ask from the steps before and fixes what still stops a reader."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/make-vague-ad-copy-concrete-with-a-clear-ask/skeleton.yaml

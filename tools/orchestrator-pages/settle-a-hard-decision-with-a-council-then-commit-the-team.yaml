@@ -1,0 +1,77 @@
+new_slug: settle-a-hard-decision-with-a-council-then-commit-the-team
+name: Settle a hard decision with a council, then commit
+summary: Give it a hard decision. Get a council's call, a stress-tested plan and a note that commits the team.
+job: think-with-minds
+thinking: high
+thinking_why: The council has several voices that must really disagree, and the plan check needs sharp reasoning. Use your strongest model.
+headline: Make the call, test the plan and get the team behind it
+subhead: Give it a decision with two or more good options. A council of great minds argues it and ranks the answers blind. You turn the call into a plan, it tries to break the plan, and then it writes the note that records every doubt and commits the team.
+explain: |
+  A hard choice has no fact that settles it. So the team argues, the loudest voice wins, and a few people go along while still doubting. The decision is made, but nobody is sure it will hold, and the same debate returns a week later.
+
+  The steps give the choice a proper hearing and a proper ending. The council gives its call, its strongest dissent and what would change its mind. You then write the call as a dated plan with an owner for each step. The next step tries to break that plan. Last it writes each doubt down fairly, names who decides any real clash and drafts the note that closes the debate with a review date.
+when:
+  - You face a real choice with a cost to getting it wrong.
+  - The team is split and the same argument keeps coming back.
+  - You are the boss and disagree with a call the team wants to make.
+you_give:
+  - The decision, the options and what a good outcome looks like
+  - Hard limits, such as money, time or values
+  - Who disagrees and why, in a line each (optional)
+  - Your brand file or business facts (optional)
+you_get:
+  - The council's recommended decision and its strongest dissent
+  - What would change the call, and the first three steps
+  - A list of ways your plan could fail, with a change for each
+  - A short team note with the owner, the signal, the review date and each doubt on record
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the decision, the options and what is at stake. Name the minds you want, or let it pick.
+  - When it pauses, turn the brief's decision and first three steps into a dated plan with an owner for each step.
+  - Add each person's real view before the last step, so the note records what they said.
+how_it_works:
+  - title: Run the council
+    text: Seats the minds, lets each one answer from their seat, has them challenge each other and rank the answers blind, then writes the brief with the call and the strongest dissent.
+  - title: Pause, then write your plan
+    text: You turn the call and the first three steps into a dated plan, with one owner per step.
+  - title: Try to break the plan
+    text: Lists what would guarantee failure, checks the plan against each, puts survival risks first and sets people to attack it on purpose.
+  - title: Write the commit note
+    text: Writes each doubt as one fair line, sorts it as a difference of view or a clash of aims, names who decides a clash and drafts the note with owner, signal and review date.
+output_shape: |-
+  STEP 1: COUNCIL BRIEF
+    The decision | strongest dissent | what would change the call | first three steps
+
+  PAUSE
+    You write the dated plan with owners
+
+  STEP 2: FAILURE CHECK
+    Ways it fails | survival risks first | changes to the plan
+
+  STEP 3: COMMIT NOTE
+    Each doubt on record | who decides any clash | commit lines | signal | review date | team note
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who sits on the council
+    how: Name up to seven minds or describe the seats you need. Mix a cautious voice with a bold one.
+  - what: How reversible the decision is
+    how: Say if you can undo it. A reversible call needs a short check and a quick review date.
+  - what: Who the note is for
+    how: Say if it goes to a team, a board or a partner. The tone and the length change.
+judge:
+  - The council really disagrees. The dissent is a real argument, not a softer version of the call.
+  - The plan has a date and an owner for every step.
+  - The failure list names the plan's own parts and puts anything that could end it first.
+  - Every person's doubt is written in words they would accept as fair.
+  - The note has a signal that would show the decision is wrong and a review date.
+test:
+  - Show the dissent to the person who disagrees most. They should say it is fair.
+  - Ask a rival or a skeptic to read the failure list and name what it missed.
+  - Check the review date on the calendar and who is meant to look at the signal.
+improve:
+  - Look at the signal on the review date and record what happened against the call.
+  - Keep the council briefs together so you can see which minds were right over time.
+  - Not worth it for a choice with one right answer, or one you can undo in a day.

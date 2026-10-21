@@ -1,0 +1,76 @@
+new_slug: set-a-six-week-product-bet-and-screen-requests-against-it
+name: Set a six-week product bet and screen requests against it
+summary: Give it your plan and requests. Get a six-week bet, a no list and a reply for each request.
+job: build-product
+thinking: medium
+thinking_why: It is plain planning and sorting. A mid-level model does it well.
+headline: Shrink your plan to a six-week bet and say no with reasons
+subhead: Give it your product plan and the requests piling up. It puts the plan on one page, cuts it to a bet you can finish in six weeks with a small team, then sorts every request into yes, later or no, with a reply for each.
+explain: |
+  A plan grows one reasonable request at a time. Each one sounds small, and nobody counts what the yeses cost together. Soon the six-week job is six months, and the product is pulling toward customers it was never for.
+
+  The first step puts your plan on one page: goal, audience and limits. The second cuts that page to a six-week bet, names what it will not build and sets the default answer to no. The third takes your request list and starts every request at not now. It counts how many different people asked, adds up what each yes would cost, and checks it against the bet. You end with a list you can send back, each with a reply.
+when:
+  - Your plan keeps growing and the date keeps slipping.
+  - Requests arrive faster than you can judge them.
+  - You want to say no kindly and have the reason ready.
+you_give:
+  - Your product plan, goal and who it is for
+  - Your team size and any fixed date
+  - The list of requests, with who asked and when
+  - Customer comments about the product (optional)
+you_get:
+  - A one-page brief with goal, audience, limits and what could go wrong
+  - A six-week bet with a small team and a list of what you will say no to
+  - A yes, later or no on each request, with the full cost of every yes
+  - A short reply to send for each request
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your plan, then your request list with who asked.
+  - Answer the few questions step 1 asks, then let it run.
+  - Send the replies yourself. Nothing goes out for you.
+how_it_works:
+  - title: Put the plan on one page
+    text: Pulls the facts you gave, asks a few questions about goal, audience and limits, and writes a one-page brief tested for weak spots.
+  - title: Cut it to a six-week bet
+    text: Scores the plan against build-less rules. Cuts it to a bet a small team can finish in six weeks. Lists the features to say no to.
+  - title: Screen every request
+    text: Starts each request at not now and counts different people asking. Adds up what a yes would cost and checks it against the bet.
+  - title: Write the replies
+    text: Gives a yes, later or no with a short reply for each request.
+output_shape: |-
+  STEP 1: ONE-PAGE BRIEF
+    Goal | audience | limits | what could go wrong | open questions
+
+  STEP 2: SIX-WEEK BET
+    Score | the bet and team | what is cut | no list | default answer
+
+  STEP 3: REQUEST SCREEN
+    Each request: asked by how many | full cost of a yes | fits the bet or not | yes, later or no | reply
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Team size
+    how: Say how many people build it. The bet is sized to them.
+  - what: Your bar for repeats
+    how: The default counts a request only if three different people asked over more than a month. Give your own bar.
+  - what: Your vision
+    how: Write one line on what the product is for. Step 3 tests each request against it.
+  - what: Fixed date
+    how: Give it if there is one. The bet fits the date and the scope flexes.
+judge:
+  - The bet fits six weeks and the team you named.
+  - The no list names real features, not vague areas.
+  - One person asking five times counts once.
+  - Every yes shows the full cost, from screens and support to copy, promises and upkeep.
+  - Every reply is kind and gives the reason.
+test:
+  - Take two requests you would have said yes to. Check what the screen added to their cost.
+  - Check that nothing on the no list shows up in the bet.
+  - Ask a teammate to read a reply and say whether it feels fair.
+improve:
+  - Keep the no list where the team can see it and add to it each cycle.
+  - Review the not-now pile every six weeks. Some will earn a yes.
+  - Track which requests came from one big event. They count as one wave.

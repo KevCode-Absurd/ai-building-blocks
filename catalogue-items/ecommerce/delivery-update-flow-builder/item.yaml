@@ -1,0 +1,21 @@
+slug: delivery-update-flow-builder
+name: "Delivery update flow builder"
+summary: "Give it your shipping setup and ticket counts. Get an update flow, tracking page plan and delay script."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: email_flow}
+  - {type: page_layout_spec}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Customer delight across the e-commerce journey: a retention playbook", by: "Research write-up (author not named)", used: "Order-status contact thresholds, the agent time cost, building the delivery date from real lane data and padding it, the delivery accuracy target, and when to move on"}
+  - {title: "Engineering Customer Delight Across the E-Commerce Journey (deep research)", by: "Research write-up (author not named)", used: "The three-message update flow, the quiet period between order and delivery, and what a branded tracking page holds"}

@@ -1,0 +1,24 @@
+slug: write-a-personal-story-email-and-read-how-it-did
+name: "Write a personal story email and read how it did"
+summary: "Give it your brand file and one true story. Get a clean email ready to send, then a read of results."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: email
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: brief, required: false}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: audit_report}
+uses: [story-email-writer, email-draft-reviewer, email-mistake-fixer, email-and-sms-performance-reader]
+steps:
+  - {uses: story-email-writer, note: "Starts from your brand file and one true story and writes three drafts."}
+  - {uses: email-draft-reviewer, note: "Reads the draft you picked from the step before and lists the cuts to make."}
+  - {uses: email-mistake-fixer, note: "Takes the draft after you apply the cuts and cleans up the small errors."}
+  - {uses: email-and-sms-performance-reader, note: "Fresh start after the send: reads the numbers so you can see if the story email beat your usual ones."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-a-personal-story-email-and-read-how-it-did/skeleton.yaml

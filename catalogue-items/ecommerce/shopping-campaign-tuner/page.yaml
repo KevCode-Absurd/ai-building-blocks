@@ -1,0 +1,125 @@
+new_slug: shopping-campaign-tuner
+name: "Shopping campaign tuner"
+summary: "Paste a weekly Shopping export. Get which products to cut, feed, bid up or fund, with a waste score."
+job: run-google-ads
+thinking: medium
+thinking_why: "It applies set rules to product rows and search terms, so a mid-size model is enough."
+
+headline: "Shopping campaign tuner"
+subhead: Paste your weekly Google Shopping export with product results, search terms and impression share. It tells you which products to exclude, fix in the feed, bid up or fund, which negatives to add, what to change this week, and gives a waste score out of 100.
+
+explain: |
+  Shopping campaigns drift. A few products eat the budget without selling, the best sellers run short of money, and junk search terms creep in. Without a routine, you either touch everything every day and reset learning, or you touch nothing.
+
+  This skill reads one week of Shopping data and sorts every product into an action: negative, feed fix, bid change or budget. It reads impression share the way the courses do: lost to budget or lost to rank, and compares impression share with click share to tell a money problem from a quality problem. It also checks rival prices when click-through falls. You get a short weekly edit list and a score that shows how much spend sits on products and terms that are not earning.
+
+when:
+  - You run Standard Shopping and want a weekly routine that fits into an hour.
+  - A product is getting clicks and spending but not selling, and you need to decide if it is the feed, the price or the product.
+  - Your best sellers feel starved of budget and you suspect money is going to the wrong products.
+
+you_give:
+  - A Shopping export at product level with spend, clicks, conversions and ROAS, for the last 7 and 30 days
+  - The search terms report
+  - Search impression share, lost to rank, lost to budget and click share
+  - Your target ROAS or CPA
+you_get:
+  - A product action list covering negative, feed fix, bid and budget
+  - Search term negatives to add
+  - A bid or budget change with the expected effect
+  - A weekly edit list and a waste score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export your Shopping campaign at product level for the last 7 and 30 days, plus the search terms report.
+  - Add your impression share, lost impression share and click share figures, and your target ROAS or CPA.
+  - Make the weekly changes it lists on one day, and change little else.
+  - Run it again next week on the new data.
+
+how_it_works:
+  - title: Checks the data
+    text: Product decisions need enough clicks. Under about 100 clicks per product a call is noise. Standard Shopping only, since Performance Max hides some product search terms.
+  - title: Reads the search terms
+    text: Irrelevant terms become negatives at account, campaign or list level. If they keep coming, the feed title is vague and gets fixed.
+  - title: Reads impression share
+    text: Lost to budget means raise budget only if you hit target. Lost to rank means fix quality signals before paying more.
+  - title: Compares share types
+    text: High impression share with low click share points to titles and images that are not clickable, or products that are not relevant.
+  - title: Protects top sellers
+    text: Starved best sellers move to their own campaign when volume allows.
+  - title: Checks rival prices
+    text: If click-through falls, it asks about rivals' prices and may pause a product rather than match a deep discount.
+  - title: Picks bids and budget
+    text: Bid steps of 5 to 10 percent, no more than 15, every 5 to 7 days, and a Target ROAS once the campaign has 30 to 50 conversions a month.
+  - title: Writes the weekly edit
+    text: Adjust target, budget, exclude products, add negatives, and little else. Then scores the waste.
+
+output_shape: |
+  DATA CHECK  <days> | <clicks per product note> | <standard Shopping? yes/no>
+
+  PRODUCT ACTIONS
+  <product> | <clicks> | <spend> | <ROAS> | <negative / feed fix / bid / budget> | <reason>
+
+  SEARCH TERM NEGATIVES
+  <term> | <match type> | <level>
+
+  IMPRESSION SHARE
+  lost to budget <n>% | lost to rank <n>% | click share <n>% -> <verdict and action>
+
+  RIVAL PRICE CHECK  <product> | <rival discount?> | <pause / hold>
+
+  THIS WEEK'S EDIT LIST
+  <target change> | <budget change> | <products to exclude> | <terms to add>
+  expected effect <...> | check again <date>
+
+  SCORE  <n>/100 (100 - <wasted spend share %> = <n>)
+  MISSING: <product export | search terms | impression share | target>
+
+tweaks:
+  - what: Clicks per product
+    how: Under about 100 clicks, a product's results are mostly noise. Give 30 days to get enough.
+  - what: Campaign age
+    how: A new campaign needs the search terms read daily for the first weeks. Older campaigns need it a few times a week.
+  - what: Your target ROAS or CPA
+    how: Every bid and budget move is judged against it. Without it the skill cannot say if a product earns its spend.
+  - what: Rival prices
+    how: If a product's click-through drops, give the top rivals' current prices for it.
+
+judge:
+  - Each action names a product and a reason from its own numbers.
+  - No product is cut with fewer than about 100 clicks unless it is clearly off topic.
+  - Impression share advice says which share is lost, budget or rank.
+  - Bid moves stay within 5 to 10 percent, never above 15, and wait 5 to 7 days between changes.
+  - The score sum is worked from your export.
+
+test:
+  - Pick a product you know sells well and check it is not on the cut list.
+  - Pick a product with lots of spend and no sales and see the skill ask whether it is the feed, the price or the product.
+  - Make the weekly edits to half the campaign only, and compare after a week.
+  - Run it again next week. Products fixed in the feed should move out of the action list.
+
+improve:
+  - Put your target ROAS or CPA in the skill file so every run uses it.
+  - Add the day of the week you make changes, so the edit list lands on that day.
+  - Add the thresholds from your own account once you know them, such as the clicks you need to judge a product.
+  - Pair it with the Search term sorter for deeper negatives, and the Google bid strategy chooser when it is time to change strategy.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Product-level Shopping reports and impression share columns come from here."}
+    - {name: "Google Merchant Center", why: "Where you fix the titles and images the skill flags."}
+    - {name: "Any good chat AI", why: "Any current chat AI can sort a pasted export."}
+  inputs:
+    - "7 and 30 day product reports side by side"
+    - "Rival prices for your top products"
+    - "Your current product titles and images for the weak products"
+
+terms:
+  - term: Lost impression share (rank)
+    meaning: Searches where your ad could have shown but your bid and quality score were too low.
+  - term: Lost impression share (budget)
+    meaning: Searches where your ad could have shown but your daily budget ran out.
+  - term: Click share
+    meaning: Clicks you got as a share of the clicks you could have got.
+  - term: Target ROAS
+    meaning: A bid goal for revenue per dollar spent.

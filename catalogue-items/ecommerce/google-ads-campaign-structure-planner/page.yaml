@@ -1,0 +1,123 @@
+new_slug: google-ads-campaign-structure-planner
+name: "Google Ads campaign structure planner"
+summary: "Give it your catalogue and markets. Get the fewest campaigns, each with a reason, and a rollout."
+job: run-google-ads
+thinking: medium
+thinking_why: "It weighs each campaign against a short list of valid reasons and has to know when to leave things alone."
+
+headline: "Google Ads campaign structure planner"
+subhead: Give it your current campaigns with 30 days of spend and conversions, your product categories and margins, and the countries you sell in. It hands back the fewest campaigns that make sense, a reason for each, which to merge or delete and a slow rollout.
+
+explain: |
+  Stores often split a Google account into many small campaigns. Each campaign learns on its own. If one campaign gets 10 conversions a month, Google models its buyers from just 10 people. Merged with others to reach 90, it learns from far more, and returns usually rise.
+
+  This skill starts from one campaign and lets you add another only for a real reason: brand versus non-brand, country, a different margin or a different product category. It also covers Search ad groups, Performance Max asset groups, a feeder pair, naming and a 90-day rollout. Below about 30 conversions a month in total, it keeps the structure to the minimum.
+
+when:
+  - Your account has many campaigns and each gets only a few sales.
+  - You are adding a new country, collection or clearance range and need to know where it goes.
+  - You want one clear map of campaigns before an audit or a hire.
+
+you_give:
+  - Your current campaigns, with 30 days of spend and conversions
+  - Product categories, with gross margin for each and stock grades (new, core, clearance)
+  - Countries you sell in and their currencies
+  - SKU count and, if you have it, your grade C (clearance) stock list
+you_get:
+  - A target map of campaigns, with a commercial reason for each
+  - A list of campaigns to merge or delete
+  - A naming pattern and Performance Max asset group plan
+  - A 90-day rollout and, if it helps, a portfolio bidding note
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your campaign list with 30-day spend and conversions.
+  - Paste your categories with margins, stock grades and countries.
+  - Read the merge list first. Merge before you add anything.
+  - Follow the rollout in slow steps, and check results after each one.
+
+how_it_works:
+  - title: Counts conversions
+    text: Below about 30 conversions a month in total, it keeps the minimum number of campaigns.
+  - title: Starts from one campaign
+    text: Every extra campaign needs a reason from a short list.
+  - title: Tests each campaign
+    text: Brand versus non-brand, country, a different margin or goal, a different product category, or a clearance, new arrivals or legacy core campaign.
+  - title: Plans merges
+    text: Small campaigns that share a goal and buyer are merged so they learn from more data.
+  - title: Shares learning
+    text: If several campaigns must stay, it suggests one portfolio bidding strategy and a cap on cost per click for niches with $10 to $30 clicks.
+  - title: Plans Search and Performance Max
+    text: Themed ad groups of 10 to 20 keywords, asset groups by product type, and a feeder pair.
+  - title: Names the campaigns
+    text: Tag, region, type, audience and goal, so every campaign reads at a glance.
+  - title: Plans the rollout
+    text: Fix tracking first, draw the map, then change structure in slow steps over 90 days.
+
+output_shape: |
+  CONVERSIONS  <n> a month in total   MINIMUM STRUCTURE  <yes | no>
+  TARGET MAP
+  <campaign name> | <reason: brand / country / margin / category / other> | <budget share>
+  MERGE OR DELETE
+  <campaign> into <campaign> | <why>
+  SEARCH AD GROUPS  <theme | 10 to 20 keywords>
+  PERFORMANCE MAX ASSET GROUPS  <product type | products in it>
+  FEEDER PAIR  <yes | no>  <standard Shopping target ROAS | Performance Max target ROAS>
+  PORTFOLIO BIDDING  <yes | no>  <which campaigns, cost per click cap>
+  NAMING  <tag-region-type-audience-goal>
+  90-DAY ROLLOUT  <week | step>
+  WHERE SOURCES DIFFER  <choice made>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Conversions per campaign
+    how: Give the real 30-day numbers. Three campaigns with 50, 20 and 10 conversions suggest a merge.
+  - what: Margin by category
+    how: Say which categories have a different margin. A 70 percent line and a 35 percent line need separate targets.
+  - what: Stock grades
+    how: Say which stock is clearance. A clearance campaign is a valid reason to split.
+  - what: Countries
+    how: List each country and currency. Geography is a valid reason to split.
+  - what: Catalogue size
+    how: With 5 to 10 products, tell it so. It won't split them by performance tier.
+
+judge:
+  - The default is one campaign, and each extra one has a stated reason.
+  - Campaigns that share a goal and buyer are merged, not kept apart.
+  - Search ad groups hold themed groups of 10 to 20 keywords, not one keyword each.
+  - Asset groups follow product type, with at least 15 products in each.
+  - The rollout moves in slow steps, not one big change.
+  - It says when the account is too small to split at all.
+
+test:
+  - Give it an account with 2 campaigns and 12 conversions a month in total. It should tell you to keep the minimum.
+  - Give it 3 campaigns of 50, 20 and 10 conversions with the same goal. It should suggest a merge.
+  - Add a country you sell in. It should offer a separate campaign for it.
+  - Run it twice on the same account. The map should match.
+  - Compare the rollout with your calendar. No step should land in the middle of a big sale.
+
+improve:
+  - Add your real margins by category to your brand file, so the margin split uses facts.
+  - Add your own naming pattern to the skill file if your agency or team already has one.
+  - Add the stock grades you use, such as A, B and C, with the rule for each.
+  - Add a rule for what counts as a legacy core campaign in your account.
+  - Pair it with the launch planner for the order, and with the Performance Max and Shopping builders for the settings.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Gives the campaign list, spend and conversions to paste in."}
+    - {name: "Google Merchant Center", why: "Shows product types, so asset groups can follow them."}
+    - {name: "Any good chat AI", why: "Applies the merge rules to your list and drafts the map."}
+  inputs:
+    - "A 30-day campaign export"
+    - "Your margin by collection from your finance sheet"
+    - "A list of clearance stock"
+    - "Your break-even ROAS from the break-even calculator"
+
+terms:
+  - term: Asset group
+    meaning: In Performance Max, a bundle of your images, videos and text, tied to a set of products.
+  - term: Portfolio bidding strategy
+    meaning: One bid strategy shared by several campaigns, so they learn from the same data.
+  - term: Feeder pair
+    meaning: Standard Shopping at a very low target ROAS to reach cold buyers, and Performance Max at a high target ROAS to convert warm ones.

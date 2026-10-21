@@ -1,0 +1,23 @@
+slug: write-a-voice-guide-from-your-documents-and-check-copy
+name: "Write a voice guide from your documents and check copy"
+summary: "Give it your documents. Get a voice guide, new copy in that voice and a ranked check of the draft."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: source_text, required: true}
+  - {type: brief, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [brand-voice-guide-builder, brand-voice-rewriter, draft-brand-voice-checker]
+steps:
+  - {uses: brand-voice-guide-builder, note: "Starts the chain: reads what you already wrote and said and makes the voice guide."}
+  - {uses: brand-voice-rewriter, note: "Uses the settled guide to write a real email, post or pitch, or to redo a draft you already have."}
+  - {uses: draft-brand-voice-checker, note: "Reads the draft from the step before and ranks where it drifts from the guide."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-a-voice-guide-from-your-documents-and-check-copy/skeleton.yaml

@@ -1,0 +1,31 @@
+slug: new-screen-design-reviewer
+name: "New screen design reviewer"
+summary: "Point it at each new screen. Get a ready, fix-first or rethink call and a ranked fix list."
+category: agent
+type: agent
+role: orchestrate
+job: design
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: design_file, required: false}
+  - {type: web_page, required: false}
+  - {type: codebase, required: false}
+  - {type: design_direction, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: feedback_notes}
+uses: [design-rules-file-writer, usability-heuristic-reviewer, design-feedback-giver, page-design-standards-checker, ai-look-design-reviewer, colour-contrast-checker, visual-hierarchy-fixer]
+steps:
+  - {uses: design-rules-file-writer, note: "Once, if you have the code and no rules file: writes the colours, type, spacing and parts your product really uses. Every review is measured against it."}
+  - {uses: usability-heuristic-reviewer, note: "Every screen: walks it as a newcomer against ten usability rules and scores it out of 100."}
+  - {uses: design-feedback-giver, note: "Only when the screen is a mockup or a design file: feedback on usability, hierarchy and consistency."}
+  - {uses: page-design-standards-checker, note: "Only when the screen is a live or built page: checks contrast, spacing, hierarchy and mobile."}
+  - {uses: ai-look-design-reviewer, note: "Only when you give the screen's code: a score for how generic or AI-made it looks, with the fixes that gain most."}
+  - {uses: colour-contrast-checker, note: "Only when the screen adds or changes a colour: checks light and dark pairs against WCAG 2.2."}
+  - {uses: visual-hierarchy-fixer, note: "Only when a review flags weak hierarchy, spacing or type: fixes for what the eye sees first."}
+schedule: "Each time a new or changed screen is ready for review"
+asks_before: [changing the design file or the code, commenting in the team's design tool, adding or changing a line in your design rules, marking a screen approved for release]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,119 @@
+new_slug: mechanism-namer
+name: "Mechanism namer"
+summary: "Give it your product and rivals. Get a named, true mechanism and three pillars that sell the reason."
+job: make-offer
+thinking: medium
+thinking_why: "It compares your product with rivals and must keep every claim true, which takes careful reading but not deep reasoning."
+
+headline: "Mechanism namer"
+subhead: Give it your product, how it works, and what your main rivals say. It finds the real feature that makes yours work differently, names it, and builds three pillars that sell the reason. You get three to five checked candidates, a chosen name and the pillars with proof.
+
+explain: |
+  If a shopper can compare your product with a rival's on price alone, you are selling a commodity. The way out is a true reason your product works differently, named so buyers can remember it. In copywriting this is called a "mechanism". An engine type in a vacuum cleaner, or a stud pattern in a tire, are examples. You sell the reason the product works, and the product follows.
+
+  This skill looks for the real difference in your ingredient, material, process, design or test results. It scores each candidate for truth, names the best one, and explains in one sentence why it matters to the buyer's result. Then it builds three pillars: what most sellers do, why that falls short, and why yours differs. It never invents a feature.
+
+when:
+  - You sell something buyers compare with rivals on price alone.
+  - You know your product is better made, but your page can't say why in one line.
+  - You are writing an offer or a long page and need a clear reason to believe.
+
+you_give:
+  - Your product and how it works
+  - Your main rivals and what they say
+  - Real differences in ingredient, material, process, design or test results
+you_get:
+  - Three to five candidate mechanisms, each checked for truth
+  - A chosen name with a one-line explanation
+  - Three pillars, each with proof and an analogy
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what your product is and how it works, in plain words.
+  - Paste two or three rivals and what they say on their pages.
+  - List every real difference you know of, with proof such as a test, a spec or a certificate.
+  - Check the chosen name against your ad platform's rules, then use it in your offer and page.
+
+how_it_works:
+  - title: Runs the commodity test
+    text: If the buyer would compare you to a rival on price alone, you need a mechanism. If not, the skill says so.
+  - title: Finds the real difference
+    text: Looks for the feature that makes yours work differently in ingredient, material, process or design. Nothing is invented.
+  - title: Checks each for truth
+    text: Each candidate is marked true and backed, or unproven. Unproven ones are dropped or flagged.
+  - title: Names the winner
+    text: Picks one, names it in plain words and explains in one sentence why the difference matters to the buyer's result.
+  - title: Builds three pillars
+    text: "For each pillar: what most sellers do, why that falls short, why yours differs, with a proof and an analogy."
+  - title: Adds a results pillar
+    text: Optionally ends with a pillar about what you have helped people do.
+  - title: Checks platform rules
+    text: Flags names that could break your ad platform's claim rules, especially for health, weight or money results.
+
+output_shape: |
+  COMMODITY TEST: <needs a mechanism | does not, why>
+
+  CANDIDATES
+  1. <candidate> | true? <yes/no/unproven> | proof: <...>
+  2. ...
+
+  CHOSEN MECHANISM
+  Name: <name>
+  One line: <why this difference matters to the buyer's result>
+
+  PILLARS
+  1. Most sellers: <...>
+     Why that falls short: <...>
+     Why ours differs: <...>
+     Proof: <...>  Analogy: <...>
+  2. ...
+  3. <optional results pillar>
+
+  CLAIM FLAGS: <any name or line that may break platform rules>
+  MISSING: <product detail | rival lines | proof>
+
+tweaks:
+  - what: Real differences you list
+    how: The more real differences you give, with proof, the better the candidates. If you give none, the skill will tell you to fix the product or offer, not the words.
+  - what: Rival lines
+    how: Paste what rivals actually say. The "what most sellers do" part of each pillar comes from this.
+  - what: Where the offer goes
+    how: Say if this is for an ad, a product page or a long page. Pillars can be cut to one line each for ads.
+  - what: Platform and category
+    how: Name your ad platform and category so the claim check uses the right rules, especially for supplements and weight claims.
+
+judge:
+  - The chosen mechanism is a real, checkable difference, not a made-up science word.
+  - The one-line explanation says what the difference does for the buyer's result.
+  - Each pillar has a proof you could show a customer.
+  - A health, weight or money result is not promised without evidence.
+  - A rival could not say the same thing truthfully.
+
+test:
+  - Give it a product with no real difference. It should say to fix the product or offer, not invent a mechanism.
+  - Give it a product with one clear, proven difference. The chosen name should be about that difference.
+  - Run it twice. The chosen mechanism should be the same or close, with the same proof.
+  - Read the name aloud to a customer and ask what they think it means. If they guess wrong, rename it.
+
+improve:
+  - Add your category's claim rules to the skill file so the flag step uses them.
+  - Save the chosen name and pillars to your brand file so ads, pages and emails use the same words.
+  - Add two or three mechanisms from your own field as examples, so the names sound right for you.
+  - The source examples come from info products, so check each pillar fits a physical product before you use it.
+  - Pair it with a skill that picks your main claim, and one that checks proof.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can compare your product with rivals and build the pillars. Paste your product facts and rival lines in the same message."}
+  inputs:
+    - "Test results, certificates or lab reports that back each difference"
+    - "Rival product pages, copied as text"
+    - "Customer review quotes that mention why they chose you"
+
+terms:
+  - term: Mechanism
+    meaning: The true reason your product works differently, given a name buyers can remember.
+  - term: Pillar
+    meaning: "One of three short blocks that sells the reason: what most sellers do, why that falls short, and why yours differs."
+  - term: Commodity
+    meaning: A product buyers compare on price alone because they see no real difference.

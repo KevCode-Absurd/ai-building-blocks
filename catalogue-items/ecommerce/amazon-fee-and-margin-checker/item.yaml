@@ -1,0 +1,19 @@
+slug: amazon-fee-and-margin-checker
+name: "Amazon fee and margin checker"
+summary: "Give it price, landed cost and size. Get profit per unit, all fees and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "The thirds rule and 30 percent floor, referral fee, size tiers and pick and pack, storage maths, returns and account costs, start-up budgets and testing a price rise"}

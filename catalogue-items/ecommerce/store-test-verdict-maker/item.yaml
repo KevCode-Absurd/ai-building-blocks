@@ -1,0 +1,24 @@
+slug: store-test-verdict-maker
+name: "Store test verdict maker"
+summary: "Give it test numbers and dates. Get valid or not, the lift as a range, a ship call and a trust score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "CRO as testing and experimentation for DTC ecommerce", by: "Written research review of A/B testing for online stores", used: "Split mismatch checks, early-stopping false alarm rates, Twyman's law, Bayesian peeking, several metrics, inconclusive tests and the test log"}
+  - {title: "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing", by: "Ron Kohavi, Diane Tang and Ya Xu", url: "https://experimentguide.com/", used: "Split mismatch, Twyman's law and the two-week minimum run"}
+  - {title: "How Not To Run an A/B Test", by: "Evan Miller", url: "https://www.evanmiller.org/how-not-to-run-an-ab-test.html", used: "Why stopping at the first good result inflates false positives"}
+  - {title: "Bayesian A/B Testing Is Not Immune to Peeking", by: "Alex Molas", url: "https://www.alexmolas.com/2025/10/30/bayesian-ab-test-peeking.html", used: "Peeking at a chance-to-win number can push false positives to about 80 percent in simulation"}
+  - {title: "eCommerce CRO Masterclass 2026: The Full System", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "Checking tests every day and stopping early, and email sends that contaminate a test"}
+  - {title: "Conversion Rate Optimization Framework Revealed - Step By Step Breakdown", by: "Ali Kenyon (Conversion Wise), hosted by Ezra Firestone", used: "Checking a test twice before launch, because a bug shows up as a false loss, and not stacking tests on one page"}

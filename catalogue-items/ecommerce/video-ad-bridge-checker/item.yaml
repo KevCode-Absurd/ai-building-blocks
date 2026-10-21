@@ -1,0 +1,27 @@
+slug: video-ad-bridge-checker
+name: "Video script bridge checker"
+summary: "Paste a video ad script. Get a bridge score out of 100, early-sell spots and a tighter script."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: intermediate
+inputs:
+  - {type: script, required: true}
+  - {type: persona, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: script}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "How to write ad hooks that scale", by: "Agency lead (name not given in the video)", used: "The awareness curve and the bridge rules"}
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead with about 8 years on Meta (name not given in the video)", used: "Introducing the product as late as the script allows, and the cold-ad awareness path"}
+  - {title: "How to create founder ads that scale", by: "Agency lead (name not given in the video)", used: "Delaying the product with problem agitation"}
+  - {title: "Why These 3 Ads Crushed It (And Why The Others Burned Money)", by: "Australian creative strategist (name not given in the video)", used: "Where bridges go wrong, benefit before feature, pacing, soft calls to action and proof that is shown"}
+  - {title: "How To Make A Winner Meta Video Ad", by: "Australian creative strategist (name not given in the video)", used: "An aggressive bridge as a cause of weak ads, overlays on talking heads, a narrow market, and the ban on contrast lines in AI scripts"}
+  - {title: "Breakthrough Advertising", by: "Eugene Schwartz", used: "The stages of awareness the viewer moves through"}

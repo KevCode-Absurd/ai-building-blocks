@@ -1,0 +1,90 @@
+# Workflow skeleton that chains library skills (docs/INTAKE.md). Our words.
+id: plan-the-cash-for-your-next-stock-order
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: plan-the-cash-for-your-next-stock-order
+  name: Plan the cash for your next stock order
+  summary: Give it your supplier invoices and lead times. Get true unit costs, the cash you need, better terms and a verdict.
+  when: you are about to place a stock order and need to know if cash, not ads, will limit growth.
+  job: plan-supply-chain
+  level: intermediate
+steps:
+  - name: Landed cost allocator
+    skill: landed-cost-allocator
+    job: analysis
+    from: library
+    method:
+      - Start with the purchase price and add freight, duty and fees
+      - Spread each lump on a stated basis
+      - Check the sums against the invoices
+      - Divide by units received
+    inputs:
+      - spreadsheet
+      - document!
+    outputs:
+      - spreadsheet
+    note: Starts with what each unit really costs once it is on your shelf.
+  - name: Inventory cash planner
+    skill: inventory-cash-planner
+    job: ops
+    from: library
+    method:
+      - Set the timing from order to shelf
+      - Build the stock table and the cash for each order
+      - Find the lowest cash point and a 13-week view
+      - Write the downside case first and compare ways to fund the gap
+    inputs:
+      - spreadsheet
+      - product_data!
+    outputs:
+      - plan
+    note: Uses the landed costs to time each order and show the cash it needs.
+  - name: Supplier terms and float planner
+    skill: supplier-payment-terms-planner
+    job: ops
+    from: library
+    method:
+      - Work out your float
+      - Build a ladder of terms to ask for
+      - Explain the factory's side and offer to share the cost
+      - Show cash by month with the new terms
+    inputs:
+      - spreadsheet
+      - question!
+    outputs:
+      - plan
+    note: Takes the cash gap from the stock plan and shows which supplier terms would close it.
+  - name: Growth cash limit checker
+    skill: growth-cash-limit-checker
+    job: analysis
+    from: library
+    method:
+      - Separate profit from cash
+      - Work out the cash conversion cycle
+      - Run the stockout and growth tests
+      - Grade the stock and give a verdict
+    inputs:
+      - spreadsheet
+      - plan
+    outputs:
+      - audit_report
+    note: Reads the stock plan and terms to tell you if cash or ads limit your growth.
+  - name: Cash lever ranker
+    skill: cash-lever-ranker
+    job: analysis
+    from: library
+    method:
+      - Name the problem and build one base model
+      - Test six cash levers one at a time
+      - Read each at day 0, 30, 60 and 180
+      - Rank them and combine two or three
+    inputs:
+      - spreadsheet
+      - performance_sheet!
+    outputs:
+      - audit_report
+    note: If cash is still the limit, ranks the levers by cash freed, starting from the same cost sheet.

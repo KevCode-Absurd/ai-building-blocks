@@ -6,7 +6,7 @@ export type Suggestion = { b: Block; why: string };
 /** Strongest signal first: what follows this block in the ready workflows,
  *  then blocks that take what it hands back, then the same job. With nothing to follow: good places to start. */
 export function suggestNext(c: Catalogue, anchor: string | null, inFlow: Set<string>, limit = 8): Suggestion[] {
-  const pool = c.blocks.filter((b) => b.category !== "orchestrator" && !inFlow.has(b.slug));
+  const pool = c.blocks.filter((b) => b.category !== "orchestrator" && b.type !== "agent" && !inFlow.has(b.slug));
   const flowsList = c.blocks.filter((b) => b.category === "orchestrator");
   if (!anchor || !c.bySlug[anchor]) {
     const firsts = new Set(flowsList.map((f) => f.steps[0]?.uses).filter(Boolean));

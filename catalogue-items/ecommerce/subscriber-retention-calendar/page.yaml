@@ -1,0 +1,124 @@
+new_slug: subscriber-retention-calendar
+name: "Subscriber retention calendar"
+summary: "Give it your products and sending habits. Get gift timing, send rules and a monthly subscriber calendar."
+job: keep-customers
+thinking: medium
+thinking_why: "It turns your churn numbers and gift options into a set of rules and a calendar, so a mid-size model is enough."
+
+headline: "Subscriber retention calendar"
+subhead: Give it your churn by order number, your gift options and your campaign calendar. It places gifts on the months where subscribers leave, sets rules for what subscribers receive, and builds a month-by-month calendar with a subscriber-only offer for your next sale.
+
+explain: |
+  Active subscribers are easy to lose by accident. Every sale email, discount code or generic newsletter is a prompt to reconsider. In one brand's data, campaigns sent to active subscribers caused more cancels than new starts. When those subscribers were left out of the sends, the brand added about 24,000 a month net, and with other changes churn went from about 19 percent to 13 to 14 percent. That is one brand and several changes, so read it as a direction.
+
+  This skill gives you a plan for the other side: what to send, and when to give a gift. It finds the order numbers where your subscribers leave, puts a low-cost gift there, and makes sure the billing reminder and confirmation announce it. It caps subscriber messages to three kinds, leaves them out of sales, and plans one to three thoughtful campaigns a month.
+
+when:
+  - Your subscribers get the same sale emails as everyone else.
+  - You know when subscribers cancel by order number, or you suspect months 2, 4 and 6.
+  - A sale is coming and you want subscribers to get their own offer instead of a code that tempts them to cancel and re-buy.
+
+you_give:
+  - Subscriber churn by month or order number
+  - Your gift options and what each costs
+  - Your campaign calendar for the next 90 days
+  - Other products you could sample or offer as add-ons (optional)
+you_get:
+  - "An order-by-order plan: gift, reminder version and any message"
+  - "Subscriber send rules: exclusions, a cap and content types"
+  - A calendar of one to three campaigns a month for subscribers
+  - A subscriber-only add-on offer for your next sale
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your cancels by order number, or say you have none and want to start from months 2, 4 and 6.
+  - List the gifts you could give and what they cost per order.
+  - Paste your next 90 days of planned sends and sale dates.
+  - Measure cancels after each subscriber send and keep what lowers them.
+
+how_it_works:
+  - title: Finds the risk orders
+    text: Looks at your churn by order number. With no data, starts from months 2, 4 and 6 and tests.
+  - title: Ranks gifts by cost
+    text: Low production cost first, then samples of other products, then a digital extra. Never more of the same product.
+  - title: Announces each gift
+    text: Puts the gift in the billing reminder and the confirmation, because a gift nobody knows about stops no cancels.
+  - title: Plans the day-28 peak
+    text: Sends the reminder before the charge with a reason to stay, such as a gift or a new item.
+  - title: Limits subscriber messages
+    text: "Keeps three kinds of message: billing reminders, order confirmations and notifications, and a few thoughtful campaigns."
+  - title: Leaves subscribers out of sales
+    text: Excludes active subscribers from promos so they are not nudged to cancel and re-buy cheaper.
+  - title: Builds the calendar
+    text: One to three campaigns a month, a monthly giveaway if it fits, and a subscriber-only offer for sale days.
+
+output_shape: |
+  RISK ORDERS: <order numbers where subscribers leave, from your data>
+
+  ORDER-BY-ORDER PLAN
+  Order <n> | gift: <gift, cost> | reminder: <version> | message: <if any>
+
+  SEND RULES
+  Allowed: billing reminders | confirmations and notices | up to <1 to 3> campaigns a month
+  Excluded from: <sales, promos, discount blasts>
+  Cap: <messages a month>
+
+  CALENDAR (next 90 days)
+  Month <n>: <campaign 1: type, purpose> | <campaign 2>
+  Giveaway: <rule, cost, legal check>
+
+  SALE DAY OFFER FOR SUBSCRIBERS
+  <add-on product, discount, how it joins their next order>
+
+  MEASURE: cancels within <3 to 7> days of each send, by send
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Churn by order number
+    how: Give the real numbers. The source points at months 2, 4 and 6, but your own data may differ.
+  - what: Gift cost
+    how: List what each gift costs. The plan keeps gift cost low enough to protect subscriber margin.
+  - what: Number of campaigns
+    how: Start with one a month. Add up to three only if cancels do not rise after each send.
+  - what: Add-on products
+    how: Name products that pair well with the subscription. The sale offer needs one.
+
+judge:
+  - Gifts sit on the order numbers where your data shows churn, not on every order.
+  - No gift is more of the product the customer already has.
+  - Each gift is announced in the billing reminder and the confirmation.
+  - Subscribers are excluded from sales and generic promos.
+  - Numbers from the sources are shown as direction only.
+
+test:
+  - Pick one risk order and add the gift. Compare cancels at that order for two cycles against the cycle before.
+  - Check cancels within a few days of every subscriber send. Flag any send where cancels exceed starts.
+  - Run the subscriber-only offer in your next sale. Compare subscriber cancels against the last sale.
+  - Ask five subscribers if the messages feel like too many or too few.
+
+improve:
+  - Save your risk orders and gift list to your brand file, so the plan starts from them.
+  - Add your own cap on messages a month once you see where cancels rise.
+  - Replace the giveaway if your region has rules that make it hard, and check with a qualified person.
+  - Pair it with the Billing reminder and confirmation writer and the Subscription churn audit.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "It lets you leave active subscribers out of segments and shows cancels after each send when you connect your subscription app."}
+    - {name: "Skio or Recharge", why: "Your subscription app holds churn by order number and the add-on to a next order."}
+    - {name: "Any good chat AI", why: "Any current chat AI can turn your numbers into the plan."}
+  inputs:
+    - "Your cancel reasons, to match gifts to them"
+    - "Last quarter's campaign sends with cancels after each"
+    - "Gift cost per unit"
+    - "Your sale calendar"
+
+terms:
+  - term: Rebill
+    meaning: A repeat charge on a subscription after the first order.
+  - term: Exclusion
+    meaning: A rule that keeps a group, such as active subscribers, out of a certain email send.
+  - term: Add-on
+    meaning: A product added to a subscriber's next order, usually at a discount.

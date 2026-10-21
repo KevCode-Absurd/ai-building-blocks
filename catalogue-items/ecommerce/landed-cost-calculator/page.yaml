@@ -1,0 +1,129 @@
+new_slug: landed-cost-calculator
+name: "Landed cost calculator"
+summary: "Give it your quote and freight. Get cost per sellable unit and margin, scored out of 100."
+job: plan-supply-chain
+thinking: medium
+thinking_why: "The work is arithmetic and layers, so a mid-level model is enough. Check its sums yourself once."
+
+headline: "Landed cost calculator"
+subhead: "Give it the factory's price, the freight quote, fees and your selling price. It adds every layer the quote leaves out and counts defects. You get the true cost per sellable unit, your margin, a go or no-go, and a score out of 100."
+
+explain: |
+  A factory quote is not your cost. The price on the quote covers making the product. After the goods leave the factory, you pay for freight, duties and taxes, insurance, packaging, warehouse storage, pick and pack, platform and payment fees, and courier fees. One founder in the source saw a margin that looked like 60 percent land near 20 percent once every layer was in. A heated hoodie that costs $40 to make cannot sell at $50.
+
+  This skill lists every layer, then divides the total by the units that pass inspection, not the units you ordered. It shows air against sea, a small order against a big one, and the selling price you need for your target margin. The score tells you how safe the numbers are. It is a house scale, and the page shows how each point is earned. It also gives you the figures to load into Shopify as cost per item, so daily profit stays true.
+
+when:
+  - You have a quote and want to know if the product can make money before you place the order.
+  - Freight, supplier, 3PL or import country changed, and you need the new cost per unit.
+  - You are choosing between air and sea, or between two order sizes.
+
+you_give:
+  - The factory price per unit (ex-factory) and the units you will order
+  - Freight quote, your duty and tax rate, insurance and packaging costs
+  - "Warehouse costs: storage, pick and pack, and courier fees per order"
+  - Your selling price, with or without sales tax, plus platform and payment fees
+  - Your expected defect share, or leave it blank for the 10 percent spare rule (optional)
+you_get:
+  - Cost per unit by layer, from ex-factory to courier
+  - Cost per sellable unit after defects and spare units
+  - Your margin at your price, and the price you need for your target margin
+  - "Scenarios: air or sea, small or big order, each at its own price break"
+  - A go or no-go, a score out of 100, and how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the quote, the freight quote and your fees. Get the duty rate from a customs broker or your country's tariff lookup and paste it in too.
+  - Say your selling price and target margin.
+  - Read the layers and the score. Fix any "estimate" layer by getting a real quote, then run it again.
+  - If you go ahead, enter the landed cost in Shopify as cost per item for each product.
+
+how_it_works:
+  - title: Lists the layers
+    text: Freight, duties and taxes, insurance, packaging, warehousing, pick and pack, platform and payment fees, and courier fees, each on its own line.
+  - title: Counts defects
+    text: Divides total spend by units that pass inspection. One buyer found about 300 defects in 10,000 pieces and advised ordering at least 10 percent extra.
+  - title: Tests the idea
+    text: Compares landed cost with your price before you order. If the product cannot sell at a price buyers pay, it stops here.
+  - title: Finds the margin
+    text: Shows profit per unit before ads, and the price needed for your target. Sales tax comes out so reports are not mixed.
+  - title: Compares ship methods
+    text: Puts air and sea side by side on the whole bill and the lead time.
+  - title: Reruns at each price break
+    text: Shows the unit cost at each volume and the extra cash tied up in stock.
+  - title: Scores it
+    text: Gives a score out of 100 for margin, cushion and how many layers are real quotes.
+  - title: Sets up Shopify
+    text: Gives the cost-per-item figure to enter and how to see profit per day.
+
+output_shape: |
+  LANDED COST  <product>  order <units>  <date>
+  Ex-factory <$> | Freight <$> | Duties and taxes <$> | Insurance <$> | Packaging <$>
+  Warehousing <$> | Pick and pack <$> | Platform and payment fees <$> | Courier <$>
+  Each layer: <real quote / looked up / estimate>
+  Landed cost per unit ordered <$>
+  Defects <n> (<%>) + spare units <n>: cost per sellable unit <$>
+
+  MARGIN  price <$> (tax <in / out>)  margin <%>
+  Price for your <target>% margin: <$>
+  Ad room before profit hits zero: <$ per order>
+
+  SCENARIOS
+  <air / sea / small order / big order> | unit <$> | margin <%> | lead time <days> | cash tied up <$>
+
+  VERDICT  <go / hold / no-go>
+  SCORE  <n>/100  = <margin points> + <cushion points> + <quote-quality points>
+  Where it is weak: <layers still estimated>
+
+  SHOPIFY  cost per item: <$>   recheck when: <freight, supplier, 3PL or country changes>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Real quotes for every layer
+    how: Each layer you replace with a real quote raises the quote-quality part of the score. Estimates produce a false margin.
+  - what: Your duty rate
+    how: Get it from a customs broker or the tariff lookup for your product code and import route. The skill does not guess duty rates.
+  - what: Defect share
+    how: Use your own number from past orders. With none, the skill uses the 10 percent spare rule from one buyer's advice and says so.
+  - what: Your target margin
+    how: Name it up front. The verdict and the price needed both depend on it.
+
+judge:
+  - Every layer has its own line and says if it is a quote, a look-up or an estimate.
+  - Cost per sellable unit uses units that pass inspection, not units ordered.
+  - Duty comes from a source you named, not from the AI.
+  - The score shows how it was added up, so you could redo it.
+  - Scenarios use the same layers and change only what they say they change.
+
+test:
+  - Run it on a product you already sell and know the true cost of. The landed cost should be close to your books.
+  - Change one layer, such as freight, and see that only the affected lines move.
+  - Run it twice on the same input. The unit cost should match to the cent.
+  - Add up the layers yourself in a sheet. The total should equal the skill's total.
+
+improve:
+  - Save your 3PL rates, payment fee rates and platform fee in the skill file so you only type the order.
+  - Add your usual defect share for each product type as a default.
+  - Add a rule for your own go line, such as a minimum margin after ad room.
+  - "Pair it with a stock reorder planner (lead times: production 20 to 30 days, sea 30 to 40 days door to door, air 7 to 10 days, per the source guide)."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can add the layers. Paste your numbers and check one sum by hand."}
+    - {name: "Shopify", why: "Holds cost per item for every product, so profit per order and per day use the landed cost."}
+    - {name: "A customs broker or your country's tariff lookup", why: "Gives the duty rate for your product code and route. The skill needs it from outside."}
+  inputs:
+    - "A written freight quote from a forwarder, with the route and weight it covers"
+    - "Your 3PL's rate sheet"
+    - "Past orders' defect counts"
+    - "Your platform and payment fee rates"
+
+terms:
+  - term: Landed cost
+    meaning: The full cost of one unit once it sits in your warehouse ready to sell, with freight, duties and fees included.
+  - term: Ex-factory price
+    meaning: The price at the factory door. It covers making the product and nothing after.
+  - term: 3PL
+    meaning: A company that stores your stock and packs and ships your orders.
+  - term: Sunk cost
+    meaning: Money you cannot get back. Import duties are one; sales tax is not.

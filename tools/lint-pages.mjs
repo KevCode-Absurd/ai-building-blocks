@@ -5,12 +5,12 @@ import path from "node:path";
 import YAML from "../site/node_modules/yaml/dist/index.js";
 
 const REQUIRED = ["new_slug", "name", "summary", "job", "headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve"];
-const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai", "think-with-minds", "test-an-idea", "plan-strategy", "build-product", "build-software", "sell-and-negotiate", "lead-people", "speak-and-persuade", "write-and-tell-stories", "design-work", "think-and-decide", "money-and-investing", "work-with-files", "build-websites", "test-and-fix-code", "ship-and-host", "secure-code", "connect-tools", "make-skills", "make-images", "organise-work", "work-with-audio", "run-your-store", "get-found-in-search", "write-emails", "set-prices", "help-customers", "hire-people", "check-contracts", "track-numbers", "document-work", "research-topics", "teach-and-train", "plan-supply-chain"];
+const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai", "think-with-minds", "test-an-idea", "plan-strategy", "build-product", "build-software", "sell-and-negotiate", "lead-people", "speak-and-persuade", "write-and-tell-stories", "design-work", "think-and-decide", "money-and-investing", "work-with-files", "build-websites", "test-and-fix-code", "ship-and-host", "secure-code", "connect-tools", "make-skills", "make-images", "organise-work", "work-with-audio", "run-your-store", "get-found-in-search", "write-emails", "set-prices", "help-customers", "hire-people", "check-contracts", "track-numbers", "document-work", "research-topics", "teach-and-train", "plan-supply-chain", "find-products", "set-up-store", "speed-up-store", "test-store-changes", "run-google-ads", "launch-and-scale-ads", "keep-customers", "sell-on-amazon", "protect-your-store"];
 const BANNED = ["delve", "foster", "leverage", "utilize", "facilitate", "empower", "streamline", "robust", "cutting-edge", "game changer", "game-changer", "unlock", "supercharge", "harness", "elevate", "seamless", "effortless", "transformative", "revolutionize", "paradigm", "synergy", "holistic", "journey", "ecosystem", "best-in-class", "world-class", "next-level", "morrow", "ledgerly", "hale studio"];
 const words = (s) => String(s ?? "").trim().split(/\s+/).filter(Boolean).length;
 
 const pages = [];
-for (const cat of ["general", "ecommerce"]) for (const slug of fs.readdirSync(`catalogue-items/${cat}`)) {
+for (const cat of ["general", "ecommerce", "agents"]) for (const slug of fs.existsSync(`catalogue-items/${cat}`) ? fs.readdirSync(`catalogue-items/${cat}`) : []) {
   if (fs.existsSync(`catalogue-items/${cat}/${slug}/item.yaml`)) pages.push({ slug, file: `catalogue-items/${cat}/${slug}/page.yaml` });
 }
 const WF = "tools/orchestrator-pages";
@@ -24,8 +24,10 @@ for (const { slug, file } of pages) {
   let p;
   try { p = YAML.parse(raw); } catch (e) { report.push({ slug, file, issues: [`bad YAML: ${e.message.split(String.fromCharCode(10))[0]}`] }); continue; }
   // Skills built from a mind's sources (item.yaml has minds:) have no worked example yet (docs/SOURCE-SKILLS-PRD.md).
-  const itemFile = file.endsWith("page.yaml") ? file.replace(/page\.yaml$/, "item.yaml") : `catalogue-items/orchestrators/${slug}/item.yaml`;
-  const fromMinds = fs.existsSync(itemFile) && /^minds:/m.test(fs.readFileSync(itemFile, "utf8"));
+  const itemFile = file.endsWith("/page.yaml") ? file.replace(/page\.yaml$/, "item.yaml") : `catalogue-items/orchestrators/${slug}/item.yaml`;
+  // Skills rebuilt from sources (with minds or credits) get their example in a later test round.
+  const itemText = fs.existsSync(itemFile) ? fs.readFileSync(itemFile, "utf8") : "";
+  const fromMinds = /^minds:/m.test(itemText) || /^generated_from:/m.test(itemText) || (/^type: (agent|prompt)/m.test(itemText) && /^example_pending: true/m.test(itemText)) || (/^origin: rebuilt/m.test(itemText) && /^credits:/m.test(itemText) && /^example_pending: true/m.test(itemText));
   for (const f of REQUIRED) if ((f !== "example" || !fromMinds) && (p[f] == null || (Array.isArray(p[f]) && !p[f].length))) issues.push(`missing ${f}`);
   for (const f of ["when", "you_give", "you_get", "how_to_use", "judge", "test", "improve"]) if (Array.isArray(p[f]) && p[f].some((x) => typeof x !== "string")) issues.push(`${f} has an item that is not plain text (quote lines containing ": ")`);
   if (p.job && !JOBS.includes(p.job)) issues.push(`unknown job "${p.job}"`);

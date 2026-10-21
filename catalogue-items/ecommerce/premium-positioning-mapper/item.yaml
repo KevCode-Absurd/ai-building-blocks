@@ -1,0 +1,24 @@
+slug: premium-positioning-mapper
+name: "Premium positioning mapper"
+summary: "Give it your product and buyer groups. Get exclusivity, identity and story angles per group to test."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: persona, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: angle_library}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [seth-godin]
+credits:
+  - {title: "The Psychology of Premium Branding", by: "Owner of a paid-social agency that works with premium fashion and swimwear stores (name not given in the video)", used: "The three parts of a premium position (exclusivity, identity, story), the step of mapping what exclusive means to each buyer group, and the warning against heavy discount blasts"}
+  - {title: "Marketing Godfather: How To Build An Audience That Buys", by: "Seth Godin, interviewed on a business podcast", used: "Once basic needs are met, people buy a story about status and who they belong with"}
+  - {title: "This Is Marketing", by: "Seth Godin (book)", used: "Price as a signal, cheap as a sign of fear, the profit sums on a small price rise, and pairing free ideas with expensive keepsakes"}
+  - {title: "Premium isn't about price, it's about positioning", by: "Founder of a canned sports-hydration brand, in a podcast interview", used: "Stay inside the price band shoppers know in your category and win premium through content, pack and where you sell"}

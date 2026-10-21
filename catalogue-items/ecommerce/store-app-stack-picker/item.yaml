@@ -1,0 +1,22 @@
+slug: store-app-stack-picker
+name: "Store app stack picker"
+summary: "List your apps. Get keep, swap or cut for each, a vetting list and a score."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: store_capture, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients (name not given)", used: "Free native Shopify apps to try first, replacing paid filter apps, bundles, subscriptions, turning on app embeds, vetting an app, image and speed quick fixes"}
+  - {title: "Shopify Store Setup Full Tutorial 2026: Step by Step", by: "Tutorial author (name not given)", used: "The three-app starting set and the warning against installing ten at once"}
+  - {title: "The Official Shopify 2026 Tutorial (four-part series)", by: "Kylie Maher, Learn with Shopify", used: "Removing unused apps, vetting thresholds, free email and search tools, speed checks and image rules"}

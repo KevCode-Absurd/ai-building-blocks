@@ -1,0 +1,24 @@
+slug: write-offers-for-each-buyer-type-and-pick-the-best
+name: "Write offers for each buyer type and pick the best"
+summary: "Give it one product and its reviews. Get an offer per buyer type, a profit check and a test plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: [hero-product-repositioner, offer-checklist-reviewer, offer-profit-per-session-checker, offer-test-planner]
+steps:
+  - {uses: hero-product-repositioner, note: "Starts the chain: one angle and one offer per buyer type."}
+  - {uses: offer-checklist-reviewer, note: "Reads the angles and offers from the step before and returns a stronger offer with its three best changes."}
+  - {uses: offer-profit-per-session-checker, note: "Checks the revised offers from the step before against your costs and visit numbers."}
+  - {uses: offer-test-planner, note: "Turns the winning offers into a funded test with a control and a spend rule."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-offers-for-each-buyer-type-and-pick-the-best/skeleton.yaml

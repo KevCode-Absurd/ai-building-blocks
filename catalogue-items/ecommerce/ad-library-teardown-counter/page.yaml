@@ -1,0 +1,127 @@
+new_slug: ad-library-teardown-counter
+name: "Ad library teardown counter"
+summary: "Paste an Ad Library export. Get ad counts by format, age, page and awareness stage, plus content gaps."
+job: study-competitors
+thinking: medium
+thinking_why: "It counts and labels many ads, so a mid-size model with a table works well. Use a stronger one for 100 or more ads."
+
+headline: "Ad library teardown counter"
+subhead: Paste a rival's ads from the public Meta Ad Library, with start dates. It counts assets, formats and copy lines, ad age, where ads send traffic and the awareness mix. You get a measured table, missing script beats and content gaps. It shows structure, never spend.
+
+explain: |
+  Scrolling a rival's ad library gives you opinions. You see a lot of ads and come away with a feeling. A count is better. How many of those ads are new this week? Where do they send people? How many talk to buyers who don't know the problem yet? Which parts of a good script do they skip?
+
+  This skill turns an export into a table. It counts creative assets, copy lines and formats, finds the median and oldest ad age, shares of ads by page type, the awareness-stage mix and how many mention price or a guarantee. It transcribes videos and checks eight script beats, and lists what's missing. It also tells you which rivals to study, brands a step or two above you, and picks the longest-running ads. Libraries show no spend or sales, so every finding is about structure only.
+
+when:
+  - You want to know how a rival really runs their ads before you plan yours.
+  - You've collected dozens of a competitor's ads and don't know what to do with them.
+  - You want to find the buyer groups and messages that no rival in your category covers.
+
+you_give:
+  - A rival's ads from the public Meta Ad Library (copy, format, start date and link)
+  - The brand and all the pages it runs ads from
+  - A list of the pages the ads point to (optional)
+  - Your own yearly revenue, to check you picked rivals at the right size (optional)
+you_get:
+  - Counts of assets, copy lines and formats, and the share that are catalog ads
+  - Median and oldest ad age, destination share and the awareness-stage mix
+  - The share of ads that mention price, a discount or a guarantee, and which of the eight script beats are missing
+  - Content gaps and a shortlist of the longest-running concepts
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In the Meta Ad Library, search all ads for the rival, include inactive ads and check each page they use. Copy the ads and start dates by hand.
+  - Paste the list and add transcripts of any videos you want checked.
+  - Read the gaps first, then pick the concepts on the shortlist to rebuild with your own product and proof.
+  - Run the winning ad DNA mapper on the shortlist to see why those ads work.
+
+how_it_works:
+  - title: Picks the right rivals
+    text: Brands a step or two above your size, not giants and not tiny stores.
+  - title: Counts assets
+    text: Unique creative assets, distinct copy lines, formats and the catalog ad share.
+  - title: Works out ad age
+    text: The median and oldest live ad from start dates, and any weekly launch rhythm.
+  - title: Counts destinations
+    text: The share of ads sent to each page type, and the pages that get no traffic.
+  - title: Sorts by awareness
+    text: From unaware to most aware, with a reason for each label.
+  - title: Counts offer mentions
+    text: The share of ads that mention price, a discount, a guarantee, loyalty, an app or a store.
+  - title: Checks the eight beats
+    text: Hook, problem, mechanism, proof, objection, offer, risk reversal and call to action, in each transcribed video.
+  - title: Finds gaps and a shortlist
+    text: Lists what is missing and saves the longest-running concepts to rebuild.
+
+output_shape: |
+  STRUCTURE ONLY: the library shows no spend or sales. Sample: <n ads> from <pages>, collected <date>.
+
+  COUNTS
+  Assets <n> | distinct copy lines <n> | formats: video <n>, static <n>, GIF <n>, carousel <n> | catalog ads <n%>
+
+  AGE         median <n days> | oldest live ad <n days> | launch rhythm <...>
+  DESTINATIONS  collection <n%> | product <n%> | home <n%> | content <n%> | persona page <n%> | no traffic <pages>
+  AWARENESS MIX  unaware <n> | problem <n> | solution <n> | product <n> | most aware <n>
+  OFFER MENTIONS price <n%> | discount <n%> | guarantee <n%> | loyalty <n%> | app or store <n%>
+
+  EIGHT BEATS (videos transcribed: <n>)
+  hook | problem | mechanism | proof | objection | offer | risk reversal | CTA   missing most <...>
+
+  CLAIMS AND PROOF  sharpness by stage | mismatched numbers | claims to avoid
+  CONTENT GAPS  <list>
+  SHORTLIST  <concept> | format | run length <days> | how to rebuild with our proof
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what would sharpen this>
+
+tweaks:
+  - what: Which rivals
+    how: Choose brands near 10 times your revenue. Too big and you copy things you can't match. Too small and they teach nothing.
+  - what: Inactive ads
+    how: Include them when you search. Paused ads show what has run before, and old long-running ads are the best signal.
+  - what: Video transcripts
+    how: Paste full transcripts for the eight beats check. Without them, the skill counts only the written copy.
+  - what: Start dates
+    how: Include them on every ad. Median age and oldest ad need them.
+  - what: Sample size
+    how: Collect at least 20 ads. The skill puts the sample size beside every percentage.
+
+judge:
+  - The words STRUCTURE ONLY appear at the top, so no one reads the counts as sales results.
+  - Every share shows the sample size beside it.
+  - Awareness labels each have a one-line reason.
+  - Missing beats are named, not just counted.
+  - Risky claims are flagged and not copied.
+
+test:
+  - Count one small set by hand, such as 10 ads, and compare formats and ages with the skill's.
+  - Run the same set a week later. Ages should move by seven days and counts should barely change.
+  - Check three awareness labels yourself. If you disagree on more than one, ask for its reasons.
+  - Pick one shortlist concept and write how you would rebuild it with your own proof, without using the rival's words.
+
+improve:
+  - Add your own awareness definitions to the skill file, so labels match how you sort buyers.
+  - Add a rule for the minimum sample size you will trust.
+  - Save each teardown in your brand file with the date, so you can see how a rival's mix shifts.
+  - Pair it with the competitor ad swipe file builder to collect the ads, and the winning ad DNA mapper to study the shortlist.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ad Library", why: "Free and public. Shows a rival's ads, start dates and links, including inactive ones if you ask for all ads."}
+    - {name: "Any good chat AI", why: "Any current chat AI can count and label a pasted list, and transcribe a video if you attach it."}
+  inputs:
+    - "Transcripts of the rival's video ads"
+    - "A list of the pages their ads point to"
+    - "Screenshots of the landing pages"
+    - "Your own awareness-stage definitions"
+
+terms:
+  - term: Awareness stage
+    meaning: How much a buyer already knows, from not knowing they have the problem to being ready to buy.
+  - term: Catalog ad
+    meaning: An ad that shows products pulled from a store's product feed.
+  - term: Risk reversal
+    meaning: A guarantee or return promise that takes the risk off the buyer.
+  - term: Ad age
+    meaning: The days since an ad was first shown, found from its start date.

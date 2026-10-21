@@ -1,0 +1,118 @@
+new_slug: category-search-plan-builder
+name: "Category search plan builder"
+summary: "Pick one product category. Get a 90-day plan of what to publish, where, and in what order."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It builds a long plan from your pages and rivals, so it needs steady reasoning more than deep analysis."
+
+headline: "Category search plan builder"
+subhead: Tell it the one product category you want to win. It checks what you already have, maps the topics your buyers search by how much they already know, and hands back a 90-day plan of what to publish, where, who shares it, and which five searches to track.
+
+explain: |
+  Most stores try to rank every category at once and end up a little further along in each direction. A better bet is one category at a time, for a quarter, sometimes two, until you cover it so fully that search engines and AI assistants treat your store as the place for that topic.
+
+  This skill builds that plan. It counts what you already have on the category, asks an AI for topics for each stage of buyer awareness (starting with the buyers who already know your product), picks five core searches to track, and orders the work: your own site first, then channels of yours that already get indexed, then placements you earn. It also sizes the work honestly, so you can cut it to what your team can do.
+
+when:
+  - You sell in several categories and don't know where to put your search effort first.
+  - You want a quarter-long content plan for one collection, with a clear order.
+  - You want a plan that covers both Google results and AI answers for one product type.
+
+you_give:
+  - The one category to win (the collection page and 3 or 4 of its product pages)
+  - Who will do the work and how many hours a week they have
+  - Search Console, GA4 or a crawl export (optional)
+  - 5 to 10 named competitors in that category (optional)
+  - Your brand voice and what you may claim (optional)
+you_get:
+  - A 90-day plan with weekly asset counts and an owner for each task
+  - A topic map by buyer awareness stage, bottom of the funnel first
+  - The 5 core searches to track, with a day 30, 60 and 90 check
+  - A page and asset list with the channel for each, and who shares each post
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the link to the category page and 3 or 4 product pages, and name the category.
+  - Say who will do the work and the hours a week they have. A solo owner gets a smaller plan.
+  - Paste any Search Console or crawl numbers and your main rivals if you have them.
+  - Cut the topic list yourself (about one in five will be weak), then start with the first week.
+
+how_it_works:
+  - title: Picks one category
+    text: Works on a single category for one quarter, sometimes two. It refuses to spread the plan across the whole store.
+  - title: Checks what you have
+    text: Counts your category pages and how many assets you already have on the topic, using the pages you paste and a brand-plus-category search.
+  - title: Maps topics by awareness
+    text: Asks for topics at each of the five awareness stages, grounded in your collection page and product pages, then drops the weak ones.
+  - title: Builds the bottom first
+    text: Starts with buyers who already know what they want, such as "best X for vegans" and "X vs Y", and decides whether each topic is an FAQ or its own page.
+  - title: Picks 5 core queries
+    text: Chooses five searches with different intent and records where you stand in classic results, AI answers, AI citations and video.
+  - title: Orders the publishing
+    text: Your site first with the category page at the centre, then owned channels that get indexed, then earned placements.
+  - title: Sizes the work
+    text: Counts the assets in the plan and cuts it to your hours. Sets day 30, 60 and 90 checks.
+
+output_shape: |
+  CATEGORY  <the one category>   TIME  <1 or 2 quarters>
+  WHAT YOU HAVE  <category pages, assets found, gaps>
+  5 CORE QUERIES
+  <query> | <intent> | classic: <rank> | AI answer: <named?> | AI cited: <yes/no> | video: <...>
+  TOPIC MAP (by awareness stage, most aware first)
+  <stage>: <topic> | <FAQ on product page / own page> | <channel>
+  PUBLISH ORDER
+  1 <own site: pages, all linking to the category page>
+  2 <owned channels that get indexed: native variants>
+  3 <earned placements: budget needed>
+  90-DAY PLAN
+  Week <n>: <assets> | owner <name> | shared by <name>
+  SIZE  <assets in plan> vs <assets your hours allow>
+  CHECKS  day 30 / 60 / 90: <what to re-check, stay or move on>
+  CHECKS MISSED: <none, or list>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: Hours you really have
+    how: Say how many hours a week. A solo founder should get the 5 core queries and about 20 pages in the quarter, not 200 assets.
+  - what: Channels you already own
+    how: Name channels with real followers. With none, the plan starts with your site and one channel.
+  - what: Competitors
+    how: Name 5 to 10 rivals so the bottom-of-funnel topics include versus pages that fit your market.
+  - what: Budget for earned placements
+    how: State a number. Sponsored posts and free product cost money, so the plan only promises what you can pay for.
+
+judge:
+  - It picked exactly one category and says what happens to the others.
+  - The topics are grouped by awareness stage and the most aware group comes first.
+  - Each of the 5 core queries has a different intent.
+  - Every task has an owner and the asset count fits the hours you gave.
+  - Any result from the source is labelled as the source's own example, not a promise.
+
+test:
+  - Run it for a category where you already know your best-selling search term. That term should show up in the core queries or the topic map.
+  - Run it twice. The category choice and the publishing order should match, even if the topic wording changes.
+  - Check three topics by hand in Google. If a topic has no real searches or already belongs to a strong page of yours, mark it as a miss and tell the skill why.
+  - After day 30, run the five core queries again and compare with the first record.
+
+improve:
+  - Add your brand voice and claims file to "What you need" so every topic follows what you can say.
+  - Write your own cut rules (for example, "no topics about price comparisons") so weak topics drop out faster.
+  - Save the 5 core queries and their day 0 record to your brand file, so day 30 and 60 checks compare against the same baseline.
+  - Pair it with the AI citation source finder to plan the earned part, and the comparison page set planner for the versus pages.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It drafts and sorts the topic map once you paste your category page and product pages."}
+    - {name: "Google Search Console", why: "Free data on the searches you already show up for, so the plan builds on what works."}
+  inputs:
+    - "A crawl of your site filtered to titles containing the category word, to count your category pages"
+    - "A list of your owned channels with follower counts and whether their posts get indexed"
+    - "A Search Console export for the category's pages"
+
+terms:
+  - term: Awareness stage
+    meaning: How much a buyer already knows about the problem and about you. The most aware buyers already want your kind of product.
+  - term: Owned channel
+    meaning: A place you control, such as your YouTube channel or company page, as opposed to a site that writes about you.
+  - term: Earned placement
+    meaning: A mention or review on someone else's site that you didn't write yourself, often won with outreach, free product or a paid post.

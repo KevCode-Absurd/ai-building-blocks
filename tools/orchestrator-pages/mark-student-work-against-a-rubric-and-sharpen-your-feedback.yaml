@@ -1,0 +1,87 @@
+new_slug: mark-student-work-against-a-rubric-and-sharpen-your-feedback
+name: Mark student work against a rubric and sharpen your feedback
+summary: Give it a learning goal and student work. Get a rubric, the gaps, the causes and checked feedback.
+job: teach-and-train
+thinking: high
+thinking_why: Tracing mistakes to causes and judging feedback quality takes careful reading. Give it your strongest model.
+headline: Find what a student's work is missing and write comments that change the next piece
+subhead: Give it a learning goal and a piece of student work. It builds a one-criterion rubric, finds exactly what the work is missing, traces the mistakes to likely causes, and checks the comments you wrote so each one tells the student what to do next.
+explain: |
+  Students often get comments such as "needs more detail" and make the same mistake on the next piece. The comment names a symptom, not the cause, and does not say what to do. Marking takes time, and little changes.
+
+  The steps move from the goal to the comment. First it builds a rubric with one criterion and open columns for evidence, so you and the student read the same target. After you pick the work, it sets the work against the rubric and names what is missing. Then it groups the errors by likely cause, such as a slip or a misunderstanding, and matches each to feedback or teaching. You write your comments from that. The last step checks each comment for how specific it is and rewrites the weak ones.
+when:
+  - Students repeat the same mistakes after you have marked their work.
+  - Your comments take long to write and you suspect they are too vague.
+  - You want a rubric students can use to check their own work.
+you_give:
+  - A learning goal or the task students did
+  - One piece of student work, or a small set, to mark
+  - After you write your comments, the comments themselves
+you_get:
+  - A single-point rubric with open columns for evidence
+  - The exact gaps between the work and the rubric
+  - Likely causes of the mistakes, each with a feedback or teaching fix
+  - A check of your comments with a better wording for the weak ones
+how_to_use:
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it the learning goal. Read the rubric and fix the wording before you use it.
+  - Remove the student's name, then paste the work, so it can be marked against the rubric.
+  - Write your comments from the causes, then paste the comments for the last check.
+how_it_works:
+  - title: Build the rubric
+    text: Writes the one criterion for the goal, describes what meeting it looks like and leaves open columns for evidence of falling short and exceeding.
+  - title: Pick the work
+    text: This part is yours. Choose one piece of student work, or a small set, and have it ready to paste without names.
+  - title: Find the gaps
+    text: Sets the work against the rubric, names what is missing and why, and suggests the feedback to give.
+  - title: Trace the causes
+    text: Groups the errors by likely cause, separates slips from misunderstandings and matches each cause to feedback or teaching.
+  - title: Write your comments
+    text: This part is yours. Write your comments to the student using the causes and fixes above.
+  - title: Check the feedback
+    text: Reads each comment for how specific it is and whether it says what to do next, flags comments that only praise or only judge, and rewrites the weak ones.
+output_shape: |-
+  STEP 1: RUBRIC
+    One criterion | what meeting it looks like | open columns for evidence
+
+  PAUSE: PICK THE STUDENT WORK
+
+  STEP 2: GAPS
+    What is missing | why | feedback to give
+
+  STEP 3: CAUSES OF MISTAKES
+    Errors grouped by cause | slip or misunderstanding | feedback or teaching for each
+
+  PAUSE: WRITE YOUR COMMENTS
+
+  STEP 4: FEEDBACK CHECK
+    Each comment rated | what is vague | better wording
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How sharp the goal is
+    how: A goal that says what students should be able to do gives a clean criterion. A goal such as "understand fractions" gives a vague rubric.
+  - what: How many pieces of work
+    how: Three to five pieces show patterns of cause. One piece shows that student's gaps only.
+  - what: Age and subject
+    how: Name both, so the rubric wording and the feedback suit the students who will read them.
+  - what: Names and personal details
+    how: Remove student names and any personal details before you paste work. The steps do not need them.
+judge:
+  - The rubric has one criterion that a student can read and understand.
+  - Each gap names something visible in the work, not a general quality.
+  - Causes are separated into slips and misunderstandings, with a reason for each.
+  - Every rewritten comment says what the student should do next.
+  - Nothing in the output tells you to give a grade you did not ask for.
+test:
+  - Mark one piece of work yourself first, then compare your gaps with the ones found.
+  - Give one student a rewritten comment and another the original. See which one leads to a better next draft.
+  - Run the cause step twice on the same errors. The causes should match even if the wording differs.
+improve:
+  - Save causes that come up again and again in a file. Teach to them before the next task.
+  - Add your marking policy, such as how many comments per piece, to the last step.
+  - Share the rubric with students before the task so they can check their own work.
+  - Pair it with a quiz of the common mistakes to use as a starter next lesson.

@@ -1,0 +1,71 @@
+new_slug: map-your-rivals-and-write-a-message-they-cannot-answer
+name: Map your rivals and write a message they cannot answer
+summary: Give it your product and rivals. Get a position map, the words nobody owns and a message you can defend.
+job: study-competitors
+thinking: medium
+thinking_why: Each step reads the one before, but none needs long sums. A mid-size model is enough.
+headline: Find the message your rivals cannot answer
+subhead: Give it your product and your rivals. It maps where each one sits, shows which words are taken and which are open, then writes a message built on a strength of yours that is also their weakness.
+explain: |
+  When every rival says "quality" and "trust", buyers hear one voice and pick on price. Copying the leader's words makes it worse. You need a spot on the map that is open and a message you can prove in a few minutes.
+
+  The steps go from wide to narrow. First it lists every real alternative, including doing nothing, and plots them on two axes buyers feel. Then it finds the one word each rival owns and the words nobody can own. Last it matches your proven strengths against what rivals are weak at, keeps only the pairs a buyer can check, and tests each rival's best reply. Give it your product facts and, if you have them, buyer quotes and your brand file.
+when:
+  - Your site and ads sound like everyone else's in your category.
+  - A bigger rival keeps winning on the same word.
+  - You are about to write a new tagline, landing page or ad set and want the message settled first.
+you_give:
+  - Your product, who it is for and the rivals you worry about
+  - What buyers say about you and them, from reviews or calls (optional)
+  - Your brand file or a list of strengths you can prove (optional)
+you_get:
+  - A map of your rivals on two axes, with crowded and open corners marked
+  - The word each rival owns, the claims nobody owns and three open words
+  - Ranked messages built on your strengths, each with proof and the rival's likely reply
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - List five or more rivals, including the cheap option and doing nothing.
+  - Only give strengths you can show with a number, a policy or a review. It drops the rest.
+how_it_works:
+  - title: Map where each rival sits
+    text: Lists every real alternative, plots them on two axes buyers feel, checks the map again on a second axis and marks the corners that are open.
+  - title: Find the words nobody owns
+    text: Reads the mapped rivals, picks the one word each owns, marks it taken, contested or open, and lists three open words buyers care about.
+  - title: Turn a rival weakness into a message
+    text: Matches your proven strengths to rival weak spots, keeps pairs a buyer can check, writes the message and tests the rival's best reply.
+output_shape: |-
+  STEP 1: POSITION MAP
+    Alternatives | two axes | where each sits | crowded and open corners | the corner to own
+
+  STEP 2: OWNED WORDS
+    Word per rival, marked taken, contested or open | empty claims | three open words
+
+  STEP 3: MESSAGES
+    Ranked messages | evidence | rival weakness behind each | reply-risk note
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your axes
+    how: Name two things buyers weigh, such as price and speed. Step 1 then plots on those instead of picking its own.
+  - what: Your category
+    how: Say who the leader is. Step 2 then looks for the opposite of the leader's word.
+  - what: Rival facts
+    how: Paste prices, policies and review quotes. Step 3 uses only public facts it can source.
+  - what: How you will use it
+    how: Say if the message is for a tagline, an ad set or a page, so the wording fits.
+judge:
+  - Every rival on the map has a reason for its place.
+  - Each word is marked taken, contested or open, with the evidence behind it.
+  - Every message rests on a strength with proof, and a buyer could check it in minutes.
+  - Each message comes with the rival's best reply and your weak spot on the same axis.
+  - No message names a rival or runs down a competitor.
+test:
+  - Pick one open word and search for it in each rival's homepage and ads. It should be missing.
+  - Show the top message to two buyers without your name. They should repeat the claim back.
+  - Check each proof against the page it points to.
+improve:
+  - Re-run it every six months, since rivals change what they say.
+  - Save the open words in your brand file so later copy stays on one message.
+  - Test the top two messages against each other in a small ad test.

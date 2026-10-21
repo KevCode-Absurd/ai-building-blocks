@@ -1,0 +1,125 @@
+new_slug: merchant-center-feed-health-checker
+name: "Merchant Center feed health checker"
+summary: "Give it your Merchant Center diagnostics. Get problems ranked by lost sales and a score out of 100."
+job: run-google-ads
+thinking: medium
+thinking_why: "It sorts many product issues by cause and has to compute a score from counts."
+
+headline: "Merchant Center feed health checker"
+subhead: Give it your Merchant Center diagnostics export or screenshots. It sorts the problems into disapproved, warnings and limited performance, ranks them by sales lost, splits the fixes into automatic, manual and policy, and hands back a score out of 100 with the sum shown.
+
+explain: |
+  Your product feed is what Google Shopping shows. A disapproved product can't show at all, so it is lost revenue. Products with warnings or limited performance still show, but less than they could. If you raise ad spend while the feed has problems, you pay to show a broken feed.
+
+  This skill reads your diagnostics in the order that matters. It looks at disapproved products first, then warnings and limited performance. It checks the five common causes: a missing or wrong GTIN, a price that doesn't match the page, missing shipping info, policy violations and wrong or missing attributes. It splits fixes into those Google can fix for you and those you must do by hand, and sets up prevention. It covers product data. For store policy, use the suspension checker.
+
+when:
+  - Products show as disapproved or "needs attention" in Merchant Center.
+  - You are about to raise ad spend on Shopping or Performance Max.
+  - Prices change often and you worry the feed lags behind the page.
+
+you_give:
+  - Merchant Center Products, then Diagnostics, as an export or screenshots
+  - How you update the feed and how often
+  - A sample product page and its feed row (optional)
+  - Your total number of products
+you_get:
+  - Issues grouped as disapproved, warnings and limited performance, with counts
+  - A fix list split into automatic, manual and policy fixes
+  - A feed score out of 100 and how it was worked out
+  - A prevention plan for update frequency, checking before upload and price sync
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In Merchant Center open Products, then Diagnostics. Export the issues or take screenshots.
+  - Tell it how the feed updates (Shopify app, a feed tool, a file) and how often.
+  - Fix the disapproved products first. Use Autofix only for low-risk items.
+  - Run it again after the fixes, and before you raise spend.
+
+how_it_works:
+  - title: Starts with disapproved
+    text: These can't show in Shopping or free listings, so they are lost revenue.
+  - title: Then warnings and limited performance
+    text: Approved but underserved, so they are chances to improve.
+  - title: Checks five common causes
+    text: Missing or wrong GTIN, price not matching the landing page, missing shipping info, policy violations and wrong or missing required attributes.
+  - title: Splits the fixes
+    text: Automatic for low-risk items. Manual for policy, price mismatch and missing required attributes.
+  - title: Checks the link
+    text: Merchant Center should appear under Connected products in Google Ads, Data manager.
+  - title: Plans prevention
+    text: Update prices at least every 6 hours, turn on automatic item updates and check large catalogues before Google sees them.
+  - title: Scores the feed
+    text: Share approved, share with full titles and GTINs, and share where the price matches.
+  - title: Applies the scaling gate
+    text: Do not scale spend until feed health is clean.
+
+output_shape: |
+  PRODUCTS  <n> total
+  DISAPPROVED  <n>  | top causes: <cause (count)>
+  WARNINGS  <n>  | top causes: <cause (count)>
+  LIMITED PERFORMANCE  <n>  | top causes: <cause (count)>
+  RANKED BY SALES LOST
+  1. <issue | products | why it costs sales | fix type>
+  FIX LIST
+  AUTOFIX: <issue | products>
+  MANUAL:  <issue | products | what to change>
+  POLICY:  <issue | products | read Google's reason, change the product page or data>
+  LINK  <Merchant Center connected in Google Ads: yes | no | not checked>
+  PREVENTION  <update frequency | automatic item updates | pre-check | price sync>
+  SCORE  <n>/100 (approved <n>/50, titles and GTIN <n>/25, price match <n>/25)
+  GATE  <clean enough to scale | fix first>
+  NOT RUN  <check | what is needed>
+  MISSING: <what would sharpen it>
+
+tweaks:
+  - what: Export size
+    how: Give the full issue list, not only the top rows. Counts per cause drive the ranking.
+  - what: Update method
+    how: Say if prices come from a Shopify app, a file or a feed tool, and how often. It sets the update frequency.
+  - what: Products with GTINs
+    how: Say which products have a barcode. A GTIN only applies to products that have one, and one is never invented.
+  - what: Best sellers
+    how: List your top 20 by revenue. Issues on those are ranked higher.
+  - what: Catalogue size
+    how: Under 30 products, feed work gains less than tracking and offer fixes. The skill says so.
+
+judge:
+  - Disapproved products come first, with counts.
+  - Each issue says what it costs, not just what it is.
+  - Fixes are split into automatic, manual and policy.
+  - No GTIN is invented or guessed.
+  - The score shows what it counted and the sum.
+  - The scaling gate is stated.
+
+test:
+  - Give it a diagnostics export with 3 disapproved best sellers. They should come first in the ranking.
+  - Include a price mismatch. It should call it manual, not automatic.
+  - Run it twice on the same export. The ranking should match.
+  - Check one count by filtering the same issue in Merchant Center.
+  - Fix the top issue, export again and see if the score rises.
+
+improve:
+  - Add your catalogue's product types to the skill file, so it knows which items need a GTIN.
+  - Add your own score weights if disapproved products matter more to you than titles.
+  - Add your best sellers list to the brand file, so they rank first.
+  - Add your update schedule, such as a refresh every 6 hours.
+  - Pair it with the Shopping feed title writer for titles and the suspension checker for store policy.
+
+works_best_with:
+  tools:
+    - {name: "Google Merchant Center", why: "Products, then Diagnostics, is where the issues and Autofix are."}
+    - {name: "Shopify", why: "Where price and availability are changed, so the feed stays in sync."}
+    - {name: "Any good chat AI", why: "Groups your issues by cause and works out the score."}
+  inputs:
+    - "A full diagnostics export"
+    - "Your top 20 products by revenue"
+    - "A sample product page next to its feed row"
+
+terms:
+  - term: Feed
+    meaning: The list of your products and their details that you send to Google.
+  - term: GTIN
+    meaning: The barcode number of a product. Many products have one, some do not.
+  - term: Autofix
+    meaning: A Merchant Center tool that fixes low-risk issues for you. Changes made in the interface can be reversed for 30 days.

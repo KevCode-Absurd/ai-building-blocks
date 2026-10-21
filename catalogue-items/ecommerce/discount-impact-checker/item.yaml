@@ -1,0 +1,25 @@
+slug: discount-impact-checker
+name: "Discount impact checker"
+summary: "Add price, costs and a discount. Get the ROAS to hit and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "The full-price waterfall, the 25 percent off worked example, why required ROAS rises faster than break-even ROAS, and the best depth in the example"}
+  - {title: "Finance for e-commerce (a set of finance lectures and Excel walk-throughs)", by: "Eric, startup finance educator (public videos)", used: "The 50 percent off versus two-for-one Black Friday example, adding the discount to CAC as one cost, no refunds on promo orders as one tip, and tying deep discounts to a subscription or loyalty sign-up"}
+  - {title: "Understanding free cash flow for e-commerce startups (finance case study)", by: "Eric, startup finance educator (public video)", used: "A discount month that doubled orders and cut gross margin"}
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital masterclass)", used: "Bundles lift AOV while shipping rises less than the unit count, gift with purchase with a low-cost gift, and flat discounts only on slow stock"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency (public long-form masterclass)", used: "The 25 percent off sale needing ROAS to rise from 6 to 9, the target ROAS curve against the discount, and the 30 percent off example at 40 percent margin"}
+  - {title: "I Studied Every Ecommerce Offer So You Don't Have To", by: "DTC offer consultant (public video)", used: "The free-shipping trap on a low-priced item, and the four-pack fix"}

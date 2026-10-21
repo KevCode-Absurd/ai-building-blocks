@@ -1,0 +1,20 @@
+slug: weekly-store-ad-pulse-checker
+name: "Weekly store ad pulse checker"
+summary: "Give weekly spend, sales, emails and discounts. Get a health score out of 100 and what to pull."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic (apparel brand), interviewed on a podcast", used: "The order of the numbers to check, why a low blended ROAS can mean the emails have not gone out, pulling retention levers first and judging a spend change over a week"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford (agency founder and head of retention at a drinks brand), podcast interview", used: "Email capture as a second KPI, discount as a share of sales, large orders per day and pulling back ad spend on days with email drops"}

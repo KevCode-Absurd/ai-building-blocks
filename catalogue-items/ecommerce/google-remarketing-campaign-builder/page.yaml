@@ -1,0 +1,126 @@
+new_slug: google-remarketing-campaign-builder
+name: "Google remarketing campaign builder"
+summary: "Give it your audiences and offer. Get remarketing setups with budgets, caps and five doubt-led ad concepts."
+job: run-google-ads
+thinking: medium
+thinking_why: "It follows set rules for settings and writes five short ad concepts, which a mid-size model handles well."
+
+headline: "Google remarketing campaign builder"
+subhead: Give it your audiences, offer, daily budget and any videos or images you have. It sets up remarketing for people who visited and did not buy. You get campaign settings, budgets and caps, and five ad concepts, each aimed at one reason people leave.
+
+explain: |
+  People who left your store without buying left for a reason. Most remarketing ignores that and shows the same product with the same words. It also gets set up with defaults that waste money on poor placements.
+
+  This skill builds remarketing in two ways, because sources disagree. One builds video remarketing first with a small budget, then image-led display. The other builds a cart abandoner campaign in Demand Gen. It gives you the settings for both so you can pick one to test. Then it writes five ad concepts, one for each doubt: distraction, price, trust, does it work, and delivery and returns. Every proof item must be real. The frequency cap and the Display-excluded setup are single-speaker results, so test them.
+
+when:
+  - You have a cart abandoner list of about 1,000 or more and nothing is running to bring those people back.
+  - Your remarketing shows the same ad to everyone and results are flat.
+  - You have Shopping and Search working and want to win back warm visitors.
+
+you_give:
+  - Your audiences and their sizes, from the audience manager
+  - Your offer for returning visitors, plus shipping, returns and review counts
+  - Your best videos or images, including ones that worked on Meta (optional)
+  - Your total daily budget
+you_get:
+  - Campaign settings for video or Demand Gen remarketing, with budgets and caps
+  - A creative brief for returning visitors
+  - Five ad concepts, one per doubt
+  - A review plan to cut weak placements and keep the winner
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your audiences with their sizes, your offer, your daily budget, and your shipping, returns and review facts.
+  - Pick one setup to test first. Do not run both at once on a small budget.
+  - Build the five ad concepts with real photos, real reviews and real terms only.
+  - Run for a few weeks, then use the network and audience breakdown to cut weak ones.
+
+how_it_works:
+  - title: Checks readiness
+    text: Needs conversions and a steady flow of new visitors. Lists of about 1,000 or more, or use broad visitors or email first.
+  - title: Sets up audiences
+    text: Google tag, GA4 linked in Data manager, and the Shopify link, with an optional customer upload.
+  - title: Plans video first
+    text: Video remarketing on Maximise Conversions at $10 to $20 a day, 10 to 15% of total budget, with the product feed attached.
+  - title: Plans display later
+    text: Image-led display at $10 to $15 a day on Maximise Conversion Value, added only if needed.
+  - title: Plans Demand Gen
+    text: Goal sales, optimise for purchases, no target CPA at first, images and video in one campaign, audiences split by behaviour.
+  - title: Sets caps and options
+    text: Frequency cap of 3 a day, optimised targeting off, video enhancements off, mobile only for Shorts.
+  - title: Writes five ad concepts
+    text: Distraction, price, trust, does it work and logistics, each with a different proof.
+  - title: Plans the review
+    text: Cuts weak networks, makes more portrait video and pushes winners back to colder ads.
+
+output_shape: |
+  REMARKETING PLAN  <store>, daily budget <$>
+  READY? lists: <sizes>  verdict: <build / use broad visitors / email first>
+  AUDIENCES  <product viewers / cart / checkout / category / all visitors / past buyers>
+  SETUP A (video then display)
+    video: <bid, budget, % of total, feed attached>  display: <budget, bid, image-led>
+  SETUP B (Demand Gen)
+    goal: sales | optimise: purchases | audience: custom only | optimised targeting: off
+    channels: <list> | exclude: <TV screens> | budget: <$>
+  CAPS AND OPTIONS  frequency cap 3 a day | video enhancements off | Shorts: mobile only
+  CREATIVE FOR RETURNING VISITORS  skip the intro; the offer is the message
+  FIVE DOUBTS  1 distraction: <ad> | 2 price: <ad> | 3 trust: <ad> | 4 does it work: <ad> | 5 logistics: <ad>
+    each: <headline> | <proof used and where it comes from>
+  ALSO  email and SMS alongside; they cost less per return visit
+  REVIEW  weekly for a few weeks: by audience and by network
+  CHECKS MISSED: <none, or list>
+  MISSING: <item>
+
+tweaks:
+  - what: Audience size
+    how: Under about 1,000 people, use broad visitors or email first. The skill will say so instead of building a list nobody sees.
+  - what: Setup
+    how: Choose setup A or B. Video campaigns are being folded into Demand Gen, so the ideas carry over either way.
+  - what: Which doubts apply
+    how: Check your exit survey, reviews or support emails. Put the budget behind the doubts customers actually name.
+  - what: Proof you have
+    how: List your real review count, press, guarantee terms and customer photos. The trust and does-it-work ads can only use what exists.
+  - what: Budget
+    how: Give your total daily budget so the shares (10 to 15% for video) can be worked out.
+
+judge:
+  - There are five ad concepts, one per doubt, and each uses a different proof.
+  - Every proof item is something the store really has. No made-up reviews, photos, press or numbers.
+  - Any urgency or deadline is a real one.
+  - Budgets are written as dollar amounts and as a share of total.
+  - The review plan says how to read performance by audience and by network.
+
+test:
+  - Give it a list of 300 people. It should say the list is too small and suggest broad visitors or email.
+  - Check each concept against its doubt. Would a person who left for that reason feel answered?
+  - Show the five concepts to a customer or a teammate and ask which doubt each one answers. If they cannot tell, the concept is unclear.
+  - After a few weeks compare results by audience and by network, then cut the weakest.
+
+improve:
+  - "Add your real proof list to the skill file: review counts, press, guarantee terms, return window, so concepts only use that."
+  - Add your voice rules, so the concepts sound like your store.
+  - Add the doubts you hear most, in your customers' words.
+  - Save the winning concept and its numbers to your notes, and use it in colder ads.
+  - Pair it with the audience builder, which makes the lists this uses.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Audience manager, Demand Gen and video campaigns, and the network breakdown live here."}
+    - {name: "Google Analytics 4", why: "Holds the cart abandoner audience and shows behaviour by step."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini can write five distinct concepts from one brief."}
+  inputs:
+    - "Your imported cart abandoner audience and its size"
+    - "Your shipping, returns and review facts, written exactly"
+    - "Your best videos or images, including from Meta"
+    - "A short customer survey of why they left, if you have one"
+
+terms:
+  - term: Remarketing
+    meaning: Showing ads to people who already visited your store.
+  - term: Demand Gen
+    meaning: A Google campaign type that shows image and video ads on YouTube, Discover and Gmail.
+  - term: Frequency cap
+    meaning: A limit on how many times one person sees your ad in a day.
+  - term: Abandoned cart
+    meaning: A cart someone filled but left before paying.

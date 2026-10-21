@@ -1,0 +1,124 @@
+new_slug: winning-ad-dna-mapper
+name: "Winning ad DNA mapper"
+summary: "Paste winning ads, yours or rivals'. Get each split into message and look, plus one-part swaps to test."
+job: study-competitors
+thinking: medium
+thinking_why: "It breaks ads into parts and compares them, which a mid-size model does well. Use a stronger one for 20 or more ads."
+
+headline: "Winning ad DNA mapper"
+subhead: Paste ads that work, yours or rivals', with a transcript for any video. It splits each into message and creative, writes the idea behind it and finds patterns and gaps. You get a breakdown of every ad, one-part swaps to test and three new ads.
+
+explain: |
+  Copying a winning ad gets you a copy that works once, then stops. What you want is why it worked: who it spoke to, what it promised, how it was shown and what idea sat underneath. Without that, you can't make a second winner on purpose.
+
+  This skill gives every ad the same set of parts. The message has a segment, concept, angle, mechanism, copy blocks, hook and format. Video also gets five look parts: what media it pretends to be, who is on screen, the style, the setting and the setup. Then it looks for what repeats in winners, what your account lacks, and what the whole field does that you could do the opposite of. It lists swaps that change one part at a time, and builds three new ads from the ideas using your own product and proof. It never reuses a rival's words or images.
+
+when:
+  - You have a few ads that sell and want to know what is common to them before you brief more.
+  - A rival's ads keep running for months and you want the idea behind them, not a copy.
+  - You make ads with AI and need a clear set of parts to vary, instead of random new versions.
+
+you_give:
+  - The ads, as images, screenshots, links or transcripts (10 or more for patterns)
+  - Results for your own ads, such as spend and ROAS or CPA (optional)
+  - Your product facts and proof, so new ads stay true
+  - Reviews and ad comments to find buyer groups you haven't reached (optional)
+you_get:
+  - A breakdown of every ad into message and creative, with the one idea behind it
+  - Patterns across winners and losers, and gaps against your account
+  - A contrast map of what the field does and the opposite
+  - A list of one-part swaps and three new ads built from the ideas
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your winning ads and any rival ads, with a transcript for each video. Add results for your own.
+  - Paste your product facts and proof.
+  - Pick two or three swaps and make them as separate ads, changing only the one part named.
+  - Run the test with the creative test reader.
+
+how_it_works:
+  - title: Splits each ad
+    text: Message and creative. Message covers segment, concept, angle, mechanism, copy blocks, hook and format.
+  - title: Reads the video look
+    text: Five parts for video, namely conceit, actor, style, terrain and setup.
+  - title: Writes the one idea
+    text: One sentence on what the ad does to the viewer and why it works. The idea stays, the wording does not.
+  - title: Finds patterns
+    text: Which parts recur in winners and in losers, only across 10 or more ads.
+  - title: Finds gaps
+    text: Formats, styles and buyer groups a rival uses or your reviews show that your ads miss.
+  - title: Maps the contrast
+    text: Lists what every top competitor does and the true, opposite option for each.
+  - title: Lists swaps
+    text: Change one part at a time, such as the same concept with a new actor.
+  - title: Builds three new ads
+    text: From the ideas, with your product and proof, never a rival's words or images.
+
+output_shape: |
+  AD BREAKDOWN (one block per ad)
+  Ad <n> | own or rival | result <...>
+   Message: segment | concept | angle | mechanism (problem side / solution side)
+   Copy blocks: pain | promise | proof | curiosity | constraints | conditions  (present, weak or missing)
+   Hook | format
+   Creative (CAST): conceit | actor | style | terrain | setup
+   Idea in one sentence: <...>
+
+  PATTERNS    winners <...> | losers <...> | basis <own results | run length>
+  GAPS        <format, style or segment> | evidence <...>
+  CONTRAST MAP  everyone does <...> | the opposite <...> | true to our product <yes/no>
+  SWAPS       keep <part>, change <part> -> <test idea>
+  THREE NEW ADS  1 <idea source> | new part <...> | our proof <...>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what would sharpen this>
+
+tweaks:
+  - what: Number of ads
+    how: Give 10 or more. Fewer ads can be split but not compared, so the patterns step says so.
+  - what: Results on your own ads
+    how: Add spend and ROAS or CPA. Without them, winners and losers can't be told apart.
+  - what: Transcripts for video
+    how: Paste the full script. The skill can't read the hook or copy blocks of a video it hasn't heard.
+  - what: Your proof
+    how: List the claims you can back up. New ads and the contrast map only use what you can show.
+  - what: Buyer words
+    how: Add reviews and comments to find buyer groups hiding in them.
+
+judge:
+  - Every ad has all its parts filled in, with copy blocks marked present, weak or missing.
+  - Each ad has a one-sentence idea you could brief someone with.
+  - Patterns rest on 10 or more ads, or say they don't.
+  - Each swap changes one part and names it.
+  - No new ad reuses a rival's words or images.
+
+test:
+  - Give it two of your own winners and one that failed. It should find a part that the winners share and the loser lacks.
+  - Run it on a rival ad you know well. Check the one-sentence idea matches how you would describe it.
+  - Make two of the swaps as ads and run them side by side with the same budget.
+  - Read the three new ads out loud. Each should use your facts, not a rival's phrases.
+
+improve:
+  - Add your own named formats and styles to the parts list, so the breakdowns use your words.
+  - Add your must-never claims to the check, so no swap or new ad drifts into them.
+  - Save each breakdown in your brand file, so you can compare winners over months.
+  - Pair it with the competitor ad swipe file builder to collect rival ads, and the creative test reader to read the swaps.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ad Library", why: "Free and public. Shows a rival's live ads and how long they have run, which is a rough sign of what works."}
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can split ads into parts. Attach the ads instead of describing them."}
+  inputs:
+    - "Transcripts of your video ads"
+    - "Spend and ROAS by ad"
+    - "Customer reviews and ad comments"
+    - "A list of your proven claims"
+
+terms:
+  - term: Concept
+    meaning: The core idea an ad communicates.
+  - term: Angle
+    meaning: How the idea is presented, such as a whistleblower or a side-by-side comparison.
+  - term: Mechanism
+    meaning: Why the problem happens and why your product solves it.
+  - term: CAST
+    meaning: The five parts of a video ad's look, which are conceit, actor, style, terrain and setup.

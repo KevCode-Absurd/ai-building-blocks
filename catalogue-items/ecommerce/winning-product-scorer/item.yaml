@@ -1,0 +1,24 @@
+slug: winning-product-scorer
+name: "Winning product scorer"
+summary: "Give it a product idea and its costs. Get a score out of 100 and a verdict."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "I asked Claude to find me a $1k/day product", by: "Mark, e-commerce YouTuber", url: "https://www.youtube.com/watch?v=1KrsOagtWgM", used: "The two margin rules (price at least 3 times cost, and enough gross profit per sale to pay for ads) with a worked example"}
+  - {title: "Full Product Research Course for Dropshipping (Find Winning Products FAST)", by: "A dropshipping YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=cRQripx7qXM", used: "Margin floor of $30 to $40 on top of supplier cost, the problem rule, the need for existing content, and avoiding heavy items"}
+  - {title: "How To Find And Validate Winning Products: The 16 Step Product Research Guide", by: "Michelle Bally, Learn with Shopify", url: "https://www.youtube.com/watch?v=KMrTD8KIB18", used: "Price band, one SKU, size, durability, shelf life, repeat-buy and rules-check questions"}
+  - {title: "The Only Product Research Video You Need to Start Dropshipping", by: "An e-commerce YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=JqbVCW14g5o", used: "Evergreen versus trend products and how long each lasts"}
+  - {title: "This Product Research Method Made Me $2.3M Dropshipping (LIVE HUNTING)", by: "Ben, dropshipping YouTuber", url: "https://www.youtube.com/watch?v=sCUEN4htx-0", used: "The cheap-price red flag, the repeat-buy bonus, and treating the rules as a blueprint that strong proof can bend"}
+  - {title: "The product research method that made me $670k", by: "A dropshipping YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=QwWO3EUYW2E", used: "The not-sold-in-shops rule"}

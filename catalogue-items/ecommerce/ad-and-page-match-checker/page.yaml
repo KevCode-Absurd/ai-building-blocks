@@ -1,0 +1,119 @@
+new_slug: ad-and-page-match-checker
+name: "Ad and page match checker"
+summary: "Attach your ad and its page. Get a match score out of 100, ranked mismatches and fixes."
+job: check-ads
+thinking: medium
+thinking_why: "It compares two things side by side against a short list of checks, so a mid-size model is enough."
+
+headline: "Ad and page match checker"
+subhead: Attach your ad and the page it sends people to, as a phone shows them. It checks that promise, product, look, offer and next step match. You get a score out of 100, mismatches ranked by how likely each is to lose the visitor, and a fix for each.
+
+explain: |
+  A shopper clicks an ad that promised one thing and lands on a page that shows something else. Many leave in seconds. You paid for the click and got nothing. This is called message match, or "messaging congruency": the page should look and sound like the continuation of the ad.
+
+  This skill reads the ad as a stranger and writes down its one promise and what it shows. Then it opens the page and checks the first screen: same promise, same product, same look, same offer and price. It also checks that the step after the page is real, such as a quiz that ends in its result before any pitch. Each check earns points. Every mismatch is ranked, with the exact line or look to change. It does not fix a weak offer: a clean match will not save a bad one.
+
+when:
+  - You are about to send paid traffic to a page, and want to check the join first.
+  - Your ads get clicks but few buy, and you suspect the page doesn't match the ad.
+  - You changed the ad or the page and want to be sure they still agree.
+
+you_give:
+  - The ad (an image, video or text) and its landing page link or screenshots
+  - The step after the page, such as cart, quiz result or checkout (optional)
+  - "Who the ad is aimed at: cold, warm or existing buyers (optional)"
+you_get:
+  - A match score out of 100, with what was measured and how
+  - A list of mismatches ranked by how likely each is to lose the visitor
+  - A fix for each, with the exact line or look to change
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the ad. Attach screenshots of the page's first screen on a phone, or paste the link.
+  - Say who the ad is for, and what comes after the page.
+  - Fix the highest-ranked mismatch first, then run the check again.
+  - Aim for no Stop-level mismatch before you spend on the traffic.
+
+how_it_works:
+  - title: Reads the ad as a stranger
+    text: Writes down the one promise it makes and what it shows. If an ad can't say what it is for in the first seconds, that is the first mismatch.
+  - title: Checks the first screen
+    text: Looks for the same promise, in similar words, and the same product or person on the page's first screen. A shirt in the ad means the shirt on the page, not the home page.
+  - title: Compares the look
+    text: Colors, style and production level should read as one brand. A rough ad leading to a polished page, or the other way, breaks trust.
+  - title: Compares offer and price
+    text: The offer and the price in the ad must be the same as on the page.
+  - title: Checks the next step
+    text: A quiz should end in its result before any pitch. A video should say what the buyer is paying for.
+  - title: Checks warm audiences
+    text: For people who know the brand, the page must match the look they already know.
+  - title: Scores and ranks
+    text: Adds up points, ranks each mismatch from most to least likely to lose the visitor, and gives a fix for the biggest first.
+
+output_shape: |
+  AD PROMISE: <one line>   AD SHOWS: <product or person>
+  AUDIENCE: <cold | warm | existing buyers>
+
+  CHECKS
+  M1 Promise on the first screen     <x>/25  <what was found>
+  M2 Same product or person shown    <x>/15
+  M3 Look and production level       <x>/15
+  M4 Offer and price are the same    <x>/20
+  M5 Next step is real               <x>/15  (or NOT RUN)
+  M6 Ad says what it is for          <x>/10
+
+  SCORE <n>/100 (points earned / points possible x 100)
+
+  MISMATCHES, MOST LIKELY TO LOSE THE VISITOR FIRST
+  1. <Stop | Fix | Polish> | <check> | ad: <...> | page: <...>
+     fix: <exact line or look to change>
+
+  NOT RUN: <check, and what is needed>
+  MISSING: <ad | page | audience | next step>
+
+tweaks:
+  - what: What you attach
+    how: Send the page as a phone screenshot of the first screen. Buyers see the page on a phone, so the check should too.
+  - what: Who the ad is for
+    how: Say cold, warm or existing buyers. For warm audiences the look check gets stricter, because they know your brand.
+  - what: The next step
+    how: Name what comes after the page, such as a quiz result or checkout. Without it the next-step check is listed as not run.
+  - what: Several ads to one page
+    how: Check each ad against the page one at a time. One page often matches one ad well and the others badly.
+
+judge:
+  - The ad's promise is written in one line before the page is judged.
+  - Every mismatch quotes both sides, the ad and the page.
+  - A different price or offer between ad and page is ranked as the most serious.
+  - Each fix names the exact line or look to change.
+  - The score shows its points, and any check not run is listed, not counted.
+
+test:
+  - Send an ad for one product and a page for another. It should fail the product check and rank it near the top.
+  - Send an ad and a page that you know match. The score should be high with few fixes.
+  - Run it twice on the same pair. The ranked order of the top mismatches should be the same.
+  - Fix the top mismatch and run it again. The score should rise.
+
+improve:
+  - Add your brand's look rules, such as colors and type, so the look check uses them.
+  - Add your usual offers and prices to the skill file, so a wrong price is caught fast.
+  - Add a rule for pages with a pop-up, such as which element counts as the first screen.
+  - If your funnel has a quiz or a video page, add its steps to the next-step check.
+  - Pair it with a skill that writes pages from an ad, and one that checks the ad alone before launch.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI that reads images can compare the ad and the page. Attach both as files."}
+    - {name: "Meta Ads Manager", why: "Its ad preview shows the ad as buyers see it, and the link opens the page you send them to."}
+  inputs:
+    - "A phone screenshot of the page's first screen"
+    - "The ad as shown in the feed, not only the raw file"
+    - "The page you send warm audiences to, if it differs from cold traffic"
+
+terms:
+  - term: Message match
+    meaning: Whether a page keeps the promise, look and offer that the ad made.
+  - term: First screen
+    meaning: What a visitor sees on the page before they scroll.
+  - term: Cold audience
+    meaning: People who have never heard of your brand.

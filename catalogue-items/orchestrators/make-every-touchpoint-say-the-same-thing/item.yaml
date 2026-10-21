@@ -1,0 +1,28 @@
+slug: make-every-touchpoint-say-the-same-thing
+name: "Make every touchpoint say the same thing"
+summary: "Give it your store link and reviews. Get a ranked list of where your touchpoints disagree and a brand guide."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: brand
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: store_capture, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: product_data, required: false}
+  - {type: copy_draft, required: false}
+  - {type: script, required: false}
+  - {type: ad_copy, required: false}
+outputs:
+  - {type: brand_guide}
+uses: [website-brand-brain-builder, store-brand-signal-auditor, brand-voice-editor, brand-guide-builder]
+steps:
+  - {uses: website-brand-brain-builder, note: "Reads your store and reviews into one brand file."}
+  - {uses: store-brand-signal-auditor, note: "Scores and ranks where homepage, pack and emails drift from the brand file. Reads the brand file from the step before."}
+  - {uses: brand-voice-editor, note: "Checks sample copy against the voice and rewrites the weak lines. Reads the brand file from the first step."}
+  - {uses: brand-guide-builder, note: "Packages the voice, look and do and don't into a guide for new writers. Reads the brand file from the first step."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/make-every-touchpoint-say-the-same-thing/skeleton.yaml

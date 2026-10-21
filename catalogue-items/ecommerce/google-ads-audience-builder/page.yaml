@@ -1,0 +1,121 @@
+new_slug: google-ads-audience-builder
+name: "Google Ads audience builder"
+summary: "Give it your site traffic and customer list. Get remarketing lists, exclusions and custom segments to build."
+job: run-google-ads
+thinking: medium
+thinking_why: "It turns your traffic numbers into a list of audiences with rules, which a mid-size model does well."
+
+headline: "Google Ads audience builder"
+subhead: Give it your monthly site visitors, add-to-cart counts and customer list details. It tells you which audiences are big enough to use, builds the cart abandoner list in GA4, plans customer lists and exclusions, and defines custom segments for cold buyers.
+
+explain: |
+  Google can only target a list that is big enough, and it will happily retarget people who already bought and take credit for the sale. Many stores skip the setup, so their remarketing is thin and their cold campaigns pay to reach existing customers.
+
+  This skill plans the audiences first. It picks a visitor window that fits your traffic, builds the cart abandoner list in GA4 from people who added to cart and did not buy, and sets up customer lists for signal and exclusions. It also defines custom segments built from the searches a buyer would type. The numbers (a 3 to 7 day window, a list of about 1,000 to 1,500 people, and the claim that search-term segments beat site segments) come from one speaker, so treat them as starting points to test.
+
+when:
+  - You are about to run remarketing and do not know if your lists are big enough.
+  - Your cold campaigns might be reaching people who already bought.
+  - You want custom segments for Demand Gen or YouTube from search terms and competitor sites.
+
+you_give:
+  - Monthly site visitors and add-to-cart numbers
+  - Your customer list details (the fields you have, such as email, phone, name, zip and country)
+  - Competitor sites and the search terms your buyers type (optional)
+  - Whether you have consent to use customer data in ads
+you_get:
+  - A list of audiences to build, with source and window for each
+  - A customer exclusion plan
+  - Custom segment definitions
+  - A note on which lists are too small to use yet
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your monthly visitors, add-to-carts and purchases, and say what fields your customer list has.
+  - Say whether customers agreed to their data being used for ads. Fix that first if they did not.
+  - Build the lists in GA4 and Google Ads in the order it gives, and wait about a day for lists to fill.
+  - Check list sizes after a week and drop or merge lists that are too small.
+
+how_it_works:
+  - title: Sizes your lists
+    text: Compares your traffic with the roughly 1,000 to 1,500 people a list needs, and picks a window that fits.
+  - title: Plans visitor lists
+    text: 3 to 7 days is the sharpest window and 30 days is broad. URL rules only if traffic is large.
+  - title: Builds cart abandoners
+    text: In GA4, people who added to cart in the last 30 to 60 days minus purchasers, marked as a key audience and imported to Google Ads.
+  - title: Plans customer lists
+    text: All customers, plus a best-customer list (3 or more orders, or the top 5 percent by spend).
+  - title: Sets exclusions
+    text: Excludes existing customers from non-brand and YouTube campaigns.
+  - title: Defines custom segments
+    text: People who search for chosen terms, then competitor sites, and a list of video viewers.
+  - title: Sets safe options
+    text: Optimised targeting off for remarketing. The GA4 link waits until the imported purchase is set to Secondary.
+
+output_shape: |
+  AUDIENCE PLAN  <store>
+  SIZE CHECK  visitors <n> a month | add to cart <n> | usable lists: <which>
+  AUDIENCES
+    <name> | source: <GA4 / Google tag / customer upload> | window: <days> | use: <remarketing / signal / exclusion>
+  CART ABANDONERS  add to cart last <30 to 60> days, exclude purchasers
+    expected size: <added> minus <purchasers> = <n>   usable? <yes / no, needs about 1,000 to 1,500>
+  CUSTOMER LISTS  all customers | best customers (<rule>)  consent: <confirmed / needed>
+  EXCLUSIONS  <campaign> excludes <list>
+  CUSTOM SEGMENTS  search terms: <...>  competitor sites: <...>
+  SETTINGS  optimised targeting: off for remarketing
+  ORDER  <steps, with the GA4 link last>
+  CHECKS MISSED: <none, or list>
+  MISSING: <item>
+
+tweaks:
+  - what: Your traffic size
+    how: Under about 1,000 monthly visitors, cart lists will be too small. Use all-visitor remarketing or email first.
+  - what: Visitor window
+    how: Start at 7 days. Widen to 30 only when the 7-day list is too small.
+  - what: Best-customer rule
+    how: Give your own rule, such as 3 or more orders or the top 5 percent by spend, based on your data.
+  - what: Consent
+    how: Say how customers agreed. The skill will not plan an upload without that line.
+  - what: Cold search terms
+    how: List what a problem-aware or solution-aware buyer would type. The segment is only as good as the terms.
+
+judge:
+  - Each audience names its source, window and use.
+  - Cart abandoner size is shown as a sum, and flagged if under about 1,000 to 1,500.
+  - Existing customers are excluded from non-brand and YouTube campaigns.
+  - The customer list plan includes a consent line.
+  - The GA4 link is placed after the step that sets the imported purchase to Secondary.
+
+test:
+  - Give it traffic you know is too small, such as 400 visitors a month. It should say cart lists are not usable yet.
+  - Run it twice on the same numbers. The audiences and sizes should match.
+  - After building, wait a day and compare the real list sizes with its estimates.
+  - Check that a past buyer, added to the exclusion list, no longer sees a cold campaign ad.
+
+improve:
+  - Add your own best-customer rule to the skill file.
+  - Add the search terms your buyers use, so custom segments start with real words.
+  - Add your privacy and consent wording to the skill, so every plan includes it.
+  - Save list names and sizes in your notes, so you can see which grow.
+  - Pair it with the remarketing campaign builder, which uses these lists.
+
+works_best_with:
+  tools:
+    - {name: "Google Analytics 4", why: "Builds the cart abandoner audience and lets you mark it as a key audience."}
+    - {name: "Google Ads", why: "Holds the audience manager, customer lists and exclusions."}
+    - {name: "Shopify", why: "Exports your customer list and links store data to Google."}
+  inputs:
+    - "Your monthly add-to-cart and purchase counts from GA4"
+    - "Your customer list export with the fields you have"
+    - "Your search terms report, for segment ideas"
+    - "A list of competitor sites"
+
+terms:
+  - term: Remarketing
+    meaning: Showing ads to people who already visited your store.
+  - term: Custom segment
+    meaning: An audience built from the searches people make or sites they visit.
+  - term: Exclusion
+    meaning: A list of people you tell a campaign not to show ads to.
+  - term: Optimised targeting
+    meaning: A setting that lets Google go beyond your audience to find similar people.

@@ -1,0 +1,60 @@
+# Workflow skeleton that chains library skills (docs/INTAKE.md). Our words.
+id: hire-the-person-who-unblocks-growth-and-hand-over-the-work
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: hire-the-person-who-unblocks-growth-and-hand-over-the-work
+  name: Hire the person who unblocks growth and hand over the work
+  summary: Give it your numbers and skills. Get the one hire to make, a written results agreement and a one-on-one plan.
+  when: revenue is stuck, you are on every decision and you think another hire is the answer.
+  job: hire-people
+  level: intermediate
+steps:
+  - name: Key hire gap finder
+    skill: key-hire-gap-finder
+    job: ops
+    from: library
+    method:
+      - Name the limiter first and check it is a hiring problem
+      - Map the core jobs and sort the owner type
+      - Size the prize before paying and budget the pay
+      - Write the 90-day result in numbers before any interview
+    inputs:
+      - question
+      - performance_sheet!
+    outputs:
+      - audit_report
+    note: Starts by finding the single hire that removes the growth limit and the result they must deliver.
+  - name: Results agreement writer
+    skill: results-agreement-writer
+    job: ops
+    from: library
+    method:
+      - Pick the type of agreement
+      - Write the desired results and the guidelines
+      - List the resources and fix accountability
+      - State the consequences and fit it to the person
+    inputs:
+      - question
+      - audit_report!
+    outputs:
+      - plan
+    note: Turns the 90-day result and pay from the hire brief into a one-page agreement to hand over the ads.
+  - name: One-on-one meeting planner
+    skill: one-on-one-meeting-planner
+    job: ops
+    from: library
+    method:
+      - Judge their task experience and set how often you meet
+      - Make it their meeting with required parts
+      - Write the meeting rules and the follow-up
+      - Cover the hard case and total your weekly hours
+    inputs:
+      - plan
+      - question
+    outputs:
+      - plan
+    note: Builds a meeting rhythm around the agreement so the handover does not slide back to you.

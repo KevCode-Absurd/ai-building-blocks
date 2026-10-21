@@ -1,0 +1,23 @@
+slug: upsell-and-downsell-sequencer
+name: "Upsell and downsell sequencer"
+summary: "Give it prices and checkout steps. Get the offer order, a fallback for each no, and post-purchase rules."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: offer}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [robert-cialdini]
+credits:
+  - {title: "Influence: The Psychology of Persuasion (revised edition)", by: "Robert B. Cialdini", used: "The contrast rule, selling the expensive item first, offering add-ons one at a time, the retreat from a big ask to a smaller one, and why an extreme first ask backfires"}
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic, interviewed on a podcast", used: "How a post-purchase offer works: one click after payment, a deep discount on the same or next item, and one weekly owner"}
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "The high-first, then down-sell order for post-purchase offers, and revenue per visit"}

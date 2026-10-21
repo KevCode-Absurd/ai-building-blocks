@@ -1,0 +1,48 @@
+id: build-a-landing-page-fix-it-and-prove-the-top-change
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: build-a-landing-page-fix-it-and-prove-the-top-change
+  name: "Build a landing page, fix it, prove the top change"
+  summary: "Give it your offer and buyer. Get a page, a review, a test design and a ship or stop call."
+  when: "you need a page that sells and a fair way to know the next change really helped."
+  job: audit-landing-page
+  level: intermediate
+steps:
+  - name: "Plan and write the page"
+    skill: conversion-landing-page-designer
+    job: ops
+    from: "skill: conversion-landing-page-designer"
+    method: ["Take in the offer, buyer and goal", "Set the page order from headline to final call", "Apply design rules for layout and one clear button", "Write the copy section by section"]
+    inputs: [brief, brand_brain!]
+    outputs: [landing_page]
+    note: "Starts from your offer and buyer and returns a page plan with copy and design rules."
+  - name: "Review the page"
+    skill: landing-page-auditor
+    job: page
+    from: "skill: landing-page-auditor"
+    method: ["Name the one job of the page", "Read it as a glance, a skim and a doubt check", "Check the phone basics", "Rank each finding by how much it hurts and how easy it is to fix"]
+    inputs: [landing_page, brand_brain!]
+    outputs: [audit_report]
+    note: "Reads the page from the step before and ranks what to fix first."
+  - pause: "Fix the quick wins and publish the page. Pick the one top change to prove, and note your visits and sign-ups or sales for the last few weeks."
+  - name: "Design the test"
+    skill: experiment-designer
+    job: ops
+    from: "skill: experiment-designer"
+    method: ["Write the hypothesis for the one change", "Choose the main number, a side number and a guardrail", "Work out the sample size and run time", "Describe the control and the variant"]
+    inputs: [brief, performance_sheet!]
+    outputs: [plan]
+    note: "Designs a test for the top change from the review, sized to your traffic."
+  - pause: "Run the test as planned and do not stop it early. Export the counts for control and variant into a sheet."
+  - name: "Read the result and make the call"
+    skill: a-b-test-verdict-maker
+    job: ops
+    from: "skill: a-b-test-verdict-maker"
+    method: ["Confirm the test was set up as designed", "Check the split of visitors was even", "Work out each rate and the range around it", "Check the side numbers and give a ship, wait or stop call"]
+    inputs: [spreadsheet, brief!]
+    outputs: [test_report]
+    note: "Reads the exported counts against the test design."

@@ -1,0 +1,19 @@
+slug: product-bill-of-materials-builder
+name: "Product bill of materials builder"
+summary: "Give it your product and quote. Get a cost sheet by part, with each maker and price-break questions."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "He Went From $3M In Debt To $13M In Cash Using This Playbook", by: "Roman Khan, multi-brand e-commerce operator, founder podcast interview", used: "What a bill of materials is, why the factory's own sub-suppliers matter, taking the product apart to match the sheet, and the spend level where it pays"}

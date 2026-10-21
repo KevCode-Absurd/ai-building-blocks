@@ -1,0 +1,124 @@
+new_slug: page-type-and-layout-planner
+name: "Page type and layout planner"
+summary: "Give it your ads, buyers and awareness stages. Get which page each ad needs and its section order."
+job: write-landing-page
+thinking: medium
+thinking_why: "It sorts ads into page types by clear rules and sets section order, so a mid-size model is enough."
+
+headline: "Page type and layout planner"
+subhead: Give it your ads with their buyer, angle and awareness stage, your traffic source, products and proof. It decides which page each ad should land on. You get a routing table, a section-by-section order, where proof sits and which pages to build first.
+
+explain: |
+  Many stores send every ad to the same page, often the homepage. A buyer who has never heard of the problem lands on a page built for someone ready to buy, and leaves. In the source example, 88 of about 700 ads pointed to a homepage that had to serve every type of buyer.
+
+  This skill sorts your ads by how aware the buyer is. Cold buyers who don't know the problem go to an advertorial or quiz that educates first. Buyers who know the solution go to a page that matches the ad. Buyers ready to buy go to the product page. It then sets the section order for each page, puts proof where doubt is likely, and lists which pages to build first, with a brief that echoes each ad's headline. It plans routing and order. It does not write the copy.
+
+when:
+  - You run several ads for different buyers and send them all to one page.
+  - A new angle or buyer group just won in your ads and needs its own page.
+  - You are about to build a page and want the section order before you write anything.
+
+you_give:
+  - A list of live or planned ads, each with its persona, angle and awareness stage
+  - Your traffic source, such as Meta, Google, email or organic (optional)
+  - Products, bundles and prices (optional)
+  - Proof you hold (optional)
+  - Existing pages with traffic and conversion rate (optional)
+
+you_get:
+  - A routing table from each ad to a page type, with the reason
+  - The section-by-section order for each page, with what each section holds
+  - A note on where proof and doubt-reducers sit
+  - Pages to build in order, each with a brief that echoes the ad headline
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your ads with the persona, angle and awareness stage for each.
+  - Add your traffic source, products and any proof you hold.
+  - Build the pages in the order listed, with the copy tools you prefer.
+  - Check that each page headline matches its ad before you send traffic.
+
+how_it_works:
+  - title: Asks who each page is for
+    text: Pain, want and awareness for each buyer group. Meta traffic is mostly unaware or problem aware.
+  - title: Routes each ad
+    text: Cold traffic to an advertorial or quiz, solution-aware to a persona page, ready buyers to the product page.
+  - title: Finds missing pages
+    text: Flags ads that point to a homepage when a persona or angle needs its own page.
+  - title: Writes the offer first
+    text: Lists every unique part of the offer, with no repeats, before any design.
+  - title: Sets the section order
+    text: Top screen, pain and proof, value points, social proof, how it works, founder, guarantee, FAQ and a closer.
+  - title: Adjusts for traffic
+    text: Pain first for problem-aware buyers, proof first for ready buyers.
+  - title: Places proof
+    text: Two to four proof sections, sprinkled between value sections, out of carousels.
+  - title: Plans the store closer
+    text: Product choice near the top, bundle savings in money, proof by add-to-cart, slide-out cart.
+  - title: Orders the build
+    text: Pages in order of spend, each with a brief that echoes its ad.
+
+output_shape: |
+  ROUTING TABLE
+  Ad | persona | angle | awareness | traffic | page type | why
+
+  PAGES TO BUILD (in order)
+  1 <page> | for ads: <list> | headline echoes: <ad headline>
+
+  SECTION ORDER for <page>
+  1 Top screen: <what it holds>
+  2 <section>: <what it holds> | headline carries: <benefit>
+
+  PROOF AND DOUBT-REDUCERS: <where each sits, and why>
+  STORE CLOSER: <product choice, bundle savings, slide cart>
+  LABEL: advertorial pages labelled as ads where required
+  RISKS: <homepage share, thin proof, untested parts>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Awareness stage for each ad
+    how: State it for every ad. Routing depends on it and the AI guesses badly without it.
+  - what: Traffic source
+    how: Say where each ad runs. Search traffic is mostly ready buyers, Meta traffic mostly cold.
+  - what: Proof you hold
+    how: List what you have. Proof slots with nothing to fill are marked MISSING.
+  - what: Existing page results
+    how: Add traffic and conversion rate for pages you already run, so the plan fixes the weakest first.
+
+judge:
+  - Every ad has a page type and a one-line reason.
+  - Cold traffic is not left pointing at a product page or homepage without a reason.
+  - Section order follows the traffic, with pain first for problem aware, proof first for ready buyers.
+  - Every section headline carries a benefit.
+  - Proof is placed where doubt is likely and none is invented.
+
+test:
+  - Give it an ad you know sends cold buyers to a product page that converts badly. It should suggest an education step first.
+  - Run it twice on the same ads. The routing should match.
+  - Build the first page it lists and compare its conversion with your current page for the same ad.
+  - Check each page headline against its ad for a word-for-word echo.
+
+improve:
+  - Add your store's real page types to the skill file, such as collection pages and quizzes you run.
+  - Add your approved section list, so the default order always matches your theme.
+  - Record the results by page type in your brand file, so routing follows your own data.
+  - Pair it with the Store hero section writer for the top screen and the Store advertorial writer for long pages.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can sort ads into page types and set section order."}
+    - {name: "Shopify", why: "Its theme editor and page templates let you build one template and reuse it for each matched page."}
+  inputs:
+    - "An export of ads with spend and results"
+    - "Traffic and conversion rate by landing page"
+    - "A list of your search terms or collections, if you run one page per term"
+
+terms:
+  - term: Awareness stage
+    meaning: How much the buyer already knows about the problem and about you.
+  - term: Persona page
+    meaning: A page written for one type of buyer, matching the ad that brought them.
+  - term: Advertorial
+    meaning: An ad written like an article. Label it as an ad where the platform or law requires.
+  - term: Closer
+    meaning: The last section of a page, a short repeat of the offer and the button.

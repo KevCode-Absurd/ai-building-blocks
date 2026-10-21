@@ -1,0 +1,82 @@
+new_slug: send-reorder-emails-that-fit-each-buyer-then-read-results
+name: Send reorder emails that fit each buyer, then read results
+summary: Give it your products and how long they last. Get timed reorder emails by buyer type.
+job: keep-customers
+thinking: high
+thinking_why: It builds a flow, splits it by buyer type and plans show and hide rules that must stay consistent. Give it your strongest model.
+headline: Get repeat orders with reorder emails timed to when each product runs out
+subhead: Give it your products and how long they last. It times a refill and second-order email, gives new, returning and loyal buyers their own paths, and plans which blocks each group sees. After 30 days, it reads your numbers and shows which branch earned.
+explain: |
+  Most reorder emails go out on a fixed day, like day 30, to everyone. A buyer who is mid-way through a bottle gets nagged. A loyal buyer gets a discount they never needed. A first-time buyer gets the same message as someone on their tenth order. The email says the same thing to people who need different things.
+
+  The steps fix the timing, then the targeting. First it works out when each product runs out and writes refill and second-order messages with an offer cap. Then it splits that flow into new, returning and loyal paths with their own goals. Then it plans the show and hide rules, so one email can serve each group, and a product block that shows what they bought. You build it, run it for 30 days and export the numbers. Last it reads them next to the flow, to show which branch earned and which to fix.
+when:
+  - Your products run out, such as food, skincare, supplements or refills, and buyers don't come back on time.
+  - You send the same reorder email to everyone and want it to fit each buyer.
+  - You want to know which branch of a flow earns before you build more.
+you_give:
+  - Your products and how long each one lasts
+  - Past order dates, to find the real gap between orders (optional)
+  - Your offer and the most you can discount (optional)
+  - Your brand file (optional)
+  - Flow and campaign numbers after 30 days
+you_get:
+  - Refill and second-order emails with the day each one goes out
+  - An offer cap for each message and a list of buyers to skip
+  - New, returning and loyal paths with their own goals
+  - Show and hide rules and a product block for each group
+  - A read of your numbers, with the branch that earned and one fix to test
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your products and how long each lasts. A real usage time beats a guess.
+  - Build the flows in your email tool and let them run for 30 days, then export the flow and campaign numbers.
+how_it_works:
+  - title: Time the reorder emails
+    text: Works out when each product runs out, times a refill nudge before that and a second-order nudge for new buyers, caps the offer and skips buyers with an open problem.
+  - title: Split by buyer type
+    text: Defines new, returning and loyal buyers with your own filters, sets a goal and tone for each and checks every offer against your margin.
+  - title: Plan the show and hide rules
+    text: Lists the customer fields you hold, plans rules so one email serves each group, plans a product block for what they bought and lists the tests.
+  - title: Build and run it (you)
+    text: You build the flows in your email tool and let them run for 30 days. Then you export the flow and campaign numbers.
+  - title: Read the results
+    text: Checks nothing is broken, then reads flow results and revenue next to the flow you built, ranks the causes and gives one fix to test for each.
+output_shape: |-
+  STEP 1: REORDER FLOW
+    Run-out day per product | refill nudge | second-order nudge | offer cap | who to skip
+
+  STEP 2: BUYER TYPES
+    New, returning and loyal paths | goal per path | offer checked against margin
+
+  STEP 3: SHOW AND HIDE RULES
+    Fields and exact values | rules | product block | tests | QA list
+
+  YOU: build the flows, run 30 days, export the numbers
+
+  STEP 4: RESULTS
+    Diagnosis ranked | which branch earned | one fix per cause | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How long a product lasts
+    how: Give the real figure, such as 30 days for a bottle, and the usual delivery time. Step 1 uses both to set the refill day.
+  - what: Your margin
+    how: Say the most you can discount. Steps 1 and 2 keep every offer below it.
+  - what: Your email tool
+    how: Name it, such as Klaviyo or Mailchimp, so the rules in step 3 use fields your tool has.
+judge:
+  - Each refill time shows its sum from the usage time and delivery time.
+  - New buyers get a second-order message and loyal buyers don't get discounts they don't need.
+  - Every offer is capped and checked against your margin.
+  - The show and hide rules use exact field values, copied from a real profile.
+  - The results read compares branches and names one fix per cause.
+test:
+  - Check the refill day for your best seller by hand.
+  - Preview the email as a new buyer and as a loyal one. Each should see a different block.
+  - Hold back a group that gets no reorder email, and compare their repeat rate after 30 days.
+improve:
+  - Move each refill day to match the real gap between orders once you have the data.
+  - Raise or lower the offer cap by branch based on which branch needed the discount.
+  - Add a pause or skip choice for subscribers once the basic flow works.

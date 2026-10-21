@@ -1,0 +1,78 @@
+new_slug: review-a-pull-request-fix-the-comments-and-sign-off
+name: Review a pull request, fix the comments and sign off
+summary: Give it an open pull request. Get risks ranked, comments fixed in code and a signed review.
+job: test-and-fix-code
+thinking: medium
+thinking_why: Reviewing and fixing are careful but well-bounded jobs. A mid-tier model is enough, and a stronger one catches more risks.
+headline: Get a pull request reviewed, fixed and signed off with nothing left open
+subhead: Point it at an open pull request. It ranks the risks, you post the ones that matter, it fixes those comments in the code, and a one-page review holds the change until you sign it off.
+explain: |
+  A pull request often stalls in the middle. The review is shallow or buried in a long list, the comments sit unanswered, and in the end it is merged on a quick glance. Nobody can say what was checked.
+
+  The steps close that gap. The first reads the change and ranks the risks by how much they matter, including what it could break outside its own files. You pick the findings worth raising and post them as comments on the pull request. The second step reads those comments, numbers them, asks which to fix and updates the code. The third builds a one-page review of the finished change, collects your notes, and refuses to close while a blocker is open or no named person has looked.
+when:
+  - A pull request is open and a quick glance would not be enough.
+  - You have review comments waiting and no time to work through them.
+  - You need a record that a person looked before the change went in.
+you_give:
+  - The open pull request, as a link or branch name
+  - Access to the project code
+  - Your name, or the person who signs off
+you_get:
+  - A ranked list of risks, from security and breaking changes to slow queries and missing tests
+  - Fixes in the code for the comments you choose
+  - A one-page review with your notes sorted into blockers and small points
+  - A sign-off record that names the reviewer and what was checked
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md".
+  - Give it the pull request. Read the ranked risks and post the ones you agree with as comments on the pull request.
+  - Tell it which numbered comments to fix. Check the changes.
+  - Open the review page, mark your notes as blockers or small points, then close it under your name.
+how_it_works:
+  - title: Rank the risks
+    text: Reads the diff and the pull request details, traces what the change could break and ranks the findings by severity.
+  - title: Post the findings (your turn)
+    text: You choose the findings that matter and post them as comments on the pull request.
+  - title: Fix the comments
+    text: Reads every comment and thread, numbers them with what each fix needs, and applies the ones you pick.
+  - title: Sign off
+    text: Builds a one-page review of the fixed change, collects your notes and will not close while a blocker is open or no reviewer is named.
+output_shape: |-
+  STEP 1: RISKS
+    Findings ranked by severity | what the change could break | missing tests | what to fix first
+
+  PAUSE: you post the findings as comments
+
+  STEP 2: COMMENT FIXES
+    Numbered comments | what each needs | the ones fixed | code changed
+
+  STEP 3: SIGN-OFF
+    Review page | blockers open | small points | reviewer name | closed or not
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: What the change touches
+    how: Name what is sensitive, such as payments, sign-in or personal data. Step 1 weighs those findings higher.
+  - what: Size of the change
+    how: For a very large pull request, give a folder or a part to focus on first, so the review stays deep.
+  - what: Who signs
+    how: Give a real name. The last step refuses a team name or an empty one.
+  - what: Fix scope
+    how: Say which kinds of comment it may fix without asking, such as naming, and which need your yes.
+judge:
+  - Each risk names the file or line, and why it matters.
+  - The ranking puts security and breaking changes above style.
+  - Each fix matches one numbered comment and changes nothing else.
+  - No blocker is open when the review closes.
+  - The sign-off names a person and lists what was checked.
+test:
+  - Pick three ranked risks and open the code at each. They should be real.
+  - Compare the diff after the fixes with the comment list. Every changed line should trace to a comment.
+  - Try to close the review with a blocker open. It should refuse.
+  - Run your tests after the fixes.
+improve:
+  - Turn repeat findings into a short checklist in your contributing file.
+  - If many findings were wrong, tell step 1 what your project already guards against.
+  - Not worth running for a tiny change that a quick read covers.

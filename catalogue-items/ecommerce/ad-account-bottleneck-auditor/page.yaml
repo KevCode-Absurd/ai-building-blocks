@@ -1,0 +1,123 @@
+new_slug: ad-account-bottleneck-auditor
+name: "Ad account bottleneck auditor"
+summary: "Give store and ad numbers. Get the growth bottleneck, a fix order and a score out of 100."
+job: read-ad-results
+thinking: high
+thinking_why: "It weighs store numbers against platform numbers and ranks fixes, so a stronger model reasons through it better."
+
+headline: "Ad account bottleneck auditor"
+subhead: Give it your store's monthly numbers and your ad exports. It names the one thing holding back your growth, puts the fixes in a 90-day order and gives your ad account a score out of 100, with the weights shown.
+
+explain: |
+  Most ad audits are a long list of settings to change. Many of those settings barely matter, and the list never says which problem to fix first. Your ad platforms also grade their own work, so an audit built only on their numbers can send you the wrong way.
+
+  This skill starts from your store's numbers: ad spend, new customers, order value and margin by month. It checks whether the ad platforms agree with the store. Then it looks at your account structure and your creative, and it drills from store revenue down through channel, campaign, ad set and ad until it finds one bottleneck. Fixes come in order: data first, structure second, creative third. Each is ranked by what it costs you.
+
+when:
+  - Your ad spend has grown but profit has not, and you can't say why.
+  - An agency or freelancer gave you a list of fixes and you can't tell which one matters.
+  - You are about to raise your ad budget and want to know what would break first.
+
+you_give:
+  - Monthly ad spend, new customers, order value and gross margin from your store, for up to 30 months
+  - Ad exports from each platform, with the audience split (new, engaged, existing) if you have it
+  - Your campaign list with each one's purpose and budget (optional)
+  - How many new ads you launch each month (optional)
+  - Repeat purchase or cohort data (optional)
+you_get:
+  - The single bottleneck, with the numbers that show it
+  - A 90-day fix order, each fix with its impact and next step
+  - Your first-order profit trend by month
+  - A score out of 100 with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your monthly store numbers first. The skill will not audit from ad platform numbers alone.
+  - Attach your ad exports, and paste your campaign list and the number of new ads you launch.
+  - Read the bottleneck and the 90-day order. Fix them in that order, then run the audit again.
+
+how_it_works:
+  - title: Starts from the store
+    text: It stops if you only have platform data. It builds a month-by-month table of CAC, first-order profit and the ratio between them.
+  - title: Checks the data
+    text: It compares what the store earned from new customers with what each platform claims, and names the cause of any gap.
+  - title: Checks the structure
+    text: It asks every campaign to defend its purpose, and checks that names match what is inside.
+  - title: Checks the creative
+    text: "It names one bottleneck at a time: too few ads, too few ideas or weak quality."
+  - title: Drills to one cause
+    text: It goes from store revenue to channel, campaign, ad set and ad until one bottleneck explains the problem.
+  - title: Orders the fixes
+    text: Fixes are ranked by impact and run data first, structure second, creative third, as a 90-day road map.
+  - title: Scores the account
+    text: Data is 40 points, structure 30 and creative 30. It shows each check and says the weights are a starting point.
+
+output_shape: |
+  BOTTLENECK  <data integrity | account structure | creative volume | creative diversity | creative quality>
+  Evidence: <the numbers that show it, with month or campaign>
+
+  TREND (<first month> to <last month>)
+  <CAC, first-order gross profit and ratio by month; direction and date it changed>
+
+  PILLARS
+  1 Data integrity   <points>/40  <findings>
+  2 Structure        <points>/30  <findings>
+  3 Creative         <points>/30  <findings>  (or "not judged: <why>")
+
+  90-DAY ORDER
+  1 <fix> | impact: <...> | time: <...> | next skill: <name>
+  2 ...
+
+  RETENTION  <cohort read at day 90, 180, 365, or MISSING: cohort data>
+  TEST TO RUN  <geo lift or brand holdout, or none needed>
+
+  SCORE  <n>/100 (data + structure + creative). Weights are a starting point.
+
+tweaks:
+  - what: Months of history
+    how: Give 24 to 30 months if you have them. A short history shows less of the trend, and the skill says which months it lacked.
+  - what: Platform exports
+    how: Include the audience split (new, engaged, existing) and the attribution columns. Without them, the data check can only guess at the cause of a gap.
+  - what: Your store size
+    how: Under about $1M a year, the skill checks data and structure only, because the method comes from much larger brands.
+  - what: Cohort data
+    how: Add repeat purchase by month of first order. It lets the skill say whether your CAC can run higher than the first order alone allows.
+
+judge:
+  - It names one bottleneck, not a list of problems.
+  - The evidence quotes your store numbers, with the month or campaign.
+  - If your store and a platform disagree, the skill says by how much and why.
+  - The 90-day order puts data before structure and structure before creative, or says why not.
+  - The score shows its points for each pillar and says the weights are a starting point.
+
+test:
+  - Run it on a month where you already know why results fell. The bottleneck should match what you found yourself.
+  - Run it twice on the same numbers. The bottleneck and the fix order should match. If they flip, give it more months of data.
+  - Check one ratio by hand. Divide a month's first-order gross profit by its CAC and compare it with the table.
+  - Give it only ad platform numbers. It should refuse to audit and ask for store numbers.
+
+improve:
+  - Add your own margin and CAC targets to the skill file, so the ratio bands match your store and not one agency's rule of thumb.
+  - Change the score weights to fit your business. A store with weak tracking may want data worth more than 40 points.
+  - Save your bottleneck and fix order to your brand file, so next quarter's audit starts from it.
+  - Run the specialist skills it names after each fix, such as the platform ROAS reality check and the CAC payback checker.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its reports give new customers, order value and orders by month, which the audit needs from the store."}
+    - {name: "Meta Ads Manager", why: "Export with the audience segment and attribution comparison columns for the data check."}
+    - {name: "Google Sheets", why: "Keep the monthly table here so you can add a month and run the audit again."}
+  inputs:
+    - "Your profit and loss statement by month, so gross margin is real and not a flat guess"
+    - "A list of every price change, promotion and product launch by date, so changes in the trend have a reason"
+    - "Screenshots of your attribution settings in each ad platform"
+
+terms:
+  - term: Bottleneck
+    meaning: The one thing that limits how fast a store can grow. Fixing anything else first gains little.
+  - term: CAC
+    meaning: Cost to get a new customer. Total ad spend divided by the number of new customers.
+  - term: Acquisition MER
+    meaning: New-customer revenue divided by total ad spend for the same dates. A store-level check on what the platforms report.
+  - term: View-through credit
+    meaning: A sale an ad platform credits to an ad the buyer saw but did not click.

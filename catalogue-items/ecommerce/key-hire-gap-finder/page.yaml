@@ -1,0 +1,135 @@
+new_slug: key-hire-gap-finder
+name: "Key hire gap finder"
+summary: "Give your numbers and skills. Get the one hire that unblocks growth, how to pay them and a readiness score."
+job: hire-people
+thinking: high
+thinking_why: "It weighs your numbers against your skills and the pay you can afford, so a stronger model reasons better."
+
+headline: "Key hire gap finder"
+subhead: Give it your revenue, margin, honest skill ratings and what you think is holding growth back. It tells you whether the limit is traffic, conversion or something else, names the one hire to make, and shows what to pay them. You get a readiness score out of 100.
+
+explain: |
+  Many store owners hit a wall and hire the wrong person, or fiddle with the site while the real problem is who is visiting it. If the wrong visitors arrive, no page will convert them.
+
+  This skill starts from the limit, not the job title. It checks traffic against conversion with your numbers, rates your own skills, and names the biggest gap. It sizes the prize, builds three pay options (cash, a bonus on a number, and a small share) and shows what each costs you a year at your margin. It also writes the 90-day result you will judge the hire by. It rests on one coaching call, so its timing claims are treated as hopes, not promises.
+
+when:
+  - Revenue has stalled and you think you need a better media buyer or growth lead.
+  - You are about to hire and want to be sure it is the right role and you can afford it.
+  - You have a thin margin and want pay options that do not give away your profit.
+
+you_give:
+  - Revenue, net margin and your growth target with a time frame
+  - Your honest rating (strong, ok, weak) on sourcing or product, media buying, conversion and site, brand, email, and operations
+  - What you think is limiting growth
+  - Traffic sources, conversion rate and sessions a month (optional)
+  - What you can offer, such as monthly cash, a share of profit or equity, or stock (optional)
+you_get:
+  - A skill map with your gap named in one line
+  - A traffic versus conversion check using your numbers
+  - A hire brief with a 90-day result in numbers
+  - Three pay options with the yearly cost at your margin
+  - A readiness score out of 100, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your revenue, margin, growth target and what you think is the limit.
+  - Rate yourself on each core job. If you hesitate on one, mark it weak.
+  - Add your traffic sources and conversion rate, and what you can offer in pay.
+  - Read the limiter first. If it is not traffic, fix that before you hire.
+
+how_it_works:
+  - title: Names the limiter
+    text: Traffic quality comes before page tweaks. It checks which sources convert and which do not.
+  - title: Checks it is a hiring problem
+    text: If the numbers show stock, margin or product is the limit, it says a media hire will not fix that.
+  - title: Maps your skills
+    text: Sourcing, media buying, brand and operations, each rated honestly. It sorts you as a product-and-brand owner or a media-buying owner.
+  - title: Sizes the prize
+    text: Profit is revenue times margin. Growth timing from the source is treated as a claim, not a promise.
+  - title: Builds pay options
+    text: Base, a bonus on a profit or revenue number, and a small share. Each shows a yearly cost at your margin.
+  - title: Writes the 90-day result
+    text: Spend, a return target and new customers, set from your data before any interview.
+  - title: Orders the hires and scores it
+    text: Missing skill first, next skill after. Five checks of 20 points give a readiness score.
+
+output_shape: |
+  HIRE READINESS  <n>/100  (<c1> + <c2> + <c3> + <c4> + <c5> = <n>)
+
+  LIMITER
+  <traffic | conversion | margin | cash | stock | product>: <numbers>
+
+  SKILL MAP
+  Strongest two: <skill>, <skill>
+  Weakest critical: <skill>
+  Gap in one line: <...>
+
+  SIZE OF THE PRIZE
+  Profit now: <revenue x margin>
+
+  HIRE BRIEF
+  Role: <title>
+  Must have done before: <work and results>
+  90-day result: <spend, return target, new customers>
+
+  PAY OPTIONS (cost per year at your margin)
+  A <base only>: <amount>
+  B <base + bonus>: <amount>
+  C <base + small share>: <amount>
+
+  ORDER OF HIRES
+  1 <this hire>   2 <next>
+
+  CASH WARNING
+  <what to settle after the hire>
+  NOT RUN / MISSING: <...>
+
+tweaks:
+  - what: Traffic data by source
+    how: Paste conversion by traffic source or country. A weak source with a strong source next to it is the clearest sign the problem is traffic, not the page.
+  - what: Your honest ratings
+    how: Rate yourself the way a friend would. A kind rating hides the gap and gives you the wrong hire.
+  - what: Your real margin
+    how: Use net margin after ads and costs. The pay options are only as safe as this number.
+  - what: What you can offer
+    how: List cash, stock and a share of profit. A mix often pays a strong person without giving away your whole margin.
+  - what: The growth target
+    how: Give a number and a date. Without them the prize cannot be sized.
+
+judge:
+  - The limiter is backed by a number from your data.
+  - If your problem is stock, margin or product, it says a media hire will not fix it.
+  - It does not promise to double your revenue.
+  - Each pay option shows a yearly cost, not just a percentage.
+  - No interview question touches age, family, health or any personal trait.
+  - The score sum is shown and each check has a reason.
+
+test:
+  - Give it a store where you already know the real limit, such as a good site with poor traffic. It should name the same limit.
+  - Rate yourself strong at everything. It should push back, since a store that is stuck usually has a weak spot.
+  - Run it twice on the same numbers. The named gap should match.
+  - Give it a store with a stock problem. It should refuse to call it a hiring problem.
+
+improve:
+  - Add the roles you use in your store, such as a marketplace manager, so the skill map fits your team.
+  - Add your own rule for how much of your margin you can spend on one role, and have the skill check against it.
+  - Save the 90-day result it writes into your brand file, then compare it with real results in 90 days.
+  - Pair it with the skill that plans your team roles once the hire is made, and the job post writer for the ad.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It only needs your numbers and your honest ratings."}
+    - {name: "Shopify and GA4", why: "Their reports give you conversion by traffic source, which settles traffic versus page."}
+  inputs:
+    - "A conversion report split by traffic source and country"
+    - "Your last 12 months of revenue and net profit"
+    - "A list of what you already pay for ads, software and help each month"
+
+terms:
+  - term: Conversion rate
+    meaning: The share of visitors who buy.
+  - term: Blended return
+    meaning: Total revenue divided by total ad spend across all channels.
+  - term: Equity
+    meaning: A share of ownership in your company. Ask a lawyer before you offer any.

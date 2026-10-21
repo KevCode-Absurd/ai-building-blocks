@@ -1,0 +1,21 @@
+slug: hero-product-repositioner
+name: "Hero product repositioner"
+summary: "Give it one hero product and its reviews. Get several buyer angles, each with its own offer."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: angle_library}
+  - {type: offer}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "Selling one product to several buyer types, building the offer around each angle, the 120-day result example, partner discounts, and keeping margin unchanged"}

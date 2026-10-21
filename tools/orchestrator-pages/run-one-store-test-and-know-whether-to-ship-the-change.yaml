@@ -1,0 +1,88 @@
+new_slug: run-one-store-test-and-know-whether-to-ship-the-change
+name: "Run one store test and know whether to ship"
+summary: Give it your orders and traffic. Get a test sized to your store and a clear ship call.
+job: test-store-changes
+thinking: high
+thinking_why: It runs five skills in a row, and the last one does the maths on your results. Give it your strongest model.
+headline: Know whether a store change is worth shipping
+subhead: Give it your monthly orders and visits. It says whether you can prove a test at your size, picks the bold test to run, fits it to your Shopify plan and writes a one-change plan. After the test, it judges the result and gives a ship call.
+explain: |
+  A green banner in a testing tool does not tell you the change worked. Small stores stop tests early, change two things at once, or run tests their traffic can never prove. They then ship a change on a result that was luck.
+
+  These steps stop that. First it checks whether you should test at all, using your monthly orders. It picks the bold changes your traffic can prove, and checks what your Shopify plan lets you test. You choose one test, and it writes a plan with one change, the dates and what each result means. You run the test without peeking and export the numbers. The last step checks the result can be trusted, reads it as a range in money, and gives a ship call.
+when:
+  - You want to change a product page or checkout and need to know if the change really helps.
+  - You have a test result and are not sure it can be trusted.
+  - You have low traffic and want to know what you can prove, and what to skip.
+you_give:
+  - Orders per month, visits per month and conversion rate for the page
+  - The change you want to test and why you think it will help
+  - Your Shopify plan, and who will build the change
+  - Where your ads send traffic
+  - After the test, the numbers for each version and anything else that happened during it, such as a sale or an email send
+you_get:
+  - A readiness call (repair first, research only, bold tests or regular tests) with the visitors and weeks needed
+  - Five bold tests in order, with the reason, main number and risk for each
+  - What your plan lets you test, which kind of tool fits, and what to ask about flicker and speed
+  - A one-change plan with fixed dates and what each result means
+  - A ship call with a trust score out of 100, the result as a range in money and a log entry
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your orders, visits and the page you want to test. Say if anything on that page is broken today.
+  - Choose the one test to run first. Build it, then run it to the planned sample and dates. Do not stop early.
+  - Export the numbers for each version and bring them back, with a note of any sale or email send during the run.
+how_it_works:
+  - title: Check you can test
+    text: Decides whether to repair or test, places you by orders per month, sets the smallest lift worth shipping and works out the visitors and weeks needed.
+  - title: Pick the bold tests
+    text: Chooses five big changes your traffic can prove, puts them in order and names what not to test at your size.
+  - title: Fit it to your plan
+    text: Checks what your Shopify plan lets you test and which route fits, and lists the questions to ask any tool about flicker, speed and the stats engine.
+  - title: Plan the one change
+    text: Writes the question in plain terms, picks the one thing to change, fixes the rest and says what counts as no effect.
+  - title: Judge the result
+    text: Checks the split, the run length and what else changed, reads the lift as a range in money, and gives a ship, do not ship, re-test or inconclusive call.
+output_shape: |-
+  STEP 1: READINESS
+    Verdict | stage | smallest lift worth shipping | visitors and weeks | main number and guardrails | score out of 100
+
+  STEP 2: FIVE BOLD TESTS
+    Each test with reason, main number, risk | what not to test | month by month plan
+
+  STEP 3: SHOPIFY SETUP
+    What each idea can use | route | flicker and speed notes | questions for every tool | score out of 100
+
+  STEP 4: ONE-CHANGE PLAN
+    Question | the one change | what stays fixed | second check | no-effect result | what each result means
+
+  STEP 5: VERDICT
+    Call | trust score | split, length and tracking checks | result as a range | money per month | log entry
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Orders per month
+    how: This sets everything. Under about 30 orders a month, a test is not the right step. Give the real figure, and use GA4 visits if you have them, because Shopify counts bots.
+  - what: Broken or just maybe better
+    how: If something on the page is failing, step 1 tells you to repair first. Say honestly which it is.
+  - what: Smallest lift worth shipping
+    how: If you know the gain that would pay for the work, give it. If not, it works one out from your numbers.
+  - what: Other tests and sales
+    how: Tell it about sales, email sends and other tests on the same page. They can spoil a result.
+judge:
+  - The readiness call matches your orders. Very low traffic gets bold tests or repairs, not small tweaks.
+  - The plan changes exactly one thing and lists what stays fixed.
+  - The sample size and weeks are on the page, with the weekly visits they rest on.
+  - The verdict shows its split, length and stopping checks, and says if any failed.
+  - The money line is a range at low, middle and high, not one number.
+test:
+  - Run step 1 on a page where you already know the answer, such as a page that is clearly broken. It should say repair first.
+  - Check the visitors per version against a free sample size calculator. They should be close.
+  - Before you run the test, write down what you expect. Compare it to the verdict.
+  - Run the verdict step on a result you already trust, and see if it agrees.
+improve:
+  - Keep the log entry from every verdict in one file. Most tests lose, and the log stops you retesting old ideas.
+  - Add your gross profit per order to your brand file, so the money range uses it.
+  - Edit the bold test list to drop tests you can never build with your team.
+  - Pair it with a heatmap and recording reader, so the next test starts from what visitors do.

@@ -1,0 +1,29 @@
+slug: weekly-product-feedback-triager
+name: "Weekly product feedback triager"
+summary: "Give it each week's feedback. Get every request counted, ruled yes, later or no, and a roadmap change to approve."
+category: agent
+type: agent
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: plan, required: true}
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+  - {type: copy_draft}
+uses: [feature-request-screener, new-user-drop-off-finder, product-metrics-review-writer, feature-priority-scorer, roadmap-update-writer]
+steps:
+  - {uses: feature-request-screener, note: "Every week: adds the new requests to the running tally, then rules yes, later or no on each one that has earned a ruling, with a reply draft."}
+  - {uses: new-user-drop-off-finder, note: "Only when new-user numbers fell against the saved base, or three or more new users say they are lost: finds where they leave before any new feature goes on the roadmap."}
+  - {uses: product-metrics-review-writer, note: "Only when you give this week's product numbers: what moved against targets, so requests are read next to the numbers."}
+  - {uses: feature-priority-scorer, note: "Only when the yes list is longer than one cycle can hold: scores and ranks it so the roadmap change is not a guess."}
+  - {uses: roadmap-update-writer, note: "Only after you approve the roadmap change and ask for a note: writes it for your team, executives or customers."}
+schedule: "Every Monday morning, after the week's feedback is in"
+asks_before: [replacing the roadmap file, sending replies to the people who asked, promising a date or a feature, posting a changelog or roadmap note, telling a major customer no]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,129 @@
+new_slug: creator-ad-roster-builder
+name: "Creator ad roster builder"
+summary: "Give it your product and budget. Get a gifting funnel, roster size, pay rule and creator brief."
+job: make-video-ads
+thinking: medium
+thinking_why: "It plans a funnel and writes a brief from your numbers, which a mid-size model does well."
+
+headline: "Creator ad roster builder"
+subhead: Give it your product, sample budget and monthly ad target. It plans a gifting funnel, sizes a creator roster for your scale and sets a flat-fee pay rule. You get a creator brief that asks for raw clips, plus partnership ad setup steps.
+
+explain: |
+  Creator videos can feed your paid ads for much less than a studio shoot, but most stores do it badly. They send a few samples, hope for good content, ask for finished ads and pay a cut of sales that brings audits and emails.
+
+  This skill plans the whole loop. It starts from gifting, since only a few in every hundred free products turn into content worth running as an ad. It sizes the roster to your scale, 5 to 10 creators for a small store. It sets flat fees for content and for account access, asks for raw clips so your editors can cut many versions, and writes a brief with the placement, the winners to learn from and what did not work. Then it sets up partnership ads, so ads run under a creator's handle with yours. Figures come from large brands, and each is marked as one operator's claim.
+
+when:
+  - You want a steady supply of creator footage for ads and don't want to pay a studio.
+  - You've gifted a few products and got mixed results, and need a system.
+  - You want to run ads through creators' handles and aren't sure how to set up the terms.
+
+you_give:
+  - Your product, price and whether it ships cheaply
+  - How many free samples you can send and what each costs
+  - How many new ads a month you want
+  - Who edits (in-house, freelance or nobody yet)
+  - Your best ads with results, and any footage you already have (optional)
+you_get:
+  - A gifting-to-paid funnel with the expected yield
+  - A roster size and a flat-fee pay rule
+  - A creator brief with a raw footage list, wide and specific versions, placement and examples
+  - Partnership ad and account setup steps, and a plan to tell your creators what wins
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, price, sample budget and ad volume. Say who edits.
+  - Attach one or two of your best ads with their results, for the specific brief.
+  - Send the brief and the first gifts. Get usage rights and account access in writing before you pay anyone.
+  - Post the best clips on organic first, then move the winners into paid and tell your creators which ones won.
+
+how_it_works:
+  - title: Checks the fit
+    text: Looks at shipping cost, margin and where your creators live before anything else.
+  - title: Plans the funnel
+    text: Gifts widely first. About 2 in 100 gifts became usable ads in one brand's funnel. It scales that to your sample budget.
+  - title: Sizes the roster
+    text: Uses your scale. A big brand keeps 30 to 50. A small store needs 5 to 10.
+  - title: Sets the pay rule
+    text: Flat fees for content and account access, no percent of sales or spend, usage and access in writing.
+  - title: Writes the brief
+    text: Raw clips, a list of about 50 hooks and 3 to 4 body clips, and a wide and a specific version.
+  - title: Makes it placement ready
+    text: 4x5 and 9x16, safe area, length, framing, look, with winners and what did not work.
+  - title: Sets up partner ads
+    text: Ads under the creator's handle, or accounts you own, with steps to connect them.
+  - title: Runs the winner loop
+    text: Organic first, then paid, and creators told which videos won so they make more.
+
+output_shape: |
+  FIT CHECK   <pass | fail> because <shipping, margin, region>
+  GIFTING FUNNEL
+  Units gifted <n> -> expected usable creators <n> (about 2 per 100, one operator's yield) -> videos <n>
+  Timeline: ship 7 days + 1 to 4 weeks to video
+
+  ROSTER      target <n creators> for <ad volume>; reason <scale>
+  PAY RULE    flat fee for content <$> + flat fee for account access <$>; usage and access in writing
+
+  CREATOR BRIEF
+  Wide brief: <...>
+  Specific brief: <top ad, its results, what to repeat>
+  Raw footage list: <hooks, body clips, b-roll>
+  Placement: <4x5 | 9x16>, safe area, length, framing, look
+  Winners to copy: <...>   What did not work: <...>
+
+  PARTNERSHIP AD SETUP  <creator handles | accounts you own> + steps
+  WINNER LOOP  <organic first> -> <paid> -> <tell creators> -> <more of the same>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what would sharpen this>
+
+tweaks:
+  - what: Sample budget
+    how: Give the real number of units and their cost. The funnel and roster are sized from it, at about 2 usable creators per 100 gifts.
+  - what: Editing capacity
+    how: Say who edits. With no editor, the skill asks for finished ads and a smaller roster.
+  - what: Winning ads for the brief
+    how: Attach your best ads and their results. The specific brief copies the idea of what already sells.
+  - what: Your scale
+    how: Tell it your daily ad spend. The 30 to 50 creator roster comes from a brand spending over $100,000 a day. A small store should plan 5 to 10.
+  - what: Region
+    how: Say where your buyers live so the skill favors creators from the same region.
+
+judge:
+  - The roster size fits your scale, not a big brand's.
+  - Yield figures are shown as ratios and marked as one operator's claim.
+  - Pay is flat, with usage and account access in writing.
+  - The brief asks for raw clips, not finished ads.
+  - The brief includes examples of what did not work.
+
+test:
+  - Gift 20 units to a small test group and compare the usable videos to the skill's yield. Expect your own ratio to differ.
+  - Show the brief to one creator and ask if they know what to film without questions.
+  - Ask your editor to cut three versions from one creator's raw clips, as a check that the brief asks for enough footage.
+  - Run one partner ad for a week against the same ad from your own page.
+
+improve:
+  - Add your own legal terms for usage rights and account access to the pay rule step.
+  - Add your brand's must-say and must-not-say lines to the brief.
+  - Save your own yield after each round, such as usable creators per 100 gifts, and replace the example ratio.
+  - Pair it with the creator filming brief writer for per-video briefs, and the creative test reader to read the partner ads.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can draft the funnel, the pay rule and the brief from your numbers."}
+    - {name: "Instagram and TikTok", why: "Partner ads run under a creator's handle on Instagram, and TikTok is where creator seeding often starts."}
+  inputs:
+    - "Your best ads and their results"
+    - "A list of customers who already post about your product"
+    - "Your editor's capacity per week"
+    - "A signed usage-rights and account-access template"
+
+terms:
+  - term: Partner ad
+    meaning: An ad shown under a creator's handle with your brand beside it.
+  - term: Raw clips
+    meaning: Unedited video the creator films, so your editors can cut many versions from it.
+  - term: Seeding
+    meaning: Sending free product to many creators in the hope that some make good content.
+  - term: Usage rights
+    meaning: The written right to use a creator's video in your ads and run it from their account.

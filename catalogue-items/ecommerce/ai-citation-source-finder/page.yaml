@@ -1,0 +1,117 @@
+new_slug: ai-citation-source-finder
+name: "AI citation source finder"
+summary: "Give it five buyer questions. Get the sites AI tools keep citing, ranked, with who to contact."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It sorts and ranks lists you paste in, so steady reasoning is enough."
+
+headline: "AI citation source finder"
+subhead: Give it five questions your buyers ask and the lists of results and cited pages you collected. It ranks the sites that AI tools and Google keep using, flags which you can realistically reach, and hands back a target sheet with the type of placement and a pitch angle for each.
+
+explain: |
+  When someone asks an AI assistant for the best product in your category, the answer leans on a short list of pages: roundups, review sites, forums and videos. If you are not on those pages, you are rarely in the answer. Guessing which sites matter wastes outreach and money.
+
+  This skill reads what you collected for five core questions: the classic search results, the brands the AI named and the pages it cited. It puts them in one sheet, ranks each domain by how many questions and how many AI tools use it, drops targets you have no chance of getting into, and sorts the rest into three tiers: editorial sites, communities and your own channels. Each target gets a flag for the kind of placement, a cost note and a pitch angle.
+
+when:
+  - You want to know which sites to approach so AI assistants and Google mention your store.
+  - You have a budget for sponsored posts, affiliate placements or free product and need to spend it where it counts.
+  - You ran your buyer questions through AI tools and don't know what to do with the long list of sources.
+
+you_give:
+  - The 5 core buyer questions for one category
+  - For each question, the classic results, the brands named in AI answers and the pages cited (from a tracker, or copied by hand from several AI tools)
+  - Your rivals, if you know them (optional)
+  - Your budget for placements and free product, and who can send outreach
+you_get:
+  - Domains ranked by how many questions and AI tools cite them
+  - A flag per target, such as sponsored post, product review, partnership, Reddit thread, YouTube channel or your own listing
+  - A target sheet with page link, type, citation count, contact, cost and status
+  - A pitch angle per target type and a do-not-do list
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your 5 questions and the three lists for each (classic results, brands named, pages cited).
+  - Say your budget, how many hours a month you have, and who sends the outreach.
+  - Mark the targets you can really reach, then contact the top one first.
+  - Re-run it every quarter and check monthly that your mentions are still there.
+
+how_it_works:
+  - title: Builds one sheet
+    text: Puts competitors named, classic results, citations and a blended list on four tabs, and removes duplicate links.
+  - title: Ranks the domains
+    text: Counts how many questions and AI tools each domain appears on. One roundup cited on many questions beats ten blogs cited on one.
+  - title: Drops hopeless targets
+    text: Adds an opportunity tick and skips sites you have no realistic chance of getting into.
+  - title: Sorts into three tiers
+    text: Editorial sites first, then communities such as Reddit and forums, then your own channels.
+  - title: Finds how to get included
+    text: Opens the top cited pages, checks who runs them, and finds more roundup pages with "best" or "versus" in the title that aren't cited yet.
+  - title: Prices the placements
+    text: Notes what a placement costs, whether a disclosure is needed, and what free product costs you in margin.
+  - title: Sets the follow-up
+    text: Rechecks mentions monthly and says what to do if a page states something wrong about you.
+
+output_shape: |
+  QUESTIONS  <the 5 core questions>
+  TOP TARGETS (ranked)
+  <domain> | cited on <n> of 5 questions | <n> AI tools | tier <1/2/3> | opportunity <yes/no>
+  TARGET SHEET
+  <page URL> | <type> | <citation count> | <contact> | <cost> | <status>
+  TYPE FLAGS
+  <sponsored post / product review / partnership / Reddit thread / YouTube channel / own listing>
+  PITCH ANGLE BY TYPE
+  <type>: <what to offer and how to say it>
+  COVERAGE  <share of top 10 sources where the brand appears now>
+  DO NOT
+  <list>
+  RECHECK  monthly: <what> | quarterly: re-run the questions
+  CHECKS MISSED: <none, or list>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: Number of AI tools
+    how: Collect answers from several AI tools, not one. Domains cited across tools rank higher than ones seen in a single tool.
+  - what: Your budget
+    how: State a monthly number. Placements and free product cost money, and the sheet marks what you can't afford.
+  - what: Category type
+    how: For stores, expect lifestyle and review publishers rather than tech sites. Say so, and check your own data, since one source's view is not a rule.
+  - what: Your rivals
+    how: Name them so a rival's own roundup is marked as a site to skip, not a target.
+
+judge:
+  - Every ranked domain shows how many questions and AI tools cite it.
+  - Targets you can't realistically reach are marked, not chased.
+  - Each cost line says whether it is a quote, an example or unknown.
+  - Paid and affiliate-ranked placements carry a disclosure note.
+  - The do-not-do list includes bulk placements, fake roundups and asking a rival to list you.
+
+test:
+  - Check the top three domains yourself in an AI tool. They should come up on your questions.
+  - Run it twice with the same lists. The ranking order should match.
+  - Pick one cost line and ask the site for its real rate. Note how far off the skill was.
+  - After a month, check if any mention you got is still live.
+
+improve:
+  - Add your own rules for what you will not pay for to the do-not-do list.
+  - Save your target sheet to your brand file and update the status column after each outreach.
+  - Add the countries you sell in, so the disclosure notes follow the right ad and affiliate rules.
+  - Pair it with the Reddit answer planner for the community tier and the best-of page writer for roundups you publish yourself.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Several different AI tools give a wider picture of what gets cited. Copy each answer's sources by hand if you have no tracker."}
+    - {name: "A spreadsheet", why: "The target sheet works best as a shared sheet where you can tick opportunities and log status."}
+  inputs:
+    - "A tracker export of AI citations, if you have one"
+    - "Your rivals' names and your category's main marketplaces"
+    - "A list of past mentions and press you already earned"
+    - "The countries you sell in, for disclosure rules"
+
+terms:
+  - term: Citation
+    meaning: A page an AI answer lists as a source for what it says.
+  - term: Mention
+    meaning: Your brand named on another page, with or without a link.
+  - term: Roundup
+    meaning: A page that lists the best products in a category, often with links to each.

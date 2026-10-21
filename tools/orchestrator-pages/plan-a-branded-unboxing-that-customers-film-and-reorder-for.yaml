@@ -1,0 +1,82 @@
+new_slug: plan-a-branded-unboxing-that-customers-film-and-reorder-for
+name: Plan a branded unboxing that customers film and reorder for
+summary: Give it your store link and order data. Get a customer ritual, an unboxing plan and the inserts that carry it.
+job: brand-file
+thinking: medium
+thinking_why: Four skills run in a row, but they are plans, not sums. A mid-size model does it well. Use your strongest for a large range.
+headline: Turn your box opening into a moment customers film and repeat
+subhead: Give it your store link, order numbers and packaging costs. It builds your brand file, designs one small ritual around your product, plans the box so weight, colour, sound and feel match, and chooses inserts and gifts you can afford, with the payback worked out.
+explain: |
+  When your product looks like your rivals', the box is one of the few places left to stand apart. Most boxes are just a container. Customers rarely film them, and nothing in them makes someone come back.
+
+  The steps build the moment in order. First it reads your store and reviews into a brand file. Then it designs one small act that customers can repeat around your product, such as a way to open, use or store it, and gives three ideas with a 90-day plan for one. Next it matches the box to that ritual, one cue per sense, with the cost of each. Last it chooses the inserts and gifts for each customer tier, costs them per order and checks how many repeat orders pay them back.
+when:
+  - Your product looks like your rivals' and you want a pack opening that customers repeat and share.
+  - You send orders in plain boxes and want to know what is worth adding for the cost.
+  - You want customers to reorder, and think a ritual or gift could help.
+you_give:
+  - Your store address, and reviews that show how customers use the product (optional)
+  - Photos of your current box, insert and wrapping
+  - Your average order value, gross margin and orders per month
+  - Your current packaging cost per order and any repeat rate you know
+  - A budget per order and a few lines in your brand voice (optional)
+you_get:
+  - A brand file that the later steps work from
+  - Three ritual ideas with a name and a line to explain each, and a 90-day plan for one
+  - An unboxing plan with one matched cue per sense, its cost per order and a test of two versions
+  - Insert and gift tiers with costs, an insert card spec and the repeat orders needed to pay back
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach photos of your current box. The AI can read images.
+  - Choose your three words for the brand feeling when it asks. It will offer five if you have none.
+  - Ask your packaging supplier for real quotes before you commit. The plan uses cost bands.
+how_it_works:
+  - title: Build your brand file
+    text: Reads your site and reviews and writes eight plain files with each fact tagged by source, so the later steps work from your real brand.
+  - title: Design the ritual
+    text: Looks for one small act in how the product is used, turns an annoyance into a ritual, and gives three ideas with a 90-day launch plan.
+  - title: Plan the unboxing
+    text: Writes the brand feeling in three words, matches weight, colour, sound, smell and feel to it, flags clashes and costs each cue.
+  - title: Choose inserts and gifts
+    text: Sets tiers for all orders, big orders and VIPs, does the volume sums, sets note and gift rules and checks how many repeat orders it takes to pay back.
+output_shape: |-
+  STEP 1: BRAND FILE
+    Eight files for facts, offers, buyers, claims, voice and look, market and history
+
+  STEP 2: RITUAL
+    Three ritual ideas with names | the one to launch | 90-day plan | how to measure it
+
+  STEP 3: UNBOXING PLAN
+    Brand feeling in three words | one cue per sense | clashes | cost per order | script | two-version test
+
+  STEP 4: INSERTS AND GIFTS
+    Tiers | cost per order | insert card spec | note and gift rules | payback check | what to measure
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Reviews that show real use
+    how: Loyal customers' own habits are the best source of a ritual that fits. Add reviews, messages or photos.
+  - what: Your packaging cost per order
+    how: The cost sums use it. Without it the plan marks cost lines as missing.
+  - what: Budget per order
+    how: A tight budget picks fewer cues. Say your cap so it does not suggest what you cannot afford.
+  - what: Marketplace selling
+    how: If you sell on a marketplace, say so. Its rules decide what may go in the box.
+judge:
+  - The ritual is one small act that a customer can do without being told twice.
+  - Each cue has a cost per order in money, not a vague high or low.
+  - No cue clashes with the three brand words.
+  - The payback check shows how many repeat orders pay for the extra cost.
+  - The plan makes no claim that customers will film it. Filming is a thing to measure.
+test:
+  - Mock up the box and ask five customers to open it on video. Watch for where they pause.
+  - Get two real quotes for the top three cues and compare with the plan's cost bands.
+  - Send version A to half of new orders and version B to the rest, as the plan suggests.
+  - Check after 90 days whether repeat orders or shares moved.
+improve:
+  - Save the ritual and the three words in your brand file for all later packaging.
+  - Cut the cue that costs most and did least, after the test.
+  - Add new rituals each season, using the seasonal ideas in step 2.
+  - Pair it with a returns policy designer so the box also eases return worries.

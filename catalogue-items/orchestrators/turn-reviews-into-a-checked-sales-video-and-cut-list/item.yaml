@@ -1,0 +1,25 @@
+slug: turn-reviews-into-a-checked-sales-video-and-cut-list
+name: "Turn reviews into a checked sales video and cut list"
+summary: "Give it your product facts and reviews. Get a checked 7-part video sales script, timed shots and, after filming, a cut list."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: video
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: footage, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: edit_plan}
+uses: [vsl-ad-scripter, video-ad-script-line-checker, ad-script-read-aloud-editor, video-ad-shot-list-maker, video-ad-edit-planner]
+steps:
+  - {uses: vsl-ad-scripter, note: "Starts the chain: turns your facts and review words into the seven-part script."}
+  - {uses: video-ad-script-line-checker, note: "Checks the script from the step before and lists each weak line with a fix."}
+  - {uses: ad-script-read-aloud-editor, note: "Applies the fixes to the script so it can be said cleanly."}
+  - {uses: video-ad-shot-list-maker, note: "Turns the edited script into timed shots and clip prompts."}
+  - {uses: video-ad-edit-planner, note: "Reads your finished clips and the script, and gives the timed cut list."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-sales-video-from-reviews-to-cut-list/skeleton.yaml

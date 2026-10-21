@@ -1,0 +1,126 @@
+new_slug: pain-point-ad-builder
+name: "Pain-point ad builder"
+summary: "Give it a real problem you solve. Get an honest pain-point ad and an answer to rival claims."
+job: write-ad-copy
+thinking: high
+thinking_why: "It must judge whether a worry is real and provable, and keep the ad inside truth and policy, which takes careful reasoning."
+
+headline: "Pain-point ad builder"
+subhead: Give it a real problem your product solves, the proof it works and the one step a buyer takes. It checks the four things a worry-based ad needs, then writes the ad in problem, fix, proof, step order. You also get an optional block answering rival claims, and policy flags.
+
+explain: |
+  Ads that name a problem can sell well, but only when the product truly fixes it. Fear that has no fix, or too much fear, makes people freeze or scroll on. And ad platforms limit health, body and "you have this problem" wording.
+
+  This skill checks four things before it writes: a clear, true threat, a specific action to take, proof the action works, and a belief that the buyer can do it. If the fix can't be proved, it stops. If it passes, it writes the ad in order: problem, fix, proof, step. It can also add a block that answers a rival's claim before they make it: warn buyers, state the claim in a weak form, then give your strong answer. Pain ads work best for low-cost buys. For high-cost items, add tests, specs and long copy.
+
+when:
+  - You solve a real, common problem and want an ad that names it honestly.
+  - Rivals make a claim you want to answer without attacking them.
+  - Your current ad lists features and doesn't say what problem they fix.
+
+you_give:
+  - The problem and how common it is, with a source
+  - The exact fix your product offers, and the proof it works
+  - What the buyer must do, in one clear step
+  - Rival claims you want to answer and the real difference (optional)
+you_get:
+  - "A four-part check: threat, specific fix, proof the fix works, buyer can do it"
+  - An ad draft in problem, fix, proof, step order
+  - An optional block that answers a rival claim
+  - A list of policy and truth flags
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the problem, with a source for how common it is. Describe your fix and your proof.
+  - Say the one step you want the buyer to take. Add rival claims if you want to answer them.
+  - Read the flags first. Remove or prove anything flagged, then check your ad platform's rules before launch.
+  - Have a qualified person check any health, body or safety wording.
+
+how_it_works:
+  - title: Checks the fix is real
+    text: A worry-based ad only works when the product truly resolves the problem. If it doesn't, the skill stops.
+  - title: Runs the four conditions
+    text: A clear true threat, a specific recommended action, proof the action works, and belief that the buyer can do it. Remove any one and the ad fails.
+  - title: Picks a worry buyers hold
+    text: Aims at fears people already have and widely recognise. It doesn't invent a new worry.
+  - title: Keeps the dose low
+    text: Too much fear freezes people. The step must be easy and achievable.
+  - title: Puts the fix after the threat
+    text: Right after the threat come the specific fix and proof, such as reviews, tests, guarantees or a demo.
+  - title: Answers rival claims
+    text: Warns buyers what others will say, states that claim in a weak form, then gives the strong answer. The attack on your side stays weak.
+  - title: Stays two-sided and honest
+    text: Grants what a rival does well, then shows your clear difference, ideally with a chart if it can be measured.
+  - title: Flags policy and truth
+    text: Lists every line that needs proof or may break platform rules. Uses a deadline only if a real one exists.
+
+output_shape: |
+  FOUR-PART CHECK
+  1. True threat:        <pass/fail, source>
+  2. Specific fix:       <pass/fail, what it is>
+  3. Proof it works:     <pass/fail, which proof>
+  4. Buyer can do it:    <pass/fail, the one step>
+  DECISION: <write the ad | stop, why>
+
+  AD DRAFT
+  Problem: <...>
+  Fix: <...>
+  Proof: <...>
+  Step: <...>
+
+  ANSWER THE RIVAL (optional)
+  Warn: <...>
+  Their claim, weak form: <...>
+  Our answer: <...>
+  What they do well: <...>  Our difference: <...>
+
+  POLICY AND TRUTH FLAGS
+  - <line> : <why it needs proof or may break a rule>
+  MISSING: <problem source | proof | one step>
+  CHECKS MISSED: <none, or ...>
+
+tweaks:
+  - what: The proof you give
+    how: Reviews, tests, guarantees and demos all work. Give the strongest, with its source. A fix without proof stops the ad.
+  - what: Price of the product
+    how: Say if it is a low-cost or high-cost buy. For high-cost items the ad also needs tests, specs and longer copy.
+  - what: The platform
+    how: Name Meta, Google or another platform. The flags then check that platform's rules on health, body and personal wording.
+  - what: Rival claims
+    how: Paste the rival's actual line. The answer block states it in a weak form and replies, and stays fair to what they do well.
+
+judge:
+  - All four conditions are present, and the fix is real and provable.
+  - The worry is one buyers already hold, with a source for how common it is.
+  - The step is one clear action the buyer can do easily.
+  - The rival's claim is stated fairly, and no claim about a rival is unproven.
+  - No health scare, fake deadline or "you have this problem" wording that you can't prove.
+
+test:
+  - Give it a problem your product only partly fixes. It should stop or ask for proof, not write a scary ad.
+  - Give it a strong, proven fix. The ad should lead with the problem and move fast to the proof.
+  - Read the ad as a stranger. Do you feel the worry without feeling talked down to? If you freeze, the dose is too high.
+  - Check each flag against your ad platform's current policy page before launch.
+
+improve:
+  - Add your platform's wording rules to the skill file, such as phrases not to use about a person's body or health.
+  - Save your best proof, with sources, to your brand file so every pain ad starts from it.
+  - Dial the examples to your voice. The source's examples are extreme, so keep to your brand and what you can prove.
+  - Add a rule for real deadlines, such as a true sale end date.
+  - Pair it with a policy checker for ads and a skill that matches claims to proof.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the four-part check and write the draft. Paste the problem, fix and proof together."}
+    - {name: "Meta Ad Library", why: "Shows how rivals word their pain-point claims, so you can answer them fairly."}
+  inputs:
+    - "A source for how common the problem is"
+    - "Review quotes that describe the problem in buyers' own words"
+    - "Your ad platform's current policy page for health and personal wording"
+    - "Test results or a guarantee that backs the fix"
+
+terms:
+  - term: Fear appeal
+    meaning: An ad that names a worry to get the buyer to act. It works only if the product truly fixes the worry.
+  - term: Inoculation
+    meaning: Warning buyers what others will say, answering it in a weak form, so they resist it later.

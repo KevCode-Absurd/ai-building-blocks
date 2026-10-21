@@ -1,0 +1,125 @@
+new_slug: incrementality-test-planner
+name: "Incrementality test planner"
+summary: "Tell it your spend and regions. Get a lift test sized to you and how to read it."
+job: track-numbers
+thinking: high
+thinking_why: "Matching regions and sizing a test needs careful reasoning about data, and a bad design wastes real money. A stronger model catches more."
+
+headline: "Incrementality test planner"
+subhead: "Tell it the channel, your spend and your sales by region. It says if you should test at all, then plans a lift test for your size, with matched regions, dates, spend change, read-out window and a cut, hold or scale rule."
+
+explain: |
+  A platform says its ads earned 5 for every dollar. An incrementality test asks how many of those sales would have happened without the ads. The answer is often far lower, and it tells you where the next dollar should go.
+
+  This skill starts with the hardest question: should you test at all? A small store, or one with a single channel, usually should not. If a test makes sense, it picks the type. An in-platform lift test holds back some users and compares purchase rates. A region test turns spend up or off in one set of matched regions and compares sales with a control set. It sets the dates, a window after the test for late sales, and the formula to read the result. It then turns the result into a factor you apply to the platform's ROAS. Tests cost real money, so it also says what can go wrong.
+
+when:
+  - You spend on more than one channel and need to know where the next dollar earns most.
+  - You doubt that a channel, such as branded search or an automated Google campaign, really earns what it reports.
+  - A platform's number and your store's sales do not match, and the Platform ROAS reality check could not settle it.
+
+you_give:
+  - The channel or campaign to test and its monthly spend
+  - Sales by region for 6 to 12 months, with spend, new-customer revenue and new-customer orders
+  - How much budget you can add or cut for the test, and how many weeks you have
+  - The channel's ROAS now and your break-even ROAS
+  - Your yearly revenue and where else you sell
+you_get:
+  - A clear call on whether to test now, with a cheaper check if not
+  - The test type, treatment and control regions with the reason, dates and spend change
+  - The read-out formula, the noise band and a cut, hold or scale rule
+  - The factor to apply to platform ROAS, and the mistakes to avoid
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the channel, spend, yearly revenue and regional sales history. Say what you can afford to risk.
+  - If it says do not test yet, do the cheaper check it names and come back later.
+  - If it plans a test, hand the region design to an analyst or a testing vendor to check the match.
+  - Run one test at a time, with no promotions in the window, then read it with the rule it gave you.
+
+how_it_works:
+  - title: Decides whether to test
+    text: Compares your size and channel count with each source's view. Says "not yet" when a test would not pay off.
+  - title: Picks the method
+    text: In-platform lift for one campaign, a region test for a whole channel, a user holdout for retargeting or email.
+  - title: Plans the in-platform test
+    text: Holds back a share of users, compares purchase rates, and notes the limits and minimum spend.
+  - title: Matches the regions
+    text: Pairs regions on spend, new-customer revenue and orders, combining regions when none match alone.
+  - title: Sets the change
+    text: Changes one thing in one group, with dates and a window after the test for late sales.
+  - title: Reads the result
+    text: Extra revenue divided by extra spend, with a noise band so a small gap is not over-read.
+  - title: Gives the rule
+    text: Cut, hold or scale against break-even ROAS, then stores the result as a factor.
+  - title: Adds a fallback
+    text: A before-and-after model for when a region test is not possible, marked as direction only.
+
+output_shape: |
+  INCREMENTALITY TEST PLAN  <store>  <channel>
+  SHOULD YOU TEST? <yes | not yet>  why: <size, channels, tracking>  cheaper check: <...>
+  TEST TYPE  <in-platform lift | region test | user holdout>  why: <...>
+  GROUPS     treatment: <regions>  control: <regions>  match: <spend / revenue / orders>
+  CHANGE     <what, by how much, which group>  start <date>  length <days>  post-test window <days>
+  COST       extra spend <$> | lost sales risk <$> | tools <$>
+  READ-OUT   incremental ROAS = (actual - predicted) / extra spend  noise band <...>
+  RULE       cut if < <x> | hold <x to y> | scale if > <x>  (break-even ROAS <x>)
+  FACTOR     incremental / platform = <x>  apply to: <platform>
+  KEEP CLEAN <no promotions, one test at a time, ...>
+  MISTAKES TO AVOID  <list>
+  Check the budget for this test with your accountant.
+  CHECKS MISSED: <none or list>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Your size and channel count
+    how: These decide if you should test now. Give yearly revenue and how many channels you run.
+  - what: Regional sales history
+    how: Six to twelve months of spend, new-customer revenue and orders by region is what makes a good match. Less makes a weak design.
+  - what: Length of the test
+    how: About 25 days is the audit default and about 6 weeks is another source's. Pick by your sales cycle and say why.
+  - what: What you change
+    how: Doubling a budget costs more but shows more than turning a channel off. Choose by what you can afford to risk.
+  - what: Where else you sell
+    how: If you sell on Amazon or in stores, say so. A web-only read can miss sales that moved there.
+
+judge:
+  - It starts by saying whether to test, and says "not yet" when it should.
+  - Size advice shows each source's view with its units (yearly revenue or monthly spend).
+  - Treatment and control are matched on spend, new-customer revenue and orders.
+  - Only one thing changes, in one group.
+  - The read-out has a noise band and a post-test window.
+  - The cut, hold or scale rule uses your break-even ROAS.
+
+test:
+  - Give it a small store with one channel. It should say not yet and name a cheaper check.
+  - Run it twice with the same inputs. The test type and the rule should match.
+  - Change the break-even ROAS and see that only the cut, hold and scale lines move.
+  - Check the formula by hand on the source example, where 40 thousand dollars extra spend and 100 thousand dollars extra revenue gives 2.5.
+
+improve:
+  - Save your regions, break-even ROAS and usual budget in the skill file.
+  - Add the testing vendor or analyst you will use, with the minimum spend they ask for.
+  - Keep a log of each test with its result and factor, and add the factors to the skill file.
+  - Pair it with the Holdout test planner for retargeting and email, and the Platform ROAS reality check before and after.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can plan the test and do the sums. Have an analyst check the region match."}
+    - {name: "Meta Ads Manager", why: "Runs conversion lift tests inside the platform on one campaign."}
+    - {name: "A geo-testing vendor or analyst", why: "Builds the matched regions and checks the match. Doing it by hand in a sheet often gives a false answer."}
+  inputs:
+    - "Daily sales and spend by region for the last 12 months"
+    - "A calendar of promotions and launches in that period"
+    - "Your break-even ROAS from the Break-even ROAS and CPA calculator"
+    - "Sales on Amazon or in stores by region"
+
+terms:
+  - term: Incrementality
+    meaning: How much of your sales an ad really caused, beyond what would have happened without it.
+  - term: Control group
+    meaning: The users or regions where nothing changes. You compare them with the group where you change spend.
+  - term: Counterfactual
+    meaning: What sales would have been if you had changed nothing. It is predicted from the control group.
+  - term: Post-test window
+    meaning: A period kept after the test to catch sales that come late because of it.

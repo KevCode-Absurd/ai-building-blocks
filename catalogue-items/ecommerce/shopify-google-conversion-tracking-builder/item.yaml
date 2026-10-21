@@ -1,0 +1,22 @@
+slug: shopify-google-conversion-tracking-builder
+name: "Shopify Google tracking builder"
+summary: "Give it your Shopify and Tag Manager access. Get a build checklist for purchase tracking and enhanced conversions."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "An agency owner who runs Google Ads for Shopify brands (name not given)", used: "The step order of the Shopify build, four conversion actions with only purchase as primary, and a second tag for first orders"}
+  - {title: "The only Google Ads strategy you need for 2026", by: "An Australian agency founder who works with mid to large stores (name not given)", used: "The warning that GA4 events as the primary conversion miss a share of purchases"}
+  - {title: "Complete Google Ads architecture and operations manual (2026 edition)", by: "A compiled written guide (author not named)", used: "The tag set, enhanced conversions and server-side tagging for larger spend"}
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "Purchases only as the goal and linking GA4"}

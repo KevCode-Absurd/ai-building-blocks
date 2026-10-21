@@ -1,0 +1,127 @@
+new_slug: brand-ritual-designer
+name: "Brand ritual designer"
+summary: "Give it your product and its use. Get three customer rituals and a launch plan for one."
+job: brand-file
+thinking: medium
+thinking_why: "It makes ideas from how a product is used and plans a launch, so a mid-size model works and a stronger one finds fresher ideas."
+
+headline: "Brand ritual designer"
+subhead: Give it your product and how customers use it. It looks for a small repeated act that can sit around the product, and gives you three rituals with a name and an explaining line, a 90-day launch plan for one, and a way to measure if it spreads.
+
+explain: |
+  Some products stick because of something customers do with them: a slow pour, a twist, a set way to serve. That small act is easy to copy and easy to talk about, and it makes the product easier to remember. Most stores never design one on purpose.
+
+  This skill looks for a ritual in what you add, what you slow down, a set way to use it, what loyal buyers already do, a product annoyance you can retell, and a routine your customer already has. You get three ideas, each with the gesture, a short name, the line that explains it and where customers will see it. For the best one it plans 90 days across the pack, the first email and creator content, and says how to count whether it spreads. A store with under about 500 customers is told to test one ritual cheaply first.
+
+when:
+  - Your product is good but forgettable, and customers do not have a way to talk about it.
+  - You sell food, drink, beauty, wellness or gifts and want something customers will copy and share.
+  - You are redoing your box or first email and want a moment worth filming.
+
+you_give:
+  - Your product and how customers use it day to day
+  - Your packaging and what arrives in the box
+  - The moment customers feel best about the product
+  - Reviews or messages that show how loyal buyers use it (optional)
+  - Your budget and how many people you have (optional)
+you_get:
+  - Three ritual ideas, each with the gesture, a short name, an explaining line and where customers see it
+  - A 90-day launch plan for one, across pack, first email and creator content
+  - A measure that shows if it spreads, with a note on what the numbers can and cannot prove
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you sell, how people use it and what arrives in the box. Add reviews or messages from loyal buyers.
+  - Pick one of the three ideas and ask for the launch plan.
+  - Try it on the pack insert and in the first email after purchase before you pay for anything bigger.
+  - After 90 days, count mentions and compare repeat orders using the measure it gives you.
+
+how_it_works:
+  - title: Checks the fit
+    text: Works best for food, drink, beauty, wellness and gifts. It warns when the store is too new, with under about 500 customers, to spend big.
+  - title: Looks for the act
+    text: Something to add, slow down, do in a set way, or serve in a set way.
+  - title: Checks loyal customers
+    text: What buyers already do with the product, so the brand can name it and teach it.
+  - title: Retells a flaw
+    text: Tests whether a real, harmless annoyance can become part of the experience. Never hides a defect.
+  - title: Anchors to routines
+    text: Morning start, shared meals, getting ready to go out and wind-down, from a 26-country study.
+  - title: Writes three ideas
+    text: Each with a gesture, a short name, one explaining line and where customers will see it.
+  - title: Checks safety and honesty
+    text: Flags anything edible or on skin, and removes any health claim.
+  - title: Plans 90 days and the measure
+    text: One ritual on the pack, in the first email and in creator briefs, counted by mentions and repeat orders.
+
+output_shape: |
+  RITUAL IDEAS: <product> | stage: <under 500 customers: test first | 500 or more>
+  Fit: <good | weak, why>
+
+  1 <short name>
+    gesture: <what the customer does>
+    one-line explainer: <line>
+    comes from: <added | slowed | set way | customer habit | flaw | season | routine | collecting>
+    seen on: <pack | email | creators | page>
+    safety / honesty note: <...>
+  2 ...
+  3 ...
+
+  LAUNCH PLAN FOR <chosen ritual> (90 days)
+  Week 1: <pack or insert change, first-email line, creator brief line>
+  Weeks 2 to 6: <...>
+  Weeks 7 to 13: <...>
+  Cost: <rough cost per order>
+
+  MEASURE
+  mentions: <where to count>
+  repeat-purchase rate: ritual buyers <n>% vs others <n>%, with the caveat
+  Stop rule: <what result ends the test>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: What loyal customers already do
+    how: Paste reviews, messages or photos that show how your best buyers use the product. The best rituals start with a habit that is already there.
+  - what: What arrives in the box
+    how: List the pack, inserts and first thing a buyer touches. The launch plan works around real things you can change.
+  - what: Your customer count
+    how: Say how many customers you have. Under about 500, the plan tests one ritual cheaply in the box and in creator content before anything bigger.
+  - what: Seasons and cash
+    how: Say whether you can hold cash through an off-season. Without that, the skill leaves out limited-run and seasonal ideas.
+  - what: Who can show it
+    how: Name the creators, staff or customers who will show the ritual in their own words, so the launch plan gives each a clear line.
+
+judge:
+  - Each idea is one clear gesture a customer can do in seconds.
+  - Every idea has a short name and one line that explains it.
+  - The lime-in-beer story is labelled as the author's claim, not fact.
+  - Anything edible or on skin has a safety note, and no health result is implied.
+  - The measure says buyers who do the ritual may already be your most loyal.
+
+test:
+  - Show the three names and lines to five customers. Ask which one they would try, and which they would tell a friend about.
+  - Add the chosen ritual to one batch of orders only, with a card in the box and a line in the first email. Compare reviews and photos with the batch before it.
+  - Ask two creators to show it with no script except the name and the line. If they do it differently from each other, make the gesture simpler.
+  - After 90 days, count mentions in comments, reviews and messages, and compare repeat orders for buyers who did it and those who did not.
+
+improve:
+  - Add your own rules on what a ritual must never involve, such as anything unsafe for children or pets, and list them in the safety step.
+  - Save the chosen ritual's name, line and gesture to your brand file, so emails, pack and creator briefs stay in sync.
+  - Add your real flaws and annoyances to the "retell a flaw" step so the skill tests them first.
+  - Pair it with the Sensory unboxing planner for the box and the Unboxing insert and gift planner for the card that teaches the ritual.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run this. Paste your product notes and reviews into the chat."}
+    - {name: "Klaviyo", why: "Put the ritual line in your first post-purchase email, then compare repeat orders for buyers who got the new email."}
+  inputs:
+    - "Reviews and photos that show how your best customers use the product"
+    - "A photo of what arrives in the box, laid out as the buyer sees it"
+    - "Your repeat-purchase rate by month, so there is a baseline before the test"
+    - "A short list of creators who already show your product"
+
+terms:
+  - term: Ritual
+    meaning: A small repeated act that customers do with a product and that others can copy.
+  - term: Repeat-purchase rate
+    meaning: The share of buyers who order again within a set time.

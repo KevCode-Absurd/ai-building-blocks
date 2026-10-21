@@ -1,0 +1,20 @@
+slug: forecast-your-startup-runway-and-prepare-a-finance-pack
+name: "Forecast your startup runway and prepare a finance pack"
+summary: "Give it your plan and numbers. Get a multi-year model, a cash-out date with ranges, and a finance plan for the board."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: [startup-financial-model-builder, startup-runway-forecaster, startup-finance-advisor]
+steps:
+  - {uses: startup-financial-model-builder, note: "Builds the monthly cash picture from your plan, with three cases to carry forward."}
+  - {uses: startup-runway-forecaster, note: "Reads the monthly cash in the model and turns it into a cash-out date with a spread, not one guess."}
+  - {uses: startup-finance-advisor, note: "Takes the model and the runway forecast and sets decision triggers and the board pack. Not legal or investment advice."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/forecast-your-startup-runway-and-prepare-a-finance-pack/skeleton.yaml

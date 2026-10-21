@@ -1,0 +1,79 @@
+new_slug: turn-a-dispute-into-a-checked-demand-letter-draft
+name: Turn a dispute into a checked demand letter draft
+summary: Answer questions about a dispute. Get a fact sheet, a dated timeline and a demand letter draft for a lawyer.
+job: check-contracts
+thinking: high
+thinking_why: A demand letter can hurt you if a fact or quote is wrong, so every step needs your strongest model.
+headline: Get a demand letter draft whose every date and amount you have checked
+subhead: Answer its questions about a dispute. It builds a fact sheet, checks it against your emails and documents in a dated timeline, then drafts the letter and a checklist for after sending. A lawyer should read the letter before it goes out.
+explain: |
+  When someone owes you money or breaks a deal, the first letter matters. A letter with a wrong date, a misquoted email or a careless admission gives the other side an easy reply. Most people write it in one go from memory and find the mistakes after it is sent.
+
+  The workflow starts with questions: what kind of demand, what tone, what you want and what you would accept. That becomes a fact sheet. Next it builds a dated timeline from your emails, contracts and invoices, so every date and amount in the letter matches a record. Only then does it draft the letter, with a check for privileged facts, admissions and settlement wording. The last step is a pause. A qualified lawyer should read the letter before you send it.
+when:
+  - A customer, supplier or partner owes you money and has not paid.
+  - Someone broke an agreement and you want to put it on record.
+  - You need a clear, calm first letter before a lawyer gets involved.
+you_give:
+  - Answers about the dispute, such as who, what was agreed and what went wrong
+  - What you want and what you would accept
+  - Your emails, contracts and invoices about it
+  - The tone you want and who will sign (asked by the workflow)
+you_get:
+  - A fact sheet of the dispute and your position
+  - A dated timeline with the key events marked and gaps listed
+  - A demand letter draft with anything unverified flagged
+  - A checklist for what to do after the letter is sent
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Answer its questions in full. Then add your emails and documents when it asks for them.
+  - Read every item it flags as "verify" before you do anything else.
+  - Have a qualified lawyer read the letter before it is sent.
+how_it_works:
+  - title: Gather the facts of the dispute
+    text: Asks what kind of demand it is, the tone, the reply window and the signer, then records the parties, what was agreed, what went wrong, what you want and what you will do if ignored.
+  - title: Build a dated timeline from your emails
+    text: Reads your emails and documents, pulls out each dated event, merges repeats, marks the ones that matter and lists the gaps. Use it to correct the fact sheet.
+  - title: Draft the demand letter
+    text: Writes the letter from the fact sheet and the timeline, after a check for privileged facts, admissions and settlement marking. It flags any quote or date it cannot match.
+  - title: Pause for a lawyer
+    text: Have a qualified lawyer read the letter before it goes out. This workflow gives a first draft, not legal advice.
+output_shape: |-
+  STEP 1: FACT SHEET
+    Demand type and tone | parties | what was agreed | what went wrong | what you want | what you will do if ignored
+
+  STEP 2: TIMELINE
+    Dated events with sources | key events marked | gaps and unclear dates
+
+  STEP 3: DEMAND LETTER DRAFT
+    The letter | items to verify | checklist for after sending
+
+  PAUSE
+    A qualified lawyer reads the letter before it is sent
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The kind of demand
+    how: Say payment, breach, cease and desist or something else. Each has its own form and reply window.
+  - what: Tone
+    how: Measured, firm or hard. A friendly tone suits a partner you want to keep, a hard one suits someone who ignored you twice.
+  - what: Settlement wording
+    how: Say whether you want the letter marked as an offer to settle. Ask your lawyer which marking applies where you are.
+  - what: What you can share
+    how: Tell it which documents are private or covered by a court order, so it leaves them out of the letter.
+judge:
+  - Every date and amount in the letter matches the timeline and a document you gave.
+  - Quotes are exact or marked "verify", and nothing is invented.
+  - The letter says what you want, by when, and what happens if nothing changes.
+  - The draft has no admissions that hurt you.
+  - The pause tells you to check with a qualified lawyer.
+test:
+  - Pick five dates or amounts in the letter and find each in your own records.
+  - Read the letter as the other side would and ask what they could use against you.
+  - Check the reply window against any deadline in the contract.
+improve:
+  - Keep the fact sheet and the timeline. You will need them if the dispute goes further.
+  - Add the reply you get to the timeline and draft the next step from there.
+  - Do not send a letter on a large claim without a lawyer. Use this to arrive prepared.

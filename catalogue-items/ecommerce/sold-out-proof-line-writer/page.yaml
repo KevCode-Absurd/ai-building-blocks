@@ -1,0 +1,114 @@
+new_slug: sold-out-proof-line-writer
+name: "Sold-out proof line writer"
+summary: "Give it your real sales, rank and restock facts. Get short proof lines and where each one goes."
+job: write-ad-copy
+thinking: low
+thinking_why: "It turns a short list of true facts into short lines, so a fast model is enough, as long as it never adds a fact."
+
+headline: "Sold-out proof line writer"
+subhead: "Give it your true sales facts: units sold, restocks, ranks, retailer wins and press. It turns each into a short proof line and says where it should run. You get the lines, the fact and date behind each one, and a list of lines that need more proof."
+
+explain: |
+  Shoppers trust a product other people have already bought. The words that show this are specific and checkable: "restocked 3 times", "number one in its category on a named store", "3,200 orders last month". A brand founder called "restock" the strongest word, because it tells buyers that others bought you out.
+
+  This skill takes the true facts you give it and writes short lines from them. It uses only facts you can prove, with a date and a source for each, and compares you to your own past, never to a rival. It will not write a sold-out or scarcity line that isn't true. Brands with no sales history yet have nothing to use. Never invent a restock, a rank or a number. If a fact is old, the line gets an end date.
+
+when:
+  - Your product has sold out or been restocked, and your ads and page don't say so.
+  - You hit a rank or a retailer milestone and want to use it everywhere.
+  - You need short proof lines for ads, your product page, social posts and emails to retailers.
+
+you_give:
+  - "Your facts: units sold, restocks, ranks, retailer wins and press, with dates and where each can be checked"
+  - Where each line will run, such as ad, product page, social or retailer outreach
+  - Your ad platform and any rules you know about claims (optional)
+you_get:
+  - A set of proof lines, each with the fact and date behind it
+  - Where to place each line
+  - A list of lines that need more proof or must expire
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each fact with its date and its source, such as an order report, a marketplace page or a retailer email.
+  - Say where each line will run.
+  - Check every line against its fact before it goes live. Remove any you can't back.
+  - Put an end date on each line and take it down when the fact is no longer true.
+
+how_it_works:
+  - title: Checks each fact
+    text: Every fact needs a date and a source. A fact with neither is held back.
+  - title: Picks the strongest proof
+    text: Restocks come first, because they show buyers sold you out. Then ranks that stand alone, then real retailer wins, then numbers you can defend.
+  - title: Writes short lines
+    text: Each line states the fact plainly, with the number, and no hype.
+  - title: Compares only to yourself
+    text: Growth is shown against your own past, such as week over week. Rivals are never named or attacked.
+  - title: Matches line to place
+    text: Assigns each line to the places it fits, such as ads, product page, social posts and outreach to retailers or investors.
+  - title: Checks claim rules
+    text: Flags rank and "best" lines that need a named, dated source under ad rules.
+  - title: Sets end dates
+    text: Each line gets a date to review or take down, so a stale fact never stays up.
+
+output_shape: |
+  PROOF LINES
+  1. "<line>"
+     fact: <the fact>  | date: <...> | source: <...>
+     place: <ad | product page | social | retailer outreach>
+     review by: <date>
+  2. ...
+
+  HELD BACK
+  - <fact> : <why: no date | no source | not true now | not allowed>
+
+  CLAIM FLAGS
+  - <line> : <rule to check, such as a named, dated source for a rank>
+
+  MISSING: <facts | dates | sources>
+  CHECKS MISSED: <none, or ...>
+
+tweaks:
+  - what: The facts you give
+    how: Give exact numbers, dates and where each can be checked. A vague fact like "selling well" cannot become a line.
+  - what: Where the line runs
+    how: Say ad, product page, social, email or retailer outreach. A line for a retailer buyer can be longer and more detailed than one for an ad.
+  - what: Your platform
+    how: Name Meta, Google or a marketplace. Rank and "best" lines have to follow that platform's claim rules.
+  - what: Time frame
+    how: Say how recent each fact is. A rank from last year should not be written as current.
+
+judge:
+  - Every line traces to a fact you gave, with a date and a source.
+  - No line says sold out, almost gone or selling fast unless that is true now.
+  - Rank lines name the place and the time, such as a store and a month.
+  - Growth is compared with your own past, never with a named rival.
+  - Every line has a review date.
+
+test:
+  - Give it one fact with no source. It should hold it back and ask.
+  - Give it a restock fact and a plain sales number. The restock line should come first.
+  - Give it a rank from last year. It should date it or leave it out.
+  - Check every line against your own order data before you publish.
+
+improve:
+  - Add your platform's claim rules for ranks and "best" lines to the skill file.
+  - Keep a running list of true facts with dates in your brand file, and paste it each time.
+  - Add a rule for how long a line may run before you review it.
+  - For retailer wins, get permission from the retailer before you show their email or numbers.
+  - Pair it with a skill that matches claims to proof, and one that places testimonials.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can turn a list of dated facts into short lines. Paste the facts with their dates and sources."}
+    - {name: "Shopify", why: "Its reports show orders and units sold by date, which gives you facts you can date and defend."}
+  inputs:
+    - "An order or sales report for the period you cite"
+    - "A screenshot of the marketplace rank with the date visible"
+    - "A restock record from your supplier or warehouse"
+    - "Retailer approval to quote their sales or email"
+
+terms:
+  - term: Validity line
+    meaning: A short true line that shows other people have already bought and trusted your product.
+  - term: Restock
+    meaning: When a product sells out and is made available again. It is proof only if it really happened.

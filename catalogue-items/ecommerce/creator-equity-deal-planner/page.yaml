@@ -1,0 +1,127 @@
+new_slug: creator-equity-deal-planner
+name: "Creator equity deal planner"
+summary: "Describe the creator or athlete and your stage. Get a deal outline and questions for your lawyer."
+job: grow-social
+thinking: high
+thinking_why: "It handles money and legal-style terms where mistakes cost a lot, so a stronger model is safer."
+
+headline: "Creator equity deal planner"
+subhead: Describe the creator or athlete, your stage and what you want from them. It outlines a deal with term, cash, equity type, deliverables and ad rights, a sponsorship order of play, and a list of questions to take to your lawyer. It is not legal or tax advice.
+
+explain: |
+  Some stores give a creator or athlete a share in the business, not only a fee. Done well, it ties a trusted person to your brand for years. Done badly, it gives away something you cannot get back, or breaks a tax or securities rule you did not know about.
+
+  This skill outlines a deal shape from what founders have described in public interviews: a long term, a base fee, a clear list of what the creator does, and equity that only counts value above today's price. It also lays out how to start with small sponsorships before a big deal. Every output ends with questions for your lawyer and accountant, because an equity deal needs them before anyone signs. Check with a lawyer.
+
+when:
+  - A creator or athlete already uses your product and you want to make a long deal.
+  - You are weighing equity against cash for a person with a big audience.
+  - You want a plan to start with sponsorships and move to deeper deals.
+
+you_give:
+  - The creator or athlete, their audience, and how they use your product
+  - Your latest valuation or share price, and the cash you can spend
+  - What you want from them, such as ad rights, product input or appearances
+  - Who owns the business today (optional)
+you_get:
+  - A deal outline with term, cash, equity type, content and ad rights
+  - A list of questions to take to your lawyer and accountant
+  - A sponsorship order of play, from small to deep
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the person and how they already use your product.
+  - Give your last valuation or share price, or say you do not have one, and the cash you can spend.
+  - Read the questions for your lawyer first and book that meeting before you talk to the creator about equity.
+  - Do not send the deal outline as a contract. Send it to your lawyer.
+
+how_it_works:
+  - title: Picks power users
+    text: It starts with people who already use the product every day, so the pitch is a conversation, not a sale.
+  - title: Sets a long term
+    text: It plans a term of at least three years with a meaningful part in equity, so both sides want it to last.
+  - title: Chooses an equity type
+    text: It lists options, warrants and profit interest units, where the partner only shares in value above today's price, and flags them for your lawyer.
+  - title: Pairs equity with work
+    text: A base fee and a clear list of deliverables such as videos a year, product feedback and ad rights.
+  - title: Plans the pitch
+    text: One to one, founder to creator, without an agent in the middle.
+  - title: Orders the sponsorships
+    text: Start broad with many small sponsors, learn what works, then move to fewer and deeper deals.
+  - title: Picks sponsors outside the topic
+    text: A channel that reviews your type of product will avoid taking money from you, so look at channels outside it.
+  - title: Writes lawyer questions
+    text: Tax, ownership, exit, disclosure to viewers and what happens if the deal ends.
+
+output_shape: |
+  CHECK WITH A LAWYER AND AN ACCOUNTANT BEFORE ANY OFFER. This is not legal or tax advice.
+
+  PERSON  <who>   Uses the product: <how>   Audience: <size and fit>
+
+  DEAL OUTLINE
+  Term: <at least 3 years>   Cash per year: <$>   Equity: <type, share, price it counts above>
+  Deliverables: <videos a year, posts, appearances, product feedback>
+  Rights: <ad, whitelisting, image use, where>
+  Exit and ending: <what happens if either side leaves>
+  Disclosure: posts show the paid and ownership link (#ad or the platform's label, and a clear note of the stake)
+
+  SPONSORSHIP ORDER
+  1. <small, wide first round>  2. <learn>  3. <fewer, deeper deals>
+
+  QUESTIONS FOR YOUR LAWYER
+  1. <question>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Your stage
+    how: Say if you are pre-revenue, bootstrapped or have investors. Equity is only advised for a brand with real upside and a clean list of owners.
+  - what: Your price or valuation
+    how: Give the figure and how you got it. The outline then says what share the person gets above that price.
+  - what: Cash available
+    how: State a yearly cap. The outline moves between cash and equity inside it.
+  - what: The person
+    how: Say if they are an athlete, a channel owner or a podcaster, since the deliverables and rights differ.
+  - what: Your country
+    how: Name where you and the person are based. Your lawyer needs it, and the questions change.
+
+judge:
+  - It starts with a line telling you to check with a lawyer and an accountant.
+  - The term is at least three years, and the outline says why.
+  - Equity is described as sharing only value above a set price, with no promise of what it is worth.
+  - Deliverables are specific and countable.
+  - The lawyer questions cover tax, disclosure and ending the deal.
+  - It says that celebrity names did not beat a brand's own accounts for ad results in the Ridge founder's tests.
+
+test:
+  - Describe a creator who has never used your product. It should push you back to start with a sponsorship first.
+  - Say you have no valuation. It should list the valuation as missing and the equity terms as unset.
+  - Ask for a one-year deal. It should explain the three-year term and ask if you still want shorter.
+  - Take the lawyer questions to your lawyer and see if they are the ones they would ask.
+
+improve:
+  - Add your standard deliverables to the outline so every deal starts from the same list.
+  - Add your lawyer's and accountant's names and the questions they always ask.
+  - Add the countries you work in and what each needs for viewer disclosure.
+  - Pair it with the creator pay planner to price the cash part.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It drafts the outline and questions. Keep the output as a brief for your lawyer, not as a contract."}
+    - {name: "A business lawyer", why: "Equity, tax and disclosure rules differ by country and by the type of award."}
+    - {name: "Carta", why: "A cap table tool that shows who owns what, which helps your lawyer model a new award."}
+  inputs:
+    - "Your latest valuation and how it was set"
+    - "Your cap table or a list of owners"
+    - "The person's posts that already feature your product"
+
+terms:
+  - term: Equity
+    meaning: A share of ownership in the business.
+  - term: Strike price
+    meaning: The company value at which equity is issued. The holder shares only in value above it.
+  - term: Whitelisting
+    meaning: Running a creator's post as an ad from their account, with their permission.
+  - term: Non-endemic sponsor
+    meaning: A sponsor from outside the channel's topic, such as a wallet brand on a tech channel.

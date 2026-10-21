@@ -1,0 +1,20 @@
+slug: ad-recall-risk-checker
+name: "Ad recall risk checker"
+summary: "Paste your ad or creator brief. Get a brand-recall score out of 100 and fixes."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+  - {type: image, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Buyology", by: "Martin Lindstrom (book)", used: "The product-in-the-story study (a sponsor woven into a show against one that only ran ad spots), the distraction effect of sexual or very attractive content on brand recall, ordinary people identifying better than glamorous ones, and the sameness of sixty car commercials"}

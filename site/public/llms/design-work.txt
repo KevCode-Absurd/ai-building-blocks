@@ -1,6 +1,6 @@
 # Design things people love: AI Blocks
 
-> 81 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 84 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Aesthetic direction brief writer](https://useaiblocks.com/skills/aesthetic-direction-brief-writer): Answer four questions about tone and feel. Get a brief that keeps copy, design and images in one style.
 - [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
@@ -9,6 +9,7 @@
 - [Apple interface reviewer](https://useaiblocks.com/skills/apple-interface-reviewer): Describe or share your iOS or Mac screen. Get fixes checked against Apple's design rules, including Liquid Glass.
 - [Bento grid style guide writer](https://useaiblocks.com/skills/bento-grid-style-guide-writer): Describe your product. Get a style guide for a tidy card-grid look, with tokens, states and checks.
 - [Bold-border style guide writer](https://useaiblocks.com/skills/bold-border-style-guide-writer): Describe your product. Get a style guide with thick borders and vivid colour, plus rules for each part.
+- [Borrow a look you like and plan a readable page](https://useaiblocks.com/workflows/borrow-a-look-you-like-and-plan-a-readable-page): Give it designs you like and your page text. Get the look, a page plan and checked colours.
 - [Brand mark system planner](https://useaiblocks.com/skills/brand-mark-system-planner): Paste your brief and brand file. Get a mark plan that starts from the brief and tests small.
 - [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker): Give it your colour tokens. Get light and dark theme pairs checked for readability, with the closest passing colours.
 - [Conversion page style guide writer](https://useaiblocks.com/skills/conversion-page-style-guide): Describe the action you want. Get a style guide for a page that removes friction and builds trust.
@@ -50,6 +51,7 @@
 - [Minimal style guide writer](https://useaiblocks.com/skills/minimal-style-guide-writer): Describe your product. Get a style guide built on space, plain type and few colours, with checks.
 - [Mobile app designer](https://useaiblocks.com/skills/mobile-app-designer): Describe the app screen. Get a touch-first design that fits iOS or Android, with a risk score before you build.
 - [Mood colour palette planner](https://useaiblocks.com/skills/mood-colour-palette-planner): Name the feeling a space, page or brand should give. Get a small palette where every colour has a job.
+- [New screen design reviewer](https://useaiblocks.com/agents/new-screen-design-reviewer): Point it at each new screen. Get a ready, fix-first or rethink call and a ranked fix list.
 - [One-symbol concept finder](https://useaiblocks.com/skills/one-symbol-concept-finder): Paste what your poster, video opening or cover is about. Get one symbol, the feeling it sets and what to leave out.
 - [Packaging brief writer](https://useaiblocks.com/skills/packaging-brief-writer): Describe your product and brand. Get a packaging brief a designer can follow, from materials to unboxing.
 - [Page design standards checker](https://useaiblocks.com/skills/page-design-standards-checker): Give it a page or component. Get checks on colour contrast, spacing, hierarchy and mobile, with fixes.
@@ -83,3 +85,4 @@
 - [Wayfinding sign planner](https://useaiblocks.com/skills/wayfinding-sign-planner): Describe your place and its routes. Get a sign plan a first-time visitor can follow, with one lead mark.
 - [Wireframe drafter](https://useaiblocks.com/skills/wireframe-drafter): Describe the screens. Get text wireframes at three detail levels, with parts, behavior and screen sizes.
 - [Wordmark sketch planner](https://useaiblocks.com/skills/wordmark-sketch-planner): Paste a name and its meaning. Get five letter-shape ideas that act it out, with a pick.
+- [Write design rules, check colours and hand developers a spec](https://useaiblocks.com/workflows/write-design-rules-check-colours-and-hand-developers-a-spec): Give it your brief. Get design rules, checked colours, tokens and a developer spec.

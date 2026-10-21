@@ -1,0 +1,122 @@
+new_slug: offer-profit-per-session-checker
+name: "Offer profit-per-session checker"
+summary: "Give it offer variants, costs and sessions. Get profit per visitor for each, a winner and a trust score."
+job: make-offer
+thinking: high
+thinking_why: "It builds cost tables and checks many numbers against each other, so a stronger model makes fewer sum errors."
+
+headline: "Offer profit-per-session checker"
+subhead: Give it your offer variants, your costs per unit and the sessions and orders each one got. It works out net profit per order and per visitor, break-even ROAS and CPA, flags offers that raise AOV but lose profit, and scores how far you can trust the read-out out of 100.
+
+explain: |
+  A higher average order value does not always mean more profit. A big pack at a high price can lift AOV and still lose money per visitor, because fewer people buy it. Revenue alone hides this. So does conversion rate alone.
+
+  This skill uses one number to compare offers: profit per session, which is total net profit divided by sessions. It builds a cost table for each variant (price, units, product cost, shipping, handling, fees, gifts, discount), works out margin, break-even ROAS and CPA, and ranks the variants. It flags any offer that lifts AOV but cuts conversion enough to lower profit per session. It also gives a trust score out of 100 that shows how safe it is to act on the result, with the reasons for every point taken off. It needs your real costs. Without them it can only show revenue.
+
+when:
+  - You tested two or more offers and need to know which one actually earns more per visitor.
+  - You added a bigger pack or a gift and revenue went up, but you are not sure profit did.
+  - You want to check an offer before spending more on ads for it.
+
+you_give:
+  - Each offer variant (tiers, price, gifts and discount)
+  - Cost per unit and per order (product, shipping, pick and pack, payment fees)
+  - Sessions and orders for each variant, or conversion rate and AOV
+  - Your target CAC or MER (optional)
+  - Notes on dates, traffic and creative for each variant
+
+you_get:
+  - A table of net profit per order and per session for every variant
+  - Break-even ROAS and CPA for each, and a flag for offers that raise AOV but lower profit per session
+  - A winner and a recommended next test
+  - A trust score out of 100 with the sum shown, and a list of checks it could not run
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each variant's offer and its costs. Round costs up, not down.
+  - Paste sessions and orders for each variant, and note the dates and traffic source.
+  - Read the table first, then the flags, then the trust score.
+  - Check 90-day repeat revenue before you roll out the winner.
+
+how_it_works:
+  - title: Builds the cost table
+    text: One table per variant with price, units, product cost, shipping, handling, fees, gifts and discount. Costs are rounded up.
+  - title: Models the shipping spread
+    text: It shows how fixed shipping falls per unit in a bigger pack, such as $5 alone and $1.25 a unit in a four-pack.
+  - title: Works out the break-evens
+    text: It gives margin, break-even ROAS and break-even CPA for each variant.
+  - title: Measures profit per session
+    text: Total net profit divided by sessions, per variant. This balances AOV against conversion.
+  - title: Flags AOV traps
+    text: It marks any offer that lifts AOV but lowers profit per session. It shows AOV times conversion as a flag only.
+  - title: Scores the read-out
+    text: It starts at 100 and takes off points for weak data. It shows the sum.
+  - title: Names the next test
+    text: It picks the winner by profit per session and says to confirm it with 90-day repeat revenue.
+
+output_shape: |
+  OFFER PROFIT-PER-SESSION CHECK  <store>  <period>
+  VARIANT TABLE
+  <variant> | <price> | <units> | <total cost> | <margin> | <break-even ROAS> | <break-even CPA>
+  <variant> | <sessions> | <orders> | <conversion> | <AOV> | <net profit per order> | <profit per session>
+
+  FLAGS
+  <variant>: <raises AOV but lowers profit per session | AOV x conversion below ~250 (flag only) | uses a discount, send to the discount checker>
+
+  WINNER: <variant> by profit per session. Confirm with 90-day repeat revenue.
+  NEXT TEST: <one test>
+
+  SCORE  <n>/100 trust in this read-out (100 - <points> - <points> = <n>)
+  Measures: how safe it is to act on this comparison, not how good the offer is.
+  NOT RUN: <checks and what is needed>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Cost data
+    how: Give product cost, shipping, pick and pack, and fees. Without them it shows revenue per session only and calls no winner.
+  - what: Sessions per variant
+    how: Give real counts and dates. Under about 1,000 sessions per variant, the read-out costs trust points.
+  - what: Creative and traffic notes
+    how: Say if the ads or traffic differed between variants. The skill then notes that the result may come from the ad, not the offer.
+  - what: Target CAC or MER
+    how: Give it so the break-even CPA can be compared to what you actually want to pay.
+
+judge:
+  - Every variant has a cost table with all cost lines, not only product cost.
+  - Profit per session is the ranking number, not revenue or conversion.
+  - The score line shows the sum and says what it measures.
+  - The AOV times conversion rule is shown as a flag only.
+  - The winner is confirmed with a 90-day repeat check, not declared final.
+
+test:
+  - Give it a variant with a very high price and low conversion. It should flag it as raising AOV but lowering profit per session.
+  - Remove the shipping cost from one variant. The score should drop and the output should say costs are incomplete.
+  - Give it 150 sessions per variant. The score should lose points and the winner should be marked as direction only.
+  - Check one profit per session figure by hand with a calculator.
+
+improve:
+  - Add your standard cost lines (pick and pack, payment fee percent) to the skill file so you do not paste them each time.
+  - Add your own rule for the lowest number of sessions you trust.
+  - Save each result in your brand file so you can see which offer types win for your store.
+  - Pair it with the Discount impact checker for discount variants and the Bundle and quantity-break builder for new tiers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It builds the cost tables and sums from the numbers you paste."}
+    - {name: "Google Sheets", why: "A sheet keeps the cost lines in one place so each new test only needs sessions and orders."}
+    - {name: "Shopify admin reports", why: "Sessions, orders and conversion rate by landing page for each variant."}
+  inputs:
+    - "Your landed cost per product, including inbound freight"
+    - "Shipping quotes for one, two and four units"
+    - "Ad spend per variant, if the traffic was paid"
+    - "Refund and return rates by variant"
+
+terms:
+  - term: Profit per session
+    meaning: Total net profit from an offer divided by the number of visits to it.
+  - term: Break-even ROAS
+    meaning: The return on ad spend at which an order earns no profit. It is 1 divided by your gross margin.
+  - term: Break-even CPA
+    meaning: The most you can pay to win one order before it loses money.
+  - term: AOV
+    meaning: Average order value, the average amount spent per order.

@@ -1,0 +1,27 @@
+slug: make-visitors-who-hesitate-at-the-price-say-yes
+name: "Make visitors who hesitate at the price say yes"
+summary: "Give it your offer and what buyers say about price. Get a value case, a guarantee, honest urgency and a closing line."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: copy_draft, required: true}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: question, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: ad_copy}
+uses: [value-equation-scorer, price-against-value-checker, guarantee-designer, honest-urgency-planner, call-to-action-writer]
+steps:
+  - {uses: value-equation-scorer, note: "Scores the offer on what the buyer gets against what it asks of them, and finds the weak part."}
+  - {uses: price-against-value-checker, note: "Compares the price with that value score and says whether to change the price or the story."}
+  - {uses: guarantee-designer, note: "Designs a guarantee aimed at the weak part the checks found."}
+  - {uses: honest-urgency-planner, note: "Plans a true reason to act now that fits the offer and the guarantee."}
+  - {uses: call-to-action-writer, note: "Writes the closing line that states the offer, the guarantee and the deadline together."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/make-visitors-who-hesitate-at-the-price-say-yes/skeleton.yaml

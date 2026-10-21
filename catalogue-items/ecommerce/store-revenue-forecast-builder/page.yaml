@@ -1,0 +1,124 @@
+new_slug: store-revenue-forecast-builder
+name: "Store revenue forecast builder"
+summary: "Give it past spend, cohorts and a calendar. Get daily new and returning revenue and the target gap."
+job: track-numbers
+thinking: high
+thinking_why: "It fits two models and layers events on top, so a stronger model keeps the steps straight and flags weak data."
+
+headline: "Store revenue forecast builder"
+subhead: Give it 12 to 36 months of daily spend and new-customer revenue, your monthly cohorts with repeat rates, and a calendar of launches and sales. It forecasts new and returning revenue apart, layers your events on top and shows the gap to your target and the actions to close it.
+
+explain: |
+  Most store forecasts are one number pulled from last year with a growth rate on top. New customers and returning customers do not respond to the same levers, so they need separate models. New revenue follows ad spend and its efficiency. Returning revenue follows the customers you already have and how often they come back.
+
+  This skill fits a line through daily new-customer efficiency against daily spend, and reads efficiency at the spend you plan. For returning revenue it multiplies each past monthly cohort by its repeat rate at its age. It adds seasonality and the events on your calendar, sized from past launches, promos and emails. The two speakers claim about 10% accuracy for the cohort method, rising to 1 to 2% with seasonality. Those are their claims, so treat the error bars as yours to test.
+
+when:
+  - You must give your board or team a revenue number for next quarter.
+  - You are deciding how much to spend to hit a target.
+  - You want to find out on day 5, not day 22, that you are behind.
+
+you_give:
+  - 12 to 36 months of daily ad spend and new-customer revenue
+  - Monthly cohorts with repeat rates by age
+  - Returning customer order value
+  - A calendar of launches, sales and emails
+  - Your revenue target
+
+you_get:
+  - A new-customer forecast from a spend and efficiency curve
+  - A returning-customer forecast from cohort decay
+  - Event effects layered on top
+  - The gap to your target and the actions to close it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your daily spend and revenue history and your cohort table.
+  - Paste the calendar of what you plan to launch, discount and send.
+  - Ask for the spend needed to reach your target, then ask if you can really spend that much.
+  - Compare daily actuals to the forecast every day.
+
+how_it_works:
+  - title: Splits the forecast
+    text: New and returning revenue are forecast separately, because different levers move them.
+  - title: Fits the spend curve
+    text: It plots daily efficiency against daily spend over a year, fits a straight or log line, and drops sale days, Black Friday and days with very low spend.
+  - title: Back-solves spend
+    text: Pick the new-customer revenue and efficiency you need, find the spend, and ask whether you can really spend it.
+  - title: Decays the cohorts
+    text: For each monthly cohort, customers times the repeat rate at their age times returning order value, summed across cohorts.
+  - title: Adds seasonality
+    text: Seasonal patterns from the last three years tighten the forecast.
+  - title: Layers events
+    text: Launches, promos and emails from the calendar, each sized from what past ones did.
+  - title: Tracks the gap
+    text: It shows the gap to target, the actions that close it, and compares daily actuals to forecast.
+
+output_shape: |
+  DATA USED  <months> of daily data | cohorts <n> | dropped days: <sale days, low-spend days>
+
+  NEW-CUSTOMER MODEL
+  line: <linear | log> fit of new-customer efficiency vs daily spend | fit quality <note>
+  at spend <$> a day, expected efficiency <x>, new revenue <$> a day
+
+  RETURNING MODEL
+  cohort | customers | repeat rate at age | returning revenue
+  total returning revenue <$>
+
+  SEASONALITY  <from last 3 years, or not available>
+  EVENTS  <event | date | effect sized from <past event> | revenue added>
+
+  FORECAST  daily and monthly: new <$> + returning <$> + events <$> = <$>
+  TARGET  <$> | GAP <$>
+  ACTIONS TO CLOSE THE GAP  <spend needed, can you fund it, events to add, each with a size>
+  DAILY CHECK  actual vs forecast, flag if off by <%> by day 5
+  CHECKS MISSED: <none or list>
+  MISSING: <input>
+
+tweaks:
+  - what: How much history you give
+    how: The spend curve needs 12 months of daily data. A new account should skip it and use a plain spend-times-efficiency guess marked as weak.
+  - what: Which days you drop
+    how: Drop sale days, Black Friday and days under about 1,000 of spend. They bend the line.
+  - what: The calendar
+    how: Keep it in the plan. If a product launch is missing this year, last year's lift should not be repeated.
+  - what: New products
+    how: One brand's history is noisy. Widen the error bars for new products.
+
+judge:
+  - New and returning revenue are forecast apart.
+  - The spend curve says which days were dropped and why.
+  - Every event added has a size taken from a past event, not from hope.
+  - The gap to target is shown, with actions that are sized.
+  - Accuracy claims are credited as the speakers' claims.
+
+test:
+  - Run it on last year with the first nine months only, then compare its forecast with the last three.
+  - Remove one event from the calendar and see the revenue drop by that event's size.
+  - Ask for the spend needed to hit your target. Can your team and cash really deliver it?
+  - Compare daily actuals to forecast for a week and see if the flags fire early.
+
+improve:
+  - Add your own event sizes to the skill file after each launch or promo.
+  - Add your seasonality curve once you have three years.
+  - Name one owner for the daily rhythm and another for the big moves ahead.
+  - Pair it with the daily contribution margin tracker so you forecast profit and not only revenue.
+  - Money figures are planning numbers. Check them with your accountant.
+
+works_best_with:
+  tools:
+    - {name: "Google Sheets", why: "Scatter charts with a trendline, cohort tables and a daily comparison are easy to build there."}
+    - {name: "Shopify", why: "Its exports give daily orders and cohorts by first-purchase month."}
+    - {name: "Any good chat AI", why: "It can fit and explain the line if you attach clean data and ask it to show its working."}
+  inputs:
+    - "Three years of monthly sales, for seasonality"
+    - "A note of every launch, promo and email send with its date"
+    - "Your realistic maximum daily spend"
+
+terms:
+  - term: Cohort
+    meaning: A group of customers who first bought in the same month.
+  - term: aMER
+    meaning: New-customer revenue divided by ad spend.
+  - term: Event effect
+    meaning: The extra revenue a launch, promo or email added in the past.

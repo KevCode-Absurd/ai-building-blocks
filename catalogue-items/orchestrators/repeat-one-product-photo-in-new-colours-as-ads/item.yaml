@@ -1,0 +1,24 @@
+slug: repeat-one-product-photo-in-new-colours-as-ads
+name: "Repeat one product photo in new colours as ads"
+summary: "Give it one product photo. Get matching image ads with exact words, checked, then sized for print."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: image
+level: intermediate
+inputs:
+  - {type: product_photos, required: true}
+  - {type: approved_image, required: true}
+  - {type: brand_brain, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: upscaled_image}
+uses: [repeated-image-campaign-planner, image-ad-maker-with-exact-text, pre-launch-ad-checker, image-upscale-checker]
+steps:
+  - {uses: repeated-image-campaign-planner, note: "Starts from your one photo and your brand file."}
+  - {uses: image-ad-maker-with-exact-text, note: "Turns each piece in the plan into a prompt with every word spelled out."}
+  - {uses: pre-launch-ad-checker, note: "Reads the prompts from the step before and names anything to fix before you spend on images."}
+  - {uses: image-upscale-checker, note: "Takes the images you approved after the pause."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/repeat-one-product-photo-in-new-colours-as-ads/skeleton.yaml

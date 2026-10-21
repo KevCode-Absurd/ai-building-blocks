@@ -1,0 +1,21 @@
+slug: hand-tasks-to-ai-without-losing-what-the-job-quietly-does
+name: "Give AI tasks and keep what the job quietly does"
+summary: "Give it a job. Get the tasks AI takes on, what each hides, safe handoffs and a failure check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [role-task-breakdown-for-ai-help, hidden-value-check, ai-workflow-handoff-planner, failure-first-plan-check]
+steps:
+  - {uses: role-task-breakdown-for-ai-help, note: "Lists the tasks and which ones AI could take on."}
+  - {uses: hidden-value-check, note: "Looks at each task chosen for AI in the plan before it goes, and flags what must be kept or replaced."}
+  - {uses: ai-workflow-handoff-planner, note: "Turns the task plan into step cards that carry forward what the hidden-value check said to keep."}
+  - {uses: failure-first-plan-check, note: "Reads the handoff plan from the step before and lists how it could fail, with fixes."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/hand-tasks-to-ai-without-losing-what-the-job-quietly-does/skeleton.yaml

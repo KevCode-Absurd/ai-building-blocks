@@ -1,0 +1,48 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: launch-a-subscription-offer-you-can-afford-to-fund
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: launch-a-subscription-offer-you-can-afford-to-fund
+  name: "Launch a subscription offer you can afford to fund"
+  summary: "Give it your product and order data. Get a subscription offer, its payback time and a cancel flow that saves sign-ups."
+  when: "you sell something people reorder and want subscriptions without running short of cash."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: "Subscription offer designer"
+    skill: subscription-offer-designer
+    job: offer
+    from: "library"
+    method: ["Make the case with the store's own numbers", "Front-load the discount", "Add a prepaid long plan if the fit and cash allow", "Match cadence to use", "List every place the offer appears"]
+    inputs: [product_data, performance_sheet!]
+    outputs: [offer, plan]
+    note: "Designs the subscription offer: discount, cadence and first-order deal."
+  - name: "Subscription payback checker"
+    skill: subscription-payback-checker
+    job: offer
+    from: "library"
+    method: ["Compute value at month 3 and month 6", "First-order loss", "Check the offer stack", "Track the trend", "Score it"]
+    inputs: [performance_sheet, product_data!, offer!]
+    outputs: [audit_report]
+    note: "Tests the designed offer for payback time and the most you can pay to win a subscriber."
+  - name: "Subscription cancel flow builder"
+    skill: subscription-cancel-flow-builder
+    job: offer
+    from: "library"
+    method: ["Start screen", "Delay not pause", "Targets and tracking", "After the cancel", "Fix root causes"]
+    inputs: [voc_reviews, performance_sheet!, offer!]
+    outputs: [plan, email_flow]
+    note: "Builds the cancel and pause steps for the same offer, so churn does not undo the payback."
+  - pause: "Put the offer live and let it run until you have a few weeks of sign-up data and a page capture."
+  - name: "Subscription page take-rate checker"
+    skill: subscription-page-take-rate-checker
+    job: page
+    from: "library"
+    method: ["R1 Default selection (20 points)", "R3 Option count (15)", "R4 Pop-up alignment (15)", "R6 Cadence sanity (8)", "R7 Cart upgrade (7)"]
+    inputs: [store_capture, offer!]
+    outputs: [audit_report]
+    note: "Checks the live page shows the offer clearly and that enough first orders choose it."

@@ -1,0 +1,119 @@
+new_slug: cash-lever-ranker
+name: "Cash lever ranker"
+summary: "Give it your P&L and stock. Get six cash levers ranked by cash freed, scored out of 100."
+job: track-numbers
+thinking: high
+thinking_why: "It runs a small model six times and then in combination. A stronger model keeps the base steady and gets the sums right."
+
+headline: "Cash lever ranker"
+subhead: "Give it three months of P&L, your stock value and your key numbers. It tests six changes one at a time, ranks them by cash freed at day 180, picks the best two or three to combine, and scores how much of your cash gap they close."
+
+explain: |
+  If your store buys stock before it sells, your cash is stuck in boxes for a while. How long it is stuck sets how fast you can grow, because ads and the next order both need cash. The question is which change frees the most.
+
+  This skill builds one small model of your store. Then it changes one thing at a time: what a customer costs to win (CAC), order value (AOV), the markup you really sell at, how many buyers come back, how much stock sells in the first 30 days, and your fixed running costs. It shows cash at day 0, 30, 60 and 180, because small changes take two to six months to show. It then runs the best two or three together. The score says how much of your cash gap those moves close, and how solid your data is.
+
+when:
+  - Your bank balance is low even though sales are up, and you do not know where to look first.
+  - You are choosing between cutting costs, raising prices, trimming products or lowering CAC.
+  - You plan to grow ad spend but stock keeps eating the cash.
+
+you_give:
+  - Your monthly P&L for the last three months, split into new and returning customers
+  - Stock value, the purchase schedule and lead time
+  - CAC (from store totals), AOV and the share of revenue from returning customers
+  - 30-day sell-through by product, and your fixed running costs
+  - Starting cash and the cash gap, if you know it (optional)
+you_get:
+  - Cash at day 0, 30, 60 and 180 for each of six levers
+  - The levers ranked by cash freed, with net income change shown apart
+  - The best two or three to combine, and what to track for 90 days
+  - A score out of 100 and how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste three months of P&L and your stock numbers. Say which numbers come from your books and which are guesses.
+  - Tell it how far you think you can move each lever, such as a CAC cut or a price rise.
+  - Read the ranking and the combination. Pick two or three moves, not six.
+  - Track the numbers it lists for 90 days before you judge the result.
+
+how_it_works:
+  - title: Names the problem
+    text: Measures how many days your cash sits in stock. That limit, not ad efficiency, caps your growth.
+  - title: Builds one base
+    text: A small monthly model from your P&L, with sales, costs, stock bought and cash.
+  - title: Tests each lever alone
+    text: Changes only CAC, AOV, markup, repeat rate, sell-through or running costs, by a move you can reach.
+  - title: Reads day 0 to 180
+    text: Cash at four points, since the effect of each lever builds up slowly.
+  - title: Ranks by cash freed
+    text: Orders the levers by cash at day 180, with net income shown in its own column.
+  - title: Combines the best
+    text: Reruns the model with two or three levers changed together. It does not add up single results.
+  - title: Scores it
+    text: Gap closed plus data quality, with the sum shown.
+
+output_shape: |
+  CASH LEVER RANKING  <store>  <date>
+  BASE  stock <$> = <days> days | cash start <$> | cash gap <$>
+  LEVER TESTS (one at a time, same base)
+    lever | change tested | cash day 0 / 30 / 60 / 180 | cash freed | net income change
+  RANK  1 <lever> <$> | 2 <lever> <$> | ... | 6 <lever> <$>
+  BEST COMBINATION  <2 or 3 levers> -> cash day 180 <$>, gap closed <%>
+  WATCH FOR 90 DAYS  <numbers to track>
+  SCORE  <n>/100 = gap closed <pts> + data quality <pts>
+  Where the data is weakest: <...>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: How big a move you can really make
+    how: Give a move you believe, such as a CAC cut you have seen before. The ranking changes a lot with the size of the move.
+  - what: Where CAC comes from
+    how: Use store totals, not the ad platform. Platform CAC is often too low and changes the ranking.
+  - what: Your own repeat data
+    how: Use your cohort or returning-customer report. The skill carries the source's claim that repeat buyers bring most of the profit, but your own numbers decide.
+  - what: Time window
+    how: Read day 60 and day 180, not day 30. Early cash can hide the real winner.
+  - what: Price tests
+    how: A price rise needs a conversion test first. Say what you will watch.
+
+judge:
+  - Each lever was tested alone, on the same base.
+  - Cash is read at 60 and 180 days, not only 30.
+  - Cash and net income sit in separate columns.
+  - The combination was run again, not added up.
+  - The source's example gains are not given as your results.
+  - The score shows its sum.
+
+test:
+  - Run it on a month where you know the real cash. The base model should land near your bank balance.
+  - Run it twice with the same inputs. The ranking should match.
+  - Change one lever by half and see that the cash freed moves by a smaller amount, in the same direction.
+  - Check the day 180 cash for the top lever by hand in a sheet.
+
+improve:
+  - Save your stock days, lead time and fixed costs in the skill file so each run starts faster.
+  - Add the levers you can really move, with the limit on each, such as a price ceiling.
+  - Add a rule for your cash floor, so the ranking is against a gap you set.
+  - Pair it with the Inventory cash planner for order timing and the SKU ad money planner for slow stock.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can run the small model. Check the day 180 cash for the top lever by hand."}
+    - {name: "Shopify", why: "Its cohort and product reports give your repeat share and sell-through."}
+    - {name: "Excel or Google Sheets", why: "Holds the base model so you can change one lever and see the result."}
+  inputs:
+    - "A cohort report from your store"
+    - "Sell-through by product for the last 90 days"
+    - "Your supplier's lead time and next order dates"
+    - "A list of fixed costs by line, with contract end dates"
+
+terms:
+  - term: Cash conversion cycle
+    meaning: How long money spent on stock takes to come back as cash. The longer it is, the less cash you have to grow.
+  - term: Maintained markup
+    meaning: The multiple of your cost that you actually sell at after discounts. A markup of 4 means you sell at four times cost.
+  - term: Sell-through
+    meaning: The share of stock that sold in a set time. Thirty-day sell-through is the share sold in the first 30 days.
+  - term: Fixed costs
+    meaning: Costs that stay the same however much you sell, such as staff and software. They hit profit one for one.

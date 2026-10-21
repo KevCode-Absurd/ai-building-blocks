@@ -1,0 +1,79 @@
+new_slug: write-your-founder-story-and-cut-it-to-what-moves
+name: Write your founder story and cut it to what moves
+summary: Give it the true facts of how you started. Get a shaped, trimmed story in plain words.
+job: write-and-tell-stories
+thinking: medium
+thinking_why: Four text skills in a row. A mid-size model works. Use your strongest one if the story is long.
+headline: Write the story of how you started, and cut it to what moves
+subhead: Give it the true facts of how you got here. It maps them into a story with a start, a hard stretch and a change, shows where the story goes flat, cuts it by a tenth and puts it in words you would say out loud.
+explain: |
+  An about-me story usually fails in one of two ways. It lists dates with no shape, or it dresses the facts up until they are not quite true. Readers feel both and skip it.
+
+  The steps keep the facts true and give them a shape. First it lists what happened in time order, then marks the call, the point of no return, the hardest stretch, the change and what you brought back for others. It drafts the story without inventing anything. Next it scores each beat from good to bad fortune and draws the line, so you can see where it goes flat. You pause to make the one fix it suggests. Then it cuts the draft by a tenth, with a log of every cut and why. Last it puts the result in plain words and checks you would say it aloud.
+when:
+  - You need an About page, an intro or a talk opener about how you started.
+  - Your story is a list of dates and does not move.
+  - Your draft is long, and you cannot tell what to cut.
+you_give:
+  - The true facts, what happened, in what order, with rough dates
+  - What it cost you and what you gave up
+  - What you learned or became, and who gains from it
+  - Who will read or hear it, and how long it should be
+  - Your brand file or voice notes (optional)
+you_get:
+  - The story mapped as a call, a point of no return, a hardest stretch, a change and a return
+  - A draft that uses only the facts you gave
+  - A line of the story's ups and downs, its shape and the flat spots
+  - A version cut by a tenth, with a log of every cut, then a plain-words edit
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it facts only. It will not add scenes, quotes or numbers you did not provide.
+  - At the pause, make the one change the shape check suggests and fix the flat spots yourself. Then hand the draft back.
+how_it_works:
+  - title: Map the facts into a story
+    text: Lists every true fact in order, marks the call, the point of no return, the trial, the change and the return, drops any stage that rests on a guess and drafts the story.
+  - title: Check the shape
+    text: Splits the story into beats, scores each from good to bad fortune, draws the line in text, names the shape and flags the flat spots with one suggested change.
+  - title: Pause and fix the flat spots
+    text: You make the one change and rewrite the flat spots, keeping every fact true.
+  - title: Cut ten percent
+    text: Sets a target of 90% of the words and cuts in passes. Protects anything set up for later, and logs every cut with its reason.
+  - title: Put it in plain words
+    text: States the point in one sentence, swaps stale phrases and jargon, makes passive lines active, and reads it aloud to catch lines you would not say.
+output_shape: |-
+  STEP 1: THE STORY MAP
+    Facts in order | call | point of no return | trial and loss | change | return | draft
+
+  STEP 2: THE SHAPE
+    Beats with scores | line | shape name | flat spots | one change
+
+  STEP 3: THE CUT
+    Word count and target | cut log by pass | new draft
+
+  STEP 4: PLAIN WORDS
+    The point | marked phrases and swaps | final draft
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Length
+    how: Say if it is a 100-word bio, an About page or a five-minute talk. The cut stops at the right size.
+  - what: Whose story
+    how: Say if it is you, a co-founder or the whole team. The call and the return change.
+  - what: Voice
+    how: Paste a sample of how you write or speak. Step 4 keeps your words where it can.
+judge:
+  - Every fact in the final story appears in what you gave it.
+  - The hardest stretch states what it cost.
+  - The return says who gains from your work, not just you.
+  - The cut log adds up to the words removed.
+  - You would say each line to someone across a table.
+test:
+  - Check each date and number in the final story against your records.
+  - Read it aloud. Mark any line you stumble on or would not say.
+  - Ask someone who knows you whether it sounds like you.
+improve:
+  - Keep the cut log. Cuts you miss later can go back in.
+  - Rerun the shape check after you add a new chapter.
+  - Make a short version and a long version from the same map.

@@ -1,0 +1,118 @@
+new_slug: store-test-readiness-checker
+name: "Store test readiness checker"
+summary: "Paste your orders, visits and the page to test. Get test, research or fix, plus a readiness score."
+job: test-store-changes
+thinking: medium
+thinking_why: "It follows set rules and does the sums, so a mid-size model is enough. Check the sample size with a calculator."
+
+headline: "Store test readiness checker"
+subhead: Paste your monthly orders, visits and conversion rate, and the change you want to test. It tells you whether to fix, research or test, how many visitors and weeks you need for the smallest gain worth shipping, and gives a readiness score out of 100.
+
+explain: |
+  Most small stores cannot run a proper A/B test, and many that try end up with a green result that means nothing. A test needs enough orders to tell a real gain from luck. At a 2 percent conversion rate, finding a 10 percent gain takes about 80,000 visitors per version, and finding a 5 percent gain takes about 315,000.
+
+  This skill starts with a question: is the page broken? If yes, you fix it and skip the test. If not, it sorts your store by orders per month into one of five stages, from research only to a full testing program. It sets the smallest gain worth shipping before it looks at traffic, sizes the test, counts the weeks, and picks the right main number to judge by. It is the store version of the general A/B test traffic checker.
+
+when:
+  - You have a test idea and want to know if your traffic can prove it.
+  - An agency or app shows you a winning test after two weeks on a page with few orders.
+  - You are choosing between a small tweak and one big change on your busiest page.
+
+you_give:
+  - Orders per month, sessions per month and conversion rate for the page to test
+  - The change you plan, and the main number you would judge it by
+  - Whether anything on the page is broken today
+  - The smallest gain that would be worth shipping (optional)
+  - Planned sales, email sends or ad changes in the next month (optional)
+
+you_get:
+  - "A verdict: repair first, research only, big swings, regular tests or full testing"
+  - Visitors and conversions needed per version, and the weeks needed at your traffic
+  - The right main metric, with guardrails
+  - A readiness score out of 100, now and after the fixes, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your orders per month, sessions (from GA4 if you can) and conversion rate for the page.
+  - Say what you want to change and whether anything is broken.
+  - Tell it the smallest gain that would be worth the work, if you know it.
+  - Do the one next step it names before you start any test.
+
+how_it_works:
+  - title: Sorts repair from test
+    text: A broken page gets fixed, not tested. Errors, failing add-to-cart and double-firing tracking all go on the repair list.
+  - title: Picks your stage
+    text: Orders per month place you in one of five stages, each with the tests that suit it and the ones to skip.
+  - title: Sets the smallest gain first
+    text: It fixes the smallest gain worth shipping before it looks at traffic, and keeps it as a relative figure.
+  - title: Sizes the test
+    text: It uses the standard sample size sums at 95 percent confidence and 80 percent power, and reads off visitors and conversions per version.
+  - title: Counts the weeks
+    text: Visitors needed, divided by visitors who reach the page each week, rounded up, never under two weeks.
+  - title: Picks the main metric
+    text: Conversion rate for most stores, with order value and margin as guardrails. Revenue per visitor only when you have about 6 times the traffic.
+  - title: Flags what can break it
+    text: Sales, email sends, overlapping tests and tracking problems inside the test window.
+  - title: Scores the readiness
+    text: Out of 100, from weeks needed, clean conditions and the plan, with the sum shown.
+
+output_shape: |
+  VERDICT  <REPAIR FIRST | RESEARCH ONLY | BIG SWINGS | REGULAR TESTS | FULL TESTING>
+  STAGE    <band> at <n> orders a month
+  REPAIRS  <list, or none>
+  TEST     <page> | change: <...> | smallest lift worth shipping: <x percent relative>
+  SIZE     <visitors> per version (<conversions> conversions) at <baseline>, 95% confidence, 80% power
+  WEEKS    <n> weeks at <weekly visitors> a week (minimum 2)
+  METRIC   main: <...> | guardrails: <...>
+  WATCH    <sales, emails, overlaps, dates to log>
+  SCORE    <n>/100 (<sum shown>)
+           <n>/100 after the fixes
+  NEXT     <the one thing to do first>
+  NOTES    <figures that need a calculator, and where sources differ>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: The smallest gain worth shipping
+    how: Give a real number from your margins. The lower it is, the more visitors you need. Halving it quadruples the sample.
+  - what: Which page you test
+    how: Name your busiest page. Weeks needed use visitors who reach that page, not all your traffic.
+  - what: Sessions source
+    how: Paste sessions from GA4 if you have them. Shopify sessions include bots, so the weeks come out too short.
+  - what: The main metric
+    how: Say if you want revenue per visitor or gross profit. The skill will tell you what that costs in traffic.
+
+judge:
+  - The verdict follows your orders per month, not your visits.
+  - Each figure names its baseline, says the lift is relative, and gives the confidence and power.
+  - Weeks needed use visitors who reach the tested page.
+  - Anything broken is on the repair list, not in the test plan.
+  - Where sources disagree, you see both figures and what each assumes.
+
+test:
+  - Run it on a page you know is too small for a test, such as one with 20 orders a month. It should say research only.
+  - Check one sample size yourself in a free A/B test calculator. It should match within about 10 percent.
+  - Run it twice with the same numbers. The verdict and the weeks should match.
+  - Add a planned email send inside the window. The score should drop and the send should show under WATCH.
+
+improve:
+  - Add your real margins to the skill file, so the smallest gain worth shipping comes from your numbers.
+  - Add your usual sale and email dates, so it warns you before you plan a test over them.
+  - Save the verdicts in a test log with the date, so you see how your stage changes as orders grow.
+  - Pair it with the test idea ranker to choose what to test, and the test verdict maker to read the result.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the sums and reads your numbers. Check the final sample size in a free sample size calculator."}
+    - {name: "GA4", why: "It gives sessions without most bot traffic, which Shopify's own sessions include."}
+  inputs:
+    - "Twelve weeks of orders and sessions for the page, so the weekly figure is steady"
+    - "Your gross margin, to work out the smallest gain worth shipping"
+    - "A list of planned sales and email sends for the next two months"
+
+terms:
+  - term: Relative lift
+    meaning: The gain as a share of where you start. Going from 2 percent to 2.4 percent is a 20 percent relative lift.
+  - term: Power
+    meaning: The chance a test finds a real gain of the size you planned for. The usual aim is 80 percent.
+  - term: Guardrail
+    meaning: A number that must not get worse, such as order value or margin, even if the main number improves.

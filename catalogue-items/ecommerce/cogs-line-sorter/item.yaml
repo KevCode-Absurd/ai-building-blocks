@@ -1,0 +1,21 @@
+slug: cogs-line-sorter
+name: "COGS line sorter"
+summary: "Paste your cost lines. Get each sorted into COGS or expense, with the rule used, scored out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Calculating COGS: what ecommerce businesses get wrong", by: "Phil, accountant at a UK accounting integrator for Amazon and Shopify brands", used: "The test for what is cost of goods sold, inbound freight, duty and container costs, retail box against shipping box, outbound shipping, platform fees, returns and drop-shipping exceptions"}
+  - {title: "Why CFOs obsess over COGS", by: "Bill, financial controller and accounting teacher", used: "Freight in against freight out, waste and shrink checks"}
+  - {title: "Finance for e-commerce: a set of finance lectures and Excel walk-throughs", by: "Eric, startup finance educator", used: "Splitting product cost from fulfilment to show contribution margin"}

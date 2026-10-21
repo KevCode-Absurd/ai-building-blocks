@@ -1,0 +1,72 @@
+new_slug: turn-your-lessons-into-funny-stories-and-a-short-talk
+name: Turn your lessons into funny stories and a short talk
+summary: Give it two or three lessons you have learned. Get a funny story for each and a talk.
+job: speak-and-persuade
+thinking: medium
+thinking_why: Three text skills, with a repeat of the first two. A mid-size model works.
+headline: Turn the lessons you have learned into funny stories and a short talk
+subhead: Give it two or three lessons. It writes a one-minute funny story for each, checks that every line serves the one point, then builds a five to ten minute talk on those stories with a joke at your own cost and a question for the room.
+explain: |
+  A talk that lists lessons is forgotten by lunch. People remember a story, and they remember a laugh. But a funny story that wanders from its point leaves them with the joke and not the lesson.
+
+  The steps start with one lesson in one plain sentence and a small everyday scene with one comic turn, an aside to the reader and a closing consequence. A checker then marks each paragraph as serving, neutral or competing with the single point, and finds where attention slips. You pause to fix the competing lines and repeat for your other lessons. The last step takes the two or three stories and builds the talk: each lesson tied to a true story, said in one sentence, backed by one outside voice, with a question for the room and an opening joke at your own cost.
+when:
+  - You have to speak for five to ten minutes and want people to remember the point.
+  - You have lessons from your work but no stories to carry them.
+  - Your talk is a list of tips and gets blank stares.
+you_give:
+  - Two or three lessons you trust, each in a sentence
+  - A true story from a low point of your own for each lesson, if you have one
+  - Who the audience is and how long you have
+  - An outside idea, quote or fact that backs each lesson (optional)
+you_get:
+  - A story under 150 words for each lesson, with one comic turn
+  - A check of each story against its one point, with cuts and fixes
+  - A talk script with each lesson on a true story, one outside voice, a question for the room and an opening joke at your own cost
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Run the first two steps once for each lesson. Fix the competing lines yourself at the pause.
+  - Give the talk step your true stories. Any lesson without one is marked as missing, not made up.
+how_it_works:
+  - title: Write a funny story for the lesson
+    text: Takes one lesson, picks a small everyday scene with one comic turn, speaks to the reader after the turn and ends on the consequence.
+  - title: Check the story serves the one point
+    text: States the single feeling the story should leave, marks each paragraph as serving, neutral or competing, and finds where attention first slips.
+  - title: Pause and repeat for each lesson
+    text: You fix the competing lines, then run the first two steps for the other lessons, so you hold two or three checked stories.
+  - title: Build the talk
+    text: Ties each lesson to a true story, says it in one sentence, adds an outside voice and a question for the room, and opens with a joke at your own cost.
+output_shape: |-
+  STEP 1: THE STORY
+    Lesson | scene | the story under 150 words | aside to the reader | closing consequence
+
+  STEP 2: THE CHECK
+    Intended effect | first sentence | paragraphs marked | where attention slips | cuts and fixes | score
+
+  STEP 3: THE TALK
+    Lessons chosen | story for each | one-sentence lessons | outside voices | questions for the room | opening joke | next step
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Talk length
+    how: Five minutes suits two lessons, ten suits three. Say which.
+  - what: Audience
+    how: Say who they are. The scenes and the opening joke should suit them.
+  - what: Your own stories
+    how: Give true low-point stories. The talk uses them over the funny stories where they fit.
+judge:
+  - Each lesson is one sentence a listener could repeat tomorrow.
+  - Each story has one comic turn and ends on a consequence, with no moral stated.
+  - No paragraph is marked competing after your fixes.
+  - The opening joke is at your own cost and is true.
+  - Outside voices are ones you supplied, or marked as missing.
+test:
+  - Tell one story to a friend. Ask what the lesson was. If they say it, the story works.
+  - Time the talk aloud against your slot.
+  - Ask the audience at the end to say one lesson back.
+improve:
+  - Keep the stories that got a laugh and a right answer. Build future talks from them.
+  - Swap the weakest lesson for a stronger one rather than adding a fourth.
+  - Record yourself and cut anything you rush.

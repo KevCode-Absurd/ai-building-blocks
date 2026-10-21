@@ -1,0 +1,82 @@
+new_slug: build-ads-on-true-facts-your-rivals-never-state
+name: Build ads on true facts your rivals never state
+summary: Give it your maker notes. Get claims no rival makes, headlines and an image ad plan.
+job: write-ad-copy
+thinking: medium
+thinking_why: The steps are clear and short. Give it a stronger model if your notes are long.
+headline: Ads built on true facts your rivals never mention
+subhead: Give it your notes on how the product is made, sourced and tested. It finds the facts buyers have never heard, turns them into claims with a number or a picture, writes headlines from them, picks the three best, and plans an image ad around your strongest fact.
+explain: |
+  Most ads in a category say the same things: quality, care, the best ingredients. The real work behind your product, the checks, the steps, the standards, is usually left out because it feels too ordinary to mention. To buyers it is news.
+
+  The steps find that material. First it reads your notes and keeps the facts a buyer would not know and would find surprising, then marks which are backed and which rivals already say. Next it writes headlines from those claims, sorted by type. A cover test reads each headline alone and keeps the three best. Last it plans an image ad around your anchor fact. You give it the notes. It will not invent a fact to fill a gap.
+when:
+  - You make, source or test something carefully, but your ads sound like everyone else's.
+  - You have notes from a maker visit, a supplier call or a test and have not used them.
+  - You need a claim a rival cannot copy by changing their wording.
+you_give:
+  - Notes on how it is made, sourced and tested (the full text, not a summary)
+  - Your product facts, such as price and what it is
+  - Rival ads or claims (optional)
+  - Your offer (optional)
+  - Your buyer and their words (optional)
+  - Product photos (optional)
+you_get:
+  - A list of true facts rivals do not state, each as a claim with a number or something visible
+  - The one anchor fact, marked backed or unproven, and questions to ask your maker next
+  - Twenty or more headlines labelled by type
+  - The three best headlines after a cover test
+  - An image ad plan with layout, feed text and an image prompt built on the anchor fact
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your maker, supplier or test notes in full. Short notes give short results.
+  - Check every claim marked unproven before you run it.
+  - When step 3 is done, paste the top headline into step 4 so the image ad keeps it.
+how_it_works:
+  - title: Find the facts rivals never state
+    text: Reads every step and standard in your notes, keeps what buyers do not know, turns each into a number or a picture and marks what rivals already say.
+  - title: Write headlines from the claims
+    text: Pulls the real figures and writes headlines sorted by self-interest, news and curiosity. News lines appear only when something is truly new.
+  - title: Pick the three best by cover test
+    text: Reads each headline alone, writes what a stranger would think it offers and scores it on five rules. Three that differ go forward.
+  - title: Plan the image ad
+    text: Picks one claim your proof backs and rivals cannot copy, sets the reading order and writes feed text and an image prompt.
+output_shape: |-
+  STEP 1: FACTS RIVALS NEVER STATE
+    Kept facts | claims with numbers | backed or unproven | what rivals say | anchor fact | questions to ask
+
+  STEP 2: HEADLINES
+    Twenty or more lines, each labelled by type and reason
+
+  STEP 3: COVER TEST
+    Stranger sentence for each | scores | three to test
+
+  STEP 4: IMAGE AD PLAN
+    One-sentence ad | claim | layout zones | feed text | image prompt
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your buyer
+    how: Say who reads the ad. Step 3 judges each headline for that person.
+  - what: Rival ads
+    how: Paste two or three. Step 1 marks the facts they already use so you lead with ones they do not.
+  - what: Ad size
+    how: Name the placement. Step 4 fits the layout and text length to it.
+  - what: Strict claim rules
+    how: Name your field. Claims in health or money are held to what you can prove.
+judge:
+  - Every kept fact came from your notes, and none was added.
+  - Each claim has a number or something a buyer could see.
+  - Unproven claims are marked, and none appears in a headline or ad as fact.
+  - Every curiosity headline carries a gain, so it still says something alone.
+  - The image ad uses one claim only and rivals could not sign it.
+test:
+  - Take the anchor fact to your maker and ask them to confirm it.
+  - Show the three headlines to a stranger, one at a time, and ask what each offers.
+  - Swap a rival's name into the image ad. If they could run it, the claim is not yours yet.
+improve:
+  - Use the questions from step 1 on your next call with the maker, then run the notes again.
+  - Run the three headlines as a small test and keep the winner.
+  - Save the claims in your brand file so every ad draws from them.

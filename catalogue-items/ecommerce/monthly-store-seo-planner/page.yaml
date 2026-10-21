@@ -1,0 +1,126 @@
+new_slug: monthly-store-seo-planner
+name: "Monthly store SEO planner"
+summary: "Give it your store and monthly hours. Get a first 30 days plan and a monthly SEO cycle to repeat."
+job: get-found-in-search
+thinking: low
+thinking_why: "It turns a fixed method into a plan for your hours, so a fast model is enough."
+
+headline: "Monthly store SEO planner"
+subhead: Give it your store, your top collections and the hours you have each month. It builds a week-by-week plan for your first 30 days, then a monthly checklist you repeat, with the early signs that it is working and when to change course.
+
+explain: |
+  Most store owners do SEO in bursts. They fix titles one weekend, forget it, and see nothing. Search engines reward a store that keeps showing up, so the work needs a rhythm.
+
+  This skill uses a monthly cycle with four jobs: research keywords, update pages, add fresh content, earn links. Then you repeat. Your first month starts with a foundation week, then one money page, then one supporting piece, then promotion and checking. It also tells you what not to do, such as publishing hundreds of pages at once. Results come slowly. Plan for 6 to 12 months before you judge it.
+
+when:
+  - You have never done SEO and need a plan that fits a few hours a month.
+  - You do SEO now but randomly, and want one routine you can repeat.
+  - You hired no one and want to know what a first month should include.
+
+you_give:
+  - Your store address and your top collections
+  - The hours you can spend each month, and who does the work
+  - Whether you have Search Console and analytics access
+  - A link budget, if any (optional)
+
+you_get:
+  - A 30-day start plan, week by week
+  - A repeating monthly checklist and review
+  - The early signs that it is working, and when to change course
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your store, top collections and monthly hours.
+  - Say if Search Console and analytics are set up. If not, week 1 covers it.
+  - Follow the plan for 30 days. Paste your Search Console numbers at the end of the month.
+  - Run the skill again each month and ask for the monthly review.
+
+how_it_works:
+  - title: Sets the cycle
+    text: "Four monthly jobs: research keywords, update pages, add fresh content, earn links. Then repeat."
+  - title: Plans week 1
+    text: Set up Search Console, pick 10 to 15 target keywords, check intent on the top 5 and list your money pages.
+  - title: Plans weeks 2 and 3
+    text: Publish or fix your most important money page. Then publish one supporting piece for a cluster tied to it, linked back.
+  - title: Plans week 4
+    text: Promote and monitor. About 15 minutes a day on journalist query sites, and a Search Console review.
+  - title: Sets the monthly routine
+    text: At least 2 posts a month, 4 if you can. Add 3 to 5 keywords to rank tracking and check 20 to 30 key terms weekly.
+  - title: Keeps volume safe
+    text: Finish one cluster before the next. Ramp new pages slowly so a spike does not look like spam.
+  - title: Names the signs
+    text: Impressions rising before clicks, new queries showing, positions moving from page five toward page three.
+  - title: Sets the review
+    text: Each month ask if the keyword is still worth ranking. Revisit a term after 6 months.
+
+output_shape: |
+  YOUR HOURS  <hours per month> | <who does it>
+
+  FIRST 30 DAYS
+  Week 1, foundation: <tasks>
+  Week 2, money page: <the page and the fix or publish>
+  Week 3, supporting piece: <cluster, topic, link back to the page>
+  Week 4, promote and check: <tasks>
+
+  EACH MONTH (repeat)
+  1. Research: <keywords to add, 3 to 5>
+  2. Update: <pages to refresh>
+  3. Fresh content: <post, product, review or collection tied to the month's keyword>
+  4. Links: <what to earn this month>
+
+  MONTHLY REVIEW
+  <questions to ask, numbers to paste>
+
+  EARLY SIGNS  <what to look for>
+  CHANGE COURSE IF  <rule>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your monthly hours
+    how: Give an honest number. At about a day a month the plan keeps to one page and one post. At more hours it adds a second cluster only after the first is done.
+  - what: Your measurement
+    how: Say if you can see organic revenue. If not, the plan adds a first task to set it up, because the plan has no review without it.
+  - what: Your link budget
+    how: Say if you have one. With none, the plan uses free sources such as journalist query sites.
+  - what: Your store size
+    how: A store with a few products needs fewer collection pages than one with hundreds. Say how many collections you have.
+
+judge:
+  - Each week has a small number of tasks that fit your hours.
+  - Week 2 is one money page, not a list of pages.
+  - The plan finishes one cluster before it starts another.
+  - The plan says results lag and gives a range of 6 to 12 months.
+  - No plan step asks you to publish many pages at once.
+
+test:
+  - Give it your real hours. Add up the tasks. If they do not fit, ask it to cut.
+  - Do week 1 only. Check that you can say which page is your most important money page and which 10 to 15 keywords you picked.
+  - After 30 days paste your Search Console numbers and ask whether the early signs are there.
+  - Run it again for month 2. The plan should change, not repeat week 1.
+
+improve:
+  - Add your own cadence to the skill file, such as "no more than 3 new pages a week".
+  - Save your target keywords and money pages in your brand file so each month starts from the same list.
+  - Add the tools you really use, such as your keyword tool, so the tasks name them.
+  - Pair it with the SEO worth-it checker first, and the store keyword map builder when you need the 10 to 15 keywords.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "Free. It shows the early signs: impressions, new queries and positions."}
+    - {name: "GA4", why: "Shows organic search revenue, which is the number the monthly review needs."}
+    - {name: "Any good chat AI", why: "Turns the plan into your calendar and drafts the supporting pieces for you to edit."}
+  inputs:
+    - "Your top 10 collection and product pages"
+    - "Your last 3 months of Search Console data"
+    - "Your keyword list, if you have one"
+
+terms:
+  - term: Money page
+    meaning: A page where people buy, such as a collection or product page.
+  - term: Cluster
+    meaning: A group of pages on one topic that link to each other and to one money page.
+  - term: Search Console
+    meaning: Google's free tool that shows how your store appears in Google search.

@@ -1,0 +1,23 @@
+slug: turn-an-idea-into-a-spec-tickets-and-tested-code
+name: "Turn an idea into a spec, tickets and tested code"
+summary: "Give it your idea. Get a written spec, small tickets, the code built from them, test gaps found and a pull request."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: codebase, required: true}
+outputs:
+  - {type: document}
+uses: [spec-writer, ticket-planner, spec-builder, test-gap-finder, pull-request-writer]
+steps:
+  - {uses: spec-writer, note: "Turns your idea into a spec with user stories and testing decisions."}
+  - {uses: ticket-planner, note: "Reads the spec from the step before and cuts it into small tickets with blocking order."}
+  - {uses: spec-builder, note: "Builds the spec and tickets from the steps before into one reviewed change."}
+  - {uses: test-gap-finder, note: "Reads the change from the build and marks what no test checks."}
+  - {uses: pull-request-writer, note: "Describes the change, with proof from the tests you added, for the reviewer."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/idea-to-tested-change/skeleton.yaml

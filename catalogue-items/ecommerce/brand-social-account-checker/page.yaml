@@ -1,0 +1,122 @@
+new_slug: brand-social-account-checker
+name: "Brand social account checker"
+summary: "Give it your accounts and posts. Get a score out of 100 and a fix per rule."
+job: grow-social
+thinking: low
+thinking_why: "It compares a short list of facts to a short list of rules. A small, fast model is enough."
+
+headline: "Brand social account checker"
+subhead: Give it your social accounts, where you sell, how you post and your last 20 post topics. It checks eight setup rules on account type, country, platforms, posting method, topic and links, then gives a pass or fix for each, a score out of 100 and the order to fix them in.
+
+explain: |
+  A store can post good videos and still get little reach because of how the account is set up. The wrong account type, the wrong country, a mix of topics or links that send people away can all hold a post back.
+
+  This skill checks eight setup rules and gives each a pass or a fix. Each rule has points, and the score is the points your accounts earn out of 100. The points are our own weights, not a platform number. The rules come from the tests and views of three social media teachers. Some are tests on their own accounts, not platform policy, so test the big ones on one account before you change everything.
+
+when:
+  - You started a store account and you are not sure it is set up the right way.
+  - Your posts get few views and you want to rule out setup problems first.
+  - You post to five or six platforms and wonder where to focus.
+
+you_give:
+  - The list of your accounts and their type (creator, business or shop)
+  - The country each was created in, and where your customers are
+  - The platforms you post to now
+  - The topics of your last 20 posts
+  - How posts get published (by hand, scheduler or the app's own scheduling)
+you_get:
+  - Pass or fix for each of eight rules
+  - A score out of 100, with the points shown
+  - The order to fix them in
+  - The one platform to keep for six months
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List each account with its type, country, and how you post to it.
+  - Paste the topics of your last 20 posts, one line each.
+  - Fix the first item in the order it gives. Change one thing at a time.
+  - Test the bigger changes, such as country or scheduler, on one account before you change them all.
+
+how_it_works:
+  - title: Checks account type
+    text: A creator account for video on Instagram and TikTok. A shop account only if a TikTok Shop is attached, with videos posted from a separate creator account.
+  - title: Checks country
+    text: Created and posted mainly from the country you sell to. The source says it matters most outside the US, Canada and English-speaking Europe.
+  - title: Checks posting method
+    text: Posting by hand. One team says it tested hundreds of videos and every scheduler, native ones too, hurt results. Test this yourself on one account.
+  - title: Checks platforms and focus
+    text: Lead with TikTok and Instagram, and treat YouTube Shorts as free awareness. Pick one hero platform plus email for six months.
+  - title: Checks topic discipline
+    text: The last 20 posts should share one topic and one buyer. Thirty to fifty in a row is what the source says it takes for the algorithm to place you.
+  - title: Checks links and ideas
+    text: No links to another platform. Only send people to email or your own community. Skip ideas your core buyer would not value.
+  - title: Scores and orders
+    text: It adds the points for passed rules, shows the sum, and lists fixes from biggest points to smallest effort.
+
+output_shape: |
+  R1 account type (12):    <PASS | FIX | NOT CHECKED> | <why>
+  R2 country (12):         <...>
+  R3 posting method (10):  <...>
+  R4 platforms (10):       <...>
+  R5 one hero platform (14): <...>
+  R6 topic discipline (20):  <...> | last 20 posts: <topic counts>
+  R7 outbound links (12):  <...>
+  R8 on-target ideas (10): <...>
+  FLAG satellite accounts: <only after a format wins, not before>
+
+  SCORE <n>/100 now (points earned: <sum shown>)
+        <n>/100 after the fixes (on the rules checked)
+
+  FIX ORDER
+  1 <rule> | change: <one thing> | test first on: <one account>
+  KEEP FOR 6 MONTHS: <platform> plus email
+
+  NOT CHECKED
+  <rule, and what is needed>
+  MISSING: <account list | country | posting method | last 20 topics>
+
+tweaks:
+  - what: The list of accounts
+    how: Name each one with its type and country. A shop account that posts videos fails R1 unless it is attached to a TikTok Shop and videos go out from a creator account.
+  - what: The last 20 topics
+    how: Paste them one line each. R6 counts how many share one topic and one buyer, so vague lines give a weaker check.
+  - what: Where customers live
+    how: Say the countries you ship to. R2 compares them with where each account was set up.
+  - what: Your team size
+    how: Say if you have a content team. The one-platform rule suits small teams, and a larger team can run more.
+
+judge:
+  - Every rule has a verdict and a reason that uses what you gave it.
+  - The score shows its sum, so you can check it.
+  - Rules it could not check are listed as not checked, not passed.
+  - The fix order says what to change first and what to test on one account.
+  - It tells you that the scheduler and country findings are tests from one teacher, not platform rules.
+
+test:
+  - Give it an account you know is wrong, such as a shop account posting videos. R1 should fail.
+  - Run it twice on the same facts. The verdicts and score should match.
+  - Test the scheduler rule for four weeks on one account. Post by hand and compare views with the previous four weeks.
+  - Check R6 yourself by counting how many of your last 20 posts share one topic.
+
+improve:
+  - Add your own rules, such as brand names you will never mention, as an extra check with points.
+  - Add a note on who has access to each account and who the backup admin is.
+  - Record each test you run on the scheduler or country rules, and change the rule if your data says otherwise.
+  - Pair it with the expert content format planner once the setup passes.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It can check the list against the rules in a minute."}
+    - {name: "Instagram and TikTok account settings", why: "They show the account type and the location that each account was set up with."}
+  inputs:
+    - "A screenshot of the account type and location in each app"
+    - "Your customers' countries from your store reports"
+    - "Your last 20 post captions"
+
+terms:
+  - term: Creator account
+    meaning: A profile type for people who post content. The source says brand accounts get less reach for video.
+  - term: Hero platform
+    meaning: The one platform where most of your buyers spend time, which you focus on for six months along with email.
+  - term: Topic discipline
+    meaning: Posting about one topic for one buyer so the platform can tell who to show your videos to.

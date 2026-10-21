@@ -1,0 +1,19 @@
+slug: campaign-link-tracker
+name: "Campaign link tracker"
+summary: "Give it your campaign and channels. Get tagged links, Shopify match rules and an attribution pick."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Official Shopify 2026 Tutorial (four-part series)", by: "Kylie Maher, Learn with Shopify", used: "Campaign naming, UTM tags, auto-match rules in the marketing area, campaign activities, attribution models"}

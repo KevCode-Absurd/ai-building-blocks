@@ -1,0 +1,27 @@
+slug: launch-a-subscription-and-keep-your-subscribers
+name: "Launch a subscription and keep your subscribers"
+summary: "Give it your products and orders. Get a priced offer, cancel flow, billing emails and a retention calendar."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: offer
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: false}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: plan}
+uses: [subscription-offer-designer, subscription-payback-checker, subscription-cancel-flow-builder, billing-reminder-and-confirmation-writer, subscription-churn-audit, subscriber-retention-calendar]
+steps:
+  - {uses: subscription-offer-designer, note: "Designs the subscription offer from your products and order data."}
+  - {uses: subscription-payback-checker, note: "Tests the designed offer against cost and payback before launch."}
+  - {uses: subscription-cancel-flow-builder, note: "Builds the cancel flow around the offer, with save offers that keep the payback true."}
+  - {uses: billing-reminder-and-confirmation-writer, note: "Writes the billing and reminder emails to sit beside the cancel flow."}
+  - {uses: subscription-churn-audit, note: "Finds where in the subscriber life people leave."}
+  - {uses: subscriber-retention-calendar, note: "Schedules the touches that land before each of those lapse points."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/launch-a-subscription-and-keep-your-subscribers/skeleton.yaml

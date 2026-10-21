@@ -1,0 +1,88 @@
+id: find-a-buyer-group-your-rivals-miss-and-brief-ads-for-it
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: find-a-buyer-group-your-rivals-miss-and-brief-ads-for-it
+  name: Find a buyer group your rivals miss and brief ads for it
+  summary: Give it your product and rivals. Get an overlooked buyer group, their real words and ad angles built on them.
+  when: your product looks like everyone else's and you need a group of buyers of your own before you write ads.
+  job: understand-customers
+  level: intermediate
+steps:
+  - name: Untapped avatar finder
+    skill: untapped-avatar-finder
+    job: research
+    from: library
+    method:
+      - Name the problem the product solves
+      - Open the Amazon reviews
+      - Tag each candidate
+      - Choose one
+      - Rank the layers
+      - Write a one-sentence offer line
+      - Optional deep research
+    inputs:
+      - question
+      - competitor_set!
+      - voc_reviews!
+    outputs:
+      - shortlist
+      - persona
+    note: Finds outlier buyer groups in reviews and rival ads that the category leaders ignore.
+  - pause: Spend an hour in the forums and review threads where the chosen group talks, and save the posts.
+  - name: Forum and review avatar digger
+    skill: forum-and-review-avatar-digger
+    job: research
+    from: library
+    method:
+      - Warm up (optional, 10 to 15 minutes, before the clock starts)
+      - Run the 30-second test
+      - Write the search phrases as the buyer would type them
+      - Mark up the quotes
+      - Look for confession forums
+      - Write the one-page buyer sketch
+      - Say what comes next
+    inputs:
+      - question
+      - voc_reviews!
+    outputs:
+      - voc_reviews
+      - persona
+    note: Pulls the group's own words and worries from what you saved. Starts from the group chosen in the step before.
+  - name: Buyer brief writer
+    skill: buyer-brief-writer
+    job: copy
+    from: library
+    method:
+      - Find the moment
+      - Sort the evidence into four forces
+      - Place their awareness
+      - Pick the force to work on
+      - Collect the words
+      - Write the job line
+      - Check the result before you hand it on
+    inputs:
+      - voc_reviews
+      - brand_brain!
+    outputs:
+      - brief
+    note: Writes the half-page brief from those words. Reads the quotes from the step before.
+  - name: Ad angle planner
+    skill: ad-angle-planner
+    job: copy
+    from: library
+    method:
+      - Pick one level and one stage, from what the buyer knows today, not what you'd like them to know
+      - Copy that row and that argument into the brief
+      - Fill the blanks from the idea and the brand file
+      - Add one line on why this level and stage, and what's assumed
+      - Check the result before you hand it on
+    inputs:
+      - brief
+      - brand_brain!
+    outputs:
+      - brief
+    note: Turns the brief into angles to test. Reads the brief from the step before.

@@ -1,0 +1,45 @@
+# Workflow skeleton that chains library skills (docs/INTAKE.md). Our words.
+id: hire-fairly-from-job-post-to-a-checked-offer-letter
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: hire-fairly-from-job-post-to-a-checked-offer-letter
+  name: "Hire fairly, from job post to a checked offer letter"
+  summary: "Give it a hiring brief and resumes. Get a job post, a ranked shortlist, a fair pick and a checked offer."
+  when: "you have a role to fill and want a fair, written process you can run start to finish."
+  job: hire-people
+  level: intermediate
+steps:
+  - name: Hiring packet builder
+    skill: hiring-packet-builder
+    job: ops
+    from: library
+    method: ["Set what the role must deliver", "Write the job post", "Write interview questions with strong and weak answers", "Draft an offer letter template"]
+    inputs: [brief]
+    outputs: [document]
+    note: "Makes the job post, the scoring guide and the offer template that every later step uses."
+  - name: Applicant shortlist builder
+    skill: applicant-shortlist-builder
+    job: ops
+    from: library
+    method: ["Take the job's needs as the only scoring rules", "Read each resume against them", "Rank and group the applicants", "Draft a reply to every applicant"]
+    inputs: [document]
+    outputs: [shortlist]
+    note: "Scores applicants only on the needs written in the job post from the step before."
+  - pause: "Interview the people on the shortlist using the questions and scoring guide from the packet. Write your notes straight after each interview."
+  - name: Fair candidate comparer
+    skill: fair-candidate-comparer
+    job: ops
+    from: library
+    method: ["Score each candidate on the same questions", "Compare on evidence, not on feel", "Run a check for bias in the notes", "Write the case for and against each finalist"]
+    inputs: [feedback_notes]
+    outputs: [audit_report]
+    note: "Compares candidates using the interview notes you took against the scoring guide. You make the hiring call."
+  - pause: "Pick your finalist. Fill the offer template from the packet with the role, pay and start date."
+  - name: Offer letter and non-compete checker
+    skill: offer-letter-check
+    job: ops
+    from: library
+    method: ["Confirm where the person will work", "Check employee or contractor terms", "Flag restrictive terms such as non-competes", "List local rules the letter must meet"]
+    inputs: [document]
+    outputs: [audit_report]
+    note: "Checks the filled-in offer letter, built from the template in step one, before you send it. Not legal advice."

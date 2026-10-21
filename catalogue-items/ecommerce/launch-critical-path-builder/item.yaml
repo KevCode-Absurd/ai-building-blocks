@@ -1,0 +1,19 @@
+slug: launch-critical-path-builder
+name: "Launch critical path builder"
+summary: "Name your product and launch date. Get every step from samples to warehouse, dated, with owners and warnings."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Complete E-commerce Operations Guide", by: "Davey, founder of a large blanket-hoodie brand (YouTube talk)", used: "Define every step, sequence it, give each a duration, set dates working back from launch, one owner per step, overdue alerts, and a plan the supplier cannot edit"}

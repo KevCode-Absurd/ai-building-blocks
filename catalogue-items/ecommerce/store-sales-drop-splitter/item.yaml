@@ -1,0 +1,19 @@
+slug: store-sales-drop-splitter
+name: "Store sales drop splitter"
+summary: "Tell it sales fell. Get the drop split into sessions, conversion and AOV, the likely cause and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "What Metrics Matter In The Shopify Analytics Dashboard", by: "An e-commerce agency's public analytics walkthrough", used: "Sales as sessions times conversion rate times AOV, the returns exception, the noise rule for small compounding dips, and checking sessions against GA4"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency (public masterclass)", used: "The three rules before touching anything, the top-down order from business to campaign to metric, Google campaign failure modes, and the rule to act only when the cause sentence is complete"}

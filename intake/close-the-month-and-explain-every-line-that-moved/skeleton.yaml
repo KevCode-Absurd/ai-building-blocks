@@ -1,0 +1,57 @@
+# Workflow skeleton chaining AI Blocks library skills (docs/INTAKE.md).
+id: close-the-month-and-explain-every-line-that-moved
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: close-the-month-and-explain-every-line-that-moved
+  name: "Close the month and explain every line that moved"
+  summary: "List your close tasks. Get a dated close plan, sorted costs, accruals, draft statements and a written reason for each big move."
+  when: "you close your own books each month and want a fixed order, drafts to review and the story behind the numbers."
+  job: money-and-investing
+  level: intermediate
+steps:
+  - name: "Month-end close planner"
+    skill: month-end-close-planner
+    job: ops
+    from: "skill: month-end-close-planner"
+    method: ["List every close task with an owner and how long it takes", "Order tasks by what must finish first", "Find the longest chain of tasks, which sets the close time", "Mark blockers and what is at risk", "Write the day by day calendar"]
+    inputs: [brief]
+    outputs: [plan]
+    note: "Sets the order for the whole close. Accruals wait for sub-ledgers, statements wait for accruals, and commentary comes last."
+  - pause: "Export the month's card, bank and bill transactions as one table."
+  - name: "Expense sorter"
+    skill: expense-sorter
+    job: ops
+    from: "skill: expense-sorter"
+    method: ["Clean each merchant name", "Sort each line into a category and a department", "Mark tax treatment", "List lines it is not sure about for you to decide", "Total by category and department"]
+    inputs: [spreadsheet]
+    outputs: [spreadsheet]
+    note: "Works on the transactions the plan calls for, and gives you clean totals by cost type."
+  - name: "Accrual schedule drafter"
+    skill: accrual-schedule-drafter
+    job: ops
+    from: "skill: accrual-schedule-drafter"
+    method: ["List the accruals your policy requires", "Work out each month's portion from its basis", "Take off what is already booked", "Cite the support for each entry", "Draft the journal entries for review"]
+    inputs: [spreadsheet]
+    outputs: [spreadsheet]
+    note: "Uses the sorted costs to see what is already booked, and drafts entries for what is missing."
+  - pause: "Review and post the draft entries in your books. Then export the trial balance, and last month's figures too."
+  - name: "Financial statement preparer"
+    skill: financial-statement-preparer
+    job: ops
+    from: "skill: financial-statement-preparer"
+    method: ["Check the trial balance adds up", "Map each account to a statement line", "Build the income statement", "Build the balance sheet and check it balances", "Build the cash flow from net income and changes in working capital"]
+    inputs: [spreadsheet]
+    outputs: [spreadsheet]
+    note: "Builds the statements from the trial balance that now includes the accruals you posted."
+  - name: "Variance commentary"
+    skill: variance-commentary
+    job: ops
+    from: "skill: variance-commentary"
+    method: ["Set the size at which a line needs a reason", "Compare each line with last month and with budget", "Find what drove each flagged move", "Write one sentence of why for each, never just the change", "Summarise the biggest movers in a short note"]
+    inputs: [spreadsheet]
+    outputs: [document]
+    note: "Compares the new statements with last month and explains every line past your limit."

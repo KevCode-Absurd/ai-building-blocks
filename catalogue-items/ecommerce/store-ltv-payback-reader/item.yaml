@@ -1,0 +1,20 @@
+slug: store-ltv-payback-reader
+name: "Store LTV and payback reader"
+summary: "Give it first-order cohorts by month. Get repeat rate, LTV and true CAC payback, scored out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Finance for e-commerce (finance lectures and spreadsheet walk-throughs)", by: "Eric, startup finance educator", used: "Cohort retention, LTV as contribution margin, cohort payback against the naive estimate, subscription lifetime from churn, and lifetime orders for non-subscription customers"}

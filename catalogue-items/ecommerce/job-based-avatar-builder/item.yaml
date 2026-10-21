@@ -1,0 +1,20 @@
+slug: job-based-avatar-builder
+name: "Job-based avatar builder"
+summary: "Paste buyer stories and reviews. Get avatar cards built on a job, a trigger and quoted proof."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: persona}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [clayton-christensen]
+credits:
+  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)", used: "A job is progress a buyer wants in a circumstance, with practical, emotional and social sides; the verbs-and-nouns test and the level test; the four forces of push, pull, habit and anxiety; grouping stories by job instead of by demographics"}

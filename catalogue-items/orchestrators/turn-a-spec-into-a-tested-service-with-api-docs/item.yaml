@@ -1,0 +1,21 @@
+slug: turn-a-spec-into-a-tested-service-with-api-docs
+name: "Turn a spec into a tested service with API docs"
+summary: "Give it a written spec. Get a starter project, a working service, API tests and an API spec."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: document}
+uses: [spec-to-starter-repo-builder, backend-builder, api-test-suite-builder, api-spec-writer]
+steps:
+  - {uses: spec-to-starter-repo-builder, note: "Turns the spec into a project folder with structure and setup."}
+  - {uses: backend-builder, note: "Fills in the service on the project from the step before."}
+  - {uses: api-test-suite-builder, note: "Finds the routes the build added and tests each one."}
+  - {uses: api-spec-writer, note: "Documents the routes the build made and the tests now cover."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/spec-to-tested-service/skeleton.yaml

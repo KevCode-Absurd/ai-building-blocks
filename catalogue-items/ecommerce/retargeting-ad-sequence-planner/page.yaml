@@ -1,0 +1,117 @@
+new_slug: retargeting-ad-sequence-planner
+name: "Retargeting ad sequence planner"
+summary: "Give your products and why visitors do not buy. Get retargeting ads in order, ending with a cross-sell."
+job: launch-and-scale-ads
+thinking: low
+thinking_why: "It sorts known reasons into a short sequence, so a small model is enough."
+
+headline: "Retargeting ad sequence planner"
+subhead: "Give it your products with margins, the real reasons visitors left without buying, and your reviews. It hands back a three-ad retargeting order (an objection ad, a proof ad, then a cross-sell), a cross-sell pairing table and the audience and window to use."
+
+explain: |
+  Most stores retarget with one ad: the product the visitor looked at. That ad repeats the pitch that already failed. If the product did not fit the visitor, showing it again will not change their mind.
+
+  This skill builds a short sequence instead. First an ad that answers the real reason people did not buy, in their own words. Second, proof, such as customer reviews in a carousel. Third, a different product from your range, picked from a pairing table that respects your margins. People who still do not buy get something of value, such as a quiz or a sample. The idea comes from one agency owner, whose own examples were lead generation, so this version translates them to a store with more than one product.
+
+when:
+  - You retarget website visitors with the same ad they already ignored.
+  - You sell more than one product and have a pool of visitors who left without buying.
+  - You collect reasons from surveys, support tickets or calls and don't use them in your ads.
+
+you_give:
+  - Your product list with margins
+  - The real reasons visitors did not buy, from surveys, calls and support
+  - Reviews and testimonials you can show
+  - Your current retargeting audience and window (optional)
+you_get:
+  - "A retargeting sequence: objection ad, proof ad, cross-sell ad"
+  - A cross-sell pairing table
+  - The audience and window to use
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product list with margins and the reasons visitors gave for not buying, in their own words.
+  - Add reviews you have permission to use.
+  - Build the objection ad first and run it for a week before you add the next ad.
+  - Cap the spend with the existing customer ad budget sizer and judge the sequence on 7-day click or incremental results.
+
+how_it_works:
+  - title: Collects real reasons
+    text: From surveys, calls and support. The most common reason is that the offer or product was not right for them.
+  - title: Writes the objection ad
+    text: It sorts reasons into objections and answers the top ones first, in the buyer's own words.
+  - title: Adds the proof ad
+    text: Customer testimonials in a carousel, only real ones, to back up the claims in your first ad.
+  - title: Builds the pairing table
+    text: For each product, which other product to show and why, using your margins. This comes before the third ad.
+  - title: Writes the cross-sell ad
+    text: A CBO of your best ads for other products, shown to people who saw the first product.
+  - title: Adds a value offer
+    text: For people who still do not buy, a quiz, sample or guide so they leave with something.
+  - title: Sets the audience
+    text: Recent buyers excluded, one consolidated audience instead of separate cart, checkout and visitor ad sets.
+  - title: Caps the spend
+    text: Retargeting is a support layer. It points you to the budget sizer and to 7-day click or incremental results.
+
+output_shape: |
+  WHY VISITORS DO NOT BUY (ranked)
+  1. <reason in their words> | source: <survey | call | support> | <how common>
+
+  SEQUENCE
+  Ad 1, objection: <objection answered> | <angle> | <first line> | <proof used>
+  Ad 2, proof: <review carousel: which reviews, which claim they back>
+  Ad 3, cross-sell: <other product> | <why it fits the first product> | <margin>
+  Value offer for non-buyers: <quiz | sample | guide>
+
+  CROSS-SELL PAIRING TABLE
+  Visited <product> | show <product> | because <reason> | margin <%>
+
+  AUDIENCE AND WINDOW: <visitors, window in days, recent buyers excluded>
+  CAP: <see existing customer ad budget sizer>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: Reasons visitors didn't buy
+    how: Real words from surveys and calls beat guesses. If you only guess, it tells you which ones to ask about first.
+  - what: Reviews you can use
+    how: Give real reviews with permission. It will not write testimonials or invent customers.
+  - what: Product margins
+    how: The pairing table favours pairs where the second product has a good margin and a fit with the first.
+  - what: Audience window
+    how: Say how many days of visitors you retarget. Keep one consolidated audience unless you have very large traffic.
+
+judge:
+  - Every objection comes from a reason you supplied, not from a guess.
+  - The proof ad uses only real reviews and says which claim each one backs.
+  - Every pairing in the table has a reason and a margin.
+  - The sequence goes objection, proof, cross-sell, in that order.
+  - Recent buyers are excluded and the audience is one consolidated pool.
+
+test:
+  - Give it three real reasons from your support inbox and check the objection ad answers the top one in the customer's words.
+  - Ask for a pairing for your best seller and see if the pair makes sense to you as a shopper.
+  - Run the objection ad alone for a week before adding the others, so you can see its effect.
+  - Compare the sequence with your current single retargeting ad on 7-day click results.
+
+improve:
+  - Add your real objection list to the skill file once you have 20 or more survey answers.
+  - Keep a file of reviews you have permission to use and paste it each time.
+  - Add products that must never be paired, for example items with a safety or health claim.
+  - Pair it with the existing customer ad budget sizer to cap the spend, and the buyer awareness stage mapper to check what visitors already know.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It works from text you paste, so any current chat AI will do."}
+    - {name: "Meta Ads Manager", why: "Its custom audiences let you build one consolidated visitor audience and exclude recent buyers."}
+  inputs:
+    - "Post-purchase and exit survey answers"
+    - "Support ticket themes from the last 90 days"
+    - "Sales by product pair, to see what shoppers buy together"
+
+terms:
+  - term: Retargeting
+    meaning: Showing ads to people who already visited your site or looked at a product.
+  - term: Cross-sell
+    meaning: Offering a different product to someone who showed interest in another one.
+  - term: CBO
+    meaning: Campaign budget optimization. You set one budget and Meta divides it between ad sets.

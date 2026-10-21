@@ -1,0 +1,124 @@
+new_slug: amazon-ppc-launch-builder
+name: "Amazon PPC launch builder"
+summary: "Give it your product, keywords and daily budget. Get auto, keyword and competitor campaigns with bids and negatives."
+job: sell-on-amazon
+thinking: medium
+thinking_why: "It follows a fixed campaign structure, but it must tie every budget to your unit profit."
+
+headline: "Amazon PPC launch builder"
+subhead: Give it your product, price and unit profit after fees, your keyword list, competitor ASINs and a daily budget you can afford to lose. It plans three campaigns. You get ad groups, match types, starting bids, a negative keyword list, and review and stop rules.
+
+explain: |
+  Amazon ads can burn through cash before a new listing has a single review. One seller in the source spent about 3,387 dollars on ads against 4,260 dollars of revenue in the first month and lost money. The cause was a budget set before the unit profit was known.
+
+  This skill builds a launch plan with three sponsored products campaigns. An automatic campaign learns which searches turn into sales. A manual keyword campaign runs your picked phrases by match type. A product targeting campaign puts each competitor in its own ad group, so you see whose page pays. It sets the budget from your unit profit, adds negatives to every campaign, and gives you a stop rule. Bids in the source come from an old screen recording, so use the live suggested bids.
+
+when:
+  - You are about to launch a product on Amazon and need a first ad plan.
+  - Your ads spend more than your sales make and you want a tighter structure.
+  - You have a keyword list from the keyword picker and need to turn it into campaigns.
+
+you_give:
+  - Your product, price and unit profit after fees
+  - The keyword list from the Amazon keyword picker
+  - Competitor brands and ASINs
+  - A daily budget you can afford to lose
+you_get:
+  - A plan with campaign and ad group names, match types and starting bids
+  - A negative keyword list and where each applies
+  - Review rules and a stop rule
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Work out your unit profit after fees first, and paste it in. Do not set a budget before you know it.
+  - Paste your keyword list and two or three competitor ASINs.
+  - Read Amazon's live suggested bids in the campaign builder and paste them in. The plan uses those, not old numbers.
+  - Start with a small budget, review the reports about monthly, and stop or cut any campaign that spends more than it earns.
+
+how_it_works:
+  - title: Sets the budget from profit
+    text: Finds your unit profit, then sets a daily budget you can lose. The source says 5 dollars a day is fine to start.
+  - title: Builds the automatic campaign
+    text: One ad group each for close match, loose match, substitutes and compliments, so each gets its own bid.
+  - title: Builds the keyword campaign
+    text: Adds each picked phrase as broad, phrase and exact, grouped by topic, with negatives for broad and phrase.
+  - title: Builds the competitor campaign
+    text: One ad group per competitor brand with its ASINs, never a whole category by default.
+  - title: Writes negatives
+    text: Lists every phrase you do not want, such as a product form you do not sell, and adds them to every campaign.
+  - title: Moves winners
+    text: Uses the automatic campaign to find searches that sell and moves them to manual campaigns.
+  - title: Sets review and stop rules
+    text: Reviews the reports about monthly and cuts spend that is higher than profit. Tests turning ads off.
+
+output_shape: |
+  BUDGET
+  Unit profit: <amount>  | Daily budget: <amount> (what you can lose)
+  Bid mode: <dynamic up and down | fixed, with why>
+
+  CAMPAIGN 1: AUTOMATIC
+  Ad group <close | loose | substitutes | compliments>: start bid <live suggested bid>
+
+  CAMPAIGN 2: MANUAL KEYWORDS
+  Ad group <topic>: <phrase> (broad | phrase | exact), start bid <...>
+
+  CAMPAIGN 3: PRODUCT TARGETING
+  Ad group <competitor brand>: <ASINs>, start bid <...>
+
+  NEGATIVE KEYWORDS
+  <phrase> | applies to: <campaigns>
+
+  REVIEW RULES
+  <when to look, what to cut, when to stop>
+
+  MISSING: <unit profit | live bids | keyword list>
+  CHECKS MISSED: <none | which>
+
+tweaks:
+  - what: Unit profit
+    how: Give profit per unit after Amazon fees. The skill caps spend by profit. Under about 5 dollars a unit, clicks at 1 dollar or more can wipe out profit.
+  - what: Live suggested bids
+    how: Read them from the campaign builder and paste them in. Old numbers in sources are out of date.
+  - what: Cash and bid mode
+    how: Choose fixed bids if cash is tight. Dynamic bids up and down can raise a bid up to 100 percent when a sale looks likely.
+  - what: Review count
+    how: A new listing without reviews converts worse, so ads cost more at first. Keep the budget small until reviews exist.
+
+judge:
+  - The daily budget comes from unit profit and an amount you can lose, not a guess.
+  - The automatic campaign has four separate ad groups, and close match gets the most money.
+  - Broad and phrase keywords come with negatives.
+  - Each competitor has its own ad group.
+  - A stop rule says when ad spend is higher than profit.
+
+test:
+  - Check the budget against your unit profit. How many sales per day pay for the budget?
+  - Compare the plan with the keyword list. Every phrase should appear once per match type you use.
+  - Run for a month at the small budget. Pull the advertising report and note which ad group paid.
+  - Turn ads off for a short period and compare sales and profit. In one case in the source, profit rose with sales about the same.
+
+improve:
+  - Add your own stop rule to the skill file, such as a maximum cost per sale for your product.
+  - Add the negative phrases you find in each report, so the list grows.
+  - Add your ad blocking notes on which words or pictures tripped Amazon's check, and how you fixed them.
+  - Pair it with the Amazon keyword picker before it, and the Amazon fee and margin checker for unit profit.
+
+works_best_with:
+  tools:
+    - {name: "Amazon Advertising console", why: "Where you build the campaigns, read the live suggested bids and pull the advertising reports."}
+    - {name: "Helium 10", why: "Exports for keywords and competitor ASINs. It has a free tier, so check current limits."}
+  inputs:
+    - "Your unit profit from the Amazon fee and margin checker"
+    - "The tiered keyword list from the Amazon keyword picker"
+    - "Your search term report after a month of ads, to find new negatives and winners"
+    - "Competitor ASINs with their brand names"
+
+terms:
+  - term: Sponsored products
+    meaning: Ads for a single listing that show in Amazon search results.
+  - term: Match type
+    meaning: "How closely a search must match your phrase: broad, phrase or exact."
+  - term: Negative keyword
+    meaning: A phrase you tell Amazon never to show your ad for.
+  - term: ASIN
+    meaning: Amazon's product code for a listing.

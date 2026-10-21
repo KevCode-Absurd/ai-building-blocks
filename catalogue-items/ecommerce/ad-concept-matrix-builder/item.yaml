@@ -1,0 +1,28 @@
+slug: ad-concept-matrix-builder
+name: "Ad concept matrix builder"
+summary: "Give it your product and buyer words. Get 30 to 40 personas with angles and offers in test order."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: angle_library}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead with about 8 years on Meta (name not given in the video)", used: "A concept is a persona, an angle and an offer; the testing order; specific personas; the AI persona loop"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands", used: "Concept definition, the angle, offer, persona, format test order and problem-based personas"}
+  - {title: "Creative strategy is easy actually", by: "Community founder and creative strategist (name not given in the video)", used: "The outcome, demographic and facet segment formula and growing by facet"}
+  - {title: "The best Facebook ad creative strategy for 2027", by: "Agency owner (name not given in the video)", used: "Adding new avatars with a different problem to get past a plateau"}
+  - {title: "How to make static image ads that scale", by: "Agency lead (name not given in the video)", used: "A design tweak is not a new concept"}
+  - {title: "The ONLY 2 Ad Creative Formats You Need to Scale Facebook Ads", by: "Agency owner (name not given in the video)", used: "Avatar to problems to angles, and a concept as avatar plus angle"}
+  - {title: "The Best AI Ad Creative Strategy for 2026", by: "Agency owner and ad community lead (name not given in the video)", used: "Grouping ads by avatar"}
+  - {title: "How To Make A Winner Meta Video Ad", by: "Australian creative strategist (name not given in the video)", used: "The warning against very narrow personas, and choosing broad pillars"}

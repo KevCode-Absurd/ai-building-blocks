@@ -1,0 +1,127 @@
+new_slug: channel-budget-mix-planner
+name: "Channel budget mix planner"
+summary: "Give it spend by channel and margin. Get a target split, small-channel caps and holdout tests."
+job: plan-strategy
+thinking: medium
+thinking_why: "It weighs a few numbers against two big-store examples and needs care about what does not carry over to a small store."
+
+headline: "Channel budget mix planner"
+subhead: Give it your monthly ad spend by channel, your revenue and your margin. It checks the mix against two big-store examples, then hands back a target split with ranges, a daily cap for each small channel and the questions a holdout test should settle.
+
+explain: |
+  Most stores either put everything in one ad channel or spread thin across six. Both can waste money. The hard part is knowing which one you are doing, because each channel's own report says it is working.
+
+  This skill looks at the whole business first: all revenue over all marketing spend, not one channel's ROAS. Then it compares your split with two real stores that spend $100K or more a day, and it says plainly which parts do not carry over to a smaller store. It uses a simple rule to pick the next channel: add money where the next dollar does best. You get a split with ranges, caps for channels you only want to test, and a short list of holdout tests that settle the claims you should not take on trust.
+
+when:
+  - You spend on two or more ad channels and want to know if the split makes sense.
+  - You are thinking about adding TikTok, YouTube, Pinterest or a creator budget and want a cap, not a leap.
+  - Your branded search or shopping spend looks high and you want to test whether it earns its keep.
+
+you_give:
+  - Monthly ad spend by channel for the last 3 to 6 months
+  - Total revenue over the same months, including wholesale, Amazon and other countries
+  - Your gross margin after shipping and fees
+  - Brand search volume against category search volume (optional)
+  - Your split of new and returning customers (optional)
+you_get:
+  - A target split with a range for each channel and what to change first
+  - A list of channels to test and a daily cap for each
+  - Holdout questions to settle before you cut anything
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste or attach your spend by channel for 3 to 6 months, with total revenue for the same months.
+  - Add your gross margin after shipping, fees and returns. The skill needs it to judge what spend your margin can carry.
+  - Read the split, then run the holdout tests it lists before you cut any channel.
+  - Come back after a month with new spend and the test results.
+
+how_it_works:
+  - title: Checks your size
+    text: Under about $10K a day in total, one channel is usually right. It says so and plans around that instead of forcing a split.
+  - title: Judges the whole business
+    text: Total revenue over total marketing spend, with margin beside it. It does not rank channels by their own ROAS.
+  - title: Compares with two examples
+    text: One store near 50/20/10/20 and one near 85/15, each shown with its size and what does not carry over.
+  - title: Flags branded search
+    text: Compares branded search to total spend against the 1% reference and asks for a holdout before any cut.
+  - title: Finds the next best dollar
+    text: Compares what the last extra spend bought in each channel and points to where the next dollar does best.
+  - title: Caps the small channels
+    text: Puts channels you only want to test in one capped bucket, rolled into the main buying team until one earns its own owner.
+  - title: Lists holdout tests
+    text: Names the claims to confirm, such as whether branded search or shopping ads are incremental, and what to hold out.
+
+output_shape: |
+  MIX CHECK
+  Daily spend <$>/day | Channels in use <n> | Months of data <n>
+  Business result: revenue <$> / spend <$> = <x> blended | margin <%>
+  Break-even blended result at this margin: <x>
+
+  TARGET SPLIT (a start, not a rule)
+  <channel>: now <%> | target <low%> to <high%> | change first: <what>
+  Upper-funnel inside <channel>: <%> of that channel's spend
+
+  CAPS FOR CHANNELS TO TEST
+  <channel>: up to <$>/day for <weeks> | pass if <metric> | owner <who>
+
+  BRANDED SEARCH
+  Now <%> of marketing spend vs a 1% reference | verdict: <test, don't cut yet>
+
+  HOLDOUT QUESTIONS
+  1. <claim to confirm> | hold out <region, period or channel> | read after <days>
+
+  REFERENCE STORES (examples, not targets)
+  <store, size, split, what does not carry over to you>
+
+  MISSING: <spend by channel | revenue | margin | months of data>
+
+tweaks:
+  - what: Your daily spend
+    how: Say your total spend per day. Under about $10K a day the skill leans toward one main channel and a small test, not a split.
+  - what: Your margin
+    how: Give margin after shipping, payment fees and returns. It sets how much of revenue you can spend on marketing and still make money.
+  - what: What revenue includes
+    how: Say whether wholesale, Amazon and other countries are in your revenue. The blended result should cover every channel that your ads help.
+  - what: Holdout ability
+    how: Tell it if you can pause a channel in one region or for a few weeks. If not, it plans smaller steps instead.
+
+judge:
+  - Every figure is marked as your number or as an example from a big store.
+  - It judges the business on blended results, not on one channel's ROAS.
+  - It does not push a split on a store under about $10K a day.
+  - Each cut it suggests has a holdout test attached, not just a number.
+  - Caps are in dollars per day and have a pass mark and an end date.
+
+test:
+  - Give it a store with one channel only. It should tell you one channel is probably right and not invent a split.
+  - Give it your real numbers and check the blended result by hand, which is total revenue divided by total marketing spend.
+  - Ask for the branded search verdict. It should ask for a holdout, not tell you to cut.
+  - Run it twice with the same data. The target ranges should overlap, and the first change should be the same.
+
+improve:
+  - Add your own margin rule to the skill file, such as the lowest blended result you accept, so every plan is checked against it.
+  - Save your channel list and daily caps in your brand file so each run starts from them.
+  - Edit the reference stores in the skill file when you learn a closer example from your own category.
+  - Add a line naming who owns each channel, so each cap has a person.
+  - Pair it with the next dollar budget allocator, which shares one budget across campaigns, and the holdout test planner, which designs the tests.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the maths and the comparison. Paste your spend table as text or a file."}
+    - {name: "Northbeam", why: "An attribution tool that shows spend and revenue across channels and creative in one place."}
+    - {name: "Meta Ads Manager", why: "Its export gives you spend by campaign and its Experiments tool can run a holdout."}
+  inputs:
+    - "A column of new customers per channel, so the next best dollar compares real customers, not clicks"
+    - "A list of channels you tried and stopped, with why"
+    - "Your budget ceiling for tests, so caps fit what you can lose"
+
+terms:
+  - term: Blended result
+    meaning: Total revenue divided by total marketing spend across all channels. Also called MER.
+  - term: Holdout test
+    meaning: Turn a channel off for a region or a period and see how much total sales fall.
+  - term: Next best dollar
+    meaning: The idea that you keep adding to a channel until the next dollar does better somewhere else.
+  - term: Upper-funnel
+    meaning: Ads aimed at views, product page visits or add to cart instead of purchase.

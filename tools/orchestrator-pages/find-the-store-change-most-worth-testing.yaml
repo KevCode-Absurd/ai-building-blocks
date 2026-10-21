@@ -1,0 +1,79 @@
+new_slug: find-the-store-change-most-worth-testing
+name: Find the store change most worth testing
+summary: Give it your store numbers and what shoppers do on key pages. Get a profit baseline and a ranked list of tests.
+job: test-store-changes
+thinking: high
+thinking_why: The ranking weighs evidence against profit across three steps. Give it your strongest model.
+headline: Know which store change to test first, ranked by profit
+subhead: Give it your store numbers and what shoppers do on your key pages. It works out revenue and profit per visitor, turns your heatmaps and recordings into a ranked friction list, and names the one or two tests to run first.
+explain: |
+  When a store has traffic but no clear next move, the test list fills up with opinions. Someone wants a new button colour, someone wants a banner. Tests are slow and cost sales while they run, so a wrong pick is expensive. Conversion rate alone also misleads, because cold traffic pulls it down and says nothing about profit.
+
+  The first step corrects your dashboard numbers for tax, shipping and bots, then works out revenue and gross profit per visitor. That becomes the baseline every idea is sized against. Then it pauses and asks you to watch about 20 recordings each on the product page and the cart, save heatmap screenshots and note any survey answers. The second step turns that into a list of friction, weighted by money. The third splits repairs from tests, writes each test as a hypothesis, drops ideas with thin evidence and picks the one or two to run first. A test needs enough orders to read, so if your store gets only a few orders a week, fix the obvious problems instead.
+when:
+  - You have traffic but no clear idea what to test on your store next.
+  - Your team keeps suggesting changes and you need a fair way to choose.
+  - Your conversion rate moved and you want to know whether it affected profit.
+you_give:
+  - A store report with orders, sessions, revenue, tax, shipping and costs for a date range
+  - After the pause, heatmap and scroll map screenshots, notes from about 20 recordings each on the product page and cart, and any survey answers
+  - Customer reviews or survey comments (optional)
+you_get:
+  - Corrected revenue and gross profit per visitor, a split of cold and warm traffic, and a trust score out of 100 for the numbers
+  - A friction list ranked by page and money at stake, a test idea for each item and a friction score out of 100
+  - A list of repairs to make now that need no test
+  - A leaderboard of test ideas, the one or two to run first and the reasons the rest wait
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it a store report for a recent range, with sessions, orders, tax and shipping.
+  - When it pauses, watch about 20 recordings each on the product page and cart. Save heatmap screenshots and write down what you saw.
+  - Make the repairs list first. Run only the tests it names, one at a time.
+how_it_works:
+  - title: Set the profit baseline
+    text: Fixes the dashboard numbers for tax, shipping and bots, works out revenue and gross profit per visitor, and shows how cold traffic pulls blended conversion down. It scores how far to trust the numbers.
+  - title: Watch the shoppers
+    text: A pause. You watch about 20 recordings each on the product page and cart, save heatmap screenshots and note any survey answers.
+  - title: Read the heatmaps and recordings
+    text: Matches screenshots to what shoppers saw, reads clicks and scroll depth and weights each friction by money, not raw clicks. Every item gets a test idea.
+  - title: Rank the test ideas
+    text: Splits repairs from tests, writes each idea as a hypothesis, counts the evidence and sizes the gain with your baseline. It names the one or two to run first.
+output_shape: |-
+  STEP 1: PROFIT BASELINE
+    Range | numbers as given vs corrected | cold and warm blend | revenue and gross profit per visitor | what to track weekly | trust score out of 100
+
+  PAUSE: watch about 20 recordings each on the product page and cart, save heatmaps, note survey answers
+
+  STEP 2: FRICTION LIST
+    Friction ranked by page and money at stake | evidence for each | test idea for each | repairs | watch plan | friction score out of 100
+
+  STEP 3: TEST RANKING
+    Fix list | leaderboard with evidence, effort and value | run first | run next | parked ideas | assumptions
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The date range of your store report
+    how: Pick a range with no big sale or outage. A distorted range gives a distorted baseline for every later step.
+  - what: How many recordings you watch
+    how: Start with about 20 on each page and stop when the same pattern repeats. Fewer recordings give weaker evidence and lower rank.
+  - what: Your margin
+    how: Give gross profit, not just revenue, so the ranking values a change by profit. Without it, the gain is sized in revenue and marked.
+  - what: Survey answers and reviews
+    how: Each kind of evidence adds points to an idea. A finding backed by recordings and customer words ranks above one with only a heatmap.
+judge:
+  - Step 1 shows the corrections it made for tax, shipping and bots, and the score shows its sum.
+  - Every friction item names its page, the evidence kind and the money at stake.
+  - Repairs and tests are on separate lists.
+  - Each test is written as a hypothesis, with a smallest lift worth finding.
+  - The run-first pick says why it beat the others, and parked ideas say what would move them up.
+test:
+  - Check the corrected revenue per visitor against your own sums for one week.
+  - Watch five recordings that were not in your sample. They should show the same top friction.
+  - Take the top test and check you get enough orders to read it in about four weeks at your current traffic.
+  - After you run the first test, check whether its result matched the size of gain the ranking expected.
+improve:
+  - Save your corrected baseline in your brand file, so later runs skip step 1.
+  - Change the evidence weights in the ranker if your team trusts some kinds of evidence more than others.
+  - Keep a log of every test, with the hypothesis and the result, and feed it back so settled questions are not retested.
+  - Pair it with a test traffic checker and a verdict skill when you are ready to run the first test.

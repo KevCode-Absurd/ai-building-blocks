@@ -1,0 +1,81 @@
+new_slug: add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays
+name: "Add YouTube and Demand Gen and check they pay"
+summary: Give it your Google data and best video ads. Get a yes or wait, a cold campaign, an ad scorecard and remarketing.
+job: run-google-ads
+thinking: high
+thinking_why: It runs four skills in a row, and the scorecard step judges ads against break-even numbers. Give it your strongest model.
+headline: Find out if YouTube pays before you scale it
+subhead: Give it your Google results, your winning video ads and your break-even cost per customer. It says yes or wait, builds a cold Demand Gen campaign, scores each ad scale, keep or pause, and sets up remarketing for the people who watched.
+explain: |
+  Many stores jump onto YouTube to test an offer, spend a few hundred dollars, see nothing and write the channel off. Cold traffic is costly and slow to learn, so it only pays when the offer, the page and the video ads are already proven somewhere else. Then comes the next trap: reading the results by clicks, when new-customer cost is what counts.
+
+  The steps start with a yes or wait call, so you do not spend before you are ready. Then it builds a cold Demand Gen campaign around the videos you cut. You run it for two to four weeks and bring back results by ad. It scores each ad out of 100, tells you which to scale and which to pause, then adds remarketing for viewers and visitors who did not buy. Two pauses ask you to cut three to five short videos from your best Meta video, and to run the campaign and export results by ad.
+when:
+  - Your Meta video ads work, your Shopping and brand Search are steady, and you want a new source of customers on Google.
+  - You ran a YouTube test, got mixed numbers, and cannot tell which ads to keep or what to change.
+  - You have many site visitors who left without buying and want a plan to win them back with video.
+you_give:
+  - Your Google results (spend, sales and cost per sale by campaign)
+  - Your best video ads from Meta or TikTok, with their results
+  - Your average order value, margin and break-even cost per new customer
+  - The landing page you would send YouTube traffic to
+  - Your offer, shipping and returns terms, and audience list sizes
+  - Your brand file (optional)
+you_get:
+  - A yes or wait call with a readiness score out of 100, a starting budget split and what to skip
+  - A cold Demand Gen plan with bids, audiences, ad groups and a brief for a five-second hook
+  - A score out of 100 for each ad, with scale, keep or pause and the next thing to test
+  - A remarketing plan with budgets and five ad ideas, one for each reason people leave
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your Google results, your best video ads and your average order value. If the answer is wait, fix what it names before you spend.
+  - When it pauses, cut three to five short videos from your best Meta video and choose the landing page.
+  - After two to four weeks, export results by ad, with placement and new-customer cost, and bring them back for step 3.
+how_it_works:
+  - title: Check if YouTube is ready
+    text: Tests fit, timing, page and claims against ten checks. Gives a yes or wait with a score out of 100, and what to hold back.
+  - title: Build the cold campaign
+    text: Sets the budget, bid, audiences and placements for Shorts and in-stream. Writes the ad groups and a brief with a five-second hook, then the order to scale in.
+  - title: Score each ad
+    text: Rates view rate, click rate, conversion rate and new-customer cost for each ad. Gives scale, keep or pause and the next test.
+  - title: Add remarketing
+    text: Checks your lists are big enough, builds the audiences and the setup, and writes five ad ideas for the five reasons people leave.
+output_shape: |-
+  STEP 1: READINESS
+    Yes or wait | score out of 100 and the ten checks | hard stops | budget split | what to skip | weeks 1 to 6 signals
+
+  STEP 2: COLD CAMPAIGN
+    Budget and bid | audiences | placements | ad groups and text | video brief with hook | scale order
+
+  STEP 3: AD SCORECARD
+    Each ad: four metrics and score out of 100 | scale, keep or pause | next test
+
+  STEP 4: REMARKETING
+    List sizes | audiences | setup | budget and frequency cap | five ad ideas
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your average order value
+    how: Under about $50, step 1 will likely say wait. YouTube cold traffic needs a daily budget near three times your order value to learn.
+  - what: Your break-even cost per new customer
+    how: Step 3 judges every ad against it. Without it, the cost check is skipped and the verdict leans on softer numbers.
+  - what: Split results by placement
+    how: Shorts and in-stream behave differently. Give step 3 results for each so ads are not judged against the wrong benchmark.
+  - what: Your list sizes
+    how: Step 4 needs about 1,000 people in a list. Smaller lists get a broad visitor or email plan instead.
+judge:
+  - The yes or wait call lists which checks passed, and a hard stop forces wait.
+  - The cold plan uses the videos and page you gave it, and says what it assumed.
+  - Every ad verdict shows its four metrics, and the scale rule is stated.
+  - Cost per new customer is compared with your break-even, not with Google's own figure alone.
+  - The five remarketing ads use only real reviews, terms and proof you supplied.
+test:
+  - Check the readiness score by hand. Count the passed checks and multiply by ten. It should match.
+  - Before step 3, pick the ad you think is best and the one you think is worst. See if the scorecard agrees, and read why if it does not.
+  - Run step 3 twice on the same export. Verdicts should match, even if the wording differs.
+improve:
+  - Replace its benchmarks with your own once you have a few campaigns. They come from one agency's accounts.
+  - Add your claim rules to your brand file so the hook brief stays inside Google policy.
+  - Save your winning hooks and the next-test list, and feed them back into the next video batch.

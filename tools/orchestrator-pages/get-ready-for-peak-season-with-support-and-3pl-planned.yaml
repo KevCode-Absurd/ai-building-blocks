@@ -1,0 +1,88 @@
+new_slug: get-ready-for-peak-season-with-support-and-3pl-planned
+name: "Get support and stock ready for peak season"
+summary: Give it past sales and your peak target. Get a peak forecast, hire dates, 3PL terms and a stock tracker.
+job: plan-supply-chain
+thinking: high
+thinking_why: It builds a forecast and runs sums across five skills. Give it your strongest model.
+headline: Be ready for your busiest weeks, with staff, warehouse and stock lined up
+subhead: Give it your sales history and your peak target. It forecasts peak orders, dates your support hires, builds the 3PL request and terms, sets up a stock arrival tracker, and later checks the warehouse bill against the agreement.
+explain: |
+  When most of your year's profit lands in a few weeks, an average month tells you nothing. Support tickets pile up, the warehouse is quoted on average volume, and stock arrives later than the sale. Each team plans for a different number.
+
+  The steps start from one daily forecast of peak orders and plan everything from it. Support gets the expected tickets and the dates new agents must start. The 3PL (the third-party warehouse that stores and ships your orders) is asked to bid on peak volume, with a pick-on-time promise in the terms. Every stock order goes in one tracker. After peak you give it the invoice and your orders, and it checks the bill. It cannot see inside your warehouse, so it uses your numbers only.
+when:
+  - Most of your profit comes in a few weeks, such as Black Friday, and you cannot ship late or run out.
+  - Your support inbox filled up last peak and you do not know when to hire this time.
+  - You are picking a new warehouse and want bids on peak volume, not an average month.
+you_give:
+  - Daily ad spend and new-customer revenue for 12 to 36 months, and your revenue target
+  - Tickets per month, support costs and how long it takes to hire and train an agent
+  - Product sizes and weights, ship-to countries and your purchase orders
+  - Bids from warehouses (optional)
+  - After peak, the warehouse invoice, rate card and your orders for the month
+you_get:
+  - A daily peak forecast with the gap to your target and the actions that close it
+  - Forecast tickets, cost per ticket and the dates new support staff must start
+  - A request for pricing, a bid comparison and the 3PL agreement terms to demand
+  - A shared tracker for every stock order, and a shipping notice for the warehouse
+  - A line-by-line bill audit with overcharges, a dispute note and a score out of 100
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your sales history, monthly tickets and your revenue target. Say how long a support hire takes to train.
+  - Send the request for pricing to several 3PLs, and tell it what the stock orders on the way are.
+  - At the pause, run peak with the 3PL. Then collect the invoice, rate card and Shopify orders for the month and give them to it.
+how_it_works:
+  - title: Forecast peak orders
+    text: Splits revenue into new and returning customers, adds seasonality and your calendar of sales, and shows the gap to your target.
+  - title: Plan support hires
+    text: Works out your cost per ticket, forecasts tickets from the sales forecast, and dates when each hire must start.
+  - title: Build the 3PL bid
+    text: Writes the request for pricing using peak volumes, splits each bid into four prices, compares them, and lists the terms to demand.
+  - title: Track inbound stock
+    text: Builds one tracker for orders and shipping, updates arrival dates when a ship moves, and drafts the advance shipping notice for the warehouse.
+  - title: Audit the 3PL bill
+    text: Rebuilds each charge from your own orders and the rate card, compares it with the invoice, and drafts a dispute note for any overcharge.
+output_shape: |-
+  STEP 1: PEAK FORECAST
+    Daily orders and revenue | new vs returning | calendar | gap to target | actions to close it
+
+  STEP 2: SUPPORT PLAN
+    Cost per ticket | forecast tickets | hire dates | team mix | top ticket reasons and help page gaps
+
+  STEP 3: 3PL BID PACK
+    Request for pricing | site-visit checklist | bid comparison | agreement terms
+
+  STEP 4: INBOUND TRACKER
+    Tracker sheet columns | update rules and owner | forwarder quote comparison | advance shipping notice
+
+  STEP 5: BILL AUDIT
+    Line-by-line match | overcharges with amounts | on-time and pick-time checks | dispute note | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your revenue target
+    how: The gap to target drives the actions in step 1. Give a real number, not a hope.
+  - what: Your calendar of sales and launches
+    how: Peak is shaped by your own events. List each date, or the forecast will treat them as ordinary days.
+  - what: Hire and training time
+    how: Hire dates work backward from this. Say how long it really takes, not how long you wish.
+  - what: Peak volumes in the bid request
+    how: A 3PL that quotes well for an average month can cost more at peak. Ask for peak prices in the request.
+judge:
+  - The forecast shows how it was built and the gap to target, not one number.
+  - Hire dates are earlier than the peak by at least the hire and training time you gave.
+  - The bid comparison splits each bid into four prices, so a blended charge cannot hide a cost.
+  - The tracker has an owner and an update rule for when a ship moves.
+  - Every overcharge in the bill audit has an amount and the line it came from.
+test:
+  - Check last year with it. Does the method come close to what really happened in your peak?
+  - Read the hire dates against your calendar and ask whether you could really start someone then.
+  - Send the request for pricing to two 3PLs and see if the bids can be put side by side.
+  - Check one invoice line by hand against the audit. The numbers should match.
+improve:
+  - Save the forecast and the real peak result in your brand file. Next year's run can check how far off it was.
+  - Add your ticket reason tags to the support skill so it can name the help pages to write.
+  - Keep your agreement terms and pick-time penalty in the skill so the bill audit tests them every month.
+  - Run the bill audit every month, not only after peak.

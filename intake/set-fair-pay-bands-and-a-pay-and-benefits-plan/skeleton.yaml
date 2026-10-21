@@ -1,0 +1,35 @@
+# Workflow skeleton that chains library skills (docs/INTAKE.md). Our words.
+id: set-fair-pay-bands-and-a-pay-and-benefits-plan
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: set-fair-pay-bands-and-a-pay-and-benefits-plan
+  name: "Set fair pay bands and a pay and benefits plan"
+  summary: "Give it your roles and budget. Get market pay ranges, pay bands you can explain, and a bonus and benefits plan."
+  when: "you need to set pay for new roles and want ranges you can defend to the team and to leaders."
+  job: hire-people
+  level: intermediate
+steps:
+  - name: Pay benchmark and equity modeler
+    skill: pay-benchmark-and-equity-modeler
+    job: ops
+    from: library
+    method: ["List the roles, level and place", "Gather market pay for each", "Flag outliers against what you pay now", "Model any equity grants"]
+    inputs: [question]
+    outputs: [spreadsheet, audit_report]
+    note: "Starts with what the market pays for each role and where your pay sits."
+  - name: Pay band builder
+    skill: pay-band-builder
+    job: ops
+    from: library
+    method: ["Match each role to market data", "Set a low, middle and high for each", "Check that the bands compete", "Write the method in plain words"]
+    inputs: [question, spreadsheet!]
+    outputs: [spreadsheet]
+    note: "Reads the market ranges from the step before and turns them into bands with a method you can explain."
+  - name: Pay and benefits plan builder
+    skill: pay-and-benefits-plan-builder
+    job: ops
+    from: library
+    method: ["State a pay philosophy", "Fit bonus ideas to the bands", "List the benefits the budget allows", "Check the maths yourself"]
+    inputs: [brief, spreadsheet!]
+    outputs: [document, plan]
+    note: "Builds the bonus and benefits plan on top of the pay bands from the step before."

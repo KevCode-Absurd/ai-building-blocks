@@ -1,0 +1,22 @@
+slug: sunset-flow-and-list-cleaner
+name: "Sunset flow and list cleaner"
+summary: "Give it your engagement rule and email volume. Get a three-email sunset flow and a monthly routine that suppresses non-openers."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: email_flow}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "The sunset flow, its segment, the three emails and the monthly suppression routine"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores (name not given)", used: "The unengaged definition with a minimum number of emails received, and the suppression step"}
+  - {title: "8 Hour Copywriting Course For Beginners", by: "A freelance copywriting YouTuber (name not given)", used: "The revive sequence idea: tell people they will be removed unless they click"}

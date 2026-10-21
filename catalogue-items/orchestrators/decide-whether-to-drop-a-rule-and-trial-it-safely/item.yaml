@@ -1,0 +1,21 @@
+slug: decide-whether-to-drop-a-rule-and-trial-it-safely
+name: "Decide whether to drop a rule and trial it safely"
+summary: "Give it a rule or step nobody can explain. Get where it came from, what it quietly does and a capped trial."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [rule-origin-tracer, hidden-value-check, second-order-effects-tracer, long-shot-bet-planner]
+steps:
+  - {uses: rule-origin-tracer, note: "Starts from the rule itself and its first reason"}
+  - {uses: hidden-value-check, note: "Reads the origin call and looks for jobs the rule does that nobody wrote down"}
+  - {uses: second-order-effects-tracer, note: "Follows the change from the origin call one step and then another"}
+  - {uses: long-shot-bet-planner, note: "Turns the revised plan into a trial you can undo"}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/decide-whether-to-drop-a-rule-and-trial-it-safely/skeleton.yaml

@@ -1,0 +1,89 @@
+new_slug: plan-a-month-of-campaign-emails-that-sell-without-discounts
+name: Plan a month of campaign emails that sell without discounts
+summary: Give it your products and brand file. Get 100 email ideas, a month calendar, a written email and a layout brief.
+job: write-emails
+thinking: high
+thinking_why: It runs five skills in a row and each one builds on the last. Give it your strongest model.
+headline: A month of campaign emails that sell without a discount code
+subhead: Give it your product facts, your brand file and your reviews. It builds a bank of 100 email ideas, places a month of sends on a calendar, writes one full email, reviews it and turns it into a brief your designer can build.
+explain: |
+  Many stores send an email only when there is a sale. Subscribers learn to wait for the code, margin shrinks, and the weeks between sales go quiet. The fix is a steady supply of emails that give the reader one useful thing and then point to a product.
+
+  The steps build that supply in order. First it lists 100 ideas from your products, reviews and customer questions, each with one takeaway. Then it places the best ones on a month calendar, with fixed dates first and a limit on discount emails. It pauses and asks you for a short brief for the first slot: the idea, the audience and the product. It writes that email, reviews it against your voice and counts the lead, length and subject line, then writes a layout brief for the designer.
+when:
+  - You email your list only when there is a sale, and you want the other weeks to earn money too.
+  - You have a product launch or restock next month and need a full set of campaign emails planned around it.
+  - You hand email design to a freelancer and want a clear brief for each email instead of a long chat.
+you_give:
+  - Your product facts, such as what each product is, what is in it and how it is used
+  - Your brand file, so the emails sound like you and only make claims you can back
+  - Customer reviews and questions (optional, but they make the ideas much better)
+  - Your current offers and key dates (optional)
+  - A one-paragraph brief for the first email you want written, which it asks you for halfway through
+  - Product images (optional)
+you_get:
+  - A bank of up to 100 email ideas on 10 topics, each with one takeaway and a flag for claims to check
+  - A month calendar with the send pace, the mix of email types and a production schedule
+  - One full email with subject and preview options, a plain-text version and two A/B variants
+  - A review of that email with a score out of 100, a ship or fix verdict and three fixes
+  - A layout brief that a designer can build from, block by block
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your product facts and brand file first. Add reviews and customer questions if you have them.
+  - When it pauses, pick the first slot on the calendar and write its brief in one paragraph.
+  - Read the review before the layout brief is made. Fix the three fixes, then let it carry on.
+how_it_works:
+  - title: Build the idea bank
+    text: Email topic bank builder writes 10 broad topics and 10 ideas under each, from your products, reviews and customer questions. Each idea has one takeaway and one format.
+  - title: Plan the month
+    text: Email campaign calendar planner sets how many sends a week your team can handle, locks fixed dates first and fills the gaps with ideas from the bank. It checks the mix of email types and the ratio of discount emails.
+  - title: Write the first email
+    text: Campaign email writer takes your brief for one slot. It writes a subject, a preview, the email block by block, a plain-text version and two A/B variants, and checks every claim against your facts.
+  - title: Review the draft
+    text: Email draft reviewer counts the lead, length and subject line, marks cuts, and scores the draft out of 100. You get a ship or fix verdict and three fixes.
+  - title: Brief the designer
+    text: Email layout brief writer turns the reviewed copy into a block-by-block layout with button places, a product grid, alt text and a test plan.
+output_shape: |-
+  STEP 1: EMAIL TOPIC BANK
+    10 topics | 10 ideas under each, with one takeaway, a format and any claim to check | first 10 to send
+
+  STEP 2: MONTH CALENDAR
+    Pace | dated sends with type and angle | mix check | production schedule
+
+  STEP 3: CAMPAIGN EMAIL
+    Subject and preview options | email blocks | plain-text version | two A/B variants | claims check
+
+  STEP 4: DRAFT REVIEW
+    Counts | marked draft | pacing map | score out of 100 and verdict | three fixes
+
+  STEP 5: LAYOUT BRIEF
+    Block table | design flow | build plan | alt text | test plan
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your reviews and customer questions
+    how: Step 1 turns them into ideas in your customers' own words. Without them the ideas lean on product facts alone and read more generic.
+  - what: Your team size and send pace
+    how: Say how many emails a week you can really produce. The calendar sets the pace from your revenue and team, and a pace you cannot keep wastes the plan.
+  - what: Which slot you brief first
+    how: Pick a slot with a clear product and a clear audience. A vague brief gives a vague email.
+  - what: What you may claim
+    how: Add your approved claims to the brand file. Ideas on health or results are flagged, and the writer checks each claim against that list.
+judge:
+  - Every idea has one takeaway you could say in one sentence.
+  - The calendar has no two sends of the same type in a row, and discount emails stay a small share of the month.
+  - No deadline, stock limit or review in the email is made up.
+  - The review shows its counts and its score sum, so you can check them.
+  - The layout brief has a button at the end of every section and under every product.
+test:
+  - Pick three ideas from the bank and ask if a customer would care about the takeaway. Drop any that read like a sales line in disguise.
+  - Check the calendar against your own diary for launches, holidays and days off.
+  - Send the written email to yourself and read it on your phone. Count how long it takes to find the button.
+  - Run the reviewer on an email you sent last month and compare its fixes with the results you saw.
+improve:
+  - Save the idea bank and the calendar in your brand file. Next month start at step 2.
+  - Edit the calendar skill's pace rule to match how many emails your team can produce.
+  - Add three of your best past emails to the brand file as voice examples for the writer.
+  - Log which topics got clicks and orders, then ask the bank builder to weight the next bank toward them.

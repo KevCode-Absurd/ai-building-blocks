@@ -1,0 +1,30 @@
+slug: amazon-monthly-account-keeper
+name: "Amazon monthly account keeper"
+summary: "Give it your Amazon fee, stock and sales reports. Get margins checked, restock sized and refund claims found."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [amazon-fee-and-margin-checker, waterfall-price-setter, amazon-inbound-stock-planner, amazon-reimbursement-claim-finder, amazon-keyword-picker, amazon-listing-writer, amazon-ppc-launch-builder]
+steps:
+  - {uses: amazon-fee-and-margin-checker, note: "Every month, for each product: profit per unit with this month's fees, and the most you can pay for ads per sale."}
+  - {uses: waterfall-price-setter, note: "Only for a product whose net margin is under the 30 percent floor: the lowest price that works and a keep, reprice or cut call."}
+  - {uses: amazon-inbound-stock-planner, note: "Every month: how much to send and when, for each product with about three months of stock or less."}
+  - {uses: amazon-reimbursement-claim-finder, note: "Every month, once the fee, returns and shipment reports are in: claims to file, with proof."}
+  - {uses: amazon-keyword-picker, note: "Only for a product whose weekly sales fell by a fifth or more while its margin is healthy: a fresh keyword list from a new export."}
+  - {uses: amazon-listing-writer, note: "Only after the keyword picker runs: a title, bullets and backend keywords to test against the live listing."}
+  - {uses: amazon-ppc-launch-builder, note: "Only when a product has no campaigns, or its ad cost per sale is above the most it can pay and you agree to rebuild: auto, keyword and competitor campaigns with bids and negatives."}
+schedule: "On the 3rd of each month, once last month's Amazon reports can be downloaded"
+asks_before: [changing a price, editing a live listing, creating or changing ad campaigns or bids, sending stock to Amazon, filing a claim or opening a support case, changing the account plan]
+origin: own
+version: 1.0.0
+example_pending: true

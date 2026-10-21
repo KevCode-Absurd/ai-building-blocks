@@ -1,0 +1,79 @@
+new_slug: reply-to-your-reviews-safely-and-plan-how-to-get-more
+name: Reply to reviews safely and plan how to get more
+summary: Give it your reviews. Get themes, safe replies and a plan to get more reviews.
+job: help-customers
+thinking: medium
+thinking_why: It drafts and checks short replies. A mid-range model is enough, unless your reviews run to the hundreds.
+headline: Answer every review without promising what you cannot keep
+subhead: Give it your reviews and complaints. It finds what customers keep saying, drafts a reply to each in your voice, checks every angry reply against your refund rules, and plans how and when to ask for more reviews.
+explain: |
+  Unanswered reviews tell the next shopper you do not care. A rushed reply to an angry one can be worse. It can blame the customer, promise a refund you did not mean to give, or admit fault in public.
+
+  The steps split the job in two. First it reads your reviews and complaints, groups them into themes with the customer's own words, and drafts a reply to each. Then it checks the replies to the angry ones. It lists what the customer asked, tests each promise against the rules you give it, and repairs the draft. You pause to post the replies and make any call the checker left open. Last it plans how to ask for more reviews, using what the first two steps showed. The checker needs your refund and replacement rules, and the last step asks how long your product takes to judge.
+when:
+  - Reviews and complaints sit unanswered and you do not know where to start.
+  - You want to reply to an angry customer but fear you will promise too much.
+  - You want more reviews and are not sure when or how to ask.
+you_give:
+  - Your reviews, complaints and support emails from the last 90 days, pasted or exported
+  - Your refund, replacement and credit rules, and what you may offer
+  - How long your product takes to try before someone can judge it
+  - Order or case facts for the angry ones (optional)
+you_get:
+  - Three to five themes with word-for-word customer quotes
+  - A draft reply to each review in your voice, with customers who may leave flagged
+  - A check on the angry replies, with promises tested, tone fixed and a repaired draft
+  - A plan for when and how to ask for reviews, with reply templates for public complaints
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your reviews or export them. Pasted text gives better results than links.
+  - Give your refund rules before step 2. Without them every promise is marked not checked.
+  - Post the replies yourself. Nothing is posted or refunded for you.
+how_it_works:
+  - title: Read the reviews and draft a reply to each
+    text: Groups reviews, complaints and tickets into themes with exact quotes, drafts a reply to every review in your voice and flags customers who look ready to leave.
+  - title: Check the angry replies before you post
+    text: Takes each draft with the complaint it answers and your rules, marks what was answered, tests every promise and fact, fixes the tone and gives a repaired draft.
+  - title: Pause to post and decide
+    text: You post the checked replies and make the calls the checker marked as yours, such as a refund or a credit.
+  - title: Plan how to ask for more reviews
+    text: Sets when to ask based on how long your product takes to judge, how to open the request and one path for every customer, plus templates for replying to public complaints.
+output_shape: |-
+  STEP 1: THEMES AND DRAFT REPLIES
+    Themes with quotes | reply for each review | customers at risk
+
+  STEP 2: REPLY CHECK
+    Verdict | what the customer raised and whether it was answered | problems | repaired draft | your decisions
+
+  PAUSE
+    Post the replies. Settle the open decisions.
+
+  STEP 3: REVIEW PLAN
+    When to ask | first question | follow-ups | rating policy | reply templates
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your rules
+    how: Give a plain list of what you may offer and when. The checker marks any promise outside it as not backed.
+  - what: Where reviews live
+    how: Name each place, such as Google, your store and social. Replies on a public site need a different tone from a private email.
+  - what: Voice
+    how: Paste two replies you like. Step 1 will match them.
+  - what: Product type
+    how: Say how long it takes to judge. A snack can be rated in a day, a skincare product takes weeks, and step 3 times the ask to fit.
+judge:
+  - Every theme is backed by exact quotes, ranked by how many reviews mention it.
+  - Every reply answers what that customer actually said.
+  - No reply promises a refund, credit or date your rules do not allow.
+  - Angry replies stay calm, name the problem and say what happens next and when.
+  - The review plan gives every customer the same path and does not pick only the happy ones.
+test:
+  - Give the checker a reply you know is bad, such as one that blames the buyer. It should flag it.
+  - Check three quotes in the themes against the original reviews.
+  - Read each repaired draft aloud as the customer. Does it sound like a person?
+improve:
+  - Keep the replies that worked as voice examples for the next run.
+  - Rerun step 1 every month and compare the themes with last month's.
+  - Share the top complaint theme with whoever fixes the product or the page.

@@ -1,0 +1,102 @@
+new_slug: turn-a-clothing-flat-lay-into-marketplace-ready-photos
+name: Turn a clothing flat lay into marketplace-ready photos
+summary: Give it a garment phone photo. Get a clean photo, a worn-shape photo, fabric close-ups and a rules check.
+job: product-photos
+thinking: medium
+thinking_why: The checks look at pictures one at a time. A mid-level model is enough.
+headline: Listing photos of your garment, checked against marketplace rules
+subhead: Give it a flat-lay phone photo of a garment. It cleans the photo, shapes it as if worn, zooms into the fabric, checks the pictures for AI faults and checks them against marketplace rules. You get a set you can list.
+explain: |-
+  A flat-lay phone photo looks cheap. Wrinkles, uneven light and a flat shape make a good garment look poor, and a shoot with a model costs more than a small shop wants to spend. Pictures made by an image model can also warp the garment or reject on a marketplace.
+
+  The steps build a set one picture at a time. First it cleans the flat lay. You pick the best result. Then it shapes that photo as if worn by an invisible person. You pick again, and it zooms into the fabric. Then it inspects your set for AI faults. You fix what it flags, and last it checks the final photos against marketplace rules.
+
+  Not worth it for a garment with a complex print or logo. Image models often warp those, and the inspector will flag them.
+when:
+  - You sell clothing and only have flat-lay photos.
+  - You want fabric close-ups without a macro lens.
+  - Your last listing photos were rejected or looked off.
+you_give:
+  - A flat-lay phone photo of your garment
+  - The marketplace you list on
+  - An image model that can draw and edit pictures, such as ChatGPT or Gemini
+you_get:
+  - A cleaned, even-lit flat-lay photo
+  - A photo shaped as if worn, with the inside of the collar visible
+  - Fabric close-ups that keep the real weave and stitching
+  - A fault report on the set, with lines to add to a retry
+  - A pass or reject check per marketplace rule, with a fix
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach your flat-lay photo. Say which marketplace you list on.
+  - At each pause, save the picture you like and attach it for the next step.
+  - Claude writes the instructions. Your image model draws the pictures.
+how_it_works:
+  - title: Clean the flat lay
+    text: Presses out random wrinkles, squares up shoulders and sleeves, evens the light and cleans the background.
+  - title: "Pause: pick the best photo"
+    text: You choose the retouched photo that looks most like the real garment and save it.
+  - title: Shape it as if worn
+    text: Fills the shoulders and chest, curves the sleeves and shows the inside of the collar, without changing colour or pattern.
+  - title: "Pause: save the worn-shape photo"
+    text: You choose the photo you like best. The next step zooms into it.
+  - title: Zoom into the fabric
+    text: Frames a close-up of the weave and stitching, adding no detail the garment lacks.
+  - title: "Pause: gather your set"
+    text: You put the retouched photo, the worn-shape photo and the close-ups in one folder.
+  - title: Inspect for faults
+    text: Rates the risk of each picture, runs eight checks and says use, retry or retouch.
+  - title: "Pause: fix what was flagged"
+    text: You redo or retouch flagged pictures using the fix lines, then save the final set.
+  - title: Check marketplace rules
+    text: Checks background, size and framing for the marketplace and marks each rule pass or reject with a fix.
+output_shape: |-
+  STEP 1: CLEANED FLAT LAY
+    Retouched photo or photos | what changed
+
+  PAUSE: you pick one
+
+  STEP 2: WORN-SHAPE PHOTO
+    Photo or photos | what was kept unchanged
+
+  PAUSE: you pick one
+
+  STEP 3: FABRIC CLOSE-UPS
+    Close-ups | the area each one shows
+
+  PAUSE: you gather the set
+
+  STEP 4: FAULT REPORT
+    Risk rating per picture | eight checks | use, retry or retouch | fix lines
+
+  PAUSE: you fix flagged pictures
+
+  STEP 5: MARKETPLACE CHECK
+    Pass or reject per rule | fix for each reject
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The flat lay
+    how: Lay the garment flat, front only, plain background, nothing folded. Folded sleeves hide their length.
+  - what: Which area to zoom into
+    how: Name one area, such as the collar or cuff. One close-up at a time gives sharper results.
+  - what: The marketplace
+    how: Rules differ for Amazon, TikTok Shop, Temu and Shopee. Name yours.
+  - what: Photo size
+    how: Use the biggest photo you have. A blurry source gives invented detail.
+judge:
+  - Colour, pattern and stitching match your real garment.
+  - No detail appears that the garment does not have, such as a pocket.
+  - The worn-shape photo keeps the true fit and length.
+  - Every rejected rule has a fix you can act on.
+  - No picture was kept that the inspector rated high risk.
+test:
+  - Hold your real garment next to the pictures and compare colour and weave.
+  - Look closely at logos, tags and text. Those fail first.
+  - Upload one final photo to a test listing and see if the marketplace takes it.
+improve:
+  - Save the fix lines that worked and add them to your next prompt.
+  - Keep your best flat-lay setup, with light and backdrop, as a repeatable routine.
+  - Run the sheet workflow next if you have many garments.

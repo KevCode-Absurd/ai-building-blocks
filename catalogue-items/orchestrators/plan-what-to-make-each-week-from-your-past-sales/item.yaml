@@ -1,0 +1,21 @@
+slug: plan-what-to-make-each-week-from-your-past-sales
+name: "Plan what to make each week from your past sales"
+summary: "Give it past sales and your capacity. Get a forecast, a weekly make plan and a meeting agenda."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+outputs:
+  - {type: plan}
+uses: [demand-forecast-planner, production-capacity-checker, production-plan-builder, demand-supply-meeting]
+steps:
+  - {uses: demand-forecast-planner, note: "Starts from your past sales and makes the forecast table every later step reads."}
+  - {uses: production-capacity-checker, note: "Reads the forecast table from step 1 and shows where demand beats what you can make."}
+  - {uses: production-plan-builder, note: "Uses the forecast from step 1 and the gaps from step 2 to set a make quantity for each week."}
+  - {uses: demand-supply-meeting, note: "Takes the forecast and the make plan and turns the gaps into a meeting agenda with owners."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-what-to-make-each-week-from-your-past-sales/skeleton.yaml

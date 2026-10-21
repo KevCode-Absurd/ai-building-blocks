@@ -1,0 +1,24 @@
+slug: search-console-quick-win-finder
+name: "Search Console quick-win finder"
+summary: "Paste Search Console queries and pages. Get pages to push this month and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Google Search Console Tutorial (2026)", by: "SEO consultant presenting for a content-optimisation tool (first name only in the transcript)", used: "Retargeting a page to the search that earns clicks, question searches, the gap list prompt and using the most-linked pages to link to newer ones"}
+  - {title: "SEO Full Course 2026 for beginners", by: "Course instructor (name not clear in the transcript)", used: "Pages with many impressions and few clicks, and the possible causes"}
+  - {title: "Complete SEO Course (3 Hours): Rank in AI Search", by: "SEO consultant (name not given)", used: "The positions 4 to 10 and 11 to 30 bands, the brand search check, the monthly routine, source and device comparison, and ignoring vanity scores"}
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two agency co-founders (names not given), a Shopify SEO agency", used: "Sorting by impressions and starting with sales pages"}

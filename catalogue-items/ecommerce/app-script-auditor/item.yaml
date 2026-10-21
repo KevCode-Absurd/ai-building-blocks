@@ -1,0 +1,21 @@
+slug: app-script-auditor
+name: "App script auditor"
+summary: "Give it your apps and speed report. Get each app marked keep, remove or delay, and a score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: store_capture, required: true}
+  - {type: audit_report, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify speed and image optimization (a video series on images, app scripts, layout shift, largest content and store audits)", by: "Christian, a Shopify developer (YouTube channel)", used: "Keeping only apps with a clear money link, where apps add their code, theme app embeds, and loading an app only on the pages that need it"}
+  - {title: "Ecommerce Site Speed Optimization: Complete Guide for 2026", by: "Jakub Rusniok (article)", used: "A benchmark of about 1,500 Shopify stores linking the number of outside services to mobile score, by store category, and a rule for trying new apps"}
+  - {title: "Website Speed Optimization Tips for Shopify Stores", by: "Shopify Plus blog, quoting agency owners", used: "Forgotten trial apps still run and slow the store; ask if the value beats the slowdown"}

@@ -1,0 +1,107 @@
+new_slug: ad-fatigue-watcher
+name: Ad fatigue watcher
+summary: Give it your ad results twice a week. Get tired ads caught early and a brief for each replacement.
+job: read-ad-results
+thinking: high
+thinking_why: It compares each ad with its own history, sorts winners from weak ads and chooses between hooks and new ideas. Give it your strongest model.
+headline: Ad fatigue watcher
+subhead: Give it your ad results twice a week. It keeps a history of every ad that spends, catches the slow slide before sales drop, tells a tired winner from a weak ad, and writes the brief for the replacement.
+explain: |
+  A winning ad rarely stops working overnight. It loses a little each week: the return slips, frequency climbs, fewer people click. By the time the account feels it, you have no replacement ready, and making one takes days.
+
+  This agent keeps a running history of each ad that spends and looks for the slide twice a week. A weak ad that never worked is sorted out first, because a new opening will not save it. For a proven winner it works out whether the ad is spent or the audience is too small, sets a pace that suits your stock and cash, and writes new hook briefs on the same body. If many ads slide at once, it checks the whole account for sameness and finds new ideas. It never pauses or launches anything without your yes.
+when:
+  - You have one or two ads that carry most of your spend and you want warning before they fade.
+  - A winner has started to slip and you need a replacement plan, not a guess.
+  - Your ads all look alike and results are flattening.
+you_give:
+  - Ad results for the last 7 days, one row per ad, with spend, purchases, frequency and click rate
+  - The cost per sale or ROAS each ad needs to hit
+  - The history file from your last run, once it exists
+  - Stock and cash for your best seller, and the words of your winning ad (advised)
+  - Your brand brain, if the account needs new ideas
+you_get:
+  - A list of sliding ads, each with its last runs of numbers and the cause
+  - Weak ads that never worked, kept apart from tired winners
+  - 10 or more hook briefs for each proven winner, each tagged with what it changes
+  - New ad ideas with briefs, when the whole account looks the same
+  - A pace for each winner that fits your stock and cash
+  - A list of pauses, budget moves and launches to approve
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run today's check.
+  - Put this week's ad results in one folder, or attach them in the chat. Connect the account read-only if you can.
+  - Give it your target and, for your best ad, the transcript.
+  - Read the list. Approve the pauses and launches you agree with.
+  - Run it again in three or four days. It adds the new rows to its history and looks for the trend.
+how_it_works:
+  - title: Read the history
+    text: Opens the saved rows for each ad and adds this run's numbers, so a trend comes from data.
+  - title: Spot the slide
+    text: Flags an ad when its return falls two runs in a row while frequency climbs, or when the daily check flags it.
+  - title: Sort each flagged ad
+    text: An ad that never met the target is a weak ad, not a tired one, and gets no hooks. A proven winner goes on to be revived.
+  - title: Revive the winners
+    text: Calls the cause, sets the pace from your stock and cash, and writes hook briefs that keep the winning body.
+  - title: Check for sameness
+    text: If many ads slide together, it groups the live ads by idea. A high score means the account needs new ideas, not new hooks.
+  - title: Find new ideas
+    text: When the account repeats itself, it finds ideas you have not tried and turns them into designer-ready briefs.
+  - title: Plan the backups
+    text: If one ad holds more than half of spend, it names the formats to make now.
+  - title: Log and hand back
+    text: Saves the hook list so nothing repeats, then stops for your yes.
+output_shape: |-
+  SLIDING ADS
+    <ad> | return: <x>, <x>, <x> | frequency: <n>, <n>, <n> | click rate: <%> | cause: <ad is spent | audience too small | both>
+
+  NOT FATIGUE (weak ads)
+    <ad> | never met target | spend <amount> | <pause candidate | needs more spend>
+
+  REPLACEMENT BRIEFS
+    <ad>: hook 1 | changes: <angle | offer | who says it | format> | <brief>
+    NEW IDEAS (only if the account looks the same): <idea> | <version A, B, C>
+
+  PACE
+    <squeeze | run lower for months>, because <stock and cash>
+
+  BACKUPS
+    <formats to add now>
+
+  CHANGES TO APPROVE
+    <pause, budget move or launch> | why: <reason>
+
+  NEXT CHECK AND MISSING
+    <numbers to watch> | MISSING: <every line>
+tweaks:
+  - what: How often it runs
+    how: Twice a week suits an account that spends enough for numbers to move. A small account is better with once a week.
+  - what: Your target
+    how: Give the cost per sale or ROAS you need. Without it, the agent cannot tell a weak ad from a tired one.
+  - what: The winning ad's transcript
+    how: Without it the agent cannot tell which part earned the spend, so its hook briefs are looser.
+  - what: Number of hooks
+    how: With a small budget, ask for 3 hooks instead of 10, so each gets enough spend to read.
+judge:
+  - Every slide is shown with numbers from at least two runs.
+  - No hooks were written for an ad that never met the target.
+  - No hook repeats one you used before.
+  - Every hook is true to your product, with no invented customers or results.
+  - Nothing in your account was changed without your clear yes.
+test:
+  - Run it on an ad you know faded. See if it flags the slide before you noticed it.
+  - Give it a weak ad and a tired winner together. It should treat them differently.
+  - Run it twice on the same data. The sliding list should match.
+improve:
+  - Keep the history file between runs. Trends need at least three runs.
+  - Add the hooks you have already used to the hooks file before the first run.
+  - Set your own line for a slide, such as a fall of one tenth in return over two runs.
+  - Add your stock position each time a restock lands, so the pace stays right.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the history files and run on a timer.
+    - name: Meta Ads Manager
+      why: Export ad-level results with frequency, hook rate and hold rate. The daily checker can read it directly if connected read-only.
+  inputs:
+    - The transcript of your best ad
+    - Your stock position for the products you advertise most

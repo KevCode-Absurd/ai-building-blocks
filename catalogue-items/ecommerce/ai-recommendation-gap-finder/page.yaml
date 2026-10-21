@@ -1,0 +1,125 @@
+new_slug: ai-recommendation-gap-finder
+name: "AI recommendation gap finder"
+summary: "Paste your AI panel results. Get six gaps ranked into fix, build or influence, and a score out of 100."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It reads a table of results and ranks gaps with reasons, so a mid-level model is enough."
+
+headline: "AI recommendation gap finder"
+subhead: Paste the results of your AI recommendation panel, your brand names and how you want to be seen. It checks six gaps, marks each opportunity fix, build or influence, ranks them by demand, credibility and chance of being cited, and scores your topic coverage out of 100.
+
+explain: |
+  Your panel shows that rivals get named and you do not. That is a symptom. The cause could be one of six gaps: you appear less often, AI describes you the wrong way, you are missing from a topic, rivals have a format that gets cited, review sites name rivals and not you, or nobody links your brand to the category.
+
+  This skill sorts the panel results into those six gaps, with evidence from your own runs. Each opportunity is tagged fix (improve what exists), build (make a new page or video) or influence (get mentioned elsewhere). It ranks them and puts quick wins first. It needs your panel results first. Without them the answer is guesswork. Platform notes here come from 2025 to 2026 studies on a few thousand queries and will drift, so recheck every 6 months.
+
+when:
+  - Your AI panel shows rivals named and you missing, and you do not know where to start.
+  - You have a list of ideas, such as Reddit, video and review sites, and need to rank them.
+  - You want to copy what a rival does, and need to know which topics and formats they cover that you do not.
+
+you_give:
+  - "Your panel results: who was named, who was cited"
+  - "Your brand names: store name, product names, any phrase or method you own, the founder"
+  - Your rivals
+  - How you want to be positioned
+
+you_get:
+  - A gap table across the six gaps, with evidence
+  - A ranked action list tagged fix, build or influence
+  - A platform priority note
+  - A score out of 100 for how many of your topics you cover
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your panel results from the AI recommendation panel runner.
+  - List your brand names and how you want to be described.
+  - Read the quick wins first. Do those before building new pages.
+  - Run the same check on one rival to see what topics and formats they cover that you do not.
+
+how_it_works:
+  - title: Lists your names
+    text: Store name, own-brand products, named features and founder. Each has its own visibility.
+  - title: Ties names to topics
+    text: Maps each name to the topics and descriptors it should own, such as plant-based or under 50 dollars, in customers' words.
+  - title: Checks six gaps
+    text: Visibility, narrative, topic, format, web mentions and demand.
+  - title: Filters the panel
+    text: Finds missed citations (named, not linked), competitor gaps (rival named, you not) and topic gaps (topics tied to rivals).
+  - title: Tags each opportunity
+    text: Fix, build or influence. Scores it on demand it could drive, credibility, and chance of being cited.
+  - title: Puts quick wins first
+    text: An old page that ranked and went stale, then missing placements in best-of lists.
+  - title: Weighs the platforms
+    text: Notes where each assistant draws from, and that only a few top cited sites appear on all of them.
+  - title: Scores topic coverage
+    text: Counts topics where you are named in at least half the runs, out of all topics.
+
+output_shape: |
+  YOUR NAMES  <store | products | owned phrases | founder>
+
+  GAPS
+  Visibility: <FOUND / NONE> | evidence: <runs>
+  Narrative: <FOUND / NONE> | AI says: <...> | you want: <...>
+  Topic: <FOUND / NONE> | missing from: <topics>
+  Format: <FOUND / NONE> | rivals have: <format> | cited on: <questions>
+  Web mentions: <FOUND / NONE> | sites naming rivals not you: <list>
+  Demand: <FOUND / NONE> | evidence: <...>
+
+  ACTIONS (ranked)
+  1. <FIX / BUILD / INFLUENCE> | <action> | demand <H/M/L> | credibility <H/M/L> | cite chance <H/M/L>
+
+  QUICK WINS  <list>
+  PLATFORM NOTE  <which assistant to work on first, and why> | dated <month year>
+
+  SCORE  <n>/100 (<topics where named in half the runs or more> of <topics> x 100 = <n>)
+
+  NOT RUN  <what, and why>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your panel size
+    how: A small panel gives rough answers. Say how many questions and runs you have so the skill can say how sure it is.
+  - what: Your owned phrases
+    how: List any named method or product line. Each name is tested for its own visibility.
+  - what: Your positioning
+    how: Say how you want AI to describe you, such as premium or budget. The narrative gap compares this with what AI says.
+  - what: A rival
+    how: Give a rival's panel results too. The skill finds topics and formats they cover that you do not.
+
+judge:
+  - Every gap names evidence from your panel, such as the question and the assistant.
+  - Each action has a fix, build or influence tag and a reason.
+  - Quick wins come first.
+  - The skill says it needs panel data and does not guess without it.
+  - Platform advice is dated and labelled as drifting.
+
+test:
+  - Check one missed citation by hand. Ask the same question and see if you are named but not linked.
+  - Do one quick win. Rerun the panel for that topic after two weeks, with a control topic you leave alone.
+  - Run it on a rival and see if it finds their gaps.
+  - Run it twice on the same data. The ranked list should hold.
+
+improve:
+  - Add your own scoring weights to the skill file, such as more weight on demand for a high-margin product line.
+  - Add the sites that matter in your field so the web mentions gap checks them first.
+  - Save the ranked list in your brand file and rerun after each action.
+  - Pair it with the AI recommendation panel runner (the input) and the answer-first page rewriter or AI-ready product page editor (to act).
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorts panel results into the six gaps and ranks them."}
+    - {name: "Ahrefs Brand Radar", why: "A paid tool that speeds up the missed citation and competitor filters. Not required."}
+    - {name: "A spreadsheet", why: "Keeps your gap table and ranked list in one place."}
+  inputs:
+    - "Panel results for at least one rival"
+    - "Your customers' words for what you do"
+    - "A list of best-of pages and review sites in your field"
+
+terms:
+  - term: Missed citation
+    meaning: An AI answer names your store but does not link to your site.
+  - term: Narrative gap
+    meaning: AI describes your store differently from how you want to be seen.
+  - term: Fix, build, influence
+    meaning: Improve a page you have, make a new page or video, or get mentioned on other sites.

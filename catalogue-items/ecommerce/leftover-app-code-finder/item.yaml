@@ -1,0 +1,20 @@
+slug: leftover-app-code-finder
+name: "Leftover app code finder"
+summary: "Give it your theme files and removed apps. Get each leftover script found and the lines to delete."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: theme_files, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify speed and image optimization (a video series on images, app scripts, layout shift, largest content and store audits)", by: "Christian, a Shopify developer (YouTube channel)", used: "Searching a downloaded theme in a code editor for the names of removed apps, and which theme files to check first"}

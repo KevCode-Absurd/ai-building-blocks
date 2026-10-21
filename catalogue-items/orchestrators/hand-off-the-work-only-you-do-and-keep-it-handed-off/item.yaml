@@ -1,0 +1,20 @@
+slug: hand-off-the-work-only-you-do-and-keep-it-handed-off
+name: "Hand off work only you do and stop it returning"
+summary: "Describe your week. Get what to hand off, a one-page agreement for the person taking it and a meeting plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [founder-leadership-coach, results-agreement-writer, one-on-one-meeting-planner]
+steps:
+  - {uses: founder-leadership-coach, note: "Starts with where your time goes and which work to hand off first."}
+  - {uses: results-agreement-writer, note: "Takes the first job on the delegation plan and writes the one-page agreement for the person who will own it."}
+  - {uses: one-on-one-meeting-planner, note: "Builds a meeting rhythm around the agreement so the work does not slide back to you."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/hand-off-the-work-only-you-do-and-keep-it-handed-off/skeleton.yaml

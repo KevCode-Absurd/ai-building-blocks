@@ -1,0 +1,30 @@
+slug: pre-launch-ad-check-and-fix-loop
+name: "Pre-launch ad check and fix loop"
+summary: "Give it a finished ad. It checks, fixes and re-checks until it passes, then hands you a version ready to upload."
+category: agent
+type: agent
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: static_ads, required: false}
+  - {type: script, required: false}
+  - {type: landing_page, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: ad_copy}
+uses: [pre-launch-ad-checker, meta-ads-compliance-checker, ad-and-page-policy-checker, claim-and-proof-matcher, ad-and-page-match-checker, sound-off-commercial-checker]
+steps:
+  - {uses: pre-launch-ad-checker, note: "Every round: stop-ship mistakes, the five links, the facts, a verdict and a score."}
+  - {uses: meta-ads-compliance-checker, note: "Every round, if the ad runs on Meta: compliance problems, a score and a fixed ad."}
+  - {uses: ad-and-page-policy-checker, note: "Every round instead of the Meta check, if the ad runs on another platform: policy risks with safer rewrites."}
+  - {uses: claim-and-proof-matcher, note: "Only when a round flags a claim as not confirmed or ahead of its proof: each claim paired with its proof."}
+  - {uses: ad-and-page-match-checker, note: "Once, for a picture ad that has a page: whether the ad and page make the same promise."}
+  - {uses: sound-off-commercial-checker, note: "Only for a video ad, and again whenever the script changes: whether it still sells with the sound off."}
+schedule: "Each time an ad is finished, before it goes into the ad account"
+asks_before: [adding any claim, number, offer term or guarantee that is not in the facts you gave, uploading or publishing the ad, changing the ad's picture or video, spending anything on the ad]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,127 @@
+new_slug: buyer-identity-segment-finder
+name: "Buyer identity segment finder"
+summary: "Paste reviews and survey answers. Get buyer groups by self-description, their size and who to build for."
+job: understand-customers
+thinking: medium
+thinking_why: "It sorts and counts text you paste, then ranks groups. A mid-size model does this well, as long as you check the counts."
+
+headline: "Buyer identity segment finder"
+subhead: Paste your reviews, a rival's reviews or survey answers. It finds the "I am a" and "as a" self-descriptions, counts how often each repeats, maps them from broad to narrow with a rough size, picks one group to build for and gives you a three-question survey.
+
+explain: |
+  Buyers often tell you who they are without being asked. "As a nurse, I'm on my feet all day." "I'm a teacher and these fit my week." Each phrase points to a group you can write ads and pages for, and most stores never count them.
+
+  This skill reads your reviews, and those of rivals or similar products if you have few of your own, and pulls out every self-description. It counts how often each identity repeats, because a real buyer group keeps growing in your reviews and survey answers. It then places the groups on a map from the broad market down to the narrow, gives each a rough size note, and picks one. For that group it lists what to change in your ad, text, page and photos. It also writes a short survey so you keep collecting more.
+
+when:
+  - You have reviews and no idea which kind of buyer they come from.
+  - You want a narrower group to speak to, so your ads stop sounding like everyone else's.
+  - You are choosing between a few buyer groups and want a count behind the choice.
+
+you_give:
+  - Your reviews, a rival's reviews, or reviews of similar products from larger brands
+  - Survey answers from your buyers (optional)
+  - Rising hobbies or trends in your niche (optional)
+you_get:
+  - A list of buyer identities with counts, trend and example phrases, without names
+  - A nesting map from the broad market to the specific group
+  - A ranked list with a size note on each, and one pick
+  - What to change for the pick in the ad, text, page and photos, plus a three-question survey
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your reviews with the reviewer names removed. If you have few, add reviews of similar products from larger brands.
+  - If you have survey answers, paste them too. If you do not, ask for the three-question survey and send it to your buyers.
+  - Read the counts first, then the size notes. Check a few counts against the reviews yourself.
+  - Pick the group, then use the list of changes to edit one ad and one page.
+
+how_it_works:
+  - title: Gathers reviews
+    text: It starts with your own reviews, then adds a rival's and similar products' reviews when you have few.
+  - title: Finds self-descriptions
+    text: It searches for "I am a", "as a" and other ways people say who they are, and keeps the sentence around each one.
+  - title: Reads survey answers
+    text: Answers to how buyers describe themselves and how the product helps go into the same count.
+  - title: Counts the repeats
+    text: Identities that keep growing in your reviews and survey are real groups. A single mention is not.
+  - title: Maps the market
+    text: Like nesting dolls, from the broad market through narrower groups to the specific one.
+  - title: Sizes each group
+    text: A rough note with its reason. A niche in a huge market can be tiny and work; one in a small market may be too small.
+  - title: Checks for new trends
+    text: It notes rising hobbies and decides if being the first brand to serve one is worth a test.
+  - title: Picks one and lists changes
+    text: It ranks the groups, picks one and says what changes in the ad, text, page and photos.
+
+output_shape: |
+  IDENTITIES FOUND
+  <identity> | count: <n> | trend: <rising | steady | old | unknown>
+    | example words: "<phrase, no names>"
+
+  NESTING MAP
+  <broad market> > <narrower> > <narrower> > <group>
+
+  SEGMENT RANKING
+  1. <group> | repeats: <n> | size note: <large/medium/small/unsized>
+       because <...> | fits product: <yes / partly / no>
+  Pick: <group> because <...>
+
+  WHAT CHANGES FOR THE PICK
+  Ad: <...>  Primary text: <...>  Page: <...>  Product photos: <...>
+
+  SURVEY (3 questions)
+  1. <...>  2. <...>  3. <...>
+
+  NEXT: <one step>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: How many reviews you paste
+    how: More reviews give clearer counts. Add reviews of similar products from larger brands if you only have a handful of your own.
+  - what: Dates on the reviews
+    how: With dates, the skill can tell rising groups from old ones. Without dates it marks the trend as unknown.
+  - what: Survey wording
+    how: Keep the questions open-ended. Tick boxes give you the groups you already guessed, not the ones you missed.
+  - what: Your market's size
+    how: Say roughly how big your market is. A group inside a huge market can be small and still work. In a small market the same group may not.
+  - what: Rival reviews
+    how: Include a rival's reviews on purpose. They show groups that buy from them and not you, which is a possible opening.
+
+judge:
+  - Each identity has a count and at least one real phrase, with no names.
+  - The counts match what is in the pasted text.
+  - Each size note says what it rests on, or says unsized.
+  - The pick fits what your product does, not just the best story.
+  - The list of changes covers ad, text, page and photos.
+
+test:
+  - Count one identity yourself in the pasted reviews. Your count should match the skill's.
+  - Check that the top group in your own order data buys more or reorders more than others. Reviews show who speaks up, not always who buys most.
+  - Send the three-question survey to ten buyers and see if the same identities come back.
+  - Run one ad aimed at the pick and one aimed at a broad group. Compare the cost of a sale over the same days.
+
+improve:
+  - Add the identity words common in your niche to the skill file, so it searches for them as well as "I am a".
+  - Add your own rules for size, such as a smallest group you will serve.
+  - Save the chosen group and its example phrases to your brand file as the buyer for the next ad round.
+  - Run it again every few months. New groups show up in newer reviews first.
+  - Pair it with the Buyer research plan with survey for the reward and the non-buyer survey, and the Avatar fit checker to test your ad and page against the group.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reads and counts the self-descriptions in the reviews you paste."}
+    - {name: "Google Forms", why: "A free way to send the three-question survey and collect open answers."}
+    - {name: "Shopify post-purchase survey apps", why: "Ask the questions right after an order so answers keep coming."}
+  inputs:
+    - "Reviews from your own store, a rival and similar products from larger brands"
+    - "Order dates and order values, to compare groups by what they buy"
+    - "A list of hobbies or trends that are rising in your niche"
+    - "Survey answers from buyers"
+
+terms:
+  - term: Avatar
+    meaning: A real buyer group, described by who they are and their situation, not just age and gender.
+  - term: Nesting dolls
+    meaning: A way to map a market from broad to narrow, each group sitting inside the one before it.
+  - term: Self-description
+    meaning: A phrase where a reviewer says who they are, such as "I am a teacher" or "as a nurse".

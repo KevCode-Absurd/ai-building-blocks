@@ -1,0 +1,14 @@
+# Keep your store safe: AI Blocks
+
+> 10 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Bot and AI agent access planner](https://useaiblocks.com/skills/bot-and-ai-agent-access-planner): Describe your traffic, logins and checkout. Get which bots and AI agents to allow, check or block.
+- [Cut risky apps and scripts from your store](https://useaiblocks.com/workflows/cut-risky-apps-and-scripts-from-your-store): Give it your app list. Get keep, swap or cut for each app, then the scripts left ranked by risk.
+- [Domain and certificate watch checker](https://useaiblocks.com/skills/domain-and-certificate-watch-checker): List your domains and subdomains. Get leftover records and weak registrar access flagged, a score out of 100 and fixes.
+- [Fraud rules setter](https://useaiblocks.com/skills/fraud-rules-setter): Give it your order volume and payment setup. Get fraud rules, a review routine and a chargeback watch line.
+- [Lock down your store logins and staff against takeover](https://useaiblocks.com/workflows/lock-down-your-store-logins-and-staff-against-takeover): Describe your team and apps. Get a security score, a fix list, a sign-in policy and a phishing rule sheet.
+- [Sign-in security checker](https://useaiblocks.com/skills/store-sign-in-security-checker): Describe how staff and customers sign in. Get gaps ranked, a score out of 100 and a password and second-step policy.
+- [Staff phishing rules briefer](https://useaiblocks.com/skills/staff-phishing-rules-briefer): Give it your tools and team size. Get a one-page phishing rule sheet and a ten-minute drill with answers.
+- [Stop fake orders, card testing and bot abuse](https://useaiblocks.com/workflows/stop-fake-orders-card-testing-and-bot-abuse): Give it your orders and payment setup. Get fraud rules, a review routine and a bot access plan.
+- [Store script and app risk auditor](https://useaiblocks.com/skills/store-script-and-app-risk-auditor): List the scripts, apps and packages your store loads. Get risky ones ranked, a score out of 100 and what to remove.
+- [Store security checkup](https://useaiblocks.com/skills/store-security-checkup): Describe your admin team and apps. Get a ranked security fix list, a score out of 100 and a quarterly routine.

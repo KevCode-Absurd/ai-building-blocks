@@ -1,0 +1,124 @@
+new_slug: shopping-feed-title-writer
+name: "Shopping feed title writer"
+summary: "Give it your products and converting search terms. Get search-led titles, descriptions and image fixes."
+job: run-google-ads
+thinking: medium
+thinking_why: "It writes many titles to a fixed pattern and has to keep every word true to the product."
+
+headline: "Shopping feed title writer"
+subhead: Give it your product list, the search terms that already led to sales and your brand name. It rewrites each title in one fixed order with the words buyers type first, drafts descriptions, lists image fixes and plans a safe rollout in small batches.
+
+explain: |
+  In Google Shopping you don't bid on keywords. Google reads your product title, description and details to decide which searches to show your product for. A vague title such as a brand name and a code word shows you for nothing. A title with the words shoppers type shows you for the right searches.
+
+  This skill puts the top converting search terms first, then the product type, variant details and one or two real features, with the brand last unless shoppers know it. It uses only true attributes. A wrong word makes Google show you for searches you can't serve. It also suggests description text, image checks, custom labels and a rollout in batches, because changing every title at once resets learning in your campaigns.
+
+when:
+  - Your Shopping ads get impressions but few clicks or sales.
+  - Your titles are brand names, codes or the supplier's text.
+  - You have search term data and want it written into the feed.
+
+you_give:
+  - Product list with current titles, variants, colours, sizes and features
+  - Search terms with conversions, from Shopping, Performance Max or Search reports (optional for a new store)
+  - Your brand name, and whether shoppers know it
+  - Your top 20 products by revenue
+  - Current product images (optional)
+you_get:
+  - A new title for each product and variant, in one fixed order
+  - A description of about 1,000 characters for each product, checked against its facts
+  - An image checklist and a test plan
+  - A rollout plan in small batches, with custom label ideas
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product list and your converting search terms. If you have none, say so and the skill uses Keyword Planner words.
+  - Say whether your brand is a market leader in its niche.
+  - Check every new title against the real product before you use it.
+  - Roll out titles in small batches and watch clicks, cost per click and returns after each batch.
+
+how_it_works:
+  - title: Finds the words buyers use
+    text: From converting search terms, or Keyword Planner for a new store, with the target country set.
+  - title: Picks one title order
+    text: One fixed order for the whole catalogue, so Google learns a stable pattern.
+  - title: Writes the titles
+    text: Top term first, then product, variants and one or two real features, with the brand last unless shoppers know it.
+  - title: Keeps it true
+    text: Only true attributes. No promotional words, no all capitals, no words for things you don't sell.
+  - title: Writes descriptions
+    text: Same keywords in short paragraphs on use cases and who it is for, checked line by line against the product.
+  - title: Handles variants and currencies
+    text: Each variant can have its own title and image. One feed per currency and country.
+  - title: Checks images
+    text: Best product shot, 4x5 where the feed allows it, no overlays, and a test of white background against lifestyle.
+  - title: Plans the rollout
+    text: Small batches, with a look at the search terms after 2 to 4 weeks.
+
+output_shape: |
+  TITLE ORDER  <the order used, in one line>
+  BRAND  <last | first, because shoppers know it>
+  TITLES
+  <product ID> | old: <old title> | new: <new title> | <character count>
+  (one line per product and variant)
+  DESCRIPTIONS
+  <product ID> | <about 1,000 characters in two short paragraphs>
+  IMAGES  <product | issue | fix | test>
+  CUSTOM LABELS  <label | values | use>
+  FEEDS  <one per currency and country>
+  ROLLOUT  <batch 1: products | what to watch | when to look>
+  WHERE SOURCES DIFFER  <choice made>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Converting search terms
+    how: Paste terms that led to sales. Titles built from real conversions beat guesses. A new store can start with Keyword Planner words and replace them later.
+  - what: Brand strength
+    how: Say if shoppers search for your brand. If they do, the brand can go first. If not, it goes last.
+  - what: Niche
+    how: Say if you sell fashion or electronics. Fashion can lead with brand, type, feature and colour or size. Electronics often lead with brand and model. Check which one your shoppers search.
+  - what: Variants
+    how: List sizes, colours and pack sizes. A 50 g, 100 g and 500 g version can each get its own title and image.
+  - what: Description length
+    how: Sources give about 1,000, 1,000 to 2,000 and up to 5,000 characters. Pick a range and keep every line true.
+
+judge:
+  - Every title uses the same order.
+  - The first part of each title holds the words buyers type.
+  - Every word is a true attribute of the product.
+  - There are no promotional words, no all capitals and no unknown brand or code at the front.
+  - Product ID and SKU are unchanged.
+  - The rollout is in batches, not all at once.
+
+test:
+  - Pick 5 to 10 hero products. Roll out their new titles first and note clicks, cost per click and returns.
+  - After 2 to 4 weeks, read the search terms for each product. They should be the ones you meant.
+  - Check each new title against the product page. Any wrong word is a fail.
+  - Run the skill twice on the same list. The order and wording should match.
+  - Test one white background image against one lifestyle image on a hero product, and measure your own result.
+
+improve:
+  - Add your own title order to the skill file, if you already chose one for a niche.
+  - Add the words you must never use, such as claims you can't prove.
+  - Add your product facts to your brand file, so descriptions draw from them.
+  - Add your best converting search terms every month.
+  - Pair it with the feed health checker, which finds disapproved items and price mismatches.
+
+works_best_with:
+  tools:
+    - {name: "Google Merchant Center", why: "Shows how each product title and image performs and where the feed has problems."}
+    - {name: "Google Ads Keyword Planner", why: "Gives the words buyers use for a product, in the country you sell to."}
+    - {name: "Any good chat AI", why: "Writes titles to a fixed pattern from your product facts."}
+  inputs:
+    - "A Shopping and Performance Max search terms report with conversions"
+    - "Your product feed export"
+    - "The real product facts for each item, such as material and size"
+    - "Your top 20 products by revenue"
+
+terms:
+  - term: Feed
+    meaning: The list of your products and their details that you send to Google.
+  - term: Supplemental feed
+    meaning: An extra feed that adds or changes details of products in your main feed, such as images.
+  - term: Custom label
+    meaning: A tag you add to products, such as margin tier or bestseller, so campaigns can treat each group differently.

@@ -1,0 +1,20 @@
+slug: shopify-store-setup-planner
+name: "Shopify store setup planner"
+summary: "Tell it your country, team and catalogue. Get your plan, payments, domain and a build order."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients", used: "Plan differences and upgrade triggers, Plus, retired plans, owner email, how location decides payments, the prep list, brand assets, and DNS steps and protecting other domain endings"}
+  - {title: "Shopify Store Setup Full Tutorial 2026: Step by Step", by: "Unnamed presenter", used: "Starting on the basic plan, the build order, domain name rules, buying through Shopify or connecting one, and waiting for DNS"}

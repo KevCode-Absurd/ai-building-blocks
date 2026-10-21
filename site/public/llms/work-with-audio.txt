@@ -1,14 +1,17 @@
 # Turn speech into text and back: AI Blocks
 
-> 11 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 14 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Audio meeting notes writer](https://useaiblocks.com/skills/audio-meeting-notes-writer): Give it a recording. Get a written transcript, a short summary and clear meeting notes.
+- [Cut a raw recording and get chapters and short clips](https://useaiblocks.com/workflows/cut-a-raw-recording-and-get-chapters-and-short-clips): Give it a raw recording. Get clean speech, a timed cut list, video chapters and five short clips.
+- [Make a voiceover and ship it in other languages](https://useaiblocks.com/workflows/make-a-voiceover-and-ship-it-in-other-languages): Give it your script. Get a spoken voiceover, dubbed versions that keep the voice and subtitles for each.
 - [Multilingual narrator](https://useaiblocks.com/skills/multilingual-narrator): Give it your text. Get spoken audio in a natural voice in 90+ languages, saved as a sound file.
 - [Music composer](https://useaiblocks.com/skills/music-composer): Describe the track you want. Get background music, a jingle or a song with lyrics, as an audio file.
 - [Noisy audio cleaner](https://useaiblocks.com/skills/noisy-audio-cleaner): Give it a noisy recording. Get clean speech with the background noise and music removed.
 - [Recording transcriber](https://useaiblocks.com/skills/recording-transcriber): Give it audio or video. Get the words written out, with each speaker labelled.
 - [Sound effects designer](https://useaiblocks.com/skills/sound-effects-designer): Describe a sound. Get a clip such as rain, an impact or a button click, with the length you set.
 - [Subtitle and transcript maker](https://useaiblocks.com/skills/subtitle-and-transcript-maker): Give it a recording or video. Get a written transcript with who spoke, word timing and subtitles.
+- [Turn a recorded call into notes, a follow-up and coaching](https://useaiblocks.com/workflows/turn-a-recorded-call-into-notes-a-follow-up-and-coaching): Give it a call recording. Get notes, a follow-up draft and coaching on how the call went.
 - [Video dubbing editor](https://useaiblocks.com/skills/video-dubbing-editor): Give it a video or podcast. Get versions in other languages that keep each speaker's voice, ready to correct.
 - [Voice swap editor](https://useaiblocks.com/skills/voice-swap-editor): Give it a recording. Get the same performance in a different voice, with your timing and emotion kept.
 - [Voiceover maker](https://useaiblocks.com/skills/voiceover-maker): Give it your text. Get spoken audio in a built-in voice, for narration, voiceovers or batches.

@@ -1,0 +1,48 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: build-and-test-a-page-on-a-clear-type-and-grid
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: build-and-test-a-page-on-a-clear-type-and-grid
+  name: "Build a page on a clear grid and test it"
+  summary: "Describe your site. Get font pairs, a grid and type plan, a built page that follows them and a real browser test."
+  when: "you want a page that looks designed, not templated, and works when someone clicks through it."
+  job: build-websites
+  level: intermediate
+steps:
+  - name: "Web font pairing picker"
+    skill: web-font-pairing-picker
+    job: design
+    from: "library"
+    method: ["Ask what the site says and who reads it", "Choose a typeface that fits the tone", "Pair a second face by contrast", "Set sizes, line spacing and a scale for each screen"]
+    inputs: [brief]
+    outputs: [design_direction]
+    note: "Picks fonts and sizes that fit the site's tone."
+  - name: "Page grid and type planner"
+    skill: page-grid-and-type-planner
+    job: design
+    from: "library"
+    method: ["Set margins that fit the mood", "Choose columns, rows and gutters for the content", "Set the order with big type against small and planned white space", "Lay out each page, cutting any element with no job"]
+    inputs: [brief, design_direction!]
+    outputs: [page_layout_spec, design_direction]
+    note: "Keeps the fonts from the step before and sets a grid and layout around them."
+  - pause: "Add the type list, grid and page layout to your brief for the page, with the words and images you have."
+  - name: "Website art director"
+    skill: website-art-director
+    job: ops
+    from: "library"
+    method: ["Read the brief and write the page's argument in one line", "Choose a direction and one strong idea", "Write the words and build the page", "Check it in a real browser at phone and desktop width"]
+    inputs: [brief]
+    outputs: [web_app]
+    note: "Builds the page from the brief, following the type and grid you added."
+  - name: "Web app tester"
+    skill: web-app-tester
+    job: ops
+    from: "library"
+    method: ["Start the page on a local server", "Open it in a real browser", "Click through links, forms and menus", "Report what failed, with screenshots and console errors"]
+    inputs: [web_app]
+    outputs: [test_report]
+    note: "Opens the built page and clicks through it to find what is broken."

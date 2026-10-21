@@ -1,0 +1,83 @@
+new_slug: write-offers-for-each-buyer-type-and-pick-the-best
+name: Write offers for each buyer type and pick the best
+summary: Give it one product and its reviews. Get an offer per buyer type and a test plan.
+job: make-offer
+thinking: high
+thinking_why: It runs four skills in a row, and the profit step does cost sums. Give it your strongest model.
+headline: One product, an offer for each kind of buyer, and the one that earns most
+subhead: Give it a product that sells for more than one reason. It finds the reasons in your reviews, writes an offer for each, checks every offer against your costs, and plans a fair test of which one earns the most per visitor.
+explain: |
+  One product often sells for several reasons. A greens powder is bought for gut health by one person and for hair by another. A single page and a single offer speak to neither well. Cutting the price to fix it teaches buyers to wait and eats your margin.
+
+  The steps keep the product and the price steady and change who the offer talks to. First it reads your reviews and writes four to six angles, each with its own offer. Then it grades each offer against a checklist and picks the three changes worth testing. It then works out profit per visitor for each offer on your costs, so a bigger basket that loses money gets flagged. You then run the offers on their own pages and export the results. The last step plans the test, with a control and a rule for where to move ad spend.
+when:
+  - One product sells to different buyers and your page speaks to all of them at once.
+  - Your offers are all discounts and you want something that keeps your margin.
+  - You have several offer ideas and no fair way to choose between them.
+you_give:
+  - Your product, its price and what you may truthfully say about it
+  - Reviews, survey answers or support lines in your buyers' words
+  - Your costs per order, including shipping and fees
+  - Visits and orders for each offer, once you have run them
+  - Your brand file (optional)
+you_get:
+  - Four to six buyer angles, each with its own offer and page title
+  - A review of each offer with a score and the three changes to test first
+  - Profit per visitor for each offer, a winner and how safe that call is
+  - A test plan with a control, a read-out table and a spend rule
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your reviews and your costs. Round costs up.
+  - When it reaches the pause, put each offer on its own page for the same dates and traffic. Come back with visits and orders.
+how_it_works:
+  - title: Write an offer for each buyer angle
+    text: Reads your reviews, keeps the four to six reasons buyers give, and builds one offer around each without changing the product. It lists every claim you must check.
+  - title: Review the offers against a checklist
+    text: Takes the angles and offers from the step before. Checks each for one clear thing sold, a believable reason for any deal, a guarantee and a higher option, then picks the three changes worth testing.
+  - title: Check profit per visitor
+    text: Takes the revised offers, builds a cost table for each and works out profit per visitor. It flags any offer where the basket grows but profit falls.
+  - title: Pause and run the offers
+    text: You run each offer on its own page for the same dates and traffic, then export visits and orders for each.
+  - title: Plan the test
+    text: Reads the offers and your results. Sets a control, splits new and returning buyers, checks you have enough visits, and gives a rule for moving spend.
+output_shape: |-
+  STEP 1: ANGLES AND OFFERS
+    Four to six angles | offer for each | claims to check
+
+  STEP 2: OFFER REVIEW
+    One-line offer | checks passed and failed | score | three changes to test
+
+  STEP 3: PROFIT PER VISITOR
+    Cost table per offer | profit per visitor | flags | winner and safety score
+
+  PAUSE: run each offer, export visits and orders
+
+  STEP 4: TEST PLAN
+    Control | tests | read-out table | spend rule
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Health, money or beauty claims
+    how: Say your country and platform. Step 1 lists claims to confirm with a qualified person before any ad uses them.
+  - what: How many angles
+    how: Ask for the top three if you can only build a few pages this month.
+  - what: Subscription products
+    how: Say so. The test step changes how it handles repeat orders.
+  - what: Your page builder capacity
+    how: Tell it how many pages you can make. The test step cuts the number of tests to fit.
+judge:
+  - Every angle is backed by lines from your reviews, not a brainstorm.
+  - The product and price are unchanged across offers.
+  - Every cost line is rounded up and shipping is spread across pack sizes.
+  - The winner is picked on profit per visitor, not on orders or basket size.
+  - The test has a named control and a minimum number of visits.
+test:
+  - Check each angle against three real review lines. Drop any angle you cannot find.
+  - Redo the profit per visitor for one offer by hand. It should match.
+  - Ask for the top three offers only and see if the test plan shrinks to fit.
+improve:
+  - Survey buyers at 90 to 120 days and ask which part of the offer persuaded them. Cut what nobody values.
+  - Keep one offer live as a control for months while you test others.
+  - Save the angles in your brand file so the next product starts from step 2.

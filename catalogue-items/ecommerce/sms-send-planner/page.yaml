@@ -1,0 +1,115 @@
+new_slug: sms-send-planner
+name: "SMS send planner"
+summary: "Give it your launches, sales and list size. Get a month of texts and a frequency test."
+job: write-emails
+thinking: medium
+thinking_why: "It builds a calendar from fixed patterns, but it must weigh two sources that disagree."
+
+headline: "SMS send planner"
+subhead: Give it your launches and sales this month, your list size and your cost per text. It plans which events deserve a text, picks the dates and send times, sets who to leave out, and designs a hold-out test so your own numbers settle how often to text.
+
+explain: |
+  Text messages cost money and cost goodwill. A text can cost one to three cents, so 100,000 subscribers is about $1,500 a send. People also leave an SMS list faster than an email list. So a text should carry news that cannot wait, such as a launch, a sale or a real restock.
+
+  This skill picks those moments for the month and spaces the texts. It sets send windows, pairs each text with an email on the same topic and leaves out people who never click. Sources disagree on how often to text: one says once a week, another says eight to ten a month. So the plan includes a hold-out test, and your own results decide. Texting needs a person's clear opt-in, and quiet-hours rules apply.
+
+when:
+  - You are planning next month's launches and sales and need to decide which ones get a text.
+  - You text every week out of habit and your costs or unsubscribes are rising.
+  - You want to know whether sending more texts would earn more, without guessing.
+
+you_give:
+  - Your launches, sales and restocks for the month, with dates
+  - Your SMS list size and cost per text
+  - Your current texts per month and unsubscribe rate (optional)
+  - Whether subscribers are buyers, prospects or a mix (optional)
+  - Which country or countries your subscribers are in (optional)
+
+you_get:
+  - A date-by-date text plan with the purpose of each text
+  - Send windows and email pairing for each text
+  - List exclusions, with the monthly clean-up rule
+  - The cost of the month and a hold-out test for frequency
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your events for the month, your list size and your cost per text.
+  - Say how you collected consent, and in which countries your subscribers live.
+  - Check each planned text is urgent news. Move the rest to email.
+  - Run the hold-out test for a month and let your own results set the cadence.
+
+how_it_works:
+  - title: Checks consent first
+    text: Texts go only to people who clearly opted in. Quiet-hours rules apply, and rules vary by country, so the plan notes what to confirm with a qualified person.
+  - title: Picks the moments
+    text: Launches, sales, early access and real restocks get a text. Nurture, testimonials and general content go to email.
+  - title: Sets the pattern
+    text: A big launch gets an announcement and a reminder about a week later. A flash sale gets a launch text and a last-chance text the next day.
+  - title: Sets time and pairing
+    text: Late morning to early afternoon, or 4 to 5 pm, with a text 5 to 6 hours after the email on the same topic.
+  - title: Sets exclusions
+    text: Everyone gets the big events. For other sends, leave out people who got 15 or more texts and never clicked.
+  - title: Prices the month
+    text: Number of texts times list size times cost per text, with the extra cost of image texts and of numbers outside your main country.
+  - title: Designs the frequency test
+    text: Half the list keeps its normal cadence, a quarter gets none and a quarter gets double. Revenue and unsubscribes decide.
+
+output_shape: |
+  SMS SEND PLAN  <month>
+  Consent: <how people opted in> | quiet hours: <not before 8 am or after 9 pm local; confirm for your region>
+  | Date | Event | Text purpose | Send time | Audience | Email pairing |
+  | <date> | <launch | sale | restock> | <announce | reminder | last chance> | <window> | <all | minus no-click> | <email at ...> |
+  EXCLUSIONS: 15+ texts and never clicked, cleaned each month
+  COST: <texts> x <list size> x <cost per text> = <total>
+  MOVED TO EMAIL: <items that were not urgent>
+  FREQUENCY TEST: 50 percent normal | 25 percent none | 25 percent double | read after <weeks>
+  CHECKS MISSED: <none | list>   MISSING: <what was not given>
+
+tweaks:
+  - what: Your country
+    how: Costs per text rise outside the US, and one source suggests texting only for launches, restocks and sales events there. Say where subscribers live so the plan counts the right cost.
+  - what: Your buying cycle
+    how: A clothing store buys monthly or quarterly and a furniture store rarely. Say yours, since it sets how often a text makes sense.
+  - what: Buyers or prospects
+    how: For subscription brands, do not text active subscribers. Ease off for existing buyers. Texting new prospects daily can work when you are buying a lot of new customers.
+  - what: Your list size
+    how: A small list can test fewer ideas. Give your real number so the hold-out is sized to it.
+
+judge:
+  - Every planned text is urgent news, not a nurture or testimonial message.
+  - Send times fall in the stated windows and nothing falls in quiet hours.
+  - The plan shows the cost of the month with its sum.
+  - The frequency advice names both views and says the hold-out decides.
+  - Nothing says an item is back in stock or running low unless that is true.
+
+test:
+  - Give it a month with only one event. It should plan one or two texts and move the rest to email.
+  - "Check the cost sum by hand: texts, list size, cost per text."
+  - Ask it to plan a nurture text. It should send you to email instead.
+  - Run the hold-out test for a month and compare revenue per subscriber and unsubscribes in the three groups.
+
+improve:
+  - Put your consent wording and your regions' quiet hours in the skill file, so they appear in every plan.
+  - Add your real cost per text by country.
+  - Add your own cadence once a hold-out gives you a number.
+  - Pair it with the SMS send checker for each text and the email and SMS performance reader for the results.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "It handles email and SMS together, supports smart sending and shows clicks and unsubscribes by send."}
+    - {name: "Shopify", why: "Order data shows who bought, which sets who gets a text and when."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the calendar from your events and numbers."}
+  inputs:
+    - "Your last three months of SMS results, including clicks, unsubscribes and revenue per text"
+    - "Your restock history, so only real restocks get a text"
+    - "A list of your biggest sales days"
+
+terms:
+  - term: Hold-out
+    meaning: A group that is left out of a send on purpose, so you can see what the send really added.
+  - term: Opt-in
+    meaning: A person's clear yes to receiving marketing texts.
+  - term: Quiet hours
+    meaning: Times of day when marketing texts must not be sent, which differ by country.
+  - term: RCS
+    meaning: A richer kind of text with images, video and buttons that falls back to SMS.

@@ -1,0 +1,118 @@
+new_slug: customer-stage-flow-mapper
+name: "Customer stage flow mapper"
+summary: "Describe your flows. Get each split into new, returning and loyal paths with their own goals."
+job: write-emails
+thinking: medium
+thinking_why: "It applies one splitting rule across several flows and checks it against margin and list size."
+
+headline: "Customer stage flow mapper"
+subhead: Give it your current flows, how you define a new, returning and loyal customer, and your offer limits. It maps a new, returning and loyal branch at the top of each flow, with a goal, tone and incentive rule for each, and a build order.
+
+explain: |
+  Most stores send the same cart or post-purchase emails to everyone. A first-time visitor needs trust and a reason to buy. A returning customer does not need your brand story, and should not get a discount every time. A loyal customer should hear less sales pressure and more care.
+
+  This skill splits every triggered flow by customer stage before anything else. New customers get the most direct emails and may get an incentive. Returning customers go straight to what they need. Loyal and subscription customers get the least pushy emails. It then maps your lifecycle groups, lists the flows to build or merge in order of the biggest bottleneck, and hands a flow spec to the email writer skills. It also covers the exceptions, such as browse flows and small lists.
+
+when:
+  - Your cart and post-purchase flows send the same emails to first-time and repeat buyers.
+  - You give a discount to people who would have bought anyway.
+  - A flow underperforms and you cannot tell which type of customer it is failing.
+
+you_give:
+  - A list of your flows, with triggers, number of emails and delays
+  - How you define never bought, bought once, repeat and VIP
+  - Whether you run a subscription (optional)
+  - Your offer rules and margin limits (optional)
+  - Flow results by flow, if you have them (optional)
+
+you_get:
+  - A flow map with a new, returning and loyal branch at the top of each flow
+  - The goal, tone and incentive rule for each branch
+  - A list of flows to build or merge, in order of the biggest bottleneck
+  - A flow spec the email writer skills can fill in
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your list of flows, with triggers and timing, and how you define each customer type.
+  - Add your discount limits and your margin per product.
+  - Read the map, then build the branch with the biggest bottleneck first.
+  - Use the flow spec with the matching flow builder skill to write the emails.
+
+how_it_works:
+  - title: Defines the stages
+    text: New customer, returning customer, and loyal or subscription customer. For a store with no subscription, it uses never bought, bought once and spend tiers.
+  - title: Splits at the top
+    text: Every triggered flow splits by stage first. Product-level splits come last and are expected to matter least.
+  - title: Sets goal and tone per branch
+    text: New customers get the most direct emails and may get an incentive. Returning customers go straight to what they need. Loyal customers get the least pushy emails.
+  - title: Gives each group a job
+    text: Never bought gets a first sale. Bought once gets a second order. Active subscribers get retention. Canceled subscribers get reactivation.
+  - title: Handles the exceptions
+    text: Browse flows are not split in most cases, small lists use two branches, and thin margins limit who gets an offer.
+  - title: Sets timing from your data
+    text: Win-back timing comes from your own days between purchases, not a default.
+  - title: Orders the build
+    text: Flows are ranked by bottleneck, and each gets a spec for the email writer skills.
+
+output_shape: |
+  CUSTOMER STAGE FLOW MAP  <store>
+  STAGES: new = <definition> | returning = <definition> | loyal / subscriber = <definition>
+  BRANCH RULES
+  new:       goal <...> | tone <direct, trust and price doubts> | incentive <allowed: ...>
+  returning: goal <...> | tone <what they need, no brand story> | incentive <not first>
+  loyal:     goal <...> | tone <least pushy> | incentive <avoid where possible>
+  FLOW <name>  trigger <...>
+    split: <stage rule> | exceptions: <...>
+    new: <emails and delays> | returning: <...> | loyal: <...>
+  BUILD ORDER: 1 <flow, branch> because <bottleneck> ...
+  OFFER AND MARGIN CHECK: <ok | thin on ...>
+  EMAIL_FLOW SPEC: <per branch: trigger, filters, delays, exit rules, purpose of each email>
+  CHECKS MISSED: <none | list>   MISSING: <what was not given>
+
+tweaks:
+  - what: Your customer definitions
+    how: Give exact rules, such as placed order zero times, once, or two or more over all time. The filters in each flow depend on them.
+  - what: Subscription status
+    how: With a subscription, add the active and canceled groups. Without one, use spend tiers such as $500, $1,000 and $3,000 as a starting point.
+  - what: Your list size
+    how: Under about 5,000 profiles, use two branches, new and repeat, so each branch has enough people.
+  - what: Your margin
+    how: Give margin per product. Thin margins mean fewer offers to new customers and more use of proof and bundles.
+
+judge:
+  - Every flow has the stage split at the top, or a stated reason why not.
+  - Each branch has a goal, a tone and an incentive rule.
+  - Returning and loyal branches do not lead with a discount.
+  - The build order names the bottleneck for each pick.
+  - Margin is checked before any incentive is planned.
+
+test:
+  - Give it your cart flow. It should split new from returning and say who gets a discount.
+  - Give it a browse flow. It should explain why it is usually left unsplit, and when it is split.
+  - Give it a list of 3,000 profiles. It should use two branches.
+  - Build one branch, run it for a month, then compare revenue per recipient with the old single flow.
+
+improve:
+  - Add your exact customer definitions and filters to the skill file.
+  - Add your tone rules for each stage, such as how your brand talks to loyal customers.
+  - Save your cohort groups and their jobs in your brand file.
+  - Pair it with the flow builder skills to write each branch, and the email flow gap checker to find flows you lack.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Flow filters and conditional splits let you build each branch, and predictive fields show expected next order dates."}
+    - {name: "Shopify", why: "Order counts, spend and subscription status define the stages."}
+    - {name: "Any good chat AI", why: "Any current chat AI can draw the map from your pasted flow list."}
+  inputs:
+    - "Your average days between orders, median and mean"
+    - "Flow revenue by flow"
+    - "Your margin per product and offer limits"
+    - "Your subscription or loyalty program rules"
+
+terms:
+  - term: Flow
+    meaning: A set of emails or texts sent automatically after something a customer does.
+  - term: Lifecycle cohort
+    meaning: A group of customers by where they are with you, such as never bought or bought once.
+  - term: Conditional split
+    meaning: A step in a flow that sends people down different paths based on a rule.

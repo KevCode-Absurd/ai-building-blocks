@@ -1,0 +1,130 @@
+new_slug: store-brand-signal-auditor
+name: "Store brand signal auditor"
+summary: "Give it your site, emails, pack and ads. Get a score out of 100 for what each says."
+job: brand-file
+thinking: high
+thinking_why: "It reads screens closely and spots small mismatches across many touchpoints. A stronger model sees more of them."
+
+headline: "Store brand signal auditor"
+subhead: Attach your homepage, a product page, your pack, a promo email and your ads. It reads each as a busy shopper would in three seconds, lists every touchpoint, finds where the look, voice and promise disagree, and gives a score out of 100 with a fix list in order of how much shoppers see.
+
+explain: |
+  Shoppers do not study your store. They scan, and ask what it reminds them of. A clip-art look, flashing badges or stock photos remind them of a scam. A premium price on a cheap-looking page sends a mixed message. A casual voice on the site and a formal one in emails makes the store feel like two companies.
+
+  This skill checks both sides. First, the three-second scan of each asset: what it reminds a scanner of, who it attracts and who it repels. Second, a list of every touchpoint from first visit to repeat purchase, with the name, tagline, voice and call to action at each. It scores five areas out of 100 and shows the sum. The score measures fit and consistency, not quality or sales. A consistent weak brand scores well. Confirm with five target shoppers before paying for a redesign.
+
+when:
+  - Your site, emails and pack were made at different times and you suspect they no longer match.
+  - You are about to spend on a redesign and want to know what is actually wrong first.
+  - Your price is rising, or you are moving upmarket, and you want to see if the signals back it up.
+
+you_give:
+  - Your homepage, a product page, the cart and thank-you page, as screenshots or links
+  - A welcome email, a shipping email and your support replies
+  - Your packaging, inserts, social profiles and main ad
+  - Your promise and audience, and your brand file if you have one
+  - Five stores your audience trusts and five they distrust (optional)
+
+you_get:
+  - A score out of 100 and how it was worked out, now and with the fixes made
+  - A signal-by-signal list of what each asset reminds a scanner of, who it attracts and who it repels
+  - A touchpoint list with the main message, voice and look at each
+  - A fix list, ordered by how many shoppers see each problem, with owners
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach screenshots of each asset. A description is not enough, because the audit is about what the screen looks like.
+  - Paste your promise and who it is for. If you used the Store promise writer, paste its output.
+  - Read the fix list from the top. The first fixes are what the most shoppers see.
+  - Show the changed assets to five target shoppers for three seconds each, and ask what they remind them of.
+
+how_it_works:
+  - title: Scans each asset
+    text: Three seconds, as a busy shopper would. Writes what it reminds you of.
+  - title: Checks the fit to the category
+    text: Type, photo style and copy tone should match the category's look, unless you break it on purpose.
+  - title: Flags scam and cheap cues
+    text: Clip-art look, flashing badges, bad grammar, stock images and a faceless company voice.
+  - title: Checks price fit and flags
+    text: Signals should match the price. Each flag you fly is on purpose, and for whom.
+  - title: Lists every touchpoint
+    text: From first contact to repeat purchase. A store has about 15 to 30. It records name, tagline, voice and call to action.
+  - title: Scores the brand ideals
+    text: Nine areas, with coherence and authenticity counted most for a small store.
+  - title: Checks moments of truth
+    text: First sight of the site, first unboxing, first problem. A bad one costs more than a good one earns.
+  - title: Scores and ranks fixes
+    text: Five areas added to 100, plus the score with fixes made, and a fix list by visibility.
+
+output_shape: |
+  SCORE: <n>/100 now, <m>/100 with the fixes made
+  Sum: first read <a>/25 + price fit <b>/15 + trust cues <c>/20 + voice <d>/20 + consistency and pack <e>/20 = <n>
+  Measures fit and consistency, not quality or sales. Weights are this skill's starting point.
+
+  TOUCHPOINTS (first contact to repeat purchase)
+  <n>. <touchpoint> | name <...> | tagline <...> | voice <...> | call to action <...>
+
+  SIGNALS
+  <asset> | reminds a scanner of <...> | attracts <...> | repels <...> | score <0 to 5>
+
+  CHECKS
+  Scam or cheap cues: <...>   Price fit: <...>   Flags flown: <...>
+  Switch test: would customers mind if you were replaced by a rival? <...>
+  Sender voice: <a person, or a faceless company>
+  Moments of truth: <first site | first unboxing | first problem>
+  Wording: <company name, product names, tagline, capitalisation, phone, URL>
+  Promise against behaviour: <where they differ>
+
+  FIX LIST (by visibility)
+  <n>. <fix> | <owner> | <touchpoint>
+  CONFIRM: show the assets to 5 target shoppers for 3 seconds
+  CHECKS MISSED: <none, or list>
+
+tweaks:
+  - what: Screenshots, not descriptions
+    how: Attach the real screens. A description cannot show clip-art feel or small type. If you can only describe, it will say what it could not check.
+  - what: Your promise and audience
+    how: Paste them. The fit checks compare each asset against who it is for.
+  - what: Trusted and distrusted stores
+    how: Add five of each. The scan then compares your look to ones your audience trusts and to ones they avoid.
+  - what: Your price tier
+    how: State your average price and the category norm. Price fit is only as good as that.
+  - what: Which assets you include
+    how: More touchpoints give a better consistency read. Include emails, support replies and pack, not only the site.
+
+judge:
+  - Each asset has a three-second read written as what it reminds a scanner of.
+  - The score shows its five parts and sum.
+  - The report says plainly that it measures fit and consistency, not quality or sales.
+  - Every fix names a touchpoint and an owner, in order of how many shoppers see it.
+  - It flags any place where the promise and the real behaviour differ.
+  - It asks you to confirm with five target shoppers before a redesign.
+
+test:
+  - Give it a store you know has a mismatch, such as a formal email and a casual site. It should find it.
+  - Show a screenshot of the homepage to five people for three seconds. Compare what they say with the first-read note.
+  - Run it again after you make the top fix. The score with fixes made should be close to the new score.
+  - Include a page you know looks cheap. It should be flagged under scam and cheap cues.
+
+improve:
+  - Change the five weights in the skill file to suit your store. A pack-led brand may weigh pack more.
+  - Add your own flags, such as a badge you fly on purpose, so they are not marked as problems.
+  - Save the fix list to your brand file, with owners and dates.
+  - Pair it with a landing page audit, since this checks fit and not conversion.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It must see the real screens. Attach each as a file at full size."}
+    - {name: "A phone and a friend", why: "Hand a stranger your phone for three seconds. It is the quickest check of the scan result."}
+  inputs:
+    - "Screenshots of five stores your audience trusts, for comparison"
+    - "Your support replies and chat macros, since voice shows up there"
+    - "Photos of your packaging and inserts from the customer's side"
+
+terms:
+  - term: Touchpoint
+    meaning: Any place a buyer meets your brand, such as the site, an email, a box or an ad.
+  - term: Moment of truth
+    meaning: A key point, such as first sight of the site or first unboxing, where the shopper decides how they feel about you.
+  - term: Coherence
+    meaning: The look, voice and promise matching everywhere a shopper meets you.

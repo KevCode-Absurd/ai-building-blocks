@@ -1,0 +1,49 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays
+  name: "Add YouTube and Demand Gen as a cold channel and read if it pays"
+  summary: "Give it your Google data and best video ads. Get a readiness call, a Demand Gen build, an ad scorecard and remarketing."
+  when: "your Meta video works and your Shopping and Search are steady, and you want a cold channel on Google."
+  job: run-google-ads
+  level: advanced
+steps:
+  - name: "YouTube readiness checker"
+    skill: youtube-readiness-checker
+    job: analysis
+    from: "library"
+    method: ["Check the brand fits and the timing is right", "Check page and claims for hard stops", "Score readiness", "Set a starting budget split and what to skip"]
+    inputs: [performance_sheet, video_ads!, brand_brain!]
+    outputs: [audit_report]
+    note: "Decides if YouTube is worth trying now and what to hold back."
+  - pause: "Cut three to five short video ads from your best Meta video and choose the landing page."
+  - name: "Demand Gen cold traffic builder"
+    skill: demand-gen-cold-campaign-builder
+    job: ads
+    from: "library"
+    method: ["Set the budget and bid", "Choose audiences and placements", "Build ad groups and text", "Plan the scale order"]
+    inputs: [video_ads, landing_page, performance_sheet!]
+    outputs: [plan, brief]
+    note: "Builds the cold campaign around the readiness call and the videos you made."
+  - pause: "Run the campaign for two to four weeks, then export the results by ad."
+  - name: "YouTube ad results reader"
+    skill: youtube-ad-results-reader
+    job: analysis
+    from: "library"
+    method: ["Read view rate, click rate and conversion rate", "Check new-customer cost per sale", "Score each ad", "Apply the scale or pause rule"]
+    inputs: [performance_sheet, video_ads!]
+    outputs: [audit_report]
+    note: "Scores each ad against the plan so you know which to scale."
+  - name: "Google remarketing campaign builder"
+    skill: google-remarketing-campaign-builder
+    job: ads
+    from: "library"
+    method: ["Check readiness for remarketing", "Build the audiences", "Set up video first or Demand Gen", "Write a creative brief for the five doubts"]
+    inputs: [plan, offer, video_ads!]
+    outputs: [plan, brief]
+    note: "Adds a layer for people who watched or visited, using the plan and the winning videos."

@@ -1,0 +1,125 @@
+new_slug: product-bill-of-materials-builder
+name: "Product bill of materials builder"
+summary: "Give it your product and quote. Get a cost sheet by part, with each maker and price-break questions."
+job: plan-supply-chain
+thinking: medium
+thinking_why: "It builds a structured sheet from your quote and a few facts, so a mid-level model does it well. Use a stronger one if your product has more than 15 parts."
+
+headline: "Product bill of materials builder"
+subhead: "Give it your product, the factory's quote and any part prices you can look up. It splits the unit price into parts, labor, overhead and margin, and finds the gaps. You get a cost sheet by part and the questions to ask for price breaks."
+
+explain: |
+  Most store owners know one number: the price the factory quotes per unit. The factory knows ten. It knows what the fabric, the zipper, the box, the labor and its own margin each cost. Without those numbers you cannot tell where a discount could come from, and the factory never has to say.
+
+  A bill of materials (a cost sheet with one row per part) shows the product the way the factory sees it. Each row carries a cost, the sub-supplier who makes the part, the country, the lead time and the payment terms. Labor, overhead, freight, insurance and the factory's financing cost get their own rows. Then every row gets one question: at what volume does this get cheaper? The skill also checks each cost cut against the risk of more returns, because a thinner part saves money now and costs you refunds later.
+
+when:
+  - The factory quotes one price per unit and you want to know what is inside it.
+  - You buy about $1 million a year of product, or you are heading there, and want to find volume savings.
+  - You are comparing two factories and need the same cost breakdown from both.
+
+you_give:
+  - Your product name, plus a photo or spec sheet
+  - The current price per unit from the factory, and the units you buy a year
+  - Any part prices you can look up yourself, such as metals, fabric, chips or packaging (optional)
+  - Quotes from a second supplier (optional)
+you_get:
+  - A cost sheet with one row per part, and labor, overhead and factory margin as their own rows
+  - Separate rows for freight in, insurance, compliance and the factory's financing cost
+  - A list of parts to price again each month, and how to check them
+  - The questions to ask the factory about price breaks
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach a photo or spec sheet of your product and paste the factory's quote and your yearly units.
+  - Add any part prices you found. Say which parts you could not price.
+  - Read the sheet. Ask the factory to fill the rows you left blank.
+  - Take the price-break questions to your next call, and check every cost cut against returns before you accept it.
+
+how_it_works:
+  - title: Splits the unit
+    text: "Breaks the product into the rows the factory sees: each part, labor, overhead and factory margin."
+  - title: Adds the columns
+    text: Gives every row a cost, a sub-supplier, a country of origin, a lead time and payment terms.
+  - title: Adds the extra rows
+    text: Puts inbound freight, insurance, compliance, credit insurance and financing cost on their own lines.
+  - title: Fills what you can look up
+    text: Enters prices you can find yourself and marks the rest as unknown. Claims such as "organic" or "solid" get a check.
+  - title: Matches the real product
+    text: Tells you to take a sample apart, part by part, so the sheet matches what is inside.
+  - title: Plans the ask
+    text: Writes how to ask the factory to build the sheet with you, starting from your growth plan in units.
+  - title: Asks about price breaks
+    text: For each row, asks at what volume it gets cheaper and what the factory's own supplier gives at that volume.
+  - title: Sets a monthly look-up
+    text: Lists the rows that move with markets and how to price them each month.
+
+output_shape: |
+  COST SHEET  <product>  <date>  unit price quoted: <$>
+  <part> | cost <$> | made by <sub-supplier> | from <country> | lead time <days> | terms <...> | source: <quote / looked up / unknown>
+  (one row per part)
+  Labor <$> | Factory overhead <$> | Factory margin <$ and %>
+  Inbound freight <$> | Insurance <$> | Compliance <$> | Credit insurance <$> | Financing cost <$>
+  Rows add up to <$> against the quote <$>, gap <$> (<what the gap means>)
+
+  PRICE-BREAK QUESTIONS  (one per row)
+  <row>: at what volume does this get cheaper, and what does your supplier give you at that volume?
+
+  LOOK UP EACH MONTH
+  <part> | how to check it | why its price moves
+
+  COST IDEAS AND RETURN RISK
+  <idea> | saving <$> | return risk <low / medium / high> | accept? <yes / test first / no>
+
+  WORTH DOING NOW?  <yes / not yet, with yearly cost of goods>
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Yearly spend with the factory
+    how: Give your cost of goods for the year. Below about $1 million a year the sheet still works, but the volume savings are small, and the skill says so.
+  - what: A second quote
+    how: A quote from another factory lets the sheet show which rows differ most. Those rows are where to push.
+  - what: A taken-apart sample
+    how: List what you found inside (zipper type, lining, fill). The sheet then matches the real product instead of the spec.
+  - what: Parts you can look up
+    how: Give current prices for metals, cotton, chips or packaging. Every row you price yourself is one the factory cannot inflate.
+
+judge:
+  - Every part has its own row with a cost, a maker and a country, or is marked unknown.
+  - Labor, overhead and factory margin appear as separate rows, or the sheet says the factory did not share them.
+  - The rows add up to the quote, and any gap is named.
+  - Every cost idea has a return-risk rating next to it.
+  - No price is invented. Each one says whether it came from the quote, a look-up or a guess.
+
+test:
+  - Run it on a product whose parts and prices you already know. The rows should match what you know.
+  - Compare the sheet with the real product. Take one sample apart and see whether the parts match.
+  - Run it twice on the same input. The structure should match, and unknown rows should stay unknown.
+  - Show the sheet to the factory. If they correct a row, put the corrected number back into the skill file.
+
+improve:
+  - Add your standard rows (for example pack insert, tamper seal, carton) so the sheet always includes them.
+  - Save each filled sheet in your brand file, with the date. Next time the skill starts from the last one and shows what moved.
+  - Add the return rate of each product, so the cost-idea ratings use your real numbers.
+  - Pair it with the landed cost calculator once the sheet is done, and the price-break negotiator before the call.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI that reads images and spreadsheets can build the sheet. Attach your spec file and quote."}
+    - {name: "Google Sheets", why: "Holds the sheet where you and the factory can both edit the rows, and keeps a history of changes."}
+  inputs:
+    - "The factory's quote in writing, with the unit and the volume it is for"
+    - "Your yearly cost of goods and what you plan to buy next year"
+    - "A sample you have taken apart, with notes on each part"
+    - "Past invoices from the factory"
+
+terms:
+  - term: Bill of materials
+    meaning: A list of every part and cost that goes into one unit of your product, with who makes each part.
+  - term: Sub-supplier
+    meaning: A company that sells parts or materials to your factory, such as the zipper or fabric maker.
+  - term: Price break
+    meaning: A lower price you get once you buy past a set volume.
+  - term: Factory overhead
+    meaning: The factory's own running costs, such as rent, power and management, shared across what it makes.

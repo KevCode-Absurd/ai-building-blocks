@@ -1,0 +1,47 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md). Our words.
+id: plan-what-to-make-each-week-from-your-past-sales
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: plan-what-to-make-each-week-from-your-past-sales
+  name: "Plan what to make each week from your past sales"
+  summary: "Give it past sales and what you can make. Get a forecast, the gaps, a weekly make plan and a meeting agenda."
+  when: "you make or pack your own products and guess each month how much to produce."
+  job: plan-supply-chain
+  level: intermediate
+steps:
+  - name: "Forecast demand"
+    skill: demand-forecast-planner
+    job: ops
+    from: "skill: demand-forecast-planner"
+    method: ["Read the sales history and spot the pattern: steady, rising, seasonal or lumpy", "Pick the forecast method that fits that pattern", "Test it on the months you held back", "Give the forecast by period plus a way to track how far off it is"]
+    inputs: [spreadsheet]
+    outputs: [plan, spreadsheet]
+    note: "Starts from your past sales and makes the forecast table every later step reads."
+  - name: "Check what you can make"
+    skill: production-capacity-checker
+    job: ops
+    from: "skill: production-capacity-checker"
+    method: ["Set your capacity per period: machines, people, hours", "Compare it with the forecast, period by period", "Find the periods and steps that run over", "List the ways to close each gap: shifts, overtime, outsourcing, moving work earlier"]
+    inputs: [spreadsheet]
+    outputs: [audit_report, plan]
+    note: "Reads the forecast table from step 1 and shows where demand beats what you can make."
+  - name: "Build the weekly make plan"
+    skill: production-plan-builder
+    job: ops
+    from: "skill: production-plan-builder"
+    method: ["Take the forecast and any orders already booked", "Subtract stock on hand and add the stock you want to keep spare", "Set what to make each week without passing capacity", "Mark the near weeks as fixed and the far weeks as open"]
+    inputs: [spreadsheet]
+    outputs: [plan]
+    note: "Uses the forecast from step 1 and the gaps from step 2 to set a make quantity for each week."
+  - name: "Run the monthly demand and supply meeting"
+    skill: demand-supply-meeting
+    job: ops
+    from: "skill: demand-supply-meeting"
+    method: ["Put the forecast, the make plan and the gaps on one page", "List where demand and supply do not match", "Write the decisions that need an owner and a date", "Set the agenda and the rhythm for next month"]
+    inputs: [spreadsheet]
+    outputs: [plan]
+    note: "Takes the forecast and the make plan and turns the gaps into a meeting agenda with owners."

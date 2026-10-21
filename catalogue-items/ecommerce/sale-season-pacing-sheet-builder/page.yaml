@@ -1,0 +1,137 @@
+new_slug: sale-season-pacing-sheet-builder
+name: "Sale season pacing sheet builder"
+summary: "Give it last year's sale data and margin. Get a pacing sheet with scale, hold and cut rules."
+job: plan-strategy
+thinking: high
+thinking_why: "It builds rules from several linked numbers, and one wrong step in the maths spreads through the whole sheet."
+
+headline: "Sale season pacing sheet builder"
+subhead: Give it last year's daily spend, revenue and click-window results, plus your margin and a budget ceiling. It builds a pacing sheet with a lag multiplier for the run-up, scale, hold and cut rules, base and stretch plans, and a calendar from September to late December.
+
+explain: |
+  A sale makes your ad numbers lie in two ways. Ads you run in the weeks before it look poor, because buyers click early and buy when the sale opens. And during the sale, the average result looks fine while the last dollars you spend buy almost nothing. Teams then cut the wrong spend or push too far.
+
+  This skill fixes both. It measures how much revenue arrives late in your own data, so you can adjust early ROAS. Then it builds the sheet on marginal results, meaning what the extra spend bought, with a rule for each day: scale, hold or cut. It adds a base plan and a stretch plan so a push can happen without a late-night call. All source numbers are one agency's examples from one market and year, so you replace them with your own last-year data.
+
+when:
+  - A big sale is two to four months away and you want rules written down before it starts.
+  - Last year's sale looked weak early and strong late, and you want to know how to read that.
+  - You have a media buyer and 100K or more a month in ad spend, and want pre-agreed rules for pushes and cuts.
+
+you_give:
+  - Last year's daily ad spend, revenue and orders, by hour if you have it
+  - 1-day click and 7-day click (or 30-day click) revenue for the 30 days before last year's sale
+  - Gross margin and discount depth
+  - Your CAC limit for the sale
+  - A budget ceiling and a stretch target
+you_get:
+  - A sheet with a 3-day rolling marginal contribution margin
+  - A lag multiplier for the days before the sale
+  - Scale, hold and cut rules
+  - Base and stretch spend plans
+  - A calendar from September to late December
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Run the sale break-even and CAC allowance modeler first, and bring its break-even ROAS and CAC limit.
+  - Paste last year's daily spend and revenue, and the 1-day and 7-day click revenue for the 30 days before the sale.
+  - Check the rules with your media buyer, then put them in a shared sheet before the sale starts.
+  - After each sale day, add the new numbers and let the sheet say scale, hold or cut.
+
+how_it_works:
+  - title: Measures the lag gap
+    text: Compares 1-day and 7-day or 30-day click revenue in the run-up to last year's sale, and turns the gap into a multiplier for pre-sale ROAS.
+  - title: Sets the pre-sale share
+    text: Works out how much of the September to December budget goes in before November, using one source's range as a starting point.
+  - title: Builds on marginal numbers
+    text: Uses what the extra spend bought, not the average, because the average hides the dollars that did not pay.
+  - title: Writes scale, hold, cut
+    text: Scale while marginal ROAS is above break-even, hold when flat, cut after two poor reads in a row on a 3-day average.
+  - title: Adds hourly multipliers
+    text: Spend and revenue peak at different hours, so early ROAS is read with last year's hour-by-hour lag.
+  - title: Makes two plans
+    text: A base plan and a stretch plan, with pushes agreed in advance.
+  - title: Prepares Google and keeps evergreen
+    text: Google needs prep, not heavy scaling. Evergreen campaigns stay on.
+  - title: Lays out the calendar
+    text: September and October spend, an early November ramp, a mid-sale refresh, a final scarcity push and a cheap late December window.
+
+output_shape: |
+  LAG GAP
+  1-day click vs <7-day|30-day> click, 30 days before the sale: <%> gap
+  Pre-sale ROAS multiplier: <x> (apply to ROAS read before the sale opens)
+
+  RULES (read on a 3-day rolling average)
+  Break-even ROAS: <x> (from the break-even modeler)
+  SCALE: marginal contribution margin 3 is rising
+  HOLD: it is flat
+  CUT: two reads in a row are poor
+  Elasticity <value>: use to cut only, never to scale
+
+  SHEET COLUMNS
+  Date | Spend | Revenue | New customers | Marginal CAC | Marginal ROAS | CM3 | 3-day CM3 | Action
+
+  HOUR MULTIPLIERS
+  <hour band>: spend share <%> | revenue share <%> | multiplier <x>
+
+  PLANS
+  Base: <spend by phase> | Stretch: <spend by phase> | Pre-agreed push: <when, what, condition>
+  Budget is a ceiling, not a target. Skip spend if marginal CM3 is negative.
+
+  CALENDAR
+  <Sep-Oct> pre-spend and offer lock | <early Nov> ramp | <mid-sale> refresh | <last 24 to 48 hours> push | <16 to 31 Dec> low-cost window
+
+  GOOGLE PREP
+  <titles, assets, Merchant Center promotions, sale price lines>
+
+  MISSING: <daily data | click-window revenue | margin | CAC limit | ceiling>
+
+tweaks:
+  - what: Which click windows you can export
+    how: Give 1-day and 7-day, or 1-day and 30-day. The lag gap needs two windows from the same days.
+  - what: Your category
+    how: Say fashion, food, supplements or other. The source says lag differs by category, so the multiplier should come from your own data.
+  - what: Your margin and discount
+    how: These set break-even ROAS and the rule for scale, hold and cut. Bring the numbers from the modeler.
+  - what: Whether you can change budgets by the hour
+    how: Say so if you can. If not, the skill gives day-level rules and leaves out hourly pacing.
+
+judge:
+  - The lag multiplier comes from your own 1-day against 7-day or 30-day data, not from a source number.
+  - Scale, hold and cut are written on marginal results with a 3-day read.
+  - Elasticity is used to cut only, and the sheet says why.
+  - The budget is treated as a ceiling.
+  - Evergreen campaigns are left on and Google is prepared, not scaled like Meta.
+
+test:
+  - Run it on last year's sale. The sheet should have told you to hold or cut on the days you now know were poor.
+  - Check one marginal CAC by hand. It is extra spend divided by extra new customers.
+  - Give it a break-even ROAS and a flat day. It should say hold, not scale.
+  - Ask for the stretch plan. The push should have a condition, such as marginal CM3 above zero.
+
+improve:
+  - Put your own category's lag gap and pre-sale share into the skill file after your first sale, and drop the source examples.
+  - Add your own cut rule if two poor reads is too slow or too fast for your spend.
+  - Save the sheet columns in your brand file so each sale uses the same layout.
+  - Add your offer ladder to the sheet so a deeper discount is the next step when margin stalls.
+  - Pair it with the sale break-even and CAC allowance modeler, the sale offer ladder planner and the platform ROAS reality check.
+
+works_best_with:
+  tools:
+    - {name: "Google Sheets", why: "A shared sheet lets the buyer and owner read the same rules at the same time."}
+    - {name: "Meta Ads Manager", why: "Its export gives daily spend and 1-day and 7-day click results for the lag gap."}
+    - {name: "Triple Whale", why: "Shows blended results and several attribution windows next to your store orders."}
+  inputs:
+    - "Last year's hourly spend and orders from your store, so the hour multipliers are your own"
+    - "Your inventory by product, so a push does not sell what you cannot ship"
+    - "Your sale offers and dates, so the calendar matches what you will run"
+
+terms:
+  - term: Marginal result
+    meaning: What the extra spend bought, not the average over all spend.
+  - term: Contribution margin 3
+    meaning: Revenue minus product cost, shipping, fees and ad spend. It shows profit after ads.
+  - term: Lag gap
+    meaning: How much more revenue shows up in a long click window than in a 1-day window.
+  - term: Break-even ROAS
+    meaning: The return at which an ad pays for itself and nothing more. It is 1 divided by gross margin.

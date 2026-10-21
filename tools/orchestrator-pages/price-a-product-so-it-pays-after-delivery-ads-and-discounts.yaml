@@ -1,0 +1,78 @@
+new_slug: price-a-product-so-it-pays-after-delivery-ads-and-discounts
+name: "Price a product so it pays after every cost"
+summary: Give it a price and every cost. Get your true margin, three test prices and how deep a discount can go.
+job: set-prices
+thinking: high
+thinking_why: It runs three skills in a row and each does margin sums on the last. Give it your strongest model.
+headline: Set a price that still makes money after delivery, ads and discounts
+subhead: Give it your price and every cost to deliver. It works out the margin you really keep and the ad cost the product can carry, sets three prices to test, picks the most profitable, and shows how deep a discount can go before profit drops.
+explain: |
+  Most prices start from cost plus a markup or from what a rival charges. They ignore what is left after shipping, packing, payment fees and returns. Then an ad target is set from the wrong margin and a discount takes away what little remained. The store is busy and the product loses money on each sale.
+
+  The steps start from the true number. First it builds the full cost of delivery, shows the three kinds of margin and finds the break-even ad return. Then it judges what the product is worth to the buyer and sets three prices that could each work, with estimated sales and total profit for each. Last it takes the chosen price and tests a discount against it: the sales jump needed to hold profit, the best depth and whether a bundle or gift beats a percent off. It never pauses, so have your costs ready.
+when:
+  - You are launching a product and need a first price that you can defend.
+  - Your ads show good returns, yet the bank balance does not grow.
+  - You plan a sale and want to know how deep the discount can go before it costs you money.
+you_give:
+  - Your selling price, excluding tax
+  - Your unit cost, freight, duty and shipping out
+  - Pick and pack, packaging and payment fees
+  - Your return and discount rates from the last 90 days (optional)
+  - Your current ad return, order value and past sales (optional)
+you_get:
+  - Full cost of delivery per order, and product, gross and contribution margin
+  - Break-even ad return, break-even cost to win a customer and a score out of 100
+  - Three test prices with estimated sales, margin and total profit, with the most profitable picked
+  - The sales jump a discount needs to keep profit, the best depth and a comparison with a bundle or gift
+  - A verdict on running the discount and a score out of 100 for how safe it is
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your price and every cost line. Tell it which numbers are guesses.
+  - Read the margin step before the prices. If the margin is low, fix cost before you test price.
+  - Take the numbers to your accountant before you set ad targets from them.
+how_it_works:
+  - title: Check the true margin
+    text: Product margin checker adds freight, duty, shipping out, packing, fees and a returns allowance to the unit cost. It shows product, gross and contribution margin, and finds break-even ad return and the ad cost the product can carry.
+  - title: Set three test prices
+    text: Pricing decision planner judges what the product is worth to the buyer and sets three prices that could each work. It estimates sales and total profit at each, checks the floor and names the one number to watch.
+  - title: Test the discount depth
+    text: Discount impact checker takes the chosen price and builds the full-price profit per order. It finds the sales jump that holds profit flat, the best depth and whether a bundle or gift does better, then scores the plan.
+output_shape: |-
+  STEP 1: MARGIN CHECK
+    Cost of delivery per order | three margins | break-even ad return and cost to win a customer | score out of 100 | flag
+
+  STEP 2: PRICE PLAN
+    Value to the buyer | costs | three prices with sales and total profit | pick | floor check | number to watch
+
+  STEP 3: DISCOUNT CHECK
+    Full-price profit | profit under the discount | ad return needed to hold profit | best depth | offer comparison | score out of 100 | verdict
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Every cost line
+    how: A missing line such as returns or payment fees is marked as a guess or missing, and a missing cost makes margin look better than it is.
+  - what: Your return and discount history
+    how: Use the last 90 days. Without it the returns allowance is a guess and the best discount depth cannot be found.
+  - what: What the buyer gets from the product
+    how: Say what result the buyer pays for and what rivals charge. Step 2 sets the prices as shares of that worth.
+  - what: Whether the product is new or live
+    how: A live product gets a plan for raising the price in steps. A new one gets a first-price test.
+judge:
+  - Tax is out of the price and every cost line has a number from you or is marked as a guess.
+  - Break-even ad return is one divided by gross margin, and you can redo it by hand.
+  - The three prices each show estimated sales and total profit, and the pick has the highest total profit.
+  - The discount is taken off full price, and shipping, fulfilment and fees are in the costs.
+  - Source figures are labelled as one source's claim and not used as a benchmark for your store.
+test:
+  - Redo the cost of delivery on one real order from your store and compare it with the total shown.
+  - Check the margin against last month's profit and loss.
+  - Run the cheapest of the three prices for two to four weeks and compare with the estimate.
+  - Pick one past sale and check what the discount step would have said about it.
+improve:
+  - Save your cost lines in your brand file or a sheet, so a new product only needs its own costs.
+  - Edit the margin skill's returns allowance to match your category.
+  - Add your price floor to the pricing skill, so no test price goes below it.
+  - Repeat the discount check before every sale and keep the results.

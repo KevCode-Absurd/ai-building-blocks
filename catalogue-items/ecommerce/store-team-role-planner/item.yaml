@@ -1,0 +1,21 @@
+slug: store-team-role-planner
+name: "Store team role planner"
+summary: "Describe your store and revenue. Get who to hire next, what to outsource and who decides what."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to Build an E-commerce Team from Scratch", by: "Mac, Analytics of Life (YouTube)", url: "https://www.youtube.com/watch?v=ZySikAKE6BQ", used: "The five areas a store team covers and what each one protects"}
+  - {title: "Complete E-commerce Operations Guide", by: "Davey, founder of a large blanket-hoodie brand (YouTube talk)", used: "Founder in most roles until about a million in revenue, the planner role, and the structure at larger size"}
+  - {title: "Handbook on Team Building", by: "A government training handbook", used: "The responsibility chart (R, A-V, S, I), team-role balance and group size"}

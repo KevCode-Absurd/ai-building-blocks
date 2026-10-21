@@ -1,0 +1,25 @@
+slug: launch-google-ads-with-trusted-tracking-and-a-clean-feed
+name: "Launch Google Ads with trusted tracking and a clean feed"
+summary: "Give it your Shopify store and products. Get tracking checked, feed issues ranked, and a launch plan in the right order."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: [shopify-google-conversion-tracking-builder, google-ads-purchase-tracking-checker, merchant-center-feed-health-checker, google-ads-launch-planner]
+steps:
+  - {uses: shopify-google-conversion-tracking-builder, note: "Sets up the purchase tracking and a test plan to run before any spend."}
+  - {uses: google-ads-purchase-tracking-checker, note: "Checks the screenshots from your test order against the setup plan and lists what is still wrong."}
+  - {uses: merchant-center-feed-health-checker, note: "Ranks the feed problems so the products that earn most are fixed first."}
+  - {uses: google-ads-launch-planner, note: "Uses the tracking and feed audits to set which campaigns go live first and when to add more. It does not take the step 1 plan as an input, so paste in the primary purchase action and test result from the passed tracking check."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/launch-google-ads-with-trusted-tracking-and-a-clean-feed/skeleton.yaml

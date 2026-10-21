@@ -1,0 +1,126 @@
+new_slug: product-page-section-planner
+name: "Product page section planner"
+summary: "Give it your product and buyers' doubts. Get the page sections and settings that answer them."
+job: set-up-store
+thinking: medium
+thinking_why: "It has to match each doubt to the right proof and setting, so a middle model is enough."
+
+headline: "Product page section planner"
+subhead: Give it your product, its price and the doubts buyers have, with any competitor pages or review questions. It plans the sections in order, what each one proves, the theme settings to switch on, the dynamic fields you need, and the photos and proof to collect.
+
+explain: |
+  A product page that lists features but does not answer the doubt in the buyer's head loses the sale. A food buyer wonders about taste. A clothing buyer wonders about fit. A pricey item makes them ask if it is worth it. Each doubt needs its own proof in its own place.
+
+  This skill starts from those doubts. You list them, or it takes them from competitor pages and review questions. For each one it picks a section and the proof that settles it: tasting reviews for taste, a detailed size chart for fit, fabric facts and a care guide for quality. It then orders the sections, puts the buy area first, moves long text into tabs, and lists the Shopify settings to switch on, such as a sticky add-to-cart. It only plans what you can prove. If you have no reviews, test results or certificates, it tells you what to collect first.
+
+when:
+  - You are building a product page and want it to answer the doubts that stop buyers.
+  - Your page gets visits but few sales and you suspect the page does not settle a doubt.
+  - You are planning one template that must work for many products.
+
+you_give:
+  - The product and its price
+  - The top doubts buyers have (taste, fit, quality, price, proof)
+  - Competitor product pages and Amazon or review questions (optional)
+  - Your theme and any apps in use
+  - "The proof you have: reviews, test results, certificates, photos"
+you_get:
+  - An ordered list of sections, with what each one proves
+  - The Shopify settings to switch on or off
+  - A list of dynamic fields (metafields) to create
+  - The photos and proof to collect
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, price and the doubts buyers have. Add review questions or competitor pages if you can.
+  - List the proof you already have, so it plans around real things.
+  - Check your theme supports each setting before you plan around it.
+  - Build the sections in order, then ask a person outside the business what still worries them.
+
+how_it_works:
+  - title: Finds the doubts
+    text: From competitor pages, Amazon reviews and your own customer questions.
+  - title: Maps doubts to proof
+    text: Each doubt gets a section and the proof that answers it.
+  - title: Sets the detail level
+    text: The more complex or costly the product, the more detailed the page.
+  - title: Orders the sections
+    text: Buy area first, then proof, with long text moved into collapsible tabs.
+  - title: Says key claims twice
+    text: Once as an image in the gallery and once as text, because buyers read in different ways.
+  - title: Lists the settings
+    text: Sticky add-to-cart, zoom, variant media grouping, size guide and buy-it-now.
+  - title: Plans the fields
+    text: Metafields for anything that differs by product, so one template serves all.
+
+output_shape: |
+  DOUBTS AND PROOF
+  <doubt> -> section <name> -> proof <reviews | numbers | size chart | certificate> (have: <yes | no>)
+
+  SECTIONS (top to bottom)
+  1. Buy area: title, price, <3 to 4 bullet benefits>, variants, quantity, buy button
+  2. <section> | proves <...> | content from <field | photo | review>
+  ...
+  Tabs: <description | fit | care | shipping and returns> with a short summary and a link to the full policy
+
+  SETTINGS TO SWITCH ON OR OFF
+  <setting> -> <on | off> (needs theme support: <check>)
+
+  METAFIELDS
+  <field> | used for <benefits | size chart | hotspots>
+
+  RECOMMENDED PRODUCTS
+  <one or two chosen by hand>
+
+  COLLECT BEFORE BUILDING
+  <photos and proof still needed>
+  MISSING: <product | doubts | proof | theme>
+
+tweaks:
+  - what: The doubts you list
+    how: Use buyers' own words from reviews and questions. The plan is only as good as the doubts it starts from.
+  - what: Price and complexity
+    how: Say if the product is costly or complex. A simple low-price item needs a shorter page.
+  - what: Theme
+    how: Name your theme. Free themes often lack media grouping, size guides and hotspots, so the plan flags those first.
+  - what: Variants
+    how: Say if buyers might add the wrong option without looking. That decides whether a variant is preselected.
+
+judge:
+  - Every doubt has a section, a proof and a note on whether you have the proof.
+  - The buy area is first and the long description is in a tab.
+  - Settings are marked as depending on the theme, not promised.
+  - Only one or two recommended products are chosen by hand.
+  - Nothing in the plan needs proof you do not have, without saying so.
+
+test:
+  - Give it a food product with the doubt "does it taste good". It should ask for tasting reviews, not invent them.
+  - Give it a clothing product with the doubt "will it fit". It should plan a size chart and flag it as a metafield.
+  - Name a free theme. It should flag settings the theme may lack.
+  - Build the first two sections and show a stranger. Ask what they would still want to know.
+
+improve:
+  - Add your real proof (reviews, tests, certificates) to the skill file so it plans around it.
+  - Add your standard tabs, such as fit, care and returns, with your policy wording.
+  - Add the doubts that come up most in your customer messages.
+  - Pair it with a product page auditor for a live page and a copy writer for the text.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Metafields, sticky add-to-cart in many themes, variant media grouping and collapsible tabs depend on the theme but are built into the platform."}
+    - {name: "Any good chat AI", why: "Any current chat AI can map doubts to proof and order the sections."}
+  inputs:
+    - "Screenshots of two or three competitor product pages"
+    - "Your reviews and customer questions"
+    - "Test results or certificates you can show"
+    - "Your size chart or product specs"
+
+terms:
+  - term: Metafield
+    meaning: A custom field on a product, such as a size chart, that fills a section differently for each product.
+  - term: Sticky add-to-cart
+    meaning: A buy button that stays on screen as the shopper scrolls.
+  - term: Collapsible tab
+    meaning: A heading that opens to show more text when clicked.
+  - term: Objection
+    meaning: A doubt or reason a buyer hesitates to buy.

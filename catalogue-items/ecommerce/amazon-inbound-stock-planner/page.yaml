@@ -1,0 +1,128 @@
+new_slug: amazon-inbound-stock-planner
+name: "Amazon inbound stock planner"
+summary: "Give it sales, lead times and case sizes. Get how much to send, when, and a shipment checklist."
+job: sell-on-amazon
+thinking: medium
+thinking_why: "It does stock maths and builds a checklist from rules, which needs care with numbers but not deep reasoning."
+
+headline: "Amazon inbound stock planner"
+subhead: Give it your weekly sales, your maker's lead time, case sizes and current stock. It works out how many units to order and send now and when to re-order. You get a first-shipment checklist with account, barcode, box and pickup steps, plus a tracking sheet.
+
+explain: |
+  Running out of stock costs you rank. Sending too much costs you storage and long-term fees. Several sellers in the source lost thousands of dollars one way or the other. Wrong labels or a wrong ship-from address can cost even more: one seller lost about 5,000 dollars in sales to a wrong address.
+
+  This skill sets the order size from your sales speed and lead times, and it builds a checklist for your first shipment. It covers account plan, Amazon's barcode, prep, box limits, small parcel or pallets, tracking and the paperwork you need to claim missing units. Fees, size tiers and the shipping screens change often, so it gives you rules and tells you to check current tables in Seller Central.
+
+when:
+  - You are placing your first order with a maker and need to know how many units to make.
+  - You are sending your first shipment to Amazon and want a step-by-step checklist.
+  - Your stock is running low and you need a date to re-order.
+
+you_give:
+  - Units sold per week and how fast sales are growing
+  - Your maker's lead time, shipping time and monthly capacity
+  - Case size, weight and units per case
+  - Current stock and any storage fee notices
+you_get:
+  - Units to order and to send now, with a re-order date
+  - A shipment set-up checklist with label checks
+  - A tracking and discrepancy sheet
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your sales per week, lead times, case size and weight, and your cash for stock.
+  - Say whether this is your first shipment, and which country you sell in.
+  - Work through the checklist in order, and fill in the tracking sheet as each shipment moves.
+  - Check current fees and limits in Seller Central before you pay for anything.
+
+how_it_works:
+  - title: Sizes the order
+    text: Orders 3 to 6 months of sales for a first order, leaning to 6 if the lead time is long, and sets a re-order date when 2 to 3 months are left.
+  - title: Plans the arrival
+    text: Allows about 3 weeks, up to 6 (more in Q4), from sending to being on sale.
+  - title: Splits the shipment
+    text: Sends in two shipments a few days apart when possible, so one lost box does not stop sales.
+  - title: Checks case limits and labels
+    text: Checks box size and weight, and that every unit has Amazon's barcode.
+  - title: Checks the box labels
+    text: Checks ship-from address, destination, weight and size on each label, and never tapes over a barcode.
+  - title: Picks the carrier
+    text: Small parcel for a few boxes, pallets for large amounts, and books the pickup yourself.
+  - title: Tracks and keeps proof
+    text: Tracks each shipment through check-in and keeps receipts and the bill of lading.
+  - title: Watches storage cost
+    text: Counts storage fees and the long-term fee, and warns against sending all stock before the sell rate is known.
+
+output_shape: |
+  ORDER AND SEND
+  Sales per week: <n> | Lead time: <weeks> | Check-in allowance: <weeks>
+  Order: <units> (<months> of sales) | Send now: <units> in <n> shipments
+  Re-order when: <date or stock level> | Cash tied up: <amount>
+
+  SHIPMENT CHECKLIST
+  1. Account plan: <individual | professional, with why>
+  2. Barcode: Amazon's barcode only | who labels: <maker | you | Amazon, at a per-unit fee>
+  3. Prep: <none | what the item needs>
+  4. Box rules: <limits for your country> | cases: <n> x <size and weight>
+  5. Labels: ship-from <ok>, destination <ok>, weight and size <ok>
+  6. Carrier: <small parcel | pallets> | pickup booked: <date>
+  7. Paperwork: <receipts, bill of lading, packing list>
+
+  TRACKING SHEET
+  <shipment> | sent <n> | in transit | delivered | receiving | closed | received <n> | gap <n>
+
+  STORAGE WATCH
+  <units older than 300 days, fee notice, action>
+
+  MISSING: <sales rate | lead time | case size>
+  CHECK IN SELLER CENTRAL: <current fees, size tiers, limits>
+  CHECKS MISSED: <none | which>
+
+tweaks:
+  - what: Lead time and capacity
+    how: Give the maker's lead time and how many units they can make in a month, not only the minimum. One seller's growth stalled because the maker could not keep up.
+  - what: Sales rate
+    how: Use units per week from real sales. With none yet, the plan sends a small first order to prove the product sells.
+  - what: Country
+    how: Say US or UK. Box limits differ, and UK fees carry 20 percent VAT.
+  - what: Cash
+    how: A 6-month order ties up cash. Say how much you can spend and the plan scales the order to it.
+
+judge:
+  - The order and send numbers come from your sales, lead times and cash, and show the months covered.
+  - Re-order timing is a date or stock level, not "soon".
+  - The checklist has Amazon's barcode, the box limits for your country and a booked pickup.
+  - Paperwork needed to claim missing units is listed.
+  - Fee numbers are not stated as fact without a check-in-Seller-Central line.
+
+test:
+  - Check the re-order date against your lead time plus check-in time. Stock should not run out before the new units are on sale.
+  - Check the box limits against Amazon's current page for your country.
+  - Do a dry run. Create the shipment in Seller Central without paying, up to the label step. The checklist should match what you see.
+  - After your first shipment, compare the tracking sheet with Amazon's receiving page and note any gap.
+
+improve:
+  - Add your maker's real lead time and monthly capacity to the skill file.
+  - Add your carrier's pickup rules (house address, lift gate) so the checklist includes them.
+  - Add your storage fee notices and the date you check them each month.
+  - Pair it with the Amazon fee and margin checker for cash needs, and the Amazon reimbursement claim finder to check receiving gaps.
+
+works_best_with:
+  tools:
+    - {name: "Seller Central", why: "Where you create the shipment, print box labels, track receiving and read current fee tables."}
+    - {name: "Your carrier's pickup booking", why: "A printed label does not book a pickup. You must book the collection with your tracking number."}
+  inputs:
+    - "Your maker's quote, with lead time, monthly capacity and units per case"
+    - "Box weights and sizes measured, not estimated"
+    - "A photo of the box label before it is stuck on"
+    - "Amazon's current inbound limits and storage fee notices"
+
+terms:
+  - term: Check-in
+    meaning: Amazon counting and accepting your delivered units so they can be sold.
+  - term: Bill of lading
+    meaning: The paper from the carrier that shows what was sent. It is proof if units go missing.
+  - term: Long-term storage fee
+    meaning: An extra charge on stock that has sat in Amazon's warehouse for a long time.
+  - term: Commingling
+    meaning: Amazon mixing your units with other sellers' units on the same listing. It happens when you use the maker's barcode.

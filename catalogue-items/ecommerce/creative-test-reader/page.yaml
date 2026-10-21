@@ -1,0 +1,130 @@
+new_slug: creative-test-reader
+name: "Creative test reader"
+summary: "Paste ad results by ad set. Get keep, leave or replace calls, false winners and a score."
+job: read-ad-results
+thinking: high
+thinking_why: "It weighs conflicting rules and spots false winners in the numbers, so a stronger model reads the data better."
+
+headline: "Creative test reader"
+subhead: Paste your ad export by ad set, with your target ROAS or CPA. It judges each ad set, ranks the ads, flags false winners and reads the path from view to purchase. You get keep, leave or replace calls, the next brief and a read score out of 100.
+
+explain: |
+  Most store owners read a creative test by looking at the ad with the best ROAS, or the one that spent the most. Both can mislead. Meta shows people several ads in a row, but credits only the last one, so a low-ROAS ad may be the one starting the sale. And an ad that spent first has simply been shown more.
+
+  This skill reads in a set order. First the ad set against your target. If it hits, it tells you to leave the ads alone. Then it ranks the ads by spend, return, clicks and video retention, checks each step from first view to purchase, and flags ads that got attention but no sales. Where two experts disagree on the top spender, it shows both views and when each applies. It ends with the next brief and a score for how safe the read is to act on.
+
+when:
+  - A test batch has run for a week or two and you need to know which ads to keep, leave or replace.
+  - One ad is eating most of the spend and you can't tell if it is a winner or just first in line.
+  - Your click-through rate looks great but sales are flat.
+
+you_give:
+  - An ad export with one row per ad and its ad set (spend, impressions, purchases, ROAS or CPA, CPC, CTR)
+  - Your target ROAS or CPA
+  - Link CTR, add to cart, checkout and conversion rate, and hook and hold rate for videos (optional)
+  - The attribution window and whether existing customers are excluded (optional, but it changes the score)
+  - One line on each ad's angle, format and hook (optional)
+you_get:
+  - A verdict for each ad set against your target
+  - A table of every ad with keep, leave, replace or retest and the reason
+  - False winners flagged, with the path from view to purchase for each ad
+  - The next creative brief, and a read score out of 100 with its sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export your ads from Ads Manager with the ad set column, and paste or attach the file. Add your target ROAS or CPA.
+  - Say which attribution window the export uses and whether existing customers are excluded.
+  - Do the leave-alone calls first. Then switch off or replace only what the skill marks, in sets that miss target.
+  - Run it again each week, not each day, and change one thing between runs.
+
+how_it_works:
+  - title: Fixes the frame
+    text: Writes down your target, window and attribution, and picks the level to judge at. Campaign first, ad set next, single ads last.
+  - title: Judges each ad set
+    text: A set that meets target is left alone. A set that misses target can have ads switched off or added.
+  - title: Ranks the ads
+    text: Spend first, then ROAS or CPA, then CPC and CTR, then hook and hold rate. Hook and hold only diagnose.
+  - title: Makes the top-spender call
+    text: Shows both views on whether the top spender is the winner, and which one fits your account.
+  - title: Reads the whole path
+    text: Checks stop, click and what happens after the click, to find ads that got attention but not sales.
+  - title: Checks test size
+    text: Compares the batch to your budget, and counts ads per concept before calling any concept dead.
+  - title: Adjusts for incremental sales
+    text: Shows how a holdout can cut a reported ROAS by half, most of all for retargeting.
+  - title: Writes the brief and score
+    text: Turns results into the next brief, then scores how safe the read is to act on.
+
+output_shape: |
+  AD SET VERDICTS
+  <ad set> | target <...> | actual <...> | <leave alone | change> | <reason>
+
+  AD TABLE
+  <ad> | spend | ROAS or CPA | CPC | CTR | link CTR | hook | hold | impressions | <keep | leave | replace | retest> | <reason>
+
+  TOP SPENDER CALL  <view A | view B | unclear>: <why>
+  FALSE WINNERS     <ad>: <numbers> | <what to check next>
+  PATH READ         stop | click | after click
+  INCREMENTAL NOTE  reported <x> is nearer <y>, or not provided
+  CONCEPT STATUS    <concept>: <ads> of 10 | <alive | not enough ads | dead>
+
+  NEXT BRIEF
+  - more formats for: <angle>
+  - new bodies for: <hook>
+  - drop: <format>
+  - retest one change: <what>
+
+  READ SCORE  <n>/100 (100 - <deductions> = <n>)
+  CHECKS MISSED: <none | list>
+  MISSING: <what would improve the read>
+
+tweaks:
+  - what: Your target
+    how: Give a real ROAS or CPA from your margin. Without one, the skill can't say whether a set is working, and the score drops by 15.
+  - what: Ad set grouping
+    how: Put one concept in each ad set before you export. Mixed sets can't be learned from, and the skill will say so.
+  - what: Attribution and customers
+    how: Say if the export is 7-day click or incremental, and if existing customers are excluded. This is worth 20 points on the score.
+  - what: Impressions per ad
+    how: Include them. The skill won't give a verdict on an ad with a few hundred impressions or fewer.
+  - what: Ad descriptions
+    how: Add one line per ad on angle, format and hook. The next brief gets much more specific.
+
+judge:
+  - Every ad has a verdict and a reason that names a number from your data.
+  - No ad is switched off inside a set that already meets your target.
+  - The top-spender call says which view it used and why.
+  - A false winner shows the drop from CTR to link CTR, or the missing sales.
+  - The score line shows its sum, so you can check it.
+
+test:
+  - Give it a set you already understand, such as one where you know a high-CTR ad never sold. It should flag that ad as a false winner.
+  - Remove your target and run it again. The score should fall and the skill should write MISSING for the target.
+  - Run it twice on the same export. The set verdicts should match. If they flip, your data is too thin and the skill should say so.
+  - Compare its next brief to what your team planned. Look for any change it suggests that you hadn't thought of.
+
+improve:
+  - Add your own break-even ROAS to the skill file under "Your target", so you never have to paste it.
+  - Add your store's usual path (for example video, then product page, then cart) as a fixed check in the path read.
+  - Save each week's brief in your brand file, so the next run can see what was already tested.
+  - Pair it with the creative hit rate planner to size how many ads to make, and the fatigued ad reviver when a winner fades.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "Its export gives you spend, impressions, CTR and link CTR by ad. The Columns menu has the incremental attribution view."}
+    - {name: "Any good chat AI", why: "Any current chat AI can read an export and follow the metric order. Attach the file instead of retyping numbers."}
+  inputs:
+    - "An export that includes the ad set column and impressions"
+    - "Post-click numbers from your store, such as add to cart and checkout rate"
+    - "A holdout or incremental report from Ads Manager"
+    - "Your break-even ROAS from margin"
+
+terms:
+  - term: Ad set
+    meaning: A group of ads that share one budget and one audience inside a Meta campaign.
+  - term: Link CTR
+    meaning: The share of people who clicked through to your store, as opposed to any click on the ad.
+  - term: Hook rate
+    meaning: The share of viewers who watch past the first 3 seconds of a video.
+  - term: Incremental
+    meaning: Sales that would not have happened without the ad, found by comparing people who saw it with a held-back group.

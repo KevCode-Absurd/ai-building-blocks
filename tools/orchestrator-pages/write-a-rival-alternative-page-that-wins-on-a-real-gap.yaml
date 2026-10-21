@@ -1,0 +1,78 @@
+new_slug: write-a-rival-alternative-page-that-wins-on-a-real-gap
+name: Write a rival alternative page that wins on a gap
+summary: Give it your rivals. Get their message gaps, a fair alternative page and a review of it.
+job: study-competitors
+thinking: medium
+thinking_why: The research reads public pages and the writing is plain. A mid-size model is enough.
+headline: Write the page buyers find when they search for your rival
+subhead: Give it the rivals buyers compare you with. It shows how each one pitches, finds a gap you can honestly own, writes a fair alternative page around it and reviews the page.
+explain: |
+  Buyers who search for a rival's name are close to buying. If your page is not there, or only says you are better, they leave. Pages that attack a rival without proof also lose trust.
+
+  The steps start with facts. It reads each rival's public pages and builds a matrix of their headlines, claims and proof. It rates every rival and you on what decides the choice, and marks the spaces where nobody is strong. The alternative page then leads with a gap you can back, compares features and price fairly, and says who should switch and who should not. The last step reviews the page by how it reads at a glance, skimmed and with doubt. It works from public pages only, so check any price or claim before you publish.
+when:
+  - Buyers ask how you differ from a named rival.
+  - Searches for a rival's name send you no traffic.
+  - You want a page that is fair enough to be trusted.
+you_give:
+  - The names of one to five rivals
+  - Your product facts and where you honestly win (optional)
+  - What your buyers say about the choice (optional)
+  - Your brand file (optional)
+you_get:
+  - A side-by-side of how each rival pitches, with the topics nobody covers
+  - A grid of where every rival and you are strong or weak, and where to stop fighting
+  - A fair alternative page that leads with a gap you can back
+  - A ranked list of fixes before the page goes live
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Name the rivals and the one buyer question you want the page to answer.
+  - Check every rival price and claim on their own site before you publish.
+how_it_works:
+  - title: Compare how rivals pitch themselves
+    text: Reads each rival's site, news and content, and builds a matrix of headlines, claims and proof, plus topics nobody covers.
+  - title: Map where nobody is strong
+    text: Rates every rival and you on the features that decide the choice, and marks open spaces and fights to skip.
+  - title: Write the alternative page
+    text: Starts with why people look for an alternative, compares fairly, says who should switch and who should not, and adds a move path and proof.
+  - title: Review the page before it goes live
+    text: Reads it at a glance, skimmed and with doubt, checks the phone view and ranks each fix.
+output_shape: |-
+  STEP 1: RIVAL MESSAGES
+    Profiles | messaging matrix | content gaps | threats | next moves
+
+  STEP 2: WHITE SPACE MAP
+    Rivals and deciding features | ratings | open spaces | fights to skip
+
+  STEP 3: ALTERNATIVE PAGE
+    Why people look | summary | comparison | who should switch | move path | proof | call to act
+
+  STEP 4: PAGE REVIEW
+    Page job | glance, skim and doubt notes | ranked fixes | score
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: One rival or several
+    how: One rival gets an "alternative to X" page. Several get an "alternatives to X" list page that includes you.
+  - what: Your strongest facts
+    how: Add numbers, awards or reviews. The page uses only facts you give it.
+  - what: Where the page will rank
+    how: Name the search phrase you want. Step 3 shapes the title and headings for it.
+  - what: Your brand file
+    how: Add it so the page uses your voice.
+judge:
+  - Every rival claim comes from a public page you can open.
+  - The comparison names something the rival does better.
+  - The page says who should not switch.
+  - The gap in the headline is one the map showed, not a guess.
+  - No claim on the page lacks proof.
+test:
+  - Open three rival pages and check each quoted claim and price.
+  - Ask a buyer who knows both products if the comparison is fair.
+  - Check the headline still makes sense with the rival's name removed.
+improve:
+  - Re-run step 1 every three months. Rival pages change.
+  - Add switcher quotes to the page as they arrive.
+  - Watch which searches reach the page and write one page for each new rival.

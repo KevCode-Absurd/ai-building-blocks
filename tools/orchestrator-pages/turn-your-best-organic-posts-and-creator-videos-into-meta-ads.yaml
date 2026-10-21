@@ -1,0 +1,88 @@
+new_slug: turn-your-best-organic-posts-and-creator-videos-into-meta-ads
+name: "Turn your best posts and creator videos into ads"
+summary: Give it your posts with views and your product facts. Get ranked posts, checked scripts, creator briefs and a test layout.
+job: launch-and-scale-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Turn your best organic posts and creator videos into Meta ads
+subhead: Give it your posts with their views and your product facts. It ranks the posts that beat your normal, writes a promo half for each reshoot, checks the scripts against Meta's rules, briefs a creator to film them, and lays out the test.
+explain: |
+  Some of your posts get far more views than usual, and you spend ad money on new ideas instead. A post that already worked is a safer bet than a guess. The trouble is knowing which posts, whether you may run them, and what to change so they sell.
+
+  The steps work through that. First it finds your normal views and ranks the posts above it. Each one is marked run as is, or keep the hook and reshoot. Then it checks the promo half of each script, so the hook leads to the product. It checks the scripts against Meta's ad rules before anyone films. Then it writes a brief a creator can film from. Last it plans a test where the new ads face your current best ad. Nothing in this run waits on you, but you must confirm who owns each post.
+when:
+  - A few of your posts beat your normal views and you want to run them as ads.
+  - You work with creators and need briefs they can film from without a call.
+  - You want to test new video ads against your best ad without wasting spend.
+you_give:
+  - A list of your posts with views and dates, from your own account or from creators
+  - Who owns each account that posted
+  - Your product facts and current offer
+  - Your target cost per sale, daily budget and stock position
+  - Your current campaigns and results by ad (optional)
+you_get:
+  - Posts ranked against your normal views, each marked run as is or reshoot the hook
+  - A promo second half for each reshoot, with a bridge score out of 100
+  - A rules check on each script, with the lines to change
+  - A filming brief for each creator, with a run order and file naming
+  - A test campaign layout with ad packs, minimum spend and rules for adding ads
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your posts with views and dates, and say who owns each account.
+  - Get written permission from any creator whose post you run as is. The first step lists who must agree.
+  - Send the briefs to creators, then build the test campaign it lays out.
+how_it_works:
+  - title: Organic post to ad promoter
+    text: Finds your normal views per post, ranks the posts that beat it, marks each run as is or reshoot, and clears the rights and rules.
+  - title: Video script bridge checker
+    text: Checks when the product enters each reshoot script and whether the hook leads to the offer. It rewrites the weak spots.
+  - title: Meta ads compliance checker
+    text: Checks the scripts against Meta's ad rules before creators film, and rewrites the lines that would be rejected.
+  - title: Creator filming brief writer
+    text: Turns each approved script into a brief with the idea, a run order for the shoot, must-haves and file names.
+  - title: Meta test campaign planner
+    text: Sizes the test to your budget, groups ads into named packs and sets the minimum spend and read rules.
+output_shape: |-
+  STEP 1: ORGANIC POST TO AD PROMOTER
+    Posts ranked against your normal | run as is or reshoot | promo script per reshoot | who must agree
+
+  STEP 2: VIDEO SCRIPT BRIDGE CHECKER
+    Bridge map | score out of 100 | tighter script
+
+  STEP 3: META ADS COMPLIANCE CHECKER
+    Verdict | findings with fixes | rewritten script
+
+  STEP 4: CREATOR FILMING BRIEF WRITER
+    Before-you-start box | the idea | run order | must and maybe list | file naming
+
+  STEP 5: META TEST CAMPAIGN PLANNER
+    Campaign layout | ad packs with minimum spend | settings checklist | rules for adding ads and scaling
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How many posts you give it
+    how: A normal view count needs enough posts. With fewer than about ten, give your own typical number instead.
+  - what: Who made each post
+    how: Mark your own posts, creator posts and borrowed clips. Only posts you have rights to can run as is.
+  - what: Your target cost per sale
+    how: Step 5 sizes the test from it, so the minimum spend per ad is enough to judge one.
+  - what: Your current best ad
+    how: Name it. The new ads are tested against it, so a win means something.
+judge:
+  - Every post in the ranking shows its views and its multiple of your normal.
+  - Each run-as-is post has a named owner who agreed.
+  - Each script brings in the product before the viewer loses interest.
+  - No claim in a script would fail Meta's rules, or it is marked for rewrite.
+  - Each test ad has a name, a pack and a minimum spend.
+test:
+  - Check the normal views number against your last twenty posts by hand.
+  - Hand one brief to a creator or friend with no other context. They should know what to film.
+  - Read the hook of each reshoot against the original. The hook should be kept.
+  - Compare the test budget with your cost per sale. Each ad should afford enough sales to read.
+improve:
+  - Save the winning hooks in your brand file, so the next round starts from them.
+  - Add your creator terms to step 1, so rights checks use your real contracts.
+  - Add your banned claims to step 3, so scripts are checked against your own rules.
+  - Run it each month on fresh posts, and keep a list of past winners to test again.

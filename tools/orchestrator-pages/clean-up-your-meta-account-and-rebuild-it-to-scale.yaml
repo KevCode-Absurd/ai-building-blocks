@@ -1,0 +1,79 @@
+new_slug: clean-up-your-meta-account-and-rebuild-it-to-scale
+name: Clean up your Meta account and rebuild it to scale
+summary: Give it your campaigns and results. Get campaigns kept or cut, a simpler layout and a spend ladder.
+job: launch-and-scale-ads
+thinking: medium
+thinking_why: Three skills run in a row, with simple break-even sums. A mid-size model is enough.
+headline: Cut your Meta campaigns down to the ones that earn their place
+subhead: Give it your campaign list and results. It marks each campaign keep, merge or cut, plans a simpler layout with ads per ad set, then builds a spend ladder from what the new layout proves.
+explain: |
+  Meta accounts grow by habit. A campaign for every idea, split audiences with a handful of sales each, and old setups nobody dares to touch. Each campaign learns on its own, so splitting a small number of sales across many leaves all of them short. Then raising spend on top of that mess is a guess.
+
+  The steps clear the ground first. The first step gives each campaign a one-line purpose, checks frequency, attribution and testing, and marks it keep, merge or cut. It pauses while you pause or merge what it flagged and pull 30 days of spend, products and margins. The second step plans a layout from your spend tier and a few questions. It pauses again while you run the new layout for four weeks. The last step works out break-even and builds a spend ladder from the winning ad sets.
+when:
+  - Your account has many campaigns and you cannot say what each one is for.
+  - Campaigns have few sales each and results swing from week to week.
+  - You want to raise spend but do not trust the structure under it.
+you_give:
+  - Your campaign list with spend, results and attribution settings
+  - Screenshots of your settings (optional)
+  - After the first pause, 30 days of spend, products and margins
+  - After the second pause, results by ad set, plus your cash and stock position
+you_get:
+  - Each campaign marked keep, merge or cut, with the setup errors found and a score out of 100
+  - A simpler layout by spend tier, with ads per ad set and KPIs
+  - Your break-even return, each ad set's ceiling and a spend ladder
+  - A call on whether a separate scaling campaign pays yet
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Share your full campaign list, even the ones you think are dead.
+  - When it pauses, pause or merge the flagged campaigns, then pull 30 days of data for what is left.
+  - Run the new layout for four weeks before the last step.
+how_it_works:
+  - title: Check what each campaign is for
+    text: Writes a one-sentence purpose for every campaign, checks frequency, attribution and testing, scans for common setup errors and marks each one keep, merge or cut.
+  - title: Plan the simpler layout
+    text: Pauses while you pause or merge what was flagged and pull 30 days of data. Then it sets your spend tier, answers five questions about categories, margins and buyers, and plans fewer campaigns with ads per ad set and KPIs.
+  - title: Build the spend ladder
+    text: Pauses while you run the new layout for four weeks. Then it works out break-even, finds each ad set's ceiling and plans steps up, and says whether a scaling campaign pays yet.
+output_shape: |-
+  STEP 1: CAMPAIGN CHECK
+    Purpose of each campaign | keep, merge or cut | setup errors | score
+
+  PAUSE: pause or merge, then pull 30 days of data
+
+  STEP 2: NEW LAYOUT
+    Spend tier | campaigns and ad sets | ads per ad set | KPIs | settings to switch off
+
+  PAUSE: run it four weeks, export results by ad set
+
+  STEP 3: SPEND LADDER
+    Break-even | ceilings | steps | scaling campaign call
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your spend tier
+    how: Say your monthly spend. Under about $50,000 the layout stays very simple, with one testing campaign.
+  - what: Product range and margins
+    how: A wide spread of margins is a good reason to split. Tell it so step 2 can use it.
+  - what: Cash and stock
+    how: If either is tight, say so. Step 3 holds the ladder lower.
+  - what: Existing customers
+    how: Say how you exclude past buyers from cold campaigns so step 1 can check it.
+judge:
+  - Each campaign has a purpose a person can defend, or is marked merge or cut.
+  - Splits in the new layout have a reason, such as margins or separate buyer groups.
+  - The ladder is based on whole-business numbers, not one platform's return.
+  - Each step up is small and held for days before the next.
+  - The scaling campaign call depends on your spend.
+test:
+  - Count sales per ad set before and after. The new layout should have more in each.
+  - Check one merged campaign to be sure no needed audience was lost.
+  - Redo break-even by hand from your margin.
+improve:
+  - Re-run step 1 every quarter to stop the account growing messy again.
+  - Move creative effort to the concept that takes most of the spend.
+  - Review the numbers yourself for a few hours a month.
+  - Not worth it for a brand-new account with little spend. Start with one testing campaign.

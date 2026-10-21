@@ -1,0 +1,79 @@
+new_slug: pick-a-lead-magnet-then-build-its-path-and-page
+name: Pick a lead magnet, then build its path and page
+summary: Give it your buyer. Get a lead magnet, its path to a sale, a signup page and a review.
+job: write-landing-page
+thinking: medium
+thinking_why: The steps are clear and short. A mid-size model is enough.
+headline: Turn visitors into email signups with a free offer that leads to a sale
+subhead: Give it your buyer. It picks a free offer, lays out the path from signup to sale, writes the signup page and reviews it before you publish.
+explain: |
+  Many sites say "join our list" and give nothing. Visitors leave, and the few who sign up hear from you rarely. A free offer helps only if it solves one small problem now and points to what you sell.
+
+  The steps start with the offer and build outward. The first step picks a specific problem your buyer has and a free offer that fits their stage, and says what to ask for in return. The second lays out the path: page, free offer, emails, and the sale, with what each email does and the numbers to watch. The third writes the signup page from the offer, with the first screen built from the post or ad people click. The last reviews the page at a glance, skimmed and with doubt, and ranks what to fix.
+when:
+  - You have traffic but no email list.
+  - Your signup box says "subscribe" and few people use it.
+  - You have a free offer in mind but no page or follow-up.
+you_give:
+  - Who your buyer is and the problem they have now
+  - What you sell and your price
+  - The post, ad or link people click to reach the page (optional)
+  - Customer quotes (optional)
+  - Your brand file
+you_get:
+  - A free offer matched to your buyer's stage, with what to ask for in return
+  - The path from page to free offer to emails to sale
+  - A signup page that says the cost of signing up before the button
+  - A ranked list of fixes for the page
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe one buyer. A second buyer gets a second run.
+  - Add your brand file so the page sounds like you.
+how_it_works:
+  - title: Pick the lead magnet
+    text: Picks a specific problem, lists free-offer types for the buyer's stage, chooses one and outlines its page and emails.
+  - title: Map the path to a sale
+    text: Matches entry points to buyers and stages, lays out page, free offer, emails and sale, and sets the numbers to watch.
+  - title: Write the signup page
+    text: Pins one buyer and one offer, builds the first screen from the click, and answers each doubt under its own heading.
+  - title: Review the page before it goes live
+    text: Reads the page at a glance, skimmed and with doubt, checks the phone view and ranks each fix.
+output_shape: |-
+  STEP 1: LEAD MAGNET
+    Problem | free offer | what you ask for | page and email outline
+
+  STEP 2: PATH TO A SALE
+    Entry points | each email's job | the sale | numbers to watch
+
+  STEP 3: SIGNUP PAGE
+    First screen | doubts and answers | cost and asks | button text
+
+  STEP 4: PAGE REVIEW
+    Page job | glance, skim and doubt notes | ranked fixes | score
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Free offer format
+    how: Say if you want a checklist, template, short video or mini course. Step 1 stays within it.
+  - what: What you ask for
+    how: Say email only, or email plus one question. Step 3 keeps the form to match.
+  - what: Your sales cycle
+    how: Say if buyers decide in a day or a month. Step 2 spaces the emails to fit.
+  - what: Rules in your field
+    how: Name any limits on claims or email so the copy stays inside them.
+judge:
+  - The free offer solves one small problem the buyer has now.
+  - It takes minutes to use, not hours.
+  - It points to what you sell without a hard pitch.
+  - Every email has one job and one next step.
+  - The page states what you ask for and what you send before the button.
+test:
+  - Ask three buyers if they would trade their email for the offer as described.
+  - Read the first screen with the ad or post beside it. The promise should match.
+  - Sign up yourself and check the first email arrives with the offer.
+improve:
+  - Track signups, opens and sales from the list, and cut the weakest email.
+  - Test two free offers one at a time.
+  - Re-run step 3 when you change the offer.

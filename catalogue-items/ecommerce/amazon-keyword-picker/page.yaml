@@ -1,0 +1,121 @@
+new_slug: amazon-keyword-picker
+name: "Amazon keyword picker"
+summary: "Give it your product and a keyword export. Get the phrases for your title, bullets and backend."
+job: sell-on-amazon
+thinking: medium
+thinking_why: "It sorts hundreds of phrases against filters and your product facts, which needs care but no deep reasoning."
+
+headline: "Amazon keyword picker"
+subhead: Give it your product facts and keyword tool exports for your seed phrases and two or three competitor ASINs. It filters the list, then marks every phrase use or drop. You get a tiered list for the title, bullets and backend, with volumes, and a list to drop.
+
+explain: |
+  An Amazon listing can only hold so many characters, and a keyword export can hold thousands of phrases. Pick the wrong ones and your listing is invisible or promises something the product is not. A general keyword researcher finds terms for articles and pages. This Amazon version works to Amazon's limits: a title, five bullets and a hidden backend field, each with a job.
+
+  The skill applies the filters one seller used to find low-hanging phrases for a new brand: volume under 5,000, at least two words, 100 or fewer competing products and at least two keyword sales a month. It then reads every remaining phrase and drops generic words, brand names and anything not true for your product. The result is a main phrase, secondary phrases, bullet phrases and backend-only phrases, each with its volume.
+
+when:
+  - You have chosen a product and need the phrases for its Amazon title and bullets.
+  - You have a keyword export of hundreds of lines and no time to read it all.
+  - Your listing gets few views and you suspect it is missing the phrases buyers type.
+
+you_give:
+  - Your product facts and benefits
+  - Keyword tool exports for 2 or 3 seed phrases and for 2 or 3 competitor ASINs
+  - Competitor titles and bullets (optional)
+you_get:
+  - A tiered list with main phrase, secondary phrases, phrases for bullets, backend-only phrases, each with its volume
+  - Phrases dropped as too broad, too generic, brand names or untrue
+  - An ad-ready list for manual campaigns
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts, including what is true about it (organic, caffeine free, size, form).
+  - Paste the keyword exports for your seed phrases and for two or three competitor ASINs.
+  - Check the dropped list for any phrase you disagree with, then pass the tiers to the Amazon listing writer.
+
+how_it_works:
+  - title: Starts from seeds
+    text: Takes 2 or 3 phrases that describe the product and the exports from reverse lookups of competitor ASINs.
+  - title: Applies the filters
+    text: Keeps phrases with volume under 5,000, at least 2 words, 100 or fewer competing products and at least 2 keyword sales a month.
+  - title: Marks every phrase
+    text: Marks each phrase use, drop as too generic, drop as a brand name, or drop as not true for your product.
+  - title: Picks the main phrase
+    text: Chooses the product name people type that has the most searches. It goes first in the title.
+  - title: Adds secondary phrases
+    text: Adds specific, honest phrases and skips very competitive single terms unless they are accurate.
+  - title: Borrows from neighbours
+    text: Checks similar products for phrases you missed, such as strength, origin or form, and adds those that fit.
+  - title: Fills the backend
+    text: Puts leftover true phrases, common misspellings and synonyms in the backend keyword field.
+  - title: Shows volumes
+    text: Gives each tier with volumes so the writer can fit the character limits.
+
+output_shape: |
+  MAIN PHRASE (title, first words)
+  <phrase> | <volume, estimate> | <competing products>
+
+  SECONDARY PHRASES (title and bullets)
+  <phrase> | <volume> | <why it is true and specific>
+
+  BULLET PHRASES
+  <phrase> | <volume> | <which benefit it supports>
+
+  BACKEND ONLY (leftover true phrases, misspellings, synonyms)
+  <phrase>, <phrase>, <phrase>
+
+  DROPPED
+  <phrase> | <too generic | brand name | not true for this product | too competitive>
+
+  FOR MANUAL ADS
+  <phrase> | <match type suggestion>
+
+  MISSING: <keyword export | product facts>
+  CHECKS MISSED: <none | which>
+
+tweaks:
+  - what: Product facts
+    how: List what is true and untrue (organic, caffeine free, sugar free). A phrase is kept only if the product earns it.
+  - what: Competitor ASIN exports
+    how: Reverse lookups of 2 or 3 leaders show what buyers type before they buy. More ASINs give more phrases to pick from.
+  - what: Brand strength
+    how: The filters suit a new brand. If your brand is strong and established, say so and it will allow bigger phrases.
+  - what: Character limits
+    how: Tell it your category's title limit so it can order the tiers to fit.
+
+judge:
+  - Every phrase in the tiers is true for your product.
+  - The main phrase is a two-word-plus product name people type, not a broad word like health.
+  - Brand names and generic words are in the dropped list with a reason.
+  - Each tier shows a volume, marked as an estimate.
+  - No medical or diet claim appears just because it is a good keyword.
+
+test:
+  - Check the main phrase by typing it into Amazon. The top results should be products like yours.
+  - Look at the dropped list. If a phrase you wanted is there, read the reason and decide if it is right.
+  - Run it twice on the same export. The main phrase and secondary phrases should match.
+  - Put the title in your listing and compare views after a few weeks using Amazon's own reports.
+
+improve:
+  - Add the claims you must not make (medical or diet claims, for example) to the skill file so they are dropped every time.
+  - Adjust the filter numbers in the skill file as your brand grows, and allow bigger volumes and more competition.
+  - Save the phrases that worked and the ones that did not, and paste them in on the next run.
+  - Pair it with the Amazon search gap finder before it, and the Amazon listing writer and Amazon PPC launch builder after it.
+
+works_best_with:
+  tools:
+    - {name: "Helium 10", why: "Its keyword finder and reverse ASIN lookup export the volume, competing products and keyword sales columns the filters use. It has a free tier, so check current limits."}
+    - {name: "Any good chat AI", why: "Reads a long export and marks each phrase use or drop."}
+  inputs:
+    - "Exports for the main competitor ASINs, not only your own seed phrases"
+    - "Competitor titles and bullets, to spot phrases they use that you missed"
+    - "Your category's current title and bullet style guide"
+    - "Your search term report once ads have run, to add the phrases that really sold"
+
+terms:
+  - term: Backend keywords
+    meaning: A hidden field in your listing for search phrases that do not need to show on the page.
+  - term: Reverse lookup
+    meaning: Pasting a competitor's product code (ASIN) into a tool to see the phrases that bring it traffic.
+  - term: Match type
+    meaning: "How closely a search must match your ad phrase: broad, phrase or exact."

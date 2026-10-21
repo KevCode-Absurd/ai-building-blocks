@@ -1,0 +1,20 @@
+slug: organic-search-report-builder
+name: "Organic search report builder"
+summary: "Paste Search Console and GA4 numbers. Get non-branded clicks against last period and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Google Search Console Tutorial (2026)", by: "SEO consultant presenting for a content-optimisation tool (first name only in the transcript)", used: "The non-branded filter with a custom regex, reading position as a trend, tracking branded search as AI-driven demand, and noting site changes"}
+  - {title: "SEO Full Course 2026 for beginners", by: "Course instructor (name not clear in the transcript)", used: "Comparing GA4 organic search add to cart, begin checkout and purchase with the previous period"}

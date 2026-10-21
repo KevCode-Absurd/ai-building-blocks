@@ -1,0 +1,26 @@
+slug: fix-a-static-ad-then-clear-it-to-run
+name: "Fix a static ad's pitch and clear it to run"
+summary: "Give it a static ad and its copy. Get a scored critique, a rewrite that fits the buyer and a ship call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: image, required: true}
+  - {type: copy_draft, required: true}
+  - {type: landing_page, required: false}
+  - {type: product_data, required: false}
+  - {type: static_ads, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [static-ad-critic, ad-awareness-stage-checker, five-part-ad-checker, pre-launch-ad-checker]
+steps:
+  - {uses: static-ad-critic, note: "Starts the chain: scores the ad and writes two rewrites."}
+  - {uses: ad-awareness-stage-checker, note: "Reads the rewritten copy from the step before and checks it speaks to one stage."}
+  - {uses: five-part-ad-checker, note: "Tests the fixed copy for proof and a clear ask, which the earlier steps do not score."}
+  - {uses: pre-launch-ad-checker, note: "Runs the last check on the ad with the fixes from the three reports applied."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/fix-a-static-ad-then-clear-it-to-run/skeleton.yaml

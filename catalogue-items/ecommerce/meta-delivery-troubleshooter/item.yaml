@@ -1,0 +1,22 @@
+slug: meta-delivery-troubleshooter
+name: "Meta delivery troubleshooter"
+summary: "Describe what Meta is doing with your ads. Get the failing delivery step and what to change first."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The entire Meta ads algorithm explained", by: "Mark, e-commerce media buyer", used: "The four serving steps, the value formula with estimated click-through rate and click-to-sale rate, and judging on 7-day windows"}
+  - {title: "How The Meta Ads Algorithm Works in 2026", by: "Agency operator who runs Meta for large online stores (name not given)", used: "The retrieval, ranking and auction model, creative as targeting, and the list of myths"}
+  - {title: "Learn 97% of Meta Ads in Under 19 Minutes (eight scaling hacks)", by: "Agency owner (name not given)", used: "The direct test of broad targeting against interest targeting over 7 days"}

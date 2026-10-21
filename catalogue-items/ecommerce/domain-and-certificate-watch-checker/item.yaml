@@ -1,0 +1,19 @@
+slug: domain-and-certificate-watch-checker
+name: "Domain and certificate watch checker"
+summary: "List your domains and subdomains. Get leftover records and weak registrar access flagged, a score out of 100 and fixes."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "University web security lecture series (compiled transcript, about 25 lectures)", by: "A university instructor and guest engineers", used: "Abandoned subdomains that can be claimed, locking registrar and DNS accounts, certificate authority rules, CAA records, certificate transparency logs and look-alike domains"}

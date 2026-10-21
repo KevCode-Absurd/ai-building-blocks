@@ -1,0 +1,129 @@
+new_slug: wholesale-margin-checker
+name: "Wholesale margin checker"
+summary: "Give it shelf price and costs. Get your margin per unit after retailer cut, promos and freight, scored."
+job: set-prices
+thinking: high
+thinking_why: "It chains several percentages and checks the sums, so a stronger model is less likely to slip on the arithmetic."
+
+headline: "Wholesale margin checker"
+subhead: Give it your shelf price, landed cost and retailer or distributor quotes. It walks the price down to what you keep per unit and tests it against a 50 percent gross margin target. You get a readiness score out of 100 and the units per store per week to track.
+
+explain: |
+  A shelf price is not your price. A retailer keeps about 45 to 50 percent of it, a distributor may take 15 to 25 percent more, then come freight and promotions. One US beverage founder says trade spend, which covers promos, end caps and events, can run 20 to 30 percent of sales. Many brands learn this after signing.
+
+  This skill builds the price waterfall step by step, from shelf price to margin per unit. It tests the result against a target of 50 percent gross margin or more, then takes trade spend off at 20 and 30 percent. It costs your promo plan and compares going direct with using a distributor. All these percentages come from one brand in one category, so replace them with real quotes. It ends with a readiness score out of 100 and the measures retailers use: units and dollars per store per week.
+
+when:
+  - A retailer or distributor asked for your wholesale price and you want to know what you would keep.
+  - You sell online and are thinking about stores, and want to see if the margin holds first.
+  - You are choosing between selling direct to stores and using a distributor.
+
+you_give:
+  - Your planned shelf price
+  - Your landed cost per unit
+  - Retailer margin, distributor margin and freight, from real quotes if you have them
+  - Your promo plan, with the price cut, who pays and how many weeks a year
+  - How much you can make, your lead time and cash for stock and promos (optional)
+you_get:
+  - A step-by-step price waterfall from shelf price to margin per unit
+  - A verdict against a 50 percent or more gross margin target, with trade spend at 20 and 30 percent
+  - A direct versus distributor comparison and the units and dollars per store per week to track
+  - A readiness score out of 100, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your shelf price, landed cost and any quotes. Say which percentages are real and which are guesses.
+  - Add your promo plan and what you can supply.
+  - Read the failed checks first, then change the price, the cost or the route and run it again.
+  - Ask the retailer for the units per store per week they expect before you commit.
+
+how_it_works:
+  - title: Builds the waterfall
+    text: Shelf price, minus retailer cut, minus distributor cut if any, minus freight, leaving your net price. Landed cost comes off to give margin per unit.
+  - title: Sets the target
+    text: 50 percent gross margin or more, because trade spend can run 20 to 30 percent of sales.
+  - title: Tests trade spend
+    text: Takes 20 and 30 percent off net sales and shows the margin at each. It must stay above zero at 30 percent.
+  - title: Costs the promotions
+    text: Price cut times the share you pay times promo weeks a year, shown per unit and checked against the trade spend allowance.
+  - title: Compares routes
+    text: Direct and distributor side by side. Direct keeps more margin but carries more supply risk.
+  - title: Checks the anchor customer
+    text: A broker is a sales agent and a distributor moves boxes. Win an anchor customer yourself first.
+  - title: Sets the velocity measures
+    text: Units and dollars per store per week, and what retailers look at in the first 30 days.
+  - title: Scores readiness
+    text: Starts at 100 and takes 20 off for each of five failed checks. The sum is shown.
+
+output_shape: |
+  WHOLESALE CHECK: <product> | shelf price <n> | route: <direct | distributor>
+  Percentages used: <real quotes | defaults from one US beverage brand [default]>
+
+  WATERFALL (per unit)
+  shelf price                  <n>
+  retailer cut (<n>%)         -<n>  -> sell price <n>
+  distributor cut (<n>%)      -<n>
+  freight and distribution    -<n>  -> net price <n>
+  landed cost                 -<n>
+  margin per unit              <n>  | gross margin <n>%  (target 50% or more: <met | not met>)
+
+  TRADE SPEND
+  at 20%: <margin per unit> | at 30%: <margin per unit>
+  PROMO PLAN: <cut> x <share you pay> x <promo weeks>/<weeks> = <cost per unit>
+  ROUTES: direct <margin> | distributor <margin> | start with <...>
+  VELOCITY TO TRACK: units per store per week <ask buyer> | dollars per store per week = units x <shelf price>
+
+  SCORE <n>/100 (100 - 20 x <failed checks> = <n>)
+  <n>/100 after the fixes (on the checks run)
+  NOT RUN: <check, and what is needed>
+
+tweaks:
+  - what: Real quotes
+    how: Paste the retailer's and distributor's actual margin and freight. The source percentages are one US beverage brand's, and apparel, beauty and supplements differ.
+  - what: Your landed cost
+    how: Include product, packaging, shipping in and duties. A low landed cost is the most common reason a margin looks better than it is.
+  - what: Your promo plan
+    how: Give the price cut, the share you pay and how many weeks a year. The promo check uses these to see if it fits inside your trade spend.
+  - what: Your route
+    how: Say whether you are going direct, through a distributor, or both. The comparison shows the margin for each side by side.
+  - what: Your supply and cash
+    how: Give how much you can make, how fast, and the cash you have for stock and promos. The readiness check needs real figures to pass.
+
+judge:
+  - The waterfall shows each step in order and the arithmetic adds up.
+  - Percentages that came from the source are marked as defaults, unless you gave real quotes.
+  - Trade spend and promo cost are not added together twice.
+  - The velocity targets come from the buyer and are not made up by the skill.
+  - The score shows the sum and says what it measures.
+
+test:
+  - Run it on a product whose wholesale margin you already know from a real quote. The margin per unit should match yours to the cent.
+  - Run it with the retailer's cut changed by 5 points. The margin and the score should move in the way you expect.
+  - Run it twice on the same inputs. The numbers should be identical.
+  - Take one line of the waterfall to your accountant or a supplier and ask if the percentage is realistic for your category.
+
+improve:
+  - Replace the default percentages in the skill file with your own quotes, so each run starts from your real numbers.
+  - Add your category's usual retailer margin and freight, so the defaults stop being a beverage brand's.
+  - Add your promo calendar to the promo step, so the weeks are real and not assumed.
+  - Pair it with the Landed cost calculator for your cost, and the Retail buyer approach planner for the pitch once the numbers hold.
+
+works_best_with:
+  tools:
+    - {name: "Google Sheets or Excel", why: "Keep the waterfall in a sheet so you can change a percentage and see the margin per unit move."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the waterfall and run the checks. Paste your numbers."}
+  inputs:
+    - "A written quote from the retailer or distributor for margin and freight"
+    - "Your landed cost per unit from your supplier invoices"
+    - "Your promo calendar for the year, with who pays for each promo"
+    - "The retailer's current rate for your category, in units per store per week"
+
+terms:
+  - term: Trade spend
+    meaning: Money a brand pays to get products sold in stores, such as promotions, end caps and events.
+  - term: Gross margin
+    meaning: What is left of your selling price after the cost of the product, as a share of the selling price.
+  - term: Velocity
+    meaning: How fast a product sells in a store, such as units per store per week.
+  - term: Anchor customer
+    meaning: The first retailer you win yourself, which proves the product sells before you add a broker or distributor.

@@ -1,0 +1,23 @@
+slug: reddit-answer-planner
+name: "Reddit answer planner"
+summary: "Give it your category and cited Reddit threads. Get which to answer and what to say."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The ultimate guide to AEO: how to get ChatGPT to recommend your product", by: "Ethan Smith, SEO agency CEO, on a product-growth podcast", used: "Real people saying who they are and where they work, and that a handful of useful answers can be enough"}
+  - {title: "Generative Engine Optimization: Is It Safe and How to Do It the Right Way", by: "Harpreet Singh (SEO practitioner), interviewed on a daily SEO show", used: "Checking which Reddit threads AI actually cites, and that old locked threads can't be changed"}
+  - {title: "The Head of Growth at a $100M Company Explains AEO", by: "Ravish Agrawal (consumer software growth lead), on a distribution podcast", used: "Pick-up delays, choosing subreddits, honest comparisons, negative sentiment, and Reddit as a long-term signal"}
+  - {title: "The Ultimate AI Visibility Checklist (AEO/GEO for 2026)", by: "Agency owner (name not given)", used: "Five to ten relevant subreddits, giving value first, and alerts"}

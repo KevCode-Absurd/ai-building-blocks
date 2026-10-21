@@ -1,0 +1,73 @@
+id: publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote
+  name: Publish comparison and best-of pages that shoppers and AI quote
+  summary: Give it your rivals and product facts. Get a comparison page plan and a fair best-of page rewritten to answer first.
+  when: shoppers search to compare you with rivals and you want to be on the pages they and AI assistants read.
+  job: get-found-in-search
+  level: intermediate
+steps:
+  - name: Comparison page set planner
+    skill: comparison-page-set-planner
+    job: organic
+    from: library
+    method:
+      - Find the rivals
+      - Use "A vs B vs You" with care
+      - Count the work
+      - Apply fairness rules to every page
+      - Add a legal check
+      - Plan the next batch
+      - Consider video
+    inputs:
+      - competitor_set
+      - performance_sheet!
+      - brand_brain!
+    outputs:
+      - plan
+    note: Plans the versus, alternative and best-of pages worth building and their order.
+  - pause: Pick the first page from the plan and gather the real prices and specs for you and each rival.
+  - name: Best-of page writer
+    skill: best-of-page-writer
+    job: page
+    from: library
+    method:
+      - Check the page type
+      - Read what ranks
+      - Include rivals fairly
+      - Show first-hand use, only if true
+      - Draft in rounds
+      - After publishing
+      - Be honest about the limits
+    inputs:
+      - question
+      - competitor_set
+      - product_data
+      - brand_brain!
+    outputs:
+      - brief
+      - copy_draft
+    note: Writes the first page from the facts you gathered, fairly and with sources.
+  - name: Answer-first page rewriter
+    skill: answer-first-page-rewriter
+    job: copy
+    from: library
+    method:
+      - Bottom line first
+      - Stand-alone test
+      - Plain sentences
+      - FAQ
+      - Ignore word count
+      - Rank first
+      - Health, money and legal advice
+    inputs:
+      - copy_draft
+      - brand_brain!
+    outputs:
+      - copy_draft
+    note: Rewrites the draft so each section opens with the answer, ready to be quoted. Reads the draft from the step before.

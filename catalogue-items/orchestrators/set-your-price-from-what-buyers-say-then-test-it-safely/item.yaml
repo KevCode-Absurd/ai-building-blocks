@@ -1,0 +1,22 @@
+slug: set-your-price-from-what-buyers-say-then-test-it-safely
+name: "Set your price from what buyers say, then test it"
+summary: "Give it your product. Get a pricing survey, a price model with tiers and a price test you can undo."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brief, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: plan}
+uses: [willingness-to-pay-survey, pricing-model-designer, price-test-planner]
+steps:
+  - {uses: willingness-to-pay-survey, note: "Starts from your product facts and returns two questions to send plus the sums to read the answers."}
+  - {uses: pricing-model-designer, note: "Reads the survey answers you collected and sets price points and tiers."}
+  - {uses: price-test-planner, note: "Tests the tier prices from the model on one product, with your real sales and costs."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/set-your-price-from-what-buyers-say-then-test-it-safely/skeleton.yaml

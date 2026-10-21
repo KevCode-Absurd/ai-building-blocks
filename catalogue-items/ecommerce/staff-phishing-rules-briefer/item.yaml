@@ -1,0 +1,18 @@
+slug: staff-phishing-rules-briefer
+name: "Staff phishing rules briefer"
+summary: "Give it your tools and team size. Get a one-page phishing rule sheet and a ten-minute drill with answers."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "University web security lecture series (compiled transcript, about 25 lectures)", by: "A university instructor and guest engineers", used: "Password managers and security keys as phishing alarms, reading web addresses, fake windows drawn inside a page, why visual security cues fail and how often people click through browser warnings"}

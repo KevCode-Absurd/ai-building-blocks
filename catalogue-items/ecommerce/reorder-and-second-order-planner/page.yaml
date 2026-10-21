@@ -1,0 +1,122 @@
+new_slug: reorder-and-second-order-planner
+name: "Reorder and second-order planner"
+summary: "Give it your products and how long they last. Get reorder, refill and second-order messages with timing and an offer cap."
+job: write-emails
+thinking: medium
+thinking_why: "It turns usage days into dates and message rules. A mid-size model does this well, but check the dates it gives."
+
+headline: "Reorder and second-order planner"
+subhead: Give it your products, how many days one unit lasts, your delivery timing and the most you can offer on order two. It plans what to send between the first order and the next. You get timings per product, a message plan and one offer rule per message.
+
+explain: |
+  The first-to-second order is where most stores lose buyers. A buyer who gets one email after delivery and then silence has no reason to come back. A buyer who gets a nudge on the wrong day, or a deep code every time, learns to wait.
+
+  This skill maps the weeks after purchase. It covers care tips while the order ships, a reassurance email, a setup sequence for products that need it, a how-to, a refill nudge at about 75 percent of the usage cycle, and a second-order nudge around day 10 after arrival. Each message gets a timing, one goal and an offer cap. Daily habit messages are an optional branch for daily-use products.
+
+when:
+  - Your product runs out (food, supplements, skincare, refills) and you don't send refill reminders.
+  - Most buyers order once and you want to lift the second order.
+  - You sell a product that needs setup or practice and want a plan for the first weeks.
+
+you_give:
+  - Your product list with how many days one unit lasts
+  - How long delivery takes, and whether your shipping app gives a delivery confirmation event
+  - Your margin and the most you can offer on order two
+  - Your repeat-order rate and any subscription you have (optional)
+
+you_get:
+  - A flow plan with triggers, delays, a goal and one offer rule per message
+  - A setup sequence for products that need teaching
+  - Refill reminder timing per product, with a cap of two messages per cycle
+  - A second-order nudge, a subscription prompt, and the timing for review and referral asks
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each product with its usage days, your delivery time and the most you can offer on order two.
+  - Build the setup sequence and the refill reminder first. Add the rest once those run.
+  - Keep codes out of messages for loyal buyers.
+  - After 60 days, compare repeat rate for this group against the group before.
+
+how_it_works:
+  - title: Plans the quiet weeks
+    text: While the order ships, each update carries a care or how-to tip. About two days after purchase a reassurance email goes out.
+  - title: Teaches what needs teaching
+    text: Products that need setup get a quick-start guide, a video and common mistakes. Others get a how-to around day 4 to 6.
+  - title: Times the refill
+    text: Nudge at about 75 percent of the usage cycle, with at most two messages per cycle. Fast consumables get a "still using one?" prompt around day 15.
+  - title: Nudges the second order
+    text: Around day 10 after arrival, with relevant products and a modest offer if margin allows. Recent but not loyal buyers are the target.
+  - title: Adds a flexible subscription
+    text: A choice of cadence, skip and pause. Rigid plans drive cancels and chargebacks.
+  - title: Sets one offer rule per message
+    text: Starts with no offer, then a small one, with a margin floor. Loyal buyers get lower offers. A pre-send check skips unhappy customers.
+
+output_shape: |
+  REORDER PLAN  <store>
+  PRODUCT  <name> | usage days <n> | refill nudge day <n> | run-out day <n>
+
+  TIMELINE
+  Day 0 to delivery   <updates with a care or how-to tip>
+  ~Day 2              <reassurance email>
+  After delivery      <setup sequence, if the product needs it: guide, video, common mistakes>
+  Day 4 to 6          <product how-to>
+  ~Day 15             <"still using one?" for fast consumables>
+  ~75% of cycle       <refill nudge> | cap: 2 messages
+  ~Day 10 after arrival  <second-order nudge> | offer: <none | up to X%>
+  Review ask          <when the product has done its job>
+  Referral ask        <after a positive moment>
+  SMS                 <one text day 10 to 14 after delivery; one near run-out>
+
+  OFFER RULE   <per message, margin floor, who is excluded>
+  OPTIONAL: 90-day habit branch <for daily-use products only>
+  MEASURE      <repeat rate and lifetime gross profit, this group vs earlier>
+  CHECKS MISSED: <none or the list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Usage days per product
+    how: Give a real number for each product. The refill nudge, run-out text and day-15 prompt all come from it. For one-off products it switches to care and cross-sell content.
+  - what: Delivery confirmation
+    how: Say whether your shipping app sends a delivery event. If not, the plan uses ship date plus delivery time and tells you to check it.
+  - what: Offer cap on order two
+    how: Give the highest you can afford. The skill keeps every code at or below it and starts with no offer.
+  - what: Daily-use product
+    how: Say if the product is used daily with a visible result. Only then does the plan add the 90-day habit branch.
+
+judge:
+  - Each message has a time, a goal and one offer rule.
+  - The refill nudge falls before the run-out day, not after it.
+  - Loyal and returning buyers get lower offers, not the same code.
+  - Benchmarks from vendor sources are labelled as claims.
+  - The habit branch appears only for daily-use products.
+
+test:
+  - Give it a one-off product such as furniture. It should skip the refill nudge and use care and cross-sell content.
+  - Give it a 30-day product with 7 days shipping. Work out the nudge and run-out days by hand and compare.
+  - Check that no message sends a code to someone with an open support ticket or a return.
+  - Run it twice on the same facts. The timeline should match.
+
+improve:
+  - Add each product's real usage days to the skill file, so the dates are always right.
+  - Add your margin floor and the highest code you allow on order two.
+  - Add your own repeat-order rate and compare it with the benchmarks the skill quotes.
+  - Pair it with the customer stage flow mapper, the post-purchase flow builder and the win-back flow builder.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Delivery, order-count and predicted next-order data can drive these triggers."}
+    - {name: "Shopify", why: "Order history decides who is recent but not loyal."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the skill from your product list."}
+  inputs:
+    - "At least a few hundred past orders, to find the real gap between orders"
+    - "Your subscription terms, if you offer one"
+    - "Support ticket and return data, for the pre-send check"
+    - "Cohort repeat rates from earlier months"
+
+terms:
+  - term: Replenishment
+    meaning: Reordering something that runs out, such as food, skincare or filters.
+  - term: Usage cycle
+    meaning: How many days one unit lasts.
+  - term: Lifetime gross profit
+    meaning: The profit a customer brings in, after product and shipping costs, over their whole time with you.

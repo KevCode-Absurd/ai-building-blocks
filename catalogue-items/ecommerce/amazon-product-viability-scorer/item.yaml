@@ -1,0 +1,21 @@
+slug: amazon-product-viability-scorer
+name: "Amazon product viability scorer"
+summary: "Give it a product idea and costs. Get a score out of 100, the weakest test and a go or no-go."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: store_capture, required: false}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "The price band, the 30 percent margin floor and thirds rule, search variety, price spread, restricted and seasonal red flags, and the cash needed to start"}
+  - {title: "COMPLETE Amazon FBA Product Research Masterclass", by: "Sean Peterson", url: "https://www.youtube.com/watch?v=n6Cp3qCPsIQ", used: "The kill list, the 25 dollar price floor, the research-tool filter settings, the brand-spread check, review mining at 4.1 to 4.3 stars and the order of the tests"}

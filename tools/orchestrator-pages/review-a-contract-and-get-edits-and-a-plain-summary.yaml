@@ -1,0 +1,78 @@
+new_slug: review-a-contract-and-get-edits-and-a-plain-summary
+name: Review a contract and get edits and a plain summary
+summary: Give it a contract. Get risky clauses flagged, edits to ask for and a summary to take to a lawyer.
+job: check-contracts
+thinking: high
+thinking_why: Contract wording is easy to misread, and the later steps build on the first review. Give it your strongest model.
+headline: Know what a contract says, what to change and what to ask a lawyer
+subhead: Give it a contract and say which side you are on. It reviews every clause, looks hard at who owns the work and what each side may use, then writes a two-minute summary you can hand to whoever signs. It is a first check, not legal advice.
+explain: |
+  Most people sign a contract after skimming it. The risky parts sit in a few clauses: who owns what you make, what you pay if things go wrong, and how you get out. Reading all of it takes hours, and a lawyer's time is costly when you do not yet know which parts to ask about.
+
+  The workflow reads the contract clause by clause against your rules and suggests edits with a fallback for each. Then it checks the ownership, licence and indemnity clauses on their own, because they are the hardest to fix once signed. Last it writes a plain summary for the person who has to say yes. A pause comes at the end: take the summary, the edits and the flagged clauses to a qualified lawyer before you sign.
+when:
+  - You were sent a contract and the deadline is close.
+  - You want to know which clauses to push back on before you talk to the other side.
+  - Someone else must approve the deal and needs a short summary, not 30 pages.
+you_give:
+  - The contract, as a file or pasted text
+  - Which side you are on, such as buyer, seller or partner
+  - Your deadline and the points that worry you
+  - Your usual rules for contracts, if you have them (optional)
+you_get:
+  - A clause-by-clause review with each gap rated, and suggested edits with fallbacks
+  - A check of who owns the work, what each side may use and who pays if it goes wrong
+  - A two-minute plain summary that says if you can sign and what the catch is
+  - A list of questions and flagged clauses for your lawyer
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the contract and say which side you are on. Add any rules you always use.
+  - When it finishes, take the summary and the flagged clauses to a qualified lawyer before you sign.
+how_it_works:
+  - title: Review the contract clause by clause
+    text: Reads the whole contract, compares each clause with your rules or common market terms, rates each gap and suggests an edit with a fallback.
+  - title: Check the IP clauses
+    text: Takes the reviewed contract and looks at ownership, assignment, licence scope, warranties and indemnities, then checks that they do not clash with each other.
+  - title: Write a plain summary
+    text: Turns the review into two short paragraphs for the person who signs, with what they must do before signing.
+  - title: Pause for a lawyer
+    text: Take the summary, the edits and the flagged clauses to a qualified lawyer before you sign. Nothing here replaces that check.
+output_shape: |-
+  STEP 1: CONTRACT REVIEW
+    Contract type and your side | clauses by risk | suggested edits with fallbacks | points to raise first
+
+  STEP 2: IP CHECK
+    Who owns what | licence scope | warranties and indemnities | clashes between clauses | risk ranking
+
+  STEP 3: PLAIN SUMMARY
+    Can you sign | the catch | what to do before signing
+
+  PAUSE
+    Check with a qualified lawyer before you sign
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your side
+    how: Say buyer, seller, licensor or licensee. The same clause can be good for one side and bad for the other.
+  - what: Your rules
+    how: Paste the terms you always want, such as payment days and liability limits. Without them it uses common market terms and says so.
+  - what: Who reads the summary
+    how: Name the reader, such as finance or a department head. The summary leaves out what they do not need.
+  - what: The country or state
+    how: Name where the contract is governed, so the IP step notes local rules on ownership and work for hire.
+judge:
+  - Every flagged clause quotes or points to the exact place in the contract.
+  - Each suggested edit has wording you could paste, plus a fallback.
+  - The IP step says who owns the work in plain terms, and flags any gap in who gets it.
+  - The summary has no legal terms and says clearly whether to sign.
+  - The workflow says to check with a qualified lawyer, and does not claim to give legal advice.
+test:
+  - Pick three flagged clauses and read them in the contract. The flags should be right.
+  - Ask the summary what happens if you want out early. The answer should match the contract.
+  - Run an old contract you know well. It should find the clauses you already know are weak.
+improve:
+  - Save your rules in a file and give it every time.
+  - Keep a list of edits the other side accepted and refused, and add them to your rules.
+  - Do not use it as the only check on a large or unusual deal. Go to a lawyer first.

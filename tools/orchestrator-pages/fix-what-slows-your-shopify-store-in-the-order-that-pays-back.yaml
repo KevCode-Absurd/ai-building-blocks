@@ -1,0 +1,92 @@
+new_slug: fix-what-slows-your-shopify-store-in-the-order-that-pays-back
+name: "Fix what slows your Shopify store, biggest wins first"
+summary: Give it your PageSpeed report and theme. Get speed fixes ranked by orders gained per hour, then applied.
+job: speed-up-store
+thinking: high
+thinking_why: It reads reports, prices fixes in orders and edits theme code across six skills. Give it your strongest model.
+headline: Fix the slow parts of your Shopify store, biggest payback first
+subhead: Give it your PageSpeed results, a list of your apps and your theme files. It names what is slow, ranks the fixes by orders gained per hour of work, cuts apps, finds their leftover code, and fixes the first-screen image and page jumps.
+explain: |
+  A failing mobile speed report lists dozens of problems, and most are not worth your week. Owners often fix whatever the report shouts about, or install a speed app that adds more code. Meanwhile the slow part may be one app, one big banner image or a widget that makes the page jump.
+
+  The steps work in order of payback. First it reads the report and names the causes. Then it turns each fix into a range of extra orders and ranks them by gain per hour. It marks each app keep, remove or delay. You remove the apps and copy your theme, then it finds the code those apps left behind, fixes the first-screen image and stops the layout shifting. Every code change is for a copy of your theme, never the live one.
+when:
+  - Your mobile PageSpeed report is failing and you do not know which fix to do first.
+  - You have installed many apps over the years and suspect some slow the store for little return.
+  - Your developer or agency has a long to-do list and you need to choose what to pay for.
+you_give:
+  - Your PageSpeed Insights results for the homepage, a collection page and a product page
+  - Monthly visits, conversion rate and average order value
+  - A screenshot or list of your installed apps
+  - A copy of your theme files
+  - The first-screen (hero) image file (optional)
+you_get:
+  - A plain read of the report with the cause on each page and a score out of 100 for the real-user results
+  - Every fix priced as a range of extra orders and ranked into this week, next month and parked
+  - A keep, remove or delay verdict for each app, with the app stack scored before and after
+  - The leftover app code to delete, the first-screen image fix and the layout shift fix, ready to test
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your PageSpeed results and your monthly visits, conversion rate and order value. Say how many hours you or your developer have.
+  - When it pauses, remove the apps it marked for removal and copy your theme. Then give it the theme files.
+  - Test each code change on the copy of your theme and run PageSpeed again before you publish it.
+how_it_works:
+  - title: Read the speed report
+    text: Splits the report into real-user and test data, judges pass or fail on the real-user data, and names what is slow on each page. Ends with the first three fixes.
+  - title: Rank the fixes
+    text: Turns each fix into a low and high range of extra orders, tags it by effort and risk, and ranks it by gain per hour.
+  - title: Audit your apps
+    text: Marks each app keep, remove, delay or one page only, and leaves your tracking tags alone. Makes the list of apps to uninstall.
+  - title: Find leftover code
+    text: After you remove the apps, searches your theme for the code they left behind and plans safe edits one at a time. Live tracking tags are protected.
+  - title: Fix the first-screen image
+    text: Reads the image the report flagged, makes it load at once, keeps lazy loading below the fold, and gives size targets.
+  - title: Stop the page jumping
+    text: Finds the element that shifts, writes the fix that reserves its space, and gives test steps and a recheck date.
+output_shape: |-
+  STEP 1: SPEED REPORT READ
+    Field vs lab verdict per page | cause on each page | score out of 100 | first three fixes
+
+  STEP 2: RANKED FIXES
+    Fix | orders gained (low to high) | effort | risk | this week / next month / parked
+
+  STEP 3: APP VERDICTS
+    App | keep, remove or delay | reason | app stack score now and after | uninstall list
+
+  STEP 4: LEFTOVER CODE
+    File and line | what it belonged to | safe to delete? | theme cleanliness score
+
+  STEP 5: FIRST-SCREEN IMAGE FIX
+    Code change | preload line | image size targets | test steps
+
+  STEP 6: LAYOUT SHIFT FIX
+    Shifting element | cause | code change | retest date
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Visits, conversion rate and order value
+    how: The order gains are worked out from these. Give real numbers and the ranking is honest. Without them it can only rank by effort.
+  - what: Who does the work and the hours
+    how: A developer with 10 hours ranks the list differently from you alone with 2. Say which.
+  - what: What each app earns you
+    how: Tell it which apps bring in revenue, such as reviews or subscriptions. It will not tell you to cut those without a reason.
+  - what: Mobile and desktop
+    how: Send both, but mobile first. Most of the real-user data that decides pass or fail is mobile.
+judge:
+  - The verdict on each page rests on real-user data, and the test data is only used to find causes.
+  - Every order gain is a range with the numbers it came from, not one confident figure.
+  - Every app has a keep, remove or delay verdict with a reason, and your tracking tags are untouched.
+  - Every code change says it is for a copy of the theme and has a way to test it.
+  - Nothing is lazy loaded on the first screen.
+test:
+  - Read the ranked list and ask whether you would do the top fix first. If the answer is no, find out which number it used.
+  - After one fix on your theme copy, run PageSpeed again three times and compare with the earlier runs.
+  - Check the pages that matter most on a real phone, because the report cannot show every shift.
+  - Run it again on the same report. The top three fixes should come out the same.
+improve:
+  - Add your tracking tags and the apps you must keep to the skill's rules, so they are never touched.
+  - Save your ranked fixes and the dates you finished them in your brand file. The next run starts from there.
+  - Edit the order range in the ranking skill if your own tests show a different link between speed and sales.
+  - Run the first two steps every quarter, and again before any sale.

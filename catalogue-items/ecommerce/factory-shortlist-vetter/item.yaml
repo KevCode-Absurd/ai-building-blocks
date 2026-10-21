@@ -1,0 +1,25 @@
+slug: factory-shortlist-vetter
+name: "Supplier shortlist vetter"
+summary: "Give it your spec and factory answers. Get each scored out of 100, red flags and a pick."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: document, required: true}
+  - {type: product_data, required: false}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Ultimate Guide To Product Sourcing In 2026", by: "Founder of a heated-hoodie and blanket brand (video guide)", used: "Shortlisting 10 to 15 verified factories, video-call red flags, checking certificates, asking for quotes in a fixed shape, and scoring samples"}
+  - {title: "How He Makes Millions Sourcing Products From China", by: "Isaac, sourcing agency founder, interviewed on a business podcast", used: "Keeping alternatives so factories stay honest, and comparing countries as a lead time against cost test"}
+  - {title: "What I learnt from sourcing e-commerce products from China (forum post and comments)", by: "A jewelry seller moving from drop shipping to bulk import, with one comment from a US sourcing agent", used: "Getting a second contact channel because suppliers go offline without notice"}
+  - {title: "9-Figure Founder: How To Build a Brand That's Impossible To Copy", by: "Nema, founder of a body care brand", used: "Vetting what other brands a contract manufacturer makes for, its capacity and certifications, and using several manufacturers at volume"}
+  - {title: "He Built a $725 Million Company in 255 Days", by: "Peter Rahal, founder of two protein snack brands", used: "Supply terms that survive a change of control, first right to open inventory, and the risk of depending on one manufacturer"}

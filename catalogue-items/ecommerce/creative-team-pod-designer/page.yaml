@@ -1,0 +1,120 @@
+new_slug: creative-team-pod-designer
+name: "Creative team pod designer"
+summary: "Give it your team and review process. Get a two-person pod design, review rules and a fast-trend budget."
+job: lead-people
+thinking: medium
+thinking_why: "It turns your team facts into rules and a plan, which a mid-range model does well."
+
+headline: "Creative team pod designer"
+subhead: Give it your team and how creative gets approved today. It builds two-person pods, cuts the review crowd to two or three owners, and sets a trend budget your team can use without waiting for a yes. You get the pod design, review rules and weekly flow.
+
+explain: |
+  Creative slows down when too many people review it. In one story, 13 people reviewed a single post, and the loudest voice won. Trends in some fields last a few days, so a slow yes means a missed chance.
+
+  This skill splits your team into pods of two: one person who handles briefs, data and posting, and one who makes the content. It puts media buying and creative strategy in one person who sees your profit and loss. It cuts reviews to the people who own the content and lets the person doing the work decide when the result can be measured. It also sets a trend budget and a deadline that are pre-approved, and a lighter review tier. Health, money and other regulated claims keep the full review.
+
+when:
+  - Ads or content take weeks to approve and you miss trends.
+  - Many people comment on each post and the result gets watered down.
+  - You are building a small creative team and want roles that fit.
+
+you_give:
+  - Who is on your team and what each person does
+  - How creative is approved now, and by how many people
+  - The measurable target for each role (optional)
+  - A trend budget and time limit you can approve in advance (optional)
+you_get:
+  - A pod design and role split
+  - Review rules, with a lighter tier for chosen creators or campaigns
+  - A trend rule with budget, deadline and who can say yes
+  - A weekly reporting flow and an ideas channel plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your team and what each person does in a week.
+  - Describe how a post gets approved today, with the number of reviewers and the wait.
+  - Pick a trend budget and hours you would approve without a meeting.
+  - Try the new rules on one campaign before changing everything.
+
+how_it_works:
+  - title: Builds pods of two
+    text: One analytical person for briefs, data and posting, and one creative who shoots and edits. The creative skips meetings and sheets.
+  - title: Merges buying and strategy
+    text: One person buys media and plans creative, sees the profit and loss, and has a designer or creator behind them.
+  - title: Cuts the review crowd
+    text: Two or three owners review. Anyone who could sway the result by pushing hard is out.
+  - title: Lets the doer decide
+    text: When a choice can be measured, the person doing it owns the target and shows the numbers.
+  - title: Sets the trend rule
+    text: A pre-approved budget and deadline, a named creator and a named person who can say yes.
+  - title: Adds two review tiers
+    text: A full tier with legal. A lighter one with clear limits for chosen creators or campaigns. Regulated claims stay in the full tier.
+  - title: Plans light reporting
+    text: Few meetings, an idea board, a weekly written report and an open ideas channel with a quality bar.
+
+output_shape: |
+  POD DESIGN
+  Pod 1: <analytical person> + <creative person>
+    Analytical owns: <...>   Creative owns: <...>
+    Result owner: <name> for <KPI>
+
+  MEDIA AND STRATEGY
+  <one person>; support: <designer or creator>
+
+  REVIEW RULES
+  Who reviews: <2 to 3>
+  Doer decides: <role -> KPI>
+  Tier 1 (full) / Tier 2 (limits)
+
+  TREND SLA
+  Budget / Deadline / Creator / Who says yes
+
+  WEEKLY FLOW
+  Idea board / Weekly report / Ideas channel / Quality bar
+
+  CHECKS MISSED: <none or list>
+
+tweaks:
+  - what: Your trend budget
+    how: Set a number you can lose without worry. The source's $1,200 and 36 hours were one brand's choice, not a standard.
+  - what: Your KPIs
+    how: Give each role one number to own, such as conversion for the designer. Without it, nobody can decide alone.
+  - what: Who counts as an owner
+    how: Name the two or three people who truly own content. Everyone else gets the weekly report.
+  - what: The limits of the lighter tier
+    how: List the few things that can never be said. Anything outside the list can go without legal review.
+
+judge:
+  - The creative person has no meetings or spreadsheets to fill.
+  - Two or three reviewers are named, not a group.
+  - Each role has one measurable target where one exists.
+  - The trend budget is your number, with the source number shown only as an example.
+  - Health, money and other regulated claims still go through full review.
+  - Someone owns the results.
+
+test:
+  - Run one trend through the new rule and time it from sighting to publish.
+  - Compare the pod's output over four weeks with the four weeks before.
+  - Ask the creative person how many hours they spent in meetings before and after.
+  - Check that a post from the lighter tier did not break your can't-say list.
+
+improve:
+  - Add your own can't-say list to the lighter tier in the skill file.
+  - Add your product claims that always need legal review, so they stay in the full tier.
+  - Change the quality bar to fit your brand and write it down.
+  - Pair it with a skill that plans creative volume and one that checks ads before they go live.
+
+works_best_with:
+  tools:
+    - {name: "Slack", why: "A shared ideas channel and a trend channel are easy to set up and everyone can see them."}
+    - {name: "Notion or Miro", why: "An idea board holds references and ideas where the whole team can add to them."}
+  inputs:
+    - "Your approval times from the last ten ads"
+    - "A list of claims your legal check must always see"
+    - "The profit and loss summary the media buyer will see"
+
+terms:
+  - term: Pod
+    meaning: A small fixed team, here two people, that works together on creative from brief to post.
+  - term: Trend budget
+    meaning: Money and time you approve in advance for a quick piece of content that rides a trend.

@@ -27,7 +27,7 @@ const flat = (x) => (x == null ? [] : Array.isArray(x) ? x.flatMap(flat) : typeo
 const readerText = (p) => [p.headline, p.subhead, p.summary, p.explain, p.when, p.you_give, p.you_get, p.how_to_use, (p.how_it_works ?? []).map((s) => s.text), (p.tweaks ?? []).map((t) => t.how), p.judge, p.improve].flatMap(flat).join("\n");
 
 const files = [];
-for (const cat of ["general", "ecommerce"]) for (const slug of fs.readdirSync(`catalogue-items/${cat}`)) {
+for (const cat of ["general", "ecommerce", "agents"]) for (const slug of fs.existsSync(`catalogue-items/${cat}`) ? fs.readdirSync(`catalogue-items/${cat}`) : []) {
   const f = `catalogue-items/${cat}/${slug}/page.yaml`;
   if (fs.existsSync(f)) files.push({ slug, f });
 }

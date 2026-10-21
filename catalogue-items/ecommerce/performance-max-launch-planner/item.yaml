@@ -1,0 +1,23 @@
+slug: performance-max-launch-planner
+name: "Performance Max launch planner"
+summary: "Give it your catalogue, budget and break-even numbers. Get a fit verdict and a Performance Max build."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given)", used: "The fit test, budget share, asset counts and settings to switch off"}
+  - {title: "The only Google Ads strategy you need for 2026", by: "Agency founder who works with mid to large e-commerce brands (name not given)", used: "Asset group sizing, brand exclusions, signals and the feed-only variant"}
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "Agency co-founder who runs Google and YouTube ads for DTC brands (name not given)", used: "The budget floor, the bidding path, lean assets, audience signals and the three controls"}
+  - {title: "Google Ads for Ecommerce: Architecture and Operations Manual (2026)", by: "Compiled written guide, author not named", used: "When feed-only Performance Max fits and the three controls"}

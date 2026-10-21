@@ -1,0 +1,135 @@
+new_slug: buyer-research-plan-with-survey
+name: "Buyer research plan with survey"
+summary: "Give it your customer list and reward budget. Get a call plan, recruiting email and objection survey."
+job: understand-customers
+thinking: medium
+thinking_why: "It writes a plan, an email and survey questions from a few facts. A mid-size model does this well, and you review before you send."
+
+headline: "Buyer research plan with survey"
+subhead: Tell it what you sell, who is on your customer list and what you can spend on rewards. It plans about 20 buyer calls, writes the recruiting email, builds a written survey for buyers and non-buyers, and sorts answers into reasons they bought and reasons they did not.
+
+explain: |
+  Reviews and forums tell you what strangers say. Your own buyers can tell you more: why they chose you, what nearly stopped them, and what they want next. Most stores never ask, or ask with a tick-box form that only confirms what they already believed.
+
+  This skill plans the asking. First about 20 short calls with buyers, with a recruiting email that says it is to learn and not to sell, and a reward. Then a short written survey, with four or five open questions, sent to buyers and to non-buyers separately. Everyone who answers gets something, so more people reply. The skill also gives you a template that sorts answers into reasons bought and reasons not, and a rule: email results do not prove what cold traffic will do. It costs the rewards before you send.
+
+when:
+  - You have a customer list and want to know why people buy, and why others on your list do not.
+  - You are choosing ad angles, offers or the next product, and want the buyer's own reasons first.
+  - Your repeat rate or reviews dropped and you want to hear from people who left.
+
+you_give:
+  - Your customer list size, split into buyers, lapsed buyers and non-buyers
+  - What you sell and who buys it
+  - What you can spend on rewards, such as a free item, a credit or a donation
+  - Your brand voice or offer limits (optional)
+you_get:
+  - A call plan for about 20 calls of 30 minutes, or five for a small list, with the questions to ask
+  - A recruiting email that says it is to learn, with the reward and the time
+  - A four or five question open survey for buyers and another for non-buyers
+  - A reading template, a reward cost and a short list of tools to try
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it what you sell, how many buyers and non-buyers you have, and your reward budget.
+  - Read the plan and edit the email so it sounds like you. Check that you will ask permission before recording a call.
+  - Send the calls first. Once you have heard a few, send the survey to buyers and non-buyers as two lists.
+  - Paste the answers back and ask it to sort them with the reading template.
+
+how_it_works:
+  - title: Picks who to ask
+    text: Buyers, repeat buyers, people who left, and non-buyers on your list are asked separately.
+  - title: Sizes the calls
+    text: About 20 calls of 30 minutes, or five if your list is small. The 97 percent claim behind 20 is second-hand, so it is labelled a rule of thumb.
+  - title: Writes the invite
+    text: It says the call is to learn, gives the length and states the reward, such as a free item, early access or a donation.
+  - title: Builds the call guide
+    text: Open questions about why they use it, how they found it, the whole path from first hearing about it and how it felt.
+  - title: Writes the survey
+    text: Four or five open, written questions, such as the main reason they bought and what held them back, sent after the calls.
+  - title: Rewards everyone
+    text: A prize entry plus a small guaranteed credit, costed, with a reminder to check local prize rules.
+  - title: Adds audience tools
+    text: Tools that show where buyers spend time and what topics they discuss, as examples to try.
+  - title: Sorts the answers
+    text: Reasons they bought, reasons they did not, product requests, grouped by the job the buyer is hiring the product for.
+
+output_shape: |
+  WHO TO ASK
+  Buyers: <n> | Left or lapsed: <n> | Non-buyers: <n>
+
+  CALL PLAN (about 20 x 30 minutes; small version: 5)
+  Week 1: <...>  Week 2: <...>  Call guide: <questions>
+
+  RECRUITING EMAIL
+  Subject: <...>
+  <body: to learn, not a pitch; 30 minutes; the reward>
+
+  REWARD AND COST
+  <reward> x <people> = <cost> | total <...>
+
+  SURVEY (buyers and non-buyers): 4 to 5 open questions each
+
+  READING TEMPLATE
+  Reasons they bought: <theme> | count | quote
+  Reasons they did not: <theme> | count | quote
+  Product requests: <item> | count
+  Group by job to be done: <...>
+
+  TOOLS (examples): <audience tool>, <social listening tool>
+  RULES: consent noted | prize rules checked
+  NEXT: <one step>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: List size
+    how: With fewer than a few hundred on the list, run the calls and skip the survey. A small survey gives noise.
+  - what: The reward
+    how: Match it to your margin. A free item, early access or a donation costs less than cash. The source examples (a $1,000 giveaway, about $30 credit) are examples only.
+  - what: Who you invite
+    how: Include customers who left as well as fans. People who stopped buying tell you the most about what is wrong.
+  - what: Survey wording
+    how: Keep the questions written and open. Ask what the main reason was, not whether price mattered.
+  - what: What happens next
+    how: Say if you will turn answers into ad angles, an offer or a product idea. The plan then points the reading template at that goal.
+
+judge:
+  - The email says it is to learn and not to sell, and states length and reward.
+  - Every survey question is open and written.
+  - Buyers and non-buyers have their own questions and their own send.
+  - The reward is costed and any prize draw has a rules reminder.
+  - The 97 percent figure, if present, is labelled a rule of thumb.
+  - The reading template has both piles, reasons bought and reasons not.
+
+test:
+  - Send the email to five friendly customers first. Ask them what was unclear.
+  - Hold one call yourself using the guide. Check you can keep from pitching for the whole 30 minutes.
+  - Run the survey on ten people and see if the open answers are long enough to use.
+  - Compare the top reasons from the calls with those from the survey. If they differ a lot, trust the calls and look again.
+
+improve:
+  - Add your real reward options and limits to the skill file so the cost line is always right.
+  - Add your product's main objections as follow-up questions for the call guide.
+  - Add a consent line and a data note to the email that match your privacy policy.
+  - Save the reading template results to your brand file, with a date.
+  - Pair it with the Buyer identity segment finder to turn the identity answers into groups, and with the Forum and review avatar digger for the same questions asked of strangers.
+
+works_best_with:
+  tools:
+    - {name: "SparkToro", why: "Shows where an audience spends time and which sources influence it. Use it to choose where to look next."}
+    - {name: "Brand24", why: "Social listening that tracks topics and frustrations people post about, not only mentions of your brand."}
+    - {name: "Google Forms", why: "A free way to send the written survey and collect answers in a sheet."}
+    - {name: "Any good chat AI", why: "Writes the plan and email, and sorts the answers you paste in."}
+  inputs:
+    - "Your customer list with buyer, lapsed and non-buyer tags"
+    - "Call transcripts, with permission, so the AI can find shared themes"
+    - "Your current reasons-to-buy from reviews, to compare against what buyers say"
+    - "Your offer and margin, so the reward is sized right"
+
+terms:
+  - term: Job to be done
+    meaning: The progress a buyer is trying to make when they buy. Grouping answers by it is more useful than grouping by age.
+  - term: Social listening
+    meaning: Tracking what people post about a topic across social sites, to see their frustrations and questions.
+  - term: Non-buyer
+    meaning: Someone on your email list who has not bought yet.

@@ -1,0 +1,96 @@
+new_slug: monthly-profit-close
+name: Monthly profit close
+summary: Give it the month's sales and costs. Get a P&L set against last month and what to fix first.
+job: track-numbers
+thinking: high
+thinking_why: It runs up to nine skills, chooses its path from the month's numbers and does margin sums. Give it your strongest model.
+headline: Monthly profit close
+subhead: Give it the month's sales, costs and ad spend. It builds your P&L in the same layout as last month, explains the lines that moved, looks into a sharp drop in sales or margin, and hands back a short list of fixes to approve.
+explain: |
+  Most owners look at sales each day and at profit once a quarter, if at all. By then a rising shipping cost or a slipping margin has been eating profit for months. A close done by hand also changes shape from month to month, so you can't tell a real change from a different way of counting.
+
+  This agent closes the month the same way every time. In the first month it sets your unit costs, your rule for what counts as cost of goods and your P&L layout. After that it builds the P&L, sets it against last month, and writes the reason for each line that moved. If sales fell a lot, it splits the drop first. If margin fell, it checks your main products against the cost line that moved. It never changes a price, a budget or an entry in your accounts. You get a P&L and a short list of fixes.
+when:
+  - You want to know your real profit each month, not only your sales.
+  - Margin or profit slipped and you don't know which cost line did it.
+  - You want to see whether new customers pay for themselves, month after month.
+you_give:
+  - The month's costs and invoices, or a ledger export
+  - Orders, discounts, refunds, shipping collected and ad spend for the month
+  - Last month's P&L, from the second month on (it saves it for you after the first run)
+  - Your profit target and what changed this month (optional)
+you_get:
+  - A P&L in dollars, percent of revenue and per order, in the same layout as last month
+  - The lines that moved past the limit, each with its reason, and whether it is a one-off
+  - A fix-first list with the money each fix is worth
+  - A new versus returning customer split, and a cash lever ranking if profit is under target
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to close the month.
+  - In the first month, give it your invoices and sales. It sets the unit costs, the cost of goods rule and the layout, and saves them.
+  - From the second month, put the new exports in the same folder. It compares against last month's files.
+  - Read the list. Make the changes you agree with yourself, and have your accountant check the cost lines it flagged.
+  - Run it again on the 5th of next month.
+how_it_works:
+  - title: Set the rules once
+    text: In the first month it works out true unit costs, picks the cost of goods rule and saves the P&L layout.
+  - title: Refresh only what changed
+    text: It updates unit costs only when new supplier, freight or duty invoices came in, and sorts only the cost lines the rule doesn't cover.
+  - title: Build and compare
+    text: It builds the P&L in the saved layout, sets it against last month and writes the reason for each line that moved.
+  - title: Choose what to look into
+    text: If net revenue fell by over a tenth, it splits the drop into traffic, conversion and order value. If margin fell two points or more, it re-checks your main products.
+  - title: Check who pays for growth
+    text: It splits the P&L into new and returning customers when there are enough orders, and ranks cash levers if profit is under target.
+  - title: Hand back one list
+    text: It saves the month's line in its history, ranks the fixes by money and stops for your yes.
+output_shape: |-
+  THE MONTH
+    Net revenue <amount> (<change> vs last month) | Gross margin <%> (<points>) | Net profit <amount> (<change>)
+
+  WHAT MOVED, AND WHY
+    <line> | <change in $ and points> | <reason> | <one-off | trend>
+
+  PATH TAKEN
+    <first month | sales drop split | margin re-check | clean month>: <why>
+
+  FIX FIRST (at most 7)
+    1. <fix> | worth: <amount a month> | from: <step> | why: <reason>
+
+  WATCH NEXT MONTH
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <P&L file and each step's file> | MISSING: <every line>
+tweaks:
+  - what: The size of a move that counts
+    how: The starting point is 10 percent or two points. Set a tighter limit if your costs are steady, or a wider one if they swing with the season.
+  - what: Order tags
+    how: Tag first-time and returning customers on every order. Without tags the new versus returning split can't run.
+  - what: What changed this month
+    how: A sale, a price rise, a stock write-off or a new tool explains many moves. Tell it, and it names them as one-offs.
+  - what: Your P&L layout
+    how: Pick one layout in the first month and keep it. Changing it later makes months impossible to compare.
+judge:
+  - The P&L uses the same layout and cost of goods rule as last month.
+  - Every change is shown in dollars and points, with the sums.
+  - A margin drop is traced to a named cost line.
+  - One-offs are called one-offs, not fixed as trends.
+  - Nothing in your prices, budgets or accounts was changed without your clear yes.
+test:
+  - Run it on a past month where you know why profit moved. See if it finds the same cause.
+  - Run it twice on the same exports. The P&L and fix list should be the same, apart from wording.
+  - Give your accountant its P&L and cost line notes, and ask where their books differ.
+improve:
+  - Add your profit target so the fix list is sized against it.
+  - Save a note of which fixes you made each month, so the next close can check whether they worked.
+  - If your store is under a few hundred orders a month, remove the new and returning split from the run.
+  - Keep the rules file in your brand brain folder so other agents use the same cost of goods rule.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the close folder, read last month's files and run on a schedule.
+    - name: Your store platform and ad accounts
+      why: Export orders, refunds, discounts and ad spend for the same dates as your costs.
+  inputs:
+    - Supplier, freight and duty invoices for the month
+    - A note of every price change and sale you ran

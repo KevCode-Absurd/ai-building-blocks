@@ -1,0 +1,27 @@
+slug: top-customer-touch-planner
+name: "Top customer touch planner"
+summary: "Give it your customer list and budget. Get a top-50 touch plan and a control group."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [paul-graham]
+credits:
+  - {title: "Wild bets folder: unconventional offer, retention and CX plays for e-commerce owners", by: "Compiled research write-up (author not named)", used: "The staged plan from the top 50 customers, cost per kind of touch, and the control-group check"}
+  - {title: "Strategic Unorthodoxy: a framework for wild bets and unscalable actions in e-commerce", by: "Research report (author not named)", used: "Gifts that are useful items and not logo swag, random timing, and gifts for the buyer's inner circle"}
+  - {title: "The Wild Bets Playbook: a curated research document for e-commerce founders", by: "Compiled case-study document (author not named)", used: "The 20 customers exercise, the founder inbox test and the small gift experiment"}
+  - {title: "Do Things That Don't Scale", by: "Paul Graham", url: "https://paulgraham.com/ds.html", used: "Doing high-touch work by hand for early and best customers, and knowing it will not scale"}
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of an apparel brand, podcast interview", used: "Calling top spenders, a membership group with the product team in the room, and closing the loop on feedback"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, podcast interview", used: "Asking top customers to tell just one person"}
+  - {title: "Every Level of Marketing", by: "Orin, creator and marketing consultant, in conversation", used: "Direct contact with the top 10 percent of customers, seeding them with product and turning some into creators"}

@@ -1,0 +1,21 @@
+slug: offer-test-planner
+name: "Offer test planner"
+summary: "Give it your offers and buyer types. Get separate funnel tests, tags to track and a read-out rule."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: advanced
+inputs:
+  - {type: offer, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Most Valuable Subscription Video You'll Watch in 2026 (with Matthew Holman)", by: "Matthew Holman, interviewed by an email and SMS marketer", used: "Treating growth limits as an acquisition problem, the churn-cap sum, funnels by use case, the one-question quiz pop-up that tags buyer types"}
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "One offer per dedicated page, separate offers for new and returning buyers, a survey at 90 to 120 days, testing in Q1, and the seven ways offers fail"}

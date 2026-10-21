@@ -1,0 +1,129 @@
+new_slug: store-pl-builder
+name: "Store P&L builder"
+summary: "Give it your sales and costs. Get a four-bucket P&L with targets and the line to fix first."
+job: track-numbers
+thinking: high
+thinking_why: "It bridges revenue, sorts many costs into buckets and traces a miss up the page, so a stronger model keeps the sums and the logic straight. Check the totals against your accounts."
+
+headline: "Store P&L builder"
+subhead: "Give it your monthly sales, discounts, refunds, shipping and cost lines. It builds a profit and loss in four buckets, shows each line in dollars, percent of revenue and per order, works out the contribution margin you need, and ranks the line to fix first."
+
+explain: |
+  A store can grow sales and still keep no more profit. Accounting tools often show only net revenue, so a drop can hide in refunds or discounts, and shipping, fees and ads sit in different places each month. The numbers cannot be compared from one month to the next.
+
+  This skill starts from gross revenue and bridges to net revenue. It sorts costs into four buckets: cost of delivery, marketing, operating expenses, then profit. It divides every line by revenue and by orders so a shift of one or two points stands out. It works back from the net profit you want to the contribution margin you need. When a line misses, it looks at the lines above it. It shows two layouts for cost of delivery and you choose one for every month. Benchmarks are labelled with whose they are. It is not a statutory P&L.
+
+when:
+  - You want one monthly P&L that shows where the money goes, in the same layout every month.
+  - Sales are up but profit is flat and you need to find which bucket moved.
+  - You want to know what contribution margin your store needs to hit a net profit target.
+
+you_give:
+  - Your monthly P&L or an accounting export
+  - Shopify gross sales, discounts, refunds and shipping charged
+  - "Cost lines: product, freight, duties, fulfilment, payment fees"
+  - Marketing spend by channel, operating expenses and loan interest
+  - New-customer order counts (optional)
+you_get:
+  - A P&L in dollars, percent of revenue and per order
+  - A gross-to-net revenue bridge
+  - The contribution margin you need for your profit target
+  - Which lines moved and by how many points, and the bucket to fix first
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your P&L export and the Shopify sales figures for the month, and the months you want to compare.
+  - Pick one layout for cost of delivery and one rule for marketing, then keep them every month.
+  - Say your net profit target.
+  - Read the line it ranks first and fix that one before the others.
+
+how_it_works:
+  - title: Bridges gross to net revenue
+    text: Gross revenue minus discounts, refunds and chargebacks, plus shipping collected. Tax is kept out.
+  - title: Builds the cost of delivery
+    text: Product cost, import duty, inbound freight, shipping to the customer, pick and pack, payment fees and a refund and discount allowance.
+  - title: Offers two layouts
+    text: Fulfilment in its own bucket for product margin and contribution margin, or all of it in one cost of delivery bucket.
+  - title: Fills marketing and operating expenses
+    text: Marketing holds paid ads, influencer fees and events. Operating expenses hold people, software and office.
+  - title: Computes the margins
+    text: Contribution margin is revenue minus cost of delivery minus marketing. Loan interest sits below operating profit.
+  - title: Divides every line
+    text: Each line as a percent of revenue and per order, month on month.
+  - title: Back-solves the target
+    text: Net profit target plus operating expenses percent gives the contribution margin to hit.
+  - title: Ranks what to fix
+    text: A profit miss comes from operating expenses, marketing or delivery. It looks at the lines above the miss first.
+
+output_shape: |
+  STORE P&L  <store>  <months>  layout: <A: product cost + fulfilment / B: one cost of delivery>
+
+  REVENUE BRIDGE
+  Gross revenue <n> - discounts <n> - refunds <n> - chargebacks <n> + shipping collected <n> = net revenue <n>
+
+  P&L          $       % revenue   per order
+  Net revenue
+  Cost of delivery / product cost + fulfilment
+  Marketing
+  Contribution margin
+  Operating expenses
+  Operating profit
+  Interest
+  Net profit
+
+  CAC  marketing on new-customer orders <n> / contribution margin per order <n>
+
+  TARGET  net profit <x>% + operating expenses <y>% = contribution margin needed <z>%  (now <w>%)
+
+  WHAT MOVED  <line> moved <n> points from <prior> to <this>
+  FIX FIRST  <bucket>, because <reason from the lines above>
+
+  CHECKS MISSED: <none / list>
+  MISSING: <what>
+  Not a statutory P&L. Review with your accountant.
+
+tweaks:
+  - what: The layout
+    how: Choose product cost plus fulfilment, or one cost of delivery bucket. Pick one and keep it for every month.
+  - what: The marketing rule
+    how: Choose whether flexible content spend sits in marketing or operating expenses. Hold the rule steady.
+  - what: Months compared
+    how: Give at least three months. A three-month trailing average smooths months that bounce.
+  - what: Your profit target
+    how: Give a net profit percent. The skill works back to the contribution margin you need.
+
+judge:
+  - The revenue bridge adds up from gross to net.
+  - Payment fees are in cost of delivery, not operating expenses.
+  - Loan interest is below operating profit.
+  - Each benchmark is named as one speaker's range, not as a standard.
+  - The same layout is used for every month shown.
+
+test:
+  - Use a past month you know. Redo net revenue and contribution margin by hand and compare.
+  - Move a cost from one bucket to another and see whether the percent shifts as you expect.
+  - Give a profit target and check that the contribution margin you need adds up.
+  - Run it twice on the same data. The ranking of what to fix should match.
+
+improve:
+  - Add your chart of accounts to the skill file so cost lines are mapped the same way each month.
+  - Add your fulfilment staff wages per day and parcels per day, so the per-order cost is worked out.
+  - Save your chosen layout and marketing rule to your brand file.
+  - Pair it with the COGS line sorter before it, and the new and returning P&L splitter after.
+
+works_best_with:
+  tools:
+    - {name: "Your accounting tool", why: "Source of the P&L export. Ask your bookkeeper to tag costs by bucket."}
+    - {name: "Shopify", why: "Gives gross sales, discounts, refunds and shipping charged."}
+  inputs:
+    - "Your last three to six months of P&L"
+    - "Marketing spend by channel"
+    - "Fulfilment staff wages and parcels per day"
+
+terms:
+  - term: Contribution margin
+    meaning: Revenue minus cost of delivery minus marketing. What is left to cover running costs and profit.
+  - term: Cost of delivery
+    meaning: Every cost that moves with orders, from product cost to shipping to payment fees.
+  - term: CAC
+    meaning: Customer acquisition cost. Here, marketing spend divided by new-customer orders only.

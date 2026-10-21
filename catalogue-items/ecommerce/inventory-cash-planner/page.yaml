@@ -1,0 +1,124 @@
+new_slug: inventory-cash-planner
+name: "Inventory cash planner"
+summary: "Give it orders, lead time and unit cost. Get order timing, cash needed, a downside case and the raise."
+job: plan-supply-chain
+thinking: high
+thinking_why: "Timing, cash and several funding options have to line up, and a slip hides a cash hole. A stronger model catches more."
+
+headline: "Inventory cash planner"
+subhead: "Give it your order forecast, supplier lead time, unit cost and starting cash. It times each purchase order, shows the cash each one needs and the lowest cash point, runs a case with sales short, and compares ways to fund the gap."
+
+explain: |
+  Stock is paid for months before it sells. A store can show a profit every month and still run out of cash the week a big order is due. That is why many stores that sell well still fail: they cannot pay for the next batch.
+
+  This skill lays out your orders against the supplier's lead time and how long each batch must last. For each order it shows the cash due and the date. It then rolls cash forward month by month, using net income, less stock bought, plus the cost of the stock you sold. The lowest point is the raise you need. It then reruns the plan with sales 30 and 50 percent short and shows what you would tell suppliers. It compares supplier terms, a credit line, order financing and revenue-share financing as repayments. It does not recommend a lender.
+
+when:
+  - You are about to place a large or growing stock order and want to know if you can pay for it.
+  - Sales are growing and you keep running out of stock because cash is tight.
+  - You are choosing between supplier terms, a credit line or other funding for stock.
+
+you_give:
+  - Your monthly order forecast in units
+  - Supplier lead time in months, and how many months each order must cover
+  - Unit cost, starting stock and starting cash
+  - Monthly profit before stock purchases, and supplier terms (deposit, balance, days)
+  - Any credit line or retailer purchase orders (optional)
+you_get:
+  - A month-by-month stock table with order dates and sizes
+  - A cash table with the lowest point, the raise needed and the month
+  - Out-of-stock days under different supplier terms, and what cash caps your growth at
+  - A downside case and a cost comparison of the funding options
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your forecast, lead time, cycle time, unit cost, starting stock and cash, and your supplier terms.
+  - Say how many SKUs you have. With more than one, ask for one table per SKU.
+  - Read the lowest cash point and the downside case before you place the order.
+  - Take the terms to ask for to the Supplier payment terms planner, and slow stock to the SKU ad money planner.
+
+how_it_works:
+  - title: Sets the timing
+    text: An order placed today arrives after the lead time and must last the cycle. It fixes the order dates.
+  - title: Builds the stock table
+    text: Opening stock, plus arrivals, minus sales, gives closing stock. Stock never goes below zero.
+  - title: Prices each order
+    text: Units times unit cost, paid when you order, months before the stock sells.
+  - title: Rolls cash forward
+    text: Net income, less stock bought, plus the cost of stock sold. Profit looks smooth and cash does not.
+  - title: Finds the gap
+    text: The lowest cash point sets the raise. A 13-week view sits beside it.
+  - title: Tests supplier terms
+    text: Compares full prepay with a deposit and the rest on shipping, and counts out-of-stock days for each.
+  - title: Compares funding
+    text: Supplier terms, a credit line, order financing, revenue-share financing and equity, each shown as repayments from revenue.
+  - title: Writes the downside
+    text: Reruns with sales 30 and 50 percent short and writes what you would tell suppliers.
+
+output_shape: |
+  INVENTORY CASH PLAN  <store / SKU>
+  INPUTS  lead time <m> | cycle <m> | unit cost <$> | start stock <u> | start cash <$>
+  STOCK   month | opening | arrivals | sold | closing | order placed
+  CASH    month | profit | stock bought | cost of stock sold added back | cash end
+  LOWEST CASH  <$> in month <n> | raise needed <$> (incl. cushion <$>)
+  GROWTH CAP   next order limited to <units> by cash <$>
+  TERMS   full prepay: <d> days out of stock | deposit + balance on ship: <d> days
+  FUNDING  option | cost as repayments | effect on lowest cash | when it fits
+  DOWNSIDE  sales -30%: lowest cash <$> month <n> | -50%: <$> month <n>
+    What to tell suppliers: <...>
+  13-WEEK VIEW  <cash in, cash out, balance>
+  CHECKS MISSED: <none or list>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Lead time and cycle time
+    how: A longer lead time pulls the cash due earlier and raises the lowest point. Test the real lead time, plus a late-shipment case.
+  - what: Supplier terms
+    how: Put in the deposit and balance you can really get. A 20 percent deposit with the balance on shipping can cut out-of-stock days a lot.
+  - what: The forecast
+    how: Errors grow with lead time. Give a low, middle and high forecast and look at all three.
+  - what: How far sales fall short
+    how: Use 30 and 50 percent first, then the drop that would put you in real trouble.
+  - what: SKU count
+    how: One table per SKU, or group similar ones and say how.
+
+judge:
+  - Stock never goes below zero, or the gap is shown as out-of-stock days.
+  - Each order's cash is units times unit cost, on the date it is paid.
+  - The cash line uses stock bought, not only net income.
+  - Financing numbers are labeled as examples, not offers or advice.
+  - The downside case is written before the plan is called safe.
+  - A store with more than one SKU gets a table for each, or a stated grouping.
+
+test:
+  - Run it on last year, with the orders you really placed. The cash low it shows should match when you were tight.
+  - Run it twice with the same inputs. The order dates and lowest cash point should match.
+  - Change the lead time by one month and check that the order dates and cash move as you expect.
+  - Add up one order by hand, as units times unit cost on the right date.
+
+improve:
+  - Save your lead times, deposit terms and cost per unit in the skill file by supplier.
+  - Add your own rules, such as "keep two months of cash above the lowest point".
+  - Add the names of the funding sources you can actually use, with their real terms.
+  - Pair it with the Store financial model builder for the profit line and the Supplier payment terms planner for what to ask.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can lay out the tables and check the sums. Check one order by hand."}
+    - {name: "Excel or Google Sheets", why: "Holds the stock and cash tables with live formulas."}
+    - {name: "Shopify", why: "Gives your sales history and stock levels to build the forecast from."}
+  inputs:
+    - "Your supplier's written terms and quoted lead times"
+    - "Last year's sales by month"
+    - "Open purchase orders and their due dates"
+    - "Any credit line limit and rate"
+
+terms:
+  - term: Lead time
+    meaning: The time from placing an order with your supplier to the stock reaching your warehouse.
+  - term: Cycle time
+    meaning: The number of months a batch of stock has to last before the next one arrives.
+  - term: Cash conversion cycle
+    meaning: Days stock sits unsold, plus days waiting to be paid, minus days before you pay suppliers. It shows how long cash is stuck.
+  - term: Safety stock
+    meaning: Stock or raw material held back so you can fill orders fast if something sells out.

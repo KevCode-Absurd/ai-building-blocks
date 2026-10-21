@@ -1,0 +1,22 @@
+slug: category-and-trend-risk-checker
+name: "Category and trend risk checker"
+summary: "Name a category to enter. Get a score out of 100 on market size, trend risk and fit."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge, in an interview", url: "https://www.youtube.com/watch?v=2eGds8kLszE", used: "A checklist for a good consumable category, the margin target, and choosing products that can follow whichever trend is hot"}
+  - {title: "How Bloom Built the Playbook Every Founder Will Copy in 2026", by: "Greg, co-founder of Bloom", used: "Free daily demand checks, and rival speed as a risk when a new brand can copy a product in weeks"}
+  - {title: "How To Find And Validate Winning Products: The 16 Step Product Research Guide", by: "Michelle Bally, Learn with Shopify", used: "Checking search volume, trend shape, seasonality and where buyers live"}
+  - {title: "This Product Research Method Made Me $2.3M Dropshipping (LIVE HUNTING)", by: "Ben, a dropshipping YouTuber", used: "Searching the exact product term, not only its parent topic"}

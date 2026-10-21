@@ -1,0 +1,128 @@
+new_slug: product-margin-checker
+name: "Product margin checker"
+summary: "Give it a price and every cost. Get true margin, break-even ROAS and CAC, scored out of 100."
+job: track-numbers
+thinking: medium
+thinking_why: "It is careful arithmetic across many cost lines, and a mid-size model does that well if it shows its sums."
+
+headline: "Product margin checker"
+subhead: Give it a product's price and every cost, from the factory to the customer's door. It separates product margin, gross margin and contribution margin, then works out your break-even ROAS and break-even CAC. You get a go or no-go call and a score out of 100.
+
+explain: |
+  Most owners quote "margin" as price minus what the factory charged. That is product margin, and it is the wrong number for setting ad targets. A $100 tee with a $30 unit cost looks like a 70% margin. Add freight, shipping to the customer, pick and pack, payment fees and an allowance for returns and discounts, and the same tee can be a 24% margin. Ads priced against 70% will lose money on every sale.
+
+  This skill builds the full cost of delivery line by line, takes tax out of the price first, and shows three labelled margins side by side. It then turns gross margin into your break-even ROAS (1 divided by gross margin as a decimal) and break-even CAC (gross profit per order), and says how much of the price the product can spend on marketing. It scores the result and says what the score measures.
+
+when:
+  - You are about to launch a product and want to know what you can afford to spend on ads.
+  - Your ads look fine on paper but the bank balance does not agree.
+  - You are planning a sale and need to know what the margin is at the lower price.
+
+you_give:
+  - Selling price, excluding tax
+  - Unit cost, plus freight and duty per unit
+  - Shipping to the customer, pick and pack, and packaging per order
+  - Payment fee percent
+  - Your refund rate and average discount (use the last 90 days)
+
+you_get:
+  - Product margin against true gross margin, with the gap in dollars and points
+  - Break-even ROAS and break-even CAC
+  - The three margins, labelled product, gross (CM2) and contribution (CM3)
+  - A go or no-go flag and a score out of 100, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the price and every cost line. Use real shipping and warehouse quotes, not memory.
+  - Paste your return and discount rates from the last 90 days. For a new product, say they are guesses.
+  - Read the gap between product margin and gross margin first. That gap is the money your ad targets were missing.
+  - Run it again at your sale price before any promotion.
+
+how_it_works:
+  - title: Takes tax out of the price
+    text: It starts from the price the store keeps, not the price on the tag.
+  - title: Builds cost of delivery
+    text: Unit cost, freight per unit, duties, shipping to the customer, pick and pack, packaging and payment fees. Payment fees go here, not in overhead, because they rise and fall with sales.
+  - title: Adds the shrink allowance
+    text: A share of revenue set aside for returns and discounts, taken from your own last 90 days.
+  - title: Labels three margins
+    text: Product margin, gross margin (CM2) and contribution margin (CM3), so nobody quotes one and means another.
+  - title: Finds break-even
+    text: Break-even ROAS is 1 divided by gross margin. Break-even CAC equals gross profit per order.
+  - title: Sizes the marketing room
+    text: It shows how much of the price the product can spend on marketing and still leave a profit.
+  - title: Scores and flags
+    text: A score out of 100 for margin level, room for ads and how real the numbers are, with a go, fix or no-go call.
+
+output_shape: |
+  PRICE  <price excluding tax> | sale price run: <price or none>
+
+  COST OF DELIVERY (per order)
+  unit cost <$> | freight <$> | duty <$> | shipping out <$>
+  pick and pack <$> | packaging <$> | payment fee <$>
+  returns and discounts allowance <$> (<% from last 90 days / guess>)
+  total <$>
+
+  THE THREE MARGINS
+  product margin (price - unit cost) <$> | <%>
+  gross margin, CM2 (price - cost of delivery) <$> | <%>
+  contribution margin, CM3 (CM2 - marketing) <$> | <%> at <% of price> on marketing
+  gap between product and gross margin: <$> | <points>
+
+  BREAK-EVEN
+  ROAS <x> (1 / gross margin) | CAC <$> (gross profit per order)
+  marketing the product can carry: <% of price>
+
+  SCORE <n>/100 now: <what was measured>
+  margin level <n>/50 | room for ads <n>/30 | evidence <n>/20
+
+  FLAG <go | fix | no-go>
+  NEXT <first change>
+  MISSING: <cost line | rate | quote>
+
+tweaks:
+  - what: Where the cost numbers come from
+    how: Real quotes from your warehouse and carrier beat memory. Say "guess" next to any line you did not check, and the evidence score drops with it.
+  - what: Return and discount rates
+    how: Use your own last 90 days. Fashion can see returns anywhere from 10% to 80% by one source's claim, so a category average is a weak stand-in.
+  - what: Sale pricing
+    how: Run it twice, once at full price and once at the sale price. A 20% sale on a 50% margin item takes it to 37.5%, which a flat 50% assumption hides.
+  - what: Who packs your orders
+    how: If your own staff pack, turn their pay into a per-order figure. $400 a day over 100 parcels is $4 an order. Count it in cost of delivery, not overhead.
+
+judge:
+  - Product margin and gross margin appear side by side, each with its label.
+  - Every cost line has a number or is marked MISSING. Nothing is quietly left at zero.
+  - Break-even ROAS equals 1 divided by gross margin as a decimal. At 40% gross margin it is 2.5.
+  - Tax is out of the price before any margin is worked out.
+  - The score line shows what it measured and how.
+
+test:
+  - Run a product you know well. Compare its gross margin with the figure on your latest profit and loss report. A gap of more than a few points means a cost line is missing.
+  - Run the same inputs twice. The numbers should match to the cent.
+  - Take your best seller and your worst seller. The worst one should score lower, or you have not given it its real costs.
+  - Add the 20% sale price and check that the margin falls the way the maths says it should.
+
+improve:
+  - Add your carrier and warehouse rates to the skill file so shipping lines are never guessed.
+  - Put your usual refund and discount rates in your brand file, and update them every quarter.
+  - Change the marketing share it tests (the skill uses 20% of price) to the share your store really runs.
+  - Tag cost per item on every product in Shopify so margin stays live, including during sales.
+  - Pair it with the waterfall price setter when the answer is that the price is too low. Money figures are planning numbers, so check them with your accountant.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can do the sums if it shows its working. Check one product by hand first."}
+    - {name: "Shopify admin", why: "The Cost per item field on each product feeds live margin reports, so your numbers stay current."}
+  inputs:
+    - "Your last 90 days of returns and discounts, so the allowance is yours and not a guess"
+    - "A real quote from your 3PL or carrier, with pick, pack and packaging as separate lines"
+    - "Your current ROAS or CAC, so the score can compare it to break-even"
+
+terms:
+  - term: Contribution margin (CM3)
+    meaning: What is left after product cost, delivery cost and marketing. It is gross margin minus marketing.
+  - term: Break-even ROAS
+    meaning: The return on ad spend at which ads pay for themselves and no more. It is 1 divided by gross margin.
+  - term: Shrink allowance
+    meaning: A share of revenue set aside for returns and discounts.

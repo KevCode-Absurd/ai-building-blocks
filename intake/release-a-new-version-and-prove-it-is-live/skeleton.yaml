@@ -1,0 +1,49 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: release-a-new-version-and-prove-it-is-live
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: release-a-new-version-and-prove-it-is-live
+  name: "Release a new version and prove it is live"
+  summary: "Give it your project. Get a version, a changelog, a go or no-go call, a live deploy and proof it is new."
+  when: "you are shipping a new version and want to be sure what visitors see is the one you built."
+  job: ship-and-host
+  level: intermediate
+steps:
+  - name: "Release preparer"
+    skill: release-preparer
+    job: ops
+    from: "library"
+    method: ["Find your version files and changelog", "Read the changes since the last tag", "Pick the version bump", "Write the changelog and tag the release"]
+    inputs: [codebase]
+    outputs: [code_change, document]
+    note: "Sets the version and writes the changelog from your commits."
+  - pause: "Review the version bump and changelog, merge them and tag the release."
+  - name: "Ship readiness gate"
+    skill: ship-readiness-gate
+    job: ops
+    from: "library"
+    method: ["Detect your stack", "Run the automatic checks: build, tests, secrets, config", "Confirm what a tool cannot check by asking you", "Give a go or no-go with the blockers listed"]
+    inputs: [codebase]
+    outputs: [audit_report]
+    note: "Checks the tagged release and gives a go or no-go before anything goes live."
+  - pause: "Fix every blocker it lists. If it said no-go, run the gate again until it says go."
+  - name: "Vercel publisher"
+    skill: vercel-publisher
+    job: ops
+    from: "library"
+    method: ["Check you are signed in to Vercel", "Deploy a preview first", "Promote to production when the preview looks right", "Return the live link"]
+    inputs: [codebase]
+    outputs: [deploy_url]
+    note: "Puts the cleared release live and returns the link."
+  - name: "Deploy verifier"
+    skill: deploy-verifier
+    job: ops
+    from: "library"
+    method: ["Check the silent ways a deploy can pass while the old version stays up", "Read the build and commit shown by the live site", "Compare them with the release you tagged", "Say shipped only when they match"]
+    inputs: [codebase, deploy_url!]
+    outputs: [audit_report]
+    note: "Opens the live link from the step before and proves it serves the new build, not the old one."

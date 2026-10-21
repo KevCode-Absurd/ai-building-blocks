@@ -1,0 +1,124 @@
+new_slug: repeat-order-bottleneck-finder
+name: "Repeat order bottleneck finder"
+summary: "Give it your order export. Get a repeat health score out of 100 and the one stage to fix first."
+job: keep-customers
+thinking: high
+thinking_why: "It works through an order export, builds cohorts and ranks causes, so a stronger model makes fewer counting mistakes."
+
+headline: "Repeat order bottleneck finder"
+subhead: Give it your order export. It measures first-to-second order rate, gross profit per customer at 90, 180 and 365 days, and the share from your top 20 percent of customers. You get a repeat health score out of 100, the one stage to fix first, a ranked list of causes and tests.
+
+explain: |
+  Stores often work on the wrong repeat problem. They polish email flows when the product range gives people no reason to return, or they build a VIP club when too few first-time buyers place a second order. Under roughly $10 to $20 million a year, the source expects first-to-second order conversion to be the bottleneck, not VIP revenue.
+
+  This skill splits the customer path into three stages: win the customer, turn first orders into second orders, and grow revenue from your top 20 percent. It measures each one by cohort, using gross profit over a fixed window, not revenue and not an open-ended "lifetime". Then it checks causes from the top down, product quality first and email last, because email amplifies a healthy base and cannot rescue a broken one. It also warns against Shopify's returning-customer percent, which is not a repeat rate.
+
+when:
+  - You have a repeat problem but do not know whether to fix the product, the offer, the flows or who you acquire.
+  - Your email revenue looks fine but second orders stay low.
+  - You are about to launch a VIP program and want to know if it is the right next move.
+
+you_give:
+  - An orders export with customer id, date, order value, discount code and refund
+  - Your email platform's flow and campaign revenue (optional)
+  - Your product list, marking which products are consumable
+  - Review or survey comments (optional)
+you_get:
+  - First-to-second order rate and 90, 180 and 365 day gross profit per customer, by cohort
+  - The share of revenue and profit from your top 20 percent of customers
+  - The single bottleneck stage, with evidence, and a ranked list of causes checked top down
+  - A test list tied to the bottleneck, and a repeat health score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your orders export. Add product cost if you have it, so it can use gross profit.
+  - Add review or survey comments and your email revenue if you have them.
+  - Read the bottleneck first, then the causes, then pick two tests from the list.
+  - Run it again in a quarter on the next cohort to see if the bottleneck moved.
+
+how_it_works:
+  - title: Splits the path
+    text: Three stages, acquire, convert first to second order, and grow the top 20 percent. First-to-second tracks 90-day value, and the top 20 percent tracks 365-day value.
+  - title: Measures by cohort
+    text: Lifetime gross profit over fixed windows of 30, 60, 90, 180 and 365 days, by first-order month.
+  - title: Drops the wrong metric
+    text: Does not use Shopify's percentage of returning customer orders as a repeat rate.
+  - title: Reads email with care
+    text: Treats email-attributed revenue as direction only. About 30 percent or more of revenue from email and SMS means reach, not proof.
+  - title: Checks causes top down
+    text: Product quality, product range, acquisition quality, experience, then email and SMS last.
+  - title: Names the bottleneck
+    text: Picks the one stage to fix first, with the numbers, and checks the VIP rule.
+  - title: Scores and lists tests
+    text: Gives a repeat health score and tests that attack the bottleneck, not subject lines.
+
+output_shape: |
+  REPEAT HEALTH SCORE <n>/100 (what it measures: how healthy your repeat base is, in three parts)
+  1 12-month repeat rate     <pts>/40  <x%> band: <problem|average|good|excellent>
+  2 Cohort trend             <pts>/30  90-day gross profit per customer: <up|flat|down>
+  3 Causes clear             <pts>/30  <layers with no problem found, of those checked>
+
+  STAGE NUMBERS
+  First-to-second order: <x%> | GP per customer: 90d <$> 180d <$> 365d <$>
+  Top 20 percent: <x%> of revenue, <y%> of profit
+  Email and SMS share of revenue: <x%> (direction only)
+
+  BOTTLENECK: <stage> because <evidence>
+
+  CAUSES, TOP DOWN
+  1 Product quality: <finding> | 2 Range: <finding> | 3 Acquisition: <finding> | 4 Experience: <finding> | 5 Email and SMS: <finding>
+
+  TESTS FOR THE BOTTLENECK
+  <test, measure, run time>
+
+  ROUTE TO: <next skill>
+  NOT RUN: <part, and what is needed>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Product cost
+    how: Add cost of goods per product. With it, the skill uses real gross profit. Without it, it falls back to revenue after discounts and refunds and says so.
+  - what: Which products are consumable
+    how: Mark them. A consumable repeat rate is higher than a luxury one, and the bands shift.
+  - what: Review and survey comments
+    how: Paste them. The product quality layer is read from real customer words, not your own view.
+  - what: First-order sources
+    how: Add the channel for each customer. It makes the acquisition-quality layer testable.
+
+judge:
+  - Every number names its window and its cohort.
+  - The bottleneck is one stage, with the evidence next to it.
+  - Causes are checked top down, and email comes last.
+  - Benchmarks are shown as vendor data, with your own cohorts as the baseline.
+  - Tests aim at the bottleneck, not at subject lines or small timing changes.
+
+test:
+  - Recompute the first-to-second order rate for one cohort in your own spreadsheet. It should match.
+  - Check that the top 20 percent share adds up to the totals.
+  - Run it on a different date range. The bottleneck should not flip unless something changed.
+  - Pick one test and run it. Compare the next cohort's first-to-second rate with the last.
+
+improve:
+  - Set your own repeat-rate bands in the skill file once you have your own history.
+  - Add your product's natural reorder time, so the window for a second order fits it.
+  - Add your acquisition channels as a standing layer in the causes check.
+  - Pair it with the Subscription churn audit if you sell subscriptions, and with the Best and worst customer profiler when acquisition quality is the cause.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its order export gives customer ids, dates, values, discounts and refunds."}
+    - {name: "Klaviyo", why: "It gives flow and campaign revenue so you can see the email and SMS share."}
+    - {name: "Any good chat AI", why: "Any current chat AI that reads a spreadsheet can build the cohorts."}
+  inputs:
+    - "Cost of goods per product"
+    - "Net promoter score or review text"
+    - "Acquisition channel per customer"
+    - "Shipping times and return reasons"
+
+terms:
+  - term: Cohort
+    meaning: A group of customers whose first order was in the same month.
+  - term: Gross profit per customer
+    meaning: Sales minus product cost, discounts and refunds, per customer, over a set window.
+  - term: Repeat rate
+    meaning: The share of customers who buy more than once in a period.

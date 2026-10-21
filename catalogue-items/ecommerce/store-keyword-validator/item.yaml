@@ -1,0 +1,25 @@
+slug: store-keyword-validator
+name: "Store keyword validator"
+summary: "Paste products and keyword data. Get keywords worth a page, page types and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Complete Shopify SEO Optimization Masterclass For Beginners in 2025", by: "A Shopify and e-commerce educator running a live workshop", used: "The four-point test for a money keyword: commercial intent, volume, difficulty under 40 and cost per click over a dollar"}
+  - {title: "Steal These Shopify SEO Hacks To Rank #1 Overnight", by: "Dave Fogerty, founder of a wearable blanket brand and a founder-coaching programme", used: "Difficulty under 35 for collection variants, and googling the term to see what ranks"}
+  - {title: "Shopify SEO Optimization Guide for Beginners 2026", by: "Christian, a Shopify consultant", used: "One main and two supporting keywords per page, and free ways to find ideas"}
+  - {title: "Semrush Tutorial 2026 - Master SEO & AEO with Semrush One", by: "A presenter in a tutorial sponsored by the tool maker", used: "The Missing and Weak tabs of a keyword gap, and a quick-win example near position 36"}
+  - {title: "Learn Everything About SEO & AI SEO in 50 Minutes!", by: "An SEO educator from an SEO software company's channel", used: "Reading intent from the top 10 results, and the demand, fit, intent and difficulty test"}
+  - {title: "$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes", by: "An e-commerce SEO agency owner", used: "Using the bid range in Google's free keyword tool as a stand-in for difficulty"}

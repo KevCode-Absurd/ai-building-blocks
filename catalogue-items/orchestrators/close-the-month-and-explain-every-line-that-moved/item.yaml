@@ -1,0 +1,23 @@
+slug: close-the-month-and-explain-every-line-that-moved
+name: "Close the month and explain every line that moved"
+summary: "List your close tasks. Get a dated close plan, sorted costs, accruals, draft statements and a written reason for each big move."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: spreadsheet, required: true}
+outputs:
+  - {type: document}
+uses: [month-end-close-planner, expense-sorter, accrual-schedule-drafter, financial-statement-preparer, variance-commentary]
+steps:
+  - {uses: month-end-close-planner, note: "Sets the order for the whole close. Accruals wait for sub-ledgers, statements wait for accruals, and commentary comes last."}
+  - {uses: expense-sorter, note: "Works on the transactions the plan calls for, and gives you clean totals by cost type."}
+  - {uses: accrual-schedule-drafter, note: "Uses the sorted costs to see what is already booked, and drafts entries for what is missing."}
+  - {uses: financial-statement-preparer, note: "Builds the statements from the trial balance that now includes the accruals you posted."}
+  - {uses: variance-commentary, note: "Compares the new statements with last month and explains every line past your limit."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/close-the-month-and-explain-every-line-that-moved/skeleton.yaml

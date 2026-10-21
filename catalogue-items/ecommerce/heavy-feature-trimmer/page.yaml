@@ -1,0 +1,124 @@
+new_slug: heavy-feature-trimmer
+name: "Heavy feature trimmer"
+summary: "Give it your homepage and collection page. Get each slider, popup and video judged, and a score."
+job: speed-up-store
+thinking: medium
+thinking_why: "It judges features against click data and speed cost. A mid-size model does this well when it can see the pages."
+
+headline: "Heavy feature trimmer"
+subhead: "Give it your homepage, collection and product page addresses, plus your theme and the popups and videos you use. It judges every slider, quick view, popup, video and animation as keep, change or remove, and scores how light your pages are out of 100."
+
+explain: |
+  Many store features are there because a theme offers them, not because shoppers use them. A slider with five slides, a quick view button on every product, a video that starts by itself, a popup that opens at once, fade-ins on every section. Each one adds code and files that load before the page is useful.
+
+  This skill looks at your pages and goes through those features one by one. It uses your click or heatmap data, if you have it, to decide which features earn their weight, and suggests a lighter replacement for each that does not: a single strong hero, a thumbnail video that loads on tap, a popup that waits. It also gives advice on your theme, with care: it won't tell you to move a working store to a new theme only for speed.
+
+when:
+  - "Your homepage has a slider, an autoplay video or many animations."
+  - "Collection pages feel slow with 20 or more products."
+  - "You're picking or changing a theme."
+
+you_give:
+  - "The addresses of your homepage, a collection page and a product page"
+  - "Your theme name and settings, and the popup and video apps you use"
+  - "Heatmap or click data (optional, but it decides most verdicts)"
+
+you_get:
+  - "A list of heavy features with what each costs, and keep, change or remove"
+  - "A replacement for each (static hero, lite video embed, thumbnail)"
+  - "Theme advice"
+  - "A score out of 100 for how light your pages are, now and after the changes, with the sum shown"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Give the addresses of your homepage, one collection and one product page, and attach screenshots."
+  - "List your theme and every popup, video and effect app you know about."
+  - "Add click or heatmap data if you have it, such as whether anyone uses quick view."
+  - "Make one change at a time on a duplicate theme and run PageSpeed three times after each."
+
+how_it_works:
+  - title: Checks quick view
+    text: Quick view can load product data for 20 to 30 items on a collection page. It looks at clicks, then removes it or loads data only after the click.
+  - title: Judges sliders
+    text: Four to five slides cost load time. One strong hero, or two or three static sections, replaces an auto-rotating carousel.
+  - title: Replaces video embeds
+    text: A standard YouTube embed becomes a lite embed that loads only a thumbnail until tapped. Autoplay is off on mobile.
+  - title: Times popups
+    text: Popups trigger on exit intent or after a delay, not when the page loads.
+  - title: Removes effects
+    text: Fade-ins and transitions on first-screen content go, because each needs library code before the image shows.
+  - title: Cleans redirects
+    text: Fixes 302s and chains, uses 301s, and fixes missing image, style and script requests.
+  - title: Advises on the theme
+    text: A clean, simple theme beats one with every option. Weighs the cost of fixing against rebuilding.
+  - title: Scores the pages
+    text: Counts what is costly and what can go, and gives a score now and after.
+
+output_shape: |
+  HEAVY FEATURE REVIEW  <store>, <date>
+  LIGHTNESS SCORE  <n>/100 now (100 - <deductions> = <n>)
+                   <n>/100 after the changes
+
+  FEATURE | WHERE | WHAT IT COSTS | DO SHOPPERS USE IT? | VERDICT | REPLACEMENT
+  <feature> | <page> | <cost> | <click data or unknown> | <keep | change | remove> | <lighter option>
+
+  REDIRECTS AND BROKEN LINKS
+  <chain or 404 request> | <fix>
+
+  THEME ADVICE
+  <keep | fix | consider a newer theme> because <reason>
+
+  ORDER OF CHANGES
+  1. <one change, on a duplicate theme> 2. <...>
+
+  NOT RUN
+  <what needs data>
+  MISSING: <what>
+
+tweaks:
+  - what: Click or heatmap data
+    how: Add it. A feature shoppers use, such as a sizing chart or reviews, may earn its weight. Without data the skill marks the verdict as a guess.
+  - what: Which pages
+    how: Give the homepage, a collection with 20 or more products, and a product page. Each has different heavy features.
+  - what: Theme details
+    how: Give the theme name and its age. An old, custom or heavy theme changes the advice.
+  - what: Your apps
+    how: List popup, video and slider apps. They are the usual source of heavy features.
+
+judge:
+  - "Verdicts rest on click or conversion data where you gave it, and say 'guess' where you didn't."
+  - "Features that earn their weight, such as a sizing chart or reviews, are kept."
+  - "Every remove or change comes with a lighter replacement."
+  - "The agency's bounce claim and the small theme test are shown as one quote and one test, not as results to expect."
+  - "It does not tell you to switch themes just for speed."
+  - "The score sum matches the verdicts."
+
+test:
+  - "Run it on a homepage you know has a five-slide slider. It should mark the slider change or remove."
+  - "Give it click data that shows quick view is used a lot. It should keep it, with data loaded after the click."
+  - "Run it twice on the same input. The verdicts should match."
+  - "After one change on a duplicate theme, run PageSpeed three times. Check the score and the real feel of the page."
+
+improve:
+  - "Add your own list of features you never remove, such as a sizing chart or a size-based reviews widget."
+  - "Add your own click data thresholds, such as 'remove anything under 1% of clicks'."
+  - "Write your theme's names for sliders, popups and effects so the skill points to the right settings."
+  - "Pair it with the app script auditor and the hero image loading fixer."
+
+works_best_with:
+  tools:
+    - {name: "Google PageSpeed Insights", why: "Shows how heavy a page is and which files cost the most."}
+    - {name: "A heatmap tool such as Microsoft Clarity", why: "Free click maps show whether shoppers use quick view, sliders and popups."}
+    - {name: "Shopify theme library", why: "Lets you try a free default theme on a copy before you decide."}
+  inputs:
+    - "Click map or heatmap screenshots for the homepage and a collection page"
+    - "A list of every popup, video and animation app"
+    - "Your mobile and desktop PageSpeed scores for the pages"
+
+terms:
+  - term: Quick view
+    meaning: A button on a product card that opens a small window with the product, without leaving the collection page.
+  - term: Lite embed
+    meaning: A light stand-in for a video that shows a small thumbnail and loads the real player only when tapped.
+  - term: Exit intent
+    meaning: A popup that appears when the visitor moves to leave the page.

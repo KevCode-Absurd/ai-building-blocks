@@ -1,0 +1,79 @@
+new_slug: find-where-new-users-leave-and-prove-the-fix-works
+name: Find where new users leave and prove the fix works
+summary: Give it your funnel numbers. Get the biggest leak, a one-morning test and a result check.
+job: build-product
+thinking: high
+thinking_why: It reads your numbers, plans a test from what it finds, then judges a second set of numbers. Give it your strongest model.
+headline: Find where new users leave, fix it and see if it worked
+subhead: Give it your visits, sign-ups and users still active after 30 days. It finds the biggest leak, plans a one-morning test of the fix with real people, and after you ship it and wait, checks whether the numbers moved.
+explain: |
+  When people sign up and then vanish, the usual reaction is to build another feature. But a new feature mostly reaches the few people who already use the product a lot. The people you are losing never see it. Meanwhile nobody can say if the last change helped, because nobody wrote down what to measure.
+
+  The first step lays out your funnel and finds the biggest drop, then plans one change to the first visit with a measure and a date. The second step turns that leak into a small test: three people plus one outsider, a script, and a short fix list. Then you pause. You run the test, ship the fix and wait two weeks. When you bring back the new numbers, the last step sets them against the old ones and tells you what moved, what did not and what to do next.
+when:
+  - Sign-ups look fine but few people are still around a month later.
+  - Your team wants a new feature to bring users back and you are not sure it will reach them.
+  - You shipped a change and cannot tell whether it helped.
+you_give:
+  - Visits, sign-ups and users still active at 30 days, for one named period
+  - What the goal of a new user is, in a sentence
+  - The page or the first five clicks of a new visit (optional)
+  - A description of your typical new user (optional)
+  - A second export of the same numbers, two weeks after you ship the fix
+you_get:
+  - A funnel with the share kept at each step and the biggest leak named
+  - The few actions that mark an active user, and one first-visit change with a target and a date
+  - A one-morning test plan with tasks, a read-aloud script and a short fix list
+  - A scorecard of what moved after the fix, against your target, with what to do next
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your funnel numbers for one named period. Do not mix periods.
+  - Stop after step 2, run the test, ship the fix and wait two weeks.
+  - Come back with the new export and run step 3 to see what moved.
+how_it_works:
+  - title: Find the leak
+    text: Lays out visits, sign-ups and 30-day users with the share kept at each step, names the biggest drop and plans one first-visit change with a measure and a date.
+  - title: Plan a one-morning test
+    text: Picks three to five tasks at the leak and plans three testers plus one outsider. Writes a script that tests the product and not the person. Builds a short fix list.
+  - title: Pause, test, ship and wait
+    text: You run the test, ship the first-visit fix and wait two weeks. Then you export the same numbers again for the same length of time.
+  - title: Check the result
+    text: Sets the new numbers against the old ones and your target. Says what moved, why it likely moved and what to do next.
+output_shape: |-
+  STEP 1: DROP-OFF
+    Funnel with shares | biggest drop | missing first-visit step | active-user actions | one change with measure, target, date
+
+  STEP 2: TEST PLAN
+    Tasks | people | read-aloud script | watcher rules | note sheet | fix list | next round
+
+  PAUSE: run the test, ship the fix, wait two weeks, export again
+
+  STEP 3: RESULT CHECK
+    Scorecard against target | what moved and why | bright spots | concerns | next actions
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your period
+    how: Use the same length of time before and after, such as 30 days each. Different lengths make the comparison unfair.
+  - what: Your product type
+    how: Say if it is an app, a site or a tool. The first-visit change differs for each.
+  - what: Your target
+    how: Give a number for the share of sign-ups still active at 30 days. Step 3 judges the result against it.
+  - what: Who tests
+    how: Tell step 2 who you can really get in a morning. It plans around them.
+judge:
+  - Every count in the funnel comes from your numbers, and a missing count is marked, not guessed.
+  - The leak it names is the biggest share lost, not the loudest complaint.
+  - Only one change is planned, and it has a measure, a target and a date.
+  - The test tasks are things a new person really does, and the script gives no hints.
+  - The result check compares like with like periods and does not claim the fix caused a move it cannot show.
+test:
+  - Redo the funnel shares by hand. They should match step 1.
+  - Check that the test tasks sit at the leak step 1 named.
+  - After the wait, check that the new export covers the same length of time as the old one.
+improve:
+  - Keep each round's numbers in one sheet, so the next check has more than two points.
+  - Repeat the test every month with new people. Small rounds repeated beat one big test.
+  - If the number did not move, test the next biggest drop, not a new feature.

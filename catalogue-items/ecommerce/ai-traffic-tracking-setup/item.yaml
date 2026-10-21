@@ -1,0 +1,24 @@
+slug: ai-traffic-tracking-setup
+name: "AI traffic tracking set-up"
+summary: "Give it your analytics and checkout. Get an AI traffic channel, a post-purchase question and a redirect list."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: tool_connection, required: false}
+outputs:
+  - {type: plan}
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "AI SEO Course for Beginners: Complete AEO Tutorial", by: "Sam Oh", used: "The GA4 channel group steps, which sources to match, how each platform undercounts, bot analytics and AI-made 404s"}
+  - {title: "Learn 80% of AEO in 19 Minutes", by: "Sam Oh", used: "The 'how did you hear about us' question and its placement"}
+  - {title: "The Head of Growth at a $100M Company Explains AEO", by: "Ravish Agrawal, consumer software growth lead, on a distribution podcast", used: "Reading AI as a channel that works like search but is measured by self-report"}
+  - {title: "The ultimate guide to AEO: how to get ChatGPT to recommend your product", by: "Ethan Smith, SEO agency CEO, on a product-growth podcast", used: "AI visits hide as direct or branded traffic, and shopping answers are more clickable"}
+  - {title: "SEO Full Course 2026 for beginners", by: "A course instructor", used: "The Tag Manager steps for add to cart events and the funnel check"}

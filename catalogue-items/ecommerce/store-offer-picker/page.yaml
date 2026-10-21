@@ -1,0 +1,120 @@
+new_slug: store-offer-picker
+name: "Store offer picker"
+summary: "Give it margin, order mix and repeat rate. Get the offer types to test first, with the maths."
+job: make-offer
+thinking: medium
+thinking_why: "It weighs a few trade-offs and does simple maths, so a mid-size model works if the inputs are complete."
+
+headline: "Store offer picker"
+subhead: Give it your margin, your order sizes, how many products you sell and how often customers reorder. It names the trade your store most needs, picks two or three offers to test first with the maths for each, and lists what to avoid.
+
+explain: |
+  Most stores call a discount an offer and stop there. A discount is one of five ways to change what a buyer gets, and it is usually the worst place to start. Every offer swaps some unit margin for something else: a higher conversion rate, a bigger cart or more repeat orders. The right pick depends on your margin, your order mix, whether you have one hero product, and how often people reorder.
+
+  This skill asks those questions first and reads your order sizes as a spread, not an average. It names the trade your store most needs, then picks two or three offers from five mechanics: repositioning, bundles, a gift with purchase, tiers and thresholds, and straight discounting. For each pick you get the maths and a test plan. It also runs a seven-point failure check before anything goes live.
+
+when:
+  - You want to improve your offer and don't know whether to change price, bundle, add a gift or start a subscription.
+  - Your conversion rate is fine but your AOV or your repeat rate is the problem.
+  - You are about to put a discount on everything and want to know what else you could test.
+
+you_give:
+  - Gross margin per product, with shipping and fulfilment counted
+  - Your AOV and a list of order sizes (not only the average)
+  - How many products you sell, and whether one is your hero product
+  - How often customers reorder, and the cash you could spend on slower payback
+  - Customer reviews or survey answers about their biggest doubt (optional)
+you_get:
+  - The one margin trade your store most needs, with the reason
+  - A shortlist of two or three offers, ranked by margin impact, each with its mechanic
+  - "The maths per offer: AOV, gross margin, break-even ROAS and target CAC"
+  - A test plan on separate pages, and what not to do for your store
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your margins, your order sizes and your repeat behaviour. Say how many products you sell and how much cash you can wait on.
+  - Add what customers say stops them buying, if you have it.
+  - Read the trade it picks first, then the shortlist. Check each pick with the discount impact checker.
+  - Run one test at a time and come back after 90 to 120 days.
+
+how_it_works:
+  - title: Name the trade
+    text: Decides whether the store needs a higher conversion rate, a bigger cart or more repeat orders, because every offer swaps unit margin for one of those.
+  - title: Ask four questions
+    text: Margin floor with shipping counted, the spread of order sizes, one hero product or many, and how often people reorder.
+  - title: Read the order spread
+    text: Looks for one peak or two in order values, because an average-based threshold misses both.
+  - title: Pick from five mechanics
+    text: Repositioning, bundles, gift with purchase, tiers and thresholds, or discounting, matched to your store type.
+  - title: Split new and returning buyers
+    text: Writes one offer for first purchase profit and another for deepening the repeat cycle.
+  - title: Run the failure check
+    text: Tests the plan against seven common offer mistakes and checks that ad, page, cart and email say the same thing.
+  - title: Plan the tests
+    text: Gives a one-line test per offer and when to look at the results.
+
+output_shape: |
+  THE TRADE  <conversion | cart size | repeat orders>, because <reason>
+
+  THE ANSWERS
+  margin floor <%> | order spread <one peak at $ / two peaks at $ and $>
+  products <hero / many> | repeat <low / high> | cash for slower payback <$>
+
+  SHORTLIST (best margin impact first)
+  1 <offer> | mechanic <...> | new or returning <...>
+    AOV <$> | gross margin <%> | break-even ROAS <x> | target CAC <$>
+    test: <one line, on its own page>
+  2 <offer> ...
+
+  NOT FOR THIS STORE  <what to skip and why>
+
+  SEVEN FAILURES CHECK  <pass or fail for each of the seven>
+  ONE VOICE CHECK  <ad, page, cart, email say the same offer>
+  REVIEW DATE  <90 to 120 days>
+  MISSING: <margin | order list | repeat rate | cash>
+
+tweaks:
+  - what: The order list
+    how: Paste real order values, not just the average. Two peaks change the advice a lot.
+  - what: Shipping cost
+    how: Give shipping cost for one, two and three units. Bundles often save more than you expect.
+  - what: Cash
+    how: Say how many days of slower payback you can fund. A subscription-led pick needs about 90 days of it.
+  - what: Customer doubts
+    how: Paste reviews or survey answers. The offer should answer the biggest doubt, not a guess.
+
+judge:
+  - The first thing it names is a trade (conversion, cart size or repeat), not a discount level.
+  - The shortlist has two or three offers, not ten.
+  - Each pick has maths you can check against your own numbers.
+  - Discounting is not the lead pick unless your numbers say so.
+  - Each of the seven failures is marked pass or fail with a reason.
+
+test:
+  - Give it a store you know well and compare its trade to what you already believe is the problem. If they differ, ask it to show the numbers.
+  - Remove the order list and run it again. It should say the order spread is missing and not guess.
+  - Change the repeat rate from low to high. The shortlist should change.
+  - Run the first pick through the discount impact checker. The maths should agree.
+
+improve:
+  - Add your real margins and order spread to your brand file so each run starts from facts.
+  - Add offers you already tried and what happened, so it does not suggest them again.
+  - Add your own customer doubts to the skill file as a standing list.
+  - Pair it with the order threshold planner and the cart upsell planner for the detail behind each pick.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its reports export order values, units per order and repeat rate."}
+    - {name: "Google Sheets", why: "Good for a quick order-size histogram before you paste the numbers in."}
+  inputs:
+    - "An order export with order totals and units per order"
+    - "Survey answers on what nearly stopped buyers"
+    - "Your shipping rate table"
+
+terms:
+  - term: Hero product
+    meaning: The one product that brings in most of your sales and most of your new customers.
+  - term: Mechanic
+    meaning: The way an offer changes what a buyer gets, such as a bundle or a gift.
+  - term: Contribution margin
+    meaning: What is left of an order after product cost, shipping, fulfilment and fees.

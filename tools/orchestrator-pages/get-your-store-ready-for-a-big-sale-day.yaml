@@ -1,0 +1,77 @@
+new_slug: get-your-store-ready-for-a-big-sale-day
+name: Get your store ready for a big sale day
+summary: Give it your homepage and collection page. Get heavy features and apps cut, plus a speed budget and sale-day checklist.
+job: speed-up-store
+thinking: high
+thinking_why: It judges features and apps across three skills and sets a budget. Give it your strongest model.
+headline: Get your store fast before sale traffic arrives, and keep it fast
+subhead: Give it your homepage, a collection page and a product page. It judges each heavy feature and each app, tells you what to cut before the sale, then sets a speed budget, a freeze rule and a sale-day checklist.
+explain: |
+  Sale day sends the most visitors you will see all month to a store that is often at its slowest. Sliders, popups, autoplay video and a long list of apps all add weight. Then someone installs one more app the day before, and the site slows when it matters most.
+
+  The steps cut weight first and then protect it. It judges each heavy feature keep, change or remove, using click data if you have any. It marks each app keep, remove or delay. You make the cuts and run the key pages through PageSpeed. Then it sets a speed budget from your results, an app freeze before the sale, a testing routine and a plan if traffic overloads the site. It cannot test your live store, so you do the checks.
+when:
+  - A sale, launch or ad push is coming and you need the store fast when traffic peaks.
+  - Your homepage has a slider, a popup and autoplay video, and you do not know which earn their place.
+  - You cleaned up speed once and it crept back after new apps and banners.
+you_give:
+  - The homepage, a collection page and a product page, as links or screenshots
+  - Your theme name and the popup and video apps you use
+  - The sale date, expected traffic, platform and plan
+  - Heatmap or click data (optional)
+  - PageSpeed results and page weights, after you make the cuts
+you_get:
+  - A keep, change or remove verdict on every heavy feature, with a lighter replacement and a score out of 100 for how light the pages are
+  - A keep, remove, delay or one page only verdict for each app, with the app stack scored before and after
+  - A speed budget for page weight, mobile score and outside scripts
+  - A pre-sale checklist with an app freeze, a testing routine and a plan for overload
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach screenshots of your homepage, a collection page and a product page. Add your app list and the sale date.
+  - At the pause, make the cuts, then run the key pages through PageSpeed and note the results.
+  - Give it those results to get your speed budget and checklist.
+how_it_works:
+  - title: Trim heavy features
+    text: Judges each slider, quick view, autoplay video, popup and animation keep, change or remove, suggests a lighter replacement, and scores how light the pages are.
+  - title: Audit your apps
+    text: Marks each app keep, remove, delay or one page only, ranks apps by blocking time, and leaves your tracking tags alone.
+  - title: Set the budget and checklist
+    text: Uses your new PageSpeed results to set limits on page weight, mobile score and outside scripts, and writes the pre-sale checklist with an app freeze and an overload plan.
+output_shape: |-
+  STEP 1: HEAVY FEATURES
+    Feature | keep, change or remove | lighter replacement | theme advice | lightness score out of 100
+
+  STEP 2: APP VERDICTS
+    App | keep, remove, delay or one page only | reason | blocking time | app stack score now and after
+
+  STEP 3: SPEED BUDGET AND SALE CHECK
+    Budget limits | testing routine | pre-sale checklist | app freeze | overload plan
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Click or heatmap data
+    how: It decides most verdicts. A slider nobody clicks is an easy cut. Without data the verdicts are more cautious.
+  - what: Sale date and expected traffic
+    how: The budget and the freeze date work back from these. Give the date and your best guess of the visitors.
+  - what: What each app earns
+    how: Tell it which apps drive revenue. It will not cut those without saying why.
+  - what: Who can change the theme and apps
+    how: If a developer must make the changes, the checklist gives them a longer lead time.
+judge:
+  - Every verdict has a reason, and click data is used where you gave it.
+  - Your tracking tags are left alone.
+  - The speed budget uses your own PageSpeed results, not general numbers.
+  - The checklist has a freeze date before the sale and a name against each item.
+  - The overload plan says what to switch off first if traffic spikes.
+test:
+  - Run the homepage and a product page through PageSpeed before and after the cuts and compare mobile scores.
+  - Try the site on a phone on mobile data, and ask someone else to try it as well.
+  - Walk through the checklist a week before, not the day before.
+  - Compare the score to your budget after any app is added.
+improve:
+  - Add your must-keep apps and tags to the skill, so it never suggests cutting them.
+  - Save your speed budget in your brand file and check every new app against it.
+  - Run the budget routine monthly, not just before sales.
+  - Pair it with the longer speed fix workflow if your mobile report is failing across the board.

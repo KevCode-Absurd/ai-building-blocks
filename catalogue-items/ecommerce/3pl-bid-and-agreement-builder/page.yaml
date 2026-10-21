@@ -1,0 +1,125 @@
+new_slug: 3pl-bid-and-agreement-builder
+name: "3PL bid and agreement builder"
+summary: "Give it forecasts and product sizes. Get a request for pricing and agreement terms to demand."
+job: plan-supply-chain
+thinking: medium
+thinking_why: "It writes a request and compares bids by cost type, which a mid-range model does well."
+
+headline: "3PL bid and agreement builder"
+subhead: Give it your 12-month forecast, product sizes and ship-to countries. It writes a request for pricing to send to several warehouses (3PLs), a visit checklist, a bid comparison split by cost type, and the terms to demand, including a pick-on-time promise with a penalty.
+
+explain: |
+  A 3PL is a company that stores your stock, packs your orders and ships them. A bad one can slow every order and lose stock, and a bid with one blended fee makes it impossible to compare.
+
+  This skill writes one request with your forecast, product sizes and past orders, so several 3PLs compete for your work. It splits each bid into pick and pack, inbound, outbound and storage. Outbound varies most, because each 3PL has its own courier deals. It lists agreement terms: a pick-on-time promise with a penalty, stock counts at least twice a year, and barcode scanning in and out. The numbers in the terms are one speaker's examples. A lawyer should check any agreement.
+
+when:
+  - You are moving to your first 3PL or replacing one that is slow or loses stock.
+  - You have bids that look different and cannot tell which is cheaper.
+  - You want a pick-time promise and a penalty before peak season.
+
+you_give:
+  - A 12-month forecast and your order history
+  - Product dimensions and weights
+  - Ship-to countries and carrier needs
+  - Any bids you have already received (optional)
+you_get:
+  - A request for pricing to send to several 3PLs
+  - A bid comparison split by cost type
+  - A site visit checklist
+  - A list of agreement terms with penalties, and a line to check with a lawyer
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your forecast, order history, product sizes and countries.
+  - Send the request to at least three 3PLs and paste their bids back in.
+  - Visit the top two with the checklist if you can.
+  - Ask a lawyer to check the agreement before you sign.
+
+how_it_works:
+  - title: Writes the request
+    text: Forecast first, then product sizes, past results, countries and carriers. Sent to several 3PLs so they compete.
+  - title: Plans a visit
+    text: A checklist for the floor. A refusal to let you in is a red flag.
+  - title: Requires scanning
+    text: Barcode scanning in and out, so missing stock cannot turn into blame.
+  - title: Splits the price
+    text: Pick and pack, inbound, outbound and storage on separate lines, with no blended fees.
+  - title: Compares bids
+    text: A monthly estimate for each 3PL from your own volumes, part by part, then the total.
+  - title: Lists the terms
+    text: A pick-on-time promise with a penalty, stock counts twice a year, and itemised pricing.
+  - title: Sets your own tracking
+    text: Delivered-on-time, with a look into picking or the courier if it falls under 95 percent.
+
+output_shape: |
+  REQUEST FOR PRICING (to send)
+  About us / Forecast / History / Products / Ship-to / Carriers
+  Please quote separately: pick and pack | inbound | outbound | storage | set-up
+
+  SITE VISIT CHECKLIST
+  - <item>
+
+  BID COMPARISON (monthly estimate)
+  3PL | Pick and pack | Inbound | Outbound | Storage | Total | Notes
+
+  AGREEMENT TERMS TO DEMAND
+  - Pick on time: <hours>; penalty: <...>
+  - Cycle counts / Scanning / Itemised pricing
+
+  YOUR OWN TRACKING
+  Delivered on time
+
+  CHECK WITH A LAWYER before signing any agreement.
+  CHECKS MISSED: <none or list>
+
+tweaks:
+  - what: Your forecast
+    how: Give an honest number you expect to hit. A 3PL staffs for it, and a wild forecast hurts both of you.
+  - what: Order history
+    how: Include orders and items per order by month. The comparison uses it to estimate each cost.
+  - what: Carrier needs
+    how: Say which carriers and speeds you need. Outbound rates differ most between 3PLs.
+  - what: Your peak season
+    how: Name your busiest months. Pick-time promises matter most then.
+  - what: Pick-time promise
+    how: The 24 to 48 hours is one speaker's example. Set a promise you can live with.
+
+judge:
+  - The request leads with your forecast.
+  - Each bid is split into the same four parts.
+  - A pick-on-time promise comes with a penalty.
+  - Stock counts at least twice a year are in the terms.
+  - The lawyer line is present.
+  - No rate or penalty is filled in that a bid did not give.
+
+test:
+  - Give it two bids where one hides costs in a blended fee. It should ask for the split.
+  - Check one total by hand from your own order volumes.
+  - Run it twice on the same bids. The ranking should not change.
+  - Send the request to a 3PL you trust and ask if anything is unclear.
+
+improve:
+  - Add the peak months and promises you need to the terms in the skill file.
+  - Add your own site visit questions, such as how they handle returns.
+  - Save each bid and score so you can compare 3PLs over time.
+  - Pair it with the bill auditor for after you sign, the inbound shipment tracker builder and the cash planner.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It writes the request and compares bids from the numbers you paste."}
+    - {name: "Google Sheets", why: "A sheet holds each bid line by line so you can check the totals."}
+  inputs:
+    - "Your last 12 months of orders by month and items per order"
+    - "Product weights and box sizes"
+    - "Your current 3PL invoice, if you have one"
+
+terms:
+  - term: 3PL
+    meaning: A third-party logistics company. A warehouse that stores, packs and ships your orders.
+  - term: Service level agreement
+    meaning: The part of the contract that sets the level of service, such as how fast orders must be picked.
+  - term: Cycle count
+    meaning: A regular count of a part of the stock, to check the system matches the shelves.
+  - term: Outbound
+    meaning: The cost of shipping orders out to customers by courier.

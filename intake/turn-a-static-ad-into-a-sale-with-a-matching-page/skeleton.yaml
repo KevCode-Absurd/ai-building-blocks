@@ -1,0 +1,47 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: turn-a-static-ad-into-a-sale-with-a-matching-page
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: turn-a-static-ad-into-a-sale-with-a-matching-page
+  name: "Turn a static ad into a sale with a matching page"
+  summary: "Give it your static ad and offer. Get a sharper ad, a matching landing page and a compliance check."
+  when: "your image ad gets clicks but the page after it does not finish the sale."
+  job: make-image-ads
+  level: intermediate
+steps:
+  - name: "Static ad critic"
+    skill: static-ad-critic
+    job: ads
+    from: "library"
+    method: ["Trace the eye path and check the simple benefit comes first","Check the phone view and how specific the claim is","Check the ad against its buyer and its destination","Write two stronger headlines"]
+    inputs: [image, copy_draft]
+    outputs: [audit_report, ad_copy]
+    note: "Starts with your ad and gives back a checked version with its copy."
+  - name: "Ad awareness stage checker"
+    skill: ad-awareness-stage-checker
+    job: ads
+    from: "library"
+    method: ["Classify the hook, the visual and the copy","Check the walk from first line to offer","Score the ad","Write the fixes"]
+    inputs: [ad_copy]
+    outputs: [audit_report]
+    note: "Reads the fixed ad copy and says how much the buyer already knows when the ad starts."
+  - name: "Ad-matched landing page writer"
+    skill: ad-matched-landing-page-writer
+    job: page
+    from: "library"
+    method: ["Pin down the page's one job","Build the first screen from the ad","List the buyer's doubts and answer each in its own section","State the full cost before the last button"]
+    inputs: [brand_brain, offer, ad_copy!]
+    outputs: [landing_page]
+    note: "Writes the landing page from the ad copy so the page repeats the ad's promise."
+  - name: "Meta ads compliance checker"
+    skill: meta-ads-compliance-checker
+    job: ads
+    from: "library"
+    method: ["Pick the policy groups that matter","Judge what the ad and page show and say","Rate each finding","Rewrite the ad with fixes in"]
+    inputs: [ad_copy!, landing_page!]
+    outputs: [audit_report]
+    note: "Checks the final ad and page together before they go live."

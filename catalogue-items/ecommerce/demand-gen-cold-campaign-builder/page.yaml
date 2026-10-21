@@ -1,0 +1,126 @@
+new_slug: demand-gen-cold-campaign-builder
+name: "Demand Gen cold traffic builder"
+summary: "Give it your winning videos, page and budget. Get Demand Gen settings, ad groups and a creative brief."
+job: run-google-ads
+thinking: high
+thinking_why: "It weighs two sources that disagree and must keep ad claims inside policy, so a stronger model is safer."
+
+headline: "Demand Gen cold traffic builder"
+subhead: Give it your winning videos, your landing page, your budget and your AOV. It builds a Demand Gen campaign for people who have never heard of you. You get settings, testing and winning ad groups, a video format guide and a creative brief.
+
+explain: |
+  Demand Gen is Google's closest campaign type to Meta ads. It shows video and image ads to cold buyers on YouTube and other Google surfaces. Started too early, or with weak creative, it burns money, because it needs budget, data and a steady supply of new ads.
+
+  This skill sets it up as stage three, after Search, Shopping and remarketing have used up cheap demand. It gives you the budget share, the bid path, the audience choice, the placements, a testing group and a winning group, and a video structure with a hook in the first 5 seconds. Two sources disagree on the setup, so it gives both and tells you to test one first. Claims such as 1 to 2 cent clicks or a 2x cold ROAS are agency cases and vary by niche and year.
+
+when:
+  - Your Search, Shopping and remarketing are stable and you want new customers from a colder audience.
+  - You already have video ads that work on Meta or TikTok and want to try them on Google.
+  - You have budget and a steady supply of new creative.
+
+you_give:
+  - Winning video ads with length and format
+  - Your landing page (product page, advertorial, listicle, quiz or sales letter)
+  - Your daily budget, AOV and how many conversions the account has so far
+  - Purchase conversion tracking status
+you_get:
+  - Campaign settings for goal, bidding, networks and devices
+  - Ad groups by creative theme, with a testing and a winning group
+  - A video format guide and creative brief
+  - A review schedule and scale order
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your videos with length and format, your landing page, your budget and your AOV.
+  - Say how many conversions the account has, and whether Search, Shopping and remarketing are stable.
+  - Pick one of the two setups it gives you and test that one first.
+  - Run it for at least 30 days before changing the settings, and add new creative on a schedule.
+
+how_it_works:
+  - title: Checks timing
+    text: Stage three, after the cheaper campaigns. Start earlier only with a big budget and creative already proven elsewhere.
+  - title: Sets the budget
+    text: About 30% of the account budget, or a start near $50 a day at AOV $10 to $20 and $100 or more near AOV $50.
+  - title: Sets the bid path
+    text: Maximise Conversions first, no target CPA until the campaign has its own data, then Target CPA or Target ROAS after about 50 conversions.
+  - title: Chooses audiences and placements
+    text: Broad or lightly guided, optimised targeting off at first, Shorts and in-stream only.
+  - title: Builds ad groups
+    text: Up to 5 videos a group. A testing group for new concepts and a winning group for proven ones.
+  - title: Sets the video format
+    text: Under 60 seconds works in Shorts and in-stream, over 60 seconds in-stream only. A 9:16 video works in-stream.
+  - title: Writes the brief
+    text: A hook in the first 5 seconds, then the problem, a demo, proof near the end, and one clear call to action.
+  - title: Plans scaling
+    text: More budget, more creative, hook tests, a 16:9 version, new offers, new pages, then in-feed last.
+
+output_shape: |
+  DEMAND GEN COLD PLAN  <store>, AOV <$>, budget <$ a day>
+  TIMING  <ready now / wait, because ...>
+  SETUP (choose one to test)
+    A (hands-off): feed <off>, audiences <none>, start <$100+ a day>
+    B (guided): feed <on>, audiences <interest / in-market + 3 to 5 search themes>, budget by AOV
+  CAMPAIGN  goal: purchase | bid: <max conversions> | devices: mobile first, tablets off
+            placements: <Shorts and in-stream> | optimised targeting: <off at first> | language: <...>
+  AD GROUPS  testing: <concepts> | winning: <proven ads>   (up to 5 videos each)
+  VIDEO FORMAT  <length> | <9:16 / 16:9> | <placements it fits>
+  CREATIVE BRIEF  hook 0 to 5 seconds: <...> | 5 to 12: <problem or product> | demo | proof | CTA
+  TEXT  headlines <=40 characters (up to 5) | long headlines <=90 | descriptions <=90 | CTA: <...>
+  FINAL URL  <page; never the homepage>
+  REVIEW  30 days before changes; new creative every <n> weeks
+  SCALE ORDER  budget, creative, hook tests, 16:9, offers, pages, in-feed last
+  CHECKS MISSED: <none, or list>
+  MISSING: <item>
+
+tweaks:
+  - what: Your AOV and budget
+    how: At AOV $10 to $20 start near $50 a day. Near $50, start at $100 or more. Too little and it cannot learn.
+  - what: Which setup to test
+    how: Pick A or B and run it alone first. Two setups at once split the data.
+  - what: Creative you have
+    how: List every video with its length and format. The skill sorts them into testing and winning groups.
+  - what: The landing page
+    how: Say what it is. Advertorials, listicles and quizzes suit cold traffic better than a bare product page, and never the homepage.
+  - what: Product risk
+    how: If your product is health-related or high-claim, say so. Creative is then tested against Google's rules before it scales.
+
+judge:
+  - The plan says whether the account is ready, and why, before any setting.
+  - The budget is written in dollars, with the rule that gave it.
+  - The bid path starts with Maximise Conversions and names the move to a target after about 50 conversions.
+  - Both sources' setups are shown, with a clear instruction to test one.
+  - The final URL is not the homepage.
+
+test:
+  - Give it an account with no purchase tracking. It should tell you to fix tracking first.
+  - Give it a low-budget store. It should suggest waiting until after remarketing, unless you have proven creative and a big budget.
+  - Run it twice. The ad group split and bid path should match.
+  - After 30 days, compare the testing and winning groups. A concept should move up only with its own data.
+
+improve:
+  - Add your proven hooks and video structures to the skill file, so briefs start from what already works.
+  - Add your policy limits and banned claims so every concept is checked against them.
+  - Add your usual landing pages and the order you test them in.
+  - Save the winning ad and its numbers in your notes and feed the next brief.
+  - Pair it with the YouTube readiness checker and the results reader.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Demand Gen campaigns, ad groups and placement reports are here."}
+    - {name: "YouTube Studio", why: "Shows how people watch your video, which helps with hook tests."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini can write a hook and a video outline to the structure."}
+  inputs:
+    - "Your best Meta or TikTok video ads with their results"
+    - "Your break-even CPA"
+    - "A 16:9 version of your winning videos"
+    - "A landing page built for cold traffic"
+
+terms:
+  - term: Demand Gen
+    meaning: A Google campaign type that shows image and video ads on YouTube, Discover and Gmail to people who are not yet looking for you.
+  - term: In-stream ad
+    meaning: A video ad that plays before or during a YouTube video.
+  - term: Shorts
+    meaning: YouTube's short vertical video feed.
+  - term: Target CPA
+    meaning: A bid setting where Google aims for an average cost per sale you choose.

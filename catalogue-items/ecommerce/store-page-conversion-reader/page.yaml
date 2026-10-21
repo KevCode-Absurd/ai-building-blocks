@@ -1,0 +1,122 @@
+new_slug: store-page-conversion-reader
+name: "Store page conversion reader"
+summary: "Paste GA4 exports. Get conversion by channel and page, your worst funnel drop and a score out of 100."
+job: track-numbers
+thinking: medium
+thinking_why: "It ranks tables and spots odd drops against rules, so a mid-level model is enough. Check the biggest drop against your own funnel report."
+
+headline: "Store page conversion reader"
+subhead: "Paste your GA4 traffic acquisition table, landing page report and checkout funnel counts. It ranks channels and product pages by purchase conversion, finds the funnel step with the worst unexpected drop, and lists what to check next. You get a score out of 100 for how reliable the read is."
+
+explain: |
+  GA4 holds the answers to which traffic buys and which pages lose people, but its default reports mix purchases with every other key event, credit the checkout page with revenue, and show campaign tables full of direct and not-set rows. Read that way, the numbers send you after the wrong fix.
+
+  This skill reads the reports in a set order. It ranks channels by session purchase rate and engaged share, compares product pages with each other and against the store average, and finds the funnel step with the worst drop where a drop should not be. It splits checkout by device and browser, which can point to a technical fault. Every cause it gives is a hypothesis to test. It does not show whether an ad caused a sale. The score tells you how reliable this read is, given the data you supplied.
+
+when:
+  - You want to know which channels and landing pages bring buyers, not just visits.
+  - Shoppers add to cart but few reach the thank-you page and you want to know where they stop.
+  - A product page converts far worse than the others and you want a first cause to test.
+
+you_give:
+  - Traffic acquisition table with session key event rate filtered to purchase
+  - Landing page report with the same filter
+  - Funnel counts by step, split by device or browser if you can
+  - Engaged sessions and engagement rate by channel
+  - Your store's overall purchase rate (optional)
+you_get:
+  - Channels ranked by purchase conversion and engaged share
+  - Product pages above and below your store average, each with a first cause to test
+  - The funnel step with the worst unexpected drop
+  - Checks to run next, and a score out of 100 with its sum
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In GA4, open Reports, Acquisition, Traffic acquisition, add session key event rate, select purchase, and paste the table.
+  - Do the same for Engagement, Landing page, then paste your funnel counts by step.
+  - Read the ranking and run the first check it names before changing a page.
+  - If a drop looks technical, split it by browser and paste that too.
+
+how_it_works:
+  - title: Ranks the channels
+    text: Uses session primary channel group, then medium for paid, email and organic detail. Purchase rate comes from the purchase filter, not all key events.
+  - title: Reads engaged share
+    text: An engaged session lasts over 10 seconds (or your changed setting), has a key event, or has 2 or more page views. A low share on organic search suggests pages that do not match the search.
+  - title: Compares landing pages
+    text: Product pages are compared with each other. One far below the rest means wrong traffic, a weak page or a weak product.
+  - title: Finds the funnel drop
+    text: Session to product view is expected to be large. The drops that matter are add to cart to checkout and checkout to purchase.
+  - title: Names where to look
+    text: A big drop between cart and checkout points to the cart page. Between checkout and purchase, look at shipping cost, trust signals and checkout faults.
+  - title: Splits by device and browser
+    text: One browser with a sharp drop at one step points to a technical checkout fault.
+  - title: Cleans the campaign view
+    text: A regex hides direct, organic and not-set rows so only campaigns show.
+  - title: Scores the read
+    text: Counts how many of seven checks the data supported.
+
+output_shape: |
+  STORE CONVERSION READ  <store>  <date range>
+
+  CHANNELS (purchase rate, sessions, engaged share)
+  <channel> | <purchase rate> | <sessions> | <engaged %> | <note>
+
+  LANDING PAGES vs STORE AVERAGE <rate>
+  <page> | <rate> | <sessions> | <above / below> | first cause to test: <hypothesis>
+
+  FUNNEL  <step counts and % kept at each step>
+  Worst unexpected drop: <step to step>, <where to look>
+  By device / browser: <finding or not run>
+
+  CHECK NEXT
+  1. <check, where to look>
+
+  SCORE  <n>/100  (<checks passed> of 7, <points>)
+  CHECKS NOT RUN
+  MISSING: <what>
+
+tweaks:
+  - what: Date range and size
+    how: Use a long enough range that each row has a few hundred sessions. Rows with fewer are shown as too small to judge.
+  - what: The purchase filter
+    how: Always pick purchase as the key event. All key events together give a rate that is not a sales rate.
+  - what: Device and browser split
+    how: Paste the checkout steps by browser when a step looks bad. It is the quickest way to find a technical fault.
+  - what: Order of channels
+    how: Say whether you want to rank by purchase rate or by total purchases. Small channels can have high rates and few sales.
+
+judge:
+  - Every channel and page row shows its session count, so small samples are visible.
+  - Purchase rate comes from the purchase filter, not all key events.
+  - Each cause is worded as something to test, not as a fact.
+  - Revenue is not read from the Pages and screens report.
+  - It never says an ad caused a sale because a channel converts well.
+
+test:
+  - Paste a table where you know one page is broken and see whether it ranks last with a sensible cause to test.
+  - Remove the funnel counts and confirm the funnel check is listed as not run.
+  - Give it one channel with 40 sessions and check that it will not rank it.
+  - Run it twice on the same tables. The ranking should match.
+
+improve:
+  - Add your store's usual purchase rate by channel so the skill can say above or below normal for you.
+  - Add the funnel steps your store really has, such as a cart drawer, so the drop names match your site.
+  - Save the page fixes you tried and their results to a lessons file for next time.
+  - Pair it with the GA4 store setup checker first, so the events being read are the right ones.
+
+works_best_with:
+  tools:
+    - {name: "Google Analytics 4", why: "Source of the traffic acquisition, landing page and funnel reports."}
+    - {name: "A heatmap and recording tool", why: "Shows what shoppers do on the page the skill flags."}
+  inputs:
+    - "The same reports for the previous period"
+    - "Checkout funnel counts by browser"
+    - "Screenshots of the landing pages that rank worst"
+
+terms:
+  - term: Session key event rate
+    meaning: The share of sessions that included a key event. Filter it to purchase to get a purchase rate.
+  - term: Engaged session
+    meaning: A session that lasted over 10 seconds, had a key event, or had 2 or more page views.
+  - term: Funnel exploration
+    meaning: A GA4 report that counts how many people move from one step to the next.

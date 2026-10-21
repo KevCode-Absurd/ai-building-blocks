@@ -1,0 +1,125 @@
+new_slug: product-angle-finder
+name: "Product angle finder"
+summary: "Give it a plain product and its story. Get eight angles plus five story angles, ranked by effort."
+job: grow-social
+thinking: medium
+thinking_why: "It generates many ideas and ranks them, which a mid-size model does well. A bigger one adds little."
+
+headline: "Product angle finder"
+subhead: Give it a plain product, what people say about its price or flaws, and what your team can film. It writes eight angles for a dull product, five story angles with the emotion each aims at, a founder carousel plan and a shortlist of two with costs.
+
+explain: |
+  Many products look dull on camera: a tool, a bag, a jar of flour. The product is not the problem. The angle is. An angle is the reason a stranger would stop and watch. This skill finds that reason.
+
+  It tries eight moves on your product, such as a format shakeup, a speed tour, a hot take or a versus. Each gets one angle and a first video idea. It then looks for the true stories in your business with six questions: what people wrongly believe, your best customer story, what frustrates your industry, what sets you apart, your strangest visual and recent news. Each story gets a target emotion and a plan. It ends with a shortlist of two, with the cost to make each one.
+
+when:
+  - Your product feels too plain for short video and you are out of ideas.
+  - A buyer complaint, such as "it is too expensive", could be turned into a story.
+  - You want a founder story post that you can build in about 30 minutes.
+
+you_give:
+  - Your product and category
+  - The price or flaw people complain about (optional)
+  - Founder, factory and supplier facts (optional)
+  - Your best customer story (optional)
+  - What your team can film, and a budget cap
+you_get:
+  - Eight angles, one per move, each with a first video idea
+  - Five story angles with the emotion each aims at, and a short script or carousel plan
+  - A year-by-year founder carousel plan
+  - A shortlist of two, with the cost to make and a series name
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, the complaints you hear, and any true facts about your founder, factory or best customer.
+  - Say who can film, with what, and the most you can spend on a prop or a trip.
+  - Add a news item from your space in the last three days, if there is one.
+  - Pick the two angles from the shortlist. Film one and compare the results.
+
+how_it_works:
+  - title: Runs eight angle moves
+    text: Format shakeup, speed, viral vehicle, attention hijack, hot take, versus, lore and depth, and tour guide. One angle each, with a first video.
+  - title: Adds one odd thing
+    text: If a normal video still lacks interest, it adds one unusual place or angle, and answers questions people feel too shy to ask.
+  - title: Finds true stories
+    text: Six questions pull out what people get wrong about your product, your best customer story, your industry's frustrations and more.
+  - title: Names the emotion
+    text: Each story targets one emotion, such as curiosity or belonging, paired with a technique, such as relatability or credibility.
+  - title: Tells it story first
+    text: The story comes first and the lesson second. Every story needs someone who wants something and something in the way.
+  - title: Plans the founder carousel
+    text: One real event for each year of the business, failures included, each with a photo and short text, ending in a real success.
+  - title: Shortlists two
+    text: It costs each angle before you film, caps props and trips, and names a series for the best one.
+
+output_shape: |
+  EIGHT ANGLES for <product>
+  1 format shakeup | <angle> | first video: <idea> | cost: <low/med/high>
+  2 speed | ...
+  3 viral vehicle | ... | spend cap: <amount you set>
+  4 attention hijack | ...
+  5 hot take | <opinion you will defend> | ...
+  6 versus | <A vs B, verdict, reason> | ...
+  7 lore and depth | <facts you gave me> | ...
+  8 tour guide | <access you can sell> | ...
+
+  FIVE STORY ANGLES
+  S1 <story> | emotion: <...> | technique: <...> | loop: <first line> | plan: <script or carousel>
+  (five lines)
+
+  FOUNDER CAROUSEL
+  <year>: <real event> | photo: <what> | text: <short line>
+
+  SHORTLIST
+  1 <angle> | cost: <time and money> | series name: <...>
+  2 <angle> | cost: <...>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <facts | customer story | budget | news item>
+
+tweaks:
+  - what: The complaint
+    how: Give the exact thing buyers say, such as "too pricey" or "too small". The best stories often answer the complaint with a true behind-the-scenes fact.
+  - what: Founder and factory facts
+    how: Real details, such as places, dates and costs, make lore, tour and story angles possible. The skill never invents history.
+  - what: Budget cap
+    how: State the most you will spend on a prop or a trip. Without it the skill avoids props and trips.
+  - what: Recent news
+    how: Add a news item from the last three days. It is the fastest way to a hijack angle, but those age quickly, so film fast.
+
+judge:
+  - There are eight angles, one per move, and each has a first video you could shoot this week.
+  - Every story is based on a fact you gave it, with nothing invented.
+  - Each story names one emotion and starts with a loop in its first sentence.
+  - Hot takes are opinions you could defend in the comments.
+  - The shortlist shows the cost in time and money for each angle.
+
+test:
+  - Pick the angle you find hardest to believe. Ask a customer if they would stop for it.
+  - Film the cheapest shortlist angle and post it. Compare views to your usual posts.
+  - Check each story against your records. Anything you can't prove is cut.
+  - Run it again with a different complaint. The angles should change with it.
+
+improve:
+  - Add a list of topics you won't touch, such as politics or health claims.
+  - Add real old photos and dates for the founder carousel, so the plan can name them.
+  - Save the angle that worked as your series format and add its rules to the skill file.
+  - Pair it with the hook writer to turn the best angle into ten openings.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It can run the eight moves and the six questions from your facts."}
+    - {name: "Your phone camera and photo library", why: "Old photos and short clips are the raw material for a founder carousel."}
+  inputs:
+    - "Three customer reviews that mention the price or a flaw"
+    - "Photos from each year of your business"
+    - "A short voice note of you telling how it started"
+
+terms:
+  - term: Angle
+    meaning: The reason a stranger would stop and watch, apart from the product itself.
+  - term: Viral vehicle
+    meaning: A satisfying prop or object that appears in every video, such as a hydraulic press in a toy shop.
+  - term: Open loop
+    meaning: A first sentence that raises a question, with the answer held back until later in the video.

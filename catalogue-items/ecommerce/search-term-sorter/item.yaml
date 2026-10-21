@@ -1,0 +1,23 @@
+slug: search-term-sorter
+name: "Search term sorter"
+summary: "Paste your search terms reports. Get winners to promote, negatives to add, where each goes and a waste score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given)", used: "Using Shopping and Performance Max as keyword discovery, then promoting winners as exact and phrase match"}
+  - {title: "The only Google Ads strategy you need for 2026", by: "Agency founder who works with mid to large e-commerce brands (name not given)", used: "How often to review search terms and the account-wide negative list"}
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "Agency co-founder who runs Google and YouTube ads for DTC brands (name not given)", used: "Negative match types, which level to add them at and how often to review"}
+  - {title: "Google Ads for Ecommerce: Architecture and Operations Manual (2026)", by: "Compiled written guide, author not named", used: "Blocking low-intent words and competitor names in new-customer campaigns"}

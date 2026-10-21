@@ -1,0 +1,127 @@
+new_slug: subscription-page-take-rate-checker
+name: "Subscription page take-rate checker"
+summary: "Give it your product page and pop-up. Get a score out of 100 for selling subscription."
+job: keep-customers
+thinking: medium
+thinking_why: "It applies seven set rules to a page and adds up points, so a mid-size model is enough. Use a stronger one if you attach many screens."
+
+headline: "Subscription page take-rate checker"
+subhead: Attach your product page on desktop and phone, plus your welcome pop-up and cart. It checks seven rules for getting first-time buyers to pick subscription. You get a score out of 100, the conflicts between pop-up, page and cart, and a test plan for the top two fixes.
+
+explain: |
+  Customers who start on a subscription are worth more over time. One brand in the source saw month-6 value of $195 for subscription-first buyers against $130 for the rest. That is one store's figure, so check your own. The catch is that many stores sell subscription badly. One-time is pre-selected, the pop-up gives 10% off one-time while the page offers 20% for subscribing, and the savings hide behind a tooltip.
+
+  This skill reads your page the way a buyer meets it, on a phone first. It checks seven rules: which option is selected, where the best discount sits, how many choices there are, whether pop-up and page agree, whether the value is shown, whether the delivery gaps fit how fast the product is used, and whether the cart can upgrade a one-time item. Each rule earns points. The weights are our own and you can change them.
+
+when:
+  - You already sell a subscription, but only a small share of first orders choose it.
+  - You are about to change a pop-up, an ad landing page or the product page and want to know what would clash.
+  - You want one cheap test to run next and need to know which fix to start with.
+
+you_give:
+  - Your product page on desktop and phone, as screenshots or a link
+  - Your welcome pop-up and any cart or slide-in offer
+  - Ad landing pages that mention a discount (optional)
+  - Your current first-order subscription take rate (optional)
+you_get:
+  - A score out of 100, with the rule each point came from
+  - A list of conflicts between pop-up, page and cart
+  - Ranked fixes, with the one change most likely to raise take rate
+  - A short test plan for the top two fixes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the product page as phone and desktop screenshots, then the pop-up and the cart.
+  - Tell it your take rate if you know it, and whether you offer a different discount in the pop-up.
+  - Try the page yourself on a phone and tell it what you see. A screenshot cannot show which option is pre-selected after the page loads.
+  - Change one thing at a time and run the test plan it gives you.
+
+how_it_works:
+  - title: Looks at the default
+    text: Checks which option is selected when the page loads, on phone and desktop. One-time pre-selected is the first red flag.
+  - title: Finds where the discount sits
+    text: Checks that the best discount is on subscription only. Equal discounts on both score zero for this rule.
+  - title: Counts the choices
+    text: Looks for three choices where two are subscription, for example a 90-day plan, a 30-day plan and one-time.
+  - title: Matches pop-up and page
+    text: Checks that the pop-up, welcome email and ads push the same subscription offer as the page.
+  - title: Reads the value block
+    text: Checks that savings, free gifts with their dollar value, the guarantee and the per-unit price sit next to the options.
+  - title: Checks cadence and cart
+    text: Checks that quantity and delivery gaps fit how fast the product is used, and whether the cart can turn a one-time item into a subscription.
+  - title: Scores and plans tests
+    text: Adds up the points, lists the conflicts, ranks the fixes and writes a test plan for the top two.
+
+output_shape: |
+  SCORE <n>/100  (sum of the seven rules below)
+
+  R1 Default selection   <pts>/20  <what the page shows>
+  R2 Offer gating        <pts>/20  <where the best discount sits>
+  R3 Option count        <pts>/15  <the choices shown>
+  R4 Pop-up alignment    <pts>/15  <pop-up, email, ad vs page>
+  R5 Visible value       <pts>/15  <what is next to the options>
+  R6 Cadence sanity      <pts>/8   <delivery gaps vs use rate>
+  R7 Cart upgrade        <pts>/7   <yes / no / not seen>
+
+  HONESTY CHECK
+  <renewal terms, cancel path, urgency>
+
+  CONFLICTS
+  <pop-up says X, page says Y>
+
+  FIXES, BIGGEST LIFT FIRST
+  1. <one change> | cost: <low/med/high> | rule: <R#>
+
+  TEST PLAN (top two fixes)
+  Test 1: <change> | measure: <first-order take rate> | run: <weeks>
+
+  NOT SEEN
+  MISSING: <what you need to check>
+
+tweaks:
+  - what: Phone screenshots
+    how: Attach the phone view first. Most buyers see the page there, and the default selection and the value block often look different from desktop.
+  - what: Your own weights
+    how: The seven weights are our choice, not the sources'. If your pop-up is your biggest source of first orders, raise R4 and say so.
+  - what: Your real take rate
+    how: Paste it. The skill then ties each fix to the size of the gap rather than only to the rules.
+  - what: Every page that sells the offer
+    how: Add ad landing pages, the cart and the welcome email. Most clashes sit between two of these, not on the product page.
+
+judge:
+  - Every point in the score points to one of the seven rules.
+  - Each conflict names the two places that disagree and quotes what each says.
+  - The top fix is one change you can make in an afternoon, not a redesign.
+  - It says what it could not see, such as which option loads selected, and asks you to try it on a phone.
+  - It does not judge whether the offer itself is good. That belongs to the Subscription offer designer.
+
+test:
+  - Run it on your page and check R1 yourself on a phone. If your own check disagrees with the score, send the phone screenshot back.
+  - Run it twice on the same screens. The score should be the same or within a few points.
+  - Make the top fix on a copy of the page or as a split test. Do not change the pop-up and the page in the same test.
+  - Look at your take rate two to four weeks later. Read it as a direction, and only count it if you had enough orders in each version.
+
+improve:
+  - Change the weights in the skill file to match where your first orders come from.
+  - Add your own rule, such as a rule for a bundle or a starter kit, with a number of points.
+  - Add a line saying which subscription app you use, so the fixes name the right setting.
+  - Pair it with the Subscription offer designer if the offer itself is weak, and with the Product page screenshot auditor for the rest of the page.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can score the screens. Attach phone and desktop views."}
+    - {name: "Shopify", why: "Your theme editor or a split-testing app shows which version of the page each buyer saw."}
+    - {name: "Skio or Recharge", why: "Your subscription app sets the default selection, the plans shown and the cart upgrade, so the fixes land there."}
+  inputs:
+    - "A screen recording of the buying path on a phone, from ad to cart"
+    - "Your first-order subscription take rate for the last 60 days"
+    - "The text of your welcome pop-up and welcome email"
+    - "Your subscription plans and prices"
+
+terms:
+  - term: Take rate
+    meaning: The share of first orders where the buyer chose subscription instead of a one-time purchase.
+  - term: Pre-selected
+    meaning: The option that is already chosen when the page loads, before the buyer clicks anything.
+  - term: Subscribe and save
+    meaning: A repeat-delivery offer where the buyer pays less per order in return for a regular shipment.

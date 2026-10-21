@@ -1,0 +1,114 @@
+new_slug: organic-search-report-builder
+name: "Organic search report builder"
+summary: "Paste Search Console and GA4 numbers. Get non-branded clicks against last period and a score out of 100."
+job: get-found-in-search
+thinking: low
+thinking_why: "It compares two sets of numbers you paste in, so a quick model is enough."
+
+headline: "Organic search report builder"
+subhead: Paste your Search Console numbers for the last three months and the three before, plus your brand terms. It strips out branded searches, compares clicks, impressions, click rate and position, adds your organic funnel from GA4, and gives a score out of 100 with its weights shown.
+
+explain: |
+  Total search clicks can look healthy while most of them come from people who already know your name. The number that shows search is earning you new customers is non-branded clicks: clicks from searches that don't include your brand. Search Console can show them, but only if you filter out your brand terms with a small pattern most owners never set up.
+
+  This skill does that. It compares the last three months with the previous three, reads clicks, impressions, click rate and average position, and reports branded search as its own line, since a rise can signal that shoppers asked an AI assistant first and then searched for you. It pairs that with GA4 organic add-to-cart, checkout and purchase, notes what you changed and when, and scores the result.
+
+when:
+  - You want one monthly or quarterly report that shows whether search is growing, without the noise from your own brand name.
+  - Your organic traffic moved and you want to know whether clicks or sales changed.
+  - You made site changes and want to tie movement to the work.
+
+you_give:
+  - A Search Console export for the last 3 months and the 3 months before
+  - Your brand terms and common misspellings
+  - GA4 organic search numbers for add to cart, begin checkout and purchase, for both periods (optional)
+  - A list of site changes with dates (optional)
+you_get:
+  - Non-branded clicks, impressions, click rate and position, with the change from the previous period
+  - A branded search trend line
+  - Your organic funnel against the previous period
+  - A score out of 100 with the weights shown, and the one thing to look at next
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In Search Console, set the range to the last 3 months and compare with the previous period, then export or paste the numbers.
+  - Paste your brand terms and misspellings, and the GA4 funnel numbers if you have them.
+  - List your site changes with dates, such as new pages or title edits.
+  - Read the one thing to look at next and act on that first.
+
+how_it_works:
+  - title: Sets the range
+    text: Search Console keeps 16 months. It uses the last 3 months against the previous period.
+  - title: Removes branded searches
+    text: Filters out your brand terms and misspellings, so what's left comes from people who didn't know you.
+  - title: Reads four numbers
+    text: Clicks, impressions, click rate and average position. Non-branded clicks come first.
+  - title: Reports branded search
+    text: Shows it as its own line, since a rise can signal AI-driven demand.
+  - title: Treats position as a trend
+    text: Ignores small swings on searches with few impressions, because position is an average.
+  - title: Adds the GA4 funnel
+    text: Compares organic add to cart, begin checkout and purchase with the previous period and points a checkout fall at payment or page faults.
+  - title: Ties changes to movement
+    text: Lines up your logged changes and known Google updates against the chart.
+  - title: Scores the report
+    text: Five parts with stated weights add up to 100, and it names the one thing to check next.
+
+output_shape: |
+  PERIOD  <last 3 months> vs <previous 3 months>
+  BRAND FILTER  <regex used> | check: <queries it removed look right?>
+  NON-BRANDED  clicks <n> (<change>) | impressions <n> (<change>) | CTR <x%> | avg position <x> (trend)
+  BRANDED  clicks <n> (<change>) | note on AI-driven demand
+  ORGANIC FUNNEL (GA4)  add to cart <change> | begin checkout <change> | purchase <n> vs <n>
+  CHANGES LOGGED  <date: change> ... and known updates
+  SCORE  <n>/100  measures: <what>
+    non-branded clicks trend <n>/30 | impressions trend <n>/15 | CTR and position <n>/15 | organic purchases trend <n>/25 | changes logged <n>/15
+  LOOK AT NEXT  <one thing>
+  NOT RUN  <check, why>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: Your brand terms
+    how: List every spelling, the store name, the domain and common typos. A missing term leaves branded clicks in the report.
+  - what: The period
+    how: Use three months on three months. A shorter range swings too much on a small store.
+  - what: GA4 data
+    how: Add the organic funnel. Without it the report can only score clicks and impressions.
+  - what: Site change log
+    how: List dates for new pages, theme or title edits and known Google updates, so movement can be tied to work.
+
+judge:
+  - The brand filter is shown, and the removed queries look like your brand.
+  - Non-branded clicks come first, with the change from the previous period.
+  - Position is described as a trend, with no claims from a tiny swing on few impressions.
+  - The score says what it measures and shows each part's points.
+  - A fall at checkout is not blamed on search.
+
+test:
+  - Check the non-branded click total by applying the same filter in Search Console yourself. The numbers should match.
+  - Run the report on a period when you know something happened, such as a big launch. The report should show it.
+  - Run it twice on the same numbers. The score should be the same.
+  - Change one input, such as a missing brand misspelling, and see if the branded line grows.
+
+improve:
+  - Change the five weights in the skill file if your store lives on a different part, for example give purchases more.
+  - Add your brand terms to the skill file so you never retype them.
+  - Add a line for Bing and AI assistants, which Search Console doesn't cover.
+  - Pair it with the Search Console traffic drop diagnoser when clicks fall, and the quick-win finder for pages to push.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "The source of clicks, impressions, click rate and position. It keeps 16 months of data."}
+    - {name: "GA4", why: "Gives the organic add to cart, begin checkout and purchase numbers for the same periods."}
+  inputs:
+    - "A site change log with dates"
+    - "Your brand terms and common misspellings"
+    - "Bing Webmaster numbers, since Search Console covers Google only"
+
+terms:
+  - term: Non-branded clicks
+    meaning: Clicks from searches that don't include your brand name, which shows search brought you new people.
+  - term: Click rate (CTR)
+    meaning: The share of people who saw your result and clicked it.
+  - term: Average position
+    meaning: Where your page showed in results on average across places and devices, so it's a trend more than an exact rank.

@@ -1,0 +1,79 @@
+new_slug: build-your-ads-shopify-page-and-check-it-live
+name: Build your ad's Shopify page and check it live
+summary: Give it your ad, offer and brand facts. Get page copy, Shopify files and a check of the live page.
+job: write-landing-page
+thinking: medium
+thinking_why: Three steps that read and write rather than calculate. A mid-size model does the job.
+headline: Get your ad's page built in Shopify and checked on a phone
+subhead: Give it your ad, your offer and your brand facts. It writes a page that picks up where the ad stops, turns the copy into a Shopify section you can upload, and after you install it, checks screenshots of the live page for what still blocks a buyer.
+explain: |
+  An ad makes a promise. If the page it lands on says something else, buyers leave. Even a good page loses sales once it's built: a button falls below the fold on a phone, a price reads wrong, an image pushes the text down. The copy and the built page are two different things to get right.
+
+  The first step writes the page from your ad, your offer and your brand facts, with one section for each buyer doubt. The second loads that copy into Shopify files, so you upload a section instead of pasting text into a template. Then it pauses. You install the files, open the page on a phone and a computer, and save screenshots. The last step reads those screenshots and lists what still blocks a shopper, with a change to test for each and a score out of 100.
+when:
+  - An ad is ready and its page isn't, or the page doesn't match the ad.
+  - You have page copy but no easy way to get it into your Shopify theme.
+  - You built a page and want a second look at how it reads on a phone.
+you_give:
+  - "The ad that will send traffic: its headline and text"
+  - "Your brand facts: products, claims, voice and the offer word for word"
+  - Customer reviews or questions (optional)
+  - Product details such as variants and prices (optional)
+  - After the pause, screenshots of the built page on a phone and a computer
+you_get:
+  - Page copy with a first screen taken from the ad and a section for each buyer doubt
+  - A Shopify section and page template with the copy loaded in, plus install steps
+  - A list of what still blocks buyers on the live page, with a change to test for each
+  - A score out of 100 for how clearly the page lets a shopper act
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it the ad, your offer and your brand facts. If a fact is missing, leave it blank. It marks the gap instead of guessing.
+  - Upload the Shopify files to a copy of your theme first, not the live one.
+  - Open the page on a phone and a computer, save screenshots, and give them back for the last step.
+how_it_works:
+  - title: Write the page from the ad
+    text: Pins one buyer, one reason and one offer. It builds the first screen from the ad's own words, writes a section for each buyer doubt, and states the full cost before the last button.
+  - title: Turn the copy into Shopify files
+    text: Plans the section and template files, keeps the words in settings so you can edit them later, and reads prices and policies from the store. It writes the install steps.
+  - title: Install and capture
+    text: A pause. You upload the files, open the page on a phone and a computer, and save screenshots of each.
+  - title: Check the live page
+    text: Reads your screenshots, records only what it can see, and links each finding to a change worth testing. It scores how clearly the page lets a shopper act.
+output_shape: |-
+  STEP 1: PAGE COPY
+    First screen from the ad | one section per buyer doubt | full cost | proof | questions | MISSING lines
+
+  STEP 2: SHOPIFY FILES
+    Section file | page template | settings for the words | install steps
+
+  PAUSE: install the files, open the page on a phone and a computer, and save screenshots
+
+  STEP 3: LIVE PAGE CHECK
+    What each screenshot shows | what blocks a shopper | a change to test for each | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your theme
+    how: Say which Shopify theme you use and whether you have edited it. The section is written to fit it.
+  - what: How people buy
+    how: Say if the page sells one product, a bundle or a subscription. The buying area is built to match.
+  - what: Your reviews
+    how: Paste real reviews word for word. The page quotes them, and never writes a review of its own.
+  - what: The screens you capture
+    how: Capture the first screen, the buying area and the bottom of the page on a phone. Those are the spots shoppers leave.
+judge:
+  - The first screen carries the ad's main words and the same offer.
+  - Every buyer doubt has its own section, and each heading states the answer.
+  - The full price, renewal and shipping cost show before the last button.
+  - The Shopify section reads prices and policies from the store and has no copied numbers.
+  - Each finding in the last step points to a screenshot.
+test:
+  - Put the ad next to the first screen of the built page. A visitor should see it is the same offer.
+  - Edit a headline in the theme settings. The page should change without touching code.
+  - Change the product price in Shopify. The page should show the new price.
+improve:
+  - Keep the page copy file. Next time you write an ad, start from the same brand facts.
+  - Build one page for each ad angle, so each ad lands on its own page.
+  - After a week of traffic, run the page through the audit workflow with your funnel numbers.

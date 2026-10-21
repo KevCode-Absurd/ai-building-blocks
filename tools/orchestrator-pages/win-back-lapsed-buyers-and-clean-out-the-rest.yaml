@@ -1,0 +1,94 @@
+new_slug: win-back-lapsed-buyers-and-clean-out-the-rest
+name: Win back lapsed buyers and clean out the rest
+summary: Give it your order history. Get a win-back flow, a stage map, a clean list and a read of the results.
+job: keep-customers
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Win back lapsed buyers and clean out the rest
+subhead: Give it your order export. It finds where buyers stop returning, builds a win-back flow for that group, maps who gets which email, and after four weeks writes a clean-out rule for the silent ones and reads what the win-back earned.
+explain: |
+  Buyers go quiet after one order, and most stores keep emailing them the same way for years. Some would have come back with the right nudge at the right time. Others never will, and they drag down your open rates and your inbox placement.
+
+  The steps cover both groups, with two pauses for you. First it measures where repeat orders drop off and names the group to chase. You pick that group and export their orders. It builds the win-back flow and maps who gets it. Then you run it for about four weeks and export the results. The last two steps write a clean-out rule for those who stayed silent, and read what the win-back earned.
+when:
+  - Customers buy once and go quiet, and you do not know when to reach out.
+  - Your open rates keep falling and you suspect a large, silent part of the list.
+  - You send win-back emails already, but never learned what they earned.
+you_give:
+  - Your orders export, with customer, date, order value, discount and refund
+  - Your email tool's flow and campaign revenue
+  - Your discount limits and best sellers
+  - Reviews or survey comments (optional)
+  - How many days you count a subscriber as quiet, if you have a rule (optional)
+you_get:
+  - First-to-second order rate, profit per customer over time and the one stage to fix first
+  - A win-back flow with a trigger day, an exit rule and three to six email outlines
+  - A flow map that says which stage gets the win-back and which gets other emails
+  - A clean-out rule, a three-email last-chance flow and a monthly routine
+  - A read of the flow results and a channel health score out of 100
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your orders export. After step 1, pick the group it says matters most (one-time buyers or lapsed regulars) and export their orders.
+  - Build the flows in your email tool and let them run for about four weeks.
+  - Export the quiet subscribers and the flow results, then paste them back to finish the last two steps.
+how_it_works:
+  - title: Repeat order bottleneck finder
+    text: Measures first-to-second order rate and profit per customer, and finds the one stage where buyers stop. It ignores Shopify's returning-order share, which is not a repeat rate.
+  - title: Win-back flow builder
+    text: Sets the day a buyer counts as lapsed, adds an exit rule, and builds a short flow with an offer ladder for the group you picked.
+  - title: Customer stage flow mapper
+    text: Maps which customer stage gets the win-back flow and which gets other emails, so nobody receives both.
+  - title: Sunset flow and list cleaner
+    text: After four weeks, defines who is unengaged, writes a last-chance flow and sets a monthly routine to stop sending to the rest.
+  - title: Email and SMS performance reader
+    text: Checks nothing is broken, then reads the flow results to show what the win-back earned and what to repeat.
+output_shape: |-
+  STEP 1: REPEAT ORDER BOTTLENECK FINDER
+    Repeat rate and profit per customer | the one stage to fix | ranked causes | tests | repeat health score out of 100
+
+  YOUR PAUSE
+    Pick the group to chase | export their orders
+
+  STEP 2: WIN-BACK FLOW BUILDER
+    Trigger day and exit filter | three to six email outlines with offers | segment for campaigns
+
+  STEP 3: CUSTOMER STAGE FLOW MAPPER
+    Flow map by stage | goal, tone and offer rule per branch | build order
+
+  YOUR PAUSE
+    Run the flows about four weeks | export quiet subscribers and flow results
+
+  STEP 4: SUNSET FLOW AND LIST CLEANER
+    Unengaged definition | three-email last-chance flow | monthly steps | who is never removed
+
+  STEP 5: EMAIL AND SMS PERFORMANCE READER
+    Short diagnosis | what to repeat or rework | deliverability status | channel health score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The group you pick at the first pause
+    how: One-time buyers and lapsed regulars need different emails. Pick the bigger loss, not the easier list.
+  - what: Your discount room
+    how: Give your margin. The offer ladder starts with no discount and only goes as far as you can afford.
+  - what: Days between orders
+    how: Give the average and median from your own data. The trigger day depends on it, so a guess is costly.
+  - what: Your list region
+    how: Say where your subscribers live, so the clean-out rule follows local consent and removal rules.
+judge:
+  - The bottleneck stage rests on numbers from your export, not a general rule.
+  - The trigger day matches how long your buyers really wait between orders.
+  - No buyer who ordered recently is in the clean-out list.
+  - The last-chance emails say what will happen, and then it does.
+  - The results read separates what the win-back earned from sales that would have happened anyway.
+test:
+  - Work out your first-to-second order rate by hand for one month and compare it with step 1.
+  - Hold back a small share of lapsed buyers from the flow, so you can compare their orders with the rest.
+  - Check the clean-out list for anyone who bought, returned or opened recently. There should be none.
+  - Compare your open rate and inbox placement before the clean-out and a month after.
+improve:
+  - Save the bottleneck finding and the trigger day in your brand file for the next run.
+  - Add the real emails that brought buyers back in the past to step 2 as examples.
+  - Re-run steps 4 and 5 every quarter on a fresh export.
+  - Pair it with the first-weeks workflow so fewer buyers lapse in the first place.

@@ -1,0 +1,27 @@
+slug: test-failure-repair-loop
+name: "Test failure repair loop"
+summary: "Point it at a red test suite. Get capped rounds of fixes, re-checked each time, until green or stopped."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: codebase, required: true}
+  - {type: test_report, required: false}
+outputs:
+  - {type: code_change}
+  - {type: test_report}
+uses: [failing-test-fixer, ci-failure-fixer, flaky-test-fixer, bug-root-cause-finder, fix-loop-breaker, lint-and-type-check-runner]
+steps:
+  - {uses: failing-test-fixer, note: "Each round, for failures that show up when you run the tests yourself: group them by cause and fix one group at a time."}
+  - {uses: ci-failure-fixer, note: "Only when the tests pass on your machine but fail in the pull request check: find the cause before any edit."}
+  - {uses: flaky-test-fixer, note: "Only for browser tests that pass sometimes and fail sometimes: find the cause and fix it, never retry until green."}
+  - {uses: bug-root-cause-finder, note: "Only when the cause of a group is not clear after one try: prove the cause before editing again."}
+  - {uses: fix-loop-breaker, note: "Only when the same failure comes back after a fix: a three-try budget with proof, and a rollback."}
+  - {uses: lint-and-type-check-runner, note: "Once, when the tests are green: the project's own checks, so the fixes did not break something else."}
+schedule: "Whenever the test suite goes red, or a pull request check fails"
+asks_before: [committing or pushing, editing or deleting an expected value in a test, skipping or disabling a test, changing build or test settings, upgrading or installing packages, editing files outside the failing area]
+origin: own
+version: 1.0.0
+example_pending: true

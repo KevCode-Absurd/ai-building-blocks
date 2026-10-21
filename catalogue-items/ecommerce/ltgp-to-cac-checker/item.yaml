@@ -1,0 +1,22 @@
+slug: ltgp-to-cac-checker
+name: "Lifetime gross profit to CAC checker"
+summary: "Give it ad spend, new customers and cohort revenue. Get your ratio, its band and a score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Death Spiral That Kills Most eCommerce Brands", by: "An agency operator who audits 8 and 9 figure stores (name not stated)", used: "The ratio bands, the time window by repeat rate, reading LTGP from a cohort table, retention lift by category, the CAC spiral, timestamping changes"}
+  - {title: "$1B Marketer Explains: How to Scale an Ecommerce Brand in 2026", by: "Eddie, agency owner, in an interview", used: "The 12-month example of losing money on order one and winning it back over a year"}
+  - {title: "8 years of marketing advice in 70 minutes", by: "Mark, paid ads operator and mentor", used: "3 to 1 lifetime value to CAC as a bare minimum"}

@@ -1,0 +1,97 @@
+new_slug: collection-page-fixer
+name: "Collection page fixer"
+summary: "Paste your collection page and stock by size. Get which products to feature and a daily check."
+job: audit-landing-page
+thinking: medium
+thinking_why: "It matches a fixed set of rules to your products and stock, so a mid-size model is enough if it can read your screenshot."
+headline: "Collection page fixer"
+subhead: "Attach your collection page and paste your top products with stock by size and colour. It picks which products belong in the top six, flags stock that will hurt conversion, fixes filters and quick add, sets a daily check and scores the page out of 100."
+explain: |
+  A collection page is a shop window. The first six products get most of the attention, so a poor seller up there, or a good seller with no medium or large left, costs you every day. Few stores look at it daily.
+  This skill checks your collection page against a short list of rules from store audits. It puts your best graded products in the top six, checks whether the sizes and colours that carry most of the clicks are still in stock, and swaps or moves down products that are not. It also checks how much sits above the fold, whether quick add-to-cart would help, whether filters are too deep and whether the page works on a phone. It gives one person a daily conversion read. The size-and-colour rules suit clothing and similar goods, so for other products it uses the rest of the checks.
+when:
+  - Your collection pages get plenty of visits but few clicks into products.
+  - A best seller has gone out of stock in the common sizes and you want to know what to show instead.
+  - You want a short daily routine for the pages that carry most of your sales.
+you_give:
+  - A screenshot of your collection page, with its top 6 to 12 products
+  - Stock by size and colour for those products
+  - Each product's grade (A, B or C) or its sales rank
+  - Conversion rate by day (optional)
+  - A scroll map and your filter or menu list (optional)
+you_get:
+  - Which products to place in the top six, and which to move down
+  - Stock warnings for products whose common sizes or colours have sold out
+  - Filter and quick-add fixes, and a score out of 100
+  - An owner and a daily check routine
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach a phone screenshot of the collection page and paste stock by size and colour for the top products.
+  - Add each product's grade or sales rank. If you have no grades, say so and it will use sales rank.
+  - Make the product swaps and filter fixes, one change at a time.
+  - Use the daily check it gives you, and name one person who owns the page.
+how_it_works:
+  - title: Grades the top six
+    text: Grade A and B products go in the top six. Grade C stays out, because landing performance depends on the first products shown.
+  - title: Checks size curves
+    text: The winning colour and the medium and large sizes may carry about 30% of clicks. When they sell out, conversion drops, so the product is swapped out or moved down.
+  - title: Checks space above the fold
+    text: Show as many products as possible above the fold and cut dead space.
+  - title: Checks quick add and filters
+    text: Quick add-to-cart if many carts start after a collection visit. Filters cut to one or two layers, with plain names such as Sort and filter.
+  - title: Places trust lines
+    text: Lines such as free shipping or a money-back guarantee go between product rows where scroll data shows a steep drop-off.
+  - title: Sets an owner and a daily read
+    text: One person owns the page and checks conversion each day, with stock by size.
+output_shape: |
+  COLLECTION PAGE CHECK  (judged from <phone / desktop> view)
+  TOP SIX NOW: <product | grade | stock note>
+  TOP SIX FIX: <product in, product out, reason>
+  STOCK WARNINGS: <product | size or colour sold out | share of clicks it carries | action: swap / move down>
+  ABOVE THE FOLD: <products shown, dead space to cut>
+  QUICK ADD: <recommended / not needed, why>
+  FILTERS: <layers now, change, plain names>
+  TRUST LINES: <where to add, based on scroll data / not checked>
+  COLLAB TRAFFIC: <custom page needed, yes / no / n.a.>
+  OWNER AND DAILY CHECK: <who, what they read each day, what triggers a swap>
+  SCORE <n>/100 (see how it was worked out)
+  CHECKS MISSED: <none or list>
+tweaks:
+  - what: Grades
+    how: Give each product a grade A, B or C, or its sales rank. Without either, the skill cannot choose the top six and marks it missing.
+  - what: Stock by size and colour
+    how: Paste the real stock numbers. The size curve check needs them, and so does the stock warning.
+  - what: Product type
+    how: Say if the products have sizes. For things without size, the skill skips the size rule and uses a custom landing page for ad traffic instead.
+  - what: Scroll data
+    how: Add a scroll map. Without it, trust lines between rows are marked as not checked.
+judge:
+  - The top six are all grade A or B, or the skill says why a C product is in there.
+  - Each stock warning names the size or colour, and what action to take.
+  - Nothing is claimed about click shares you did not give; the 30% figure is labelled as one source's.
+  - The daily check names one person and one number to watch.
+  - The score shows its sum.
+test:
+  - Check one stock warning by looking at the product in your store. The size it names should really be sold out.
+  - Make the top six change, and compare collection page conversion for the same weekdays before and after.
+  - Run the skill again next week with fresh stock. A product that sold out should now be flagged.
+  - Ask a colleague to run the daily check using only the routine it gave. They should finish in minutes.
+improve:
+  - Add your own size curve once you have sales data, so the share of clicks in the key sizes uses your numbers, not the 30% from one source.
+  - Add your sell-out rule, such as swap out when a key size has fewer than a set number left.
+  - Save the daily check in your team's task list so it actually happens.
+  - Pair it with the store friction checker for menus and with the heatmap and recording reader for scroll data.
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Collections, inventory by variant and the theme editor are all in one admin."}
+    - {name: "Microsoft Clarity", why: "Scroll maps show where shoppers stop, to place trust lines."}
+    - {name: "Any good chat AI", why: "Needs to read a screenshot of your page."}
+  inputs:
+    - A scroll map of the collection page
+    - Sales rank by product for the last 30 days
+    - Conversion rate by day for the collection page
+    - The ad or creator the traffic comes from
+terms:
+  - {term: "Size curve", meaning: "How your sales or clicks spread across sizes. The common sizes usually carry most of the demand."}
+  - {term: "Top six", meaning: "The first six products shown on a collection page."}
+  - {term: "Quick add", meaning: "A button on the collection page that adds a product to the cart without opening the product page."}

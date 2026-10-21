@@ -1,0 +1,56 @@
+# Workflow skeleton: chain of existing library skills (docs/INTAKE.md).
+id: lib-generative-art-to-sharp-images
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: make-generative-art-and-export-sharp-small-images
+  name: Make generative art and export sharp, small images
+  summary: Describe the look you want. Get a coded art piece you can tweak, sharp stills of it, and smaller files.
+  when: you want original art for a site, a poster or a social post that you can repeat.
+  job: make-images
+  level: intermediate
+steps:
+  - name: Generative art maker
+    skill: generative-art-maker
+    job: ops
+    from: "skill: generative-art-maker"
+    method:
+      - Name the style and write what it expresses
+      - Code a piece that runs in the browser
+      - Add controls and a seed to repeat a result
+    inputs:
+      - brief
+    outputs:
+      - web_app
+    note: "Starts the chain: an interactive art page."
+  - name: App screenshot maker
+    skill: app-screenshot-maker
+    job: ops
+    from: "skill: app-screenshot-maker"
+    method:
+      - Open the running page
+      - Say how many stills and what they are for
+      - Capture at high resolution
+      - Save them with clear names
+    inputs:
+      - web_app
+    outputs:
+      - image
+    note: Opens the art page from the step before and captures stills of it.
+  - name: Image compressor
+    skill: image-compressor
+    job: ops
+    from: "skill: image-compressor"
+    method:
+      - Pick WebP or PNG
+      - Set the quality
+      - Compress and keep the originals
+      - Report the size saved
+    inputs:
+      - image
+    outputs:
+      - image
+    note: Shrinks the stills so they load fast.

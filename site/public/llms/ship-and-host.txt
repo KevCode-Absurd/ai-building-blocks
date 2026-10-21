@@ -1,6 +1,6 @@
 # Ship and host your app: AI Blocks
 
-> 56 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 58 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [App update health checker](https://useaiblocks.com/skills/app-update-health-checker): Name your Expo app. Get crash rates, installs and update sizes for each published update.
 - [AWS architecture designer](https://useaiblocks.com/skills/aws-architecture-designer): Describe your app. Get an AWS design with serverless parts, setup templates and cost cuts.
@@ -39,6 +39,8 @@
 - [Page speed gate builder](https://useaiblocks.com/skills/page-speed-gate-builder): Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
 - [Pre-push repo cleaner](https://useaiblocks.com/skills/pre-push-repo-cleaner): Point it at your project. Get junk files, dead code and leaked secrets found and fixed before you publish.
 - [Production stability reviewer](https://useaiblocks.com/skills/production-stability-reviewer): Give it a service. Get weak spots found and fixes like timeouts, retries and circuit breakers, so outages stay small.
+- [Release a new version and prove it is live](https://useaiblocks.com/workflows/release-a-new-version-and-prove-it-is-live): Give it your project. Get a version, changelog, go or no-go call and proof it is live.
+- [Release manager](https://useaiblocks.com/agents/release-manager): Run it before each release. Get a go or no-go, version, changelog, rollback plan and a live check.
 - [Release preparer](https://useaiblocks.com/skills/release-preparer): Point it at your project. Get the version bumped, a changelog written and a tagged release ready to publish.
 - [Release proof checker](https://useaiblocks.com/skills/release-proof-checker): Point it at a deployed service. Get fresh proof across code, CI, database and live routes before you call it ready.
 - [Release readiness reviewer](https://useaiblocks.com/skills/release-readiness-reviewer): Point it at a release. Get a read-only report of real deploy risks: migrations, config, order and rollback.

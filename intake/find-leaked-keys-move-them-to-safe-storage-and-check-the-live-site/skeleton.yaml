@@ -1,0 +1,41 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site
+  name: "Find leaked keys, secure them and check your live site"
+  summary: "Give it your project. Get leaked keys found, a rotation plan, secrets moved to safe storage and the live site checked."
+  when: "a key may have leaked, or secrets sit in files and you want them locked down and proven safe."
+  job: secure-code
+  level: intermediate
+steps:
+  - name: "Secrets hygiene checker"
+    skill: secrets-hygiene-checker
+    job: ops
+    from: "library"
+    method: ["Scan the project and its history for keys and passwords", "Check env files and what git ignores", "List every secret that must be treated as leaked", "Write the order to rotate them"]
+    inputs: [codebase]
+    outputs: [security_report]
+    note: "Finds every leaked or loose secret and gives the rotation order."
+  - pause: "Rotate each leaked key at its provider, in the order the report gives, and remove old copies from your files."
+  - name: "Secrets setup helper"
+    skill: secrets-setup-helper
+    job: ops
+    from: "library"
+    method: ["Pick a secret store that fits your pipeline", "Change the code to read secrets from it, not from files", "Set who and what may read each secret", "Plan how and when to rotate again"]
+    inputs: [codebase]
+    outputs: [code_change]
+    note: "Moves the secrets you just rotated into safe storage and changes the code to read them from there."
+  - pause: "Deploy the updated code and keep the address of the live site."
+  - name: "Exposed secrets finder"
+    skill: exposed-secrets-finder
+    job: ops
+    from: "library"
+    method: ["Fetch the live page and its headers", "Scan the page and every script file for keys", "Probe for config, source and deploy files visitors can open", "Rank what turns up and write the fix"]
+    inputs: [deploy_url]
+    outputs: [security_report]
+    note: "Checks the live site, the one place a leak shows to visitors, for anything the first scan missed."

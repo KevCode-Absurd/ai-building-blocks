@@ -1,0 +1,88 @@
+new_slug: set-your-cac-limit-and-test-what-ads-really-add
+name: "Set your CAC limit and test what ads add"
+summary: Give it your ad and order data. Get a CAC limit, a lift test and a budget split.
+job: plan-ad-tests
+thinking: high
+thinking_why: It runs five skills in a row, with profit sums and a test design that depend on each other. Give it your strongest model.
+headline: Know what a new customer may cost, and which ads earn it
+subhead: Give it your ad spend and order exports. It builds a daily new-customer sheet, sets the most you can pay for a customer, checks which platform numbers hold up, plans a lift test for the channel you doubt, and splits the next $10,000.
+explain: |
+  Ad platforms grade their own work, and they claim more sales than your store sees. With several channels running, nobody can say what a new customer may cost, or which channel brings customers who would not have come anyway. Budget moves to whichever dashboard looks best.
+
+  These steps give you one number to hold to, then test it. First it builds a daily sheet of new-customer cost, return and profit from your exports. It uses that sheet to set your CAC limit, the most you can pay and still make money. It compares each platform's claims with the sheet. You pick the channel you doubt most, and it plans a lift test. After the test, it uses the result to decide where the next $10,000 goes.
+when:
+  - You spend on several channels, the platforms claim more than your store sees, and you need one limit.
+  - Your cost to win a customer keeps rising and you do not know if you can keep scaling.
+  - You want to know how many of one channel's sales it really caused.
+you_give:
+  - Shopify orders with a new or returning flag, and net revenue after returns
+  - Ad spend by day and by channel
+  - Product cost per product, and fulfilment cost per order
+  - Gross profit per customer at 30, 90 and 180 days (optional, but it makes the limit safer)
+  - Sales by region for 6 to 12 months, for the lift test
+you_get:
+  - A one-page daily sheet with new-customer return, blended CAC and new-customer profit, and the formulas
+  - A CAC limit (target, ceiling and floor) with a payback time and a score out of 100 for how safe it is
+  - A return ladder for each platform and a trust level for each channel, with a score out of 100
+  - A lift test plan with the test type, matched regions, spend change, dates and a cut, hold or scale rule
+  - A ranking for the next $10,000 and a stop point for each channel
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your order and ad exports. Check your product costs with your accountant first. Wrong costs give a wrong limit.
+  - Pick the channel you doubt most. Pull its spend by week and region for the last 90 days.
+  - Run the test for the planned weeks. Then pull spend and new-customer results by channel and bring them back.
+how_it_works:
+  - title: Build the new-customer sheet
+    text: Defines net revenue, MER, new-customer MER, blended CAC and profit once, writes the sheet formulas and lists the cost gaps to fix.
+  - title: Set your CAC limit
+    text: Checks the first order, rates lifetime gross profit to CAC on a fixed window, and sets a target, a ceiling and a floor for CAC.
+  - title: Check the platform numbers
+    text: Steps each platform's reported return down to new-customer return, and flags views, existing customers and sales that would have happened anyway.
+  - title: Plan the lift test
+    text: Says whether to test at all, picks a platform lift study or a region test for your size, matches the regions and sets the dates, the cost and the cut, hold or scale rule.
+  - title: Split the next dollar
+    text: Uses the test result to rank channels by new-customer revenue per extra dollar and finds the stop point for each.
+output_shape: |-
+  STEP 1: NEW-CUSTOMER SHEET
+    Daily columns | definitions | reading rules | cost gaps to fix
+
+  STEP 2: CAC LIMIT
+    First order check | window ratio | target, ceiling, floor | payback | score out of 100 | scale, hold or fix
+
+  STEP 3: PLATFORM NUMBERS
+    Return ladder per platform | traps found | trust per channel | score out of 100
+
+  STEP 4: LIFT TEST PLAN
+    Should you test | test type | groups | change and dates | cost | read-out formula | rule
+
+  STEP 5: BUDGET SPLIT
+    Ranking for the next $10,000 | stop point per channel | evidence grade | move test
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your product type
+    how: A one-off product, a refill and a subscription pay back at different speeds. Say which, so step 2 picks the right window.
+  - what: Your cash
+    how: Say how much cash you can use while customers pay back. The limit depends on it.
+  - what: The test budget
+    how: A lift test costs real money in extra spend or lost sales. Give the most you can risk, and ask a finance person to check it.
+  - what: Other places you sell
+    how: Name Amazon, shops and wholesale. Without them, the test can read their sales as ad sales.
+judge:
+  - Each metric in the sheet is defined once, and blended CAC uses ad spend divided by new customers, not platform cost per sale.
+  - The CAC limit shows the window it used and never mixes 30, 90 and 180 day figures.
+  - The first order check and the window ratio both appear, with their sums.
+  - The test plan says plainly if you should not test yet, and what to do first.
+  - The ranking states how strong the evidence is for each channel.
+test:
+  - Rebuild one week of the sheet by hand and compare it to the formulas.
+  - Check the new-customer count against Shopify for the same dates.
+  - Ask for the CAC limit twice with the same data. It should land on the same window and ratio.
+  - Before you run the lift test, write down the result that would make you cut the channel. The plan should match.
+improve:
+  - Keep the daily sheet running and review it weekly, so the limit moves with real data.
+  - Add cohort profit at 30, 90 and 180 days to your brand file once you have it.
+  - Edit the rule bands in the CAC step if your type of business pays back differently.
+  - Repeat the lift test on a second channel once the first has a result.

@@ -1,0 +1,74 @@
+new_slug: build-a-weekly-kpi-report-with-a-forecast-and-dashboard
+name: Build a weekly KPI report with a forecast and dashboard
+summary: Describe your weekly numbers. Get a report you can rerun, a forecast and a shareable dashboard.
+job: track-numbers
+thinking: medium
+thinking_why: Each step reads a table and the forecast is a standard method. A mid-level model is enough.
+headline: Get your weekly numbers, a forecast and a dashboard in one run
+subhead: Say which numbers you check each week. It builds a report with fixed definitions, finds the trend, the seasons and the odd spikes, forecasts the next weeks with ranges, and puts it all on one page you can open and share.
+explain: |
+  Many people rebuild the same weekly numbers by hand, and each time the definitions shift a little. Last week's "sales" included refunds and this week's does not. A forecast added on top inherits the drift, and a chart pasted into a slide goes stale in a day.
+
+  The steps fix the numbers first. The report step turns your plain description into metrics with a formula, a grouping, a comparison and a period, builds the workbook, and saves the definition so it reruns the same way. The analysis step then reads the weekly series, splits trend from season, flags spikes and dips, and forecasts with a test on held-back weeks. The dashboard step puts the headline numbers, the trend and the forecast range on one page with filters.
+when:
+  - You report the same numbers every Monday and rebuild them each time.
+  - You want a forecast with a range, not a single guess, for the next quarter.
+  - Your team keeps asking for a link to "the numbers".
+you_give:
+  - A plain description of the report, with the numbers, the groups, the comparison and the period
+  - A spreadsheet or export with at least two full seasons of weekly history (optional but best)
+  - How far ahead to forecast
+  - Known events such as promos or outages, so spikes can be explained (optional)
+you_get:
+  - A workbook with each metric defined once, plus a saved definition to rerun
+  - A read on trend, seasons and odd spikes, with a forecast table and ranges
+  - A test of the forecast on weeks it did not see
+  - One page with headline cards, trend and forecast charts, and filters
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the report in your own words and attach the data. Answer its one or two questions, like which period each run covers.
+  - Tell it how far ahead to forecast and which events to know about.
+  - Open the finished page and check three numbers against your source.
+how_it_works:
+  - title: Fix the report
+    text: Turns your description into metrics, groups, comparisons and a period, asks only about what is unclear, builds the workbook and saves the definition.
+  - title: Find the trend and forecast
+    text: Fills date gaps, splits each metric into trend, season and leftover, flags spikes and dips against your events, and forecasts with a test on held-back weeks.
+  - title: Build the dashboard
+    text: Puts the headline numbers in cards, charts the trend and the forecast range, adds filters and saves one page you can share.
+output_shape: |-
+  STEP 1: REPORT
+    Metric list with formulas | grouping | comparison | period | workbook | saved definition
+
+  STEP 2: TREND AND FORECAST
+    Trend | seasons | spikes and dips with causes | forecast table with ranges | held-back test error
+
+  STEP 3: DASHBOARD
+    Cards | trend chart | forecast chart | filters | one shareable page
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The period each run covers
+    how: Say calendar week, trailing seven days or month to date. This is the one choice that changes every number.
+  - what: Forecast length
+    how: Short forecasts are tighter. With under two seasons of history, ask for a short one.
+  - what: Comparison
+    how: Pick last week, last year or a target. Last year needs at least a year of history.
+  - what: Your events
+    how: List promos, launches and outages by date. Step 2 uses them to explain spikes instead of guessing.
+judge:
+  - Each metric has a written formula and the same definition in the report and on the page.
+  - The forecast shows a range and a test error on weeks it did not see.
+  - Spikes are matched to a known event or marked as unexplained, never left out.
+  - Numbers on the dashboard match the workbook.
+  - It says plainly when there is too little history for seasons.
+test:
+  - Recompute two metrics by hand from the source for the latest week.
+  - Rerun the saved definition on next week's data and check that the same columns come out.
+  - Hide the last four weeks, run the forecast and see how close it lands.
+improve:
+  - Add a target line to the dashboard once you agree one.
+  - Log each rerun date so you can see how the forecast drifted.
+  - Not worth running on under about twelve weeks of data. Build the report only and let the history grow.

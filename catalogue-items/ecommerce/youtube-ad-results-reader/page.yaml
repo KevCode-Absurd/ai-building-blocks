@@ -1,0 +1,123 @@
+new_slug: youtube-ad-results-reader
+name: "YouTube ad results reader"
+summary: "Give it your YouTube ad results. Get a scale, keep or pause call per ad, with a score out of 100."
+job: run-google-ads
+thinking: low
+thinking_why: "It compares a few numbers with fixed thresholds and follows a short decision rule, so a fast, small model is enough."
+
+headline: "YouTube ad results reader"
+subhead: Give it each YouTube ad's view rate, click-through rate, conversion rate, cost and new-customer cost per sale, plus your break-even cost per sale. It rates each metric, gives a score out of 100 per ad, and says scale, keep or pause, with the next test to run.
+
+explain: |
+  YouTube results are easy to misread. A hook can look weak because you judged on clicks, or a page can look fine because Google over-reports sales. Stores then scale the wrong ad or pause one that was working.
+
+  This skill reads each ad against four things: view rate (how strong the hook is), click-through rate (how strong the offer and call to action are), conversion rate (how strong the page is) and new-customer cost per sale against your break-even. It gives a verdict per ad and tells you which test to run next. The benchmarks come from one agency's accounts, so treat them as starting points. A low reported ROAS is fine only when you have proof that customers come back.
+
+when:
+  - You have several YouTube ads running and do not know which to scale and which to stop.
+  - An ad has views but few sales, and you need to know whether to fix the hook, the offer or the page.
+  - You want a quick weekly read of YouTube results that you can repeat.
+
+you_give:
+  - Per ad, the view rate, click-through rate, conversion rate, cost and new-customer cost per sale
+  - Where each ad ran (in-stream or Shorts)
+  - Your break-even new-customer cost per sale
+  - View-through conversions (optional)
+you_get:
+  - A scorecard with each metric rated
+  - A score out of 100 per ad, with the sum shown
+  - A scale, keep or pause call per ad
+  - "The next test: hook, offer and call to action, or page"
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export the YouTube ad results from Google Ads, split by in-stream and Shorts, and paste them.
+  - Add your new-customer cost per sale from your store or attribution tool, and your break-even figure.
+  - Act on the verdicts, one change per ad, and read the results again after the next full week.
+  - Run the next test it names for each ad that is not ready to scale.
+
+how_it_works:
+  - title: Rates view rate
+    text: About 20% is very good for in-stream and about 10% for Shorts. This is hook strength.
+  - title: Rates click-through rate
+    text: Above 1% is good in-stream, 1.3 to 1.4% is common and 2% is a big scaler. Shorts run lower.
+  - title: Rates conversion rate
+    text: About 0.05% or above in the Google dashboard is the floor. Below that, fix the page.
+  - title: Rates new-customer cost
+    text: Compares new-customer cost per sale with break-even, using your own store or attribution data, not Google's number.
+  - title: Adds view-through
+    text: Notes view-through conversions, so you do not judge on clicks alone.
+  - title: Scores each ad
+    text: Four metrics at 25 points each, with the sum shown.
+  - title: Gives a verdict
+    text: Pause, keep a little or scale, by a fixed rule.
+  - title: Names the next test
+    text: Low view rate means test hooks, low click-through means test offer and call to action, low conversion means test the page.
+
+output_shape: |
+  YOUTUBE RESULTS  <date range>, break-even new-customer CPA <$>
+  AD <name> (<in-stream / Shorts>)  VERDICT <SCALE / KEEP / PAUSE>  SCORE <n>/100
+    view rate <x>%      <pass/fail>  (needs about 20% in-stream, 10% Shorts)
+    CTR <x>%            <pass/fail>  (above 1% in-stream)
+    conversion rate <x>% <pass/fail> (about 0.05% or more)
+    new-customer CPA <$> <pass/fail> (at or under break-even)
+    view-through conversions: <n>
+    SCORE = 25 x <passes> = <n>
+    NEXT TEST  <hook / offer and call to action / page>
+  (one block per ad)
+  NOTES  <low ROAS allowed only with a proven repeat purchase>
+  NOT CHECKED: <metric, and what is needed>
+  MISSING: <item>
+
+tweaks:
+  - what: Placement
+    how: Always split in-stream and Shorts. The thresholds differ and mixing them hides which one is working.
+  - what: Your break-even new-customer CPA
+    how: Calculate it first with the break-even calculator. The cost check has no meaning without it.
+  - what: Where new-customer CPA comes from
+    how: Use your store or attribution data. Google over- and under-reports, so its number is a guide only.
+  - what: Repeat purchase
+    how: Say if customers come back, such as monthly. A low first-order ROAS can then be fine, if you have proof.
+  - what: Date range
+    how: Use a full week or more per ad, and wait until each ad has enough spend to show a pattern.
+
+judge:
+  - Every ad shows all four metrics with a pass or fail beside each.
+  - The score line shows its sum.
+  - "The verdict follows the rule: poor view rate and CTR with no conversions is pause."
+  - The next test matches the weakest metric.
+  - No metric is passed that was not supplied.
+
+test:
+  - Give it an ad with a 5% view rate, 0.3% CTR and no sales. The verdict should be PAUSE.
+  - Give it an ad that meets all four. The verdict should be SCALE.
+  - Run it twice on the same numbers. The scores should match.
+  - Change only the conversion rate to 0.02%. The next test should become the page.
+
+improve:
+  - Replace the benchmarks in the skill file with your own, once you have three months of your own results.
+  - Add your margin and break-even rules so the cost check is always done against your numbers.
+  - Add a rule for how long an ad must run before it can be paused.
+  - Save each weekly read in your notes, so you can see which hooks win.
+  - Pair it with the Demand Gen builder, which uses the winners.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Gives view rate, click-through rate, conversion rate and view-through conversions per ad, split by placement."}
+    - {name: "Shopify", why: "Shows which customers are new, for the new-customer cost per sale."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini compare numbers with thresholds reliably."}
+  inputs:
+    - "Your break-even new-customer CPA"
+    - "New-customer CPA from your attribution tool or store"
+    - "Results split by in-stream and Shorts"
+    - "Your repeat purchase rate, if it is high"
+
+terms:
+  - term: View rate
+    meaning: The share of people who watched your video ad that it counted as a view, which tells you how strong the hook is.
+  - term: Click-through rate
+    meaning: The share of people who saw the ad and clicked it.
+  - term: View-through conversion
+    meaning: A sale by someone who saw the ad but did not click it.
+  - term: New-customer CPA
+    meaning: What you pay in ads to win one customer who has never bought from you.

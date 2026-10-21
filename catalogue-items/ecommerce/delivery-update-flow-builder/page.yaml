@@ -1,0 +1,129 @@
+new_slug: delivery-update-flow-builder
+name: "Delivery update flow builder"
+summary: "Give it your shipping setup and ticket counts. Get an update flow, tracking page plan and delay script."
+job: keep-customers
+thinking: medium
+thinking_why: "It works out a few rates and writes short messages, so a mid-size model is enough if you give it real numbers."
+
+headline: "Delivery update flow builder"
+subhead: Give it your orders per month, your order-status tickets and your real delivery times. It rates your numbers against clear limits, then hands back a delivery date rule, a four-message update flow, a tracking page plan and a script for late parcels.
+
+explain: |
+  Most "where is my order" (WISMO) tickets are not complaints. They come from customers who were told nothing. Each one costs an agent about 3 to 5 minutes, so a store with 100 such tickets a day loses 5 to 8 hours of work to lookups.
+
+  This skill starts by measuring: your WISMO rate, and how often parcels arrive inside the date you promised. It then builds the date from your handling time and real carrier times, with a little padding so you usually beat it. It writes four automatic messages (confirmed, shipped, out for delivery, delayed), plans a tracking page on your own domain, and uses the quiet days to teach first use. Most size claims come from software vendors, so it treats them as direction and tells you what to measure on your own store.
+
+when:
+  - Your support inbox is full of "where is my order" emails.
+  - Customers get only the carrier's tracking link and nothing from your store.
+  - Parcels are often late and you only hear about it when someone is angry.
+
+you_give:
+  - Orders per month and the number of tickets that ask about order status
+  - Your carrier, handling time and real delivery times by lane or zone
+  - Your current shipping emails and tracking links (optional)
+  - Your email or SMS tool, such as Klaviyo or Shopify notifications (optional)
+you_get:
+  - Your WISMO rate and delivery accuracy, each rated against a limit
+  - A delivery date rule that pads your real times
+  - A four-message update flow with timing and copy
+  - A tracking page plan and a script for delayed parcels
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your monthly orders, the count of order-status contacts and what your carrier really delivers by region.
+  - Paste your current shipping emails if you have them, and say which tool sends them.
+  - Build the date rule and the email flow first. Add a branded tracking page only if your order volume covers the monthly fee.
+  - Re-measure after 30 days and move on when WISMO is under 5 percent of orders and accuracy is above 90 percent.
+
+how_it_works:
+  - title: Measures first
+    text: WISMO rate is order-status contacts divided by orders. Under 3 percent is healthy, 3 to 8 percent is normal but costly, and over 8 percent is a structural problem.
+  - title: Costs the tickets
+    text: At 3 to 5 minutes a lookup, it turns your ticket count into agent hours.
+  - title: Builds the date rule
+    text: It uses handling time plus real carrier times for each lane, padded slightly, and checks delivery accuracy against 90 percent.
+  - title: Writes the four messages
+    text: Confirmation with an estimate, shipping with tracking, out for delivery with a window, and a delay message.
+  - title: Plans the tracking page
+    text: A page on your own domain with status, a window, order lookup, a returns path, one product pick and how-to content.
+  - title: Fills the quiet days
+    text: It plans first-use help for the days between order and delivery.
+  - title: Writes the delay script
+    text: A message that goes out before a stalled parcel becomes a complaint, with a fix or small credit.
+  - title: Sets the move-on test
+    text: You are done when WISMO is under 5 percent and accuracy is above 90 percent.
+
+output_shape: |
+  YOUR NUMBERS
+    WISMO rate: <contacts> / <orders> = <%>  rated <healthy | normal | structural>
+    Agent time: <tickets per day> x <minutes> = <hours per day>
+    Delivery accuracy: <delivered within promise> / <shipped> = <%>
+
+  DELIVERY DATE RULE
+    <lane>: handling <days> + carrier <real days> + padding <days> = show <date or range>
+    Show on: product page, cart, checkout, confirmation
+
+  UPDATE FLOW
+    1 Confirmation  trigger <...>  sends <...>
+    2 Shipped  trigger <...>  sends <...>
+    3 Out for delivery  trigger <...>  sends <...>
+    4 Delayed  trigger <...>  sends <...>
+
+  TRACKING PAGE  <sections in order>  Worth it now? <yes | not yet, why>
+
+  DELAY SCRIPT  <short message>
+
+  QUIET-DAYS PLAN  <first-use content by day>
+  MOVE ON WHEN  WISMO under 5% and accuracy above 90%
+  MISSING: <what was needed>
+
+tweaks:
+  - what: Real carrier times by lane
+    how: Give delivery times for your main regions. One national average hides the lanes that run late, and those lanes make the tickets.
+  - what: Your order value
+    how: Higher-priced orders get more calls. One source puts calls at 12 to 18 percent of orders at a $250 average order and about 3 percent at $40. Give your average so the limits are read fairly.
+  - what: Peak season
+    how: Say if your numbers are from a peak month. Sources put the ticket share higher then, so compare like with like.
+  - what: Your channel
+    how: Say whether you use email, SMS or both, and the skill will set the timing and length for each.
+
+judge:
+  - The WISMO rate and delivery accuracy are worked out from your numbers, with the sums shown.
+  - The date rule uses your handling time and real carrier times, not the carrier's best case.
+  - There are four messages, each with a trigger and timing, and none needs a login.
+  - Vendor claims are labelled as vendor claims, and the tracking page is not pushed if your volume is too low.
+  - The delay message offers a fix or a small credit without promising what you can't keep.
+
+test:
+  - Give it one lane where you know parcels are late. The date rule should be longer for that lane than for the rest.
+  - Run it twice on the same numbers. The rates and the rating should match.
+  - Place a test order and watch the messages arrive. Each should come at the planned time with a working link.
+  - After 30 days, count order-status contacts again and compare the rate with the first run.
+
+improve:
+  - Add your carrier names and service levels to the skill file, so the date rule is built from them every time.
+  - Add your brand voice rules, so the messages sound like you.
+  - Add any limits your carrier contract or consumer law sets on how you state delivery dates.
+  - Save your WISMO rate and accuracy to your brand file each month, so you can see the trend.
+  - Pair it with the where-is-my-order risk finder, which finds orders already at risk, and the shipment tracking planner.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can do the sums and write the messages. Paste real numbers."}
+    - {name: "Klaviyo", why: "It sends the update flow by email and SMS from your order events."}
+    - {name: "AfterShip", why: "It hosts a tracking page and sends delivery updates. Check the current price against your order volume."}
+    - {name: "Gorgias", why: "A helpdesk that can tag order-status tickets, so your WISMO count is real and not a guess."}
+  inputs:
+    - "Your helpdesk tag counts for order-status tickets"
+    - "Delivery scan data by lane for the last 90 days"
+    - "Your current shipping emails"
+    - "Your peak-season dates"
+
+terms:
+  - term: WISMO
+    meaning: Short for where is my order, the question customers send when they have no update.
+  - term: Delivery accuracy
+    meaning: Parcels delivered inside the promised date, divided by parcels shipped.
+  - term: Lane
+    meaning: A route from your warehouse to a region, with its own real delivery times.

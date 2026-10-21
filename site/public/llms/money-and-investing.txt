@@ -1,6 +1,6 @@
 # Handle money and investing: AI Blocks
 
-> 153 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 157 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter): Give it the period's expenses. Get an accrual schedule with each entry, its support and a draft journal entry.
 - [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence list, valuation checks and an integration plan.
@@ -30,6 +30,8 @@
 - [Choose your investing style and your stock and bond split](https://useaiblocks.com/workflows/investing-style-split): Tell it your time, skill and nerve. Get your investor type, a stock and bond split with rules, and a one-page policy.
 - [Circle of competence sorter](https://useaiblocks.com/skills/circle-of-competence-sorter): Describe a business or bet. Get it sorted as yes, no or too tough, with your real edge written down.
 - [Cleanup cost liability calculator](https://useaiblocks.com/skills/cleanup-liability-calculator): Give it an asset and its cleanup cost. Get the liability, yearly interest cost and journal entries worked out.
+- [Close the month and explain every line that moved](https://useaiblocks.com/workflows/close-the-month-and-explain-every-line-that-moved): List your close tasks. Get a close plan, accruals, draft statements and a reason for each big move.
+- [Code vendor bills, flag odd ones and find supplier savings](https://useaiblocks.com/workflows/code-vendor-bills-flag-odd-ones-and-find-supplier-savings): Give it your vendor bills. Get each coded, the odd ones flagged and the biggest savings ranked.
 - [Company fair value modeler](https://useaiblocks.com/skills/company-fair-value-modeler): Give it a stock ticker. Get a fair value range from three methods, with a sensitivity grid. Collects data from websites.
 - [Company financial health reviewer](https://useaiblocks.com/skills/company-financial-health): Give it a company's filings. Get ratios, cash flow and balance sheet health explained in plain words.
 - [Company one-page tear sheet maker](https://useaiblocks.com/skills/company-tear-sheet): Name a company. Get a dense one-page Word profile with numbers, ratios and a business summary. It collects data from websites.
@@ -76,6 +78,7 @@
 - [Find bargain stocks with a screen and a group test](https://useaiblocks.com/workflows/bargain-stock-screen): Paste a table of listed companies. Get the cheap ones that pass five safety tests, their asset floor and the group rules.
 - [Find out if a business is worth owning long term](https://useaiblocks.com/workflows/business-worth-owning): Give it a business and its figures. Get a pass, fail or too-hard call on ten tests, and what to check next.
 - [Fixed asset register keeper](https://useaiblocks.com/skills/fixed-asset-register-keeper): Give it your purchases and disposals. Get what to capitalise, yearly depreciation and impairment checks.
+- [Forecast your startup runway and prepare a finance pack](https://useaiblocks.com/workflows/forecast-your-startup-runway-and-prepare-a-finance-pack): Give it your plan. Get a cash model, a cash-out date with ranges and a board finance plan.
 - [Funding round multiple analyst](https://useaiblocks.com/skills/funding-round-multiple-analyst): Give it a software company. Get how its value multiple changed across funding rounds and what drove the shift.
 - [Group accounts combiner](https://useaiblocks.com/skills/group-accounts-combiner): Give it each company's accounts. Get one set of group statements with the cancelled internal items shown.
 - [Holding value change checker](https://useaiblocks.com/skills/holding-value-change-checker): Paste a holding and why you bought it. Get what changed in the business and a keep, watch or weak mark.
@@ -96,6 +99,7 @@
 - [Linked financial model builder](https://useaiblocks.com/skills/linked-financial-model-builder): Give it your past accounts and drivers. Get income, balance sheet and cash flow models that tie together.
 - [Long-hold return calculator](https://useaiblocks.com/skills/long-hold-return-calculator): Paste what you know about a business and its price. Get the long-run sums and a keep, wait or pass call.
 - [Market mood reader](https://useaiblocks.com/skills/market-mood-reader): Paste your holdings and how prices moved. Get each move sorted as business or mood, and a take, ignore or wait read.
+- [Match bank to books and issue a clean P&L](https://useaiblocks.com/workflows/reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l): Give it a bank statement and your ledger. Get matches, causes for the gaps and clean statements.
 - [Merger effect modeler](https://useaiblocks.com/skills/merger-effect-modeler): Give it two companies and deal terms. Get the effect on earnings per share, cost savings cases and price split.
 - [Mispriced bet tester](https://useaiblocks.com/skills/mispriced-bet-tester): List your bets. Get which have the odds truly in your favour after the price, and which are only favourites.
 - [Net worth calculator](https://useaiblocks.com/skills/net-worth-calculator): List your assets and debts. Get your net worth, how it splits, and a monthly view to track.

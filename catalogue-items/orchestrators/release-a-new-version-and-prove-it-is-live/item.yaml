@@ -1,0 +1,21 @@
+slug: release-a-new-version-and-prove-it-is-live
+name: "Release a new version and prove it is live"
+summary: "Give it your project. Get a version, a changelog, a go or no-go call, a live deploy and proof it is new."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: codebase, required: true}
+outputs:
+  - {type: audit_report}
+uses: [release-preparer, ship-readiness-gate, vercel-publisher, deploy-verifier]
+steps:
+  - {uses: release-preparer, note: "Sets the version and writes the changelog from your commits."}
+  - {uses: ship-readiness-gate, note: "Checks the tagged release and gives a go or no-go before anything goes live."}
+  - {uses: vercel-publisher, note: "Puts the cleared release live and returns the link."}
+  - {uses: deploy-verifier, note: "Opens the live link from the step before and proves it serves the new build, not the old one."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/release-a-new-version-and-prove-it-is-live/skeleton.yaml

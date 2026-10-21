@@ -1,0 +1,133 @@
+new_slug: untapped-avatar-finder
+name: "Untapped avatar finder"
+summary: "Give it a crowded product. Get rivals' buyers, three or four unserved groups and a ranked pick."
+job: understand-customers
+thinking: medium
+thinking_why: "It compares groups and weighs evidence you paste in. A mid-size model does this well, and a larger one helps only if the notes are long."
+
+headline: "Untapped avatar finder"
+subhead: Give it a crowded product, plus rival ads and review stories you collect. It maps who your rivals sell to, finds three or four buyer groups nobody serves, checks how big each is, ranks them and gives you one offer line to test.
+
+explain: |
+  When ten brands sell the same product to the same buyer, the one with the biggest budget wins. A new store cannot out-spend them. What it can do is sell the same product to a group they ignore, and speak to that group in its own words.
+
+  This skill finds that group with evidence. You map who the leading brands talk to in the Meta Ad Library. Then you read long Amazon review stories where buyers say who they are. Each different story is a possible group. For each one you check how many forum threads exist on the same problem, so you know it is more than one person. The skill then picks the group with the best evidence and no brand speaking to it yet, and sharpens it into layers you can test with separate ad angles.
+
+when:
+  - You sell a product many others sell and your ads fight rivals for the same buyer.
+  - A rival with a bigger budget owns the obvious buyer and you cannot win on spend.
+  - You want a new group to test, with proof that it exists, before you make new ads.
+
+you_give:
+  - Your product and the problem it solves
+  - Three to five rivals, as names or Meta Ad Library links
+  - Amazon links for the top-reviewed product or a similar one
+  - The review stories and forum threads you find, with names removed
+  - Who buys from you now and their order values (optional)
+you_get:
+  - A table of who each rival sells to, with the group they all share
+  - Three or four candidate groups, each with a quote, a belief and the fixes they tried
+  - A size check for each group from forum threads
+  - One chosen group with the reason, ranked layers and a one-sentence offer line
+  - A test plan that changes the ad angle and leaves the product alone
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it the product, the problem it solves and three to five rivals who are selling well.
+  - Look at each rival's ads in the Meta Ad Library and paste in who they seem to talk to and what they promise.
+  - Open the top Amazon product, sort by top reviews, and paste the long life stories with names removed.
+  - Search each group's situation plus Reddit and paste what you find. Then ask it to rank the groups and pick one.
+
+how_it_works:
+  - title: Names the problem
+    text: One line about what the product solves, so every later step stays on it.
+  - title: Maps rivals' buyers
+    text: For each winning brand it records the age range, gender, desires and selling points in their ads, and finds the group they share.
+  - title: Finds candidate groups
+    text: It reads long review stories for other kinds of buyer. Each different story is a possible group, tagged without a name.
+  - title: Checks the size
+    text: It looks at how many forum threads cover each situation. Many threads mean many people. One story is not a market.
+  - title: Writes each group's picture
+    text: It records the beliefs, the fixes tried and the feelings, all from the quotes you gave it.
+  - title: Picks one
+    text: It wants strong evidence, many threads, a clear wish for your product and no brand speaking to the group yet.
+  - title: Sharpens into layers
+    text: It narrows the group a step at a time and ranks each layer by pain, ability to pay and size.
+  - title: Plans the test
+    text: Each top layer gets its own ad angle with a result that decides it. The product stays the same.
+
+output_shape: |
+  RIVAL BUYERS
+  <brand> | <age range> | <gender> | <desires> | <selling points> | <source>
+  Shared group to avoid: <...>
+
+  CANDIDATES (3 to 4)
+  <tag> | <story> | <quote> | <belief> | <fixes tried> | <feeling>
+  SIZE CHECK
+  <tag> | <search used> | <threads: few / some / many>
+
+  PICK
+  <tag> because <evidence> | <threads> | <wish for your product>
+    | <nobody speaking to them yet: yes / no / not checked>
+  Not picked: <tag, why>
+
+  LAYERS (ranked)
+  1. <layer> | pain <...> | can pay <...> | size <...>
+  OFFER LINE: <one sentence>
+  CONTRAST: <how this group stands apart from rivals>
+  TEST PLAN: <angle per layer and the result that decides>
+  CLAIMS NOTE: <what you may not claim for this group>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: How many rivals you map
+    how: Three is the least. The more successful brands you map, the clearer the shared group is, and that group is the one to avoid.
+  - what: The review filter
+    how: Sort by top reviews and keep only reviews with photos or video. Those writers tend to tell long stories about who they are.
+  - what: The size search
+    how: Search the exact situation plus the word Reddit. Try two or three wordings, because a group can hide under a different name.
+  - what: How narrow the layers go
+    how: Stop narrowing when you could no longer reach enough people. People tend to underestimate group size, so test before you cut a layer.
+  - what: Your own customer data
+    how: If you already sell, paste who buys and their order values. A group already buying from you is cheaper to test than a stranger.
+
+judge:
+  - Each rival row has a source, and guesses are marked.
+  - Each candidate has a real quote, a belief and a fix they tried, with no names.
+  - The size check says what was searched and found, not just "big market".
+  - The pick says which of the four tests it passes, or which it lacks.
+  - The test plan changes the angle, not the product.
+  - Claims for the new group do not go past what the product does.
+
+test:
+  - Take the chosen group and search Reddit for it yourself. You should find the same threads the skill used.
+  - Check the Ad Library for that group. If a strong brand already talks to them, treat the pick as taken.
+  - Run the skill twice with the same notes. The pick should be the same, or the two top groups should swap places with a close score.
+  - Run one small ad test for each of the top two layers with the same product and budget. The result is the real judge.
+
+improve:
+  - Add your price, margin and shipping limits to the skill file so groups that cannot pay are dropped early.
+  - Add claims your product can never make (for example health or income claims), so no layer is written around one.
+  - Save the chosen group and its quote file to your brand file as the second buyer.
+  - Rerun it after a new rival enters your market. A group that nobody served last season may not be open now.
+  - Pair it with the Forum and review avatar digger to go deeper on the chosen group, and with the Avatar fit checker to test your ads and page against it.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ad Library", why: "Shows what rivals say and who they seem to talk to, free and public."}
+    - {name: "Amazon reviews", why: "Long life stories from buyers show other groups who already buy the product."}
+    - {name: "Reddit search", why: "Shows how many people discuss the same problem, which is your size check."}
+    - {name: "Any good chat AI", why: "Compares the groups and ranks them against your notes."}
+  inputs:
+    - "A website traffic tool's numbers for each rival, such as visits and average order value, to see how strong they are"
+    - "Your order export, to see which groups already buy from you"
+    - "Your price and margin, so groups that cannot pay for the product are dropped"
+    - "Search terms your best customers used to find you"
+
+terms:
+  - term: Avatar
+    meaning: A real buyer described by their situation, fears, fixes tried and words, not just their age and gender.
+  - term: Layer
+    meaning: A narrower version of a group, such as women, then women over 40, each one sharper than the last.
+  - term: Meta Ad Library
+    meaning: A free public tool that shows the ads any brand is running on Facebook and Instagram.

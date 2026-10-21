@@ -1,0 +1,134 @@
+new_slug: amazon-product-viability-scorer
+name: "Amazon product viability scorer"
+summary: "Give it a product idea and costs. Get a score out of 100, the weakest test and a go or no-go."
+job: sell-on-amazon
+thinking: high
+thinking_why: "It judges one idea against ten tests and several hard stops, so a stronger model catches more."
+
+headline: "Amazon product viability scorer"
+subhead: Give it a product idea, your planned price, landed cost, page 1 results and the cash you have. It runs ten tests and five hard stops. You get a score out of 100 with the points for each test, the weakest test, and a go, test first or no-go call.
+
+explain: |
+  Many Amazon products fail for reasons you can see before you buy stock: a price too low for the fees, a page 1 where every seller charges about the same, a gated category, or a first order that eats all your cash. A wrong pick costs thousands.
+
+  This skill scores one idea against rules from two working sellers. It checks price band, margin, how many ways buyers search, price spread, weak page 1 listings, brand giants, shipping risk, seasonality, gates and how you would stand out. Any restricted category, fad item or cash gap is a hard stop, whatever the score. The point weights are ours, since the sources give rules, not points, and the score says how it was worked out. It ends with the cheapest test to run before you order.
+
+when:
+  - You have a product idea for Amazon and are about to ask a supplier for a quote.
+  - You have two or three ideas and need to know which one to test first.
+  - You found a product in a research tool and want a second opinion before you spend.
+
+you_give:
+  - Your product idea, planned price and category
+  - Landed cost per unit (product, freight, duties, taxes), plus size and weight
+  - Page 1 results with prices, review counts and ratings
+  - Monthly search volume, and how many different phrases describe the product
+  - The cash you could lose on the first order and ads
+you_get:
+  - A score out of 100, with the points for each of the ten tests and how it was worked out
+  - Any hard stop that ends the idea, and the weakest test
+  - A go, test first or no-go call, and the cheapest next test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your idea, price, landed cost, size and weight, and your cash.
+  - Paste page 1 for your main search phrase, with prices, review counts and ratings. Add research tool figures if you have them.
+  - Read the hard stops first, then the weakest test. Fix what can be fixed and run the score again.
+  - Before you order stock, run the cheapest test it names, and check the trademark.
+
+how_it_works:
+  - title: Runs the kill list
+    text: Stops at once for a restricted category, a fad or seasonal item, a patented item, or a price under 10 dollars.
+  - title: Scores price and margin
+    text: Checks the price band and a net margin of 30 percent or more after all costs and fees.
+  - title: Reads page 1
+    text: Scores price spread, weak listings, brand giants and how many ways buyers describe the product.
+  - title: Checks the product itself
+    text: Scores shipping risk, year-round demand, gates and flags, and how you would be clearly better.
+  - title: Checks your cash
+    text: Compares your cash with the first order plus about 1,000 dollars of ads.
+  - title: Adds the points
+    text: Adds ten tests that total 100 points and shows each line so you can check the sum.
+  - title: Names the weakest test
+    text: Says which test hurt most and what would raise it.
+  - title: Gives the call
+    text: Go, test first or no-go, plus the cheapest test before you buy stock, and a reminder to search the trademark.
+
+output_shape: |
+  VERDICT: <GO | TEST FIRST | NO-GO>  <n>/100
+  Weakest test: <name and why>
+
+  HARD STOPS
+  <restricted | seasonal or fad | patented | under $10 | cash short>: <hit or clear>
+
+  SCORE (our weights, from the sources' rules)
+  1 Price band        <n>/15  <price and why>
+  2 Margin            <n>/20  <net margin and the 3x landed cost check>
+  3 Search variety    <n>/10
+  4 Price spread      <n>/10  <low to high on page 1>
+  5 Weak page 1       <n>/10  <images, ratings, complaints>
+  6 No brand giants   <n>/10
+  7 Ships well        <n>/5
+  8 Evergreen         <n>/5
+  9 Gates and flags   <n>/5
+  10 Differentiation  <n>/10
+  Sum: <a + b + c ... = n>
+
+  REPEATED COMPLAINTS (1 to 3 star reviews, ranked by count)
+  <complaint>: <n reviews> -> <change for the supplier>
+
+  CHEAPEST NEXT TEST: <pre-sale | social page | crowdfunding page>
+  CHECK FIRST: <trademark search, current fee tables>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Landed cost
+    how: Give product, freight, duties and taxes in one number per unit. The margin test is only as good as this figure.
+  - what: Page 1 paste
+    how: Paste prices, review counts and ratings for the top 10 to 20 results. The spread, weak-listing and brand-giant tests read straight from it.
+  - what: Your cash
+    how: State what you can lose, not what you have. The cash hard stop uses it, and it decides how big a revenue band you can fund.
+  - what: Review text
+    how: Paste the 1 to 3 star reviews of the top three results. The skill counts repeated complaints and turns them into supplier changes.
+  - what: Your country
+    how: Say US or UK. In the UK, Amazon fees carry 20 percent VAT on top, which lowers net profit unless you reclaim it.
+
+judge:
+  - The ten lines add up to the score shown, and each line says what was measured.
+  - Any restricted, seasonal, patented or cash-short idea is a no-go, whatever the score.
+  - The weakest test is named with one thing that would improve it.
+  - Where the two sources disagree, both numbers and their conditions are shown.
+  - Missing data is marked MISSING, and a test it could not run is not scored as a pass.
+
+test:
+  - Score a product you already know sells well. It should not hit a hard stop and should score well on margin and price spread.
+  - Score a cheap, seasonal item. It should be a no-go at the kill list.
+  - Run the same idea twice. The score should land within a few points. If not, your page 1 paste is too thin.
+  - Take the weakest test, change the input that fixes it (a higher price, a narrower niche), and see the score move.
+
+improve:
+  - Change the weights in the skill file to match your goals, such as more points for margin if you are short on cash.
+  - Add your own hard stops, such as categories you will not enter or a weight limit your supplier cannot meet.
+  - Add the scores of past products and how they did, so you can see which test best predicted your results.
+  - Pair it with the Amazon search gap finder before it, and the Amazon fee and margin checker after it.
+
+works_best_with:
+  tools:
+    - {name: "Helium 10", why: "A research database with the filters the sources use (ungated, price, revenue, review count, listing age, image count). It has a free tier, so check current limits."}
+    - {name: "Seller Central fee calculator", why: "Amazon's own revenue calculator shows current referral and fulfilment fees for your size and weight."}
+    - {name: "Any good chat AI", why: "Runs the score from your pasted numbers and page 1 text."}
+  inputs:
+    - "A research tool export for your phrase, with revenue, reviews, listing age and image count per result"
+    - "Reviews of the top three competitors, especially the 1 to 3 star ones"
+    - "A supplier quote with unit cost, freight and duties"
+    - "A trademark search result for your product name"
+
+terms:
+  - term: Landed cost
+    meaning: What one unit costs you once it reaches Amazon, counting product, freight, duties and taxes.
+  - term: Net margin
+    meaning: What you keep per sale after product cost, Amazon fees and shipping, as a share of the price.
+  - term: Gated
+    meaning: A category or brand where Amazon asks for approval before you can sell.
+  - term: ASIN
+    meaning: Amazon's product code for a listing.

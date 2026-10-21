@@ -1,0 +1,80 @@
+new_slug: write-a-personal-story-email-and-read-how-it-did
+name: Write a personal story email and read how it did
+summary: Give it a true story. Get a clean email to send, then a read of results.
+job: write-emails
+thinking: medium
+thinking_why: It writes, then edits and scores a short email. A mid-size model does it well.
+headline: Send a story email that sounds like a person, then see if it beat your usual sends
+subhead: Give it your brand file and one true story. It writes three drafts, tells you what to cut, fixes the small errors, and picks one to send. After you send it, it reads your numbers to show whether it did better than your normal emails.
+explain: |
+  A promo email sounds like every other promo email. A story email can sound like a friend, but it often runs long, wanders, and goes out with small mistakes. Then it's hard to tell if it worked, because nobody compared it with the usual sends.
+
+  The steps handle each part. First it writes three drafts from your true story, each with one idea and one call to action. Then it checks the one you pick: the opening line, the length, the subject and the filler, with a score for how ready it is to send. After you take the cuts, it fixes small errors in your voice. You send it to part of your list and export the numbers. Then it reads them to find what to repeat and what to fix.
+when:
+  - Your emails all sound like promotions and you want one that sounds personal.
+  - You have a true story about why you started, a customer or a mistake, and don't know how to turn it into an email.
+  - You want to know if a story email beats your usual sends before you write more.
+you_give:
+  - Your brand file with voice, products and what you can claim
+  - One true story you can tell, in rough notes
+  - A short brief with the goal of the email (optional)
+  - Your campaign numbers a few days after sending
+you_get:
+  - Three story email drafts in different shapes, with the first to send
+  - A list of cuts, a pacing map, subject fixes and a score out of 100
+  - A clean version with small errors fixed in your voice
+  - A read of your numbers, with what to repeat and one fix to test
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Tell it the story as you would to a friend. Don't polish it first.
+  - Pick one draft, take the cuts, then send it to part of your list next to your usual emails. Export the numbers after a few days.
+how_it_works:
+  - title: Write three drafts
+    text: Decides the reaction and the one takeaway first, answers the buyer's main doubts, and writes three drafts in different shapes with a call to action and a P.S.
+  - title: Review the draft you pick
+    text: Checks the opening line, length and subject, cuts filler, maps the pacing, checks facts and scores how ready it is to send.
+  - title: Fix the small errors
+    text: Takes the draft after you apply the cuts and fixes spelling and wording in your own voice, leaving your style alone.
+  - title: Send and export (you)
+    text: You send the email to part of your list next to your usual sends. After a few days you export the campaign numbers.
+  - title: Read the results
+    text: Checks nothing is broken, then compares opens, clicks and orders to show what the story email did next to your usual sends.
+output_shape: |-
+  STEP 1: THREE DRAFTS
+    Who is on the list | three drafts | which to send first | claims check
+
+  STEP 2: REVIEW
+    Cuts | pacing map | subject fixes | score out of 100 | verdict
+
+  STEP 3: CLEAN DRAFT
+    The final email with small errors fixed
+
+  YOU: send it to part of your list and export the numbers
+
+  STEP 4: RESULTS
+    Diagnosis ranked | what to repeat | one fix to test | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who sends it
+    how: Name the person who signs it. A real name makes the email easier to write and easier to believe.
+  - what: Your list
+    how: Say if it is mostly buyers or mostly new sign-ups, so step 1 doesn't explain things they already know.
+  - what: How much to send
+    how: Send to a slice of the list that is big enough to count, and keep a similar slice for your usual email.
+judge:
+  - It tells one true story and doesn't invent a founder story or a customer result.
+  - The email has one idea and one call to action.
+  - The opening line is short and the subject fits on a phone.
+  - Every claim, price and deadline matches the facts you gave.
+  - The results read compares the story email with your usual sends, not with nothing.
+test:
+  - Read the final email aloud. Fix every place you trip.
+  - Check that the story would still make sense if the brand name was removed.
+  - Compare opens, clicks and revenue per send with a normal promo sent in the same week.
+improve:
+  - Save the story that worked and reuse its shape for the next one.
+  - Try the other two drafts on later sends to see which shape your list likes.
+  - Put the best story email into your welcome flow.

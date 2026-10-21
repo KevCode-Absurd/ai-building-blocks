@@ -1,0 +1,114 @@
+new_slug: sms-send-checker
+name: "SMS send checker"
+summary: "Paste a text and send plan. Get its cost, rule flags and a score out of 100."
+job: write-emails
+thinking: medium
+thinking_why: "It counts characters, adds up costs and runs a fixed list of rule checks."
+
+headline: "SMS send checker"
+subhead: Paste your text, your list size, your cost per text and when it goes out. It counts the characters and billed parts, prices the send, tests whether an image pays for itself, flags rule problems and gives a send-readiness score out of 100 with the sum shown.
+
+explain: |
+  A text that runs one character over 160 is billed twice. An image text can cost two to three times as much as a plain one. A text sent at 7 am, or to someone who never agreed to texts, can break the rules. These are small things that cost money or cause trouble, and they are easy to miss.
+
+  This skill checks one text or one flow against a fixed list. It counts the characters and billed parts, works out the cost of the send, runs a break-even test if you use an image, and flags the rules: opt-in, send hours, one text per abandonment event, opt-out wording and smart sending. It also asks whether the news is urgent enough for a text. This is not legal advice, and rules vary by country and carrier.
+
+when:
+  - You wrote a text and want to check it before you send it to your whole list.
+  - You are about to add images to your texts and want to know if they pay.
+  - You set up a flow text, such as an abandoned cart text, and want to confirm it follows the rules.
+
+you_give:
+  - The text itself, exactly as it will be sent
+  - Your list size and cost per text
+  - The send day, time and time zone
+  - Which flow or campaign it belongs to, and how people opted in (optional)
+  - Revenue from your last text with and without an image (optional)
+
+you_get:
+  - The character count and the number of billed parts
+  - The cost of the send, with the sum
+  - A break-even result for an image text, if you use one
+  - Rule flags, with a fix for each, and a send-readiness score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the text exactly as it will go out, with the link and the opt-out line.
+  - Add list size, cost per text, send time and time zone, and how people opted in.
+  - Fix every Stop flag first, then the rest in order.
+  - Run it again on the fixed text before you send.
+
+how_it_works:
+  - title: Counts the characters
+    text: Over 160 characters means two or more billed messages. Emoji take a lot of room, so the skill suggests dropping them.
+  - title: Prices the send
+    text: List size times cost per text, with the extra cost of images, which one source puts at two to three times SMS.
+  - title: Tests the image
+    text: Net profit is revenue minus send cost for each version. The image wins only if its extra revenue beats its extra cost.
+  - title: Flags the rules
+    text: No opt-in, sent before 8 am or after 9 pm local time, more than one text per abandonment event, no opt-out wording, or smart sending off.
+  - title: Asks if it is urgent news
+    text: A nurture, testimonial or general text is better as an email.
+  - title: Checks timing and flow fit
+    text: Best windows, spacing after the email, and the right timing for welcome, browse, cart, post-purchase and win-back texts.
+  - title: Scores send readiness
+    text: Starts at 100 and takes points off for each fault, with the sum shown. Any rule flag means do not send.
+
+output_shape: |
+  SMS SEND CHECK  <campaign or flow>
+  TEXT: <the text>  | characters: <n> | billed parts: <n> | emoji: <yes/no>
+  COST: <list size> x <cost per text> = <total>   (image text: <x times> = <total>)
+  IMAGE BREAK-EVEN: net with image <n> vs net without <n> -> <image pays | does not pay | not tested>
+  RULE FLAGS
+  <flag> | <Stop / Fix / Polish> | <what it means> | <fix>
+  URGENT NEWS? <yes | no, move to email>
+  TIMING: <send time vs windows> | email pairing: <...>
+  SCORE  <n>/100 = 100 - 25 x <Stops> - 15 x <not urgent> - 10 x <Fixes> - 5 x <Polish> = <n>
+  Not run: <what is needed>   MISSING: <what was not given>
+
+tweaks:
+  - what: Exact text
+    how: Paste the final text with its link and opt-out line. A short link or a changed word can push the count over 160.
+  - what: Where it sits
+    how: Say if it is a campaign or a flow text. Flows have their own limits, such as one text per abandonment event.
+  - what: Your region
+    how: Say where the recipients live. Quiet hours and costs differ, and Canadian numbers can cost two credits in one source's view.
+  - what: Image results
+    how: Give revenue and send cost for your last image and plain texts. The break-even test is only as good as those numbers.
+
+judge:
+  - The character count and billed parts are right when you count the text yourself.
+  - The cost line shows its sum.
+  - Every rule flag names the rule and gives a fix.
+  - An image is never called worthwhile without a break-even test.
+  - The score shows its sum and lists what was not run.
+
+test:
+  - Paste a text with 161 characters. It should say two billed parts and fix it.
+  - Give it a send time of 6:30 am local. It should flag the quiet-hours rule as a Stop.
+  - Give it a nurture text. It should suggest an email.
+  - "Check one break-even result by hand: revenue minus cost for each version."
+
+improve:
+  - Add your region's quiet hours and consent wording to the skill file.
+  - Add your real cost per text, by country.
+  - Add your own opt-out wording so the check looks for it.
+  - Pair it with the SMS send planner for the month, and the performance reader for results.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "It shows segments, smart sending and the cost of each SMS send."}
+    - {name: "Any good chat AI", why: "Any current chat AI can count and apply the checks to a pasted text."}
+  inputs:
+    - "Revenue and send cost of your last image text and plain text"
+    - "Your opt-in wording from the pop-up"
+    - "Your list split by country"
+    - "The email that goes out on the same topic"
+
+terms:
+  - term: Billed part
+    meaning: One message as charged by the SMS provider. A text over 160 characters is billed as two or more.
+  - term: MMS
+    meaning: A text with a picture or other media, which costs more than plain SMS.
+  - term: Smart sending
+    meaning: A setting that stops a person getting more than one campaign in a set time, such as 24 hours.

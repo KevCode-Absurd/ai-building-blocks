@@ -1,0 +1,25 @@
+slug: cut-your-product-cost-and-turn-supplier-terms-into-cash
+name: "Cut your product cost and turn supplier terms into cash"
+summary: "Give it your product and quote. Get a cost sheet by part, terms to ask for, a negotiation plan and cash check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: product_photos, required: false}
+  - {type: question, required: false}
+  - {type: document, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: [product-bill-of-materials-builder, supplier-payment-terms-planner, factory-price-break-negotiator, growth-cash-limit-checker]
+steps:
+  - {uses: product-bill-of-materials-builder, note: "Starts the flow. Shows where each dollar of the quote goes."}
+  - {uses: supplier-payment-terms-planner, note: "Reads the cost sheet and your order cycle to find terms worth asking for."}
+  - {uses: factory-price-break-negotiator, note: "Uses the cost sheet and the terms ladder to write the asks, the give-backs and the fallback."}
+  - {uses: growth-cash-limit-checker, note: "Tests whether the new prices and terms free enough cash to grow, using the cost sheet and the negotiation plan."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/cut-your-product-cost-and-turn-supplier-terms-into-cash/skeleton.yaml

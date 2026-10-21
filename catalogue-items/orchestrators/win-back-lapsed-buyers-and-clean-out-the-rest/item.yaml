@@ -1,0 +1,27 @@
+slug: win-back-lapsed-buyers-and-clean-out-the-rest
+name: "Win back lapsed buyers and clean out the rest"
+summary: "Give it your order history. Get a win-back flow, a map of who gets what, a clean list and a results read."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: email
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [repeat-order-bottleneck-finder, win-back-flow-builder, customer-stage-flow-mapper, sunset-flow-and-list-cleaner, email-and-sms-performance-reader]
+steps:
+  - {uses: repeat-order-bottleneck-finder, note: "Finds where buyers stop coming back."}
+  - {uses: win-back-flow-builder, note: "Builds the win-back flow for that group."}
+  - {uses: customer-stage-flow-mapper, note: "Maps which customer stage gets the win-back flow and which gets other emails."}
+  - {uses: sunset-flow-and-list-cleaner, note: "Writes the clean-out rule for the buyers the flows did not wake up."}
+  - {uses: email-and-sms-performance-reader, note: "Reads the flow results to show what the win-back earned."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/win-back-lapsed-buyers-and-clean-out-the-rest/skeleton.yaml

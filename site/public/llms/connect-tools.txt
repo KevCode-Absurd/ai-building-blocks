@@ -1,12 +1,13 @@
 # Connect AI to your tools: AI Blocks
 
-> 22 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 24 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer): Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools.
 - [AI tool definition writer](https://useaiblocks.com/skills/ai-tool-definition-writer): Describe what a tool does. Get a clear, safe definition your AI can call without guessing.
 - [AI tool designer](https://useaiblocks.com/skills/ai-tool-designer): Describe what your AI needs to do. Get clear tool definitions it can call without guessing or failing silently.
 - [API connector builder](https://useaiblocks.com/skills/api-connector-builder): Name the service you need to reach. Get working code with sign-in, error handling and retries.
 - [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder): Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
+- [Build an n8n automation that reports failures and is reusable](https://useaiblocks.com/workflows/build-an-n8n-automation-that-reports-failures-and-can-be-reused): Describe the task. Get an n8n workflow that retries, alerts you on failure and splits into reusable parts.
 - [ChatGPT app builder](https://useaiblocks.com/skills/chatgpt-app-builder): Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
 - [Google Workspace command-line operator](https://useaiblocks.com/skills/google-workspace-cli): Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you.
 - [Market data connector](https://useaiblocks.com/skills/market-data-connector): Name the data source and series. Get MATLAB code that pulls Bloomberg, FRED, Haver or Datastream data.
@@ -23,4 +24,5 @@
 - [Python vision model connector](https://useaiblocks.com/skills/python-vision-model-connector): Give it a vision model repo on GitHub. Get a MATLAB function that runs it on your images.
 - [Sign-in flow setup helper](https://useaiblocks.com/skills/sign-in-flow-setup-helper): Say which app and service. Get a secure OAuth sign-in flow, with the right steps for your case.
 - [Tool connector builder](https://useaiblocks.com/skills/tool-connector-builder): Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.
+- [Turn an API into a safe, installable MCP server](https://useaiblocks.com/workflows/turn-an-api-into-a-safe-mcp-server-others-can-install): Give it an API spec. Get an MCP server with sign-in, a security review and a package.
 - [Webhook receiver builder](https://useaiblocks.com/skills/webhook-receiver-builder): Say which events to catch. Get a webhook receiver that checks signatures and handles repeats safely.

@@ -1,0 +1,119 @@
+new_slug: advertorial-story-and-belief-checker
+name: "Advertorial story and belief checker"
+summary: "Paste your advertorial. Get each spot the story turns pitchy, fixes and a score out of 100."
+job: audit-landing-page
+thinking: medium
+thinking_why: "It reads one draft against a fixed list of checks, so a mid-size model is enough. A human read is still needed."
+
+headline: "Advertorial story and belief checker"
+subhead: Paste your advertorial and, if you have them, your foundation docs. It marks every sentence where the story turns into a pitch and checks eight things, from mirror to images. You get a rewrite for each spot, a pass or fail per check and a score out of 100.
+
+explain: |
+  An advertorial is an ad written like an article. It works while it reads like a story. Each time it slips into a sales pitch, some readers close the tab. The same goes for beliefs: if a buyer must believe three things to buy and the page moves only two, the page stalls.
+
+  This skill reads the draft like a chapter in a book and marks every sentence where the story stops and the selling starts. Then it checks eight things: that it speaks to one person, that the story flows, the before and after, the mechanism, the beliefs, the objections, the buttons and the images. Each check adds up to a score out of 100 that shows what was measured. A separate honesty line checks the ad label and fakes, and any fail there blocks publishing, whatever the score.
+
+when:
+  - Your advertorial draft is done and you want a read before you spend on traffic.
+  - An advertorial is live but readers drop off halfway and you don't know where.
+  - Your AI wrote the page and you want to check it hits every belief the buyer needs.
+
+you_give:
+  - The advertorial draft, or its URL and screenshots
+  - The avatar and the ad it follows (optional)
+  - The foundation docs (research, avatar sheet, offer brief and necessary beliefs), optional
+
+you_get:
+  - A list of sentences where the story turns into a pitch, with a rewrite for each
+  - A pass, part or fail for each of eight checks
+  - Button and image fixes
+  - A score out of 100 with the sum shown, and the fixes in order
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the draft, or attach screenshots of the live page.
+  - Add the ad, the avatar and your foundation docs if you have them.
+  - Fix the story breaks first, then the failed checks in the order listed.
+  - Read the page yourself once more, start to end, before it goes live.
+
+how_it_works:
+  - title: Marks story breaks
+    text: Finds each sentence where the story stops and selling starts, and rewrites it as story.
+  - title: Checks the mirror
+    text: Is it written for one named person with age, gender and length of problem?
+  - title: Checks the transformation
+    text: Problem on the first screen, result on the last, with a longer before than after.
+  - title: Checks the mechanism
+    text: A short name the reader can repeat, and why past fixes failed.
+  - title: Checks beliefs and objections
+    text: Every necessary belief moves, and each testimonial answers one named objection.
+  - title: Checks buttons and images
+    text: No early sticky button, soft wording, and images that match the paragraph and look real.
+  - title: Checks honesty
+    text: Ad label at the top, and no fake outlet, byline, expert, review or urgency.
+  - title: Scores
+    text: Eight checks at 12.5 points each. Full, half or zero. The sum is shown.
+
+output_shape: |
+  STORY BREAKS (<n>)
+  "<sentence>" | at <section> | rewrite: <story version>
+
+  CHECKS
+  Mirror:         <pass / part / fail> | <why>
+  Story flow:     <pass / part / fail> | <n breaks>
+  Transformation: <pass / part / fail>
+  Mechanism:      <pass / part / fail>
+  Beliefs:        <pass / part / fail> | not moved: <list>
+  Objections:     <pass / part / fail> | duplicates, no proof
+  Buttons:        <pass / part / fail> | fixes
+  Images:         <pass / part / fail> | fixes
+  HONESTY (not scored): <pass / fail>
+
+  SCORE <n>/100 = sum of 8 checks at 12.5 / 6 / 0 (<on n of 8 checks>)
+  FIXES IN ORDER: 1 <...> 2 <...>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Foundation docs
+    how: Add the necessary beliefs list. Without it the belief check cannot run and the score is scaled over the other checks.
+  - what: The ad it follows
+    how: Attach the ad. The mirror check then compares the ad's person and promise with the headline.
+  - what: Screenshots of the live page
+    how: Attach them to check the buttons and images as a reader sees them.
+  - what: Product category
+    how: Say it. The rules come from health and wellness writers, so for other categories treat the results as defaults and test.
+
+judge:
+  - Every story break quotes the exact sentence and gives a rewrite.
+  - Every pass or fail names a reason, not just a mark.
+  - The score is the sum of eight marks at 12.5, 6 or 0, and any skipped check is stated.
+  - The honesty line is separate, and a fail there says do not publish.
+  - No rewrite adds an invented quote, person or proof.
+
+test:
+  - Add a plain pitch sentence ("Buy now and save") in the middle of a story. It should be marked as a break.
+  - Remove one belief from your draft. The belief check should name it.
+  - Run it twice on the same draft. The story breaks should be nearly the same.
+  - Read the page start to end yourself and see whether you find a bump it missed.
+
+improve:
+  - Add your own brand's voice and banned phrases to the Checks.
+  - Change how many points each check is worth if one matters more to your category, and write the new weights in the skill file so the sum stays clear.
+  - Add the rules of your ad platform for the label, so the honesty line checks them.
+  - Pair it with the Advertorial draft editor for a style edit, and the Store social proof placer for proof.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the checks. Attach screenshots as files for the button and image checks."}
+  inputs:
+    - "The foundation docs, especially the necessary beliefs list"
+    - "Screenshots of the live page on a phone"
+    - "The ad that sends traffic to the page"
+
+terms:
+  - term: Advertorial
+    meaning: An ad written like an article. Label it as an ad where the platform or law requires.
+  - term: Necessary beliefs
+    meaning: The short list of "I believe that..." statements a buyer must hold before buying.
+  - term: Story break
+    meaning: A sentence where the writing stops telling a story and starts selling.

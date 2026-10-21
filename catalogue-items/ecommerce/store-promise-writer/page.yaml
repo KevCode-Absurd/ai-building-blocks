@@ -1,0 +1,127 @@
+new_slug: store-promise-writer
+name: "Store promise writer"
+summary: "Give it your product and best customers. Get a three-line promise and a not-for-you list."
+job: brand-file
+thinking: medium
+thinking_why: "It turns your customers' words into a short promise and sorts who it is not for. A mid-size model does this well."
+
+headline: "Store promise writer"
+subhead: Give it what you sell, what it changes for the buyer, and your best ten customers. It sketches the smallest group worth serving by what they believe and want, writes a three-line promise, lists who is not your buyer, and gives you a short for-you and not-for-you block for your homepage.
+
+explain: |
+  A store that tries to suit everyone says little to anyone. A promise starts from the smallest group that would make the store worth running. You pick that group by what they believe and want, not by age or gender. Then you promise them one change in their life, in plain words.
+
+  This skill follows a simple three-line template. It checks that the promise is a feeling or status shoppers want, such as belonging, peace of mind or control, and not a spec. It then lists five groups who should not be your buyer, and why choosing a rival is the right call for them. It does the sum on whether a few thousand people, or about a thousand true fans, could carry the store. It works for niche stores more than for staples. With no customers yet, talk to five people first.
+
+when:
+  - You are launching a store and need one clear sentence about who it is for.
+  - Your homepage tries to talk to everyone and reads like every other store.
+  - You are choosing between customer groups and need to pick the smallest one worth serving.
+
+you_give:
+  - What you sell and the change it makes for the buyer
+  - Your best 10 customers, with what they believe, want and how they talk
+  - Recent non-buyers and reasons for lost sales (optional)
+  - Review lines, emails or survey answers in customers' own words (optional)
+
+you_get:
+  - A sketch of the smallest viable market by beliefs, wants and language
+  - A three-line promise
+  - A not-for-you list with the reason each group is right to pass
+  - A for-you and not-for-you block for the homepage, and the line a customer would tell a friend
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you sell, the change it makes, and notes on your best ten customers. Real customer words help most.
+  - Say how many customers you have. With none yet, talk to five people first and bring the notes.
+  - Read the promise out loud. If it sounds like a spec, ask for a feeling or status version.
+  - Ask three customers for advice on it, not a verdict, and bring their answers back.
+
+how_it_works:
+  - title: Writes the change
+    text: One sentence about the buyer's life after buying, not about features.
+  - title: Finds the smallest group
+    text: The smallest group that would make the store worth running, grouped by beliefs and wants.
+  - title: Fills the three lines
+    text: Who it is for by belief, who you focus on by want, and what engaging will help them get.
+  - title: Checks the outcome
+    text: The promise is a feeling or status shoppers want, not a spec.
+  - title: Lists who should pass
+    text: Five groups who should not be your buyer and why a rival is exactly right for them.
+  - title: Checks the size
+    text: Could a few thousand of the right people, or about a thousand true fans, carry the store. It does the revenue sum.
+  - title: Turns feedback into advice
+    text: Asks for how the store could fit them better, and sorts a sore-spot one-star from useful advice.
+  - title: Writes the homepage block
+    text: A short for-you and not-for-you block, plus the friend line.
+
+output_shape: |
+  THE CHANGE: <one sentence about the buyer's life, not features>
+  SMALLEST VIABLE MARKET (by worldview)
+  Believes: <...>  Wants: <...>  Dreams of: <...>  Words they use: <...>
+
+  PROMISE (three lines)
+  For people who believe <...>.
+  Focused on people who want <...>.
+  Engaging with <store> will help you get <feeling or status>.
+
+  FEELING CHECK: <belonging | connection | peace of mind | status | respect | good looks | control | justice>
+  NOT-FOR-YOU (5)
+  For people who want <...> and believe <...>, choosing <rival> is exactly correct.
+
+  SIZE SUM: <buyers> x <yearly spend> = <revenue>; enough? <yes/no, why>
+  ASK FOR ADVICE: "I made this for you. How could it fit you better?"
+
+  HOMEPAGE BLOCK
+  For you if: <...>   Not for you if: <...>
+  A customer would tell a friend: <...>
+  CHECKS MISSED: <none, or list>
+
+tweaks:
+  - what: How many real customers you describe
+    how: Ten is the aim. If you have fewer, say so. With none, the output is a hypothesis to test in five interviews.
+  - what: Customer words
+    how: Paste real review lines and emails. The worldview uses their language, not yours.
+  - what: Revenue per customer
+    how: Give the average yearly spend per customer so the size sum is real.
+  - what: How narrow the group is
+    how: If you sell staples to everyone, narrow by one use or one moment, such as "first-time home cooks".
+  - what: Who you want to turn away
+    how: Name any group you already know is a poor fit. They go straight onto the not-for-you list.
+
+judge:
+  - The group is described by beliefs and wants, not by age and gender.
+  - The promise names a feeling or status, not a spec.
+  - Each not-for-you group has a reason it is right to choose a rival.
+  - The size sum uses your numbers or says what is missing.
+  - The friend line sounds like something a customer would say.
+  - It asks for advice, not a verdict, when it points you to feedback.
+
+test:
+  - Read the promise to three people who match your best customers. Ask what they think it is for.
+  - Read it to three people who do not. They should say "not for me" without being put off by the brand.
+  - Put the homepage block on a test page for a week and see if visitors who stay look more like your best customers.
+  - Redo it with a different pick of ten customers. The group should be similar. If it is not, the group is too wide.
+
+improve:
+  - Add a short list of feelings your category sells, so the check starts from the right ones. The skill ships with eight.
+  - Add your own non-buyer reasons to the skill file so the not-for-you list starts from real lost sales.
+  - Save the promise to your brand file so ads, emails and pages use the same words.
+  - Pair it with the Positioning grid builder to place the promise against rivals, and the Store brand signal auditor to check your touchpoints say it.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run this. Paste customer words and the AI will use their phrasing."}
+    - {name: "A survey tool such as Typeform or Google Forms", why: "To ask five or more people for advice on the promise and collect answers you can paste in."}
+  inputs:
+    - "Review lines from your best customers"
+    - "Reasons from lost sales or abandoned carts"
+    - "Support tickets that show what customers believe about the category"
+
+terms:
+  - term: Smallest viable market
+    meaning: The smallest group of people who could make your store worth running.
+  - term: Worldview
+    meaning: A group's shared beliefs and stories about the world, used instead of age or gender.
+  - term: True fans
+    meaning: A small group of people who buy most of what you make and tell others.

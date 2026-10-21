@@ -1,0 +1,119 @@
+new_slug: hero-product-repositioner
+name: "Hero product repositioner"
+summary: "Give it one hero product and its reviews. Get several buyer angles, each with its own offer."
+job: make-offer
+thinking: medium
+thinking_why: "It reads review language and writes angles and offers. A mid-size model handles that well; the claims check is simple."
+
+headline: "Hero product repositioner"
+subhead: Give it your best-selling product, its allowed claims and your review language. It finds four to six reasons different buyers want the same product, then writes a title, headline, page plan and offer for each, with the claims to check before use.
+
+explain: |
+  One product often sells to more than one kind of buyer. A greens powder can be bought for digestion, for energy or as a daily multivitamin. Each buyer has a different problem and a different doubt. A single page and a single offer speak to none of them well.
+
+  This skill reads your reviews and your best ad angles, then lists the reasons buyers already give. It builds a separate page title, headline and offer for each one. The product does not change, so your margin stays the same or improves. It also suggests a partner who could fund a gift or a discount, and it lists every claim that needs checking, because health and beauty angles carry rules. It works for a hero product, not a catalogue of many items.
+
+when:
+  - One product makes most of your sales and you want more buyer types for it.
+  - Your ads for the hero product all say the same thing and have stopped growing.
+  - Your reviews mention several different reasons people buy, and your page ignores most of them.
+
+you_give:
+  - Your hero product's facts and the claims you are allowed to make
+  - Review and survey language
+  - Ad angles that already perform (optional)
+  - Margin and shipping cost by pack size
+  - Partners who could give a discount or gift (optional)
+
+you_get:
+  - Four to six buyer angles for the same product, each with a product title, headline and page plan
+  - An offer built on each angle's own need
+  - A partner or gift idea at near-zero cost where one fits
+  - A list of claims to check before use
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the product facts, your allowed claims and a good handful of real review lines.
+  - Add margin and shipping by pack size so each offer can be cost-checked.
+  - Read the claims list first. Remove or fix anything you cannot back up.
+  - Build one angle page at a time and send traffic from a matching ad.
+
+how_it_works:
+  - title: Lists real angles
+    text: It pulls the reasons buyers already give from your reviews and your best ads, not from a brainstorm.
+  - title: Builds the offer around each
+    text: Each angle gets an offer that fits its own timing and doubt, such as a longer offer for a slow result.
+  - title: Looks for a partner
+    text: It looks for a partner whose product fits the angle and could fund a discount or gift.
+  - title: Matches page to angle
+    text: Every angle gets its own page and title so the ad, page and offer say the same thing.
+  - title: Keeps the product fixed
+    text: Only the buyer, problem and headline change. Margin stays the same or better.
+  - title: Lists claims to check
+    text: It marks every claim that needs a check against your allowed claims or the rules in your market.
+  - title: Sends offers to a cost check
+    text: Each offer goes through the Discount impact checker before it goes live.
+
+output_shape: |
+  HERO PRODUCT: <product>  Allowed claims used: <ids or list>
+
+  ANGLE <n>: <buyer reason, in their words>
+    Who: <buyer type>   Proof in reviews: <short quote or count>
+    Product title: <...>   Headline: <...>   Page: <own page>
+    Offer: <built on this angle's need>
+    Why it fits: <timing, doubt or use>
+    Partner or gift idea: <or none>
+    Margin check: <unchanged | better | needs the checker>
+
+  CLAIMS TO CHECK
+  <claim> | <angle> | <what to confirm>
+
+  CHECKS MISSED: <list, or none>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Review language
+    how: Paste real lines. The angles then match what buyers say, not what you think they say.
+  - what: Allowed claims
+    how: Paste what you can legally and truthfully say. Angles that need other claims are dropped or marked.
+  - what: Pack sizes and margins
+    how: Give costs by pack size so the offers fit your margin from the start.
+  - what: Partner ideas
+    how: Name brands you already talk to. The skill then suggests real fits, not random ones.
+
+judge:
+  - Every angle comes from something in your reviews or ads, not from thin air.
+  - Each angle has its own page, title and offer.
+  - The product itself is not changed or exaggerated for any angle.
+  - Every health, beauty or result claim appears on the claims list.
+  - The offers fit the margin you gave.
+
+test:
+  - Pick one angle and find its words in your reviews yourself. If you cannot, drop that angle.
+  - Send one angle's page to a friend who knows the product. Ask if it still describes what the product does.
+  - Run it twice. The top angles should mostly match, even if the wording changes.
+  - Build one angle and run ads to it beside your old page. Compare profit per session, not clicks.
+
+improve:
+  - Add your allowed claims list to the skill file so it can mark each angle as allowed or not.
+  - Add the buyer words you hear on calls, not only in reviews.
+  - Save finished angles that worked in your brand file, and the ones that failed with the reason.
+  - Pair it with the Discount impact checker for each offer and the Offer test planner to run the angles side by side.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can group review language into angles and draft offers."}
+    - {name: "Shopify", why: "Each angle can be its own product page template or landing page."}
+  inputs:
+    - "A survey asking why customers bought, in their own words"
+    - "Top-performing ad angles from the last 90 days"
+    - "A list of partner brands that sell to the same buyers"
+    - "Return and refund reasons, which show angles that over-promise"
+
+terms:
+  - term: Angle
+    meaning: A reason someone buys, in their own words.
+  - term: Repositioning
+    meaning: Selling the same product to a different buyer for a different reason.
+  - term: Contribution margin
+    meaning: What is left of each sale after the cost of the product, shipping and fees.

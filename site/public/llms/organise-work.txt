@@ -1,10 +1,11 @@
 # Run meetings, notes and plans: AI Blocks
 
-> 55 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 58 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Activity digest writer](https://useaiblocks.com/skills/activity-digest-writer): Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by topic.
 - [Brain dump organizer](https://useaiblocks.com/skills/brain-dump-organizer): Dump everything on your mind. Get it sorted into tasks, ideas and notes with nothing lost.
 - [Bullet note maker](https://useaiblocks.com/skills/bullet-note-maker): Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise.
+- [Catch up on your week, close loops and plan tomorrow](https://useaiblocks.com/workflows/catch-up-on-your-week-close-loops-and-plan-tomorrow): Connect your chat, email and files. Get what you missed, open loops closed and a protected day planned.
 - [Company operating system setter](https://useaiblocks.com/skills/company-operating-system-setter): Describe your company. Get a way of running it: scorecard, accountability chart, meetings and 90-day goals.
 - [Confluence space builder](https://useaiblocks.com/skills/confluence-space-builder): Say what your team needs. Get a Confluence space set up with page templates, permissions and a clear layout.
 - [Cross-tool search finder](https://useaiblocks.com/skills/cross-tool-search-finder): Ask where a decision or doc lives. Get one search across your chat, email and files, with sources.
@@ -37,6 +38,7 @@
 - [Personal wiki keeper](https://useaiblocks.com/skills/personal-wiki-keeper): Feed it sources. Get an Obsidian wiki that updates pages, links ideas and flags where sources disagree.
 - [Process bottleneck finder](https://useaiblocks.com/skills/process-bottleneck-finder): Describe a business process. Get a swim-lane map, cycle times and the one stage holding everything up.
 - [Questionnaire writer](https://useaiblocks.com/skills/questionnaire-writer): Tell it who you need answers from. Get a questionnaire aimed at what they know and you do not.
+- [Run a meeting worth holding, from agenda to action items](https://useaiblocks.com/workflows/run-a-meeting-worth-holding-from-agenda-to-action-items): Name a meeting. Get a call on whether to hold it, a pre-read, then notes with owners and dates.
 - [Sales day briefing writer](https://useaiblocks.com/skills/sales-day-briefing-writer): Ask for your day. Get today's meetings with context, deals closing soon, waiting emails and your top actions.
 - [Setup walkthrough guide](https://useaiblocks.com/skills/setup-walkthrough-guide): Name what you want to set up. Get one small step at a time, with the steps left shown.
 - [Slack message finder](https://useaiblocks.com/skills/slack-message-finder): Ask what was said and where. Get the right messages, files and people from your Slack, found with smart searches. Needs Slack.
@@ -52,6 +54,7 @@
 - [Vendor scorecard builder](https://useaiblocks.com/skills/vendor-scorecard-builder): Give it your vendor list and uptime data. Get scorecards, missed-SLA credits and keep, review or replace calls.
 - [Web clipper template maker](https://useaiblocks.com/skills/web-clipper-template-maker): Name the site you clip from. Get a tested Obsidian Web Clipper template that saves clean, well-labelled notes.
 - [Weekly customer call planner](https://useaiblocks.com/skills/weekly-customer-call-planner): Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
+- [Weekly meeting actions keeper](https://useaiblocks.com/agents/weekly-meeting-actions-keeper): Give it this week's meeting notes. Get minutes, last week's open actions checked and an agenda for the next meeting.
 - [Weekly review guide](https://useaiblocks.com/skills/weekly-review-guide): Run it each week. Get open loops closed, stalled projects found and a clear plan for next week.
 - [Weekly sales wrap-up writer](https://useaiblocks.com/skills/weekly-sales-wrap-up-writer): Ask for your week. Get what closed, moved and slipped, plus Monday's plan and an optional team post draft.
 - [Working notes planner](https://useaiblocks.com/skills/working-notes-planner): Give it a long task. Get a plan, findings and progress kept in files so your AI stays on track.

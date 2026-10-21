@@ -1,0 +1,22 @@
+slug: story-email-writer
+name: "Story email writer"
+summary: "Give it your list and one true story. Get three personal email drafts."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "8 Hour Copywriting Course For Beginners", by: "A freelance copywriting YouTuber", used: "The three email structures, the three buying doubts and the one-call-to-action rule"}
+  - {title: "How to start brand social media from scratch in 2026", by: "A creative strategist for large brands", used: "Where a plain-text founder email fits in a welcome and post-purchase flow"}
+  - {title: "The 3-Step Writing Framework That Helped Us Build +$10M Newsletters", by: "Two newsletter founders on a business podcast", used: "Decide the reaction, action and one takeaway first, then draft, rest and edit"}
+  - {title: "Learn email marketing in 39 minutes", by: "A business-education founder (B2B and info-product emails)", used: "Reward-first shape, the P.S. and preview text"}

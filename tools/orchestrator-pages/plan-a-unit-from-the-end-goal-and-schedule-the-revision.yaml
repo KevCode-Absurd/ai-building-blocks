@@ -1,0 +1,73 @@
+new_slug: plan-a-unit-from-the-end-goal-and-schedule-the-revision
+name: Plan a unit from its end goal and schedule revision
+summary: Give it your standards. Get a unit planned backwards, practice mixed through it and a revision calendar.
+job: teach-and-train
+thinking: medium
+thinking_why: Each step reshapes the plan from the step before. A mid-size model does it well. Use a stronger one for long units.
+headline: Plan a unit that students still remember weeks after it ends
+subhead: Give it your standards for a unit. It plans backwards from what students must do at the end, mixes practice of related topics through the lessons, and sets dates to bring each topic back so it sticks.
+explain: |
+  Units are often planned topic by topic, in blocks, with revision left to the last week. Students do well on the test at the end of each block and forget it a month later. Teaching feels fine, and recall is poor.
+
+  The steps change the order of the work. First it plans backwards: the end goal, then the proof of learning, then the lessons that lead to it. Then it takes that plan and mixes related topics through the later lessons, so old ideas come back before they fade. Last it takes the mixed plan and sets dates to return to each topic, with a short retrieval task each time.
+when:
+  - You are planning a new unit or a term from standards.
+  - Students do well at the end of a topic and forget it by the next one.
+  - Revision is a rush before the exam instead of something built in.
+you_give:
+  - The standards or goals for the unit
+  - The number of lessons and the dates, or the term length
+  - Your current topic order, if you have one (optional)
+you_get:
+  - A unit plan worked back from the end result and the proof of learning
+  - The same plan with practice of related topics mixed through the lessons
+  - A calendar of dates to bring each topic back, with a retrieval task for each
+how_to_use:
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your standards and say how many lessons and weeks you have.
+  - Read the proof of learning in step one. Change it now, because the later steps are built on it.
+  - Check the revision dates against your real school calendar before you share them.
+how_it_works:
+  - title: Plan backwards
+    text: Writes what students should be able to do at the end, decides what proof you will accept, then plans the lessons that lead to the proof.
+  - title: Mix the practice
+    text: Takes the unit plan, finds related topics that students confuse and spreads practice of earlier topics through later lessons, keeping new teaching in blocks.
+  - title: Schedule the revision
+    text: Takes the mixed plan, sets the gaps between returns to each topic, places them on the calendar and adds a short retrieval task for each.
+output_shape: |-
+  STEP 1: UNIT PLAN
+    End goal | proof of learning | lessons in order | how each lesson serves the goal
+
+  STEP 2: MIXED PRACTICE PLAN
+    Same lessons | where old topics return | related topics mixed together
+
+  STEP 3: REVISION SCHEDULE
+    Topic | dates it returns | gap between returns | retrieval task
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The proof of learning
+    how: A clear test, project or performance in step one shapes every lesson after it. State what a strong answer looks like.
+  - what: Lessons and time
+    how: Give the real number of lessons and the weeks you have. Too little time changes how much can be mixed and how often topics return.
+  - what: Topics that get confused
+    how: Name two ideas that students mix up. The mixed practice step will put them close enough to be told apart.
+  - what: Age and subject
+    how: Say the age group and subject. The retrieval tasks and gaps suit a ten-year-old maths unit differently from a sixteen-year-old history unit.
+judge:
+  - The end goal is something students do, not something they hear about.
+  - Every lesson in the plan has a line saying how it leads to the proof of learning.
+  - Old topics return in later lessons without cutting the time for new teaching.
+  - Revision dates grow wider apart and fall on days you actually teach.
+  - Each retrieval task takes a few minutes and has an answer you can check.
+test:
+  - Teach the first two weeks and give a short quiz on week one content in week four. Compare it with last year's class if you can.
+  - Ask a colleague to read step one and say what students will be able to do at the end.
+  - Check that no topic goes more than the longest gap without returning.
+improve:
+  - Save your best proof of learning as a template for the next unit.
+  - Tell the AI which retrieval tasks students liked and which ones fell flat.
+  - Add your school's calendar to the file so dates avoid holidays and exams.
+  - Pair it with quick checks for each lesson stage once the unit starts.

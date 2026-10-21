@@ -1,0 +1,24 @@
+slug: turn-a-static-ad-into-a-sale-with-a-matching-page
+name: "Turn a static ad into sales with a matching page"
+summary: "Give it your static ad and offer. Get a sharper ad, a matching landing page and a compliance check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: image, required: true}
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+outputs:
+  - {type: audit_report}
+uses: [static-ad-critic, ad-awareness-stage-checker, ad-matched-landing-page-writer, meta-ads-compliance-checker]
+steps:
+  - {uses: static-ad-critic, note: "Starts with your ad and gives back a checked version with its copy."}
+  - {uses: ad-awareness-stage-checker, note: "Reads the fixed ad copy and says how much the buyer already knows when the ad starts."}
+  - {uses: ad-matched-landing-page-writer, note: "Writes the landing page from the ad copy so the page repeats the ad's promise."}
+  - {uses: meta-ads-compliance-checker, note: "Checks the final ad and page together before they go live."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-a-static-ad-into-a-sale-with-a-matching-page/skeleton.yaml

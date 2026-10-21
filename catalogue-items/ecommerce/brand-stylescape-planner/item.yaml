@@ -1,0 +1,22 @@
+slug: brand-stylescape-planner
+name: "Brand stylescape planner"
+summary: "Give it your brand traits and buyers. Get three visual directions, a merged pick and photo rules."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: persona, required: false}
+  - {type: competitor_set, required: false}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: design_direction}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Building a Brand: Redesigning a Business Start to Finish", by: "Chief design officer rebranding a direct-to-consumer hardware company (name not given here)", used: "Three wide mood boards, a merged final direction, the site-first order, the photo rule set, the type jobs and the anchor colour with accents"}
+  - {title: "How to Design a Brand Identity - From Start to Finish", by: "Freelance brand designer (name not given in the video)", used: "Values as creative filters, three directions chosen early so revisions stay low, and a locked direction to return to"}

@@ -1,0 +1,124 @@
+new_slug: programmatic-direct-mail-planner
+name: "Programmatic direct mail planner"
+summary: "Give it your flows and customer value. Get triggers to mail, a test cell and a payback check."
+job: keep-customers
+thinking: medium
+thinking_why: "It sets triggers and does payback sums for several segments, so a mid-size model is enough if you give it real costs and margins."
+
+headline: "Programmatic direct mail planner"
+subhead: Give it your customer list with order dates, your average order and margin, and what a printed piece costs to send. It picks which customers to mail and what triggers each letter, sets a test group that gets email only, and checks the payback per piece.
+
+explain: |
+  Programmatic direct mail means a printed letter or card sent automatically from the same event that triggers an email, such as a lapsed buyer or a left-behind cart. A real letter cuts through a full inbox, but each piece costs about $1 to $5, so it only pays on customers worth that much.
+
+  This skill finds the segments where order value times margin covers the cost, then maps each to a trigger: welcome, second purchase, high-value abandoned cart, win-back and birthday. It writes a mailer brief for each, with a personal line, an offer and a tracking code, caps how often one person is mailed, and holds back a group that gets email only. Every result you see online comes from a vendor or one case study, so the skill uses them as test targets, never as forecasts. It also asks you to check address data and consent rules where you mail.
+
+when:
+  - Your email flows work and you want a second channel for your best segments.
+  - You have lapsed or one-time buyers who ignore emails.
+  - You want a way to test mail without betting your whole budget.
+
+you_give:
+  - Your customer list with first order date, last order date and order value
+  - Your email flow triggers (welcome, abandoned cart, win-back) (optional)
+  - Average order value and margin
+  - Print and postage cost per piece, and the mail vendor if you have chosen one (optional)
+you_get:
+  - A segment and trigger map
+  - A mailer brief for each trigger, with a personal line, an offer and a tracking code
+  - A test design with an email-only control group
+  - A frequency cap, send timing and a payback check per piece
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your customer data, your average order, margin and cost per printed piece.
+  - Pick one or two triggers to start with, such as second purchase and win-back.
+  - Check you have a clean address list and the right consent for your region before anything is printed.
+  - Run the test with a control group for a full cycle before you add more triggers.
+
+how_it_works:
+  - title: Picks the segments
+    text: It starts where value is high, such as VIPs, repeat buyers, high-value abandoned carts and buyers who lapsed 6 to 12 months ago.
+  - title: Maps the triggers
+    text: The letter goes out from the same event as the email, through your email platform.
+  - title: Sets the timing
+    text: Second purchase 30 to 60 days after the first order, win-back at 6 to 12 months, cart letters within days.
+  - title: Writes the brief
+    text: Each brief has the product they left or bought, an offer, and a QR code or unique link plus a private offer code.
+  - title: Caps the frequency
+    text: For example one piece per 30 days per customer.
+  - title: Holds back a control
+    text: A group that gets email only, so you judge by extra revenue and not total redemptions.
+  - title: Checks the payback
+    text: Print and postage cost per piece against extra gross margin per mailed customer.
+  - title: Tests the creative
+    text: A/B test mailers, and review each brief with the direct mail package reviewer before print.
+
+output_shape: |
+  FIT CHECK  AOV x margin: <$>  cost per piece: <$>  segments that cover it: <list>  min size per segment: about 500
+
+  SEGMENT AND TRIGGER MAP
+    <segment> | trigger <event> | timing <days> | test target: <reported result, not a forecast>
+
+  MAILER BRIEFS
+    <trigger>: personal line <...> | offer <...> | QR or link <...> | offer code <...>
+
+  TEST DESIGN   mailed <n> / email-only control <n> | metric: extra orders and extra gross margin
+  FREQUENCY CAP  one piece per <days> per customer | SEND TIMING  <...>
+
+  PAYBACK  extra orders needed per 1,000 pieces = 1,000 x <$ per piece> / <gross profit per order> = <n>
+  Check address data and consent rules where you mail.
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what was needed>
+
+tweaks:
+  - what: Your cost per piece
+    how: Get a real quote for print and postage. A plain letter at $1 and a rich mailer at $5 give very different lists of segments that pay back.
+  - what: Segment size
+    how: As a starting rule, about 500 customers per segment so a control group gives a readable result. Smaller segments need a longer test.
+  - what: Order value and margin
+    how: Mail only where average order value times margin covers the piece with room to spare. Give gross margin, not revenue.
+  - what: Your region
+    how: Say where you mail. Consent and address-data rules differ, and some tactics may not be allowed.
+
+judge:
+  - Every segment has an order value and margin that cover the cost per piece.
+  - Every trigger has a timing, a brief and a tracking method.
+  - There is an email-only control group and the metric is extra revenue.
+  - Reported results are called test targets from one source, not forecasts.
+  - The consent and address-data line is there.
+
+test:
+  - Give it a segment where gross profit per order is lower than the cost of one piece. It should say the segment cannot pay back and why.
+  - Run it twice on the same numbers. The segments and the payback sums should match.
+  - Send one trigger to a small group with a control. Count orders with the tracking code and the extra orders against control.
+  - Run the creative review on each brief before you print.
+
+improve:
+  - Add your real print and postage quotes to the skill file, so the payback is yours.
+  - Add your brand voice and offer limits, so each letter fits.
+  - Add the consent and address-data rules for each region you mail, as your adviser gives them.
+  - Save the winning brief to your brand file once the control group shows a gain.
+  - Pair it with the lapsed customer finder for the win-back list and the direct mail package reviewer for each brief.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can build the trigger map and the payback sums. Paste real costs."}
+    - {name: "Klaviyo", why: "Your email platform can fire the same events that trigger the letter, if your mail service connects to it."}
+    - {name: "Shopify", why: "Its order data gives first and last order dates and order value for each segment."}
+  inputs:
+    - "A quote from a print-and-mail service"
+    - "Your email flow list with triggers"
+    - "A list of VIPs and lapsed buyers"
+    - "Your consent record by region"
+
+terms:
+  - term: Programmatic direct mail
+    meaning: Printed mail sent automatically from an event, such as a lapsed buyer, like an email would be.
+  - term: Control group
+    meaning: A group that gets email only, kept so you can see what the mail added.
+  - term: Incremental revenue
+    meaning: Revenue the mail added that would not have come without it.
+  - term: Redemption
+    meaning: A customer using the offer code or link on the piece.

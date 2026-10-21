@@ -1,0 +1,21 @@
+slug: tiktok-starter-campaign-builder
+name: "TikTok starter campaign builder"
+summary: "Give your budget and target CPA. Get a TikTok campaign layout, budgets and a four-week targeting ladder."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: video_ads, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The BEST TikTok Ads Course For Beginners in 2026 (free full course)", by: "Corbin, Zoco Marketing", used: "Starting with a manual sales campaign, budget as two times your cost per acquisition, the 25 results in 7 days learning rule, broad targeting first, the account layouts by budget, the audience recipes and the search ad add-on"}
+  - {title: "The Only TikTok Ads Tutorial You Will Ever Need", by: "Tim, a TikTok ads agency", used: "The three-level campaign layout, naming, the $50 a day ad group minimum, the interest case, custom audiences as lookalike seeds and the four-week targeting ladder"}

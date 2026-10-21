@@ -1,0 +1,20 @@
+slug: catch-up-on-your-week-close-loops-and-plan-tomorrow
+name: "Catch up on your week, close loops and plan tomorrow"
+summary: "Connect your chat, email and files. Get a digest of what you missed, open loops closed and a protected day."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: tool_connection, required: true}
+outputs:
+  - {type: plan}
+uses: [activity-digest-writer, weekly-review-guide, deep-work-day-planner]
+steps:
+  - {uses: activity-digest-writer, note: "Starts from your connected tools. Makes a short digest of mentions, decisions and action items."}
+  - {uses: weekly-review-guide, note: "Uses the action items and decisions from the digest as the loops to close."}
+  - {uses: deep-work-day-planner, note: "Takes the tasks from the digest and the top items from the weekly plan, and puts the important ones first."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/catch-up-on-your-week-close-loops-and-plan-tomorrow/skeleton.yaml

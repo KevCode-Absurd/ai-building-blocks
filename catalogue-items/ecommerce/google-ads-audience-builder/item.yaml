@@ -1,0 +1,19 @@
+slug: google-ads-audience-builder
+name: "Google Ads audience builder"
+summary: "Give it your site traffic and customer list. Get remarketing lists, exclusions and custom segments to build."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "Agency co-founder who runs Google and YouTube ads for DTC brands (name not given)", used: "GA4 cart abandoner steps and numbers, list windows, customer lists, custom segments and exclusions"}

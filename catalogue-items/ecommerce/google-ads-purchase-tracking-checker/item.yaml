@@ -1,0 +1,20 @@
+slug: google-ads-purchase-tracking-checker
+name: "Google Ads purchase tracking checker"
+summary: "Paste your conversion actions. Get a pass or fail on double counting, a score out of 100 and the fix for each."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: store_capture, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "An agency co-founder who runs Google and YouTube ads for direct-to-consumer brands (name not given)", used: "The three common tracking mistakes, primary versus secondary actions, the GA4 import default and the Shopify app path"}
+  - {title: "Complete Google Ads architecture and operations manual (2026 edition)", by: "A compiled written guide (author not named)", used: "Tag Manager structure, enhanced conversions, real order value and server-side tagging above about $50,000 a month"}

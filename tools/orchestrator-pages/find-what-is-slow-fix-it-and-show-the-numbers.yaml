@@ -1,0 +1,79 @@
+new_slug: find-what-is-slow-fix-it-and-show-the-numbers
+name: Find what is slow, fix it and show the numbers
+summary: Give it what feels slow. Get the cause ranked by cost, a fix, and before and after timings.
+job: test-and-fix-code
+thinking: medium
+thinking_why: Ranking from timings and fixing one bottleneck is bounded work. A mid-tier model is enough.
+headline: Make slow code faster and prove it with before and after numbers
+subhead: Say what feels slow. It plans real timings, ranks the stages by what they cost, fixes the biggest one, measures again and writes a pull request that shows the numbers.
+explain: |
+  When something feels slow, people guess. They add a cache, rewrite a loop or buy a bigger server, and the slow part stays where it was. Without numbers nobody can say whether the change helped.
+
+  The steps here start with the clock. The first writes the slow moment in one line, plans the timings, looks at the worst runs and ranks each stage by the time a fix would save. It also lists the ideas the numbers rule out. You then run the timings it planned and note the top stage. The second step measures that stage in the code, fixes it and measures again. The last writes the pull request with the before and after timings, so a reviewer can see the gain.
+when:
+  - A page, report, job or query feels slow and the team is guessing why.
+  - A speed fix was tried and nobody can say if it worked.
+  - You need numbers to show a reviewer or a client.
+you_give:
+  - What is slow, when it happens and about how long it takes
+  - Access to your project code
+  - Logs, timings or a slow-query list (optional)
+  - Your target speed (optional)
+you_get:
+  - The slow moment written in one line, with the stages ranked by what they cost
+  - A list of ideas the numbers rule out, so you skip them
+  - The biggest bottleneck fixed in code, measured before and after
+  - A pull request that shows the timings
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md".
+  - Describe what is slow and how long it takes. Add any logs you have.
+  - Run the timings the first step plans. Tell it the numbers for the top stage.
+  - Check the before and after figures in the pull request on a run of your own.
+how_it_works:
+  - title: Rank the slow parts by cost
+    text: Writes the slow moment in one line, plans real timings, looks at the worst runs and ranks the fixes by the time they save.
+  - title: Run the timings (your turn)
+    text: You run the timings it planned and note the numbers for the top stage.
+  - title: Fix the bottleneck and measure again
+    text: Measures the top stage in the code, finds the cause with a profiler or query plan, fixes the biggest cost and measures again.
+  - title: Write the pull request
+    text: Describes the change in a small picture, with the timings before and after and how hard it is to undo.
+output_shape: |-
+  STEP 1: SLOW PARTS
+    The slow moment | timing plan | stages ranked by cost | ideas the numbers rule out
+
+  PAUSE: you run the timings and note the top stage
+
+  STEP 2: FIX
+    Before number | the cause found | the change | after number
+
+  STEP 3: PULL REQUEST
+    Summary | timings before and after | merge danger
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your target speed
+    how: Give it a number such as under 2 seconds. Step 1 ranks fixes by how close they get you, and step 2 stops once it is met.
+  - what: The worst runs
+    how: Send the slowest logged runs, not just the average. Slow tails often have a different cause.
+  - what: What you already tried
+    how: List past fixes and their results so they are not suggested again.
+  - what: Where it runs
+    how: Say if the slowness is in the browser, the server or the database. Step 2 picks a matching tool.
+judge:
+  - Every stage in the ranking has a number beside it, or a clear MISSING line.
+  - The fix targets the top-ranked stage, not an easier one.
+  - The before and after figures come from the same test on the same data.
+  - Behaviour is unchanged. Your tests pass before and after.
+  - The pull request shows what you can re-measure.
+test:
+  - Re-run the same timing yourself after the fix. It should match the report within normal noise.
+  - Run the timing three times and compare the median, not one run.
+  - Run your test suite before and after.
+  - Check the fix on the worst-case input too, not only the typical one.
+improve:
+  - Keep the timing script in the project so the next change can be measured the same way.
+  - If the top stage is a design problem, not a code problem, plan that change as its own job.
+  - Not worth running when the slowness is a known, one-off cost, such as a first load.

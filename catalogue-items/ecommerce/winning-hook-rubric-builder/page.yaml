@@ -1,0 +1,130 @@
+new_slug: winning-hook-rubric-builder
+name: "Winning hook rubric builder"
+summary: "Paste your top ads and a rival's. Get a hook rubric from the winners and your drafts graded."
+job: write-ad-copy
+thinking: high
+thinking_why: "It compares many ads, finds patterns and grades drafts against them, which needs careful reasoning."
+
+headline: "Winning hook rubric builder"
+subhead: Paste the opening lines and results of your top ads or videos, and the top ones from one rival. It splits winners from losers, finds what the winners share, and writes a rubric and fill-in-the-blank hook formats. Your draft hooks get an A to D grade and three rewrites.
+
+explain: |
+  Most hook advice is a guess. Your own best ads, and a rival's, show what actually worked for an audience. The problem is seeing the pattern across dozens of ads by eye.
+
+  This skill sorts each source's ads by results and marks the break point, where the numbers drop sharply. Above it are winners, below are losers. It then compares winners with losers: the psychology, the trigger words and framing, the grammar, and what is not obvious. Patterns that show up in two or more sources are marked universal. Each winning hook becomes a template with blanks. Your new hooks are graded against the rubric, line by line, and rewritten. It works best with 50 or more items. With four to ten per source, treat the rules as guesses to test.
+
+when:
+  - You have a pile of old ads or videos and want to know what your winners have in common.
+  - You want to learn from one rival's best hooks without copying them.
+  - You have draft hooks and want them graded against what has worked.
+
+you_give:
+  - Your top 10 ads or videos with the hook or transcript and a result number
+  - The top 10 from one rival, kept separate
+  - Which items were boosted or paid, and which are off-topic
+  - Draft hooks to grade (optional)
+you_get:
+  - Winners and losers split at the break point for each source
+  - "A rubric in four buckets: psychology, trigger words and framing, grammar, and what is not obvious"
+  - Rules shared across sources, plus custom rules per source, and fill-in-the-blank hook formats
+  - An A to D grade with reasons, and three rewrites, for each draft hook
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your top ads with the hook text and the metric you trust, such as views, hold rate or purchases. Mark any that were boosted or paid.
+  - Paste the top ads from one rival in a separate list. Do not mix rivals.
+  - Read the rubric and the hook formats. Treat every rule as a hypothesis to test.
+  - Paste your draft hooks to grade, then test the best rewrites in a real ad test.
+
+how_it_works:
+  - title: Cleans each list
+    text: Keeps each channel or source separate. Drops off-topic posts and boosted posts. For paid ads it drops items with unusual spend or an audience that isn't normal for you.
+  - title: Finds the break point
+    text: Sorts by your metric and marks where numbers drop sharply. Above is winners, below is losers. You can move the line.
+  - title: Compares winners and losers
+    text: For each source, looks at psychology, trigger words and framing, grammar, and the non-obvious.
+  - title: Marks the shared patterns
+    text: Patterns that appear in two or more sources are universal. Source-specific ones stay tagged.
+  - title: Writes hook formats
+    text: Each winning hook becomes a template with blanks, with where it came from.
+  - title: Grades your drafts
+    text: Checks each draft against each rubric rule and says why it lost marks, such as no specific number, a soft opening or no proof.
+  - title: Rewrites, not copies
+    text: Gives three rewrites that keep the format but use your product and your facts. Hooks graded C or below are not shown.
+  - title: Saves the rubric
+    text: Hands back the rubric as a file to reuse, so the analysis isn't run again each time.
+
+output_shape: |
+  SOURCE <name> : <n> items, metric <...>
+  Break point at <value>. Winners <n> | Losers <n>
+  Removed: <n boosted> boosted, <n> off-topic
+
+  RUBRIC (per source)
+  Psychology: <...>
+  Trigger words and framing: <...>
+  Grammar: <...>
+  Not obvious: <...>
+
+  UNIVERSAL RULES (two or more sources)
+  1. <rule> : seen in <sources>
+  SOURCE-SPECIFIC RULES
+  <source>: <rule>
+
+  HOOK FORMATS
+  1. "<fill-in-the-blank template>"  from: <source>
+  2. ...
+
+  DRAFT GRADES
+  "<draft>"  Grade <A to D>  reasons: <...>
+    rewrite 1: <...>  rewrite 2: <...>  rewrite 3: <...>
+
+  CONFIDENCE: <n items per source : thin | enough>
+  CHECKS MISSED: <none, or ...>
+
+tweaks:
+  - what: Number of items
+    how: More is better. Four to ten per source is thin. Fifty or more gives sharper rules. Add more if you can.
+  - what: The result metric
+    how: Name the metric you trust. Views suit organic video. For paid ads use a result that fits, such as cost per purchase or hold rate.
+  - what: Rivals kept separate
+    how: Run one rival at a time if their styles differ. Mixing many rivals pulls the rubric toward an average.
+  - what: Boosted items
+    how: Mark which items were boosted or paid. The source drops organic videos with under 2 percent engagement as probable paid pushes, but that filter is for organic video only.
+
+judge:
+  - Each source has its own winners, losers and break point.
+  - Boosted and off-topic items are removed, and the skill says how many.
+  - Every rule names the pattern it came from, and rules in only one source are tagged.
+  - Hook formats are templates with blanks, not copies of a rival's lines.
+  - Draft grades give the rule that cost marks. No hook graded C or below is offered as a final.
+
+test:
+  - Paste a list where you know why one ad won. The rubric should include that reason.
+  - Run it with the same list twice. The main rules should be the same.
+  - Grade a hook you know is weak. It should get a low grade with the reasons you'd give.
+  - Test one rewritten hook against your current best in a real ad test. A high grade does not prove it will win.
+
+improve:
+  - Save the rubric as a project file and reuse it, so you don't run the analysis again each time.
+  - Re-run it every few months with fresh top ads, since what works changes.
+  - Add your own rules, such as words you never use, as extra rubric lines.
+  - Keep your own niche's results in one list and a rival's in another, and compare the two rubrics.
+  - Pair it with a skill that writes hooks, and one that picks which hooks to test.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can sort pasted ads, find patterns and grade drafts. Paste transcripts and results as text."}
+    - {name: "Meta Ad Library", why: "Shows a rival's active ads and how long they have run, which hints at which ones win."}
+  inputs:
+    - "Transcripts of each ad, not only the title"
+    - "A result for each ad, such as views, hold rate, cost per purchase"
+    - "Notes on which ads were boosted or ran to a narrow audience"
+    - "At least 30 items per source if you have them"
+
+terms:
+  - term: Hook
+    meaning: The first line or first few seconds of an ad, which decides whether people keep watching.
+  - term: Break point
+    meaning: The place in a ranked list where the numbers drop sharply, which separates winners from losers.
+  - term: Rubric
+    meaning: A list of rules you grade a piece of work against.

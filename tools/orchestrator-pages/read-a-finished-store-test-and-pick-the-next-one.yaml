@@ -1,0 +1,74 @@
+new_slug: read-a-finished-store-test-and-pick-the-next-one
+name: Read a finished store test and pick the next one
+summary: Give it your test numbers and dates. Get a ship call, ranked ideas and the next bold tests.
+job: test-store-changes
+thinking: high
+thinking_why: The first step does the test sums and the last sizes tests to your traffic. Give it your strongest model.
+headline: Know if your test won, then pick the next one
+subhead: Give it the numbers and dates of a finished store test. It checks the result can be trusted, gives the gain as a range in money and makes a ship call. Then it ranks the next ideas by evidence and profit and picks bold tests your traffic can prove.
+explain: |
+  A test ends and you get a dashboard that says "95% chance to win". That banner can mislead. Stopping early, an uneven split or a sale in the middle can make a loss look like a win. After the call, most stores pick the next test by gut, or run another small tweak their traffic can never prove.
+
+  The first step checks the split, how the test ended, tracking faults and other changes, then gives the lift as a range and in money, and checks order value and margin. The second takes what the test taught and writes each next idea as a hypothesis, scored on the evidence behind it. The third fits those ideas to your traffic: bold tests you can prove, one per page, laid out by month, with what not to test at your size.
+when:
+  - A test just ended and you aren't sure the result is real.
+  - You won or lost a test and don't know what to test next.
+  - Your store has modest traffic and past tests ended with no clear answer.
+you_give:
+  - "Test numbers: visits, orders and revenue for each version, with start and end dates"
+  - The test plan, if you wrote one (optional)
+  - Customer reviews or survey answers (optional)
+  - Your store's monthly orders and visits, and the pages you could test next
+you_get:
+  - "A verdict: valid or not, the lift as a range, the gain in money and a ship, do not ship or re-test call"
+  - Next test ideas written as hypotheses and ranked by evidence and profit
+  - Five bold tests your traffic can prove, with the main number and guardrails for each
+  - A month-by-month order, one test per page, and what not to test at your size
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Export the test numbers for both versions with dates. Say if anything else changed during the test, like a sale or an email.
+  - Add the research you already have, such as heatmap notes or survey answers, for step 2.
+  - Give your monthly orders and visits so step 3 can size tests to your traffic.
+how_it_works:
+  - title: Get the verdict
+    text: Checks the split and how the test ended, looks for tracking faults and other changes, gives the lift as a range and in money, checks order value and margin, then makes the call.
+  - title: Rank the ideas it points to
+    text: Splits repairs from tests, writes each idea as a hypothesis, counts the kinds of evidence behind it and ranks the top ideas by profit.
+  - title: Pick the next bold tests
+    text: Places your store by its traffic, picks tests your traffic can prove, gives each one a main number and guardrails, and lays them out one per page by month.
+output_shape: |-
+  STEP 1: VERDICT
+    Split check | how it ended | lift as a range | gain in money | order value and margin | call
+
+  STEP 2: RANKED IDEAS
+    Repairs | hypotheses with evidence | profit-weighted order | chances of winning
+
+  STEP 3: NEXT TESTS
+    Five bold tests | main number and guardrails for each | month-by-month order | what not to test
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your test dates
+    how: Give exact start and end dates. A test under two full weeks can't be trusted, and the verdict says so.
+  - what: What else changed
+    how: List sales, emails, price changes and site fixes during the test. They can skew the result.
+  - what: Your traffic
+    how: Give monthly visits and orders. Under about 300 orders a month, only bold changes on your busiest page are worth testing.
+  - what: Your research
+    how: Add heatmap notes, recordings and survey answers. Ideas backed by more kinds of evidence rank higher.
+judge:
+  - The verdict gives a range, not only a single number, and a gain in money.
+  - It names anything that could skew the result, such as a sale or a split that wasn't fair.
+  - Each idea is a hypothesis with the evidence it rests on.
+  - Broken things are listed as repairs, not as tests.
+  - The tests fit your traffic, and it says what not to test at your size.
+test:
+  - Redo the gain in money by hand from your visits and revenue. It should match.
+  - Check that every idea in the list traces back to a finding from your research or your test.
+  - Check the monthly plan has one test per page at a time.
+improve:
+  - Log each verdict and what you shipped, so the same idea isn't tested twice.
+  - Keep notes on lost tests. Most tests lose, and the pattern shows what your buyers ignore.
+  - Rerun this after every test, with the new numbers and what you shipped.

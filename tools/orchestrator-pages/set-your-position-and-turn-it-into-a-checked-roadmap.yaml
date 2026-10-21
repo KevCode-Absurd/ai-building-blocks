@@ -1,0 +1,77 @@
+new_slug: set-your-position-and-turn-it-into-a-checked-roadmap
+name: Set your position and turn it into a checked roadmap
+summary: Give it what you offer and who you serve. Get a position, a roadmap of results and the gaps found.
+job: plan-strategy
+thinking: high
+thinking_why: Two steps rebuild and attack the same plan. Give it your strongest model.
+headline: Set your position and test the roadmap before you commit
+subhead: Give it what you offer and who you serve. It picks a position and a not-do list, turns the activities into a roadmap of measurable results, rebuilds that roadmap from the end date, then lists the ways it could fail and fixes them.
+explain: |
+  Many strategies are a list of features and dates. Nobody has said what the business will not do, so every request gets added, and the plan cannot be tested because it names things to make, not results to reach.
+
+  The steps go from position to proof. First one position is chosen and a list of things you will not do is written, with the activities that must fit together to carry it. Those activities are rewritten as three to five problems for named customers, each with a number that shows progress. The roadmap is then rebuilt from the end date, checked a second way and scored out of 100. The last step lists what would guarantee failure, checks the plan against each item and writes one change for every gap.
+when:
+  - You list what you offer and keep adding to it.
+  - You have a roadmap of features and cannot say what it should change.
+  - You must show a board, partner or bank that the plan holds.
+you_give:
+  - What you offer and who you serve
+  - Your main rivals (optional)
+  - Your end date and the result you want by then
+  - Your current feature or task list with dates (optional)
+you_get:
+  - One position, a list of what you will not do and the activities that must fit
+  - Three to five customer problems, each with a result you can measure and an owner
+  - The plan rebuilt from the end date, with a score out of 100
+  - A list of ways it could fail and one change for each gap
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - State your end date and the result you want in plain numbers at the start. Step 3 needs both.
+  - Tell it about any commitment you cannot drop, so the not-do list stays honest.
+  - Read the failure list last and decide which changes to make before you share the roadmap.
+how_it_works:
+  - title: Choose a position and what you will not do
+    text: Separates doing better from doing different, picks one position that fits the facts, writes at least four things you will not do and lists the activities that carry it.
+  - title: Rewrite the activities as a roadmap of results
+    text: Marks each item as a feature, a problem or a result, rewrites features as problems for named customers and gives each one a number and an owner, with review points in place of dates.
+  - title: Rebuild the roadmap from the end date
+    text: Starts at the end date and works back to this week, checks the answer a second way, tests small input changes, adds backup routes and scores the plan out of 100.
+  - title: List the ways it could fail and fix them
+    text: Lists what would guarantee failure, checks the plan against each item, marks risks that could end it and writes one change for each exposed gap.
+output_shape: |-
+  STEP 1: POSITION
+    Better vs different | chosen position | price or cost stance | not-do list | activities that must fit
+
+  STEP 2: ROADMAP OF RESULTS
+    Three to five problems | customer | result to measure | owner | review point
+
+  STEP 3: BACKWARD CHECK
+    End goal | steps from the end | two cases | second method | return paths | score out of 100
+
+  STEP 4: FAILURE REVIEW
+    Ways to fail | plan coverage | survival risks | attacks | changes
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your rivals
+    how: Name two or three. Step 1 uses them to decide whether you are better or different.
+  - what: Your end date
+    how: A short date makes step 3 harsher. Pick the one you really face.
+  - what: Who attacks the plan
+    how: Name the person who would doubt it most. Step 4 writes the attacks from their side.
+judge:
+  - The position is one choice, and the not-do list has at least four real items.
+  - Each roadmap problem names a customer and a result someone can pull from a system.
+  - The backward check starts from the end date, not from today's list.
+  - Every failure item maps to a part of the plan or is marked uncovered.
+  - Each change in step 4 is a change to the plan, not advice.
+test:
+  - Pick one not-do item. Ask whether a good customer would still pay you for it. If so, keep it out of the list.
+  - Take one roadmap result and find the system or count it would come from.
+  - Move your end date by one month and see if step 3 still holds.
+improve:
+  - Review the roadmap at each review point and swap in the new results.
+  - Share the failure list with the people who attack the plan and ask what is missing.
+  - Run step 1 again each year, because the best position can change.

@@ -1,0 +1,115 @@
+new_slug: holdout-test-planner
+name: "Holdout test planner"
+summary: "Name the channel or change you doubt. Get a holdout design, run time and how to read it."
+job: read-ad-results
+thinking: medium
+thinking_why: "It picks a design from clear rules and sets up a table, so a mid-size model works. Check the size sums."
+
+headline: "Holdout test planner"
+subhead: Name the channel, email, popup or program you doubt, and give your store size. It picks a holdout design, sets the split and run time, builds the table for reading the result, and writes the budget rule before the test starts.
+
+explain: |
+  Ad platforms and email tools report sales they were credited with, not sales they caused. Retargeting is the classic case. People who already visited your store are likely to buy anyway, so the report looks great. A holdout shows the truth: keep a random group from seeing the thing, and compare.
+
+  This skill matches your question to a design. A permanent 5 percent holdout for your whole testing program. An 80/20 split for retargeting. A 10 percent holdout from a promotional email. Matched regions for a channel such as Meta. It checks your traffic is big enough to read the result, adds the cost of the test, and writes the keep, cut or repeat rule first, so the result cannot bend the rule. It leaves out methods that need an analyst.
+
+when:
+  - Your retargeting report shows a great return and you wonder how many buyers would have bought anyway.
+  - You shipped a dozen test winners and sales did not rise by the same amount.
+  - You want to cut or move ad spend and need proof of what a channel really adds.
+
+you_give:
+  - The channel, campaign, change or program you want to test
+  - Your monthly visitors, list size and conversion rate
+  - Whether you can pause spend by region, suppress an audience or hold back part of a list
+  - Gross profit per first order and your break-even cost per order (optional)
+
+you_get:
+  - "A holdout design: type, split and run time"
+  - A size check that says whether your traffic can read the result
+  - "A read-out table: baseline, exposed, absolute lift, incremental share"
+  - A budget decision rule written before the test, and a log template
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name the one thing you doubt, and give your visitors, list size and conversion rate.
+  - Say what you can pause, suppress or hold back, and what you can afford to give up.
+  - Agree the decision rule it writes before you start.
+  - Run the test, fill in the table, and save the log line.
+
+how_it_works:
+  - title: Matches the question
+    text: One test won, retargeting or email, a channel, a whole program, or a site-wide change each get a different design.
+  - title: Checks the size
+    text: User-level and geo holdouts need about 100,000 monthly visitors. Smaller stores get a longer run or an on/off test.
+  - title: Picks the design
+    text: Program holdout, retargeting 80/20, email 10 percent, matched regions, popup holdout or difference-in-differences.
+  - title: Sets random groups
+    text: Random assignment is what makes the gap a cause.
+  - title: Builds the read-out table
+    text: Holdout rate, exposed rate, absolute and relative lift, and the share of results the thing really caused.
+  - title: Writes the budget rule
+    text: Keep, cut or repeat, based on the extra cost per extra order against your break-even.
+  - title: States the cost
+    text: Sales given up or spend paused during the test.
+  - title: Adds the log
+    text: Question, method, result with range, and the budget decision.
+
+output_shape: |
+  QUESTION     <what is being tested>
+  DESIGN       <type> | groups: <split> | run: <days or weeks> | why this design: <...>
+  SIZE CHECK   holdout visitors: <n> | smallest gain it can show: <x percent> | verdict: <enough / too small, fix>
+  HOW TO SPLIT <how groups are chosen at random, what is suppressed or paused>
+  COST         <sales given up or spend paused during the test>
+  READ-OUT TABLE
+   measure | holdout (baseline) | exposed | absolute lift | relative lift | incremental share
+  DECISION RULE  keep if <...> | cut or move if <...> | repeat if <...>
+  LOG          question | method | result with range | budget decision
+  MISSING: <what was not given>
+  CHECKS MISSED: <one line each, or none>
+
+tweaks:
+  - what: The one question
+    how: Name a single channel or change. A test of everything at once shows nothing.
+  - what: What you can pause
+    how: Say if you can pause by region, suppress an audience or hold back part of a list. It sets the design.
+  - what: Break-even cost
+    how: Give your gross profit per first order. The decision rule uses it to say keep or cut.
+  - what: How long you can wait
+    how: Say your limit. Geo tests run about 6 weeks, retargeting about 14 days, a program holdout about 90 days.
+
+judge:
+  - The design matches your question and your size.
+  - The size check says plainly whether your traffic can read the result.
+  - The decision rule is written before the test runs.
+  - Example numbers are labelled as examples, not benchmarks.
+  - The cost of the test is stated in sales or spend.
+
+test:
+  - Ask it to test retargeting with 5,000 monthly visitors. It should say the holdout is too small and offer the on/off test.
+  - "Check the retargeting example by hand: if the holdout converts at 70 percent of the exposed rate, 30 percent was caused by ads."
+  - Run it twice on the same inputs. The design and the rule should match.
+  - Read the decision rule out loud. If you would not follow it, change it before the test.
+
+improve:
+  - Add your break-even cost per order to the skill file so every rule uses it.
+  - Add which platforms you can pause by region, to skip designs you cannot run.
+  - Keep the log lines in one file and attach it, so you stop repeating tests.
+  - Pair it with the store test verdict maker for single tests and the profit per visitor calculator for the money.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It picks the design and builds the table and the rule from your numbers."}
+    - {name: "Meta and Google lift studies", why: "These run the exposed versus held-out split inside the ad platform. Check their current requirements."}
+  inputs:
+    - "Sales by region for the last year, to pick matched regions"
+    - "Your email list size and past promotion results"
+    - "Gross profit per first order"
+
+terms:
+  - term: Holdout
+    meaning: A random group kept from seeing the thing you are testing, so you can compare.
+  - term: Incremental
+    meaning: Sales that happened because of the thing, and would not have happened without it.
+  - term: Difference-in-differences
+    meaning: The change in the test group minus the change in a comparable group, over the same time.

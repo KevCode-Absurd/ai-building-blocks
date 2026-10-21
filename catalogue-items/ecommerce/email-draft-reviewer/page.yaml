@@ -1,0 +1,128 @@
+new_slug: email-draft-reviewer
+name: "Email draft reviewer"
+summary: "Paste an email. Get cuts, a pacing map, subject fixes, a score out of 100 and a verdict."
+job: write-emails
+thinking: low
+thinking_why: "It counts words, spots patterns and edits lines against a clear rubric, which a fast model does well."
+
+headline: "Email draft reviewer"
+subhead: Paste a campaign or flow email with its subject line and preview. It counts the lead, the length and the I and we lines, then marks cuts and rewrites. You get a marked draft, a pacing map, subject fixes, a score out of 100 and a ship or fix verdict.
+
+explain: |
+  Most store emails fail in the same ways. The first sentence is long, the email talks about "we" more than "you", and the subject line is cut off on a phone. There are three ideas where one would do, and no clear next step.
+
+  This skill reviews the email against a short rubric. It counts words in the opening sentence and in the whole email, checks the subject line length, cuts filler, and maps the line lengths to show the pacing. It lists every sentence that starts with I or we and flips it to speak to the reader. Then it checks for one idea and one call to action. The limits come from one teacher's rules of thumb, not tested benchmarks, so test them against your own open and click data. Your brand voice always wins.
+
+when:
+  - You wrote a campaign email and want a second pair of eyes before it goes out.
+  - A flow email, such as a welcome or a cart reminder, gets opens but few clicks.
+  - Your emails sound like the company talking about itself.
+
+you_give:
+  - The email draft, its subject line and preview text
+  - Who it goes to and the one goal
+  - Your brand voice rules (optional)
+you_get:
+  - A marked draft with cuts and rewrites
+  - A line-length (pacing) map
+  - Subject line rewrites
+  - A score out of 100 with its sum, a ship or fix verdict, and three fixes
+  - A list of I and we lines flipped to you, with before and after
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the email, the subject line, the preview text, who it goes to and the one goal.
+  - Paste your brand voice rules if you have them, so the review doesn't cut your style.
+  - Make the three fixes, then run the review again on the new draft.
+  - Rest the draft overnight, then read it aloud before it goes out.
+
+how_it_works:
+  - title: Counts the lead and length
+    text: Counts the words in the first sentence, where the rule of thumb is 14 at most and ideally 7 to 10. Checks the whole email against the usual 200 to 300 words, with one idea.
+  - title: Checks the subject line
+    text: 40 characters or less so it isn't cut off on mobile. Not ambiguous. Not referred to again inside the email.
+  - title: Cuts filler
+    text: "Removes words like very, really, almost and \"I hope this finds you well\". Reads it aloud, and if you would not say it to a friend, it gets rewritten."
+  - title: Maps the pacing
+    text: Shows the line lengths. A wall of long lines and a run of one-liners both fail. A short line goes where the eye should stop.
+  - title: Faces the reader
+    text: Counts I, me, my, we, us and our. Flips them so the reader is the subject, and puts the benefit near the top.
+  - title: Shows, not tells
+    text: Marks every line that only tells the reader something is true, and asks what proof or story would show it.
+  - title: Checks the call to action
+    text: One only, or a double with teaser bullets, and a P.S. that repeats it. If you want replies, it tells the reader which word to reply with.
+  - title: Scores and gives a verdict
+    text: Takes points off for each fault, shows the sum, and gives ship or fix with the three fixes that matter most.
+
+output_shape: |
+  EMAIL: <subject> | goal: <...> | to: <...>
+
+  COUNTS
+  Lead: <n> words (rule of thumb: 14 max, 7 to 10 ideal)
+  Length: <n> words (rule of thumb: 200 to 300)
+  Subject: <n> characters (rule of thumb: 40 max)
+  I/we lines: <n> | brand name as subject: <n>
+
+  MARKED DRAFT
+  <draft with [cut] and [rewrite: ...] marks>
+
+  PACING MAP
+  <line 1: ##### (n words)>  <line 2: ## (n words)> ...
+
+  SUBJECT LINES
+  1. <...> 2. <...> 3. <...>
+
+  FLIPPED TO YOU
+  before: <...>  after: <...>
+
+  SCORE <n>/100 (100 - 30 x <Stops> - 10 x <Fixes> - 3 x <Polish> = <n>)
+  VERDICT: <ship | fix>
+  THREE FIXES: 1. <...> 2. <...> 3. <...>
+  NOTE: the limits are one teacher's rules of thumb. Test them on your own data.
+
+tweaks:
+  - what: Your brand voice rules
+    how: Paste them. Where they conflict with a rule here, your brand wins. A serious brand may want no emoji.
+  - what: Email type
+    how: Say if it is a campaign, welcome flow, cart reminder or order update. Order and shipping emails have to say "we" for terms, returns and legal lines, and the review leaves those.
+  - what: Your open and click data
+    how: Paste the results of your last few sends. The review can then say which limits hold for your list.
+  - what: One goal
+    how: State it in a line. Everything in the email is checked against it, and extra ideas are cut.
+
+judge:
+  - Every count (lead, length, subject, I and we) is a number you can check yourself.
+  - Cuts and flips show before and after, and keep your meaning.
+  - The subject line rewrites are clear and under the limit, not clever and vague.
+  - There is one call to action and a P.S. that repeats it, unless your brand says otherwise.
+  - The score shows its sum, and the note says the limits are rules of thumb.
+
+test:
+  - Paste an email you know is too long and "we" heavy. It should count both and cut them.
+  - Paste an email you already like. The score should be high and the changes few.
+  - Run it twice on the same email. The counts should match and the top fix should be the same.
+  - Send the old and the revised email to two halves of your list and compare clicks.
+
+improve:
+  - Put your brand voice rules at the top of the skill file so they override the rules of thumb.
+  - Change the limits to match your own data, for example your best-performing email length.
+  - Add a list of words and tells your brand bans.
+  - Add your legal lines, such as returns and shipping terms, as text the review leaves alone.
+  - Pair it with a skill that writes the email, and one that checks typos.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can count words, mark cuts and map the pacing. Paste the email as text."}
+    - {name: "Klaviyo", why: "Shows opens and clicks per email, so you can test whether the rules of thumb hold for your list."}
+  inputs:
+    - "Open and click results from your last few sends"
+    - "Your brand voice rules"
+    - "A phone preview of the subject line and preview text"
+
+terms:
+  - term: Lead
+    meaning: The first sentence of the email, which decides whether people keep reading.
+  - term: Pacing
+    meaning: The mix of short and long lines, which sets how the email reads.
+  - term: Preview text
+    meaning: The short line shown after the subject line in an inbox.

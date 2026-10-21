@@ -1,0 +1,20 @@
+slug: store-funnel-benchmark-checker
+name: "Store funnel benchmark checker"
+summary: "Paste your GA4 funnel and device numbers. Get the step that leaks most, why, and what to test."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The best conversion rate optimization tutorial for ecommerce", by: "Arsh, CRO agency founder (as named in the talk)", used: "The four funnel benchmarks, how to read each under-range step, the path reports, the device split and the landing pages check"}
+  - {title: "I studied 1,000 landing pages: what stops them making money", by: "CRO agency founder", used: "Why the view product rate is the main homepage metric"}

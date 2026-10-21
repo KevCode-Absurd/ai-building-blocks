@@ -1,0 +1,126 @@
+new_slug: ga4-store-setup-checker
+name: "GA4 store setup checker"
+summary: "Describe your GA4 setup. Get missing day-one settings, store events to add and a setup score out of 100."
+job: track-numbers
+thinking: low
+thinking_why: "It compares your answers with a fixed list of settings. A fast model is enough. Open GA4 yourself to confirm each click path, because menu labels change."
+
+headline: "GA4 store setup checker"
+subhead: "Tell it how GA4 is set up on your store. It checks the settings that should be right on day one, the store events that must be sent, and your thank-you page key event. You get a pass or fail list with click paths, a test sequence and a score out of 100."
+
+explain: |
+  A new GA4 property looks ready but is not. Data is kept for only two months in explorations, your own visits are counted, a shopper who leaves checkout and returns can show up as a fake "checkout" landing page, and GA4 does not send view item, add to cart or purchase events on its own. Reports then look fine and answer the wrong question.
+
+  This skill goes through the day-one list one setting at a time and marks each pass, fail or not sure, with the click path to fix it. It checks that your store events arrive, shows how to make a thank-you page a key event without marking every page, and gives a test order to run before you trust the numbers. Two of the settings are one teacher's preference, so it presents them as choices. It does not cover the install itself.
+
+when:
+  - You just created a GA4 property for your store and want to know what is still missing.
+  - Your GA4 numbers look wrong or your purchases are not showing.
+  - You are about to send traffic to the store and want tracking right before you do.
+
+you_give:
+  - Your platform and how GA4 is installed (Shopify Google channel, a tag, Tag Manager, a developer)
+  - The domains in a shopper's path, such as store and checkout
+  - Current retention, session timeout, engagement time and data filters
+  - Events you can see in Recent events or DebugView (optional)
+  - Whether you can edit the property (optional)
+you_get:
+  - A pass or fail list of day-one settings with click paths
+  - The store events that are missing
+  - A key event plan that includes your thank-you page
+  - A test sequence, the wait time before judging data, and a score out of 100 with its sum
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Open GA4 Admin and write down what you see in data retention, data streams and data filters. Paste it in.
+  - Open Reports, Realtime, and list the events you see. Paste them in.
+  - Fix the fails in order, then run the test order it gives you.
+  - Wait the time it names before judging traffic numbers.
+
+how_it_works:
+  - title: Checks retention
+    text: Event data retention moves from the 2 month default to 14 months, so explorations can look back.
+  - title: Checks domains
+    text: One property across store and checkout domains, with all domains listed under the stream settings.
+  - title: Checks internal traffic
+    text: Your office IP is defined and the data filter is switched from testing to active.
+  - title: Offers two choices
+    text: A longer session timeout and a higher engaged-session time, both one teacher's preference.
+  - title: Decides on Google signals
+    text: Turned on only if you want demographics, after a legal check.
+  - title: Checks store events
+    text: View item, add to cart and purchase must be sent by an app, theme or developer, and seen in Recent events.
+  - title: Plans key events
+    text: Creates a thank-you page event with a URL condition and marks that, not page view.
+  - title: Gives the test order
+    text: Preview, trigger, confirm the tag fired, check DebugView, then publish and wait.
+
+output_shape: |
+  GA4 SETUP  <store>  <date>
+
+  DAY-ONE SETTINGS
+  <setting> | <pass / fail / not sure> | <current value> | fix: <click path>
+
+  CHOICES (not Google rules)
+  <setting> | <your value> | <option and its cost>
+
+  STORE EVENTS
+  view_item <seen / missing>   add_to_cart <...>   begin_checkout <...>
+  add_payment_info <...>   purchase <...>
+  <who sends them, and the fix for each missing one>
+
+  KEY EVENTS
+  <event> | <how it is made> | <marked as key event: yes / no>
+
+  TEST SEQUENCE
+  <steps in order>  then wait <hours> before judging acquisition numbers
+
+  SCORE  <n>/100  (<points> of <possible>, checks run only)
+  CHECKS NOT RUN
+  MISSING: <what>
+
+tweaks:
+  - what: Platform and install method
+    how: Say if you use the Shopify Google channel, a theme tag, Tag Manager or a developer build. It changes which events are already sent for you.
+  - what: Domains
+    how: List every domain a shopper visits from first click to thank-you page. A missed checkout domain splits one visit in two.
+  - what: Who can edit
+    how: Say if you have admin or editor access. Some steps need it, and the skill will hand you a message for whoever does.
+  - what: Session timeout and engagement time
+    how: Decide on purpose. A longer timeout gives fewer fake landing pages but also fewer sessions.
+
+judge:
+  - Every fail has a click path that starts in GA4 Admin or Reports.
+  - Session timeout and engagement time are shown as choices, not as Google rules.
+  - Store events are listed by name, with who sends each one.
+  - Page view is never marked as a key event.
+  - The score lists the points for each check and which were not run.
+
+test:
+  - Give it a property you already know has the 2 month default, and check that it fails retention.
+  - Leave out your events list and confirm that event checks are listed as not run.
+  - Follow its test order once and see whether purchase appears in DebugView.
+  - Run it twice on the same answers. The pass and fail marks should match.
+
+improve:
+  - Add your own session timeout and engagement time to the skill file once you decide, so it passes them.
+  - Add the exact events your theme or app sends, so it can name what is missing.
+  - Add your consent banner type, since consent can block events.
+  - Pair it with the store page conversion reader once data has had time to fill.
+
+works_best_with:
+  tools:
+    - {name: "Google Analytics 4", why: "The property being checked. Admin, DebugView and Realtime are used."}
+    - {name: "Google Tag Manager", why: "Its preview mode shows whether a tag fired before you publish."}
+  inputs:
+    - "Screenshots of data retention, data streams and data filters"
+    - "A list of the events shown in Realtime after a test visit"
+    - "Your thank-you page address"
+
+terms:
+  - term: Key event
+    meaning: An event you mark as important, such as a purchase. GA4 counts it as a conversion.
+  - term: DebugView
+    meaning: A GA4 screen that shows events from your own test visit as they arrive.
+  - term: Custom dimension
+    meaning: A custom detail you send with an event, which only shows in reports once you register it.

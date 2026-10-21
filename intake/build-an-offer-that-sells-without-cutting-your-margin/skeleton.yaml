@@ -1,0 +1,55 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: build-an-offer-that-sells-without-cutting-your-margin
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: build-an-offer-that-sells-without-cutting-your-margin
+  name: "Build an offer that sells without cutting your margin"
+  summary: "Give it your product, buyer and costs. Get a priced offer with a gift or tier, and the ad return it needs."
+  when: "you run percent-off sales and want an offer that lifts profit instead of just revenue."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: "Offer builder that answers buyer doubts"
+    skill: offer-builder
+    job: offer
+    from: "library"
+    method: ["Brand brain", "When they say go ahead,", "Put the doubt on one lever", "Check the profit", "Word it"]
+    inputs: [persona, product_data, brand_brain!]
+    outputs: [offer]
+    note: "Builds a first offer that answers the buyer's biggest doubts."
+  - name: "Gift-with-purchase planner"
+    skill: gift-with-purchase-planner
+    job: offer
+    from: "library"
+    method: ["Pick the gift first", "Run the numbers per tier", "Answer the biggest worry", "Lead with the gift", "Check stock"]
+    inputs: [product_data, performance_sheet!, offer!]
+    outputs: [offer]
+    note: "Adds a gift or tier to the offer and works out what each tier costs you."
+  - name: "Store guarantee planner"
+    skill: store-guarantee-planner
+    job: offer
+    from: "library"
+    method: ["Compare net sales, not refunds", "Choose the type", "Keep-the-bonus idea (digital items only)", "Handle late refund requests with judgment", "Check the law"]
+    inputs: [performance_sheet, product_data, offer!]
+    outputs: [offer]
+    note: "Adds a guarantee to the offer and counts what refunds would cost."
+  - name: "Discount impact checker"
+    skill: discount-impact-checker
+    job: offer
+    from: "library"
+    method: ["Full-price waterfall", "Hold profit flat", "Find the best depth", "Free-shipping check on low-ticket items", "Score it"]
+    inputs: [product_data, performance_sheet!, offer!]
+    outputs: [audit_report]
+    note: "Tests the offer against a plain discount and shows the return on ad spend it must hit."
+  - name: "Offer profit-per-session checker"
+    skill: offer-profit-per-session-checker
+    job: offer
+    from: "library"
+    method: ["Know the numbers first and round costs up", "Model the shipping spread", "Flag the traps", "Note that creative also moves the numbers", "Score it"]
+    inputs: [offer, product_data, performance_sheet]
+    outputs: [audit_report]
+    note: "Compares the offer's profit per visitor with your current one before you launch it."

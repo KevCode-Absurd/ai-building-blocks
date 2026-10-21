@@ -1,0 +1,81 @@
+new_slug: cut-your-product-cost-and-turn-supplier-terms-into-cash
+name: Cut your product cost and turn supplier terms into cash
+summary: Give it your product and quote. Get a cost sheet, terms to ask for, a talk plan and a cash check.
+job: plan-supply-chain
+thinking: high
+thinking_why: It runs four skills in a row, with cost and cash sums that each step relies on. Give it your strongest model.
+headline: Pay less per unit and free up the cash stock ties up
+subhead: Give it your product and the factory's quote. It breaks the price into parts, finds payment terms worth asking for, writes the asks and give-backs for your talks, and then tests whether the new prices and terms free enough cash to grow.
+explain: |
+  If you buy from a factory, you probably pay a single number per unit and have no idea what is in it. So you can't tell which line to push on, and you pay a deposit, wait weeks for production and shipping, and fund the stock before a single unit sells. That is how a growing store runs out of cash.
+
+  The steps tackle both. First it builds a cost sheet with one row per part, labour, overhead and factory margin, and rates each cost cut by the risk of more returns. Next it works out how many days of float your terms give you and builds a ladder of terms to ask for. Then it writes the factory talk. You run the talks and write down what is agreed. The last step tests that against your growth plan and cash, and scores it out of 100.
+when:
+  - You buy stock from a factory and your cost per unit is too high.
+  - Stock uses up your cash before it sells, and growth means ordering more.
+  - You have a bigger order coming and want price breaks or better payment terms before you commit.
+you_give:
+  - Your product, with a photo or spec sheet
+  - The factory's quote, the volume it is for and the units you buy a year
+  - Your current payment terms, production and shipping days
+  - Part prices you can look up, and quotes from other factories (optional)
+  - Stock by product, debt, cash and your 12-month growth and ad plan
+  - Your profit and loss in rough shares (optional)
+you_get:
+  - A cost sheet with one row per part, labour, overhead and factory margin, each cost cut rated by return risk
+  - Your float in days, a ladder of terms to ask for, and cash by month with and without them
+  - An opening call script, line-by-line asks for price breaks, what you give back and a fallback with a second factory
+  - A grade for each product from A to D, a test of your growth plan against cash, and a score out of 100 for growth cash safety
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach a photo or spec sheet of the product, along with the quote and your yearly volume.
+  - When it pauses, run the talks with the factory and write down the new prices, price breaks and payment terms they agree to.
+  - Bring those figures back for the final cash check. Ask whoever handles your finances for stock and debt numbers if you do not have them.
+how_it_works:
+  - title: Break down the quote
+    text: Builds the cost sheet with one row per part, labour, overhead, factory margin and extras. Writes price-break questions for each row.
+  - title: Find terms worth asking for
+    text: Works out float as terms minus lead time. Builds a ladder from deposit to consignment and shows cash with and without each step.
+  - title: Plan the negotiation
+    text: Writes the opening call as a partnership in units, line-by-line asks, what you give back, the factory's likely margin range and a fallback.
+  - title: Check the growth cash limit
+    text: Works out your cash cycle, grades products A to D, tests stockouts and tests your growth plan against cash and debt. Scores it out of 100.
+output_shape: |-
+  STEP 1: COST SHEET
+    Each row: part | cost | share of price | question to ask | return risk of cutting it
+
+  STEP 2: TERMS
+    Float in days | ladder of terms to ask for | how to share financing cost | cash by month with and without
+
+  STEP 3: NEGOTIATION
+    Opening call | asks by line | what you give back | factory margin range | fallback with a second factory
+
+  STEP 4: CASH LIMIT
+    Cash cycle | grade per product | stockout test | growth plan vs cash and debt | slow stock plan | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your yearly volume
+    how: Factories give price breaks for units. A firmer yearly number gives you something to trade.
+  - what: Part prices you can look up
+    how: Material prices make the cost sheet and the margin estimate sharper.
+  - what: How long you have worked with the factory
+    how: A longer record helps you ask for better terms, and step 2 uses it.
+  - what: Other factory quotes
+    how: A second quote makes the fallback real, not a bluff.
+judge:
+  - Each row of the cost sheet adds up to the quote, and guessed rows are marked.
+  - Every cost cut is rated for return risk, not just price.
+  - The asks give the factory something back, such as volume or earlier payment.
+  - The cash sums use your terms, lead time and growth plan, not general rules.
+  - It says plainly that this is planning, not financial advice.
+test:
+  - Add the rows of the cost sheet and compare with the quote. They should match.
+  - Show the cost sheet to your factory contact. The rows they dispute show where they can move.
+  - Redo the float sum by hand. Take your terms in days and subtract production plus shipping days.
+improve:
+  - Add your real part prices and your second-factory quotes after each round.
+  - Save the agreed prices and terms in your brand file so the landed cost skills start from them.
+  - Re-run the cash check each time you plan a large reorder.

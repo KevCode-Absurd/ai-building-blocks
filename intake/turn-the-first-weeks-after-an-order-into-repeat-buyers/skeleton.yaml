@@ -1,0 +1,47 @@
+# Workflow skeleton chaining skills already in the AI Blocks library (docs/INTAKE.md).
+id: turn-the-first-weeks-after-an-order-into-repeat-buyers
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: turn-the-first-weeks-after-an-order-into-repeat-buyers
+  name: "Turn the first weeks after an order into repeat buyers"
+  summary: "Give it your products and order data. Get a post-purchase flow, delivery updates, a stage map and a test plan."
+  when: "a first order is the end of your email, and you want the weeks after it to bring buyers back."
+  job: keep-customers
+  level: intermediate
+steps:
+  - name: "Post-purchase flow builder"
+    skill: post-purchase-flow-builder
+    job: email
+    from: "library"
+    method: ["Trigger and filters", "Split by order count", "Email 1, plain text from the founder (0 to 30 minutes after the order)", "Email 2 (about 24 hours, or the same day): add more", "Email 3 (about 3 days later): \"it's on its way\"", "Email 4 (about 3 days later): how to get the most from the product"]
+    inputs: [product_data, brand_brain!]
+    outputs: [email_flow]
+    note: "Builds the flow that follows a first order."
+  - name: "Delivery update flow builder"
+    skill: delivery-update-flow-builder
+    job: email
+    from: "library"
+    method: ["Measure first", "Cost it", "Check the basics first", "Build the delivery date rule", "Write four automatic messages, none needing a login", "Plan a branded tracking page on your own domain"]
+    inputs: [performance_sheet, email_flow!]
+    outputs: [email_flow, page_layout_spec]
+    note: "Adds the delivery messages, reusing the post-purchase flow so nothing is sent twice."
+  - name: "Customer stage flow mapper"
+    skill: customer-stage-flow-mapper
+    job: email
+    from: "library"
+    method: ["List the flows", "Define the three stages", "Set the branch rules", "Map lifecycle groups", "Set the post-purchase focus", "Apply the split to each flow"]
+    inputs: [email_flow, offer!, brand_brain!, performance_sheet!]
+    outputs: [email_flow]
+    note: "Maps the flows by customer stage so a buyer is in one place at a time."
+  - name: "Email test planner"
+    skill: email-test-planner
+    job: email
+    from: "library"
+    method: ["Write a hypothesis first", "Test where the volume is", "Set sample sizes", "Choose the winning metric", "Never use automatic winner selection in campaigns", "Rank popup tests by impact"]
+    inputs: [performance_sheet, email_flow!]
+    outputs: [plan]
+    note: "Plans the first test on the mapped flows, one change at a time."

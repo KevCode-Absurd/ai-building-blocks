@@ -1,0 +1,128 @@
+new_slug: new-customer-profit-dashboard-builder
+name: "New-customer profit dashboard builder"
+summary: "Give it Shopify and ad exports. Get a daily sheet of new-customer MER, CAC and profit."
+job: track-numbers
+thinking: medium
+thinking_why: "It lays out formulas and definitions from clear rules, which a mid-size model handles if it checks each column."
+
+headline: "New-customer profit dashboard builder"
+subhead: Give it your Shopify orders, product costs and daily ad spend. It builds a one-page daily sheet with formulas for net revenue, MER, new-customer MER, blended CAC and profit, each with a plain reading rule. You also get a list of cost gaps to fix in your store admin.
+
+explain: |
+  Most stores watch total revenue and platform ROAS. Both flatter you. Returning customers lift total revenue even when new customers are getting harder to win. In one source's example, MER (revenue divided by ad spend) rose from 4 to 5 while new-customer MER (new-customer revenue divided by ad spend) fell from 2 to 1.8 to 1.6. Returning revenue propped it up, and spending more made new acquisition worse.
+
+  This skill builds a small dashboard around new customers. It uses net revenue after returns, CAC as total ad spend divided by new customers (not the platform's number), profit contribution, and new-customer profit contribution. It keeps to few, clear metrics. It does not add more attribution tools. It tells you which actions suit your revenue band and which cost data is missing.
+
+when:
+  - Total revenue looks fine but ad spend keeps climbing.
+  - You want one daily page a team can read in a minute.
+  - Your product costs are not all tagged in Shopify and margin is a guess.
+
+you_give:
+  - Shopify orders with a new or returning flag
+  - Cost of goods per product
+  - Ad spend by day
+  - Net revenue after returns
+  - Gross profit by cohort at 30, 90 and 180 days, if you have it (optional)
+
+you_get:
+  - A one-page dashboard layout with sheet formulas
+  - A daily headline row, each metric defined
+  - A reading rule for each metric
+  - The 180-day profit to CAC band
+  - A list of cost gaps to fix in the store admin
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your order export and daily ad spend, and paste your cost of goods per product.
+  - Tell it your yearly revenue band so it can give the right action list.
+  - Paste the formulas into a sheet and fill a week of data to check the numbers against your own.
+  - Fix the cost gaps it lists in Shopify before you rely on the margin lines.
+
+how_it_works:
+  - title: Fixes the definitions
+    text: Net revenue, true CAC, MER, new-customer MER, profit contribution and new-customer profit contribution, each written once.
+  - title: Uses the right attribution
+    text: Meta reporting on 7-day click, not view-through, compared with new-customer MER.
+  - title: Separates new and returning
+    text: New and returning customers are tracked apart, since returning customers are where most profit sits.
+  - title: Builds the rows
+    text: Net revenue, MER, new-customer MER, new-customer revenue and orders, blended CAC, profit contribution, new-customer profit contribution, and the 180-day band.
+  - title: Writes a reading rule
+    text: One line per metric on what good looks like for your own trend, not another store's.
+  - title: Picks actions by band
+    text: What to do at 1 to 5 million, 5 to 20 million and above 20 million a year.
+  - title: Lists cost gaps
+    text: Products without a cost, so margin lines can be trusted.
+
+output_shape: |
+  DASHBOARD  one page, one row per day, latest at top
+  columns: date | net revenue | ad spend | MER | new-customer revenue | new-customer orders
+           | new-customer MER | blended CAC | profit contribution | new-customer profit contribution
+
+  DEFINITIONS
+  net revenue = <sales - returns>
+  MER = net revenue / ad spend
+  new-customer MER = new-customer revenue / ad spend
+  blended CAC = ad spend / new customers (not platform CPA)
+  profit contribution = net revenue - cost of delivery - marketing
+  new-customer profit contribution = <same, for first orders only>
+
+  SHEET FORMULAS  <one formula per column, with cell references>
+
+  READING RULES
+  <metric>: <what up or down means, what to do>
+
+  180-DAY BAND  LTGP:CAC <x> | <band>   (bands: see the CAC payback checker)
+  ACTIONS FOR <revenue band>  <list>
+  COST GAPS  <products with no cost>
+  CHECKS MISSED: <none or list>
+  MISSING: <input>
+
+tweaks:
+  - what: Your revenue band
+    how: At 1 to 5 million a year it covers 7-day click, tagged costs and this dashboard. At 5 to 20 million it adds in-platform lift tests. Above 20 million it adds geo lift and incrementality factors.
+  - what: Cost tagging
+    how: Tag cost per item on every product. A flat 50% assumption hides sales. A $100 item that costs $50 drops from 50% to 37.5% margin at 20% off.
+  - what: How you flag new customers
+    how: Use Shopify's first-order flag or your email list. Say which, because every new-customer line depends on it.
+  - what: Channels you spend on
+    how: With heavy influencer, TV or retail spend, one platform's spend misleads. Use lift tests instead of this ratio alone.
+
+judge:
+  - Every metric has one definition and one formula.
+  - CAC is total ad spend divided by new customers, not a platform CPA.
+  - Net revenue is used for every ratio, not gross.
+  - The dashboard has few metrics and no added attribution tool.
+  - Missing costs are listed, not guessed.
+
+test:
+  - Fill one week by hand and compare each row with the sheet. They should match.
+  - Check a day with a big sale. Margin should drop on that day, not stay flat.
+  - Change a day's new-customer count and see CAC and new-customer MER move.
+  - Show it to your team and ask what they would do after reading one row. If they cannot say, tighten the reading rules.
+
+improve:
+  - Add your own good range for new-customer MER once you have three months of data. It depends on your margin and repeat rate.
+  - Save the definitions to your brand file so every report uses them.
+  - Add a weekly view once the daily view is stable.
+  - Add the 180-day band when cohort data is ready, using the CAC payback checker.
+  - Pair it with the daily contribution margin tracker for the owner view. Money figures are planning numbers, so check them with your accountant.
+
+works_best_with:
+  tools:
+    - {name: "Google Sheets", why: "Daily rows and plain formulas are easy to build, share and check there."}
+    - {name: "Shopify", why: "Its order export gives the new or returning flag, and cost per item feeds live margin."}
+    - {name: "Any good chat AI", why: "It writes the formulas and checks them against a sample week."}
+  inputs:
+    - "A first-order flag on every order"
+    - "Cost of goods tagged on every product"
+    - "Daily ad spend from every channel you pay for"
+
+terms:
+  - term: MER
+    meaning: Marketing efficiency ratio. Net revenue divided by total ad spend.
+  - term: New-customer MER
+    meaning: Revenue from first-time buyers divided by ad spend. It shows what ads do for new customers.
+  - term: Profit contribution
+    meaning: Revenue minus cost of delivery minus marketing.

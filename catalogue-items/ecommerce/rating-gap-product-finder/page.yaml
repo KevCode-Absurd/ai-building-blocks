@@ -1,0 +1,120 @@
+new_slug: rating-gap-product-finder
+name: "Rating gap product finder"
+summary: "Name a category. Get pain points ranked by urgency and sub-categories with weak ratings but strong search."
+job: find-products
+thinking: medium
+thinking_why: "It sorts many findings and must check each on two sources, which takes some care."
+
+headline: "Rating gap product finder"
+subhead: Name a product category and the buyer group you have in mind. It lists the top ten unmet pain points with proof links, ranked by urgency and willingness to pay. It also finds sub-categories with weak ratings but strong search, and turns the top pain into a product concept.
+
+explain: |
+  The best product gaps are where many people search and the products they find are bad. A sub-category with an average rating under about 3.8 and strong search volume shows demand with weak products. The reviews tell you what the products get wrong.
+
+  This skill asks an AI with web search for the top ten unmet pain points in a category, with proof from reviews, forums and Q&A, grouped by theme and ranked by urgency and willingness to pay. It then looks for people saying they would pay more for a fix. It lists sub-categories with low ratings and strong search. Each gap must be backed by two sources, such as review text and search volume, before it goes on your list. A single forum post is not enough. It is a variant of the product demand researcher, with the ranking and the rating gap rule added.
+
+when:
+  - You are choosing what to make or sell and want proof of unmet demand.
+  - You see a crowded category and want to know where buyers are unhappy.
+  - You have a product idea and want to know which pain to build it around.
+
+you_give:
+  - A product category
+  - The buyer group you are targeting
+  - Review or Q&A text you already have (optional)
+you_get:
+  - The top ten unmet pain points, grouped by theme, ranked by urgency and willingness to pay, with proof links
+  - Sub-categories with a low average rating but strong search
+  - Rank, review and seller data where you supplied it or the AI could find it
+  - A product concept for one narrow buyer group, as a mood board and not a design
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give the category and the buyer group. Use an AI that can search the web, or paste in review text.
+  - Read the ranked pains and the proof links. Open a few to check they are real.
+  - Check each gap on a second source, such as search volume, before you keep it.
+  - Pick one gap and ask for a product concept for a narrow group.
+
+how_it_works:
+  - title: Asks for the top ten pains
+    text: Runs this prompt for your category, to find unmet pain points with proof from reviews, forums and Q&A, grouped by theme and ranked by urgency and willingness to pay.
+  - title: Searches for willingness to pay
+    text: Looks for people saying they would pay more for a fix, and quotes them with links.
+  - title: Finds rating gaps
+    text: Lists sub-categories with an average rating below about 3.8 but strong search volume. In the source demo, washable pads for senior dogs showed 3.88.
+  - title: Compares search with sales
+    text: Looks at search volume next to sales counts, and at positive and negative review tags.
+  - title: Confirms on two sources
+    text: Keeps a gap only if review text and search volume agree. A gap backed by one forum post is dropped.
+  - title: Turns the top pain into a concept
+    text: Writes a product concept for a narrow buyer group. Concept images are mood boards, not production designs.
+
+output_shape: |
+  CATEGORY: <category>   BUYER GROUP: <group>
+
+  TOP PAIN POINTS (ranked by urgency, then willingness to pay)
+  1. <pain> | theme: <...> | urgency: <high/med/low> | would pay more: <quote or none>
+     proof: <link 1>, <link 2>
+  2. ...
+  (up to 10)
+
+  RATING GAPS
+  <sub-category> | avg rating <n> | monthly searches <n> | confirmed on: <review text | search volume>
+  (kept only if two sources agree)
+
+  DROPPED: <gaps with one source only>
+
+  CONCEPT FOR <narrow group>
+  <product idea, the pain it solves, why this group>
+  (mood board only, not a production design)
+
+  NOT CHECKED: <...>
+  MISSING: <search volume | sales data | review text>
+
+tweaks:
+  - what: The category scope
+    how: Name a narrow sub-category, not a whole aisle. A broad category returns vague pains.
+  - what: The buyer group
+    how: Name who you want to sell to. It ranks pains by how much that group feels them.
+  - what: Where the proof comes from
+    how: Paste review text if the AI cannot browse. Say which site each came from.
+  - what: The rating line
+    how: Change the 3.8 line if your category has a different average. It is a rule of thumb from one demo.
+
+judge:
+  - Every pain point has a link or a quote as proof.
+  - The ranking says why one pain sits above another.
+  - Each kept gap has two kinds of support.
+  - Gaps from one forum post are dropped or labelled.
+  - The concept targets a narrow group and is called a mood board.
+
+test:
+  - Run it on a category you sell in. Check that you already know most of its top pains.
+  - Open three proof links. Each should show what the skill says it shows.
+  - Run it twice. The top three pains should be mostly the same.
+  - Check one rating gap by hand on a shopping site. The rating and search should match.
+
+improve:
+  - Add the category, rating line and search floor you use to the skill file.
+  - Add the forums and sites your buyers use, so the proof comes from the right places.
+  - Add your own customer reviews as a source.
+  - Pair it with the Amazon market researcher for data, and the untapped buyer finder for who to sell to.
+  - Save the chosen pain and its proof in your brand file.
+
+works_best_with:
+  tools:
+    - {name: "Any chat AI with web search", why: "Needed to find reviews, forum posts and Q&A. Without it, paste the text in."}
+    - {name: "Amazon reviews and Q&A", why: "Free text from real buyers on what products get wrong."}
+    - {name: "Google Trends or a keyword tool", why: "Gives search volume to confirm a gap."}
+  inputs:
+    - "Search volume for each sub-category"
+    - "Sales counts or best-seller ranks if you have them"
+    - "Review text from your own customers"
+
+terms:
+  - term: Rating gap
+    meaning: A sub-category with strong search and a low average rating, so buyers want the product but dislike what exists.
+  - term: Willingness to pay
+    meaning: How much extra buyers say they would spend to fix a problem.
+  - term: Mood board
+    meaning: A set of rough images that shows a feel or a direction, not a final design.

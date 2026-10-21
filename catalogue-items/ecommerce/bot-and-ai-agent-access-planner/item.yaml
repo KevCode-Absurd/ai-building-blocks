@@ -1,0 +1,23 @@
+slug: bot-and-ai-agent-access-planner
+name: "Bot and AI agent access planner"
+summary: "Describe your traffic, logins and checkout. Get which bots and AI agents to allow, check or block."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Protecting E-Commerce from Agentic Swarms and AI Bot Attacks (security report)", by: "A compiled report citing Akamai, Visa, Darwinium, DataDome, NIST and OWASP", used: "The permit, verify, challenge and prevent levels, checking at the money step, challenge over block, the phased plan and the readiness checklist"}
+  - {title: "Ecommerce security: what it means, common threats, and best practices", by: "A web article on ecommerce security", used: "Simple alert signals: traffic spikes, failed logins and failed gift card checks"}
+  - {title: "Ecommerce Security: Threats and Best Practices", by: "Shopify (blog)", used: "Bots targeting checkout and account interfaces, not only pages"}
+  - {title: "University web security lecture series (compiled transcript, about 25 lectures)", by: "A university instructor and guest engineers", used: "Rate limits per account and per address, set far above real use, cheap bot signals, challenge pitfalls, risk-score challenges, and giving the same reply to every sign-in outcome"}

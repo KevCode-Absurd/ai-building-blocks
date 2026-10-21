@@ -1,0 +1,48 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Our words.
+id: find-a-product-that-sells-and-a-gap-rivals-leave-open
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: find-a-product-that-sells-and-a-gap-rivals-leave-open
+  name: "Find a product that sells and a gap rivals leave open"
+  summary: "Give it your market. Get proven products, the gaps in a crowded category, a margin score and a small first test."
+  when: "you want a product to sell and need proof of demand, room to win and a margin before you order stock."
+  job: find-products
+  level: beginner
+steps:
+  - name: "Proven product scout"
+    skill: proven-product-scout
+    job: research
+    from: "skill: proven-product-scout"
+    method: ["Set the ad library filters for your market", "Read each long-running ad with four questions", "Check the proof: ad count, reach and price", "Study the longest-running ad", "Make a short list and the call"]
+    inputs: [question, store_capture!]
+    outputs: [shortlist, competitor_set]
+    note: "Starts the flow. Finds products that already sell and the sellers behind them."
+  - name: "Crowded category white space finder"
+    skill: crowded-category-white-space-finder
+    job: research
+    from: "skill: crowded-category-white-space-finder"
+    method: ["Compare the leaders on price, reach, taste and buyer", "Look for sameness every rival shares", "Borrow an idea from a far-away field", "Change one big thing, not three", "Rank the gaps by money and reach"]
+    inputs: [competitor_set, voc_reviews!, product_data!]
+    outputs: [shortlist, plan]
+    note: "Takes the rivals from the scout and finds the gap one of them leaves open."
+  - pause: "Pick one product from the shortlist. Get a supplier quote, work out its landed cost per unit and decide the price you would charge."
+  - name: "Winning product scorer"
+    skill: winning-product-scorer
+    job: analysis
+    from: "skill: winning-product-scorer"
+    method: ["Do the margin sums first: multiple and gross profit per unit", "Mark each rule pass, fail or missing", "Bend a soft rule only with proof", "Score out of 100 and give a go, test small or drop", "Name the one thing to fix first"]
+    inputs: [product_data, store_capture!]
+    outputs: [audit_report]
+    note: "Scores your pick and its real costs. The gap you chose in the step before is the problem it must solve."
+  - name: "MVP experiment planner"
+    skill: mvp-experiment-planner
+    job: research
+    from: "skill: mvp-experiment-planner"
+    method: ["Write every guess the idea needs to be true", "Pick the riskiest guess", "Design the smallest test and set the pass number first", "Write the pivot or persevere rule"]
+    inputs: [plan!, question]
+    outputs: [plan]
+    note: "Turns the gap plan and the score's first fix into a small test with a pass number set before it runs."

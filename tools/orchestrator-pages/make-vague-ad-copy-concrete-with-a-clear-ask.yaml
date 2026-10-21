@@ -1,0 +1,79 @@
+new_slug: make-vague-ad-copy-concrete-with-a-clear-ask
+name: Make vague ad copy concrete with a clear ask
+summary: Give it a vague draft. Get concrete lines, a believable how-it-works and a clear ask.
+job: write-ad-copy
+thinking: medium
+thinking_why: Four steps with clear rules. A mid-size model works if you supply the facts.
+headline: Turn a vague ad draft into copy a stranger can picture and act on
+subhead: Give it a draft full of praise words and your product facts. It swaps each vague line for something you could point to, adds a short passage that makes the promise believable, ends with a clear ask and a real reason to act, then edits the whole ad.
+explain: |
+  A draft that says "premium", "powerful" and "loved by thousands" could belong to any brand. Readers skim past it. Editing line by line rarely fixes it, because the problem is that nothing is specific, nothing explains why it works, and nothing tells the reader what to do next.
+
+  The steps fix those in order. First every line goes through three tests: can you picture it, can it be proved, and can only you say it. Vague words become facts. Next it adds a short cause-and-effect passage so the promise is believable. Then it writes the ask, with a real reason to act now. Last it edits the whole ad as a skimmer and a doubter would read it, and logs each gain. Anything it cannot prove from your facts is marked confirm.
+when:
+  - Your draft sounds fine but says nothing a buyer could check.
+  - Your ad explains what it is but not why it works or what to do next.
+  - You want a final edit that keeps your claims and numbers fixed.
+you_give:
+  - Your draft ad copy
+  - Your product facts, such as materials, numbers and how it is used
+  - Your offer, price and guarantee (optional)
+  - Your brand file (optional)
+you_get:
+  - A draft where vague lines are replaced with facts, with anything unproven marked confirm
+  - A short passage that explains why the product works, each link backed
+  - A clear ask with a real reason to act now and the barriers removed
+  - An edited ad with each change logged, the new word count and the reading grade
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your draft and your facts. The more numbers you give, the less is marked confirm.
+  - Answer every confirm line with a fact or cut the line.
+  - Check the last step's list of changes before you publish.
+how_it_works:
+  - title: Make each line concrete
+    text: Runs the picture, proof and only-you tests on every line, zooms from vague words to things you could point to and tries the rival test.
+  - title: Add a believable how-it-works
+    text: Builds a chain of at least two true links, each following the one before, in the words your buyer uses.
+  - title: Write the ask
+    text: Picks the kind of ask, finds a real reason to act now and removes barriers with the guarantee as you offer it.
+  - title: Edit the whole ad
+    text: Locks your claims and numbers, reads as a skimmer and a doubter, fixes from the top and measures the result again.
+output_shape: |-
+  STEP 1: CONCRETE DRAFT
+    Test results per line | rewritten lines | confirm list
+
+  STEP 2: HOW IT WORKS
+    Promise and doubt | causes tagged fact, standard or gap | the passage
+
+  STEP 3: THE ASK
+    Kind of ask | reason to act now | barriers removed | direct and smaller versions
+
+  STEP 4: EDIT
+    Locked claims | the one promise | fixes with gains | word count and grade | verdict
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Where the ad runs
+    how: Name the placement and length. The edit fits the copy to it.
+  - what: Real deadlines
+    how: Give any date, limit or price rise that is true. Step 3 uses only those.
+  - what: Claims you cannot change
+    how: List them. Step 4 locks them and edits around them.
+  - what: Reading level
+    how: Say the grade you want. The edit measures before and after.
+judge:
+  - Each rewritten line is something you could point to, prove or only you could say.
+  - No fact was added that you did not supply, and unproven details are marked confirm.
+  - The how-it-works passage has at least two links, and each is true and backed.
+  - The ask has a reason to act now that is real, not an invented deadline.
+  - The edit changed no locked claim, number or price.
+test:
+  - Hand the old and new drafts to a stranger. Ask which one they could repeat to a friend.
+  - Swap a rival's name into each line. If they could sign it, the line is not concrete yet.
+  - Check every confirm line was answered or cut.
+improve:
+  - Save the concrete facts in your brand file so every draft starts from them.
+  - Run the old and new versions as a small test and keep the winner.
+  - Use the edit log to spot the vague words you reach for most.

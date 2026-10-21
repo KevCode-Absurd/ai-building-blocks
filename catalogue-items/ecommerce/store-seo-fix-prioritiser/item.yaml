@@ -1,0 +1,25 @@
+slug: store-seo-fix-prioritiser
+name: "Store SEO fix prioritiser"
+summary: "Paste a crawl report. Get the fixes that matter, an ignore list and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Google Search Console Tutorial (2026)", by: "SEO consultant presenting for a content-optimisation tool (first name only in the transcript)", used: "Reading the indexing reasons, the pages a store leaves out on purpose, the small-site caveat, using URL inspection sparingly, and the rule for pages whose main content is a video"}
+  - {title: "SEO Full Course 2026 for beginners", by: "Course instructor (name not clear in the transcript)", used: "Sending 404s to the nearest collection, fixing a canonical that points at a redirect, fixing orphan pages, and title length"}
+  - {title: "$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes", by: "E-commerce SEO agency owner (name not given)", used: "The four technical things that matter and a free crawler for small sites"}
+  - {title: "Semrush Tutorial 2026 - Master SEO & AEO with Semrush One", by: "Presenter of a sponsored tutorial (partnered with the tool maker)", used: "Fixing errors before warnings before notices, and handling 4XX pages"}
+  - {title: "Shopify SEO Optimization Guide for Beginners 2026", by: "Christian, Shopify consultant (channel not stated)", used: "Setting the primary domain before the sitemap, image and loading rules, and the delay in speed data after a fix"}

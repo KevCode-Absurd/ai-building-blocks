@@ -1,0 +1,126 @@
+new_slug: search-term-sorter
+name: "Search term sorter"
+summary: "Paste your search terms reports. Get winners to promote, negatives to add, where each goes and a waste score."
+job: run-google-ads
+thinking: medium
+thinking_why: "It sorts many rows by clear rules, so a mid-size model is enough. Use a stronger one for very large reports."
+
+headline: "Search term sorter"
+subhead: Paste the search terms reports from your Google Shopping, Performance Max and Search campaigns, plus your break-even CPA and brand names. You get winners to promote, negatives to add with match type and level, and a waste score out of 100.
+
+explain: |
+  Every search term in your report is a customer telling you what they typed before they bought, or before they wasted your click. Most stores skim the list, add a few negatives by feel, and never move the winners into the places that would grow them.
+
+  This skill reads the report row by row. It tags each term as brand, competitor, low intent, off topic or relevant. Converting terms at or under your break-even CPA become winners, with a match type and the five places to use them: Search keywords, feed titles, Performance Max search themes, ad copy and the landing page headline. Waste becomes a negative list with a match type and a level for each entry. The score shows how much of your spend went to terms that earned nothing.
+
+when:
+  - You launched Shopping or Performance Max and want to turn the queries it found into Search keywords.
+  - Your spend is going up but the search terms report is full of terms you never meant to buy.
+  - You are setting up a new campaign and want an account-wide negative list before it spends.
+
+you_give:
+  - The search terms reports with impressions, clicks, conversions and cost, ideally by campaign
+  - Your break-even CPA, or your average order value and gross margin so the skill can work it out
+  - Your brand name, its misspellings and product-line names
+  - What you sell and what you do not sell (optional)
+you_get:
+  - A winners list with a match type and the places to use each term
+  - A negative keyword list with match type and the level to add each at
+  - A short list of feed or listing fixes where the same junk keeps appearing
+  - A waste score out of 100, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export the search terms report for the last 30 days from each campaign type and paste or attach it.
+  - Add your break-even CPA and your brand names with their misspellings.
+  - Add the negatives in small batches, then log what you added and why.
+  - Run it again in one to two weeks on fresh data.
+
+how_it_works:
+  - title: Checks the data
+    text: Counts conversions per month. Under about 30 a month the trends are noisy, so verdicts are marked as an early read.
+  - title: Tags every term
+    text: Brand, competitor, low intent (free, cheap, jobs), off topic or relevant. Volume is ignored because a popular term is not a buying term.
+  - title: Picks the winners
+    text: A converting term at or under break-even CPA wins. It starts as exact match, with phrase match for close variations.
+  - title: Sends winners out
+    text: Each winner goes to Search keywords, feed titles, Performance Max search themes, ad copy and the landing page headline.
+  - title: Builds the negatives
+    text: Only clear junk, or terms with about 20 to 30 clicks and no sale. Each gets a match type and a level.
+  - title: Handles brand and rivals
+    text: Brand terms in cold campaigns are flagged and kept apart. Competitor names are listed for you to decide.
+  - title: Finds the root cause
+    text: If the same junk keeps showing in Shopping, the fix is the product title or description, not another negative.
+  - title: Scores the waste
+    text: Shows the share of spend that went to terms that should be blocked, and the score that follows.
+
+output_shape: |
+  DATA CHECK  <conversions per month>, <days covered>, <early read? yes/no>
+
+  WINNERS (converting, cost per sale <= break-even CPA <value>)
+  <term> | <conversions> | <cost per sale> | exact / phrase
+    use in: <Search keyword | feed title | PMax search theme | ad copy | page headline>
+
+  NEGATIVES TO ADD
+  <term> | <exact / phrase / broad> | <account / campaign / list> | <why>
+
+  YOUR CALL (competitors, low-intent words, unproven terms)
+  <term> | <what the choice is>
+
+  BRAND TERMS FOUND IN COLD CAMPAIGNS
+  <term> | <campaign> | <spend>
+
+  ROOT-CAUSE FIXES
+  <product or listing> | <title or description change>
+
+  SCORE  <n>/100 (100 - <wasted spend share %> = <n>)
+  REVIEW NEXT  <date and what to read>
+  MISSING: <report | break-even CPA | brand terms>
+
+tweaks:
+  - what: Break-even CPA
+    how: Winners are judged against it. Give your average order value times gross margin if you have no figure, and the skill works it out.
+  - what: Which campaign each row came from
+    how: Brand leaks and Shopping junk only show up when the skill knows the campaign. Export with the campaign column.
+  - what: Your brand misspellings
+    how: List every spelling, the name without a space and each product line name, so brand terms are caught.
+  - what: Age of the campaign
+    how: New campaigns get a daily review for the first weeks. Older ones move to weekly or every two weeks.
+
+judge:
+  - Every winner has conversions and a cost per sale at or under your break-even CPA.
+  - No winner is a brand term in a cold campaign.
+  - Every negative has a match type and a level, and none is a term that has sold.
+  - Terms blocked for no sales had about 20 to 30 clicks, or are clearly off topic.
+  - The score sum adds up from the rows you pasted.
+
+test:
+  - Add a term you know is junk and a term you know sold. The junk should land in negatives, the seller in winners.
+  - Run it twice on the same report. The lists should match. If a term flips, its click count is close to the 20 to 30 line.
+  - Add one negative from the list in a small campaign and read that campaign's report a week later. Sales should not drop.
+  - Compare the winners to your best keywords today. The ones you already bid on should show up.
+
+improve:
+  - Put your brand names and misspellings in the skill file so brand terms are tagged every time.
+  - Add your own always-block words to the account-wide list, such as jobs, careers, hiring, salary and free.
+  - If you bid on competitor names on purpose, say so in the skill file and the skill stops listing them as your call.
+  - Pair it with the Brand and non-brand splitter to fix brand leaks, and the Shopping campaign tuner for the weekly routine.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "The search terms report and negative keyword lists live here. Export with the campaign, clicks, conversions and cost columns."}
+    - {name: "Any good chat AI", why: "Any current chat AI can sort a pasted report. A stronger one handles very long exports better."}
+  inputs:
+    - "Cost per sale by term from the last 30 days, not only the last week"
+    - "Your current negative keyword lists, so the skill does not repeat them"
+    - "Auction insights, so competitor names in the report make sense"
+
+terms:
+  - term: Negative keyword
+    meaning: A word you tell Google not to show your ads for.
+  - term: Exact match
+    meaning: Your ad shows only for that search or a very close version of it.
+  - term: Break-even CPA
+    meaning: The most you can pay for a sale and still cover your costs. Average order value times gross margin.
+  - term: Search theme
+    meaning: A phrase you give Performance Max as a hint about what customers search for.

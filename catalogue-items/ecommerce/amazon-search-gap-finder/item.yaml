@@ -1,0 +1,21 @@
+slug: amazon-search-gap-finder
+name: "Amazon search gap finder"
+summary: "Give it an interest or category. Get Amazon product ideas people search for that page 1 misses."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "The keyword gap method with the title-competition filter, bestseller and new-release lists, a filtered product database, reverse lookup of a competitor, the free autocomplete walk, the trend check and the daily-life idea questions"}
+  - {title: "COMPLETE Amazon FBA Product Research Masterclass", by: "Sean Peterson", url: "https://www.youtube.com/watch?v=n6Cp3qCPsIQ", used: "Mining low-rated sellers for fixable complaints, and checking page 1 for a spread of prices"}

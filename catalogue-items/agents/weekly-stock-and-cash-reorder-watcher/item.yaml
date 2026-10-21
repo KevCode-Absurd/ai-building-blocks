@@ -1,0 +1,29 @@
+slug: weekly-stock-and-cash-reorder-watcher
+name: "Weekly stock and cash reorder watcher"
+summary: "Give it your stock and sales each week. Get what to reorder, what it costs and whether cash can cover it."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+uses: [demand-forecast-planner, inventory-cash-planner, order-quantity-calculator, supplier-payment-terms-planner, growth-cash-limit-checker, cash-lever-ranker, clearance-discount-planner]
+steps:
+  - {uses: demand-forecast-planner, note: "Once, then only when the last four weeks of sales are off the forecast by a quarter or more: a fresh forecast and its error."}
+  - {uses: inventory-cash-planner, note: "Every week: stock cover per product, the order dates, the cash each order needs and the lowest cash point."}
+  - {uses: order-quantity-calculator, note: "Only for products at or past their reorder point: the order size with the lowest total cost."}
+  - {uses: supplier-payment-terms-planner, note: "Only when the lowest cash point is below the cash cushion: terms to ask for before the order is placed."}
+  - {uses: growth-cash-limit-checker, note: "Only when cash still falls short after the terms are tried: whether cash or ads limit growth, and the stock grades."}
+  - {uses: cash-lever-ranker, note: "Only when the verdict is cash-limited: six levers ranked by cash freed."}
+  - {uses: clearance-discount-planner, note: "Only when a product holds more than the slow-stock limit of cover: a markdown plan that frees cash."}
+schedule: "Every Monday morning, after the weekend's sales and stock counts are in"
+asks_before: [placing or changing a supplier order, paying a deposit or balance, drawing on a credit line or loan, cutting a price or starting a clearance, moving money between accounts]
+origin: own
+version: 1.0.0
+example_pending: true

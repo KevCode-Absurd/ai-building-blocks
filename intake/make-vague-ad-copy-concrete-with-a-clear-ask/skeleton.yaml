@@ -1,0 +1,43 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md).
+id: make-vague-ad-copy-concrete-with-a-clear-ask
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: make-vague-ad-copy-concrete-with-a-clear-ask
+  name: "Make vague ad copy concrete with a clear ask"
+  summary: "Give it a draft that sounds like every other ad. Get concrete lines, a believable how-it-works and a clear ask."
+  when: "your draft is full of praise words and nothing a stranger could picture or check."
+  job: write-ad-copy
+  level: beginner
+steps:
+  - name: "Make each line concrete"
+    skill: concrete-copy-rewriter
+    job: copy
+    from: "skill: concrete-copy-rewriter"
+    method: ["Run the picture, proof and only-you tests", "Zoom from vague words to things you could point to", "Swap opinions for facts", "Try the rival test", "Mark anything you did not supply as confirm"]
+    inputs: [copy_draft, product_data]
+    outputs: [copy_draft]
+    note: "Starts from your draft and product facts."
+  - name: "Add a believable how-it-works"
+    skill: how-it-works-copy-writer
+    job: copy
+    from: "skill: how-it-works-copy-writer"
+    method: ["State the promise and the doubt", "List the causes and tag each as fact, standard or gap", "Choose how long the passage should be", "Build a chain of at least two true links", "Use the words your buyer uses"]
+    inputs: [copy_draft, product_data]
+    outputs: [copy_draft]
+    note: "Takes the concrete draft and adds the cause-and-effect that backs the promise."
+  - name: "Write the ask"
+    skill: call-to-action-writer
+    job: copy
+    from: "skill: call-to-action-writer"
+    method: ["Pick the kind of ask: buy, try or reply", "Find a real reason to act now", "Remove barriers with the guarantee as offered", "Write a direct ask and a smaller one"]
+    inputs: [copy_draft, offer!]
+    outputs: [ad_copy]
+    note: "Ends the draft from the step before with a clear ask."
+  - name: "Edit the whole ad"
+    skill: sales-copy-editor
+    job: copy
+    from: "skill: sales-copy-editor"
+    method: ["Lock the claims and numbers that cannot move", "Find the one promise", "Read as a skimmer, then line by line, then as a doubter", "Fix from the top and log each gain", "Measure again"]
+    inputs: [copy_draft, brand_brain!, ad_copy!]
+    outputs: [audit_report]
+    note: "Reads the draft and the ask from the steps before and fixes what still stops a reader."

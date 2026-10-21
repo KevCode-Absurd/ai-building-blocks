@@ -1,5 +1,6 @@
 # Talk it through with great minds: AI Blocks
 
-> 1 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 2 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Advisory council](https://useaiblocks.com/skills/advisory-council): Ask a hard question. Get several great minds arguing it, then a brief you can act on.
+- [Settle a hard decision with a council, then commit](https://useaiblocks.com/workflows/settle-a-hard-decision-with-a-council-then-commit-the-team): Give it a hard decision. Get a council's call, a stress-tested plan and a note that commits the team.

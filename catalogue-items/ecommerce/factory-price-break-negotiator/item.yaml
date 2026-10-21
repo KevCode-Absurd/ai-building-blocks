@@ -1,0 +1,22 @@
+slug: factory-price-break-negotiator
+name: "Factory price-break negotiator"
+summary: "Give it your bill of materials and volume plan. Get asks, give-backs and a fallback."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: plan, required: true}
+  - {type: document, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "He Went From $3M In Debt To $13M In Cash Using This Playbook", by: "Roman Khan, multi-brand e-commerce operator, founder podcast interview", used: "Line-by-line price break questions, the factory's own margin range, using the factory's line time, and finding another factory when it will not move"}
+  - {title: "The Ultimate Guide To Product Sourcing In 2026", by: "Founder of a heated-hoodie and blanket brand (video guide)", used: "Why squeezing a factory too hard backfires and why other quotes keep talks honest"}
+  - {title: "What I learnt from sourcing e-commerce products from China (forum post and comments)", by: "A jewelry seller moving from drop shipping to bulk import, with one comment from a US sourcing agent", used: "A negotiated per-unit saving across a large order, and the prefunded stock idea from one comment"}

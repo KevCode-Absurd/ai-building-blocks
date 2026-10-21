@@ -1,0 +1,20 @@
+slug: email-flow-gap-checker
+name: "Email flow gap checker"
+summary: "List your flows and triggers. Get a score out of 100, missing flows and wrong triggers."
+category: ecommerce
+type: skill
+role: check
+job: email
+level: intermediate
+inputs:
+  - {type: email_flow, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores", used: "The core flow list, cart versus checkout trigger, exit filters and re-entry limits"}
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (agency case results, not independent data)", used: "The seven core flows, basics before advanced work, and swapping winning campaigns into flows"}

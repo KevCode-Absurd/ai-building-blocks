@@ -1,6 +1,6 @@
 # Make image ads: AI Blocks
 
-> 47 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 52 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D cutaway image ad maker](https://useaiblocks.com/skills/3d-cutaway-image-ad-maker): Paste how it works. Get a 3D cutaway image prompt, the words and feed copy.
 - [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker): Paste your ad and photos. Get an image prompt that keeps your real product, and an image check.
@@ -29,6 +29,7 @@
 - [Image upscale checker](https://useaiblocks.com/skills/image-upscale-checker): Attach your image and size needed. Get upscale settings, a change check and a score out of 100.
 - [Knitted wool image ad maker](https://useaiblocks.com/skills/knitted-wool-image-ad-maker): Paste your idea, attach photos. Get a knitted-wool image prompt, the ad words and a layout.
 - [Leftover mess image ad maker](https://useaiblocks.com/skills/leftover-mess-image-ad-maker): Paste your story ad. Get a close-up mess photo prompt and a caption.
+- [Make a cutaway ad that shows how your product works](https://useaiblocks.com/workflows/make-a-cutaway-ad-that-shows-how-your-product-works): Give it your product and buyer words. Get a cutaway image prompt that shows how it works.
 - [Make new image ads in the style your winners share](https://useaiblocks.com/workflows/winning-style-image-ads): Give it your ads with results. Get the style your winners share, new ad plans, and image prompts ready to make.
 - [Odd-one-out image ad maker](https://useaiblocks.com/skills/odd-one-out-image-ad-maker): Paste your story ad. Get a photo prompt of one odd thing and a caption.
 - [Overhead portrait image maker](https://useaiblocks.com/prompts/overhead-portrait-image-maker): Paste a brief and attach photos. Get one overhead portrait image prompt with the camera and light set.
@@ -36,6 +37,7 @@
 - [Paper cutout image ad maker](https://useaiblocks.com/skills/paper-cutout-image-ad-maker): Paste your claim and photos. Get a paper cutout image prompt and the feed copy.
 - [Phone note screenshot image ad maker](https://useaiblocks.com/skills/phone-note-image-ad): Paste your story ad. Get a private phone note in their voice and a screenshot plan.
 - [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker): Paste your story ad. Get a phone-photo image prompt of the problem moment and a caption line.
+- [Repeat one product photo in new colours as ads](https://useaiblocks.com/workflows/repeat-one-product-photo-in-new-colours-as-ads): Give it one product photo. Get matching image ads with exact words, checked, then sized up.
 - [Repeated image campaign planner](https://useaiblocks.com/skills/repeated-image-campaign-planner): Name your product and give one photo. Get a plan to repeat one flat image in new colours.
 - [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner): Paste your facts. Get the layout, image words, feed copy and an image prompt.
 - [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker): Paste your story ad. Get a sticky-note photo brief, an image prompt and a blank version.
@@ -43,9 +45,12 @@
 - [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner): Paste your offer. Get three offer image ads in two sizes and one offer block.
 - [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker): Paste your story ad and claims. Get a tracker-photo image prompt, one mark and the line under it.
 - [Tried-before products image ad maker](https://useaiblocks.com/skills/tried-before-image-ad): Paste your story ad. Get an image prompt of what your buyer gave up on, and its caption.
+- [Turn a flaw-first ad into a checked picture ad](https://useaiblocks.com/workflows/turn-a-flaw-first-ad-into-a-checked-picture-ad): Give it your product's real weaknesses. Get a flaw-first ad, a matching picture and a check.
+- [Turn a static ad into sales with a matching page](https://useaiblocks.com/workflows/turn-a-static-ad-into-a-sale-with-a-matching-page): Give it your image ad and offer. Get a stronger ad, a page that matches it and a rules check.
 - [Turn customer quotes into image ads that quote them](https://useaiblocks.com/workflows/quote-image-ads): Give it your reviews. Get quote image ads, a review card ad, an ad rules check and the ad types still missing.
 - [Turn reviews into image ads buyers believe](https://useaiblocks.com/workflows/review-image-ads): Give it your website and reviews. You get the words, picture plan and image prompt for each ad, all checked.
 - [Visible symptom image ad maker](https://useaiblocks.com/skills/visible-symptom-image-ad-maker): Paste your story ad. Get a body-safety check and a close-up photo prompt, or a safer idea.
 - [Visual twist image ad maker](https://useaiblocks.com/skills/visual-twist-image-ad-maker): Paste a buyer's words. Get a one-twist image ad, its words, layout and image prompt.
 - [Watercolor image ad maker](https://useaiblocks.com/skills/watercolor-image-ad-maker): Paste your idea, attach photos. Get a watercolor image prompt, a layout and the ad words.
+- [Weekly image ad batch maker](https://useaiblocks.com/agents/weekly-image-ad-batch-maker): Give it last week's ad results. Get a checked batch of new image ad plans, words and prompts to approve.
 - [Winning image ad style finder](https://useaiblocks.com/skills/winning-image-ad-style-finder): Attach ads with results. Get the style your winners share and new ad plans that test one change.

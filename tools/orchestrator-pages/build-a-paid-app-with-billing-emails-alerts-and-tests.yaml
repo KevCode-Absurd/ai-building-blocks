@@ -1,0 +1,87 @@
+new_slug: build-a-paid-app-with-billing-emails-alerts-and-tests
+name: Build a paid app with billing, emails, alerts and tests
+summary: Give it your app idea. Get a starter with sign-in, billing, emails, alerts and tests.
+job: build-software
+thinking: high
+thinking_why: It writes a lot of connected code in five passes. Give it your strongest model.
+headline: Start a subscription app with sign-in, billing, emails and tests already working
+subhead: Describe your app. It scaffolds the project, adds subscriptions and safe payment webhooks, builds the emails your app sends, adds logs and alerts, and writes tests for the whole thing.
+explain: |
+  Starting a paid app from a blank folder takes weeks before you reach what makes it yours. Sign-in, billing, emails and monitoring all have to work together, and the parts that go wrong, such as failed payments, repeated webhooks and emails that land in spam, are the ones people forget.
+
+  The steps build in the order the app needs. The first lays out the project with sign-in, a database and a dashboard. The second adds plans, trials, checkout and webhooks that check signatures and ignore repeats. The third builds the emails the app sends. The fourth adds logs and alerts to the paths that now matter: payments and emails. The last writes and runs tests on the finished app and says what is still untested.
+when:
+  - You are starting a subscription web app and want the base done properly.
+  - Your first version needs real payments, not a mock checkout.
+  - You want monitoring and tests from day one.
+you_give:
+  - Your app idea in a few sentences, with the features you need
+  - Your choices for sign-in, database and payments, or say you have none
+  - Your plans and prices
+  - The emails your app should send (optional)
+you_get:
+  - A project with sign-in, a database, pages and a dashboard
+  - Subscriptions with trials, checkout, a customer portal and safe payment webhooks
+  - Email templates and a sending setup with a local preview
+  - Logs and alerts on the payment and email paths
+  - Tests with a coverage report and a list of what is still untested
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Open an empty folder in Claude Code, give it the pack and say "Follow HANDOFF.md".
+  - Describe the app. Use payment test keys only, never live keys.
+  - After each step, run the app and check that step before you continue.
+  - Read the final test report. Fix the gaps it lists before you take real payments.
+how_it_works:
+  - title: Scaffold the app
+    text: Lays out pages, API routes, the database and sign-in from your choices, with an example settings file.
+  - title: Add subscriptions and webhooks
+    text: Adds plans, trials, checkout and the customer portal. Webhooks check signatures and ignore repeats. Sets up local testing.
+  - title: Add the emails the app sends
+    text: Builds the templates and a sending function, with a local preview and spam and dark mode checks.
+  - title: Add logs and alerts
+    text: Writes the questions you will ask when something breaks, adds a log or metric for each and alerts for what needs action.
+  - title: Write the tests
+    text: Lists what can be tested, riskiest first, writes the tests, runs them and reports what is still missing.
+output_shape: |-
+  STEP 1: PROJECT
+    File layout | sign-in | database | pages | example settings
+
+  STEP 2: BILLING
+    Plans | checkout | portal | webhook handlers | local test steps
+
+  STEP 3: EMAILS
+    Templates | sending function | preview | spam check
+
+  STEP 4: LOGS AND ALERTS
+    Questions to answer | signals | alerts
+
+  STEP 5: TESTS
+    Tests written | results | coverage | gaps left
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your stack
+    how: Name your sign-in, database and payment provider. The first step builds around them, and later steps follow.
+  - what: Plans and trials
+    how: Give prices, trial length and what happens at a failed payment. Step 2 turns them into plan settings and rules.
+  - what: Email provider
+    how: Name the one you use. Step 3 builds the sending setup for it.
+  - what: What you want alerts on
+    how: List what you would want a message about, such as failed payments. Step 4 builds the alerts around that.
+judge:
+  - The app runs locally after each step.
+  - Webhooks check a signature and handle the same event twice without harm.
+  - No secret key appears in the code. Everything comes from settings.
+  - Every alert says what to do when it fires.
+  - The tests cover the payment and email paths, and the report lists what is not covered.
+test:
+  - Use the payment provider's test cards to run a signup, a failed payment and a cancel.
+  - Send the same webhook twice. The second should change nothing.
+  - Open each email in the preview and in light and dark mode.
+  - Break a payment on purpose and check that the log and alert show it.
+  - Run the test suite from a clean checkout.
+improve:
+  - Keep the finished project as your own starter for the next app.
+  - Add the missing tests it lists before you launch.
+  - Not worth running if you only need a landing page or a one-time payment link.

@@ -1,0 +1,50 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: launch-google-ads-with-trusted-tracking-and-a-clean-feed
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: launch-google-ads-with-trusted-tracking-and-a-clean-feed
+  name: "Launch Google Ads with trusted tracking and a clean feed"
+  summary: "Give it your Shopify store and products. Get tracking checked, feed issues ranked, and a launch plan in the right order."
+  when: "you are about to spend on Google Ads and want tracking and the product feed right first."
+  job: run-google-ads
+  level: intermediate
+steps:
+  - name: "Shopify Google tracking builder"
+    skill: shopify-google-conversion-tracking-builder
+    job: ops
+    from: "library"
+    method: ["Link GA4 and turn on enhanced conversions", "Create one primary purchase action and the secondary ones", "Add the Shopify pixel and map the fields", "Write a test plan for a real order"]
+    inputs: [question, store_capture!]
+    outputs: [plan]
+    note: "Sets up the purchase tracking and a test plan to run before any spend."
+  - pause: "Add the tags, place a test order, and save screenshots of the Google Ads conversion page and Tag Assistant."
+  - name: "Google Ads purchase tracking checker"
+    skill: google-ads-purchase-tracking-checker
+    job: analysis
+    from: "library"
+    method: ["Check there is one primary purchase action", "Check the GA4 import is not the primary purchase", "Reconcile Google's count with Shopify orders", "List the fixes in order"]
+    inputs: [store_capture, performance_sheet!]
+    outputs: [audit_report]
+    note: "Checks the screenshots from your test order against the setup plan and lists what is still wrong."
+  - pause: "Fix the tracking faults, then run the tracking check again until it passes. Then export the Merchant Center products and issues list."
+  - name: "Merchant Center feed health checker"
+    skill: merchant-center-feed-health-checker
+    job: analysis
+    from: "library"
+    method: ["Filter disapproved products first", "Check the five common causes", "Rank the fixes by sales lost", "Score the feed and state the gate"]
+    inputs: [spreadsheet, store_capture!]
+    outputs: [audit_report]
+    note: "Ranks the feed problems so the products that earn most are fixed first."
+  - pause: "Fix the feed faults, then run the feed check again until the gate passes."
+  - name: "Google Ads launch planner"
+    skill: google-ads-launch-planner
+    job: ads
+    from: "library"
+    method: ["Match the daily budget to the order value", "Pick the hero products to start with", "Order the campaigns into three stages", "Set the bid ladder and the scaling gates"]
+    inputs: [product_data, performance_sheet!, audit_report!]
+    outputs: [plan]
+    note: "Uses the tracking and feed audits to set which campaigns go live first and when to add more. It does not take the step 1 plan as an input, so paste in the primary purchase action and test result from the passed tracking check."

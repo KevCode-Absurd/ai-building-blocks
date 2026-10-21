@@ -1,0 +1,82 @@
+new_slug: revive-a-hero-ad-that-is-slowing-down
+name: Revive a hero ad that is slowing down
+summary: Give it your fading ad's results. Get the cause, scored new hooks and a read on what won.
+job: plan-ad-tests
+thinking: high
+thinking_why: It runs four skills in a row and the first call (why the ad is fading) steers the rest. Give it your strongest model.
+headline: Bring your best ad back without starting over
+subhead: Give it the numbers and script of a winning ad that is slowing down. It finds out why, writes ten or more new openers and scores each one. After you test them, it counts which cleared your return line and saves what won as a rubric.
+explain: |
+  A winning ad fades for one of two reasons. People have seen it too often, or the audience it reaches is too small. Most owners kill it and start again, which throws away a body that already earned its spend. Others push daily spend harder, which shortens the ad's life.
+
+  These steps keep the body and change the opening. First it reads the life of the ad, names the cause, picks a pace that fits your stock and cash, and writes the new hook briefs. Then it scores each hook out of 100 and picks what to film. You film the top ones and run them for about a week. After that it counts which ones cleared your return line and saves what the winners share, so the next revival starts from it.
+when:
+  - Your best ad costs more every week and its return is falling, but you do not want to rebuild it from scratch.
+  - One ad takes more than half of your ad spend, and you want a replacement ready before it fades.
+  - You have a few strong ads and want to know what their openers have in common.
+you_give:
+  - The ad's spend and return by week since launch (frequency and audience size too, if you can see them)
+  - The transcript of the ad
+  - The hooks you have already used (optional)
+  - Who the ad speaks to, in a line or two
+  - A sheet of your other ads with spend and results (optional, for the hit rate)
+you_get:
+  - The cause of the fade, how much life the ad has left, and a pace that fits your stock and cash
+  - Ten or more new hook briefs on the same body, each scored out of 100 with a film, fix or cut call
+  - A hit rate showing how many of your ads cleared your return line, and which ideas to keep making
+  - A hook rubric of your winners, with fill-in-the-blank hook templates
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the ad's weekly spend and return, and its transcript. Add your stock and cash position, so it picks the right pace.
+  - After the hook scores, film the top hooks on the old body and run them for about a week. Then export the results.
+  - Give it the results and your own break-even return. It counts the winners and builds the rubric.
+how_it_works:
+  - title: Find why the ad is fading
+    text: Reads the ad's life, calls the cause (stale or too small an audience), ranks the revival moves and writes ten or more new hook briefs on the same body.
+  - title: Score the new hooks
+    text: Rates each hook for clarity, relevance, novelty, specificity and credibility, checks who it attracts, and picks the three to film first.
+  - title: Count what cleared the line
+    text: After your week of tests, counts the ads that beat your return line, keeps every idea that pays, and plans the next real changes.
+  - title: Save what won as a rubric
+    text: Compares winning and losing hooks, writes each winner as a template with blanks, and grades any new draft hook against it.
+output_shape: |-
+  STEP 1: REVIVAL PLAN AND HOOKS
+    Cause call | life stage | pace | ranked revival moves | ten or more hook briefs
+
+  STEP 2: HOOK SCORES
+    Each hook out of 100 with its sum | who it attracts | rewrites | the three to film
+
+  STEP 3: HIT RATE
+    Hits of ads launched | ideas above, near and below the line | what to make next
+
+  STEP 4: HOOK RUBRIC
+    Winners and losers | rules | fill-in-the-blank hook templates | grades for new drafts
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your return line
+    how: Step 3 counts hits against your own break-even return or cost per sale. Give it yours. A borrowed rule of thumb gives a false hit rate.
+  - what: Stock and cash
+    how: Plenty of stock and fast cash means squeeze the winner. Thin stock or slow cash means run it lower for months. Say which, so step 1 picks the right pace.
+  - what: Your test budget
+    how: Ten hooks need enough spend each to show a result. On a small budget, ask for three. With fewer than about 20 ads in your sheet, the hit rate is only a rough guide.
+  - what: Who can film
+    how: Say who can be on camera. New hooks work best with a visibly different person, not a recut of old lines.
+judge:
+  - The cause call cites a number from your data, such as frequency or weekly return, not a guess.
+  - Every new hook keeps the old body and changes only the first 3 to 5 seconds.
+  - Each hook score shows its sum, and a hook weak on clarity or relevance is marked cut.
+  - No hook promises a result, customer or expert you did not give it.
+  - The hit rate shows hits, ads launched and dates, and counts ads that are too new separately.
+test:
+  - Check the cause against your ad account. Do the frequency and weekly return it quotes match what you see?
+  - Film the top-scored hook and one the scorer rated low. See if the order holds in your results.
+  - Run step 1 twice on the same numbers. The cause call should come out the same.
+  - After the test week, count the hits yourself and compare with its count.
+improve:
+  - Add your return line and stock notes to your brand file, so the pace call starts from them.
+  - Edit the rubric's break point if you think the line between winners and losers sits in the wrong place.
+  - Keep the rubric and grade every new hook against it before you film.
+  - Pair it with a creative portfolio mix planner, so a backup ad is ready before the next one fades.

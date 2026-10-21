@@ -1,0 +1,105 @@
+new_slug: long-form-draft-editor
+name: Long-form draft editor
+summary: Give it a finished draft. Get it checked, edited and checked again until it passes, with every change logged.
+job: write-and-tell-stories
+thinking: high
+thinking_why: It reads a long draft closely, decides who owns each problem and fixes only what it should. Give it your strongest model.
+headline: Long-form draft editor
+subhead: Give it a finished story, talk, article or guide. It marks what is wrong, fixes what it can without changing what you meant, checks again, and stops when the draft passes or only your decisions are left. Your original is never touched.
+explain: |
+  Editing a long draft by yourself goes in circles. You fix a page, miss a hole three scenes back, and cannot tell if the second pass made it better. Hiring an editor for every round costs more than most drafts earn.
+
+  This agent edits in rounds with a clear rule for when to stop. It saves your original and checks the draft first. It sorts the problems into yours (a plot hole, a wrong fact, someone acting out of character) and its own (puffy length, stiff words, scenes that explain, named feelings, weak dialogue). It fixes its own, checks again, and repeats up to three rounds. It stops when the scores pass, the rounds run out, nothing is left but your decisions, or a round stops helping.
+
+  It cuts once, to 90% of the length, and never again. It never changes your plot, facts, quotes or names. It is for stories, talks, articles and guides. It is not for ads or sales pages.
+when:
+  - You have a finished draft that has rested and you want it tightened without losing your voice.
+  - You want to know which problems you must fix yourself and which an editor can fix for you.
+  - Your readers sent notes and you want a ranked list of what to fix first.
+you_give:
+  - The whole draft in one file, and how long it has rested
+  - "The kind of piece, a story or narrative or an article, guide or post"
+  - The brief or word limit, if there is one (optional)
+  - First readers' notes (optional)
+  - The facts and sources the piece relies on, if it is an article (advised)
+you_get:
+  - The edited draft, next to your untouched original
+  - Scores for each check at the start and after each round
+  - A log of every change, with the skill behind it
+  - A list of the problems left for you, with the page and the question to answer
+  - A question sheet to send to first readers
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the draft file.
+  - Tell it the kind of piece and how long the draft has rested.
+  - Read the hand-back. Fix the problems on your list yourself.
+  - Send the draft to first readers with the question sheet. When their notes come in, run the agent again. It starts with their notes.
+  - Run it as many times as you like. It keeps a kept-on-purpose list, so it never undoes a choice you made.
+how_it_works:
+  - title: Set up
+    text: Saves your original, asks the kind of piece, and opens the list of lines you said to keep.
+  - title: Use readers' notes first
+    text: If readers sent notes, it ranks what to fix first from what they said.
+  - title: Check without changing anything
+    text: For a story, scores the draft on a cold read and on 18 plain rules, and finds what it is really about. For an article, runs a pre-publish check.
+  - title: Sort by who owns each problem
+    text: Plot holes, wrong facts and out-of-character acts are yours. Length, wording, scenes that explain and weak dialogue are its own.
+  - title: Fix and check, up to three rounds
+    text: Cuts once to 90%, rebuilds scenes that explain, shows feelings, fixes dialogue, then checks again. Plain words go in last.
+  - title: Decide whether to go on
+    text: It stops on a pass of 85 or more on both story scores, the round cap, only your decisions left, or a round that gained under 3 points.
+  - title: Hand back
+    text: Gives you the draft, the scores, the change log, your list and the reader questions.
+output_shape: |-
+  THE DRAFT
+    <latest round file> | original untouched: <file>
+
+  SCORES BY ROUND
+    cold reread: <round 0> -> <round 1> -> <round 2>
+    story rules: <round 0> -> <round 1> -> <round 2>
+    (article: halt items <n> -> <n> | flags <n> -> <n>)
+
+  WHY IT STOPPED
+    <pass | round cap | your turn | no progress>
+
+  WHAT CHANGED
+    Round <n>: <change> | skill: <name> | reason: <reason>
+
+  YOURS TO DECIDE (most important first)
+    <page>: <hole, act or fact> | question: <what to answer>
+
+  QUESTIONS FOR FIRST READERS
+    <sheet | waits for your decisions>
+
+  FILES AND MISSING
+    <each round's file> | MISSING: <every line>
+tweaks:
+  - what: How long the draft has rested
+    how: Two weeks or more gives the best read. A fresh draft hides its own holes, so the agent marks the read as thin.
+  - what: The pass line
+    how: It starts at 85 on both story scores. Raise it if you want a stricter edit. Do not go above 95, as the last points cost you your voice.
+  - what: The lines you keep
+    how: Tell it which lines or choices to keep. It saves them and no round will undo them.
+  - what: The kind of piece
+    how: Name it. A story gets the story checks. An article gets the pre-publish checks.
+judge:
+  - Your original is untouched.
+  - The agent did not change a plot point, fact, quote or name.
+  - The scores shown are the ones the checks gave, with their sums.
+  - The cut ran once at most.
+  - Every change names the skill behind it.
+test:
+  - Run it on a draft you know has a hole. It should list the hole for you and not patch it.
+  - Run it twice on the same draft. The second run should not cut again or undo a kept line.
+  - Give it a draft that already passes. It should stop in round 0 and say so.
+improve:
+  - Add your own style rules to the brief, such as words you never use.
+  - Keep the kept-on-purpose list between runs, so each round starts where the last stopped.
+  - After readers answer, run it again with their notes so the next round fixes what they flagged.
+  - For an article, send the facts and sources with it. The fact check can then run on more than the draft's own claims.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the edit folder, the round files and the kept-on-purpose list between runs.
+  inputs:
+    - First readers' notes
+    - Your facts and sources, for an article

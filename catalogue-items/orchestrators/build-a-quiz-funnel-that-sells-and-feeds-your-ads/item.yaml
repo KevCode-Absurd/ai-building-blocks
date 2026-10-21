@@ -1,0 +1,28 @@
+slug: build-a-quiz-funnel-that-sells-and-feeds-your-ads
+name: "Build a quiz funnel that sells and feeds your ads"
+summary: "Give it your product and offer. Get a quiz page that sorts buyers, plus the angles their answers say to advertise."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: copy_draft, required: false}
+  - {type: store_capture, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief}
+uses: [copy-foundation-docs-builder, store-quiz-funnel-builder, quiz-answers-to-ad-angles-reader, ad-angle-planner]
+steps:
+  - {uses: copy-foundation-docs-builder, note: "Writes the buyer profile and brief the quiz questions and results will lean on."}
+  - {uses: store-quiz-funnel-builder, note: "Builds the quiz, its result pages and offer from the buyer profile and brief."}
+  - {uses: quiz-answers-to-ad-angles-reader, note: "Reads the exported answers for the most common problems and words, and turns them into ranked ad angles."}
+  - {uses: ad-angle-planner, note: "Turns the top quiz angles into a campaign brief for the next round of ads."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-a-quiz-funnel-that-sells-and-feeds-your-ads/skeleton.yaml

@@ -1,0 +1,28 @@
+slug: google-ads-weekly-account-keeper
+name: "Google Ads weekly account keeper"
+summary: "Give it your weekly Google Ads exports. Get waste cut, a scale-or-hold call and a change list to approve."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [break-even-roas-and-cpa-calculator, search-term-sorter, shopping-campaign-tuner, performance-max-routine-keeper, google-ads-dip-investigator, google-ads-scale-gate-checker]
+steps:
+  - {uses: break-even-roas-and-cpa-calculator, note: "Once, then reused: the break-even ROAS and CPA every later call is measured against."}
+  - {uses: search-term-sorter, note: "Every week: winners to promote and negatives to add, from the search terms reports."}
+  - {uses: shopping-campaign-tuner, note: "Every week, if Shopping runs: products to cut, fix in the feed, bid up or fund."}
+  - {uses: performance-max-routine-keeper, note: "Every week, if Performance Max runs: the weekly checks, exclusions and one budget move."}
+  - {uses: google-ads-dip-investigator, note: "Only when sales or ROAS fell sharply against last week: the likely cause and a fix-or-wait call, before any other change."}
+  - {uses: google-ads-scale-gate-checker, note: "Only when nothing is broken: pass or fail on the gates before any budget goes up."}
+schedule: "Every Monday morning, after last week's data is in"
+asks_before: [changing budgets, adding or removing keywords, pausing campaigns or products, changing bids or targets]
+origin: own
+version: 1.0.0
+example_pending: true

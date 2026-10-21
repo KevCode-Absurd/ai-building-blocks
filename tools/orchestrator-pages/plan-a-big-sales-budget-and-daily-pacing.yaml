@@ -1,0 +1,82 @@
+new_slug: plan-a-big-sales-budget-and-daily-pacing
+name: Plan a big sale's budget, offers and daily pacing
+summary: Give it your margin, discount depth and last year's sale data. Get a cost-per-sale limit, an offer ladder and a pacing sheet.
+job: plan-ad-tests
+thinking: high
+thinking_why: Four skills run in a row, and the first and third do real money sums. Give it your strongest model.
+headline: Run Black Friday so it makes money, not just revenue
+subhead: Give it your margin, discount options and last year's sale data. It finds the most you can pay for a customer at each discount, plans a main offer with backups, sets daily spend rules with a ceiling, then reads each week against the plan to say what to push or pull.
+explain: |
+  A big discount cuts your margin, but ad spend usually keeps the old rules. So a sale can bring record revenue and a loss. Sales ads also pull in bargain buyers who may never come back, and clicks lag behind spend, so day-one results mislead.
+
+  The steps keep the sale inside what you can afford. First it recomputes margin after the discount and sets a separate cost-per-sale limit for the sale. It pauses while you agree the discount depth and limit with whoever signs off the budget. Then it plans the main offer, backups, and when to switch. The pacing sheet sets daily spend with scale, hold and cut rules. It pauses while the first days run. Then a weekly check reads your results against the plan.
+when:
+  - You are planning Black Friday, Cyber Monday or another big sale and want it to make profit, not just revenue.
+  - Last year's sale brought record sales and an empty bank account.
+  - You have a discount in mind but do not know the most you can pay to win a customer during it.
+you_give:
+  - Price, product cost, shipping and fees per order, with packaging, payment fees and returns
+  - Your discount options, such as 10%, 20% or 40%, or a gift with purchase
+  - Your sale goal, which is profit or clearing stock, and your sale dates
+  - Products graded A, B or C by margin and stock depth
+  - Last year's daily spend, revenue and orders, and your budget ceiling
+you_get:
+  - A table of margin and cost-per-sale limit at each discount, with a go or skip call and a readiness score out of 100
+  - A main offer with ordered backups, a trigger to switch and a stock limit for each
+  - A pacing sheet with daily spend, base and stretch plans, and scale, hold and cut rules
+  - A weekly ad pulse with a health score out of 100 and the next levers to pull
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the real landed cost per order, not a guess. The whole plan depends on it.
+  - When it pauses, agree the discount depth and the sale cost-per-sale limit with whoever signs off the budget.
+  - After the first days of the sale, export spend, sales, emails and discounts and run the weekly check.
+how_it_works:
+  - title: Set the cost limit
+    text: Recomputes margin after the discount, sets break-even return and a separate sale cost-per-sale limit, and checks if sale customers repeat less.
+  - title: Plan the offer ladder
+    text: Pauses for your sign-off. Then writes the main offer, ordered backups, switch triggers and stock limits, with a plan for subscribers.
+  - title: Build the pacing sheet
+    text: Measures the lag between spend and sales in last year's data and sets daily spend with scale, hold and cut rules and a budget ceiling.
+  - title: Check the weekly pulse
+    text: Pauses while the sale runs. Then reads blended return, new-customer cost, email capture and discount share, and scores health.
+output_shape: |-
+  STEP 1: COST LIMIT
+    Margin after discount | break-even return | sale cost-per-sale limit | repeat check | go or skip table | score out of 100
+
+  STEP 2: OFFER LADDER
+    Goal | main offer | backups in order | trigger and stock limit for each | quiet window | subscriber plan
+
+  STEP 3: PACING SHEET
+    Spend-to-sales lag | scale, hold and cut rules | pre-sale spend | base and stretch plan | calendar
+
+  STEP 4: WEEKLY PULSE
+    Numbers this week and last | what moved | levers to pull, retention first | health score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your landed cost per order
+    how: Include packaging, payment fees and returns. A low guess makes every discount look safe.
+  - what: Sale goal
+    how: Profit and clearing stock give different answers. Say which one you want before step 1.
+  - what: Two years of order history
+    how: With two years of repeat rates, the cohort check can tell if sale customers come back less. Without them it says so.
+  - what: Budget ceiling
+    how: The pacing sheet treats it as a ceiling, not a target. Say what you will not go above.
+judge:
+  - Margin after discount is recomputed, and the sale limit is separate from your normal limit.
+  - Every rung of the offer ladder has a trigger and a stock limit.
+  - Spend rules use marginal results, not averages.
+  - The weekly pulse compares to your goals or to last week, and says which.
+  - Each score explains what it measures.
+test:
+  - Redo the margin after discount for your best seller by hand. It should match the table.
+  - Check each trigger and stock limit against your real stock count.
+  - Apply the scale, hold and cut rules to last year's data. Would they have saved money?
+  - Run the weekly check on a normal week first, to see what a calm week looks like.
+improve:
+  - Save the agreed discount and cost limit in your brand file for next year.
+  - Update the grades for your products after each sale, from real stock and margin.
+  - Add your own lessons from this sale to the pacing rules.
+  - Pair it with a cash lever ranker if cash is tight before the sale.

@@ -1,0 +1,23 @@
+slug: existing-customer-ad-budget-sizer
+name: "Existing customer ad budget sizer"
+summary: "Give customer count, CPM and frequency. Get a monthly dollar cap and a test to prove it."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Two practitioners: a paid media and finance operator (Nathan) and an email and SMS retention agency founder (Angus Cowan)", used: "The dollar budget formula, the frequency range, the lower CPA target for existing customers and the spend-cut example"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "The 300,000 customer example, the weekly frequency check and retargeting as a capped support layer"}
+  - {title: "The Only Video You Need On Meta Ads In 2026", by: "Agency operator who runs Meta for large online stores (name not given)", used: "Consolidating retargeting and the failure pattern of overspending on dynamic product ads"}
+  - {title: "5 ecommerce myths keeping you stuck", by: "Two paid media and email operators (first name Angus is one of them)", used: "The monthly frequency check, the conversion lift test, category examples and the warning about followers who never bought"}
+  - {title: "The #1 bottleneck in 80% of ecommerce audits (data integrity)", by: "Agency founder who has run 1,000+ audits on 7 to 9 figure brands", used: "How existing-customer spend inflates reported results"}

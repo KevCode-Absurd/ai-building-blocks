@@ -1,0 +1,18 @@
+slug: shopify-dashboard-reader
+name: "Shopify dashboard reader"
+summary: "Paste your Shopify analytics numbers. Get which tiles to trust, your cash collected and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "What Metrics Matter In The Shopify Analytics Dashboard", by: "An e-commerce agency's public analytics walkthrough", used: "Cash collected as net sales plus shipping, why returns and attribution tiles mislead, the AOV shipping gap, Shopify against GA4 sessions, and the 4:2:1 funnel benchmark"}

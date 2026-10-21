@@ -1,0 +1,21 @@
+slug: speed-budget-and-sale-check
+name: "Speed budget and sale check"
+summary: "Give it your store and sale date. Get a speed budget, test routine and pre-sale checklist."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Site Speed Optimization: Complete Guide for 2026", by: "Jakub Rusniok (article)", used: "Setting limits for page weight, scores and outside scripts, testing monthly and after changes, and auditing before a major sale"}
+  - {title: "Website Speed Optimization Tips for Shopify Stores", by: "Shopify Plus blog, quoting agency owners", used: "Asking the platform about peak load before a big sale, and keeping checkout light"}
+  - {title: "93 powerful statistics that show why your ecommerce site speed matters in 2026", by: "Queue-it (article)", used: "How slowdowns at peak show up as slow carts and logins, and shoppers' view of waiting rooms"}

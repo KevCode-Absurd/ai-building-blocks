@@ -1,0 +1,121 @@
+new_slug: sunset-flow-and-list-cleaner
+name: "Sunset flow and list cleaner"
+summary: "Give it your engagement rule and email volume. Get a three-email sunset flow and a monthly routine that suppresses non-openers."
+job: write-emails
+thinking: medium
+thinking_why: "It sets exact conditions and a short flow. A mid-size model is enough, but it should show every condition."
+
+headline: "Sunset flow and list cleaner"
+subhead: Give it how you define a quiet subscriber, your email volume and a re-engagement offer. It defines who is unengaged, writes a three-email flow that gives them one last chance, and sets a monthly routine to suppress the rest. You get the segment conditions, the flow plan and the monthly steps.
+
+explain: |
+  Every subscriber who never opens costs you money and hurts your sender reputation. Mail providers notice when many people ignore you, and your good emails then land in spam. Many email tools bill by the number of active profiles, so a quiet list also raises the bill.
+
+  This skill defines who is unengaged in a way that avoids false alarms. It then runs them through a short sunset flow that asks if they still want your emails, makes one last offer, and tells them they will be removed unless they click. Anyone who does nothing is marked, and a monthly routine suppresses them so you stop sending to them.
+
+when:
+  - Your open rate is falling and your list keeps growing.
+  - Your email bill rises with the number of profiles.
+  - You are about to send a big sale and want a clean list first.
+
+you_give:
+  - Your engagement window (180 days by default) and how often you send
+  - Your email tool and whether it counts Apple privacy opens
+  - A re-engagement offer and your margin
+  - Your region, so removal and consent rules can be checked (optional)
+
+you_get:
+  - A segment definition for unengaged profiles
+  - A three-email sunset flow plan with timing
+  - Monthly suppression steps
+  - A rule for who is never suppressed, such as recent buyers
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your engagement window, how many emails you send a week, and your tool's name.
+  - Build the segment first and check the size before you start the flow.
+  - Turn on the flow, then do the suppression step once a month.
+  - After the first clean, compare open rate, spam complaints and your monthly bill.
+
+how_it_works:
+  - title: Defines unengaged
+    text: Can receive marketing, no opens or clicks, no orders or site activity in the window, and at least six emails received so they had a chance.
+  - title: Guards against false signals
+    text: Apple privacy can fake opens, so the skill uses clicks and site activity too. For a 365-day window it uses email data only, with at least 12 campaigns received.
+  - title: Builds the flow
+    text: Trigger is entering the segment. Anyone who opens or clicks leaves the flow. Three emails go out five days apart.
+  - title: Marks the rest
+    text: At the end it sets an unengaged property. A second segment holds everyone with that property who can still receive marketing.
+  - title: Suppresses monthly
+    text: Export that segment and import it as suppressed. That protects your sender reputation and lowers a per-profile bill.
+  - title: Sets sending rules
+    text: Campaigns go to engaged profiles only, and always exclude unengaged, spam-marked and bounced profiles.
+
+output_shape: |
+  SUNSET PLAN  <store>
+  UNENGAGED SEGMENT  <window> days
+    can receive marketing | opens 0 | clicks 0 | orders/checkouts/carts/views/visits 0
+    received at least <6> emails | Apple privacy opens: <filtered | clicks only>
+  (clone versions for 30, 60, 90, 120, 180, 365 days)
+
+  SUNSET FLOW  trigger: enters segment | exit: opens or clicks since start
+  1  day 0  | <plain text: do you still want these emails? easy unsubscribe link>
+  2  day 5  | <last offer> | code: <dynamic, ends on a set date>
+  3  day 10 | <reminder the code still works + "you will be removed unless you click">
+  END  set unengaged = true
+
+  SECOND SEGMENT  unengaged = true and can receive marketing
+  MONTHLY  export as CSV -> import as suppressed
+  SEND RULES  engaged <window> only; exclude unengaged, spam-marked, bounced
+  CHECKS MISSED: <none or the list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your engagement window
+    how: 180 days is the default. Sources range from 90 to 180 days, with a lighter 30 to 60 day revive for stores that send often.
+  - what: Your sending rhythm
+    how: The "at least six emails received" rule assumes about three a week. If you send less, the skill raises the window so people had a fair chance.
+  - what: Apple privacy opens
+    how: Say if your tool counts them. If so, the skill relies more on clicks and site activity so false opens don't keep dead profiles on the list.
+  - what: Your region
+    how: Say where your subscribers live. The skill flags the removal and consent rules to check with a qualified person before anything is suppressed.
+
+judge:
+  - The unengaged definition includes a minimum number of emails received.
+  - Buyers and recent site visitors are not in the segment.
+  - The notice about removal matches what the monthly step really does.
+  - Any code in the flow has a real end date.
+  - The skill says to check regional rules before removal.
+
+test:
+  - Give it a list that receives one email a month. It should warn that six emails in the window cannot be met and widen the window.
+  - Check the segment size before you turn on the flow. It should be a share of your list, not nearly all of it.
+  - Send the flow to a test profile and confirm the 5-day gaps and the exit on click.
+  - Run it twice on the same facts. The segment conditions should match.
+
+improve:
+  - Add your tool's exact event names to the skill file, so the segment conditions match your filters.
+  - Add the offer you can afford for a last-chance email, with your margin.
+  - Add a rule for profiles you never suppress, such as wholesale accounts.
+  - Pair it with the email segment builder, the inbox placement recovery planner and the email setup health checker.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Its profile properties, segments and suppression import match these steps, and billing is per active profile."}
+    - {name: "Shopify", why: "Order data keeps recent buyers out of the segment."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the conditions from your description."}
+  inputs:
+    - "A list of at least a few thousand profiles, for the price saving to matter"
+    - "Your open and click rates by segment"
+    - "Spam complaint and bounce rates"
+    - "Your last three months of sending volume"
+
+terms:
+  - term: Sunset flow
+    meaning: A short set of emails that gives quiet subscribers one last chance before you stop sending to them.
+  - term: Suppressed
+    meaning: Kept on file but no longer sent marketing email.
+  - term: Sender reputation
+    meaning: How mail providers rate you, based on whether people open, ignore or report your emails.
+  - term: Apple privacy opens
+    meaning: Opens that Apple's mail app records automatically, so an open does not always mean a person read it.

@@ -1,0 +1,79 @@
+new_slug: decide-whether-to-quit-a-project-and-set-the-evidence-bar
+name: Decide whether to quit and set the evidence bar
+summary: Give it the project you want to quit. Get a push, change or stop call that survived an attack.
+job: think-and-decide
+thinking: high
+thinking_why: Each step argues with the one before it. Give it your strongest model.
+headline: Decide whether to quit, push on or change course
+subhead: Give it the project you are tempted to quit. It calls it a hard stretch or a dead end, argues the strongest case against that call, finds the loss that would sink you and sets how much proof you need and by when.
+explain: |
+  Quitting is hard to judge when you are tired. Reasons to stay and reasons to leave mix with fear, and whichever view you hold gets stronger. Without a date, the choice stays open and keeps costing you.
+
+  The steps separate the judging from the feeling. First the facts are written down and you get one call: push on, change course or stop. Then someone who knows the field argues the opposite case in their own words, and each point is marked answered or open. Next the plan is searched for any loss you could not recover from, and a limit is set on it. The last step sets how much proof is enough, names the cheapest fact to get first and fixes the date to decide.
+when:
+  - You have thought about quitting for weeks and keep going back and forth.
+  - You have put in a lot of time or money and cannot tell whether more will pay off.
+  - You must tell a partner or team whether you are staying.
+you_give:
+  - The project, its start date and what you have put in
+  - What results you have had and when
+  - Your reasons to stay and to quit, honest and unsorted
+  - What is at stake if it fails, such as money, time or your name
+you_get:
+  - A call to push on, change course or stop, with a reason and a date
+  - The three strongest arguments against that call and which ones you can answer
+  - The loss you could not recover from and a way to cap it
+  - How much proof is enough, the first fact to get and a date to decide
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Write the facts first, such as dates, hours, money and results. Add feelings after, and mark them as feelings.
+  - Name the person who would disagree most. Step 2 writes their case.
+  - Put the decision date in your calendar before you close the last file.
+how_it_works:
+  - title: Call it dip or dead end
+    text: Gets the facts, tests whether more effort ever raised results, asks if getting through would make you best at something worth it, splits evidence from fear and makes one call with a date.
+  - title: Argue the case against the call
+    text: Picks the sharpest opponent, writes their three best arguments, answers each or marks it open, names the weak assumption and sets what would change your mind.
+  - title: Cap what you can lose
+    text: Lists what the plan depends on, finds the outcome you could not recover from, adds a fix that caps each such loss with its cost and names a sign to act early.
+  - title: Set the evidence bar and a date to decide
+    text: Says how reversible the choice is, weights the facts you wish you had, sets how much proof is enough and names the cheapest fact to get first.
+output_shape: |-
+  STEP 1: THE CALL
+    Facts | effort test | prize test | evidence vs fear | cost of staying | call and date
+
+  STEP 2: THE CASE AGAINST
+    Opponent | three arguments | answered or open | hit assumption | mind-changing test | go, change or wait
+
+  STEP 3: THE LOSS CAP
+    Dependencies | unrecoverable outcome | ordinary losses | fixes with cost | early sign
+
+  STEP 4: THE EVIDENCE BAR
+    Reversibility | facts wanted, weighted | share known | bar | verdict | first fact to get | date
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How long you have worked on it
+    how: Give real dates. Step 1 looks at whether effort and results moved together over time.
+  - what: Your reasons, unsorted
+    how: Paste them all. Step 1 marks each as evidence or fear.
+  - what: Who disagrees most
+    how: Name them. Step 2 argues in their words and their view of the field.
+  - what: What you can afford to lose
+    how: State a number. Step 3 caps the downside inside it.
+judge:
+  - Every reason to stay or leave is marked as evidence or fear.
+  - The opposing case is written in the opponent's words, not as a weak copy.
+  - The unrecoverable loss is named, and the cap has a cost beside it.
+  - The final step ends with a date, not "when you know more".
+  - The call matches the evidence even if it is not the one you hoped for.
+test:
+  - Hide the call and read only the evidence list. See if you would reach the same call.
+  - Ask the opponent in step 2, if they are a real person, whether the case sounds like them.
+  - Check the decision date against your calendar and cash. You should be able to keep it.
+improve:
+  - Log what happened after the date, and compare with the call.
+  - Save the evidence bar as a template for your next stop or go choice.
+  - Add a second reviewer for step 2 who has quit something similar.

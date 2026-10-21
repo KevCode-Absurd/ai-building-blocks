@@ -1,0 +1,73 @@
+new_slug: borrow-a-look-you-like-and-plan-a-readable-page
+name: Borrow a look you like and plan a readable page
+summary: Give it designs you like and your page text. Get the look, a page plan and checked colours.
+job: design-work
+thinking: medium
+thinking_why: It reads images and applies a profile to a layout. A mid-level model that can see images is enough.
+headline: Turn designs you like into a page plan you can build
+subhead: Give it screenshots of designs you like and your page content. It writes down what makes the look work, lays out your page in that look with a grid, type and white space, then checks that the colours can be read.
+explain: |
+  Most people can point at a design they like and cannot say why. Copying it by eye gets the surface and misses the rules, and the colours you guess often fail on a real screen.
+
+  The first step reads your references and writes the look as a profile: measured colours, type, spacing, mood and effects, with a note where the references disagree. The second step takes that profile and your content. It sets margins, a grid, one or two typefaces, sizes and white space, page by page. The third checks every text and background colour in the result for reading. It finds the closest passing colour for any that fail.
+when:
+  - You have screenshots you love and no words for what they share.
+  - You want your own page to feel like them without copying them.
+  - You want to know the colours can be read before you build.
+you_give:
+  - Screenshots or links of designs you like
+  - Your page content and what the page must do
+  - Where it is read, such as phone, desktop or print
+  - Your brand file or fixed fonts and colours (optional)
+you_get:
+  - A style profile with measured colours, type, spacing, mood and effects
+  - A page layout with margins, grid, type sizes and white space for each page
+  - A contrast check on every text and background pair, with passing fixes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach your reference images, or paste the links.
+  - Paste your page content and say where it is read.
+  - Review the style profile before it goes into the layout.
+how_it_works:
+  - title: Read the look
+    text: Measures the colours from each image, describes type, spacing, layout and mood, and notes where the references disagree.
+  - title: Plan the page
+    text: Sets margins, a grid, one or two typefaces and sizes, and uses scale and white space to put the content in order.
+  - title: Check the colours
+    text: Pairs each text colour with its background and measures the ratio in light and dark themes. Suggests the closest passing colour.
+output_shape: |-
+  STEP 1: STYLE PROFILE
+    Measured colours | type | spacing | layout | mood | effects | where references differ
+
+  STEP 2: PAGE PLAN
+    Margins | grid | type and sizes | order by scale | white space | each page laid out | cuts
+
+  STEP 3: COLOUR CHECK
+    Each pair with ratio, pass or fail | closest passing colour
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Number of references
+    how: Three to five that agree work best. Fewer gives a thin profile and more can pull in different directions.
+  - what: Where it is read
+    how: Say phone, desktop or print. Sizes and line length change with it.
+  - what: What to keep
+    how: Name a font or colour you must keep. The plan works around it.
+  - what: How close to get
+    how: Say if you want the same mood or the same details. The profile is a guide, not a copy.
+judge:
+  - Colours in the profile are measured, not guessed by eye.
+  - The page plan uses the profile and does not copy any one reference.
+  - Every element has a job, and anything without one is cut.
+  - Failing colour pairs have a passing fix.
+  - The result reads well at the size it will be read.
+test:
+  - Hold your references next to the plan. Does it feel related without being a copy?
+  - Check body text size and line length against how the page is read.
+  - Measure two colour pairs yourself with a contrast tool.
+improve:
+  - Save the style profile and reuse it for the next page.
+  - Add new references over time and refresh the profile.
+  - Test the finished page with one person who has never seen the references.

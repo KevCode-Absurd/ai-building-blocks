@@ -1,0 +1,40 @@
+id: set-your-price-from-what-buyers-say-then-test-it-safely
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: set-your-price-from-what-buyers-say-then-test-it-safely
+  name: "Set your price from what buyers say, then test it"
+  summary: "Give it your product. Get a pricing survey, a price model with tiers and a price test you can undo."
+  when: "you are guessing at a price and want buyers' answers behind it, plus a safe way to try it."
+  job: set-prices
+  level: intermediate
+steps:
+  - name: "Plan the pricing survey"
+    skill: willingness-to-pay-survey
+    job: ops
+    from: "skill: willingness-to-pay-survey"
+    method: ["Build a ladder of seven prices from low to high", "Write an open-answer question and a price-ladder question with the same product text", "Set how many answers you need", "Give the sums to turn answers into a best price"]
+    inputs: [product_data]
+    outputs: [plan]
+    note: "Starts from your product facts and returns two questions to send plus the sums to read the answers."
+  - pause: "Send the survey to at least 30 people per price. Put the answers into a sheet and keep it with the survey plan."
+  - name: "Design the price model and tiers"
+    skill: pricing-model-designer
+    job: ops
+    from: "skill: pricing-model-designer"
+    method: ["Describe the customer and what the product is worth to them", "Pick the pricing model that fits", "Read the survey for the price range that feels fair", "Package the result into good, better and best tiers"]
+    inputs: [brief]
+    outputs: [plan]
+    note: "Reads the survey answers you collected and sets price points and tiers."
+  - pause: "Pull your last 90 days of sales and the cost of each product. Pick the product you will test first."
+  - name: "Plan a price test you can undo"
+    skill: price-test-planner
+    job: ops
+    from: "skill: price-test-planner"
+    method: ["Check the sales data is clean enough", "Work out unit costs and floors", "Model the candidate prices and three outcome cases", "Design a controlled test with a rollback rule"]
+    inputs: [performance_sheet, product_data!]
+    outputs: [plan]
+    note: "Tests the tier prices from the model on one product, with your real sales and costs."

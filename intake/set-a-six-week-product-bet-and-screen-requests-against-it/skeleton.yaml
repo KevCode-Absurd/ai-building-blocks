@@ -1,0 +1,35 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md).
+id: set-a-six-week-product-bet-and-screen-requests-against-it
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: set-a-six-week-product-bet-and-screen-requests-against-it
+  name: "Set a six-week product bet and screen requests against it"
+  summary: "Give it your plan and requests. Get a six-week bet, a no list and a yes, later or no on each request."
+  when: "your plan keeps growing and every new request sounds reasonable on its own."
+  job: build-product
+  level: intermediate
+steps:
+  - name: "Project kickoff brief writer"
+    skill: project-kickoff-brief-writer
+    job: ops
+    from: "skill: project-kickoff-brief-writer"
+    method: ["Pull every fact already given", "Find the gaps in goal, audience and limits", "Ask a few grouped questions", "Write a one-page brief and test it for weak spots"]
+    inputs: [brief]
+    outputs: [brief]
+    note: "Puts the plan on one page with a goal, an audience and limits."
+  - name: "Lean product shaping coach"
+    skill: lean-product-shaping-coach
+    job: ops
+    from: "skill: lean-product-shaping-coach"
+    method: ["Score the plan against build-less rules", "Cut it to a six-week bet with a small team", "List the features to say no to", "Set the default answer to no"]
+    inputs: [brief]
+    outputs: [plan]
+    note: "Shrinks the brief to a six-week bet and a no list. Reads the brief from the step before."
+  - name: "Feature request screener"
+    skill: feature-request-screener
+    job: ops
+    from: "skill: feature-request-screener"
+    method: ["Start every request at not now", "Count different people asking over time", "List the hidden cost of each yes", "Test each request against the bet", "Give yes, later or no with a reply for each"]
+    inputs: [plan, question, voc_reviews!]
+    outputs: [shortlist, copy_draft]
+    note: "Screens your request list against the bet. Reads the plan from the step before."

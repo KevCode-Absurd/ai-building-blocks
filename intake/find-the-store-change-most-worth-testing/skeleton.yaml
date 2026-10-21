@@ -1,0 +1,40 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: find-the-store-change-most-worth-testing
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: find-the-store-change-most-worth-testing
+  name: "Find the store change most worth testing"
+  summary: "Give it your store numbers and what shoppers do on key pages. Get a profit baseline and a ranked list of tests."
+  when: "you have traffic but no clear idea what to test on your store next."
+  job: test-store-changes
+  level: intermediate
+steps:
+  - name: "Store profit per visitor calculator"
+    skill: store-profit-per-visitor-calculator
+    job: analysis
+    from: "library"
+    method: ["Fix the Shopify numbers", "Work out revenue and gross profit per visitor", "Show why conversion alone misleads", "Score how far to trust the numbers"]
+    inputs: [performance_sheet]
+    outputs: [audit_report]
+    note: "Sets the baseline you will judge every change by."
+  - pause: "Watch about 20 recordings each on the product page and cart, save heatmap screenshots, and note any survey answers."
+  - name: "Heatmap and recording reader"
+    skill: heatmap-and-recording-reader
+    job: research
+    from: "library"
+    method: ["Match screenshots to what shoppers saw", "Read the click and scroll maps", "Weight friction by money, not raw clicks", "Write the friction list with a test idea for each"]
+    inputs: [store_capture, performance_sheet!]
+    outputs: [audit_report]
+    note: "Turns what you watched into a list of friction, each with a test idea."
+  - name: "Test idea ranker"
+    skill: test-idea-ranker
+    job: analysis
+    from: "library"
+    method: ["Split repairs from tests", "Write each idea as a hypothesis", "Count the evidence and weight by profit", "Name the one or two to run first"]
+    inputs: [audit_report, performance_sheet!, voc_reviews!]
+    outputs: [shortlist]
+    note: "Ranks the friction findings by evidence and profit, using the baseline to size the gain."

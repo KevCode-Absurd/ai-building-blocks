@@ -1,0 +1,86 @@
+new_slug: fix-a-drop-in-search-traffic-and-check-it-recovers
+name: Fix a drop in search traffic and check it recovers
+summary: Give it your Search Console export. Get the pages that lost clicks, a ranked fix list and a recovery report.
+job: get-found-in-search
+thinking: high
+thinking_why: Four steps trace a cause and carry it forward, and a wrong cause sends the fixes the wrong way. Give it your strongest model.
+headline: Find why your search clicks fell, fix it and see them return
+subhead: Give it your Search Console export. It ranks the pages that lost clicks, finds what they share, orders the technical fixes by revenue at risk, gives exact changes for a Shopify store's duplicate pages, and reports whether non-branded clicks recover four weeks later.
+explain: |
+  When search clicks fall, the guesses start: an update, a competitor, a broken page. Without a method, stores often fix the wrong thing first, or rewrite content when the real fault was that Google could not index the pages. They also stop looking before they know whether the fix worked.
+
+  The first step ranks the pages that lost clicks, finds what they share and reads click rate against position to tell lost rankings from lost clicks. It also checks the store itself, such as sales, stock and ads, before blaming search. The second step ranks the faults by revenue at risk and keeps crawl and index problems ahead of content. The third gives the exact theme, setting or redirect change for the duplicate and thin pages. Then it pauses: you make the fixes live, wait four weeks and export a fresh report for the same pages. The fourth compares non-branded clicks and organic sales with the period before. Search results take weeks to settle, so a recovery check sooner than four weeks is not worth much.
+when:
+  - Organic clicks fell and you need to find the cause, fix it in the right order and prove the traffic is returning.
+  - A Shopify store has duplicate or thin pages that may be wasting search crawling.
+  - You want a plain report that shows whether search brings new customers, with brand searches removed.
+you_give:
+  - A Search Console export covering the drop and the period before it
+  - Crawl or indexing reports, or page screenshots (optional)
+  - Your Shopify theme files, for the duplicate page fixes
+  - Your brand file or a list of your brand search terms (optional)
+  - After the pause, a fresh export for the same pages four weeks later
+you_get:
+  - The pages that lost the most clicks, what they share, a likely cause for each group and a score out of 100 for how clear the cause is
+  - A ranked list of fixes by revenue at risk, with a list of things to ignore and a score out of 100 for the four technical basics
+  - The exact theme edits, redirects and settings for duplicate pages, a re-test checklist and a score for the leaks closed
+  - A recovery report on non-branded clicks, branded trend and organic funnel against the period before, a score out of 100 and the one thing to look at next
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Export Search Console for the drop and the equal period before it. Give it the theme files if you use Shopify.
+  - Duplicate your theme and test each change there before it goes live. Do not noindex pages that bring organic sales.
+  - Wait four weeks after the fixes, export again for the same pages, and run the last step.
+how_it_works:
+  - title: Diagnose the drop
+    text: Ranks pages by clicks lost, finds what they share, reads click rate against position and checks the store itself before blaming search. It orders fixes for each group and scores how clear the cause is.
+  - title: Rank the fixes
+    text: Holds to four technical basics, separates pages left out on purpose from real problems and ranks the faults by revenue at risk. It lists what to ignore.
+  - title: Fix duplicate pages
+    text: Checks product links, tag pages, the robots file and the sitemap, and gives the exact theme, setting or redirect change for each. It never noindexes pages that bring organic sales.
+  - title: Make the fixes and wait
+    text: A pause. You put the fixes live, wait four weeks and export a fresh Search Console report for the same pages.
+  - title: Report the recovery
+    text: Removes branded searches, compares non-branded clicks and organic sales with the period before, treats average position as a trend and names the one thing to look at next.
+output_shape: |-
+  STEP 1: DIAGNOSIS
+    Window | site-wide check | pages ranked by clicks lost | what they share | likely cause by group | fix order | score out of 100
+
+  STEP 2: FIX RANKING
+    Four basics | fixes ranked by revenue at risk | developer group | ignore list | setup checklist | score out of 100
+
+  STEP 3: DUPLICATE PAGES
+    Leaks ranked | theme edits and redirects | pages not to noindex | re-test checklist | score for leaks closed
+
+  PAUSE: make the fixes live, wait four weeks, export a fresh report for the same pages
+
+  STEP 4: RECOVERY REPORT
+    Period compared | brand filter | non-branded and branded numbers | organic funnel | changes logged | score out of 100 | look at next
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The date range you export
+    how: Cover the drop and an equal period before it. A range that starts after the drop hides the pages that fell.
+  - what: Whether you also give sales data
+    how: Step 1 checks whether store sales fell too, which would point away from search. Without it, that check is marked not run.
+  - what: Your theme files
+    how: Step 3 gives exact edits only if it can read the code. Without it, you get the settings and the plan, not the code.
+  - what: Your brand search terms
+    how: The recovery report removes them from the non-branded numbers. Missing terms leave brand traffic in and make recovery look better than it is.
+judge:
+  - The losers list shows clicks, position and click rate before and after for each page.
+  - The cause for each group has evidence beside it, and the score says it measures how clear the cause is.
+  - Crawl and index fixes come before content fixes, ranked by revenue at risk.
+  - Duplicate fixes show the before and after of each change, and say to test on a copy of the theme.
+  - The recovery report keeps branded and non-branded apart and logs the changes made.
+test:
+  - Pick the page that lost the most clicks. Check its numbers against Search Console.
+  - Run a site search for two of the duplicate pages the third step found. Check that they exist.
+  - Check at four weeks that the fixed pages are indexed in Search Console.
+  - Run the last step again at eight weeks. Non-branded clicks should keep rising if the fix worked.
+improve:
+  - Add your brand terms and common misspellings to your brand file, so the filter is right every time.
+  - Keep a change log with dates, so the recovery report can match results to what you changed.
+  - Edit the ignore list in the prioritiser for pages you leave out on purpose, such as account and cart pages.
+  - Pair it with a collection page rewrite if the lost pages were thin on content.

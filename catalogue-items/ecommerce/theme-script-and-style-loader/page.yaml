@@ -1,0 +1,133 @@
+new_slug: theme-script-and-style-loader
+name: "Theme script and style loader"
+summary: "Give it your theme.liquid, apps and fonts. Get scripts delayed or deferred, styles unblocked and fonts set safely."
+job: speed-up-store
+thinking: high
+thinking_why: "It edits theme code where one wrong change can break the cart or tracking. A stronger model is more careful with the edge cases."
+
+headline: "Theme script and style loader"
+subhead: "Give it your theme.liquid, your app list and your fonts. It decides which scripts can wait, then writes the edited tags, the delay code, the stylesheet and font rules, and a test list for each change. Run it only on a duplicate of your theme."
+
+explain: |
+  Scripts and styles that load before the page is drawn make shoppers stare at a blank screen. Apps are a common cause: chat, reviews, loyalty and cookie tools all load their code on every page, even though few people see them in the first screen.
+
+  This skill sorts your scripts into three groups: must load early (tracking tags and anything in the first screen), can wait (chat, lower-page widgets, loyalty), and can load later with a defer or async tag. It writes the code to hold chosen scripts until the first scroll, tap or key press, unblocks non-critical stylesheets, moves libraries onto your own store files, and sets font rules so text shows at once. Every change comes with a test, and nothing is applied to your live theme. Gains in demos were large, but those stores had many heavy apps, so a lean store gains less.
+
+when:
+  - "Blocking time is your biggest problem on mobile."
+  - "PageSpeed lists render-blocking scripts or styles, or a custom font makes text invisible or jump."
+  - "You need to keep apps that aren't needed in the first screen."
+
+you_give:
+  - "Your theme.liquid and the theme editor's app embeds list"
+  - "The PageSpeed blocking time, unused JavaScript and render-blocking sections"
+  - "Which apps are visible in the first screen, and which are tracking tags"
+  - "Your list of custom fonts (optional)"
+
+you_get:
+  - "Theme code that holds chosen scripts back until the first visit action"
+  - "Edited tags for each script and stylesheet, with the reason"
+  - "Font rules with swap and a close fallback"
+  - "A list of what was delayed, what was left alone and why, plus a test list for every change"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Duplicate your theme first: Online Store, Themes, the three dots, Duplicate. Edit only the copy."
+  - "Paste theme.liquid and the PageSpeed sections, and mark which apps appear in the first screen."
+  - "Make one change at a time on the copy. After each, refresh with the console open, move the mouse, and test the cart, variant picker, search, reviews and checkout."
+  - "Run PageSpeed three times and average, then publish the copy only when everything works."
+
+how_it_works:
+  - title: Sorts the scripts
+    text: Tracking tags and first-screen items stay early. Chat, lower reviews, cookie banners and loyalty widgets can wait.
+  - title: Defers visible tags
+    text: For scripts in theme.liquid, tries defer first, then async, and leaves the script alone if both break it.
+  - title: Delays app scripts
+    text: Holds scripts added by the platform until the first scroll, tap, click or key press, then loads each once.
+  - title: Handles checkout buttons
+    text: Switches off dynamic checkout buttons if few shoppers use them, or delays their script the same way.
+  - title: Unblocks styles
+    text: Loads non-critical stylesheets late and keeps critical styles inline for each template type.
+  - title: Moves libraries local
+    text: Hosts files on your store with the asset URL filter, so they come with a version number from Shopify's CDN.
+  - title: Sets font rules
+    text: Adds font-display swap, keeps fonts to three variants or fewer, and matches the fallback font's size.
+  - title: Writes the tests
+    text: A test list for every app and every change, plus space reserved for delayed widgets that show on screen.
+
+output_shape: |
+  LOAD PLAN  <store>, theme <name> (duplicate)
+  Main problem: <blocking time | render blocking | fonts>
+
+  SCRIPT | WHAT IT IS | WHEN IT LOADS | WHY
+  <script> | <app or tag> | <early | deferred | async | on first interaction> | <reason>
+
+  LEFT ALONE
+  <tracking tags, first-screen items, anything that broke>
+
+  CODE CHANGES (one block per change)
+  File: <file> | Find: <the original line> | Replace with: <new code>
+  Why: <reason> | Test: <what to check>
+
+  STYLES AND FONTS
+  <stylesheet and font-face edits, fallback match>
+
+  SPACE TO RESERVE
+  <delayed widget> | height <px> | width <px>
+
+  TEST LIST (after every change)
+  <cart, variant picker, search, reviews, checkout, consent banner>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what>
+
+tweaks:
+  - what: First-screen apps
+    how: Say which apps show above the fold. Those stay early or get reserved space, and the rest can wait.
+  - what: Cookie consent tool
+    how: Name it. A banner that appears late may not meet your legal duty in some regions, so the skill leaves it early or asks you to check.
+  - what: Render-blocking list
+    how: Paste the PageSpeed list. Each blocking file gets a defer, async or late-load decision.
+  - what: Your comfort with code
+    how: Say if a developer will apply the changes. The skill then writes find and replace blocks that are easy to hand over.
+
+judge:
+  - "No tracking pixel is deferred or delayed."
+  - "Every change is on a duplicate theme with a test beside it."
+  - "Defer is tried first, then async, and a script that breaks both is left alone."
+  - "Delayed widgets that show on screen have reserved height and width."
+  - "The cookie banner warning is there."
+  - "No score gain is promised; the demos are called demos."
+
+test:
+  - "Make one change on the copy, refresh with the console open, and look for red errors. There should be none."
+  - "Test cart, variant picker, search, reviews and checkout after each change. All should work."
+  - "Move the mouse and scroll. Each delayed widget should appear and work."
+  - "Run PageSpeed three times before and after. The average blocking time should fall."
+
+improve:
+  - "Add your list of tracking tags and apps that must load early, so the skill never touches them."
+  - "Add your theme's file names and layout, so the find and replace blocks match your theme exactly."
+  - "Add your cookie and consent rules for the regions you sell to."
+  - "Pair it with the hero image loading fixer and the layout shift fixer, which this skill does not replace."
+
+works_best_with:
+  tools:
+    - {name: "Google PageSpeed Insights", why: "Lists render-blocking requests and blocking time, and lets you average three runs."}
+    - {name: "Chrome DevTools", why: "The console shows errors after each change, and the network tab shows when each script loads."}
+    - {name: "Shopify theme editor", why: "Duplicate a theme, edit the copy and preview it before you publish."}
+  inputs:
+    - "The app script auditor's list of apps to delay"
+    - "Your layout, head and footer files if scripts are placed in more than one"
+    - "A screenshot of the live page head with the app scripts"
+    - "The names of the fonts you use and where they load from"
+
+terms:
+  - term: Defer
+    meaning: A tag setting that makes a script wait until the page has been read, so it does not hold up the first draw.
+  - term: Async
+    meaning: A tag setting that loads a script alongside the page and runs it as soon as it is ready.
+  - term: Render-blocking
+    meaning: A script or style the browser must finish before it can draw the page.
+  - term: Critical CSS
+    meaning: The small set of styles the first screen needs, placed straight in the page so it draws at once.

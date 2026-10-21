@@ -1,0 +1,120 @@
+new_slug: win-back-flow-builder
+name: "Win-back flow builder"
+summary: "Give it your order gaps and discount room. Get a win-back flow timed to how your buyers actually reorder."
+job: write-emails
+thinking: medium
+thinking_why: "It turns order data into a trigger day and a short flow. A mid-size model is enough, but it should show its working on the numbers."
+
+headline: "Win-back flow builder"
+subhead: Give it the days between your customers' orders, your discount room and your best sellers. It sets when a buyer counts as lapsed and builds the emails to bring them back. You get a trigger and exit rule, three to six email outlines with timing, and a segment for extra campaigns.
+
+explain: |
+  A fixed "90 days since the last order" rule is wrong for most stores. A coffee shop and a furniture shop do not have the same buying rhythm. A code sent too early gives margin to someone who was about to reorder anyway.
+
+  This skill works out the right day from your own order gaps. It then builds a short flow: a "it has been a while" email, a reminder, and an offer with a real end time. Offers climb in steps instead of opening with the biggest one. It also checks your list first, since a win-back flow will not work on customers who had a bad experience. A short add-on covers subscribers who cancelled.
+
+when:
+  - You send a win-back email at 90 days because that is what the tool suggested.
+  - Many past buyers have gone quiet and you want a flow to bring some back.
+  - You run a subscription and want a plan for people who cancelled.
+
+you_give:
+  - The average and median days between orders, from your email tool or order data
+  - Your discount policy and margin
+  - Best sellers and recent launches
+  - Support ticket, return and review data for lapsed customers (optional)
+  - Whether you run a subscription and capture a cancel reason (optional)
+
+you_get:
+  - A trigger day and an exit filter
+  - Three to six email outlines with timing and an offer for each
+  - A win-back segment definition for extra campaigns
+  - A short subscriber-cancel branch, if you run a subscription
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your average and median days between orders and your discount room.
+  - Check your lapsed list for tickets, returns and 1-star reviews before you build.
+  - Build the three-email flow first. Add the longer version only if the first one earns.
+  - Compare reactivated buyers with your own history, not with the benchmarks.
+
+how_it_works:
+  - title: Checks the list first
+    text: If more than 20 percent of lapsed customers had a support ticket, return or 1-star review, it tells you to fix that cause before sending.
+  - title: Finds the trigger day
+    text: Uses the gap between orders, taking a number between the median and the average, or twice the average. A 45-day average gives day 90.
+  - title: Fits your product
+    text: Fast consumables trigger sooner. Slow products need longer. A customer's own rhythm beats a flat day count.
+  - title: Writes the emails
+    text: An "it has been a while" email with what is new, a reminder, then an offer with a real end time and a plain-text last call.
+  - title: Climbs the offer ladder
+    text: No discount first, then a small one, then a larger one or free shipping, instead of the biggest offer up front.
+  - title: Sets expectations
+    text: Win-back is the smallest of the core flows. Most repeat sales come from regular campaigns, so build it after the others.
+
+output_shape: |
+  WIN-BACK FLOW  <store>
+  LIST CHECK   <% of lapsed with ticket, return or 1-star> -> <ok | fix first>
+  TRIGGER DAY  <n> (average <n>, median <n>, method: <between | 2x average | own rhythm>)
+  EXIT         placed order after flow start
+
+  EMAILS
+  1  <day> | "it has been a while" | <what's new> | offer: none
+  2  <+3 days to +7 days> | <reminder or first offer> | code: <unique, ends in 48 hours>
+  3  <+7 days> | plain-text last call | <24 hours>
+  (long version) 4 to 6 | <larger offer, about two weeks later>
+
+  OFFER LADDER   <no discount | 10% | 15% | free shipping> | margin floor <n>
+  SEGMENT        <ordered in last 150 days and not in last 90> (adjust to cycle)
+  SMS            <two texts, flash offer, last chance 2 days later> (consent only)
+  SUBSCRIBER CANCEL BRANCH  <if used>
+  CHECKS MISSED: <none or the list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your days between orders
+    how: Give the average and the median. The skill picks a number between them, or uses twice the average, and shows the sum.
+  - what: Your product type
+    how: A 30-day supplement may need a trigger around 45 to 50 days. A hot tub may need years. Say which you sell.
+  - what: Predicted next-order date
+    how: If your email tool predicts it, the skill can start the flow 5 days after that date and never repeat it.
+  - what: Customer value
+    how: If your tool predicts customer value, the skill can give high-value customers a better offer, within your margin.
+
+judge:
+  - The trigger day comes from your own order gaps, with the working shown.
+  - Different timing views from the sources are shown with the product type each fits.
+  - The first email has no discount and the offer climbs in steps.
+  - Every deadline is real.
+  - Benchmarks are labelled as vendor figures.
+
+test:
+  - Give it a 45-day average gap. It should land on day 90 with twice-the-average, or a day between median and average.
+  - Give it a list where 30 percent had a return. It should tell you to fix the cause first.
+  - Give it a high-ticket product. The trigger should be far later than 90 days.
+  - Run it twice on the same data. The trigger day and email order should match.
+
+improve:
+  - Put your real median and average gaps into the skill file, one per product line.
+  - Add your margin floor, so no step in the ladder goes below it.
+  - Add your best reactivation email as a model for the "it has been a while" email.
+  - Pair it with the email segment builder, the post-purchase flow builder and the sunset flow and list cleaner.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Its predicted next-order date and customer value fields fit the advanced steps."}
+    - {name: "Shopify", why: "Order history gives the gap between purchases."}
+    - {name: "Any good chat AI", why: "Any current chat AI can do the sums from pasted order data."}
+  inputs:
+    - "At least a few hundred past buyers, for stable gaps"
+    - "Your cancel reasons, if you run subscriptions"
+    - "Support, return and review data for lapsed customers"
+    - "Your best-performing past win-back email"
+
+terms:
+  - term: Lapsed customer
+    meaning: A past buyer who has gone longer than usual without ordering again.
+  - term: Median
+    meaning: The middle number when you line gaps up from smallest to largest.
+  - term: Offer ladder
+    meaning: Offers that grow in steps, such as nothing, then 10 percent, then 15 percent or free shipping.

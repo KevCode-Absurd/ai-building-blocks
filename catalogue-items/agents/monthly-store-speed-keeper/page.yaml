@@ -1,0 +1,106 @@
+new_slug: monthly-store-speed-keeper
+name: Monthly store speed keeper
+summary: Give it this month's speed reports and app list. It compares with last month, flags new app scripts, and ranks the fixes.
+job: speed-up-store
+thinking: medium
+thinking_why: It reads reports, compares two months and picks which fixes to run. A mid-level model is enough. Use your strongest one when code fixes are needed.
+headline: Monthly store speed keeper
+subhead: Give it this month's PageSpeed results and your app list. It compares them with last month, flags every new app script, runs only the fixes the numbers call for, and hands back a ranked list for you to approve.
+explain: |
+  A store gets slower a little at a time. An app is added for a sale, a banner goes in, a slider comes back, and nobody tests again until sales fall. One fix day does not stop this. The same check every month does.
+
+  This agent keeps that check for you. It reads your speed reports and judges pass or fail on real-user data. It compares with last month, page by page, and lists every app that is new or gone. If nothing got worse and everything passes, it tells you there is no work this month and stops. If an app is new or the score fell, it checks the apps first, since they are the most common cause. Then it runs only the fixes that match what failed: the hero image, page jumping, blocking scripts, heavy features, leftover code. It prices the fixes in orders and ranks them. It never edits your theme or removes an app.
+when:
+  - You want your store's speed checked the same way every month.
+  - You add apps often and want to know which ones cost you speed.
+  - A sale is coming and you want the store checked beforehand.
+you_give:
+  - PageSpeed results for the homepage, a collection page and a product page, mobile and desktop
+  - Your installed apps and theme app embeds, as a screenshot or list
+  - Monthly sessions by page type, conversion rate and average order value
+  - Theme files, if you want code fixes (optional)
+  - What changed this month, and any sale date (optional)
+you_get:
+  - Your field score now and last month, and which metrics moved
+  - A keep, remove, delay or one-page-only call on each new app
+  - A ranked fix list with effort, risk, who does it, and the gain in orders as a range
+  - Code for a duplicate theme where a fix needs it
+  - A sale-day checklist when a sale is near
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's speed check.
+  - Run PageSpeed Insights on the same three pages each month, three times each if you can, and give it the results with your app list.
+  - The first month it saves a baseline. Every month after, it compares against it.
+  - Read the list. Test each change on a duplicate theme, then say yes to the ones you want.
+  - Run it again next month. Wait 28 days before judging a fix on real-user data.
+how_it_works:
+  - title: Read the reports
+    text: Scores real-user data, reads each page, and names the cause on the lab run.
+  - title: Compare with last month
+    text: Shows the change in score and in each metric, and lists apps that are new or removed.
+  - title: Choose the path
+    text: If all is good and nothing is new, it stops with no work. If an app is new or the score fell, it checks the apps first.
+  - title: Run the fixes that match
+    text: Leftover code after a removal, heavy features, the hero image, page jumping or blocking scripts. Only the ones that apply.
+  - title: Rank by money
+    text: Prices each fix in orders a month as a range, and ranks by gain per hour.
+  - title: Check for a sale
+    text: If a sale is within 30 days, it adds a speed budget and a checklist.
+  - title: Save the baseline
+    text: Stores this month's numbers and app list so next month can compare.
+output_shape: |-
+  THIS MONTH
+    Field score <n>/100 vs last month <n>/100 | LCP <band> | INP <band> | CLS <band> | change by page
+
+  PATH TAKEN
+    <hold | app check | fixes>: <why>
+
+  APPS
+    NEW: <app> | <keep | remove | delay | one page only> | <reason>
+    REMOVED: <app> | leftover code found: <yes or no>
+
+  FIXES TO APPROVE (ranked)
+    1. <fix> | page: <page> | who: <owner or developer> | effort: <hours> | risk: <low | mid | high> | gain: <low> to <high> orders a month | check: <how>
+
+  SALE CHECK
+    <budget and checklist, or "no sale within 30 days">
+
+  LOOK AGAIN
+    <date> | field data needs about 28 days
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: The same three pages each month
+    how: Test the homepage, one collection page and one product page every time, so the months can be compared.
+  - what: Three runs per page
+    how: Lab scores swing between runs. Average three, a few minutes apart.
+  - what: The size of drop that counts
+    how: It treats a field score fall of more than 10 points as a trigger. Change that to suit how steady your store is.
+  - what: Theme files
+    how: Without them it tells you what to fix but cannot write the code. Bring theme.liquid for script fixes.
+judge:
+  - Pass or fail is judged on real-user data, not one lab score.
+  - Every new app is named, with a verdict and a reason.
+  - A month with nothing wrong ends with no work, not made-up fixes.
+  - Fixes under 28 days old are not blamed on field data.
+  - Nothing in your store was changed without your clear yes.
+test:
+  - Run it on a month where you know you added a heavy app. See if it flags that app first.
+  - Run it twice on the same reports. The path and the ranked list should match, apart from wording.
+  - Give it a month where nothing changed and all pages pass. It should stop with no work.
+improve:
+  - Keep a log of the apps you added and removed and the date, so it can tell leftover code from new code.
+  - Add your store's sale dates to the baseline so the sale check runs without being asked.
+  - Set your own bands for what you accept on pages that get no paid traffic.
+  - Save the changes you approved each month so the next run can check whether they worked.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the speed folder, read last month's baseline and edit a duplicate theme folder.
+    - name: PageSpeed Insights
+      why: Run it on the same three pages each month. It gives real-user data and lab diagnostics.
+    - name: Shopify
+      why: The app list, the theme app embeds and a duplicate theme to test on.
+  inputs:
+    - A list of every app you added or removed since last month, with dates
+    - Your sale and campaign dates for the next 30 days

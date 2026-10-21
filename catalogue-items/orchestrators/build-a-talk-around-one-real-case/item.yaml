@@ -1,0 +1,23 @@
+slug: build-a-talk-around-one-real-case
+name: "Build a talk around one real case"
+summary: "Give it your topic and notes. Get one case, a pitch story with a vision and an order with stakes first."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan}
+uses: [case-first-story-builder, idea-buy-in-pitch-planner, talk-tension-planner]
+steps:
+  - {uses: case-first-story-builder, note: "Finds the case and outline your talk rests on."}
+  - {uses: idea-buy-in-pitch-planner, note: "Builds the pitch story and vision on the case from the step before."}
+  - {uses: talk-tension-planner, note: "Reorders the outline so the room knows the stakes in the first minute. Reads the case brief from step one."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-a-talk-around-one-real-case/skeleton.yaml

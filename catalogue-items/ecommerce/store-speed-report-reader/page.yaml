@@ -1,0 +1,132 @@
+new_slug: store-speed-report-reader
+name: "Store speed report reader"
+summary: "Paste your PageSpeed report. Get a field score out of 100, each page read, three fixes."
+job: speed-up-store
+thinking: medium
+thinking_why: "It reads a long report and sorts real-user numbers from lab numbers. A mid-size model does this well if it follows the steps."
+
+headline: "Store speed report reader"
+subhead: "Paste your PageSpeed results for your homepage, a collection page and a product page. It separates what real shoppers see from what a test phone saw. You get a field score out of 100, the cause on each page, and your first three fixes."
+
+explain: |
+  A PageSpeed report mixes two kinds of numbers. One is real shoppers on Chrome over the last 28 days. The other is a single simulated phone. Owners often chase the lab score, which swings from run to run, while the number Google judges your store on sits a few lines above it.
+
+  This skill splits the report in two. It judges pass or fail on the real-user numbers and uses the lab part to find the cause: the slow image, the shifting bar, the blocking script. It checks the three page types Shopify uses for its own speed score, says when a page has too little traffic to have its own data, and tells you when to look again so you don't judge a fix too early.
+
+when:
+  - "Your store feels slow, or your mobile score is under 50."
+  - "Google Search Console or Shopify flags Core Web Vitals on your store."
+  - "You changed a theme or an app and want to know if it helped."
+
+you_give:
+  - "PageSpeed Insights results for your homepage, one collection page and one product page (mobile first; paste the text or attach screenshots)"
+  - "Every product and collection template you use, if you have more than one"
+  - "Past test scores or notes (optional)"
+
+you_get:
+  - "A real-user (field) against lab verdict for each page and metric"
+  - "A field score out of 100, with the sum shown"
+  - "The element that causes the slow load and the page shift on each page"
+  - "Your first three fixes, what to retest and when"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Run PageSpeed Insights on your homepage, a collection page and a product page. Run each page three times, a few minutes apart, and note the lab scores."
+  - "Paste each report's text, mobile first, then desktop. Say how many product and collection templates your theme has."
+  - "Read the verdict page by page, then do the first three fixes."
+  - "Look again after 24 hours for Shopify's score and after 28 days for real-user data."
+
+how_it_works:
+  - title: Splits the report
+    text: Real-user data decides pass or fail. Lab data is used only to find causes.
+  - title: Checks the data source
+    text: If the real-user panel shows the whole site and not the page, it says that page has too little traffic and does not treat the numbers as page data.
+  - title: Reads each metric
+    text: Compares load, response and shift numbers with the good and poor bands and notes the first-paint and server-response numbers too.
+  - title: Covers every template
+    text: Checks the homepage, a collection page and a product page, mobile first, and flags each template you have not tested.
+  - title: Averages the runs
+    text: Uses three runs per page, a few minutes apart, so one lucky or unlucky run does not decide anything.
+  - title: Names the causes
+    text: Finds the largest element and the shifting elements before any fix is listed.
+  - title: Scores and ranks
+    text: Gives the field score and the three fixes to do first, load and shift before blocking time.
+  - title: Sets the recheck dates
+    text: Tells you when each number can change and when to stop chasing a perfect score.
+
+output_shape: |
+  STORE SPEED READ  <store>, report date <date>
+  FIELD SCORE  <n>/100 (<good> good, <middle> needs work, <poor> poor, <n> not measured)
+
+  PAGE <homepage | collection | product> <URL> <mobile | desktop>
+  Real-user data: <page-level | whole-site only | none>
+  LCP <value> <band> | INP <value> <band> | CLS <value> <band>
+  FCP <value> | TTFB <value> | Lab (3 runs): score <n>
+  Slowest element <what>; shifting elements <what>
+  Verdict: <pass | fail | cannot judge> because <reason>
+
+  (one block per page and device)
+  TEMPLATES NOT TESTED: <list>
+
+  FIRST THREE FIXES
+  1. <fix> | page <name> | cause <element> | who does it <you | developer>
+  2. <...>
+  3. <...>
+
+  RETEST
+  <what to run again, how, and on which date>
+
+  NOT MEASURED / MISSING
+  <what could not be read, and why>
+
+tweaks:
+  - what: Mobile and desktop results
+    how: Paste both. Mobile decides the verdict, but some widgets shift the page only on desktop, so the shift check needs both.
+  - what: Every template
+    how: List how many product and collection templates the theme has. Shopify's score uses three page types, so fixing only the one you tested gives a smaller gain.
+  - what: Three runs per page
+    how: Paste all three lab scores. One run can swing by many points, so the skill averages them and shows the spread.
+  - what: Past notes
+    how: Add earlier scores and what you changed. It can then tell you which change moved which number.
+
+judge:
+  - "Pass or fail is decided from real-user data. Lab numbers are only used for causes."
+  - "A page with whole-site data is marked 'cannot judge', not passed or failed."
+  - "Each metric is compared with its band, and the bands are stated so you can check them."
+  - "The largest element and the shifting elements are named before any fix."
+  - "The score sum matches the metrics, and not-measured cells are listed and left out."
+  - "It does not tell you to chase 100."
+
+test:
+  - "Paste a report for a page you already know is slow. The skill should name the same cause you suspect (for example the hero image or an app bar)."
+  - "Paste a report for a new page with no real-user data. It should say lab data only and refuse to give a field score."
+  - "Run the same report twice. The verdicts should match."
+  - "Check one band against Google's current Core Web Vitals page. The skill says its bands come from its sources and should be checked."
+
+improve:
+  - "Write your real traffic by page type into the skill, so it knows which pages deserve a fix first."
+  - "Add your own pass line, such as 'all three vitals good on mobile for the product page', if you want a stricter standard."
+  - "Save each month's verdict in your brand file, so the next read can show what moved."
+  - "Pair it with the speed fix ranker to turn the three fixes into orders and money."
+
+works_best_with:
+  tools:
+    - {name: "Google PageSpeed Insights", why: "Free. It shows real-user (field) data and a lab test for any public URL, which is exactly what this skill reads."}
+    - {name: "Google Search Console", why: "Its Core Web Vitals report groups your pages by status over time, so you can check the 28-day picture."}
+    - {name: "Shopify online store speed report", why: "Shows the speed score Shopify builds from your homepage, a collection and a product page."}
+  inputs:
+    - "Your monthly visits by page type, so low-traffic pages are flagged correctly"
+    - "A list of your installed apps, so slow scripts can be matched to a name"
+    - "Screenshots of the lab 'diagnostics' section, so the largest and shifting elements are named exactly"
+
+terms:
+  - term: Field data
+    meaning: How real Chrome users experienced your page over the last 28 days. Google judges your store on this.
+  - term: Lab data
+    meaning: One simulated mid-range phone run on demand. Good for finding causes, but it changes from run to run.
+  - term: LCP
+    meaning: Largest Contentful Paint. How long the biggest thing in the first screen takes to appear.
+  - term: INP
+    meaning: Interaction to Next Paint. How fast the page reacts when someone taps or clicks.
+  - term: CLS
+    meaning: Cumulative Layout Shift. How much the page jumps around as it loads.

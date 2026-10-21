@@ -1,0 +1,22 @@
+slug: check-real-demand-for-your-idea-then-run-one-cheap-test
+name: "Check demand for your idea, then run one cheap test"
+summary: "Give it your idea. Get what people say about the problem, the fact that could kill it and a cheap test."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: [product-demand-researcher, buyer-brief-writer, business-idea-killer, pretotype-experiment-designer]
+steps:
+  - {uses: product-demand-researcher, note: "Starts from your idea written as a question and returns the real words people use, with links."}
+  - {uses: buyer-brief-writer, note: "Turns the quotes from the step before into a short brief of who the buyer is and what they are trying to get done."}
+  - {uses: business-idea-killer, note: "Reads the buyer brief and looks for the one fact that ends the idea, or names the test it still has to pass."}
+  - {uses: pretotype-experiment-designer, note: "Builds tests around the buyer brief and the weak point the kill check found."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/check-real-demand-for-your-idea-then-run-one-cheap-test/skeleton.yaml

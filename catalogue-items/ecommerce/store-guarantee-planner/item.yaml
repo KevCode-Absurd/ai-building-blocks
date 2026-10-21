@@ -1,0 +1,23 @@
+slug: store-guarantee-planner
+name: "Store guarantee planner"
+summary: "Give it sales, refund rate and product type. Get guarantee settings, a net-sales test and placement."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: offer}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [alex-hormozi]
+credits:
+  - {title: "$100M Offers", by: "Alex Hormozi (book)", used: "The net-sales test for a stronger guarantee and the types of guarantee"}
+  - {title: "How to Create Irresistible Offers", by: "Robert W. Bly (book)", used: "The four settings of a guarantee (length, conditions, coverage, activation), keeping the item, and double your money back"}
+  - {title: "Applying $100M Offers to E-Commerce", by: "Alex Hormozi (public video)", used: "Try before you buy as a second layer of risk reversal"}

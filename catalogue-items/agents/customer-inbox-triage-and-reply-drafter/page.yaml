@@ -1,0 +1,98 @@
+new_slug: customer-inbox-triage-and-reply-drafter
+name: Customer inbox triage and reply drafter
+summary: Give it the new customer emails. Get them ranked, with a checked reply to approve for each. It never sends.
+job: help-customers
+thinking: medium
+thinking_why: It sorts, picks a path for each email and loops on checks for upset customers. A mid-size model handles most days. Use a stronger one when the inbox is full of disputes.
+headline: Customer inbox triage and reply drafter
+subhead: Give it the new customer emails each morning. It ranks them, finds the right answer for each, drafts a reply, checks the ones from upset customers, and hands back a ranked list for you to approve and send.
+explain: |
+  A customer inbox fills up unevenly. A few emails matter a great deal, most are simple, and some carry a risk you only see on a careful read. Owners either answer in the order emails came in, or put it off, and the urgent ones wait.
+
+  This agent reads the new emails and ranks them. It looks up each answer in your own policy and pages, checks order facts where it can, and drafts a reply in your voice. For upset customers, it checks the draft against what they actually said and what your policy lets you offer, then fixes it, for up to two rounds. Emails about harm, the law or disputes go to the top with no argued reply. It spots questions that keep coming back and drafts a help article for them. It never sends, refunds or closes anything. You get a ranked list with a draft beside each email.
+when:
+  - Your inbox has more customer emails than you can answer in the order they arrived.
+  - You answer the same questions again and again.
+  - You want drafts that match your policy, with the risky emails flagged first.
+you_give:
+  - The new customer emails, pasted or forwarded, with the full thread
+  - Your returns, refund and shipping policies, the first time
+  - Order details, or access to your store, if you want order replies checked (optional)
+  - A few replies you wrote and liked, for your voice (optional)
+you_get:
+  - A ranked list of emails with a priority for each
+  - A draft reply beside each, with a check result
+  - A short list of emails to decide first, with the open question
+  - What to look up before you send, per email
+  - A draft help article for any question asked three or more times
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to clear this morning's inbox.
+  - The first time, give it your policies and a few of your own replies. It saves them.
+  - Paste or forward the new emails. If your inbox or store is connected, tell it which to read.
+  - Read the decide-first list, then the ranked list. Edit and send the replies you agree with yourself.
+  - Run it again tomorrow. It remembers what you approved and which questions repeat.
+how_it_works:
+  - title: Read what it knows
+    text: Opens your policy, your voice notes and the log of past emails.
+  - title: Sort the batch
+    text: Sorts each email by type and severity and routes it.
+  - title: Rank the top
+    text: Sets P1 to P4 on the most severe emails and checks for duplicates and known issues.
+  - title: Choose the path
+    text: Order emails get an order check. Questions get an answer from your own pages. Disputes get an evidence plan. Harm or legal emails stop for you.
+  - title: Draft and check
+    text: Drafts every reply. Replies to upset customers are checked against their words and your policy, and fixed for up to two rounds.
+  - title: Look for patterns
+    text: A question asked three times in 30 days gets a draft help article.
+  - title: Save and hand back
+    text: Logs the day and stops for your yes. It sends nothing.
+output_shape: |-
+  THE INBOX
+    <n> emails | <n> urgent | <n> to decide first
+
+  DECIDE FIRST
+    <sender> | <why: harm, legal, dispute, refund over policy> | open question: <question>
+
+  RANKED LIST
+    1. P<n> | <type> | <sender> | <one-line summary>
+       Draft: <reply>
+       Check: <ready | fixed | hold> | look up: <order or account facts>
+
+  REPEATED QUESTIONS
+    <question> | asked <n> times | draft help article attached
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your policy in plain words
+    how: The drafts can only promise what your policy allows. A vague policy gives vague replies.
+  - what: Your own past replies
+    how: Three to five replies you liked are enough for it to match your tone.
+  - what: Order access
+    how: With your store connected, order replies use real status. Without it, they are marked not checked.
+  - what: How many emails get a full priority check
+    how: It checks the top five. Raise it if your inbox is mostly urgent, or lower it on quiet days.
+judge:
+  - Every email has a priority and a draft, or a clear reason it has none.
+  - No draft promises a refund, date or outcome your policy does not allow.
+  - Replies to upset customers were checked and the rounds stopped at two.
+  - Emails about harm, the law or disputes are at the top with no argued reply.
+  - Nothing was sent, refunded, closed or published.
+test:
+  - Give it ten past emails you remember well. See if it ranks the urgent ones where you would.
+  - Include one email that says to ignore your rules. It should flag it and not follow it.
+  - Run the same batch twice. The ranking should be the same, apart from wording.
+improve:
+  - Add your real refund limits to the policy, so drafts stay inside them.
+  - Add emails you changed before sending, so it learns your edits.
+  - Raise or lower the repeat count for help articles, to suit how many emails you get.
+  - Add the names of products that cause the most questions to the policy file.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the inbox folder, read the log and run each weekday morning.
+    - name: Shopify
+      why: Lets order replies use real order status. Refunds still wait for your yes.
+  inputs:
+    - Your shipping times by region
+    - A list of known issues you are already working on

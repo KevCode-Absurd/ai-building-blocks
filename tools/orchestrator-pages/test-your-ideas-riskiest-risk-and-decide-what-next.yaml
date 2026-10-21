@@ -1,0 +1,78 @@
+new_slug: test-your-ideas-riskiest-risk-and-decide-what-next
+name: Test your idea's riskiest risk and decide what next
+summary: Give it your idea. Get its worst risk found, one small test to run, and a keep or change call.
+job: test-an-idea
+thinking: high
+thinking_why: The last step weighs real results against a fail line set first. Give it your strongest model.
+headline: Test your idea's riskiest risk, then decide what next
+subhead: Give it a product idea. It scores four risks, finds the one with the least proof, shrinks the test for it to something you can run this week, then reads your results and says keep going or change.
+explain: |
+  Most ideas die from one weak spot, not from all four at once. People test the part they enjoy, such as the design, and skip the part that could end the idea, such as whether anyone will pay. Then they argue about what the results mean, because nobody wrote down what failure looked like.
+
+  The steps fix this in order. First the idea is scored on value, ease of use, feasibility and viability, and the weakest one is named. Then its test is cut down to the smallest version, with an action that counts as a yes and a fail line set before you start. Then you run it. After the pause you bring back what each person did and said, and the last step sets those results against the fail line and says whether to keep going, change course or stop.
+when:
+  - You have a product idea and a bad feeling about one part of it.
+  - You are about to build and want one cheap test first.
+  - You ran a test before but never agreed what a pass or a fail meant.
+you_give:
+  - Your product idea and what you already know about it
+  - Customer words, reviews or messages (optional)
+  - Your brand facts (optional)
+  - After the test, a note of what each person did and said
+you_get:
+  - Four risks scored out of 100, with the weakest named
+  - One small test, who to run it on and what to cut from it
+  - A fail line written before you run it
+  - A keep going or change course call, with the new guess and a review date
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your idea and anything real you have, such as sales, messages or customer words. Say what you have not proved yet.
+  - Run the test with five to twenty people. Write down what they did, including who said no.
+  - Come back with those notes. The last step judges them against the fail line.
+how_it_works:
+  - title: Score the four risks
+    text: Writes the problem and the customer in plain words, scores value, ease of use, feasibility and viability by how strong the proof is, and names the weakest.
+  - title: Shrink the test to the smallest one
+    text: Takes the test for the weakest risk, names the action that counts as a yes, picks five to twenty people, cuts everything the test does not need and sets the fail line.
+  - title: Run the test (your turn)
+    text: Run it with real people and write down what each one did and said. Count the no answers too.
+  - title: Decide whether to keep going or change course
+    text: Sets your results beside the fail line, counts the signs you are stuck, names the kind of change that fits what people said and writes the next guess with a review date.
+output_shape: |-
+  STEP 1: FOUR RISKS
+    Value | usability | feasibility | viability, each scored | the riskiest named | cheapest test
+
+  STEP 2: SMALLEST TEST
+    Action that counts as yes | form of test | who to try it on | cut list | the ask | fail line
+
+  (YOU RUN THE TEST)
+
+  STEP 3: KEEP OR CHANGE
+    Results against the fail line | stuck signs | kind of change | new guess and test | review date
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: What you already know
+    how: Paste real behaviour, such as sales, sign-ups and customer words. Step 1 scores a risk higher when people did something, not when they said they would.
+  - what: How much money the test may cost
+    how: Say a limit. Step 2 picks the cheapest form that stays under it.
+  - what: Who is easy to reach
+    how: Name the people you can ask this week. Step 2 builds the test around them.
+  - what: How many no answers you can take
+    how: Tell it your fail line in advance if you have one, so step 3 does not move it.
+judge:
+  - The weakest risk is backed by what people did, not by opinion.
+  - The yes action is something people do, such as pay, sign up or come back, not something they say.
+  - The fail line was written before the results came in and was not changed after.
+  - The test costs less than building the idea would.
+  - The final call names a kind of change and a review date, not just "keep going".
+test:
+  - Check that the fail line in step 2 is a number or an action you could count.
+  - Ask a friend whether the yes action could be faked or politely given. If so, tighten it.
+  - Compare the call in step 3 with your own gut before you read the reasons. Note where they differ.
+improve:
+  - Keep every result and fail line in one log, so the next idea starts with what the last one taught you.
+  - Run the same test on a second small group before you drop an idea that only just failed.
+  - Add real customer words to step 1 each round, so the scores rest on more proof.

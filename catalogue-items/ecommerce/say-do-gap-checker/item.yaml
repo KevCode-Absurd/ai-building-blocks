@@ -1,0 +1,20 @@
+slug: say-do-gap-checker
+name: "Say-do gap checker"
+summary: "Paste survey answers. Get a trust score out of 100 and a behaviour test to run first."
+category: ecommerce
+type: skill
+role: check
+job: research
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Buyology", by: "Martin Lindstrom (book)", used: "That what people say differs from what they do, the blind versus branded cola test, the unaired TV pilot rated badly yet engaging, and the claim that most choices run on autopilot"}

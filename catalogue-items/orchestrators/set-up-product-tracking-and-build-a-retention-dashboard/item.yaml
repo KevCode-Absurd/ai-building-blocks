@@ -1,0 +1,20 @@
+slug: set-up-product-tracking-and-build-a-retention-dashboard
+name: "Set up product tracking and build a retention dashboard"
+summary: "Describe your product. Get an event plan to ship, then a retention grid and a shareable dashboard from your real data."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: web_page}
+uses: [event-tracking-planner, retention-heatmap-maker, dashboard-builder]
+steps:
+  - {uses: event-tracking-planner, note: "Starts from your product description and fixes the event list, the funnels and the retention groups you will read later."}
+  - {uses: retention-heatmap-maker, note: "Uses the groups and the activity event the plan defined, on the export you pulled after the pause."}
+  - {uses: dashboard-builder, note: "Takes the retention table from the step before and turns it into a page the team can open."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/set-up-product-tracking-and-build-a-retention-dashboard/skeleton.yaml

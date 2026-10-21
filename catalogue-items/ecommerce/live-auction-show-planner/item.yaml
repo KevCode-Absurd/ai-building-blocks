@@ -1,0 +1,20 @@
+slug: live-auction-show-planner
+name: "Live auction show planner"
+summary: "Give it your stock, costs and show length. Get a run order, promotion schedule and profit sheet."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to start selling on Whatnot with no followers", by: "Reseller channel host", used: "Short first shows, one photo and one title per item, consistency over many shows, selling items with wide appeal, setting a start price you can accept, and the trade between a fast small sale and a slow bigger one"}
+  - {title: "Our Secret Strategies to Making $975/Hour on Whatnot!", by: "A husband and wife reseller team, in a recap of one big show", used: "Scheduling a week or more ahead, posting three times, a buyer-only giveaway, high-value anchor items, pace per item, entertainment, and the cost and revenue sums"}

@@ -1,0 +1,23 @@
+slug: map-your-rivals-and-write-a-message-they-cannot-answer
+name: "Map your rivals and write a message they cannot answer"
+summary: "Give it your product and rivals. Get a position map, the words nobody owns and a message you can defend."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: brand
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: angle_library}
+uses: [positioning-grid-builder, owned-word-mapper, rival-weakness-message-finder]
+steps:
+  - {uses: positioning-grid-builder, note: "Starts the chain: writes the rival set with where each one sits and which corners are open."}
+  - {uses: owned-word-mapper, note: "Reads the mapped rivals from the step before and marks which words are taken and which are open."}
+  - {uses: rival-weakness-message-finder, note: "Takes the map and picks the one strength of yours that is also a rival's weakness."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/map-your-rivals-and-write-a-message-they-cannot-answer/skeleton.yaml

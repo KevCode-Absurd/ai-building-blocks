@@ -1,6 +1,6 @@
 # Track your numbers: AI Blocks
 
-> 91 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 120 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test verdict maker](https://useaiblocks.com/skills/a-b-test-verdict-maker): Give it your test data. Get a split check, the result with a confidence range, side effects and a ship call.
 - [Account reconciler](https://useaiblocks.com/skills/account-reconciler): Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
@@ -16,12 +16,19 @@
 - [Books reconciler and P&L narrator](https://useaiblocks.com/skills/books-reconciliation-pl): Give it your ledger and payment reports. Get mismatches, duplicates and missing receipts flagged, plus a plain P&L story.
 - [Brand health metrics planner](https://useaiblocks.com/skills/brand-health-metrics-planner): Say what your brand should achieve. Get the numbers to track, how to collect them and how to read them.
 - [Budget variance explainer](https://useaiblocks.com/skills/budget-variance-explainer): Give it actual and budget numbers. Get what moved, why, and a short note for leadership.
+- [Build a monthly P&L and know your real margin](https://useaiblocks.com/workflows/build-a-monthly-p-and-l-and-know-your-real-margin): Give it your invoices and sales. Get true unit costs, a monthly P&L, a new versus returning split and a daily margin.
+- [Build a weekly KPI report with a forecast and dashboard](https://useaiblocks.com/workflows/build-a-weekly-kpi-report-with-a-forecast-and-dashboard): Describe your weekly numbers. Get a report you can rerun, a forecast and a shareable dashboard.
+- [CAC payback checker](https://useaiblocks.com/skills/cac-payback-checker): Give it CAC, margins and cohort profit. Get profit to CAC ratios, a scale-or-fix call, scored out of 100.
+- [Campaign link tracker](https://useaiblocks.com/skills/campaign-link-tracker): Give it your campaign and channels. Get tagged links, Shopify match rules and an attribution pick.
 - [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder): Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day cash forecast with risks named.
+- [Cash lever ranker](https://useaiblocks.com/skills/cash-lever-ranker): Give it your P&L and stock. Get six cash levers ranked by cash freed, scored out of 100.
+- [COGS line sorter](https://useaiblocks.com/skills/cogs-line-sorter): Paste your cost lines. Get each sorted into COGS or expense, with the rule used, scored out of 100.
 - [Control testing workpaper builder](https://useaiblocks.com/skills/control-testing-workpaper): Name a control area. Get a test sample, a workpaper and a rating for any gap. Not audit advice.
 - [Conversion funnel analyst](https://useaiblocks.com/skills/conversion-funnel-analyst): Give it an event log and your steps. Get conversion per step, drop-offs, time to convert and what to fix.
 - [Cost per funnel stage reporter](https://useaiblocks.com/skills/cost-per-funnel-stage-reporter): Give it your CRM stages and ad spend. Get a trusted funnel with the true cost of each stage.
 - [Cross-platform conversion reconciler](https://useaiblocks.com/skills/conversion-reconciliation): Give it your Meta and Google conversion reports. Get why the numbers differ and a plan to make them match.
 - [Crypto asset bookkeeper](https://useaiblocks.com/skills/crypto-asset-bookkeeper): Describe your coin or NFT holdings. Get them classified, valued and recorded under accounting standards.
+- [Daily contribution margin tracker](https://useaiblocks.com/skills/daily-contribution-margin-tracker): Give it daily sales, costs and ad spend. Get a daily contribution margin sheet with a returns accrual.
 - [Dashboard builder](https://useaiblocks.com/skills/dashboard-builder): Give it your data and what to track. Get one HTML dashboard with charts, filters and tables you can open and share.
 - [Data analyst](https://useaiblocks.com/skills/data-analyst): Give it a dataset and a question. Get evidence-based answers with trends, tests and correlations.
 - [Data chart drawer](https://useaiblocks.com/skills/data-chart-drawer): Give it your data. Get a clean chart with the right chart type, as an image or an interactive plot.
@@ -33,18 +40,23 @@
 - [Experiment result analyst](https://useaiblocks.com/skills/experiment-result-analyst): Give it test numbers. Get the right test, sample size and whether the result is real, in plain words.
 - [First-party tracking pixel builder](https://useaiblocks.com/skills/first-party-tracking-pixel): Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands.
 - [GA4 raw data analyst](https://useaiblocks.com/skills/ga4-raw-data-analyst): Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen.
+- [GA4 store setup checker](https://useaiblocks.com/skills/ga4-store-setup-checker): Describe your GA4 setup. Get missing day-one settings, store events to add and a setup score out of 100.
 - [Google Analytics reader](https://useaiblocks.com/skills/google-analytics-reader): Ask about your traffic, sign-ups or top pages. Get a clear Google Analytics report, pulled live and read only.
 - [Ignition delay simulator](https://useaiblocks.com/skills/ignition-delay-simulator): Give it a fuel mix, heat and pressure. Get an ignition delay with checks that the result is sound.
+- [Incrementality test planner](https://useaiblocks.com/skills/incrementality-test-planner): Tell it your spend and regions. Get a lift test sized to you and how to read it.
 - [Insight brief writer](https://useaiblocks.com/skills/insight-brief-writer): Give it your findings and goals. Get the top insights ranked by impact and confidence, each with an action.
 - [Invoice checker](https://useaiblocks.com/skills/invoice-checker): Give it invoices and purchase orders. Get fields pulled out, matched, checked and coded to the right accounts.
 - [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker): Give it an invoice. Get every line and total recalculated, and any missing fields or date problems listed.
 - [Journal entry drafter](https://useaiblocks.com/skills/journal-entry-drafter): Describe the transaction. Get a balanced journal entry with debits, credits and support notes.
 - [Journal entry preparer](https://useaiblocks.com/skills/journal-entry-preparer): Name an accrual or adjustment. Get the debits, credits and support ready for review. An accountant should check it.
+- [Landed cost allocator](https://useaiblocks.com/skills/landed-cost-allocator): Paste freight, duty and supplier invoices. Get the true landed cost per unit for each product.
 - [Lead source field checker](https://useaiblocks.com/skills/lead-source-field-checker): Give it your CRM leads and ad history. Learn if your lead source fields are good enough to link leads to ads.
 - [Lead to ad matcher](https://useaiblocks.com/skills/lead-to-ad-matcher): Give it your CRM lead export. Get each lead linked to the paid channel and ad that brought it in.
 - [Ledger to subledger reconciler](https://useaiblocks.com/skills/ledger-to-subledger-reconciler): Give it ledger and subledger data. Get matches, breaks and a likely cause for each break.
+- [Lifetime gross profit to CAC checker](https://useaiblocks.com/skills/ltgp-to-cac-checker): Give it ad spend, new customers and cohort revenue. Get your ratio, its band and a score.
 - [Marketing budget scenario planner](https://useaiblocks.com/skills/marketing-budget-scenarios): Give it past spend and results by channel. Get low and high forecasts for a new budget, with diminishing returns built in.
 - [Meta pixel and server events fixer](https://useaiblocks.com/skills/meta-pixel-capi-fix): Give it your site and Meta pixel. Get a tracking audit, a match quality score and step-by-step fixes for your platform.
+- [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker): Describe your Meta setup. Get the right server route, proof each event counts once and a score out of 100.
 - [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator): Tell it which number moved. Get the change confirmed, split by group, the main driver ranked and next steps.
 - [Metric mismatch tracer](https://useaiblocks.com/skills/metric-mismatch-tracer): Tell it which number differs between two reports. Get the gap, the step where they split and a fix.
 - [MLflow experiment tracker](https://useaiblocks.com/skills/mlflow-experiment-tracker): Give it your training code. Get every run logged, compared and versioned, so you can repeat the best one.
@@ -52,13 +64,17 @@
 - [Month-end close day planner](https://useaiblocks.com/skills/month-end-close-day-planner): Give it your close tasks. Get a day by day schedule and what is blocking. Review with your accountant.
 - [Month-end close planner](https://useaiblocks.com/skills/month-end-close-planner): Say what must be done to close the books. Get a dated task list with owners and blockers.
 - [Month-end variance commentary writer](https://useaiblocks.com/skills/variance-commentary): Give it this period's and last period's numbers. Get a written reason for every line that moved past your limit.
+- [Monthly profit close](https://useaiblocks.com/agents/monthly-profit-close): Give it the month's sales and costs. Get a P&L set against last month and what to fix first.
 - [Multi-touch credit calculator](https://useaiblocks.com/skills/multi-touch-credit-calculator): Give it your touches and sales. Get credit split by first, last, linear or decay rules, plus cost per sale.
+- [New and returning P&L splitter](https://useaiblocks.com/skills/new-and-returning-pl-splitter): Paste your monthly P&L and order tags. Get one P&L for first-time and one for returning customers, scored.
 - [New dataset explorer](https://useaiblocks.com/skills/new-dataset-explorer): Give it a new dataset. Get its structure, spread, links and odd spots mapped before you use it.
+- [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder): Give it Shopify and ad exports. Get a daily sheet of new-customer MER, CAC and profit.
 - [North star metric picker](https://useaiblocks.com/skills/north-star-metric-picker): Describe your product. Get the one metric to steer by, plus 3 to 5 supporting numbers that feed it.
 - [Opportunity size estimator](https://useaiblocks.com/skills/opportunity-size-estimator): Give it a baseline and an expected change. Get a low, base and high estimate with every assumption listed.
 - [P&L and balance sheet writer](https://useaiblocks.com/skills/p-l-and-balance-sheet-writer): Give it your books. Get an income statement, balance sheet or cash flow with big swings flagged. Review with an accountant.
 - [Plain-words SQL writer](https://useaiblocks.com/skills/plain-words-sql-writer): Describe the data you need. Get a working SQL query for your database type, with a note on how it runs.
 - [Prediction driver explainer](https://useaiblocks.com/skills/prediction-driver-explainer): Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
+- [Product margin checker](https://useaiblocks.com/skills/product-margin-checker): Give it a price and every cost. Get true margin, break-even ROAS and CAC, scored out of 100.
 - [Queue and process simulator](https://useaiblocks.com/skills/queue-and-process-simulator): Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
 - [Quick time series forecaster](https://useaiblocks.com/skills/quick-time-series-forecaster): Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
 - [Rates and economy dashboard builder](https://useaiblocks.com/skills/rates-economy-dashboard): Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle.
@@ -70,6 +86,9 @@
 - [Retention heatmap maker](https://useaiblocks.com/skills/retention-heatmap-maker): Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading.
 - [Sample size planner](https://useaiblocks.com/skills/sample-size-planner): Say what effect you want to detect. Get how many subjects you need, with power curves you can put in a grant.
 - [Seawater carbonate calculator](https://useaiblocks.com/skills/seawater-carbonate-calculator): Give it two seawater measures like alkalinity and pH. Get the full carbonate chemistry worked out.
+- [Set up product tracking and build a retention dashboard](https://useaiblocks.com/workflows/set-up-product-tracking-and-build-a-retention-dashboard): Describe your product. Get an event plan to ship, then a retention grid and dashboard from real use.
+- [Set up tracking you can trust before scaling](https://useaiblocks.com/workflows/set-up-tracking-you-can-trust-before-you-scale): Give it your GA4, Meta and campaign setup. Get fix lists, tagged links and a truer ROAS.
+- [Shopify dashboard reader](https://useaiblocks.com/skills/shopify-dashboard-reader): Paste your Shopify analytics numbers. Get which tiles to trust, your cash collected and a score out of 100.
 - [Spend savings finder](https://useaiblocks.com/skills/spend-savings-finder): Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
 - [SQL query launch reviewer](https://useaiblocks.com/skills/sql-query-launch-reviewer): Give it a SQL query before it goes live. Get wrong-result risks, slow spots and rewrites ranked by impact.
 - [SQL query writer](https://useaiblocks.com/skills/sql-query-writer): Describe what you want to know. Get a working SQL query, using joins, groups, windows and CTEs as needed.
@@ -77,6 +96,14 @@
 - [Startup metrics picker](https://useaiblocks.com/skills/startup-metrics-picker): Describe your business stage. Get the one metric to focus on and a short list of numbers to track. Uses Lean Analytics.
 - [Statistical model checker](https://useaiblocks.com/skills/statistical-model-checker): Give it a fitted Bayesian model. Learn if you can trust its results, and where it breaks, in plain words.
 - [Statistics helper](https://useaiblocks.com/skills/statistics-helper): Give it data and a question. Get trends, outliers, correlations and tests, explained in plain words.
+- [Store financial model builder](https://useaiblocks.com/skills/store-financial-model-builder): Give it ad budget, CAC, prices and costs. Get a 36-month store model with cash and runway.
+- [Store funnel benchmark checker](https://useaiblocks.com/skills/store-funnel-benchmark-checker): Paste your GA4 funnel and device numbers. Get the step that leaks most, why, and what to test.
+- [Store LTV and payback reader](https://useaiblocks.com/skills/store-ltv-payback-reader): Give it first-order cohorts by month. Get repeat rate, LTV and true CAC payback, scored out of 100.
+- [Store P&L builder](https://useaiblocks.com/skills/store-pl-builder): Give it your sales and costs. Get a four-bucket P&L with targets and the line to fix first.
+- [Store page conversion reader](https://useaiblocks.com/skills/store-page-conversion-reader): Paste GA4 exports. Get conversion by channel and page, your worst funnel drop and a score out of 100.
+- [Store profit per visitor calculator](https://useaiblocks.com/skills/store-profit-per-visitor-calculator): Paste your Shopify and analytics numbers. Get corrected revenue and gross profit per visitor, and a trust score.
+- [Store revenue forecast builder](https://useaiblocks.com/skills/store-revenue-forecast-builder): Give it past spend, cohorts and a calendar. Get daily new and returning revenue and the target gap.
+- [Store sales drop splitter](https://useaiblocks.com/skills/store-sales-drop-splitter): Tell it sales fell. Get the drop split into sessions, conversion and AOV, the likely cause and a score out of 100.
 - [Supply chain carbon tracker](https://useaiblocks.com/skills/supply-chain-carbon-tracker): Give it your shipping, energy and supplier data. Get emissions worked out by source, plus ways to cut them.
 - [Supply chain dashboard designer](https://useaiblocks.com/skills/supply-chain-dashboard-designer): Tell it what you ship and from where. Get a one-screen design showing delays, low stock and orders at risk.
 - [Time log keeper](https://useaiblocks.com/skills/time-log-keeper): Tell it what you did today in plain words. Get rows added to your Notion time log, asking when unsure.
@@ -84,6 +111,7 @@
 - [Traffic channel classifier](https://useaiblocks.com/skills/traffic-channel-classifier): Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from.
 - [Training curve viewer](https://useaiblocks.com/skills/training-curve-viewer): Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs.
 - [Trend and forecast analyst](https://useaiblocks.com/skills/trend-and-forecast-analyst): Give it numbers over time. Get trend, seasons and odd spikes found, plus a forecast table and plain insights.
+- [Turn a dataset into a checked brief of top insights](https://useaiblocks.com/workflows/turn-a-raw-dataset-into-a-checked-brief-of-top-insights): Give it a data file and a question. Get a checked analysis and a ranked insight brief.
 - [UK late payment chaser](https://useaiblocks.com/skills/uk-late-payment-chaser): Give it an overdue invoice. Get the legal interest and fixed fee worked out, plus reminder emails ready to send.
 - [Units and error margin checker](https://useaiblocks.com/skills/units-and-error-margin-checker): Give it a calculation. Get units checked, error margins carried through and an uncertainty budget you can show.
 - [Unpaid invoice chaser](https://useaiblocks.com/skills/unpaid-invoice-chaser): Give it your unpaid invoices. Get a reminder for each, gentle or firm to suit the customer. Nothing sends alone.
@@ -93,3 +121,4 @@
 - [Visitor to contact matcher](https://useaiblocks.com/skills/visitor-to-contact-matcher): Give it your site visit records and contact list. Get anonymous visits linked to known contacts, with unclear links flagged.
 - [Warehouse A/B test runner](https://useaiblocks.com/skills/warehouse-a-b-test-runner): Describe your data setup. Get SQL steps to split users, log exposure and read results with proper stats.
 - [Weekly spend impact modeler](https://useaiblocks.com/skills/weekly-spend-impact-modeler): Give it weekly spend and sales by channel. Get a simple model of what each channel adds, with honest limits.
+- [Weekly store ad pulse checker](https://useaiblocks.com/skills/weekly-store-ad-pulse-checker): Give weekly spend, sales, emails and discounts. Get a health score out of 100 and what to pull.

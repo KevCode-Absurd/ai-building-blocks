@@ -1,0 +1,127 @@
+new_slug: content-team-scaler
+name: "Content team scaler"
+summary: "Give it your posts, weekly sales and budget. Get a sales check, hire plan and editor pay plan."
+job: grow-social
+thinking: medium
+thinking_why: "It weighs your numbers against a budget and a team size, so a mid-size model is enough."
+
+headline: "Content team scaler"
+subhead: Give it how often you post, your sales by week and what you can spend. It checks whether sales follow your posts, then plans who to hire, how to batch filming, how to store footage and how to pay editors. You get a plan sized to 90 days of cash.
+
+explain: |
+  Many stores grow because the founder posts, then stall because the founder cannot post more. Sales rise in the weeks you post a lot and flatten when life gets busy. Hiring a team can fix that, but only if posting really drives your sales and you can pay for it.
+
+  This skill checks that first. It lines up your sales by week next to your posts by week, then plans the smallest team that fits your budget: who to hire, how often to film, how to keep every clip in one drive, and how to pay editors by results. It sets a spending limit for the first 90 days. If the link between posts and sales is weak, or your team is tiny, it stops early and tells you.
+
+when:
+  - You are the only person posting and your sales dip when you stop.
+  - You can afford to pay a creator or editors but do not know who to hire first.
+  - You have old footage in many places and want one system before you hire anyone.
+
+you_give:
+  - How many posts you make per week and who makes them
+  - Your sales by week next to your posts by week (a sheet is best)
+  - Your monthly budget for content
+  - Footage that already exists, and where it lives (optional)
+  - Any discount codes or tracked links you have used on posts (optional)
+you_get:
+  - A plain verdict on whether sales follow your posting, and how sure it is
+  - A hire plan, a filming rhythm and a footage drive layout
+  - An editor pay plan and a spending limit for 90 days
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your weekly sales and weekly posts for as many weeks as you have, and say which weeks had a post that did unusually well.
+  - Tell it your monthly content budget and how many hours the person on camera has.
+  - Read the sales check first. If it says the link is weak, follow the shorter plan it gives you.
+  - Run the plan for 90 days, then bring back new sales and posting numbers and run it again.
+
+how_it_works:
+  - title: Checks the link to sales
+    text: It lines up sales by week with posts by week, and looks at the weeks after a run of strong posts and at a consistent month against the month before.
+  - title: Sets your 90-day limit
+    text: It multiplies your monthly budget by three and refuses any plan you could not pay for that long.
+  - title: Picks a format that repeats
+    text: It favours interview, street-style and talking formats and avoids formats that need a new set for every video.
+  - title: Plans filming days
+    text: One person on camera films a batch about every two weeks, from ideas and scripts prepared in advance.
+  - title: Builds the footage drive
+    text: One shared drive with set folders, and a rule that everyone uploads every clip, old and new.
+  - title: Plans the hire
+    text: It looks for a creator, videographer or native social manager who already earns views, and asks to see their own results.
+  - title: Plans editor pay
+    text: Editors get the drive and examples, and are paid per view or by a bonus when a video leads to sales, inside the 90-day limit.
+  - title: Extends each winner
+    text: A winning post is re-made with a new hook, a voice-over or a carousel, and posted again.
+
+output_shape: |
+  SALES CHECK
+  Posts per week: <n>   Weeks compared: <n>
+  Result: <sales follow posting | maybe | no clear link>   Sure because: <evidence>
+  Better read next: <discount code | content run as ads | tracked link>
+
+  90-DAY LIMIT  <monthly budget> x 3 = <amount>, of which pay <amount>, tools <amount>
+
+  FORMAT  <format that repeats>   Avoid: <format that needs a new set each time>
+  HIRE PLAN  1. <role>: <what to ask to see before hiring>
+  FILMING  Batch every <two weeks>: <ideas and scripts ready by> / <who is on camera>
+  FOOTAGE DRIVE  <folder layout>   Who uploads: <people>
+
+  EDITOR PAY PLAN
+  <per-view rate or bonus rule> | monthly cap <amount> | disclosure: <#ad or paid-partnership label>
+
+  WINNERS
+  <post>: re-make as <new hook | voice-over | carousel>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: How many weeks of numbers you paste
+    how: More weeks make the sales check firmer. With only a handful of weeks it will say the result is a guess and plan a smaller step.
+  - what: Discount codes or tracked links
+    how: Add them to posts for a month. It then reads sales by code, which is a cleaner test than comparing weeks.
+  - what: Your budget
+    how: Give the real monthly figure. The 90-day limit and the pay plan are cut to fit it.
+  - what: Team size
+    how: Say if you are one person. It then stops at the filming rhythm and the footage drive and leaves out hiring.
+  - what: Your platform
+    how: Name Instagram, TikTok or YouTube Shorts. Formats and hiring advice are written for that one.
+
+judge:
+  - The sales check shows the weeks it compared, not only a verdict.
+  - The 90-day limit is your monthly budget times three, and the plan fits inside it.
+  - It does not tell you to hire if the link between posts and sales is weak.
+  - Every hire has something you can ask to see first, such as their own posts and view counts.
+  - The pay plan has a monthly cap and says what happens when a video goes viral.
+  - Any paid or gifted post is told to carry #ad or the platform's paid-partnership label.
+
+test:
+  - Give it numbers from a period when you know you posted a lot and sales rose. It should say sales follow posting, and show the weeks.
+  - Give it a flat sales line against heavy posting. It should say there is no clear link and shorten the plan.
+  - Set your budget at a very small amount. The plan should stop at filming days and the footage drive.
+  - Run it twice on the same numbers. The verdict and the limit should match.
+
+improve:
+  - Add your real folder names to the footage step so new staff upload to the right place from day one.
+  - Add your own pay rates once you know what editors accept, and keep the monthly cap line.
+  - Save your sales check result in your brand file, and re-run it each quarter.
+  - Pair it with the organic format tester to learn which formats are worth hiring for.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It reads your weekly sheet and writes the plan. Paste the rows as text or attach the sheet."}
+    - {name: "Google Drive", why: "A shared drive is a simple home for all footage, with folders and view access for editors."}
+    - {name: "Shopify", why: "Its orders report gives sales by day and by discount code, so you can line sales up against posts."}
+  inputs:
+    - "Sales by discount code for the same weeks"
+    - "A list of your best five posts with their view counts"
+    - "Examples of videos you want editors to copy"
+
+terms:
+  - term: Batch filming
+    meaning: Filming many videos in one session from ideas and scripts prepared before.
+  - term: CPM
+    meaning: The cost for every 1,000 views.
+  - term: Native social manager
+    meaning: A person who has grown their own accounts and knows how posts earn views on the platform.

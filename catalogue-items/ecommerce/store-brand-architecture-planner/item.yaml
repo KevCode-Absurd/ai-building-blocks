@@ -1,0 +1,22 @@
+slug: store-brand-architecture-planner
+name: "Store brand architecture planner"
+summary: "List your stores and ranges. Get a brand structure, a naming rule and a name call per range."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+uses: []
+minds: [al-ries, jack-trout]
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Positioning: The Battle for Your Mind", by: "Al Ries and Jack Trout (book)", used: "The five rules for house name or own name, the shopping-list and bartender tests, the teeter-totter principle, the rubber-band limit, step-up and step-down cases, and one position per brand"}
+  - {title: "Designing Brand Identity (4th edition, Part 1 only)", by: "Alina Wheeler (book)", used: "The three brand architecture models with examples, the strategic questions for acquisitions, and master brand versus several brands for own-label ranges"}

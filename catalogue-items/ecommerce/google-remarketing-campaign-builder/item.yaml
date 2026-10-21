@@ -1,0 +1,24 @@
+slug: google-remarketing-campaign-builder
+name: "Google remarketing campaign builder"
+summary: "Give it your audiences and offer. Get remarketing setups with budgets, caps and five doubt-led ad concepts."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: offer, required: true}
+  - {type: video_ads, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Full Ecom Google Ads Course 2026 (100% FREE)", by: "Max, agency owner who runs Google Ads for online stores", used: "Audiences, video and display remarketing settings, budgets, frequency cap, creative for returning visitors and the feed under video"}
+  - {title: "Google Ads For Ecommerce: 9 Keys To Success", by: "Ben, Google Ads agency founder", used: "Opening the wider catalog for warm audiences and using email and SMS alongside"}
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "Agency co-founder who runs Google and YouTube ads for DTC brands (name not given)", used: "The five doubts behind abandoned carts, Demand Gen settings, optimised targeting off and network choices"}
+  - {title: "The Best E-commerce Google Ads Strategy for 2026", by: "Agency founder with 12 years of Google ads (name not given)", used: "Splitting remarketing audiences and reading performance by audience and network"}

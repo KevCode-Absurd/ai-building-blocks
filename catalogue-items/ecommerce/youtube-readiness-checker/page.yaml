@@ -1,0 +1,128 @@
+new_slug: youtube-readiness-checker
+name: "YouTube readiness checker"
+summary: "Tell it your AOV, ad stack and Meta winners. Get a yes or wait on YouTube, with a score out of 100."
+job: run-google-ads
+thinking: medium
+thinking_why: "It checks ten facts against fixed rules and explains the call, so a mid-size model does it well."
+
+headline: "YouTube readiness checker"
+subhead: Tell it your AOV, margin, Google campaigns and which video ads won on Meta. It checks ten fit and timing rules and gives a yes or wait on YouTube, a readiness score out of 100, the setup to start with, the weeks 1 to 6 numbers to watch and what to skip.
+
+explain: |
+  YouTube looks like a cheap way to find new customers, so stores jump in with a low order value, untested videos or a weak page. The first weeks are choppy anyway, and the money is gone before the test tells you anything.
+
+  This skill checks fit and timing before you spend. Fit means an order value above $50 (ideally $75 to $100), a product that shows its value on video, and the budget and patience for a 4 to 6 week start. Timing means ads already proven on Meta, Shopping and brand Search already working, and money that is not taken from something that works. It then gives a starting setup. The split of budget it quotes (80% to Demand Gen and YouTube) is one agency's stance for cold-traffic brands, not a rule for stores with strong search demand.
+
+when:
+  - You have winning video ads on Meta or TikTok and wonder if YouTube is next.
+  - Someone says to put most of your Google budget into YouTube and you want to check the logic.
+  - Your Google budget is mostly brand and Shopping and you want to know if it is time to add video.
+
+you_give:
+  - Your AOV and margin
+  - Your winning video ads on Meta or TikTok, with spend and results
+  - Your current Google campaigns, with brand share
+  - How much you can spend, and how many weeks you can wait
+  - How risky your product claims are, and whether people search for the category
+you_get:
+  - A YES or WAIT call with the reason for every check
+  - A readiness score out of 100, with the sum shown
+  - The starting setup, audiences to test and metrics for weeks 1 to 6
+  - A budget split, what to skip, and the order of creative and page
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your AOV and margin, your Google campaigns, and your winning Meta or TikTok ads with results.
+  - Say your budget, and how many weeks you can wait before judging.
+  - If the call is WAIT, fix the checks that failed first and run it again.
+  - If it is YES, start with the setup it gives, and use the results reader to judge the ads.
+
+how_it_works:
+  - title: Checks fit
+    text: AOV above $50 and ideally $75 to $100, a product that shows its value on video, budget and patience for a choppy 4 to 6 weeks, and a customer you know well.
+  - title: Checks timing
+    text: Winners already proven on Meta, Shopping and branded Search working, and the money not taken from something that works.
+  - title: Checks page and claims
+    text: A strong, compliant site and offer, since YouTube users reject weak or scammy pages, plus claim risk.
+  - title: Scores readiness
+    text: Ten checks at 10 points each. A hard stop means WAIT whatever the score.
+  - title: Gives the setup
+    text: Demand Gen with Maximise Conversions at about 3 times AOV a day, mobile Shorts first, optimised targeting off.
+  - title: Plans audiences and creative
+    text: Three audiences to test with the same 2 or 3 best ads, and a creative format for Shorts.
+  - title: Lists metrics
+    text: Early signals before purchases, so you can read the test in weeks 1 to 6.
+  - title: Sets the split and skips
+    text: A budget split by role, and what to leave out, such as Shopping for risky products.
+
+output_shape: |
+  YOUTUBE READINESS  <store>
+  CALL  <YES / WAIT>  READINESS SCORE <n>/100  (<checks passed> x 10; unknown counts 0)
+  FIT
+    F1 AOV: <$>  <pass/fail>   F2 shows value on video: <...>   F3 budget and patience: <...>   F4 know the customer: <...>
+  TIMING
+    T1 winners proven on Meta: <...>   T2 Shopping and branded Search working: <...>   T3 money not taken from what works: <...>
+  PAGE AND CLAIMS
+    P1 strong page and offer: <...>   P2 claim risk and policy: <...>   P3 can fund about 3 x AOV a day: <...>
+  HARD STOPS  <list, or none>
+  START WITH  Demand Gen | sales | exclude TVs, tablets, often desktop | Shorts | optimised targeting off
+              Maximise Conversions, about 3 x AOV a day; after 2 to 4 weeks Target CPA at or just under actual
+  AUDIENCES TO TEST  <search-term segment> | <competitor-site segment> | <lookalike from best customers>; exclude customers
+  CREATIVE  9:16 | 20 to 60 seconds | subtitles | hook in the first 1 to 2 seconds | demo | proof | clear call
+  WEEKS 1 TO 6 SIGNALS  view rate, watch quartiles, CTR, CPM, cost per view, frequency, add to cart
+  BUDGET SPLIT  <Demand Gen and YouTube / PMax or search / brand>   SKIP  <...>
+  NOT CHECKED: <check, and what is needed>
+  MISSING: <item>
+
+tweaks:
+  - what: Order value
+    how: Give your real AOV. Below $50 the call is WAIT unless you can raise AOV first. $25 to $30 is a clear stop.
+  - what: Your Meta or TikTok winners
+    how: List each winner with spend and results. The skill will not test creative on YouTube that has not proved itself elsewhere.
+  - what: Claim risk
+    how: Say if your product is health-related or likely to be refused. Then Shopping is skipped and wording is checked against policy.
+  - what: Search demand
+    how: Say whether people search for the category. Search is skipped unless there is real demand.
+  - what: Patience
+    how: Say how many weeks you will wait. Under 4 weeks, the answer is WAIT.
+
+judge:
+  - Every check says pass, fail or unknown and gives the fact it used.
+  - A hard stop makes the call WAIT, whatever the score.
+  - The score line shows its sum.
+  - The call never says to use YouTube to validate an offer.
+  - The budget split is marked as one agency's stance.
+
+test:
+  - Give it an AOV of $27 and no Meta winners. The call should be WAIT with both reasons.
+  - Give it a strong Meta winner and an AOV of $90. The call should be YES, with the fit and timing checks passing.
+  - Run it twice on the same facts. The call and score should match.
+  - Ask it to judge a product with a risky health claim. It should skip Shopping and add a policy line.
+
+improve:
+  - Add your own readiness rules, such as a minimum cash buffer, to the skill file and give them points.
+  - Add your past YouTube results, so the next call uses what you learned.
+  - Write your usual creative formats into the skill, so the brief matches how you make ads.
+  - Save the score and date in your notes, and run it again after you fix the failed checks.
+  - Pair it with the Demand Gen builder and the YouTube results reader.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Holds your current campaigns, brand share and the Demand Gen setup."}
+    - {name: "Meta Ads Manager", why: "Shows which video ads really won, with spend and results."}
+    - {name: "YouTube Studio", why: "Shows how people watch your videos before you pay for them."}
+  inputs:
+    - "Your winning Meta or TikTok video ads with spend, CPA and ROAS"
+    - "Your current Google campaign list with brand share"
+    - "Your margin and break-even CPA"
+    - "Your landing page and offer"
+
+terms:
+  - term: Demand Gen
+    meaning: A Google campaign type that shows image and video ads on YouTube, Discover and Gmail.
+  - term: Shorts
+    meaning: YouTube's short vertical video feed.
+  - term: Lookalike
+    meaning: An audience of people who resemble your best customers.
+  - term: Optimised targeting
+    meaning: A setting that lets Google go beyond your chosen audience to find similar people.

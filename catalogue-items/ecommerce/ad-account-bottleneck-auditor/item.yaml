@@ -1,0 +1,20 @@
+slug: ad-account-bottleneck-auditor
+name: "Ad account bottleneck auditor"
+summary: "Give store and ad numbers. Get the growth bottleneck, a fix order and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How We Audit 8 and 9 Figure Ad Accounts (Full Process)", by: "A performance marketing agency operator (video)", used: "Treating an audit as a diagnosis of one bottleneck, starting from store numbers, drilling from the top down, the data then structure then creative fix order, and the first-order profit trend"}

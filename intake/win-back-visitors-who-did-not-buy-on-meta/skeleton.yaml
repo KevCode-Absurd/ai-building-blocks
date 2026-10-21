@@ -1,0 +1,39 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: win-back-visitors-who-did-not-buy-on-meta
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: win-back-visitors-who-did-not-buy-on-meta
+  name: "Win back visitors who did not buy on Meta"
+  summary: "Give it your reviews and store results. Get an ad for each objection, a three-ad sequence and a retargeting budget cap."
+  when: "people visit your store, leave without buying, and your retargeting ads all say the same thing."
+  job: launch-and-scale-ads
+  level: intermediate
+steps:
+  - name: "Retargeting objection ad planner"
+    skill: retargeting-objection-ad-planner
+    job: ads
+    from: "library"
+    method: ["Start from the visitors who left","Collect real objections three ways and rank them","Map one ad to each objection, one claim per ad","Write the test order"]
+    inputs: [voc_reviews, performance_sheet!, offer!]
+    outputs: [objection_map, plan]
+    note: "Starts with why people left and gives each reason an ad."
+  - name: "Retargeting ad sequence planner"
+    skill: retargeting-ad-sequence-planner
+    job: ads
+    from: "library"
+    method: ["Sort the real reasons into objections","Write the second ad as proof","Write the third ad as a cross-sell","Set the audience and cap the spend"]
+    inputs: [product_data, voc_reviews, objection_map!]
+    outputs: [plan]
+    note: "Orders the objection ads into a short sequence."
+  - name: "Next-dollar budget allocator"
+    skill: next-dollar-budget-allocator
+    job: ads
+    from: "library"
+    method: ["Rank channels by new-customer revenue per extra dollar","Check the funnel bias toward retargeting","Find the stop point"]
+    inputs: [performance_sheet, plan!]
+    outputs: [plan]
+    note: "Checks the sequence plan does not take budget from ads that find new buyers."

@@ -1,0 +1,79 @@
+new_slug: cut-chapter-and-clip-a-long-video-into-five-shorts
+name: Cut, chapter and clip a long video into five shorts
+summary: Give it a raw recording transcript. Get a cut list, chapters and five shorts with new first lines.
+job: grow-social
+thinking: medium
+thinking_why: Each step reads a transcript and picks times. A mid-size model does it well. Use a stronger one for transcripts over an hour.
+headline: Turn one long video into a tighter cut, chapters and five shorts
+subhead: Give it the transcript of your raw recording. It lists every pause, filler and retake to cut. After you edit and upload, it writes chapters that work on YouTube and picks the five moments that stand alone as shorts.
+explain: |
+  A long talking video costs hours twice. First you cut the pauses, the "um" lines and the takes you started again. Then you hunt through the finished video for chapters and for moments worth posting as shorts. Most people skip both, so the video drags and the best minute is never seen on its own.
+
+  The steps remove that work. First it reads the transcript of your raw recording and lists each cut with its time. You make the cuts and upload the new version. Then it reads the transcript of that final video, so the times match. It writes chapters that follow YouTube's rules and picks five moments that make sense without the rest, each with a new first line.
+when:
+  - You record long videos where you talk to camera and want them tighter.
+  - Your video has no chapters, so viewers can't jump to the part they want.
+  - You want shorts from a long video but don't know which moments will stand alone.
+you_give:
+  - The transcript of your raw recording, with times
+  - The link to the video after you cut and upload it
+  - Your channel topic, so first lines fit (optional)
+you_get:
+  - A timed list of pauses, filler lines and retakes to cut
+  - A chapter list for the description that YouTube will show
+  - Five short clips with start and end times and a new first line each
+  - On-screen text for the first two seconds of each clip
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the transcript of your raw recording. Apply the cut list in your editor, then upload the new version.
+  - Give it the link to the uploaded video, or paste its captions. It picks up from there.
+how_it_works:
+  - title: List the cuts
+    text: Reads your raw transcript and marks pauses, filler lines and restarted sentences, each with a time and a short reason.
+  - title: Edit and upload (you)
+    text: You make the cuts in your editor, export the video and upload it. The times change after cutting, so the next steps use the new version.
+  - title: Read the final transcript
+    text: Gets the transcript of the video you uploaded. If you'd rather not use a transcript service, paste the captions from YouTube Studio.
+  - title: Write the chapters
+    text: Finds where the topic shifts and writes a chapter list that starts at 00:00, has at least three chapters and none under ten seconds.
+  - title: Pick five shorts
+    text: Finds moments of 20 to 55 seconds that open on a full thought and end on a strong line, then writes a new first line for each.
+output_shape: |-
+  STEP 1: CUT LIST
+    Time | what to cut | why (dead air, filler or retake) | time saved
+
+  YOU: edit, export and upload
+
+  STEP 2: FINAL TRANSCRIPT
+    The transcript of the cut video, with times
+
+  STEP 3: CHAPTERS
+    A block to paste in the description, checked against YouTube's rules
+
+  STEP 4: FIVE SHORTS
+    Times | new first line | on-screen text | where it ends
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How tight you want the cut
+    how: Tell step 1 the longest pause you'll keep. A shorter limit gives a faster video that can sound rushed.
+  - what: How many chapters
+    how: Give a target, such as 8. Step 3 merges or splits sections to match.
+  - what: Where the shorts go
+    how: Say if they are for YouTube Shorts, TikTok or Reels, so first lines and on-screen text suit the place.
+judge:
+  - Every cut has a time, and none cuts a word the speaker needs.
+  - The chapter list starts at 00:00, has three or more chapters and no chapter under ten seconds.
+  - Each chapter title promises what that section gives, in about five words.
+  - Each short makes sense without the video around it and ends on a line, not a trail-off.
+  - The new first lines don't need context from earlier in the video.
+test:
+  - Apply the cuts to one minute of the video and play it. It should sound natural, not choppy.
+  - Paste the chapter block into a test video's description. The chapters should show up.
+  - Watch the first line of each short on its own. A stranger should know what it's about.
+improve:
+  - Keep the chapter and short picks that worked and tell step 4 next time which kind of moment got views.
+  - Record with fewer retakes and long pauses once you see what step 1 cuts most.
+  - Run it on your three best videos and compare the shorts it picks.

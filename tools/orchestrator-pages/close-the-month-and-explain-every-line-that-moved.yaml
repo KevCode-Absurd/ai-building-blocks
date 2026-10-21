@@ -1,0 +1,95 @@
+new_slug: close-the-month-and-explain-every-line-that-moved
+name: Close the month and explain every line that moved
+summary: List your close tasks. Get a close plan, accruals, draft statements and a reason for each big move.
+job: money-and-investing
+thinking: high
+thinking_why: The accrual and statement steps do sums that must tie. Give it your strongest model.
+headline: Close the month in a fixed order and explain every big move
+subhead: List your close tasks and it sets the order and the dates. It sorts the month's costs and drafts the accruals for you to post. Then it builds draft statements from your trial balance and writes a reason for each line that moved.
+explain: |
+  A month-end close goes wrong when steps run out of order. Accruals get booked before the bills are in, statements are built on a trial balance that is not final, and then someone has to explain numbers nobody has checked. The notes about why a line moved get written in a rush, if at all.
+
+  The steps run the close in the right order. First it lays out the tasks by what must finish first, finds the longest chain and marks the blockers. You then export the month's transactions. It sorts them into cost types and drafts the accruals with a journal entry for each. You pause to review and post those entries, then export the trial balance. It builds the income statement, balance sheet and cash flow, and writes a one-sentence reason for each line that moved past your limit. All of it is a draft for your accountant to review.
+when:
+  - You close your own books each month and want the same order every time.
+  - Your close drifts late because accruals and statements get tangled.
+  - A boss, partner or investor asks why a line moved and you need an answer written down.
+you_give:
+  - Your close tasks, who does each, and roughly how long they take
+  - The month's card, bank and bill transactions as one table
+  - Your accrual list, such as rent, payroll costs and fees
+  - After the pause, the trial balance with the posted entries, and last month's figures
+  - Your limit for what counts as a big move (optional)
+you_get:
+  - A dated close calendar with dependencies, blockers and the longest chain
+  - Every transaction sorted by cost type, with the unsure ones listed
+  - An accrual schedule with draft journal entries and the support for each
+  - Draft income statement, balance sheet and cash flow
+  - A written reason for every line past your limit, plus a short note on the biggest movers
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - List your close tasks. Step 1 gives the calendar and stops.
+  - Pause. Export the month's transactions as one table. After it drafts the accruals, review them, post the ones you accept and export the trial balance and last month's figures.
+  - Set your limit for a big move, such as 5 percent or a fixed amount.
+  - Give the finished drafts to your accountant to review.
+how_it_works:
+  - title: Plan the close
+    text: Orders the tasks by what must finish first, finds the longest chain, marks blockers and writes the day by day calendar.
+  - title: Export the month
+    text: Pause. You export the month's transactions as one table.
+  - title: Sort the costs
+    text: Cleans merchant names, sorts each line by category, department and tax treatment, and lists the lines it is unsure about.
+  - title: Draft the accruals
+    text: Works out the month's portion of each accrual, takes off what is already booked, cites the support and drafts the journal entries.
+  - title: Post and export
+    text: Pause. You review and post the entries you accept, then export the trial balance and last month's figures.
+  - title: Build the statements
+    text: Checks the trial balance adds up, maps accounts to lines and builds the income statement, balance sheet and cash flow.
+  - title: Explain the moves
+    text: Compares each line with last month and budget, and writes one sentence of why for each line past your limit.
+output_shape: |-
+  STEP 1: CLOSE PLAN
+    Tasks with owners | order | longest chain | blockers | calendar
+
+  PAUSE: export the month's transactions
+
+  STEP 2: SORTED COSTS
+    Category | department | tax treatment | unsure lines | totals
+
+  STEP 3: ACCRUALS
+    Schedule | support | draft journal entries
+
+  PAUSE: post entries, export trial balance
+
+  STEP 4: STATEMENTS
+    Income statement | balance sheet | cash flow | tie-out checks
+
+  STEP 5: COMMENTARY
+    Lines past limit with a reason each | short note on biggest movers
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your accrual list
+    how: Give the list and your policy for each, like "audit fee spread over twelve months". Without it, step 3 only drafts the obvious ones.
+  - what: Reporting basis
+    how: Say which rules you follow and the currency. Statements then use your labels and format.
+  - what: Your limit
+    how: A tight limit gives more lines to explain. Pick one that your reader will accept.
+  - what: Budget
+    how: Add the budget for the month to get a second comparison on every line.
+judge:
+  - Every task in the calendar depends on a named earlier task, and blockers are listed.
+  - Each draft entry balances and cites its support.
+  - The statements tie, with assets equal to liabilities plus equity and net income flowing through.
+  - Each reason says why the line moved, from activity, and says "driver unclear" when it cannot tell.
+  - Nothing is marked as posted, and everything is labelled a draft for review.
+test:
+  - Add up the debits and credits on the draft entries by hand.
+  - Check one big line in the commentary against the underlying transactions.
+  - Compare the draft balance sheet with the last one your accountant signed off.
+improve:
+  - Keep the calendar and reuse it next month, with the slow tasks moved earlier.
+  - Add every accrual you had to correct to your list.
+  - Not a substitute for an accountant. If you have a team and software that closes for you, use this to check the order, not to replace it.

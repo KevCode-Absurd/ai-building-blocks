@@ -1,0 +1,20 @@
+slug: compare-a-list-of-options-and-get-one-checked-report
+name: "Compare a list of options and get one checked report"
+summary: "Name a topic. Get a list of items and questions, each item researched, and one report that leaves out unsure answers."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: document}
+uses: [research-outline-builder, item-by-item-researcher, research-results-report-builder]
+steps:
+  - {uses: research-outline-builder, note: "Starts from your topic. Makes the list of items and the fields to fill in for each."}
+  - {uses: item-by-item-researcher, note: "Works through the outline one item at a time. It can use a lot of time and searches, so start with a small batch."}
+  - {uses: research-results-report-builder, note: "Turns the item files into one report. Unsure answers are left out, so gaps show as gaps."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/compare-a-list-of-options-and-get-one-checked-report/skeleton.yaml

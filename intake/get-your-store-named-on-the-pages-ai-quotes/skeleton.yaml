@@ -1,0 +1,93 @@
+id: get-your-store-named-on-the-pages-ai-quotes
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: get-your-store-named-on-the-pages-ai-quotes
+  name: Get your store named on the pages AI quotes
+  summary: Give it your category and rivals. Get the sources AI cites instead of you and a plan to show up on them.
+  when: AI answers name your rivals but not you, and you need to appear on the sites and threads they already trust.
+  job: get-found-in-search
+  level: intermediate
+steps:
+  - name: Category search plan builder
+    skill: category-search-plan-builder
+    job: organic
+    from: library
+    method:
+      - Pick one category
+      - Check topic coverage without a tool
+      - Ground the AI before asking for ideas
+      - Pick 5 core queries with different intent
+      - Order the publishing
+      - Size the work honestly
+      - Set the re-checks
+    inputs:
+      - question
+      - performance_sheet!
+      - competitor_set!
+      - brand_brain!
+    outputs:
+      - plan
+    note: Chooses the category and the questions that matter, so the test has a fixed scope.
+  - name: AI recommendation panel runner
+    skill: ai-recommendation-panel-runner
+    job: research
+    from: library
+    method:
+      - Fix the panel
+      - Run on each assistant that matters
+      - Compare free and logged in
+      - Work out share of voice
+      - Rank the sources
+      - Repeat before you believe it
+      - Rhythm
+    inputs:
+      - plan
+      - competitor_set!
+    outputs:
+      - audit_report
+      - spreadsheet
+    note: Records who AI names for those questions and which sites it cites. Reads the category plan from the step before.
+  - name: AI citation source finder
+    skill: ai-citation-source-finder
+    job: research
+    from: library
+    method:
+      - Gather three lists per question
+      - Rank the domains
+      - Open the top cited pages
+      - Price the placements
+      - Aim for mentions, not only links
+      - Set the target
+      - Write the do-not-do list
+    inputs:
+      - question
+      - spreadsheet!
+      - competitor_set!
+    outputs:
+      - shortlist
+      - plan
+    note: Ranks the sites and threads AI cites where you are missing. Reads the panel log from the step before.
+  - pause: Pick the three to five sources and threads to go after first, based on the ranking.
+  - name: Reddit answer planner
+    skill: reddit-answer-planner
+    job: organic
+    from: library
+    method:
+      - List the Reddit threads and subreddits that AI cites
+      - Choose 5 to 10 communities two ways
+      - Write the answer template
+      - Write an honest comparison template
+      - Watch negative comments
+      - Set expectations
+      - Size the routine
+    inputs:
+      - question
+      - product_data!
+      - brand_brain!
+    outputs:
+      - plan
+    note: Plans honest answers in the chosen threads so your store is named where AI already looks.

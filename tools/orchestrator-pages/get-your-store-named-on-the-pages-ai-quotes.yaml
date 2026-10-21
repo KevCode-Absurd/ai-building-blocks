@@ -1,0 +1,82 @@
+new_slug: get-your-store-named-on-the-pages-ai-quotes
+name: Get your store named on the pages AI quotes
+summary: Give it your category and rivals. Get the sources AI cites instead of you and a plan to show up on them.
+job: get-found-in-search
+thinking: high
+thinking_why: It compares answers from several AI assistants and ranks sources. Give it your strongest model.
+headline: Get your store named on the sites and threads AI assistants quote
+subhead: Give it your category and your closest rivals. It plans the questions to test, records who AI names and which pages it cites, ranks the sources where you are missing, and plans honest Reddit answers for the threads AI already trusts.
+explain: |
+  When someone asks an AI assistant what to buy, it names a few stores and quotes a few pages. If you are not named, your own site is rarely the cause. The assistant is quoting review sites, listicles and Reddit threads that mention your rivals and not you.
+
+  The steps find those pages. First it fixes one category and the five questions that matter, so the test stays the same each time. You run those questions in the assistants and paste the answers, and it works out who is named and which sources are cited. Then it ranks the sites where you are missing and prices the ways onto them. At the pause you choose three to five targets, and it plans honest Reddit answers from a real team member. No fake accounts.
+when:
+  - AI answers name your rivals but not you, and you want to know why.
+  - You have no idea which sites and threads AI trusts in your category.
+  - You have a few hours a week for outreach and want to spend them on the pages that count.
+you_give:
+  - Your category, with the collection page and three or four product pages
+  - Who does the work and how many hours a week they have
+  - Five to ten rivals (optional)
+  - Search data or past sales (optional)
+  - Your brand file and product facts (optional)
+you_get:
+  - A 90-day plan sized to your hours, with one category, five core questions and the order to publish
+  - A log of who each AI assistant named, linked or left out, your share of voice and a visibility score out of 100
+  - A ranked list of the sites and threads AI cites, in three tiers, with the placement type, cost and pitch angle
+  - A Reddit plan with five to ten communities and an honest answer template
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your category pages and say how many hours a week you have. The plan is sized to that.
+  - Run the questions it writes in each AI assistant you can use, and paste the answers back. It cannot run them for you.
+  - At the pause, pick the three to five sources and threads to go after first.
+how_it_works:
+  - title: Plan the category
+    text: Picks one category, checks what your site already covers, picks five core questions with different intent, and orders the work from your own site to outside placements.
+  - title: Run the AI panel
+    text: Records for each question who the assistants name, link or leave out, works out share of voice, and lists the sources they cite. You paste in the answers.
+  - title: Find the sources to target
+    text: Ranks the sites that keep showing up, opens the top pages, prices the placements, and writes a do-not-do list. It aims for mentions, not only links.
+  - title: Plan Reddit answers
+    text: Sorts the cited threads into open and closed, picks five to ten communities, and writes an answer template where a real team member says who they are.
+output_shape: |-
+  STEP 1: CATEGORY PLAN
+    Category | five core questions | publishing order | 90-day plan sized to your hours | re-check dates
+
+  STEP 2: AI PANEL LOG
+    Question | assistant | named, linked or absent | share of voice | sources cited | visibility score out of 100
+
+  STEP 3: SOURCE TARGETS
+    Domain | tier | placement type | cost | pitch angle | do-not-do list
+
+  STEP 4: REDDIT PLAN
+    Cited threads (open or closed) | five to ten communities | answer template | comparison template | routine
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Hours a week
+    how: The plan is sized to your hours. Give an honest number, or the plan will be too big to finish.
+  - what: Which assistants you test
+    how: Name the ones you can run, and whether you are logged in. Free and logged-in answers can differ.
+  - what: Budget for placements and free product
+    how: Without a budget the target list leans on free mentions. Say what you can spend.
+  - what: Who can post on Reddit
+    how: Answers must come from a real team member who says who they are. Name the person.
+judge:
+  - The plan covers one category, not the whole store.
+  - Each answer in the log is marked named, linked or absent, and the share of voice shows its working.
+  - The target sheet puts the sites that keep showing up first.
+  - No step suggests fake accounts, hidden ads or paying for fake reviews.
+  - Every Reddit answer template says who is posting and where they work.
+test:
+  - Run the same questions twice, a day apart. Judge a result only if it holds.
+  - Open the top three cited pages yourself and check the ranking is right.
+  - Write one Reddit answer from the template and ask if it would help a stranger who asked the question.
+  - After a placement goes live, run the panel again and compare share of voice.
+improve:
+  - Add your claim rules to the Reddit skill, so answers never say more than you can prove.
+  - Save each panel log in your brand file, so you can see change over time.
+  - Add the sites you already have good relationships with to the target skill.
+  - Re-run the panel on the dates in the plan, not just once.

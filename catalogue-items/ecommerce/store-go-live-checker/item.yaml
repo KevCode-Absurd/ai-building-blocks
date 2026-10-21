@@ -1,0 +1,28 @@
+slug: store-go-live-checker
+name: "Store go-live checker"
+summary: "Give it your store setup. Get a score out of 100, the blockers and a test-order plan."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Official Shopify 2026 Tutorial (four-part series)", by: "Kylie Maher, Learn with Shopify", used: "Test-mode orders, the phone check, policy links at checkout, and removing the password last"}
+  - {title: "WooCommerce Tutorial for Beginners 2026", by: "Daryl Wilson", used: "Test card order, free-shipping trigger, order status and refund path"}
+  - {title: "How to Create an Ecommerce Website with WordPress 2026 (step by step)", by: "Dale, Creator Pro Website", used: "Gateway from test to live, the connection test and the coming-soon switch"}
+  - {title: "Shopify Tutorial for Beginners 2026 - Full Store Setup Guide", by: "Simon", used: "General settings sweep, policy pages, favicon and footer"}
+  - {title: "Shopify Store Setup Full Tutorial 2026: Step by Step", by: "Unnamed presenter", used: "Test-mode order, confirmation email, mobile review, policy check, domain status and password"}
+  - {title: "Shopify for Beginners: Everything From Setup to Your First Sale", by: "A Shopify consultant who builds stores for clients", used: "Real fulfilled test orders per location, warehouse links, shipping rates per country and the duties note"}
+  - {title: "How To Start an Online Store That Runs on Autopilot (WooCommerce Tutorial)", by: "Ferdy", used: "Stripe test mode and webhook, switching to live, PayPal production, order status flow and emails"}
+  - {title: "WooCommerce Tutorial 2026: Complete MasterClass for Beginners", by: "Tim Nishad", used: "Buyer and owner views of a test order, downloads in the account, matching keys and mode, coming soon to live"}
+  - {title: "Claude & Shopify Built a $750k/m AI-Powered Ecom Brand", by: "Ali (host of the video)", used: "The sold-out inventory trap and checking the page in a private window"}

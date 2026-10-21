@@ -1,0 +1,21 @@
+slug: programmatic-direct-mail-planner
+name: "Programmatic direct mail planner"
+summary: "Give it your flows and customer value. Get triggers to mail, a test cell and a payback check."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Wild Bets Playbook: a curated research document for e-commerce founders", by: "Compiled case-study document (author not named)", used: "Event-triggered letters for birthdays, second purchase, abandoned carts, browsers and new members, the frequency cap, and the test targets for each"}
+  - {title: "Wild bets folder: unconventional offer, retention and CX plays for e-commerce owners", by: "Compiled research write-up (author not named)", used: "Cost per piece, a private offer code to track response, and reserving mail for proven repeat buyers"}

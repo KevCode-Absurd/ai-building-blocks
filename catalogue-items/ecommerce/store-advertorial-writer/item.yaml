@@ -1,0 +1,29 @@
+slug: store-advertorial-writer
+name: "Store advertorial writer"
+summary: "Give it your angle, mechanism, product facts and ad. Get a full advertorial, labelled as an ad."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+  - {type: ad_copy, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: landing_page}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Guide: $100k/day with Advertorials", by: "An advertorial funnel consultant", used: "Separation and the pain threshold, ad and page congruence, the ten sections in order, burning down the alternatives, root cause then mechanism, day-by-day proof, objection-matched testimonials, price anchoring and the guarantee"}
+  - {title: "Copy my $20k/day advertorial structure", by: "A dropshipping YouTuber who goes by Alex", used: "Labelling the page as an ad, the low-ticket skeleton and the inputs to give an AI (price, compare price, offer, angle)"}
+  - {title: "Advertorial formula: six types, how to pick one, structure and KPIs", by: "Alex, ecommerce advertiser (as named in the talk)", used: "The 12-part structure, three layers of proof, how many buttons to use and the image list"}
+  - {title: "Using Claude to write 10 advertorials in an hour", by: "Stefan, direct-response copywriter (name as heard)", used: "Buyer archetypes, the swipe loop and drafting section by section"}
+  - {title: "How I write advertorial landing pages only using AI", by: "Mark, DTC funnel operator (as named in the talk)", used: "Drafting in halves so long pages are not cut short"}
+  - {title: "Advertorials: how to write them and why they work", by: "Novel Medora, copywriting teacher", used: "The rule to keep the page mostly useful content, with a lighter pitch"}
+  - {title: "The ultimate Advertorial Blueprint to scale past $1m/month", by: "An agency operator, in a teardown of a public golf-equipment brand's advertorial", used: "Stacking pains until the reader acts, section order, proof matched to objections and the two-options close"}
+  - {title: "3 things every winning advertorial has", by: "A health and wellness advertorial writer", used: "A headline that mirrors one named person, the after-state first, the mechanism name and a soft call to action"}
+  - {title: "How I build $1k/day advertorials with Claude in 6 minutes 41 seconds", by: "A dropshipping media buyer", used: "Story style by product type, and the capture, merge and HTML output route into a page builder"}

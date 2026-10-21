@@ -1,0 +1,79 @@
+new_slug: build-shopping-by-margin-tune-it-weekly-and-fix-titles
+name: Build Shopping by margin, tune it weekly and fix titles
+summary: Give it your products with margins. Get Shopping tiers with targets, weekly product calls and search-led titles.
+job: run-google-ads
+thinking: medium
+thinking_why: Three skills run in a row and the break-even sums are simple. A mid-size model is enough.
+headline: Give each product a Shopping target that fits its margin
+subhead: Give it your products with margins and past return. It sorts them into tiers with a target for each, reads your first two weeks to say what to cut, feed or fund, then rewrites the weak titles from searches that sold.
+explain: |
+  Most Shopping accounts treat every product the same. A product with a 60 percent margin and one with a 25 percent margin get the same target, so you either leave profit on the table or starve the products that could carry the account. Weak titles add to it, because Google matches your product to searches by its title.
+
+  The steps fix the targets first, then the products, then the words. The first sets tiers and a target for each from break-even, and checks you have enough sales to split. It pauses while you build and run it for two weeks and export the weekly report. The second finds products to cut, feed, bid up or fund, and the search terms to block. It pauses again while you pull the converting search terms for the products it said to feed. The last rewrites those titles in one order, using the words buyers really typed.
+when:
+  - Your Shopping campaign has one target for every product, whatever the margin.
+  - Some products take spend and never sell and you cannot tell which.
+  - Your titles are the supplier's names and do not match what people search.
+you_give:
+  - Your products with price, margin and past return on ad spend
+  - The weekly Shopping report with search terms, after the first two weeks
+  - The converting search terms for the products to fix, and their current titles
+  - Photos of the products (optional)
+you_get:
+  - Shopping tiers with a break-even and a target for each, and a budget split
+  - A call on every product with enough clicks, plus search terms to block
+  - A waste score and the weekly edit to make
+  - New titles and descriptions in one order for the whole catalogue, rolled out in batches
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it real margins per product. It marks any margin you guessed.
+  - When it pauses, build the tiers, run them two weeks and export the weekly report with search terms.
+  - Pause again to pull converting search terms for the products it chose to fix.
+how_it_works:
+  - title: Set tiers and targets
+    text: Checks you have enough products and sales to split, picks tiers by margin or by past return, and sets each target from break-even. It also decides where Performance Max fits.
+  - title: Read the first two weeks
+    text: Pauses while you build the tiers and run them for two weeks and export the report. Then it checks each product has enough clicks to judge, sorts search terms into blocks and feed problems, reads impression share and writes the weekly edit.
+  - title: Fix the weak titles
+    text: Pauses while you pull the converting search terms for the products it said to feed. Then it writes titles and descriptions in one order, keeps every word true to the product and rolls them out in small batches.
+output_shape: |-
+  STEP 1: TIERS AND TARGETS
+    Fit | structure | tiers with break-even and target | budget split
+
+  PAUSE: build, run two weeks, export the weekly report
+
+  STEP 2: WEEKLY READ
+    Data check | product actions | search term blocks | impression share | waste score
+
+  PAUSE: pull converting search terms for the products to feed
+
+  STEP 3: TITLES
+    Title order | new titles and descriptions | rollout batches
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Catalogue size
+    how: Under about 30 products, tell it. Step 1 will say to fix titles and consolidate before splitting.
+  - what: Your margin by product
+    how: Give real numbers. Guessed margins put products in the wrong tier.
+  - what: Standard Shopping or Performance Max
+    how: Say which you run. Product-level calls in step 2 only work for Standard Shopping.
+  - what: Your country and currency
+    how: Titles and feeds are written for one country and currency at a time.
+judge:
+  - Tiers have enough sales each, and small ones are merged.
+  - Every target comes from break-even, not an industry average.
+  - Product calls only cover products with enough clicks to judge.
+  - Titles use words from real converting searches and say nothing untrue about the product.
+  - Titles roll out in batches, not all at once.
+test:
+  - Work out break-even for one product by hand and compare it with step 1.
+  - Check three product calls from step 2 against the raw report.
+  - Compare two new titles with what the product is. Every word should be true.
+improve:
+  - Watch click rate and returns after each title batch before the next one.
+  - Re-run step 2 every week for the first month, then every two weeks.
+  - Move products between tiers when their sales change.
+  - Not worth it with very few products or sales. Fix titles and wait.

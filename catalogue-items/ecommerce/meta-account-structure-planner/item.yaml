@@ -1,0 +1,22 @@
+slug: meta-account-structure-planner
+name: "Meta account structure planner"
+summary: "Give your spend, products and margins. Get a Meta campaign and ad set layout with budgets and KPIs."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Only Video You Need On Meta Ads In 2026", by: "Agency operator who runs Meta for large online stores (name not given)", used: "The five questions that decide how much to split, the layouts by monthly spend, the page ad cap and the settings to switch off"}
+  - {title: "How To Structure Meta For High Creative Volume", by: "Agency operator who runs Meta for large online stores (name not given)", used: "Segmenting by business complexity, the persona + angle + offer concept, the spend cap on one concept, and when splitting by format helps"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "Why one consolidated campaign beats many thin ones, the five questions and the settings to turn off"}

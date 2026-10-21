@@ -1,0 +1,56 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: find-where-your-page-loses-buyers-and-prove-the-fix
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: find-where-your-page-loses-buyers-and-prove-the-fix
+  name: "Find where your page loses buyers and prove the fix"
+  summary: "Give it page captures and your funnel numbers. Get a ranked test list and a clear verdict on the first fix."
+  when: "your store has steady traffic but few orders and you want evidence, not guesses, before you change the page."
+  job: audit-landing-page
+  level: intermediate
+steps:
+  - name: "Heatmap and recording reader"
+    skill: heatmap-and-recording-reader
+    job: research
+    from: "library"
+    method: ["Start with the dashboard insights", "Read the area map", "Weight by money, not raw clicks", "Write the friction list", "Score it"]
+    inputs: [store_capture, performance_sheet!]
+    outputs: [audit_report]
+    note: "Reads heatmaps and recordings and lists what visitors do instead of buying."
+  - name: "Page issue sorter"
+    skill: page-issue-sorter
+    job: analysis
+    from: "library"
+    method: ["Look first", "List every issue with its proof", "Tag obvious fixes to do now", "Check each issue is in one bucket", "Check it"]
+    inputs: [audit_report]
+    outputs: [plan]
+    note: "Sorts what the reading found into a plan, worst leak first."
+  - name: "Test idea ranker"
+    skill: test-idea-ranker
+    job: analysis
+    from: "library"
+    method: ["Split repairs from tests", "Count the evidence", "Pick honest chances of winning", "Order the top of the list", "Name the top one or two to run, and park the rest"]
+    inputs: [audit_report, performance_sheet!, voc_reviews!]
+    outputs: [shortlist]
+    note: "Turns the sorted issues into a short ranked list of tests worth running first."
+  - pause: "Run the top test on live traffic until it has enough orders, then export the results."
+  - name: "A/B test traffic checker"
+    skill: ab-test-traffic-checker
+    job: analysis
+    from: "library"
+    method: ["Look first", "Work out the honest numbers", "Pick the smallest lift worth finding", "Set the rules for running it", "Score it"]
+    inputs: [performance_sheet]
+    outputs: [audit_report]
+    note: "Checks the exported results had enough traffic to trust before anyone calls a winner."
+  - name: "Store test verdict maker"
+    skill: store-test-verdict-maker
+    job: analysis
+    from: "library"
+    method: ["Check the split first", "Apply Twyman's law", "Turn it into money", "Only agreed splits count", "Write the log entry"]
+    inputs: [performance_sheet, plan!]
+    outputs: [audit_report]
+    note: "Gives a ship, stop or keep-running verdict on the test the traffic check cleared."

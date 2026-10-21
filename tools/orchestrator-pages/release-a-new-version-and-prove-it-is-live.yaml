@@ -1,0 +1,85 @@
+new_slug: release-a-new-version-and-prove-it-is-live
+name: Release a new version and prove it is live
+summary: Give it your project. Get a version, changelog, go or no-go call and proof it is live.
+job: ship-and-host
+thinking: medium
+thinking_why: Each step is a defined check or command. A mid-size model does it well.
+headline: Ship a new version and prove visitors see the new build
+subhead: Give it your project. It sets the version number and writes the changelog, runs a go or no-go check, puts the release live on Vercel and then proves the live site is the new build, not the old one.
+explain: |
+  A deploy that says "success" does not mean visitors see your change. A cache, a wrong branch or a build that failed quietly can leave the old version up. Teams find out when a customer reports the bug they already fixed. A release also goes out with a version nobody chose and notes nobody wrote.
+
+  The steps put a check at each point. First it sets the version and writes the changelog from your commits. You review, merge and tag. Then it runs a go or no-go check and lists blockers. You fix them. Only then does it deploy to Vercel. Last it compares what the live site serves with the release you tagged, and says shipped only when they match.
+when:
+  - You are releasing a new version and cannot afford a bad deploy.
+  - You have shipped, then found the old version still live.
+  - Your release notes and version numbers are guesses, not worked out from the commits.
+you_give:
+  - Your project (a folder or repo with its git history and tags)
+  - Your Vercel account, signed in on your computer
+  - Your build and test commands (optional)
+you_get:
+  - A version number worked out from your commits, and a changelog grouped into added, changed and fixed
+  - A go or no-go call with each blocker listed
+  - A live link on Vercel
+  - A report that compares the live site with the release you tagged
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Sign in to Vercel first. The deploy step asks for a preview first and production only after you agree.
+  - Do your two steps, which are to merge and tag, then to fix blockers.
+how_it_works:
+  - title: Set the version and write the changelog
+    text: Finds your version files, reads the commits since the last tag, picks the bump and writes the changelog.
+  - title: Review, merge and tag
+    text: This one is yours. Check the bump and the notes, merge them and tag the release.
+  - title: Get a go or no-go
+    text: Runs your build, tests, secrets and config checks, asks about what a tool cannot see and lists the blockers.
+  - title: Fix the blockers
+    text: This one is yours. Fix every blocker. After a no-go, run the check again until it says go.
+  - title: Deploy to Vercel
+    text: Deploys a preview first, promotes it to production when you agree and returns the live link.
+  - title: Prove it is the new build
+    text: Checks for the quiet ways a deploy can pass while the old version stays up, reads the build shown by the live site and compares it with your tag.
+output_shape: |-
+  STEP 1: RELEASE
+    Version and why | changelog | tag
+
+  YOUR STEP: review, merge, tag
+
+  STEP 2: GO OR NO-GO
+    Checks run | blockers | verdict
+
+  YOUR STEP: fix blockers
+
+  STEP 3: DEPLOY
+    Preview link | live link
+
+  STEP 4: PROOF
+    Build the live site shows | your tag | match or mismatch
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your host
+    how: This uses Vercel. For Netlify or Cloudflare, swap step 3 for the Netlify or Cloudflare publisher. They take and make the same things.
+  - what: Version rules
+    how: Tell step 1 if you use a set style, such as a minor bump for every new feature.
+  - what: Checks the gate runs
+    how: Name your build and test commands, so step 2 runs the real ones.
+  - what: Skip production on the first run
+    how: Ask it to stop at the preview link, check it yourself, then promote.
+judge:
+  - The version follows from the commits, and the reason for the bump is written down.
+  - The changelog lists real changes and none that are not in the commits.
+  - Every blocker is either fixed or has a clear reason it can wait.
+  - The proof compares something unique to this release, such as a build id or commit, not only "the page loads".
+  - A mismatch is reported as a mismatch.
+test:
+  - Look at the live site's footer or page source for the build id, and compare it with your tag.
+  - Make one test change in a preview copy and check the gate catches a failing test.
+  - Read the changelog against your commit list. Every line should have a commit.
+improve:
+  - Keep the changelog going in your repo so each release adds to it.
+  - Add the gate's checks to your CI so a bad release cannot start.
+  - Show the build id on your site so the proof step has something exact to read.

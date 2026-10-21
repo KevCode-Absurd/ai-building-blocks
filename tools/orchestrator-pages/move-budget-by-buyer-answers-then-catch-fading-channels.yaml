@@ -1,0 +1,77 @@
+new_slug: move-budget-by-buyer-answers-then-catch-fading-channels
+name: Move budget by buyer answers, then catch fading channels
+summary: Give it survey answers and spend by channel. Get over-credited channels, a budget move and a fade check.
+job: read-ad-results
+thinking: high
+thinking_why: It compares survey answers with platform reports and weighs weak evidence. Give it your strongest model.
+headline: Find which channels really bring buyers and move budget there
+subhead: Give it your checkout survey answers, spend and platform sales by channel. It shows which channels the platforms over-credit, ranks where the next dollar goes, and later checks which channels are wearing out.
+explain: |
+  Each ad platform takes credit for the sale. Add up their reports and you get more sales than you had. Buyers tell a different story when you ask them where they first heard of you. Moving budget by platform reports alone rewards the channels that grab credit, not the ones that find new buyers.
+
+  The steps put the two views side by side, then act on them. First it sorts survey answers into channels and compares each channel's share of spend, platform sales and answers. It picks one small budget move to test. The second step ranks where the next dollar goes and grades the evidence behind each channel. It pauses while you make the move and leave it for eight weeks, then asks for spend, responses and customers by channel for each month. The last step finds channels whose results are falling, why, and what to refresh.
+when:
+  - Platform reports add up to more sales than your store shows.
+  - Your checkout survey says one thing and your ad reports say another.
+  - A channel that worked is slipping and you want to know if it is wearing out.
+you_give:
+  - Checkout survey answers, with how many orders answered
+  - Spend and platform-reported sales by channel for a closed date range
+  - New-customer revenue by channel and any test results (optional)
+  - After the pause, spend, responses and customers by channel for each month, including earlier months
+you_get:
+  - Channels sorted by their share of spend, platform sales and buyer answers
+  - A trust score for your numbers and one small budget move to test
+  - A ranking of where the next ten thousand dollars goes, with the evidence graded
+  - A table of fading channels with causes, small refreshes and one channel to try
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it survey answers as they were written. It sorts them into channels.
+  - Make only the budget move it picks and leave it for eight weeks.
+  - When it pauses, export monthly numbers by channel, with earlier months too.
+how_it_works:
+  - title: Compare survey with platform reports
+    text: Checks there are enough answers to trust, sorts them into channels, compares each channel's share of spend, platform sales and answers, and picks a small budget move to test.
+  - title: Rank the next dollar
+    text: Reads the survey's budget move, asks what an extra ten thousand dollars brings in new-customer revenue for each channel, grades the evidence and writes a test plan for the biggest move.
+  - title: Check for fading channels
+    text: Pauses while you make the move and leave it for eight weeks and export monthly numbers by channel. Then it finds where each channel began to fall, tests three causes, and suggests small refreshes and one channel to try.
+output_shape: |-
+  STEP 1: SURVEY READ
+    Answer count | channel table | trust call | budget move to test | trust score
+
+  STEP 2: NEXT DOLLAR
+    Ranking | evidence grade | stop point per channel | test plan
+
+  PAUSE: make the move, wait eight weeks, export monthly numbers by channel
+
+  STEP 3: FADING CHANNELS
+    Channel table | where each fell | causes | refreshes | one channel to test | score
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Survey size
+    how: Under about 200 answers, tell it. Step 1 will say the read is weak and suggest collecting more first.
+  - what: Break-even return
+    how: Give your break-even on new customers. Step 2 uses it to find where each channel stops paying back.
+  - what: Test results
+    how: Share any holdout or lift test you have run. Step 2 ranks tested channels above guessed ones.
+  - what: Channel names
+    how: Tell it which channels you group together, such as Instagram and Facebook as Meta.
+judge:
+  - The survey count is shown before any channel is judged.
+  - Platform reports are used to compare ads inside one channel, not channels against each other.
+  - Every ranking states how good the evidence is.
+  - The budget move is small and has a clear measure and end date.
+  - Channels with few customers behind them are marked unreliable.
+test:
+  - Count the survey answers for one channel yourself and compare it with the table.
+  - Check the share of spend for each channel against your billing.
+  - Compare the month where a channel began to fall with your own change log.
+improve:
+  - Keep the survey running and re-run step 1 each quarter.
+  - Test one new channel at a time with a set budget cap.
+  - Add a holdout test before moving a large amount.
+  - Not worth it with one channel or very few orders. Run a single holdout test instead.

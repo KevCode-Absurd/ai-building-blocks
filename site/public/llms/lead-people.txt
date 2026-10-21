@@ -1,6 +1,6 @@
 # Lead and manage people: AI Blocks
 
-> 64 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 67 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Anger pause and repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner): Describe a fight or hurt at work or home. Get a pause routine and a calm first message.
 - [Ask for feedback, then give it](https://useaiblocks.com/workflows/ask-for-feedback-then-give-it): Say who you manage. Get a go-to question to ask for feedback and a plan for the next conversation you lead.
@@ -11,6 +11,7 @@
 - [Company health scorer](https://useaiblocks.com/skills/company-health-scorer): Give it signals from your teams. Get a traffic-light score on eight areas with what to fix first.
 - [Company values and culture builder](https://useaiblocks.com/skills/company-values-culture): Describe your team. Get values written as behaviours, a culture code and a simple health check.
 - [Cost versus revenue reset planner](https://useaiblocks.com/skills/cost-revenue-reset): Paste last year's costs and revenue. Get one clear reset decision, who is affected and a staff note that owns the mistake.
+- [Creative team pod designer](https://useaiblocks.com/skills/creative-team-pod-designer): Give it your team and review process. Get a two-person pod design, review rules and a fast-trend budget.
 - [Crisis response planner](https://useaiblocks.com/skills/crisis-response-planner): Describe the defect, complaint or failure. Get a first-30-days plan: who to tell, who investigates, what to fix and what to promise.
 - [Culture-fit hiring planner](https://useaiblocks.com/skills/culture-fit-hiring-planner): Paste your team's values and the role. Get hire-and-fire values, a two-part interview and a paid exit offer.
 - [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer): Paste a decision and who disagrees. Get the dissent on record, who decides and a note that commits the team.
@@ -24,6 +25,7 @@
 - [Get honest notes on rough work and a fix plan](https://useaiblocks.com/workflows/rough-work-feedback): Give it rough work and your reviewers. Get a safe review, sharp problem notes and a plan to fix it.
 - [Give criticism that changes behaviour without resentment](https://useaiblocks.com/workflows/give-criticism-well): Describe the person and the problem. Get a message with true praise, an easy fix and a plan to praise progress.
 - [Good note sharpener](https://useaiblocks.com/skills/good-note-sharpener): Paste raw comments on your work. Get each rewritten as a note on the problem, with fixes kept as examples.
+- [Hand off work only you do and stop it returning](https://useaiblocks.com/workflows/hand-off-the-work-only-you-do-and-keep-it-handed-off): Describe your week. Get what to hand off, a one-page agreement and a meeting plan.
 - [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer): Paste what went wrong and who needs to hear it. Get a message that changes the behaviour without making an enemy.
 - [Hard no planner](https://useaiblocks.com/skills/hard-no-planner): Paste the request you must turn down and why. Get a word-for-word no that keeps trust and points to another path.
 - [Hire, pay and measure a sales team on what works](https://useaiblocks.com/workflows/sales-team-hiring-pay): Describe your sale and past hires. Get a hiring scorecard, a pay plan check and one early sign of customer success.
@@ -36,6 +38,7 @@
 - [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener): Describe a partner, client or hire. Get a check on intelligence, energy and integrity, and whether it is worth repeating.
 - [Manager output coach](https://useaiblocks.com/skills/manager-output-coach): Describe your team and role. Get meeting rhythms, one-on-ones and the tasks that most raise your team's output.
 - [Motivation designer](https://useaiblocks.com/skills/motivation-designer): Describe your team or product. Get ways to raise drive through choice, skill growth and purpose.
+- [New hire onboarding keeper](https://useaiblocks.com/agents/new-hire-onboarding-keeper): Give it a name, role and start date. Get the plan, then a weekly check on progress and what to fix.
 - [New idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner): Paste your rough idea and its pressures. Get who sees it, what they may ask, funded time and an end date.
 - [New leader first message writer](https://useaiblocks.com/skills/new-leader-first-message-writer): Paste your background and your team's situation. Get a first-week message: who you are, why you are here, what happens next.
 - [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner): Name the person who reports to you and their job. Get a meeting plan with agenda rules, timing and follow-up.

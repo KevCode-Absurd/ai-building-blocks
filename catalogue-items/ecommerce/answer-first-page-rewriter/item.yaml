@@ -1,0 +1,23 @@
+slug: answer-first-page-rewriter
+name: "Answer-first page rewriter"
+summary: "Give it a blog, guide or FAQ page. Get sections rewritten answer first, with a list of facts still needing a source."
+category: ecommerce
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "AI SEO Course for Beginners: Complete AEO Tutorial", by: "Sam Oh", used: "Bottom line up front, sections that stand alone, naming things in full, list and word count findings, and naming your own ideas"}
+  - {title: "The Complete AI SEO Course 2026", by: "An SEO community founder", used: "The short answer under each question heading: 20 to 25 words, 60 to 70% of the page, no links inside"}
+  - {title: "The Ultimate AI Visibility Checklist (AEO/GEO for 2026)", by: "An agency owner running an AI visibility community", used: "The 2 to 4 sentence answer first, a short summary, an FAQ and original data"}
+  - {title: "The ultimate guide to AEO: how to get ChatGPT to recommend your product", by: "Ethan Smith, SEO agency CEO, on a product-growth podcast", used: "Say something others do not, and the results of AI-written content"}
+  - {title: "Complete SEO Course (3 Hours): Rank in AI Search", by: "An SEO consultant who runs a paid community", used: "Content rules for being cited in AI answers"}

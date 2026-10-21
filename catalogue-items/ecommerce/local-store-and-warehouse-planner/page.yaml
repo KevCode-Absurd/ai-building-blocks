@@ -1,0 +1,120 @@
+new_slug: local-store-and-warehouse-planner
+name: "Local store and warehouse planner"
+summary: "Give it sales by country. Get the order to open local stores and warehouses, with triggers."
+job: plan-strategy
+thinking: high
+thinking_why: "It weighs cost, volume and risk across countries and must keep one founder's numbers separate from yours, so a stronger model is safer."
+
+headline: "Local store and warehouse planner"
+subhead: Give it your sales and traffic by country, your product size and your shipping and payment costs. It gives you the order to open local stores and warehouses, the sales level that should trigger each, a cost comparison, warehouse options and a launch and rollback plan.
+
+explain: |
+  Shipping abroad from one warehouse works for a while. Later, duties, slow delivery and payment fees on international orders cost real money, and a local store or warehouse can pay off. Open too early and you carry the cost of a second store. Switch on every country at once and you meet broken integrations and a flood of support tickets, as one apparel brand reported.
+
+  This skill uses your sales by country to set an order and a trigger for each market. Its sample triggers and fee figures come from one founder who sells small, light items, so it marks them as his and asks you to test them against your own numbers. It adds what the general market-ranking skill leaves out: separate stores, warehouses, local payment costs, local-language ads and support, and a rollback plan.
+
+when:
+  - Overseas orders are growing and you wonder when a local store or warehouse pays off.
+  - You want to avoid launching in many countries at once.
+  - You pay high fees on international orders and want to compare the alternatives.
+
+you_give:
+  - Sales and traffic by country from your analytics
+  - The number of products, and whether they ship small and light
+  - Your current payment processing and shipping costs by country
+  - Shipping and duties setup, support hours and languages (optional)
+
+you_get:
+  - A market order with a sales trigger for each
+  - "A cost comparison: country store versus one global store"
+  - Warehouse partner options, and a list of site and ad changes
+  - A support plan, a test plan and a rollback plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your sales and traffic by country for the last 12 months.
+  - Add your shipping costs, payment fees and product size.
+  - Compare the founder's trigger numbers with your own country data, then pick one market.
+  - Run the test plan on real orders before any ads go live.
+
+how_it_works:
+  - title: Ranks the markets
+    text: One founder's order was the UK, then Canada, then the EU, then Australia. It checks if your data agrees.
+  - title: Sets sales triggers
+    text: His numbers were about $15M a year for a UK warehouse, $20M for Canada and $50M for the EU. These are his, not rules.
+  - title: Sizes the market
+    text: Asks if the country would add as much revenue as California, as a rough bar for the extra work.
+  - title: Compares payment costs
+    text: Compares what you pay now with a local store, and shows his example figures for the UK and US.
+  - title: Checks product fit
+    text: A small range is easier to run locally than a seasonal range with many sizes. Bulky goods do not follow this order.
+  - title: Plans language and shipping
+    text: Translate the site and ads, use local actors, set local-language support and test the shipping partner on real orders.
+  - title: Adds the guardrails
+    text: Turns off shipping to countries you have not costed, opens markets one at a time and plans a rollback.
+
+output_shape: |
+  LOCAL MARKET PLAN for <store>, home market <country>
+
+  YOUR DATA  <country> | <sales, 12 months> | <orders> | <shipping cost> | <payment fee>
+  MARKET ORDER
+  1 <country> | trigger: <your number, with his number beside it> | why: <...>
+  2 ... (one line per market)
+
+  COST COMPARISON   <local store/warehouse> vs <one global store>: <payment, shipping, duties>
+  WAREHOUSE OPTIONS <your US warehouse's local partner (4PL) | international fulfilment firm>
+  LOCALISATION      <site, ads, local actors, support language>
+  TEST PLAN         <real orders through the shipping partner before ads>
+  ROLLBACK          <how to switch it off>
+  SKIPPED FOR NOW   <markets and why>
+  VERIFY            <duty-free thresholds, tariff rules, tax>
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you need to give>
+
+tweaks:
+  - what: Your sales by country
+    how: Give 12 months if you can. The order and triggers rest on it, not on the founder's numbers.
+  - what: Product size and range
+    how: Say if items are small and light, bulky, seasonal or in many sizes. Bulky or seasonal ranges do not fit the sample order.
+  - what: Your current fees
+    how: Give payment and shipping costs by country. The cost comparison needs both sides.
+  - what: Support and language
+    how: Say which languages your team can cover. Local-language support must be ready before ads start.
+
+judge:
+  - Every trigger shows your number beside the founder's number and says which is which.
+  - The plan opens one market at a time.
+  - It warns that bulky or seasonal goods do not follow this order.
+  - Duty and tariff points are marked for checking.
+  - It includes a test plan on real orders and a rollback step.
+
+test:
+  - Give it sales that are well below every sample trigger. It should say to wait.
+  - Give it a bulky product. It should flag that the sample order does not fit.
+  - Compare its payment-cost figures with your processor's rate sheet.
+  - Ask it for the first market and check that it can name which of your own numbers decided it.
+
+improve:
+  - Add your own triggers once you have a few months of local data.
+  - Add the countries your customers already ask about.
+  - Add the warehouse partners your current supplier works with.
+  - Pair it with the skill that sets up Shopify Markets, and with the one that ranks which country to open first.
+
+works_best_with:
+  tools:
+    - {name: "Shopify analytics", why: "Sales and sessions by country come from here."}
+    - {name: "Your payment processor's rate sheet", why: "The cost comparison needs your real fees, not examples."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the comparison from your numbers."}
+  inputs:
+    - "Sales and traffic by country for 12 months"
+    - "Quotes from an international fulfilment firm and your current warehouse"
+    - "Return rates by country"
+    - "An accountant's note on duties, VAT and tax in each market"
+
+terms:
+  - term: 4PL
+    meaning: A partner that manages other shipping and warehouse firms for you.
+  - term: Duty-free threshold
+    meaning: The order value under which a country charges no import duty. It changes, so check it.
+  - term: Rollback
+    meaning: A plan to switch a launch off and go back to how things were.

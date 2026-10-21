@@ -1,0 +1,100 @@
+new_slug: bundle-tier-layout-planner
+name: "Bundle tier layout planner"
+summary: "Give it your product and costs. Get a 3-tier bundle layout, savings wording and a test plan."
+job: make-offer
+thinking: medium
+thinking_why: "It sets out three tiers, a margin check and a test order, which a mid-size model does well if you check the sums."
+headline: "Bundle tier layout planner"
+subhead: "Give it your product, unit price, unit cost and current bundle options. It cuts them to three tiers, puts the saving in each tier's title, makes the middle tier look safest, checks the margin on each tier and gives you a test plan with the numbers to track."
+explain: |
+  Many product pages show five or more pack sizes. Shoppers freeze, pick the smallest, or leave. How the tiers look on the page changes what they pick, even when the prices stay the same.
+  This skill plans the layout, not the price. It works out three tiers, puts the saving in dollars in each tier's title so buyers do not do the maths, and makes the middle tier the size people really buy. It checks your margin per tier after discounts, shipping and fees, so you do not pay for conversion with a tier that loses money. Then it gives a test plan, one change at a time. To set the bundle prices and quantity breaks themselves, use the bundle and quantity break builder first. The lifts in the sources come from a drinks brand and a few other stores. Yours will differ.
+when:
+  - Your product page offers four or more pack sizes and most buyers pick the smallest.
+  - You show your savings as a small percentage under the option and want a clearer way to say it.
+  - You want to test bundle layouts with a clear plan and margin check.
+you_give:
+  - Your product, unit price and unit cost
+  - Your current bundle options and which ones sell
+  - Page traffic per week
+  - Shipping cost and payment fees, for the margin check (optional)
+you_get:
+  - Three bundle tiers with prices, compare-at prices and savings text
+  - Headline wording for each tier, with the saving in the title
+  - A margin check for each tier
+  - A test plan with the numbers to track
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your product, unit price, unit cost, current bundle options and what sells.
+  - Add shipping and fee costs if you know them, so the margin check is accurate.
+  - Build the three tiers on your product page, or in your bundle app, as one change at a time.
+  - Track conversion, AOV and revenue per visitor together for two weeks on each change.
+how_it_works:
+  - title: Cuts to three tiers
+    text: One drinks brand went from five bundles to three after recordings showed buyers picking only the smallest option or leaving. Conversion rose about 53% and AOV about 13.5%, in that one test.
+  - title: Puts the saving in the title
+    text: A title like 3 packs, save $10 beats small print. The same brand saw about 25% more conversion and about 28.6% more revenue per user in that test.
+  - title: Shows money, not maths
+    text: The saved amount is shown in dollars, not left for the buyer to work out.
+  - title: Sets the compare-at price
+    text: A higher compare-at price can anchor value while real prices stay the same. Only a price you actually charged, or can show, is used.
+  - title: Makes the middle tier safest
+    text: Steps between tiers save the same amount. In the test, each step saved $20, and conversion rose about 11.74% with AOV and revenue per visitor up about 5%.
+  - title: Checks margin per tier
+    text: Price minus product cost, shipping, fees and any discount, for each tier. A tier that loses money is changed or removed.
+  - title: Plans the tests
+    text: Options count first, then savings wording, then anchor, then middle layout. Two weeks each, tracking conversion, AOV and revenue per visitor together.
+output_shape: |
+  BUNDLE TIER LAYOUT FOR <product>
+  TIER 1: <units> | price <$> | compare-at <$ or none> | title: "<units> <pack word>, save <$>"
+  TIER 2 (middle): <units> | price <$> | compare-at <$> | title: "<...>" | label: <Most popular only if true>
+  TIER 3: <units> | price <$> | compare-at <$> | title: "<...>"
+  Saving steps: tier 1 to 2 = <$>, tier 2 to 3 = <$>
+  MARGIN CHECK (per tier, after discount, shipping and fees)
+  Tier | Revenue | Cost | Shipping | Fees | Contribution | Margin %
+  TIERS DROPPED: <options removed and why>
+  COMPARE-AT PRICE NOTE: <the real prior price used, and the local rule to check>
+  TEST PLAN (one change at a time, 2 weeks each if traffic allows)
+  1 options count -> 2 savings in title -> 3 compare-at anchor -> 4 middle layout
+  Track together: conversion, AOV, revenue per visitor
+  If traffic is low: ship the change, compare before and after for 4 weeks
+  CHECKS MISSED: <none or list>
+tweaks:
+  - what: Which tier sells most
+    how: Tell it your current best-selling pack. The middle tier should be the size people really buy, such as a three-pack to share.
+  - what: Costs
+    how: Give unit cost, shipping per order and payment fee percentage. Without them, the margin check is marked missing.
+  - what: Price steps
+    how: Ask for equal savings between tiers, as in the middle-option test, or give your own step. Say if your margin cannot afford it.
+  - what: Traffic
+    how: Say weekly visits to the page. With too little for A/B tests, the plan uses a four week before and after instead.
+judge:
+  - There are exactly three tiers, and each title carries the saving in money.
+  - The middle tier is the size people really buy, and Most popular is used only if it is true.
+  - The margin check shows the sums and every tier stays above zero.
+  - Any compare-at price is a price you actually charged or can show.
+  - The test plan changes one thing at a time and tracks conversion, AOV and revenue per visitor together.
+test:
+  - Check the margin sum for one tier by hand from your unit cost, shipping and fees.
+  - Show the three tiers to a few people who have not seen your page. Ask which they would pick and why. Compare with the tier you wanted chosen.
+  - "Run the first test only: three tiers against your old set, for two weeks if traffic allows. Do not change savings wording at the same time."
+  - Check all three numbers at the end. If conversion rose and AOV or revenue per visitor fell, the change may not be a win.
+improve:
+  - Add your price floor, such as a minimum contribution margin per tier, so the skill drops any tier below it.
+  - Add the local rules on compare-at prices for the countries you sell in, as an extra check.
+  - Add the names you use for packs (box, bag, set) so the titles match your product.
+  - Pair it with the bundle and quantity break builder for pricing, and the store friction checker for the rest of the page.
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Where most stores set variants, compare-at prices and bundle blocks."}
+    - {name: "Microsoft Clarity", why: "Recordings showed the source's team which bundle option buyers picked or left on."}
+    - {name: "Any good chat AI", why: "Runs the layout and the margin sums."}
+  inputs:
+    - Recordings or click data on your bundle section
+    - Your best-selling pack size over the last 90 days
+    - The prices you have charged in the last 30 days
+    - Competitor bundle layouts for the same product
+terms:
+  - {term: "Compare-at price", meaning: "The higher, crossed-out price shown next to the price you charge."}
+  - {term: "Anchor", meaning: "A reference price that makes the real price look better by comparison."}
+  - {term: "Revenue per visitor", meaning: "Total revenue divided by the number of visitors."}

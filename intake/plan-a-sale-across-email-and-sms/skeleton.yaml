@@ -1,0 +1,57 @@
+# Workflow skeleton chaining skills already in the AI Blocks library (docs/INTAKE.md).
+id: plan-a-sale-across-email-and-sms
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: plan-a-sale-across-email-and-sms
+  name: "Plan a sale across email and SMS"
+  summary: "Give it your offer and list. Get a text plan, a send calendar, written emails, checked texts and a results read."
+  when: "you have a sale, drop or launch coming and want email and text to work together."
+  job: write-emails
+  level: advanced
+steps:
+  - name: "SMS send planner"
+    skill: sms-send-planner
+    job: email
+    from: "library"
+    method: ["Decide what earns a text", "Check the cost", "Set the frequency to test", "Place the events", "Set send times", "Set who gets it"]
+    inputs: [offer, product_data!, performance_sheet!]
+    outputs: [plan]
+    note: "Plans how many texts the sale can bear and when each goes out."
+  - name: "Email campaign calendar planner"
+    skill: email-campaign-calendar-planner
+    job: email
+    from: "library"
+    method: ["Pick the pace", "Lock fixed dates", "Add supporting sends", "Add holidays or awareness days", "Map existing content", "Fill gaps"]
+    inputs: [brand_brain, offer!, plan!]
+    outputs: [plan]
+    note: "Places the emails around the text plan so the two channels do not repeat each other."
+  - pause: "Write the one-paragraph brief for the sale email: the offer, the deadline and the audience."
+  - name: "Campaign email writer"
+    skill: campaign-email-writer
+    job: email
+    from: "library"
+    method: ["Set one core message", "Write for the buyer", "Order the blocks", "Write subject and preview", "Choose by campaign type", "Use persuasion honestly"]
+    inputs: [brief, brand_brain!, voc_reviews!]
+    outputs: [copy_draft]
+    note: "Writes the sale email from the brief."
+  - name: "SMS send checker"
+    skill: sms-send-checker
+    job: email
+    from: "library"
+    method: ["Count", "Price the send", "Test the image", "Flag the rules", "Ask if it is urgent", "Check the timing"]
+    inputs: [copy_draft, plan!, performance_sheet!]
+    outputs: [audit_report]
+    note: "Checks the text copy and timing against the email draft and the plan."
+  - pause: "Send the emails and texts, then export the results for the sale window."
+  - name: "Email and SMS performance reader"
+    skill: email-and-sms-performance-reader
+    job: analysis
+    from: "library"
+    method: ["Check nothing is broken", "List growth", "Campaigns", "Flows", "Deliverability", "Other reads"]
+    inputs: [performance_sheet, email_flow!]
+    outputs: [audit_report]
+    note: "Reads the sale results by channel against the plan."

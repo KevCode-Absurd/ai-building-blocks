@@ -1,0 +1,88 @@
+new_slug: write-an-ad-and-a-landing-page-that-keep-the-same-promise
+name: "Write an ad and a page with the same promise"
+summary: Give it your product facts and reviews. Get an ad and a matching page that repeat the promise, each checked.
+job: write-ad-copy
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Write an ad and a landing page that keep the same promise
+subhead: Give it your product facts and customer reviews. It writes a pain-point ad, checks it has all five parts, writes a landing page that repeats the ad's promise, places your reviews where doubts arise, and scores the page on 30 checks.
+explain: |
+  Paid clicks arrive, then buyers bounce. The ad promised one thing, and the page leads with another. The ad and page are usually written at different times, by different people, from different notes.
+
+  The steps write them as one piece. The ad builder finds a real problem in your reviews and writes the ad around it, in problem, fix, proof, step order. The checker tests the ad has all five parts and one idea, and fixes weak lines. The page writer opens on the checked ad's promise and answers each doubt in its own section. The proof placer puts real reviews next to the doubts they answer. The last checker scores the finished page on 30 checks. Nothing in this run waits on you, but you should check the ad before the page is written.
+when:
+  - Paid clicks arrive but buyers bounce because the page does not match the ad that brought them.
+  - You are launching a product and want the ad and page written together.
+  - You have good reviews but your ad and page use none of the words in them.
+you_give:
+  - Product facts, such as what it does, price, offer, guarantee and delivery
+  - Customer reviews or support questions, each with its source
+  - The problem the product solves, and the proof that the fix works
+  - Rival products and the claims they make (optional)
+  - Your brand file and buyer description (optional)
+you_get:
+  - A pain-point ad with a four-part check and a list of policy and truth flags
+  - A five-part check with a score out of 100 and fixes in order
+  - Landing page copy whose first screen repeats the ad's promise, with the full cost stated
+  - A map of which review answers which doubt on the page
+  - A 30-point page check with a score out of 100 and the five fixes to make first
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your product facts and reviews. Include the source of each review.
+  - Read the checked ad after step 2. The page is built from it, so change it now if a line is wrong.
+  - Make the five fixes the last check lists, then publish the ad and page together.
+how_it_works:
+  - title: Pain-point ad builder
+    text: Checks the problem is real and the fix is provable, then writes the ad in problem, fix, proof, step order. It lists policy and truth flags.
+  - title: Five-part ad checker
+    text: Finds the five parts of the ad, tests each against a pass line, scores the ad out of 100 and fixes the weak lines.
+  - title: Ad-matched landing page writer
+    text: Opens the page where the checked ad left off, lists the buyer's doubts and answers each in its own section, and states the full cost.
+  - title: Store social proof placer
+    text: Matches each real review to a doubt on the page, puts proof where visitors hesitate and lists reviews it dropped as not real or not similar.
+  - title: Landing page 30-point checker
+    text: Runs 30 yes-or-no checks on the finished page at the five stops a buyer makes, and lists the five fixes to make first.
+output_shape: |-
+  STEP 1: PAIN-POINT AD BUILDER
+    Four-part check | ad in problem, fix, proof, step order | policy and truth flags
+
+  STEP 2: FIVE-PART AD CHECKER
+    Pass or fail per part | score out of 100 | length verdict | fixes in order
+
+  STEP 3: AD-MATCHED LANDING PAGE WRITER
+    Page brief | first screen from the ad | doubts and answers | cost block | missing facts
+
+  STEP 4: STORE SOCIAL PROOF PLACER
+    Proof matched to doubts | layout map | hot-spots | dropped proof
+
+  STEP 5: LANDING PAGE 30-POINT CHECKER
+    Two-line verdict | 30 checks with evidence | no's by stop | five fixes first | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The problem you pick
+    how: Pick a problem your reviews name often, with a fix you can prove. A made-up worry makes a weak ad and a page that cannot back it.
+  - what: Where each review comes from
+    how: Give a source for each. Step 4 drops quotes it cannot trace.
+  - what: Rival claims
+    how: Name them and what really differs. The ad can then answer a rival's claim without attacking it.
+  - what: Your price and terms
+    how: Give the real price, shipping and returns. The page states the full cost, so leave nothing out.
+judge:
+  - The page's first screen repeats the ad's promise in nearly the same words.
+  - The problem, fix and proof in the ad each come from your facts and reviews.
+  - Each doubt on the page has a section and a review that answers it.
+  - The page score shows which checks failed, not only the total.
+  - Nothing on the page contradicts the ad, such as a different price or offer.
+test:
+  - Show the ad, then the page's first screen, to someone new. Ask if it feels like the same offer.
+  - Check each review quoted on the page against its source.
+  - Look at the five fixes from the last check. Make them and score the page again.
+  - Run a small paid test of the ad and page against your current page.
+improve:
+  - Save the checked ad and the doubts list in your brand file, so the next ad starts from them.
+  - Add your best past ad to step 1, so new ads copy its structure.
+  - Add your banned claims, so the policy flags use your own rules.
+  - Pair it with a Meta rules checker before the ad goes live.

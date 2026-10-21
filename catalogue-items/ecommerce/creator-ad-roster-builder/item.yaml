@@ -1,0 +1,26 @@
+slug: creator-ad-roster-builder
+name: "Creator ad roster builder"
+summary: "Give it your product and budget. Get a gifting funnel, roster size, pay rule and creator brief."
+category: ecommerce
+type: skill
+role: make
+job: video
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+  - {type: reference_set, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The best Facebook ad creative strategy for 2027", by: "Agency owner (says 600M+ managed spend)", used: "The mass invite and sample funnel numbers, getting two to three videos per sample, wide and specific briefs, telling creators what wins and the winner loop"}
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead (about 8 years on Meta)", used: "How partnership ads work and why they reach cold people, and the share of spend they reached in some accounts"}
+  - {title: "How to create founder ads that scale", by: "Media buyer and agency lead (same as the 2026 masterclass)", used: "The 5 to 30% lift range and when a personal page helps or does not"}
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge", used: "The gifting yield of about 2 in 100, roster size, flat fees, raw clips with a hook document, partner ads, accounts you own and organic as the filter"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, agency founder and head of retention at Breeze", used: "Designing for 4x5 and 9x16, what a placement-ready creator brief holds and showing examples of what did not work"}
+  - {title: "Every Level of Marketing", by: "Orin, creator and marketing consultant", used: "Two tiers of review rules for creators and longer creator deals"}

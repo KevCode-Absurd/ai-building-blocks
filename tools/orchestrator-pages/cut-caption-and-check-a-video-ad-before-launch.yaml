@@ -1,0 +1,77 @@
+new_slug: cut-caption-and-check-a-video-ad-before-launch
+name: Cut, caption and check a video ad before launch
+summary: Give it your clips and script. Get a cut list, brand-font captions and a launch check.
+job: make-video-ads
+thinking: medium
+thinking_why: Each step is a defined check. A mid-level model is enough.
+headline: A finished video ad, cut, captioned and checked
+subhead: Give it your clips and script. It plans the cut, you edit it, then it writes captions in your brand font timed to the speech and checks the finished ad for mistakes that get ads rejected. You get a verdict and a fix list.
+explain: |-
+  Clips are not an ad. Between the raw files and a launch sit three jobs people skip: a cut that follows the script, captions that people can read, and a check for faults. Miss one and the ad loses viewers, or gets rejected after you pay to publish it.
+
+  The steps cover all three. First it plans the cut from your real clips and script. You pause to edit and export. Then it times captions to the speech in your font, kept clear of the app buttons. Last it checks the captioned ad and lists stop-ship mistakes first, each with a fix.
+
+  It plans and checks. It does not edit or render the video for you.
+when:
+  - Your clips are ready but the ad is not edited.
+  - You edited an ad and want captions that fit the speech.
+  - You want a last check before you put money behind it.
+you_give:
+  - The list of your clip files
+  - The script the clips follow
+  - Your offer (optional)
+  - Your brand font and file (optional)
+you_get:
+  - A cut list with in and out times for each shot
+  - A caption plan in your font, an exported file and a subtitle file
+  - A launch check with a verdict, a fix for each mistake and a score out of 100
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach or list your clips and paste the script.
+  - When it stops after the cut list, edit the video and export it.
+  - Attach the exported video and your font. It adds captions, then checks the result.
+how_it_works:
+  - title: Plan the cut
+    text: Sorts your clips by job, opens on a clean first frame, times every shot to the real files and plans sound and exports.
+  - title: "Pause: cut and export"
+    text: You edit the video to the cut list and export it.
+  - title: Write the captions
+    text: Locks the words to the script, splits them into groups, times them to the speech and places them clear of the app buttons.
+  - title: Check before launch
+    text: Checks facts, claims, format and safe zones, lists stop-ship mistakes first, and scores the ad.
+output_shape: |-
+  STEP 1: CUT LIST
+    Cuts by clip file | caption windows | sound plan | exports | gaps
+
+  PAUSE: you edit and export the video
+
+  STEP 2: CAPTIONS
+    Caption groups word for word | style and font | timing table | subtitle file | fault list
+
+  STEP 3: LAUNCH CHECK
+    Stop-ship mistakes with fixes | verdict | score out of 100 and how it was worked out
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Where it will run
+    how: Name the placements, such as Reels or Stories. Safe zones for captions differ by placement.
+  - what: Your font
+    how: Attach the real font file. Without it, caption widths are only estimates.
+  - what: Sound
+    how: Say if the ad is mostly watched muted. Caption size and timing change.
+judge:
+  - Every caption says what the speaker says, in the same order.
+  - No caption sits under the app's buttons.
+  - The subtitle file matches the burned-in captions.
+  - Each stop-ship mistake has a one-line fix.
+  - The score says what it measured.
+test:
+  - Watch the captioned ad on a phone with the sound off and read every caption.
+  - Check the first and last frames against the cut list.
+  - Fix one flagged mistake and run step 3 again. The score should rise.
+improve:
+  - Save your caption style in your brand file so every ad matches.
+  - Keep a list of your most common stop-ship mistakes and watch for them while editing.
+  - Run this on every ad before launch, not only the big ones.

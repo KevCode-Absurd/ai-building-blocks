@@ -1,0 +1,121 @@
+new_slug: retargeting-objection-ad-planner
+name: "Retargeting objection ad planner"
+summary: "Give it your conversion rate and exit reasons. Get one retargeting ad per objection and a test order."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It sorts your reasons into groups and maps ads to them, which a mid-size model does well."
+
+headline: "Retargeting objection ad planner"
+subhead: Give it your conversion rate and the reasons visitors left, from surveys, reviews and calls. It splits the visitors who didn't buy into price, trust, quality and not ready yet. You get one retargeting ad concept per objection, a test order and what to measure.
+
+explain: |
+  If 5 in 100 visitors buy, 95 leave. Most retargeting ads treat those 95 as one group and repeat the product. But people leave for different reasons. Some think the price is too high, some don't trust a store they just met, some doubt the quality, and some aren't ready yet. One ad can't answer all four.
+
+  This skill starts from your real reasons, not averages. You give it survey answers, reviews or notes from calls with people who left at checkout. It ranks the objections, then maps one ad to each, with one claim per ad and proof you actually have. It sets up the audiences, suggests a pain-led to desire-led mix, and gives a test order. It also warns that retargeting returns shown by Meta are inflated, so you judge by incremental or 7-day click results.
+
+when:
+  - Your store gets traffic but visitors don't buy, and your retargeting ads just show the product again.
+  - You have survey, review or support data on why people hesitate and no plan to use it in ads.
+  - You are adding a bottom-of-funnel layer to your ads and need to know what to make first.
+
+you_give:
+  - Your site conversion rate
+  - Why visitors left (post-purchase survey answers, exit survey, chat, reviews, call notes or your own list)
+  - Your proof and offer (customer count, reviews, guarantee, real discounts)
+  - Customer videos and demos you can use (optional)
+  - The number of visitors you can retarget (optional)
+you_get:
+  - A split of the visitors who left into price, trust, quality and not ready yet, with each share marked as measured or a guess
+  - One ad concept per objection, with one claim and its proof
+  - A test order, the audience setup and what to measure
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your conversion rate and every source of why people left. Add your customer count, reviews and guarantee.
+  - If you have no data, call 10 to 20 people who left at checkout (only ones who agreed to be contacted) and paste your notes.
+  - Make the largest objection's ad first, in its own ad set, with existing customers excluded.
+  - Read results on incremental or 7-day click, not the return Meta reports.
+
+how_it_works:
+  - title: Starts from who left
+    text: Works out how many visitors did not buy from your conversion rate and traffic.
+  - title: Collects real reasons
+    text: Uses what you know, survey answers and calls with people who left at checkout.
+  - title: Ranks the objections
+    text: Orders them by estimated share and marks each as measured, a few answers or a guess.
+  - title: Maps one ad each
+    text: Price, trust, quality and not ready yet each get an ad with one claim and real proof.
+  - title: Sets up audiences
+    text: Catalog ads for product viewers, objection ads in their own ad sets, existing customers excluded.
+  - title: Sets the mix
+    text: Aims for 60/40 to 70/30 pain-led to desire-led ads across the account.
+  - title: Writes the test order
+    text: Biggest objection first, one ad per objection, so you can see which one moves sales.
+  - title: Names what to measure
+    text: Judges each ad on its role using incremental or 7-day click results.
+
+output_shape: |
+  VISITORS WHO LEFT   <share> of <traffic> = <count>
+  OBJECTION SPLIT
+  <price | trust | quality | not ready | other> | est. share <..>% | source <measured | a few answers | guess>
+
+  AD CONCEPTS (one claim each)
+  <objection> | claim: <one line> | proof: <...> | format: <...> | audience: <...> | ad set: <name>
+
+  TEST ORDER  1. <largest objection> 2. <...> 3. <...>
+  SETUP NOTE  catalog retargeting <on | off>, existing customers <excluded>, mix <..>/<..>
+  MEASURE     <purchases, cost per purchase on 7-day click or incremental, buy rate>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what would sharpen this>
+
+tweaks:
+  - what: Your own shares
+    how: Replace the example split with your survey and call data. Even ten answers are better than a guess.
+  - what: Proof you really have
+    how: Give real counts, real review text and exact guarantee terms. The ads can only be as strong as the proof.
+  - what: Footage
+    how: Share customer videos and demos you have rights to. Quality and trust ads need them.
+  - what: Traffic size
+    how: Tell it how many visitors you can retarget. A small audience means one ad set, not four.
+  - what: Real discounts
+    how: List the offers you will honour. The price ad uses only those.
+
+judge:
+  - Every share says whether it is measured, from a few answers or a guess.
+  - Each objection has one ad with one claim.
+  - Every claim has proof you really have.
+  - No customer count, review or testimonial is made up.
+  - The measure uses incremental or 7-day click results, not the return Meta reports.
+
+test:
+  - Give it your real data and check that the largest objection matches what your support team hears most.
+  - Remove the data and run it again. It should label every share as a guess.
+  - Make the first ad and run it alone for a week against your current retargeting ad.
+  - Read the claim in each ad aloud to a colleague and ask if they could show the proof today.
+
+improve:
+  - Add your guarantee and warranty terms to the skill file so claims always match.
+  - Add a rule for which objections you will never answer with a discount.
+  - Save each week's survey answers in your brand file so shares update over time.
+  - Pair it with the post-purchase survey builder to collect fresh objections, and the Meta test campaign planner to place the ad sets.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "It runs catalog retargeting and lets you keep each objection ad in its own ad set."}
+    - {name: "Any good chat AI", why: "Any current chat AI can sort survey text into objection groups and draft the ad concepts."}
+  inputs:
+    - "Post-purchase survey answers on what almost stopped buyers"
+    - "Notes from calls with people who left at checkout"
+    - "Your review count and rating"
+    - "A holdout or incremental report"
+
+terms:
+  - term: Objection
+    meaning: A reason someone gives for not buying, such as price, trust or doubt about quality.
+  - term: Retargeting
+    meaning: Ads shown to people who already visited your store.
+  - term: Catalog ads
+    meaning: Ads that automatically show the products a visitor looked at.
+  - term: Incremental
+    meaning: Sales the ad caused, found by comparing people who saw it with a held-back group.

@@ -1,0 +1,118 @@
+new_slug: gift-with-purchase-planner
+name: "Gift-with-purchase planner"
+summary: "Give it your catalogue, AOV and margins. Get spend-to-earn gift tiers with a margin check."
+job: make-offer
+thinking: medium
+thinking_why: "It picks gifts and sets thresholds from your numbers, then checks margin. A mid-size model does this well."
+
+headline: "Gift-with-purchase planner"
+subhead: Give it your products, average order value, costs and shipping. It picks the gift, sets two to four spend tiers above your average order, checks the margin at each tier and writes the banner, product page and cart lines, with a stop rule to agree before launch.
+
+explain: |
+  A free gift can raise order value without a discount, if the gift is right and the spend tier is set well. A cheap tote bag does neither. The best gift is something shoppers already want, or a product from a category they did not come for, so the gift acts as a trial of that line.
+
+  This skill picks the gift first, then sets the first spend tier about 30 to 40 percent above your current average order. It runs the numbers for each tier so the top tier does not turn a profitable cart into a loss. It checks that the gift costs less than the extra order value it earns, writes messages for the banner, product page and cart progress bar, and sets a stop rule before launch. It needs gift stock on hand and works best with several categories.
+
+when:
+  - You want a bigger average order without cutting prices.
+  - You have a product that shoppers want and could use as a gift to move them into another category.
+  - You run a free shipping threshold and want a second reason to add to the cart.
+
+you_give:
+  - Your products with price, cost per unit and sales share
+  - Current average order value and how order sizes spread
+  - Shipping cost per order
+  - The category you want shoppers to try next (optional)
+  - Candidate gifts with what each costs and sells for
+
+you_get:
+  - Two to four spend tiers with the reward at each
+  - Cost of each tier as a share of order value, and a break-even check for each gift
+  - Banner, product page and cart lines for each tier
+  - A before-and-after margin model and a stop condition
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your products, costs, average order value and shipping cost.
+  - Add the gifts you are thinking of, with cost and price.
+  - Agree the stop rule it writes before you launch, then change one thing at a time.
+  - Check that you have enough stock of every gift.
+
+how_it_works:
+  - title: Picks the gift first
+    text: The item shoppers want most, or a product from a category they did not come for. Never cheap swag.
+  - title: Sets the thresholds
+    text: The first tier is about 30 to 40 percent above your average order. More tiers sit just above that.
+  - title: Runs the numbers
+    text: It works out profit per order at each tier so the top tier does not cause a loss.
+  - title: Checks the gift rule
+    text: The gift must cost you less than the order value or CAC saving it buys.
+  - title: Adds zero-cost bonuses
+    text: Short videos, guides and checklists that answer a worry right after buying.
+  - title: Places the offer
+    text: It leads with the gift in the banner, ads, cart progress bar and product pages.
+  - title: Sets a stop rule
+    text: It agrees what to compare, and when to stop, before launch.
+
+output_shape: |
+  GIFT PLAN  <store>  AOV <amount>
+  GIFT: <item> | cost <amount> | normal price <amount> (gift-only)
+  TIERS
+  Spend <amount> -> <reward> | reward cost <amount> = <percent> of order value | margin after <amount>
+  (2 to 4 tiers)
+  BREAK-EVEN: <gift cost vs extra order value, per tier>
+  ZERO-COST BONUSES: <video, guide or checklist, with what worry it answers>
+  FREE SHIPPING: <lower tier or later step>
+  COPY LINES
+  Banner: <...>  Product page: <...>  Cart bar: <add $<amount> for <reward>>
+  MARGIN MODEL: before <amount> / after <amount> per order
+  STOP RULE: <what to compare, over how long, and the line that ends it>
+  CHECKS MISSED: <list, or none>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Average order value
+    how: Give the real figure and how orders spread. The first tier sits about 30 to 40 percent above the average.
+  - what: Gift cost and price
+    how: Give landed cost and the price it sells for. The skill only shows a price you really charge.
+  - what: Category goal
+    how: Name the category you want shoppers to try. The gift then comes from that line.
+  - what: Shipping cost
+    how: A heavy gift can break the margin. Give the cost per order.
+
+judge:
+  - The gift is something shoppers want, not cheap swag.
+  - Each tier shows reward cost as a share of order value and the margin after.
+  - The top tier does not turn a profitable cart into a loss.
+  - The gift is listed at a price it really sells for, never an invented value.
+  - A stop rule is written before launch.
+
+test:
+  - Give it a one-product store. It should say a gift ladder is a weak fit and point to pack tiers.
+  - Check one tier by hand. Check the order value, gift cost, shipping and margin.
+  - Give it a gift that is out of stock. It should refuse to use it.
+  - Set up the first tier for a month and compare average order, units per order and profit per order to last month.
+
+improve:
+  - Add your free shipping threshold to the skill file so the gift tiers sit above it.
+  - Add a rule on the lowest margin you will accept at any tier.
+  - Save gift redemption and repeat purchase data in your brand file to see which gifts bring buyers back.
+  - Pair it with the Order threshold planner for the cart bar and the Offer profit-per-session checker for the result.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the tier sums and writes the banner and cart lines."}
+    - {name: "Shopify", why: "Cart progress bars and gift-with-purchase rules come from theme features or apps. Check which your theme supports."}
+  inputs:
+    - "Sales share by product, to find the item shoppers want most"
+    - "A survey asking customers what the biggest worry was before buying"
+    - "Stock levels for each gift candidate"
+    - "Repeat purchase rate by first product"
+
+terms:
+  - term: Threshold
+    meaning: The order value a shopper must reach to earn the gift.
+  - term: Perceived value
+    meaning: What the gift seems worth to the buyer, which can be far above what it costs you.
+  - term: Landed cost
+    meaning: What an item costs you once it is in your warehouse, including shipping to you.

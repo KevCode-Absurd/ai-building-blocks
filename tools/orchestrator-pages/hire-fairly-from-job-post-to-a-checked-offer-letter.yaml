@@ -1,0 +1,89 @@
+new_slug: hire-fairly-from-job-post-to-a-checked-offer-letter
+name: Hire fairly, from job post to a checked offer letter
+summary: Give it a brief and resumes. Get a job post, shortlist, fair pick and checked offer.
+job: hire-people
+thinking: high
+thinking_why: The comparison step weighs evidence and checks for bias, and the offer check reads legal terms. Give it your strongest model.
+headline: Hire from job post to a checked offer letter, scored the same way for everyone
+subhead: Give it a hiring brief and a pile of resumes. It writes the job post, interview questions and offer template, ranks applicants on the job's needs only, compares your interviewed candidates on evidence, and checks the offer letter before you send it.
+explain: |
+  Small hiring goes wrong in the same places. The job post is vague, so the wrong people apply. Resumes get judged on gut feel. After the interviews, the person who talked best wins instead of the person who did best. Then an offer goes out with a term nobody checked.
+
+  The steps tie each stage to the one before. The packet fixes the job's needs, the interview questions and the offer template once. The shortlist scores resumes against those needs and nothing else. You then interview and write notes, and the comparison weighs each candidate on the same questions and checks the notes for bias. You pick the finalist and fill in the offer template. The last step checks the offer for risky terms such as non-competes. You make every hiring decision.
+when:
+  - You are hiring and have no written process beyond a job post.
+  - You have a stack of resumes and need a fair way to cut it down.
+  - You want to send an offer without a term that causes trouble later.
+you_give:
+  - A hiring brief with the role, the team, the pay range and the place of work
+  - The resumes or applications you received
+  - Your notes from each interview, written straight after
+  - The finalist's offer details, such as pay and start date
+you_get:
+  - A job post, interview questions with strong and weak answers, and an offer letter template
+  - A ranked shortlist scored only on the job's needs, with a reply drafted for each applicant
+  - A comparison of your interviewed candidates on evidence, with a bias check
+  - A list of risky terms and local rules to review in the offer letter
+how_to_use:
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it the hiring brief. Say where the person will work, because the offer check depends on it.
+  - After the shortlist, interview with the questions from the packet and write notes right after each one.
+  - Paste your notes for the comparison. Pick your finalist, fill in the offer template, then bring the letter back for the check.
+how_it_works:
+  - title: Build the hiring packet
+    text: Fixes what the role must deliver, writes the job post, writes interview questions with strong and weak answers, and drafts an offer letter template.
+  - title: Shortlist the applicants
+    text: Scores each resume only against the needs in the job post, ranks and groups them, and drafts a reply to every applicant. You send the replies.
+  - title: Interview and take notes
+    text: This part is yours. Interview the shortlist with the packet's questions and scoring guide, and write notes right after each interview.
+  - title: Compare on evidence
+    text: Scores every candidate on the same questions, compares them on what they said and did, and checks the notes for bias. You make the call.
+  - title: Pick and fill in the offer
+    text: This part is yours. Choose the finalist and fill the offer template with the role, pay and start date.
+  - title: Check the offer letter
+    text: Reads the letter for the place of work, employee or contractor terms, non-competes and local rules, and lists what to review with a lawyer.
+output_shape: |-
+  STEP 1: HIRING PACKET
+    Job post | interview questions with strong and weak answers | scoring guide | offer letter template
+
+  STEP 2: SHORTLIST
+    Ranked applicants with the need each one meets | groups | reply drafts
+
+  PAUSE: INTERVIEW AND TAKE NOTES
+
+  STEP 3: COMPARISON
+    Scores per question | evidence | bias check | case for and against each finalist
+
+  PAUSE: PICK THE FINALIST AND FILL IN THE OFFER
+
+  STEP 4: OFFER CHECK
+    Place of work | classification | restrictive terms | local rules | items to review
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How exact the brief is
+    how: Real duties and a pay range give a sharper job post and a tighter score sheet. A vague brief gives vague needs, and the shortlist can only be as fair as those needs.
+  - what: Where the person will work
+    how: Rules on non-competes and pay posting change by place. Name the state or country in step one so the offer check has it.
+  - what: When you write your interview notes
+    how: Notes written right after the interview hold more than notes written days later. The comparison can only weigh what you wrote down.
+  - what: Number of interviewers
+    how: If more than one person interviews, give each one's notes separately so the comparison can show where they differ.
+judge:
+  - Every need in the job post appears in the scoring guide and in the shortlist scores.
+  - The shortlist gives a reason for each score and uses nothing that is not a stated need.
+  - Each candidate is scored on the same questions, with evidence quoted from your notes.
+  - The comparison says plainly where evidence is thin and does not pick for you.
+  - The offer check names the place of work it assumed and lists items to review, not verdicts.
+test:
+  - Cover the names on your top three resumes and see if the shortlist ranks them the same way.
+  - Check that a candidate you already know well gets a score you agree with.
+  - Ask a colleague who did not interview to read the comparison. Do they reach the same top two?
+  - Compare the offer check with a lawyer's review on one past offer letter before you rely on it.
+improve:
+  - Keep the best job post and scoring guide as your own starting point for the next role.
+  - Add your must-have values to the scoring guide so every candidate is judged on them.
+  - Save your interview notes in the same layout each time so the comparison reads them cleanly.
+  - Pair it with a new hire plan to build the first 30, 60 and 90 days once the offer is accepted.

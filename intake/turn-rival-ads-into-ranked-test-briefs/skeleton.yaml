@@ -1,0 +1,47 @@
+# Workflow skeleton chained from existing skills in the AI Blocks library (docs/INTAKE.md).
+id: turn-rival-ads-into-ranked-test-briefs
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: turn-rival-ads-into-ranked-test-briefs
+  name: "Turn rival ads into test briefs and a campaign layout"
+  summary: "Give it a rival's Ad Library ads. Get the gaps they leave, test briefs and a campaign layout."
+  when: "you can see what rivals run and want to turn it into ads of your own to test."
+  job: study-competitors
+  level: advanced
+steps:
+  - name: "Count what the rival runs"
+    skill: ad-library-teardown-counter
+    job: research
+    from: "library"
+    method: ["Pick rivals a step above you", "Collect their ads, live and ended", "Count formats, ad age and landing pages", "Sort by awareness stage and count offers", "Note the beats and claims that are missing"]
+    inputs: [reference_set, spreadsheet!]
+    outputs: [competitor_set, shortlist]
+    note: "Starts the chain: turns the Ad Library export into counts, a shortlist and content gaps."
+  - name: "Find the gaps in their ads"
+    skill: competitor-ad-gap-finder
+    job: research
+    from: "library"
+    method: ["Sort the sampled ads into nine types", "Write a card for each ad from the creative", "Map which types and questions nobody answers", "Match the gaps to your brand", "Score the gaps and write briefs"]
+    inputs: [reference_set, brand_brain, competitor_set!, shortlist!]
+    outputs: [ad_breakdowns, brief]
+    note: "Reads the counts and the shortlist from the step before and finds what the rivals leave empty."
+  - name: "Write three ideas and nine versions"
+    skill: ad-test-brief-writer
+    job: ads
+    from: "library"
+    method: ["Grade the evidence behind the brief", "Name the doubt the ads must answer", "Fill the thinking block for each idea", "Write three different versions per idea", "List questions for the founder"]
+    inputs: [brand_brain, competitor_set!, brief!]
+    outputs: [brief]
+    note: "Takes the gap brief and the rival counts and turns them into designer-ready test briefs."
+  - name: "Lay out the test campaign"
+    skill: meta-test-campaign-planner
+    job: ads
+    from: "library"
+    method: ["Size the structure to the business", "Group ads in packs of four to eight", "Pick CBO or ABO and say why", "Split budget by funnel stage", "Write the scale rules"]
+    inputs: [brief, performance_sheet!]
+    outputs: [plan]
+    note: "Reads the test briefs and sets how many ads go in each pack and when to scale."

@@ -1,0 +1,23 @@
+slug: copy-foundation-docs-builder
+name: "Copy foundation docs builder"
+summary: "Give it your product page. Get a research doc, avatar sheet, offer brief and belief list to reuse."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: persona}
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How I write advertorial landing pages only using AI", by: "Mark, DTC funnel operator (as named in the talk)", used: "Letting the AI write its own deep-research prompt, the set of reusable documents, and the rules for the beliefs list"}
+  - {title: "How I make $535k a month with landing pages that look like trash", by: "Mark, DTC funnel operator (as named in the talk)", used: "The four documents and what each holds, and the 20 to 60 page research document"}
+  - {title: "Using Claude to write 10 advertorials in an hour", by: "Stefan, direct-response copywriter (name as heard)", used: "Pulling the market's problems and pain points from an existing sales page, and buyer archetypes"}

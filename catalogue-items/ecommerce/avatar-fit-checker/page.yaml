@@ -1,0 +1,133 @@
+new_slug: avatar-fit-checker
+name: "Avatar fit checker"
+summary: "Paste your buyer notes, ad and page. Get a fit score out of 100 and every mismatch."
+job: understand-customers
+thinking: high
+thinking_why: "It judges a buyer description, an ad and a page against many checks and has to spot small mismatches in wording. A stronger model catches more."
+
+headline: "Avatar fit checker"
+subhead: Paste your buyer description, and your ad and product page if you have them. It passes or fails each buyer field, scores the fit out of 100, shows where the ad, page, photos and offer stop speaking to that buyer, and rewrites lines in the buyer's own words.
+
+explain: |
+  Many stores write "women 45 and up" and call it a buyer. Then the ad speaks to one person, the page to another and the photos to nobody. Shoppers feel that mismatch even if they cannot name it, and they leave.
+
+  This skill checks in two stages. First, is the buyer description a person? It needs a situation, a daily struggle, a deepest fear, a mind state, a dream outcome, the fixes already tried and the exact words they use, each backed by a quote or a source. Second, does every part of your sales path speak to that person: the hook, the primary text, the product photos, the page and the offer. An outsider should feel they landed in the wrong place. The ad and the page should tell the same story.
+
+when:
+  - You wrote a buyer description and want to know if it is specific enough to write ads from.
+  - Your ads get clicks, but the page loses people, and you suspect the page tells a different story.
+  - You are about to test a new buyer group and want ad, page and photos to match before you spend.
+
+you_give:
+  - The buyer description, with quotes or sources
+  - Your ad text or script (optional)
+  - Your product or landing page text, and what the photos show (optional)
+  - Your offer (optional)
+  - Call transcripts, reviews or survey answers, for the optional stand-in test (optional)
+you_get:
+  - A pass or fail for the 30-second test and each required buyer field, with what is missing
+  - A fit score out of 100, with the sum shown and any part not scored
+  - The mismatches by part (hook, text, photos, page, offer), and whether ad and page tell the same story
+  - A rewrite list in the buyer's own words, and the next research step for each gap
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your buyer description, with the quotes behind it. If you have none, run the Forum and review avatar digger first.
+  - Paste your ad text and your page text. Attach the product photos so it can see them.
+  - Read the Stage 1 result first. Fix the buyer description before you rewrite any copy.
+  - Use the rewrite list, then run the check again on the new versions.
+
+how_it_works:
+  - title: Runs the 30-second test
+    text: It looks for who they are, their hopes, their situation, their problem and the one wish. Missing any of them fails.
+  - title: Rejects age and gender
+    text: A description with only demographics fails. It needs a person-level situation.
+  - title: Checks seven fields
+    text: Situation, daily struggle, fear, mind state, dream outcome, failed fixes and exact words. Each needs a quote or is flagged as a guess.
+  - title: Lists beliefs and tired promises
+    text: It records the hidden beliefs ("only surgery works") and the promises the buyer is sick of hearing.
+  - title: Checks each part for fit
+    text: Hook, primary text, photos, page and offer are each scored on whether they speak to this one person in their words.
+  - title: Runs the outsider and match tests
+    text: Someone outside the group should feel wrong. The ad and the page must tell the same story, in the same order.
+  - title: Scores the fit
+    text: Stage 1 and Stage 2 are 50 points each. The score is points earned over points possible, with the sum shown.
+  - title: Writes the rewrites
+    text: Each fix uses words from the buyer's own evidence, and every gap gets a next research step.
+
+output_shape: |
+  STAGE 1  BUYER DESCRIPTION  <PASS | FAIL>
+  30-second test: <pass/fail, what was missing>
+  Situation: <pass / fail / guess> | <evidence>
+  Daily struggle | Deepest fear | Mind state | Dream outcome
+  Failed fixes (named) | Exact words: <same format>
+  Limiting beliefs: <list>
+  Promises they are sick of: <list>
+  Next research step per gap: <...>
+
+  STAGE 2  FIT BY PART
+  Hook | Primary text | Product photos | Landing page | Offer:
+    <0 / 5 / 10> | <mismatch> | rewrite: <in their words>
+  Congruence (ad to page): <pass/fail>
+  Outsider test: <pass/fail>
+  Belief order: <pass/fail>
+  Wording by age: <pass/fail>
+  Content level: <101 | 301 | unclear>
+
+  SCORE  <n>/100 (<points earned> of <points possible>)
+  Not scored: <parts not given>
+  REWRITE LIST (buyer's words only)
+  1. <where> | now: <...> | change to: "<phrase from evidence>"
+  NEXT: <the one most useful next step>
+  MISSING: <what would improve the check>
+
+tweaks:
+  - what: The quotes behind the description
+    how: A description with real quotes passes more fields. Without quotes, every field is a guess and stage 1 will fail.
+  - what: How many parts you give it
+    how: Give the ad, the page, the photos and the offer. Each part you leave out is not scored, so the score only covers what you gave.
+  - what: Photos
+    how: Attach the images. A written description of a photo is a weak substitute and some checks will be marked as not run.
+  - what: The buyer's age
+    how: Say the age range. The check on wording looks for phrases that suit that age, because a 20 year old and a 50 year old do not speak the same.
+  - what: Call transcripts
+    how: Five or more calls let you run the optional stand-in test. Treat its answers as ideas to check with real buyers.
+
+judge:
+  - Every pass points to a quote or source, and every guess is flagged.
+  - Rewrites use words from the buyer's evidence, not new marketing lines.
+  - The score line shows its sum and lists any part left out.
+  - Each mismatch names the part it is in, not "the copy".
+  - Nothing in a rewrite promises more than the product does.
+
+test:
+  - Give it a description that is only "women 45 and up". It should fail stage 1 and name what is missing.
+  - Give it an ad about one problem and a page about another. The congruence check should fail.
+  - Run the same input twice. The pass and fail results should match, with the score within a few points.
+  - Show one rewritten hook to a real customer in the group. Ask if it sounds like them.
+
+improve:
+  - Add your own required fields to the skill file, such as the season or place where the buyer meets the problem.
+  - Add the claims your product may never make, so no rewrite goes past them.
+  - Keep a list of your buyer's exact phrases in the skill file, so rewrites draw from it every time.
+  - Change the point values if one part matters more to you. They are a starting set, not measured figures.
+  - Pair it with the Forum and review avatar digger for evidence, and the Buyer identity segment finder for new groups to test.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reads your description, ad and page, and can read attached product photos."}
+    - {name: "Meta Ad Library", why: "Lets you compare your ad with rivals' to see who they speak to."}
+    - {name: "Google Forms", why: "A free way to survey buyers in the words they use, so the next check has more quotes."}
+  inputs:
+    - "Quotes from reviews, forums or calls that back each buyer field"
+    - "Your live ad and the exact landing page it points to"
+    - "Product photos attached as files"
+    - "Five or more customer call transcripts, for the stand-in test"
+
+terms:
+  - term: Avatar
+    meaning: A real buyer described by their situation, fears, fixes tried and words, not just their age and gender.
+  - term: Congruence
+    meaning: The ad and the page tell the same story, with the same problem and the same fixes tried.
+  - term: Stand-in test
+    meaning: Putting real call transcripts into one AI project and asking it how a buyer like that would react. Its answers are ideas to check, not proof.

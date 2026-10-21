@@ -1,0 +1,40 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: get-your-store-ready-for-a-big-sale-day
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: get-your-store-ready-for-a-big-sale-day
+  name: "Get your store ready for a big sale day"
+  summary: "Give it your homepage and collection page. Get heavy features and apps cut, plus a speed budget and sale-day checklist."
+  when: "a sale or launch is coming and you need the store fast when traffic peaks."
+  job: speed-up-store
+  level: beginner
+steps:
+  - name: "Heavy feature trimmer"
+    skill: heavy-feature-trimmer
+    job: page
+    from: "library"
+    method: ["Judge sliders, video and popups", "Flag effects and redirects", "Check the theme weight", "Order the changes"]
+    inputs: [store_capture, performance_sheet!]
+    outputs: [audit_report]
+    note: "Finds the features that cost the most speed before the sale."
+  - name: "App script auditor"
+    skill: app-script-auditor
+    job: analysis
+    from: "library"
+    method: ["Ask the money question for each app", "Count third-party services", "Mark apps to delay or remove for the sale", "Write the install rule"]
+    inputs: [store_capture, audit_report]
+    outputs: [audit_report]
+    note: "Cuts the apps not needed for the sale, next to the features you are trimming."
+  - pause: "Make the cuts, then run the key pages through PageSpeed and note the results."
+  - name: "Speed budget and sale check"
+    skill: speed-budget-and-sale-check
+    job: ops
+    from: "library"
+    method: ["Set the speed budget", "Set the retest routine", "Test the cart and checkout flows", "Freeze changes and plan for overload"]
+    inputs: [audit_report, question]
+    outputs: [plan]
+    note: "Sets limits from the audit and a freeze-and-test checklist for the sale."

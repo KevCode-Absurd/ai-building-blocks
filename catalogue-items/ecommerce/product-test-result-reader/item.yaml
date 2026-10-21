@@ -1,0 +1,20 @@
+slug: product-test-result-reader
+name: "Product test result reader"
+summary: "Paste product test numbers. Get ad, page or checkout as the cause, and the next fix."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "I asked Claude to find me a $1k/day product", by: "Mark, an e-commerce mentor on YouTube", used: "The ad and funnel benchmarks for a product test (link cost per click, click rate, page to cart, cart to purchase, order value) and the order of questions to ask"}
+  - {title: "This Product Research Method Made Me $2.3M Dropshipping (LIVE HUNTING)", by: "Ben, a dropshipping YouTuber", used: "How long to run a product test (2 to 3 days on Meta) and how many ads to run per product"}

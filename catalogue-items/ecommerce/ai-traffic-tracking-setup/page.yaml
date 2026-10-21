@@ -1,0 +1,130 @@
+new_slug: ai-traffic-tracking-setup
+name: "AI traffic tracking set-up"
+summary: "Give it your analytics and checkout. Get an AI traffic channel, a post-purchase question and a redirect list."
+job: get-found-in-search
+thinking: low
+thinking_why: "It follows fixed set-up steps for your tools, so a fast model is enough."
+
+headline: "AI traffic tracking set-up"
+subhead: Tell it your analytics and checkout setup. It gives you the steps to add an AI traffic channel in GA4, a "how did you hear about us" question for your order page, a sheet to track AI sessions and orders, and a redirect list for AI links that land on 404 pages.
+
+explain: |
+  Some shoppers find your store through ChatGPT, Gemini or Perplexity. Your analytics shows only part of them. Some AI tools pass no referral data, and others land buyers who then type your name into Google. Those visits show up as direct or branded search.
+
+  This skill covers both sides. It adds a custom AI channel in GA4 so you can see the visits that do carry a source. It adds a post-purchase question so buyers can tell you where they heard of you. Treat the channel number as an undercount and use it as a trend. The survey is the highest-value part. AI traffic is small in most data, about 0.25% of sessions on average in one 2025 data set, so wait 2 to 3 months before you judge.
+
+when:
+  - You think AI assistants send you buyers and you cannot see them.
+  - You want to know if AI visitors buy more than organic visitors.
+  - AI tools send people to pages that no longer exist.
+
+you_give:
+  - Access to GA4 or your analytics tool
+  - Your store platform and access to the order confirmation or thank-you page
+  - Server or CDN log access (optional)
+
+you_get:
+  - A custom AI traffic channel with its source rules
+  - "A tracking sheet: AI sessions, orders, revenue and pages hit"
+  - A survey question with answer options and where to place it
+  - A redirect list for AI-made 404s
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say which analytics you use and where your orders confirm. Paste any current channel rules.
+  - Follow the GA4 steps, then add the survey question to checkout or the order page.
+  - Paste the landing pages that return 404 and get the redirect list.
+  - Check the sheet at 2 to 3 months, not before.
+
+how_it_works:
+  - title: Adds an AI channel
+    text: In GA4, copy the default channel group and add AI traffic, matching chat.openai.com, chatgpt.com, perplexity, gemini.google.com, copilot.microsoft.com, claude.ai and deepseek.com.
+  - title: Reads it with care
+    text: Some tools pass referral data and others pass none, so the number is an undercount and a trend.
+  - title: Adds the survey
+    text: A "how did you hear about us" question on checkout or the order page, with an AI assistant option.
+  - title: Reads the answers
+    text: Treats them like view-through in paid social. The channel works like search but is measured by self-report.
+  - title: Lists AI landing pages
+    text: Shows which pages get AI visits and which key pages get none.
+  - title: Checks bot logs
+    text: If you can see logs, counts AI search and citation bots by page. A page they visit often is probably a source.
+  - title: Fixes 404s
+    text: Finds AI landing pages that return 404 and redirects them to the nearest real page.
+  - title: Compares conversion
+    text: Checks conversion rate and order value of AI visitors against organic on your own data.
+
+output_shape: |
+  YOUR SET-UP  <analytics> | <store platform> | <order page>
+
+  GA4 CHANNEL
+  Name: AI traffic
+  Source rule: <regex of sources>
+  Steps: <numbered steps for your set-up>
+  Reads as: undercount, a trend
+
+  SURVEY
+  Question: How did you hear about us?
+  Options: <AI assistant (ChatGPT, Perplexity, Gemini) | Google AI Overview | search | social | friend | other>
+  Where: <checkout or order page>
+
+  TRACKING SHEET (monthly)
+  <month> | AI sessions | AI orders | AI revenue | survey: AI answers | pages hit
+
+  LOG CHECK  <bot hits by page, if you have logs>
+
+  REDIRECTS  <old URL> -> <closest real page>
+
+  COMPARE AFTER 2 TO 3 MONTHS
+  <conversion rate and order value: AI vs organic>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your analytics tool
+    how: Say GA4 or another tool. The steps change. Ahrefs Web Analytics has a built-in AI search channel in one source.
+  - what: Your order page
+    how: "Say where you can add a question: checkout, order confirmation or a thank-you page. The skill then places it there."
+  - what: Your survey options
+    how: Give your real channels. Keep the AI option first or clearly marked so buyers see it.
+  - what: Store events
+    how: If add to cart and purchase events do not show in GA4, say so and the skill gives the Tag Manager steps.
+
+judge:
+  - The channel rule lists the sources and the steps match your tool.
+  - The skill says the AI number is an undercount and a trend.
+  - The survey question has an AI option and a place on the page.
+  - The skill says to wait 2 to 3 months before judging.
+  - The conversion multiples from other sources are labelled as software sign-ups, not stores.
+
+test:
+  - Click a link from an AI assistant to your store and see if the visit shows in GA4 real-time under the new channel.
+  - Place an order yourself and check the survey shows and records your answer.
+  - Check one redirect by hand.
+  - After a month, compare the survey count of AI answers with the GA4 AI channel. Expect the survey to be higher.
+
+improve:
+  - Add your own source domains to the skill file when a new assistant starts sending visits.
+  - Add the survey answers to your brand file so the team reads the same words.
+  - Save your redirect rules in your store's redirect list.
+  - Pair it with the AI recommendation panel runner, which shows visibility, and the AI shortlist readiness checker.
+
+works_best_with:
+  tools:
+    - {name: "GA4", why: "Free. Holds the custom channel group and the traffic acquisition report."}
+    - {name: "Google Tag Manager", why: "A no-developer way to add store events if your platform's own events are missing."}
+    - {name: "Shopify", why: "Your order status page or a post-purchase survey app can hold the survey question."}
+    - {name: "Ahrefs Web Analytics", why: "Has a built-in AI search channel and splits unknown traffic from direct."}
+  inputs:
+    - "Your current GA4 channel group settings"
+    - "A list of landing pages from AI sources that show 404"
+    - "Your server or CDN logs"
+
+terms:
+  - term: Channel group
+    meaning: A way GA4 sorts visits into groups such as organic search or email. You can add your own.
+  - term: Referral
+    meaning: The site a visitor came from, when it is passed along.
+  - term: View-through
+    meaning: A sale credited to an ad or channel the buyer saw but did not click.

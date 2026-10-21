@@ -1,0 +1,123 @@
+new_slug: prepaid-plan-ltv-modeler
+name: "Prepaid plan LTV modeler"
+summary: "Give it price, costs, retention. Get if a prepaid plan beats one-time sales, scored out of 100."
+job: keep-customers
+thinking: medium
+thinking_why: "The work is a set of sums on your numbers, so a mid-level model is enough. Check one segment by hand."
+
+headline: "Prepaid plan LTV modeler"
+subhead: "Give it your price, costs, planned discounts and how often one-time buyers come back. It works out profit per customer for one-time buyers and for 3-order and 6-order prepaid plans, weights it by your mix, checks the cash effect, and scores plan fit out of 100."
+
+explain: |
+  A prepaid plan lets a buyer pay for 3, 6 or more orders at once, for a deeper discount. Profit per order falls, so many owners say no. What they miss is that the buyer is now locked in for several orders, and many come back for more. Orders per customer go up, and LTV (lifetime value, the profit one customer earns over time) can rise a lot.
+
+  This skill compares three groups on your numbers: one-time buyers, the 3-order plan and the 6-order plan. For each it works out profit per order, orders in a year and LTV. It finds how many orders a plan needs to break even, weights the result by the share of buyers you could move, and checks if the cash you collect up front covers the stock. The retention figures in the source come from one software maker's customers, so the skill treats them as test values until you have your own.
+
+when:
+  - You sell coffee, supplements, pet food or something else buyers reuse, and you wonder about a 3-month or 6-month plan.
+  - Someone says a prepaid discount is too deep and you want to see the whole picture.
+  - You want customers to fund part of your next stock order.
+
+you_give:
+  - Price with no discount, product cost and fulfilment cost per order
+  - The discount you plan for each plan, such as 25 percent for 3 orders
+  - How often one-time buyers order again over 12 months, from a cohort table
+  - What share of buyers you could move to each plan
+  - Your re-enrol rate for plans, if you have run any (optional)
+you_get:
+  - Profit per order, orders in a year and LTV for each group
+  - The orders a plan needs to break even
+  - Average LTV for your mix, and the cash effect up front
+  - A score out of 100 for plan fit and a first test to run
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your price, costs and planned discounts. Attach your cohort table, or say that you have none.
+  - Say how many buyers you think you could move to each plan.
+  - Read the break-even and the score. If retention is a test value, run a small test before you commit.
+  - Ask how the cash collected up front should be booked, from your accountant.
+
+how_it_works:
+  - title: Finds profit per order
+    text: Price after discount, minus product and fulfilment cost. Cost stays the same in every group.
+  - title: Counts orders in a year
+    text: One-time buyers from your cohort table. Plans lock in 3 or 6 orders and some re-enrol.
+  - title: Works out LTV
+    text: Orders in a year times profit per order, for each group.
+  - title: Finds the break-even
+    text: One-time LTV divided by plan profit per order tells you how many orders a plan needs.
+  - title: Weights by your mix
+    text: Moves a share of buyers to plans and shows the average LTV across all of them.
+  - title: Checks cash
+    text: Compares cash collected up front with the stock cost of the locked orders.
+  - title: Suggests design ideas
+    text: Stepped discounts, a pause option, a default to subscribe. Vendor claims are marked.
+  - title: Scores it
+    text: Five tests worth 20 points each, with the sum shown.
+
+output_shape: |
+  PREPAID PLAN CHECK  <product>  <date>
+  PER ORDER   one-time: price <$>, cost <$>, profit <$> | 3-order: <$> | 6-order: <$>
+  ORDERS IN 12 MONTHS  one-time <n> | 3-order <n> | 6-order <n>   (retention: <your data | test value>)
+  LTV   one-time <$> | 3-order <$> (<+%>) | 6-order <$> (<+%>)
+  BREAK-EVEN  3-order needs <n> orders | 6-order needs <n>
+  MIX   <x>% one-time, <y>% 3-order, <z>% 6-order -> average LTV <$> (<+%>)
+  CASH  collected up front <$> vs stock cost of locked orders <$>
+  DESIGN IDEAS TO TEST  <...> (vendor claims marked)
+  SCORE  <n>/100 = locked orders <pts> + retention evidence <pts> + profit per order <pts> + cash <pts> + mix <pts>
+  FIRST TEST  <group, plan, length, what to compare>
+  Check how to book prepaid cash with your accountant.
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Retention from your own store
+    how: Give a cohort table for one-time buyers. It is the number that matters most, and it moves the score.
+  - what: The depth of discount
+    how: A deeper discount cuts profit per order and raises the orders needed to break even. Try two or three depths.
+  - what: The share you can move
+    how: A small share still shifts average LTV. Test a realistic 5 to 15 percent, not a hope.
+  - what: Plan length
+    how: Compare 3, 6 and 12 orders. Longer plans collect more cash up front and lock in more orders.
+  - what: Re-enrol rate
+    how: If you have run a plan, use your rate. The skill's figure is a test value from one software maker.
+
+judge:
+  - Cost per order is the same in every group, and only the price changes.
+  - Orders in a year come from a cohort table, or are marked as a test value.
+  - LTV uses profit, not revenue.
+  - Vendor claims are marked as claims.
+  - The score shows its sum and says what each part tests.
+  - The terms shown to buyers are clear about charges, renewal and cancel.
+
+test:
+  - Run it with only your one-time numbers and no plan. LTV should match what your cohort table gives.
+  - Run it twice with the same inputs. The LTV and the score should match.
+  - Change the discount from 25 to 15 percent and see that profit per order and break-even both move the way you expect.
+  - Check one group by hand, as orders times profit per order.
+
+improve:
+  - Save your price, cost per order and cohort table in the skill file so each run is faster.
+  - Add your own rules, such as "no plan below a set profit per order".
+  - After a test, add your real re-enrol rate and retention to replace the test values.
+  - Pair it with the Inventory cash planner for stock timing and the Cash lever ranker for other cash moves.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can do the sums. Check one group by hand."}
+    - {name: "Shopify", why: "Its cohort report shows how often one-time buyers come back."}
+    - {name: "A subscription app for your store", why: "Runs the prepaid plan and reports re-enrol and cancel rates once you test."}
+  inputs:
+    - "A cohort report for the last 12 months"
+    - "Your current cost per order from your 3PL or packer"
+    - "Refund and chargeback rates"
+    - "Your payment provider's rules on prepaid and recurring charges"
+
+terms:
+  - term: Prepaid plan
+    meaning: The buyer pays up front for several orders, such as 3 or 6, usually at a bigger discount, and gets them over time.
+  - term: LTV
+    meaning: Lifetime value. The profit one customer earns over time. Here it is gross profit per order times orders.
+  - term: Re-enrol
+    meaning: When a buyer signs up for another round of the plan once the first one ends.
+  - term: Working capital
+    meaning: The cash you need to run the business day to day, including the cash tied up in stock.

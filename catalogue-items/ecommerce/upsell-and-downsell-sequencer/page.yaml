@@ -1,0 +1,126 @@
+new_slug: upsell-and-downsell-sequencer
+name: "Upsell and downsell sequencer"
+summary: "Give it prices and checkout steps. Get the offer order, a fallback for each no, and post-purchase rules."
+job: make-offer
+thinking: medium
+thinking_why: "It sets an order of offers with rules and a few sums, so a mid-size model works if the honesty check is followed."
+
+headline: "Upsell and downsell sequencer"
+subhead: Give it your products with prices and margins, and your checkout steps. It sets the order to show offers, writes a smaller fallback for each no, and builds the post-purchase rules, with a discount, a margin floor and a test plan for each.
+
+explain: |
+  The order in which a shopper sees prices changes how they judge them. A $95 item feels cheap right after a $495 one, and feels dear right after a $20 one. Most stores show cheap things first and work upward. This skill does the reverse. It leads with a real, higher-priced tier, then offers a genuinely smaller one when the shopper says no, and puts add-ons after the main price is agreed.
+
+  It also plans the post-purchase step: one click after payment, with the card already authorised. You get rules by what is in the cart, a discount for each offer with a margin floor, and the order of offers from high to low. The research behind the price-order ideas is from lab, phone and shop-floor tests, mostly before the web, so treat it as direction and test it on your own store. Every offer must be real: no fake anchors, no fake was-prices.
+
+when:
+  - You sell products with a range of tiers or add-ons and want to decide what a shopper sees first, second and third.
+  - You want a fallback offer for shoppers who decline the big one, so you don't lose the sale.
+  - You are adding a post-purchase offer and want rules, a discount and a margin floor.
+
+you_give:
+  - Products with price and margin per item
+  - Your current cart, checkout and thank-you steps
+  - Top sellers and what is usually bought with them
+  - Any warranty, protection or plan add-on you sell (optional)
+  - Who can own the post-purchase offer each week (optional)
+you_get:
+  - The offer order for product page, cart, checkout and post-purchase
+  - One smaller fallback for each decline, with the line that frames it
+  - Post-purchase rules by cart contents, with a discount and margin floor per offer
+  - A test plan, and an honesty check on every offer
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your products with prices and margins, your top bundles from order history, and your checkout and thank-you steps.
+  - Say which apps handle post-purchase, and who could own it each week.
+  - Read the honesty check first. Remove any offer that is not real before you build anything.
+  - Test the top-down order against your current order, and watch returns for the fallback buyers.
+
+how_it_works:
+  - title: Apply the contrast rule
+    text: Shows the big-ticket item first and lets smaller items follow, never the cheap one first.
+  - title: Sell down, not up
+    text: Leads with a real higher tier and trades down when the shopper says no.
+  - title: Place add-ons last
+    text: Offers add-ons one at a time after the main price is agreed, priced separately.
+  - title: Write the retreat
+    text: Pairs each declined big offer with a real smaller one, framed as a step down.
+  - title: Plan post-purchase
+    text: One click after payment, with rules by what is in the cart and a deeper discount on the same or next item.
+  - title: Set a margin floor
+    text: Gives each offer a discount and a floor so the deep discount still leaves profit.
+  - title: Check honesty
+    text: Removes fake anchors, inflated decoys, was-prices never charged and lowball tactics.
+  - title: Plan the test
+    text: Compares the top-down order with your current one, with take rate, revenue per visit and returns.
+
+output_shape: |
+  OFFER ORDER
+  product page: <first> then <second>
+  cart: <add-on 1>, then <add-on 2> (one at a time, after the main item)
+  checkout: <one low-friction add-on>
+  post-purchase: <offer 1, high> then <offer 2, lower>, cap <2 or 3>
+
+  FALLBACKS
+  if no to <big offer> -> <smaller real offer> | line: "<framing>"
+
+  POST-PURCHASE RULES (by cart contents)
+  <cart has A> -> <bigger pack of A> at <% off> | margin floor <%>
+  <cart has bundle> -> <complement> at <% off> | margin floor <%>
+
+  MEASURE  take rate (big offer and fallback separately) | revenue per visit | extra revenue per order
+  TEST  top-down order vs current order | metric <...> | length <...>
+  WATCH  returns, cancellations, second-order rate for fallback buyers
+  OWNER  <who looks at it weekly>
+  HONESTY CHECK  <each offer real: yes/no> <each fallback smaller: yes/no>
+  MISSING: <prices | margins | checkout steps | volume>
+
+tweaks:
+  - what: Your real tiers
+    how: Give only tiers you sell and would honour. A first offer you would not honour is a trap, and the fallback loses its force.
+  - what: Order history
+    how: Paste the top bundles. Post-purchase offers should follow what the cart already holds.
+  - what: Checkout platform
+    how: Say which post-purchase or thank-you app you use. A bare theme starts with product page order and cart add-ons.
+  - what: Volume
+    how: Give weekly orders. Under a few hundred a week, a test needs several weeks and only a big gap should be trusted.
+
+judge:
+  - The most expensive real tier is shown first, and no cheap item is shown first to lead up.
+  - Every decline has a smaller offer that really is smaller, with a framing line.
+  - Every post-purchase offer has a discount and a margin floor.
+  - Take rates for the big offer and the fallback are tracked separately.
+  - The honesty check names any offer that is not real.
+
+test:
+  - Check each first offer against your price list. If you would not honour it, remove it.
+  - Work out the profit on a post-purchase offer at its discount. It should stay above the margin floor.
+  - Run an A/B test of the top-down order against your current order for several weeks, with the metric set first.
+  - Compare returns and second-order rate for fallback buyers and direct buyers.
+
+improve:
+  - Add your own tiers, fallbacks and framing lines to the skill file as standing rules.
+  - Add the lines you tested that worked or failed in your tone of voice.
+  - Set margin floors per product in your brand file.
+  - Pair it with the cart and checkout upsell planner and with a skill that sets price tiers and anchors.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its checkout and order data give you cart contents and the order history for the rules."}
+    - {name: "Aftersell", why: "A Shopify app that shows a one-click offer after payment and charges the stored card."}
+    - {name: "ReConvert", why: "A Shopify app for thank-you page and post-purchase offers."}
+  inputs:
+    - "Top bundles from order history"
+    - "A product margin list"
+    - "Your current refund and cancellation rates"
+
+terms:
+  - term: Contrast rule
+    meaning: People judge a price against what they saw just before it, so the order of prices matters.
+  - term: Down-sell
+    meaning: A smaller, cheaper offer shown after the shopper says no to a bigger one.
+  - term: Lowball
+    meaning: A price or perk offered to win the decision, then taken away before the sale closes. Surprise fees at checkout are the store version.
+  - term: Post-purchase offer
+    meaning: An offer shown after payment, one click to add to the same order.

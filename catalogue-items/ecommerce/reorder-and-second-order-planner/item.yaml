@@ -1,0 +1,25 @@
+slug: reorder-and-second-order-planner
+name: "Reorder and second-order planner"
+summary: "Give it your products and how long they last. Get reorder, refill and second-order messages with timing and an offer cap."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Engineering Customer Delight Across the E-Commerce Journey (deep research)", by: "Research write-up with brand case studies (author not given)", used: "The quiet period, the day 2 reassurance email, the setup sequence after delivery and the day 6 and day 15 emails"}
+  - {title: "Customer delight across the e-commerce journey: a retention playbook", by: "Research write-up (author not given)", used: "Replenishment at about 75 percent of the usage cycle, the day-10 second-order nudge, the incentive ladder and the pre-send check"}
+  - {title: "$1B Marketer Explains: How to Scale an Ecommerce Brand in 2026", by: "Eddie, agency owner", used: "The 90-day habit messages with one action each, and the caution on big bundles"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Post-purchase content and timing, and using the gap between orders"}
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "The twice-the-gap rule and the SMS timing near run-out"}
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Nathan and Angus Cowan", used: "Recent-but-not-loyal as the second-order segment and a trigger from each customer's own rhythm"}

@@ -1,0 +1,136 @@
+new_slug: ai-shortlist-readiness-checker
+name: "AI shortlist readiness checker"
+summary: "Give it your store address and product pages. Get a found, matched, chosen check with fixes and a score out of 100."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It checks many items on live pages and ranks the fixes. A mid-level model is enough if it can browse. Use a stronger one for a large store."
+
+headline: "AI shortlist readiness checker"
+subhead: Give it your store address and three to five key product pages. It checks three stages, found, matched and chosen, and returns a pass or fix for each. You get a robots.txt line list, rewritten fact lines for weak pages, a 404 redirect list and a score out of 100.
+
+explain: |
+  When a shopper asks an AI assistant for "the best mineral sunscreen for sensitive skin", the assistant builds a shortlist from many products. Your store can drop out at three points. The AI cannot reach or read your pages. Your product words do not match the question. Or other sites do not back you up when the AI picks one.
+
+  This skill checks all three. Found covers crawler access, whether key content shows without JavaScript, indexing and product data. Matched covers hard facts and narrow collections. Chosen covers reviews and mentions on other sites. It scores what it could check and lists what it could not. Figures here are from sources collected in October 2026 and AI shopping features change fast, so confirm anything that matters.
+
+  This is different from the imported AI shopping readiness checker. That one is a Shopify Admin audit: it needs a connection to your store admin and checks your catalogue data. This one works from your public pages and needs no admin access. It also covers the matched and chosen stages, and it hands you the fixes.
+
+when:
+  - You want to know why AI assistants name your rivals and not you.
+  - You edited robots.txt, changed your theme or added a CDN and want to be sure AI search bots can still reach you.
+  - You are about to rewrite product pages and want to know which facts to fix first.
+
+you_give:
+  - Your store address and three to five key product pages
+  - Product titles, descriptions and metafields (optional)
+  - Access to robots.txt, CDN settings, Search Console and Bing Webmaster Tools (optional)
+  - Where your reviews live outside your store (optional)
+
+you_get:
+  - A pass or fix for each of the three stages
+  - A robots.txt line list that separates training bots from search bots
+  - Rewritten fact lines for your weakest product pages
+  - Outside sites to build proof on, and a 404 redirect list
+  - A score out of 100 on the checks that ran
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your store address and three to five product pages. If it cannot browse, paste your robots.txt and the page text.
+  - Turn JavaScript off in your browser, reload one product page and tell the skill what disappeared.
+  - Fix the Stop items first. Back up your theme before any change to robots.txt or the theme.
+  - Run it again after the fixes to see the new score.
+
+how_it_works:
+  - title: Checks if AI can reach you
+    text: Reads robots.txt for the main AI bots and the CDN setting that can add blocks. Separates training bots from search and citation bots.
+  - title: Checks if it can read you
+    text: With JavaScript off, do reviews, price and FAQs still show? Many AI crawlers do not run JavaScript.
+  - title: Checks indexing and data
+    text: Sitemap and a site search in Google and Bing, product schema, and Shopify catalog eligibility.
+  - title: Checks speed and freshness
+    text: Slow pages can be dropped when AI fetches live. Looks for old years and stale facts.
+  - title: Checks the match
+    text: Replaces vague lines with item type, colour, size, material and use. Suggests narrow collections.
+  - title: Checks the proof
+    text: Looks for reviews and mentions on other sites that agree with you, such as Reddit and best-of roundups.
+  - title: Finds AI-made 404s
+    text: Lists landing pages from AI referrers that return 404 and sets redirects to the closest real page.
+  - title: Scores and fixes
+    text: Gives points per check, shows the sum, and lists the fixes in order.
+
+output_shape: |
+  STORE  <address> | PAGES CHECKED  <list>
+
+  FOUND  <points earned>/40
+  <check> | <PASS / FIX / NOT RUN> | <evidence>
+    fix: <one change>
+
+  MATCHED  <points earned>/30
+  <check> | <PASS / FIX / NOT RUN> | <evidence>
+    fix: <rewritten fact line>
+
+  CHOSEN  <points earned>/30
+  <check> | <PASS / FIX / NOT RUN> | <evidence>
+    fix: <site to build proof on>
+
+  ROBOTS.TXT LINES
+  Training bots: <allow or block> | Search and citation bots: <allow>
+
+  404 REDIRECTS  <old URL> -> <closest real page>
+
+  SCORE  <n>/100 on <checks run> (<points earned> of <points available>, scaled to 100)
+
+  NOT RUN  <check, and what is needed>
+  FIGURES  dated <month year>, from <source>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Which pages you give it
+    how: Pick your best seller and two weak pages. A strong page shows what good looks like on your own store.
+  - what: Training versus search bots
+    how: Say if you want to block AI training. The skill then writes lines that block training bots and still allow the bots that find you.
+  - what: Your platform
+    how: Say Shopify or another store. On Shopify, robots.txt edits go through the theme file and catalog checks apply.
+  - what: Your reviews
+    how: List where they live outside the store. The chosen stage depends on them.
+
+judge:
+  - Each check names the evidence, such as the robots.txt line or the missing text with JavaScript off.
+  - The skill separates training bots from search bots, and does not tell you to block everything.
+  - Checks it could not run say what is needed, and take nothing off the score.
+  - The score sum is shown and adds up.
+  - It says AI shopping features and figures change quickly and dates each figure.
+
+test:
+  - Add a Disallow line for one AI search bot on a staging copy or a test file, and see if the skill catches it.
+  - Turn JavaScript off yourself and compare with what the skill says disappeared.
+  - Ask an AI assistant the question a shopper would ask. Check if the pages the skill flagged are the ones missing from the answer.
+  - Run it twice on the same pages. The pass and fix list should match.
+
+improve:
+  - Add your own hard facts to the skill file, such as item types and sizes, so the matched stage rewrites lines the same way each time.
+  - Add your marketplace or feed rules as extra checks.
+  - Save your approved robots.txt lines in your brand file so a theme change does not undo them.
+  - Pair it with the AI-ready product page editor to apply the page fixes, and the AI traffic tracking set-up to see results.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "Shows if your key pages are indexed. Indexing is the first step for AI search that uses Google's results."}
+    - {name: "Bing Webmaster Tools", why: "ChatGPT's search draws on Bing's index, so submit your sitemap here too."}
+    - {name: "A schema validator", why: "Free tools show if your product name, price and availability are readable."}
+    - {name: "Any good chat AI", why: "Reads robots.txt and page text you paste, and rewrites weak fact lines."}
+  inputs:
+    - "Your robots.txt text, pasted"
+    - "Product page text with JavaScript turned off"
+    - "A list of landing pages that get AI visits and return 404"
+    - "Your review sites and Reddit threads that mention you"
+
+terms:
+  - term: robots.txt
+    meaning: A file on your store that tells bots which pages they may visit.
+  - term: Training bot
+    meaning: A bot that collects pages to train an AI model, such as GPTBot. Blocking it does not stop search bots.
+  - term: Search bot
+    meaning: A bot that finds pages so an AI assistant can cite them in answers, such as OAI-SearchBot.
+  - term: Schema
+    meaning: Code on a page that tells machines the product name, price and availability.

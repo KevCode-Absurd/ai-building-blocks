@@ -1,0 +1,126 @@
+new_slug: store-name-tester
+name: "Store name tester"
+summary: "Paste your shortlisted names. Get each scored out of 100 with a keep, fix or drop call."
+job: brand-file
+thinking: medium
+thinking_why: "It runs a set of tests on each name and writes short reasons. A mid-size model does this well, and a stronger one helps with tricky sound and meaning calls."
+
+headline: "Store name tester"
+subhead: Paste two to five names, what you sell and the markets you sell in. It tests each name for spelling, saying, surprise, sound and clash with rivals, shows it in five real places, and gives a score out of 100 with a keep, fix or drop call.
+
+explain: |
+  A name can look fine on a list and fail in real life. People mis-spell it, so they cannot find you. It sounds like a bigger rival. It means something else in a market you sell in. Finding this out after you have a logo, a domain and a stock of packaging costs far more than testing now.
+
+  This skill runs each name through five scored tests: spelling and search, ease of saying, surprise, sound fit, and clear of rivals. Each is worth 20 points. It also checks name type, growth room, meaning by market, and shows each name in five places a shopper will see it. It reports risk only. It cannot clear a trademark, so you check trademarks and domains yourself, and a lawyer should check trademarks.
+
+when:
+  - You have a shortlist of two to five names and need to pick one with reasons.
+  - You are about to buy a domain, a logo or packaging and want a last check on the name.
+  - You are adding a new product line or bundle and want to test its name before launch.
+
+you_give:
+  - Two to five names to test
+  - What you sell, who buys it, and the main benefit
+  - Your top three rivals' names
+  - The feeling the name must carry, such as fast, trusted, soft or strong
+  - The countries and languages you sell in (optional but valuable)
+
+you_get:
+  - A score out of 100 per name, with a test-by-test table and how the score was worked out
+  - A keep, fix or drop call and a one-line reason a stranger would remember it
+  - Five mock-ups per name and a believability line
+  - A list of items to check with native speakers and with a trademark search
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your names, what you sell and your rivals. Add the markets you sell in.
+  - Say the name out loud to five people and ask them to write it down. Bring the results in so the spelling test has real data.
+  - Read the table, then fix what the fix calls name. Run it again on the changed names.
+  - Do the trademark and domain checks yourself before you commit.
+
+how_it_works:
+  - title: Runs the spell and search test
+    text: Asks five strangers to write the name after hearing it, then searches for it. A name nobody can spell or find costs traffic.
+  - title: Tests saying and surprise
+    text: Short and easy to say scores higher. A real word used in a new place scores higher than a category word.
+  - title: Checks sound fit
+    text: Hard stops such as P, K, B and D tend to feel reliable and fast. Softer sounds feel gentler. Used as a tie-breaker only.
+  - title: Checks rivals
+    text: Looks up the name the way a customer would, and checks it does not sit close to a bigger rival's name.
+  - title: Labels the name type
+    text: Founder, descriptive, made-up, metaphor, initials or odd spelling, with the known cost of each.
+  - title: Shows it in context
+    text: A news headline, a product page title, pack front text, a search result and a creator caption. One rule, is it believable.
+  - title: Checks markets
+    text: Meaning, sound and colour in each market and dialect. Flags what a native speaker must confirm.
+  - title: Scores and calls
+    text: 20 points for each of five tests. Below 60 drop, 60 to 79 fix, 80 and up keep.
+
+output_shape: |
+  NAME <name>   SCORE <n>/100   CALL <KEEP | FIX | DROP>
+  Spell and search  <0 / 10 / 20>  <reason, from the five-person test>
+  Easy to say       <0 / 10 / 20>  <reason>
+  Surprise          <0 / 10 / 20>  <reason>
+  Sound fit         <0 / 10 / 20>  <reason, tie-breaker only>
+  Clear of rivals   <0 / 10 / 20>  <reason>
+  Sum: <a> + <b> + <c> + <d> + <e> = <n>
+
+  FLAGS (not scored): name type <type> and its cost; growth room; extension fit;
+  initials; too generic; meaning by market <market: flag>; colour
+  CONTEXT: headline <...> | page title <...> | pack front <...> | search result <...> | creator caption <...>
+  BELIEVABLE in under a second? <yes/no>, <why>
+  REMEMBERED AS: <one line a stranger would use>
+  FIX: <one change that raises the score>
+
+  (one block per name)
+  CHECK WITH A PERSON: trademark search and a lawyer; native speakers for <languages>
+  NOT RUN: <test, and what is needed>
+
+tweaks:
+  - what: Whether you ran the five-person spelling test
+    how: Real spellings beat a guess. Ask five strangers to write the name after one hearing and paste what they wrote.
+  - what: The feeling you want the name to carry
+    how: Fast, trusted, soft or strong changes how the sound test reads each name.
+  - what: Where the name will appear
+    how: Say if it goes on a pack, a site, ads, a marketplace or a social handle. The context mock-ups follow your list.
+  - what: Whether the brand has sales history
+    how: If the store already has sales and search traffic under the name, say so. A rename then needs a redirect and relaunch plan, so use the Store rebrand planner.
+  - what: Your markets
+    how: Name each country and dialect. The meaning check is only run on what you list.
+
+judge:
+  - Each name has a score with the sum shown, not a bare number.
+  - The sound result is treated as a tie-breaker, never the reason a name is dropped alone.
+  - Every name has five mock-ups and a believable yes or no.
+  - The report says plainly that it is not a trademark check.
+  - Tests it could not run are listed under NOT RUN, not guessed.
+  - Meaning checks name the markets and say a native speaker must confirm them.
+
+test:
+  - Test a name you already use and know is hard to spell. It should lose points on spell and search, and say why.
+  - Run it twice on the same names. The calls should match. If one flips, the inputs were too vague.
+  - Compare its call with the one from five real people who heard the names. Where they differ, trust the people.
+  - Add a name you know is close to a big rival. It should lose points on clear of rivals.
+
+improve:
+  - Add the sound feelings you want for your category to the skill file, so the sound test uses your list.
+  - Add your own rival names to the skill file so the rival check always runs on the same list.
+  - Raise or lower the 60 and 80 lines if you want a stricter or looser call. The 20-points-each scoring is this skill's design, so adjust it as you learn.
+  - Pair it with the Store name generator before it and the Store brand architecture planner after it for a range.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the tests. Paste the real spellings from your five-person test."}
+    - {name: "Your country's trademark office search", why: "For example the USPTO search in the US or TMview from EUIPO in Europe. Use it, and a lawyer, to check trademarks."}
+  inputs:
+    - "A native speaker for each language you sell in"
+    - "Search results screenshots for the name on your marketplaces and social platforms"
+    - "Your rivals' product page titles, to check for look-alikes"
+
+terms:
+  - term: Fluency
+    meaning: How easy a name is to say and understand on first hearing.
+  - term: Sound symbolism
+    meaning: The idea that some sounds feel fast, soft or strong. It comes from one agency's research, so use it to break ties only.
+  - term: Generic name
+    meaning: A word so close to the product that it names the whole category, which can cost you trademark rights.

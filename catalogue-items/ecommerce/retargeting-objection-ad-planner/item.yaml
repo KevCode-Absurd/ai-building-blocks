@@ -1,0 +1,23 @@
+slug: retargeting-objection-ad-planner
+name: "Retargeting objection ad planner"
+summary: "Give it your conversion rate and exit reasons. Get one retargeting ad per objection and a test order."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: objection_map}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead (about 8 years on Meta)", used: "Starting from the visitors who did not buy, the four objection groups and their answers, and the warning that retargeting and dynamic product ad returns are inflated"}
+  - {title: "The ONLY 2 Ad Creative Formats You Need to Scale Facebook Ads", by: "Agency owner (says $500M managed)", used: "Finding objections by listing them, using survey answers and calling people who left at checkout, catalog ads, one claim per ad and the price and warranty examples"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency", used: "Objection-based retargeting and the pain-led versus desire-led creative mix"}

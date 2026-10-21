@@ -1,0 +1,27 @@
+slug: quarterly-strategy-reviewer
+name: "Quarterly strategy reviewer"
+summary: "Give it last quarter's plan and results. Get what to keep, cut or change, and next quarter's goals with dated results."
+category: agent
+type: agent
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [program-keep-or-cut-reviewer, pivot-or-persevere, strategy-trade-off-planner, okr-goal-writer, work-backwards-plan-checker]
+steps:
+  - {uses: program-keep-or-cut-reviewer, note: "Every quarter: each project or program marked keep, change or cut from its results against last quarter's plan."}
+  - {uses: pivot-or-persevere, note: "Only when the main goal was missed by a wide margin, or missed two quarters in a row: honest progress measures and a keep, change or stop call on the direction."}
+  - {uses: strategy-trade-off-planner, note: "Only when the review shows too many projects or no list of what you will not do: a position and the things to say no to."}
+  - {uses: okr-goal-writer, note: "Every quarter, last: a few objectives for the next quarter with dated key results, carrying over unfinished work with its reason."}
+  - {uses: work-backwards-plan-checker, note: "Every quarter, after the goals: the new plan rebuilt from the end date and checked a second way."}
+schedule: "In the last week of each quarter"
+asks_before: [dropping a project or product, telling the team or others about the new plan, changing budgets or prices, hiring or letting people go, sharing the plan outside the company]
+origin: own
+version: 1.0.0
+example_pending: true

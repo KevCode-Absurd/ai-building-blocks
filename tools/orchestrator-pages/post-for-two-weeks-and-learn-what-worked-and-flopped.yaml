@@ -1,0 +1,80 @@
+new_slug: post-for-two-weeks-and-learn-what-worked-and-flopped
+name: Post for two weeks and learn what worked and flopped
+summary: Give it your platforms and goal. Get checked posts, then a read of what worked.
+job: grow-social
+thinking: medium
+thinking_why: It writes posts, scores them on set reasons and reads a table of numbers. A mid-size model does it well.
+headline: Post for two weeks, then see what worked and why one post flopped
+subhead: Give it your platforms and goal. It plans two weeks of posts, rates each on six reasons people share, and tells you the weakest point to fix. After you post and export your numbers, it ranks the posts and explains why the worst one failed.
+explain: |
+  Most people post, glance at the likes and guess. They can't tell which post worked because of the idea, which because of the timing, and which only looked bad because few people saw it. So the next two weeks look like the last two.
+
+  The steps fix that. First it plans the posts and writes them. It checks each for the six reasons people pass things on and flags the weakest, so you fix it before posting. You post for two weeks and export your numbers. Then it works out engagement for each post and ranks them. Last it takes the worst post and tells you if it failed because few saw it, people skipped it, or they saw it and did not care.
+when:
+  - You post often but have no proof of what works.
+  - You are about to start posting and want a first set you can trust.
+  - A post flopped and you don't know whether to rewrite it or drop the topic.
+you_give:
+  - The platforms you use and your goal
+  - Your brand file (optional)
+  - Who you want to reach (optional)
+  - "Your post numbers after two weeks (reach, likes, comments, shares and clicks)"
+you_get:
+  - A calendar and ready posts for each platform
+  - A sharing score for each post, with the weakest reason and one change
+  - Engagement rates, a post ranking and what to post next
+  - A reason the worst post failed and the one change to make
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Name your platforms and goal. Fix the weakest posts, then post them on the days in the calendar.
+  - After two weeks, export your numbers from each platform and give them back.
+how_it_works:
+  - title: Plan and write the posts
+    text: Sets topics and a mix of post types, lays out a calendar and writes the posts for each platform.
+  - title: Check each post for sharing
+    text: Rates every post on six reasons people pass things on, quotes the part that earns each, and names the weakest with one change.
+  - title: Post and export (you)
+    text: You post for two weeks, then export reach, likes, comments, shares and clicks for each post.
+  - title: Read the numbers
+    text: Works out the engagement rate per post, compares each platform with typical ranges, ranks the posts and says what to post next.
+  - title: Diagnose the flop
+    text: Takes the worst post and tells apart three causes. Few people saw it, they skipped it, or they saw it and did not care. Then it gives the one change.
+output_shape: |-
+  STEP 1: PLAN AND POSTS
+    Calendar | topic mix | the posts for each platform
+
+  STEP 2: SHARING CHECK
+    Six ratings per post with quotes | score out of 30 | weakest reason | one change
+
+  YOU: post for two weeks and export the numbers
+
+  STEP 3: RESULTS
+    Engagement per post | platform comparison | ranking | what to post next
+
+  STEP 4: THE FLOP
+    Why it failed (unseen, skipped or ignored) | the weak line | the one change
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Which platforms
+    how: Name only the ones you will really post on. Fewer platforms gives fewer posts to write and cleaner numbers to read.
+  - what: Post count
+    how: Tell step 1 how many posts a week you can keep up. A rhythm you can hold gives better data than a burst.
+  - what: Which post to diagnose
+    how: Name the post you think flopped. If you don't, step 4 picks the lowest ranked one.
+judge:
+  - Every rating in the sharing check quotes the part of the post that earns it.
+  - The sharing score is described as a count of reasons to share, not a prediction of reach.
+  - Engagement is worked out the same way for every post, so they can be compared.
+  - The flop is placed in one of the three causes, with the number that shows it.
+  - The next-post advice follows from your numbers, not from a general rule.
+test:
+  - Pick two posts and work out their engagement rates by hand. They should match step 3.
+  - Check that the post step 4 picked really ranks near the bottom.
+  - Fix the weakest reason in three posts before you post them and see if they beat the rest.
+improve:
+  - Keep what worked in your brand file so the next plan starts from it.
+  - Repeat the two weeks with the one change from step 4 and compare.
+  - Add a note for each post saying what time and day it went out, so timing can be read next round.

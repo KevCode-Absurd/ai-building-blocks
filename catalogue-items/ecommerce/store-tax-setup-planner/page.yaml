@@ -1,0 +1,128 @@
+new_slug: store-tax-setup-planner
+name: "Store tax setup planner"
+summary: "Say where and what you sell. Get tax settings, rate rows to enter and a test plan."
+job: set-up-store
+thinking: high
+thinking_why: "A wrong tax setting is costly and the rules differ by place, so a stronger model is worth it."
+
+headline: "Store tax setup planner"
+subhead: Tell it where your business, stock and staff are, where you ship, and whether you sell physical or digital goods to consumers, companies or both. You get the tax settings in order, the rate rows to enter, a class for each product type and the test addresses.
+
+explain: |
+  Tax settings are easy to get wrong in a way you do not see. Enter prices with tax but show them without it, and a 1,000 price can display as 833. Forget a priority number, and a state is charged the country rate. Leave shipping tax on or off by mistake, and every order is a little wrong.
+
+  This skill plans how tax is charged in your store. It chooses whether prices include tax, sets the display to match, sets up tax classes, writes the rate rows with the right number format and priority, and gives you test addresses with the total you should see for each. It does not tell you whether you owe tax in a place, or which registrations you need. That depends on your sales and local rules, and is a question for a qualified accountant or tax service. This is not tax advice.
+
+when:
+  - You are setting up tax for a new store and do not know which settings matter.
+  - Your product prices look wrong at checkout, or tax differs from what you expected.
+  - You are starting to sell in a new state or country and need the rows and tests.
+
+you_give:
+  - Your platform (WooCommerce, Shopify or other)
+  - The country and state of your business, your stock and your staff
+  - Where you ship, and whether you sell to consumers, companies or both
+  - "What you sell: physical goods, books, digital goods or services"
+  - Rates from an official or tax-service table for the places you must charge (optional)
+you_get:
+  - "A settings sheet: prices entered with or without tax, and how they show in the shop and cart"
+  - "A rate table: country, state, rate with four decimals, priority and shipping tax on or off"
+  - A tax class for each product type, and a list of test addresses with the total you should see
+  - Questions to take to a tax professional
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say your platform, where your business, stock and staff are, and where you ship.
+  - Paste current rates from an official or tax-service table. Do not use the example rates in tutorials.
+  - Enter the settings and rows in the order it gives, then test every address it lists.
+  - Take its questions to a qualified accountant before you rely on the setup.
+
+how_it_works:
+  - title: Turns tax on
+    text: Switches on tax in the general settings first, since the tax tab only appears after you save.
+  - title: Chooses price entry
+    text: Prices with or without tax, and a display that matches. Mixed settings are flagged.
+  - title: Sets the base
+    text: Tax by the customer's shipping address, or by your location where your state requires it.
+  - title: Sets classes
+    text: Standard, reduced and zero classes, with the rates marked as placeholders to verify.
+  - title: Writes the rate rows
+    text: One row per place you must charge, with four-decimal rates and a priority so the state beats the country.
+  - title: Sets shipping tax and products
+    text: Shipping tax only where it applies, and every product taxable with its class.
+  - title: Writes the tests
+    text: Addresses to try in the cart, with the total to expect each time, then the accountant questions.
+
+output_shape: |
+  PRICE SETTINGS
+  entered <with | without> tax | shop shows <incl | excl> | cart and checkout show <incl | excl>
+
+  TAX BASE
+  calculate by <customer shipping address | store address> because <reason; confirm with an adviser>
+
+  CLASSES
+  <class> | <product types> | rate <x.xxxx> (placeholder: verify)
+
+  RATE ROWS
+  <country> | <state> | <rate, four decimals> | name | priority <n> | shipping tax <on | off>
+
+  PRODUCT SETTINGS
+  <product type> -> taxable, class <class>
+
+  TEST ADDRESSES
+  <address> -> expect tax <amount>, total <amount>
+
+  QUESTIONS FOR A TAX PROFESSIONAL
+  <question>
+  Not tax advice. Check with a qualified accountant.
+  MISSING: <where you sell | product types | current rates>
+
+tweaks:
+  - what: Consumers or companies
+    how: Say who you sell to. A store selling to companies may need shipping tax on. A store with every price shown including tax needs inclusive display everywhere.
+  - what: Current rates
+    how: Paste rates from an official or tax-service table. The planner will never use a tutorial's example rates as real ones.
+  - what: Number of places you charge
+    how: One or two states can be entered by hand. Many states point to an automated tax service.
+  - what: Product types
+    how: Name any books, digital goods or services. Whether they are taxed differently is something you must verify for your place.
+
+judge:
+  - Prices entered and prices shown are set to match, or the mismatch is flagged.
+  - Every rate row has a four-decimal rate and a priority.
+  - Every example rate is marked as a placeholder to verify.
+  - Test addresses come with the total you should see.
+  - It ends with questions for an accountant and does not say whether you owe tax anywhere.
+
+test:
+  - Enter prices with tax and display them without tax in your plan. It should flag the mismatch.
+  - Give it a country row and a state row. It should give the state a lower priority number than the country.
+  - Ask whether you must collect tax in a state. It should refuse to decide and send you to an accountant.
+  - Place one test cart at each address it lists and compare the totals.
+
+improve:
+  - Save your rate rows and the date you checked each rate in your brand file.
+  - Add your product types and tax classes so every run starts with them.
+  - Add a note of the states where you have a physical presence.
+  - Pair it with the store go-live checker so tax is tested before you open.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "It calculates sales tax from your store location and the buyer's address, and has its own settings under taxes and duties."}
+    - {name: "WooCommerce", why: "Tax classes and rate rows are built in. An automated tax plugin can handle many states."}
+    - {name: "Any good chat AI", why: "Any current chat AI can plan the settings and write the tests."}
+  inputs:
+    - "A tax registration list or a note from your accountant"
+    - "Current rate tables for the places you charge"
+    - "Your product list with types"
+    - "Your sales by state, to help your accountant decide where you must collect"
+
+terms:
+  - term: Tax-inclusive pricing
+    meaning: Showing prices with tax already added in, as is normal in the UK and much of the EU.
+  - term: Tax class
+    meaning: A group of products that share a tax rate, such as standard, reduced and zero.
+  - term: Priority
+    meaning: The order of tax rows. The lowest number wins when two rows could apply.
+  - term: Origin-based
+    meaning: Tax set by where the seller is, not where the buyer is.

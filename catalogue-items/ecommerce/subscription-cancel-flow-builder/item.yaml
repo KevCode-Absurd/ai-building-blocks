@@ -1,0 +1,24 @@
+slug: subscription-cancel-flow-builder
+name: "Subscription cancel flow builder"
+summary: "Give it your cancel reasons and portal options. Get a cancel flow with one save per reason and a failed-payment plan."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: advanced
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: plan}
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The $100M Subscription Brand Playbook", by: "An email and retention agency founder (name not given)", used: "Save rate targets, branching by cancel reason, the founder splash screen, the post-cancel emails and the win-back timed 30 to 60 days later"}
+  - {title: "The Most Valuable Subscription Video You'll Watch in 2026", by: "Matthew Holman, interviewed by an email and SMS marketer", used: "The one-minute founder video, six or seven reasons plus Other, bigger discounts over gifts, delay instead of pause, easy frequency changes, no offers in the cancel confirmation, and failed-payment flows by payment type"}
+  - {title: "Strategic Unorthodoxy: a framework for wild bets and unscalable actions in e-commerce", by: "Unknown (research write-up)", used: "The proactive pause for overstocked customers and a human response to a cancel after a loss"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, head of retention at a drinks brand", used: "The four common leave reasons, a reply to each, and downsizing a pack instead of losing the customer"}

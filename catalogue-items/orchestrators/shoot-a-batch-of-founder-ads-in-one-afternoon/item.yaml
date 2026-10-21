@@ -1,0 +1,26 @@
+slug: shoot-a-batch-of-founder-ads-in-one-afternoon
+name: "Shoot a batch of founder ads in one afternoon"
+summary: "Give it your reviews, product facts and brand facts. Get checked founder scripts, hooks and a shoot list for one afternoon."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: true}
+  - {type: persona, required: true}
+outputs:
+  - {type: shot_list}
+  - {type: plan}
+uses: [ad-concept-matrix-builder, founder-ad-script-builder, video-hook-scorer, video-ad-bridge-checker, founder-ad-shoot-planner]
+steps:
+  - {uses: ad-concept-matrix-builder, note: "Picks the problems and angles the founder will talk about."}
+  - {uses: founder-ad-script-builder, note: "Writes founder scripts for the top angles from the matrix."}
+  - {uses: video-hook-scorer, note: "Scores the hooks from the scripts and picks which to film."}
+  - {uses: video-ad-bridge-checker, note: "Checks each script holds from the hook to the offer before anyone films it."}
+  - {uses: founder-ad-shoot-planner, note: "Turns the approved scripts and hooks into one shoot list for the afternoon."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/shoot-a-batch-of-founder-ads-in-one-afternoon/skeleton.yaml

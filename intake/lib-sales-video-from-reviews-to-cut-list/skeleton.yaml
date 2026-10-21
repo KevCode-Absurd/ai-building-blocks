@@ -1,0 +1,99 @@
+# Workflow skeleton: chain of existing library skills (docs/INTAKE.md).
+id: lib-sales-video-from-reviews-to-cut-list
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: turn-reviews-into-a-checked-sales-video-and-cut-list
+  name: Turn reviews into a checked sales video and cut list
+  summary: Give it your product facts and reviews. Get a checked 7-part video sales script, timed shots and, after filming, a cut list.
+  when: your product needs explaining and a short ad will not carry it.
+  job: make-video-ads
+  level: advanced
+steps:
+  - name: VSL ad scripter
+    skill: vsl-ad-scripter
+    job: video
+    from: "skill: vsl-ad-scripter"
+    method:
+      - Confirm a long video suits the product
+      - Set the starting length
+      - Write the seven parts in order with timings
+      - Complete the bridge to the product slowly
+      - Write hooks and plan the shorter cuts
+    inputs:
+      - product_data
+      - voc_reviews
+      - offer!
+    outputs:
+      - script
+      - brief
+    note: "Starts the chain: turns your facts and review words into the seven-part script."
+  - name: Video ad script line checker
+    skill: video-ad-script-line-checker
+    job: analysis
+    task: check-ads
+    from: "skill: video-ad-script-line-checker"
+    method:
+      - Label each line with its beat
+      - Run the checks on every line
+      - Quote each weak line with a fix
+      - Count spoken words against the length
+      - Score out of 100
+    inputs:
+      - script
+    outputs:
+      - audit_report
+    note: Checks the script from the step before and lists each weak line with a fix.
+  - name: Ad script read-aloud editor
+    skill: ad-script-read-aloud-editor
+    job: copy
+    from: "skill: ad-script-read-aloud-editor"
+    method:
+      - Say each line at delivery speed
+      - Fix every line that trips
+      - Keep the voice steady across the script
+      - Strip habits that sound machine-made
+    inputs:
+      - script
+    outputs:
+      - script
+    note: Applies the fixes to the script so it can be said cleanly.
+  - name: Video ad shot list maker
+    skill: video-ad-shot-list-maker
+    job: video
+    from: "skill: video-ad-shot-list-maker"
+    method:
+      - Write the film plan
+      - Time the words to the pace
+      - Count and vary the shots
+      - Write clip prompts that describe only the motion
+    inputs:
+      - script
+      - product_data
+    outputs:
+      - shot_list
+      - image_prompt
+      - video_prompt
+      - edit_plan
+    note: Turns the edited script into timed shots and clip prompts.
+  - pause: Film or generate the clips from the shot list and save every take in one folder.
+  - name: Video ad edit planner
+    skill: video-ad-edit-planner
+    job: video
+    from: "skill: video-ad-edit-planner"
+    method:
+      - Sort the footage by job
+      - Open on a clean first frame
+      - Time every shot to the real footage
+      - Plan captions and sound
+      - Set the exports
+    inputs:
+      - footage
+      - script
+      - offer!
+    outputs:
+      - edit_plan
+    note: Reads your finished clips and the script, and gives the timed cut list.

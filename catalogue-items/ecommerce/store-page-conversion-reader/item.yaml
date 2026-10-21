@@ -1,0 +1,20 @@
+slug: store-page-conversion-reader
+name: "Store page conversion reader"
+summary: "Paste GA4 exports. Get conversion by channel and page, your worst funnel drop and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Google Analytics 4 For eCommerce 2025", by: "A Shopify and e-commerce educator (public video)", used: "Session key event rate by channel and landing page filtered to purchase, and which funnel drops matter"}
+  - {title: "Google Analytics Tutorial For Beginners (2026 Update)", by: "Loves Data", used: "The regex that hides non-campaign rows, and directly versus indirectly followed by in funnels"}
+  - {title: "Google Analytics 4 tutorial for beginners (2026)", by: "Julius, Analytics Mania", used: "Path exploration backwards from purchase and checking the checkout step by browser"}

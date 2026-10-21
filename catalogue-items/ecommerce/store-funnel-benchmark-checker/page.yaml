@@ -1,0 +1,100 @@
+new_slug: store-funnel-benchmark-checker
+name: "Store funnel benchmark checker"
+summary: "Paste your GA4 funnel and device numbers. Get the step that leaks most, why, and what to test."
+job: track-numbers
+thinking: medium
+thinking_why: "Most of the work is sums and a fixed reading guide, so a mid-size model works if you check the sums."
+headline: "Store funnel benchmark checker"
+subhead: "Paste your GA4 funnel rates for the last 12 months, your device split and your top landing pages. It compares each step with a benchmark range, names the one step to fix first and why, lists device gaps and gives you a score out of 100."
+explain: |
+  A store with a low conversion rate has a leak somewhere, but not one leak. Shoppers fail to find a product, or fail to add it, or fail to start checkout, or fail to pay. Each needs a different fix, and you cannot work on all of them at once.
+  This skill is the store version of the general sales funnel drop-off finder. It adds the exact GA4 reports to pull and one agency's benchmark ranges for the four steps: view product, add to cart, begin checkout and purchase. It marks each step over, inside or under range, picks the single worst step, and reads it in plain words. Then it checks navigation loops, the mobile and desktop gap and odd rows in your landing pages report. The benchmarks come from one agency's audits, so under range means a place to look, not proof.
+when:
+  - Your conversion rate is lower than you want and you do not know which step to work on first.
+  - You are about to redesign a page and want to know whether discovery, the product page or checkout is the weak spot.
+  - You want a baseline table to compare against after every big change.
+you_give:
+  - GA4 purchase funnel figures for the last 12 months (view product, add to cart, begin checkout, purchase)
+  - Tech overview by device, with conversion rate, bounce, engagement time and revenue per active user
+  - The landing pages report for your top 5 to 10 pages
+  - Path exploration counts from the homepage, and into add to cart (optional)
+you_get:
+  - A table with each funnel step, your rate, the benchmark range and over, inside or under
+  - The one step to fix first and the likely cause in plain words
+  - Device gaps written as test ideas
+  - A list of odd spots to look at in heatmaps and recordings, and a score out of 100 with how it was worked out
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In GA4, open the purchase funnel report (under Monetization) for the last 12 months and paste the four step rates.
+  - Paste the tech overview by device and the landing pages report. Add path exploration counts if you have them.
+  - Fix only the step it names first. Keep the table as your baseline.
+  - Pull the same numbers again after each major change and run the skill again.
+how_it_works:
+  - title: Checks your tracking
+    text: GA4 purchase counts must match your store orders. If they do not, it stops and tells you to fix tracking first.
+  - title: Compares each step
+    text: View product 50 to 70%, add to cart 12 to 20%, begin checkout 40 to 60%, purchase 45 to 60%. Each is marked over, inside or under.
+  - title: Picks the worst step
+    text: It names the step furthest under its range. Only that step is fixed first.
+  - title: Reads the likely cause
+    text: Low view product points to shoppers not finding products. Low add to cart points to the product page. A weak purchase step points to surprise costs, mostly shipping.
+  - title: Looks for loops
+    text: In path exploration, a large share going from the homepage to a collection and back flags a navigation loop. Many add-to-carts after a collection suggest quick add on the collection page.
+  - title: Splits by device
+    text: A big mobile and desktop gap, with most visits on mobile, means the mobile page is the first thing to rebuild.
+  - title: Flags odd pages
+    text: Each strange row in the landing pages report becomes a question for your heatmap and recording pass.
+output_shape: |
+  TRACKING CHECK: <GA4 purchases vs store orders, match or not>
+  FUNNEL (last 12 months, GA4 step rates)
+  Step | Your rate | Benchmark | Over / Inside / Under | Points
+  View product | <%> | 50 to 70% | <...> | <n>/25
+  Add to cart | <%> | 12 to 20% | <...> | <n>/25
+  Begin checkout | <%> | 40 to 60% | <...> | <n>/25
+  Purchase | <%> | 45 to 60% | <...> | <n>/25
+  SCORE <n>/100 (each step 25 points; under range = 25 x your rate / bottom of range)
+  FIX FIRST: <step>, likely cause <plain words>
+  NAVIGATION LOOPS: <share from homepage to collection and back, if found>
+  QUICK ADD: <add-to-carts after a collection, yes / no / not checked>
+  DEVICE GAPS: <mobile vs desktop figures, test idea>
+  ODD SPOTS FOR HEATMAPS: <page | what looks odd | question to answer>
+  NOT CHECKED: <anything missing>
+tweaks:
+  - what: Length of the date range
+    how: Use 12 months so the sample is large enough. A short window on a small store gives noisy rates.
+  - what: Path exploration
+    how: Add the homepage counts and the counts that lead to add to cart. Without them the loop and quick add checks are skipped.
+  - what: Store size
+    how: Under about 50,000 visitors a month the numbers alone will not show why. Pair this with the shopper doubt survey planner.
+  - what: Your own benchmarks
+    how: If you know your category runs lower or higher, give your own ranges and the skill will use them and say so.
+judge:
+  - The table shows all four steps with your rate, the range and a clear over, inside or under.
+  - It picks one step to fix first, not three.
+  - The cause is written as a possibility to check, not a fact.
+  - The score line shows its sum, so you can recompute it.
+  - Odd spots are phrased as questions a heatmap or recording could answer.
+test:
+  - Work out one step rate by hand from the raw GA4 counts and compare it with the table.
+  - Run it with the date range changed from 12 months to 6 months. The worst step should usually stay the same. If it flips, your sample is too thin.
+  - Make the one change it suggests, wait for enough traffic, pull the numbers again and check that step moved.
+  - Check the tracking check by comparing GA4 purchases with your store's order count for the same dates.
+improve:
+  - Replace the benchmark ranges with your own once you have a year of data, and note the date in the skill file.
+  - Add the checks your theme needs, such as a sticky add-to-cart bar, as extra causes for a low add-to-cart rate.
+  - Save each pull as a dated baseline in your brand file so the next run can show change.
+  - Pair it with the heatmap and recording reader for the pages it flags.
+works_best_with:
+  tools:
+    - {name: "Google Analytics 4", why: "Has the purchase funnel, Path exploration, Tech overview and Landing pages reports this skill reads."}
+    - {name: "Microsoft Clarity", why: "Free heatmaps and recordings to answer the questions the odd spots raise."}
+    - {name: "Shopify", why: "Its order count is the check for your GA4 purchase events."}
+  inputs:
+    - Your store's order count for the same dates
+    - Path exploration counts from the homepage
+    - Mobile and desktop traffic share
+    - Your AOV, to size the cost of a leak
+terms:
+  - {term: "View product rate", meaning: "The share of visits where someone looks at a product page."}
+  - {term: "Path exploration", meaning: "A GA4 report that shows which pages people go to next."}
+  - {term: "Navigation loop", meaning: "Shoppers going from the homepage to a collection and back again without finding a product."}

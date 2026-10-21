@@ -1,0 +1,90 @@
+# Workflow skeleton that chains library skills (docs/INTAKE.md). Our words.
+id: build-a-monthly-p-and-l-and-know-your-real-margin
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: build-a-monthly-p-and-l-and-know-your-real-margin
+  name: Build a monthly P&L and know your real margin
+  summary: Give it your invoices and sales. Get true unit costs, a monthly P&L, a new versus returning split and a daily margin.
+  when: your profit report looks fine but cash is tight and you do not trust your margin.
+  job: track-numbers
+  level: intermediate
+steps:
+  - name: Landed cost allocator
+    skill: landed-cost-allocator
+    job: analysis
+    from: library
+    method:
+      - Start with the purchase price and add every cost to the shelf
+      - Tie each invoice to its purchase
+      - Spread each lump on a stated basis, never evenly
+      - Divide by units received and show margin per unit
+    inputs:
+      - spreadsheet
+      - document!
+    outputs:
+      - spreadsheet
+    note: Starts from supplier, freight and duty invoices to get the real cost of each product.
+  - name: COGS line sorter
+    skill: cogs-line-sorter
+    job: analysis
+    from: library
+    method:
+      - Apply one main rule for what is cost of goods
+      - Split packaging, outbound shipping, fees, discounts and returns
+      - Check freight in against freight out
+      - Show gross margin and a score
+    inputs:
+      - spreadsheet
+    outputs:
+      - audit_report
+    note: Takes the landed costs and sorts every other cost line into COGS or expense with one rule.
+  - name: Store P&L builder
+    skill: store-pl-builder
+    job: analysis
+    from: library
+    method:
+      - Pick a layout and keep it every month
+      - Bridge gross to net revenue
+      - Sort costs into delivery, marketing and operating buckets
+      - Show each line in dollars, percent and per order
+      - Back-solve the contribution margin needed for your profit target
+    inputs:
+      - spreadsheet
+      - performance_sheet!
+    outputs:
+      - spreadsheet
+    note: Builds the monthly P&L from the unit costs and the rule for what counts as COGS.
+  - name: New and returning P&L splitter
+    skill: new-and-returning-pl-splitter
+    job: analysis
+    from: library
+    method:
+      - Filter every P&L line by order tag
+      - Put ad spend on first-time customers
+      - Split shared costs by a stated rule
+      - Reconcile to the whole P&L and read both bottom lines
+    inputs:
+      - spreadsheet
+      - performance_sheet!
+    outputs:
+      - audit_report
+    note: Takes the P&L and shows what first-time buyers cost and what returning ones earn.
+  - name: Daily contribution margin tracker
+    skill: daily-contribution-margin-tracker
+    job: analysis
+    from: library
+    method:
+      - Set the daily formula and accrue returns
+      - Reconcile to the month
+      - Set the monthly goal and two views
+      - Share the sheet and run checks
+    inputs:
+      - performance_sheet
+      - spreadsheet!
+    outputs:
+      - spreadsheet
+    note: Turns the monthly P&L rules into a daily margin sheet you can watch.

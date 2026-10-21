@@ -1,0 +1,22 @@
+slug: seo-worth-it-checker
+name: "SEO worth-it checker"
+summary: "Give it your margin, cash and hours. Get a go, go small or not-now call, scored."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Steal These Shopify SEO Hacks To Rank #1 Overnight", by: "Dave Fogerty, founder of a wearable blanket brand and a founder-coaching programme", used: "When SEO is the best channel and when it is a waste: a brand-new product, low order value, thin margin or few searches, plus the demand check and the brand-search defence"}
+  - {title: "$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes", by: "An e-commerce SEO agency owner", used: "Organic search revenue as the number one measure, money pages over blogs, and what small agency retainers buy"}
+  - {title: "Complete Shopify SEO Optimization Masterclass For Beginners in 2025", by: "A Shopify and e-commerce educator running a live workshop", used: "SEO as a slow build and an honest timeline, and the monthly cycle"}

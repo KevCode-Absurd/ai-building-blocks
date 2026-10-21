@@ -1,0 +1,82 @@
+new_slug: launch-google-ads-with-trusted-tracking-and-a-clean-feed
+name: Launch Google Ads with trusted tracking and a clean feed
+summary: Give it your Shopify setup and Merchant Center issues. Get tracking proof, ranked feed fixes and a launch order.
+job: run-google-ads
+thinking: high
+thinking_why: Four skills run in a row, two of them score your setup and one does budget sums. Give it your strongest model.
+headline: Launch Google Ads with sales counted once and products approved
+subhead: Give it your Shopify setup, a test order and your Merchant Center issues. It builds the purchase tracking, checks the test and scores it out of 100, ranks feed problems by sales lost, then plans which campaigns start first and what budget each gets.
+explain: |
+  Google Ads learns from the sales it is told about. If a purchase is counted twice, or not at all, it spends toward the wrong results. If your product feed has disapproved items, your best sellers may not show. Starting to spend before both are right wastes the early budget, and it is hard to see why.
+
+  The steps check the base before any money moves. First it gives you a build checklist for tracking and a test plan. It pauses while you add the tags, place a test order and save screenshots. Then it checks those against three rules and your Shopify orders. It pauses again while you fix faults and export your Merchant Center issues. The feed check ranks problems by sales lost and gives a feed score. Last, it plans three stages of campaigns from your budget and order value.
+when:
+  - You are about to spend on Google Ads for the first time and want to know sales are counted once and your products are approved.
+  - Google reports more purchases than your Shopify orders, and you do not trust the numbers.
+  - Merchant Center shows disapproved products or warnings and you want to know which to fix first.
+you_give:
+  - What you have now, such as the Google and YouTube app, GA4, Tag Manager and your current conversion actions
+  - Your store country and the checkout details you collect, such as email and phone
+  - Screenshots from a test order, showing the Google Ads conversion page and Tag Assistant
+  - Your Merchant Center issues list and product count
+  - Your monthly Google budget, average order value and margin
+you_get:
+  - A numbered tracking build checklist, a list of which ID goes where and a test plan
+  - A tracking score out of 100 with the one purchase action that should be primary and fixes in order
+  - A feed score out of 100, issues ranked by sales lost and a fix list
+  - A three-stage launch plan with budget per campaign and the signals to move to the next stage
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Tell it what tracking you already have, even if it is a mess. It builds on what exists.
+  - When it pauses, add the tags, place one real test order and save screenshots before you continue.
+  - Fix the tracking faults, then export your Merchant Center issues list for the feed step.
+how_it_works:
+  - title: Build the tracking
+    text: Gives a numbered checklist to link GA4, turn on enhanced conversions, set one primary purchase action and add the Shopify pixel, plus a test plan.
+  - title: Check the test order
+    text: Pauses while you test. Then checks your screenshots against three rules, compares Google's count with your orders and scores the setup. If it finds faults, you fix them and run the check again until it passes.
+  - title: Check the product feed
+    text: Pauses while you fix tracking. Then sorts Merchant Center problems, ranks them by sales lost and scores the feed. You fix the feed faults and check again before the launch plan.
+  - title: Plan the launch
+    text: Matches daily budget to order value, picks the hero products and orders campaigns into three stages with gates for moving on.
+output_shape: |-
+  STEP 1: TRACKING BUILD
+    Build checklist | copy list of IDs | conversion actions | enhanced conversions | test plan
+
+  STEP 2: TRACKING CHECK
+    Three rule results | Google against store orders | primary action | fix steps | score out of 100
+
+  STEP 3: FEED CHECK
+    Disapproved, warnings, limited items | issues ranked by sales lost | fix list | feed score out of 100 | gate
+
+  STEP 4: LAUNCH PLAN
+    Readiness | budget check | three stages with budget and bid strategy | settings for every campaign | bid ladder
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your test order
+    how: A real order is the only proof that each event fires once. Include screenshots from both Google Ads and Tag Assistant.
+  - what: Your monthly ad spend
+    how: Above about $50,000 a month the plan adds server-side tagging. Below that, it says it is not needed yet.
+  - what: Your Merchant Center export
+    how: Give the full list with product counts. Screenshots alone can hide the long tail of issues.
+  - what: Your break-even cost per sale
+    how: The launch planner uses it to size the budget. Without it, it works from order value and margin and says so.
+judge:
+  - Exactly one purchase action is primary, and the GA4 import is not.
+  - The Google order count and your Shopify order count are compared for the same dates, with the gap shown.
+  - Feed issues are ranked by sales lost, not by how many products they touch.
+  - Both scores show how they were worked out.
+  - The launch plan says what must happen before each stage starts.
+test:
+  - Place a test order and check that your Shopify count and the tracking each show it once.
+  - Compare the top feed issue with the disapproved list in Merchant Center. It should match.
+  - Check the budget against your order value. Does the daily budget buy a few sales a day?
+  - Stop after step 2 and fix only what it names. Run step 2 again and the score should rise.
+improve:
+  - Save your conversion action names and IDs in your brand file for the next account.
+  - Re-run the feed check each month, or after any big catalogue change.
+  - Add your real break-even cost per sale to the launch step, so budgets use your margin.
+  - Use the results to start a Google Ads results reader once campaigns run.

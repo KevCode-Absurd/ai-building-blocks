@@ -1,0 +1,20 @@
+slug: product-margin-checker
+name: "Product margin checker"
+summary: "Give it a price and every cost. Get true margin, break-even ROAS and CAC, scored out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital public masterclass)", used: "The three margin levels, the 100 dollar shirt example, what goes in cost of delivery, and the shrink allowance"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "Landed cost, product margin against gross margin, break-even ROAS and CAC, and tagging cost of goods on every product"}

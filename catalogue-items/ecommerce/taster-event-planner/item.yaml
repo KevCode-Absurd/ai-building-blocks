@@ -1,0 +1,20 @@
+slug: taster-event-planner
+name: "Taster event planner"
+summary: "Give it your product versions and buyer. Get a one-day tasting plan, taster card and decision rule."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: shot_list}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How Bloom Built the Playbook Every Founder Will Copy in 2026", by: "Greg, co-founder of Bloom, a consumer drinks and supplements brand", used: "Fewer and bigger public events planned backward from the content, testing unreleased versions with real people, trusting a small real sample, the loud minority story, and using the team as a test panel"}

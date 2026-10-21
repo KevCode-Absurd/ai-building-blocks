@@ -1,0 +1,133 @@
+new_slug: signup-popup-builder
+name: "Signup popup builder"
+summary: "Give it your offer and order value. Get desktop and mobile popup specs, copy and tests."
+job: write-emails
+thinking: medium
+thinking_why: "It applies a set of rules to your offer and writes short copy. A mid-size model does this well."
+
+headline: "Signup popup builder"
+subhead: Give it your offer, margin and average order value. It picks the offer type to test, then writes separate desktop and mobile popup specs with headline, button, no-thanks line, timing, targeting, success page copy, a consent line and a ranked list of tests.
+
+explain: |
+  A signup popup is often the biggest source of new email subscribers, and the offer moves signups more than the design does. Stores often get the order wrong: they tweak colours when the offer is the problem, or judge a test on signup rate alone when the welcome emails make the money.
+
+  This skill starts with the offer and checks it against your margin. It then builds the popup one step at a time: a yes or no first step, email first, phone or name later. It sets timing and who should not see it, builds a separate mobile version, writes the success page and gives you the first three tests to run. It adds a consent line, because list growth must stay within consent and anti-spam law.
+
+when:
+  - You are launching a store and need a first popup.
+  - Your popup signup rate is low and you do not know what to change first.
+  - You want a mobile version that is built for phones, not shrunk from desktop.
+
+you_give:
+  - Your offer and gross margin
+  - Average order value
+  - Your email tool and popup tool
+  - Pages to exclude, such as cart, checkout and wholesale
+  - Whether you also collect phone numbers (optional)
+
+you_get:
+  - A popup spec for desktop and a separate one for mobile
+  - Headline, button and no-thanks line options
+  - Timing and targeting rules, and a consent line to fit your region
+  - Success page copy and the first three tests to run, in order
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your offer, margin, order value and the countries you sell to.
+  - Say which email and popup tools you use, and which pages to exclude.
+  - Build the desktop and mobile versions from the specs, with the consent line in place.
+  - Run the first test, wait for the sample size, and judge it on the whole welcome flow.
+
+how_it_works:
+  - title: Checks the offer first
+    text: It tests the offer against your margin and your order value. Under $100 average order value, percent off. Over $100, dollars off.
+  - title: Writes the headline
+    text: The offer in the headline and nothing else competing with it. The button names the benefit in first person.
+  - title: Builds the steps
+    text: A yes or no first step, then email, then phone or name on a later step. One field per step.
+  - title: Sets timing and targeting
+    text: A delay of 4 to 12 seconds, a scroll trigger, and exit intent on desktop only. It hides the popup from subscribers, cart, checkout and countries you do not ship to.
+  - title: Builds the mobile version
+    text: Large buttons, big text, no side images, and a small round tab that reopens the form.
+  - title: Adds the consent line
+    text: A short, plain line that says what they sign up for and how to leave, to fit your region.
+  - title: Writes the success page
+    text: Tells people the offer is on its way and where to look. It sets the first three tests with sample sizes.
+
+output_shape: |
+  OFFER CHECK
+  <offer> | margin after offer: <n>% | average order value: <$> | verdict
+
+  DESKTOP SPEC
+  Step 1: <yes or no question> [<yes button>] [<no-thanks line>]
+  Step 2: email field | button: <first-person benefit text>
+  Step 3 (optional): <phone or name>
+  Timing: <seconds> | scroll <n>% | exit intent: on | repeat after <n> days
+
+  MOBILE SPEC
+  <button height, text size, tab text, no side image, timing>
+
+  TARGETING
+  Hide from: <subscribers, cart, checkout, wholesale, countries>
+
+  CONSENT LINE
+  <short line for your region>
+
+  SUCCESS PAGE
+  <headline, line, where to look, time to wait>
+
+  FIRST THREE TESTS
+  1. <test> | sample <n> | win rule <...>
+  MISSING: <margin | order value | tools | regions>
+
+tweaks:
+  - what: The offer
+    how: Give your margin. The skill tests dollars off against percent off for orders around $200 and over, and checks the offer against your welcome flow, not signup rate alone.
+  - what: Your regions
+    how: Say where your customers live. EU and UK stores need a clear consent line, and may need double opt-in.
+  - what: Phone numbers
+    how: Say if you want phone numbers. It adds a text step with the consent wording your region needs, and a checkout opt-in box.
+  - what: Your traffic
+    how: Give monthly visitors. With under about 5,000 a month, tests take longer and the skill says so.
+  - what: Your tools
+    how: Name your popup tool so the spec uses its own words for steps, triggers and targeting.
+
+judge:
+  - The offer is checked against margin before any design.
+  - Desktop and mobile have separate specs.
+  - There is a consent line and the close button is easy to find.
+  - Tests are in order of impact, with a sample size and a win rule.
+  - Any figure from the sources is shown as one source's case.
+  - Nothing in it hides the close button or pushes people to opt in against their will.
+
+test:
+  - Give it an offer with a thin margin. It should warn you and suggest a free gift or free shipping instead.
+  - Run it for a store in the EU and one in the US. The consent line should differ.
+  - Build the desktop spec and check each step has one field only.
+  - Run test 1 to its sample size and judge it on signup rate, welcome-flow orders, order value and revenue together.
+
+improve:
+  - Add your real margin and order value to the skill file, so the offer check starts from them.
+  - Add the consent wording your lawyer or policy page uses for each region.
+  - Add your popup tool's step and trigger names.
+  - Save each test result to your brand file so the next run starts from it.
+  - Pair it with the email test planner for the testing rules and the welcome flow builder for what happens after the signup.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Its signup forms support multi-step popups, timing and targeting, and it holds the lists the form writes to."}
+    - {name: "Shopify", why: "It supplies the pages, cart and checkout rules for targeting, and the checkout opt-in box."}
+  inputs:
+    - "Your current popup signup rate and welcome-flow revenue"
+    - "Your monthly visitors"
+    - "Your privacy policy page, so the consent line links to it"
+
+terms:
+  - term: Opt-in
+    meaning: A person agreeing to get your emails or texts.
+  - term: Single opt-in
+    meaning: A person joins the list as soon as they submit their email.
+  - term: Double opt-in
+    meaning: A person must also confirm by clicking a link in an email before joining.
+  - term: Exit intent
+    meaning: A popup that shows when the mouse moves toward closing the tab on a desktop.

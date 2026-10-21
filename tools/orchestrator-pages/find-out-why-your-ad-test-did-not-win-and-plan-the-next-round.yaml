@@ -1,0 +1,88 @@
+new_slug: find-out-why-your-ad-test-did-not-win-and-plan-the-next-round
+name: "Find why your ad test lost and plan the next"
+summary: Give it your test results and the ads. Get a verdict per ad, a next-round brief and where the next dollar goes.
+job: read-ad-results
+thinking: high
+thinking_why: Five steps pass findings along, and the early reads decide what you cut. Give it your strongest model.
+headline: Know which ads to keep, cut and make next after a test
+subhead: Give it your test results and the ads you ran. It breaks each ad into message and look, checks whether you tested one idea many times, gives each ad a verdict, lays out the next Meta test and ranks where the next dollar should go.
+explain: |
+  A round of ads ends and the numbers are muddy. One ad has a good return on a few sales, another spent a lot and did little, and you cannot say whether the idea or the execution failed. Often the round tested one idea ten times, so there was never a real comparison.
+
+  The first step splits every ad into its message and its look, and writes the one idea behind each. The second counts distinct ideas, not ads, and shows how many were repeats. The third reads the results by ad set and by concept, flags false winners and writes the brief for the next round. The fourth turns that brief into a Meta test layout with a minimum spend. The fifth ranks channels by new-customer revenue per extra dollar. It needs real spend and results per ad. With only a handful of sales in total, the reads are too thin to act on.
+when:
+  - A round of ads finished and you cannot tell what won, what to cut or what to make next.
+  - Your best ad has stopped working and you are not sure whether to make more like it or something new.
+  - You are about to add budget and want to know where an extra dollar earns the most new customers.
+you_give:
+  - The ads you ran (images, videos and their copy, or a description of each)
+  - Results per ad and ad set, with spend, purchases, return, clicks and frequency
+  - Your target return or cost per sale
+  - Spend and results by channel (optional, but step 5 needs it)
+  - Rival or reference ads you want compared (optional)
+you_get:
+  - A breakdown of every ad by message and look, with the one idea behind each and the patterns across winners
+  - A sameness score out of 100, the number of distinct ideas, and which ads to keep and replace
+  - A verdict for each ad set and ad, false winners flagged, and a read score out of 100
+  - A Meta test layout for the next round, with a pack plan, minimum spend, naming and scaling rules
+  - A ranking of channels by the next $10,000, with a stop point for each and a test that could change the ranking
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach the ads themselves where you can, as images or video stills, and paste the results export beside them.
+  - Say your target return or cost per sale, so each verdict is against your goal and not a general one.
+  - Read the false winners and the sameness count before you decide what to brief next.
+how_it_works:
+  - title: Map the ads
+    text: Splits each ad into message and look, writes the one idea behind it, and finds patterns and gaps across winners and losers. It never copies a rival's words or images.
+  - title: Check for sameness
+    text: Groups ads by persona, angle, offer and format, counts clusters rather than ads and flags cold ads above frequency 2. It says which to keep and which to replace.
+  - title: Read the test
+    text: Gives each ad set a verdict against your target, ranks the ads, flags false winners and judges the concept, not one ad. It writes the next brief.
+  - title: Plan the next test
+    text: Sizes the next Meta test to your spend, groups ads by pack and never adds to a winning ad set. It sets the minimum spend, naming and read rules.
+  - title: Place the next dollar
+    text: Ranks channels by new-customer revenue per extra dollar, finds each stop point, checks that product ads and retargeting are not eating the budget and plans one test that would change the ranking.
+output_shape: |-
+  STEP 1: AD BREAKDOWNS
+    Each ad by message and look | the one idea behind it | patterns | gaps | swaps to test
+
+  STEP 2: SAMENESS
+    Ads vs distinct clusters | clusters with keep and replace | cold ads above frequency 2 | sameness score out of 100
+
+  STEP 3: TEST READ
+    Ad set verdicts | ad table | false winners | concept status | next brief | read score out of 100
+
+  STEP 4: NEXT TEST LAYOUT
+    Structure | budget split | pack plan | minimum spend | naming | rules for adding and scaling
+
+  STEP 5: NEXT DOLLAR
+    Channel ranking | stop points | product-ad and retargeting check | test plan | guardrails
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your target return or cost per sale
+    how: Every verdict in step 3 is against it. Without one, the reader has to guess what good means and says so.
+  - what: How much you spent per ad
+    how: Ads with very little spend are marked retest, not loser. Give real spend so thin results are not read as failures.
+  - what: The ads themselves
+    how: Step 1 can only split message from look if it can see the ad. A written description loses detail and is marked as a limit.
+  - what: Any holdout or lift test results
+    how: Steps 3 and 5 use them to separate what the platform reports from what is truly extra. Without them, the notes say the figures are platform reports only.
+judge:
+  - Every ad has one idea written in a single sentence, and no step copies a rival's words.
+  - The sameness score shows its sum, ads minus clusters over ads.
+  - Verdicts name the ad set target and the actual, and false winners say what to check next.
+  - The next test never adds ads to an ad set that is winning.
+  - The budget ranking says what evidence each rank rests on (lift test, model, judgement or platform report only).
+test:
+  - Pick two ads you already know won and lost. Check that step 3 marks them the same way.
+  - Count the distinct ideas in your last round by hand. Compare with the cluster count in step 2.
+  - Stop after step 3 and check the brief against your own view of what to make next.
+  - Run the next test as planned, then give the new results back to step 3 and see whether the verdicts held.
+improve:
+  - Put your naming scheme into the test planner, so ad names match your reports.
+  - Add your real minimum order and margin to the allocator, so stop points use your numbers.
+  - Save the winning ideas and the concepts marked dead in your brand file for the next round.
+  - Pair it with an ad script or image prompt skill, using the next brief from step 3.

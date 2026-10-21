@@ -1,0 +1,131 @@
+new_slug: new-product-line-checker
+name: "New product line checker"
+summary: "Name a product to add. Get CAC or LTV, a score out of 100, a test cap."
+job: find-products
+thinking: medium
+thinking_why: "It follows three checks and a score sheet, but needs sound judgment on your numbers."
+
+headline: "New product line checker"
+subhead: Name a product you want to add to your store, with its price, margin and what your buyers already own. It labels the product CAC or LTV, scores it on three checks out of 100, and gives go or no-go. You also get a capped test plan with kill rules.
+
+explain: |
+  Adding a product is a bet. Some new products win new customers with ads. Others only sell to people who already bought from you. Mixing the two up is how stores waste ad money on a product that no cold buyer wants.
+
+  This skill uses a three-check method from one founder, Sean Frank of Ridge. First: is it a CAC product (wins new buyers through ads) or an LTV product (sells to people you already have)? Second: do buyers of the new product go on to buy your old one? Third: can it also sell on Amazon, in wholesale or to a big retailer? It then caps the launch cost, plans a small test, and sets rules for when to drop it. The numbers are from one large brand. The skill scales the cap to your own cash.
+
+when:
+  - You are choosing your next product and have more ideas than cash.
+  - A new product is selling to your own list but not to cold traffic, and you wonder why.
+  - You want a rule for when to drop a flop instead of spending to rescue it.
+
+you_give:
+  - The new product idea, with price and margin
+  - What your existing buyers already own or buy
+  - Whether it can sell on Amazon or in stores
+  - The factory minimum order, and any buyer who has committed to it
+  - Your cash cap for the launch
+  - Your current ad results (optional)
+you_get:
+  - "A label: CAC product or LTV product"
+  - A score out of 100 on the three checks, with the sum shown
+  - Go or no-go, with the reason
+  - A capped test plan with kill rules
+  - The condition a buyer must meet before you place the minimum order
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the product, its price, its margin and its main use.
+  - Say what your current buyers already own or buy, and where else it could sell.
+  - Say the most you can afford to lose on the launch.
+  - Read the label, score and test plan. Run the small test before you order stock.
+
+how_it_works:
+  - title: Labels CAC or LTV
+    text: A CAC product can win cold buyers with ads. It should cost over $50, have a big enough market and stand on its own. An add-on that only suits your current buyers is an LTV product.
+  - title: Checks the pull on old products
+    text: Asks if buyers of the new product go on to buy your old one. Cross-selling both ways is a plus.
+  - title: Checks other places to sell
+    text: Asks if it could also sell on Amazon, in wholesale or to a big retailer. A product with a store order waiting is worth more.
+  - title: Sets a launch cap
+    text: Caps total launch cost at an amount you can lose, whatever the minimum order is. The source brand used about $500,000, which is far too high for most stores.
+  - title: Holds the minimum order
+    text: For a physical product with a factory minimum, the order waits until a buyer commits, such as a retailer listing, pre-sales or subscribers. Print-on-demand and dropship have no minimum, so this does not apply.
+  - title: Plans a small test
+    text: Email your list, then organic reach, then a small paid test. If it fails all three, drop it.
+  - title: Scores and decides
+    text: Adds up the points for the checks that apply, shows the sum and gives go or no-go.
+  - title: Sets how to run it
+    text: Suggests running a CAC line as its own unit, with its own ad account and results, so you can see if it wins those buyers at a profit.
+
+output_shape: |
+  PRODUCT: <name>   LABEL: <CAC product | LTV product>   (<one-line reason>)
+
+  CHECK 1 CAC or LTV      <points>/<max>  <...>
+  CHECK 2 LTV effect      <points>/<max>  <...>
+  CHECK 3 distribution    <points>/<max>  <...>
+
+  SCORE <n>/100 (<points> out of <points available>, scaled to 100)
+  VERDICT: <GO | NO-GO | TEST FIRST>, because <reason>
+
+  LAUNCH CAP: <amount you can afford to lose>
+  TEST PLAN
+  1. Email to your list: <what, result that passes>
+  2. Organic: <what, result that passes>
+  3. Small paid test: <budget, result that passes>
+  ORDER GATE: <buyer commitment needed before the factory minimum, or not needed (print-on-demand)>
+  KILL RULE: <what ends the test; no rescue>
+
+  TRACK: <share of revenue from new lines; returning-customer revenue>
+  NOT CHECKED: <...>
+  MISSING: <price | margin | buyer data | cash cap>
+
+tweaks:
+  - what: Your cash cap
+    how: Give a number you can lose without hurting the store. The $500,000 in the source suits a large brand, so it scales the cap down to your size.
+  - what: What buyers already own
+    how: List what your current buyers have bought. This decides the CAC or LTV label and the cross-sell check.
+  - what: Where else it could sell
+    how: Name the marketplaces, shops or wholesale buyers you could reach. Check 3 only scores what you can name.
+  - what: Minimum order and committed buyers
+    how: Give the factory minimum and any retailer, pre-sale or subscriber commitment. Without one, the order waits.
+  - what: Past launches
+    how: Paste what worked and flopped before. It uses them to set the kill rule.
+
+judge:
+  - The label follows the price, market size and whether the product stands alone.
+  - Every point in the score has a reason you can read.
+  - The score shows its sum and what it left out.
+  - The launch cap is a number you can afford to lose.
+  - The kill rule says when to stop and does not suggest rescuing the flop.
+  - It does not tell you to place the minimum order until a buyer has committed.
+
+test:
+  - Run it on a past product you know worked and one that flopped. The scores should rank them in the right order.
+  - Change the price to $30 on a CAC product. The label or the score should drop and say why.
+  - Run it twice on the same input. The label and verdict should match.
+  - Check one point in the score by hand against the rule it quotes.
+
+improve:
+  - Edit the price floor in the skill file if your own ad results show a different level works for you. The $50 figure is one brand's.
+  - Add the weights you want for each check after you have a few launches to compare.
+  - Add your own past launches so the kill rule reflects your results.
+  - Pair it with the category and trend risk checker before you run this one.
+  - Save each verdict in your brand file so you can see what held up.
+
+works_best_with:
+  tools:
+    - {name: "Shopify reports", why: "Show which products your existing buyers bought together, for the cross-sell check."}
+    - {name: "Klaviyo or another email tool", why: "Runs the first test, an email send to your list."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the checks from the facts you paste."}
+  inputs:
+    - "Orders that show which products buyers bought together"
+    - "Your margin per unit after shipping and fees"
+    - "Quotes with the minimum order, so the cap uses real numbers"
+
+terms:
+  - term: CAC
+    meaning: Customer acquisition cost. What you spend on ads and other costs to win one new customer.
+  - term: LTV
+    meaning: Lifetime value. What one customer spends with you over time.
+  - term: Cross-sell
+    meaning: Selling a second product to someone who bought your first.

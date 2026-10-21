@@ -1,0 +1,116 @@
+new_slug: meta-campaign-purpose-checker
+name: "Meta campaign purpose checker"
+summary: "List your Meta campaigns. Get each kept or cut, setup errors and a score out of 100."
+job: read-ad-results
+thinking: medium
+thinking_why: "It compares names, settings and numbers across a list, so a mid-size model is enough."
+
+headline: "Meta campaign purpose checker"
+subhead: "List your Meta campaigns with budgets, objectives and names, plus your audience breakdown and settings. It asks each campaign to defend its purpose, flags setup errors, and hands back a keep, merge or cut call per campaign and a score out of 100 that says what it measured."
+
+explain: |
+  Many Meta accounts carry campaigns nobody can explain. Each extra campaign splits your sales, slows learning and makes results harder to read. Some also hide mistakes: a campaign called "cold" that targets past buyers, or a setting that gives you credit for sales you would have made anyway.
+
+  This skill checks the account the way an auditor does. It writes one sentence of purpose for each campaign and rolls up any that can't be defended. Then it checks frequency by audience, attribution, how new ads are tested, the common setup errors, and whether names match settings. Business complexity is the reason for more campaigns, not spend level. The score is ours, with the weights shown, so you can see what pulled it down.
+
+when:
+  - You inherited a Meta account or an agency's setup and want to know what is worth keeping.
+  - You have many campaigns and the numbers are hard to trust.
+  - You want a quick audit of settings before you spend more.
+
+you_give:
+  - A campaign and ad set list with budgets, objectives and names
+  - Your audience segment breakdown with spend and frequency
+  - Screenshots of your advertiser settings (optional)
+you_get:
+  - Each campaign defended, merged or cut
+  - A list of setup errors with the fix for each
+  - A score out of 100 with the weights shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste or attach a list of every campaign with its budget, objective and name.
+  - Add your audience segment breakdown, with spend and frequency for new, engaged and existing customers.
+  - Attach screenshots of your advertiser settings if you can.
+  - Fix the errors in the order the report lists them, then run it again.
+
+how_it_works:
+  - title: Writes each purpose
+    text: One sentence per campaign. If it cannot be defended, it goes in the roll-up list.
+  - title: Checks frequency by audience
+    text: Looks at frequency, not percent. 30-day frequency on existing customers should stay under 7.
+  - title: Checks attribution
+    text: Same setting everywhere, 7-day click plus 1-day engaged view.
+  - title: Checks the testing structure
+    text: How new ads and products are introduced, and where they are judged.
+  - title: Scans for setup errors
+    text: Existing customers in cold campaigns, store-visit campaigns leaking to the app rewards placement, interest and lookalike targeting on purchase campaigns, one-day view used to judge budgets.
+  - title: Matches names to settings
+    text: A campaign called cold that targets existing customers makes its ROAS meaningless.
+  - title: Checks switch-offs and sync
+    text: Flexible ads and automatic creative enhancements, including advertiser-level settings, and the email-to-Meta audience sync.
+  - title: Scores the account
+    text: Four parts with weights shown, ours, not Meta's.
+
+output_shape: |
+  CAMPAIGN VERDICTS
+  <campaign> | purpose: <one sentence> | <KEEP | MERGE into <x> | CUT> | reason: <...>
+
+  SETUP ERRORS (most serious first)
+  <error> | where: <campaign or setting> | fix: <one change>
+
+  CHECKS
+  Frequency on existing customers (30 days): <n> | Attribution: <setting> | Testing structure: <yes/no> | DPA share: <%> | Existing + engaged share: <%>
+
+  SCORE <n>/100
+  Purpose defended <n>/30 + Attribution <n>/20 + Setup errors <n>/30 + Budget mix and frequency <n>/20
+  (weights are ours; the sources do not give a score)
+
+  NOT RUN: <check, and what is needed>
+  MISSING: <campaign list | audience breakdown | settings screenshots>
+
+tweaks:
+  - what: Audience segment breakdown
+    how: It is the single most useful input. It shows how much goes to existing customers and the frequency for each group.
+  - what: Account size
+    how: Under about $10k a month you can skip the frequency checks. Say your spend and it will.
+  - what: Campaign names
+    how: Paste the names exactly as they appear. The names-versus-settings check needs them.
+  - what: Settings screenshots
+    how: Without them the checks on flexible ads and creative enhancements are marked not run.
+
+judge:
+  - Every campaign has a verdict and a one-sentence purpose.
+  - Each error names the campaign or setting and gives one fix.
+  - Frequency is judged in numbers on a stated window, not in percent of spend.
+  - The score shows its four parts and says the weights are ours.
+  - Checks it could not run are listed as not run, not passed.
+
+test:
+  - Add a campaign you know is a duplicate and see if it is merged.
+  - Name a campaign "Cold" but let it target past buyers. The name check should catch it.
+  - Run it twice on the same list. Verdicts should match.
+  - Compare the score before and after you fix the top three errors. It should rise by about the weights of those parts.
+
+improve:
+  - Add your own naming rule to the skill file, so the names check uses it.
+  - Add any error you find twice as its own named check.
+  - Lower or raise the 70 percent DPA limit if your own testing says otherwise. It is one source's rule.
+  - Pair it with the Meta account structure planner to rebuild the layout and the existing customer ad budget sizer to cap past-buyer spend.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It works from lists and numbers you paste, so any current chat AI will do."}
+    - {name: "Meta Ads Manager", why: "Its audience segment breakdown and advertiser settings hold the facts this check needs."}
+  inputs:
+    - "Screenshots of the advertiser settings page"
+    - "Your email tool's list of customer audiences synced to Meta"
+    - "The last 30 days of spend by campaign"
+
+terms:
+  - term: Audience segment breakdown
+    meaning: A Meta report that splits spend and results into new, engaged and existing customers.
+  - term: Flexible ads
+    meaning: A Meta ad type where you load many images and videos into one ad. You can't tell which one worked.
+  - term: DPA
+    meaning: A dynamic product ad. Meta shows each shopper the products they looked at.

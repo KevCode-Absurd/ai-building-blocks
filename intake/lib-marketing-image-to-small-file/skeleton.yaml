@@ -1,0 +1,58 @@
+# Workflow skeleton: chain of existing library skills (docs/INTAKE.md).
+id: lib-marketing-image-to-small-file
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: make-a-marketing-image-and-shrink-it-for-the-web
+  name: Make a marketing image and shrink it for the web
+  summary: Say what the image is for. Get a prompt and size plan, the finished picture and a smaller file.
+  when: you need a blog header, social graphic or banner that looks right and loads fast.
+  job: make-images
+  level: beginner
+steps:
+  - name: Marketing image maker
+    skill: marketing-image-maker
+    job: ops
+    from: "skill: marketing-image-maker"
+    method:
+      - Say what the image is for and where it goes
+      - Pick the way to make it
+      - Write the prompt with style and size
+      - Plan file names and sizes
+    inputs:
+      - brief
+      - brand_brain!
+    outputs:
+      - image_prompt
+    note: "Starts the chain: a prompt, size and file plan."
+  - name: Multi-provider image maker
+    skill: multi-provider-image-maker
+    job: ops
+    from: "skill: multi-provider-image-maker"
+    method:
+      - Choose the image service you have a key for
+      - Set the size and shape
+      - Send the prompt
+      - Save the picture
+    inputs:
+      - image_prompt
+    outputs:
+      - image
+    note: Draws the picture from the prompt in the step before.
+  - name: Image compressor
+    skill: image-compressor
+    job: ops
+    from: "skill: image-compressor"
+    method:
+      - Pick WebP or PNG
+      - Set the quality
+      - Compress and keep the originals
+      - Report the size saved
+    inputs:
+      - image
+    outputs:
+      - image
+    note: Shrinks the picture so the page loads faster.

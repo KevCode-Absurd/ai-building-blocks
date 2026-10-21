@@ -1,0 +1,122 @@
+new_slug: google-ads-scale-gate-checker
+name: "Google Ads scale gate checker"
+summary: "Give it your account facts. Get pass or fail on five gates and a score out of 100."
+job: run-google-ads
+thinking: medium
+thinking_why: "It checks facts against fixed gates and adds up points, so a mid-size model does it well."
+
+headline: "Google Ads scale gate checker"
+subhead: Tell it how your feed, tracking, structure, creative and bidding stand today. It checks five gates before you raise spend, gives a pass, fail or unknown with evidence for each, a score out of 100, and a go or wait call with a safe step size.
+
+explain: |
+  Raising the budget makes whatever is already wrong in your account bigger. A broken feed, missing purchase values or brand traffic mixed into cold campaigns all get worse as you spend more. Then the budget gets blamed, when the campaign was weak before.
+
+  This skill is a gate check to run before you scale. It tests five gates: the feed, tracking, structure, creative and bid maturity. It also checks that your ROAS is above break-even at today's spend, and that your plan raises spend in small steps. Each gate is worth 15 points, plus 10 for ROAS above break-even and 15 for a stepped plan. The gates come from a guide written for accounts spending $50K to $500K a month, so small stores should apply gates 1 to 3 and skip the rest.
+
+when:
+  - You want to double your Google budget and are not sure the account can take it.
+  - ROAS dropped after your last budget increase and you want to know why.
+  - An agency or teammate asks for more budget and you want a clear yes or wait.
+
+you_give:
+  - Your feed health report, or counts of disapproved products and warnings
+  - How purchase tracking is set up (enhanced conversions, purchase value, server-side if you use it)
+  - Whether brand and non-brand run in separate campaigns with separate budgets
+  - Creative counts and last refresh dates, and conversions per month by campaign with the bid strategy
+  - Your break-even ROAS and the budget change you plan
+you_get:
+  - Pass, fail or unknown for each of the five gates, with the evidence
+  - A score out of 100, with the sum shown
+  - A fix list in order, and a go or wait call with a safe step-up size
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your account facts or attach the reports. Say what budget you plan to move to.
+  - Add your break-even ROAS. If you do not have it, work it out first with the break-even calculator.
+  - Fix every failed gate in the order it lists, then run the check again.
+  - Raise spend only in the step size it gives you, and wait the days it says between steps.
+
+how_it_works:
+  - title: Checks the feed
+    text: Gate 1. No disapproved products and few warnings, taken from your feed health report.
+  - title: Checks tracking
+    text: Gate 2. Purchases and values reach Google correctly, enhanced conversions are on, and server-side tagging runs if spend is above about $50K a month.
+  - title: Checks structure
+    text: Gate 3. Brand and non-brand sit in separate campaigns with their own budgets and reports.
+  - title: Checks creative
+    text: Gate 4. Performance Max has 15 or more images and 5 or more videos refreshed every 4 to 6 weeks, and Demand Gen gets new creative. Feed-only setups skip the count.
+  - title: Checks bid maturity
+    text: Gate 5. About 50 conversions a month before you move to Target CPA or Target ROAS.
+  - title: Checks profit and plan
+    text: ROAS must be above break-even at today's spend, and the increase must be stepped.
+  - title: Scores and calls it
+    text: Adds the points, shows the sum and gives a go or wait call.
+
+output_shape: |
+  SCALE GATE CHECK  <store>, planned spend <from> to <to> a month
+  G1 feed:       <PASS / FAIL / UNKNOWN>  evidence: <...>
+  G2 tracking:   <...>
+  G3 structure:  <...>
+  G4 creative:   <...>
+  G5 bid maturity: <...>
+  ROAS vs break-even: <ROAS> against <break-even>  <PASS / FAIL / UNKNOWN>
+  STEPPED PLAN: <PASS / FAIL>  (<what the plan says>)
+  SCORE  <n>/100  (<gates passed> x 15 + <10 or 0> + <15 or 0>; unknown counts 0)
+         <n> out of <points checked> on what could be checked
+  CALL   <GO / WAIT>  safe step: <% change, days between steps>
+  FIX LIST (in order)
+    1 <gate and fix>
+  NOT CHECKED: <gate, and what is needed>
+  MISSING: <item>
+
+tweaks:
+  - what: Your monthly spend
+    how: Say it. Under about $50K a month, gates 1 to 3 matter most and server-side tagging is not required.
+  - what: The feed health report
+    how: Run the Merchant Center feed health checker first and paste its result. Gate 1 then rests on counts, not a guess.
+  - what: Break-even ROAS
+    how: Give the number from your own margin. Without it the profit check is unknown.
+  - what: Feed-only Performance Max
+    how: Say if it is on purpose, so the creative count is skipped.
+  - what: Your planned budget path
+    how: Give the actual dates and amounts. The check of your step sizes needs the real plan.
+
+judge:
+  - Every gate says pass, fail or unknown and gives the evidence it used.
+  - An unknown gate earns no points and is not shown as a pass.
+  - "The score line shows its sum: gates passed times 15, plus the other two parts."
+  - The safe step size is stated as a percentage and a number of days between steps.
+  - A weak campaign is sent to the offer, copy and creative, not to a bigger budget.
+
+test:
+  - Give it an account with a known fault, such as 40 disapproved products. Gate 1 should fail with that count.
+  - Run it twice on the same facts. The score should be the same.
+  - Take a plan that raises the budget by half in one day. It should fail the stepped plan check.
+  - Leave out the tracking details. Gate 2 should say unknown, not pass.
+
+improve:
+  - Add your own gate for something that has hurt you before, such as stock levels on bestsellers, and give it points.
+  - Change the points if your account needs different weights, and write the reason in the skill file.
+  - Save the score and date in your notes each time, so you can see which gates keep failing.
+  - Pair it with the feed health checker and the purchase tracking checker, which feed gates 1 and 2.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Conversions by campaign, bid strategy and asset counts are all in the account."}
+    - {name: "Google Merchant Center", why: "Diagnostics shows the disapproved and warning counts for gate 1."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all add up points and check gates well."}
+  inputs:
+    - "The result of the feed health checker, so gate 1 is based on counts"
+    - "The result of the purchase tracking checker, so gate 2 is based on a check"
+    - "Your break-even ROAS from the break-even calculator"
+    - "The last 90 days of weekly spend and ROAS, to see how ROAS moved when spend moved"
+
+terms:
+  - term: Gate
+    meaning: A condition that must be true before you add spend.
+  - term: Break-even ROAS
+    meaning: The return on ad spend at which a sale pays for its own ad cost and your product cost, with no profit.
+  - term: Server-side tagging
+    meaning: Sending purchase data to Google from a server you control instead of the shopper's browser. It steadies tracking.
+  - term: Bid maturity
+    meaning: Having enough conversions for an automatic bid strategy such as Target ROAS to work.

@@ -1,0 +1,27 @@
+slug: signup-popup-builder
+name: "Signup popup builder"
+summary: "Give it your offer and order value. Get desktop and mobile popup specs, copy and tests."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder", used: "Offer first, one field per step, the yes or no first step, timing, targeting, mobile build and the success page"}
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (agency case results, not independent data)", used: "Offer choice by order value, opt-in versus margin, large and fast forms, and sizing the value of a lift"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "The test order for popups and judging an offer on the whole welcome flow"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores", used: "Weekly test cadence and the text step angle"}
+  - {title: "The only ecommerce SMS marketing video you'll ever need", by: "An agency owner who runs SMS for ecommerce clients", used: "The two-step popup and wording for the text step"}
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "Wording for the text step and collecting phone numbers early"}
+  - {title: "Everything you need to know about SMS marketing in 2025", by: "An agency founder (email and SMS for ecommerce)", used: "The popup delay range"}

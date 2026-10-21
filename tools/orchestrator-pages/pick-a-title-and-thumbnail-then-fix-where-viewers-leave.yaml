@@ -1,0 +1,81 @@
+new_slug: pick-a-title-and-thumbnail-then-fix-where-viewers-leave
+name: Pick a title and thumbnail, then fix where viewers leave
+summary: Give it a video idea. Get three titles to test, then the one fix for drop-off.
+job: grow-social
+thinking: medium
+thinking_why: It writes and scores short lines, then reads a retention report. A mid-size model does it well.
+headline: Win the click with a tested title, then fix the spot where viewers leave
+subhead: Give it your video idea and channel. It makes a dozen title and thumbnail pairs and cuts them to the three worth testing. After you publish and export the retention report, it shows where viewers leave, what you said then, and the one change to make.
+explain: |
+  A video has two jobs. It must win the click, and then it must keep the viewer. Most people guess at the title, publish, and never look at the retention graph, so the next video repeats the same mistakes.
+
+  The steps cover both. First it plans the one promise of the video and makes title and thumbnail pairs that each change one thing. Then it reads each title alone and cuts the list to three that are different enough to test. You publish and, after a week or more, export the retention report from YouTube Studio. Then it gets the video's transcript and reads the report beside it, so each drop shows the words you said at that moment.
+when:
+  - You have a video idea and want the title and thumbnail to earn the click.
+  - Your videos get views but viewers leave early and you don't know why.
+  - You want to pick the next video from what worked, not from a hunch.
+you_give:
+  - Your video idea and what the viewer gets
+  - Your channel, style and audience
+  - Past results and lessons (optional)
+  - The link to the video once published
+  - The audience retention export from YouTube Studio
+you_get:
+  - A dozen or more title and thumbnail pairs, each changing one thing
+  - The first minute of the video, written to pay off the promise
+  - Three titles that differ enough to test, with a way to test each
+  - The place where viewers leave most, what you said then, and one change
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the video and your channel. Choose one of the three pairs and publish it.
+  - After a week or more, open YouTube Studio, download the audience retention report for that video and give it back with the video link.
+how_it_works:
+  - title: Plan the pairs
+    text: Writes the single promise, then at least twelve title and thumbnail pairs that each change one thing, and the first minute that pays off the promise.
+  - title: Cut to three
+    text: Reads each title with the video hidden, scores it on five rules, drops weak ones and keeps three that differ from each other.
+  - title: Publish and export (you)
+    text: You publish the top pair. After a week or more you download the audience retention report for the video from YouTube Studio.
+  - title: Get the words of the video
+    text: Gets the transcript of the live video. If you'd rather not use a transcript service, paste the captions from YouTube Studio.
+  - title: Read where viewers leave
+    text: Finds the loss in the first 30 seconds, the steep drops and the slow slide, matches each to what you said, and names the one biggest leak.
+output_shape: |-
+  STEP 1: PAIRS
+    Promise | base pair | 12 or more pairs with one change each | phone-size check | first minute | empty result log
+
+  STEP 2: THREE TO TEST
+    Scores on five rules | cut titles and why | the three picks | how to test each
+
+  YOU: publish, wait, export the retention report
+
+  STEP 3: TRANSCRIPT
+    The video's words, with times
+
+  STEP 4: WHERE VIEWERS LEAVE
+    Opening loss | steep drops with what you said | the slide | the one change
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: What you can change in a shoot
+    how: Tell step 1 what is easy for you to vary, such as clothing, background or the object shown, so every pair is one you can make.
+  - what: Who the title is for
+    how: Give a line about your viewer. Step 2 uses it to judge whether each title speaks to them.
+  - what: How long to wait
+    how: Wait for enough views that the retention graph is smooth. A video with few views gives noisy results.
+judge:
+  - Title and thumbnail make the same single promise.
+  - Each pair differs from the base by one change, so a result can be read.
+  - The three picks differ in type or reason, not in wording alone.
+  - Each drop in the retention report is matched to words from the transcript.
+  - The report names one change, not five.
+test:
+  - Show the three titles to three people who don't know your channel. Ask which they'd click.
+  - Shrink each thumbnail to phone size and check it still reads.
+  - Read the transcript at the biggest drop yourself and see if the cause is clear.
+improve:
+  - Fill in the result log after each video and give it back as lessons next time.
+  - Fix the opening first, since losses in the first 30 seconds cost the most.
+  - Run the pairs again on your next video and compare the click rate with this one.

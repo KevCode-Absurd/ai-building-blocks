@@ -1,0 +1,22 @@
+slug: advertorial-readiness-checker
+name: "Advertorial readiness checker"
+summary: "Give it your live ads. Get a go or no-go, a score out of 100 and page length."
+category: ecommerce
+type: skill
+role: check
+job: page
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How I build $1k/day advertorials with Claude in 6 minutes 41 seconds", by: "A dropshipping media buyer", used: "The four variables that must be confirmed in an ad, the rule that the less the ad sells the more the page must sell, and the page style by product type"}
+  - {title: "3 things every winning advertorial has", by: "A health and wellness advertorial writer", used: "Keeping the same person, promise and tone from the ad to the headline"}
+  - {title: "Advertorial formula: six types, how to pick one, structure and KPIs", by: "Alex, ecommerce advertiser (as named in the talk)", used: "The awareness gate: product-page traffic suits buyers who know the product, advertorials suit buyers who don't"}

@@ -1,0 +1,77 @@
+new_slug: spec-a-feature-and-make-a-legal-checked-launch-call
+name: Spec a feature and make a legal-checked launch call
+summary: Give it a feature idea and launch plan. Get a spec, a legal risk memo and a go call.
+job: build-product
+thinking: high
+thinking_why: The legal step walks many risk areas and the last step weighs them against your plan. Give it your strongest model.
+headline: Know if a feature is safe to launch before the date is fixed
+subhead: Give it a feature idea. It writes a spec, checks the spec for legal risks, and after you fix what it flags, weighs the memo against your launch plan and gives a go, wait or no-go call.
+explain: |
+  Teams often write the spec, build the feature and only then ask about data, claims or terms. By then the date is public and the fix is expensive. The risks were in the spec all along, but nobody read it that way.
+
+  The first step turns the idea into a spec with goals, non-goals and acceptance checks. The second reads that spec for legal risk: what is new, who uses it, what data it touches and what it claims. It rates each area and lists what to fix. Then you pause: fix the flags or ask a lawyer about the high ones, and update your launch plan. The last step weighs the memo against that plan and gives a clear call. It is a first check, not legal advice.
+when:
+  - You are about to build a feature that uses personal data, new vendors, AI or public claims.
+  - A launch date is set and nobody has read the spec for risk.
+  - You need a clear go, wait or no-go before telling customers.
+you_give:
+  - The feature idea, who it is for and the problem it solves
+  - Any limits you know, such as timing, rules and dependencies
+  - Your launch date and where you will launch
+  - Your launch plan, after you have fixed what the memo flags
+you_get:
+  - A spec with goals, non-goals, success measures and acceptance checks
+  - A legal risk memo rated by area, with what to fix and who should sign off
+  - A go, wait or no-go call with the reason, based on the memo and your plan
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the feature and answer the questions it asks about users and data.
+  - Stop after step 2. Fix the flagged items or take the high ones to a lawyer.
+  - Update your launch plan, then run step 3 for the call.
+how_it_works:
+  - title: Write the spec
+    text: Pins down the feature, the user problem and the success measures, then lists requirements with acceptance checks and open questions.
+  - title: Check the legal risks
+    text: Reads the spec to see what is launching and who uses it. Flags AI use, new data, vendors and claims. Rates each legal area and lists what to fix first.
+  - title: Pause and fix
+    text: You fix the flagged items, or ask a lawyer about the high-rated ones, then update your launch plan to match.
+  - title: Make the launch call
+    text: Quotes your plan and tests it against six common faults and three readiness checks. Asks whether pride or anger is driving it. Gives a go, wait or no-go.
+output_shape: |-
+  STEP 1: SPEC
+    Problem | users | goals | non-goals | requirements with acceptance checks | success measures | open questions
+
+  STEP 2: LEGAL RISK MEMO
+    What is launching | AI and data flags | risk by area | fix before launch | who signs off
+
+  PAUSE: fix the flags, update your launch plan
+
+  STEP 3: LAUNCH CALL
+    Plan quoted | six faults | three checks | go, wait or no-go with reason
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Where you launch
+    how: Name the countries or states. Step 2 rates the risks that apply there.
+  - what: Whether it uses AI
+    how: Say so even if the spec does not. Step 2 runs an extra check when AI is involved.
+  - what: Who signs off
+    how: Name your lawyer or approver. The memo then says which items go to them.
+  - what: Launch date
+    how: Give it. A tight date changes how urgent each fix is.
+judge:
+  - The spec has non-goals and acceptance checks, not only wishes.
+  - The memo names risks that come from the spec, not a generic list.
+  - Every high-rated item has a fix or an owner.
+  - The call quotes your plan and shows the reason, not just a verdict.
+  - Nothing here claims to be legal advice.
+test:
+  - Pick two requirements from the spec and check each has a pass or fail test.
+  - Check that each high-rated risk in the memo points to a line in the spec.
+  - Read the call as the person who signs off. Could they act on it?
+improve:
+  - Keep the memo with the spec so the next feature starts with the same questions.
+  - Add the risks your lawyer raised to your spec template.
+  - Run the memo again when the feature changes scope.

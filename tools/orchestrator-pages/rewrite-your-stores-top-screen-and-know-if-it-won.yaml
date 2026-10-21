@@ -1,0 +1,80 @@
+new_slug: rewrite-your-stores-top-screen-and-know-if-it-won
+name: Rewrite your store's top screen and know if it won
+summary: Give it your offer and proof. Get a new top screen, a one-change test and a ship call.
+job: write-landing-page
+thinking: high
+thinking_why: The last step does the test sums and decides whether to ship. Give it your strongest model.
+headline: Rewrite your top screen, then find out if it sold more
+subhead: Give it your offer, proof and the ad that sends traffic. It writes five headlines with a pick, a subhead, proof, a button and doubt-reducers, plans a test that changes only that screen, and after the test gives a ship call.
+explain: |
+  The top screen is where most visitors decide to stay or leave. A new headline feels like a win the day it goes live. But sales move for many reasons, so a better feeling proves nothing. A test that changes three things at once can't say which one worked.
+
+  The first step writes the top screen from your offer, your proof and the promise in your ad, and drafts a first test plan. The second turns that plan into a test that changes one thing, lists what else could move the result, and says what each outcome would mean. Then it pauses. You run the test for at least two full weeks and export visits and orders for both versions. The last step checks the split and how the test ended, turns the result into a range in money, and gives a ship, do not ship or re-test call.
+when:
+  - Visitors land on a store page and leave in the first screen.
+  - You rewrote a headline last month and can't tell if sales moved because of it.
+  - You want a ship or stop call you can defend, not a feeling.
+you_give:
+  - Your offer, with price, guarantee and delivery
+  - "Your best proof: reviews, ratings, numbers sold or press"
+  - The ad or link that sends traffic to the page (optional)
+  - The question you want the test to answer, in plain words
+  - After the pause, visits and orders for both versions of the page
+you_get:
+  - Five headline options with one picked and why, plus a subhead, proof, a button and doubt-reducers
+  - A test plan that changes only the top screen, with what counts as no effect
+  - What each result would mean, before you run anything
+  - "A call on the finished test: ship, do not ship or re-test, with the gain as a money range"
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your offer, your proof and the ad that sends traffic. Leave nothing out that a visitor would ask about.
+  - Put the new top screen live as one version and keep the old one as the other. Change nothing else on the page.
+  - Run it for at least two full weeks. Then export visits and orders for each version and give them back.
+how_it_works:
+  - title: Write the top screen
+    text: Matches the headline to your ad's promise, writes five options and picks one, then adds a subhead, proof, a button and doubt-reducers. It drafts a first test plan.
+  - title: Plan a one-change test
+    text: Turns that plan into a test with one change. It lists what else could move sales, says what counts as no effect and what each result would tell you.
+  - title: Run the test
+    text: A pause. You show the old and new top screens to visitors for at least two full weeks, then export visits and orders for each.
+  - title: Get the ship call
+    text: Checks that the split was fair and the test ran its course, looks for tracking faults or a sale that skewed it, gives the gain as a range in money and makes the call.
+output_shape: |-
+  STEP 1: TOP SCREEN
+    Five headlines and the pick | subhead | proof | button | doubt-reducers | image plan | first test plan
+
+  STEP 2: ONE-CHANGE TEST
+    Question in plain words | what could move the result | the one change | what counts as no effect | what each result means
+
+  PAUSE: run the test for at least two full weeks, then export visits and orders for both versions
+
+  STEP 3: SHIP CALL
+    Split check | how it ended | lift as a range | gain in money | order value and margin check | ship, do not ship or re-test
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The proof you give
+    how: Real ratings, counts and quotes beat claims. Tell it which proof you can show, so the top screen shows two kinds.
+  - what: Your traffic
+    how: Say how many visitors the page gets a week. Low traffic means a bold change is needed, because small ones can't be proved.
+  - what: The ad
+    how: Paste the ad that sends traffic. The headline should repeat its promise, so visitors see they are in the right place.
+  - what: What you can measure
+    how: Name your main number, such as orders per visitor, and the one you must not hurt, such as order value.
+judge:
+  - The headline repeats the ad's promise and states one benefit.
+  - Every proof item on the screen is real and you can show where it comes from.
+  - The test changes the top screen and nothing else on the page.
+  - The plan says what no effect looks like before the test starts.
+  - The call gives a range and a money figure, and checks order value as well as orders.
+test:
+  - Read the five headlines next to your ad. Each one should make the same promise in different words.
+  - Check that the old and new pages differ only in the top screen.
+  - Redo the money figure by hand from your visits and orders. It should match within rounding.
+improve:
+  - Keep the losing headlines. They show which promise your visitors did not want.
+  - Test the next part of the page only after this one has a clear result.
+  - Add the winning proof and headline to your brand file so ads and pages use the same words.
+  - If a result looks too good, such as a jump of several hundred percent, check tracking before you celebrate.

@@ -1,0 +1,97 @@
+new_slug: amazon-monthly-account-keeper
+name: Amazon monthly account keeper
+summary: Give it your Amazon fee, stock and sales reports. Get margins checked, restock sized and refund claims found.
+job: sell-on-amazon
+thinking: high
+thinking_why: It runs up to seven skills, picks a path for each product from margin and sales, and does fee and stock sums. Give it your strongest model.
+headline: Amazon monthly account keeper
+subhead: Give it the month's Amazon fee, stock, returns and sales reports. It checks each product's margin against last month, sizes restocks, finds refund claims, and picks listing or ad work only where the numbers call for it.
+explain: |
+  An Amazon account leaks in quiet ways. A fee tier changes. A product slips below a safe margin. Stock runs thin while a shipment is still on the water. Amazon loses units and never repays you, and nobody files the claim. Checking each of these by hand every month is slow, so most sellers do it now and then.
+
+  This agent does the same checks every month. It works out each product's profit per unit with this month's fees and the most you can pay for ads per sale. From that it picks one path per product: fix the margin, refresh the listing, rebuild ads, or leave it alone. It sizes restocks and searches your reports for claims. It does not read your live account or live ad reports, and it never changes anything. You get a list of actions to approve.
+when:
+  - You sell on Amazon and want the same checks every month.
+  - A product's sales or margin slipped and you don't know why.
+  - You've never checked your shipment, fee and returns reports for money owed.
+you_give:
+  - Price, landed cost, size and weight for each product, the first time
+  - The month's fee, sales, ad and returns reports
+  - Stock in Amazon, stock on the way and your maker's lead time
+  - Shipment records and receipts, and a keyword export if a listing needs work (optional)
+you_get:
+  - Profit per unit and the most each product can pay for ads per sale, against last month
+  - One path per product, from margin fix, listing refresh, ad rebuild or hold
+  - Restock sizes and send-by dates
+  - Refund claims with the proof for each
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - The first time, give it your product facts. It saves them and reuses them.
+  - Each month, download the fee, returns, shipment and sales reports for the same dates and put them in the folder.
+  - Read the list. Make the changes you agree with in Seller Central yourself, and file claims with the proof it names.
+  - Run it again on the 3rd of next month. It compares against last month's files.
+how_it_works:
+  - title: Check each margin
+    text: Works out profit per unit with this month's fees, and the most each product can pay for ads per sale.
+  - title: Choose a path per product
+    text: Margin fix if net margin is under the floor or fell a lot. Listing refresh if sales fell and margin is healthy. Ad rebuild if ad cost is above what the product can pay. Hold otherwise.
+  - title: Size the restock
+    text: Sizes how much to send and when for any product with about three months of stock or less, counting stock on the way.
+  - title: Look for money owed
+    text: Checks units sent against units received, size tiers, fee lines and lost or damaged stock, and lists claims with proof.
+  - title: Hand back one list
+    text: Merges every action, ranks it by money and stops for your yes.
+output_shape: |-
+  THE MONTH
+    <product> | units <n> | net margin after ads <%> (<points> vs last month) | ad cost per sale <amount> vs most it can pay <amount>
+
+  PATH PER PRODUCT
+    <product>: <margin fix | listing refresh | ad rebuild | hold>: <why>
+
+  ACTIONS TO APPROVE (at most 10, most important first)
+    1. <action> | product: <name> | size: <amount> | from: <step> | why: <reason>
+
+  RESTOCK
+    <product> | units <n> | send by <date> | cash tied up <amount>
+
+  CLAIMS TO FILE
+    <type> | <shipment or product> | amount <amount> | proof <what you have>
+
+  WATCH NEXT MONTH
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Current fee figures
+    how: Paste fees from Amazon's revenue calculator or your own fee report. Old fee tables make every margin wrong.
+  - what: How big a sales fall counts
+    how: The starting point is a fifth over four weeks. Use a tighter limit for steady sellers and a wider one for seasonal products.
+  - what: Your margin floor
+    how: The fee checker uses 30 percent net. Set your own floor if your category or business model needs a different one.
+  - what: Stock on the way
+    how: Give send dates and counts. Without them the restock size is a guess.
+judge:
+  - Every margin call uses this month's fee figures and says where they came from.
+  - No price rise is proposed without a test plan.
+  - No listing or ad action is proposed for a product that is out of stock.
+  - Every claim names the proof you hold, or says proof is missing.
+  - Nothing in your account was changed without your clear yes.
+test:
+  - Run it on a past month where you know a product lost margin. See if it finds the same cause.
+  - Run it twice on the same reports. The path per product should be the same.
+  - Check one claim it lists against Seller Central before you file it.
+improve:
+  - Set your own floor and sales-fall limit in the first message.
+  - Keep a claims log, so you can see which kinds of claims Amazon pays and which it rejects.
+  - If you sell only one product, remove the path choice and run the margin, restock and claim steps alone.
+  - Add your launch and sale dates so a sales fall isn't mistaken for a problem.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the amazon folder, read last month's files and run on a schedule.
+    - name: Seller Central
+      why: Download fee, returns, shipment, damaged and lost, and sales reports here.
+  inputs:
+    - Maker receipts, packing lists and bills of lading for each shipment
+    - A keyword export for any product whose sales fell

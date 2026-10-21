@@ -1,0 +1,121 @@
+new_slug: margin-tier-shopping-builder
+name: "Margin-tier Shopping builder"
+summary: "Give it products with margin and ROAS history. Get a Shopping structure and a target for each tier."
+job: run-google-ads
+thinking: high
+thinking_why: "It weighs margins, conversion counts and two structures against each other, so a stronger model avoids bad targets."
+
+headline: "Margin-tier Shopping builder"
+subhead: Give it your products with gross margin, 90-day spend, ROAS and conversions. It picks a Shopping structure, by ROAS history or by margin tier, sets a break-even-based target for each campaign, and plans a Performance Max catch-all as a test.
+
+explain: |
+  One target ROAS for the whole catalogue quietly steers spend to the wrong products. A product with a 70 percent margin and one with a 35 percent margin cannot share one target. The first can pay for more clicks and the second cannot.
+
+  This skill sorts your products into tiers. If your margins sit within about 10 points of each other, it groups products by ROAS history: winners, weak sellers, products with no data and zombies with no spend. If margins range widely, it groups by margin tier and sets a lower target for high margin and a higher target for low margin, each worked out from break-even. It then sets a target for Performance Max as a catch-all. That last part is one agency's method, so it comes as a 4 to 6 week test judged on total revenue and new-customer ROAS.
+
+when:
+  - Your catalogue has margins from 30 to 70 percent and one target ROAS is wasting money.
+  - You run Standard Shopping or Performance Max and want your best-margin products to get more budget.
+  - You have a few zombie products with no spend that you want to give a fair test.
+
+you_give:
+  - A product list with gross margin, 90-day spend, ROAS and conversions
+  - Your break-even ROAS for each tier, or the margin so it can be worked out
+  - How much time you have each week to manage the account
+  - Your current Performance Max and Shopping setup (optional)
+you_get:
+  - A campaign structure, by ROAS tier or by margin tier, with reasons
+  - A target ROAS for each campaign
+  - A Performance Max catch-all setting with a 4 to 6 week test plan
+  - A note on any tier that is too small to run
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your product list with gross margin, 90-day spend, ROAS and conversions.
+  - Say how many hours a week you can give to the account.
+  - Build the tiers one at a time and leave each alone for 2 to 4 weeks.
+  - Judge the Performance Max test on total revenue and new-customer ROAS, not campaign ROAS.
+
+how_it_works:
+  - title: Checks the size
+    text: Under about 30 products there is too little room to scale. It tells you to fix titles and merge instead of splitting.
+  - title: Picks the structure
+    text: Margins within about 10 points use Structure A, by ROAS history. Wider margins use Structure B, by margin tier.
+  - title: Sets targets from break-even
+    text: Break-even ROAS is 1 divided by gross margin before ad spend. A 60 percent margin brand can run lower than a 25 percent one.
+  - title: Builds the tiers
+    text: Structure A has four tiers. Structure B has three to five margin tiers, lower target for high margin and higher for low.
+  - title: Checks tier size
+    text: A tier needs about 30 conversions a month. Smaller tiers are merged so they do not starve.
+  - title: Sets Performance Max
+    text: Kept on as a catch-all with a target well above the manual campaigns, as a test with a warning about warm shoppers.
+  - title: Splits the budget
+    text: Shows both views on how to share Google budget, and lets you pick what fits your capacity.
+  - title: Plans the test
+    text: A 4 to 6 week test judged on total revenue and new-customer ROAS.
+
+output_shape: |
+  FIT  <products> | <conversions per tier> | <margin range>
+  STRUCTURE  <A: by ROAS history | B: by margin tier>  because <reason>
+
+  TIERS
+  <tier> | <products> | <margin> | break-even ROAS <n> | target ROAS <n> | budget note
+  (tiers too small to run: <merge with ...>)
+
+  PERFORMANCE MAX SAFETY NET (test)
+  target <n> vs manual <n> | run <4 to 6 weeks>
+  judge on <total revenue, new-customer ROAS>
+  warning <a very high target can narrow reach to warm shoppers>
+
+  BUDGET SPLIT  <view A> | <view B> | your pick and why
+  CHECKS MISSED: <none | list>
+  MISSING: <margins | spend and ROAS | conversions>
+
+tweaks:
+  - what: Margin accuracy
+    how: Targets depend on gross margin per product. Give margin before ad spend and say how you worked it out.
+  - what: Conversions per tier
+    how: Fewer than about 30 a month in a tier means it will starve, and the skill merges tiers.
+  - what: Weekly time
+    how: More tiers mean more to manage. Give your real weekly hours.
+  - what: Test length
+    how: Give the Performance Max test 4 to 6 weeks, and judge on total revenue.
+
+judge:
+  - The structure matches the margin spread, within 10 points for A and wider for B.
+  - Every target ROAS is worked out from break-even, with the sum shown.
+  - High-margin tiers get lower targets and low-margin tiers higher ones.
+  - The Performance Max step is a labelled test with its warning.
+  - Both views on budget split are given.
+
+test:
+  - Check one tier by hand. Divide 1 by its margin and compare with the break-even in the plan.
+  - Check no tier has fewer than about 30 conversions a month, or that it is flagged for merging.
+  - Run it again on the same list. The structure and targets should match.
+  - After 4 to 6 weeks, compare total store revenue and new-customer ROAS with the weeks before.
+
+improve:
+  - Put your product margins in the skill file so targets are always worked from them.
+  - Add your weekly time and the number of tiers you can really manage.
+  - Add a rule for when you stop the Performance Max test, such as new-customer ROAS falling.
+  - Pair it with the Google bid strategy chooser for each tier's bidding, and the Shopping campaign tuner for the weekly routine.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Standard Shopping campaigns, product-level reports and Performance Max settings live here."}
+    - {name: "Google Merchant Center", why: "Custom labels let you group products by margin tier."}
+    - {name: "Any good chat AI", why: "Any current chat AI can work from a pasted product list."}
+  inputs:
+    - "Margin per product from your store or accounting data"
+    - "Backend revenue by new and returning customer"
+    - "Your Performance Max asset groups and listing groups, if you run it"
+
+terms:
+  - term: Gross margin
+    meaning: Price minus the cost of making and shipping the product, as a percent of price.
+  - term: Break-even ROAS
+    meaning: The return you need to cover your costs. 1 divided by gross margin before ad spend.
+  - term: Zombie product
+    meaning: A product with a listing but almost no spend or sales.
+  - term: Safety net
+    meaning: A broad campaign set to a high target so manual campaigns win most auctions and it picks up what is left.

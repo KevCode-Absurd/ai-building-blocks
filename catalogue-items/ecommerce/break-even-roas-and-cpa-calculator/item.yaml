@@ -1,0 +1,22 @@
+slug: break-even-roas-and-cpa-calculator
+name: "Break-even ROAS and CPA calculator"
+summary: "Give it price and margin. Get break-even ROAS and CPA for Meta or Google, and a score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "An agency owner who runs Google Ads for Shopify brands (name not given)", used: "The break-even ROAS and CPA formulas with the $100 and 40 percent margin example, why break-even CPA beats front-end ROAS, and checking Google against the whole marketing mix"}
+  - {title: "The only Google Ads strategy you need for 2026", by: "An Australian agency founder who works with mid to large stores (name not given)", used: "Splitting campaigns by margin so one target ROAS does not send spend to the unprofitable collection"}
+  - {title: "Google Ads for ecommerce: 9 keys to success", by: "Ben, Google Ads agency founder", used: "AOV, margin and lifetime value logic, the affordable CPA example, why ROAS falls as spend rises, and discount rules"}
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "Why the budget has to match the order value"}

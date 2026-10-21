@@ -1,0 +1,122 @@
+new_slug: winning-ad-variant-writer
+name: "Winning ad variant writer"
+summary: "Paste your winning ad and top customer groups. Get same-voice variants and a launch plan."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It rewrites in a matching voice and plans a launch, so a mid-size model gives clean variants."
+
+headline: "Winning ad variant writer"
+subhead: "Paste your best ad, the customer groups that bring most of your revenue and your product facts. It writes variants of the primary text and headline in the winner's own voice, one per group, plus a launch plan with a CBO test, a zombie campaign and a weekly creative hour."
+
+explain: |
+  A winning ad fades. Many stores rest all their results on one ad, then scramble when it tires. A faster move is to multiply it. Meta reads your copy and image to decide who sees an ad, so putting a specific group or use-case word in the headline or first line, such as "for runners" or "for night-shift workers", opens a new pocket of people without rebuilding the ad.
+
+  This skill takes the winner and the groups that bring about 80 percent of your revenue, and writes same-voice variants for each group. You ask the AI to read the ad as its author, so a reader can't tell different writers made the versions. Only what relates to that group changes. The plan then launches the variants together, rescues good ads that got no spend and sets a weekly hour for fresh creative. The ideas come from one operator's lead-generation work, translated here to store buyers.
+
+when:
+  - You have one ad that works and you want more ads like it.
+  - Your winner is tiring and you need fresh versions that keep its voice.
+  - Some ads you rated highly got no spend and you want to give them a fair run.
+
+you_give:
+  - Your winning ad, with its copy and image
+  - The customer groups that bring most of your revenue, with the words they use
+  - Product and offer facts
+  - Your ad policy limits, such as claims you may not make (optional)
+you_get:
+  - Variants of primary text and headline for each group
+  - Identity-trigger versions, with the group word in the first line
+  - A launch plan with a CBO test and a zombie campaign
+  - A one-hour weekly creative slot
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the winning ad's copy and attach its image. Say how much it spent and what result it got.
+  - List the customer groups that bring the most revenue, with their words, and your product facts.
+  - Check each variant against your product facts and Meta's ad policies before it goes live.
+  - Launch the winners together in one CBO and let Meta move spend.
+
+how_it_works:
+  - title: Picks the winner
+    text: By spend and result. It keeps it running. You don't switch off the others and ride one ad.
+  - title: Finds identity triggers
+    text: Groups from the 20 percent of customers who bring 80 percent of revenue, such as "for new mums".
+  - title: Writes in the author's voice
+    text: The AI reads the winner as its author and writes versions so a reader could not tell different writers made them.
+  - title: Changes only what fits the group
+    text: Start with body copy, then headlines, then the creative.
+  - title: Uses longer copy where it helps
+    text: Longer copy gives Meta more to read, so it can place the ad more precisely.
+  - title: Plans the launch
+    text: Winners go together in one CBO and Meta shifts spend.
+  - title: Adds a zombie campaign
+    text: Ads you rate highly that got no spend go into their own ad set so they are forced to deliver.
+  - title: Checks policy and facts
+    text: Every variant is checked against ad policy and your facts. No invented customer details or results.
+
+output_shape: |
+  WINNER: <ad name> | spend <$> | result <CPA or ROAS> | voice notes: <tone, sentence length, signature phrases>
+
+  VARIANTS
+  Group: <customer group> | their words: <phrases>
+    Headline: <variant>
+    Primary text: <variant>
+    Identity trigger: <the group or use-case word, where it sits>
+    Facts used: <product fact or claim and its source>
+
+  LAUNCH PLAN
+  Test: <one CBO | winners together | budget | read window>
+  Zombie campaign: <which no-spend ads | own ad set | when to review>
+  Weekly creative hour: <day and time>
+
+  POLICY AND CLAIMS CHECK: <pass or list of changes>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: The groups you give
+    how: Use real groups from your sales data, not guesses. It will not invent customer attributes.
+  - what: Winner's voice
+    how: Paste two or three of your best older ads too, so the voice match is closer.
+  - what: Copy length
+    how: Ask for a longer version to give Meta more to read, and a short version to compare.
+  - what: Product facts and claims
+    how: Paste what you can truthfully say. Variants stay inside it.
+  - what: Ad policy limits
+    how: Say what your category may not claim, such as health results or personal-attribute wording.
+
+judge:
+  - A reader cannot tell the variants from the original by voice.
+  - Each variant changes only what relates to its group.
+  - No variant makes a claim your facts don't support.
+  - No variant names a personal attribute in a way ad policy forbids.
+  - The plan says which result decides if a variant wins and when to read it.
+  - The zombie campaign step names which ads go in.
+
+test:
+  - Show three variants and the original to someone who knows your brand and ask which is the original.
+  - Check every claim in the variants against your product facts line by line.
+  - Launch two variants against the winner with the same budget and read after 7 days or more.
+  - Run it twice on the same winner and check the voice stays the same.
+
+improve:
+  - Add your approved claims and banned phrases to the skill file so every variant stays inside them.
+  - Save the groups that worked in your brand file for the next run.
+  - Add your own rule for how many variants to launch at once, based on your budget.
+  - Pair it with the ad angle multiplier for new angles and the Meta ads compliance checker before launch.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It writes and rewrites text you paste, so any current chat AI will do."}
+    - {name: "Meta Ads Manager", why: "Its campaign setup is where the CBO test and the zombie ad set are built."}
+  inputs:
+    - "Two or three of your best older ads, for a closer voice match"
+    - "Revenue by customer group from your store reports"
+    - "Review text from each group, to borrow their real words"
+
+terms:
+  - term: Identity trigger
+    meaning: A word for a group or use case in the headline or first line, such as "for runners", that tells the right people the ad is for them.
+  - term: Zombie campaign
+    meaning: A separate ad set for ads you rated highly that got no spend, so they are forced to deliver.
+  - term: CBO
+    meaning: Campaign budget optimization. You set one budget and Meta divides it between ads.

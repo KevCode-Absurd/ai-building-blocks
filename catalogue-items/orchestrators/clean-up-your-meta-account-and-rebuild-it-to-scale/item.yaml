@@ -1,0 +1,23 @@
+slug: clean-up-your-meta-account-and-rebuild-it-to-scale
+name: "Clean up your Meta account and rebuild it to scale"
+summary: "Give it your campaigns and results. Get campaigns kept or cut, a simpler layout with budgets and a spend ladder."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: store_capture, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: [meta-campaign-purpose-checker, meta-account-structure-planner, meta-scaling-campaign-planner]
+steps:
+  - {uses: meta-campaign-purpose-checker, note: "Decides which campaigns stay before anything is rebuilt."}
+  - {uses: meta-account-structure-planner, note: "Plans the simpler layout for the campaigns that survived the clean-up."}
+  - {uses: meta-scaling-campaign-planner, note: "Turns the winning ad sets in the new layout into a spend ladder."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/clean-up-your-meta-account-and-rebuild-it-to-scale/skeleton.yaml

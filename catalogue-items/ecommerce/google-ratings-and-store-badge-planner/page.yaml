@@ -1,0 +1,125 @@
+new_slug: google-ratings-and-store-badge-planner
+name: "Google ratings and store badge planner"
+summary: "Tell it your reviews and policies. Get a score and a plan for star ratings and the top store badge."
+job: run-google-ads
+thinking: low
+thinking_why: "It compares your numbers with a short list of thresholds, so a fast model is enough."
+
+headline: "Google ratings and store badge planner"
+subhead: Tell it your review counts, review app, page speed, images, shipping, returns and payment options. It checks if you can show star ratings on Google Shopping, plans how to send your reviews, finds the gaps against the five store quality areas and gives a score out of 100.
+
+explain: |
+  Stars under a Shopping ad and a trusted store badge help shoppers pick you over a lookalike. Both depend on real reviews and on how your store compares with others in your country. Many stores never apply, or apply and wait without knowing what Google needs.
+
+  This skill checks eligibility for product ratings first: one course says at least 50 reviews in total and at least 3 on any product that should show stars. It then picks a route for sending reviews, and checks your store against five quality areas: browsing, purchase, shipping, returns and store ratings. It lists the easy fixes first. It only works with real reviews from real customers. These numbers come from one course, so check them on Google's current help page.
+
+when:
+  - You want star ratings on your Google Shopping ads and don't know where to start.
+  - You have reviews on your site but none show on Google.
+  - You want to work toward the top store badge and need to know which gaps to close first.
+
+you_give:
+  - Your review app, and review counts in total and per product
+  - Average page load time and the number of images per product
+  - Shipping times and costs, and your return window and cost
+  - Payment options at checkout
+  - Whether you collect store reviews after purchase (optional)
+you_get:
+  - An eligibility check for product ratings
+  - A step list for sending your ratings feed
+  - A gap list against the five store quality areas
+  - A score out of 100 and how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your review counts, review app and page speed. Add images per product.
+  - Paste your shipping, return and payment details as they really are.
+  - Do the easy fixes first, such as images, speed, matching promotions and payment options.
+  - Check the figures on Google's current help page before you act on them.
+
+how_it_works:
+  - title: Checks eligibility
+    text: At least 50 reviews in total, and at least 3 on any product that should show stars.
+  - title: Starts the interest form
+    text: Submit Google's product ratings interest form first. Expect 2 to 4 weeks from the form to stars showing.
+  - title: Picks a route
+    text: Google's own customer reviews, an official aggregator partner, or a non-official app that needs a manual upload through Shopify.
+  - title: Checks browsing
+    text: Sharp images, 8 to 10 per product, and load under 2 seconds.
+  - title: Checks purchase
+    text: Promotions in Merchant Center match the site, and more payment options.
+  - title: Checks shipping and returns
+    text: Fast and cheap shipping, and returns of 30 days or more at low cost.
+  - title: Checks store ratings
+    text: Collect store reviews after purchase. Store ratings can also show on text ads.
+  - title: Scores and orders the fixes
+    text: Easy fixes first, then the ones that depend on shipping and returns.
+
+output_shape: |
+  PRODUCT RATINGS ELIGIBILITY
+  total reviews <n> (need 50): <ok | short by n>
+  products with 3+ reviews: <list> | below 3: <list>
+  ROUTE  <Google customer reviews | official aggregator | non-official app with manual upload>
+  STEPS  1. <step> ... (in order)
+  STORE QUALITY (against stores in your country)
+  browsing:      <ok | gap>  <images per product | load time>
+  purchase:      <ok | gap>  <promotions match | payment options>
+  shipping:      <ok | gap>  <speed | cost>
+  returns:       <ok | gap>  <window | cost>
+  store ratings: <ok | gap>  <store reviews collected>
+  FIX FIRST (easy)  <list>     LATER (depends on shipping or returns)  <list>
+  SCORE  <n>/100 (ratings <n>/40, five areas <n>/60)
+  NOT RUN  <check | what is needed>
+  MISSING: <what would sharpen it>
+
+tweaks:
+  - what: Review counts per product
+    how: Give the real counts. Only products with 3 or more reviews can show stars, per one course.
+  - what: Review app
+    how: Name it. Some apps connect to Google directly and others need a manual upload through Shopify.
+  - what: Country
+    how: Name the country you sell in. The badge compares you with stores there, so it differs by country.
+  - what: Page speed
+    how: Give the load time of a product page on a phone, not just the home page.
+  - what: Promotions
+    how: List the promotions in Merchant Center with their terms and dates, so a mismatch with the site shows up.
+
+judge:
+  - Eligibility says what is met and what is short, with numbers.
+  - The route names the manual upload when the app needs it.
+  - Each of the five areas has a result and a fix.
+  - The 20 percent lift is shown as one operator's result.
+  - Easy fixes come before ones that depend on shipping or returns.
+  - Nothing suggests asking for only good reviews.
+
+test:
+  - Give it 30 reviews in total. It should say you are 20 short and name how to collect them.
+  - Give it a product with 2 reviews. It should say that product can't show stars yet.
+  - Run it twice on the same facts. The gap list should match.
+  - Check the thresholds against Google's current help page and note any difference.
+  - After the easy fixes, run it again and see if the score rises.
+
+improve:
+  - Add your country's shipping and return norms, if you know them, so the gap list uses them.
+  - Add a review request message to your post-purchase email, so reviews arrive from real buyers.
+  - Add your own load-time target to the skill file.
+  - Save the date you submitted the interest form to your brand file.
+  - Pair it with the suspension checker, since promotions that don't match the site hurt you in both places.
+
+works_best_with:
+  tools:
+    - {name: "Google Merchant Center", why: "Where the ratings programme, promotions and store quality scorecard live."}
+    - {name: "Shopify", why: "Where your product pages and review app connect."}
+    - {name: "Any good chat AI", why: "Compares your numbers with the thresholds and lists the gaps."}
+  inputs:
+    - "A review export with product names"
+    - "A speed report for a product page on mobile"
+    - "Your shipping and return policy pages"
+
+terms:
+  - term: Product ratings
+    meaning: Star ratings that show under your products on Google Shopping.
+  - term: Aggregator
+    meaning: A review company that sends your reviews to Google for you.
+  - term: Store quality badge
+    meaning: A mark Google can show on a store that rates well against others in its country.

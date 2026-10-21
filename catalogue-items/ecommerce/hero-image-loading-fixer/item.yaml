@@ -1,0 +1,23 @@
+slug: hero-image-loading-fixer
+name: "Hero image loading fixer"
+summary: "Give it your slow-LCP page and theme. Get the hero image set to load first, with code."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: theme_files, required: true}
+  - {type: image, required: false}
+outputs:
+  - {type: code_change}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify speed and image optimization (a video series on images, app scripts, layout shift, largest content and store audits)", by: "Christian, a Shopify developer (YouTube channel)", used: "Not lazy loading or fading in the largest image, and loading only the first loop item eagerly in Liquid"}
+  - {title: "Ecommerce Site Speed Optimization: Complete Guide for 2026", by: "Jakub Rusniok (article)", used: "Never lazy loading images above the fold, and the size targets for hero and product images"}
+  - {title: "WordPress Speed Optimization (step by step)", by: "Elijah (video)", used: "Marking first-screen images eager so plugins don't lazy load them later"}
+  - {title: "Google PageSpeed Insights: Step-by-Step tutorial to Boost Site Speed", by: "Jack, Rank Math (video)", used: "Reading the largest element from the lab diagnostics"}

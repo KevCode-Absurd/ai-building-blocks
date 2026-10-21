@@ -1,0 +1,22 @@
+slug: journalist-query-answer-writer
+name: "Journalist query answer writer"
+summary: "Give it journalist requests and your expertise. Get ranked picks, expert answers and a win-rate sheet."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two co-founders of a Shopify SEO agency", used: "Setting up an expert profile, filtering queries, checking an outlet's authority, answer format, the short bio, tracking pitches and watching for follow-ups"}
+  - {title: "Complete SEO Course (3 Hours): Rank in AI Search", by: "An SEO consultant who runs a paid community", used: "A once-a-month routine using the free answers and adding your own experience"}
+  - {title: "Learn Everything About SEO & AI SEO in 50 Minutes!", by: "An SEO educator from an SEO software company's channel", used: "About 15 minutes a day, and the point that it is a numbers game with few hits per many replies"}

@@ -1,0 +1,80 @@
+new_slug: find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site
+name: Find leaked keys, secure them and check your live site
+summary: Give it your project. Get leaked keys found, replaced, stored safely and checked on your live site.
+job: secure-code
+thinking: medium
+thinking_why: Each step is a focused scan or change. A mid-size model does it well.
+headline: Find the keys you leaked, replace them and prove your live site shows none
+subhead: Give it your project. It finds keys and passwords in files and history, gives the order to replace them, moves secrets into safe storage, then checks your live site for anything a visitor could read.
+explain: |
+  A leaked key is not fixed by deleting it from the file. It stays in your history and still works until you replace it at the provider. And moving to a secret store is no use if the old key still runs, or if the live site still ships a key in its scripts.
+
+  The steps go in the order that works. First it scans the project and its history and lists every secret you must treat as leaked, with the order to rotate them. You rotate each key at its provider. Then it changes the code to read secrets from safe storage and plans the next rotation. You deploy. Last it opens the live site as a visitor would and looks for keys in the page, the scripts and files that should be private.
+when:
+  - A key or password was pushed to a repo, pasted in chat or sent in a screenshot.
+  - Your project has env files, keys in code or secrets in CI settings with no plan.
+  - You want proof that your live site does not show any key to visitors.
+you_give:
+  - Your project (a folder or repo the AI can open, with its history)
+  - Where you run it, such as your host, your CI and the secret store you prefer (optional)
+  - The address of your live site, once you have deployed
+you_get:
+  - A list of every leaked or loose secret, ranked, with the order to replace them
+  - Code changed to read secrets from a store, with who may read each one
+  - A plan to rotate secrets again on a schedule
+  - A report on what the live site shows to a visitor, with a fix for each find
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - It never needs to print a secret. Tell it to refer to keys by name and the last four characters.
+  - Do not skip your two steps, which are replacing the keys and deploying.
+how_it_works:
+  - title: Find the leaked secrets
+    text: Scans the files and the git history, checks env files and what git ignores, lists every secret to treat as leaked and writes the order to rotate them.
+  - title: Replace the keys at each provider
+    text: This one is yours. Rotate each key in the order the report gives and remove old copies from your files.
+  - title: Move secrets to safe storage
+    text: Picks a store that fits your pipeline, changes the code to read from it, sets who and what may read each secret and plans the next rotation.
+  - title: Deploy the updated code
+    text: This one is yours. Deploy and keep the address of the live site for the last step.
+  - title: Check the live site
+    text: Fetches the page and every script, looks for keys in them, probes for config and source files visitors can open, ranks what turns up and writes the fix.
+output_shape: |-
+  STEP 1: LEAKED SECRETS
+    Each secret by name | where it was found | rotate order
+
+  YOUR STEP: replace the keys
+
+  STEP 2: SAFE STORAGE
+    Store chosen | code changes | who reads what | rotation plan
+
+  YOUR STEP: deploy, keep the live address
+
+  STEP 3: LIVE SITE CHECK
+    What a visitor can read | ranked finds | fixes
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your secret store
+    how: Name it (your host's built-in settings, a cloud store or a vault) so step 2 changes the code for that one.
+  - what: How far back to look
+    how: Tell step 1 whether to scan the whole history or only recent commits.
+  - what: A key that cannot be replaced today
+    how: Say so in step 1. It will mark the risk and suggest limits at the provider while you wait.
+  - what: Live site scope
+    how: Give step 3 only a site you own. Add the pages that carry the most scripts first.
+judge:
+  - No secret value appears in the report, only its name and where it sits.
+  - Every secret is either rotated or has a reason it can wait, with a date.
+  - The code reads each secret from the store, with no fallback value left in a file.
+  - The live check looked at the scripts, not only the page.
+  - Anything still open is on the list, not hidden.
+test:
+  - Try an old, replaced key against its provider. It should be refused.
+  - Search your repo and history for the key names you replaced. No live values should remain.
+  - Open the live site in a private window, look at the page source and search for key names.
+improve:
+  - Add a secret scan to your CI so a new leak is caught on the first push.
+  - Put the rotation dates in your calendar.
+  - Run step 3 again after each release that changes your scripts.

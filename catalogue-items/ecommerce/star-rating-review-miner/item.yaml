@@ -1,0 +1,19 @@
+slug: star-rating-review-miner
+name: "Star-rating review miner"
+summary: "Paste rivals' reviews by star. Get broken trust markers, product gaps and hot-lead phrases."
+category: ecommerce
+type: skill
+role: source
+job: research
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How I find avatars that scale creatives to $100k a day", by: "an ecom brand scaling coach (name not given)", used: "Mining competitors' 1-star reviews for exact failure points, physical friction and broken trust markers"}
+  - {title: "How I do market research for new products", by: "an info-product teacher (name not given)", used: "3-star reviews for structural gaps and level problems, the hot-lead phrase about spending a lot without results, not chasing contradictions, and copying exact quotes by hand"}

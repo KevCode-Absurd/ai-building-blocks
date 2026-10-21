@@ -1,0 +1,130 @@
+new_slug: product-page-seo-builder
+name: "Product page SEO builder"
+summary: "Give it a product and target term. Get page layout, copy, image names, markup and an index call."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It makes a few judgement calls and writes within fixed limits, so a mid-size model is enough."
+
+headline: "Product page SEO builder"
+subhead: Give it a product's facts and the term you want it to rank for. It first decides whether the page should try to rank at all, then builds the title, H1, address, page layout, copy, image names, markup list and out-of-stock plan.
+
+explain: |
+  Product pages usually have much less search volume than collections. Many stores still spend days on every product page. If the product has a made-up name nobody searches, that work brings no visitors. If it does have searches, the page also has to sell, since the shopper who lands on it is close to buying.
+
+  This skill starts with the question of whether the page should rank, using search volume and what Google shows today. Then it builds a page that sells: a short description, bullets, a spec table, a longer description, an FAQ and reviews. It names the images, lists the markup the page needs, and plans what happens when the item sells out or is discontinued so you do not lose a page that ranks.
+
+when:
+  - You are adding or rewriting a product page for a product people search by name.
+  - Your product titles are supplier names like "Silk Stretch Crepe 4421" and you want clear ones.
+  - You sell out often and want to keep rankings when stock runs out.
+
+you_give:
+  - The product facts, such as specs, materials or ingredients, use and variants
+  - The term you want it to rank for, and its search volume if you know it
+  - Questions customers ask (optional)
+  - Product photos (optional)
+you_get:
+  - A rank, keep-live or noindex call with a reason
+  - Title tag, H1, address and search listing
+  - A page layout with short and long copy, a spec table and an FAQ
+  - Image names and alt text, a markup list and stock-out rules
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the product facts and your target term. Add the search volume if you know it.
+  - Attach product photos if you want image names and alt text.
+  - Read the rank-or-not call first. If it says do not target, spend your time on the collection page instead.
+  - Paste each part into the right Shopify field, then check the markup with a rich results test.
+
+how_it_works:
+  - title: Decides whether to rank
+    text: Looks at volume for the product name. No volume means put the effort into the collection. Real volume means rank it.
+  - title: Checks the owner
+    text: Mostly product pages in the results means a product page can win. Category pages mean the collection owns the term.
+  - title: Sets the key fields
+    text: Keyword first in a title of about 60 characters, one H1 with product name plus keyword, and a short address.
+  - title: Lays out the page
+    text: Short description, bullets, spec table, longer description, FAQ and reviews, in a sales-first order.
+  - title: Names the images
+    text: Descriptive file names and alt text. Smaller files. The main image is never lazy-loaded.
+  - title: Lists the markup
+    text: Product, review, FAQ and breadcrumb markup, with a check for doubles from review apps.
+  - title: Plans stock-outs
+    text: Out of stock keeps the page live with notify me. Discontinued shows similar products. Ranking pages are never deleted.
+
+output_shape: |
+  INDEX CALL: <rank | keep live | noindex> because <reason>
+
+  FIELDS
+  Title tag: <...> (<n> characters) | bulk template: <...>
+  H1: <...>
+  URL: <...>
+  Search listing: <...>
+
+  PAGE LAYOUT
+  Short description (<n> words): <...>
+  Bullets: <...>
+  Spec table: <rows>
+  Detailed description (<n> words, because <reason>): <...>
+  FAQ: <Q/A pairs>
+
+  IMAGES
+  <file name> | alt: <...> | format: <...>
+
+  MARKUP: <types> | check: <duplicates>
+  STOCK RULES: <out of stock | discontinued>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Search volume for the product name
+    how: Add it. It drives the first call. With no volume, the skill leaves that call open.
+  - what: Description length
+    how: Say if buyers decide in seconds or need depth. A long block can hurt conversion on simple products.
+  - what: Catalogue size
+    how: Say how many products. A big catalogue gets one bulk title template instead of a title for each.
+  - what: Customer questions
+    how: Paste real ones from email or chat. The FAQ answers those, using only your product facts.
+  - what: Your review app
+    how: Name it. Many add their own markup, so the check for doubles targets that app.
+
+judge:
+  - The first line is a rank-or-not call with a reason.
+  - Title has the keyword first, with about 60 characters or fewer, and there is exactly one H1.
+  - No spec, claim or review appears that was not in your facts.
+  - Image names and alt text describe what is in the picture.
+  - Out-of-stock and discontinued pages stay live with a clear button.
+
+test:
+  - Give it a product with a made-up name and no searches. It should say put the effort into the collection.
+  - Leave out the specs. It should ask for them, not guess.
+  - Give it a keyword a collection already targets. It should pick another or flag the clash.
+  - Check the markup with a rich results test after you publish.
+
+improve:
+  - Add your shipping, returns and guarantee wording to the skill file so the copy uses only approved lines.
+  - Add your brand tone and phrases to avoid.
+  - Save a finished page as the model for the next product.
+  - Pair it with the Product page image checker for the pictures, and with the AI-ready product page editor for answers AI tools can use.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Title, listing and handle fields, a redirect on rename, and the notify-me and shop-similar buttons through apps or theme edits."}
+    - {name: "Google Search Console", why: "Free. Shows whether a product page gets impressions before you decide to rank or noindex it."}
+    - {name: "Any good chat AI", why: "Drafts the copy from your facts and checks the character counts."}
+  inputs:
+    - "Search volume for the product name"
+    - "Real customer questions and reviews"
+    - "A spec sheet from your supplier"
+    - "Photos of the product from several angles"
+
+terms:
+  - term: Noindex
+    meaning: A setting that asks Google not to show a page in search results.
+  - term: Spec table
+    meaning: A table listing size, weight, material and other facts.
+  - term: Markup
+    meaning: Hidden code that tells search engines what a page contains, such as price or reviews.
+  - term: Lazy loading
+    meaning: Loading an image only when the shopper scrolls to it.

@@ -1,0 +1,99 @@
+new_slug: release-manager
+name: Release manager
+summary: Run it before each release. Get a go or no-go, version, changelog, rollback plan and a live check.
+job: ship-and-host
+thinking: high
+thinking_why: It chooses its path from the review results, loops on the go or no-go check and plans a rollback. Give it your strongest model.
+headline: Release manager
+subhead: Run it before each release. It checks deploy risks first, sets the version and changelog only when the way is clear, loops on the go or no-go check up to three times, plans the rollback, and checks the live site after you deploy.
+explain: |
+  Releases go wrong in the same few ways: a data change that cannot be undone, a setting missed on the server, a version tagged before anyone checked, or a deploy that never reached the live site. A rollback written the night before is often the one that does not work.
+
+  This agent runs the checks in the right order. It reads for deploy risks first, and if it finds a blocker it stops before any version is set. It then prepares the version and changelog, runs the go or no-go check, and reruns it as you fix blockers, up to three times. A go gets a deploy plan with a rollback, built on what worked last time. After you deploy, it comes back to prove the live site runs the new build. It never commits, tags, deploys, migrates or rolls back. You do, when you say so.
+when:
+  - You ship software and want the same checks before every release.
+  - A release has a data change or a setting change and you want the rollback planned first.
+  - You want proof the live site runs the new version, not a hope.
+you_give:
+  - Your project, with its history since the last release
+  - How the last release was done, the first time
+  - Known risks such as a data change or a partner that must update first (optional)
+  - The live link, once you have deployed
+you_get:
+  - A go, no-go or blocked verdict with the reasons
+  - The next version number and a changelog
+  - A deploy plan with a check after each step
+  - A rollback, with anything that cannot be undone said first
+  - A check that the live site serves the new build
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then tell it you are preparing a release.
+  - Read the verdict. Fix any blocker, then tell it so and it checks again.
+  - Read the plan and the rollback. Commit, tag and deploy yourself, or say yes to each step one by one.
+  - After you deploy, give it the live link and ask it to check.
+  - It saves the release for next time, including the rollback steps that worked.
+how_it_works:
+  - title: Read its memory
+    text: Opens the last release and the blockers found in earlier releases, and lists what changed since.
+  - title: Review the deploy risks
+    text: A read-only check of data changes, settings, order of steps and rollback. A blocker stops the run before any version is set.
+  - title: Prepare the release
+    text: Works out the next version and writes the changelog. Both stay as local changes for you.
+  - title: Gate it, with a cap
+    text: Gives a go or no-go. After a no-go and your fixes, it runs again, up to three times in all.
+  - title: Plan the deploy and the way back
+    text: Writes the steps and the checks after each, with a longer plan when there is a data or settings change.
+  - title: Check after you deploy
+    text: Proves the live site serves the new build. If not, it points to the rollback and asks you.
+output_shape: |-
+  VERDICT
+    <go | no-go | blocked at review> | <reasons>
+
+  VERSION AND CHANGELOG
+    <number> | why: <reason> | <changelog text>
+
+  BLOCKERS
+    1. <what> | where: <place> | clears when: <condition> | repeat? <yes or no>
+
+  DEPLOY PLAN
+    1. <step> | check after: <what to see>
+
+  ROLLBACK
+    <steps> | time: <estimate> | cannot be undone: <list or "nothing">
+
+  AFTER DEPLOY
+    <live checks passed or failed>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: The limit on go or no-go runs
+    how: It starts at 3. Lower it if you want to look at the blockers sooner.
+  - what: How the last release was done
+    how: Give the real steps, including any manual ones. The plan and the rollback build on them.
+  - what: Known risks
+    how: Tell it about data changes, new settings and partners who must update first. These make the plan longer, on purpose.
+  - what: The live link
+    how: Without it, the after-deploy check does not run. It says so and does not guess.
+judge:
+  - Nothing was committed, tagged, deployed or migrated without your clear yes.
+  - The go or no-go check ran after the version was set, and the count of runs is stated.
+  - The rollback says what cannot be undone.
+  - The after-deploy check used the live link.
+  - Past blockers were checked again.
+test:
+  - Run it on a past release that went badly. See if the review finds the cause.
+  - Run it on a release with a data change. The plan should say whether the old version can run on the new data.
+  - Give it a live link that still serves the old build. It should fail the check.
+improve:
+  - After each release, tell it what happened. It saves the rollback steps that worked.
+  - Add every blocker you meet to the blockers list, so it is checked next time.
+  - Add your own go-live checks to the notes, such as a payment test or a login test.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your commit history, keep the release folder and prepare the version and changelog.
+    - name: GitHub
+      why: It reads the commits and checks since the last release. You tag and publish.
+  inputs:
+    - The steps you followed for the last release
+    - A list of data or settings changes in this release

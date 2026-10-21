@@ -1,0 +1,96 @@
+new_slug: fix-inbox-placement-and-win-back-your-opens
+name: Fix inbox placement and win back your opens
+summary: Give it your sending setup and results. Get a recovery plan, a wider engaged list and a sunset flow.
+job: write-emails
+thinking: high
+thinking_why: Five steps carry a diagnosis through two waiting periods, and each one changes who you email. Give it your strongest model.
+headline: Get your emails out of spam and your opens back
+subhead: Give it your email setup and 60 days of campaign results. It finds the setup faults that push mail to spam, builds a staged plan that emails your most engaged people first, widens the list as opens recover, writes a sunset flow for the quiet ones and reads the results.
+explain: |
+  When emails land in spam, opens fall. Falling opens make it worse, because mailbox providers watch who opens and who complains, then send more of your mail to spam. Sending harder to the whole list digs the hole deeper. The way out is to fix the setup, send to the people who still open, and widen slowly.
+
+  The first step checks your sending domain, DMARC, tracking and list settings and scores the setup. Then it pauses while you fix the faults and export 60 days of results. The second step diagnoses the likely cause, scores inbox health and builds a staged send plan with gates. The third defines engaged from your buying cycle and adds random groups of quiet contacts into engaged sends, with stop rules. Then it pauses again: send to the engaged group only for two weeks and export the quiet subscribers. The fourth writes a three-email sunset flow and a monthly clean-out rule. The fifth reads whether opens and revenue per send recovered. The full plan takes weeks. If your list is small, the engaged group is small too, so progress will be slow.
+when:
+  - Your emails are going to spam, or open rates have been falling.
+  - You send to the whole list and complaints or unsubscribes have crept up.
+  - You want to email a bigger group again without losing your inbox placement.
+you_give:
+  - Your email platform settings and DNS records for your sending domain
+  - Screenshots or exports of your sign-up forms, pages and tracking settings (optional)
+  - After the first pause, your last 60 days of campaign results
+  - Your flows, and the offer you will use to win people back (optional)
+  - After the second pause, the quiet subscribers and their open history
+you_get:
+  - An email setup score out of 100, each failed check with the exact fix, and the DMARC records to add
+  - An inbox health score out of 100, a diagnosis, and a staged recovery plan with gates at each stage
+  - An engaged definition, a send split and a drip plan with stop rules for adding quiet contacts
+  - A three-email sunset flow, the rules for who counts as unengaged and a monthly clean-out step
+  - A review of list growth, campaigns, flows and deliverability, ranked causes and a channel health score out of 100
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your sending domain settings and your platform's list and tracking settings.
+  - When it pauses, fix the faults it found, export 60 days of campaigns and give them back.
+  - Pause again after step 3. Send to the engaged group only for two weeks, then export the quiet subscribers.
+how_it_works:
+  - title: Check the email setup
+    text: Checks your sending domain, DMARC, smart sending, attribution, tracking and list settings against a fixed list. It scores the setup and gives the exact fix for each fault.
+  - title: Fix the faults and export
+    text: A pause. You fix the faults the check found and export your last 60 days of campaign results.
+  - title: Plan the recovery
+    text: Diagnoses the likely cause, scores inbox health and builds the engaged groups. It plans a staged ramp with a gate at each stage and a restart order.
+  - title: Widen the engaged list
+    text: Defines engaged from your buying cycle, sizes it, splits the sends and plans a slow drip of quiet contacts into engaged sends, with stop rules and a monthly check.
+  - title: Send to the engaged only
+    text: A pause. You send to the engaged group only for two weeks, then export the quiet subscribers and their open history.
+  - title: Sunset the quiet ones
+    text: Defines unengaged with conditions, guards against false signals, writes a three-email sunset flow and sets a monthly rule that suppresses those who never answer.
+  - title: Read the results
+    text: Checks nothing is broken, then reads list growth, campaigns, flows and deliverability in order. It ranks the causes and scores channel health.
+output_shape: |-
+  STEP 1: SETUP CHECK
+    Setup score out of 100 | failed checks with exact fixes | DMARC records | settings table
+
+  PAUSE: fix the faults, export 60 days of campaign results
+
+  STEP 2: RECOVERY PLAN
+    Inbox health score out of 100 | diagnosis | fix first | staged plan with gates | email fixes
+
+  STEP 3: ENGAGED LIST
+    Engaged definition | send split | drip plan | stop rules | monthly check
+
+  PAUSE: send to the engaged group only for two weeks, export the quiet subscribers
+
+  STEP 4: SUNSET FLOW
+    Unengaged segment | three-email flow with timing | monthly suppression | send rules
+
+  STEP 5: RESULTS
+    Ranked causes | list growth | campaigns | flows | deliverability | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your buying cycle
+    how: Step 3 defines engaged from how often people buy. A store with yearly buyers needs a longer window than one with monthly buyers.
+  - what: How quickly you widen
+    how: The recovery plan sets a gate at each stage. Move to the next stage only when opens meet the gate, and repeat a stage if they do not.
+  - what: The offer in the sunset flow
+    how: A real offer gives quiet people a reason to answer. Without one, the flow is a plain last-chance notice.
+  - what: Your sending region
+    how: The sunset step checks consent rules for the regions you send to. Tell it where your subscribers live.
+judge:
+  - Each failed setup check names the setting, the severity and the exact fix.
+  - The inbox health score lists what was measured and what was not given.
+  - The staged plan has a gate for each stage, and the next stage only starts when the gate is met.
+  - The sunset flow tells people the truth about what happens if they do not respond.
+  - The results step puts the causes in order, with evidence and confidence for each.
+test:
+  - Look up your sending domain in a free DMARC checker. Check it matches step 1.
+  - Count your engaged group by hand from the platform. Check it matches step 3.
+  - Check that each stage of the plan was gated on opens, not on the calendar alone.
+  - Compare opens and revenue per send in the last step with the 60 days before the plan.
+improve:
+  - Save your engaged definition and your gate numbers in your brand file, so later months use the same rules.
+  - Edit the sunset flow's emails to sound like your brand, and keep the notice true to what you do.
+  - Add a monthly step that exports the quiet subscribers, so the clean-out runs without a new project.
+  - Pair it with a welcome or win-back flow writer once opens have recovered.

@@ -1,0 +1,22 @@
+slug: seo-and-ai-search-agency-vetter
+name: "SEO and AI search agency vetter"
+summary: "Paste an agency proposal. Get red flags, questions to send, a keep-or-walk verdict and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: document, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes", by: "An e-commerce SEO agency owner", used: "Long audits full of warnings as a red flag, blog-only plans, the low-price retainer anecdote, and revenue as the one number"}
+  - {title: "Claude Code + SEO Masterclass", by: "An AI-automation freelancer and community owner", used: "The cheap bulk link package trap and its penalty risk"}
+  - {title: "Generative Engine Optimization: Is It Safe and How to Do It the Right Way", by: "Harpreet Singh, SEO practitioner, interviewed on a daily SEO show", used: "Red flags for AI search vendors, five questions to ask, how to read customer stories, the Reddit vendor check and Google's scaled content abuse policy"}
+  - {title: "The ultimate guide to AEO: how to get ChatGPT to recommend your product", by: "Ethan Smith, SEO agency CEO, on a product-growth podcast", used: "Pick the cheapest answer tracker that does the job instead of paying for a commodity tool"}

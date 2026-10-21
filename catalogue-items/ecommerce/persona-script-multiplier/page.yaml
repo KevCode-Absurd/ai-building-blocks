@@ -1,0 +1,126 @@
+new_slug: persona-script-multiplier
+name: "Persona script multiplier"
+summary: "Give it one winning video script. Get a version and a page brief for each buyer group."
+job: write-ad-copy
+thinking: high
+thinking_why: "It must rewrite one script many ways while keeping every claim inside what you can prove, which needs careful reasoning."
+
+headline: "Persona script multiplier"
+subhead: Give it one winning video ad script, your product facts and your buyer groups. It keeps the angle and the offer fixed and changes only who the script talks to. You get one script per buyer group, a matching landing page brief for each, and claim review notes.
+
+explain: |
+  When one video ad wins, the fastest next test is the same ad for a different buyer. Many shops change everything at once, so they can't tell what worked. Here you change one thing: the persona, which means the group of buyers the script speaks to. The angle and the offer stay the same.
+
+  The structure comes from a teardown of one supplement brand's ads. Each script opens with a symptom aimed at one group, reframes the cause, then walks a timeline (day 1, day 9, day 21), naming one ingredient and dose at each step. Results show as scenes, not claims. The mechanism comes before the benefit. Proof comes last, then offer, guarantee and scarcity. It suits products with several ingredients or features and distinct buyer groups. It does not suit a one-benefit product.
+
+when:
+  - One of your video ads is winning and you want to test it with other kinds of buyers.
+  - You sell a product with several ingredients or features that matter to different people.
+  - You want each buyer group to land on a page that matches its script.
+
+you_give:
+  - Your winning script
+  - Product ingredients or features, with doses where they apply
+  - Buyer groups, each with their top problem and the words they use
+  - Your offer, guarantee and proof
+  - Claims you are allowed to make
+you_get:
+  - One script per buyer group
+  - A matching landing page brief for each group
+  - Claim review notes for each script
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your winning script and the product facts, with doses or specs.
+  - List each buyer group with their top problem and their own words, from reviews if you can.
+  - List the claims you may make and the proof you have.
+  - Have a qualified person read every script before it runs, then test one new script at a time against the original.
+
+how_it_works:
+  - title: Fixes angle and offer
+    text: Changes one variable per new concept. Here that is the persona. The angle and the offer stay as they are.
+  - title: Opens with one group's symptom
+    text: Starts with a symptom aimed at one buyer group, not everyone, then reframes the cause as something they haven't considered.
+  - title: Builds the timeline
+    text: Walks day 1, day 9, day 21 or a similar clock. At each step it names one ingredient or feature, its dose and what it does. Viewers keep watching to hear what happens next.
+  - title: Shows scenes, not claims
+    text: Describes outcomes as scenes, such as playing with grandchildren, instead of claims about conditions.
+  - title: Orders the script
+    text: Mechanism before benefit. Proof last, then offer, guarantee and any true scarcity.
+  - title: Reviews the claims
+    text: Colder audiences need sharper hooks but riskier claims. Flags anything beyond what you can substantiate.
+  - title: Briefs a page for each
+    text: Writes a landing page brief for each group, so the page matches the script's persona and promise.
+
+output_shape: |
+  FIXED: angle <...> | offer <...> | proof <...>
+  CHANGED: persona only
+
+  SCRIPT FOR <group 1>
+  Hook (symptom): <...>
+  Reframe (cause): <...>
+  Timeline:
+    Day <n>: <ingredient or feature, dose> : <what it does>
+    Day <n>: ...
+  Scene: <outcome shown as a scene>
+  Mechanism: <...>
+  Proof: <...>
+  Offer, guarantee: <...>
+  Scarcity (only if true): <...>
+
+  PAGE BRIEF FOR <group 1>
+  Headline promise: <...> | first screen shows: <...> | proof near top: <...>
+
+  CLAIM REVIEW
+  <line> : <claim, backed or not, what to check>
+
+  (one script, page brief and claim review per group)
+  MISSING: <winning script | doses | proof | allowed claims>
+
+tweaks:
+  - what: Buyer groups
+    how: Use groups whose problems really differ and whose words you have heard in reviews. Groups that overlap give near-copies of one script.
+  - what: How cold the audience is
+    how: Colder audiences need sharper hooks, but claims get riskier as ads go colder. Tell it how cold, and keep to what you can back.
+  - what: Doses and specs
+    how: Paste exact doses and specs from your label or supplier. The timeline steps can only be as specific as these.
+  - what: Allowed claims
+    how: List what you may say. Anything outside the list is flagged, not written.
+
+judge:
+  - Only the persona changed. The angle and the offer match the original script.
+  - Each script opens with a symptom for one group, not a general line.
+  - Every timeline step uses a dose or spec you gave, not an invented one.
+  - Outcomes are shown as scenes, and no line claims to treat or cure a condition.
+  - Every line is covered by your allowed claims, or flagged in the review.
+
+test:
+  - Run it for two very different groups. The hooks and scenes should differ while the offer stays identical.
+  - Check one timeline step against your label. The dose and name should match exactly.
+  - Give it a product with one benefit. It should say the product is a poor fit instead of padding the timeline.
+  - Test one new script against the original with the same budget and audience, and wait for enough results before you judge.
+
+improve:
+  - Add your compliance rules for health-style claims to the skill file, and a line saying who signs off.
+  - Save each winning script and its notes to your brand file, so the next round starts from them.
+  - Add your real timeline, such as when customers typically notice a result, only if you have data for it.
+  - The source brand's strong health claims should not be copied. Keep claims inside your own proof.
+  - Pair it with a landing page writer that works from an ad.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can rewrite a script for each group. Paste the script, facts and groups in one message."}
+    - {name: "Meta Ad Library", why: "Lets you see how similar ads speak to different buyer groups, so your groups reflect the market."}
+  inputs:
+    - "Customer review quotes sorted by buyer group"
+    - "Your label, spec sheet or supplier dose list"
+    - "Results of the original ad, such as hold rate and cost per purchase"
+    - "A line from your compliance reviewer on what can't be said"
+
+terms:
+  - term: Persona
+    meaning: A group of buyers with the same main problem and the same words for it.
+  - term: Mechanism
+    meaning: The true reason your product works, told before the benefit.
+  - term: Timeline script
+    meaning: A script that walks through days, such as day 1, day 9 and day 21, so viewers stay to hear what happens next.

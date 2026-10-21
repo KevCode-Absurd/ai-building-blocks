@@ -1,0 +1,20 @@
+slug: meta-server-tracking-checker
+name: "Meta server tracking checker"
+summary: "Describe your Meta setup. Get the right server route, proof each event counts once and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Install Facebook (Meta Ads) Conversion API with server-side GTM", by: "Leon, web analytics channel", used: "Sending the same event from pixel and server with one event ID, proving the match in Events Manager, consent-gated triggers, and keeping the test event code out of live traffic"}
+  - {title: "Facebook Conversions API gateway tutorial", by: "Julius, Analytics Mania", used: "How the gateway route works, why it depends on the browser pixel, the practitioner's 1 to 2 percent estimate, Meta's published claims, and why server-side tagging recovers more"}

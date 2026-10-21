@@ -1,0 +1,24 @@
+slug: non-brand-search-campaign-builder
+name: "Non-brand Search campaign builder"
+summary: "Give it your products and search terms. Get themed ad groups, keywords, ad copy and extensions."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: plan}
+  - {type: ad_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "Agency co-founder who runs Google and YouTube ads for DTC brands (name not given)", used: "Seed to long-tail to theme keywords, match types, copy rules, extensions and the Quality Score effect of relevance"}
+  - {title: "The Best E-commerce Google Ads Strategy for 2026", by: "Agency founder with 12 years of Google ads (name not given)", used: "Fewer headlines and descriptions, mining converting terms from Performance Max, single theme ad groups"}
+  - {title: "Google Ads for Ecommerce: The Complete Architecture & Operations Manual (2026 Edition)", by: "Compiled written guide, author not named", used: "Four keyword intent tiers and keeping competitor campaigns apart"}
+  - {title: "Full Ecom Google Ads Course 2026 (100% FREE)", by: "Max, agency owner who runs Google Ads for online stores", used: "Category Search setup, headlines, assets and budgets"}

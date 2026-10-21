@@ -1,0 +1,126 @@
+new_slug: first-use-gap-checker
+name: "First-use gap checker"
+summary: "Paste returns, tickets and reviews. Get where buyers stall before first real use, a fix each and a score."
+job: keep-customers
+thinking: medium
+thinking_why: "It sorts many messages onto a timeline and ranks gaps by a fixed rule. A mid-range model does this well."
+
+headline: "First-use gap checker"
+subhead: Paste your return reasons, low and mid star reviews, support tickets and what the product is for. It draws the path from delivery to repeat use, marks where buyers stall, and gives each gap a barrier type, evidence quotes, one fix and a first-use score out of 100.
+
+explain: |
+  An order only tells you that someone bought. It does not tell you the product did its job. The real test is whether they used it, and used it again. Between the order and that second use, many buyers get stuck: the setup takes too long, they are not sure it fits, a partner has not agreed, or the old item is still in the way. Those buyers become returns, "how do I" tickets and reviews that say "still in the box".
+
+  This skill puts each of those signals on a timeline from delivery to reorder, so you can see where buyers drop off. It names the barrier at each drop, picks a fix that moves the work from the buyer to you, and ranks the gaps by how many orders they touch and what each one costs. It also gives three numbers to track in place of "shipped" and "sold".
+
+when:
+  - Returns or "how do I" tickets are rising and you do not know which step is failing.
+  - Reviews say "never used" or "still in the box", and you want to know why.
+  - You are about to add an insert, a how-to video or a follow-up message, and want to put it on the right step.
+
+you_give:
+  - Return reasons and counts for the last 90 days
+  - Low and mid star reviews and support tickets, pasted
+  - Orders in the same window, and post-purchase email or SMS click data and reorder timing (optional)
+  - What the product is for, and how long one unit should last
+you_get:
+  - A first-use timeline from delivery to repeat use, with drop-off points marked
+  - Ranked gaps, each with evidence quotes, the barrier type and one fix
+  - A first-use score out of 100, with what it measures and the sum shown
+  - Three measures to track in your own store, in place of "shipped" and "sold"
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste return reasons with counts, then the reviews and tickets as they are. Remove names and contact details first.
+  - Say how many orders were in the same window, and how long one unit should take to use up.
+  - Fix the top gap first. Cheap fixes (an insert, a video link, a day-2 message) come before costly ones.
+  - Run it again in 30 days on the new window and compare the score.
+
+how_it_works:
+  - title: Splits two moments
+    text: Treats the order as the first hire and each real use as a smaller hire. Order data shows only the first.
+  - title: Finds use signals
+    text: Lists the proxies you already have, such as return reasons, "never used" lines, "how do I" tickets and reorder timing.
+  - title: Draws the timeline
+    text: Puts delivery, unboxing, setup, first use, first result, second use and reorder in order, and places each signal on its step.
+  - title: Names the barrier
+    text: Tags each drop as effort, anxiety, another person, or an old thing to get rid of.
+  - title: Reads the push
+    text: Treats reviews that start with how bad the old product was as proof for your ads and page.
+  - title: Picks fixes
+    text: Chooses fixes that move work from buyer to you, and costs any that need cash before suggesting them.
+  - title: Sets better measures
+    text: Replaces vanity numbers with delivery as promised, first use in a window, repeat use on time, and would-buy-again.
+  - title: Ranks and scores
+    text: Ranks gaps by orders touched times cost, and scores how many orders were free of a first-use signal.
+
+output_shape: |
+  FIRST-USE TIMELINE  (window <dates>, <n> orders, one unit lasts <time>)
+  delivery > unboxing > setup > first use > first result > second use > reorder
+  signals per step: <step>: <count> (<return | ticket | review>)  <- drop-off marked
+
+  GAPS, ranked (orders touched x cost per order)
+  1. <step> | barrier: <effort | anxiety | other person | old thing to get rid of>
+     orders touched: <n of N> | cost each: <shipping + refund + lost repeat, or MISSING>
+     evidence: "<quote>" (<source type>, <date>), "<quote>"
+     fix: <one fix>  cost to us: <cheap | needs cash: how much>
+  2. ...
+
+  OLD-PRODUCT PUSH
+  "<quote>" - use this in <ad | page>
+
+  SCORE  <n>/100 (100 x <orders with no first-use signal> / <all orders in the window>)
+         measures: share of orders with no first-use trouble signal; not satisfaction
+         after the top fix: <n>/100 if that gap's orders reach zero (a ceiling, not a forecast)
+
+  TRACK INSTEAD OF "SHIPPED" AND "SOLD"
+  1. arrived as promised  2. first use within <window you set>  3. repeat use or reorder on time
+  MISSING: <returns | tickets | reviews | order count | usage time>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: Orders in the window
+    how: The score divides by it. Without the order count the checker still ranks gaps but writes MISSING for the score.
+  - what: How long one unit lasts
+    how: It sets your own first-use window and the reorder check. The book gives no store threshold, so you choose it and the output says so.
+  - what: Bundle and gift orders
+    how: Say which orders are gifts. The buyer and the person who uses it are two stories, and the checker reads them apart.
+  - what: Cost per return
+    how: Give shipping, refund and lost repeat sales. Then the ranking uses your real cost, not a guess.
+
+judge:
+  - Every gap sits on one step of the timeline and names one barrier type.
+  - Each gap has at least two word-for-word quotes with a source type and a date.
+  - The score line shows its sum, the counts it came from, and what it does not measure.
+  - Fixes that cost cash say what they cost, or say the cost is missing.
+  - No benchmark is given for first-use rates, because none exists in the source.
+
+test:
+  - Pick the biggest return reason and count it yourself. The number on the report should match.
+  - Make a fix for the top gap (an insert or a day-2 message) and run the checker on the next 30 days. The gap's count should fall, or you learn that the fix missed.
+  - Give it a message you know is a gift order. It should set it aside or read the recipient as a separate story.
+  - Run it twice on the same data. The ranking should not flip.
+
+improve:
+  - Put your product's setup steps and expected first-use time into the skill file, so the timeline starts from facts and not from guesses.
+  - Add your return reason codes, so it tags them the way your helpdesk does.
+  - Save the three tracking measures in your brand file and read them every month.
+  - Pair it with the Wrong-buyer review checker (promise and buyer mismatch) and the Switch friction remover (worries before the order).
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can sort messages onto a timeline. Paste the text, with dates."}
+    - {name: "Shopify admin", why: "Its order and returns export gives the order count and return reasons for the same window."}
+    - {name: "Klaviyo", why: "Click data on a how-to email shows who opened the setup guide."}
+  inputs:
+    - "Delivery dates versus the dates you promised"
+    - "Reorder dates for consumables, against the date a unit should run out"
+    - "Your helpdesk's tags on tickets"
+
+terms:
+  - term: Big Hire and Little Hire
+    meaning: The order is the big hire. Each real use of the product is a little hire.
+  - term: First-use window
+    meaning: The number of days you allow between delivery and first real use. You set it from how long one unit should take to use.
+  - term: Barrier
+    meaning: "What stops a buyer from using the product: effort, anxiety, another person, or an old thing to get rid of."

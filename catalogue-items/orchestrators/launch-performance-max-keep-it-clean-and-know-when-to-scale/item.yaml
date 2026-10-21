@@ -1,0 +1,22 @@
+slug: launch-performance-max-keep-it-clean-and-know-when-to-scale
+name: "Launch Performance Max, keep it clean, know when to scale"
+summary: "Give it your catalogue and break-even numbers. Get a Performance Max build, a clean-up list and a go or wait on scaling."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [performance-max-launch-planner, performance-max-routine-keeper, google-ads-scale-gate-checker]
+steps:
+  - {uses: performance-max-launch-planner, note: "Says go or wait, then gives the build."}
+  - {uses: performance-max-routine-keeper, note: "Checks the live campaign against the plan and lists what to exclude or replace."}
+  - {uses: google-ads-scale-gate-checker, note: "Takes the clean-up findings and decides whether raising spend is safe."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/launch-performance-max-keep-it-clean-and-know-when-to-scale/skeleton.yaml

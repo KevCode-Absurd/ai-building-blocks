@@ -1,0 +1,20 @@
+slug: email-setup-health-checker
+name: "Email setup health checker"
+summary: "Paste your email settings and DNS records. Get a score out of 100 and the exact fixes."
+category: ecommerce
+type: skill
+role: check
+job: email
+level: beginner
+inputs:
+  - {type: document, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores", used: "Branded sending domain, DMARC starting at policy none, the smart sending window and attribution settings"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Attribution window and exclusions, DMARC policy, Gmail and Yahoo limits, anonymous visitor tracking"}

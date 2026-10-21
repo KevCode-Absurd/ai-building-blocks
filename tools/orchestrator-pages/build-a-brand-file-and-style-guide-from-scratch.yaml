@@ -1,0 +1,88 @@
+new_slug: build-a-brand-file-and-style-guide-from-scratch
+name: Build a brand file and style guide from scratch
+summary: Give it your product and buyers. Get a brand file, a visual direction and a style guide.
+job: brand-file
+thinking: medium
+thinking_why: It runs five skills in a row, and each adds to the same file. A mid-size model works. Read the messages and voice rules before the style guide step.
+headline: Build your brand file and style guide from nothing
+subhead: Give it your product and who it is for. It builds one brand file, adds your core message and voice rules, settles on one visual direction from three, and writes a style guide anyone can follow without guessing.
+explain: |
+  A brand that lives in your head gets said a little differently every time. Each new page, post or freelancer starts from nothing, and the work drifts. If you have no website yet, there is nothing to read the facts from.
+
+  The steps build the brand up in the order that keeps it consistent. First your answers become one brand file. Then it writes the core message, tagline options and proof for each audience. It adds tone, word choices and writing rules on top. Next it makes three different visual directions, scores each against your values and your buyer, and merges the best parts into one. Last it brings the brand file and the direction into a style guide with a real example for every rule.
+when:
+  - You are starting a business or a project and have no website or brand file to read.
+  - Your brand is only in your head and each new writer or designer asks you the same questions.
+  - You want the message, voice and look decided together, so they do not fight each other.
+you_give:
+  - What you make and what it costs
+  - Who it is for and what they want
+  - Your rivals and how you differ (optional)
+  - Names of brands whose voice or look you like, and ones you do not (optional)
+  - Photos of your product and any logo or colours you must keep (optional)
+you_get:
+  - One brand file with product, buyers, proof and voice
+  - A core message, tagline options and proof points for each audience
+  - Tone, word lists and writing rules any writer can follow
+  - One merged visual direction with photo rules you can test
+  - A style guide with story, logo, colour, type, imagery, voice and dos and don'ts
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Answer step 1's questions. Say plainly what is not decided yet. It will mark those lines as missing.
+  - Read the core message and the voice rules. Fix anything that does not sound like you before the look step.
+  - If your logo or colours are fixed, say so before the visual step so it only changes the look around them.
+how_it_works:
+  - title: Build the brand file
+    text: Asks about the product, buyer, rivals, proof and voice, shows a draft, and saves one file every later step reads.
+  - title: Write the messages
+    text: Writes one core message and a value line, tagline options and key messages with proof for each audience, and checks each claim has a fact.
+  - title: Write the voice rules
+    text: Describes the brand as a person, sets the tone, and writes voice qualities with a do and a don't, word lists and short writing rules.
+  - title: Choose the visual direction
+    text: Makes three different directions, scores each against your values and your buyer, merges the best parts, and writes photo rules you can answer with yes or no.
+  - title: Write the style guide
+    text: Combines the brand file and the direction into one guide with a real example for every rule.
+output_shape: |-
+  STEP 1: BRAND FILE
+    Product | buyers | rivals | proof | voice | gaps marked MISSING
+
+  STEP 2: MESSAGES
+    Core message | value line | tagline options | key messages and proof per audience
+
+  STEP 3: VOICE RULES
+    Overview | tone dimensions | qualities with do and don't | vocabulary | writing rules
+
+  STEP 4: VISUAL DIRECTION
+    Three directions | fit grid | merged direction | photo rules | type and colour
+
+  STEP 5: STYLE GUIDE
+    Story | logo | colour | type | imagery | voice | applications | dos and don'ts
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How much is already fixed
+    how: If you have a logo or colours people know, say so. Step 4 then refines the look around them instead of replacing it.
+  - what: Your values
+    how: List the two or three things you will not give up. Step 4 turns each into a rule for what may be shown.
+  - what: Brands you do not want to sound like
+    how: Name them in step 1. Step 3 uses them to set what the voice should never be.
+  - what: Product photos
+    how: Attach clear photos before step 4. Without them the photo rules stay general.
+judge:
+  - Every claim in the messages has a fact in the brand file behind it.
+  - The three visual directions are truly different, and the merged one says what it took from each.
+  - Each photo rule can be answered yes or no by looking at a picture.
+  - The style guide has a real example next to each rule.
+  - Gaps are marked MISSING, not filled with invented facts.
+test:
+  - Write a short post using only the voice rules. Ask someone if it sounds like your brand.
+  - Give the style guide to a person who has not seen your brand. Ask them to describe what to do with the logo and colours.
+  - Check that the core message appears in the guide's voice section without changing meaning.
+  - Run step 1 again after you have real customers. Compare what changed.
+improve:
+  - Fill every MISSING line in the brand file, then re-run steps 2 to 5 so they use real facts.
+  - Add real customer quotes to the brand file after you have some.
+  - Add your logo files and exact colour codes to the style guide as soon as they exist.
+  - Pair it with the Draft brand voice checker so each new piece is held to the guide.

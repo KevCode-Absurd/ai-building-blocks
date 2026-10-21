@@ -1,0 +1,32 @@
+slug: discount-and-price-change-checker
+name: "Discount and price change checker"
+summary: "Give it a planned sale or price change. Get the deepest discount your margin allows and the wording to use."
+category: agent
+type: agent
+role: orchestrate
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+  - {type: spreadsheet, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: tool_connection, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+uses: [product-margin-checker, waterfall-price-setter, price-test-planner, promotion-and-stock-planner, clearance-discount-planner, discount-wording-planner, fake-sale-price-cleaner, bulk-price-changer]
+steps:
+  - {uses: product-margin-checker, note: "Every time, and again after each cut to the discount: margin at the current price and at the sale price, against the margin floor."}
+  - {uses: waterfall-price-setter, note: "Only for a price rise, or when the margin fails even with no discount: the lowest viable price and a keep, reprice or cut call."}
+  - {uses: price-test-planner, note: "Only for a price rise: a test you can undo, with three outcome cases."}
+  - {uses: promotion-and-stock-planner, note: "Only for a sale of a set length: the extra stock to have ready and the lift to expect, from past promotions."}
+  - {uses: clearance-discount-planner, note: "Only when the goal is to clear slow stock: when and how much to cut, in stages."}
+  - {uses: discount-wording-planner, note: "Only after the depth is set: percent or amount form, how to show the sale price and the banner wording."}
+  - {uses: fake-sale-price-cleaner, note: "Once a month, or after every sale ends: strikethrough prices that no longer show a real discount, as a preview."}
+  - {uses: bulk-price-changer, note: "Only after a clear yes to a previewed list: the price change itself, within a floor and a ceiling."}
+schedule: "Before every sale or price change, and once a month for old strikethrough prices"
+asks_before: [changing any live price, setting or removing a compare-at price, starting a sale or a discount code, sending a sale to customers, changing an ad budget for a sale]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,122 @@
+new_slug: store-social-proof-placer
+name: "Store social proof placer"
+summary: "Give it buyer doubts and reviews. Get which proof to show, from whom and where."
+job: write-landing-page
+thinking: medium
+thinking_why: "It matches proof to doubts and places it by clear rules, so a mid-size model is enough."
+
+headline: "Store social proof placer"
+subhead: Give it your reviews, press, video testimonials and the doubts your buyers have. It matches each real proof item to a doubt and a buyer group. You get a proof list, a layout map, the spots where proof goes first and a list of items dropped as not real.
+
+explain: |
+  Most stores show their best reviews in a carousel and hope. Buyers doubt at specific moments: before a high price, a size choice or a new product. Proof that doesn't answer the doubt in front of them does little.
+
+  This skill is the store version of the general Social proof placer. It matches each real review, rating, press quote and video to one doubt or belief. It puts two kinds of proof on the first screen, the matching quote under the add-to-cart button, and an open grid of reviews with names, photos and sources instead of a carousel. It tags reviews by buyer type so a buyer sees people like them first. It also checks every expert with two questions, asks you to show the real rating spread, and drops anything staged or not real. Lift numbers come from single cases, so use them as a direction to test.
+
+when:
+  - Your product page has reviews but visitors still leave before buying.
+  - You are rebuilding a page and need to decide where each review and press quote goes.
+  - You want to use an expert or press quote and need to check it is honest.
+
+you_give:
+  - Reviews, video testimonials, press quotes and counts, each with its source
+  - Buyer groups and what makes each different (optional)
+  - The main doubts, and the pages where visitors hesitate most (optional)
+
+you_get:
+  - A proof list matched to each doubt and buyer group
+  - A layout map showing where each proof item sits
+  - Hot-spots where proof goes first
+  - A list of proof dropped as not real, not sourced or not similar to the buyer
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your real reviews with their source, and your press and video list.
+  - List the doubts buyers raise and the pages where they hesitate.
+  - Place the proof as the layout map shows, and drop what the skill drops.
+  - Add the real rating spread and test one change at a time.
+
+how_it_works:
+  - title: Ties proof to a doubt
+    text: Each testimonial overcomes one objection or installs one belief. Three or four hand-picked quotes beat a generic wall.
+  - title: Fills the first screen
+    text: At least two kinds of proof, such as a rating plus a quote, and the matching quote under add-to-cart.
+  - title: Opens the reviews
+    text: An open grid with headline, name, photo and source, not a carousel or drop-down.
+  - title: Adds quotes to logos
+    text: A real quote beside each press logo.
+  - title: Matches the buyer
+    text: Tags reviews by buyer type and shows similar buyers first.
+  - title: Finds the hot-spots
+    text: Puts proof where visitors are unsure, such as a new product, a high price or a size choice.
+  - title: Checks authority
+    text: Is the person a real expert on exactly this topic, and how truthful can they be given what they gain?
+  - title: Keeps it honest
+    text: Shows the rating spread, states drawbacks and paid links, and gives an honest steer to a better fit.
+  - title: Lists what it drops
+    text: Anything not real, not sourced or not similar goes on a drop list.
+
+output_shape: |
+  PROOF MATCHED TO DOUBTS
+  Doubt | buyer group | proof item | type | source | where it sits
+
+  LAYOUT MAP
+  First screen: <two kinds of proof>
+  Under add-to-cart: <matching quote>
+  Between sections: <proof items>
+  Press logos: <logo + real quote>
+  Wall of love: <open grid with headline, name, photo, source>
+  Video testimonials: <count, headline over each>
+
+  HOT-SPOTS: <product, price, size choice>
+  AUTHORITY CHECK: <expert> | exact topic: <yes / no> | gains: <...> | disclosed: <yes / no>
+  RATING SPREAD SHOWN: <yes / no>
+  HONEST STEER / DRAWBACK LINE: <...>
+  DROPPED: <item> | reason
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Review tags
+    how: Tag reviews by buyer type, such as age, use, size or skin type. The skill shows matching ones first.
+  - what: Where visitors hesitate
+    how: Name the pages and the moments, such as the size picker. Proof goes there first.
+  - what: Video testimonials
+    how: Add short phone videos from real customers. Each gets a one-line headline so silent viewers understand.
+  - what: Rating spread
+    how: Give the real count at each star level. The skill shows it, not just the average.
+
+judge:
+  - Every proof item has a real source and answers a named doubt.
+  - At least two kinds of proof sit on the first screen.
+  - Reviews sit in an open grid, not a carousel or drop-down.
+  - Every expert passed the two-question test and any paid link is disclosed.
+  - Nothing staged, invented or unsourced is kept.
+
+test:
+  - Hide your reviews on one page and show the placed proof on another with the same traffic. Compare conversion.
+  - Show the first screen for five seconds to someone outside the business. Ask what made them trust it.
+  - Check each quote against the original review. All should match.
+  - Add a drawback line to one page and watch whether conversion or returns change over a few weeks.
+
+improve:
+  - Add your own buyer tags to the skill file, so every run sorts reviews the same way.
+  - Add your platform and local rules on endorsements, so the authority check uses them.
+  - Record which proof placement wins in your brand file.
+  - Pair it with the Store hero section writer for the first screen and the Page type and layout planner for the section order.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can sort reviews by doubt and buyer type. Paste reviews with their source."}
+    - {name: "Shopify", why: "Your theme's review and testimonial sections can show an open grid in place of a carousel."}
+  inputs:
+    - "A full export of your reviews with dates and ratings"
+    - "Short phone videos from real customers, with permission"
+    - "Press mentions with the exact published quote and link"
+
+terms:
+  - term: Social proof
+    meaning: Signs that other people bought and were happy, such as reviews, ratings and press.
+  - term: Wall of love
+    meaning: An open grid of real customer reviews shown on a page.
+  - term: Authority proof
+    meaning: A quote from an expert. It counts only when they are an expert on exactly that topic and honest about what they gain.

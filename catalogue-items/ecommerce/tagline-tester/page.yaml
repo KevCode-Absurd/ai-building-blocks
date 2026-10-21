@@ -1,0 +1,126 @@
+new_slug: tagline-tester
+name: "Tagline tester"
+summary: "Paste your tagline and key messages. Get a score out of 100 from ten tests and sharper versions."
+job: brand-file
+thinking: low
+thinking_why: "It runs a short fixed list of tests on a few lines of text, so a fast, small model is enough."
+
+headline: "Tagline tester"
+subhead: Paste your tagline and key messages, plus three rival taglines if you have them. It names the type and runs ten pass or fail tests. You get a score out of 100, one big idea with up to three key messages, where the line must appear, and sharper versions.
+
+explain: |
+  A tagline is a few words that sit on every page, pack and email. If it is vague, long or hard to say, it costs you on all of them. If it promises something the store does not deliver, it costs more.
+
+  This skill names your tagline's type: imperative, descriptive, superlative, provocative or specific. It then runs ten tests worth 10 points each, such as short, different from rivals, easy to say aloud, still readable small, and distilled to one idea. The score shows how well the line meets the list, not how well it sells. It also checks that each claim in the line is backed by your store experience, and that the words match across every place they appear. It ends with three rewrites of the same type and one of another, each scored. If your positioning is not settled, it tells you to fix that first.
+
+when:
+  - You are launching a store and need a line for the header, pack and ads.
+  - You have a tagline you are not sure about, or two or three to choose between.
+  - The wording on your site, emails and pack has drifted and you want one line that matches everywhere.
+
+you_give:
+  - Your current tagline and key messages, or the lines you are choosing between
+  - What you want the store to be known for
+  - Three rival taglines (optional)
+  - Customer words from reviews (optional)
+  - Where the line will appear, such as header, pack, emails and ads (optional)
+you_get:
+  - The tagline type, and whether it suits a new store or a known brand
+  - A score out of 100 from ten pass or fail tests, with the sum shown
+  - One big idea with at most three key messages, and a list of every place the line must appear
+  - Three sharper versions of the same type and one of another type, each scored
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your tagline and key messages, and three rival taglines if you have them.
+  - Read the failed tests first and fix those.
+  - Check the list of places and update each so the wording matches.
+  - Say your line aloud to three people and ask them to repeat it a day later.
+
+how_it_works:
+  - title: Names the type
+    text: Imperative, descriptive, superlative, provocative or specific, and which suits a new store or a known brand.
+  - title: Runs ten tests
+    text: Short, different, unique, essence and position, easy to say, no negative meaning, legible small, can be protected, emotional and distilled.
+  - title: Scores the line
+    text: 10 points for each test passed. The sum is shown, and the score does not measure sales.
+  - title: Finds the big idea
+    text: One line, supported by at most three key messages, with adverbs and filler cut.
+  - title: Checks consistency
+    text: Lists every place the words appear so the wording matches on site, pack, emails and ads.
+  - title: Checks it is true
+    text: Each claim must be backed by shipping, returns, support or the product itself.
+  - title: Checks how long it lasts
+    text: A slogan for one campaign, or a lasting position kept for years.
+  - title: Writes sharper versions
+    text: Three of the same type and one of another type, each scored on the same ten tests.
+
+output_shape: |
+  TAGLINE: "<line>" | type: <imperative | descriptive | superlative | provocative | specific>
+  Stage fit: <new store | known brand>, <fits | does not fit, why>
+
+  SCORE <n>/100 (10 points for each test passed)
+  1 Short <P/F>: <reason>
+  2 Differentiated <P/F>: <reason>
+  3 Unique <P/F>: <reason>
+  4 to 10: essence, easy to say, no negative meaning, legible small, protectable, emotional, distilled
+  Sum: <passed> x 10 = <n>
+
+  BIG IDEA: <one line>
+  KEY MESSAGES (max 3): 1 <...> 2 <...> 3 <...>
+  TRUE? <claim -> store proof | gap>
+  SLOGAN OR LASTING: <...>
+  WHERE THE LINE MUST APPEAR: <list, with the current wording>
+
+  SHARPER VERSIONS
+  A <line> (<type>) <n>/100 | B ... | C ... | D <other type> ...
+  NOT RUN: <test, and what is needed>
+
+tweaks:
+  - what: Rival taglines
+    how: Paste three rival taglines. The differentiated and unique tests need them, and without them those two tests are not run.
+  - what: Customer words
+    how: Paste short lines from reviews in the customers' own words. The emotional test and the rewrites use them, so nothing is invented.
+  - what: Your stage
+    how: Say whether the store is new or known. A new store with no history can use a descriptive line that says what it is, and a known brand can use a looser one.
+  - what: Where it will be used
+    how: List the header, pack, emails and ads. The legible-small test checks the smallest place, and the consistency list covers all of them.
+  - what: Your markets
+    how: List the countries and languages you sell in. The negative-meaning test checks the line in each, and it needs a native speaker to confirm.
+
+judge:
+  - The type is named, and the stage fit is stated.
+  - All ten tests have a pass or fail with a one-line reason, and the sum adds up.
+  - There are at most three key messages.
+  - Each claim in the line is linked to proof in your store, or flagged as a gap.
+  - The protect test says it is not a trademark clearance.
+
+test:
+  - Test your current line, then a line you know is vague. The vague line should score lower and fail the distilled test.
+  - Run it twice on the same line. The pass and fail results should match, give or take one test.
+  - Say your top-scoring version aloud to three people, then ask them a day later to repeat it. Keep it only if they can.
+  - Ask a native speaker to read the line for any second meaning in each market you sell in.
+
+improve:
+  - Add words you never want in a tagline, such as hype words or jargon, to the distilled test so they always fail.
+  - Add your real proof points, like your return window or delivery promise, to the "is it true" step.
+  - Keep a list of your places for the line in your brand file, so each new page starts with the same words.
+  - Pair it with the Store promise writer to settle what you promise first, and the Store brand signal auditor to check the wording across your touchpoints.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the ten tests on text. Paste your line and rivals."}
+    - {name: "Google search", why: "A quick search of the exact words in quotes shows whether others in your field already use your line."}
+  inputs:
+    - "Your three closest rivals' taglines"
+    - "Short lines from reviews in your customers' own words"
+    - "A list of every page, pack and email where the line appears"
+    - "A trademark search result for the line, if you plan to protect it"
+
+terms:
+  - term: Tagline
+    meaning: A short phrase that sums up what a brand stands for and sets it apart from rivals.
+  - term: Key messages
+    meaning: Up to three short points that back up the one big idea behind the tagline.
+  - term: Trademark clearance
+    meaning: A legal search showing nobody else has the right to use the same words in your field.

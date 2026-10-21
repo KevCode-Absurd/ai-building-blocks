@@ -1,0 +1,117 @@
+new_slug: store-profit-per-visitor-calculator
+name: "Store profit per visitor calculator"
+summary: "Paste your Shopify and analytics numbers. Get corrected revenue and gross profit per visitor, and a trust score."
+job: track-numbers
+thinking: low
+thinking_why: "It follows fixed formulas on numbers you paste, so a fast model is enough. Check the arithmetic once."
+
+headline: "Store profit per visitor calculator"
+subhead: Paste your net sales, shipping collected, orders, sessions and gross margin. It corrects Shopify's figures for tax, shipping and bots, works out revenue and gross profit per visitor, shows how cold traffic moves your conversion rate, and gives a trust score out of 100.
+
+explain: |
+  Conversion rate is easy to move and hard to read. Turn off your cold ads and it jumps overnight, though nothing on the page changed. Shopify's own numbers add to the muddle: total sales include tax, average order value leaves out the shipping you collected, and sessions include bots.
+
+  This skill fixes those three, then works out revenue per visitor (conversion rate times order value) and gross profit per visitor (that times your margin). It shows how your mix of cold and warm traffic sets your blended conversion rate, so you stop comparing yourself with other brands. It also links conversion to what a new customer costs, and lists what to track each week. It covers the store parts only, not a general split by source.
+
+when:
+  - You are about to judge a page change and need a number that does not move when your ad mix does.
+  - Your conversion rate fell as you scaled ads and you want to know if the page got worse.
+  - You compare your conversion rate with other brands and want to know if that makes sense.
+
+you_give:
+  - Net sales, shipping collected, tax and discount totals for one date range
+  - Order count, and new versus returning orders if you have them
+  - Sessions from GA4 or your analytics tool, split by cold and warm traffic if possible
+  - Your gross margin percent
+  - Ad spend and new-customer orders (optional)
+
+you_get:
+  - Revenue per visitor and gross profit per visitor, as given and corrected
+  - A blended conversion check showing the effect of your cold traffic share
+  - The link between conversion and the cost of getting a customer
+  - What to track weekly, and a trust score out of 100 with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export net sales, shipping collected, tax, discounts and orders from Shopify for one clean date range.
+  - Paste sessions from GA4, split by cold and warm traffic if you can.
+  - Add your gross margin percent and, if you have them, ad spend and new-customer orders.
+  - Put the weekly list it gives you into a sheet and fill it in every Monday.
+
+how_it_works:
+  - title: Sets the formulas
+    text: Revenue per visitor is conversion rate times order value. Gross profit per visitor is that times your margin.
+  - title: Fixes the Shopify numbers
+    text: Net sales instead of total sales, shipping collected added back, and sessions from GA4 to avoid bots.
+  - title: Works out both views
+    text: The figures as the dashboard gives them and the corrected ones, with the working shown.
+  - title: Shows the cold traffic effect
+    text: Blended conversion moves toward the cold rate as cold traffic grows, so a lower rate may not mean a worse page.
+  - title: Warns against comparing brands
+    text: Price, category, order value and traffic source set the ceiling for conversion.
+  - title: Links to acquisition cost
+    text: Cost to get a customer is ad spend divided by new-customer orders, so higher conversion lowers it.
+  - title: Guards against false wins
+    text: Halving prices lifts conversion and cuts revenue per visitor, so no change is judged on conversion alone.
+  - title: Scores the numbers
+    text: Points off for tax in sales, missing shipping, bot sessions, no traffic split, a short window or no margin.
+
+output_shape: |
+  RANGE        <dates> | orders: <n> | sessions: <n> (<source>)
+  AS GIVEN     conversion <x%> | order value <$> | revenue per visitor <$> | gross profit per visitor <$>
+  CORRECTED    net sales <$> + shipping <$> = <$> | order value <$> | sessions <n>
+               revenue per visitor <$> | gross profit per visitor <$>
+  CORRECTIONS  tax <...> | shipping <...> | bots <...>
+  BLEND        cold <x%> at <rate> | warm <x%> at <rate> | blended <rate> | at a different cold share: <rate>
+  CAC LINK     ad spend <$> / new-customer orders <n> = <$>; at double the conversion: <$>
+  READ         <two sentences>
+  TRACK WEEKLY <list>
+  SCORE        <n>/100 (<sum shown>)
+               <n>/100 after the fixes
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Date range
+    how: Use several weeks of clean data. Short windows swing with sales and email sends.
+  - what: Traffic split
+    how: Give sessions for cold paid traffic and for warm traffic such as email, direct and returning buyers.
+  - what: Gross margin
+    how: Use the margin after cost of goods. Without it you only get revenue per visitor.
+  - what: Sessions source
+    how: Use GA4 sessions. Shopify's include bots and make your rates look lower than they are.
+
+judge:
+  - Both the dashboard figures and the corrected ones are shown, with the working.
+  - Conversion rate is never the only number used to judge a change.
+  - Gross profit per visitor uses your stated margin.
+  - The blend example uses your own split, or says it is only an example.
+  - Single-source claims are marked as claims.
+
+test:
+  - "Check one corrected figure by hand: net sales plus shipping collected, divided by sessions."
+  - Give it a store with no margin. It should still give revenue per visitor and lower the score.
+  - Change the cold share in your example. The blended rate should move toward the cold rate as cold grows.
+  - Run it on last month and this month and compare the corrected revenue per visitor, not conversion.
+
+improve:
+  - Add your real margin by product line to the skill file for a gross profit per visitor that fits each page.
+  - Add your usual traffic sources and which count as cold, so the split is the same every month.
+  - Keep a sheet of the weekly list and ask the skill to read the trend each month.
+  - Pair it with the store test readiness checker and the store test verdict maker, which use gross profit per visitor as the honest score.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Net sales, shipping collected, tax, discounts and orders come from its reports."}
+    - {name: "GA4", why: "Sessions with fewer bots, and traffic split by source."}
+  inputs:
+    - "Twelve weeks of weekly numbers, to see the trend"
+    - "Ad spend and new-customer orders for the same dates"
+    - "Returns and refunds for the same dates"
+
+terms:
+  - term: Revenue per visitor
+    meaning: Money from sales divided by visitors. It equals conversion rate times average order value.
+  - term: Gross profit per visitor
+    meaning: Revenue per visitor times your gross margin. It shows what each visit earned you after the cost of goods.
+  - term: Blended conversion rate
+    meaning: The conversion rate across all your traffic, cold and warm together.

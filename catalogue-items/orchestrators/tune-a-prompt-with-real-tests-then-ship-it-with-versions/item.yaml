@@ -1,0 +1,20 @@
+slug: tune-a-prompt-with-real-tests-then-ship-it-with-versions
+name: "Tune a prompt with real tests, then keep versions"
+summary: "Give it a rough prompt. Get a clear version, scores against your test cases and a safe way to change it later."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [prompt-improver, prompt-tester-and-tuner, prompt-change-manager]
+steps:
+  - {uses: prompt-improver, note: "Turns the rough prompt into a clear, structured one."}
+  - {uses: prompt-tester-and-tuner, note: "Runs the rebuilt prompt and your test cases and scores every version."}
+  - {uses: prompt-change-manager, note: "Takes the winning version and its test cases and sets rules for changing it later."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/tune-a-prompt-with-real-tests-then-ship-it-with-versions/skeleton.yaml

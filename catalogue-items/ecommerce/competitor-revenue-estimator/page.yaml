@@ -1,0 +1,121 @@
+new_slug: competitor-revenue-estimator
+name: "Competitor revenue estimator"
+summary: "Give a rival's visits and price. Get low, mid and high monthly revenue, a score and a verdict."
+job: find-products
+thinking: low
+thinking_why: "It is one formula with set inputs, so a fast model is enough if it shows its sums."
+
+headline: "Competitor revenue estimator"
+subhead: Give it a rival store's monthly visits, its price and the offers you saw. It works out orders and revenue as a low, mid and high case, shows the sums, and scores the result against a revenue bar you can change.
+
+explain: |
+  You cannot see a rival's sales. You can see their traffic, and traffic times conversion rate times order value gives a rough revenue. Without a method, people pick one optimistic number and call it fact.
+
+  This skill uses the formula from one e-commerce video with cautious inputs. Conversion is 2% for a mid-priced item and about 1.5% for a high-ticket one, inside a range of 1.5% to 3.5%. Order value is the low end of the rival's bundles and upsells. It gives you three cases, marks which inputs are guesses and compares the mid case with a bar. The default bar is $300,000 a month, and you can change it.
+
+when:
+  - You found a store selling your product and want to know if the market is big enough to chase.
+  - You are choosing between two products and one has a rival with strong traffic.
+  - You want to check that a viral product turns into real sales before you pay for stock.
+
+you_give:
+  - The rival's store link and its monthly visits from a free traffic tool
+  - The price on their page, and any bundles or upsells you saw
+  - Your guess of their conversion rate by price point (optional)
+  - Your own revenue bar (optional)
+you_get:
+  - Orders per month and revenue as a low, mid and high case, with the sums
+  - A score out of 100 against the bar, and a verdict of strong pass, pass or fail
+  - What you saw in their funnel, such as page type, offer and price
+  - A list of which inputs are known and which are guesses
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Look up the rival's monthly visits in a free traffic tool and paste the number, the tool name and the date.
+  - Open their page as a shopper and paste the price, the bundles and the upsells you saw.
+  - Say whether you want the default bar of $300,000 a month, or give your own.
+  - Read the range, not only the mid case. Plan with the low case if cash is tight.
+
+how_it_works:
+  - title: Uses one formula
+    text: Visits x conversion rate x average order value. Orders come first, then revenue.
+  - title: Picks cautious rates
+    text: 2% for mid-priced items and about 1.5% for high-ticket, inside a range of 1.5% to 3.5%. A higher price means a lower rate.
+  - title: Picks a cautious order value
+    text: The low end of the rival's bundles and upsells. A $70 price with an offer stack was set at $90.
+  - title: Works three cases
+    text: Low, mid and high, with every sum shown so you can check them.
+  - title: Walks their funnel
+    text: Page type, price, bundle and upsell, so you know what you would be up against.
+  - title: Scores against the bar
+    text: Mid case divided by the bar, capped at 100. Strong pass if the low case clears the bar too.
+
+output_shape: |
+  RIVAL <store link>  price <p>  traffic tool <name, date>
+
+  INPUTS
+  Monthly visits: <n>   Conversion: low <a>% | mid <b>% | high <c>%
+  Average order value: low $<x> | mid $<y> | high $<z>
+  Guessed inputs: <list>   Known inputs: <list>
+
+  CASES
+  LOW    <orders>  $<revenue per month>
+  MID    <orders>  $<revenue per month>
+  HIGH   <orders>  $<revenue per month>
+
+  BAR  $<n> a month
+  SCORE  <n>/100 (mid $<n> / bar $<n> x 100, capped at 100)
+  VERDICT  <STRONG PASS | PASS | FAIL>  <one line why>
+
+  FUNNEL SEEN
+  Page type | Price | Bundle | Upsell
+
+  CHECKS MISSED: <check and what is needed | none>
+  MISSING: <what>
+
+tweaks:
+  - what: Your revenue bar
+    how: The $300,000 a month default comes from one video, which also calls $200,000 to $300,000 the bare minimum. A small store should set a bar that matches what it can win, and pass it in.
+  - what: Price tier
+    how: Say whether the rival's price is mid or high-ticket. High-ticket uses a mid conversion rate of 1.5% instead of 2%, which cuts the result by a quarter.
+  - what: What you saw in the bundle
+    how: List every bundle and upsell with its price. The order value is the part of the formula you can read from the page, so detail here tightens the range.
+  - what: Whether the rival buys traffic
+    how: Say if you saw their ads. Paid traffic can push visits above what organic sales support, so the skill notes it as a risk to the result.
+
+judge:
+  - The orders and revenue sums match your own calculator for all three cases.
+  - Conversion stays between 1.5% and 3.5%, and the high-ticket case uses the lower rate.
+  - The answer is a range and the guessed inputs are named.
+  - The bar and where it came from are on the page.
+  - It says revenue, never profit.
+
+test:
+  - "Use the source example of 1.5 million visits, 2% and $90. You should get 30,000 orders and $2.7 million a month."
+  - Run a store whose revenue you know, such as your own. Compare your real figure with the three cases.
+  - Run the same inputs twice. The numbers should match.
+  - Lower the bar to $100,000. The verdict should move, and the sums should not.
+
+improve:
+  - Change the default bar and the conversion bands in the skill file to match your price points.
+  - Add your own known conversion rate once you have store data, so mid cases use real figures.
+  - Keep a sheet with each estimate and the rival's later behaviour, to see if your order value guess runs high or low.
+  - Pair it with the competitor saturation checker, so a rival that is big and crowded is weighed together.
+
+works_best_with:
+  tools:
+    - {name: "Similarweb", why: "Its free browser extension shows a rival's monthly visits. The free plan is limited each day."}
+    - {name: "Any good chat AI", why: "Any current chat AI can do the sums if it shows each line."}
+  inputs:
+    - "Screenshots of the rival's traffic page with the date"
+    - "A walk through the rival's funnel with prices at each step"
+    - "A store revenue tracker figure for the same rival, to compare with your mid case"
+    - "Your own conversion rate, once your store has traffic"
+
+terms:
+  - term: Conversion rate
+    meaning: The share of visits that end in an order.
+  - term: Average order value
+    meaning: The average amount a customer spends in one order, including bundles and upsells.
+  - term: Upsell
+    meaning: An extra offer shown after the buyer picks a product, to raise the order value.

@@ -1,0 +1,75 @@
+new_slug: build-a-vip-program-for-your-best-customers
+name: Build a VIP program for your best customers
+summary: Give it your order history and brand file. Get a best-customer profile, a VIP program and personal touches.
+job: keep-customers
+thinking: high
+thinking_why: It runs three skills in a row and sets tiers from your own spend numbers. Give it your strongest model.
+headline: Keep the few customers who make most of your profit
+subhead: Give it your order history. It ranks customers by profit, shows what your best have in common, designs VIP tiers and perks that are not discounts, and plans personal notes, videos or calls for your top customers.
+explain: |
+  A small group of customers often brings most of your profit, yet they get the same emails as everyone else. Stores then reach for discounts, which cost margin and teach people to wait. Or they build a points scheme before they know who their best customers are.
+
+  The steps start with the data. First it ranks customers by gross profit and compares the top fifth with the bottom fifth. It also splits them by discount code, which shows what your best have in common. You choose the VIP rule from that. Next it checks VIP is really your bottleneck, then designs tiers from your own spend spread, with status and access in place of discounts. You invite the first VIPs and wait a month. Last it plans personal touches, with a control group to check reorders.
+when:
+  - A small group of customers brings most of your profit and you want to keep them.
+  - Your repeat rate is flat and you suspect discounts are not what brings people back.
+  - You want to do something personal for your best customers, but not sure who or what.
+you_give:
+  - Your order export with customer, date, order value, discount code, refunds and cost or margin
+  - How each customer first came to you (optional)
+  - Survey answers or support reasons (optional)
+  - Your monthly budget and weekly hours for VIP work
+  - Your brand file (optional)
+you_get:
+  - A list of customers ranked by profit, with what your top and bottom groups share and a fit score out of 100
+  - A go or wait call, and VIP tiers set from your own spend, with perks, cost per member, an invite and a 90-day test
+  - A touch for each top customer (note, video, gift or call) with its cost and the words to use
+  - A control group so you can check that reorders really rise
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Export at least 90 days of orders, with cost or margin if you have it.
+  - When it pauses, choose the VIP rule from the profile, either number of orders or spend, and export the orders of customers who meet it.
+  - Set up the tiers, invite the first VIPs, wait a month and export their orders for the last step.
+how_it_works:
+  - title: Profile your best customers
+    text: Ranks customers by gross profit, splits them into groups and profiles each. Shows what your best have in common and which discount codes brought in the weakest.
+  - title: Design the VIP program
+    text: Checks first if VIP is the real bottleneck. Sets tiers from your own spend, picks status and access over discounts, and works out cost per member.
+  - title: Plan the personal touches
+    text: Ranks your top customers, picks a touch for each by cost, and writes handwritten notes and video scripts that name a past purchase. Adds a control group.
+output_shape: |-
+  STEP 1: CUSTOMER PROFILE
+    Profit ranking | top and bottom groups compared | what the best share | discount code split | fit score out of 100
+
+  STEP 2: VIP PROGRAM
+    Go or wait call | tiers from your spend | perks and cost per member | leak guard | invite | 90-day test
+
+  STEP 3: PERSONAL TOUCHES
+    Ranked list | touch and cost per customer | note and video scripts | control group
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your order data
+    how: More history and a cost column make the profit ranking sharper. Without cost, it ranks by sales and says so.
+  - what: Your margin limits
+    how: Step 2 keeps perk costs inside them. Give it the most you will spend per member.
+  - what: Your weekly hours
+    how: Step 3 picks touches you can keep up. A handwritten note needs more time than a gift card.
+  - what: Where customers first came from
+    how: With it, step 1 shows which ads brought your best customers, not just who they are.
+judge:
+  - Customers are ranked by profit, not just by sales.
+  - The tiers come from your own numbers, and the spread is shown.
+  - Perks are status and access first, and each has a cost per member.
+  - The wait call is honest when VIP is not your real bottleneck.
+  - Notes name a real past purchase and carry no discount code.
+test:
+  - Check the top five customers in the ranking by hand. They should be the ones you would pick.
+  - Send touches to half the group and keep half as the control. Compare reorders after 60 to 90 days.
+  - Ask three VIPs what they would value from a perk list. Compare with step 2.
+improve:
+  - Add your own perks, such as early access to a drop, to the program skill.
+  - Save the VIP rule and tiers in your brand file, so email and ad skills know who your VIPs are.
+  - Re-run step 1 each quarter, since your best customers change.

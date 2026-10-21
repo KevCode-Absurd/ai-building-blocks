@@ -1,0 +1,21 @@
+slug: fraud-rules-setter
+name: "Fraud rules setter"
+summary: "Give it your order volume and payment setup. Get fraud rules, a review routine and a chargeback watch line."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Security: Threats and Best Practices", by: "Shopify (blog)", used: "Chargeback thresholds, the low, medium and high order risk rating, Flow actions, dynamic 3D Secure and liability, the address check default, and Shopify Protect eligibility"}
+  - {title: "How to Make Your Shopify Store More Secure", by: "A Shopify agency (blog post)", used: "Flagging, holding or cancelling high-risk orders with automated rules"}

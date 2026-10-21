@@ -1,0 +1,23 @@
+slug: organic-format-tester
+name: "Organic format tester"
+summary: "Give it 20 posts and their numbers. Get a score out of 100, winning formats and a test."
+category: ecommerce
+type: skill
+role: check
+job: organic
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: test_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "the ONLY way to BEAT the Instagram algorithm in 2026", by: "Instagram growth coach", used: "Reviewing posts in groups across weeks, comparing top posts by views and by followers, and studying the flops"}
+  - {title: "5 Proven Social Media Marketing Strategies to Grow ANY Business", by: "Marketing educator", used: "The five-step test loop, refining a winner, naming a series and keeping several formats in rotation"}
+  - {title: "Instagram Expert Explains How to Grow from Zero Followers in 2026", by: "Instagram growth educator (guest) with a host", used: "Choosing the metric by goal, and reading retention in the first three seconds"}
+  - {title: "The Secret to Making Viral Content That Actually Sells", by: "E-commerce founder and YouTuber", used: "Posting a winner again with a new hook or format"}

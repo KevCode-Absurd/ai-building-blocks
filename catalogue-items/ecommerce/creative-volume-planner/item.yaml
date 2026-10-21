@@ -1,0 +1,25 @@
+slug: creative-volume-planner
+name: "Creative volume planner"
+summary: "Give it your spend, target and hit rate. Get ads needed per month and a weekly quota."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead with about 8 years on Meta (name not given in the video)", used: "One new ad per 1,000 of monthly spend, production budget and team by spend band, and the content mix"}
+  - {title: "How to make static image ads that scale", by: "Agency lead (name not given in the video)", used: "Back-solving the ad count from revenue or from winners lost, and profit per ad by format"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands", used: "The simple volume rule, production budget by tier, content mix and image versus video economics"}
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge", used: "How many ads a very large account launches each week, and hiring editors before filming more"}
+  - {title: "How He Hit $100M in Under a Year (And Why You Won't)", by: "Danny Young, founder of IM8", used: "How the ad count grew with spend and one brand's mix of about 75 percent statics"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, agency founder and head of retention at Breeze (podcast interview)", used: "The 70/30 split, a weekly quota of concepts and ads, a 30-day runway and the weekend cycle"}
+  - {title: "Creative strategy is easy actually", by: "Community founder and creative strategist (name not given in the video)", used: "Seven sources of ad ideas and the rules for what to bet on"}

@@ -1,0 +1,77 @@
+# Workflow skeleton that chains library skills (docs/INTAKE.md). Our words.
+id: set-up-tracking-you-can-trust-before-you-scale
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: set-up-tracking-you-can-trust-before-you-scale
+  name: Set up tracking you can trust before you scale ad spend
+  summary: Give it your GA4, Meta and campaign set-up. Get fixed tracking, tagged links and a truer ROAS.
+  when: you are about to raise ad spend and the numbers in GA4, Meta and Shopify do not agree.
+  job: track-numbers
+  level: intermediate
+steps:
+  - name: GA4 store setup checker
+    skill: ga4-store-setup-checker
+    job: analysis
+    from: library
+    method:
+      - "Check the day-one settings: domains, data retention, internal traffic and Google signals"
+      - Check the store events and their names
+      - Check the thank-you page counts as a key event
+      - Place a test order and see if it shows up
+    inputs:
+      - question
+    outputs:
+      - audit_report
+    note: "Starts with the base layer: what GA4 is missing before anything else is measured."
+  - pause: Fix the GA4 gaps, place a test order and check it appears in GA4 the next day.
+  - name: Meta server tracking checker
+    skill: meta-server-tracking-checker
+    job: analysis
+    from: library
+    method:
+      - Check for an existing server route and pick the right one
+      - Set the route up and prove each event counts once
+      - Check consent and run test events
+      - Set a weekly check on the server tag
+    inputs:
+      - question
+      - performance_sheet!
+    outputs:
+      - audit_report
+    note: "Fresh start after the GA4 fix: gets Meta counting each sale once."
+  - pause: Apply the Meta route and check in Events Manager that one test purchase shows once.
+  - name: Campaign link tracker
+    skill: campaign-link-tracker
+    job: analysis
+    from: library
+    method:
+      - Name the campaign and tag every promo link
+      - Write the rules that match orders to campaigns in Shopify
+      - Tag partner links and clean up existing traffic
+      - Pick one attribution model and a weekly review
+    inputs:
+      - question
+    outputs:
+      - spreadsheet
+    note: With both sets of events working, tags every link so orders can be matched to a campaign.
+  - pause: Run the tagged campaigns for two weeks, then pull platform ROAS and store totals for the same dates.
+  - name: Platform ROAS reality check
+    skill: platform-roas-reality-check
+    job: analysis
+    from: library
+    method:
+      - Set the store's own revenue base
+      - "Step down each platform's ROAS: view credit, clicks, existing customers"
+      - Check the top ad by itself
+      - Add a post-purchase survey and other places you sell
+      - Rank the evidence and pick one next step
+    inputs:
+      - performance_sheet
+      - spreadsheet!
+    outputs:
+      - audit_report
+    note: Reads the tagged-link sheet from the step before to compare what platforms claim with what the store counts.

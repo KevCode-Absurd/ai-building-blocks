@@ -1,0 +1,108 @@
+new_slug: ad-test-sprint-runner
+name: Ad test sprint runner
+summary: Give it your brand file and results. It plans each test round, reads it when it ends and plans the next.
+job: plan-ad-tests
+thinking: high
+thinking_why: It reads each result, chooses between four paths and carries lessons from round to round. Give it your strongest model.
+headline: Ad test sprint runner
+subhead: Give it your brand file, your target and your past ad results. It plans round one, and when each round ends it reads the result, decides what it means and plans the next round. It stops after three rounds without a winner and finds out why.
+explain: |
+  One ad test teaches little. A run of tests teaches a lot, if each round builds on the last. Most people plan a test, read it in a hurry, and start again from scratch, or repeat the same idea in a new colour.
+
+  This agent runs the whole run. It sets a test budget from your target, finds ideas you have not tried, and lays out the round. When the round ends, it checks the data is enough to read, then reads it. A winning set is left alone and built on. A round that was too small is repeated. A round that lost is checked for sameness: if every ad was the same idea, it finds new ideas; if the ideas differed and still lost, it records the lesson. After three rounds with no winner, it checks whether the problem is the page, not the ads. It never launches or spends without your yes.
+when:
+  - You want to find a winning ad and expect it to take more than one round.
+  - Your last test did not win and you do not know what to try next.
+  - You have run tests before but never kept what they taught.
+you_give:
+  - Your brand file with products, claims, proof and buyers
+  - Your target cost per sale or ROAS
+  - Past ad results for the last 30 to 90 days
+  - What you can spend on the whole sprint and per day, and the platform
+  - Each round's results by ad, when the round ends
+you_get:
+  - A test budget, a spend limit per ad and a read date for the round
+  - Five untried ideas, each with designer-ready versions
+  - A campaign layout with one idea per ad set
+  - A keep, leave or replace call for each set after each round, and what it means
+  - A running list of lessons, with dates
+  - A call on whether the problem is the ads or the page after three rounds
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to start a sprint.
+  - Give it your brand file, target, past results and budget. It hands back the round plan.
+  - Launch the round yourself, or say yes to each step if it is connected.
+  - On the read date, give it the round's results. It reads them and plans the next round.
+  - Keep going until a set wins or the cap of three rounds is reached.
+how_it_works:
+  - title: Set the budget
+    text: Works out the daily test budget, the spend limit per ad and the earliest day to read, from your target.
+  - title: Find ideas
+    text: Reads your past ads and your brand file and finds five ideas you have not tried, then writes designer-ready versions.
+  - title: Lay out the round
+    text: Sets the ad packs, minimum spend and rules, with one idea per ad set so the result can be read.
+  - title: Check the round can be read
+    text: If the round was too small or ended early, it gives no verdict and sets a later read date.
+  - title: Read the round
+    text: Gives a keep, leave or replace call for each set, and flags false winners.
+  - title: Choose the path
+    text: A winning set is left alone and built on. A round with an unsafe read is repeated. A lost round is checked for sameness, then gets new ideas or a recorded lesson.
+  - title: Count the hits
+    text: After 20 ads, works out your hit rate and how many ads the next batch needs.
+  - title: Apply the cap
+    text: After three rounds with no winner, checks whether the ad, the page or the checkout is the cause.
+output_shape: |-
+  ROUND PLAN (start of a round)
+    Budget <amount>/day | limit per ad <amount> | read on <date> | win = <target>
+    Ideas: <idea> | versions A, B, C
+    Layout: <pack> | idea | ads | minimum spend
+
+  ROUND RESULT (end of a round)
+    <ad set> | verdict: <meets target | leave | replace> | read safety <n>/100
+    False winners: <ads>
+
+  WHAT IT MEANS
+    <path taken>: <the number that decided it>
+
+  NEXT ROUND
+    <plan built on the lesson> | or | STOP: <reason>
+
+  LESSONS SO FAR
+    <date> | round <n> | changed: <one thing> | result: <what it showed>
+
+  STANDING AND MISSING
+    Rounds used <n> of 3 | ads tested <n> | hit rate <% or not yet readable> | MISSING: <every line>
+tweaks:
+  - what: Your target
+    how: Give the cost per sale you can afford, from your margin. Without it no verdict is possible.
+  - what: Your test money
+    how: A small budget means fewer ads, not thinner spend on each. Three to five ads can teach more than twenty starved ones.
+  - what: Past ad results
+    how: The more the agent knows about what already lost, the less likely it is to repeat it.
+  - what: The cap
+    how: Three rounds is the agent's starting point. Raise it only if each round taught you something new.
+judge:
+  - Every verdict is measured against your target, and the sums are shown.
+  - No ad was judged on a few hundred impressions.
+  - No idea that lost on a clean read was planned again.
+  - Each round changed one thing, and the lesson says which.
+  - Nothing was launched, spent or turned off without your clear yes.
+test:
+  - Give it the results of a past round and see whether its call matches what you decided at the time.
+  - Give it a round with very few impressions. It should refuse to give verdicts.
+  - Give it a round where every ad was a variation of one idea. It should find the sameness.
+improve:
+  - Keep the lessons file between sprints. It saves repeating tests.
+  - Add the ads each round tested to the tested file, so the sameness check has the full list.
+  - Set the cap to suit your money. A sprint of three rounds needs enough budget for three.
+  - If you run on TikTok, say so at the start so it uses the TikTok reader.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the sprint folder and remind you of the read date.
+    - name: Meta Ads Manager
+      why: Export ad-level results by ad set, and show the incremental column if your account has it.
+    - name: TikTok Ads Manager
+      why: Export ad-level results for the round if the sprint runs there.
+  inputs:
+    - Your break-even figure
+    - A list of every ad you have run in the last 90 days

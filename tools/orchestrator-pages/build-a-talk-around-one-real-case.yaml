@@ -1,0 +1,70 @@
+new_slug: build-a-talk-around-one-real-case
+name: Build a talk around one real case
+summary: Give it your topic and notes. Get one case, a pitch story and an order with stakes first.
+job: speak-and-persuade
+thinking: medium
+thinking_why: Three text skills in a row. A mid-size model works. Use your strongest one for a high-stakes talk.
+headline: Build a talk or pitch around one real case, with the stakes up front
+subhead: Give it a topic and your notes. It finds the one person or event that holds your idea, writes a short story and a picture of life after the change, then reorders it so the room knows what is at stake in the first minute.
+explain: |
+  Most talks start with background. You have notes and facts but no way in, so you explain first and hope the room cares later. The room checks out before you reach the point.
+
+  The steps give you a way in and then move it to the front. First it picks the one case that holds your idea, tests what everyone assumes and finds a case that cuts the other way. Next it builds a pitch around that case: how each person in the room will react, a story under two minutes and a picture of ordinary life after the change. Last it finds the news the room will care about most, puts it in the opening with one true clock, and marks the slides that only explain.
+when:
+  - You must pitch an idea to people who do not see it yet.
+  - You have a pile of notes and no clear way into the talk.
+  - Your talk is accurate but dull, and the point comes too late.
+you_give:
+  - Your topic and your notes, facts, quotes, names, dates
+  - Who is in the room and how long you have
+  - What you want them to decide or do at the end
+  - Customer or interview words on the topic (optional)
+you_get:
+  - One case to build on, the common view it questions and a case that cuts the other way
+  - A story under two minutes, a vision of life after the change and small ways to test the idea
+  - A new running order with the stakes in the first minute, one real clock and the explaining slides marked
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste real notes with names and dates. A case needs a real person or event.
+  - Tell it who is in the room. The news it moves to the front depends on them.
+how_it_works:
+  - title: Find the one case
+    text: Picks one person or event that holds the whole idea, tests what people assume, and finds the strongest case that does not fit. It ends with an outline from a small scene to the idea.
+  - title: Build the pitch around it
+    text: Writes how each person will react at four stages, a story under two minutes, a vision of life after the change and small measures that lower the risk of saying yes.
+  - title: Put the stakes first
+    text: Finds the news the room cares about most, moves it to the opening, adds one true clock, marks slides that only explain and keeps one real twist.
+output_shape: |-
+  STEP 1: THE CASE
+    The one case | what people assume | the case against | outline
+
+  STEP 2: THE PITCH
+    Idea and ask | reactions by stage | story under two minutes | vision picture | small measures
+
+  STEP 3: THE ORDER
+    The news | first minute | the clock | slides that move or only explain | new order with times
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Length
+    how: Say five minutes or fifty. Step 3 sets times for each part of the order.
+  - what: A skeptical room
+    how: Say what they believe now. The case and the opening then start from there.
+  - what: Slides or no slides
+    how: Say which. Step 3 gives a picture for each explaining slide it swaps out.
+judge:
+  - The case is a real, named person or event from your notes, not an invented one.
+  - A case that cuts the other way is shown, not hidden.
+  - The story is short enough to say in under two minutes.
+  - The first minute states the news and what is at stake before any background.
+  - The clock is a real date or number from your material.
+test:
+  - Say the first minute aloud to a friend. Ask them what is at stake. They should answer in a sentence.
+  - Check every fact in the story against your notes. Cut any you cannot find.
+  - Time the new order against your slot.
+improve:
+  - Record the talk and note where the room leaned in. Move more of that up front next time.
+  - Keep your best cases in one file for later talks.
+  - If the twist did not land, check if it was really a surprise.

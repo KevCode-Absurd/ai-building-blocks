@@ -1,0 +1,130 @@
+new_slug: brand-stylescape-planner
+name: "Brand stylescape planner"
+summary: "Give it your brand traits and buyers. Get three visual directions, a merged pick and photo rules."
+job: brand-file
+thinking: medium
+thinking_why: "It compares three directions against your values and writes rules, so a mid-size model works and a stronger one gives more distinct directions."
+
+headline: "Brand stylescape planner"
+subhead: Give it your brand values, traits and buyers. It plans three different visual directions as wide mood boards, grades each against your values, merges the best into one named direction, and writes testable photo rules, type jobs, colours and a short shoot brief.
+
+explain: |
+  Many stores pick a look by taste, then pay for revisions when it does not fit. A stylescape is a wide mood board that shows the brand on the pack, on a screen and on the product at the same time. Making three early, and grading them against your values, settles the look before design money is spent.
+
+  This skill turns your values into rules for what may be shown. It plans three distinct directions, each with a theme, colour mood, type feel and imagery. A fit grid shows which ones match your values and your buyer. You then merge the best parts into one named direction and lock it. From it you get four to six photo rules, each with a Yes or No test, type jobs, a colour system and a shoot brief. A designer or image tool builds the actual boards.
+
+when:
+  - You are launching or rebuilding a store and cannot decide how it should look.
+  - Your photos, pack and site look like they came from different brands.
+  - You are about to brief a photographer or a designer and need rules they can follow.
+
+you_give:
+  - Your values and the traits the brand should show
+  - What you sell and who buys it
+  - Three to five competitor brands, as links or screenshots
+  - Reference images you like (optional)
+  - Whether your logo is already known to customers
+you_get:
+  - Three named visual directions, each with theme, colour mood, type feel, imagery and where it shows up
+  - A fit grid against your values and buyer, and one merged direction
+  - Four to six photo rules, each with a Yes or No test, plus type jobs and a colour system
+  - A short shoot brief
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your values, traits and buyers, and attach competitor and reference images.
+  - Read the three directions and the fit grid, then say which you prefer and what you want to borrow from the others.
+  - Give the photo rules and shoot brief to your photographer or designer, with the reference images.
+  - Test the look on your home page and one product page before you roll it out.
+
+how_it_works:
+  - title: Turns values into filters
+    text: Each value you cannot break becomes a rule on what may be shown and what never appears.
+  - title: Checks the logo
+    text: If your logo already has customer recognition, the plan keeps it and only changes the look around it.
+  - title: Plans three directions
+    text: Three truly different themes, each with colour mood, type feel, imagery and where it appears.
+  - title: Describes the boards
+    text: What goes on each wide board so one glance previews the pack, a screen and the product. A designer or image tool builds it.
+  - title: Grades the fit
+    text: A grid of Yes, Partly or No against each value and your buyer. Directions that feel off-story are dropped.
+  - title: Merges and locks
+    text: The strongest direction is the base, with the best parts of the others added. It gets a name and becomes the reference.
+  - title: Writes testable rules
+    text: Four to six photo rules with a Yes or No test, three to five reference images each, type jobs and an anchor colour.
+  - title: Plans the test
+    text: Two real pages first, then the rest, and a shoot brief built from the rules.
+
+output_shape: |
+  STYLESCAPE PLAN: <store>
+  VALUE FILTERS
+  <value> -> always <...> | never <...>
+
+  DIRECTIONS
+  1 <name>: <one-line theme>
+    colour <...> | type <...> | imagery <...> | shows up on <...>
+  2 ...   3 ...
+
+  FIT GRID (Yes / Partly / No)
+  <direction> | <value 1> | <value 2> | buyer | dropped?
+
+  MERGED DIRECTION: <name>
+  base <direction>; kept <...> from <...>
+
+  PHOTO RULES
+  1 <rule> | test: <Yes/No question> | do <...> | do not <...>
+  TYPE JOBS: <header> / <body> / <technical> / <accent>
+  COLOURS: anchor <...> | accents <...> | checked on <pack, screen>
+  CONTEXT TEST: <two pages to build first>
+  SHOOT BRIEF: <shots, light, styling, people, avoid>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Your values
+    how: Give three to five values you will not give up. Vague values such as "quality" make all three directions look alike. Specific ones, such as "made in small batches by named people", give each a different feel.
+  - what: Reference images
+    how: Attach images you like and say what you like in each. The directions are built from what you show, so more images mean sharper directions.
+  - what: Competitor brands
+    how: Attach screenshots of three to five rivals so the directions can stay clear of their look.
+  - what: Where the look must show up
+    how: Name your touchpoints, such as pack, site, social and product. Each board is planned around them.
+  - what: A logo that is already known
+    how: Say so up front. The plan then keeps the logo and changes only what sits around it.
+
+judge:
+  - There are exactly three directions, and they feel different from each other.
+  - Each value from your brief shows up in the fit grid with a reason.
+  - The merged direction says what came from which board.
+  - Every photo rule can be answered Yes or No by looking at a photo.
+  - Nothing says a board or image already exists.
+
+test:
+  - Show the three direction summaries, without the grid, to three buyers. Ask which feels like your brand. Compare their pick to the grid.
+  - Take one photo rule and judge five of your existing photos against it. The rule should sort them clearly into pass and fail.
+  - Give the shoot brief to someone outside the project and ask them to list the first five shots. If they list the wrong ones, tighten the rules.
+  - Build the home page and one product page in the new look before changing anything else, and look at both on a phone.
+
+improve:
+  - Add your own non-negotiable values to the first step, so every run filters by them.
+  - Keep a standing do-not list of looks that do not fit your brand, such as clip-art style or flashing badges, and add it to the fit grid.
+  - Save the merged direction, photo rules and colours to your brand file so ads, emails and product pages use the same look.
+  - Pair it with the Positioning grid builder to choose the space to own first, and with the Store brand signal auditor to check the finished look.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can describe and grade the directions. Attach your references."}
+    - {name: "Figma", why: "A designer can build the wide boards and mock the pack and home page in one file."}
+    - {name: "Pinterest", why: "A quick place to collect reference images for each theme before you build the boards."}
+  inputs:
+    - "Your brand brain file, with mission, values and voice"
+    - "Screenshots of three to five rivals' sites and pack"
+    - "Photos of your products in the scenes where they are used"
+    - "Your current logo and any brand colours already in use"
+
+terms:
+  - term: Stylescape
+    meaning: A wide mood board that shows the look of a brand across several places at once, such as pack, screen and product.
+  - term: Anchor colour
+    meaning: The main brand colour, with a few secondary colours added as accents.
+  - term: Creative filter
+    meaning: A rule taken from a brand value that decides what can and cannot be shown.

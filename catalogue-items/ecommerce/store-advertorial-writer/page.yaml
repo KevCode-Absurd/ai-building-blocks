@@ -1,0 +1,138 @@
+new_slug: store-advertorial-writer
+name: "Store advertorial writer"
+summary: "Give it your angle, mechanism, product facts and ad. Get a full advertorial, labelled as an ad."
+job: write-landing-page
+thinking: high
+thinking_why: "A long story-led page has to stay true to the ad, the facts and the proof across ten to twelve sections, and a stronger model holds that together."
+
+headline: "Store advertorial writer"
+subhead: Give it your angle, root cause, mechanism, product facts, buyer objections and the ad that sends traffic. It writes a long story-led page in order, labelled as an ad. You get the copy, a button plan, a testimonial-to-objection table and an image list.
+
+explain: |
+  An advertorial is an ad written like an article. Cold buyers who have never heard of your product won't buy from a product page, but they will read a story about someone like them. The page continues the story the ad began, explains why other fixes failed, then shows your product as the new answer.
+
+  This skill is the store version of the general Article-style landing page writer. It adds a story-led structure, a pain stack and a named mechanism. It writes for one named person, repeats three to five pains and desires, burns down the alternatives, and handles price and doubts in order. It is always labelled as an ad where the platform or law requires. It never fakes a news site, a doctor, a reviewer or a study. You replace every gap with something real or leave it marked.
+
+when:
+  - An ad already breaks even and you need the page it should send people to.
+  - Your product page converts cold traffic poorly and the buyer needs a story before an offer.
+  - You have a winning advertorial from another source and want to rebuild its structure for your own product, in your own words.
+
+you_give:
+  - The avatar, one specific customer, and the angle, root cause and mechanism
+  - Product facts, price, compare price, offer, guarantee and real reviews
+  - The five main buyer objections
+  - The ad that sends traffic here, with its length and how much it sells
+  - Foundation docs or a swipe advertorial (optional)
+
+you_get:
+  - Advertorial copy in section order, with an ad label and an honest author line
+  - The pains and desires used, and where each one repeats
+  - A testimonial-to-objection table and a button plan
+  - An image list with each image tied to its paragraph, and a list of claims to check
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Run the Advertorial readiness checker first. Come back only if it says go.
+  - Paste your avatar, mechanism, facts, real reviews, objections and the ad.
+  - Ask for the page in sections or halves, then ask for ten headline options.
+  - Fill every MISSING gap with something real, check every claim, then add the page to your store in a custom HTML block.
+
+how_it_works:
+  - title: Writes for one person
+    text: One named customer and the ad's promise run through the ad, headline and page.
+  - title: Sets the frame
+    text: Writes the after-state first, then works back and spends most words on the before-state.
+  - title: Picks the story style
+    text: A story of failed fixes for an improvement product. A reveal in tone only for a new gadget.
+  - title: Lists pains and desires
+    text: Three to five of each, repeated through the page in different forms, with none added later.
+  - title: Writes the sections in order
+    text: Hook, reasons, current situation, alternatives burned down, root cause, mechanism, proof, social proof, objections, price, guarantee, close.
+  - title: Writes the hook
+    text: An article-style headline and one small human moment that buys the next 30 seconds.
+  - title: Builds the proof
+    text: Three layers of proof and a day-by-day account from real customers, matched to the five objections.
+  - title: Handles price and the close
+    text: Price after objections, a two-option close, a real guarantee and about four buttons.
+  - title: Drafts in parts
+    text: Writes in blocks or halves so a long page is not cut short, then offers ten headlines.
+
+output_shape: |
+  AD LABEL: <wording> | placement: top, before the headline
+  HEADLINE (+ 10 alternatives)
+  AVATAR + PROMISE: <person> | <promise>
+  PAINS (3 to 5) / DESIRES (3 to 5) and where each repeats
+
+  PAGE
+  1 Hook and trust
+  2 Listicle of reasons
+  3 Current situation
+  4 Alternatives burned down
+  5 Root cause
+  6 Mechanism (named)
+  7 Proof story
+  8 Social proof
+  9 Objections
+  10 Price
+  11 Guarantee
+  12 Close (two options)
+  Author line: <honest line>
+
+  BUTTON PLAN: <text and position, about four>
+  TESTIMONIAL -> OBJECTION: <objection> | <real quote> | <source>
+  IMAGE LIST: <image> | tied to <paragraph>
+  CLAIMS TO CHECK: <claim> | proof
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: The avatar
+    how: Be exact about age, gender and how long they have had the problem. The headline mirrors this person.
+  - what: How much the ad sells
+    how: A thin clickbait ad needs a long lead. A long story ad needs a shorter one that reaches the product sooner.
+  - what: Real reviews and objections
+    how: Paste your real reviews and the five biggest doubts. Each testimonial is matched to one doubt.
+  - what: Price and compare price
+    how: Give both, with the true alternative you compare to. The skill uses only comparisons that are true.
+  - what: A swipe page
+    how: Add a winning page as a PDF to rebuild its structure. Expect a skeleton that is 80 to 90% there.
+
+judge:
+  - The ad label is at the top and nothing makes the page look like a real news site.
+  - The headline names the same person and promise as the ad.
+  - The three to five pains repeat through the page, and no new pain appears near the end.
+  - Every testimonial answers one named objection and has a real source.
+  - Every claim, number and price matches the facts you gave it.
+  - The mechanism name is short enough to repeat to a friend.
+
+test:
+  - Read the first screen aloud to someone who has seen the ad. Ask if it feels like the same story.
+  - Mark each place where the story turns into a pitch (run the Advertorial story and belief checker for this).
+  - Compare each testimonial with the real review it came from. They should match.
+  - Run the page against a product page in a split test with the same ad. Judge by conversion and by cost per purchase, not by taste.
+
+improve:
+  - Add your platform's ad rules and your local labelling law as a check at the top of the skill file.
+  - Add your approved author line and guarantee wording, so they never change.
+  - Save the section map of your best page to your brand file as the default order.
+  - Add your banned claims, such as health or income promises, to the Checks.
+  - Pair it with the Advertorial draft editor to tighten the draft, and the Store social proof placer to place reviews.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can write the page in sections. One with a long context window keeps the whole page in view."}
+    - {name: "Shopify", why: "A custom Liquid or custom HTML section in your theme can hold the page copy, so it lives on your own store."}
+  inputs:
+    - "The foundation docs: research, avatar sheet, offer brief and necessary beliefs"
+    - "Real customer photos and short quotes you have permission to use"
+    - "Your platform's rules on labelling ads"
+
+terms:
+  - term: Advertorial
+    meaning: An ad written like an article. It must be labelled as an ad where the platform or law requires.
+  - term: Mechanism
+    meaning: The reason the product works, given a short name the reader can repeat.
+  - term: Pain stack
+    meaning: Several real, concrete pains laid one after another until staying put feels worse than acting.
+  - term: Swipe
+    meaning: A winning page you study for its structure. You rebuild the structure in your own words.

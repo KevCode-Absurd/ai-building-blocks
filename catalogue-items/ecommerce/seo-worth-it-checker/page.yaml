@@ -1,0 +1,128 @@
+new_slug: seo-worth-it-checker
+name: "SEO worth-it checker"
+summary: "Give it your margin, cash and hours. Get a go, go small or not-now call, scored."
+job: get-found-in-search
+thinking: high
+thinking_why: "It weighs money, time and demand against each other and the call can cost months of effort, so a stronger model is safer."
+
+headline: "SEO worth-it checker"
+subhead: Give it your average order value, margin, months of cash, hours a month and the terms your buyers search. It checks demand, margin, who ranks, how winnable the terms are and how long you can wait, then gives you a go, go small or not-now call with a score out of 100.
+
+explain: |
+  Search can be a store's best sales channel or a waste of months. It fails for a brand-new product nobody searches, for a very low order value, for razor-thin margins and for a store that needs orders this quarter. Many owners find out after paying an agency for blog posts.
+
+  This skill checks the case before you spend. It looks at demand, works out how many organic orders you would need to cover the cost, looks at who ranks for your best term, and tests whether your terms are winnable. It checks you have the cash and the hours. Then it makes a call and shows its score and its maths. If the answer is not now, it names what to do instead.
+
+when:
+  - You are about to hire an agency or start a search project and want to know if it can pay back.
+  - You have thin margins or a low order value and wonder if search is worth the work.
+  - You sell something new and are not sure anyone searches for it.
+
+you_give:
+  - Your average order value and gross margin
+  - Three to five search terms a buyer would use to find your products
+  - Months of cash you can run without organic orders
+  - Hours per month someone can spend on search
+  - Your ad spend, any SEO spend and store conversion rate (optional)
+you_get:
+  - A call of go, go small or not now, with reasons
+  - A score out of 100 for the strength of the case, with the weights shown
+  - The first money pages to build, the one number to track and what would break the case
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your order value, margin, cash, hours and search terms.
+  - Add your store conversion rate and per-order costs so it can work out the break-even.
+  - Search your best term yourself and tell it who ranks on page one.
+  - Follow the call. If it says not now, use the other channel it names and rerun later.
+
+how_it_works:
+  - title: Checks demand
+    text: Looks at search volume for your terms. If nobody searches your category, it stops and says no.
+  - title: Works the money
+    text: Finds profit per organic order, then the orders and visits needed each month to cover the cost.
+  - title: Reads the results page
+    text: Stores with collection and product pages on page one mean you can win. Only blogs or giants mean it is harder.
+  - title: Tests the terms
+    text: Looks for variants with difficulty under about 35 to 40 and buying intent. Above 50, it plans narrow variants.
+  - title: Checks runway and hours
+    text: Needs cash for 6 months and no need for orders this quarter, plus about a working day a month.
+  - title: Defends the brand
+    text: Checks you hold page one for your own name before you spend on ads or search.
+  - title: Makes the call
+    text: Go if demand, margin and runway pass. Go small if one is weak. Not now if demand or runway fails.
+
+output_shape: |
+  CALL: <GO | GO SMALL | NOT NOW> because <reasons>
+
+  CHECKS
+  Demand: <pass | weak | fail> | <numbers> | <points>/25
+  Rankability: <...> | <points>/20
+  Order value and margin: profit per order <n>; orders needed <n>; visits needed <n> | <points>/20
+  Runway: <months> | <points>/20
+  Capacity: <hours> | <points>/10
+  Brand defence: <...> | <points>/5
+  Who ranks: <stores | blogs | giants>
+
+  SCORE  <n>/100 (<sum>)
+  NOT RUN: <check, and data needed>
+
+  BUILD FIRST
+  <up to 10 money pages>
+
+  THE ONE NUMBER: organic search revenue, starting at <n>
+  WHAT BREAKS THE CASE: <...>
+  INSTEAD (if not now): <ads | email | other>
+  MISSING: <what>
+
+tweaks:
+  - what: Order value and margin
+    how: Give real figures and your per-order costs. The break-even maths depends on them.
+  - what: Cash runway
+    how: Say how many months you can run with no organic orders. Under 6 months pushes the call toward not now.
+  - what: Hours per month
+    how: Be honest. A monthly cycle needs about a working day plus writing time.
+  - what: Your search terms
+    how: Give terms a buyer would type, not your own product names. Demand and winnability are judged on them.
+  - what: Who ranks
+    how: Search your best term and say what you see on page one. It changes the call.
+
+judge:
+  - The call has plain reasons tied to your numbers.
+  - The break-even maths is shown with its steps.
+  - The score shows its weights and sum, and says they are a writer's choice.
+  - It says not now when cash or demand fails, even if the score is high.
+  - It names what to use instead if the call is not now.
+
+test:
+  - Give it a brand-new product with no searches. It should say not now.
+  - Give it 2 months of cash. It should say not now or go small, never go.
+  - Give it a store with solid margin, real demand and 12 months of cash. It should lean toward go.
+  - Run it twice on the same numbers. The call should match.
+
+improve:
+  - Add your own margin floor and cash rules to the skill file.
+  - Add your usual per-order costs, such as shipping and payment fees.
+  - Rerun it every six months and compare the scores.
+  - Pair it with the Store keyword validator for the terms, and the Collection page planner for the first pages to build.
+
+works_best_with:
+  tools:
+    - {name: "Google Keyword Planner", why: "Free. Gives search volume ranges for your terms."}
+    - {name: "Google Search Console", why: "Free. Shows what your store already earns from search."}
+    - {name: "Any good chat AI", why: "Runs the checks and the break-even maths from your numbers."}
+  inputs:
+    - "Your store conversion rate"
+    - "Shipping, fees and returns per order"
+    - "Your organic revenue for the past three months"
+    - "Quotes from any agency you are considering"
+
+terms:
+  - term: Contribution profit
+    meaning: What one order earns after product cost and the costs that come with the order, such as shipping and fees.
+  - term: Runway
+    meaning: How many months you can keep going before you must see sales from this work.
+  - term: Money page
+    meaning: A page that sells directly, such as a collection or a product page.
+  - term: Brand defence
+    meaning: Holding the top results when someone searches for your own name.

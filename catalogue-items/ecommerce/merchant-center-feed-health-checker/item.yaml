@@ -1,0 +1,20 @@
+slug: merchant-center-feed-health-checker
+name: "Merchant Center feed health checker"
+summary: "Give it your Merchant Center diagnostics. Get problems ranked by lost sales and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Complete Google Ads architecture and operations manual (2026 edition)", by: "A compiled written guide (author not named)", used: "The diagnostics workflow, the five common causes of disapproval, Autofix, the 6-hour refresh and the rule not to scale until feed health is clean"}
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "Linking Shopify, checking Connected products in Data manager, and filling every field"}

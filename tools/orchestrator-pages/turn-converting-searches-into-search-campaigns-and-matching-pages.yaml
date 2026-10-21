@@ -1,0 +1,79 @@
+new_slug: turn-converting-searches-into-search-campaigns-and-matching-pages
+name: Turn converting searches into Search campaigns and matching pages
+summary: Give it your Google search terms and products. Get winners and negatives sorted, new Search campaigns with ads, and page plans.
+job: run-google-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Turn converting searches into Search campaigns and matching pages
+subhead: Give it your search terms report, product data and break-even cost per sale. It sorts the terms into winners and waste, builds a Search campaign from the winners with headlines and descriptions, and plans the page each ad group should land on.
+explain: |
+  Your Shopping and Performance Max campaigns already show what people type before they buy. Most of that sits in a report nobody reads. The winners never get their own Search campaign, and the waste keeps costing money.
+
+  The steps turn the report into a campaign. The sorter tags every term, picks the winners, and builds a negative list. Then it pauses. You add the negatives in Google Ads and save the winning terms in a sheet with your products and offer. The builder groups the winners into ad groups and writes the headlines and descriptions. The planner picks the page type for each ad group and keeps its promise the same as the ad's.
+when:
+  - Your Shopping campaigns convert, and you want to win the same buyers on Search.
+  - Your search terms report is long and you do not know which terms to keep or block.
+  - You are starting non-brand Search and want to begin from terms that already sell.
+you_give:
+  - Search terms reports from Shopping, Performance Max and Search, with clicks, conversions and cost
+  - Your break-even cost per sale, or your order value and margin
+  - Your product list with key benefits
+  - Your brand name and its misspellings, so they stay out of cold campaigns
+  - Your offer and the buyer you target (optional)
+you_get:
+  - A winners list, a negative keyword list with level and match type, and a waste score out of 100
+  - A Search campaign with ad groups, keywords, match types, headlines and descriptions
+  - A page type for each ad group, a section order for each page and the pages to build first
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Export your search terms reports and paste them in, with your break-even cost per sale.
+  - When it pauses, add the negatives in Google Ads and save the winning terms in a sheet with your products and offer. Then tell it to carry on.
+  - Check the headlines against Google's 30 character limit, then build the pages in the order it gives.
+how_it_works:
+  - title: Search term sorter
+    text: Tags every term by what the searcher wants and what it earned. It picks winners, builds negatives at the right level, and flags brand terms in cold campaigns.
+  - title: Non-brand Search campaign builder
+    text: After your pause, groups the winning terms into ad groups, picks match types and writes headlines and descriptions for people who do not know your name yet.
+  - title: Page type and layout planner
+    text: Picks the page type for each ad group, sets the section order and keeps the page's promise the same as the ad's.
+output_shape: |-
+  STEP 1: SEARCH TERM SORTER
+    Winners with match types | negatives with level | feed fixes | waste score out of 100
+
+  YOUR PAUSE
+    Add the negatives | save the winners in a sheet with products and offer
+
+  STEP 2: NON-BRAND SEARCH CAMPAIGN BUILDER
+    Keyword groups | ad groups with headlines and descriptions | category plan | free assets to add
+
+  STEP 3: PAGE TYPE AND LAYOUT PLANNER
+    Routing table | section order per page | proof placement | pages to build first
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your break-even cost per sale
+    how: The sorter judges every term against it. Without it, the sorter works from your order value and margin.
+  - what: How far back your data goes
+    how: Terms with a few clicks prove little. Give 90 days or more, so winners rest on real conversions.
+  - what: Your brand names
+    how: List every spelling and product line. Brand terms in a cold campaign hide how well the campaign finds new buyers.
+  - what: Your daily budget
+    how: Tell step 2 your budget and bidding stage, so it does not plan more ad groups than the money can feed.
+judge:
+  - Every winner has conversions in your data, not a guess.
+  - Every negative says its match type and the level it goes on.
+  - Brand terms are kept out of the cold campaign.
+  - Each headline fits 30 characters and each description fits 90.
+  - Each ad group's page repeats what its ad promises.
+test:
+  - Pick three terms you know are waste. Each should show up in the negatives.
+  - Pick your best seller. Its search terms should appear in a winners group.
+  - Check the waste score sum against the cost of the terms it marked as waste.
+  - Run the campaign at a small budget first, and compare cost per sale with Shopping.
+improve:
+  - Save the winners sheet and re-run the sorter each month, so new terms keep arriving.
+  - Add your approved claims and tone to step 2, so the ads sound like your brand.
+  - Add your page templates to step 3, so the plan names pages you can really build.
+  - Pair it with a Google Ads tracking check so conversions are counted right before you scale.

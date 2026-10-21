@@ -1,0 +1,105 @@
+new_slug: monthly-email-flow-keeper
+name: Monthly email flow keeper
+summary: Give it last month's email numbers. Get the weakest flow found and rebuilt, with the copy checked.
+job: write-emails
+thinking: high
+thinking_why: It runs up to eight skills, compares two months, picks one fix from the numbers and loops on copy checks. Give it your strongest model.
+headline: Monthly email flow keeper
+subhead: Give it last month's email numbers and your live flows. It compares the month with the one before, checks whether last month's fix worked, fixes sending trouble first, rebuilds your weakest flow, reviews the new emails and sets the next tests.
+explain: |
+  Email flows earn quietly, so a broken one can go unseen for months. Most owners look at open rates, rebuild what they feel like rebuilding, and never check whether it worked. Open rates are also unreliable now, so they can point you the wrong way.
+
+  This agent does the same monthly check every time. It reads the month against last month, then asks one question: is the weakest part sending, or a flow? If mail is landing badly, it fixes that first, because a better flow will not be seen. If sending is fine, it rebuilds one flow, reviews the new emails and fixes them, then sets the next tests. It saves a short summary so next month it can say whether the fix helped. It never sends or turns anything on. You get the rebuilt flow and a list of changes to approve.
+when:
+  - You have email flows running and want one monthly check done the same way each time.
+  - Email revenue slipped and you want to know whether to fix sending or a flow first.
+  - You rebuilt a flow last month and want to know whether it helped.
+you_give:
+  - Last month's campaign list and flow revenue from your email tool
+  - Your live flows with trigger, filters, delay and number of emails (the first time)
+  - Deliverability and list growth figures if you have them
+  - Your brand file, offer and best sellers, for a rebuild
+  - What changed last month, such as a new pop-up or a sale (optional)
+you_get:
+  - This month against last month, with the sums
+  - A verdict on last month's fix, helped, no change or worse
+  - One rebuilt flow with its first two emails reviewed and fixed
+  - A list of changes to approve, most important first
+  - The next three tests, with sample sizes
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Export last month's campaign and flow numbers from your email tool and put them in one folder, or attach them in the chat.
+  - The first time, paste your live flows. It saves them and reuses them.
+  - Read the changes to approve. Make the ones you agree with in your email tool. Nothing goes out until you do.
+  - Run it again next month. It compares against its saved summary.
+how_it_works:
+  - title: Read last time
+    text: Opens last month's saved summary, so it knows the score, the flow it rebuilt and the tests it set.
+  - title: Read the month
+    text: Runs the email and SMS performance reader and shows the change in score, flow revenue and clicks.
+  - title: Check the last fix
+    text: Compares the flow it rebuilt last month with the month before. It says helped, no change or worse.
+  - title: Score the flows
+    text: Runs the flow gap checker to find missing flows, wrong triggers and the weakest flow.
+  - title: Choose the path
+    text: If mail is landing badly, it fixes sending first and holds back rebuilds. If many contacts never open, it adds the sunset flow.
+  - title: Rebuild one flow
+    text: Picks one flow, missing core flows first, and runs the matching builder.
+  - title: Check the new copy
+    text: Reviews the first two emails and fixes them, for up to two rounds, until each is ready.
+  - title: Set the tests and save
+    text: Sets the top three tests and saves a summary for next month. It stops for your yes.
+output_shape: |-
+  THIS MONTH
+    Channel score <n>/100 vs last month <n>/100 | flow revenue <change> | clicks <change>
+
+  LAST MONTH'S FIX
+    <flow rebuilt>: <helped | no change | worse> | <numbers>
+
+  PATH TAKEN
+    <sending fixes first | flow rebuild | both>: <why>
+
+  REBUILT FLOW
+    <flow name> | trigger | emails | review: <ready | needs your eyes> for email 1 and 2
+
+  CHANGES TO APPROVE
+    1. <change> | where: <flow or setting> | why: <reason>
+
+  NEXT TESTS
+    1. <test> | sample: <n> | win rule: <rule>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Two months of numbers
+    how: The fix check and the path both depend on a change from last month. With one month alone it can only say where you are, not what moved.
+  - what: Flow revenue by flow
+    how: Without it the agent ranks flows by recipients, which is a weaker guide to the weakest flow.
+  - what: Your discount room
+    how: Give it the lowest margin you can bear. A rebuilt cart or win-back flow offers a discount only inside that room, and late.
+  - what: How many flows you rebuild a month
+    how: Keep it at one. You can read the result in the next month's numbers.
+judge:
+  - Every change claim shows this month's and last month's number and the sum.
+  - Last month's fix was checked before a new one was chosen.
+  - Sending trouble was fixed before any flow was rebuilt, unless the flow was missing.
+  - Only one flow was rebuilt, and its first two emails were reviewed.
+  - Nothing was sent or switched on without your clear yes.
+test:
+  - Run it on a past month where you know one flow was broken. See if it picks the same flow.
+  - Run it twice on the same numbers. The chosen flow and path should be the same, apart from wording.
+  - Give it a month with poor open and click rates. It should fix sending before it rebuilds a flow.
+improve:
+  - Set your own floors for click rate and orders per recipient, to suit your list, and tell it in step 5.
+  - Add your voice rules and words to avoid to the brand file, so the email review follows them.
+  - Save the changes you approved each month, so the next run can check whether they worked.
+  - If you also send texts, add your SMS numbers so the reader scores them.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the keeper folder, read last month's files and run on a monthly schedule.
+    - name: Klaviyo
+      why: Export campaign and flow analytics, with test variants included, for 90 days or more. Other email tools have similar exports.
+  inputs:
+    - A note of every change you made to flows or settings last month
+    - Site traffic for the same month, because flow revenue follows traffic

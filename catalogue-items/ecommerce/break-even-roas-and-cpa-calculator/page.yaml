@@ -1,0 +1,131 @@
+new_slug: break-even-roas-and-cpa-calculator
+name: "Break-even ROAS and CPA calculator"
+summary: "Give it price and margin. Get break-even ROAS and CPA for Meta or Google, and a score."
+job: run-google-ads
+thinking: medium
+thinking_why: "The sums are simple, but it has to catch weak inputs and judge whether the numbers can pay for ads."
+
+headline: "Break-even ROAS and CPA calculator"
+subhead: Give it your average order value, your margin after all costs and, if you have it, your repeat buying. It works out break-even ROAS and break-even CPA for Meta, Google or any ad channel. You get targets, a verdict on whether ads can pay and a score out of 100.
+
+explain: |
+  Most store owners judge ads by the ROAS the ad platform shows. That number tells you nothing until you know the ROAS at which an order stops making money. Break-even ROAS is the sales per ad dollar where you earn nothing. Break-even CPA is the most you can pay for one customer on the first order without losing money.
+
+  This skill works both out from your own order value and margin, so it works for Meta, Google or any other channel. It then asks the harder questions. Can you carry a higher CPA because customers buy again, and does your cash allow it? Can the cost of a click and your conversion rate fit inside your break-even CPA at all? Collections with different margins get their own targets. If the numbers don't work, it says what to fix before you spend.
+
+when:
+  - You are about to set a target ROAS or a bid cap and want a number you can defend.
+  - Your ad platform shows a good ROAS but the bank balance disagrees.
+  - You want to know if a higher CPA is safe because customers come back.
+
+you_give:
+  - Average order value (AOV)
+  - Gross margin after product cost, shipping and payment fees
+  - Repeat purchase rate and profit per repeat order over 6 to 12 months (optional)
+  - The ad channel, plus its cost per click and conversion rate (optional)
+  - Current ad spend, store revenue and new-customer share of orders (optional)
+you_get:
+  - Break-even ROAS and break-even CPA, with the sum shown
+  - A first-order target and, if your data supports it, a lifetime value target
+  - Which campaigns need their own target
+  - A go or fix verdict and a score out of 100, with how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your AOV and your margin after product cost, shipping and payment fees. Use real costs, not a guess.
+  - Say which channel you plan to run, and add its cost per click and conversion rate if you know them.
+  - If customers buy again, add repeat data from at least 3 months of orders.
+  - Read the verdict first. If it says fix, change the business number it names before you spend more on ads.
+
+how_it_works:
+  - title: Checks your inputs
+    text: It asks for margin after product cost, shipping and payment fees, and flags any figure that looks like a guess.
+  - title: Works out break-even
+    text: Break-even ROAS is 100 divided by margin percent. Break-even CPA is AOV times margin.
+  - title: Applies it to your channel
+    text: The sums are the same for Meta and Google. It explains how each channel reports sales, so you compare with store totals.
+  - title: Picks the play
+    text: First-order profitable, or a lifetime value play that goes a little over break-even. It writes the choice down.
+  - title: Tests the lifetime value case
+    text: It uses 30, 60, 90, 180 and 365 day cohorts, and only allows what the cohort has paid back. Thin cash or under 3 months of data means first order only.
+  - title: Tests whether ads can pay
+    text: It compares break-even CPA with cost per click divided by conversion rate. If it doesn't fit, it names the fix.
+  - title: Splits targets
+    text: Collections with different margins, and brand, cold and retargeting campaigns, get their own targets.
+  - title: Gives a verdict and score
+    text: Four checks, each with points, add up to a score out of 100 and a go or fix verdict.
+
+output_shape: |
+  BREAK-EVEN  <channel>
+  AOV <$>   margin after costs <%>   (source of each figure)
+  Break-even ROAS  100 / <margin %> = <x>
+  Break-even CPA   <AOV> x <margin %> = <$>
+
+  PLAY  <first-order profitable | lifetime value play>  (why, in one line)
+  Target CPA <$>   Target ROAS <x>
+  Lifetime value case: <30/60/90/180/365 day cohort paid back, or "not enough data">
+
+  CAN ADS PAY?
+  Expected CPA = cost per click <$> / conversion rate <%> = <$>
+  <fits | does not fit>  <if not: the fix, with AOV, retention or conversion first>
+
+  OWN TARGETS NEEDED
+  <segment | margin | target>
+
+  SCORE  <n>/100  (A inputs <n>/25, B fit <n>/40, C targets <n>/20, D decision <n>/15)
+  VERDICT  <GO | GO WITH CARE | FIX FIRST>  <one line>
+  MISSING: <what would sharpen it>
+
+tweaks:
+  - what: Margin after all costs
+    how: Include product cost, shipping and payment fees, and refunds if they are common. Margin is the biggest input. A few points off changes every target.
+  - what: The channel
+    how: Name Meta, Google or both. The skill then says how that channel counts sales and which store totals to compare with.
+  - what: Cost per click and conversion rate
+    how: Add them from your account or Keyword Planner. Without them the skill can't say if ads can pay at all.
+  - what: Repeat data
+    how: Give real cohorts of 30, 60, 90, 180 and 365 days. Hope isn't a lifetime value. Under 3 months of data, stay with first order.
+  - what: Segments
+    how: List collections and campaign types with their own margin. A 70 percent margin line and a 35 percent line can't share one target ROAS.
+
+judge:
+  - The sums are shown, so you can check them with a calculator.
+  - The margin is after product cost, shipping and payment fees, and says where it came from.
+  - A lifetime value target only appears if real repeat data backs it.
+  - It compares break-even CPA with cost per click divided by conversion rate.
+  - The verdict names the single number to change when the answer is fix.
+  - The score shows what each of the four checks gave.
+
+test:
+  - Run it on a product you know well, with $100 AOV and 40 percent margin. Break-even ROAS should be 2.5 and break-even CPA $40.
+  - Run it twice with the same numbers. The targets should match. If they move, your inputs were too vague.
+  - Change the margin to 70 percent. Break-even ROAS should drop to about 1.43.
+  - Give it a lifetime value claim with no data behind it. It should refuse to use it and say what data it needs.
+  - Compare its targets with the target ROAS you use today. Note any gap and find out why.
+
+improve:
+  - Save your true margin by product line in your brand file, so the skill never asks again.
+  - Add your cash position and how long you can wait for repeat orders, so it sets the lifetime value limit for you.
+  - Add your own scoring weights in the Score it section if some checks matter more to you.
+  - Re-run it each quarter, and after a price, shipping or supplier change.
+  - Pair it with the launch planner, which takes break-even CPA as an input, and with a check of your tracking, so the ROAS you compare against is real.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the arithmetic and asks follow-up questions. Check the sums yourself once."}
+    - {name: "Shopify Analytics", why: "Gives your real AOV, new-customer share and repeat rate to paste in."}
+    - {name: "Google Ads Keyword Planner", why: "Shows the cost per click for your products, so the skill can check the fit."}
+  inputs:
+    - "A profit and loss by product line, so margin is real"
+    - "A cohort report of repeat orders by 30, 60, 90, 180 and 365 days"
+    - "Your last 90 days of ad spend and store revenue, to compute blended MER"
+
+terms:
+  - term: ROAS
+    meaning: Return on ad spend. Sales divided by ad spend. A ROAS of 2.5 means $2.50 in sales for each $1 of ads.
+  - term: Break-even CPA
+    meaning: The most you can pay to win one customer on their first order without losing money.
+  - term: MER
+    meaning: Marketing efficiency ratio. Total store revenue divided by total ad spend across all channels.
+  - term: LTV
+    meaning: Lifetime value. What a customer is worth to you over time. Use profit, not sales.

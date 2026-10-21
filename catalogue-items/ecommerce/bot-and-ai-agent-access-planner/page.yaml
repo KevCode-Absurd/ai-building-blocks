@@ -1,0 +1,136 @@
+new_slug: bot-and-ai-agent-access-planner
+name: "Bot and AI agent access planner"
+summary: "Describe your traffic, logins and checkout. Get which bots and AI agents to allow, check or block."
+job: protect-your-store
+thinking: high
+thinking_why: "It balances letting real shoppers and useful agents in against stopping abuse, across several flows. A stronger model handles the trade-offs better."
+
+headline: "Bot and AI agent access planner"
+subhead: Describe your traffic, your login, sign-up, reset and gift card flows, and what bot protection you have. It writes a policy that allows, checks or blocks each visitor type, with rate limits, alerts, exact error wording and a monthly review.
+
+explain: |
+  Bots hit stores in two ways. Classic bots run fixed scripts: they copy prices, hoard stock and try stolen passwords. AI agents chase a goal and change tactics as they go, so plain rate limits and simple CAPTCHAs fail more often against them. At the same time, some AI shopping assistants are customers you may want. Blocking everything loses them. Allowing everything loses money.
+
+  This skill sets one policy with four levels: permit, verify, challenge and prevent. Browsing stays open, and the strong checks sit at the money steps: checkout, gift cards, password and address changes. It also covers login defence: rate limits per account and per address, bot signals, the right kind of challenge and the same error message for every sign-in outcome. It fits your size. A small hosted store gets a simple plan built on its platform's own bot protection.
+
+when:
+  - You see failed logins, odd order bursts or small test charges and want a plan.
+  - You want AI shopping assistants to find your products but not to scrape or abuse them.
+  - You run drops, limited stock or gift cards that bots like to target.
+
+you_give:
+  - Your traffic sources and any bot or firewall tool already in place
+  - "Which pages and interfaces are public: cart, checkout, login, gift card, search"
+  - "Signs you have seen: failed logins, odd order bursts, small test charges"
+  - Whether you want AI shopping assistants to find and buy your products
+  - Recent failed-login counts per hour and top source addresses (optional)
+  - Your fastest real use, such as support staff, a shared office or wholesale buyers (optional)
+you_get:
+  - "A one-page policy: who is allowed, checked or blocked at each step"
+  - A rules table per flow with what to count, the limit and what happens next
+  - Exact wording for sign-in, reset and sign-up messages
+  - Alerts to set, a monthly review list and a plan by week
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your store size, platform and the flows you want to protect.
+  - Paste any counts you have, such as failed logins per hour. With none, start by collecting one week of counts.
+  - Turn on your platform's own bot protection first, then add the rules the plan lists.
+  - Review the counts each month and bring them back to the skill.
+
+how_it_works:
+  - title: Sizes your situation
+    text: Decides how much to build. A small hosted store relies on platform bot protection, alerts and a written policy.
+  - title: Maps visitors
+    text: Lists public pages and interfaces, which bots or agents visit them and why they come.
+  - title: Writes the four levels
+    text: Permit browsing and discovery, verify when behaviour changes, challenge at money steps, and prevent clear abuse.
+  - title: Sets login limits
+    text: Names the attack, then sets rate limits per account and per address, set well above real use.
+  - title: Picks the challenge
+    text: Prefers a step-up check or a risk-score challenge to a hard block, and gives known customers another route.
+  - title: Writes the messages
+    text: Gives one reply for every sign-in, reset and sign-up outcome, and says when to relax that.
+  - title: Sets alerts and review
+    text: Lists signals to watch, a monthly review and a twice-yearly test on a staging store.
+
+output_shape: |
+  YOUR SIZE AND SETUP
+  <traffic, platform, tools in place, what can be set by you>
+
+  VISITOR POLICY
+  Permit:    <who and where>
+  Verify:    <what triggers it>
+  Challenge: <steps: checkout, gift cards, password change, address change, loyalty points>
+  Prevent:   <clear abuse patterns>
+
+  RULES BY FLOW
+  <flow> | count: <what> | limit: <n per time, per account / per address> | then: <action>
+
+  MESSAGES (exact wording)
+  Sign-in failed: "<text>"
+  Forgot password: "<text>"
+  Sign-up: "<text>"
+
+  ALERTS
+  <signal> | alert at <n> | who is told
+
+  PLAN BY WEEK
+  Weeks 1 to 4: <visibility>   Weeks 3 to 6: <policy>   Weeks 5 to 12: <build>
+
+  MONTHLY REVIEW
+  <counts to read>  | Twice a year: <staging test>
+
+  CHECKS MISSED: <list or none>
+  MISSING: <traffic data | flows | tools in place | goal for AI agents>
+
+tweaks:
+  - what: Your size
+    how: Give daily visits and say if you run drops or gift cards. The plan is most useful at about 5,000 visits a day or more. Below that, it stays simple.
+  - what: Your platform
+    how: Say Shopify or another hosted platform. You can usually only switch on the platform's bot protection and pick from apps, so the plan uses its limits as a guide to judge them.
+  - what: Whether you want AI shopping assistants
+    how: Say yes, no or only some. The policy then gives trusted agents their own lane instead of loosening rules for everyone.
+  - what: Real traffic counts
+    how: Paste failed logins per hour and top source addresses. With no logs there are no baselines, so the plan tells you to count for a week before it sets numbers.
+
+judge:
+  - Browsing is permitted, and the strong checks sit at checkout, gift cards and account changes.
+  - Every rule has a count, a limit and a next action.
+  - Limits are set well above the heaviest real use, and shared addresses are mentioned.
+  - Sign-in, reset and sign-up messages are the same for every outcome.
+  - A challenge is preferred to a block for unclear cases.
+
+test:
+  - Tell it you run a small Shopify store. It should point to platform bot protection and alerts, not edge rules.
+  - Ask for a plan with wholesale buyers behind one office address. Per-address limits should be softer than per-account ones.
+  - Read the error messages. A visitor should not be able to tell a wrong password from a missing account.
+  - Run it twice. The policy levels should match.
+
+improve:
+  - Add your real checkout and login addresses to the skill file so rules name them.
+  - Add your support team's process for a blocked customer, so the plan says who to ask.
+  - Add the vendors you already pay for, so it recommends settings, not new tools.
+  - Add your privacy policy text and have it flag where AI agent visits should be mentioned.
+  - Pair it with the AI crawler access editor for the allow-AI-readers step, and the Fraud rules setter for card testing at checkout.
+
+works_best_with:
+  tools:
+    - {name: "Your platform's own bot protection", why: "On a hosted store this is usually the first and main layer. Turn it on before adding anything else."}
+    - {name: "Cloudflare", why: "A common edge service with bot and rate-limit settings. It suits stores with a technical person."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the policy and wording from your description."}
+  inputs:
+    - "A week of failed-login counts per hour and the top source addresses"
+    - "A list of your public interfaces from your developer"
+    - "Your current privacy policy text"
+    - "A list of customers who buy through a shared office address"
+
+terms:
+  - term: Credential stuffing
+    meaning: Trying email and password pairs stolen from another site on yours.
+  - term: Rate limit
+    meaning: A cap on how many tries one account or address gets in a set time.
+  - term: Step-up check
+    meaning: An extra proof, such as a code, asked only when an action looks risky.
+  - term: Card testing
+    meaning: Small charges used to check whether stolen card numbers work.

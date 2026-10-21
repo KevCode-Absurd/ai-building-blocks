@@ -1,0 +1,132 @@
+new_slug: engaged-list-expander
+name: "Engaged list expander"
+summary: "Give it your list and send results. Get a plan to bring quiet contacts back safely."
+job: write-emails
+thinking: medium
+thinking_why: "It sets up rules and does sums on your numbers. A mid-size model handles that well."
+
+headline: "Engaged list expander"
+subhead: Give it your list size, how often people buy and your recent send results. It defines who counts as engaged, then plans a slow drip that adds quiet contacts back into your sends. You get the plan, the sizes of each step and a stop rule.
+
+explain: |
+  Many stores email only the few people who opened lately, to protect their inbox placement. That keeps open rates up, but the rest of the list goes cold and the store sells to a smaller and smaller group. Other stores email everyone and watch their emails land in spam.
+
+  This skill sits between the two. It defines "engaged" from your own buying cycle, then splits the quiet part of your list into random groups of about 10 percent. It adds one group to each engaged send and checks the results before adding the next. Contacts who open move into the engaged group. If spam complaints or bounces rise, the plan stops. Only people who agreed to hear from you are ever included.
+
+when:
+  - Your list is big, but you send only to a small slice of it.
+  - You are preparing for a big sale and want a larger audience that still opens.
+  - Your list has gone quiet and you want to win people back without hurting inbox placement.
+
+you_give:
+  - Total profiles, and how many receive campaigns today
+  - Average days between orders in your store
+  - Open, click, bounce and spam complaint numbers for recent sends
+  - A calendar of sales, launches and restocks (optional)
+  - Your email tool, so the segment names match (optional)
+
+you_get:
+  - A definition of "engaged" with a day limit for each signal
+  - A drip plan that adds random groups of quiet contacts to engaged sends, with sizes for your list
+  - A split of your campaigns between broad reach and narrow goals
+  - A monthly check and a stop rule if deliverability slips
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your list size, buying cycle and recent send results. Add your sale calendar if you have one.
+  - Say what your email tool calls its segments, if you know.
+  - Check that your spam complaints and bounces are steady before you start. If they are rising, run the inbox placement recovery planner first.
+  - Follow the plan one step at a time. Read the results before you add the next group.
+
+how_it_works:
+  - title: Checks it is safe
+    text: It stops if complaints or bounces are rising or the list was bought or rented. It also checks that everyone on the list agreed to get your email.
+  - title: Defines engaged
+    text: Opened or clicked an email, added to cart, started checkout or placed an order. Each signal gets a day limit that fits how often your customers buy.
+  - title: Sizes the segment
+    text: It counts who is engaged today and compares it with the target of at least 50 percent of profiles. It then plans a monthly check.
+  - title: Splits reach and goals
+    text: About 80 percent of campaign sends are good content for the widest engaged audience. About 20 percent serve narrow goals such as clearing stock.
+  - title: Plans the drip
+    text: It cuts the quiet part of the list into random groups of about 10 percent and adds one group to each engaged send, with the numbers for your list.
+  - title: Sets stop rules
+    text: It pauses the drip if complaints or bounces rise, and widens it only when opens hold up.
+  - title: Keeps buyers safe
+    text: Past buyers stay on the list even when quiet. An optional clean-up removes people who never engaged, after a consent check.
+
+output_shape: |
+  ENGAGED DEFINITION
+  <signal> within <n> days (email opens, clicks, site activity, orders)
+  Engaged today: <n> of <n> profiles (<n>%). Target: 50% or more.
+
+  SEND SPLIT
+  Reach (about 80%): <content types>
+  Targeted (about 20%): <goals from the calendar>
+
+  DRIP PLAN
+  Quiet contacts: <n>. Sample size (about 10%): <n>
+  Send <n>: engaged <n> + sample <n> = <n> | expect <n> to move to engaged
+  (one row per send)
+
+  STOP RULES
+  Pause if complaints go above <n>% or bounces above <n>%.
+  Widen only when <rule>.
+
+  MONTHLY CHECK
+  <engaged size, open rate, click rate, complaints, bounces>
+
+  CLEAN-UP (optional)
+  <segments to remove, after the consent check>
+  MISSING: <list size | buying cycle | send results | calendar>
+
+tweaks:
+  - what: Your buying cycle
+    how: Day limits should follow how often customers really order. A store that sells a monthly refill needs shorter limits than one that sells furniture.
+  - what: Sample size
+    how: About 10 percent per group is the starting point. Use smaller groups if your complaints are already near the limit.
+  - what: Content you can make
+    how: The plan only works if broad campaigns are worth opening. Tell it how many good campaigns you can send each week.
+  - what: Your sales calendar
+    how: Add your sales and launches so the drip speeds up before a big event and does not clash with one.
+  - what: Your email tool
+    how: Say which tool you use, so segment names and event names match what you see on screen.
+
+judge:
+  - The engaged definition uses your own buying cycle, not one set of days for every store.
+  - Every sample size and expected result shows the sum from your list numbers.
+  - Quiet contacts are added in groups, never all at once.
+  - There is a stop rule with clear numbers, and it names who checks it.
+  - Anyone who unsubscribed or never agreed to email is left out.
+  - Figures from the source cases are shown as examples, not as promises.
+
+test:
+  - "Work out the first sample yourself: 10 percent of your quiet contacts. It should match the plan."
+  - Change one input, such as doubling the days between orders, and check that the day limits change in the right direction.
+  - Run it twice on the same numbers. The segment definition and the sample sizes should match.
+  - Compare the plan with how you send today. Ask if you could follow it with the content you can make.
+
+improve:
+  - Add your own day limits to the skill file once you know them, so the definition starts from your numbers.
+  - Add the segment names your email tool uses for engaged and quiet contacts.
+  - Add your stop numbers for complaints and bounces, and who checks them each week.
+  - Save each month's engaged size to your brand file so the next run starts from it.
+  - Pair it with the inbox placement recovery planner first if opens are low, and with the email campaign calendar planner for the broad content.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "It builds segments from email and site activity with OR rules, and shows complaint and bounce rates for each send."}
+    - {name: "Shopify", why: "Order and checkout events from the store feed the engaged segment."}
+  inputs:
+    - "An export of your last eight campaigns with opens, clicks, bounces and complaints"
+    - "Your list size by signup source"
+    - "Your repeat purchase rate, so the day limits fit"
+
+terms:
+  - term: Engaged segment
+    meaning: The people who opened, clicked or shopped within a set number of days.
+  - term: Inbox placement
+    meaning: Whether your email lands in the inbox, the promotions tab or spam.
+  - term: Spam complaint
+    meaning: A person pressing the report spam button on your email.
+  - term: Profile
+    meaning: One person in your email tool, with all their activity.

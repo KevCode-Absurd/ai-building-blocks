@@ -1,0 +1,39 @@
+# Workflow skeleton chaining AI Blocks library skills (docs/INTAKE.md).
+id: code-vendor-bills-flag-odd-ones-and-find-supplier-savings
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: code-vendor-bills-flag-odd-ones-and-find-supplier-savings
+  name: "Code vendor bills, flag odd ones and find supplier savings"
+  summary: "Give it your vendor bills. Get each coded, the odd ones flagged for a look, and the biggest supplier savings."
+  when: "a pile of vendor bills needs coding and you want to know what is odd and where you could spend less."
+  job: money-and-investing
+  level: intermediate
+steps:
+  - name: "Vendor bill coder"
+    skill: vendor-bill-coder
+    job: ops
+    from: "skill: vendor-bill-coder"
+    method: ["Collect the bills and remove copies of the same bill", "Read vendor, number, dates, lines and totals, and name what cannot be read", "Code each bill from your accounts and past coding for that vendor", "Match it to the purchase order and receipt", "Stage a payment run for you to approve"]
+    inputs: [document]
+    outputs: [spreadsheet]
+    note: "Turns the pile of bills into one coded table. Nothing is paid until you say yes."
+  - name: "Unusual transaction finder"
+    skill: unusual-transaction-finder
+    job: ops
+    from: "skill: unusual-transaction-finder"
+    method: ["Say what odd means here: one strange bill, strange for this vendor, or strange together", "Build simple signals like amount against the vendor usual and gaps between bills", "Score each line", "Flag the top ones with a short reason", "Hand the flags back for a person to check"]
+    inputs: [spreadsheet]
+    outputs: [audit_report]
+    note: "Looks through the coded table for repeats, jumps and bills that do not fit a vendor pattern."
+  - name: "Spend savings finder"
+    skill: spend-savings-finder
+    job: ops
+    from: "skill: spend-savings-finder"
+    method: ["Group spend by type, supplier and team", "Find suppliers doing the same job", "Size the savings from joining or switching", "Rank the chances by amount and effort", "List quick wins and what to ask each supplier"]
+    inputs: [spreadsheet]
+    outputs: [audit_report]
+    note: "Uses the coded table to group spend and rank savings, leaving out bills the last step flagged as errors."

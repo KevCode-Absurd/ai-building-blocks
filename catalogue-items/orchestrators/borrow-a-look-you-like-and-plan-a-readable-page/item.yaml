@@ -1,0 +1,23 @@
+slug: borrow-a-look-you-like-and-plan-a-readable-page
+name: "Borrow a look you like and plan a readable page"
+summary: "Give it designs you like and your page text. Get the look as notes, a grid and type plan, and checked colours."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: image, required: true}
+  - {type: brief, required: true}
+  - {type: copy_draft, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [design-style-analyst, page-grid-and-type-planner, colour-contrast-checker]
+steps:
+  - {uses: design-style-analyst, note: "Turns your references into one style profile you can reuse."}
+  - {uses: page-grid-and-type-planner, note: "Lays out your content in the borrowed look. Reads the style profile from the step before."}
+  - {uses: colour-contrast-checker, note: "Checks the final colours are readable. Reads the design direction the planner updated."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/borrow-a-look-you-like-and-plan-a-readable-page/skeleton.yaml

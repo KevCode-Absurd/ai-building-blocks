@@ -1,0 +1,21 @@
+slug: store-script-and-app-risk-auditor
+name: "Store script and app risk auditor"
+summary: "List the scripts, apps and packages your store loads. Get risky ones ranked, a score out of 100 and what to remove."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - {type: store_capture, required: true}
+  - {type: question, required: false}
+  - {type: codebase, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "University web security lecture series (compiled transcript, about 25 lectures)", by: "A university instructor and guest engineers", used: "Treating third-party code as code you wrote, scripts swapped over plain http, sold extensions, look-alike package names, install-time scripts, isolated install spaces and review before production"}

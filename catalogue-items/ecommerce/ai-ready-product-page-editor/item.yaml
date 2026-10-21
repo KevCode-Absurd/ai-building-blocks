@@ -1,0 +1,24 @@
+slug: ai-ready-product-page-editor
+name: "AI-ready product page editor"
+summary: "Give it a product or collection page. Get the facts, spec table, FAQs and markup checklist AI tools can use."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: pdp_copy}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Complete AI SEO Course 2026", by: "An SEO community founder", used: "The 2-second rule, one page per offer, a single H1, a short FAQ and validating schema"}
+  - {title: "Generative Engine Optimization: Is It Safe and How to Do It the Right Way", by: "Harpreet Singh, SEO practitioner, interviewed on a daily SEO show", used: "Category pages titled best-for-a-use, and showing a price or range so AI does not invent one"}
+  - {title: "The ultimate guide to AEO: how to get ChatGPT to recommend your product", by: "Ethan Smith, SEO agency CEO, on a product-growth podcast", used: "Shoppable cards in shopping answers, rich snippets and review counts"}

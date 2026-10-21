@@ -14,7 +14,7 @@ export type Block = {
   slug: string;
   name: string;
   summary: string;
-  category: "general" | "ecommerce" | "orchestrator" | "mind";
+  category: "general" | "ecommerce" | "orchestrator" | "agent" | "mind";
   boards: string[];
   type: "prompt" | "skill" | "workflow" | "routine" | "agent" | "mind";
   role: Role;
@@ -213,14 +213,15 @@ export function wireSteps(c: Catalogue, slugs: string[]): [number, number][] {
 }
 
 /** What a person sees: three kinds, in order of how much they do. */
-export type Kind = "prompt" | "skill" | "workflow" | "mind";
+export type Kind = "prompt" | "skill" | "workflow" | "agent" | "mind";
 export const KINDS: { id: Kind; name: string; plural: string; path: string; what: string }[] = [
   { id: "prompt", name: "Prompt", plural: "Prompts", path: "prompts", what: "One message you paste into your AI for a quick result." },
   { id: "skill", name: "Skill", plural: "Skills", path: "skills", what: "Instructions you add to your AI once. It follows them step by step and checks its own work." },
   { id: "workflow", name: "Workflow", plural: "Workflows", path: "workflows", what: "Several skills in order. Each one hands its work to the next." },
+  { id: "agent", name: "Agent", plural: "Agents", path: "agents", what: "An AI that runs whole workflows on its own, decides what to do next and asks you before anything that spends, sends or goes live." },
   { id: "mind", name: "Mind", plural: "Minds", path: "minds", what: "A great mind's ideas and voice, from their public work. Use one alone, or seat several on a council." },
 ];
-export const kindOf = (b: Block): Kind => (b.type === "mind" ? "mind" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflow" : b.type === "prompt" ? "prompt" : "skill");
+export const kindOf = (b: Block): Kind => (b.type === "mind" ? "mind" : b.type === "agent" ? "agent" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflow" : b.type === "prompt" ? "prompt" : "skill");
 export const kindInfo = (b: Block) => KINDS.find((k) => k.id === kindOf(b))!;
 export const pathOf = (b: Block) => `/${kindInfo(b).path}/${b.slug}`;
 
@@ -275,6 +276,15 @@ export const TASKS: { id: string; name: string }[] = [
   { id: "research-topics", name: "Research a topic properly" },
   { id: "teach-and-train", name: "Teach and train people" },
   { id: "plan-supply-chain", name: "Plan stock, shipping and suppliers" },
+  { id: "find-products", name: "Find products worth selling" },
+  { id: "set-up-store", name: "Set up your online store" },
+  { id: "speed-up-store", name: "Make your store load fast" },
+  { id: "test-store-changes", name: "Test changes to your store" },
+  { id: "run-google-ads", name: "Run Google Ads" },
+  { id: "launch-and-scale-ads", name: "Launch and scale Meta and TikTok ads" },
+  { id: "keep-customers", name: "Keep customers coming back" },
+  { id: "sell-on-amazon", name: "Sell on Amazon" },
+  { id: "protect-your-store", name: "Keep your store safe" },
 ];
 const TASK_BY_ID = new Map(TASKS.map((t) => [t.id, t]));
 export const taskOf = (b: Block) => TASK_BY_ID.get(b.task) ?? TASKS[0];
@@ -289,10 +299,12 @@ export function loadPage(slug: string): Promise<Page | null> {
  *  Each one groups a few jobs; a job can sit under more than one. */
 export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[] }[] = [
   { id: "copywriter", name: "Write copy that sells", line: "Ads, landing pages and offers", tasks: ["write-ad-copy", "write-landing-page", "make-offer", "write-emails"] },
-  { id: "media-buyer", name: "Run Meta ads", line: "Plan tests, get ads approved, read the results", tasks: ["plan-ad-tests", "check-ads", "read-ad-results", "study-competitors"] },
+  { id: "media-buyer", name: "Run Meta ads", line: "Plan tests, get ads approved, read the results", tasks: ["plan-ad-tests", "launch-and-scale-ads", "check-ads", "read-ad-results", "study-competitors"] },
+  { id: "google-ads", name: "Run Google Ads", line: "Shopping, Performance Max, Search and your product feed", tasks: ["run-google-ads"] },
+  { id: "retention", name: "Keep customers buying", line: "Email, text messages, subscriptions and what happens after the order", tasks: ["keep-customers", "write-emails"] },
   { id: "ads", name: "Create ads", line: "Image ads and video ads, each with its own skills", tasks: ["make-image-ads", "make-video-ads"] },
   { id: "photos", name: "Make product photos", line: "Photos for your product pages", tasks: ["product-photos"] },
-  { id: "cro", name: "Turn visitors into buyers", line: "Check your landing pages and fix what loses sales", tasks: ["audit-landing-page", "write-landing-page"] },
+  { id: "cro", name: "Turn visitors into buyers", line: "Check your landing pages and fix what loses sales", tasks: ["audit-landing-page", "write-landing-page", "test-store-changes", "speed-up-store"] },
   { id: "strategist", name: "Know your market", line: "Your customers, your brand and your rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
   { id: "social", name: "Grow on social", line: "Posts that build an audience", tasks: ["grow-social"] },
   { id: "founder", name: "Set up AI for your work", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
@@ -309,7 +321,7 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
   { id: "files", name: "Work with files", line: "Documents, sheets, slides and PDFs", tasks: ["work-with-files"] },
   { id: "connector", name: "Connect your tools", line: "Plug AI into the apps you use, or make your own skills", tasks: ["connect-tools", "make-skills", "set-up-ai"] },
   { id: "office", name: "Run your work", line: "Meetings, notes, plans and audio", tasks: ["organise-work", "work-with-audio", "document-work"] },
-  { id: "store", name: "Run your store", line: "Orders, stock, prices and payouts", tasks: ["run-your-store", "set-prices"] },
+  { id: "store", name: "Run your store", line: "Orders, stock, prices and payouts", tasks: ["set-up-store", "run-your-store", "set-prices", "sell-on-amazon", "protect-your-store"] },
   { id: "search", name: "Get found", line: "Search, AI answers and listings", tasks: ["get-found-in-search"] },
   { id: "support", name: "Help your customers", line: "Replies, help pages and problems sorted fast", tasks: ["help-customers", "write-emails"] },
   { id: "people", name: "Hire and look after people", line: "Job posts, interviews, pay and reviews", tasks: ["hire-people", "lead-people"] },
@@ -317,12 +329,12 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
   { id: "analyst", name: "Track your numbers", line: "Books, reports, dashboards and data", tasks: ["track-numbers", "read-ad-results", "money-and-investing"] },
   { id: "researcher", name: "Research anything", line: "Sources found, read, checked and written up", tasks: ["research-topics"] },
   { id: "teacher", name: "Teach and train", line: "Lessons, courses, quizzes and feedback", tasks: ["teach-and-train"] },
-  { id: "supply", name: "Run your supply chain", line: "Stock, suppliers, shipping and routes", tasks: ["plan-supply-chain", "run-your-store"] },
+  { id: "supply", name: "Run your supply chain", line: "Stock, suppliers, shipping and routes", tasks: ["find-products", "plan-supply-chain", "run-your-store"] },
 ];
 
 /** The broad areas above the groups (docs/MINDS-PRD.md §3). A group can sit in more than one; a mind sits in its own areas. */
 export const AREAS: { id: string; name: string; fns: string[] }[] = [
-  { id: "marketing", name: "Marketing", fns: ["copywriter", "media-buyer", "ads", "cro", "strategist", "social", "search"] },
+  { id: "marketing", name: "Marketing", fns: ["copywriter", "media-buyer", "google-ads", "ads", "cro", "retention", "strategist", "social", "search"] },
   { id: "design", name: "Design", fns: ["ads", "photos", "maker", "product"] },
   { id: "business", name: "Business", fns: ["strategist", "founder", "validator", "strategy", "product", "minds", "files", "office", "store", "support", "legal", "analyst", "supply"] },
   { id: "sales", name: "Sales", fns: ["seller", "validator", "support"] },

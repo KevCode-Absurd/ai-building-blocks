@@ -1,0 +1,125 @@
+new_slug: pain-point-niche-finder
+name: "Pain point niche finder"
+summary: "Pick a market. Get 30 buyer problems, your best 5 and the brands already selling to them."
+job: find-products
+thinking: medium
+thinking_why: "It brainstorms and sorts a long list and keeps ideas apart from data, which a mid-size model does well."
+
+headline: "Pain point niche finder"
+subhead: Name a market and say who you are. It writes 30 emotional buyer problems, helps you pick the best five, and shows which brands already sell to each one. You get the product, the pain point, the ad pattern, the page type and a plan for what to do if the first test fails.
+
+explain: |
+  Most new stores start with a product and hunt for buyers. The market you choose lifts or caps your results more than the item does, so this skill works the other way round. Market first, then the problem, then the product, then a check, then a plan.
+
+  A single problem can hold many products. Migraines can be solved with a supplement, a head band, a massage gun or neck traction. So you list 30 specific buyer problems for your market and pick five. For each one, it lists the brands already selling to it, with their product, ad pattern and page type. If you have an ad spy tool connected, it uses that data. If not, it gives search terms and leaves the table for you to fill. It never makes up a brand or an ad count.
+
+when:
+  - You want to start a store and have a market in mind but no product yet.
+  - You have a product and want to know if the problem behind it is worth selling to.
+  - Your last product failed and you want to pick a better problem before the next test.
+
+you_give:
+  - A market, such as pets, hair growth, skincare or supplements
+  - Who you are, such as a beginner, your budget and your country
+  - Your ad spy tool, if it is connected to your AI (optional)
+  - Reviews or comments from the market (optional)
+you_get:
+  - A list of 30 emotional sub-niches, each a specific buyer problem
+  - Your best five, with why and the other products that could solve each
+  - For each, the brands selling to it, their product, pain point, ad pattern and page type (from your tool or your searches)
+  - Product picks to check next, and a game plan for a failed test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your market and who you are. Pick the market fast, because the market matters more than the item.
+  - Read the 30 problems and pick the five you like most, or ask it to rank them.
+  - If you have an ad spy tool connected, let it fill the brand table. If not, run the searches it gives you in the free Ad Library and fill the table yourself.
+  - Run the best product pick through the winning product scorer and the competitor revenue estimator.
+
+how_it_works:
+  - title: Confirms the market
+    text: A clear before and after, and loyal buyers. Health and body markets get a note on strict ad rules.
+  - title: Writes 30 sub-niches
+    text: Specific buyer problems for a beginner brand, such as lower back stiffness or plantar fasciitis.
+  - title: Helps pick five
+    text: Daily pain, how much buyers want it solved, how many products fit, and your own knowledge. It says this is judgment, not data.
+  - title: Lists who sells to each
+    text: Brands with enough active ads, their product, pain point, ad pattern, page type and top ad. From your tool, or search terms and an empty table.
+  - title: Chooses products
+    text: Two or three options per problem, each to be checked with the scorer and the revenue estimator.
+  - title: Writes the game plan
+    text: A test budget and a stop point first. If the test fails, ask why and check the ads before the page.
+
+output_shape: |
+  MARKET <market>  FOR <who: beginner? budget, country>
+
+  THIRTY SUB-NICHES
+  1. <problem in the buyer's words> | who has it
+  ... (30 lines)
+
+  YOUR FIVE
+  <problem> | why | other products that could solve it
+
+  WHO SELLS TO EACH (source: <ad spy tool | your searches | idea, not data>)
+  <problem>
+    <brand> | product | pain point | ad pattern | page type | top ad
+
+  SEARCHES TO RUN (when there is no tool)
+  <problem>: <free Ad Library search terms>
+
+  PRODUCT PICKS
+  <problem> -> <product option>
+
+  GAME PLAN
+  Test budget | stop point | if it fails ask why: ads first, then page and checkout
+
+  CHECKS MISSED: <check and what is needed | none>
+  MISSING: <what>
+
+tweaks:
+  - what: How specific your market is
+    how: Give a market with a clear before and after, such as hair growth, not a wide one like health. A specific market gives sharper problems.
+  - what: Who you are
+    how: Say your budget and country. A beginner list leans to problems with simple products and low shipping cost.
+  - what: Whether a tool is connected
+    how: With an ad spy tool connected, the brand table has real brands and ad counts. Without one, you get search terms and fill the table yourself.
+  - what: Customer words
+    how: Paste reviews or comments from your market. The problems are written in your buyers' own words, so they are easier to test.
+
+judge:
+  - There are exactly 30 sub-niches and each is a buyer problem, not a product.
+  - Your five each have a reason and 2 or 3 products that could solve the problem.
+  - Every brand name and ad count came from your tool or your own searches.
+  - Anything not from data is marked as an idea.
+  - The game plan has a budget, a stop point and the ads-first rule.
+
+test:
+  - Run it for a market you know well. Check that most of the 30 problems are real ones you have seen buyers mention.
+  - Ask for the brand table with no tool connected. It should give search terms and an empty table, not invented brands.
+  - Pick one brand it lists from your tool and open its ads yourself. The product and the ad count should match.
+  - Run it twice for the same market. The lists will differ in wording, but the top problems should overlap.
+
+improve:
+  - Add the markets you will never enter, such as ones with strict claims rules, so they are skipped from the first step.
+  - Add your own scoring for the five picks, such as how well you know the buyer or how light the product ships.
+  - Paste the output of the winning product scorer for past picks to teach it what you reject.
+  - Pair it with the proven product scout for ads in each pick, and the competitor saturation checker for rivals.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can write the 30 problems and rank your five. Add web search for fresher examples."}
+    - {name: "Meta Ad Library", why: "Free. Use the search terms to find brands that already run ads for each problem."}
+    - {name: "A paid ad spy tool", why: "Optional. When connected to your AI it can list brands, ad counts and top ads for you."}
+  inputs:
+    - "Reviews, comments or forum posts from your market, so problems are in your buyers' words"
+    - "Your budget and country, so picks fit what you can ship and test"
+    - "A list of markets or claims you will not touch"
+    - "Your earlier test results, so repeats are avoided"
+
+terms:
+  - term: Sub-niche
+    meaning: A narrow group inside a market, such as people with plantar fasciitis inside the health market.
+  - term: Ad pattern
+    meaning: The way a brand's ads are built, such as a before-and-after story or a customer talking to the camera.
+  - term: Page type
+    meaning: Whether ads send people to a product page or an article-style page.

@@ -1,0 +1,24 @@
+slug: inventory-cash-planner
+name: "Inventory cash planner"
+summary: "Give it orders, lead time and unit cost. Get order timing, cash needed, a downside case and the raise."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Finance for e-commerce: a set of about 16 finance lectures and Excel walk-throughs (contribution margin P&L, unit economics, LTV and CAC, cohorts, churn, discounts, Black Friday, prepaid subscriptions, subscription model, inventory cash, Amazon launch model)", by: "Eric, startup finance educator (one channel; a few segments co-presented by a subscription-software company's strategy director)", used: "Stock timing with lead time and cycle time, cash for each purchase order, the mini cash flow, the lowest cash point and the revenue-share financing example"}
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital masterclass)", used: "The cash cycle formula, why cash caps growth, how deposits and shorter lead times cut out-of-stock days, and the cost of inventory financing"}
+  - {title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, agency founder, interviewed on a business podcast", url: "https://www.youtube.com/watch?v=RHJSO4eVJVA", used: "The 13-week cash forecast as the first view for the owner"}
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge (9-figure wallet and accessories brand, bootstrapped, spends over $100K a day on ads)", used: "Keeping a credit line open before it is needed, and funding a big retailer order against the order"}
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic (apparel brand, about $200M a year), interviewed on a podcast", used: "Writing the downside before a big stock buy, what to tell suppliers, safety stock and betting on staple colors (used as a warning, not a method)"}

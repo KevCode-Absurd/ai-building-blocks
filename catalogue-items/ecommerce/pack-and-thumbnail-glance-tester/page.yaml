@@ -1,0 +1,125 @@
+new_slug: pack-and-thumbnail-glance-tester
+name: "Pack and thumbnail glance tester"
+summary: "Give it your pack image. Get a 3-second read score out of 100 and a sharper pack brief."
+job: brand-file
+thinking: medium
+thinking_why: "It scores answers from strangers and writes small pack changes, so a mid-size model works. A stronger one reads your image more closely."
+
+headline: "Pack and thumbnail glance tester"
+subhead: Attach your pack front or main image beside three rivals, and paste what five strangers said after a 3 second look. It scores the read out of 100, finds the weakest question, and gives pack changes and a plan to compare old and new in the same channel.
+
+explain: |
+  Shoppers decide fast. On a shelf, a collection page or a marketplace grid, they have a moment to see what a product is. A pack that looks great on its own can vanish among rivals, and a clean design in your brand deck can fail where the product really sits.
+
+  This skill gives you a simple test to run with five strangers: show the front for 2 to 3 seconds beside rivals, then ask what it is, which type or flavour, what it is not and why this one. It scores their answers, 25 points per question, and finds the weak spot. Then it suggests a clear colour cue for each variant, the few claims that belong on the front, and one or two changes against the category. It ends with a plan to compare the old and new version by sales speed, in the same place and period.
+
+when:
+  - You are redesigning a pack, label or main product image and want proof it reads fast.
+  - Your product sells well on its own site but poorly next to rivals on a marketplace or shelf.
+  - You have two pack versions and need a fair way to compare them.
+
+you_give:
+  - Your pack front or main image, as a file
+  - A screenshot of three rivals in the same view, such as a shelf, grid or collection page
+  - What five strangers said after a 2 to 3 second look
+  - Sales by pack version, with dates and where sold (optional)
+you_get:
+  - A glance score out of 100, with the sum shown, and the question where the pack is weakest
+  - Pack changes, with a colour cue for the variant, the few claims for the front, and what is fixed by rules
+  - A plan to compare old and new in the same channel, with the measure to use
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your pack front and a screenshot with three rivals, and ask it for the test script.
+  - Show the front to five strangers for 2 to 3 seconds beside the rivals, then ask the four questions and write down each answer.
+  - Paste the answers and read the score and the weakest question first.
+  - Change one or two things, then compare old and new in the same channel before you print or upload everything.
+
+how_it_works:
+  - title: Gives you the test
+    text: "Five strangers, 2 to 3 seconds beside rivals, then four questions: what is it, which type, what is it not, why this one."
+  - title: Scores the answers
+    text: 25 points per question, based on the share of strangers who answered correctly. The sum is shown.
+  - title: Finds the weak spot
+    text: Names the question with the fewest points and fixes that first.
+  - title: Adds a colour cue
+    text: A clear colour for the variant, such as a wide band, so flavour, type or size is clear at a glance.
+  - title: Limits the claims
+    text: Only the few true, allowed claims that matter, placed where a glance finds them.
+  - title: Lists what is fixed
+    text: Barcode, legal call-outs and platform rules come first, then the rest is designed around them.
+  - title: Changes one or two things
+    text: Size, shape or format against the category, kept close enough that shoppers still know it.
+  - title: Plans the comparison
+    text: Old and new in the same channel and window, measured by sales speed, with a warning that one result is only a test.
+
+output_shape: |
+  GLANCE TEST: <product> | strangers: <n> | rivals in view: <n>
+  Source: <strangers | AI read, not strangers>
+
+  SCORE <n>/100 (each question 25 x share correct)
+  What is it:            <n> of <n> right -> <points>
+  Which type or flavour: <n> of <n> right -> <points>
+  What it is not:        <n> of <n> right -> <points>
+  Why this one:          <n> of <n> right -> <points>
+  Main weakness: <question with lowest points>
+
+  FIXED PARTS: <barcode, legal text, platform rules>
+
+  BRIEF CHANGES
+  colour cue for variant: <...>
+  front claims: <claim> | placement <...> | allowed? <...>
+  category look to avoid copying: <...>
+
+  SPLIT TEST PLAN
+  old <...> vs new <...> | channel <...> | window <...> | measure <...>
+  NOT RUN: <what, and what is needed>
+
+tweaks:
+  - what: Who you ask
+    how: Use strangers who buy in your category, not friends or staff. People who know the product read it faster than a real shopper will.
+  - what: Which rivals are in the view
+    how: Show the three rivals that really sit next to you on the shelf, grid or collection page. The test is only as fair as the neighbours.
+  - what: Where it will sit
+    how: Say whether it sits on a shelf, a marketplace grid or your own collection page. The brief designs for that place, not for a brand deck.
+  - what: Which parts are fixed
+    how: Tell it about barcodes, legal text and marketplace image rules. They are set aside first, and the rest is designed around them.
+  - what: Your sales data
+    how: Give sales by pack version with dates and where sold. The comparison plan then uses the same place and period for old and new.
+
+judge:
+  - Strangers, not friends, gave the answers, and the sum of the score is shown.
+  - The weakest question is named, and the main fix targets it.
+  - Every front claim is true and allowed, with a note on who to check with.
+  - An AI read is clearly labelled and is not passed off as the stranger score.
+  - The comparison uses the same channel and dates, and does not call one result proof.
+
+test:
+  - Run the glance test yourself on a pack you know is hard to read. The score should be low and the weakest question should match what you already suspect.
+  - Run the same test with a second group of five strangers. The scores should be close. If they differ a lot, use more people.
+  - Show only the new pack to five people a day later and ask what it was. They should name the product and the type.
+  - Put old and new into the same grid or page for a set period and compare click-through and orders per 100 views.
+
+improve:
+  - Add your category's pack rules and marketplace image rules to the fixed-parts step, so they are always set aside first.
+  - Add your real claims list, with the ones you are allowed to make, so the skill only picks from it.
+  - Save the winning pack read and the score to your brand file, and use the same four questions every time you test.
+  - Pair it with the Product page image checker for the gallery and the Store brand signal auditor to check the whole brand's look.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can look at your pack and rivals. Attach the files."}
+    - {name: "Google Forms", why: "A short form to collect the four answers from strangers, one person at a time, so answers do not influence each other."}
+  inputs:
+    - "A screenshot of the real shelf, marketplace results or collection page with your product among rivals"
+    - "Sales by pack version, with dates and where it sold"
+    - "Your marketplace's image rules, saved on the day you check"
+    - "Photos of the pack from the front, side and top"
+
+terms:
+  - term: Glance test
+    meaning: Showing a pack for 2 to 3 seconds, then asking what the person saw.
+  - term: Sales velocity
+    meaning: How fast a product sells, such as units per store per week.
+  - term: Call-out
+    meaning: A short label on a pack that tells the buyer one thing, such as "no sugar".

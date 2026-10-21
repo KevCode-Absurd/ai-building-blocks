@@ -1,0 +1,23 @@
+slug: proven-product-scout
+name: "Proven product scout"
+summary: "Name your market. Get ad spy filters, a reading routine and a short list of proven products."
+category: ecommerce
+type: skill
+role: source
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: competitor_set}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The product research method that made me $670k", by: "A dropshipping YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=QwWO3EUYW2E", used: "The ad spy filter settings, scouting offers on news-site widgets, the free Ad Library image check, and the limits of feed scrolling"}
+  - {title: "The Only Product Research Video You Need to Start Dropshipping", by: "An e-commerce YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=JqbVCW14g5o", used: "Sorting ads by days running, skipping big brands, the three-viral-videos check, reverse image search for supplier cost, and sales estimates"}
+  - {title: "I asked Claude to find me a $1k/day product", by: "Mark, e-commerce YouTuber", url: "https://www.youtube.com/watch?v=1KrsOagtWgM", used: "Qualifying brands by how many ads they run and what kind of page they send people to"}
+  - {title: "Full Product Research Course for Dropshipping (Find Winning Products FAST)", by: "A dropshipping YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=cRQripx7qXM", used: "Training a feed with a product hashtag, and the quick scroll method"}

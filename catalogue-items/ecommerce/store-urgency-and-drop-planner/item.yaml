@@ -1,0 +1,24 @@
+slug: store-urgency-and-drop-planner
+name: "Store drop and urgency planner"
+summary: "Give it stock, dates and your email list. Get drop, deadline and early-access plans, truth-checked."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: plan, required: false}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [alex-hormozi, robert-cialdini]
+credits:
+  - {title: "$100M Offers", by: "Alex Hormozi (book)", used: "Limited release rules, dated promotions and the share of sales in the last hours"}
+  - {title: "Applying $100M Offers to E-Commerce", by: "Alex Hormozi (public video)", used: "Stock counts and short lightning deals"}
+  - {title: "How to Create Irresistible Offers", by: "Robert W. Bly (book)", used: "Deadline types, deadline length and reminders, and the warning not to extend a stated date"}
+  - {title: "Influence: The Psychology of Persuasion (revised edition)", by: "Robert B. Cialdini (book)", used: "Loss framing, newly scarce versus always scarce, news that is itself scarce, and why scarcity raises wanting but not quality"}

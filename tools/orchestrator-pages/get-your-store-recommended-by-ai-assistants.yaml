@@ -1,0 +1,83 @@
+new_slug: get-your-store-recommended-by-ai-assistants
+name: Get your store recommended by AI assistants
+summary: Give it your products and rivals. Get a baseline of who AI names, the gaps, and product pages rewritten to be quoted.
+job: get-found-in-search
+thinking: high
+thinking_why: It maps questions, compares assistants and rewrites pages across four skills. Give it your strongest model.
+headline: Get your products named when shoppers ask AI what to buy
+subhead: Give it your products and your rivals. It maps the questions shoppers ask, records who ChatGPT, Gemini and Perplexity name for them, finds the gaps that keep you out, and rewrites your product pages with facts an assistant can quote.
+explain: |
+  Shoppers now ask an AI assistant which product to buy and read the answer instead of ten search results. The assistant names a few stores. If you are left out, there is usually a gap you can see: no page answers the question, the facts are buried, or your rivals are mentioned in places yours is not.
+
+  The steps find the gap and fix it. First it builds the 30 to 60 questions shoppers ask about your category, including the smaller questions an assistant asks behind the scenes. You run them in the assistants and paste the answers, and it records who is named and cited. Then it names the gaps and tags each fix, build or influence. Last it rewrites your key product pages with plain facts, a spec table and an FAQ. It never invents a spec, price or review.
+when:
+  - Shoppers ask ChatGPT, Gemini or Perplexity what to buy and you want your store in the answers.
+  - A rival is named in AI answers and you cannot tell why you are not.
+  - Your product pages describe the product in marketing words, with the plain facts missing.
+you_give:
+  - Your products and collections with prices
+  - The page address and text of the product pages you want rewritten
+  - Specs, materials, sizing, shipping and returns
+  - Reviews and customer questions (optional)
+  - Search terms and past sales (optional)
+  - Your rivals (optional)
+you_get:
+  - A list of 30 to 60 shopper questions in topic groups, with the ones your store does not answer marked
+  - A log of who each assistant named, linked or left out, your share of voice and a visibility score out of 100
+  - A gap list with fix, build or influence on each item, quick wins first, and a topic coverage score out of 100
+  - Rewritten product pages with a plain first screen, spec table, short FAQ, title and a markup checklist
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your products with prices, and any reviews or customer emails. Real customer words make better questions.
+  - Run the questions it writes in each AI assistant you can use and paste the answers back. It cannot run them for you.
+  - Give it the page text and facts for the product pages to rewrite. Check every fact before you publish.
+how_it_works:
+  - title: Map shopper questions
+    text: Starts from money terms and adds the long tail and the sub-questions assistants run. Groups them into topics and marks the ones no page of yours answers.
+  - title: Run the AI panel
+    text: Records for each question who the assistants name, link or leave out, works out your share of voice, and lists the sources they cite.
+  - title: Find the gaps
+    text: Checks six gaps, ties your brand to topics, tags each fix, build or influence, and puts quick wins first.
+  - title: Rewrite the product pages
+    text: Puts plain facts in the first screen, adds a spec table, a short FAQ and a title, and lists the markup to add. Health, money and legal claims are checked.
+output_shape: |-
+  STEP 1: SHOPPER QUESTIONS
+    30 to 60 questions in topic groups | fan-out sub-questions | gaps marked | [inferred] tags where no customer words were given
+
+  STEP 2: AI PANEL LOG
+    Question | assistant | named, linked or absent | share of voice | sources cited | visibility score out of 100
+
+  STEP 3: GAP LIST
+    Gap | fix, build or influence | quick wins first | platform weighting | topic coverage score out of 100
+
+  STEP 4: REWRITTEN PAGES
+    First-screen facts | spec table | FAQ | title and H1 | markup checklist
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Real customer words
+    how: Reviews, emails and chat questions make the question list sound like your shoppers. Without them, questions are marked [inferred].
+  - what: Which assistants you test
+    how: Name the ones you can run, and whether you are logged in. Free and logged-in answers can differ.
+  - what: Your rivals
+    how: Name the five closest. Share of voice is measured against them.
+  - what: Product facts with units
+    how: The page editor can only use facts you give. Give sizes, weights, materials and care in units.
+judge:
+  - Questions are in the words shoppers use, and the ones that are guesses are marked.
+  - Each answer in the log is named, linked or absent, and the share of voice shows its working.
+  - Every gap has a tag and a first action.
+  - Every number on the rewritten page comes from the facts you gave, and gaps are marked MISSING.
+  - The first screen of each page says what the product is, who it is for and the price.
+test:
+  - Run the panel twice on different days and trust only the results that repeat.
+  - Ask an assistant the same question again after you publish the new page, and compare.
+  - Ask a friend to read the first screen of a rewritten page and say what the product is in ten seconds.
+  - Check each spec on the page against the box or the supplier sheet.
+improve:
+  - Add your claim rules to the page editor, so health and legal wording stays safe.
+  - Save the first panel log as your baseline in your brand file and compare it every quarter.
+  - Add the questions your support team gets most to the question list.
+  - Pair it with the workflow for getting named on the pages AI quotes, to work on the outside sources too.

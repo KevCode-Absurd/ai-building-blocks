@@ -1,0 +1,27 @@
+slug: plan-a-month-of-campaign-emails-that-sell-without-discounts
+name: "Plan a month of campaign emails that sell without discounts"
+summary: "Give it your products and brand file. Get a topic bank, a month calendar, written emails and a layout brief for each."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: true}
+  - {type: brief, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: offer, required: false}
+  - {type: image, required: false}
+outputs:
+  - {type: page_layout_spec}
+uses: [email-topic-bank-builder, email-campaign-calendar-planner, campaign-email-writer, email-draft-reviewer, email-layout-brief-writer]
+steps:
+  - {uses: email-topic-bank-builder, note: "Builds the bank of reasons to email that are not a discount."}
+  - {uses: email-campaign-calendar-planner, note: "Places the best topics from the bank on a month calendar."}
+  - {uses: campaign-email-writer, note: "Writes the full email from the brief for that slot."}
+  - {uses: email-draft-reviewer, note: "Reviews the draft against the brand voice before anyone designs it."}
+  - {uses: email-layout-brief-writer, note: "Turns the reviewed draft into a layout brief for the designer."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-a-month-of-campaign-emails-that-sell-without-discounts/skeleton.yaml

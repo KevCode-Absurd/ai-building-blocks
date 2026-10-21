@@ -1,0 +1,28 @@
+slug: build-a-buyer-profile-from-interviews-and-reviews
+name: "Build a buyer profile from interviews and reviews"
+summary: "Give it your orders and reviews. Get buyer interviews, a job-based buyer profile and a brief writers can use."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: product_data, required: true}
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+  - {type: copy_draft, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: audit_report}
+uses: [order-record-buyer-interview-guide, forum-and-review-avatar-digger, job-based-avatar-builder, buyer-brief-writer, avatar-fit-checker]
+steps:
+  - {uses: order-record-buyer-interview-guide, note: "Picks recent buyers from your order records and writes the questions to ask each one."}
+  - {uses: forum-and-review-avatar-digger, note: "Mines your interview notes, reviews and forum posts for the words this group uses."}
+  - {uses: job-based-avatar-builder, note: "Turns the quoted words into a buyer profile with a trigger, a job and proof. Reads the words from the step before."}
+  - {uses: buyer-brief-writer, note: "Boils the findings to a half-page brief for ad and page writers. Reads the quoted words from the digger step."}
+  - {uses: avatar-fit-checker, note: "Checks whether your current ad or page sounds like this buyer. Reads the profile from the step before."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-a-buyer-profile-from-interviews-and-reviews/skeleton.yaml

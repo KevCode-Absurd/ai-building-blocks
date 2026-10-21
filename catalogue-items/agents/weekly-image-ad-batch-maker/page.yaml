@@ -1,0 +1,104 @@
+new_slug: weekly-image-ad-batch-maker
+name: Weekly image ad batch maker
+summary: Give it last week's ad results. Get a checked batch of new image ad plans, words and prompts to approve.
+job: make-image-ads
+thinking: high
+thinking_why: It picks its path from your data, runs up to seven skills, and fixes and re-checks each ad. Give it your strongest model.
+headline: Weekly image ad batch maker
+subhead: Give it last week's image ad results and your product photos. It keeps what your winners share, plans new ads that each change one thing, writes the words and picture prompts, checks every ad before you see it, and holds back the ones that fail.
+explain: |
+  Most image ad batches start from a blank page and a hunch. Last week's winners sit in a spreadsheet nobody reads, and the new ads copy their words instead of what made them work. Then a picture comes back with the wrong pack on it and a week is lost.
+
+  This agent runs the same steps every Monday. It counts how many of your ads have enough results to judge. With six or more, it finds the style your winners share and plans new ads that change one thing each. With fewer, it builds from your reviews instead of guessing a style. It scores each first line, writes a prompt that keeps your real product, and checks each ad before launch. An ad with a stop-ship fault gets two fix rounds, then it is held out.
+
+  It writes prompts. It cannot draw, so it tells you how the pictures get made and asks before anything is made with credits.
+when:
+  - You run image ads every week and want a new batch ready each Monday.
+  - You have results on past ads but no time to work out what the winners share.
+  - Your pictures keep coming back with the wrong product, and you want it caught before you pay for them.
+you_give:
+  - An export of your image ads with the image, dates, spend and your result (cost per purchase, return on ad spend or click rate)
+  - The product this batch is for, with its facts and current offer
+  - Clear photos of the exact product
+  - Customer reviews, if you have them (needed when fewer than six ads are measured)
+  - Your brand brain (optional)
+you_get:
+  - What last week's ads taught, one line each
+  - A batch of about 5 ads, each changing one thing, with image words, feed text and a picture prompt
+  - A pre-launch result for every ad, and the reasons for any held out
+  - How to get the pictures made, and what it costs
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to make this week's batch.
+  - Attach last week's export, the product photos and the product name. The first time, add reviews too.
+  - Read the batch. Say yes or no to each ad.
+  - If you want pictures made, pick a tool. The agent asks before it uses any credits.
+  - Run it again next Monday. It reads its memory folder to see what last week's changes taught.
+how_it_works:
+  - title: Read the memory
+    text: Opens last week's style traits, the change each ad tested and the never-again list.
+  - title: Count the measured ads
+    text: An ad counts once it has about 20 purchases, or 100 link clicks. Six or more means it can look for a style.
+  - title: Choose the path
+    text: With six or more, it finds what your winners share. With fewer, it builds from your reviews and does not pretend to know a style.
+  - title: Plan and write each ad
+    text: Locks the settings once, plans each ad and scores each first line. A weak line gets one fix and one new score.
+  - title: Write the prompts
+    text: Gives each ad a prompt that repeats your product's lock lines, so the picture keeps your real pack.
+  - title: Check each ad
+    text: A stop-ship fault is fixed and checked again, twice at most. An ad that still fails is held out with its reasons.
+  - title: Ask, then make
+    text: Hands back the prompts first. Pictures are made only on your yes, and each one is checked when it comes back.
+output_shape: |-
+  PATH
+    <style from winners | reviews, thin data> | measured ads: <n>
+
+  WHAT LAST WEEK TAUGHT
+    <ad code>: <one change> -> <result or "too early">
+
+  THE BATCH
+    1. <type · dress · audience> | changes: <one thing> | image words: <words> | feed text: <text>
+       prompt: <five blocks and keep line> | pre-launch: <score, no stop-ship>
+
+  HELD OUT
+    <ad>: <stop-ship reason> | fix: <smallest fix>
+
+  HOW THE PICTURES GET MADE
+    <tools, cost, first step>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your result measure
+    how: Pick one measure and keep it every week. Cost per purchase and return on ad spend rank ads differently, so switching hides what is working.
+  - what: Batch size
+    how: Start at 5. A bigger batch spreads a small budget so thin that no ad reaches enough purchases to judge.
+  - what: The product you name
+    how: Name it every week. The agent never assumes this week's product is last week's.
+  - what: Your lock lines
+    how: Check the three to five phrases that describe your pack against the photos. A wrong lock line puts the wrong product in every picture.
+judge:
+  - Each ad changes one thing from your winners, and says which.
+  - Every picture prompt repeats your product's lock lines.
+  - Every ad in the batch passed pre-launch with no stop-ship item.
+  - No winner's words, numbers, offer or people were copied.
+  - Nothing was made with credits or published without your yes.
+test:
+  - Run it on a week you remember, and see whether it finds the style you know your winners share.
+  - Give it fewer than six measured ads on purpose. It should switch to the reviews path and say why.
+  - Plant a wrong claim in a feed text. The pre-launch check should stop it.
+improve:
+  - Set your own rule for how many purchases make an ad measured, if your sales are very slow or very fast.
+  - Add the claims you may never make to your brand brain, so the pre-launch check catches them.
+  - Save the pictures you approve in the memory folder, so next week's ads can be checked against them.
+  - Remove the first-line scoring step if your ads carry almost no words.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the image-batch folder, read last week's files and run on a schedule.
+    - name: Meta Ads Manager
+      why: Export your ads with image, dates, spend and results from here.
+    - name: ChatGPT or Gemini
+      why: Paste a prompt into either one to get the picture. Free plans have tight daily limits.
+  inputs:
+    - A note of what changed in your offer or site this week
+    - Your product's stock level

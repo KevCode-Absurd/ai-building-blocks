@@ -1,0 +1,21 @@
+slug: lock-down-your-store-logins-and-staff-against-takeover
+name: "Lock down your store logins and staff against takeover"
+summary: "Describe your team and apps. Get a security score, a fix list, a sign-in policy and a phishing rule sheet."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: document}
+uses: [store-security-checkup, store-sign-in-security-checker, staff-phishing-rules-briefer]
+steps:
+  - {uses: store-security-checkup, note: "Starts the flow. Finds the gaps and ranks the fixes."}
+  - {uses: store-sign-in-security-checker, note: "Takes the checkup's sign-in and password findings and writes the policy for staff and customers."}
+  - {uses: staff-phishing-rules-briefer, note: "Builds the staff rule sheet and drill on top of the sign-in policy, closing the phishing gap the checkup found."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lock-down-your-store-logins-and-staff-against-takeover/skeleton.yaml

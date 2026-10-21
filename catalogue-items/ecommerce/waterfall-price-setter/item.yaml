@@ -1,0 +1,21 @@
+slug: waterfall-price-setter
+name: "Waterfall price setter"
+summary: "Give it your targets, CAC and costs. Get the lowest viable price, or a call to drop it."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital public masterclass)", used: "Pricing from the bottom up, why keystone and fixed markups fail, and the keep, reprice, reposition or cut decision"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "The worked bottom-to-top price example and why keystone pricing is the worst common method"}

@@ -1,0 +1,120 @@
+new_slug: best-of-page-writer
+name: "Best-of page writer"
+summary: "Give it a buyer question and your rivals. Get a fair best-of page with real numbers."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It writes a long page from facts you give it, and balance and accuracy matter more than depth."
+
+headline: "Best-of page writer"
+subhead: Give it a "best X" question, your product, four to eight rivals and verified facts on each. It hands back a page brief and a draft with the same block for every product, a comparison table, honest pros and cons, and a list of proof you still need to add.
+
+explain: |
+  When someone searches "best X for Y", the top results are often list pages. If your own product pages can't reach that spot, a fair list page that includes your product can. But a list that puts you first in every case reads as an ad, doesn't convert, and AI assistants tend to prefer third-party lists over a brand ranking itself.
+
+  This skill checks that a list is the right page type, builds a brief (title, entities, questions, links), and drafts the page. Every product gets the same block: a best-for badge, a short description, a picture, pros, cons and ideal use. Rivals are included fairly, you only rank first where you truly fit best, and any line that claims "we tested it" is held back until you provide real notes.
+
+when:
+  - Google shows list articles for the question your buyers search, and your product pages don't rank for it.
+  - You want to be in a "best X" list without bending the truth.
+  - You have a category page and want pages that support it with fair, useful comparisons.
+
+you_give:
+  - The buyer question or "best X" term
+  - Your product, 4 to 8 rivals and verified facts on each (price, size, materials, what is included)
+  - Your 5 to 10 real differences from rivals
+  - Photos, screenshots and test notes, plus an author name and photo (optional)
+  - Internal links to add, such as your category page (optional)
+you_get:
+  - "A brief: title, meta description, URL, entities to cover, questions for an FAQ, internal links"
+  - A best-of page draft with the same block for every item and a comparison table at the top
+  - A checklist of first-hand proof you still need to add
+  - A list of claims it held back because they had no support
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the buyer question and the top results (or a link to them) so it can check the page type.
+  - Paste your facts and your rivals' verified facts, and attach any photos and test notes.
+  - Review the draft with someone who knows the products. Expect three to five rounds.
+  - Replace every vague line with a real price or number before you publish.
+
+how_it_works:
+  - title: Checks the page type
+    text: If the top results for the question are list articles, a best-of page is the right type, especially if your homepage can't rank.
+  - title: Finds your real differences
+    text: Takes your goal and unique selling points, asks for 5 to 10 differentiators, and trims any you can't prove.
+  - title: Builds the brief
+    text: Title with the number in it, meta description, URL, entities, gaps rivals left, questions for an FAQ, and internal links.
+  - title: Includes rivals fairly
+    text: Picks 3 to 4 larger rivals shoppers search against, puts the table at the top, then pros and cons, and says where the rival wins.
+  - title: Writes a same-shape block
+    text: Best-for badge, description, picture, pros, cons and ideal use for each item, plus a byline, dates and a short summary at the top.
+  - title: Shows first-hand use
+    text: Asks for original photos, screenshots, test notes and real numbers, and holds back any "tested" line without notes.
+  - title: Drafts and links
+    text: Drafts in rounds, swaps filler for real prices, and links the page to the category page and sibling pages.
+  - title: Plans the refresh
+    text: Watches FAQ questions after publishing, and re-checks rival facts every quarter.
+
+output_shape: |
+  PAGE TYPE CHECK  <list articles in top results? yes/no, decision>
+  BRIEF
+  Title: <number + best X for Y>   Meta: <...>   URL: <...>
+  Entities to cover: <...>   Gaps rivals left: <...>
+  FAQ questions: <...>   Internal links: <category page, siblings>
+  DRAFT
+  <summary at top> / <byline, published, updated>
+  COMPARISON TABLE  <item | price | key facts | best for>
+  ITEM BLOCKS (same for each)
+  <badge> / <description> / <picture> / <pros> / <cons> / <ideal use> / <proof>
+  PROOF CHECKLIST  <photos, screenshots, notes, numbers still needed>
+  HELD BACK  <claims with no support>
+  REFRESH  <quarterly re-check of rival facts>
+  CHECKS MISSED: <none, or list>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: Which rivals you list
+    how: Name 3 to 4 larger rivals shoppers really compare you with, and give verified facts for each.
+  - what: Where you rank
+    how: Say honestly where you fit best. The page puts you first only for the use case where you are the best fit.
+  - what: Your proof
+    how: Attach test notes, photos and numbers. Without them the page can't say it was tested.
+  - what: Number in the title
+    how: Match the number to the products actually listed, such as "7 best".
+
+judge:
+  - The page type matches what ranks for the question.
+  - Every item has the same block, and the cons are real.
+  - You are first only where your product is the best fit, and that use case is named.
+  - No line says "we tested" or "I used" without notes behind it.
+  - Prices and numbers are real, with no "contact for pricing" filler.
+
+test:
+  - Give it a question where you know a rival is better for one use case. The page should say so.
+  - Run it twice and compare the rankings. They should match for the same facts.
+  - Check three facts about rivals on their own sites. Fix any that are off.
+  - Ask a customer which product they would pick from the page, and whether it felt fair.
+
+improve:
+  - Add your house style for the item block, such as the order of pros and cons.
+  - Save each rival's facts with the date you checked them, and re-check them every quarter.
+  - Add your rule on claims, such as no health claims without review.
+  - Pair it with the comparison page set planner to choose pages, and the honest product review writer for single-product reviews.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It drafts the brief and page from the facts you give it. Ask it to flag every number it can't source."}
+    - {name: "Google Search Console", why: "Shows which FAQ questions bring clicks after you publish, so you can split a strong one into its own page."}
+  inputs:
+    - "Original photos of each product you list"
+    - "Your own test notes, with dates"
+    - "A byline with the author's real name, photo and background"
+    - "The pages that rank today for the question"
+
+terms:
+  - term: Roundup
+    meaning: A page that lists the best products for a need, usually with a short block for each.
+  - term: Entities
+    meaning: The products, brands, materials and ideas a page should mention so it covers the topic fully.
+  - term: Byline
+    meaning: The author's name and photo shown at the top of a page.

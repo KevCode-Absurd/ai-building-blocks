@@ -1,0 +1,21 @@
+slug: engaged-list-expander
+name: "Engaged list expander"
+summary: "Give it your list and send results. Get a plan to bring quiet contacts back safely."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Nathan (paid media and finance) and Angus Cowan (email and SMS retention agency)", used: "The engaged definition with a day limit per signal, the 50 percent target, the 80/20 reach rule and the random-sample drip"}
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (agency case results, not independent data)", used: "The expansion trigger and the schedule for widening the engaged window"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder", used: "Engaged segment conditions, the OR logic and the clean-up rules"}

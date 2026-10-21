@@ -1,0 +1,21 @@
+slug: tiktok-ad-test-reader
+name: "TikTok ad test reader"
+summary: "Paste TikTok test numbers. Get keep, fix or kill for each ad, and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Only TikTok Ads Tutorial You Will Ever Need", by: "Tim, a TikTok ads agency", used: "The 24-hour and day-3 thresholds, the cause rules for hook and audience problems, killing the bottom half after 3 days, and the 3x3 creative test"}
+  - {title: "The BEST TikTok Ads Course For Beginners in 2026 (free full course)", by: "Corbin, Zoco Marketing", used: "Typical CPM and CPC ranges to cross-check the thresholds"}

@@ -1,0 +1,95 @@
+new_slug: test-failure-repair-loop
+name: Test failure repair loop
+summary: Point it at a red test suite. Get capped rounds of fixes, re-checked each time, until green or stopped.
+job: test-and-fix-code
+thinking: high
+thinking_why: It reads each result, picks the next fix path and watches for going in circles. Give it your strongest model.
+headline: Test failure repair loop
+subhead: Point it at a failing test suite or a failed pull request check. It fixes one group of failures per round, runs the tests again each time, and stops at a round limit with a clear report. It never skips or loosens a test.
+explain: |
+  A red test suite is easy to fix badly. It is easy to retry a flaky test until it goes green, loosen a check, or make five changes at once and not know which one worked. Fixing tests with an AI can also turn into a loop of near-identical patches that never change the result.
+
+  This agent works in capped rounds. It takes a baseline first, then fixes one group of failures at a time and runs the suite after each fix. It picks its path from what it sees: a check that fails only in the pull request gets the cause found first, a browser test that fails sometimes gets a flaky-test fix, and a failure that keeps coming back gets a three-try budget. It stops when the suite is green, the rounds run out, or it is going in circles. It leaves the fixes uncommitted for you to read.
+when:
+  - Your tests are red after a change and you want them fixed without the guesswork.
+  - A pull request check fails and you do not know why.
+  - You have flaky browser tests and want the cause fixed, not retries added.
+you_give:
+  - The code, in a folder or repository it can run
+  - The command that runs your tests
+  - The failing output or the failed check, if you have it (optional)
+  - A list of tests you already know are flaky (optional)
+you_get:
+  - The failures before and after, with a full final run
+  - One line per round, with the group, cause, change and result
+  - A diff of the changes, left uncommitted for you
+  - A list of what is still failing and the decision each one needs
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then point it at your project.
+  - Tell it the test command the first time. It saves it.
+  - Let it run. It stops by itself at the limit.
+  - Read the diff and the list of what is still failing. Decide on any test that looks out of date.
+  - Commit the changes yourself when you are happy. It will not.
+how_it_works:
+  - title: Take a baseline
+    text: Runs the full suite and saves the failing tests, so every later round is compared with the start.
+  - title: Set the limits
+    text: Five rounds in total and three tries on any one group of failures.
+  - title: Choose a path
+    text: A failure only in the pull request check gets the cause found first. A flaky browser test gets a flaky-test fix. The rest are grouped and fixed by cause.
+  - title: Fix one group, then check
+    text: Runs that group, then the full suite, and counts what was fixed, what still fails and what is new.
+  - title: Decide from the result
+    text: Proves the cause when it is unsure, applies the three-try budget when a failure comes back, and undoes a fix that breaks other tests.
+  - title: Stop and run the project checks
+    text: Stops at green or at a limit. When green, runs your lint and type checks once.
+output_shape: |-
+  RESULT
+    <green | partly fixed | stopped> | failures before <n>, after <n>
+
+  ROUNDS
+    1. <failure group> | cause: <cause> | change: <files> | result: <fixed, still failing, new>
+
+  CHANGES MADE (uncommitted)
+    <file> | <why>
+
+  STILL FAILING
+    <test> | cause: <cause> | needs: <your decision>
+
+  FLAKY FOUND
+    <tests added to the flaky list>
+
+  CHECKS AND MISSING
+    <lint and type result> | MISSING: <every line>
+tweaks:
+  - what: The round limit
+    how: It starts at 5 rounds and 3 tries per group. Raise it for a very large suite, lower it if you want an early look.
+  - what: The test command
+    how: Give the exact command, with any flags your team uses. A wrong command gives a wrong baseline.
+  - what: Tests that need a live service
+    how: Tell it which ones. It will leave them out and list them, rather than guess.
+  - what: Which tests it may change
+    how: By default it never edits a test. Say so if some tests are known to be out of date and you want a proposed change.
+judge:
+  - The final full run is shown, with the count of failures.
+  - No test was skipped, deleted or loosened.
+  - No group had more than three tries and the rounds stayed within the limit.
+  - Each change maps to a failure group.
+  - Nothing was committed or pushed.
+test:
+  - Run it on a branch you broke on purpose in two places. See if it fixes both and says which round fixed which.
+  - Run it on a suite with one flaky test. It should find the cause and not add a retry.
+  - Run it on a failure it cannot fix. It should stop at the limit with a clear report.
+improve:
+  - Keep the flaky list up to date, so it does not chase the same tests twice.
+  - Add the commands for your slow suites, so it can run the group first and the full suite last.
+  - After each run, read the still-failing list. Tests that are out of date are your cue to fix the test on purpose.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run your tests, edit the code and keep the fixer folder between runs.
+    - name: GitHub
+      why: It can read a failed pull request check so the cause is found before any edit.
+  inputs:
+    - The failing test output or the failed check log
+    - A list of tests you already know are flaky

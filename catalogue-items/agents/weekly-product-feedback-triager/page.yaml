@@ -1,0 +1,99 @@
+new_slug: weekly-product-feedback-triager
+name: Weekly product feedback triager
+summary: Give it each week's feedback. Get every request counted, ruled yes, later or no, and a roadmap change to approve.
+job: build-product
+thinking: medium
+thinking_why: It runs up to five skills and counts requests across weeks, but each step is plain reading and sorting. A mid-range model is enough.
+headline: Weekly product feedback triager
+subhead: Give it this week's feedback and your roadmap. It adds each request to a running tally, rules yes, later or no, looks into lost new users before adding anything, and hands back a roadmap change and reply drafts for you to approve.
+explain: |
+  Feedback piles up fast, and the loudest voice wins. A request that came from five people over three months looks like five small asks. A feature that is easy to build gets a yes, and the roadmap fills with things that cost more than anyone counted.
+
+  This agent keeps the count for you. Each week it adds new feedback to a running tally, counts different people instead of messages, and rules each request yes, later or no against your product aim. If new users are dropping off, it looks into that first, because a new feature rarely helps people who leave early. If the yes list is too long for one cycle, it scores and ranks it. It never edits your roadmap or replies to anyone on its own. You get one proposed change and short reply drafts to approve.
+when:
+  - Feedback, support notes and requests pile up and you want the same fair sort every week.
+  - The same request keeps coming back and you want to know how many different people asked.
+  - Sign-ups look fine but fewer new people stay, and you want that checked before you build more.
+you_give:
+  - This week's feedback, with who said it and the date
+  - Your current roadmap and how much room the next cycle has
+  - What the product is for and who it is not for, the first time
+  - This week's product numbers, such as visits, sign-ups and 30-day users (optional)
+you_get:
+  - Each request with a yes, later or no, how many different people asked and one reason
+  - A proposed roadmap change, each line with its reason
+  - Short reply drafts with no promised date
+  - The numbers and requests to watch next week
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to triage this week's feedback.
+  - Put the week's feedback and your roadmap in one folder, or attach them in the chat.
+  - The first time, give it your product aim. It saves that and keeps the tally in a feedback folder.
+  - Read the rulings and the roadmap change. Say yes to the lines you agree with, and send the replies yourself or ask it to prepare them.
+  - Run it again next Monday. It adds to the same tally.
+how_it_works:
+  - title: Load the memory
+    text: Reads the tally, your product aim, last week's numbers and every earlier ruling from the feedback folder.
+  - title: Update the tally
+    text: Adds new items, merges repeats and counts different people, not messages.
+  - title: Screen the requests
+    text: Starts every item at not now, adds up the cost of each yes and rules yes, later or no. Earlier rulings stand unless there are new askers.
+  - title: Choose the path
+    text: If new-user numbers fell sharply or new users say they are lost, it looks into that first and puts the fix ahead of new features.
+  - title: Fit the yes list
+    text: If there are more yeses than one cycle can hold, it scores and ranks them and moves the rest to later.
+  - title: Hand back one change
+    text: Writes a proposed roadmap with each change marked, plus reply drafts, and stops for your yes.
+output_shape: |-
+  THIS WEEK
+    New items <n> | Repeats <n> | Rulings changed <n>
+
+  PATH TAKEN
+    <screened only | lost new users first>: <why>
+
+  RULINGS
+    1. <request> | <yes | later | no> | asked by <n> different people | <reason>
+
+  ROADMAP CHANGE TO APPROVE
+    <add | move | cut> <item> | why: <reason> | from: <step>
+
+  REPLY DRAFTS
+    <request>: <short reply, no promised date>
+
+  WATCH NEXT WEEK
+    <1 to 3 requests or numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Who said it and when
+    how: The count only works with names or accounts and dates. Without them every item counts once.
+  - what: Your product aim
+    how: Write who the product is not for. That one line settles more requests than any score.
+  - what: Room in the next cycle
+    how: Say how many people and weeks you have. The yes list is cut to fit it.
+  - what: The size of a sharp drop
+    how: The starting point is a fifth. Raise it if your numbers move a lot week to week.
+judge:
+  - Each count is of different people, not messages.
+  - Every yes has its full cost and a place on the roadmap or the later list.
+  - Lost new users were looked into before any new feature was added.
+  - No reply promises a date.
+  - Nothing was changed or sent without your clear yes.
+test:
+  - Run it on a month of old feedback in order. See whether a request that came back gets a higher count and the same ruling you would give.
+  - Run it twice on the same week. The rulings should match, apart from wording.
+  - Add a made-up request from a big customer that clashes with your product aim. It should say no kindly and show the draft before anything is sent.
+improve:
+  - Move rulings you disagree with into your product aim as a plain rule, so the next run follows it.
+  - Add your support tool's tag names to the feedback, so repeats merge faster.
+  - If you have no product numbers, leave that step out so the run is shorter.
+  - Keep the replies you sent in the folder, so the next run can see what people were told.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the feedback folder, read earlier weeks and run on a schedule.
+    - name: Your support inbox or feedback tool
+      why: Export the week's messages with names and dates so repeats are counted fairly.
+  inputs:
+    - Your last three months of requests, to start the tally
+    - The commitments already made to customers

@@ -1,0 +1,21 @@
+slug: sku-ad-money-planner
+name: "SKU ad money planner"
+summary: "Give it sales, stock days and costs per SKU. Get each one's grade, ad target and clearance plan."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital masterclass)", used: "Stock grades A to D, pushing slow stock through paid ads at break-even, and splitting campaigns by product economics (the hoodie and t-shirt example)"}
+  - {title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, agency founder, interviewed on a business podcast", url: "https://www.youtube.com/watch?v=RHJSO4eVJVA", used: "Days-of-stock ROAS targets, the liquidation funnel, protecting scarce stock, four SKU roles and pricing by variant"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass, about 9.5 hours)", used: "The paid-ads route for slow stock, kept apart from the main site"}

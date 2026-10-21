@@ -1,0 +1,124 @@
+new_slug: campaign-link-tracker
+name: "Campaign link tracker"
+summary: "Give it your campaign and channels. Get tagged links, Shopify match rules and an attribution pick."
+job: track-numbers
+thinking: low
+thinking_why: "It follows a fixed naming pattern and fills a table, so a small, fast model is enough."
+
+headline: "Campaign link tracker"
+subhead: Give it your campaign name, dates, channels and destination pages. It writes naming rules, a link sheet with tags for every channel, the match rules to enter in Shopify's marketing area, and the attribution model to start with, and why.
+
+explain: |
+  If a promo link carries no tag, Shopify's marketing area cannot tell which post, ad or email sent the shopper. Then a Black Friday campaign shows up as "direct" traffic, and you cannot say which channel earned the sale.
+
+  This skill names the campaign once and tags every link to match. Each platform gets its own source tag, and the same campaign tag goes on all of them. It then writes the match rules Shopify needs to group those visits, plans separate links for influencers, and picks an attribution model that fits the question you are asking. It does not replace server-side tracking, and Shopify only sees tagged traffic, so its numbers can differ from each platform's own reports.
+
+when:
+  - You are launching a sale or campaign on more than one channel and want to see which one sold.
+  - You send links to influencers or event partners and want each one tracked.
+  - Your marketing reports show most sales as direct traffic.
+
+you_give:
+  - Campaign name and dates
+  - The channels (Instagram, Facebook, TikTok, email, influencers)
+  - The page each link goes to
+  - Existing traffic you want counted, such as a Shopify email or an ad (optional)
+
+you_get:
+  - Naming rules and a link sheet with tags for each channel
+  - The auto-match rules to enter in Shopify's marketing area
+  - The attribution model to start with, and why
+  - A weekly review routine
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your campaign name, dates, channels and destination pages.
+  - Copy the links from the sheet into each platform. Use the exact tags.
+  - Enter the match rules in Shopify's marketing area, one per source.
+  - Each week, look at sessions, sales and orders per campaign, and change one thing.
+
+how_it_works:
+  - title: Names the campaign
+    text: One name by goal or time, such as blackfriday or launch week, used the same way everywhere.
+  - title: Tags every link
+    text: The same campaign tag on every link, and a source tag per platform, such as instagram, facebook, tiktok or email.
+  - title: Writes the match rules
+    text: One auto-match rule per source, where the campaign tag equals the campaign and the source tag equals the platform.
+  - title: Plans partner links
+    text: Shareable links, with QR codes where useful, so each influencer or event has its own address.
+  - title: Counts existing traffic
+    text: Adds a Shopify email or social ad as a campaign activity instead of a rule.
+  - title: Picks the attribution model
+    text: "Matches the model to your question: first click for awareness, last click for final sales, linear for the whole path."
+  - title: Sets the weekly review
+    text: Reads sessions, sales, orders, ROAS and customer acquisition cost per campaign, then changes one thing.
+
+output_shape: |
+  CAMPAIGN <name>, <dates>
+
+  NAMING RULES
+  utm_campaign = <campaign>
+  utm_source = <instagram | facebook | tiktok | email | ...>
+  (other tags such as utm_content or utm_term are tracked but not used for matching)
+
+  LINK SHEET
+  channel | destination page | full link with tags | who uses it
+
+  SHOPIFY MATCH RULES
+  rule <n> | utm_campaign equals <campaign> | utm_source equals <platform>
+
+  PARTNER LINKS   <partner> | <link> | <QR yes/no>
+  ACTIVITIES      <existing traffic added as campaign activity>
+  ATTRIBUTION     <model to start with> | why: <the question it answers>
+  WEEKLY REVIEW   <what to read, the one thing to change>
+  LIMITS          <untagged traffic, platform reports may differ>
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you need to give>
+
+tweaks:
+  - what: Your campaign name
+    how: Use a goal or a time, such as blackfriday or launchweek, in lowercase with no spaces. The same tag must go on every link.
+  - what: Your channels
+    how: List each platform and each influencer. Each gets its own source tag or its own link.
+  - what: Your main question
+    how: Say if you care about awareness, final sales or the whole path. The attribution pick depends on it.
+  - what: Existing traffic
+    how: Name Shopify emails and ads that already run. They are added as activities rather than rules.
+
+judge:
+  - The same campaign tag is on every link.
+  - Each platform has its own source tag.
+  - There is one match rule per source.
+  - The attribution model has a reason tied to your question.
+  - It says clearly that untagged traffic is not seen.
+
+test:
+  - Click one of your own links and check the visit shows under the campaign in Shopify after a short wait.
+  - Leave one tag off a link. Confirm the visit lands in direct traffic.
+  - Compare the campaign's orders in Shopify with the platform's own report and note the gap.
+  - Run it twice on the same input. The tags should match.
+
+improve:
+  - Add your naming style to the skill file, such as lowercase with dashes.
+  - Add your standing channels so each new campaign starts from the same list.
+  - Add your own weekly review questions.
+  - Pair it with the skill that reads revenue by tag, so you can see which source sold.
+
+works_best_with:
+  tools:
+    - {name: "Shopify marketing area", why: "Where the match rules, activities and attribution models are set."}
+    - {name: "Google Analytics 4", why: "A second view of the same tagged traffic."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the link sheet from your channel list."}
+  inputs:
+    - "Your list of influencers with the pages they will link to"
+    - "Your Shopify emails and ads that already run"
+    - "Last campaign's results, for comparison"
+    - "The platform reports for the same dates"
+
+terms:
+  - term: UTM tag
+    meaning: Text added to the end of a link, such as utm_campaign, that tells your analytics where a visit came from.
+  - term: Attribution model
+    meaning: The rule for which touch gets credit for a sale, such as first click or last click.
+  - term: ROAS
+    meaning: Revenue from a campaign divided by what you spent on it.

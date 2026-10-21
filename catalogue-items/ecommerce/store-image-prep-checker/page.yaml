@@ -1,0 +1,131 @@
+new_slug: store-image-prep-checker
+name: "Store image prep checker"
+summary: "Give it your image files and sizes. Get what to resize and rename, alt text and a score."
+job: speed-up-store
+thinking: low
+thinking_why: "It checks sizes and names against fixed rules. A small, fast model is enough if it can read your list or files."
+
+headline: "Store image prep checker"
+subhead: "Give it your product and banner images, with their pixel and file sizes. It tells you what to resize, crop, convert, compress and rename before upload, writes the file names and alt text, sets the gallery order, and scores the set out of 100."
+
+explain: |
+  Big images are one of the most common reasons a store feels slow, and a camera file uploaded straight from a phone can be several megabytes. Shoppers can't see the difference between a huge file and a right-sized one, but they feel it in the wait.
+
+  This skill checks each image against clear limits: no wider than 2,000 pixels, a file weight that fits the job, the right format, and a shape that suits your grid. It also names the file, writes plain alt text, and decides the order of the gallery. It hands the compressing to an image compressor and the full alt text work to an alt text writer. It does not judge how good a picture looks or sells; for that, use a gallery checker. The limits are for web display, not print.
+
+when:
+  - "You're about to upload a batch of product or banner images."
+  - "Your store's Files list shows images over 1 MB."
+  - "Product grids look uneven or load slowly on phones."
+
+you_give:
+  - "A list or folder of image files with pixel size and file size"
+  - "Product name, the key detail of each shot, and where each image is used"
+  - "Your grid shape, square or 4:5"
+  - "Your store's Files list sorted by size (optional)"
+
+you_get:
+  - "A score out of 100 for the set, now and after the fixes, with the sum shown"
+  - "Per image: the resize, crop, format and compression action"
+  - "New file names and alt text for each"
+  - "The upload order for the gallery and what to assign to variants"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "List each image with its pixel size and file size. Attach a few of the images so it can see them."
+  - "Say where each one is used (product page, collection, banner) and your grid shape."
+  - "Resize first, then crop by hand to the grid shape, then compress. Keep the original files."
+  - "Upload each file once and reuse it, then check your Files list for anything over 1 MB."
+
+how_it_works:
+  - title: Checks the size ceiling
+    text: No image wider than 2,000 px, and 3,000 at most. A box needs its width plus about 100 to 300 px for sharpness, not more.
+  - title: Checks file weight
+    text: Each image under 500 to 600 KB, 100 to 200 KB is better, and a whole page about 2 to 3 MB.
+  - title: Picks the format
+    text: JPEG for photos, PNG only for transparency, and no GIFs. It does not ask you to upload WebP.
+  - title: Plans resize and crop
+    text: Resize in bulk, then crop by hand to the grid shape, because products sit in different places.
+  - title: Plans compression
+    text: Uses a tool with a quality preview. It checks by eye and never compresses a lossy file twice.
+  - title: Counts the gallery
+    text: Three to five images per product, each answering a different question.
+  - title: Names and describes
+    text: Writes file names and alt text, and hands full alt text writing to a dedicated skill.
+  - title: Audits what exists
+    text: Looks at the Files list, sorted by size, for anything over 1 MB.
+
+output_shape: |
+  IMAGE PREP CHECK  <store>, <date>
+  PREP SCORE  <n>/100 now (100 - <deductions> = <n>)
+              <n>/100 after the fixes
+
+  IMAGE <current name> | used in <place> | now <w x h px>, <KB>, <format>
+  Action: <resize to px | crop to shape | convert to jpeg | compress to KB | replace GIF with MP4>
+  New name: <keyword-descriptor-detail>.jpg
+  Alt text: <plain description>
+
+  (one block per image)
+
+  GALLERY ORDER FOR <product>
+  1. <main> 2. <alternate angle> 3. <detail> 4. <lifestyle>
+  Variants: <which image goes with which variant>
+
+  FILES LIST: OVER 1 MB
+  <file> | <KB> | <fix>
+
+  PASS TO OTHER SKILLS
+  Compress: <files> | Alt text: <files>
+
+  NOT RUN
+  <check and what is needed>
+  MISSING: <what>
+
+tweaks:
+  - what: Grid shape
+    how: Say square or 4:5 (often used for fashion). Crops are planned to that shape, and each is a hand job.
+  - what: Where each image is used
+    how: A hero banner and a product thumbnail have different targets. Say which each one is.
+  - what: Attach real images
+    how: Attach a few of them. The skill can check how a crop looks, not just the numbers.
+  - what: Your Files list
+    how: Add your store's Files list sorted by size. The biggest wins are usually homepage section images that image apps skip.
+
+judge:
+  - "No image is wider than 2,000 px unless the reason is stated."
+  - "Photos are JPEG, and PNG is kept only for transparency."
+  - "File weight targets match the ones in the hero image loading fixer."
+  - "Alt text describes the picture for a person who can't see it, with no sales words or keyword stuffing."
+  - "Each gallery image answers a different question."
+  - "The score sum matches the faults."
+
+test:
+  - "Run it on a set where you know one image is 5 MB. It should flag it first."
+  - "Run it on a perfect set. It should score near 100 and not invent faults."
+  - "Compress one file as suggested and compare it with the original at full size. You should not see a difference."
+  - "Run it twice. The actions per image should match."
+
+improve:
+  - "Write your grid shape, brand file name style and standard image sizes into the skill."
+  - "Add the files you never touch (for example logos in PNG), so they pass each time."
+  - "Save your naming pattern in your brand file so every new product follows it."
+  - "Pair it with an image compressor and a product alt text writer, and with the hero image loading fixer for the first-screen image."
+
+works_best_with:
+  tools:
+    - {name: "Shopify admin Files", why: "Lists every uploaded file so you can sort by size and find images over 1 MB."}
+    - {name: "Squoosh", why: "A free image compressor from Google that previews quality before you save."}
+    - {name: "TinyPNG", why: "A free tool that compresses JPEG and PNG files in batches."}
+  inputs:
+    - "The product page copy, so each alt text matches the product"
+    - "A zip of the images or screenshots of the largest ones"
+    - "Your brand file's product names, for file names"
+    - "A list of the images your theme shows at the largest size"
+
+terms:
+  - term: Alt text
+    meaning: A short description of a picture, read aloud to people who can't see it and used by search engines.
+  - term: WebP
+    meaning: A modern image format that is smaller than JPEG. Shopify serves it to browsers that support it.
+  - term: Crop
+    meaning: Cutting an image to a shape, such as square, while keeping the product in view.

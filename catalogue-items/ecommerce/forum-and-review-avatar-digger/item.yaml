@@ -1,0 +1,22 @@
+slug: forum-and-review-avatar-digger
+name: "Forum and review avatar digger"
+summary: "Give it your product and top buyer group. Get a 60-minute plan, quote file and buyer sketch."
+category: ecommerce
+type: skill
+role: source
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: voc_reviews}
+  - {type: persona}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How I find avatars that scale Facebook ads to $10k a day", by: "Anthony, a drop shipping YouTuber", used: "The 60 minute hand-research plan, acting as the buyer when searching, pasting and marking quotes, the worked hair-loss example and the 30-second test"}
+  - {title: "How I do market research for new products", by: "an info-product teacher (name not given)", used: "Copy real quotes by hand and stay close to the exact words, and do not run scripts or AI over reviews"}
+  - {title: "Market research 101", by: "a marketing YouTuber (name not given)", used: "The who, what, when, where, why frame with miracles and miseries, Google and Amazon autocomplete, and reading the Meta Ad Library"}

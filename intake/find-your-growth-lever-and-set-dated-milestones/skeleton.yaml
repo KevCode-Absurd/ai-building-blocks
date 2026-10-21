@@ -1,0 +1,35 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md).
+id: find-your-growth-lever-and-set-dated-milestones
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: find-your-growth-lever-and-set-dated-milestones
+  name: "Find your growth lever and set dated milestones"
+  summary: "Give it your sales numbers. Get the growth lever to pull, ranked ideas with tests, and dated milestones with predictions."
+  when: "you want growth but cannot tell whether to chase new buyers, bigger orders or repeat orders."
+  job: plan-strategy
+  level: intermediate
+steps:
+  - name: "Size the three growth levers"
+    skill: growth-lever-audit
+    job: analysis
+    from: "skill: growth-lever-audit"
+    method: ["List buyers, orders, revenue, average sale and repeat rate", "Model the same modest gain in each lever", "Map every step from lead to repeat buyer", "Pick the cheapest lever and one test"]
+    inputs: [performance_sheet, product_data!]
+    outputs: [plan, audit_report]
+    note: "Finds the lever worth pulling first from your own numbers"
+  - name: "Rank the ideas for that lever"
+    skill: growth-idea-ranker
+    job: ops
+    from: "skill: growth-idea-ranker"
+    method: ["Put every idea on one list", "Score each for impact, confidence and ease", "Write one test per top idea with a measure and stop date", "Order the tests quickest first"]
+    inputs: [audit_report, question!]
+    outputs: [plan, shortlist]
+    note: "Scores ideas against the lever and the weak steps the audit found"
+  - name: "Set dated milestones with predictions"
+    skill: learning-milestone-planner
+    job: strategy
+    from: "skill: learning-milestone-planner"
+    method: ["Write the hoped-for result as a chain of rates", "Plan the test that gives each starting figure", "Tie each change to the one rate it should move", "Set three dated milestones and predict the figure before you look"]
+    inputs: [plan, question!]
+    outputs: [plan]
+    note: "Takes the ranked tests and puts a date and a predicted figure on each"

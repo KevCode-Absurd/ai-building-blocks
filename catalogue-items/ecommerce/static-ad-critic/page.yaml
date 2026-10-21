@@ -1,0 +1,126 @@
+new_slug: static-ad-critic
+name: "Static ad critic"
+summary: "Attach a static ad and its page. Get a score out of 100, fixes and two rewrites."
+job: check-ads
+thinking: high
+thinking_why: "It reads an image and judges how the picture, words and page work together, so a stronger model sees more."
+
+headline: "Static ad critic"
+subhead: Attach your image ad, its headline and primary text, and say what page it sends to. It checks nine things, including clarity or curiosity, the image and headline pair, who the ad speaks to and where it lands. You get a score out of 100, ranked fixes and two rewritten headlines.
+
+explain: |
+  Many image ads sit in the middle. They are not clear enough to be about an offer, and not curious enough to make someone click. The viewer is confused and scrolls on. The fix is to choose a side: be plainly about the offer, or leave a deliberate gap that only a click can close.
+
+  This skill reads the ad the way a shopper does. It follows the eye from image to headline to support text to proof. It tests whether the image and headline work as a pair. It checks the words on a phone, how well the ad suits the buyer's awareness, and whether the page it sends to continues the story. The score is out of 100 from nine checks and is this skill's own scale. It rates the ad as a hypothesis to test, not a verdict on sales.
+
+when:
+  - You designed a static ad and want a second opinion before you spend on it.
+  - An image ad underperforms and you do not know whether the picture, the headline or the page is the problem.
+  - You want to turn one good ad layout into versions for each problem your product solves.
+
+you_give:
+  - The image ad itself, attached as a file
+  - The headline and primary text
+  - What you sell and who it is for
+  - The type of page it sends to, such as a product page, article-style page, list page or quiz (optional)
+  - Whether the audience is cold or ready to buy (optional)
+you_get:
+  - A score out of 100 across nine checks, now and after the fixes, with the sum shown
+  - A clarity-or-curiosity verdict, with the middle zone flagged
+  - "The eye path: what is seen first, second and third"
+  - A ranked list of fixes, a note on the page match and two rewritten headlines, one clear and one curiosity-led
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the image as a file, not a description, and paste the headline and primary text.
+  - Say what page it sends to and who sees it first.
+  - Fix the highest-ranked problems, then test the two headlines against each other.
+  - Run the compliance checker on any fixed ad about health or money before you publish.
+
+how_it_works:
+  - title: Picks a side
+    text: Says whether the ad is plainly about the offer or deliberately vague. An ad in the middle that only confuses fails.
+  - title: Traces the eye
+    text: Follows the order image, headline, support text, proof. The first thing seen should open a question that the second closes.
+  - title: Tests the pair
+    text: Swaps the image for a plain product shot, and the headline for a generic one. If the ad falls apart, the pair is doing the work.
+  - title: Puts the simple benefit first
+    text: The benefit goes first and the science or ingredient detail goes underneath.
+  - title: Checks the phone view
+    text: Looks for hard-to-read support text and messy spacing, logos or graphs.
+  - title: Checks specificity and proof
+    text: A named buyer and problem, or an exact figure, builds trust. Vague slogans cause confusion.
+  - title: Matches awareness and page
+    text: Compares what the image, the copy and the page assume the buyer knows. Curiosity ads should go to an educational page.
+  - title: Scores and rewrites
+    text: Adds nine checks, shows the sum and writes two headlines, one clear and one curiosity-led.
+
+output_shape: |
+  VERDICT  <clear | curiosity | middle zone (fail)>  |  FOUR QUICK CHECKS: attention / curiosity / emotion / connection
+  EYE PATH  1 <...>  2 <...>  3 <...>
+  AWARENESS  image <stage> | copy <stage> | page <stage>  -> <match | mismatch>
+
+  CHECKS (points earned / points available)
+  C1 side chosen <n>/15 ... C9 clonable format <n>/5
+
+  SCORE  <n>/100 now (<earned> / <available> x 100)
+         <n>/100 after the fixes (on the checks run)
+
+  FIXES (ranked)
+  1 <check> | <where> | <fix>
+
+  PAGE MATCH: <note>
+  HEADLINES  clear: <...>   curiosity: <...>
+  POLICY WATCH: <health or before-and-after>
+  NOT RUN: <check, and what is needed>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: Who sees it
+    how: Say cold or ready to buy. Plain product shots suit ready-to-buy viewers. Cold viewers need a problem, a list of signs or an education hook.
+  - what: The page it goes to
+    how: Name the page type. Without it the page advice is a guess.
+  - what: Cloning the layout
+    how: Ask for versions of the headline and image for each core problem, to see if the format carries them.
+  - what: Sensitive topics
+    how: For a health problem, ask for an illustration idea. A real image of the problem can raise costs or hit a platform limit.
+
+judge:
+  - The verdict names a side, and flags the middle zone if the ad sits in it.
+  - The eye path lists what is seen first, second and third.
+  - The score shows its sum from nine checks.
+  - Fixes are ranked and each names the spot in the ad.
+  - Both rewritten headlines keep the facts from your ad and add no new claims.
+
+test:
+  - Give it an ad you know is clear. It should pass on side and pair.
+  - Give it a vague slogan ad. It should flag the middle zone.
+  - Run the two rewritten headlines as a small test against the original.
+  - Show the ad to someone for 2 seconds and ask what it is about. Compare to the verdict.
+
+improve:
+  - Add your landing page types and which ads go to which, so the destination check is exact.
+  - Add your claims list, so rewrites stay inside what you may say.
+  - Add a few of your best ads as examples of the clear side and the curiosity side.
+  - Save the verdict next to results in your brand file, and see which side wins for you.
+  - Pair it with a Meta ads compliance checker run on every fixed ad.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can run the checks. Attach the ad as a file."}
+    - {name: "Meta Ads Manager", why: "Where you test the two headlines side by side."}
+  inputs:
+    - "A screenshot of the ad as it shows on a phone"
+    - "The landing page text or a screenshot"
+    - "Your buyer persona and awareness stage"
+    - "Results from past static ads"
+
+terms:
+  - term: Static ad
+    meaning: An image ad.
+  - term: Curiosity gap
+    meaning: A deliberate gap in what the ad says, so the viewer clicks to close it.
+  - term: Eye path
+    meaning: The order in which a viewer's eye moves over the ad.
+  - term: Awareness stage
+    meaning: How much the buyer already knows about the problem and about you.

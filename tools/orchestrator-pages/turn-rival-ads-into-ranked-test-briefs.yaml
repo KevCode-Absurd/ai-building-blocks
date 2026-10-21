@@ -1,0 +1,77 @@
+new_slug: turn-rival-ads-into-ranked-test-briefs
+name: Turn rival ads into test briefs and a campaign layout
+summary: Give it a rival's Ad Library ads. Get the gaps they leave, test briefs and a campaign layout.
+job: study-competitors
+thinking: high
+thinking_why: It counts a large export, then writes briefs from the counts. Give it your strongest model.
+headline: Turn what rivals run into ads you can test
+subhead: Give it an Ad Library export from a rival a step above you. It counts what they run, finds what they leave out, writes three ideas with nine versions for designers, and lays out the test campaign.
+explain: |
+  Looking through a rival's ads one by one gives you a feeling, not a plan. You see a few styles you like and copy them, so your ads join the pile. The useful facts are in the counts: which formats they use, how old the ads are, where they send people, and which kinds of ad nobody makes.
+
+  The steps turn counts into briefs. First it counts the export by format, age, page, awareness stage and offer. Then it sorts the ads into nine types and finds the gaps that fit your brand. It writes three ideas with nine versions, each aimed at one buyer doubt. Last it lays out the test campaign: packs of four to eight ads, a budget split by stage and the rules for scaling.
+when:
+  - A rival runs a lot of ads and you want to know what they have not tried.
+  - You have an Ad Library export and no time to read it ad by ad.
+  - You are about to brief a designer or editor and want the ideas grounded in what the market shows.
+you_give:
+  - Ads or an Ad Library export from one or more rivals
+  - Your brand file (products, voice, claims you can make)
+  - Your own ad results (optional)
+you_get:
+  - Counts by format, ad age, landing page, awareness stage and offer
+  - The ad types and buyer questions your rivals leave empty
+  - Three ideas with nine designer-ready versions and questions to settle first
+  - A test campaign layout with pack names, budget split and scale rules
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Export ads from the Ad Library with inactive ads included, and pick rivals a step or two above your size.
+  - Give it your brand file. The briefs only use claims you can make.
+how_it_works:
+  - title: Count what the rival runs
+    text: Counts assets, formats, ad age, landing pages, awareness stages and offers, and notes the missing beats and risky claims.
+  - title: Find the gaps in their ads
+    text: Reads the counts, sorts the ads into nine types, writes a card for each from the creative and finds the gaps that fit your brand.
+  - title: Write three ideas and nine versions
+    text: Grades the evidence, names the buyer doubt for each idea and writes three different versions per idea with their own opening frame.
+  - title: Lay out the test campaign
+    text: Groups the new ads in packs, picks the budget type, splits budget by stage and writes the scale rules.
+output_shape: |-
+  STEP 1: RIVAL COUNTS
+    Assets | formats | ad age | landing pages | awareness mix | offers | missing beats
+
+  STEP 2: GAPS
+    Ad type map | cards | gaps that fit | brief | score out of 100
+
+  STEP 3: TEST BRIEFS
+    Evidence grade | three ideas | nine versions | questions for you
+
+  STEP 4: CAMPAIGN LAYOUT
+    Packs | budget split by stage | CBO or ABO | scale rules
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Which rivals
+    how: Choose brands a step or two above you. Giants run ads on budgets you cannot match.
+  - what: Your budget
+    how: Give your daily test money. Step 4 sizes the structure to it, with fewer packs for small budgets.
+  - what: Formats you can make
+    how: Say if you can shoot video or only make images, so the briefs stay possible.
+  - what: Your own results
+    how: Add your export so step 3 can grade the evidence and avoid repeating what already failed.
+judge:
+  - The counts add up and each one says how many ads it rests on.
+  - Each gap is a type or question that no rival covers, not a style you like.
+  - Every idea names a buyer doubt and a fact that answers it.
+  - The three versions of an idea differ in the first frame, not only in the wording.
+  - The layout fits your budget and never adds ads to a winning set.
+test:
+  - Spot check five counts against the export.
+  - Take one gap and search the Ad Library for it. Nothing should match.
+  - Ask a designer to read one brief and say what they would make. It should match what you meant.
+improve:
+  - Run it again in three months and compare what rivals added.
+  - After the test, record which gap won and look for the next one.
+  - Keep the export dates, since ad age depends on them.

@@ -1,0 +1,127 @@
+new_slug: sale-break-even-and-cac-allowance-modeler
+name: "Sale break-even and CAC allowance modeler"
+summary: "Give it discount depth and margin. Get break-even ROAS, a CAC limit and a score out of 100."
+job: plan-strategy
+thinking: medium
+thinking_why: "The maths is simple but each step feeds the next, so it needs care with your costs and with the repeat-rate gap."
+
+headline: "Sale break-even and CAC allowance modeler"
+subhead: Give it your price, product cost, shipping, fees and the discounts you are considering. It works out break-even ROAS and a CAC limit at each discount depth, adjusts for weaker sale customers if your data shows it, and gives a decision table and a sale readiness score out of 100.
+
+explain: |
+  A discount cuts your margin, so the return you need from ads goes up fast. Most teams still use their normal CAC limit during a sale. That limit assumes full margin, so it lets the ads lose money. A second problem is that sale customers may come back less often than customers from a quiet month, which makes each one worth less.
+
+  This skill recomputes your margin at each discount depth, sets break-even ROAS as 1 divided by that margin, and sets a separate sale CAC limit. It compares your repeat rate for November customers against February customers, using your own order history. Then it shows a table: margin, break-even ROAS, CAC limit and go or skip for each discount, and a score that says how ready the chosen discount is.
+
+when:
+  - You are choosing between 10%, 20%, 40% off or a free gift, and want to see what each does to your ad limits.
+  - Your ads look fine during a sale but your profit does not.
+  - You want one clear break-even ROAS and CAC limit to hand your media buyer before the sale starts.
+
+you_give:
+  - Current price, product cost, shipping and fees per order
+  - The discount options you are considering, including a gift with purchase
+  - Your normal CAC limit
+  - 6-month repeat rate for November and February customers for the last two years (optional)
+  - Whether the aim is profit or clearing stock
+you_get:
+  - Margin, break-even ROAS and a CAC limit at each discount depth
+  - A decision for each option, which is discount, add a gift or bundle, or skip
+  - An adjustment to customer value if sale customers repeat less
+  - A sale readiness score out of 100 with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your price, product cost, shipping and fees per order, and the discounts you want to compare.
+  - Say whether the aim is profit or clearing stock. The CAC limit is different for each.
+  - Add your November and February repeat rates for two years if you have them.
+  - Take the break-even ROAS and CAC limit to your pacing sheet and your media buyer.
+
+how_it_works:
+  - title: Recomputes margin
+    text: Takes the discount off the price first, then subtracts product cost, shipping and fees. Margin is never left at its normal level.
+  - title: Sets break-even ROAS
+    text: One divided by the margin after the discount. A deeper discount raises it sharply.
+  - title: Sets a sale CAC limit
+    text: Uses the margin under the discount instead of your normal margin.
+  - title: Compares customer cohorts
+    text: November customers against February customers, on 6-month repeat rate, from your own last two years.
+  - title: Asks for the aim
+    text: A profit play and a stock-clearing play need different CAC limits, so it records which one before the sale.
+  - title: Reads platform results with care
+    text: ROAS tends to rise on Meta in a sale and fall on Google. It will not let that excuse a deeper discount than your margin allows.
+  - title: Builds the table and score
+    text: One row per discount, with a go or skip. The score checks margin, ROAS, CAC limit and the repeat-rate gap.
+
+output_shape: |
+  OBJECTIVE
+  <profit | clear stock> | normal break-even ROAS <x> | normal CAC limit <$>
+
+  BY DISCOUNT DEPTH
+  Discount | Price after | Cost per order | Margin | Break-even ROAS | Sale CAC limit | Go or skip
+  <10%> | <$> | <$> | <%> | <x> | <$> | <go|skip>
+  <20%> | ...
+  <40%> | ...
+  <gift with purchase> | ...
+
+  COHORT CHECK
+  November 6-month repeat <%> vs February <%> (last two years) | gap: <yes|no|not checked>
+  Adjustment to customer value: <what changed, or none>
+
+  DECISION
+  <discount, add a gift or bundle, or skip> because <one line>
+
+  SCORE <n>/100 (margin <0-25> + ROAS <0-25> + CAC limit <0-25> + repeat gap <0-25>)
+  Pass this to the pacing sheet: break-even ROAS <x>, CAC limit <$>
+
+  MISSING: <price | product cost | shipping | fees | discount options | objective>
+
+tweaks:
+  - what: Your real costs
+    how: Include product cost, shipping, packaging, payment fees and returns per order. Missing costs make break-even look better than it is.
+  - what: The aim of the sale
+    how: Say profit or clear stock. If stock, the skill shows how far below break-even you would go to clear it.
+  - what: Your order history
+    how: Give repeat rates for November and February customers for two years. Without them the cohort adjustment is skipped and flagged.
+  - what: Gift with purchase
+    how: Give the cost of the gift. A gift cuts margin by its cost, not by a percentage of price.
+
+judge:
+  - Margin is calculated after the discount, not before.
+  - Break-even ROAS is exactly 1 divided by that margin.
+  - The sale CAC limit is separate from your normal one.
+  - The repeat-rate gap uses your own data, or is flagged as not checked.
+  - The score shows its sum and what each part measured.
+
+test:
+  - Use a product at 100 with 50 cost and a 20% discount. Margin should come out at 37.5%.
+  - Check one row by hand. Take the price after discount, minus all costs, over price after discount, then 1 divided by that.
+  - Ask for a 40% discount. Break-even ROAS should rise sharply, and the table should say so.
+  - Remove the repeat-rate data. The skill should say not checked and lose points for it, not guess.
+
+improve:
+  - Add your fee structure to the skill file, such as a payment fee of a set percent plus a fixed amount, so each row uses your real fees.
+  - Set your own go or skip rule, for example skip any discount whose break-even ROAS is above what you have ever reached.
+  - Save your two-year repeat rates in your brand file after each sale.
+  - Add a note for products with different margins, and run one table per product group.
+  - Pair it with the sale season pacing sheet builder and the break-even ROAS and CPA calculator.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The maths is simple. Paste your costs as a table and check one row by hand."}
+    - {name: "Shopify", why: "Its order exports give you cohorts by month and the repeat orders that follow."}
+    - {name: "Google Sheets", why: "Keep the table in a sheet so you can change the discount and watch the ROAS move."}
+  inputs:
+    - "Returns rate per product, so margin reflects goods that come back"
+    - "Your normal customer value for 6 and 12 months"
+    - "The ROAS you reached in last year's sale, so the score can compare it with break-even"
+
+terms:
+  - term: Break-even ROAS
+    meaning: The return at which ads pay for themselves and nothing more. It is 1 divided by gross margin.
+  - term: CAC allowance
+    meaning: The most you can pay to win a new customer and still hit your goal.
+  - term: Cohort
+    meaning: A group of customers who bought in the same period.
+  - term: Repeat rate
+    meaning: The share of customers who buy again within a set time, here 6 months.

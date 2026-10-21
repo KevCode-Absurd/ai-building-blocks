@@ -1,0 +1,19 @@
+slug: store-sign-in-security-checker
+name: "Sign-in security checker"
+summary: "Describe how staff and customers sign in. Get gaps ranked, a score out of 100 and a password and second-step policy."
+category: ecommerce
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "University web security lecture series (compiled transcript, about 25 lectures)", by: "A university instructor and guest engineers", used: "Modern password rules (length, no forced symbols, no forced rotation), second-factor ranking, recovery as the weakest link, why secret security images fail, offline guessing speeds, and keeping passwords out of logs"}

@@ -1,0 +1,128 @@
+new_slug: store-blog-plan-builder
+name: "Store blog plan builder"
+summary: "Give it your products and rivals. Get 10 to 30 posts that lift your collections, in order."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It weighs several sources and checks live results, so a mid-size model is enough."
+
+headline: "Store blog plan builder"
+subhead: Give it your products, collections and main rivals. It plans 10 to 30 blog posts for one cluster, each with a format, a target search and the collection it feeds, in the order to write them. It also lists posts to update instead and the links for each post.
+
+explain: |
+  Most store blogs write about winter tips and fun facts. Those posts bring clicks from people who never buy, and a store ends up with traffic that grows while sales stay flat.
+
+  This skill plans a blog with one job: lift your collections and products. It picks four formats that match buying searches, such as you versus a rival, alternatives to a rival, best product type for a use case, and a long buying guide. It checks the live results for each term, so you write a post only where posts rank. It works one cluster at a time, updates old posts first, and gives each post its links and product call to action. The sources disagree on scale, so it shows both: 10 to 15 posts for one person, hundreds for a big team.
+
+when:
+  - You publish blog posts but your collections do not rank or sell more.
+  - You are about to start a blog and want to know what to write first.
+  - You have a rival whose name shoppers search, and want posts that meet them there.
+
+you_give:
+  - Your products, collections and main rivals
+  - Search terms with rival names and questions for your topic (optional)
+  - Your existing posts with traffic and sales (optional)
+  - Your own stories, results and numbers (optional)
+you_get:
+  - A list of 10 to 30 posts for one cluster, in order, each with format, target term and the page it feeds
+  - Posts to update instead of write, and posts to skip
+  - A plan for links, call to action and a human-layer checklist for each post
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your products, collections and the rivals shoppers search against. Say how many hours a week you can write.
+  - Paste your existing posts and the sales they led to, if you track that.
+  - Update the posts it marks for updating first, then write the new ones in order.
+  - Check each post's organic revenue after a few months, not its traffic.
+
+how_it_works:
+  - title: Checks the base
+    text: Posts need live collections to link to. If those are missing, it says build them first.
+  - title: Chooses formats
+    text: Starts with four formats. They are versus a rival, alternatives to a rival, best product type for a use case and a buying guide.
+  - title: Reads the results
+    text: For each term, blog posts ranking means write the post. Collections filling page one means build a collection.
+  - title: Picks the scale
+    text: Shows 10 to 15 posts for one person and the larger view for a big team, with the time each takes.
+  - title: Works one cluster
+    text: Finishes one product type before the next, and joins clusters with a versus post.
+  - title: Sets up each post
+    text: Title, H1, URL, a link to the money page early, related post links and a call to action.
+  - title: Adds the human layer
+    text: Your stories and numbers, a voice file, and the last part written by hand.
+
+output_shape: |
+  CLUSTER: <topic> -> feeds <collection or product>
+
+  POSTS, IN ORDER
+  1. <title idea> | format: <versus | alternatives | best for use case | guide>
+     target: <keyword> | feeds: <money page>
+     results check: <blogs rank | collections rank> | action: <write | update>
+
+  PER-POST PLAN
+  <post>: title <...> | H1 <...> | URL <...>
+    link to money page in first 100 to 200 words | 3 to 5 related posts | CTA <...>
+    benchmark: topics <...>, gaps <...>, words <n>, H2s <n>
+
+  SKIPPED
+  <idea> | reason
+
+  HUMAN-LAYER CHECKLIST
+  <own results | customer story | numbers | voice file>
+
+  MEASURE: organic revenue from each landing page
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Time you have
+    how: Say hours per week. One person gets 10 to 15 posts over 3 to 6 months. A team can aim higher.
+  - what: Rival names
+    how: List the rivals shoppers search against. The versus and alternatives posts depend on them.
+  - what: Existing posts
+    how: Paste posts with traffic and sales. Posts on page two or three of the results get updated before new ones.
+  - what: Your own proof
+    how: Give your results, customer stories and numbers. They are what makes a post different from everyone else's.
+  - what: Voice
+    how: Paste a short sample of your writing, so drafts can match it.
+
+judge:
+  - Every post names the page it feeds and uses one of the four formats or says why not.
+  - Each post has a results check, and the plan builds a collection where collections rank.
+  - Old posts to update come before new ones.
+  - The number of posts fits the time you have.
+  - Claims about rivals are fair and provable.
+
+test:
+  - Give it a term where collection pages fill page one. It should say build a collection, not a post.
+  - Give it a store with no collections yet. It should say build those first.
+  - Check one planned post's results page yourself for the same format.
+  - After three months, compare organic revenue from the posts you wrote to the plan.
+
+improve:
+  - Add your voice rules and banned phrases to the skill file so drafts sound like you.
+  - Add the rivals you will never name, and your legal rules for comparisons.
+  - Save the finished plan and the results, so the next cluster learns from the first.
+  - Pair it with the Comparison page set planner for rival pages and the Best-of page writer for list posts.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "Free. Shows which posts are on page two or three and which collections they feed."}
+    - {name: "Semrush", why: "Finds rival versus and alternative terms with difficulty and volume."}
+    - {name: "Shopify", why: "Blog posts, internal links and product call-to-action blocks live in the store admin."}
+    - {name: "Any good chat AI", why: "Drafts titles and posts from your voice file and your own results."}
+  inputs:
+    - "Search terms that include rival names"
+    - "Your best customer stories"
+    - "Your results and test numbers"
+    - "Organic revenue by landing page from your analytics"
+
+terms:
+  - term: Cluster
+    meaning: A group of posts and pages about one topic that link to each other.
+  - term: Money page
+    meaning: A page that sells, such as a collection or a product page.
+  - term: Internal link
+    meaning: A link from one page of your store to another.
+  - term: Call to action
+    meaning: A button or line that asks the reader to take a step, such as shop the collection.

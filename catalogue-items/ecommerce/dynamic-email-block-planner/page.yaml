@@ -1,0 +1,119 @@
+new_slug: dynamic-email-block-planner
+name: "Dynamic email block planner"
+summary: "Give it your customer data and apps. Get show-hide rules, product feeds and app-triggered flows."
+job: write-emails
+thinking: high
+thinking_why: "It ties customer data, store events and email rules together, and one wrong value shows nothing."
+
+headline: "Dynamic email block planner"
+subhead: Give it the customer data you hold, the apps you have connected and the moments that matter. It plans show-hide rules with exact values, product feeds, app-triggered flows, abandonment blocks and uses of predicted order dates, with a test list for each.
+
+explain: |
+  One email can look different to each reader. A block can show only to people in the US, or only to people who have not bought, or fill with the exact product someone viewed. This saves you from building two campaigns where one will do. It also makes abandonment emails work, because the reader sees what they left behind.
+
+  This skill plans those blocks. It lists the customer data you hold, writes each show-hide rule with the exact value your tool needs, and plans product feeds and flows that start from apps such as reviews, loyalty and subscriptions. It also checks the cart, checkout and browse events, and plans what to do with predicted order dates. Every rule adds a test step, so it ends with a test list. The examples use Klaviyo, and the logic works in other tools with the matching triggers.
+
+when:
+  - You send two campaigns that differ only in a line or two, such as shipping terms by country.
+  - Your cart or browse emails do not show the product the person left behind.
+  - You use a reviews, loyalty or subscription app and want its events to start emails.
+
+you_give:
+  - The customer data you hold, such as country, tags, tier and loyalty points
+  - The apps connected to your email tool
+  - Your flows and the moments that matter most to your customers
+  - How often you restock or change your catalogue (optional)
+  - Your margin on a first-order discount (optional)
+
+you_get:
+  - Show-hide rules with the exact property values to use
+  - Product feed settings and a reusable block plan
+  - App-triggered flows and abandonment block settings
+  - A list of predictive data uses, and a test list for each rule
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your customer properties exactly as they appear in your email tool, plus your connected apps.
+  - Name the moments you care about, such as a subscription pause or a first order.
+  - Build one rule at a time, and preview it with real profiles before you send.
+  - Add the next rule only after the first one shows the right content.
+
+how_it_works:
+  - title: Lists what you hold
+    text: Profile properties, tags, tiers, apps and events. Values must match the profile text exactly, such as the way a country is written.
+  - title: Writes show-hide rules
+    text: One block, two or more versions, based on a property. For example, free shipping over $100 for the US and over $150 elsewhere.
+  - title: Plans product feeds
+    text: Best sellers over a set window, filtered by category, minimum price and stock, saved as one reusable block.
+  - title: Fits blocks to triggers
+    text: Cart, checkout and browse flows use different variables, so each gets its own block, and none is copied across.
+  - title: Plans app-triggered flows
+    text: A subscription pause starts a keep-going flow. A loyalty birthday starts a points email. Only apps you already use.
+  - title: Plans predictive uses
+    text: Expected next order date for win-back timing, predicted value for offer tiers and channel affinity for email or SMS.
+  - title: Lists the tests
+    text: Each rule gets a preview with real profiles and a test send.
+
+output_shape: |
+  DYNAMIC BLOCK PLAN  <store>
+  DATA HELD: <property = exact values> | apps: <...> | events: <...>
+  SHOW / HIDE RULES
+  <block> | show when <property = "exact value"> | else <other version> | where used <...>
+  PRODUCT FEEDS: <window> | filters <category | min price | stock> | saved as <name>
+  ABANDONMENT BLOCKS
+  cart: <variables> | checkout: <variables> | browse: <variables> (not shared)
+  EVENT CHECKS: <added to cart | viewed product | active on site>: <how to test>
+  APP-TRIGGERED FLOWS: <app event> -> <flow purpose>
+  PREDICTIVE USES: <field> -> <use>
+  TEST LIST: <rule> | preview as <profile type> | expected <...>
+  CHECKS MISSED: <none | list>   MISSING: <what was not given>
+
+tweaks:
+  - what: Exact property values
+    how: Copy the values from a real profile. "United States" and "US" are different values to your tool.
+  - what: Your platform
+    how: Name it. The logic is general, but names of triggers and variables differ, and a block built for one trigger may show nothing in another.
+  - what: Order history size
+    how: Predicted dates and values need enough history. Say how many orders you have so the plan only uses them when they will work.
+  - what: Traffic level
+    how: A low-traffic store may see a handful of flow entries a week. Judge results by revenue per recipient over a month, not days.
+
+judge:
+  - Every rule shows the property and its exact value.
+  - Cart, checkout and browse blocks are listed separately.
+  - Each rule has a preview step with a real profile type.
+  - Only apps you named are used as triggers.
+  - Predictive uses are skipped or flagged when order history is thin.
+
+test:
+  - Preview each block as a profile that should see it and one that should not. Both should show the right version.
+  - "Test the added-to-cart event: open your store with your email in the link, add an item, then look up your profile and check for the event."
+  - Send a test of the browse email after viewing a product. It should show that exact product.
+  - After a month, compare revenue per recipient for the flow with and without the block.
+
+improve:
+  - Add your property names and exact values to the skill file.
+  - Add your platform's trigger and variable names so the rules use them.
+  - Add a rule for any block you reuse, with the name it is saved under.
+  - Pair it with the customer stage flow mapper for who sees what, and the cart and browse flow builders for the emails.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Show-hide blocks, product feeds, app events and predictive fields are built in, and the preview tool checks blocks with real profiles."}
+    - {name: "Shopify", why: "Cart, checkout and product-view events come from your store connection."}
+    - {name: "Any good chat AI", why: "Any current chat AI can draft the rules from your property list."}
+  inputs:
+    - "A screenshot of one real customer profile in your email tool"
+    - "Your list of connected apps and the events each sends"
+    - "Your free shipping rules by country"
+    - "Your last browse flow report"
+
+terms:
+  - term: Dynamic block
+    meaning: A part of an email that changes for each reader based on data about them.
+  - term: Property
+    meaning: A piece of data saved on a customer profile, such as country or tier.
+  - term: Event
+    meaning: Something a customer does that your tool records, such as viewing a product or adding to cart.
+  - term: Predictive data
+    meaning: Estimates from order history, such as the expected date of a person's next order.

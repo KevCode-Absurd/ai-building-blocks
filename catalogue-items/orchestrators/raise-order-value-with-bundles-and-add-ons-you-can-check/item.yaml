@@ -1,0 +1,23 @@
+slug: raise-order-value-with-bundles-and-add-ons-you-can-check
+name: "Raise order value with bundles and add-ons you can check"
+summary: "Give it your sales export and product list. Get a free-shipping threshold, bundles and an after-sale offer that keeps profit."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: offer
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: audit_report}
+uses: [order-threshold-planner, bundle-and-quantity-break-builder, after-sale-offer-planner, offer-profit-per-session-checker, store-test-verdict-maker]
+steps:
+  - {uses: order-threshold-planner, note: "Sets a free-shipping or gift threshold just above your current average order."}
+  - {uses: bundle-and-quantity-break-builder, note: "Builds bundles and quantity breaks that sit around that threshold."}
+  - {uses: after-sale-offer-planner, note: "Adds an after-sale offer that follows the bundle the customer picked."}
+  - {uses: offer-profit-per-session-checker, note: "Checks the full set of offers earns more profit per visitor, not only more revenue."}
+  - {uses: store-test-verdict-maker, note: "Reads the exported results against the plan and says keep, change or stop."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/raise-order-value-with-bundles-and-add-ons-you-can-check/skeleton.yaml

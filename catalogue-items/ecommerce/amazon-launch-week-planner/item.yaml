@@ -1,0 +1,20 @@
+slug: amazon-launch-week-planner
+name: "Amazon launch week planner"
+summary: "Give it your product and audience. Get a pre-launch and launch-day plan for early sales and reviews."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "Building a wait list before launch, sending samples to micro-influencers, a first-week discount and limited offer, raising the price after launch, using the free Vine programme and the Vine mistake that dropped one seller's rating"}

@@ -1,0 +1,22 @@
+slug: fix-a-bug-with-proof-and-a-clear-pull-request
+name: "Fix a bug with proof and a clear pull request"
+summary: "Give it the bug. Get the cause proven before any fix, a minimal fix, test gaps closed and a pull request."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: codebase, required: true}
+  - {type: brief, required: true}
+outputs:
+  - {type: document}
+uses: [bug-root-cause-finder, test-gap-finder, code-change-reviewer, pull-request-writer]
+steps:
+  - {uses: bug-root-cause-finder, note: "Finds and proves the cause, then makes a minimal fix once you agree."}
+  - {uses: test-gap-finder, note: "Reads the fix and says which behaviour no test would catch if it broke again."}
+  - {uses: code-change-reviewer, note: "Reviews the fix and its tests against your standards and the bug report."}
+  - {uses: pull-request-writer, note: "Describes the fix with the cause and the before and after proof."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/bug-fix-with-proof/skeleton.yaml

@@ -1,0 +1,29 @@
+slug: build-ads-on-true-facts-your-rivals-never-state
+name: "Build ads on true facts your rivals never state"
+summary: "Give it your maker and test notes. Get claims no rival makes, headlines from them and an image ad plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: source_text, required: true}
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+  - {type: offer, required: false}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: ad_copy}
+  - {type: image_prompt}
+uses: [process-fact-finder, typed-headline-batch-writer, headline-cover-test-ranker, single-image-ad-planner]
+steps:
+  - {uses: process-fact-finder, note: "Starts from your maker, supplier and test notes."}
+  - {uses: typed-headline-batch-writer, note: "Writes twenty or more headlines from the claims in the step before."}
+  - {uses: headline-cover-test-ranker, note: "Reads the headline list and keeps three that can teach you something."}
+  - {uses: single-image-ad-planner, note: "Reads the claims from step 1. Paste the top headline from step 3 as the line it should keep."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-ads-on-true-facts-your-rivals-never-state/skeleton.yaml

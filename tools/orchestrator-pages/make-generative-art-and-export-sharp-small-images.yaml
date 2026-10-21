@@ -1,0 +1,72 @@
+new_slug: make-generative-art-and-export-sharp-small-images
+name: Make generative art and export sharp, small images
+summary: Describe the look. Get a coded art piece, sharp stills of it and smaller files.
+job: make-images
+thinking: medium
+thinking_why: The art step writes real code. A mid-level model is enough.
+headline: Original generative art, exported as sharp, small images
+subhead: Describe the look you want. It builds a piece of generative art you can run in a browser and tweak, captures sharp stills of it, and shrinks the files so you can use them on a site, a poster or a post.
+explain: |-
+  Generative art lives in code, which is good for variety and bad for sharing. You cannot post a running page on a poster, a profile or a product page. People end up with a screenshot at the wrong size, or a huge file that no site wants.
+
+  The steps turn the piece into things you can use. First it builds the art as a page you can run, with a seed so a result can be repeated. Then it opens that page and captures sharp stills at high resolution. Last it compresses the stills so they load fast.
+
+  It makes code-drawn art, not photos or pictures of people. For those, use an image model.
+when:
+  - You want original art for a site, a poster or a social post.
+  - You want a result you can repeat and tweak later.
+  - You need stills of a piece, not the running page.
+you_give:
+  - A description of the look, such as mood, colours and movement
+  - How many stills you need and what they are for
+  - A computer that can run the page and a screenshot tool
+you_get:
+  - An art page you can run, with controls and a seed
+  - Sharp stills of the piece at high resolution
+  - Smaller WebP or PNG files with the size saved
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the look in a few lines. Name colours and a mood.
+  - Open the page it makes and try a few seeds. Pick the ones you like.
+  - Say how many stills you need and where they will be used.
+how_it_works:
+  - title: Build the art page
+    text: Names the style, writes what it expresses, codes a piece that runs in the browser and adds controls and a seed.
+  - title: Capture the stills
+    text: Opens the running page, captures the number of stills you ask for at high resolution and saves them with clear names.
+  - title: Shrink the files
+    text: Compresses the stills to WebP or PNG, keeps the originals and reports the size saved.
+output_shape: |-
+  STEP 1: ART PAGE
+    Style name and idea | page you can run | seed and controls
+
+  STEP 2: STILLS
+    Saved stills | size | seed behind each
+
+  STEP 3: SMALLER FILES
+    Compressed files | format and quality | size before and after
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The description
+    how: Name colours, mood and how fast things move. Vague words give generic art.
+  - what: Seeds
+    how: Note the seed behind each still you like, so you can bring it back.
+  - what: Resolution
+    how: Say if the stills go on a screen or a print. Print needs a larger size.
+judge:
+  - The page runs without errors and the controls change the art.
+  - Each still matches a seed you can repeat.
+  - Stills are sharp, with no cut-off edges.
+  - Compressed files look the same as the originals.
+  - File names say what each one is.
+test:
+  - Run the page twice with the same seed. The art should match.
+  - Zoom into a still at full size and check for blur.
+  - Open the compressed file next to the original.
+improve:
+  - Keep the seeds you like in a list so you can build a series.
+  - Save the style description in your brand file for the next piece.
+  - Ask for a second style to compare the two.

@@ -1,0 +1,21 @@
+slug: bestseller-shopping-campaign-builder
+name: "Bestseller Shopping campaign builder"
+summary: "Give it your bestsellers and brand name. Get Shopping settings, product group steps and brand negatives."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "The bestseller campaign: product group steps, bid steps, brand negatives, weekly exclusions and the all-products follow-up"}
+  - {title: "Google Ads for ecommerce: 9 keys to success", by: "Ben, Google Ads agency founder", used: "Why a few hero products beat a wide catalogue on cold traffic"}

@@ -1,0 +1,99 @@
+new_slug: new-screen-design-reviewer
+name: New screen design reviewer
+summary: Point it at each new screen. Get a ready, fix-first or rethink call and a ranked fix list.
+job: design-work
+thinking: medium
+thinking_why: It runs up to six reviews and judges a screen by a set score and rules. A mid-range model is enough. Use a stronger one for a screen with a complex flow.
+headline: New screen design reviewer
+subhead: Give it a new screen and what the person is there to do. It picks the checks that fit what you gave it, measures the screen against your own design rules, calls it ready, fix first or rethink, and tells you when the same problem keeps coming back.
+explain: |
+  Screens get reviewed when someone has time, and by whoever is around. One person checks contrast, another checks spacing, and nobody notices that the third screen this month has the same weak hierarchy. By the time it ships, a button looks different on every page.
+
+  This agent reviews every new screen the same way. It starts from what the person must do on the screen, then runs the checks that fit what you gave it: a mockup, a live page or code. It measures the screen against your design rules, calls it ready, fix first or rethink, and keeps a count of problems that repeat. When one shows up on three screens, it suggests a rule to stop it. It never edits your design or approves a release. You get the call and a ranked fix list, and you decide.
+when:
+  - You ship new screens often and want each one reviewed the same way before it goes out.
+  - Pages across your product look slightly different and you want one set of rules to hold them to.
+  - You work alone or in a small team with no design reviewer.
+you_give:
+  - "The screen, as a Figma link or mockup, a live page address, or the screen's code"
+  - What the person is there to do on it, in one line
+  - Your design rules, if you have them (it writes them from your code if not)
+  - Where it is used, such as phone or desktop (optional)
+you_get:
+  - "A call of ready, fix first or rethink, with the working"
+  - A ranked fix list, each with the harm and the size of the fix
+  - Values on the screen that are not in your design rules
+  - Problems that keep coming back, with a rule that would stop them
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to review a screen.
+  - Give it the screen and the one-line task. Add your code the first time, so it can write your design rules.
+  - Read the call and the fix list. Make the fixes yourself, or ask it to suggest the exact change for each.
+  - Ask for a recheck after you fix. It reruns only the checks that failed, up to two times.
+  - Review the next screen. It remembers the scores and the problems that repeat.
+how_it_works:
+  - title: Load the memory
+    text: Reads your design rules, the problems you chose to accept and the problems seen on earlier screens.
+  - title: Name the task
+    text: Writes what the person is there to do. Every finding has to tie back to it.
+  - title: Review for use
+    text: Walks the screen as a newcomer against ten usability rules and scores it out of 100.
+  - title: Choose the visual checks
+    text: Picks the design feedback, the page standards check, the generic-look check, the contrast check or the hierarchy fix, based on what you gave it.
+  - title: Measure and make the call
+    text: Compares the screen with your rules and calls it ready, fix first or rethink, using clear limits.
+  - title: Check for repeats and hand back
+    text: Counts problems that return, suggests a rule when one appears on three screens, and stops for your decision.
+output_shape: |-
+  THE CALL
+    <ready | fix first | rethink> | usability <score> / 100 | <other scores>
+
+  THE TASK
+    <one line>
+
+  FIX LIST (highest harm first)
+    1. <fix> | where: <screen part> | harm: <harm> | size: <size> | from: <step>
+
+  OFF THE RULES
+    <value on the screen> | nearest in rules: <value>
+
+  KEEPS COMING BACK
+    <problem> | seen on <n> screens | suggested rule: <rule>
+
+  NEEDS A REAL TEST
+    <doubt> | test: <test>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: The one-line task
+    how: Be exact, such as "pick a plan and start a free trial". A vague task gives vague findings.
+  - what: Your design rules
+    how: Keep them short and true to what you ship. A rules file full of wishes makes every screen fail.
+  - what: The limits for the call
+    how: The starting points are 80 for ready and 50 for rethink. Change them if your product needs a higher or lower bar.
+  - what: Problems you accept
+    how: Tell it which breaks you chose to keep and why. It will stop raising them until the screen changes.
+judge:
+  - Every finding ties back to the task and names the part of the screen.
+  - The call follows the stated limits, and the working is shown.
+  - A screen with a high-cost break is not called ready, whatever its score.
+  - Skipped checks are named with the reason.
+  - Nothing in your design, your code or your tools was changed without your clear yes.
+test:
+  - Review a screen you already know has a problem, such as low contrast. See whether it finds that and calls it fix first.
+  - Review the same screen twice. The call and the order of the top fixes should match.
+  - Review three screens with the same flaw. On the third, it should say the problem keeps coming back and suggest a rule.
+improve:
+  - Add each rule it suggests to your design rules once you agree, so the next screen is held to it.
+  - Run a short test with real people on the doubts it lists. A review cannot settle those.
+  - Give it the same screen at phone and desktop width, since many breaks only show on one.
+  - Note the screens you shipped after fixes, so you can see whether scores rise over time.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your code, write your design rules and keep the review folder.
+    - name: Figma
+      why: Share a link or a frame so it can review a mockup before anything is built.
+  inputs:
+    - Screenshots of the screen at phone and desktop width
+    - Your colour and font choices, if you have no rules file

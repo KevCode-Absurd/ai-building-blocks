@@ -1,0 +1,25 @@
+slug: get-your-store-named-on-the-pages-ai-quotes
+name: "Get your store named on the pages AI quotes"
+summary: "Give it your category and rivals. Get the sources AI cites instead of you and a plan to show up on them."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: organic
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+uses: [category-search-plan-builder, ai-recommendation-panel-runner, ai-citation-source-finder, reddit-answer-planner]
+steps:
+  - {uses: category-search-plan-builder, note: "Chooses the category and the questions that matter, so the test has a fixed scope."}
+  - {uses: ai-recommendation-panel-runner, note: "Records who AI names for those questions and which sites it cites. Reads the category plan from the step before."}
+  - {uses: ai-citation-source-finder, note: "Ranks the sites and threads AI cites where you are missing. Reads the panel log from the step before."}
+  - {uses: reddit-answer-planner, note: "Plans honest answers in the chosen threads so your store is named where AI already looks."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/get-your-store-named-on-the-pages-ai-quotes/skeleton.yaml

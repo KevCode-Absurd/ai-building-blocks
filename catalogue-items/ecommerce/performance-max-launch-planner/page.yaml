@@ -1,0 +1,128 @@
+new_slug: performance-max-launch-planner
+name: "Performance Max launch planner"
+summary: "Give it your catalogue, budget and break-even numbers. Get a fit verdict and a Performance Max build."
+job: run-google-ads
+thinking: high
+thinking_why: "It weighs budget, data and conflicting advice before saying go or wait, so a stronger model avoids a costly wrong call."
+
+headline: "Performance Max launch planner"
+subhead: Give it your feed status, monthly conversions, daily budget, product categories and break-even ROAS. It tells you if Performance Max fits now, and if so hands back the campaign and asset group map, assets, settings to switch off, bidding path and budget plan.
+
+explain: |
+  Performance Max spreads your budget across Google Search, Shopping, YouTube, Display and more, and decides where the sales come from. It works when it has clean product data, tracked purchases and enough budget to learn. On a small budget you cannot see what works, and in-platform ROAS can overstate it, since one source says 50 percent or more of its conversions can come from warm or repeat buyers.
+
+  This skill starts with a fit test, using the stricter of two budget rules. If you fit, it builds the plan: how much of your budget it should get, how to split asset groups by product type, what assets to add, which automatic settings to switch off, how to exclude brand, and how to bid. If you do not fit, it tells you what to build first.
+
+when:
+  - You run Search and Shopping and wonder whether to add Performance Max.
+  - You launched Performance Max and it spends but you cannot tell what works.
+  - You want your asset groups, signals and exclusions set up right before you spend.
+
+you_give:
+  - Feed status and conversions per month
+  - Your daily budget and average non-brand cost per sale
+  - Product categories and top sellers
+  - Your break-even ROAS
+  - Existing images, headlines, converting search terms, brand list and customer list (optional)
+you_get:
+  - A go or wait verdict with the numbers behind it
+  - A campaign and asset group map with listing groups
+  - Asset counts and the settings to switch off
+  - A bidding and budget plan, plus setup fixes if you already run it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your feed status, conversions per month, daily budget and average non-brand cost per sale.
+  - List your product categories and top sellers, and your break-even ROAS.
+  - If it says wait, build what it names first. If it says go, set up the plan and leave it alone for the learning weeks.
+  - Do not change big settings while it learns, since each change can reset learning.
+
+how_it_works:
+  - title: Runs the fit test
+    text: Clean feed, working purchase tracking, and the stricter of two budget rules. If you fail, you stay on Search and Shopping.
+  - title: Sets the budget share
+    text: About 20 to 30 percent in a mixed setup, 20 to 40 percent at large scale in some accounts. Never all of it.
+  - title: Maps asset groups
+    text: Split by product type, with 15 or more products in each, never one, and 3 to 20 asset groups in total.
+  - title: Orders the products
+    text: The 20 percent of products earning 80 percent of revenue go first. Weak or untested ones go in a separate zombie group.
+  - title: Fills the assets
+    text: Shows both views, fill every slot or start lean, and says to skip Google's auto-generated assets.
+  - title: Sets the switches
+    text: Turn off automatic text assets and final URL expansion, keep image enhancement, and exclude junk pages.
+  - title: Excludes brand
+    text: A brand list and negative keywords, since without them it is mostly a retargeting campaign.
+  - title: Sets bidding
+    text: Max conversion value first, then a target by conversion count, with the two views shown.
+
+output_shape: |
+  FIT  <go / wait>
+  feed <clean?> | tracking <purchases working?> | conversions/mo <n>
+  budget floor: rule 1 <$50 to $100/day + 30 to 50 conv/mo> | rule 2 <3 x non-brand CPA = $n/day> | stricter <$n>
+  if wait: <what to build first>
+
+  SHARE OF GOOGLE BUDGET  <n>% (<reason>)
+
+  CAMPAIGN MAP
+  <campaign> | <asset groups> | <listing group per asset group> | <products>
+  zombie group: <products>
+
+  ASSETS  <headlines> / <long headlines> / <descriptions> / <images> / <extras>
+  SWITCH OFF  <automatic text assets, final URL expansion, tablets, TV>
+  EXCLUDE URLS  <blog, about, size guides, shipping, contact, out of stock>
+  BRAND  <brand list + negative keywords>
+  SIGNALS  <customer list, converting search themes, notes>
+
+  BIDDING  <max conversion value> -> <target at n conversions>
+  REVIEW  <dates and what changes you may make>
+  CHECKS MISSED: <none | list>
+  MISSING: <feed status | conversions | budget | break-even>
+
+tweaks:
+  - what: Daily budget and non-brand cost per sale
+    how: The fit test needs both. The floor is the higher of the two rules.
+  - what: Conversions per month
+    how: Under 30 to 50 a month the skill says wait. Between that and 50, bidding stays on conversion value.
+  - what: Asset approach
+    how: Start lean with 6 to 7 headlines and 3 to 4 descriptions, or fill every slot. The skill shows both.
+  - what: Your best search themes
+    how: Only converting terms. Skip themes if you run strong Search campaigns that they would overlap.
+
+judge:
+  - The fit test shows both budget rules and uses the stricter number.
+  - Asset groups each have 15 or more products and the total is between 3 and 20.
+  - Brand is excluded with both a list and negative keywords.
+  - Bidding advice depends on conversion count and shows both views.
+  - It says in-platform ROAS may overstate results.
+
+test:
+  - Give it numbers below the floor, such as a $40 daily budget, and check it says wait and names what to build first.
+  - Give it a good case and check the asset group map matches your product categories.
+  - Run it again with the same input. The fit verdict and map should match.
+  - After launch, compare Performance Max ROAS to your backend revenue. If spend rises and backend revenue does not, treat the gains as warm traffic.
+
+improve:
+  - Put your budget, break-even ROAS and product categories in the skill file so every run starts from them.
+  - Add your junk URL list, such as size guides and shipping pages.
+  - Add the creative you already have, so the asset counts show what you still need.
+  - Pair it with the Feed-only Performance Max builder for a lean version, and the Performance Max routine keeper for the weekly checks.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Where Performance Max campaigns, asset groups, brand exclusions and reports live."}
+    - {name: "Google Merchant Center", why: "A clean, approved feed is the first thing the fit test checks."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the fit test and build the plan."}
+  inputs:
+    - "Your backend revenue and new-customer share, to check Performance Max against reality"
+    - "Your converting search terms from the search terms report"
+    - "Your customer list, for a signal"
+
+terms:
+  - term: Asset group
+    meaning: A set of images, headlines and descriptions that Performance Max combines into ads for a set of products.
+  - term: Listing group
+    meaning: The products inside an asset group.
+  - term: Audience signal
+    meaning: A hint, such as a customer list, that helps Performance Max start. It matters little once there is about 30 days of data.
+  - term: Final URL expansion
+    meaning: A setting that lets Google send people to pages on your site other than the one you chose.

@@ -1,0 +1,24 @@
+slug: find-a-product-idea-in-buyer-complaints-and-score-it
+name: "Find a product idea in buyer complaints and score it"
+summary: "Give it a category. Get complaints that sell, the gap in it and a score out of 100."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: [rating-gap-product-finder, pain-point-niche-finder, crowded-category-white-space-finder, winning-product-scorer]
+steps:
+  - {uses: rating-gap-product-finder, note: "Starts the chain: ranked complaints and the review lines behind them."}
+  - {uses: pain-point-niche-finder, note: "Uses the complaints from the step before to pick the best five problems and the brands already selling to them."}
+  - {uses: crowded-category-white-space-finder, note: "Reads the rival brands and review lines from the steps before and finds the one gap to own."}
+  - {uses: winning-product-scorer, note: "Scores the product you chose for the gap, using your costs."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/find-a-product-idea-in-buyer-complaints-and-score-it/skeleton.yaml

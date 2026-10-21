@@ -1,0 +1,78 @@
+new_slug: set-up-product-tracking-and-build-a-retention-dashboard
+name: Set up product tracking and build a retention dashboard
+summary: Describe your product. Get an event plan to ship, then a retention grid and dashboard from real use.
+job: track-numbers
+thinking: medium
+thinking_why: The event plan needs care, but the later steps read tables. A mid-level model is enough.
+headline: Track your product cleanly and see who comes back
+subhead: Describe your product and it plans the events to track, the funnels and the groups to compare. You ship the tracking and let people use it. Then it turns your real export into a retention grid and a dashboard you can share.
+explain: |
+  Most teams add tracking late and in a hurry. Event names drift, nobody trusts the numbers, and the question that matters, whether people come back, goes unanswered. A dashboard built on that data only shows the mess faster.
+
+  The steps do it in the right order. First it plans a short event list with clear names, splits the details of an event from the details of a person, and picks the funnels and the sign-up groups to compare. Then you pause: ship the tracking, let real people use the product for two to four weeks, and export sign-up and activity dates. It then builds a grid of how many people in each group are still active week by week, and reads where people drop. The last step puts the main number, the grid and the funnel on one page you can open and share.
+when:
+  - You are about to add analytics to a new product or feature.
+  - Your current tracking is a mess and you want to start again with a clean plan.
+  - You want to know how many people come back and which sign-up group holds best.
+you_give:
+  - A plain description of your product and what a person does in it
+  - Which tool you use for tracking, if you have one (optional)
+  - After the pause, sign-up dates and activity dates for each person
+  - The audience for the dashboard (optional)
+you_get:
+  - One main number to steer by and a list of events with clear names
+  - Funnels, sign-up groups and a version note for the plan
+  - A colour-coded retention grid with a plain reading of where people drop
+  - A page with cards, charts and filters you can open and share
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your product and what counts as a person using it. Step 1 gives the event plan and stops.
+  - Pause. Ship the events, let real people use the product for two to four weeks, then export sign-up dates and activity dates per person.
+  - Attach the export. It builds the grid and then the dashboard.
+how_it_works:
+  - title: Plan the events
+    text: Picks one main number, lists events as object then past-tense action, separates event details from person details, and sets funnels and sign-up groups.
+  - title: Ship it and wait
+    text: Pause. You add the events to your product, let people use it for two to four weeks, and export sign-up and activity dates.
+  - title: Build the retention grid
+    text: Sets what counts as active, builds the group by week table from your export, works out the share still active, and draws a colour-coded grid with a plain reading.
+  - title: Build the dashboard
+    text: Puts the main number in cards, charts the grid and the funnel, adds filters for group and week, and saves one page you can share.
+output_shape: |-
+  STEP 1: EVENT PLAN
+    Main number | event list with details | funnels | sign-up groups | naming rules
+
+  PAUSE: ship the events, wait, export
+
+  STEP 2: RETENTION GRID
+    Active rule | share still active per group per week | reading of where people drop
+
+  STEP 3: DASHBOARD
+    Cards | retention chart | funnel | filters | one shareable page
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your tracking tool
+    how: Name it. Step 1 shapes the event list and details to what that tool handles well.
+  - what: What counts as active
+    how: Say it in one line, like "made a post" or "opened a report". A loose rule makes every group look the same.
+  - what: Group size
+    how: Weekly groups work from about 100 sign-ups. With fewer, ask for monthly groups.
+  - what: Your audience
+    how: Tell the dashboard step who opens it. A founder wants three cards, a team lead wants filters.
+judge:
+  - The plan has one main number and a short event list, not a copy of every click.
+  - Event names read as object then past-tense action, and states are details, not events.
+  - The grid uses your real activity rule, and small groups are marked as noisy.
+  - The reading names the week where most people drop, not just "retention is low".
+  - The dashboard shows the grid and the main number, and every chart matches the export.
+test:
+  - Fire each event once in a test account and check it shows up with the right details.
+  - Pick one group and one week in the grid and count the active people yourself.
+  - Open the dashboard on a phone. The cards should still read.
+improve:
+  - Add one event at a time later, and note the change in the plan version.
+  - Rerun the grid every two weeks with the same rule so the numbers can be compared.
+  - Not worth running before you have at least a few hundred sign-ups. Plan the tracking and come back.

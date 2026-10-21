@@ -47,8 +47,8 @@ const walk = (dir, rel = "") => fs.readdirSync(dir, { withFileTypes: true }).sor
   return e.isDirectory() ? walk(path.join(dir, e.name), r) : [r];
 });
 const seen = new Set();
-for (const dirName of ["general", "ecommerce", "orchestrators", "imported"]) {
-  const category = dirName === "imported" ? "general" : dirName;
+for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "imported"]) {
+  const category = dirName === "imported" ? "general" : dirName === "agents" ? "agent" : dirName;
   const dir = path.join(ROOT, dirName);
   if (!fs.existsSync(dir)) continue;
   for (const slug of fs.readdirSync(dir).sort()) {
@@ -100,7 +100,7 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "imported"]) {
       job: item.job ?? "ops",
       level: item.level ?? "intermediate",
       // Workflows run several skills in a row, so they always ask for the strongest model.
-      thinking: ["low", "medium", "high"].includes(page?.thinking) ? page.thinking : category === "orchestrators" || item.type === "workflow" ? "high" : "medium",
+      thinking: ["low", "medium", "high"].includes(page?.thinking) ? page.thinking : category === "orchestrators" || category === "agent" || item.type === "workflow" ? "high" : "medium",
       thinkingWhy: page?.thinking_why ?? (category === "orchestrators" || item.type === "workflow" ? "It runs several skills in a row. Give it your strongest model." : ""),
       inputs: asPorts(item.inputs),
       outputs: asPorts(item.outputs),
@@ -280,14 +280,14 @@ fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new
 // Every page, for search engines: the home page, each block, the mini tools and the apps. The saved example app
 // (example-app-site, its own Pages project) is left out: it's a copy of another app, marked noindex.
 const SITE = "https://useaiblocks.com";
-const kindPath = (b) => (b.type === "mind" ? "minds" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
+const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
 const urls = ["/", "/how-it-works", "/minds", "/from-a-source", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed. No lastmod:
 // the only dates we have are file times, and a wrong date teaches search engines to ignore it.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs.
 const urlset = (us) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${us.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`;
-const SITEMAPS = { pages: urls.filter((u) => !/^\/(skills|workflows|prompts|minds)\//.test(u)), skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
+const SITEMAPS = { pages: urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
 for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(f))) fs.rmSync(path.join("public", f));
 for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(`public/sitemap-${k}.xml`, urlset(us));
 fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...Object.keys(SITEMAPS).filter((k) => SITEMAPS[k].length), "jobs"].map((k) => `  <sitemap><loc>${SITE}/sitemap-${k}.xml</loc></sitemap>`).join("\n")}\n</sitemapindex>\n`);
@@ -351,5 +351,5 @@ fs.writeFileSync("public/_redirects", `# Old block names, moved to shorter ones 
 if (redirects.length + appRoutes.length > 2000) problems.push(`_redirects has ${redirects.length + appRoutes.length} rules; Cloudflare Pages allows 2,000`);
 console.log(`sitemap: ${urls.length} pages`);
 console.log(`${blocks.filter((b) => b.headline).length} of ${blocks.length} have a page`);
-console.log(`${blocks.length} blocks (${blocks.filter((b) => b.category === "general").length} general, ${blocks.filter((b) => b.category === "ecommerce").length} ecommerce, ${blocks.filter((b) => b.category === "orchestrator").length} orchestrators, ${blocks.filter((b) => b.category === "mind").length} minds)`);
+console.log(`${blocks.length} blocks (${blocks.filter((b) => b.category === "general").length} general, ${blocks.filter((b) => b.category === "ecommerce").length} ecommerce, ${blocks.filter((b) => b.category === "orchestrator").length} orchestrators, ${blocks.filter((b) => b.category === "agent").length} agents, ${blocks.filter((b) => b.category === "mind").length} minds)`);
 if (problems.length) console.log("Problems:\n  " + problems.join("\n  "));

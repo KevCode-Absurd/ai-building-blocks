@@ -1,0 +1,20 @@
+slug: pack-and-thumbnail-glance-tester
+name: "Pack and thumbnail glance tester"
+summary: "Give it your pack image. Get a 3-second read score out of 100 and a sharper pack brief."
+category: ecommerce
+type: skill
+role: check
+job: image
+level: intermediate
+inputs:
+  - {type: image, required: true}
+  - {type: competitor_set, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Premium isn't about price, it's about positioning", by: "Founder of a canned sports-hydration brand, in a podcast interview", used: "The pack redesign that beat a minimal design on shelf, the colour rim and short claims, designing for where the product sits, fixed parts of a pack, changing only one or two things against the category, and measuring by sales velocity"}

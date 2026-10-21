@@ -1,0 +1,122 @@
+new_slug: feed-only-performance-max-builder
+name: "Feed-only Performance Max builder"
+summary: "Give it your Shopping setup. Get feed-only Performance Max settings that retarget shoppers without wasted spend."
+job: run-google-ads
+thinking: medium
+thinking_why: "It follows a fixed setup but must pick one role among conflicting views, so a mid-size model works if you check the role it picks."
+
+headline: "Feed-only Performance Max builder"
+subhead: Give it your Shopping campaigns, conversions in the last 30 days and brand negatives. It hands back step-by-step settings for a Performance Max campaign with no text, image or video assets, the priority setup beside Shopping, the brand exclusion step, and review dates with kill rules.
+
+explain: |
+  A normal Performance Max campaign can wander into YouTube, Display and Gmail, spending where you did not plan. A feed-only version leaves the asset group blank, so the campaign runs on your product feed. That keeps spend on Shopping placements, which is useful for reaching people who already visited your store.
+
+  This skill builds that campaign. It checks you are ready (sales coming in, at least 15 live products, a clean feed), gives the exact settings, and pairs it with a High priority new-customer Shopping campaign. It also picks one role for the campaign, because the sources disagree: a remarketing layer under Shopping, or the main engine. It sets review dates at two and four weeks with rules for when to stop.
+
+when:
+  - You run Shopping, have steady sales, and want a retargeting layer without paying for display and video.
+  - Your Performance Max spends on YouTube or Display and you want to pull it back to Shopping.
+  - You want to test a lean Performance Max with no creative work.
+
+you_give:
+  - Your existing Shopping campaigns and their priority
+  - Your brand negative keyword list
+  - Conversions and ROAS in the last 30 days
+  - Whether Merchant Center is linked
+you_get:
+  - A step-by-step setup for a feed-only Performance Max
+  - Priority settings across Shopping and Performance Max
+  - The brand exclusion step
+  - Review dates and kill rules, with the one role chosen for this account
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your Shopping campaigns with their priority, and your conversions and ROAS for the last 30 days.
+  - Give your brand negative list and say whether Merchant Center is linked.
+  - Follow the settings in order, and check the form against your live account since Google changes its screens.
+  - Read the campaign at 2 weeks and 4 weeks with the kill rules it gives.
+
+how_it_works:
+  - title: Checks readiness
+    text: Needs sales coming in, at least 15 live products and a clean feed. Not for stores under about 30 sales a month.
+  - title: Picks one role
+    text: Remarketing under Shopping, or the main engine. The sources differ, so it picks one and says why.
+  - title: Sets up the campaign
+    text: Sales, purchases, Performance Max, the Merchant Center feed, and a clear name such as PMax-USA-FeedOnly-Remarketing.
+  - title: Sets the bid
+    text: Maximize Conversion Value with no target at the start.
+  - title: Blanks the assets
+    text: Switch off auto-created assets and enhancements, include all products, clear every asset and leave signals blank.
+  - title: Sets priority
+    text: The new-customer Shopping campaign at High, so it serves first-time searches and Performance Max serves the rest.
+  - title: Excludes brand
+    text: Brand terms out of this campaign so branded sales stay in the branded campaigns.
+  - title: Sets the reviews
+    text: A look at 2 weeks and 4 weeks, with kill rules, and a note that Poor ad strength can be ignored for this setup.
+
+output_shape: |
+  READINESS  <ready / not yet>  | sales/mo <n> | live products <n> | feed <clean?>
+  ROLE  <remarketing layer | main engine> because <reason>
+
+  SETUP (in order)
+  1 campaign <Sales, purchases, Performance Max, feed>  name <...>
+  2 bidding <Maximize Conversion Value, no target>
+  3 automatic assets and enhancements <off>
+  4 asset group <all products; every asset cleared>
+  5 audience signals <blank>
+  6 brand <excluded how>
+
+  PRIORITY  Shopping <High, new customers> | feed-only PMax <serves the rest>
+  REVIEW  2 weeks <what to read, what is expected> | 4 weeks <...>
+  KILL RULES  <spend moves to Display or YouTube; new-customer sales fall; ...>
+  CHECKS MISSED: <none | list>
+  MISSING: <Shopping setup | conversions | brand list | Merchant Center link>
+
+tweaks:
+  - what: The role
+    how: Tell the skill whether Shopping is your main engine. That decides if this runs as a retargeting layer or the main campaign.
+  - what: Number of live products
+    how: It needs at least 15. With fewer, stay on Shopping.
+  - what: Sales per month
+    how: Under about 30 a month, the skill says to wait.
+  - what: Brand list
+    how: Without brand exclusions, this campaign takes credit for branded sales.
+
+judge:
+  - It states one role for the campaign and explains why.
+  - The settings are in order and every asset is cleared.
+  - The Shopping campaign is High priority and the brand exclusion step is included.
+  - Review dates are at 2 and 4 weeks, with kill rules.
+  - It says the priority behaviour should be tested, not trusted.
+
+test:
+  - Check the campaign after a week. Its placements should be Shopping, not YouTube or Display.
+  - Compare new-customer sales before and after. If they fall while Performance Max ROAS rises, it is claiming warm traffic.
+  - Check the search terms report for brand terms. There should be none.
+  - Run the skill with fewer than 15 products and see that it says not yet.
+
+improve:
+  - Put your Shopping campaigns and their priority in the skill file so every run starts from your setup.
+  - Add your kill rules, such as the share of spend in Display or YouTube that makes you pause it.
+  - Note which role you chose and your reason, so the next run stays consistent.
+  - Pair it with the Brand and non-brand splitter for brand exclusions, and the Performance Max routine keeper for the weekly checks.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Performance Max, Shopping priority and brand exclusions are set here."}
+    - {name: "Google Merchant Center", why: "The campaign runs on the feed, so it must be linked and clean."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the plan from your setup."}
+  inputs:
+    - "Your campaign placement report from the first two weeks"
+    - "Backend revenue by new and returning customer"
+    - "Your Shopping priority settings screenshot or export"
+
+terms:
+  - term: Feed-only Performance Max
+    meaning: A Performance Max campaign with no headlines, images or video, so it runs on your product feed alone.
+  - term: Campaign priority
+    meaning: A Shopping setting. When two campaigns have the same product, the higher one serves first.
+  - term: Ad strength
+    meaning: Google's rating of how complete your ad assets are. It reads Poor when you leave them blank.
+  - term: Remarketing
+    meaning: Showing ads to people who have already visited your store.

@@ -1,0 +1,121 @@
+new_slug: email-layout-brief-writer
+name: "Email layout brief writer"
+summary: "Give it your email copy and goal. Get a section-by-section layout brief a designer can build."
+job: write-emails
+thinking: medium
+thinking_why: "It follows fixed layout rules and a known build order, so a mid-level model is enough."
+
+headline: "Email layout brief writer"
+subhead: Give it your email copy, your goal and any brand colours. It writes a section-by-section layout brief with button places, product grid, infographic type, headline and button text, and a slice-and-export plan, so a designer can build it without guessing.
+
+explain: |
+  A good email can fail because of its layout. The button sits far down the page, the copy is a wall of text, or a designer reshuffles the sections. Most readers skim and many never scroll, so the top of the email has to work on its own.
+
+  This skill turns your copy into a layout brief. It puts the headline, short copy and a large button at the top, adds a short section that backs up the claim, repeats the button after every section and ends with a footer. Then it plans the build: what to design in Figma, what to slice into images, and what must stay live in your email tool, such as product blocks and the unsubscribe footer.
+
+when:
+  - You have the copy for a campaign email and need a designer or your own design tool to build it.
+  - Your emails get opens but few clicks, and the first button sits far down the page.
+  - You like a competitor's email layout and want your own version with your own words.
+
+you_give:
+  - Your email goal and offer, plus the copy if you have it
+  - The hero image or product to feature
+  - Brand colours and fonts (optional)
+  - A screenshot of an email layout you like (optional)
+  - Your proof, such as reviews and ratings (optional)
+
+you_get:
+  - A layout table with one row per block, in order, with what each block holds
+  - The headline, body and button text for each block
+  - "A build and export plan: what to design, slice, compress and keep live"
+  - Notes you can reuse as a template for the next email
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your goal, offer and copy. Attach a competitor email you like, if you have one.
+  - Check the top block first. A reader should see the headline, the point and a button without scrolling.
+  - Send the layout table to your designer as it is. The order is part of the brief.
+  - When the email is built, send yourself a test and click every link on a phone and a computer.
+
+how_it_works:
+  - title: Sets one message
+    text: One goal, one or two calls to action, one clear offer. It cuts anything that belongs in a different email.
+  - title: Plans the top block
+    text: Logo, a headline about the pain or benefit, one or two short sentences and a large button, so everything needed to decide sits above the fold.
+  - title: Adds a bridge
+    text: A short section that backs up the claim with icons, at most three points, a checklist or a comparison. The main point of each block is in bold.
+  - title: Places the buttons
+    text: A button at the end of every section, one under each product, a general one after the products and a footer with shop-by-category links.
+  - title: Picks the product grid
+    text: One row with copy or a 2 by 2 grid, never 3 by 2, so text stays readable on a phone.
+  - title: Writes the layout as a table
+    text: One row per block, in order, so the designer cannot reshuffle it. It starts from a real layout you like.
+  - title: Plans the build
+    text: Design at 600 pixels wide, slice so each tappable part is its own image with one link, export at 2x, compress, and keep key lines as live text.
+
+output_shape: |
+  EMAIL LAYOUT BRIEF  <campaign>
+  Goal: <...> | one message: <...> | calls to action: <1 or 2>
+  Length target: <one to two phone scrolls>
+  | # | Block | What it holds | Headline / copy | Button | Image |
+  | 1 | Top (above the fold) | logo, headline, 1-2 sentences | <...> | <large, centred> | <...> |
+  | 2 | Bridge | <infographic type>, max 3 points | <...> | <button> | <...> |
+  | 3 | Products | <1 row with copy | 2x2> | <...> | shop now under each | <...> |
+  | 4 | Final call | <...> | <...> | <button> | |
+  | 5 | Footer | category buttons, trust icons, unsubscribe | | | |
+  DESIGN FLOW: <gradient, accent colour, button style>
+  BUILD PLAN: design 600 px | slice list (one link each) | export 2x JPEG | compress | live blocks
+  ALT TEXT AND LIVE TEXT: <alt for each image> | <lines kept as real text>
+  TEST PLAN: <phone and computer, every link>
+  CHECKS MISSED: <none | list>   MISSING: <what was not given>
+
+tweaks:
+  - what: A competitor email you admire
+    how: Attach it. The skill turns its structure into a template and writes your version with your angle. It copies the structure, never the words.
+  - what: Number of products
+    how: Say how many you want to show. A few products in a 2 by 2 grid beat a long list, which splits attention.
+  - what: Who builds it
+    how: Say whether it is a designer in Figma or you in your email tool's own blocks. The brief changes from slices to built-in blocks.
+  - what: Who reads it
+    how: Name the audience so the images match them. A men's brand should not show women's imagery.
+
+judge:
+  - The top block has a headline, a short point and a large button, with no scroll needed.
+  - There is a button at the end of every section and under every product.
+  - The product grid is one row or 2 by 2, and the footer has category links.
+  - The layout is a table in order, not a loose list.
+  - Key lines are live text and every image has alt text.
+
+test:
+  - Show the top block to someone for three seconds. Ask what the email wants them to do.
+  - Hand the layout table to a designer who has not seen the copy. Check the build matches the order.
+  - Open the built email on a phone. Count the scrolls to the last button and confirm it is about one to two.
+  - Send a test with images off. The main message and buttons should still make sense.
+
+improve:
+  - Save your best layout as a table in your brand file, so every new brief starts from it.
+  - Add your brand fonts, colours and button style to the skill file so each brief names them.
+  - Add a rule for your own mobile checks, such as the minimum text size you use.
+  - Pair it with the email design checker to score the finished design, and the campaign email writer for the copy.
+
+works_best_with:
+  tools:
+    - {name: "Figma", why: "Design the email in one frame, group it by section and use its slice tool to export each part."}
+    - {name: "Klaviyo", why: "Upload slices, add links and alt text, and build live product blocks and the footer."}
+    - {name: "Any good chat AI", why: "It can transcribe a competitor email, turn it into a template and draft headline and button text."}
+  inputs:
+    - "A screenshot of a competitor or inspiration email, for the structure"
+    - "Your brand colours, fonts and logo files"
+    - "Reviews and ratings for a proof block"
+    - "Product images at high resolution"
+
+terms:
+  - term: Above the fold
+    meaning: The part of the email you see without scrolling.
+  - term: Bridge
+    meaning: The section under the top block that backs up its claim with short points or icons.
+  - term: Slice
+    meaning: A cut-out piece of the design saved as its own image, so it can have its own link.
+  - term: Infographic
+    meaning: A simple picture that shows a point, such as a checklist, icons or a comparison chart.

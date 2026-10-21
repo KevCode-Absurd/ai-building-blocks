@@ -1,0 +1,28 @@
+slug: website-quality-keeper
+name: "Website quality keeper"
+summary: "Check your site each week. See what got slower or harder to find since last time, with a ranked fix list."
+category: agent
+type: agent
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: codebase, required: false}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [web-page-speed-tuner, wcag-accessibility-fixer, page-metadata-fixer, search-indexing-auditor, page-speed-fixer, page-issue-sorter]
+steps:
+  - {uses: web-page-speed-tuner, note: "Every run: where each key page is slow and why, against last run's saved numbers."}
+  - {uses: wcag-accessibility-fixer, note: "Every run if you give the site code: scan only. Finds access problems by severity. Fixes are made only after a yes."}
+  - {uses: page-metadata-fixer, note: "Every run, and always after new pages go up: missing titles, descriptions, share cards and canonical links."}
+  - {uses: search-indexing-auditor, note: "Every run: pages that are not indexed, broken links, redirect chains and sitemap errors, from the site or a Search Console export."}
+  - {uses: page-speed-fixer, note: "Only when speed or the PageSpeed scores got worse than last run: fix batches in order, to apply after a yes."}
+  - {uses: page-issue-sorter, note: "Every run, last: puts every finding in one bucket (fix now, look into, or test) and ranks by gain and effort."}
+schedule: "Every Monday morning, and again after each site release"
+asks_before: [changing site code, changing a live theme or published pages, editing robots.txt, redirects or the sitemap, deleting or unpublishing a page, installing or removing an app or plugin]
+origin: own
+version: 1.0.0
+example_pending: true

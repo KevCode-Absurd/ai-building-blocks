@@ -1,0 +1,91 @@
+new_slug: turn-an-idea-into-a-spec-tickets-and-tested-code
+name: Turn an idea into a spec, tickets and tested code
+summary: Give it a feature idea. Get a spec, small tickets, built code, test gaps and a pull request.
+job: build-software
+thinking: high
+thinking_why: It builds real code across many files and reviews its own work. Give it your strongest model.
+headline: Get a feature built from a plain idea, in small pieces you can check
+subhead: Tell it the feature you want. It writes the spec, cuts it into small tickets, builds them, lists the tests that are still missing and writes the pull request for you to review.
+explain: |
+  When you ask an AI to build a whole feature from one sentence, it guesses. It fills the gaps with its own ideas, builds it all at once, and hands you a pile of code that is hard to review and has few tests.
+
+  The steps here take the guessing out. The first writes down what the feature must do, so nothing is left to chance. The second cuts that spec into thin tickets, each one working from end to end, with the order they depend on. The third builds the tickets one at a time and reviews the whole. The fourth lists every new behaviour that no test checks. Then you add those tests and run them, and the last step writes a pull request that shows the proof.
+when:
+  - You have a feature in your head and no written spec yet.
+  - Past AI builds came back too big to review.
+  - You want tests and a pull request that a teammate can read in ten minutes.
+you_give:
+  - A feature idea, in a few sentences, and who it is for
+  - Access to your project code
+  - Your issue tracker, if you use one (the spec and tickets are posted there)
+  - Your written coding standards (optional)
+you_get:
+  - A spec with the problem, user stories and the decisions made
+  - Small tickets in build order, each saying what blocks it
+  - The feature built on one branch and reviewed
+  - A list of new behaviours with no test, and the tests to add
+  - A pull request with a short summary and proof
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md".
+  - Describe the feature, then answer its questions about the tests and the ticket sizes.
+  - After the missing-test step, add the tests it proposes and run your suite before you go on.
+  - Read the pull request text and fix anything that does not match what you wanted.
+how_it_works:
+  - title: Write the spec
+    text: Turns your idea into a spec with the problem, user stories, what to build and how it will be tested, then posts it to your tracker.
+  - title: Split the spec into tickets
+    text: Cuts the spec into thin slices that each work from end to end, with the tickets that must come first marked.
+  - title: Build the tickets
+    text: Builds each ticket test first on its own branch, merges them together and runs a review on the whole change.
+  - title: Find the missing tests
+    text: Lists each new behaviour in the change and marks it covered or not covered, then proposes tests for the gaps.
+  - title: Add the tests (your turn)
+    text: You write or approve the proposed tests and run the suite, so the next step can show real proof.
+  - title: Write the pull request
+    text: Sums up the change in a small picture, shows before and after proof, and says how hard it is to undo.
+output_shape: |-
+  STEP 1: SPEC
+    Problem | solution | user stories | decisions | testing decisions
+
+  STEP 2: TICKETS
+    Each ticket with what blocks it and what it delivers
+
+  STEP 3: BUILD
+    Branch | what each ticket changed | review fixes
+
+  STEP 4: MISSING TESTS
+    Table of behaviour, covered or not, evidence | proposed tests, riskiest first
+
+  PAUSE: you add the tests and run the suite
+
+  STEP 5: PULL REQUEST
+    Summary view | before and after proof | merge danger
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Where the feature is tested from
+    how: Say if you want tests at the screen, the API or a single module. Step 1 uses it to pick the one place the feature is checked from.
+  - what: Ticket size
+    how: Tell it how much one AI session can hold in your project. Small projects can take bigger tickets.
+  - what: Your issue tracker
+    how: Name GitHub, Linear or plain files. Without one, the spec and tickets are saved as files in the project.
+  - what: Standards
+    how: Point it at your coding rules file, so the review in step 3 checks against your rules and not general ones.
+judge:
+  - Every user story in the spec has a ticket that delivers it.
+  - Each ticket can be built and checked on its own, and the blocking order has no loop.
+  - The built change matches the spec, with nothing added that the spec did not ask for.
+  - Each behaviour marked covered names a real test that checks it.
+  - The pull request shows proof you can verify, not claims.
+test:
+  - Pick one user story and follow it into a ticket, the code and a test. All four should line up.
+  - Run the proposed tests against the code with the new behaviour broken on purpose. They should fail.
+  - Ask a teammate to read the pull request cold. They should say what changed without opening the code.
+  - Run the full suite before and after. Nothing that passed before should fail now.
+improve:
+  - Keep the spec template that worked and give it to step 1 next time.
+  - Save repeat decisions in a project glossary file, so later specs use the same words.
+  - If tickets keep coming out too big, say so at step 2 and give a size limit.
+  - Not worth running for a one-line change. Ask for the change directly.

@@ -1,0 +1,82 @@
+new_slug: tune-a-prompt-with-real-tests-then-ship-it-with-versions
+name: Tune a prompt with real tests, then keep versions
+summary: Give it a rough prompt. Get a clear version, scores on your tests and safe rules for changing it.
+job: set-up-ai
+thinking: medium
+thinking_why: Scoring against test cases is steady work. A mid-size model is enough. The cheapest one may miss subtle misses.
+headline: Change a prompt only when the tests say it is better
+subhead: Give it a prompt that gives uneven answers. It rebuilds it clearly, scores each version on your own test cases, and sets up versions and a rollback so later edits can't quietly make it worse.
+explain: |
+  A prompt that does real work gets edited again and again. Someone fixes one bad answer and breaks three good ones. Nobody notices for weeks, because no one kept the old version or a set of cases to check against.
+
+  The steps fix that. First it rebuilds the rough prompt into a clear one. You then write 10 to 20 test cases with the answers you would accept, including cases where it failed before. The next step scores the rebuilt prompt and each change against those cases, one change at a time. You pick the best version and save it as version 1. The last step sets up names for versions, a check before each change, a way to try a change on part of the work and a rollback.
+when:
+  - A prompt gives good answers one day and weak ones the next.
+  - Several people edit the same prompt and you cannot tell which edit hurt.
+  - A prompt runs in a product or a weekly routine, and a bad answer costs you.
+you_give:
+  - The rough prompt
+  - What a good answer looks like and who reads it
+  - Examples of answers that went wrong (optional)
+  - Where the prompt lives and who edits it (optional)
+you_get:
+  - A clear version of your prompt
+  - A score for each version against your test cases
+  - A winning version, saved with its tests
+  - Rules for naming versions, checking changes, trying them on part of the work and rolling back
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the rough prompt and say what a good answer is.
+  - When it pauses, write 10 to 20 test cases with the answer you would accept. Include two or three where it failed before.
+  - After the scores, save the best version as version 1 in a file, with the test cases beside it.
+how_it_works:
+  - title: Rebuild the rough prompt
+    text: Works out what the prompt is for, picks a fitting structure, adds the missing context, format and limits, and returns one clean prompt.
+  - title: Pause, then write your test cases
+    text: You write 10 to 20 cases, each with an answer you would accept. Cases that failed before are the most useful.
+  - title: Score each version on the tests
+    text: Takes a baseline score, changes one thing at a time, and keeps only the changes the scores support.
+  - title: Pause, then save version 1
+    text: You pick the best version and save it in a file with its test cases beside it.
+  - title: Set up versions and safe changes
+    text: Sets where prompts live and how versions are named, a check that runs before each change, a small trial for new versions and a rollback.
+output_shape: |-
+  STEP 1: REBUILT PROMPT
+    The prompt | what was added or cut
+
+  PAUSE
+    You write 10 to 20 test cases
+
+  STEP 2: SCORES
+    Baseline | each version's score | what each change did | best version
+
+  PAUSE
+    You save version 1 with its tests
+
+  STEP 3: VERSION RULES
+    Where prompts live | version names | check before a change | trial | rollback steps
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Where the prompt runs
+    how: Say if it is a chat, a script or a product. Step 3 sets rules that fit, such as a file or a database.
+  - what: How many cases you have
+    how: With under 10 the scores are noisy. Step 2 will say so instead of calling a winner.
+  - what: What counts as a good answer
+    how: Give a rule, such as under 100 words or must cite a source. Scores are then about your rule, not taste.
+judge:
+  - Each test case has an expected answer and was written before the scoring.
+  - The baseline score is shown, and every change is scored against it.
+  - Only one thing changed per version.
+  - The winning version is better on cases that failed before, and no worse on the rest.
+  - The rollback steps name who does what.
+test:
+  - Run the winning prompt on five fresh cases that were not in the set. It should hold up.
+  - Make a small edit that should make no difference. The check should show the score barely moves.
+  - Make a bad edit on purpose. The check should catch it.
+improve:
+  - Add every bad answer you see in real use to the test cases.
+  - Rerun the scores whenever you change the AI model behind the prompt.
+  - Not worth it for a prompt you use once. Do it for prompts that run again and again.

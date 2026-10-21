@@ -1,0 +1,89 @@
+new_slug: launch-an-amazon-product-with-sales-from-day-one
+name: Launch an Amazon product with sales from day one
+summary: Give it product facts and keywords. Get a listing, launch ads, a stock order and a launch week.
+job: sell-on-amazon
+thinking: high
+thinking_why: Five skills run in a row, and the ad and stock steps do money sums. Give it your strongest model.
+headline: Launch an Amazon product with buyers already waiting
+subhead: Give it your product facts, price, unit profit and a keyword export. It picks the phrases buyers really type, writes the listing, plans three launch ad campaigns, sizes your first stock order and plans launch week with a wait list and honest reviews.
+explain: |
+  Most new Amazon products launch cold. The listing uses guessed keywords, the ads burn cash before there are reviews, the stock runs out in week three, and nobody knew the launch was happening. Each of those mistakes costs rank, and rank is hard to win back.
+
+  The steps fix them in order, each one using the last. First it picks true, searched phrases. The listing and the ads are both built from those phrases, so they agree. Then it sets the ad budget from your unit profit, so you only risk what you can lose. It pauses while you place your stock order, because the stock plan needs your maker's lead time and monthly capacity. It pauses again while you send stock in and build a wait list. Then it plans launch day around the live listing, the ads and the stock that arrived.
+when:
+  - You have chosen a private-label product and want the listing, ads, stock and launch plan ready together before you press go.
+  - Your last launch had no early sales, or ran out of stock after a few weeks.
+  - You have at least eight weeks before launch and can post short videos to build a wait list.
+you_give:
+  - Your product facts, benefits and any proof you can show, such as certificates or test numbers
+  - A keyword export from your seed phrases and from two or three rival listings
+  - Your price, unit profit after Amazon fees, and a daily ad budget you can afford to lose
+  - Your maker's lead time and monthly capacity, and your sales plan
+  - Your audience size and launch date (optional)
+you_get:
+  - A keyword shortlist in tiers, with a main phrase, volumes and the phrases you dropped
+  - A listing with title, five bullets, description and backend keywords
+  - Three launch ad campaigns with starting bids, negative keywords and a stop rule
+  - A stock order with a shipment checklist, plus a week-by-week launch plan and review plan
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your keyword export and your unit profit ready before you start. Without unit profit it will not set an ad budget.
+  - After the ads, it stops and asks you to place the stock order. Come back with your maker's lead time and capacity.
+  - After the stock is sent, it stops again. Use that wait to post videos and send samples, then carry on with launch week.
+how_it_works:
+  - title: Pick the keywords
+    text: Filters your export for a new brand, drops phrases that are too broad, a brand name or not true, and ranks the rest in tiers with a main phrase.
+  - title: Write the listing
+    text: Puts the main phrase first in the title, writes five benefit-first bullets from your facts, and fills the backend keywords. It flags health claims.
+  - title: Build launch ads
+    text: Sets a budget from unit profit, then builds an automatic, a keyword and a rival-product campaign, with negatives and a stop rule.
+  - title: Plan the stock
+    text: Pauses for your maker's lead time. Sizes the first order at three to six months of sales and gives a shipment checklist.
+  - title: Plan launch week
+    text: Pauses while stock ships. Then plans the wait list, samples, launch-day email, first-week offer with its cost, and an honest review plan.
+output_shape: |-
+  STEP 1: KEYWORD SHORTLIST
+    Main phrase | secondary phrases | bullet phrases | backend phrases | dropped | phrases for ads
+
+  STEP 2: LISTING
+    Title | five bullets | description | backend keywords | price and launch date check
+
+  STEP 3: LAUNCH ADS
+    Budget from unit profit | three campaigns with bids | negative keywords | stop rule
+
+  STEP 4: STOCK PLAN
+    Order size and re-order point | shipment checklist | tracking sheet | storage watch
+
+  STEP 5: LAUNCH WEEK
+    Fit check | week-by-week plan | launch-day run sheet | offer and its cost | review plan | stock check
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your unit profit
+    how: It caps the ad budget and the launch discount. A thin margin means a very small ad budget until reviews arrive.
+  - what: Your keyword export
+    how: Export rival listings too, not only your seed phrases. A bigger export gives step 1 more true phrases to pick from.
+  - what: Your lead time and capacity
+    how: Ask your maker how many units they can make in a month, not only the minimum order. The stock plan relies on it.
+  - what: Your audience
+    how: With no followers or list, the launch plan leans on ads and a small offer, and tells you to expect less.
+  - what: Your launch date
+    how: Under eight weeks away, you get a short plan. Fixing the date early gives the wait list time to grow.
+judge:
+  - Every phrase in the listing came from the keyword shortlist and is true for your product.
+  - The ad budget is tied to your unit profit, and every broad or phrase keyword has negatives behind it.
+  - The stock order shows how many months of sales it covers and how much cash it ties up.
+  - The launch plan buys no reviews and makes no review a condition of a free sample.
+  - Fee numbers are marked as dated, with a note to check Seller Central.
+test:
+  - Check each bullet against your product facts. Nothing should appear that you did not supply.
+  - Work out the launch discount cost yourself, as units at the discount against your unit profit.
+  - Compare the stock order with your maker's real monthly capacity.
+  - Run step 1 twice on the same export. The main phrase should match even if the wording differs.
+improve:
+  - Save the keyword shortlist in your brand file, so a second product starts at step 2.
+  - Replace the starting bids with Amazon's live suggested bids, since the bids in the skill are old.
+  - After launch, add the search terms that sold to your next keyword export.
+  - Pair it with a fee and margin checker so the unit profit you give is right.

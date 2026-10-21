@@ -1,0 +1,22 @@
+slug: store-brand-signal-auditor
+name: "Store brand signal auditor"
+summary: "Give it your site, emails, pack and ads. Get a score out of 100 for what each says."
+category: ecommerce
+type: skill
+role: check
+job: brand
+level: beginner
+inputs:
+  - {type: store_capture, required: true}
+  - {type: copy_draft, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+minds: [seth-godin]
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "This Is Marketing (book)", by: "Seth Godin (author)", used: "The three-second scan, vernacular, scam and cheapness cues, price fit, flags, brand as expectation, the logo rule and the human voice"}
+  - {title: "Designing Brand Identity (4th edition, Part 1 only)", by: "Alina Wheeler (book)", used: "Keeping touchpoints consistent, the nine brand ideals, coherence checks and moments of truth"}

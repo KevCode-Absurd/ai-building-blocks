@@ -1,0 +1,33 @@
+slug: customer-inbox-triage-and-reply-drafter
+name: "Customer inbox triage and reply drafter"
+summary: "Give it the new customer emails. Get them ranked, with a checked reply to approve for each. It never sends."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: source_text, required: true}
+  - {type: document, required: true}
+  - {type: tool_connection, required: false}
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: spreadsheet}
+  - {type: copy_draft}
+  - {type: plan}
+uses: [support-ticket-sorter, support-inbox-priority-sorter, customer-reply-and-order-checker, customer-question-researcher, customer-reply-drafter, angry-customer-reply-checker, chargeback-evidence-gatherer, solved-ticket-help-page-writer]
+steps:
+  - {uses: support-ticket-sorter, note: "Every run: sorts the new emails by type, ranks them by severity and routes each."}
+  - {uses: support-inbox-priority-sorter, note: "Only for the top-ranked emails: sets P1 to P4 and checks for a duplicate or a known issue."}
+  - {uses: customer-reply-and-order-checker, note: "Only for order status, delivery and refund emails: checks the order and drafts a reply. Refunds only on the owner's yes."}
+  - {uses: customer-question-researcher, note: "Only for how-to and product questions: finds the answer in the owner's own docs and past tickets, with sources."}
+  - {uses: customer-reply-drafter, note: "For every email that has no draft yet: drafts the reply in the right tone."}
+  - {uses: angry-customer-reply-checker, note: "Only for complaints and upset customers: checks the draft against the customer's words and the policy. Fixes and checks again, up to two rounds."}
+  - {uses: chargeback-evidence-gatherer, note: "Only when an email mentions a dispute or chargeback: lists the proof to collect and whether to accept it."}
+  - {uses: solved-ticket-help-page-writer, note: "Only when the same question has come in three times in 30 days: drafts a help article."}
+schedule: "Every weekday morning, and again mid-afternoon if the inbox is busy"
+asks_before: [sending any reply, issuing a refund, replacement or credit, closing or assigning a ticket, publishing a help article, promising a date, an outcome or anything outside the policy, replying to a customer who mentions harm, legal action or a regulator]
+origin: own
+version: 1.0.0
+example_pending: true

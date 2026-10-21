@@ -1,0 +1,81 @@
+new_slug: fix-api-security-gaps-with-tests-and-a-clear-pull-request
+name: Fix API security gaps with tests and a pull request
+summary: Give it your API code. Get gaps fixed, tests for each fix and a reviewed pull request.
+job: secure-code
+thinking: high
+thinking_why: It reads routes, writes fixes and reviews its own change. Give it your strongest model.
+headline: Fix your API's security gaps and send a pull request a reviewer can trust
+subhead: Give it your API code. It checks sign-in, access rules and input on every route, writes a fix for each gap, finds the fixes no test would catch, reviews the whole change and writes the pull request.
+explain: |
+  A security scan hands you a list. Turning that list into a merged fix is the hard part. Fixes go in without tests, so the next edit quietly undoes them. Nobody reviews the fixes for new harm. The pull request says "security fixes" and the reviewer has to guess what changed.
+
+  The steps close that gap. First it checks every route for sign-in, access and input gaps and writes a fix for each. Next it reads those fixes and lists every new behaviour that no test would catch, with the test to add. Then you add the tests and run your suite. After that it reviews the finished change, fixes and tests together, for breakage and new risk. Last it writes the pull request, with the gaps as the story.
+when:
+  - A scan or audit found gaps in your API and you need to merge fixes this week.
+  - You added routes fast and never checked who may call them.
+  - You want the fixes to stay fixed, with tests that fail if someone removes them.
+you_give:
+  - Your API code (a folder or repo the AI can open)
+  - Your test folder, so it can see what is already covered
+  - Who your callers are and how they sign in (optional)
+you_get:
+  - A ranked list of sign-in, access and input gaps, with a fix written for each
+  - A list of the new behaviours no test covers, with test cases to add
+  - A review of the finished change, ranked by how serious each issue is
+  - A pull request description with before and after proof and a note on what else could break
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Point it at the API folder and the tests. Use a test copy, not production data.
+  - After step 2, add the tests and run your suite before you continue.
+how_it_works:
+  - title: Check the routes and write the fixes
+    text: Lists each route and who may call it, checks sign-in, access rules and input handling, ranks the gaps and writes a fix for each.
+  - title: Find the fixes no test would catch
+    text: Reads the fixes from step 1, searches your tests for one that would fail if each fix broke, and writes a test case for every gap.
+  - title: Add the tests and run them
+    text: This one is yours. Add the proposed tests, run the whole suite and fix any failure before the review.
+  - title: Review the whole change
+    text: Reads the fixes and the new tests together for breaking changes, wider impact and new security slips, and ranks the findings.
+  - title: Write the pull request
+    text: Sums up the change, shows before and after evidence, says whether the merge can be undone and what else it could touch.
+output_shape: |-
+  STEP 1: API SECURITY GAPS
+    Routes and callers | ranked gaps | a fix for each
+
+  STEP 2: TEST GAPS
+    Behaviours covered, not covered, unknown | test cases for the gaps
+
+  YOUR STEP: add the tests, run the suite
+
+  STEP 3: CHANGE REVIEW
+    Issues ranked by severity | review comments
+
+  STEP 4: PULL REQUEST
+    Summary | before and after evidence | can it be undone | what else it could touch
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your sign-in set up
+    how: Say which identity provider or session library you use. The fixes then keep it instead of adding a second system.
+  - what: Your test framework
+    how: Name it in step 2 so the proposed tests match your style and run in your suite.
+  - what: How strict the review is
+    how: Tell step 3 which routes touch money or personal data, so it ranks those issues first.
+  - what: Fix scope
+    how: If you want only the top three gaps fixed now, say so in step 1. The rest stay on the list.
+judge:
+  - Every gap names a route and a way someone could use it, not a general warning.
+  - Each fix keeps your existing sign-in and data model.
+  - Each new behaviour has a test, or is marked not covered with a test case to add.
+  - The review looks at the fixes and the tests together, not at the fixes alone.
+  - The pull request says honestly what could still break.
+test:
+  - Take one fix and undo it by hand. A test should fail. If none does, step 2 missed a gap.
+  - Call one fixed route as a user who should be refused. It should refuse.
+  - Read the pull request as a reviewer who has not seen the audit. Can you tell what changed and why?
+improve:
+  - Keep the gap list and add each new route to it before it ships.
+  - Run step 1 again after every large change to the routes.
+  - Add a failing test for each gap you find later, before you fix it.

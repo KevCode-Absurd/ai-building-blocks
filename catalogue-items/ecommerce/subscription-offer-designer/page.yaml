@@ -1,0 +1,123 @@
+new_slug: subscription-offer-designer
+name: "Subscription offer designer"
+summary: "Give it price, margin and cash. Get a subscription offer and your max CAC."
+job: make-offer
+thinking: high
+thinking_why: "It balances cash, margin and offer design across several steps, so a stronger model avoids unsafe suggestions."
+
+headline: "Subscription offer designer"
+subhead: Give it your price, margin, shipping by pack size and the cash you can wait on. It builds a subscription offer with a first-order discount, a smaller recurring one, bulk tiers, gifts and a prepaid long plan, and works out the most you can pay to win a subscriber.
+
+explain: |
+  A flat "save 15% when you subscribe" gives nobody a reason to subscribe today. The brands that win subscribers build a set of benefits instead: a bigger cut on the first order, a small one for life, a bulk ladder, gifts that help the customer use the product, and sometimes a prepaid plan. The reward is that a subscriber is worth more over time, so you can afford to pay more to win one. The cost is that you often lose money on order one.
+
+  This skill checks the case with your own numbers first, then checks cash, because many small brands run out of cash on this play. It then designs the offer, models margin on order one and from month two separately, and gives you a maximum CAC from lifetime value. It lists every place the offer must appear so nothing contradicts it, and a plan to test it. It only suits products people use up and reorder.
+
+when:
+  - You sell something people use up and reorder, and want a subscription offer that wins first-order subscribers.
+  - You want to move from a flat subscribe discount to a real offer with gifts, bulk tiers or a prepaid plan.
+  - You want to know how much you can spend to win a subscriber, and how much cash you need to fund it.
+
+you_give:
+  - Price, product cost, landed cost and shipping by pack size
+  - How long one unit lasts and how long buyers need to see a result
+  - Your reorder rate, and the month-6 value of subscribers against one-time buyers if you have it
+  - Cash available and how many months you can wait for payback
+  - Your current subscribe discount, take rate and CAC, and ideas for low-cost gifts (optional)
+you_get:
+  - "An offer sheet: first-order discount, recurring discount, bulk tiers and gifts with cost and shown value"
+  - A three-option product page layout, and cadence and quantity rules
+  - Maximum CAC from lifetime value, the first-order loss and the cash needed for 90 days
+  - A test plan, and every place the offer must be said
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your price, margin, shipping by pack size, how long a unit lasts and your cash position.
+  - Add subscriber and one-time value at month 3 and 6 if you have it. If not, say so.
+  - Read the cash check first. If you cannot fund about 90 days of loss, take the bundle route it suggests.
+  - Run the offer as a test with a holdout and come back after 90 to 120 days.
+
+how_it_works:
+  - title: Make the case with your numbers
+    text: Compares subscribers and one-time buyers on your own data, and says when it is only a reason to test.
+  - title: Check cash first
+    text: Works out the first-order loss and the cash needed, and stops you if you cannot fund about 90 days.
+  - title: Check product fit
+    text: Daily-use products keep subscribers. As-needed ones see more skips and cancels.
+  - title: Shape the discount
+    text: Front-loads a bigger first-order cut with a small recurring one, and prefers a bulk ladder to a flat percent.
+  - title: Add value, not only discount
+    text: Builds a gift kit and a long plan, and sets the quantity limits that match how fast the product is used.
+  - title: Model the margin
+    text: Checks first-order margin and month-2 margin separately before launch.
+  - title: Set the CAC ceiling
+    text: Uses lifetime value to give the most you can pay to win a subscriber.
+  - title: Plan the test
+    text: Measures take rate, then value and repeat orders at months 3 and 6 before calling it a win.
+
+output_shape: |
+  THE CASE  subscriber <$> vs one-time <$> at month <n> | source <your data / example only>
+  FIT  <daily use / as needed> | cash check <pass / fail: need $ for 90 days>
+
+  OFFER SHEET
+  first order <% off> | recurring <% off> | bulk ladder <1 / 2 / 3 packs: $ / $ / $>
+  long plan <90 days, price $, per month $> | gifts <item, cost, shown value>
+  one-time purchase: full price, shown small
+
+  PRODUCT PAGE  3 options: <subscribe short> / <subscribe long, headlined> / <one-time>
+  CADENCE  <units per cycle> | cap <max per cadence>
+  MARGIN  order one <$ and %> | month 2 on <$ and %>
+  MAX CAC  <$> at <ratio> | first-order loss <$> | cash for 90 days <$>
+
+  WHERE IT APPEARS  page, pop-up, cart, emails, billing reminder, ads
+  TEST  <what> | holdout <%> | read at 90 to 120 days
+  MISSING: <margin | cash | value by month | shipping>
+
+tweaks:
+  - what: Cash
+    how: Give the cash you can fund for 90 days. If it is thin, the skill moves to offers that stay profitable on order one.
+  - what: Your subscriber data
+    how: Give month-3 and month-6 value for subscribers and one-time buyers. The max CAC is only as good as these.
+  - what: How fast the product is used
+    how: Give the days one unit lasts. Cadence, pack size and limits depend on it.
+  - what: Gifts
+    how: List items with landed cost under $5 to $10. Gifts are cheaper than a deeper discount.
+
+judge:
+  - It checks cash before it designs anything.
+  - The discount is front-loaded, with a bigger first-order cut and a small recurring one.
+  - The offer is a set of benefits, not only a percentage.
+  - Order one and month two margins are shown separately.
+  - Source numbers are labelled as examples, not used as your targets.
+
+test:
+  - Work out the first-order loss by hand with its CAC and first-order gross profit. It should match the skill.
+  - Remove your cash figure. The skill should mark cash as missing and not assume you can fund it.
+  - Compare the max CAC with what you pay today. If today's CAC is above it, the skill should say so.
+  - Run the offer on a holdout. After 90 to 120 days, survey subscribers on which part of the offer decided them.
+
+improve:
+  - Add your real cohort values to your brand file so the case uses your data.
+  - Add your gift list with landed cost and the value you show.
+  - Add your subscription app's limits, such as whether it can send a gift at a set order number.
+  - Pair it with the subscription payback checker and a skill that handles cancellations.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its customer and order reports can show first-order subscribers against one-time buyers."}
+    - {name: "Recharge", why: "A Shopify subscription app that supports plans, gifts at set order counts and cohort reports."}
+    - {name: "Klaviyo", why: "Email and SMS flows that repeat the offer and the gift in the billing reminder."}
+  inputs:
+    - "Month-3 and month-6 value for subscribers and one-time buyers"
+    - "Your subscription app's list of what it can do"
+    - "Survey answers on what convinced subscribers"
+
+terms:
+  - term: Front-loaded discount
+    meaning: A bigger discount on the first order and a smaller one on every order after.
+  - term: Landed cost
+    meaning: What an item costs you once it is in your hands, with freight and duty included.
+  - term: Cadence
+    meaning: How often the subscription ships.
+  - term: Prepaid plan
+    meaning: A plan where the customer pays for several months in one payment.

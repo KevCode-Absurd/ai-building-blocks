@@ -84,6 +84,28 @@ function useIdlePrefetch() {
 const byName = new Intl.Collator("en");
 const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "quote-video-ad-script", "meta-ads-compliance-checker"];
 const PAGE = 12;
+// Scrolling near the end of the list loads the next cards on its own, a few at a time, up to AUTO_UNTIL.
+// After that the button stays, so the page footer can still be reached.
+const AUTO_UNTIL = 120;
+function MoreOnScroll({ left, limit, onMore }: { left: number; limit: number; onMore: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || limit >= AUTO_UNTIL || typeof IntersectionObserver === "undefined") return;
+    // Only below the screen, and only once scrolling has settled there: a jump to a section further down passes
+    // the end of the list without loading more, so the place it lands on doesn't move.
+    let near = false;
+    let timer = 0;
+    const io = new IntersectionObserver((e) => {
+      near = e.some((x) => x.isIntersecting);
+      clearTimeout(timer);
+      if (near) timer = window.setTimeout(() => { if (near) onMore(); }, 300);
+    }, { rootMargin: "0px 0px 600px 0px" });
+    io.observe(el);
+    return () => { io.disconnect(); clearTimeout(timer); };
+  }, [limit, onMore]);
+  return <div className="more" ref={ref}><button className="btn btn-dark" onClick={onMore}>Show {Math.min(24, left)} more</button></div>;
+}
 const KIND_PATHS: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [k.path, k.id]));
 
 function Header({ onKits }: { onKits: () => void }) {
@@ -270,7 +292,7 @@ function Library({ c }: { c: Catalogue }) {
       {results.length ? (
         <>
           <div className="grid">{results.slice(0, limit).map((b) => <BlockCard key={b.slug} b={b} />)}</div>
-          {results.length > limit && <div className="more"><button className="btn btn-dark" onClick={() => setLimit(limit + 24)}>Show {Math.min(24, results.length - limit)} more</button></div>}
+          {results.length > limit && <MoreOnScroll left={results.length - limit} limit={limit} onMore={() => setLimit((n) => n + 24)} />}
         </>
       ) : (
         <div className="empty"><h3 className="h3">Nothing matches that yet</h3><p>Try fewer words, or <button className="link-btn" onClick={clear}>clear all</button>.</p></div>

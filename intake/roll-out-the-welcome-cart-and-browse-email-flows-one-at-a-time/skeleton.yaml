@@ -1,0 +1,59 @@
+# Workflow skeleton chaining skills already in the AI Blocks library (docs/INTAKE.md).
+id: roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time
+  name: "Roll out the welcome, cart and browse email flows one at a time"
+  summary: "Give it your store setup and offer. Get a safe sending setup, three live flows and the gaps left."
+  when: "you are setting up email for a store, or your flows are thin and you want the main ones live."
+  job: write-emails
+  level: intermediate
+steps:
+  - name: "Email setup health checker"
+    skill: email-setup-health-checker
+    job: email
+    from: "library"
+    method: ["Sending domain", "DMARC", "Smart sending", "Attribution", "Tracking and UTM", "Opt-in, lists and pages"]
+    inputs: [document, store_capture!]
+    outputs: [audit_report]
+    note: "Scores the sending setup first, so the fixes come before any flow goes out."
+  - pause: "Fix the red items from the setup check (sending domain, DMARC, tracking) before building the first flow."
+  - name: "Welcome flow builder"
+    skill: welcome-flow-builder
+    job: email
+    from: "library"
+    method: ["Check the ground", "Set the trigger and filters", "Time it", "Write email 1 (the offer)", "Write email 1B (plain text, founder)", "Outline the rest, one job each"]
+    inputs: [brand_brain, offer, product_data!]
+    outputs: [email_flow]
+    note: "Builds the first flow on a setup that is safe to send from."
+  - pause: "Build the welcome flow in your email tool and switch it on."
+  - name: "Cart recovery flow builder"
+    skill: cart-recovery-flow-builder
+    job: email
+    from: "library"
+    method: ["Check the trigger", "Add the added-to-cart event if missing", "Build two flows with the same emails and different triggers", "Use the right product block in each flow", "Set the delays", "Order the emails"]
+    inputs: [product_data, brand_brain!, offer!]
+    outputs: [email_flow]
+    note: "Adds cart recovery in the same voice and offer rules as the welcome flow. This skill does not take the welcome flow as an input, so paste in the welcome flow's offer, code rule and voice lines."
+  - pause: "Build the cart flow in your email tool and switch it on."
+  - name: "Browse abandonment flow builder"
+    skill: browse-abandonment-flow-builder
+    job: email
+    from: "library"
+    method: ["Site abandon (one email)", "Browse abandon filters", "Time it", "Email 1: a plain reminder", "Email 2: remove doubt", "Email 3: proof, or a margin-safe push"]
+    inputs: [product_data, brand_brain!, offer!]
+    outputs: [email_flow]
+    note: "Adds browse recovery so it does not collide with the cart emails. This skill does not take the welcome flow as an input, so paste in the welcome offer and voice lines, and the cart exit rules."
+  - pause: "Build the browse flow in your email tool and switch it on."
+  - name: "Email flow gap checker"
+    skill: email-flow-gap-checker
+    job: email
+    from: "library"
+    method: ["Core flows", "Triggers and filters", "Timing and length", "Discount and urgency rules", "Settings", "Rank the gaps"]
+    inputs: [email_flow, performance_sheet!]
+    outputs: [audit_report]
+    note: "Checks the flows you built for gaps and overlaps, and ranks what to add next."

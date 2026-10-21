@@ -1,6 +1,6 @@
 # Build and ship software: AI Blocks
 
-> 310 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 313 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D image viewer builder](https://useaiblocks.com/skills/3d-image-viewer-builder): Give it a 3D scan or mesh. Get a viewer with slices, overlays and marked regions.
 - [5G waveform generator](https://useaiblocks.com/skills/5g-waveform-generator): Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
@@ -42,6 +42,7 @@
 - [Bluetooth network simulator](https://useaiblocks.com/skills/bluetooth-network-simulator): Describe your devices and links. Get a system-level Bluetooth network run with results.
 - [Breaking change reviewer](https://useaiblocks.com/skills/breaking-change-reviewer): Paste a change you plan to ship. Get a safety score, who it breaks, what to keep and a safer rollout.
 - [Bug report writer](https://useaiblocks.com/skills/bug-report-writer): Paste error logs, notes or a screenshot. Get a clear GitHub issue with steps to repeat, impact and proof.
+- [Build a paid app with billing, emails, alerts and tests](https://useaiblocks.com/workflows/build-a-paid-app-with-billing-emails-alerts-and-tests): Give it your app idea. Get a starter with sign-in, billing, emails, alerts and tests.
 - [Business model code designer](https://useaiblocks.com/skills/business-model-code-designer): Describe your business rules. Get areas, shared terms and clusters of data that map to your code. Uses domain-driven design.
 - [C++ network code helper](https://useaiblocks.com/skills/c-network-code-helper): Describe the networking job. Get safe Boost.Asio code for servers, clients, timers and secure connections.
 - [Camera image fixer](https://useaiblocks.com/skills/camera-image-fixer): Say what looks wrong in your camera picture. Get settings and steps that improve it.
@@ -302,6 +303,8 @@
 - [Training loop tidier](https://useaiblocks.com/skills/training-loop-tidier): Give it a messy training script. Get a clean one with checkpoints, logging and multi-GPU support built in.
 - [Transactional email builder](https://useaiblocks.com/skills/transactional-email-builder): Say which emails your app sends. Get coded templates, a sending setup, preview and dark mode.
 - [Triggered radio capture helper](https://useaiblocks.com/skills/triggered-radio-capture-helper): Say which signal to catch. Get a radio that records only when it appears.
+- [Turn a spec into a tested service with API docs](https://useaiblocks.com/workflows/turn-a-spec-into-a-tested-service-with-api-docs): Give it a spec. Get a project, a working service, route tests and an API spec.
+- [Turn an idea into a spec, tickets and tested code](https://useaiblocks.com/workflows/turn-an-idea-into-a-spec-tickets-and-tested-code): Give it a feature idea. Get a spec, small tickets, built code, test gaps and a pull request.
 - [TypeScript module guard setter](https://useaiblocks.com/skills/typescript-module-guard-setter): Point it at a TypeScript repo. Get dependency-cruiser set up so each package is reached only through its front door.
 - [USRP radio setup helper](https://useaiblocks.com/skills/usrp-radio-setup-helper): Name your USRP model. Get it connected, set up and verified for use in MATLAB.
 - [Vehicle log data converter](https://useaiblocks.com/skills/vehicle-log-data-converter): Give it MDF, BLF or CAN log files. Get signals decoded and written to the format you need.

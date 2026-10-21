@@ -1,0 +1,20 @@
+slug: creative-portfolio-mix-planner
+name: "Creative portfolio mix planner"
+summary: "Give it your live ads. Get a target mix across sources, stages and formats."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The best Facebook ad creative strategy for 2027", by: "Agency owner (name not given in the video)", used: "The one-third split by source, 10 to 15 distinct formats, stage layout and the move away from variants of a winner"}
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead with about 8 years on Meta (name not given in the video)", used: "The pain versus desire ratio and the production mix"}

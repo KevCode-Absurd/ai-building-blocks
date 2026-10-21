@@ -1,0 +1,130 @@
+new_slug: speed-budget-and-sale-check
+name: "Speed budget and sale check"
+summary: "Give it your store and sale date. Get a speed budget, test routine and pre-sale checklist."
+job: speed-up-store
+thinking: medium
+thinking_why: "It builds a plan from your numbers and dates. A mid-size model does this well with clear inputs."
+
+headline: "Speed budget and sale check"
+subhead: "Give it your current speed results, your sale date and who can change the theme and apps. It sets a speed budget, a monthly and after-change test routine, a pre-sale checklist with an app freeze, and a plan if traffic overloads the site."
+
+explain: |
+  A store gets slow a little at a time. Someone adds an app, someone uploads a big banner, someone edits the theme, and nobody checks. Then a big sale arrives and the site that was fine in a quiet week crawls under the crowd.
+
+  This skill sets limits before that happens: a maximum page weight, a minimum mobile score and a cap on outside scripts. Any change that breaks a limit gets reviewed first. It builds a routine to test every month and after every app or theme change, covering the pages that earn money, including cart and checkout. Before a sale it adds a checklist: ask your platform about peak load, test add to cart and login, freeze apps and theme edits two weeks out, and recheck after. Big-spike tools such as waiting rooms are only for stores that really get a crowd at once.
+
+when:
+  - "Before Black Friday, a launch or a big ad push."
+  - "After a speed cleanup, to stop it creeping back."
+  - "You add apps or content often."
+
+you_give:
+  - "Your current speed results and page weights"
+  - "The sale date, the traffic you expect, and your platform and plan"
+  - "Who can change the theme and apps"
+
+you_get:
+  - "A speed budget: maximum page weight, minimum scores, maximum outside scripts"
+  - "A monthly and after-change testing routine"
+  - "A pre-sale checklist, with an app freeze date"
+  - "A plan for what to do if traffic overloads the site"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your latest speed results for the homepage, top product pages, main collection, cart and checkout."
+  - "Say the sale date, the traffic you expect, your platform and plan, and who can edit the theme and apps."
+  - "Put the budget where everyone who changes the store can see it."
+  - "Run the checklist from three weeks out, and freeze apps and theme changes two weeks before."
+
+how_it_works:
+  - title: Writes the budget
+    text: Sets a page weight limit, a minimum mobile score and a cap on outside scripts, based on your current results.
+  - title: Sets the routine
+    text: Tests monthly, and straight after an app install, a theme change or a site-wide edit, with a three-run average and a dated log.
+  - title: Chooses the pages
+    text: Tests the homepage, top product pages, main collection, cart and checkout, not only the homepage.
+  - title: Prepares for the sale
+    text: Runs a speed audit and asks the platform or host about memory, bandwidth and peak load.
+  - title: Tests the flows
+    text: Checks add to cart, search and login, since slowdowns at peak show up there more than as a crash.
+  - title: Plans for a crowd
+    text: For stores with real spikes, considers a virtual waiting room. Small stores skip it.
+  - title: Keeps checkout light
+    text: Tests checkout on mobile separately and reviews its payment, address and fraud scripts.
+  - title: Freezes changes
+    text: No new apps or theme edits for two weeks before the event, then a recheck of mobile real-user data after.
+
+output_shape: |
+  SPEED BUDGET AND SALE PLAN  <store>, sale on <date>
+  Current: mobile <score>, page weight <MB>, outside scripts <n>
+
+  SPEED BUDGET
+  Max page weight: <MB> | Min mobile score: <n> | Max outside scripts: <n>
+  Rule: any change that breaks a limit is reviewed before approval.
+
+  TEST ROUTINE
+  Monthly and after every app, theme or site-wide change: <pages, three runs, dated log>
+
+  PRE-SALE CHECKLIST
+  <weeks out>: <task> | owner <name>
+  Ask the platform: <peak load, memory, bandwidth questions>
+  Test: <add to cart, search, login, checkout on mobile>
+  Freeze: <date>
+
+  IF TRAFFIC OVERLOADS THE SITE
+  <steps, waiting room only if your spike is real>
+
+  AFTER THE SALE
+  <recheck mobile field data, log results>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what>
+
+tweaks:
+  - what: Sale size
+    how: Say how many visitors you expect at once. Thousands at once may need a waiting room; most stores just need the budget and the freeze.
+  - what: Your platform and plan
+    how: The questions to ask your platform depend on the plan. Name it so the checklist matches.
+  - what: Who edits the store
+    how: List everyone who can install apps or edit the theme. The budget rule only works if they all know it.
+  - what: Page weights
+    how: Give actual page weights. The skill sets the limit from your own numbers and does not invent one.
+
+judge:
+  - "The budget has all three limits, set from your own results."
+  - "The test routine covers cart and checkout, not only the homepage."
+  - "The app freeze is dated two weeks before the event."
+  - "Waiting rooms and load tests are marked optional for stores with real spikes."
+  - "Vendor figures are labelled as vendor figures."
+  - "Add to cart, search and login are tested, not only page views."
+
+test:
+  - "Give it a store with a sale in three weeks. The checklist should start with the audit and end with the freeze."
+  - "Tell it you get 500 visits a day. It should leave out the waiting room."
+  - "Check the budget limits against your last three test results. They should be set from them."
+  - "Run it twice. The budget numbers should match."
+
+improve:
+  - "Write your store's real limits into the skill so every sale starts from them."
+  - "Add the people and roles who approve changes, and name who can say 'this breaks the budget'."
+  - "Save each sale's results in your brand file, then use them to set the next sale's limits."
+  - "Pair it with the app script auditor and the speed fix ranker."
+
+works_best_with:
+  tools:
+    - {name: "Google PageSpeed Insights", why: "Gives the scores and page weights to set limits from."}
+    - {name: "Shopify online store speed report", why: "Tracks your store's speed score over time."}
+    - {name: "Google Search Console", why: "Shows real-user results after the sale."}
+  inputs:
+    - "Your last three months of speed test results"
+    - "Expected sale traffic, from last year's sale or your ad spend"
+    - "The list of apps and who installed them"
+    - "Your platform plan and contact for questions about load"
+
+terms:
+  - term: Speed budget
+    meaning: A written set of limits for page weight, mobile score and outside scripts that any change must stay inside.
+  - term: App freeze
+    meaning: A pause on new apps and theme changes before an event, so nothing new can break the store.
+  - term: Virtual waiting room
+    meaning: A queue that holds visitors briefly when too many arrive at once, so the site stays up.

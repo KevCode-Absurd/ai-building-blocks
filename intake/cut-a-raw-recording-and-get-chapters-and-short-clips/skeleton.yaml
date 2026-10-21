@@ -1,0 +1,51 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md).
+id: cut-a-raw-recording-and-get-chapters-and-short-clips
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: cut-a-raw-recording-and-get-chapters-and-short-clips
+  name: "Cut a raw recording and get chapters and short clips"
+  summary: "Give it a raw recording. Get clean speech, a timed cut list, video chapters and the best five short clips."
+  when: "you recorded a talk, podcast or lesson and need it tightened and published in pieces."
+  job: work-with-audio
+  level: intermediate
+steps:
+  - name: "Noisy audio cleaner"
+    skill: noisy-audio-cleaner
+    job: ops
+    from: "skill: noisy-audio-cleaner"
+    method: ["Send the recording to the voice isolation tool", "Remove background noise and music", "Save the clean speech file", "Listen for damage to the voice"]
+    inputs: [audio]
+    outputs: [audio]
+    note: "Gives you clean speech to work from."
+  - name: "Subtitle and transcript maker"
+    skill: subtitle-and-transcript-maker
+    job: ops
+    from: "skill: subtitle-and-transcript-maker"
+    method: ["Transcribe the clean audio", "Label who spoke", "Keep word timing", "Export subtitles and a transcript"]
+    inputs: [audio]
+    outputs: [transcript]
+    note: "Writes a timed transcript of the clean audio. Reads the audio from the step before."
+  - name: "Dead air and retake cutter"
+    skill: dead-air-and-retake-cutter
+    job: ops
+    from: "skill: dead-air-and-retake-cutter"
+    method: ["Find gaps longer than a set floor", "Find filler lines such as um", "Find restarted sentences", "List each cut with a timecode and the time saved"]
+    inputs: [transcript]
+    outputs: [edit_plan]
+    note: "Lists every cut with timecodes. Reads the timed transcript from the step before."
+  - name: "YouTube chapter writer"
+    skill: youtube-chapter-writer
+    job: ops
+    from: "skill: youtube-chapter-writer"
+    method: ["Find section boundaries from the pauses and topic shifts", "Check the list starts at 00:00 and has at least three chapters of ten seconds", "Retitle each chapter as a promise in three to five words"]
+    inputs: [transcript]
+    outputs: [copy_draft]
+    note: "Writes the chapter list from the same transcript."
+  - name: "Shorts clip finder"
+    skill: shorts-clip-finder
+    job: ops
+    from: "skill: shorts-clip-finder"
+    method: ["Find 20 to 55 second spans that open on a full thought", "Keep spans with a turn in them that end on a line", "Rank the top five", "Write a new first line, on-screen text and a loop point for each"]
+    inputs: [transcript]
+    outputs: [shot_list]
+    note: "Picks five clips from the transcript and rewrites each opening."

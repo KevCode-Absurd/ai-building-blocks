@@ -1,0 +1,84 @@
+new_slug: interview-customers-and-map-what-they-hire-you-to-do
+name: Interview customers and map what they hire you to do
+summary: Give it your idea. Get interview questions, then a buyer profile, their jobs and their path.
+job: understand-customers
+thinking: medium
+thinking_why: It runs four skills in a row, but each one is a clear job. A mid-size model is enough, and the analysis step is the one to check.
+headline: Learn what customers hire you to do, from their own words
+subhead: Give it your idea. It writes interview questions that get honest answers. After your talks, it turns your notes into a buyer profile, the jobs they hire you for, and a map of each step they take and where it hurts.
+explain: |
+  Most customer talks go wrong in the same way. You pitch your idea, people are polite, and you leave with compliments instead of facts. Then the notes sit in a document and nothing changes.
+
+  The steps fix both ends. First it writes questions about what people did in the past, not what they might do, with a way to spot polite answers and a plan for finding people to ask. You then have five to ten real conversations and bring back your notes. It pulls out the pains, triggers and exact words, and builds a buyer profile from them. Then it writes the jobs that buyer hires you for, practical, emotional and social. Last it maps the steps they take, with the friction at each one.
+when:
+  - You have an idea or a product and have not yet heard from the people you built it for.
+  - You have talked to customers before but came away with compliments and no clear change to make.
+  - You need a buyer profile and a path map built on what people said, not what you guessed.
+you_give:
+  - Your idea or product, and who you think it is for
+  - Notes or transcripts from five to ten customer talks (you bring these back after the talks)
+  - The goal your buyer is trying to reach (optional)
+you_get:
+  - Interview questions, a way to spot polite answers and a plan for finding people to talk to
+  - A buyer profile with their pains, triggers and exact words
+  - The practical, emotional and social jobs they hire you for, and what else they could hire
+  - A map of each step they take, with feelings, friction and fixes in order
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your idea and who you could reach for talks. Step 1 stops with your questions and plan.
+  - Hold five to ten conversations. Write notes straight after each one, in the words people used.
+  - Come back to the same chat and paste all the notes. Steps 2 to 4 run on them.
+how_it_works:
+  - title: Write the interview questions
+    text: Turns your idea into questions about past behaviour, adds ways to spot polite answers and ends each talk with a real next step.
+  - title: Have the conversations
+    text: This step is yours. Talk to five to ten people and write notes after each one, keeping the exact words.
+  - title: Find patterns in your notes
+    text: Pulls the jobs, pains, triggers and wanted results from each talk, groups what repeats, and writes a buyer profile that rests on quotes.
+  - title: Map the jobs they hire you for
+    text: Writes the before and after the buyer wants, splits the job into practical, emotional and social sides, and names the trigger and the other things they could hire.
+  - title: Map the path they take
+    text: Lists each step with touchpoints, feelings and friction, and ranks the fixes.
+output_shape: |-
+  STEP 1: INTERVIEW QUESTIONS
+    Questions | polite-answer traps | who to find | note template
+
+  (YOU: HAVE THE TALKS AND BRING YOUR NOTES BACK)
+
+  STEP 2: BUYER PROFILE AND QUOTES
+    Patterns | jobs, pains, triggers | exact quotes | buyer profile
+
+  STEP 3: JOBS THEY HIRE YOU FOR
+    Before and after | practical, emotional, social jobs | trigger | rivals | success in their words
+
+  STEP 4: PATH MAP
+    Steps | touchpoints | feelings | friction | fixes in order
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who you talk to
+    how: Talk to people who did the thing in the last few months, not people who might. Step 1 tells you how to find them. Fresh memories give better facts.
+  - what: How you keep notes
+    how: Write what was said, not what you think it meant. Keep the exact words. Step 2 builds the profile from quotes, so paraphrased notes give a weaker one.
+  - what: How many talks
+    how: Five is the least that shows a pattern. If the first five disagree, do five more before you trust the profile.
+  - what: The goal you name for step 4
+    how: Name one goal, such as "get a first result" or "pick a supplier". The path map is for one goal at a time.
+judge:
+  - Every interview question asks about something the person did, not what they would do.
+  - Each pain and job in the profile has a quote behind it, and the quote is in your notes.
+  - The three sides of the job (practical, emotional, social) are written as different things.
+  - The path map shows at least one step where the buyer feels worse, with a fix for it.
+  - Nothing in the profile came from the model rather than your notes.
+test:
+  - Check three quotes in the profile against your notes. Each should be there word for word.
+  - Ask a friend who knows your buyer to read the profile. They should say "that is them" without a question.
+  - Run the questions in step 1 on one real person first. If they start praising your idea, rewrite that question.
+  - Change one job from the job map into a sentence for your page. See if a stranger can say who it is for.
+improve:
+  - After each batch of talks, add the new notes to the same file and run step 2 again. The profile should move.
+  - Save the buyer profile in your brand file so other skills start from it.
+  - Add your own bad-question examples to step 1, so it avoids the traps you fall into.
+  - Pair it with the Customer buying reasons finder when you also have reviews or support emails.

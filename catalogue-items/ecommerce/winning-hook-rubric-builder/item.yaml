@@ -1,0 +1,21 @@
+slug: winning-hook-rubric-builder
+name: "Winning hook rubric builder"
+summary: "Paste your top ads and a rival's. Get a hook rubric from the winners and your drafts graded."
+category: ecommerce
+type: skill
+role: compress
+job: ads
+level: advanced
+inputs:
+  - {type: transcript, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: hooks, required: false}
+outputs:
+  - {type: ad_style_dna}
+  - {type: hooks}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Claude + Sandcastles = Irresistible Hooks", by: "Callaway, short-form video creator (video demo of his own tool)", used: "Pulling the top videos, splitting winners from losers at a break point, dropping boosted posts, building a rubric, then grading and rewriting new hooks against it"}

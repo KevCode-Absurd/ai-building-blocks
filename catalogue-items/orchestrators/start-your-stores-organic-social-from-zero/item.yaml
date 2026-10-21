@@ -1,0 +1,26 @@
+slug: start-your-stores-organic-social-from-zero
+name: "Start your store's organic social from zero"
+summary: "Give it your accounts and product. Get a setup fix list, formats and hooks to film, and a read on what works."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: organic
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: true}
+  - {type: persona, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: test_report}
+  - {type: plan}
+uses: [brand-social-account-checker, short-video-format-picker, video-hook-scorer, organic-format-tester]
+steps:
+  - {uses: brand-social-account-checker, note: "Starts with the account setup, because a wrong setup caps reach."}
+  - {uses: short-video-format-picker, note: "Chooses formats and hooks for the focus you set after the account check."}
+  - {uses: video-hook-scorer, note: "Scores the hooks from the format picker before you film."}
+  - {uses: organic-format-tester, note: "Reads which of the formats you picked earned views and sets the next round."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/start-your-stores-organic-social-from-zero/skeleton.yaml

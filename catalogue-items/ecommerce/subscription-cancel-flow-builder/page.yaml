@@ -1,0 +1,133 @@
+new_slug: subscription-cancel-flow-builder
+name: "Subscription cancel flow builder"
+summary: "Give it your cancel reasons and portal options. Get a cancel flow with one save per reason and a failed-payment plan."
+job: keep-customers
+thinking: high
+thinking_why: "It balances margin, timing and legal limits across many branches, so a stronger model makes fewer mistakes."
+
+headline: "Subscription cancel flow builder"
+subhead: Give it the reasons customers cancel, what your subscription portal can do and your margin room. It builds a cancel flow with one save per reason, delay and skip rules, post-cancel and win-back emails, a failed-payment plan by payment type, and a save-rate tracking sheet.
+
+explain: |
+  Subscribers leave for a handful of reasons, and most of them can be solved: too much product, a short break, a different product, price. A good cancel flow asks why and offers the one fix that fits. It also stays honest. Cancelling must stay easy to find and finish, with no hidden button and no maze, and you follow the cancel rules where you sell.
+
+  This skill is for stores that sell consumables on repeat. It opens with a founder message and a nudge to delay, branches by reason, caps the discount, and tracks save rate per reason. It also covers what happens after the cancel: plain-text emails, a win-back 30 to 60 days later, and a separate plan for failed payments, which can quietly cost a store 5 to 10% of its subscription revenue. Sources give different advice in places, so the skill shows both with their conditions.
+
+when:
+  - You have a subscription portal such as Skio or Recharge and your save rate is under 10 or 15 percent.
+  - Customers cancel because they have too much product, and you only offer a discount.
+  - You lose subscribers when a card fails and have no flow for it.
+
+you_give:
+  - The reasons customers give today, or a survey
+  - "What your portal can do: skip, delay, swap product, change frequency, discount, loyalty points"
+  - Your subscription orders with frequency, quantity and use rate per product (optional)
+  - Your margin room for a save discount
+  - A founder video or message, and failed-payment data (optional)
+you_get:
+  - "A cancel flow map: start screen, reason question, one action for each reason"
+  - Offer copy for each branch, and skip and delay settings
+  - A proactive pause email, post-cancel emails, and a win-back test plan
+  - A failed-payment flow for each payment type, and a tracking sheet for save rate by reason
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your cancel reasons and tell it what your portal can and cannot do.
+  - Give your margin room, such as the biggest discount you can afford on an order.
+  - Check the flow for a visible way to cancel at every step, then build it in your portal.
+  - Track save rate per reason and repeat orders after a save, and fix the reason with the most cancels first.
+
+how_it_works:
+  - title: Sets the ground rule
+    text: Cancelling stays easy to find and finish. No hidden button, and you follow the rules where you sell.
+  - title: Builds the start screen
+    text: A one-minute founder video or message that nudges to delay instead of cancel. Shows loyalty points that would be lost.
+  - title: Asks why, then branches
+    text: Six or seven reasons plus Other, with one save for each. The least-picked reasons are swapped out every month.
+  - title: Prices the save
+    text: Prefers a bigger discount on this order to a gift, within a cap, and measures repeat orders after the save.
+  - title: Sets delay and frequency
+    text: Offers skip, delay for up to 30 days, and easy frequency changes. Avoids open-ended pauses.
+  - title: Plans catching and rescuing
+    text: A proactive pause email for overstocked customers, a human response to a cancel after a loss, and a failed-payment flow by payment type.
+  - title: Plans after the cancel
+    text: Plain-text emails, a stronger win-back 30 to 60 days later, and a tracking sheet.
+
+output_shape: |
+  GROUND RULE CHECK
+  Cancel path at every step: <where> | Skip-save link on each screen: <yes/no>
+
+  CANCEL FLOW
+  Start screen: <founder video script, delay nudge, points lost>
+  Reason 1 <reason> -> <one action> | copy: <...> | cap: <discount>
+  Reason 2 ... (6 or 7 reasons plus Other)
+
+  DELAY AND SKIP RULES
+  <skip, delay up to 30 days, frequency change settings>
+
+  PROACTIVE PAUSE
+  Trigger: <rule> | email: <copy>
+
+  AFTER THE CANCEL
+  Confirmation: <no offers>
+  Emails 1 to 2 (text style): <copy>
+  Win-back at day <30 to 60>: <offer ladder>
+
+  FAILED PAYMENTS
+  Card: <flow> | PayPal: <flow> | Shop Pay: <flow> | fallback: <card update> | SMS: <opted-in only>
+
+  TRACKING SHEET
+  reason | shown | saved | save rate | repeat orders after save | discount cost
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Margin room
+    how: Give the biggest discount you can afford. The skill caps the save offer there and checks it against repeat orders after a save.
+  - what: Portal limits
+    how: List exactly what your portal supports. Branching, splash screens and per-payment-type flows differ between apps.
+  - what: Use rate per product
+    how: Add how fast each product is used. It sets the overstock rule that triggers the proactive pause.
+  - what: Basket size
+    how: If you can segment by basket value, the skill uses flat dollars off above a cut-off. If not, it uses percent.
+
+judge:
+  - There is a visible way to cancel at every step.
+  - Each reason has exactly one action, and "too much product" does not get a discount.
+  - Discounts have a cap and a plan to check repeat orders after the save.
+  - The cancel confirmation holds no offer.
+  - Source numbers are marked as one person's experience, not promised.
+
+test:
+  - Walk through the flow as a customer who wants to leave. You should be able to cancel without searching or calling.
+  - Count the clicks to cancel and compare with the clicks to sign up. Cancel should not take more.
+  - Run it for a month, then compare save rate per reason with your older rate.
+  - Check repeat orders for 60 to 90 days after a save. A save that cancels the next month is not a save.
+
+improve:
+  - Put your real cancel reasons and margin cap in the skill file so every run starts from them.
+  - Add your own reason list. Swap out the one or two least picked each month.
+  - Add your payment mix, so the failed-payment flows cover the types your customers use.
+  - Pair it with the Billing reminder and confirmation writer, the Subscription churn audit and the Subscriber retention calendar.
+
+works_best_with:
+  tools:
+    - {name: "Skio", why: "It supports a splash screen, branching by reason and flows by payment type failure."}
+    - {name: "Recharge", why: "It has a customer portal with cancel flows and skip and delay settings."}
+    - {name: "Klaviyo", why: "It sends the post-cancel, win-back and failed-payment emails and texts."}
+  inputs:
+    - "Cancel reasons by count, from your portal"
+    - "A one-minute founder video"
+    - "Failed-payment counts by payment type"
+    - "Repeat orders after a past save"
+
+terms:
+  - term: Save rate
+    meaning: The share of customers who start to cancel and then stay.
+  - term: Delay
+    meaning: A timed move of the next order that returns on its own date, unlike a pause with no end.
+  - term: Dunning
+    meaning: The emails and texts sent when a payment fails, to get the customer to fix it.
+  - term: Win-back
+    meaning: A message to someone who cancelled, with a reason to come back.

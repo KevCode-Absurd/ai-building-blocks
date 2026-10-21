@@ -1,0 +1,126 @@
+new_slug: store-urgency-and-drop-planner
+name: "Store drop and urgency planner"
+summary: "Give it stock, dates and your email list. Get drop, deadline and early-access plans, truth-checked."
+job: make-offer
+thinking: medium
+thinking_why: "It turns your real stock and dates into plans and lines, then checks each for truth. A mid-size model is enough."
+
+headline: "Store drop and urgency planner"
+subhead: Give it your real stock by size or variant, your campaign dates and your email schedule. It plans limited drops, honest deadlines and early access for your list, writes gain and loss versions of each line, and checks every claim is true on the day.
+
+explain: |
+  Urgency sells, but only when it is real. A fake timer or a made-up "only 3 left" works once, then costs you trust, and in some places it breaks consumer rules. Real limits can work just as well: a small batch that sells out, a sale that ends on a stated date, a price that rises on a known day.
+
+  The general Honest scarcity and urgency planner sets real caps and dates. This store version adds a drop rhythm, stock lines by size or variant, deadline lengths and reminders, loss-framed and gain-framed lines to test, and early access for your list first. Every line goes through an honesty check. If a claim is not true on the day, it comes out. It needs stock you can control. Frequent flash deals teach shoppers to wait, so the plan keeps them rare.
+
+when:
+  - You want to launch a limited run and sell out without lying about it.
+  - You run promotions and want deadlines that make people act, without fake timers.
+  - You want to tell your email list first and reward them with early access.
+
+you_give:
+  - Your products and the real stock by size or variant
+  - Campaign dates and your promotion calendar
+  - Your email and SMS schedule (optional)
+  - Real start and end dates for any offer or price rise
+  - Real capacity limits, such as batch size or supplier minimums
+
+you_get:
+  - A drop plan, with a quantity and a date you can stand behind
+  - Dated promotion lines and a price-rise notice
+  - Deadline length and a reminder schedule
+  - Gain and loss versions of each line, an early-access plan for your list and an honesty check
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste real stock by size and variant, your dates and your email schedule.
+  - Say which limits are real, such as a single batch or a supplier cap.
+  - Read the honesty check last and remove any line it marks as not true.
+  - On the day, check each stock count and date against what is live.
+
+how_it_works:
+  - title: Finds the real levers
+    text: It lists the limits you can truthfully use, such as stock, a batch size, a date or a price rise.
+  - title: Plans the drop
+    text: Fewer units than you could sell, sold out, then announced. About once a month at most.
+  - title: Sets stock lines
+    text: Real units left by size or variant, shown only when true.
+  - title: Sets the deadline
+    text: A real end time, a length that fits the channel and one or two reminders near the end.
+  - title: Writes both framings
+    text: A gain line and a loss line for each limit, to test side by side.
+  - title: Plans list-first news
+    text: Your list hears first, with a note on why.
+  - title: Runs the honesty check
+    text: Every line is checked against real stock and dates, and any claim not true on the day is removed.
+
+output_shape: |
+  URGENCY PLAN  <store>  <dates>
+  REAL LEVERS (usable truthfully)
+  <lever> | <evidence: stock count, date, batch size>
+
+  DROP PLAN
+  Release: <product, quantity, date> | Announce sell-out: <how>
+
+  DEADLINES
+  Offer: <name> | Ends: <real date and time> | Length: <days> | Reminders: <1 to 2, when>
+  Price-rise notice: <what rises, when, wording>
+
+  LINES TO TEST
+  Gain: <...>   Loss: <...>
+  Stock line: <per size or variant, shown only when true>
+
+  EARLY ACCESS (list first): <who, when, note on why>
+
+  HONESTY CHECK
+  <line> | <true on the day? evidence> | <keep | remove>
+  CHECKS MISSED: <list, or none>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Real stock by variant
+    how: Give counts by size and variant. Stock lines use them, and the plan never invents a count.
+  - what: Campaign dates
+    how: Give real start and end times. The plan sets deadline length and reminders from them.
+  - what: Whether items restock
+    how: Say yes or no. A quantity limit on a restockable or digital item is not believable, so the plan uses dates instead.
+  - what: Live data
+    how: Say whether your page can show live stock. If not, the plan uses fixed dates and fixed caps.
+
+judge:
+  - Every urgency line points to a real stock count, date or batch size.
+  - A limited release is made in a quantity you can stand behind and is announced as sold out when it is.
+  - The deadline has a real end time, and the plan says not to extend it.
+  - Gain and loss versions are both written.
+  - The honesty check marks each line keep or remove.
+
+test:
+  - Give it a restockable item and a quantity limit. It should refuse the limit and use a date.
+  - Give it a countdown that resets every day. It should remove it.
+  - Check two lines against your live store on the day, the stock count and the end time.
+  - Run it twice on the same input. The real levers and the honesty check should match.
+
+improve:
+  - Add your restock policy to the skill file so it knows which products can be limited.
+  - Add your local rules on stated end dates and price claims, after you check them with a qualified person.
+  - Add each new line type you use to the honesty check.
+  - Pair it with the General honest scarcity planner for caps and the Sale offer ladder planner for sale timing.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It turns your stock and dates into plans and lines, and runs the honesty check."}
+    - {name: "Shopify", why: "Inventory counts by variant feed real stock lines."}
+    - {name: "Klaviyo", why: "Segments let you send early access to your list first."}
+  inputs:
+    - "A stock export by size and variant, dated on the day you write the plan"
+    - "Past drop results: how fast each sold out"
+    - "Your promotion calendar for the next quarter"
+    - "Your email send times and open rates"
+
+terms:
+  - term: Drop
+    meaning: A limited release of a product, sold in a set quantity at a set time.
+  - term: Loss framing
+    meaning: Showing what the buyer will lose by waiting, instead of what they gain by buying.
+  - term: Early access
+    meaning: Letting a chosen group, such as your email list, buy before everyone else.

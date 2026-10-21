@@ -1,0 +1,123 @@
+new_slug: shopify-google-conversion-tracking-builder
+name: "Shopify Google tracking builder"
+summary: "Give it your Shopify and Tag Manager access. Get a build checklist for purchase tracking and enhanced conversions."
+job: run-google-ads
+thinking: medium
+thinking_why: "The settings are exact and one wrong choice double counts sales, so it needs to follow the steps closely."
+
+headline: "Shopify Google tracking builder"
+subhead: Tell it your Shopify and Google setup. It hands back a numbered build checklist for purchase tracking and enhanced conversions, a list of which ID goes where, and a test plan that proves each event fires once.
+
+explain: |
+  Google Ads bids on the sales it can see. If your purchase tracking is wrong, Google learns from wrong data. It may count one order twice, count add to cart as a sale, or miss orders. That spoils every campaign, however well it is set up.
+
+  This skill gives the build for a Shopify store in the order that works: link GA4 through the Shopify Google and YouTube app, turn on enhanced conversions, create four conversion actions with only purchase as primary, add the Tag Manager events as a custom pixel in Shopify, and test. Enhanced conversions send hashed customer data, such as an email address, back to Google so it can match more sales. For bigger spend, it outlines server-side tagging.
+
+when:
+  - You are launching Google Ads and purchase tracking is not yet built.
+  - Google shows far fewer purchases than your store, or more than your store.
+  - You want enhanced conversions on and need the exact steps for Shopify.
+
+you_give:
+  - Shopify admin access (Google and YouTube app, customer events)
+  - Google Ads and Tag Manager access
+  - Your store's country code
+  - Whether you want to track first orders separately (optional)
+  - Monthly ad spend (optional)
+you_get:
+  - A numbered build checklist with the setting to choose at each step
+  - A list of what to copy where (conversion ID, four labels, container ID)
+  - A test plan that confirms each event fires once
+  - Enhanced conversion steps and a server-side outline for larger spend
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you already have, such as the Google and YouTube app, GA4, Tag Manager and any current conversion actions.
+  - Give your country code and monthly ad spend.
+  - Follow the checklist step by step. Write each ID in the copy list as you go.
+  - Place one real test order and run the test plan. Do not start campaigns until every event fires once.
+
+how_it_works:
+  - title: Links GA4
+    text: Connects Google Analytics 4 through the Shopify Google and YouTube app first.
+  - title: Turns on enhanced conversions
+    text: In Google Ads, using the Google tag method, with a note on privacy and consent.
+  - title: Creates four actions
+    text: Purchase (primary), and add to cart, begin checkout and product view (secondary, observe only).
+  - title: Sets the options
+    text: Count every conversion for purchase, with set click, engaged-view and view-through windows and data-driven attribution.
+  - title: Adds the Shopify pixel
+    text: A custom pixel in customer events with the Tag Manager event code, the country code and the container ID.
+  - title: Builds the tag set
+    text: Conversion Linker on all pages, a GA4 purchase event and the Google Ads conversion tag with the right ID and label.
+  - title: Tests every event
+    text: One real test order, then a check that each event fires once, using Diagnostics.
+  - title: Outlines server-side tagging
+    text: For spend above about $50,000 a month, with the need for a hosted server container.
+
+output_shape: |
+  READY?  <what exists now | what is missing>
+  BUILD CHECKLIST
+  1. <step | where | setting to choose>
+  (numbered, in order)
+  COPY LIST  <what | where it comes from | where it goes>
+  CONVERSION ACTIONS  <name | primary or secondary | count | windows | attribution>
+  ENHANCED CONVERSIONS  <fields mapped | consent and privacy note>
+  TEST PLAN  <event | how to trigger it | expected result>
+  SERVER-SIDE  <not needed yet | outline for spend above about $50,000 a month>
+  WHERE SOURCES DIFFER  <the GA4 gap range and which action to keep primary>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Store country code
+    how: Give the code for the country your store sells from. It goes into the Shopify custom pixel.
+  - what: Monthly ad spend
+    how: Say it. Under about $50,000 a month the plan skips server-side tagging. Above it, you need a developer or tracking vendor.
+  - what: First orders
+    how: Say yes if you want bidding to learn new customers. It adds a second purchase tag that fires only on a first order.
+  - what: What you already have
+    how: List current conversion actions. The skill keeps exactly one primary purchase and tells you what to demote.
+  - what: Checkout data
+    how: Say which fields you collect (email, phone, address) so enhanced conversions map them.
+
+judge:
+  - Only purchase is primary. The other three actions are secondary.
+  - There is exactly one primary conversion action per campaign goal.
+  - GA4 imported events are not the primary purchase.
+  - The copy list names every ID and where it goes.
+  - The test plan says how to trigger each event and what you should see.
+  - It states a privacy and consent note for enhanced conversions.
+
+test:
+  - Place one real test order. Each of the four events should fire once in Tag Manager preview and in Google Ads Diagnostics.
+  - Compare Google Ads purchases with store orders for the same dates after a week. A big gap needs a look.
+  - Run the skill twice on the same setup. The checklist should match.
+  - Refresh the thank-you page. The purchase should not fire a second time.
+  - Check that add to cart is secondary in your campaign conversion goals too.
+
+improve:
+  - Add your Tag Manager naming pattern to the skill file, so every tag reads the same.
+  - Add your consent tool and its settings, so the plan respects the choices your visitors make.
+  - Add a line for any other platform you run, such as Meta, so purchases are counted the same way.
+  - Save the IDs you made into your brand file, with the date.
+  - Pair it with the purchase tracking checker for a regular check.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "The Google and YouTube app and customer events (custom pixel) are where the build starts."}
+    - {name: "Google Tag Manager", why: "Holds the Conversion Linker, GA4 purchase event and Google Ads conversion tag."}
+    - {name: "Google Ads", why: "Where the conversion actions, enhanced conversions and Diagnostics are."}
+  inputs:
+    - "A screenshot of your current conversion actions in Google Ads"
+    - "Your privacy policy, so the enhanced conversions note matches it"
+    - "Your consent banner settings"
+
+terms:
+  - term: Conversion action
+    meaning: An event that Google Ads counts as a result, such as a purchase.
+  - term: Enhanced conversions
+    meaning: A setting that sends hashed customer data, such as an email, to Google so it can match more sales to ads.
+  - term: Server-side tagging
+    meaning: Sending tracking data from your own server, not from the visitor's browser. It is steadier but needs a developer.
+  - term: Secondary action
+    meaning: A conversion Google tracks but does not bid on.

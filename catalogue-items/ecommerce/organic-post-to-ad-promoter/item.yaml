@@ -1,0 +1,20 @@
+slug: organic-post-to-ad-promoter
+name: "Organic post to ad promoter"
+summary: "Give it your posts and views. Get outliers ranked and each marked run-as-is or reshoot the hook."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: script, required: false}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Every Level of Marketing", by: "Orin (creator and marketing consultant, first name only as stated), in a conversation with a host", used: "Finding a baseline and an outlier post, the two ways to turn it into an ad (run it as is with its comments, or keep the hook and change the back half), and getting your own formats working before chasing trends"}

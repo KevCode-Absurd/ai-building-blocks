@@ -1,0 +1,127 @@
+new_slug: supplier-payment-terms-planner
+name: "Supplier terms and float planner"
+summary: "Give it your order cycle and cash. Get your float, terms to ask for and a cost split."
+job: plan-supply-chain
+thinking: high
+thinking_why: "It ties payment terms, lead times and cash together, and a slip in the sums changes the advice. A stronger model keeps them straight."
+
+headline: "Supplier terms and float planner"
+subhead: "Give it your payment terms today, how long goods take to reach your warehouse, your yearly spend with the factory and your cash. It works out your float in days, then plans the terms to ask for and how to share the factory's financing cost. This is cash planning, not financial advice."
+
+explain: |
+  You can turn ads off with one click. You cannot cancel a purchase order. So the days between paying your supplier and goods arriving in your warehouse decide how much room you have for mistakes. That room is your float: your payment terms minus the days it takes to make the goods and land them.
+
+  This skill works out your float, then plans a ladder of terms to ask for, from a shorter deposit to net 60, net 90, weekly drip payments and consignment (you pay when you sell). It explains how a factory can afford to give you longer terms, how to share that cost, and what credit check to expect. It shows your cash each month with and without the new terms. Terms like these suit brands with a track record and clean books. A new brand usually starts near a 30 percent deposit and 70 percent before shipping.
+
+when:
+  - You pay a deposit and the balance up front and want more cash room.
+  - Your supplier spend is growing and you want to ask for better terms.
+  - You are planning stock for a busy season and need to know if cash will stretch.
+
+you_give:
+  - "Your payment terms today: deposit, balance, net days"
+  - Production plus shipping days to your warehouse
+  - Your yearly spend with the supplier and how long you have worked together
+  - Monthly profit, cash in the bank and ad budget
+you_get:
+  - Your float in days
+  - A ladder of terms to ask for, from the easiest to the hardest
+  - A cost-share offer for the factory's financing cost, as a line in the cost sheet
+  - Cash left each month after stock, with and without the new terms
+  - "A risk list: size and color mix errors, tariff swings, credit check"
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your terms, lead times, yearly spend and cash. Be honest about your books.
+  - Read the float and the ladder. Start at the rung that fits your track record.
+  - Take the cost-share offer to your supplier, and ask your accountant to check the numbers.
+  - Close your books on the same day each month and rerun the plan.
+
+how_it_works:
+  - title: Works out the float
+    text: Payment terms minus the days to get goods into your warehouse. Net 90 with 30 days to produce and land leaves 60 days of float.
+  - title: Adjusts for mistakes
+    text: Buy the wrong sizes or colors and the real float is shorter, because you carry stock you cannot sell.
+  - title: Builds the terms ladder
+    text: Shorter deposit, net 60, net 90, weekly drip payments, consignment.
+  - title: Explains the factory side
+    text: Many factories insure buyer credit and sell the invoice to a bank, which costs them a yearly rate.
+  - title: Shares the cost
+    text: Puts the factory's financing cost on the cost sheet and offers to split it by your bargaining power.
+  - title: Plans the credit check
+    text: Lists the books and records a credit insurer may ask for.
+  - title: Compares with loans
+    text: Shows how a loan quoted at 10 percent can act like much more when you grow fast.
+  - title: Sets a close day
+    text: Closes books on a fixed day each month, then splits real cash from working capital the next months need.
+
+output_shape: |
+  FLOAT  payment terms <days> minus lead time <days> = <days> of float
+  With a stock mistake (<what>): <days>
+
+  TERMS LADDER (start at the rung that fits you)
+  <rung> | what to ask | when it fits | risk to you
+
+  COST-SHARE OFFER
+  Factory financing cost: about <% a year> on <$ spend> = <$ a year> = <$ a unit>
+  Offer: you pay <%>, factory pays <%>   shown as one line on the cost sheet
+
+  CASH BY MONTH  (<months>)
+  <month> | cash after stock now | cash after stock with the new terms
+
+  EXPECT A CREDIT CHECK  <records they may ask for>
+  RISKS  <size and color mix | tariff swing | credit check | what else>
+  CLOSE DAY  <day of month> -> real cash <$>, working capital needed <$>, can be taken out <$>
+  NOT FINANCIAL ADVICE: check with an accountant.
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Your track record
+    how: Give years working together and how reliably you pay. The skill picks the rung that fits and does not start a new brand at net 90.
+  - what: Yearly spend
+    how: The source examples buy $12 million or more a year. Give your real spend, and the skill says which rungs are out of reach.
+  - what: Production and shipping days
+    how: Use the days from paying to goods on your shelf, including customs. A short number inflates your float.
+  - what: Your cash and profit
+    how: Give the month's cash and profit so the plan shows stock you can afford, not stock you want.
+
+judge:
+  - The float sum is shown with your numbers.
+  - The ladder starts at a rung you can win, not the top one.
+  - The cost-share offer shows a yearly cost, per unit, and a split.
+  - Cash by month is shown with and without the new terms.
+  - It says it is cash planning and not financial advice.
+
+test:
+  - "Check the float yourself: terms days minus days to the warehouse."
+  - Run it twice. The float and cash by month should match.
+  - Give it a case where you are new and see whether it refuses to start at net 90.
+  - Ask your accountant to read the cash-by-month table and the loan comparison.
+
+improve:
+  - Add your close day and your usual lead time into the skill file.
+  - Add your past supplier disputes, so the credit check section covers them.
+  - Add your accountant's rules for cash you must keep in the bank.
+  - Pair it with the growth cash limit checker, which tests whether cash caps your growth, and the factory price-break negotiator.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can run the float and cash tables. Paste your terms and cash."}
+    - {name: "An accountant", why: "Checks your books and the financing, insurance and bank terms in your country."}
+    - {name: "Google Sheets", why: "Holds your monthly cash table so you can update it on your close day."}
+  inputs:
+    - "Your last three months of supplier invoices and payments"
+    - "Your current cash and monthly profit"
+    - "Your stock plan for the next quarter"
+    - "Your management accounts, if a credit insurer asks"
+
+terms:
+  - term: Float
+    meaning: The days between when you pay a supplier and when goods reach your warehouse.
+  - term: Net 90
+    meaning: You pay the invoice 90 days after you receive it.
+  - term: Consignment
+    meaning: The factory puts goods in your warehouse and you pay for each one when you sell it.
+  - term: Working capital
+    meaning: The cash your business needs to keep buying stock and paying bills.

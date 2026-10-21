@@ -1,0 +1,20 @@
+slug: tiktok-ads-account-setup-checker
+name: "TikTok ads account setup checker"
+summary: "Say what you set up on TikTok. Get missing steps and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: beginner
+inputs:
+  - {type: store_capture, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The BEST TikTok Ads Course For Beginners in 2026 (free full course)", by: "Corbin, Zoco Marketing", used: "How Ads Manager, Business Center, TikTok profile and shop link together, the Shopify pixel setup, testing events with Pixel Helper, billing, brand safety, account health and per-ad privacy settings"}
+  - {title: "The Only TikTok Ads Tutorial You Will Ever Need", by: "Tim, a TikTok ads agency", used: "Starting with a card and a backup payment method, adding the pixel through a partner integration, and the three-level campaign layout"}

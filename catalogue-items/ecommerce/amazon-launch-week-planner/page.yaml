@@ -1,0 +1,126 @@
+new_slug: amazon-launch-week-planner
+name: "Amazon launch week planner"
+summary: "Give it your product and audience. Get a pre-launch and launch-day plan for early sales and reviews."
+job: sell-on-amazon
+thinking: medium
+thinking_why: "It builds a dated plan from your audience and cash, and must keep every step inside Amazon's rules."
+
+headline: "Amazon launch week planner"
+subhead: Give it your product, price, launch date, your audience and channels, and the cash you can spend on a discount and ads. It plans 8 to 12 weeks before launch and the launch day. You get a run sheet, a discount offer with its cost, and a review plan within Amazon's rules.
+
+explain: |
+  A new Amazon listing starts with no sales, no clicks and no reviews. The seller in the source believes early sales speed, click-through and conversion, and reviews all lift your rank. So the plan is to bring buyers with you on day one: a wait list, a private group, free samples for small creators and a first-week offer.
+
+  This skill turns that into a dated plan. It starts 1 to 3 months before launch, and it builds the list, sets the offer start date to launch day, plans the discount and a limit on units, turns on the automatic ads and checks stock. It leaves out bought or paid-for reviews. They break Amazon's rules and risk your account. The results in the source are the best cases sellers told, so plan for less.
+
+when:
+  - You have a product with a launch date at least a few weeks away.
+  - You have some audience, an email list or a content habit and want to turn it into launch sales.
+  - You plan a launch discount and want to know what it costs and when to end it.
+
+you_give:
+  - Your product, price and launch date
+  - Your existing audience, lists and channels
+  - Unit profit and cash for a discount and ads
+you_get:
+  - An 8 to 12 week pre-launch plan and a launch-day run sheet
+  - A discount and scarcity offer with its cost
+  - A review plan that stays within Amazon's rules
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it your launch date, product, price and unit profit, and which channels and lists you already have.
+  - Say how much cash you can put into a discount, samples and ads.
+  - Follow the plan in order. Check that stock will cover the spike before you set the date.
+  - After launch, record sales, rating and rank, so the next launch starts from real numbers.
+
+how_it_works:
+  - title: Checks the time
+    text: Needs time and a content habit of about 3 months. A launch next week gets a short plan and an honest warning.
+  - title: Builds the wait list
+    text: Starts 1 to 3 months out with short videos and a link in the bio to a wait list. A one-unit giveaway lifts sign-ups.
+  - title: Opens a private group
+    text: Asks wait-list people for feedback on the pack and product, so they feel part of it.
+  - title: Plans samples
+    text: Sends free product to micro-influencers with 5,000 to 10,000 followers.
+  - title: Sets launch day
+    text: Sets the offer start date to launch day and emails the list with the link.
+  - title: Plans the offer
+    text: Sets a first-week discount, or a limit on the first units, then raises the price.
+  - title: Plans honest reviews
+    text: Asks buyers for honest reviews, uses the free Vine programme once the brand is registered, and leaves out bought reviews.
+  - title: Checks stock
+    text: Makes sure inventory will cover the spike.
+
+output_shape: |
+  FIT CHECK
+  Time to launch: <weeks> | Audience: <size and channels> | Verdict: <full plan | short plan, with why>
+
+  PRE-LAUNCH PLAN (week by week, 8 to 12 weeks)
+  Week <n>: <task> | owner: <you> | done when: <...>
+
+  LAUNCH-DAY RUN SHEET
+  <time or order>: <action>
+
+  OFFER AND ITS COST
+  Launch price: <...> | normal price: <...> | limit: <first n units>
+  Cost: <units x discount> | price rise plan: <steps>
+
+  REVIEW PLAN (within Amazon's rules)
+  <honest requests, Vine once registered, who to ask and how>
+
+  STOCK CHECK
+  Needed for the spike: <units> | have: <units>
+
+  MISSING: <launch date | audience | unit profit>
+  CHECKS MISSED: <none | which>
+
+tweaks:
+  - what: Launch date
+    how: With under 8 weeks, ask for a short plan. It keeps the offer, ads and stock steps and drops the long build.
+  - what: Your audience
+    how: Give follower counts and list size. A plain product with no audience gets little attention, and the skill says so.
+  - what: Discount cost
+    how: Give unit profit. The skill counts what the discount and free samples cost and checks you can fund them.
+  - what: Brand registry
+    how: Say if your brand is registered. Vine and A+ content need it.
+
+judge:
+  - The plan starts 1 to 3 months before the launch date, or says why it is short.
+  - The offer shows its cost in money, not just a percent.
+  - There is no step that buys reviews, pays people to buy and review, or makes a review a condition of a free product.
+  - The stock check names units, not "enough".
+  - Results from the source are shown as best cases, not promises.
+
+test:
+  - Check each pre-launch task against your calendar. Could you do it in the time given?
+  - Cost the offer yourself, with units at the launch price against your unit profit. It should match the plan.
+  - Read the review plan once with Amazon's current review rules open. Nothing should break them.
+  - After launch, record how many wait-list people bought on day one and compare with the plan.
+
+improve:
+  - Add the channels you actually use to the skill file, with how often you can post.
+  - Add your own sample list rules, such as the follower range and the product you will send.
+  - Add the Amazon features that are current for you (live shopping, Vine) after you check them in Seller Central.
+  - Pair it with the Amazon listing writer before it, and the Amazon PPC launch builder and Amazon inbound stock planner around it.
+
+works_best_with:
+  tools:
+    - {name: "Seller Central", why: "Where you set the offer start date, enrol in Vine once the brand is registered and check what is available now."}
+    - {name: "Any email tool", why: "Sends the launch-day email with the link to your wait list."}
+    - {name: "TikTok, Instagram or Facebook", why: "Where the source builds the wait list with short videos. Use the one your buyers use."}
+  inputs:
+    - "A list of 20 to 50 micro-creators in your niche with 5,000 to 10,000 followers"
+    - "Your email list or wait-list size"
+    - "Unit profit and the cash set aside for the discount and ads"
+    - "Your stock count and when more arrives"
+
+terms:
+  - term: Micro-influencer
+    meaning: A creator with a small following, often 5,000 to 10,000 people, who may work for free product.
+  - term: Vine
+    meaning: Amazon's programme that sends free units to trusted reviewers. It needs a registered brand.
+  - term: Offer start date
+    meaning: The day the listing goes live. Set it to your launch day.
+  - term: Rank
+    meaning: Where your listing shows in Amazon search results.

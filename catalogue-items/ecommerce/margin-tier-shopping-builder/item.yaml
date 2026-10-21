@@ -1,0 +1,22 @@
+slug: margin-tier-shopping-builder
+name: "Margin-tier Shopping builder"
+summary: "Give it products with margin and ROAS history. Get a Shopping structure and a target for each tier."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Best E-commerce Google Ads Strategy for 2026", by: "Agency founder with 12 years of Google Ads (name not given)", used: "The two Shopping structures (by ROAS tier and by margin tier), the four ROAS tiers and the Performance Max high-target safety net"}
+  - {title: "Google Ads for Ecommerce: Architecture and Operations Manual (2026)", by: "Compiled written guide, author not named", used: "Margin-based targets and the budget split between campaign types"}
+  - {title: "How To Fix An Underperforming Google Ads Account", by: "Performance agency lead (name not given)", used: "The risk that a very high Performance Max target narrows reach toward warm shoppers"}
+  - {title: "The only Google Ads strategy you need for 2026", by: "Agency founder who works with mid to large e-commerce brands (name not given)", used: "Why a collection with a different margin needs its own target"}

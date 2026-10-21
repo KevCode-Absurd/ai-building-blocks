@@ -1,0 +1,84 @@
+new_slug: scale-meta-spend-while-it-still-pays
+name: Scale Meta spend while it still pays
+summary: Give it your ad results and costs. Get your true return, a spend ladder and a budget split.
+job: launch-and-scale-ads
+thinking: high
+thinking_why: It runs four skills in a row, and the scaling ladder depends on your break-even sums. Give it your strongest model.
+headline: Spend more on Meta without losing the profit
+subhead: Give it your ad results and your costs. It finds the return your store really banked, builds a step-by-step spend ladder with stop rules, and splits the extra budget. After you scale, it finds why spend stalled or cost rose.
+explain: |
+  Meta shows a return that is usually better than what your store keeps. The platform counts views, past customers and sales that would have happened anyway. Owners raise the budget on that number, and cost per sale climbs or spend stalls. Then they change five things at once and cannot tell what broke.
+
+  These steps scale on the real number. First it strips your platform return down to what new customers brought in. You then write down the return you need to break even, and pick the campaign to scale. It builds a ladder of small spend steps with a stop rule for each, and decides where the extra dollars go. You scale for one to two weeks. Then it reads the results and names the delivery step that failed.
+when:
+  - Your Meta ads are profitable and you want to spend more without losing the profit.
+  - Meta shows a strong return, but your bank balance does not match it.
+  - You raised the budget, spend stalled or cost per sale jumped, and you do not know why.
+you_give:
+  - Your Meta spend, platform return and 7-day click return for the dates you are checking
+  - Store totals for the same dates (new-customer revenue, new-customer count and total ad spend)
+  - Your average order value, product cost, shipping, fees and returns rate
+  - Your daily sales and the cash you can put into ads
+  - A breakdown of Meta spend by new, engaged and existing audiences (optional)
+you_get:
+  - A return ladder for each platform, from what it reports down to new-customer return, with the traps found
+  - Your break-even return and the highest cost per sale you can pay
+  - A spend ladder for each ad set, with the step, how long to hold and when to stop
+  - A call on whether a separate scaling campaign pays off yet
+  - A ranked split of the next $10,000, with the stop point for each channel
+  - After the scale test, the delivery step that is failing and what to change first
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your ad results and store totals for the same dates. Use dates that have closed.
+  - Write down the return you need to break even, and pick the campaign to scale.
+  - Scale in the steps of the ladder for one to two weeks. Export the results and bring them back for the delivery check.
+how_it_works:
+  - title: Find the real return
+    text: Sets your store's own base, then steps each platform's return down from reported to 7-day click to new-customer. It also checks the top ad alone and looks for spend on existing customers.
+  - title: Build the scaling ladder
+    text: Works out your break-even return, finds each ad set's ceiling and sets spend steps with stop rules. It says if a separate scaling campaign is not worth it yet.
+  - title: Split the next dollar
+    text: Ranks channels by new-customer revenue per extra dollar, checks that retargeting is not taking the budget, and finds each stop point.
+  - title: Fix delivery
+    text: Walks your symptoms through how Meta serves ads, checks the sums behind your cost per sale and names the step that is failing.
+output_shape: |-
+  STEP 1: REAL RETURN
+    Store base | return ladder per platform | top ad check | traps found | trust per channel | score out of 100
+
+  STEP 2: SCALING PLAN
+    Break-even return and highest cost per sale | scale or hold call | spend ladder with stop rules | monthly review list
+
+  STEP 3: BUDGET SPLIT
+    Ranking for the next $10,000 | stop point per channel | retargeting check | tests that would change the ranking
+
+  STEP 4: DELIVERY FIX
+    Symptoms with numbers | the failing step | what to change first | what to leave alone | a 7-day test
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your costs
+    how: Break-even return comes from your real product cost, shipping, fees and returns. Wrong costs make a wrong ladder, so check them first.
+  - what: Cash and stock
+    how: Say how much cash you can put into ads and how fast stock sells. The plan caps the steps to what you can fund.
+  - what: Closed dates
+    how: Use full weeks that have ended. Partial weeks and sale days give a false return.
+  - what: Other channels
+    how: Say if you also sell on Amazon or in shops. Those sales can wrongly look like Meta sales.
+judge:
+  - The return ladder shows its numbers, and the store's own figure comes from your order data, not the platform.
+  - Break-even return is one divided by your margin, and the margin sum is on the page.
+  - Each ladder step has a hold time and a stop rule.
+  - The budget ranking says how strong the evidence is for each channel.
+  - The delivery diagnosis names one failing step with a number that proves it.
+test:
+  - Work out your break-even return by hand from your costs. It should match step 2.
+  - Compare the new-customer return with your own Shopify numbers for the same dates.
+  - Scale only one ad set on the first step of the ladder. Check the stop rule works before you rely on it.
+  - Ask the delivery step the same question twice. The failing step should be the same both times.
+improve:
+  - Save your real margin and break-even return in your brand file, so you do not retype them.
+  - Run a holdout or lift test on Meta when you can afford it, then enter the factor it finds.
+  - Edit the ladder steps to suit your daily spend. The defaults come from larger accounts.
+  - Pair it with a creative hit rate planner, so new ads arrive as spend rises.

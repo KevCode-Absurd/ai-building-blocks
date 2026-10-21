@@ -1,0 +1,27 @@
+slug: gift-with-purchase-planner
+name: "Gift-with-purchase planner"
+summary: "Give it your catalogue, AOV and margins. Get spend-to-earn gift tiers with a margin check."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: offer}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [alex-hormozi]
+credits:
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic, interviewed on a podcast", used: "Three spend tiers with a cross-category gift at each step"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, interviewed on a podcast", used: "The gift-versus-cost rule and gifts with high perceived value and low cost of goods"}
+  - {title: "$1B Marketer Explains: How to Scale an Ecommerce Brand in 2026", by: "Eddie (agency owner), answering an email-agency host", used: "A threshold above AOV to earn a gift, and choosing the item shoppers want most"}
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "Gift-with-purchase economics and perceived value"}
+  - {title: "$100M Offers", by: "Alex Hormozi (book)", used: "Rules for bonuses and bonuses that answer a worry"}
+  - {title: "Applying $100M Offers to E-Commerce", by: "Alex Hormozi (public video)", used: "Zero-cost digital bonuses such as styling videos and usage guides"}
+  - {title: "How to Create Irresistible Offers", by: "Robert W. Bly (book)", used: "Perceived value set against fulfilment cost"}

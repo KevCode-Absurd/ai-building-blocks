@@ -1,0 +1,117 @@
+new_slug: post-purchase-survey-builder
+name: "Post-purchase survey builder"
+summary: "Say your store and customers. Get a post-purchase survey, a list survey and review-mining prompts."
+job: understand-customers
+thinking: low
+thinking_why: "It writes short questions and a table from a clear method, so a fast model is enough."
+
+headline: "Post-purchase survey builder"
+subhead: Tell it what you sell and which survey or email tool you use. It writes a post-purchase survey with the two questions that matter, an email survey for your list, a call script and a review-mining prompt. It also sets up a table that maps each customer doubt to a page fix and a test idea.
+
+explain: |
+  Most stores guess what stops people from buying. The answer is already with the people who just bought from you. Two questions after checkout tell you why they bought and what almost made them leave. The second answer is the useful one, because it shows what your page and ads fail to say.
+
+  This skill writes the survey, a one-time email version for your list if you have no survey yet, a short call script, and a prompt that mines your reviews for the same doubts. Then it turns every answer into a row: the doubt in the customer's words, where on the page to answer it, and the test to run. It also keeps you safe. No paying for good reviews, a rules line for prize draws, and a check on every claim you plan to make.
+
+when:
+  - You get traffic but cannot say why most visitors do not buy.
+  - You have hundreds of reviews and have never read them for patterns.
+  - You are about to rewrite a product page and want the words to come from customers.
+
+you_give:
+  - What you sell, your main products and your orders per month
+  - The survey app or email tool you use
+  - A review export as a CSV file, if you have about 500 or more reviews (optional)
+  - Your customer list size (optional)
+  - Any survey or support answers you already have (optional)
+
+you_get:
+  - A post-purchase survey with the two core questions and short follow-ups
+  - A one-time email survey for your list, with an incentive and a rules line
+  - A call script and a review-mining prompt you can paste
+  - A table of doubts, with the page spot to answer each and a test idea
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it what you sell, how many orders you get and which survey tool you use.
+  - Set up the survey in your tool, and send the list email if you have no survey yet.
+  - Run the review-mining prompt with your review export attached.
+  - After a few dozen answers, paste them back to fill the objection table, then send the test ideas to the test idea ranker.
+
+how_it_works:
+  - title: Checks the volume
+    text: Under about 30 orders a month it leads with customer calls, because a survey will not fill fast enough.
+  - title: Writes the two questions
+    text: What made you purchase today, and what almost stopped you. Plus up to two short follow-ups.
+  - title: Adds a list survey
+    text: A one-time email for your best customers, with a prize draw and a rules line.
+  - title: Writes the call script
+    text: Why they bought, what was unclear, and how checkout felt.
+  - title: Writes the review prompt
+    text: Finds common themes, tone of voice, buzzwords, friction points and objections in your reviews.
+  - title: Finds a true point of difference
+    text: Looks for something customers say that competitors cannot, and checks that the claim is true.
+  - title: Builds the table
+    text: Each doubt, where to answer it on the page, the hypothesis and the test idea.
+  - title: Plans the FAQ
+    text: Built from your three biggest real doubts, not from generic questions.
+
+output_shape: |
+  POST-PURCHASE SURVEY   Q1 What made you purchase today? | Q2 What almost stopped you from buying today?
+                         follow-ups: <up to 2> | where to set it up: <app or tool>
+  LIST SURVEY EMAIL      subject: <...> | body: <...> | incentive: <...> | rules line: <...>
+  CALL SCRIPT            <3 to 5 questions, in order>
+  REVIEW MINING PROMPT   <ready to paste, with the export attached>
+  EXIT-INTENT QUESTION   <one line for cart and product pages, if wanted>
+  OBJECTION TABLE
+   objection (customer words) | where on the page to answer it | hypothesis | test idea
+  FAQ PLAN               <3 biggest doubts and the proof for each>
+  READ-OUT PLAN          <when, how to group, where it goes next>
+  MISSING: <what was not given>
+  CHECKS MISSED: <one line each, or none>
+
+tweaks:
+  - what: Your survey tool
+    how: Name it. The skill writes steps that fit what it can do, such as one question per screen.
+  - what: Order volume
+    how: Give your orders per month. Low volume changes the plan toward calls and your list.
+  - what: The review export
+    how: Attach all your reviews, not a sample. Patterns show up only in the full set.
+  - what: Your claims
+    how: List what you can prove. The skill only suggests points of difference you can back.
+
+judge:
+  - Both core questions are there, in order, in the post-purchase survey.
+  - Nothing offers money or gifts for good reviews.
+  - The prize draw has a rules line.
+  - Each row in the objection table has the customer's words, a page spot, a hypothesis and a test idea.
+  - The survey is short.
+
+test:
+  - Ask it to add a discount for five-star reviews. It should refuse and explain why.
+  - Give it only 20 orders a month. It should lead with calls.
+  - Run the review prompt on 50 reviews you know well. It should find the themes you already see.
+  - Send the survey to ten customers first and see if any question confuses them.
+
+improve:
+  - Add your brand voice to the skill file so the email sounds like you.
+  - Add the claims you can back, so the point-of-difference search stays inside them.
+  - Save each round of answers with the date and compare after you change the page.
+  - Pair it with the test idea ranker for what to test first and the heatmap and recording reader for the why.
+
+works_best_with:
+  tools:
+    - {name: "A store survey app", why: "Sets up post-purchase and exit surveys tied to your order data, with no fixed reply limit on some plans. Check current terms."}
+    - {name: "Any good chat AI", why: "Mines a review export for themes, tone and objections."}
+  inputs:
+    - "A CSV of all your reviews"
+    - "Support emails and chat lines from the last three months"
+    - "A list of your best customers"
+
+terms:
+  - term: Objection
+    meaning: A doubt that almost stops someone from buying, such as 'is the leather good quality?'.
+  - term: Review mining
+    meaning: Giving your reviews to an AI to find the themes, words and doubts that repeat.
+  - term: Exit-intent survey
+    meaning: A short question shown when a visitor is about to leave, such as why they did not buy.

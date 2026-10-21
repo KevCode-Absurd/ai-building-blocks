@@ -1,0 +1,24 @@
+slug: get-a-product-made-right-from-tech-pack-to-inspected-shipment
+name: "Get a product made right, from tech pack to shipment"
+summary: "Give it your product photos. Get a tech pack, a vetted factory, the landed cost, a sample check and an inspection brief."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: product_photos, required: true}
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
+outputs:
+  - {type: brief}
+uses: [product-tech-pack-writer, factory-shortlist-vetter, landed-cost-calculator, sample-approval-gatekeeper, pre-shipment-inspection-brief-writer]
+steps:
+  - {uses: product-tech-pack-writer, note: "Starts the flow. Turns your photos and ideas into the one spec every factory quotes against."}
+  - {uses: factory-shortlist-vetter, note: "Judges factories by how they answer the tech pack from the step before."}
+  - {uses: landed-cost-calculator, note: "Prices the quotes you collected, checked against the tech pack, down to cost per sellable unit and margin."}
+  - {uses: sample-approval-gatekeeper, note: "Judges the samples line by line against the tech pack from the first step."}
+  - {uses: pre-shipment-inspection-brief-writer, note: "Gives the inspector the tech pack and the gold standard to check bulk goods against, and ties payment to the result."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/get-a-product-made-right-from-tech-pack-to-inspected-shipment/skeleton.yaml

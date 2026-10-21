@@ -1,0 +1,22 @@
+slug: plan-a-year-of-hiring-and-what-it-will-cost
+name: "Plan a year of hiring and what it will cost"
+summary: "Give it your headcount history and goals. Get a hiring forecast, a role-by-role plan and a monthly people-cost budget."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: spreadsheet}
+uses: [headcount-forecast-builder, headcount-plan-builder, people-cost-budget-builder]
+steps:
+  - {uses: headcount-forecast-builder, note: "Starts with how many people you will need and lose, with a stated margin of error."}
+  - {uses: headcount-plan-builder, note: "Reads the forecast from the step before and turns it into named roles in the order to hire them."}
+  - {uses: people-cost-budget-builder, note: "Prices the roles in the plan against the forecast so finance can approve a number."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-a-year-of-hiring-and-what-it-will-cost/skeleton.yaml

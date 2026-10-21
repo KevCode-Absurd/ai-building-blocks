@@ -1,0 +1,82 @@
+new_slug: fix-a-bug-with-proof-and-a-clear-pull-request
+name: Fix a bug with proof and a clear pull request
+summary: Give it a bug. Get the cause proven, a small fix, missing tests found and a pull request.
+job: test-and-fix-code
+thinking: high
+thinking_why: Proving a cause means reading code and weighing evidence. Give it your strongest model.
+headline: Fix a bug for good, with the cause proven and a test that would have caught it
+subhead: Describe the bug. It reproduces it, proves the cause before touching the code, makes the smallest fix, finds the tests you were missing, reviews the result and writes the pull request.
+explain: |
+  Many bugs come back because the first fix treated a guess. The AI sees an error, edits the nearest code, the error moves, and nobody knows why. You end up with a fix that has no proof and no test that would catch it again.
+
+  These steps put the proof first. The first step reproduces the bug, narrows it down and states the cause. It waits for your yes before it edits anything, then makes the smallest change. The second lists what the fix changes and which of that no test checks. You then add the tests, starting with one that fails on the old code. The third reviews the fix and tests against your standards. The last writes a pull request that shows the failing run before and the passing run after.
+when:
+  - A bug keeps coming back after being fixed.
+  - Your AI keeps changing the wrong code and the error just moves.
+  - You need a fix a teammate can review without redoing the investigation.
+you_give:
+  - What is broken, how to trigger it and the exact error if you have it
+  - Access to your project code
+  - Your written coding standards or the original issue (optional)
+you_get:
+  - The cause of the bug, shown with evidence and agreed by you
+  - The smallest fix, checked by re-running the failing test
+  - A list of behaviours the fix touches that no test checks, and the tests to add
+  - A review of the fix against your standards and the issue
+  - A pull request showing the failing run before and the passing run after
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md".
+  - Give it the steps that trigger the bug. When it states the cause, read it and say yes or no. It will not edit until you do.
+  - After the missing-test step, add the tests it proposes and run them. Make sure one fails on the old code.
+  - Read the review, then use the pull request text as it is or trim it.
+how_it_works:
+  - title: Prove the cause, then fix
+    text: Reproduces the bug, narrows it down with temporary debug lines, states the cause for your yes, then makes the smallest fix and re-runs the failing test.
+  - title: Find the missing tests
+    text: Reads the fix and lists what it changes. Marks each change covered or not and proposes a test that would have caught the bug.
+  - title: Add the tests (your turn)
+    text: You add the proposed tests, with one that fails on the old code, and run them.
+  - title: Review the fix
+    text: Compares the fix and its tests with your written standards and with the issue, and reports both side by side.
+  - title: Write the pull request
+    text: Describes the cause and the fix in a small picture, with the failing run before and the passing run after.
+output_shape: |-
+  STEP 1: CAUSE AND FIX
+    Reproduction | where it goes wrong | root cause (your yes) | the fix | rerun result
+
+  STEP 2: MISSING TESTS
+    Table of behaviour, covered or not | tests to add
+
+  PAUSE: you add the tests and run them
+
+  STEP 3: REVIEW
+    Standards findings | spec findings | verdict
+
+  STEP 4: PULL REQUEST
+    Summary | before and after | merge danger
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Kind of bug
+    how: Say if it is a crash, wrong output, a bug that only sometimes happens or one that started after a change. Step 1 picks a different way to narrow it down for each.
+  - what: The failing test
+    how: Give a command or test name that fails. A bug it can run on demand is proven much faster.
+  - what: Your standards
+    how: Name the file with your coding rules, so the review in step 3 checks against them.
+judge:
+  - The cause is shown with evidence, such as a logged value or a failing line, not just stated.
+  - The fix touches only code tied to that cause.
+  - The test you added fails on the old code and passes on the new.
+  - The review reports no change outside the bug.
+  - The pull request shows runs before and after.
+test:
+  - Revert the fix and run the new test. It must fail.
+  - Ask it to state the cause in two sentences. If you cannot follow it, the proof is too thin.
+  - Run the full suite. Nothing that passed before should fail.
+  - For a bug that only sometimes happens, run the fixed case at least five times.
+improve:
+  - If the cause is rejected twice, give it a fresh log or a smaller reproduction before the next try.
+  - Keep the cause and the lesson in your project notes so the same mistake is caught earlier.
+  - Not worth the full run for a typo or a one-line change.

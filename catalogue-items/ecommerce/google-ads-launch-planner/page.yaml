@@ -1,0 +1,133 @@
+new_slug: google-ads-launch-planner
+name: "Google Ads launch planner"
+summary: "Give it your store, budget and sales so far. Get the launch order, campaign settings and budget split."
+job: run-google-ads
+thinking: medium
+thinking_why: "It weighs several sources that disagree and has to fit one plan to your cash and data."
+
+headline: "Google Ads launch planner"
+subhead: Give it your budget, your break-even CPA, how many products you sell and how many purchases Google has already counted. It tells you if you are ready, then hands back the order to launch campaigns, the budget for each and the signals that open the next step.
+
+explain: |
+  Most new accounts fail by doing too much at once. They start every campaign type on a small budget, set a bid strategy before there is any data, and let Google fill the account with cheap actions that aren't sales. Then nothing gets enough data to learn.
+
+  This skill gives one default launch order and shows the other orders as "if" choices, because the sources disagree on small details. It starts with Shopping and brand, adds remarketing and feed-only Performance Max after purchases build up, and leaves Demand Gen for last. It sets the budget split, the settings every campaign needs, and the point where each bid strategy changes. It also tells you when not to launch yet.
+
+when:
+  - You are about to run Google Ads for your store for the first time.
+  - Your account has too many campaigns for its budget and none gets enough sales.
+  - You want to know when to move from manual bids to a smart bid strategy.
+
+you_give:
+  - Your monthly Google budget, and monthly Meta or TikTok spend if you run them
+  - Number of products and your hero product
+  - Average order value, margin and break-even CPA
+  - Purchases per month from Google so far, and conversions per day today
+  - Merchant Center status (connected or not) and whether purchase tracking is clean
+you_get:
+  - A ready or not yet verdict, with the fixes to make first
+  - The launch order with the signal that starts each step
+  - A daily budget for each campaign and a 30, 60 and 90 day sequence
+  - A bid plan with the points where you change strategy
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your budget, order value, margin and number of products. Add break-even CPA if you have it.
+  - Say how many purchases Google has counted so far, and whether purchase tracking and Merchant Center are working.
+  - If the skill says not yet, fix those items before spending.
+  - Follow the stages in order, and use the builder for each campaign type when you reach it.
+
+how_it_works:
+  - title: Checks you are ready
+    text: Clean purchase tracking, a connected Merchant Center and cash for 4 to 6 weeks. If not, it stops and lists the fixes.
+  - title: Matches budget to order value
+    text: A high price with a small daily budget means few sales and slow learning. It says whether to raise the budget or start with a cheaper hero product.
+  - title: Sets stage 1
+    text: Non-brand Shopping on 5 to 10 bestsellers, a branded Search campaign and a branded Shopping campaign.
+  - title: Sets stage 2
+    text: Video and display remarketing, then feed-only Performance Max, after purchases build up (about 4 to 6 weeks).
+  - title: Sets stage 3
+    text: Demand Gen for cold traffic, once cheaper campaigns are used up. A large budget with proven creative can start earlier.
+  - title: Applies the settings
+    text: Sales goal, purchases only, Presence location, no Search Partners or Display, consistent names, a budget split guide.
+  - title: Plans the bid ladder
+    text: Manual or capped clicks first, then maximise conversion value, then target ROAS at set conversion counts.
+  - title: Hands back the plan
+    text: A table of campaigns by funnel role, the budget for each, and the signals that start each step.
+
+output_shape: |
+  READY?  <yes | not yet>  <the fixes if not yet>
+  Budget <$/day>  AOV <$>  Break-even CPA <$>  Purchases so far <n>
+  Budget check: <enough for about <n> sales a day | raise the budget or lead with a cheaper hero product>
+
+  STAGE 1 (day one)
+  <campaign name> | <funnel role> | <$ per day> | <bid strategy>
+  Start stage 2 when: <signal>
+
+  STAGE 2 (about weeks 4 to 6)
+  <campaign name> | <funnel role> | <$ per day> | <bid strategy>
+  Start stage 3 when: <signal>
+
+  STAGE 3
+  <campaign name> | <funnel role> | <$ per day> | <bid strategy>
+
+  SETTINGS FOR EVERY CAMPAIGN  <list>
+  BID LADDER  <step | conversions needed | what to do>
+  BRAND SHARE  <% of monthly Google spend>
+  WHERE SOURCES DIFFER  <the choice made and why>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Budget in relation to AOV
+    how: Say your daily budget and AOV. A $1,000 product at $50 a day gets about one sale in four days, so the plan changes.
+  - what: Purchases so far
+    how: Give the real count from Google. Performance Max waits until the account has built up purchases (one source says about 100, another says 4 to 6 weeks at a normal budget).
+  - what: Other channels
+    how: Say if you run Meta or TikTok. Brand search will rise as they work, so the plan sizes the branded campaigns for it.
+  - what: Hero product
+    how: Name one product or a few that win. Cold traffic goes to them first, and the full catalogue opens up for warm audiences.
+  - what: Account size
+    how: Say if you spend $50,000 to $500,000 a month. A four-layer model can fit larger accounts, per one 2026 manual.
+
+judge:
+  - It starts with a ready or not yet verdict and gives reasons.
+  - Each campaign has a funnel role, a budget and a bid strategy.
+  - Each stage has a signal that starts it, not just a date.
+  - It shows where the sources disagree and names the choice it made.
+  - Brand spend is under 10 percent of monthly Google spend, usually 3 to 8 percent.
+  - It does not stack every campaign type on a budget under $50 to $100 a day.
+
+test:
+  - Give it a budget of $30 a day and a $400 product. It should say to start small, not launch five campaigns.
+  - Give it no purchase tracking. It should say not yet, and list the fix first.
+  - Run it twice with the same facts. The launch order and start signals should match.
+  - Check one budget figure against your own sums. Daily budget times 30 should fit your monthly budget.
+  - Compare with your current account and note which campaigns the plan would not have launched yet.
+
+improve:
+  - Add your own rule for leaving manual bids to the skill file, if you want one rule (the sources give 15, 15 to 30, and about one a day for 30 days).
+  - Save your hero products and break-even CPA to your brand file, so the plan starts from them.
+  - Add your own naming pattern if you already use one.
+  - Add a rule for seasonal peaks, such as holding the budget before a sale.
+  - Pair it with the break-even calculator before you run it, and with the structure planner and tracking checker around it.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Where the campaigns, budgets and bid strategies are set up."}
+    - {name: "Google Merchant Center", why: "Holds your product feed, which Shopping and feed-only Performance Max need."}
+    - {name: "Any good chat AI", why: "Turns your numbers into the staged plan and lists the gaps."}
+  inputs:
+    - "Your break-even CPA and ROAS"
+    - "A list of your best sellers by revenue and margin"
+    - "Your last 90 days of Google conversions, if you have any"
+    - "A screenshot of your conversion actions, so tracking can be confirmed"
+
+terms:
+  - term: Hero product
+    meaning: The one product, or a few, you push first to cold traffic because they win.
+  - term: Performance Max
+    meaning: A Google campaign type that shows your ads across Google. Feed-only means it uses your product feed and little else.
+  - term: Target ROAS
+    meaning: A bid strategy where you tell Google the return you want, and it bids to reach it.
+  - term: Demand Gen
+    meaning: Google ads on YouTube, Discover and Gmail that find new people who haven't searched for you yet.

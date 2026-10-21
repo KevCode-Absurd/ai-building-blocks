@@ -1,0 +1,127 @@
+new_slug: taster-event-planner
+name: "Taster event planner"
+summary: "Give it your product versions and buyer. Get a one-day tasting plan, taster card and decision rule."
+job: find-products
+thinking: medium
+thinking_why: "It builds a plan, a card and a rule from a few facts. A mid-size model does this well, and you check the costs and local rules yourself."
+
+headline: "Taster event planner"
+subhead: Tell it your product versions, who should taste them, your budget and city, and how you will film. It plans a one-day public tasting with setup, a sampling script, a shot list, a one-line taster card, and a pass rule that you set before the day.
+
+explain: |
+  Comments and surveys can mislead. One founder shared how about 50 online comments a day asked for a vegan product. He ordered a large batch and sold about 50 bags, because the comments came from a few vocal people. Tasting in person, with people who match your buyer, gives a more honest answer.
+
+  This skill plans that day. It works backward from the content, because an event that cannot make good video is mostly wasted, and footage can last for years. It sets a screening question so only your buyers taste, a taster card with three quick answers, and a decision rule written before the event so you cannot bend it after. It costs the day first, plans consent for filming, and keeps health claims out of the sampling script. It is best for food, drink and other products people can sample.
+
+when:
+  - You have several versions of a food, drink or similar product and need to know which to launch.
+  - You want real buyer reactions and also footage to use in ads and content.
+  - Online comments ask for a product and you want to check demand before a large order.
+
+you_give:
+  - The versions to test and what each one is
+  - Who should taste them, in a line or two
+  - Your budget and city
+  - How you will film, such as who and with what
+you_get:
+  - A cost line for the day, so you can decide if it is worth it
+  - A one-day plan with setup, a screening question, a sampling script and a timeline
+  - A shot list for the footage, with the consent you need
+  - A one-line taster card and a decision rule set before the event
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it the versions, the buyer, your budget, your city and who will film.
+  - Read the cost first. If it is too high, ask for the small version that uses your own team.
+  - Check the decision rule and change the numbers to what you would act on. Do it before the day.
+  - Print the taster cards, collect the permits and release forms, and run the event. Bring the cards back to count.
+
+how_it_works:
+  - title: Costs the day
+    text: Venue, permits, product, staff, filming, insurance and clean-up, with a total you can weigh against the decision.
+  - title: Plans fewer, bigger events
+    text: One large free event now and then, open to the public, beats many tiny ones.
+  - title: Works backward from content
+    text: The shot list comes before the setup, because an event that cannot make good video is mostly wasted.
+  - title: Plans consent
+    text: Signs, a short release for people close to the camera, and no filming of children without a parent's permission.
+  - title: Screens the tasters
+    text: One question so only people who match your buyer taste.
+  - title: Writes the taster card
+    text: Like it, would you buy it, what price do you expect, and a favourite across versions.
+  - title: Sets the pass rule
+    text: You write it before the event. The founder's numbers are examples, not rules.
+  - title: Plans safety and the read-out
+    text: Food safety, allergens, permits, and who counts the cards and how.
+
+output_shape: |
+  COST
+  Venue <...> | Permits <...> | Product <...> | Staff <...> | Filming <...> | Total <...>
+
+  ONE-DAY PLAN
+  Before: <permits, signs, release forms, allergen info>
+  Setup: <layout, stations, queue>
+  Screening question: "<...>" | qualifies if: <...>
+  Sampling script: <what staff say, what they must not say>
+  Timeline: <hour by hour>
+
+  SHOT LIST
+  1. <shot> | when | who films | consent needed
+
+  TASTER CARD
+  Like it <1 to 5> | Would you buy it <yes / no> | Expected price <...> | Favourite <...>
+
+  DECISION RULE (set before the event)
+  Goes forward if <X of N matching tasters like it and Y would buy at a price in range>
+  Tie <...> | Fail <...> | Read-out <who counts, when>
+  SAFETY AND LEGAL: <food safety, allergens, permits, filming consent>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: The number of versions
+    how: Fewer versions give each more tasters. The founder tested about 10 versions with 100 to 150 people. Fewer versions let you use fewer people.
+  - what: The screening question
+    how: Make it match your buyer in one line, such as whether they already buy a rival product. Do not let anyone taste who does not match.
+  - what: The pass rule
+    how: Set it from how costly a wrong call would be. A cheap flavour change needs a lower bar than a large order.
+  - what: Where it happens
+    how: Pick a place where your buyer already is, such as a market near your target group, and check the permit rules for it.
+  - what: The small version
+    how: If an event costs too much, use your own team as a first filter, but only if they match your buyer.
+
+judge:
+  - The cost covers every line and has a total.
+  - The decision rule is written before the event, and says who counts as a valid taster.
+  - The screening question matches the buyer.
+  - The sampling script contains no health claims.
+  - Consent for filming is planned.
+  - The founder's numbers are labelled as examples.
+
+test:
+  - Run the plan once with ten friendly tasters. See if the cards are easy to fill in and count.
+  - Count a mock set of cards and apply the rule. It should give a clear pass, tie or fail.
+  - Ask a friend outside the business to read the sampling script. They should know what to say and what not to say.
+  - After the real event, compare the winner with your online comments and sales data. If they differ, ask who was in each group.
+
+improve:
+  - Add your permit and insurance rules for your city to the skill file, so the cost and the checklist are right.
+  - Add your allergen list and labelling rules for the products you make.
+  - Add your pass rule as a default, with the numbers you decided, so the next event starts from it.
+  - Save the winning footage ideas to your brand file for ads.
+  - Pair it with the Say-do gap checker to compare what tasters said with what they buy, and with the Buyer research plan with survey for calls with your buyers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Builds the plan, the card and the rule, and checks the cost line."}
+    - {name: "Google Forms", why: "Lets you key in the taster cards afterward and count them fast."}
+  inputs:
+    - "A map or list of places where your target buyers already gather"
+    - "Quotes from your best reviews, to write the screening question"
+    - "Permit and insurance rules for the venue you plan to use"
+    - "A camera person who has filmed events before"
+
+terms:
+  - term: Loud minority
+    meaning: A small group of vocal people whose comments make demand look bigger than it is.
+  - term: Screening question
+    meaning: One quick question to check that a person matches your buyer before they taste.

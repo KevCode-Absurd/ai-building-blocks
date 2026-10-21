@@ -1,0 +1,87 @@
+new_slug: make-visitors-who-hesitate-at-the-price-say-yes
+name: Make visitors who hesitate at the price say yes
+summary: Give it your offer and what buyers say about price. Get a value case, a guarantee, honest urgency and a closing line.
+job: make-offer
+thinking: high
+thinking_why: Five skills run in a row, and the guarantee step does refund sums. Give it your strongest model.
+headline: Win buyers who like your product but balk at the price
+subhead: Give it your offer, your cost to deliver and what buyers say about price. It scores the offer's value from the buyer's side, tests the price against it, designs a guarantee for the weakest point, plans honest urgency and writes the closing line that ties them together.
+explain: |
+  When visitors reach your product and leave at the price, the usual fix is a discount. That teaches buyers to wait and eats your margin. Often the real problem is that the offer feels risky, slow or hard, so the price feels too high for what they get.
+
+  The steps find the weak part first and fix that. It scores the offer on what the buyer gets against the effort, delay and doubt they face, and names the weakest part. Then it tests your price against that value and says whether to change the price or the story. It designs a guarantee aimed at the weak part, with refund sums on your delivery cost. It plans a real reason to act now from your true capacity. Last it writes the closing line that states the offer, the guarantee and the deadline together.
+when:
+  - Visitors view your product page, add to cart or ask about price, but do not buy.
+  - Buyers say it is too expensive, and a discount would eat your margin.
+  - You want a guarantee and a deadline you can keep, without fake timers.
+you_give:
+  - Your offer, with what is included, the price, the terms and how it is delivered
+  - Your cost to deliver per buyer, in time and cash
+  - What buyers say about price, from reviews, calls or surveys (optional)
+  - What buyers get and what the price costs them, by year if it lasts longer than one purchase
+  - How many buyers you can serve well at once, and your sales and refund history (optional)
+you_get:
+  - A value score for the offer, with the weakest part named and cheap fixes listed
+  - A price check with a low, middle and high value, a walk-away price and a verdict
+  - A guarantee in an if, time and or-what form, with refund sums and a name
+  - A plan for a real cap or date, and a closing line in two versions with the ask
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your offer exactly as buyers see it, and add the price objections you hear.
+  - Give your real cost to deliver and capacity. The guarantee and the limit rely on them.
+  - Check the refund sums and every date before you publish.
+how_it_works:
+  - title: Score the value
+    text: Scores outcome, likelihood, time delay and effort as the buyer sees them, then names the weakest part and the cheapest fixes.
+  - title: Check price against value
+    text: Builds a low, middle and high value with the sums shown, sets a walk-away price and counts fees and friction. It says to change the price or the story.
+  - title: Design the guarantee
+    text: Ranks buyer fears, picks a guarantee type that fits your ticket size, writes it and runs the refund sums with delivery cost.
+  - title: Plan honest urgency
+    text: Sets a real cap from your capacity, keeps supply a little under demand and writes true lines for each channel.
+  - title: Write the closing line
+    text: Writes two versions of the ask that state the offer, the guarantee and the deadline together, and removes barriers to acting.
+output_shape: |-
+  STEP 1: VALUE SCORE
+    Outcome, likelihood, delay and effort scores | value index | weakest part | cheapest fixes
+
+  STEP 2: PRICE CHECK
+    Low, middle and high value with sums | walk-away price | best alternative | fees and friction | verdict
+
+  STEP 3: GUARANTEE
+    Buyer fears ranked | the guarantee | refund sums | names
+
+  STEP 4: HONEST URGENCY
+    Real cap and date | lines per channel | honesty check
+
+  STEP 5: CLOSING LINE
+    Kind of ask | two versions | barriers removed
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your cost to deliver
+    how: The guarantee sums include it on each refund. Without it the sums rest on a stated guess.
+  - what: Buyer words about price
+    how: Real quotes show which part of the value feels weak. Without them the score is your judgement, not theirs.
+  - what: Your capacity
+    how: The cap must be one you can keep. Say how many buyers you can serve well at once.
+  - what: Deadline you can keep
+    how: Give real dates, such as a restock or a cohort start. The plan will not invent one.
+judge:
+  - The weakest part is named, and the guarantee is aimed at it.
+  - Every number in the price check can be redone by hand from your inputs.
+  - The guarantee has an if, a time and an or what.
+  - No timer, count or date is fake.
+  - The closing line states the offer, guarantee and deadline in one place.
+test:
+  - Redo the refund sums by hand. Net money before and after should match.
+  - Check every cap and date against your calendar and stock.
+  - Show the closing line to three people who balked at the price. Ask what they would still doubt.
+  - Run step 1 twice on the same offer. The weakest part should match.
+improve:
+  - Start tracking refunds, so the guarantee can be updated from real numbers.
+  - Re-run step 1 after you change the offer, and compare scores.
+  - Replace the generic fixes in step 1 with ones your team can really do.
+  - Test two closing lines against each other, one at a time.

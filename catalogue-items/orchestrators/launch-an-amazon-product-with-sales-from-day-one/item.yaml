@@ -1,0 +1,26 @@
+slug: launch-an-amazon-product-with-sales-from-day-one
+name: "Launch an Amazon product with sales from day one"
+summary: "Give it your product facts and a keyword export. Get the listing, launch ads, a stock plan and a launch-week plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: [amazon-keyword-picker, amazon-listing-writer, amazon-ppc-launch-builder, amazon-inbound-stock-planner, amazon-launch-week-planner]
+steps:
+  - {uses: amazon-keyword-picker, note: "Starts the flow. Chooses the true, searched phrases every later step uses."}
+  - {uses: amazon-listing-writer, note: "Writes the title, bullets and backend terms from the keyword tiers."}
+  - {uses: amazon-ppc-launch-builder, note: "Turns the same keyword list into launch campaigns with bids and negatives."}
+  - {uses: amazon-inbound-stock-planner, note: "Plans how much to send, when and how, using the quantities and lead times you now have."}
+  - {uses: amazon-launch-week-planner, note: "Plans launch day around the live listing, the ads and the stock that has arrived."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/launch-an-amazon-product-with-sales-from-day-one/skeleton.yaml

@@ -1,0 +1,20 @@
+slug: inbound-shipment-tracker-builder
+name: "Inbound shipment tracker builder"
+summary: "Give it your purchase orders and freight details. Get a shared tracker and a warehouse notice."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: spreadsheet}
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Complete E-commerce Operations Guide", by: "Davey, founder of a large blanket-hoodie brand (YouTube talk)", used: "Two records for each purchase order, the tracker columns, quotes from two or three freight forwarders, keeping the sheet internal, the advance shipping notice and short-shipment checks"}

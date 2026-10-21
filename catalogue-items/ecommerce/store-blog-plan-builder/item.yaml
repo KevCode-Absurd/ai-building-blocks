@@ -1,0 +1,28 @@
+slug: store-blog-plan-builder
+name: "Store blog plan builder"
+summary: "Give it your products and rivals. Get 10 to 30 posts that lift your collections, in order."
+category: ecommerce
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two co-founders of a Shopify SEO agency", used: "Why a store blog exists (to lift collections), one cluster at a time, post template, product calls to action, internal links and the route that passes link value to shopping pages"}
+  - {title: "Steal These Shopify SEO Hacks To Rank #1 Overnight", by: "Dave Fogerty, founder of a wearable blanket brand and a founder-coaching programme", used: "The four buying-intent blog formats, checking the results page, 10 to 15 posts and internal link rules"}
+  - {title: "$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes", by: "An e-commerce SEO agency owner", used: "Why informational blog traffic can convert near zero, and money pages first"}
+  - {title: "Learn Everything About SEO & AI SEO in 50 Minutes!", by: "An SEO educator from an SEO software company's channel", used: "Money pages first, one cluster at a time, updating before writing new, and reading the top five results for table stakes and gaps"}
+  - {title: "How to Rank #1 in Google in 2026: The 3-Step SEO Playbook", by: "An SEO consultant (video sponsored by a content tool)", used: "Earning links to educational posts and passing that value to money pages"}
+  - {title: "Complete Shopify SEO Optimization Masterclass For Beginners in 2025", by: "A Shopify and e-commerce educator running a live workshop", used: "Telling the AI who writes and for whom, asking for titles first, and rewriting the last part by hand"}
+  - {title: "Claude Code + SEO Masterclass", by: "An AI-automation freelancer and community owner", used: "Benchmarking the top results for length and headings, voice files and an on-page checklist"}
+  - {title: "Claude Code Full Content Automation", by: "Unknown", used: "Targeting specific long-tail buyer terms and linking back to money pages (minor)"}

@@ -1,0 +1,23 @@
+slug: win-back-visitors-who-did-not-buy-on-meta
+name: "Win back visitors who did not buy on Meta"
+summary: "Give it your reviews and store results. Get an ad for each objection, a three-ad sequence and a retargeting budget cap."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: plan}
+uses: [retargeting-objection-ad-planner, retargeting-ad-sequence-planner, next-dollar-budget-allocator]
+steps:
+  - {uses: retargeting-objection-ad-planner, note: "Starts with why people left and gives each reason an ad."}
+  - {uses: retargeting-ad-sequence-planner, note: "Orders the objection ads into a short sequence."}
+  - {uses: next-dollar-budget-allocator, note: "Checks the sequence plan does not take budget from ads that find new buyers."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/win-back-visitors-who-did-not-buy-on-meta/skeleton.yaml

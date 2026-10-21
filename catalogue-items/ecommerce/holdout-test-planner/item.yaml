@@ -1,0 +1,20 @@
+slug: holdout-test-planner
+name: "Holdout test planner"
+summary: "Name the channel or change you doubt. Get a holdout design, run time and how to read it."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "CRO fundamentals (holdouts, incrementality, ecommerce CRO benchmarks)", by: "Compiled research notes on holdouts and incrementality for online stores", used: "Holdout types, the program holdout, the retargeting 80/20 split, the email holdout, geo holdouts and difference-in-differences"}
+  - {title: "CRO as testing and experimentation for DTC ecommerce", by: "Written research review of A/B testing for online stores", used: "Re-testing a surprising large winner with a holdout"}

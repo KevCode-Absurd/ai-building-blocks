@@ -1,0 +1,19 @@
+slug: daily-contribution-margin-tracker
+name: "Daily contribution margin tracker"
+summary: "Give it daily sales, costs and ad spend. Get a daily contribution margin sheet with a returns accrual."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, agency founder, interviewed on a business podcast", used: "The daily contribution margin formula, leaving fixed costs out of the daily view, the returns accrual and the January trap, the metric pyramid, and the active customer file"}

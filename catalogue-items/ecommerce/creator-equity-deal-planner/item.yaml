@@ -1,0 +1,20 @@
+slug: creator-equity-deal-planner
+name: "Creator equity deal planner"
+summary: "Describe the creator or athlete and your stage. Get a deal outline and questions for your lawyer."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How He Hit $100M in Under a Year (And Why You Won't)", by: "Danny Young, founder of IM8, in an interview", used: "Signing power users of the product, deals of at least three years with part of the deal in equity, and pitching one to one"}
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge, in a podcast interview", used: "How equity above a set valuation works, pairing equity with a fee and set deliverables, sponsoring broad then narrow, non-endemic sponsors, ad rights and being a small channel's first sponsor"}

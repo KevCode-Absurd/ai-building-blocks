@@ -1,0 +1,78 @@
+new_slug: build-google-remarketing-lists-and-campaigns-then-read-the-results
+name: Build Google remarketing lists and campaigns, then read the results
+summary: Give it your traffic, customer list and offer. Get lists to build, remarketing campaigns and a read of results.
+job: run-google-ads
+thinking: medium
+thinking_why: Three skills run in a row, but each is a plan or a report. A mid-size model is enough.
+headline: Win back visitors on Google without paying to retarget buyers
+subhead: Give it your traffic numbers, customer list details and offer. It plans the lists worth building, sets up remarketing campaigns with budgets and caps and one ad for each reason people leave, then reads your first results.
+explain: |
+  People leave your store without buying all day. Google can bring them back, but remarketing goes wrong in familiar ways. Lists are too small to run, buyers see ads for products they own, and every ad says the same thing, so you learn nothing about why people left.
+
+  The steps build it in the right order. First it checks which lists are big enough to use and plans cart abandoner and customer lists, with exclusions so buyers are left out. The second step uses those lists to set up the campaigns, with budgets, frequency caps and one ad concept for each of five doubts. It pauses while you build it and run it for three to four weeks and export the report. The last step reads the results against your target and ranks the changes worth making.
+when:
+  - Visitors add to cart and leave and you want to bring them back.
+  - You see ads on Google for products you already bought, or suspect your own do the same.
+  - You have an offer for returning visitors and no plan for who sees it.
+you_give:
+  - Monthly visitors, add to cart numbers and purchases
+  - Customer list details and how customers agreed to ads (before any upload)
+  - Your offer for returning visitors, with shipping and returns terms
+  - Your daily budget and any videos or images (optional)
+  - After the pause, the Google Ads report by campaign and ad
+you_get:
+  - A size check and the audience lists to build, with exclusions and custom segments
+  - Remarketing campaigns with budgets, caps and audiences
+  - Five ad concepts, one for each doubt, ready to brief
+  - Ranked changes from your first results, with a score
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Tell it how customers agreed to their data being used for ads before you upload any list.
+  - When it pauses, build the lists and campaigns, run them three to four weeks and export the report by campaign and ad.
+  - Keep the ad that wins and drop the weak ones as it ranks them.
+how_it_works:
+  - title: Plan the audiences
+    text: Checks each list is big enough to use, plans cart abandoner and customer lists, sets exclusions so buyers are left out and defines custom segments from search terms.
+  - title: Build the remarketing campaigns
+    text: Reads the audience plan, checks the list sizes again, sets up video first or Demand Gen, sets budgets and frequency caps, and writes one ad concept for each of five doubts.
+  - title: Read the first results
+    text: Pauses while you build it and run it for three to four weeks and export the report. Then it checks the export fits, compares results with your target and ranks the changes worth making.
+output_shape: |-
+  STEP 1: AUDIENCE PLAN
+    Size check | audiences | cart abandoners | customer lists | exclusions | custom segments
+
+  STEP 2: REMARKETING CAMPAIGNS
+    Readiness | audiences | setup | budgets and caps | five ad concepts
+
+  PAUSE: build it, run three to four weeks, export the report
+
+  STEP 3: RESULTS READ
+    What was read | findings ranked by money at stake | changes worth making | score
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your list sizes
+    how: Lists need about 1,000 people to run. If yours are smaller, step 2 will say to start with broad visitors or email.
+  - what: Customer upload
+    how: Say how customers agreed to ads. Without it the plan marks the upload as not ready.
+  - what: Video or Demand Gen
+    how: Tell it which you can make. Step 2 sets up the one that fits.
+  - what: Real proof only
+    how: Give it your real review count and terms. The ads use only proof you can show.
+judge:
+  - Lists too small to run are called out, not planned.
+  - Existing customers are excluded from the campaigns that should not reach them.
+  - Customer uploads are held until consent is confirmed.
+  - Each of the five ads answers one doubt, and uses proof you can show.
+  - The results read only covers what the export holds.
+test:
+  - Check the list sizes against your own numbers.
+  - Look in Google Ads for the exclusions and confirm buyers are left out.
+  - Compare the budget and caps in the plan with what you set.
+improve:
+  - Push what the winning doubt teaches you back into your cold ads.
+  - Re-run step 3 after another month and compare the two reads.
+  - Add email and text as well, since they cost less per return visit.
+  - Not worth it before you have a steady stream of new visitors.

@@ -1,0 +1,22 @@
+slug: hire-fairly-from-job-post-to-a-checked-offer-letter
+name: "Hire fairly, from job post to a checked offer letter"
+summary: "Give it a hiring brief and resumes. Get a job post, a ranked shortlist, a fair pick and a checked offer."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: feedback_notes, required: true}
+outputs:
+  - {type: audit_report}
+uses: [hiring-packet-builder, applicant-shortlist-builder, fair-candidate-comparer, offer-letter-check]
+steps:
+  - {uses: hiring-packet-builder, note: "Makes the job post, the scoring guide and the offer template that every later step uses."}
+  - {uses: applicant-shortlist-builder, note: "Scores applicants only on the needs written in the job post from the step before."}
+  - {uses: fair-candidate-comparer, note: "Compares candidates using the interview notes you took against the scoring guide. You make the hiring call."}
+  - {uses: offer-letter-check, note: "Checks the filled-in offer letter, built from the template in step one, before you send it. Not legal advice."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/hire-fairly-from-job-post-to-a-checked-offer-letter/skeleton.yaml

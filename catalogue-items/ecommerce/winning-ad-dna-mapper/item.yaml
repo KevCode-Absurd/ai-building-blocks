@@ -1,0 +1,22 @@
+slug: winning-ad-dna-mapper
+name: "Winning ad DNA mapper"
+summary: "Paste winning ads, yours or rivals'. Get each split into message and look, plus one-part swaps to test."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: reference_set, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: ad_breakdowns}
+  - {type: ad_style_dna}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Creative strategy is easy actually", by: "Community founder and creative strategist", used: "Splitting every ad into messaging and creative, the segment, concept, angle, mechanism, copy blocks, hook and format parts, the CAST parts for video, pattern and gap finding and rotating one element at a time"}
+  - {title: "8 years of marketing advice in 70 minutes", by: "Mark, paid ads operator and mentor", used: "Swiping the philosophy and not the copy, the contrast idea of doing the opposite of the field, and the warning about copying trends once they are widely known"}

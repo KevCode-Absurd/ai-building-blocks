@@ -1,0 +1,24 @@
+slug: collection-page-planner
+name: "Collection page planner"
+summary: "Give it your range and keyword data. Get a set of collection pages, each aimed at one search."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Steal These Shopify SEO Hacks To Rank #1 Overnight", by: "Dave Fogerty, founder of a wearable blanket brand and a founder-coaching programme", used: "Splitting one collection into variant collections by audience, style, use and price, with one keyword each and the same products"}
+  - {title: "$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes", by: "An e-commerce SEO agency owner", used: "Collection pages over blog content as the sales driver, and one agency's claim about 40 new collections"}
+  - {title: "Complete Shopify SEO Optimization Masterclass For Beginners in 2025", by: "A Shopify and e-commerce educator running a live workshop", used: "Building the collection first, and writing it around a hero keyword and cluster keywords"}
+  - {title: "Shopify SEO Optimization Guide for Beginners 2026", by: "Christian, a Shopify consultant", used: "Naming a collection for the search, description length and placement, and renaming a handle with a redirect"}
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two co-founders of a Shopify SEO agency", used: "Reusing products across collections, linking parent collections to sub-collections, and why collections bring most search sales"}

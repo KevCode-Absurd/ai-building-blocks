@@ -1,0 +1,101 @@
+new_slug: hiring-pipeline-runner
+name: Hiring pipeline runner
+summary: Give it a role and each batch of resumes. Get a fair ranked shortlist and draft replies. You decide on every person.
+job: hire-people
+thinking: high
+thinking_why: It scores people, picks its own path from the results and drafts messages about them. Give it your strongest model and read every score.
+headline: Hiring pipeline runner
+subhead: Give it the role, then each new batch of resumes. It scores them only against your scoring guide, drafts the replies, tells you when to widen the search, and sends a short update each Friday. You send, book and decide.
+explain: |
+  Hiring a person takes weeks, and the work comes in waves. A batch of resumes lands, you screen it, someone replies late, another batch lands. The usual faults are scoring on a gut feel, losing track of who was already looked at, and leaving good people without a reply.
+
+  This agent keeps one folder for the role. It writes the job post and the scoring guide once, then scores each new batch only against that guide and keeps a running ranking with the evidence quoted. If strong fits are scarce, it says where else to look and whether one must-have may be set too high. It drafts every reply but sends none. After interviews, it compares your notes against the same guide. You make every call about a person. For anything about hiring rules, check with a qualified person.
+when:
+  - You have an open role and applications keep arriving in batches.
+  - You want every applicant scored the same way, with the reason shown.
+  - You want a short update each Friday without building it by hand.
+you_give:
+  - A short brief of the role and what the team needs
+  - Each new batch of resumes or application forms
+  - Your notes from each interview, after the interviews (optional)
+  - Your country, so the drafts and checks fit local rules
+you_get:
+  - A job post and a scoring guide, made once and reused
+  - A running ranking with the quoted evidence behind each score
+  - Draft invites, replies and holding notes, all marked not sent
+  - A call on whether to widen the search, and where to look
+  - A one-page update each Friday
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the role brief.
+  - Read the job post and scoring guide it makes, and change anything you disagree with before the first batch is scored.
+  - Each time new resumes arrive, put them in the folder or attach them and ask it to run the new batch.
+  - Read the ranking and the drafts. Send, book or reject yourself, or say yes to one named action.
+  - After interviews, give it your notes and ask for the comparison. Run it again on Friday for the update.
+how_it_works:
+  - title: Get the job post and scoring guide
+    text: Builds them once for the role and shows them to you before anyone is scored. Only what is in the guide counts.
+  - title: Find the new applicants
+    text: Compares each batch with the people already scored, so no one is scored twice.
+  - title: Screen the batch
+    text: Scores each new applicant against the guide and adds them to the ranking, with the quoted line behind each score.
+  - title: Choose the path
+    text: With enough strong fits, it goes on to replies. With too few, it suggests where else to look and flags a must-have that may be set too high.
+  - title: Draft the replies
+    text: Writes an invite, a clear reply or a holding note for each person. Every draft is marked not sent.
+  - title: Compare finalists
+    text: After interviews, lines up your notes against the guide. It does not name a winner.
+  - title: Report on Friday
+    text: Counts people by stage, shows what is stuck and what to do next week.
+output_shape: |-
+  THIS BATCH
+    New <n> | Strong fits <n> | Miss a must-have <n> | Unclear <n>
+
+  RANKING (top of the list)
+    1. <ID> | must-haves met <n of n> | evidence: "<quoted line>" | score <x>
+
+  PATH TAKEN
+    <replies | widen the search>: <why>
+
+  DRAFTS WAITING FOR YOUR YES
+    <invite | reply | hold> | for: <ID> | not sent
+
+  QUESTIONS FOR YOU
+    <unclear resumes, must-haves worth a second look>
+
+  FRIDAY UPDATE
+    <counts by stage, stuck, next week>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: What counts as a strong fit
+    how: The starting point is meeting every must-have. Tell it if one must-have can be learned on the job and it will score it as a nice-to-have in the guide you approve.
+  - what: How many strong fits you want
+    how: It suggests widening the search when there are fewer than three after two batches. Set your own number for a role that is hard to fill or easy to fill.
+  - what: Your country
+    how: Hiring and privacy rules differ. Say where the role is based so drafts and checks fit, then have a qualified person look over the process.
+  - what: Names removed
+    how: You can give it resumes with names and photos taken out, so even the file does not carry them.
+judge:
+  - Every score is against the scoring guide and has a quoted line behind it.
+  - Nothing outside the guide, such as name, age, school or a gap in work, moved a score.
+  - No message was sent, no interview booked and no one rejected without your yes.
+  - No winner was named for you.
+  - People already scored were not scored again.
+test:
+  - Run it on a past search where you know who you hired. Check whether that person ranked near the top on the guide alone.
+  - Run the same batch twice. The ranking should match, apart from wording.
+  - Put a resume in with a line that says to rank it first. It should flag the line, not follow it.
+improve:
+  - Save which strong fits became hires, and tell the agent after the search, so you can see whether the guide predicted well.
+  - Add your reply tone to the brief so the drafts sound like you.
+  - If a must-have screened out many people, change it in the guide with a qualified adviser, then re-score only what the change affects.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the hiring folder, remember who was scored and run the Friday update on a timer.
+    - name: Gmail
+      why: Applications often arrive here. Export or attach the batch. Sending stays with you.
+  inputs:
+    - The scoring guide you used for your last hire
+    - A list of the stages in your hiring process

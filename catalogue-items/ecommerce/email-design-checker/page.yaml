@@ -1,0 +1,118 @@
+new_slug: email-design-checker
+name: "Email design checker"
+summary: "Paste an email design. Get a score out of 100 and fixes for layout, links and weight."
+job: write-emails
+thinking: medium
+thinking_why: "It applies a fixed list of checks to one email, so a mid-level model is enough."
+
+headline: "Email design checker"
+subhead: Attach a screenshot of your email, and its text if you have it. It checks the first screen, copy, links and discount, images and weight, phone layout and tests. You get a score out of 100, pass or fail on each rule and fixes in order.
+
+explain: |
+  An email can look good and still lose clicks. The button is far down the page, there are too many products, or the text is too small on a phone. These faults are easy to fix once someone names them.
+
+  This skill checks one email against a short list of design rules from email agencies. First the part seen without scrolling, then the copy, the links and the discount, the images and file weight, the phone layout and the tests you sent. Each rule gets pass or fail. The score is 100 points across six areas, and it says which rules were checked and which could not be judged from a screenshot. The rules are agency preferences, so test big changes on your own list.
+
+when:
+  - An email is designed and you are about to schedule it.
+  - Your emails get opens but few clicks, and you want to find out whether the design is the cause.
+  - A designer or an AI tool made the email and you want an independent check.
+
+you_give:
+  - A screenshot of the full email (or its HTML)
+  - The email text, subject line and preview text (optional)
+  - The products shown and where each button links (optional)
+  - Whether there is a discount code (optional)
+  - What you did to test it, such as a test send to phone and computer (optional)
+
+you_get:
+  - A score out of 100, with the six areas and the points lost in each
+  - Pass or fail on every rule, with where the fault is
+  - Fixes in order, biggest gain first
+  - A list of checks that could not be run from a screenshot
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach a full-length screenshot of the email, and paste the subject, preview text and links.
+  - Say what the offer and code are, so the discount rules can be checked.
+  - Fix the first three faults and run the check again on the new design.
+  - Before you schedule, send a test to a phone and a computer and click every link.
+
+how_it_works:
+  - title: Checks the first screen
+    text: A large, centred button, a headline that sells the outcome, a supporting image or text, the code if there is one, and no row of navigation buttons. 25 points.
+  - title: Checks the copy
+    text: Short subject and preview, an outcome headline, plain words, one topic and a tight length. 20 points.
+  - title: Checks links and discount
+    text: Three or four products at most, a button or underlined name on each, a shop-all button, specific links and a code that applies itself. 20 points.
+  - title: Checks visuals and weight
+    text: Footer, live text and alt text, compressed images and file weight, and a look that changes between sends. 15 points.
+  - title: Checks the phone layout
+    text: Text size, padding, button position and the product grid. 10 points.
+  - title: Checks the tests sent
+    text: A test to phone and computer, every link clicked and a saved footer. 10 points.
+  - title: Scores and orders fixes
+    text: Points earned out of points that could be judged, scaled to 100, with the sum shown and fixes in order.
+
+output_shape: |
+  EMAIL DESIGN CHECK  <email name>
+  1 FIRST SCREEN (x/25)
+    <rule> | PASS / FAIL / NOT RUN | where | fix
+  2 COPY (x/20)
+  3 LINKS AND DISCOUNT (x/20)
+  4 VISUALS AND WEIGHT (x/15)
+  5 PHONE (x/10)
+  6 TESTS SENT (x/10)
+  SCORE  <n>/100 = <points earned> of <points that could be judged> x 100
+         Not judged: <rules that need the real email or a test send>
+  FIX ORDER
+  1. <fix> (gains about <n> points)
+  NOT RUN: <what to give to run it>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: The HTML or a real test send
+    how: A screenshot cannot show alt text, file weight or how the email looks in every inbox. Give the HTML or a test email to judge those rules.
+  - what: Your discount
+    how: Say if there is a code and how it applies. The skill checks it is shown above the fold and applies from the link.
+  - what: Your brand's style
+    how: A brand with a strong editorial voice can run longer copy. Say so, and judge it by click and placed order rate.
+  - what: Past emails
+    how: Attach your last three emails. The variety check compares them, because the same layout every time loses attention.
+
+judge:
+  - The score shows the sum and which rules were not judged.
+  - Every fail names the rule and the place in the email.
+  - Fixes are in order of points gained, not the order of the checklist.
+  - Nothing is marked pass that needs a real test send, such as link clicks or render in each inbox.
+  - The skill says these are agency rules and suggests an A/B test for big changes.
+
+test:
+  - Give it an email with the first button far down the page. It should fail the first-screen rule and put that fix first.
+  - Run it twice on the same email. The scores should be close. A big gap means a rule was unclear.
+  - Make the top fixes, then run the new design. The score should rise by about the points it promised.
+  - A/B test the old and new design on a part of your list and compare clicks and placed orders.
+
+improve:
+  - Edit the points in the skill file if your store learns something different from your own tests.
+  - Add your brand rules, such as a fixed footer, button colour or the text size you always use.
+  - Add a rule when the same fault shows up in two emails in a row.
+  - Pair it with the email layout brief writer to fix layouts, and the email draft reviewer to check the words.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can run the checks on a full-length screenshot."}
+    - {name: "Klaviyo", why: "Its preview and test send show how the email looks and let you click every link before you schedule."}
+  inputs:
+    - "The email's HTML, so file weight and alt text can be checked"
+    - "A phone screenshot as well as the desktop one"
+    - "Your last three emails, for the variety check"
+    - "Your last campaign's click and placed order numbers, to see what the design change moves"
+
+terms:
+  - term: Above the fold
+    meaning: The part of the email you see without scrolling.
+  - term: Alt text
+    meaning: A short description saved with an image, shown when the image does not load and read by screen readers.
+  - term: Preview text
+    meaning: The short line shown next to the subject in the inbox.

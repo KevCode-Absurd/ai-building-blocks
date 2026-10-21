@@ -1,0 +1,20 @@
+slug: set-your-order-size-and-split-it-across-suppliers
+name: "Set your order size and split it across suppliers"
+summary: "Give it past sales and supplier quotes. Get a forecast, the cheapest order size and a split by supplier."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+outputs:
+  - {type: plan}
+uses: [demand-forecast-planner, order-quantity-calculator, supplier-order-splitter]
+steps:
+  - {uses: demand-forecast-planner, note: "Starts from your past sales and makes the demand figure the next steps size orders from."}
+  - {uses: order-quantity-calculator, note: "Reads the demand figure from step 1 and finds the order size with the lowest total cost."}
+  - {uses: supplier-order-splitter, note: "Takes the order size from step 2 and your quotes, and says how much to buy from each supplier."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/set-your-order-size-and-split-it-across-suppliers/skeleton.yaml

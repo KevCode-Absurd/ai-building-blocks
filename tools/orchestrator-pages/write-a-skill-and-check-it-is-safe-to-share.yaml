@@ -1,0 +1,89 @@
+new_slug: write-a-skill-and-check-it-is-safe-to-share
+name: Write a skill and check it is safe to share
+summary: Give it a job you repeat. Get a written skill that is scored, tested for triggering and checked for risk.
+job: make-skills
+thinking: medium
+thinking_why: Most steps read files against a checklist. A mid-size model handles that. Use your strongest one for the safety scan.
+headline: A skill you can trust and pass on
+subhead: Give it a job you do again and again. It writes the skill and scores it. It grades the line that makes your AI pick it. Then it scans for risky code and checks it loads in other AI tools.
+explain: |
+  Writing a skill is the easy part. The trouble comes later. The skill never fires because its description is vague. It has a typo in the header that other tools reject. Or it carries a command or a leak that nobody noticed until a teammate ran it.
+
+  The steps catch each of those in order. First it writes the skill with test prompts. It scores the folder and fixes the weak spots. Then it grades the description that decides when your AI picks the skill. You then apply the fixes yourself, because you know what the skill is for. Last it scans the fixed files for risky code and data leaks, and checks they will load in other tools.
+when:
+  - You repeat a job and want your AI to do it your way each time.
+  - You are about to share a skill with a team or post it for others.
+  - A skill you wrote never seems to fire, or breaks in another tool.
+you_give:
+  - The job you repeat, what a good result looks like and when it should start
+  - A sample of the job done well (optional)
+  - The other skills you already have installed (optional)
+you_get:
+  - A skill folder with test prompts, ready to add to your AI
+  - A score with a fix list, in order of value
+  - A grade for the description, with the skills that block it
+  - A risk report on code and data leaks
+  - A list of what stops it loading in other tools, with fixes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the job in a few lines and say when it should start.
+  - When it pauses, fix the skill files using the score and the trigger grade. Then tell it to carry on.
+  - Read the risk report before you share anything.
+how_it_works:
+  - title: Write the skill
+    text: Turns your job into a skill folder with clear steps, a description that says when to use it, and a few test prompts.
+  - title: Score its quality
+    text: Checks the files and sections, runs any scripts, and scores it with a list of fixes from most to least useful.
+  - title: Grade when it fires
+    text: Grades the name and description the way your AI reads them. Tests which skill wins for sample requests. Flags skills that block each other.
+  - title: Pause, then apply the fixes
+    text: You edit the skill using the score and the trigger grade. Keep a copy of the first draft so you can compare.
+  - title: Scan it for risk
+    text: Reads every file without running it and lists risky commands, data leaks and hidden code, ranked.
+  - title: Check it loads elsewhere
+    text: Looks for header errors, bad names, broken links and tool names that only work in one app, and gives each fix.
+output_shape: |-
+  STEP 1: THE SKILL
+    Skill folder | test prompts | what it does and when it fires
+
+  STEP 2: QUALITY SCORE
+    Score | what is missing | fixes in order
+
+  STEP 3: TRIGGER GRADE
+    Grade for the description | prompts that do and do not fire it | skills that block it
+
+  PAUSE
+    You apply the fixes
+
+  STEP 4: RISK REPORT
+    Findings ranked | what to remove or keep
+
+  STEP 5: PORTABILITY
+    Problems by tool | fix for each
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Where the skill will run
+    how: Say Claude, ChatGPT, Gemini or all of them. Step 5 then checks the tools you named first.
+  - what: Whether it ships scripts
+    how: If it has scripts, step 2 runs them and step 4 reads them closely. If it is text only, both are quicker.
+  - what: Who will use it
+    how: A skill for you can be loose. One for a team needs plain names, no private paths and a stated stop rule.
+  - what: Your other skills
+    how: Name the ones you already use. Step 3 then checks the new skill against them for clashes.
+judge:
+  - The description says when to use the skill and a request that fits it would trigger it.
+  - Each fix in the score list names a file or line, not a general tip.
+  - Every risk finding says what it is, where it is and what to do.
+  - Portability findings match what the skill really contains, not a standard list.
+  - The skill still does the job after you apply the fixes.
+test:
+  - Give the finished skill a request it should handle, and one it should not. Check which one fires it.
+  - Plant a harmless risky line in a copy of the skill, such as a call to a web address. The scan should find it.
+  - Install the skill in a second tool and see if it loads.
+improve:
+  - Keep the first test prompts. Run them again after every edit.
+  - Save the risk checks you find useful as a short list to run before you add anyone else's skill.
+  - Not worth it for a one-off task. Do it for work you repeat or share.

@@ -1,0 +1,22 @@
+slug: write-a-skill-and-check-it-is-safe-to-share
+name: "Write a skill and check it is safe to share"
+summary: "Give it a job you repeat. Get a written skill, a score, a trigger grade, a safety scan and a portability check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: audit_report}
+uses: [skill-writer, skill-quality-tester, skill-trigger-auditor, skill-safety-checker, skill-portability-checker]
+steps:
+  - {uses: skill-writer, note: "Turns your description of the job into a skill folder with test prompts."}
+  - {uses: skill-quality-tester, note: "Reads the skill folder from the step before and scores it with a fix list."}
+  - {uses: skill-trigger-auditor, note: "Reads the same skill folder and grades the line that decides when it runs."}
+  - {uses: skill-safety-checker, note: "Scans the fixed skill files for risky code and data leaks."}
+  - {uses: skill-portability-checker, note: "Checks the same files will load in other AI tools, so you can share them."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-a-skill-and-check-it-is-safe-to-share/skeleton.yaml

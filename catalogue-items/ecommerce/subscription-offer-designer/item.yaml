@@ -1,0 +1,26 @@
+slug: subscription-offer-designer
+name: "Subscription offer designer"
+summary: "Give it price, margin and cash. Get a subscription offer and your max CAC."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: offer}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "I Studied Every Ecommerce Offer So You Don't Have To", by: "DTC offer consultant (public video)", used: "Treating a subscription as an auction where lifetime value caps what you can pay, losing money on order one on purpose, and the cash warning"}
+  - {title: "The Most Valuable Subscription Video You'll Watch in 2026", by: "Matthew Holman, interviewed by an email and SMS marketer", used: "Buy more save more over a flat percent, gift options, discount hunters, take rate and CAC phases, and telling customers about gifts"}
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "The layered 90-day pack with a lifetime subscribe discount and its effect on required ROAS"}
+  - {title: "I Studied Every $100M Ecommerce Offer So You Don't Have To", by: "DTC offer consultant (public video)", used: "Front-loaded subscription discount, subscribe-only best offer, and why testing discount percentages is not offer testing"}
+  - {title: "The $100M Subscription Brand Playbook", by: "Public video, speaker not named", used: "A subscription-only offer, a welcome kit of gifts that help use the product, and matching cadence to use"}
+  - {title: "$10,000,000 per year on Shopify: Insane Offer and Conversion Rate Strategy", by: "Jordan Hayes (agency owner)", used: "A subscription-only gate with a starter kit and gifts"}
+  - {title: "How He Hit $100M in Under a Year (And Why You Won't)", by: "Public interview with a founder", used: "A prepaid three-month plan priced as one payment, added value that is not a discount, and its take-up"}

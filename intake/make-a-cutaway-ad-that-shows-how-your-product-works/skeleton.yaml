@@ -1,0 +1,52 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md).
+id: make-a-cutaway-ad-that-shows-how-your-product-works
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: make-a-cutaway-ad-that-shows-how-your-product-works
+  name: "Make a cutaway ad that shows how your product works"
+  summary: "Give it your product and buyer words. Get a how-it-works idea and a cutaway image prompt that keeps your real product."
+  when: "your product works in a way buyers cannot see and a picture of the inside would make the case."
+  job: make-image-ads
+  level: advanced
+steps:
+  - name: "Find the idea and how it works"
+    skill: big-idea-and-mechanism-builder
+    job: copy
+    from: "skill: big-idea-and-mechanism-builder"
+    method: ["List what only your product has", "Ask why for each part", "Rank the buyer pains", "Build the root cause and name the mechanism", "List every claim that needs proof"]
+    inputs: [product_data, voc_reviews, competitor_set!, brand_brain!]
+    outputs: [brief]
+    note: "Starts from your product facts and buyer words."
+  - name: "Write the cutaway ad"
+    skill: 3d-cutaway-image-ad-maker
+    job: image
+    from: "skill: 3d-cutaway-image-ad-maker"
+    method: ["Test that the process is hidden, true and worth learning", "Write the chain as two to four links, each sourced", "Freeze the one link where the product acts", "Colour-code the parts", "Lay out a short headline and at most three labels"]
+    inputs: [brief, brand_brain, product_photos!]
+    outputs: [image_prompt, ad_copy]
+    note: "Takes the mechanism from the brief and draws it as one frozen moment."
+  - name: "Keep the real product in the picture"
+    skill: accurate-product-image-ad-maker
+    job: image
+    from: "skill: accurate-product-image-ad-maker"
+    method: ["Give each photo one role", "Fix three to five lock lines for the details models get wrong", "Write the prompt in five blocks with the exact words in quotes", "Check six pass-or-fail lines on the first image"]
+    inputs: [brief, product_photos!, ad_copy!, brand_brain!, lessons_register!]
+    outputs: [image_prompt]
+    note: "Reads the brief and the ad words from the step before and rewrites the prompt so the product looks like yours."
+  - name: "Check the ad before you make it"
+    skill: pre-launch-ad-checker
+    job: ads
+    from: "skill: pre-launch-ad-checker"
+    method: ["Check shape, size and safe zones", "Check every claim and number against your proof", "Read it as your buyer: who, gain, proof, risk, step", "Give a verdict"]
+    inputs: [ad_copy, image_prompt, brand_brain!]
+    outputs: [audit_report]
+    note: "Reads the words and the prompt together and flags any claim that shows more than your proof."
+  - pause: "Make the image in your image tool, compare it with your product photos and approve one."
+  - name: "Get the picked image to full size"
+    skill: image-upscale-checker
+    job: image
+    from: "skill: image-upscale-checker"
+    method: ["Fix faults in the original first", "Work out the pixel size the use needs", "Set a faithful upscaler", "Lay the original over the result to find changes"]
+    inputs: [approved_image]
+    outputs: [upscaled_image]
+    note: "Takes the image you approved after the pause."

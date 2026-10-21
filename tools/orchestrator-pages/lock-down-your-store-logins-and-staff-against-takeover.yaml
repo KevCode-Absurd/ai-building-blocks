@@ -1,0 +1,77 @@
+new_slug: lock-down-your-store-logins-and-staff-against-takeover
+name: Lock down your store logins and staff against takeover
+summary: Describe your team and apps. Get a security score, a fix list, a sign-in policy and a phishing rule sheet.
+job: protect-your-store
+thinking: medium
+thinking_why: Three skills run in a row, but each is a checklist. A mid-size model does it well. Use your strongest if you have a large team.
+headline: Stop a stolen login from taking over your store
+subhead: Tell it who has admin access, which apps are installed and how people sign in. It scores your store security out of 100, ranks the fixes into today, this month and this quarter, writes a one-page sign-in policy, and gives your staff a phishing rule sheet with a ten-minute drill.
+explain: |
+  Most store takeovers start with one stolen login. A leaver still has admin access, a shared password was reused, or a staff member typed a password into a fake page. Your platform protects its own servers, but it cannot protect a login you gave away.
+
+  The steps close those gaps in order. First it splits the job between what your platform covers and what you cover, then scores eight basics such as two-step sign-in, leavers, apps and backups. It pauses so you can do the fixes marked for today. The second step checks sign-in itself, including password rules and account recovery, and writes the policy. It pauses again so you can share the policy and set up a password manager. The last step writes a rule sheet and a drill so staff spot fake login pages.
+when:
+  - You have staff, contractors or agencies with admin access and have never reviewed who still needs it.
+  - A phishing email or a strange login alert made you worry about your store.
+  - You are hiring or about to share access and want written rules before you do.
+you_give:
+  - Your platform, such as Shopify, WooCommerce or a custom store
+  - Everyone with admin or staff access, their role and whether they are staff or a contractor
+  - Your installed apps and the permissions each one has
+  - How people sign in, your password rules today and what support does on a forgotten password
+  - The accounts that matter most, such as store admin, email, ad accounts and your domain, and whether you use a password manager
+you_get:
+  - A security score out of 100 across eight checks, with fixes ranked for today, this month and this quarter
+  - A sign-in score out of 100, ranked gaps and a one-page policy for passwords, second steps, recovery and risky changes
+  - A one-page phishing rule sheet in plain words, and a ten-minute drill with ten sample cases and answers
+  - A quarterly routine to keep it all current
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Copy your staff list and installed apps from the admin pages. Do not paste passwords or codes.
+  - When it pauses, turn on two-step sign-in for every admin, remove leavers and delete apps you do not use.
+  - Share the policy with your team, move everyone to a password manager, then run the drill.
+how_it_works:
+  - title: Check your store security
+    text: Splits what your platform covers from what you cover, scores eight basics, and ranks the fixes into today, this month and this quarter.
+  - title: Check sign-in security
+    text: Pauses while you do today's fixes. Then ranks gaps in password rules, second steps and recovery, and writes the one-page policy.
+  - title: Brief staff on phishing
+    text: Pauses while you share the policy. Then writes the staff rule sheet and a ten-minute drill with made-up example addresses.
+output_shape: |-
+  STEP 1: SECURITY CHECKUP
+    Platform split | eight checks with points | score out of 100 | fixes for today, this month and this quarter | quarterly routine
+
+  STEP 2: SIGN-IN CHECK
+    What applies | ranked gaps | score before and after fixes | one-page policy
+
+  STEP 3: PHISHING RULES
+    One-page rule sheet | who to tell | ten-case drill with answers | tools the rules need
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your platform
+    how: A hosted platform handles part of this for you. Naming it stops the steps from checking things you cannot change.
+  - what: The apps list with permissions
+    how: Apps are a common weak spot. Copy the permissions each one has, so the checkup can rank them.
+  - what: Contractors and agencies
+    how: List them separately from staff. They are the access most often forgotten when work ends.
+  - what: Password manager and security keys
+    how: Say which you use. The rule sheet only asks staff to do what your tools allow.
+judge:
+  - Each fix names the check it comes from and how long it takes.
+  - The platform split names what your platform covers and what you do.
+  - Scores show how they were worked out, and any check that does not apply is left out, not marked as passed.
+  - The policy fits on one page and sets who uses which second step.
+  - Drill examples use made-up addresses, and each answer says why in one line.
+test:
+  - Check the admin list in the report against your real admin page. No one should be missing.
+  - Do the first fix marked for today, then run the checkup again. The score should rise.
+  - Run the drill with two staff members. Ask them to say why each answer is right.
+  - Ask one person to find the rule that covers an unknown login pop-up. It should take under a minute.
+improve:
+  - Put the policy and rule sheet in your staff handbook and send them to every new hire.
+  - Repeat the checkup each quarter, using the routine it gives you.
+  - Add your own real near-misses to the drill, with details changed.
+  - Pair it with a fraud rules setter once your logins are in order.

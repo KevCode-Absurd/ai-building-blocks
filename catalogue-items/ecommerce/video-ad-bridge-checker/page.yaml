@@ -1,0 +1,123 @@
+new_slug: video-ad-bridge-checker
+name: "Video script bridge checker"
+summary: "Paste a video ad script. Get a bridge score out of 100, early-sell spots and a tighter script."
+job: check-ads
+thinking: high
+thinking_why: "It reads a whole script line by line and judges how the viewer's awareness changes, so a stronger model catches more."
+
+headline: "Video script bridge checker"
+subhead: Paste your video ad script and say who it is for. It finds the lines where the viewer first feels sold to, checks the bridge from hook to body and from body to call to action, and gives a bridge score out of 100 with a tighter script.
+
+explain: |
+  A strong hook means little if the next lines lose the viewer. The bridge is the move from the hook into teaching or problem talk. If the script pitches the product right after the hook, or jumps to the buy button with no reason, cold viewers leave. Some sources say to introduce the product as late as the script allows. That gives a smaller but better qualified viewer, and often better conversion.
+
+  This skill maps the script from hook to bridge to body to proof to call to action. It plots how aware the viewer is that they are being sold to, line by line, and marks the two bridges good or abrupt. It also checks benefit before feature, pacing, proof, who the ad speaks to and the call to action. The score is out of 100 from ten checks and is this skill's own scale. It shows how well the script handles the bridge, not how it will sell.
+
+when:
+  - You wrote a video script with a strong hook, but viewers drop off right after it.
+  - Your script names the product in the first few lines and you wonder if that is too soon.
+  - You are about to film or send a script to a creator and want one more read for flow.
+
+you_give:
+  - The full script, with timestamps or line order
+  - Who the ad is for and how much they already know at the start (cold, warm, or ready to buy)
+  - The product claim and the offer
+  - A retention graph from a similar video, if you have one (optional)
+you_get:
+  - A line-by-line map of how aware the viewer is that they are being sold to
+  - Each bridge (hook to body, body to call to action) marked good or abrupt
+  - A bridge score out of 100, now and after the fixes, with the sum shown
+  - A tighter script, with feature-to-benefit rewrites, pacing notes and a teaching step before the product
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the script with timings or one line per beat.
+  - Say who it is for, the product claim and the offer.
+  - Fix the lines marked as early-sell spots first, then the end bridge.
+  - Run it again on the fixed script, and test that the link goes to a page that continues the story.
+
+how_it_works:
+  - title: Maps the sections
+    text: Marks the script into hook, bridge, body, proof and call to action. The bridge must not hard-sell the product.
+  - title: Plots awareness
+    text: Rates each line from unaware to problem aware, solution aware, product aware and ready to buy. Awareness should rise slowly.
+  - title: Finds early-sell spots
+    text: Flags any sudden jump right after the hook or just before the call to action.
+  - title: Checks product timing
+    text: Asks if the product enters as late as the script allows. If it must come early, it should be brief, then return to teaching.
+  - title: Checks the end bridge
+    text: The move from education to buying needs a reason, such as the mechanism that explains why this product, now.
+  - title: Puts benefits first
+    text: Adds the plain-life benefit for every feature, then puts the benefit before the feature.
+  - title: Checks pacing and proof
+    text: Looks for a new visual about every 3 seconds, proof that is shown, and the whole audience addressed.
+  - title: Scores and rewrites
+    text: Adds up ten checks, shows the sum, and rewrites the bridge with a teaching step before the product.
+
+output_shape: |
+  AWARENESS MAP
+  <time/line> | <line summary> | <stage> | <sold-to level 0-5>
+
+  SECTIONS (hook / bridge / body / proof / CTA): <pass or fix each, one line why>
+  BRIDGE 1 (hook to body): <good | abrupt, why>
+  BRIDGE 2 (body to CTA): <good | abrupt, why>
+
+  EARLY-SELL SPOTS: <lines>
+
+  CHECKS (points earned / points available)
+  B1 <...> <n>/15 ... B10 <...> <n>/5
+
+  SCORE  <n>/100 now (<earned> / <available> x 100)
+         <n>/100 after the fixes (on the checks run)
+
+  REWRITES: <bridge, feature-to-benefit, edit notes: overlays, cuts, b-roll>
+  NOT RUN: <check, and what is needed>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: Who the ad is for
+    how: Say cold, warm or retargeting. Warm and retargeting ads can name the product early, so the early-product check is skipped and its points leave the total.
+  - what: Script length
+    how: It works best on scripts of about 45 seconds up to several minutes, long enough to teach. A very short script has little bridge to check.
+  - what: Timings
+    how: Paste timestamps. The pacing check uses them. Without them, it works from line order and marks pacing as not run.
+  - what: A retention graph
+    how: Add one from a similar video, and it can say if the drop sits at the hook, the bridge or the body.
+
+judge:
+  - The awareness map covers every line, not just the start and end.
+  - Both bridges are marked, with a reason.
+  - Every early-sell spot names the line.
+  - The score shows its sum from the ten checks.
+  - Rewrites keep every fact from the original script, and add no new claim.
+
+test:
+  - Give it a script you know sells too early. It should flag the line and rewrite the bridge.
+  - Give it a script that already teaches well. It should pass the bridge and change little.
+  - Run it twice on the same script. The two bridge verdicts should match.
+  - Read the rewritten bridge aloud and check it still sounds like you.
+
+improve:
+  - Add your claim list, so rewrites stay inside what you may say.
+  - Add a banned list of phrases you do not want, such as favourite AI-sounding lines.
+  - Save the stage each of your winning scripts starts at, so the skill compares to your own wins.
+  - Set your own pacing target if your editor works to a different rhythm. The 3 seconds is a target, not a law.
+  - Pair it with the video hook scorer for the first lines, and a line-level script checker for wording.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can read a script and plot the awareness map."}
+    - {name: "Meta Ads Manager", why: "Shows the retention graph of a running video, so you can see where viewers drop."}
+  inputs:
+    - "A retention graph from a similar video"
+    - "The landing page the ad links to"
+    - "Your proof items, such as lab results, studies and reviews"
+    - "The persona and awareness stage from your concept plan"
+
+terms:
+  - term: Bridge
+    meaning: The move from the hook into teaching or problem talk, and later from teaching to buying.
+  - term: Awareness stage
+    meaning: How much the buyer already knows about the problem and about you.
+  - term: Call to action
+    meaning: The line that tells the viewer what to do next.

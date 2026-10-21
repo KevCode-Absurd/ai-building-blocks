@@ -1,0 +1,123 @@
+new_slug: meta-delivery-troubleshooter
+name: "Meta delivery troubleshooter"
+summary: "Describe what Meta is doing with your ads. Get the failing delivery step and what to change first."
+job: read-ad-results
+thinking: high
+thinking_why: "It reasons from symptoms to a cause across several steps, so a stronger model diagnoses better."
+
+headline: "Meta delivery troubleshooter"
+subhead: "Describe what Meta is doing with your ads, with numbers such as frequency, click rate, CPM, cost per sale and spend by ad. It matches the symptoms to the delivery steps, says which step is failing, what to change first and what to leave alone, and plans a 7-day broad against interest test."
+
+explain: |
+  When Meta ads stall, people blame the wrong thing. They tweak budgets daily, add exclusions, or chase a "learning" label, when the real problem sits earlier. Meta picks which ads a person sees in steps. It reads your creative to narrow tens of millions of ads to a few thousand, ranks them, then runs an auction. Each step takes about 200 milliseconds.
+
+  This skill walks your symptoms through those steps. It treats the creative as the targeting, since who is on screen and what is said shapes who sees the ad. It checks the click rate, page conversion and unit economics, and it tests common claims before you act on them. Much of this is one buyer's practice or one agency's reading of Meta's engineering posts, not Meta's own documents, so the skill hedges and tells you what to test.
+
+when:
+  - Your frequency is high and spend stays in warm audiences.
+  - A new ad or concept lost and you can't tell if the idea or the ad was the problem.
+  - Someone gave you Meta advice (reset learning, 20 percent budget rule, interest targeting) and you want to know if it holds.
+
+you_give:
+  - "Symptoms with numbers: frequency, click rate, CPM, cost per sale and spend by ad"
+  - Your targeting setup and bid strategy
+  - Your creative mix and landing page
+  - Your daily spend level
+you_get:
+  - A diagnosis against the delivery steps, with the failing step named
+  - What to change first and what to leave alone
+  - A 7-day broad against interest comparison plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you see in plain words, then paste the numbers for the last 7 days or more.
+  - Say how you target, how you bid, how much you spend a day and how many different concepts you run.
+  - Change one thing at a time from the list it gives you, in the order it gives.
+  - Read the result over 7 days or more before you decide whether it worked.
+
+how_it_works:
+  - title: Maps the serving steps
+    text: Retrieval reads your creative and picks a few thousand ads. Light ranking and heavy ranking narrow them. The auction picks the winner.
+  - title: Reads creative as targeting
+    text: A 55-year-old woman on screen skews delivery to older women. To reach a new group, change who is in the ad and what it says.
+  - title: Checks the value formula
+    text: Auction value is roughly bid x estimated action rate plus user experience. For sales, action rate = click rate x click-to-purchase rate.
+  - title: Checks warm-audience traps
+    text: High frequency with spend stuck in warm audiences points to too many product-aware ads. Exclusions will not fix it.
+  - title: Plans the broad test
+    text: Duplicate your best interest-stacked ad with no interests, same country, run both for 7 days and compare cost per sale.
+  - title: Checks concept versus variation
+    text: A new concept needs variations, for example 3 hooks, so one losing ad is not read as a losing concept.
+  - title: Checks bidding, windows and data
+    text: Lowest cost is fine. Judge on 7 days or longer. Send good data, but treat match quality as secondary.
+  - title: Tests the myths
+    text: Interest targeting, the 20 percent budget rule, Lattice, cookies. Each is marked as one source's claim to check.
+
+output_shape: |
+  SYMPTOMS (with numbers): <list>
+
+  DELIVERY STEP DIAGNOSIS
+  Creative reading (who it reaches): <finding>
+  Estimated action rate: click rate <n> | click-to-sale rate <n> | verdict
+  Auction and bid: <finding>
+  Data sent to Meta: <finding>
+  Unit economics: <finding>
+  FAILING STEP: <step, with the evidence>
+
+  CHANGE FIRST: <one change, why, how to read it>
+  LEAVE ALONE: <what not to touch, and why>
+
+  7-DAY BROAD vs INTEREST TEST
+  A: <existing interest ad> | B: <same ad, no interests> | same country | 7 days | compare cost per sale
+
+  MYTHS CHECKED: <claim, verdict, how to test it yourself>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: Numbers over 7 days or more
+    how: Daily numbers swing at lower spend. Give 7-day totals so the diagnosis rests on enough data.
+  - what: Daily spend
+    how: Under about $1,000 a day results swing, so it tells you to read a longer window.
+  - what: Your creative mix
+    how: Say how many different concepts and who is on screen. This is how it checks for too many product-aware ads.
+  - what: Targeting setup
+    how: Say what exclusions, interests or age limits you use, so the broad test compares like with like.
+
+judge:
+  - The failing step is named with the number that shows it.
+  - It says what to change first and what to leave alone.
+  - Claims from one operator are marked as that operator's practice, with a way to test them.
+  - It does not tell you to change budgets daily or chase the learning label.
+  - The broad test changes one thing only (the interests).
+  - There is no score. It is a diagnosis, not a grade.
+
+test:
+  - Give it a case you already solved. It should name the same failing step.
+  - Ask it about the "budget over 20 percent resets learning" rule. It should say the source found no documentation and give a way to test it.
+  - Run the 7-day broad test it plans and see whether the result matches its prediction.
+  - Run it twice on the same facts. The first change it picks should match.
+
+improve:
+  - Save your last diagnosis and what you changed in your brand file, so the next run sees your history.
+  - Add your break-even CPA so the cost-per-sale line has a clear pass mark.
+  - Update the myths list in the skill file when Meta changes a rule. Names and defaults change.
+  - Pair it with the Meta account structure planner for the layout and the ad awareness stage checker for the creative mix.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It reasons over numbers and descriptions you paste, so any current chat AI will do."}
+    - {name: "Meta Ads Manager", why: "Its breakdowns by ad, placement and audience segment hold the evidence."}
+  inputs:
+    - "A 7-day Ads Manager export by ad with frequency, click rate, CPM and cost per sale"
+    - "The landing page address or a screenshot, so page conversion can be checked"
+    - "Your event match quality score from Events Manager"
+
+terms:
+  - term: Retrieval
+    meaning: The first step, where Meta reads your ad and picks a few thousand from tens of millions.
+  - term: Estimated action rate
+    meaning: Meta's guess at how likely a person is to click and then buy.
+  - term: Frequency
+    meaning: The number of times the average person saw your ad in a set period.
+  - term: Event match quality
+    meaning: A score for how well the data you send Meta can be matched to real people.

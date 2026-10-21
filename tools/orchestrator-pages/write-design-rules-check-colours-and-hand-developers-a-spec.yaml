@@ -1,0 +1,79 @@
+new_slug: write-design-rules-check-colours-and-hand-developers-a-spec
+name: Write design rules, check colours and hand developers a spec
+summary: Give it your brief. Get design rules, checked colours, tokens and a developer spec.
+job: design-work
+thinking: medium
+thinking_why: Each step is a clear job with a checkable result. A mid-level model is enough.
+headline: Turn a design feeling into rules a developer can build from
+subhead: Give it your brief. It sets the feeling and firm rules for colour, type and grid, checks that the colours can be read, builds design tokens from the colours that pass, and writes the spec a developer builds from.
+explain: |
+  Designers hold a feeling in their heads. Developers need numbers. Between them sits a gap: colours that fail contrast tests, tokens guessed from a screenshot, and a handoff that says "make it look like the mock".
+
+  The first step writes the feeling first, then the few rules that carry it: which colours and what they mean, one type family, a grid, and where there is room to play. The second step measures every text and background pair and finds the closest colour that passes. The third builds tokens from the guide, using the fixed colours. The last turns the tokens into a spec with components, states, breakpoints and accessibility notes.
+when:
+  - You have a brief and a feeling but no written design rules.
+  - A developer is waiting and keeps asking for exact values.
+  - You want to know the colours can be read before anything is built.
+you_give:
+  - A brief that says what the brand or event is, who it is for and where it appears
+  - The feeling it should give, in a few words
+  - Your brand file (optional)
+  - Any fonts or colours you must keep
+you_get:
+  - A short rule sheet with the feeling, colours and their meanings, type, grid and where to play
+  - A contrast check for each text and background pair, with passing fixes
+  - Design tokens for colour, type, spacing and shadow, with component notes
+  - A developer spec with components, every state, breakpoints and accessibility notes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your brief and say the feeling in a few words.
+  - Tell it which fonts and colours are fixed.
+  - Pass the final spec to your developer with the token file.
+how_it_works:
+  - title: Write the rules
+    text: States the feeling and what to avoid. Picks the fewest colours with a meaning each, one type family and a grid. Marks where play is allowed.
+  - title: Check the colours
+    text: Pairs each text colour with its background and measures the ratio in light and dark themes. Finds the closest passing colour for any failure.
+  - title: Build the tokens
+    text: Takes the brand guide with the colours that passed, and builds colour, type, spacing and shadow tokens with component notes and sizes.
+  - title: Write the developer spec
+    text: Lists layout, tokens, components, every state, edge cases, breakpoints and accessibility notes.
+output_shape: |-
+  STEP 1: DESIGN RULES
+    Feeling | what to avoid | colours and meanings | type | grid | where to play | who checks
+
+  STEP 2: COLOUR CHECK
+    Each pair with ratio, pass or fail | closest passing colour
+
+  STEP 3: DESIGN TOKENS
+    Colour | type | spacing | shadow | component notes | responsive sizes
+
+  STEP 4: DEVELOPER SPEC
+    Layout | tokens used | components and variants | states | edge cases | breakpoints | accessibility
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Fixed colours or fonts
+    how: Name them. Step 1 keeps them and the check measures them as they are.
+  - what: Where it appears
+    how: Say web, app, print or signs. The rules and tokens change with the place.
+  - what: Token format
+    how: Ask for CSS, SCSS or JSON in step 3, to match how your developer works.
+  - what: Dark mode
+    how: Say if you need a dark theme. Step 2 then checks both themes.
+judge:
+  - Each colour has a meaning tied to where it will be seen.
+  - Every pair that fails contrast has a passing fix, and the tokens use the fix.
+  - The rules fit on one page and a stranger could follow them.
+  - The spec shows every state, not only the default.
+  - The tokens match the rule sheet.
+test:
+  - Pick three colour pairs and measure them yourself with a contrast tool.
+  - Ask a developer to build one component from the spec alone. Count their questions.
+  - Compare the token file with the rule sheet. Any colour that differs is a bug.
+improve:
+  - Keep the token file in the project so the spec and the code stay in step.
+  - Re-run the colour check whenever a colour changes.
+  - Add the questions your developer asked to the spec template.

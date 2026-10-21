@@ -1,0 +1,132 @@
+new_slug: live-auction-show-planner
+name: "Live auction show planner"
+summary: "Give it your stock, costs and show length. Get a run order, promotion schedule and profit sheet."
+job: run-your-store
+thinking: medium
+thinking_why: "It builds a schedule and a profit sheet from a stock list, which a mid-size model handles well."
+
+headline: "Live auction show planner"
+subhead: Give it your stock list with cost and lowest price, the show length and date, your platform fees and helper costs. It plans a first show. You get a promotion schedule, a thumbnail brief, a run order with anchor items and a giveaway, start prices with floors and a break-even and profit sheet.
+
+explain: |
+  Live auctions on apps such as Whatnot suit sellers with lots of small, low-cost items. The risk is putting a huge amount of work into one big first show that few people see, or starting prices so low that you lose money, then deciding the app does not work.
+
+  This skill plans the show backwards from your numbers. For a first show it starts small. For a bigger show it plans promotion over several weeks, picks anchor items that draw people in, adds a buyer-only giveaway, sets a pace, and does the sums for fees, stock, the prize and helper wages. It was built from two reseller sources and suits thrift and collectible resale. It is not a method for a branded store, and the item economics differ there.
+
+when:
+  - You want to run your first live auction and do not know how to size it.
+  - You are planning a big show and want to promote it and check it will break even.
+  - You have a pile of low-cost stock and want to turn it into a run order and a profit sheet.
+
+you_give:
+  - Your items with cost and expected resale value (a stock list with a lowest price you accept)
+  - The show length and date
+  - Platform fees and the cost of help with shipping
+  - Channels where you can promote the show and the audience you have
+  - The platform category (optional)
+you_get:
+  - A promotion schedule
+  - A thumbnail text brief
+  - A run order with anchor items and a giveaway
+  - Start prices and floors for each item
+  - A break-even and profit sheet
+  - A first show plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your stock list with your cost for each item and the lowest price you will accept.
+  - Say how long the show is and when. Add your platform fee rates and any helper cost.
+  - List the places you can promote the show and how many followers you have.
+  - Check the platform's current rules and bonuses before you rely on the plan.
+
+how_it_works:
+  - title: Sizes the show
+    text: A first show is short, about 15 minutes, with one item, one photo and one title. Four 15-minute shows beat one hour-long show.
+  - title: Picks the items
+    text: Items with wide appeal and impulse value. Niche items go to resellers.
+  - title: Sets start prices
+    text: Start at the price you can accept. Buy stock so you can sell at $5 or even $2 and still profit. Start at $1 only if you can fill the room.
+  - title: Schedules and promotes
+    text: Schedule at least a week ahead, up to two or three weeks, and post about it three times.
+  - title: Builds the run order
+    text: Anchor items draw viewers. The rest of the items earn the profit. Pace is 15 to 20 seconds per auction.
+  - title: Adds a giveaway
+    text: A buyer-only prize at the end. The extra bid on each item should pay for it.
+  - title: Does the sums
+    text: Gross sales, fees, inventory, prize and helper wages give break-even and profit.
+  - title: Compares with normal shows
+    text: Checks the big show against your usual show size and average price.
+
+output_shape: |
+  SHOW PLAN
+  Type: <first show | regular | big show>  Length: <minutes>  Items: <n>  Seconds per item: <n>  Run time: <n x seconds / 60 = minutes>
+
+  PROMOTION SCHEDULE
+  Show date: <date>  Post 1: ~1 week before | Post 2: 2 to 3 days before | Post 3: a few hours before  Channels: <list>
+  Thumbnail text: <words on the image>  (only brands and prizes you really have)
+
+  RUN ORDER
+  Anchors (<n> items): <list with start price, floor>
+  Core items (<n>): <list or groups>
+  Giveaway: <prize> at <point in the show>; needed extra bid per item = <prize cost> / <items> = <$>
+
+  START PRICES AND FLOORS
+  <item> | cost <$> | start <$> | floor <$>
+
+  PROFIT SHEET
+  Gross sales: <$>  minus fees and rewards: <$>  = paid out: <$>
+  minus stock cost: <$>  minus prize: <$>  minus helper wages (<hours> x <rate>): <$>  = profit: <$>
+  Break-even gross sales: <$>
+  Compare normal show: <items, average price>
+  CHECKS MISSED: <none, or the list>
+  MISSING: <what was not supplied>
+
+tweaks:
+  - what: Show length
+    how: Start with 15 minutes. A bigger show adds time at about 45 to 60 seconds per item, including bidding.
+  - what: Start price
+    how: Start at what you can accept. A start of $1 only works with a full room, about 300 to 500 viewers, and is not advised for most small sellers.
+  - what: Your following
+    how: The big-show results leaned on an existing following. With none, start small and be consistent.
+  - what: Prize
+    how: Size the prize so the extra bid per item covers it. A $250 prize across 250 items needs about $1 extra per item.
+
+judge:
+  - The run time is shown as a sum and fits the show length.
+  - Every item has a floor above its cost.
+  - The prize cost is covered by the needed extra bid, and the sum is shown.
+  - The profit sheet includes fees, stock, prize and helper wages.
+  - Promotion starts at least a week out for a big show.
+
+test:
+  - Run one 15-minute show with one to three items before you plan a long one.
+  - Run it twice on the same stock list. The profit sheet should match.
+  - After a show, compare the real paid-out figure with the plan.
+  - Check your platform's current fee rates and bonuses, since the source's are dated.
+
+improve:
+  - Add your platform fee rates and shipping costs to the skill file so the sums always use them.
+  - Add your floors by category so it never starts an item below them.
+  - Save each show's real results and ask the skill to adjust pace and anchor counts.
+  - Pair it with a stock sourcing planner and a skill for writing the promotion posts.
+
+works_best_with:
+  tools:
+    - {name: "Whatnot", why: "A live selling app where resellers run auctions, with a buyer giveaway feature."}
+    - {name: "Canva", why: "Free tool to make the show thumbnail."}
+    - {name: "Any good chat AI", why: "Builds the run order and profit sheet from a stock list you paste."}
+  inputs:
+    - "Your stock list with what you paid for each item"
+    - "Sold-price history for similar items"
+    - "Your platform's current fee table"
+    - "A helper's hourly rate and hours for shipping"
+
+terms:
+  - term: Anchor item
+    meaning: A high-value item that draws viewers into the show, even if it sells cheaply.
+  - term: Buyer giveaway
+    meaning: A prize drawn at the end of the show, open only to people who bought something.
+  - term: Floor
+    meaning: The lowest price you will accept for an item.
+  - term: Break-even
+    meaning: The sales you need to cover all your costs for the show.

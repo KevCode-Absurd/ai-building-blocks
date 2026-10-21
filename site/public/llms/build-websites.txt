@@ -1,6 +1,6 @@
 # Build websites and web apps: AI Blocks
 
-> 58 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 60 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder): Describe the scene or product viewer. Get a working 3D page with fast loading and a fallback.
 - [3D website builder](https://useaiblocks.com/skills/3d-website-builder): Describe the site. Get a 3D web page with shaders, smooth motion, a preloader and phone-friendly tuning.
@@ -11,6 +11,7 @@
 - [App translation setup helper](https://useaiblocks.com/skills/app-translation-setup-helper): Point it at your app. Get hardcoded text found and a plan for translations, locale files and right-to-left support.
 - [ASP.NET web app builder](https://useaiblocks.com/skills/asp-net-web-app-builder): Describe the web app or API. Get ASP.NET Core code that follows current official guidance.
 - [Brand identity markup adder](https://useaiblocks.com/skills/brand-identity-markup-adder): Give it your brand details. Get markup added so AI can confirm your store is a real brand. Changes your live theme.
+- [Build a page on a clear grid and test it](https://useaiblocks.com/workflows/build-and-test-a-page-on-a-clear-type-and-grid): Describe your site. Get fonts and a grid, a page that follows them and a browser test.
 - [Comparison table designer](https://useaiblocks.com/skills/comparison-table-designer): Give it your products or plans. Get a comparison page that helps people choose, with a fair default pick.
 - [Editorial web designer](https://useaiblocks.com/skills/editorial-web-designer): Describe the interface. Get a calm, document-style design with warm greys, crisp borders and quiet motion.
 - [Favicon maker](https://useaiblocks.com/skills/favicon-maker): Give it a logo image. Get a full set of favicons and the link tags added to your site.
@@ -58,5 +59,6 @@
 - [Web page speed tuner](https://useaiblocks.com/skills/web-page-speed-tuner): Give it a slow site. Get fixes for network, loading and rendering, ranked by gain. Uses High Performance Browser Networking.
 - [Website art director](https://useaiblocks.com/skills/website-art-director): Describe your site or app screen. Get a built page with a chosen look, checked in a browser, not a template.
 - [Website content mover](https://useaiblocks.com/skills/website-content-mover): Name your old and new site. Get a move plan that keeps search rank, links and bookmarks working.
+- [Website quality keeper](https://useaiblocks.com/agents/website-quality-keeper): Check your site each week. See what got slower or harder to find since last time, with a ranked fix list.
 - [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner): Point it at a slow site. Get Core Web Vitals, bundle size and caching problems fixed.
 - [WordPress health fixer](https://useaiblocks.com/skills/wordpress-health-fixer): Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.

@@ -1,0 +1,20 @@
+slug: marketing-vector-writer
+name: "Marketing vector writer"
+summary: "Give it your brand and ad plans. Get a marketing vector and on, borderline and off-brand ad angles."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Psychology of Premium Branding", by: "owner of a paid-social agency that works with premium fashion and swimwear stores", used: "The marketing vector, the spectrum of ad variance, the warning about deep-discount blasts, identity-led ad formats, and reading hook rate, hold rate and click-through before repeat purchase and ROAS"}

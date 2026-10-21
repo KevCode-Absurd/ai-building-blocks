@@ -1,0 +1,120 @@
+new_slug: founder-ad-shoot-planner
+name: "Founder ad shoot planner"
+summary: "Give it your hooks and story bank. Get a hook-by-body matrix and a shoot list."
+job: make-video-ads
+thinking: low
+thinking_why: "It arranges hooks, bodies and locations into a list, so a fast model is enough."
+
+headline: "Founder ad shoot planner"
+subhead: Give it your hooks, your bodies and your founder story bank. It builds a hook-by-body matrix that shows how many ads one shoot makes, a shoot list grouped by location and outfit, a monthly story-collection checklist and edit notes.
+
+explain: |
+  Filming is the quick part of a founder ad. One agency says about 4 to 5 minutes of filming covers 30 ads. The slow part is the scripting, and running dry of things to say. A batch plan fixes both. You write about 10 hooks and 3 different bodies, film them once, and let the editor combine them. 10 hooks times 3 bodies is 30 ads. Two call-to-action versions would make 60, but few viewers reach the call to action, so skip that test unless you need the count.
+
+  This skill sets out the matrix and a shoot list. It splits your story into fixed parts (origin, founding, the personal problem) and renewable ones (new reviews, support emails, supplier updates, one-star reviews). You collect the renewable ones all month, and script from them in one batch. It also plans the same script in several locations, since a change of setting can refresh a tired ad.
+
+when:
+  - You have a founder who will go on camera, and want a month of ads from one shoot day.
+  - Your founder ads are tiring and you need fresh versions without new scripts.
+  - You keep running out of things to say and need a way to collect story material.
+
+you_give:
+  - A list of scripts or story ideas, or hooks and bodies from the founder ad script builder
+  - "Your story bank: reviews, support emails, supplier calls, one-star reviews, complaints"
+  - The locations you can use and your budget for cameras or editing
+  - How many ads you want per month
+you_get:
+  - A hook-by-body matrix with the ad count
+  - A shoot list grouped by location and outfit
+  - A monthly checklist for collecting story material
+  - Edit notes on cuts, a second camera and overlays
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your hooks, your bodies and your story bank, and say how many ads you want.
+  - List the locations and outfits you can use, and who edits.
+  - Film the shoot list in order, one location at a time, and give the editor the matrix.
+  - Collect new story material all month in one place, and run the planner again next month.
+
+how_it_works:
+  - title: Builds the matrix
+    text: About 10 hooks across 3 different bodies makes 30 ads. A second call-to-action version doubles it to 60.
+  - title: Sizes the shoot
+    text: Recording is short, and one agency reports 4 to 5 minutes for 30 ads. The work is in the scripting.
+  - title: Sorts the story parts
+    text: Splits fixed parts (origin, founding, personal problem) from renewable ones (new reviews, support emails, supplier updates, one-star reviews, live complaints).
+  - title: Plans the collection
+    text: Makes a monthly checklist so renewable material is gathered all month, then scripted in a batch.
+  - title: Groups the shoot list
+    text: Orders takes by location and outfit, and repeats the same script in several locations.
+  - title: Adds edit notes
+    text: Calls for a second camera, overlays and movement, since a bare talking head tires viewers.
+  - title: Checks partnership use
+    text: Notes when to run an ad through the founder's handle as a partnership ad, and when to skip it.
+  - title: Plans the refresh
+    text: Reshoots only hooks to refresh a winner.
+
+output_shape: |
+  MATRIX  <n> hooks x <n> bodies = <n> ads  (x2 CTA versions = <n>, only if needed)
+
+  SHOOT LIST (by location and outfit)
+  <location> / <outfit>
+    take <n>: <hook or body id> | <line or outline> | <framing>
+
+  FIXED STORY PARTS: <origin, founding, personal problem>
+  RENEWABLE STORY PARTS: <sources to collect>
+  MONTHLY COLLECTION CHECKLIST: <items and where they are kept>
+
+  EDIT NOTES: <second camera | overlays | cuts every few seconds | movement>
+  PARTNERSHIP AD: <use or skip, with the condition>
+  REFRESH PLAN: <hooks to reshoot first>
+  CHECKS MISSED: <none, or list>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: Number of ads wanted
+    how: Give a monthly target. The matrix is sized to it, and it tells you if the hooks or bodies are too few.
+  - what: Locations and outfits
+    how: List every place you can film. The same script in more places gives more versions to test, and one brand got more spend by changing the setting of a tired ad.
+  - what: Who edits
+    how: Say if there is an editor and a second camera. The edit notes change with it.
+  - what: Your page content
+    how: Say if the founder's own page has relevant content. A partnership ad only makes sense if it does.
+
+judge:
+  - The matrix multiplies out to the stated ad count.
+  - Every take in the shoot list is a hook or a body from your input.
+  - Story parts are split into fixed and renewable, with a source for each renewable one.
+  - Edit notes ask for movement, overlays or a second camera.
+  - The plan adds no new claims or invented story material.
+
+test:
+  - "Check the matrix by hand: hooks times bodies equals the ad count."
+  - Film one location from the list and check the editor can build every ad in the matrix from it.
+  - Use the monthly checklist for four weeks and see if the next batch has fresh material.
+  - Compare the first ad from each location after launch.
+
+improve:
+  - Add your real filming time to the skill file after the first shoot, so the plan uses your numbers.
+  - Add your locations and outfits as a standing list.
+  - Add where you save story material, such as a shared folder, so the checklist names it.
+  - Add which hooks were reshot, and what happened.
+  - Pair it with the founder ad script builder, which writes the scripts this plan films.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can build the matrix and shoot list."}
+    - {name: "A shared folder or note app", why: "Keeps the monthly story material in one place."}
+  inputs:
+    - "The scripts and hooks from the founder ad script builder"
+    - "A month of support emails and reviews"
+    - "Photos of each location"
+    - "Your ad test results by hook"
+
+terms:
+  - term: Hook-by-body matrix
+    meaning: A grid where each hook is paired with each body, so a few takes make many ads.
+  - term: Renewable story part
+    meaning: Story material that changes, such as new reviews, support emails and supplier updates.
+  - term: Partnership ad
+    meaning: An ad that runs through another account's handle, such as the founder's, with that account's agreement.

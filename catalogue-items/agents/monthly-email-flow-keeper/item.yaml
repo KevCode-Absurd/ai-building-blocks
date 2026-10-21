@@ -1,0 +1,37 @@
+slug: monthly-email-flow-keeper
+name: "Monthly email flow keeper"
+summary: "Give it last month's email numbers. Get the weakest flow found and rebuilt, with the copy checked."
+category: agent
+type: agent
+role: orchestrate
+job: email
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: email_flow, required: true}
+  - {type: brand_brain, required: false}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: email_flow}
+  - {type: plan}
+uses: [email-and-sms-performance-reader, email-flow-gap-checker, email-setup-health-checker, inbox-placement-recovery-planner, sunset-flow-and-list-cleaner, welcome-flow-builder, cart-recovery-flow-builder, browse-abandonment-flow-builder, post-purchase-flow-builder, win-back-flow-builder, email-draft-reviewer, email-test-planner]
+steps:
+  - {uses: email-and-sms-performance-reader, note: "Every month: reads the month, ranks the causes and scores channel health. Compared with last month's saved score."}
+  - {uses: email-flow-gap-checker, note: "Every month: scores the flows and ranks the gaps by likely revenue. Names the weakest flow."}
+  - {uses: email-setup-health-checker, note: "Only when sending trouble shows (open or click rates under the floors, or spam and bounce rates high): the setting fixes first."}
+  - {uses: inbox-placement-recovery-planner, note: "Only when sending trouble shows: the recovery plan, before any flow is rebuilt."}
+  - {uses: sunset-flow-and-list-cleaner, note: "Only when many contacts never open: the sunset flow and the monthly clean-out."}
+  - {uses: welcome-flow-builder, note: "Only when the welcome flow is the weakest or missing: rebuilds it."}
+  - {uses: cart-recovery-flow-builder, note: "Only when the cart or checkout flow is the weakest or missing: rebuilds it."}
+  - {uses: browse-abandonment-flow-builder, note: "Only when the browse flow is the weakest or missing: rebuilds it."}
+  - {uses: post-purchase-flow-builder, note: "Only when the post-purchase flow is the weakest or missing: rebuilds it."}
+  - {uses: win-back-flow-builder, note: "Only when the win-back flow is the weakest or missing: rebuilds it."}
+  - {uses: email-draft-reviewer, note: "After a rebuild: checks the first two emails and sends them back for a fix, up to two rounds, until each is ready."}
+  - {uses: email-test-planner, note: "Every month: sets the next tests, where the most people receive the email."}
+schedule: "On the first working day of each month, after last month's numbers are in"
+asks_before: [sending any email or text, turning a flow on or off, changing a flow trigger or filter, changing segments or suppressing contacts, changing DNS or sending settings, changing discount codes or offers]
+origin: own
+version: 1.0.0
+example_pending: true

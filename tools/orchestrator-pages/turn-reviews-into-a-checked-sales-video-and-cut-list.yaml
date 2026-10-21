@@ -1,0 +1,89 @@
+new_slug: turn-reviews-into-a-checked-sales-video-and-cut-list
+name: Turn reviews into a checked sales video and cut list
+summary: Give it product facts and reviews. Get a checked sales video script, timed shots and a cut list.
+job: make-video-ads
+thinking: high
+thinking_why: Five skills run in a row and each one edits the last. Give it your strongest model.
+headline: A sales video script that is checked, then cut to your clips
+subhead: Give it your product facts and customer reviews. It writes a seven-part sales video script, flags every weak line, fixes how it sounds spoken, and plans timed shots. After you film or generate the clips, it plans the cut.
+explain: |-
+  Some products need more than fifteen seconds. Buyers want to know how it works and why they should trust it. A long video can do that, but a loose script rambles, trips the presenter and wastes the clips you pay to make.
+
+  The steps fix that in order. First it writes a seven-part script from your facts and your buyers' own review words. Then it checks every line and scores the script. Next it fixes lines that are hard to say out loud. Then it turns the script into timed shots with a prompt for each clip. You pause to film or generate the clips. Last it plans the cut from the real files.
+when:
+  - Your product is hard to explain in a few seconds.
+  - Buyers hesitate and you have good reviews to answer their doubts.
+  - You have been burned before by a video script that read well but sounded stiff.
+you_give:
+  - "Your product facts: what it is, how it works, price"
+  - Customer reviews or quotes, with where each one came from
+  - Your offer (optional)
+  - Your finished clips, once you have made them (for the last step)
+you_get:
+  - A seven-part sales video script with hooks and shorter cuts
+  - A list of weak lines, each with a fix, and a score out of 100
+  - A script that reads cleanly out loud
+  - Timed shots with a prompt for each clip
+  - A cut list, caption windows and a sound plan for your clips
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your product facts and reviews. Say who the buyer is and what they doubt.
+  - When it stops at the shot list, make the clips with your video tool. Save every take in one folder.
+  - Come back, list the clip files and say go. It plans the cut from what you really have.
+how_it_works:
+  - title: Write the seven-part script
+    text: Checks a long video suits the product, then writes seven parts with timings, the hooks and the shorter cuts, using your reviews for the doubts.
+  - title: Check every line
+    text: Labels each line by its job, quotes each weak line with a fix, compares spoken words with the length and scores the script.
+  - title: Fix the read-aloud trips
+    text: Reads the script at speaking speed and fixes each line a presenter would stumble on.
+  - title: Plan the shots
+    text: Times the words, counts the shots and writes a prompt for each clip, describing only the motion.
+  - title: "Pause: make the clips"
+    text: You film or generate every clip from the shot list and save the takes in one folder.
+  - title: Plan the cut
+    text: Sorts your real clips by job, times each shot to the files, and plans captions, sound and exports.
+output_shape: |-
+  STEP 1: SALES VIDEO SCRIPT
+    Seven parts with timings | hooks | shorter cuts | brief
+
+  STEP 2: LINE CHECK
+    Weak lines with fixes | score out of 100 and how it was worked out
+
+  STEP 3: READ-ALOUD SCRIPT
+    Fixed script | rule each fix followed
+
+  STEP 4: SHOTS AND CLIP PROMPTS
+    Timed shots | prompt per clip | edit list
+
+  PAUSE: you make the clips
+
+  STEP 5: CUT LIST
+    Cuts by clip file | caption windows | sound plan | exports | gaps
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Length
+    how: Start at one to three minutes. Say a longer length only if you can afford the edit.
+  - what: Review quality
+    how: Real quotes with their source give the strongest script. Thin reviews make the doubts generic.
+  - what: How the clips are made
+    how: Say if you film, use a video model or mix them. The shot prompts change to match.
+  - what: Your offer
+    how: Give the exact price and terms. The close in the cut list uses only what you approve.
+judge:
+  - Every doubt in the script traces back to a real review line.
+  - No claim, number or result appears that your facts do not support.
+  - A presenter can read each line aloud in one breath.
+  - Every shot has one action and a reason to be there.
+  - The cut list names real files, not imagined ones.
+test:
+  - Take the three weakest lines from step 2 and check each fix is true to your facts.
+  - Read the step 3 script out loud with a timer and compare with the length it promised.
+  - Run it again with a different set of reviews. The doubts it answers should change.
+improve:
+  - Save the review quotes you use most in your brand file so step 1 starts with them.
+  - Add your own banned words to the read-aloud step.
+  - Keep your winning hook in your notes and ask for new hooks around it next time.

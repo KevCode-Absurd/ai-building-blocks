@@ -1,0 +1,22 @@
+slug: interview-customers-and-map-what-they-hire-you-to-do
+name: "Interview customers and map what they hire you to do"
+summary: "Give it your idea. Get interview questions, then from your notes a buyer profile, their jobs and their path."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: transcript, required: true}
+outputs:
+  - {type: document}
+uses: [customer-interview-coach, customer-research-analyst, customer-job-mapper, customer-path-blueprint-maker]
+steps:
+  - {uses: customer-interview-coach, note: "Turns your idea into questions that draw honest answers and a plan for finding the people to ask."}
+  - {uses: customer-research-analyst, note: "Reads your interview notes and makes the buyer profile and the quote file the next steps use."}
+  - {uses: customer-job-mapper, note: "Takes the buyer profile and writes the jobs they hire you for, with the trigger and rivals."}
+  - {uses: customer-path-blueprint-maker, note: "Uses the buyer profile and the quote file to map each step they take and where it hurts."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/interview-customers-and-map-what-they-hire-you-to-do/skeleton.yaml

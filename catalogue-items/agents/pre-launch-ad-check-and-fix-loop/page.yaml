@@ -1,0 +1,104 @@
+new_slug: pre-launch-ad-check-and-fix-loop
+name: Pre-launch ad check and fix loop
+summary: Give it a finished ad. It checks, fixes and re-checks until it passes, then hands you a version ready to upload.
+job: check-ads
+thinking: medium
+thinking_why: Each round is a check and a small fix, but it decides what is fixable and when to stop. A strong model keeps it from inventing claims.
+headline: Pre-launch ad check and fix loop
+subhead: Give it a finished ad, your facts and where it will run. It checks the ad, makes the fixes the checks name, and checks again, up to three rounds. You get a cleared version, or a short list of what only you can settle.
+explain: |
+  Most ads fail on small things you could have caught before upload: words in the screen areas the app covers, a claim with no proof behind it, a price that does not match the page, a line that breaks the platform's rules. Checking once and fixing by hand tends to miss what the fix breaks.
+
+  This agent runs the checks, makes only the fixes those checks name, and runs them again, so a fix cannot sneak in a new problem. It stops when the ad passes, when the same problem comes back twice, or after three rounds. It never invents a claim, a price or a guarantee to get a pass. Those go to you as questions. It never uploads the ad. Over time it keeps a list of the mistakes that keep coming up, so your next ad starts clean.
+when:
+  - You have a finished ad and want it cleared before you spend on it.
+  - An ad was rejected or flagged and you want it fixed and checked again.
+  - You make many ads and keep hitting the same mistakes.
+you_give:
+  - The finished ad, with its copy and the picture or the video frames or script
+  - Where it will run and who it is for
+  - Your facts, such as live price, offer, dates, claims you may make and the proof for each
+  - Your landing page, if the ad sends people to one (advised)
+you_get:
+  - A cleared version of the ad with every change marked
+  - What was fixed, which check asked for it and in which round
+  - A short list of questions only you can answer, such as a missing proof or an age limit
+  - A readiness score and a compliance score, before and after
+  - A list of the mistakes that keep coming up across your ads
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the ad.
+  - Attach the picture or the video frames, not only a description. The checks need to see it.
+  - Give it your facts file, or paste the offer and the proof for each claim.
+  - Answer any question it hands back, then run it again. Each answer starts a new round.
+  - Upload the cleared version yourself. It never publishes.
+how_it_works:
+  - title: Read the repeat list
+    text: Looks at the mistakes that came up in your earlier ads and checks those first.
+  - title: Check the ad
+    text: Runs the pre-launch check, then the rules check for the platform. Video gets a sound-off check. A picture ad with a page gets a match check.
+  - title: Sort what came back
+    text: Splits problems into fixes it can make with words you already have, and questions only you can answer.
+  - title: Prove the claims
+    text: If a claim looks unproven, it pairs each claim with its proof and cuts back any that run ahead.
+  - title: Fix
+    text: Changes only what a check named, keeps every passing line word for word and marks each change.
+  - title: Check again
+    text: Re-runs the checks that the fixes could affect, and compares with the last round.
+  - title: Decide whether to stop
+    text: Stops when the ad passes, when the same problem returns, when only your questions are left, or after three rounds.
+  - title: Hand back
+    text: Gives you the cleared ad or the list of what is open, and updates the repeat list.
+output_shape: |-
+  RESULT
+    <cleared | not cleared yet | remake> | rounds used: <n of 3>
+
+  THE CLEARED AD (latest version)
+    <every field, changed lines marked>
+
+  WHAT WAS FIXED
+    <fix> | named by: <check> | round <n>
+
+  OPEN ITEMS (only you can settle)
+    <item> | what I need: <exact fact, proof or decision>
+
+  SCORES
+    Readiness <n> to <n> | Compliance <n> to <n> | sums shown
+
+  FOR A PERSON
+    <what to check on a phone: colours, safe zones, logo>
+
+  REPEAT FLAWS AND FILES
+    <findings that keep coming up> | <each round's file> | MISSING: <every line>
+tweaks:
+  - what: Your facts file
+    how: With live price, offer and proof for each claim, the checks can confirm instead of marking "not confirmed". It is the biggest gain.
+  - what: The real picture or frames
+    how: Attach the image at full size. A description cannot show safe zones or a pasted box over the art.
+  - what: Where it runs
+    how: Say the platform and placement. A Reels ad and a feed ad have different safe zones and rules.
+  - what: The round cap
+    how: Three rounds suit most ads. If round three still has fixes that work, remake the ad instead.
+judge:
+  - No claim, price or offer term was added that you did not supply.
+  - Every line that passed is unchanged, and every changed line is marked.
+  - Each fix names the check that asked for it.
+  - A cleared ad has no stop-ship mistake and no claim ahead of its proof.
+  - The ad was not uploaded or published.
+test:
+  - Feed it an ad you know has a flaw, such as a claim with no proof, and see if it finds and handles it.
+  - Run it on an ad that already runs well. It should clear it in one round with few changes.
+  - Run it twice on the same ad. The result should match.
+improve:
+  - Keep the repeat list between ads. After ten ads it shows the mistakes your process lets through.
+  - Add your approved claims and their proof to your brand brain once, so every run starts with facts.
+  - Add the rejection notices you receive. They show which rules bite your account.
+  - If you only run Meta ads, drop the other platform check so each round is shorter.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the check folders and the repeat list between ads.
+    - name: Meta Ads Manager
+      why: Preview the ad in each placement after the loop, to confirm the safe zones by eye.
+  inputs:
+    - Your approved claims and the proof for each
+    - Past rejection notices from the ad platform

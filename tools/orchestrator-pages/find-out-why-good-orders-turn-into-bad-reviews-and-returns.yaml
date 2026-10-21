@@ -1,0 +1,82 @@
+new_slug: find-out-why-good-orders-turn-into-bad-reviews-and-returns
+name: "Find why good orders turn into bad reviews"
+summary: Give it your orders and reviews. Get the wrong-fit buyers, what holds them back and how to measure the fix.
+job: understand-customers
+thinking: high
+thinking_why: Each of the four steps reads and tags real customer data, and mistakes carry forward. Give it your strongest model.
+headline: Stop attracting buyers who leave bad reviews and send returns
+subhead: Give it your order data and your low reviews. It compares your best and worst customers, sorts bad reviews into product faults and wrong-fit buyers, ranks what holds buyers back, and picks the few numbers that show the fix is working.
+explain: |
+  Sales look healthy, yet the reviews are mixed and returns pile up. The usual guess is that the product is the problem. Often some of the buyers came for a different job than the one the product does, drawn in by an ad angle, a photo or a claim that promised something else. Fixing the product will not help them.
+
+  The first step compares your top and bottom customers by profit and traces them to the ads and offers that brought them in. The second tags each low review as a product failure, a wrong-job buyer, a promise you set or a delivery fault, and scores how much of the pain comes from the promise. The third ranks the worries and old habits that hold buyers back and picks one change to test. The fourth picks three to five measures that show buyers making progress. The review step needs about 30 low reviews to be worth running. If most of your lows are real product failures, fix the product first.
+when:
+  - Orders are healthy but reviews, returns or repeat orders are weak, and you want to know who is unhappy and why.
+  - A new ad angle brought a rush of sales and then a rush of refunds.
+  - You keep adding features and still lose the same kind of buyer.
+you_give:
+  - Order data with customers, products, discount codes and refunds
+  - Your reviews, return notes and support messages
+  - The product page copy or ad text that draws buyers in
+  - A question to focus on, such as one product or one ad angle (optional)
+  - A brief or notes on who you meant to sell to (optional)
+you_get:
+  - The top and bottom 20 percent of customers by profit, who they are in their own words and which ads and offers brought them in, with an acquisition fit score out of 100
+  - Every low review tagged, the wrong-job groups, the claim that drew them and a not-for line, with a promise match score out of 100
+  - The worries and habits holding buyers back, ranked, with two fixes each and one change to test
+  - Three to five measures of customer progress, each with a formula, a source and an owner
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your order export and your reviews, with the discount code on each order if you have it.
+  - Add the page copy or ad text that draws buyers in, so the second step can trace a bad review to a claim.
+  - Check the not-for line against what the product really does before it goes on your page.
+how_it_works:
+  - title: Profile best and worst customers
+    text: Ranks customers by gross profit, compares the top and bottom 20 percent, splits by discount code and finds the ad angle that sells a benefit the product does not deliver.
+  - title: Check for wrong-buyer reviews
+    text: Tags every low review as a product failure, a wrong-job buyer, a promise you set or a delivery fault. It traces wrong-job groups to the claim that drew them and writes a not-for line.
+  - title: Remove switch friction
+    text: Lists the habits and worries that hold buyers back, places each in the path to purchase, ranks them and sets one small change to test with its measure.
+  - title: Pick progress measures
+    text: Checks the numbers you track for traps, then writes three to five measures of customer progress with a formula, source and owner, plus a repeat-use measure and a check against gaming.
+output_shape: |-
+  STEP 1: BEST AND WORST CUSTOMERS
+    Data check | top 20 percent and bottom 20 percent with who they are | discount code groups | ad angle fit | what to scale, stop and fix | score out of 100
+
+  STEP 2: WRONG-BUYER REVIEWS
+    Reviews read | tag counts | product failures | wrong-job groups with the claim that drew them | not-for lines | reviews to pin | promise match score out of 100 | 30-day re-measure
+
+  STEP 3: SWITCH FRICTION
+    Ranked holding forces | worries by type and where they bite | two fixes each | who it is not for | the one change to test
+
+  STEP 4: PROGRESS MEASURES
+    Tracked numbers sorted | three to five chosen measures | repeat-use measure | gaming checks | owners and actions
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How many low reviews you give it
+    how: The second step wants 30 or more. With fewer it says so and marks its groups as early reads.
+  - what: Discount codes on orders
+    how: Without them, step 1 cannot split full-price buyers from deal buyers, which is often where the worst customers sit.
+  - what: The page copy and ads you give step 2
+    how: It can only trace a bad review to a claim it can read. Paste the actual text, not a summary.
+  - what: A focus question
+    how: Name one product or one ad angle and steps 1 and 3 will concentrate there instead of spreading across the store.
+judge:
+  - Step 1 names the data it lacked and does not judge on ad return alone.
+  - Every wrong-job group has a quote, a date and the claim that drew the buyer in.
+  - The promise match score shows its sum and says it measures the promise, not product quality.
+  - Each fix in step 3 matches a named worry and says who the product is not for.
+  - Each chosen measure has a formula, a source, an owner and a way it could be gamed.
+test:
+  - Pick five low reviews you already understand. Check that step 2 tags them the way you would.
+  - Check the bottom 20 percent in step 1 against a customer list you know. The names and angles should ring true.
+  - Run steps 1 and 2 again on a different month. The same wrong-job groups should show up if they are real.
+  - Put the not-for line on one page for 30 days and compare returns on that product with the 30 days before.
+improve:
+  - Add your real return reasons list to the second step, so it tags with your words instead of general ones.
+  - Edit the tag rules in the review checker if a category you sell in has its own common misuse.
+  - Save the wrong-job groups and the claims that drew them in your brand file, and check new ads against them before launch.
+  - Pair it with an ad copy or product page rewrite, using the not-for lines and claim edits from step 2.

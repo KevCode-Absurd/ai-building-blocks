@@ -10,7 +10,7 @@ const KINDS: { id: string; n: number; name: string; line: string; here: boolean 
   { id: "skill", n: 2, name: "Skill", line: "Instructions you add to your AI once. It follows them every time.", here: true },
   { id: "routine", n: 3, name: "Routine", line: "A skill or workflow that runs on a schedule, like every Monday at 9.", here: true },
   { id: "workflow", n: 4, name: "Workflow", line: "Several skills in order. Each one hands its work to the next.", here: true },
-  { id: "agent", n: 5, name: "Agent", line: "An AI that works through the steps on its own, using tools. Optional.", here: false },
+  { id: "agent", n: 5, name: "Agent", line: "An AI that works through the steps on its own, using tools. Optional.", here: true },
   { id: "app", n: 6, name: "App", line: "A screen your team signs in to. Fill in a form, press a button.", here: true },
 ];
 
@@ -203,10 +203,11 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <p>In a chat, you start each step and read each answer. An agent can run a whole workflow while you do something else. Some can start on their own, for example every Monday morning.</p>
             </div>
             <Box title="Try it with what's here" items={[
-              "Our workflows already work with agents. Give the downloaded folder to an AI that can read files and use tools, like Claude Code, and it can run every step.",
+              "Pick a ready-made agent from the library. Add it to Claude Code or Claude like a skill, then give it your goal and your files. It runs its workflows in order and decides what to do between them.",
+              "Any of our workflows works with an agent too. Give the downloaded folder to an AI that can read files and use tools, like Claude Code, and it can run every step.",
               "Stay in charge. Our workflow files tell your AI to ask you before it publishes, sends, spends money or changes a live account.",
             ]} />
-            <p className="hiw-now"><Status here={false} /> Ready-made agents aren't in the library yet.</p>
+            <p className="hiw-now"><Status here /> <Link to="/?kind=agent#library">See the ready-made agents</Link>.</p>
           </Section>
 
           <Section id="app" title="An app: a finished tool with its own screen">

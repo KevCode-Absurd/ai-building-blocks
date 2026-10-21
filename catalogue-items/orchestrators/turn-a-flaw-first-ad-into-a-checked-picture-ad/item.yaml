@@ -1,0 +1,25 @@
+slug: turn-a-flaw-first-ad-into-a-checked-picture-ad
+name: "Turn a flaw-first ad into a checked picture ad"
+summary: "Give it your product and its real weaknesses. Get a flaw-first ad, the right picture for it and a launch check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: competitor_set, required: false}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [flaw-first-ad-writer, image-style-picker-for-story-ads, pre-launch-ad-checker]
+steps:
+  - {uses: flaw-first-ad-writer, note: "Starts from your facts and what buyers say."}
+  - {uses: image-style-picker-for-story-ads, note: "Reads the ad from the step before and picks a picture that shows the same flaw."}
+  - {uses: pre-launch-ad-checker, note: "Reads the words and the picture prompt together."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-a-flaw-first-ad-into-a-checked-picture-ad/skeleton.yaml

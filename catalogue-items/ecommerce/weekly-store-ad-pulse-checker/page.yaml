@@ -1,0 +1,124 @@
+new_slug: weekly-store-ad-pulse-checker
+name: "Weekly store ad pulse checker"
+summary: "Give weekly spend, sales, emails and discounts. Get a health score out of 100 and what to pull."
+job: track-numbers
+thinking: low
+thinking_why: "It compares this week's numbers to last week's in a fixed order, so a fast model works."
+
+headline: "Weekly store ad pulse checker"
+subhead: Paste your store's weekly spend, sales, email and discount numbers. It reads them in a fixed order, flags what moved, scores the week's health out of 100 and lists which levers to pull first, with email and drops ahead of any discount.
+
+explain: |
+  Looking at ad numbers every hour makes owners jumpy. Mid-day, blended ROAS (all your revenue divided by all your ad spend) can look weak because the day's emails haven't gone out. A weak week can lead to a discount, and a discount can hide a bigger problem.
+
+  This skill gives you one weekly pulse. It reads blended ROAS first, then new-customer ROAS and CAC (the cost to get a new customer), CPM and spend by channel. It adds email capture, discount share and large orders. It tells you what moved and what to pull, in order: emails and drops first, creative and budget next, a discount last. The method comes from two large brands, so use it as practice and test it on your own store.
+
+when:
+  - You want one weekly check of your store's marketing instead of checking numbers all day.
+  - Blended ROAS dropped and you're tempted to run a discount.
+  - Your sales are up but you suspect discounts are doing the work.
+
+you_give:
+  - This week's and last week's blended ROAS, new-customer ROAS, CAC, CPM and spend by channel
+  - Emails and texts sent, product drops launched and sign-ups captured
+  - Discount as a percent of sales and large orders per day
+  - Your goals for ROAS and CAC (optional)
+  - Whether the numbers were pulled mid-day (optional)
+you_get:
+  - A pulse table with last week, this week, the change and a flag for each number
+  - A health score out of 100 with the sum shown
+  - Levers to pull, in order, each with the number that supports it
+  - A bull case, bear case and daily pace
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste this week's and last week's numbers, and say what your goals are.
+  - Say whether the numbers were pulled mid-day or at the end of the week.
+  - Pull the first lever it lists, then give it a week before judging the change.
+
+how_it_works:
+  - title: Reads in order
+    text: Blended ROAS, then new-customer ROAS and CAC, then CPM, then spend by channel, each as up, down or flat.
+  - title: Checks the time
+    text: If the numbers are from mid-day, it asks if the day's emails or drop have gone out before calling the week.
+  - title: Adds email and discount
+    text: Email capture, discount as a percent of sales and large orders per day, to see if sales are being bought.
+  - title: Picks the lever
+    text: Emails, texts and drops first. Creative and budget next. A discount last, only if the margin holds.
+  - title: Judges over a week
+    text: A spend change is read from a week of profit and loss, not one day's ROAS.
+  - title: Plans the pace
+    text: On email drop days it pulls back ad spend, and it sets a bull case, a bear case and a daily pace.
+  - title: Scores health
+    text: Four parts of 25 points each, scored against your goals or last week. The weights are a starting point.
+
+output_shape: |
+  WEEKLY PULSE  <week of ...>  (data pulled: <full week | mid-day>)
+
+  NUMBER            LAST WEEK   THIS WEEK   CHANGE   FLAG
+  Blended ROAS      <x>         <x>         <+/-%>   <ok | watch | act>
+  New-customer ROAS <x> ...
+  New-customer CAC  <$> ...
+  CPM               <$> ...
+  Spend by channel  <channel: $> ...
+  Email capture     <n> ...
+  Discount share    <%> ...
+  Large orders/day  <n> ...
+
+  HEALTH SCORE  <n>/100 (spend/ROAS + CAC + email + discount, 25 each). Weights are a starting point.
+
+  LEVERS TO PULL (in order)
+  1 <lever> | why: <number> | when: <day>
+
+  PACE
+  Bull case <...> | bear case <...> | daily pace <...>
+  Email drop days: <pull back ad spend by ...>
+
+  MISSING: <email data | discount data | goals>
+
+tweaks:
+  - what: Your goals
+    how: Give target blended ROAS, target CAC and your daily cost. With goals, the score compares to them. Without, it compares to last week and marks the score as no goal set.
+  - what: Time of the pull
+    how: Say if the numbers are from mid-day. It then asks about the day's emails before it calls anything.
+  - what: What counts as a large order
+    how: Set your own line, such as a dollar amount that only bulk buyers reach. Large orders per day are tracked against it.
+  - what: Store size
+    how: A small store can paste fewer numbers. Give only what you track, and the skill scores the parts it has.
+
+judge:
+  - The numbers are read in the stated order and each has a flag.
+  - Retention levers come before any discount.
+  - A mid-day pull is not used to call a week good or bad.
+  - Every lever cites a number from your data.
+  - The score shows its parts and says the weights are a starting point.
+
+test:
+  - Paste a week where blended ROAS fell and no emails went out. It should name emails and drops as lever 1, not a discount.
+  - Paste a week with rising sales and rising discount share. It should flag discount as a risk.
+  - Run it twice on the same week. The flags and lever order should match.
+  - Paste mid-day numbers. It should ask about emails sent before it calls the week.
+
+improve:
+  - Add your own goals for blended ROAS, CAC and discount share to the skill file, so the score uses them.
+  - Change the four score weights to match what matters most in your store.
+  - Add your email schedule to the skill file, so it knows which days have drops.
+  - Pair it with the CAC payback checker and the platform ROAS reality check when a number looks off.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Reports give sales, discounts and large orders by day or week."}
+    - {name: "Klaviyo", why: "Shows emails and texts sent, sign-ups captured and revenue from flows."}
+    - {name: "Triple Whale", why: "A store dashboard that shows blended ROAS and new-customer numbers in one place."}
+  inputs:
+    - "Your email and text schedule for the week"
+    - "Your profit and loss for the last four weeks"
+    - "A daily cost figure for the business, so discount share can be read against it"
+
+terms:
+  - term: Blended ROAS
+    meaning: All your revenue divided by all your ad spend, across every channel.
+  - term: Retention lever
+    meaning: An action aimed at past buyers, such as an email, a text or a product drop.
+  - term: Discount share
+    meaning: Discounts given as a percent of sales.

@@ -1,0 +1,20 @@
+slug: order-record-buyer-interview-guide
+name: "Order-record buyer interview guide"
+summary: "Paste recent orders. Get a pre-filled interview sheet per buyer, gap questions and a timeline pattern note."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [clayton-christensen]
+credits:
+  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)", used: "A buying-story interview that builds a timeline from the first thought to first use instead of asking about features; depth from a small number of conversations; clustering several stories before trusting a pattern"}

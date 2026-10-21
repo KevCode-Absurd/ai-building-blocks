@@ -1,0 +1,125 @@
+new_slug: expert-content-format-planner
+name: "Expert content format planner"
+summary: "Give it your products and what you know. Get a positioning line, 2 to 3 formats and a 4-week schedule."
+job: grow-social
+thinking: medium
+thinking_why: "It joins your facts, a stance and a schedule into one plan. A mid-size model keeps the plan consistent."
+
+headline: "Expert content format planner"
+subhead: Give it your products and what you know about them. It writes a one-line positioning statement, picks two or three of four expert formats, builds a research sheet and 20 ideas, and lays out a four-week posting schedule with a batch day.
+
+explain: |
+  Many store owners post whatever comes to mind, then quit when it does not work. Expert-led content works differently. A person on camera, or a carousel, shows real knowledge about the products and the category. Buyers who have never heard of you learn from it, and they trust you before they buy.
+
+  This skill starts with one sentence: who you are, what you do, who it is for, and why to listen to you. Then it picks two or three formats out of four (stories, ratings and rankings, breakdowns, and scenarios), chooses whether you speak as the expert or the student, and plans four weeks. The source says this style works now and may last only about nine months, so check your own results every quarter.
+
+when:
+  - You sell a product with a taste, material or know-how story and you want a steady content plan.
+  - You post at random and want a simple four-week plan to test.
+  - You can put one person on camera, or you can make carousels without a camera.
+
+you_give:
+  - Your products and category
+  - What you know first-hand, or what you are learning (expert or student)
+  - Who will be on camera, if anyone (optional)
+  - Hours free each week
+  - A few top videos or carousels you found in your category (optional)
+you_get:
+  - A one-line positioning statement
+  - Two or three formats with a stance for each
+  - A research sheet and 20 one-line post ideas
+  - A four-week schedule and a batch-day plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your products, what you know and how many hours a week you have.
+  - Search three broad buyer phrases yourself on Instagram, TikTok and YouTube. Paste the top videos you find, with topic and hook. Do this by hand once, so the pattern is clear to you.
+  - Read the positioning line and fix any proof that isn't true.
+  - Post the plan for four weeks before you judge anything.
+
+how_it_works:
+  - title: Writes the positioning line
+    text: 'The line runs: I am X. I do Y for people who Z. Listen to me because of real proof. It must be specific enough that a rival could not say it.'
+  - title: Picks the viewer
+    text: It aims at your narrow core buyer, not the widest crowd. Ideas that your core buyer would not value are dropped.
+  - title: Chooses 2 or 3 formats
+    text: From stories, ratings and rankings, breakdowns and scenarios, with a stance of expert or student for each.
+  - title: Runs the stranger test
+    text: Each idea must work for someone who has never seen you, because new posts are tested on non-followers first.
+  - title: Builds the research sheet
+    text: Topic, hook and pattern for the top videos you found. It then asks what is missing that you can add.
+  - title: Writes 20 ideas
+    text: One line each, with a gap that only you can fill.
+  - title: Lays out four weeks
+    text: Two of each chosen format a week, 4 to 6 posts, plus a batch day for scripting and filming.
+
+output_shape: |
+  POSITIONING
+  I am <who>. I do <what> for people who <viewer>. Listen to me because <real proof>.
+
+  CORE BUYER: <one narrow viewer>   STANCE: <expert | student> because <reason>
+
+  FORMATS (2 to 3)
+  <format> | <talking head | vlog | green screen | carousel> | why it fits: <reason>
+
+  RESEARCH SHEET (from what you pasted)
+  <topic> | <hook> | <pattern> | what is missing: <your gap>
+
+  20 IDEAS
+  1 <one line> | <format>
+  ...
+
+  4-WEEK SCHEDULE
+  Week 1: <post> / <post> / <post> / <post>   (repeat for weeks 2 to 4)
+
+  BATCH DAY: <script day> / <film day> | set and light: <notes>
+  REVIEW AT: week 4 | re-check this plan in <3 months>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <products | proof | hours | on-camera person>
+
+tweaks:
+  - what: Expert or student
+    how: Say honestly which you are. If you are still learning, the skill plans "learning out loud" posts. It never invents credentials.
+  - what: Hours free each week
+    how: Give a real number. The plan is cut to fit, and it says so if the hours are too few for four posts a week.
+  - what: Who is on camera
+    how: If no one wants to be on camera, say so. The skill plans carousels and faceless videos instead.
+  - what: Pasted research
+    how: Paste links or text of the top videos you found. The more real examples, the more specific the gap it finds.
+
+judge:
+  - The positioning line could not be said by a rival, and every proof in it is true.
+  - Two or three formats, each with a reason that fits your products.
+  - Each of the 20 ideas is a single line and clearly meant for your narrow buyer.
+  - The schedule adds up to the hours you gave it.
+  - The research sheet holds only videos you pasted, never ones made up.
+
+test:
+  - Check the positioning line against your facts. Anything you can't show is cut or reworded.
+  - Show five of the 20 ideas to someone who has never heard of your brand. Ask which they would watch.
+  - Run the plan for four weeks without changing it, then look at which format got the most views and which got the most follows.
+  - Compare your first batch day to the time the plan gave you. Adjust the hours for next month.
+
+improve:
+  - Add proof that is real, such as years in the trade, a workshop, or sales and reviews you can show.
+  - Add your set rules, such as where you film and what is behind you. The source says lighting matters more than the camera.
+  - Save the formats that worked into the skill file as your core formats.
+  - After four to twelve weeks, add posts that answer questions from comments, each opening with that question.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It writes the plan and the ideas from the research you paste."}
+    - {name: "Google Sheets", why: "A plain sheet with topic, hook and pattern columns is enough for the research."}
+    - {name: "Instagram, TikTok and YouTube search", why: "Their search suggestions show what buyers type. Do the research by hand once."}
+  inputs:
+    - "Screenshots of three competitor posts that did well"
+    - "Your most common customer questions from email, comments and DMs"
+    - "A photo of the place you plan to film"
+    - "Your brand file, if you have one"
+
+terms:
+  - term: Stranger test
+    meaning: Asking whether a post works for someone who has never seen you. New posts are shown to people who don't follow you first.
+  - term: Batch day
+    meaning: A day where you script several posts, followed by a separate day where you film them back to back.

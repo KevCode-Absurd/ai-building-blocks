@@ -1,0 +1,128 @@
+new_slug: bestseller-shopping-campaign-builder
+name: "Bestseller Shopping campaign builder"
+summary: "Give it your bestsellers and brand name. Get Shopping settings, product group steps and brand negatives."
+job: run-google-ads
+thinking: low
+thinking_why: "It follows a fixed setup with a short product list, so a small, fast model is enough."
+
+headline: "Bestseller Shopping campaign builder"
+subhead: Give it your 5 to 10 bestsellers, your brand name and your daily budget. It hands back a settings sheet for a Google Standard Shopping campaign, the click-by-click steps to show only those products, your brand negatives, and a plan to find new winners.
+
+explain: |
+  A new Google Shopping campaign with 200 products and a small budget spreads thin. Google cannot test them all, so it latches onto a few weak ones and your money goes there. Starting with your 5 to 10 best sellers gives the algorithm a clear job and gives you clean data.
+
+  This skill builds that campaign. You get the settings (goal, bidding, priority, networks, location), the product group steps that exclude everything except your bestsellers, and a list of exact-match brand negatives so brand searches go to your branded campaigns. It also plans a second all-products campaign to find new winners, and a weekly rule for dropping products that spend and never sell. It tells you honestly when your budget is too small for your price.
+
+when:
+  - You are starting Google Shopping for the first time and your account has no data.
+  - Your Shopping spend is spread over many products and few of them sell.
+  - You want a cold-traffic Shopping campaign that leaves brand searches to the branded campaigns.
+
+you_give:
+  - Your list of 5 to 10 bestsellers with prices
+  - Your brand name, misspellings and product-line names
+  - Whether Merchant Center is connected and products approved
+  - Your daily budget and average order value
+  - Your Shopping export, if you already run one (optional)
+you_get:
+  - A campaign settings sheet with goal, bidding steps, priority, networks and location
+  - The click-by-click product group steps to include only your bestsellers
+  - An exact-match brand negative keyword list
+  - A plan for a second all-products campaign to find new winners
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your 5 to 10 bestsellers with prices, and give your daily budget and average order value.
+  - Give your brand name with its misspellings and product-line names.
+  - Build the campaign, then check the menu names against your live account, since Google and Shopify move them.
+  - Every week, exclude products that took clicks and spend and did not sell.
+
+how_it_works:
+  - title: Checks the setup
+    text: Store, Merchant Center and Google Ads must be connected and products imported, which can take a few hours.
+  - title: Checks budget against price
+    text: Compares your daily budget to your order value and warns when sales would be too rare to learn from.
+  - title: Sets the campaign
+    text: Objective Sales, purchases as the goal, Standard Shopping, a name with country, bestsellers and the bid strategy.
+  - title: Sets bidding by stage
+    text: Maximize Clicks to about 15 conversions, then Maximize Conversion Value, then a Target ROAS once sales are steady.
+  - title: Sets the controls
+    text: Search Network off, location set to presence, all devices on, and a priority that fits your campaigns.
+  - title: Narrows to bestsellers
+    text: Subdivide product groups by Item ID, pick the bestsellers and set Everything else to Excluded.
+  - title: Adds brand negatives
+    text: Exact-match brand name, misspellings and product lines, so brand searches go to the branded campaigns.
+  - title: Plans the next steps
+    text: Weekly exclusions, an all-products campaign to hunt winners, and a branded Shopping campaign if brand volume is large.
+
+output_shape: |
+  FIT  <feed and tracking ready? yes/no> | budget vs price <note>
+
+  SETTINGS
+  objective <Sales> | goal <purchases only> | type <Standard Shopping>
+  name <country - Bestsellers - bid strategy>
+  bidding <current step> -> <next step and trigger>
+  max CPC cap <number or later>
+  networks <Search Network off> | location <presence> | devices <all>
+  priority <Low if only Shopping campaign | High once feed-only PMax added>
+
+  PRODUCT GROUPS (<5 to 10> products)
+  1 <step> ... n <step>  Everything else -> Excluded
+
+  BRAND NEGATIVES (exact)
+  [<brand>] [<misspelling>] [<product line>]
+
+  WEEKLY RULE  <exclude products with clicks and spend but no sales>
+  NEXT CAMPAIGNS
+  all-products <when and how> | branded Shopping <when and budget>
+  CHECKS MISSED: <none | list>
+  MISSING: <bestsellers | brand terms | budget | feed status>
+
+tweaks:
+  - what: Number of products
+    how: Keep it at 5 to 10, and under 10 if you can. A small budget cannot test 200.
+  - what: Daily budget against order value
+    how: A budget too small for your price gives too few sales to learn from. The skill warns you.
+  - what: Brand spellings
+    how: List every spelling and product line so the negatives catch brand searches.
+  - what: Whether a feed-only Performance Max is coming
+    how: The priority setting changes when you add one, so say if you plan to.
+
+judge:
+  - There are 5 to 10 products and each has a price.
+  - The bidding path shows the stage you are at and the trigger for the next one.
+  - The product group steps end with Everything else set to Excluded.
+  - Brand negatives are exact match and cover spellings and product lines.
+  - The skill warns when your budget is too small for your order value.
+
+test:
+  - Build the campaign with only three products first, then check the product group list in Google Ads shows just those.
+  - After a week, search your own brand name. Your bestseller campaign should not be the one showing.
+  - Check the search terms report for brand terms. There should be none.
+  - Run the skill again with a smaller budget and see that the warning about price and budget appears.
+
+improve:
+  - Put your product names, prices and brand spellings in the skill file so every run starts from them.
+  - Add your own conversion thresholds if you have enough data to set them.
+  - Add your store's menu names once you have checked them, so the click steps match your account.
+  - Pair it with the Feed-only Performance Max builder for the remarketing layer, and the Shopping campaign tuner for the weekly routine.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "Where Standard Shopping campaigns and product groups are built."}
+    - {name: "Google Merchant Center", why: "Your product feed must be approved before the campaign can show."}
+    - {name: "Shopify", why: "The Google and YouTube app connects your store to Merchant Center and Google Ads."}
+  inputs:
+    - "Your sales by product for the last 90 days, to pick real bestsellers"
+    - "Your break-even ROAS, so the Target ROAS step uses your own number"
+    - "Your product feed titles, since weak titles waste Shopping spend"
+
+terms:
+  - term: Standard Shopping
+    meaning: A Google campaign type where you choose products and see bids and queries by product. Performance Max gives less control.
+  - term: Product group
+    meaning: A set of products inside a Shopping campaign that you can bid on or exclude.
+  - term: Item ID
+    meaning: The unique code of a product in your feed.
+  - term: Target ROAS
+    meaning: A bid goal for revenue per dollar spent, such as 2.5 for each dollar.

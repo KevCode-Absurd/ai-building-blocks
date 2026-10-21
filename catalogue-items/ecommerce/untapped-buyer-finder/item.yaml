@@ -1,0 +1,22 @@
+slug: untapped-buyer-finder
+name: "Untapped buyer finder"
+summary: "Give it a crowded product. Get the buyer groups nobody targets, ranked, with a test for each."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: reference_set, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Full Product Research Course for Dropshipping (Find Winning Products FAST)", by: "A dropshipping YouTuber (name not given)", url: "https://www.youtube.com/watch?v=cRQripx7qXM", used: "Selling a crowded product to a buyer group no rival shows, the blue ocean angle pivot, and the idea that a group with very few ads is open ground"}
+  - {title: "How to Build an Billion Dollar E-Commerce Empire", by: "Dave Fogarty, interviewed on a podcast", url: "https://www.youtube.com/watch?v=TGooaNoeEfc", used: "One generic store, one ad per buyer group, to see which use case takes off"}
+  - {title: "The Only Product Research Video You Need to Start Dropshipping", by: "An e-commerce YouTuber (name not given)", used: "A narrow hook can win in a crowded niche, shown by a clothing brand for men under 5 ft 8 in"}

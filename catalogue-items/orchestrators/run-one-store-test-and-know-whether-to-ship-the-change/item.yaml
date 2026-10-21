@@ -1,0 +1,23 @@
+slug: run-one-store-test-and-know-whether-to-ship-the-change
+name: "Run one store test and know whether to ship"
+summary: "Give it your orders and visits. Get a readiness call, a test plan for your Shopify plan, and a ship verdict."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: [store-test-readiness-checker, big-swing-test-picker, shopify-test-setup-picker, one-change-experiment-planner, store-test-verdict-maker]
+steps:
+  - {uses: store-test-readiness-checker, note: "Checks your traffic can prove a test at all and how long it takes."}
+  - {uses: big-swing-test-picker, note: "Picks the tests your readiness result says you can prove."}
+  - {uses: shopify-test-setup-picker, note: "Picks how to run the chosen test on your Shopify plan without flicker or speed cost."}
+  - {uses: one-change-experiment-planner, note: "Turns the picked test into a one-change plan with dates and decision rules."}
+  - {uses: store-test-verdict-maker, note: "Judges the finished test against the plan, then gives the call and a log entry."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/run-one-store-test-and-know-whether-to-ship-the-change/skeleton.yaml

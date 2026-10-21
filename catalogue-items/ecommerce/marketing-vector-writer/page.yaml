@@ -1,0 +1,133 @@
+new_slug: marketing-vector-writer
+name: "Marketing vector writer"
+summary: "Give it your brand and ad plans. Get a marketing vector and on, borderline and off-brand ad angles."
+job: brand-file
+thinking: medium
+thinking_why: "It sorts your ad ideas against a brand direction and writes a short brief. A mid-size model does this well. Use a stronger one if you review real ad data."
+
+headline: "Marketing vector writer"
+subhead: Give it your brand, your current ad angles and offers, and how often you discount. It writes the one direction every ad must follow, sorts ad types into on-brand, stretch and off-limits, sets the rules for discounts, and gives creators a one-page brief and a quarterly review order.
+
+explain: |
+  Ads have to sell, and selling pushes you toward discounts and urgency. If every ad drifts that way, the brand slowly looks like a bargain shop. A marketing vector is one direction that stays the same in every ad: the world it shows, who the buyer is and the tone. Around it you set a spectrum of what is allowed, so your testers have room to try things without breaking the brand.
+
+  This skill writes the vector first. Then it builds a grid of concept types and formats against three columns: on-brand, stretch and off-limits. It sets a rule for when a sale is allowed. It gives creators a one-page brief. Each quarter it tells you how to review results, in a set order, to see which ads carry the story and which only win on a deep discount. It fits stores that sell on identity at a price above commodity. It does not suit a pure price-led store.
+
+when:
+  - You sell on identity and your ads are drifting toward heavy discounts.
+  - You are briefing creators or editors and need a short guide on what is in and out.
+  - You review ad results each quarter and want to tell story-led ads from ones that only win on a discount.
+
+you_give:
+  - Your brand file or a short description of the brand and who it is for
+  - Current ad angles and offers, including any discount ads
+  - Price point and average order value
+  - Hook rate, hold rate and click-through rate per ad (optional)
+  - ROAS, purchases, repeat purchase or cohort figures, and the share of ads that use discounts (optional)
+
+you_get:
+  - A one-paragraph marketing vector
+  - A grid of ad concepts and formats sorted into on-brand, stretch and off-limits, with a reason for each
+  - Rules for when a discount or sale is allowed and how to word it
+  - A one-page brief for creators and editors, and a quarterly review order
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brand file or a short description of the brand. If you have no brand file, run the Store promise writer first.
+  - List your current ad angles, offers and discounts, and your price and average order value.
+  - Hand the one-page brief to your creators. Add ad results each quarter and ask for the review.
+  - Move an angle between columns only when the review backs it.
+
+how_it_works:
+  - title: Writes the vector
+    text: One direction that stays the same in every ad, covering the world, the buyer's identity and the tone.
+  - title: Lists allowed selling moves
+    text: Offer, proof and urgency you will allow, before it lists what is banned.
+  - title: Builds the grid
+    text: Rows for concept types and formats. Columns for on-brand, stretch and off-limits. It says no in writing.
+  - title: Sets the discount rule
+    text: Heavy discount blasts are off-limits for a premium store. They are allowed only under a rule such as members-only or end-of-season.
+  - title: Gives testers room
+    text: The testing team has latitude inside the on-brand and stretch columns so tests are not choked.
+  - title: Keeps identity-led formats
+    text: Short lifestyle clips of real community members and founder-led story ads stay on-brand.
+  - title: Reviews each quarter
+    text: Hook, hold and click-through first, then repeat-purchase cohorts, then ROAS.
+  - title: Writes the creator brief
+    text: One page the creators and editors can follow.
+
+output_shape: |
+  MARKETING VECTOR (one paragraph)
+  World: <...>  Buyer identity: <...>  Tone: <...>
+
+  ALLOWED SELLING MOVES: <offer> | <proof> | <urgency, honest only>
+
+  SPECTRUM OF AD VARIANCE
+  <concept or format> | On-brand / Stretch / Off-limits | <reason>
+  (rows for concept types and formats, columns for the three zones)
+
+  DISCOUNT RULE
+  Off-limits: <deep discount blasts>   Allowed only if: <members-only | end-of-season | other rule>
+  How to word it: <...>
+
+  ONE-PAGE CREATOR BRIEF
+  <vector, do list, do not list, formats, examples>
+
+  QUARTERLY REVIEW (in this order)
+  1. Hook rate, hold rate, click-through   2. Repeat-purchase cohorts   3. ROAS
+  Ad | carries the story / converts only on discount / not enough data | evidence
+  Baseline: <your last 60 to 90 days>
+  TOP 3 CHANGES: <...>
+  CHECKS MISSED: <none, or list>
+
+tweaks:
+  - what: Your brand file
+    how: Paste it, or the brand traits and who it is for. A weak brand description gives a weak vector. Run the Store promise writer first if you have none.
+  - what: Your discount history
+    how: List every discount you have run and how often. The rule is built around what you actually do.
+  - what: Price and average order value
+    how: Give both. The skill uses them to judge whether a discount belongs in the brand.
+  - what: Ad data you paste in
+    how: Add hook, hold and click-through rates per ad and repeat-purchase figures for the review. Without them it gives the grid only.
+  - what: How much room testers need
+    how: Say how many tests you run each month. A higher volume needs a wider stretch column.
+
+judge:
+  - The vector is one direction, in the world, buyer and tone, that every ad could follow.
+  - The grid has all three columns and each row has a reason.
+  - It names deep discount blasts as off-limits for a premium store and says when a sale is allowed.
+  - The brief fits on one page and a creator could follow it.
+  - The review order is hook, hold and click-through first, then cohorts, then ROAS.
+  - It does not invent benchmark values. It asks you to set a baseline from your own last 60 to 90 days.
+
+test:
+  - Give it three of your real ads and ask where each sits on the grid. You should agree with at least two.
+  - Hand the brief to a creator who has not seen your brand and ask what they would make. It should match the vector.
+  - Run the review on a quarter of real data. Check the ads it says only win on discount against your own numbers.
+  - Re-run the vector with a different brand description. It should change to match.
+
+improve:
+  - Add the off-limits list that fits your brand, such as words or offers you never use, to the skill file.
+  - Add your own baseline for hook, hold and click-through from the last 60 to 90 days, so the review starts from your numbers.
+  - Save the vector to your brand file so ads, emails and pages share it.
+  - Pair it with a cohort reader for the repeat-purchase step.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can write the vector and grid. Paste your real ads and offers."}
+    - {name: "Meta Ads Manager or TikTok Ads Manager", why: "Their video play and click columns give the numbers hook rate, hold rate and click-through are worked out from."}
+    - {name: "Shopify's customer cohort report", why: "On plans that include it, it shows whether buyers come back, for the repeat-purchase step."}
+  inputs:
+    - "Your best-performing story-led ads and your best-performing discount ads, side by side"
+    - "Cohort figures for buyers who came from each type of ad"
+    - "A baseline from your own last 60 to 90 days for hook, hold and click-through"
+
+terms:
+  - term: Marketing vector
+    meaning: One direction that stays the same in every ad.
+  - term: Spectrum of ad variance
+    meaning: A grid that sorts ad ideas into on-brand, stretch and off-limits.
+  - term: Hook rate
+    meaning: The share of people who keep watching past the first few seconds of a video ad.
+  - term: Hold rate
+    meaning: The share of viewers who keep watching a video ad further in.

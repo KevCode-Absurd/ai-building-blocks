@@ -1,0 +1,56 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: raise-order-value-with-bundles-and-add-ons-you-can-check
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: raise-order-value-with-bundles-and-add-ons-you-can-check
+  name: "Raise order value with bundles and add-ons you can check"
+  summary: "Give it your sales export and product list. Get a free-shipping threshold, bundles and an after-sale offer that keeps profit."
+  when: "your average order is flat and ad costs leave little room to grow."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: "Order threshold planner"
+    skill: order-threshold-planner
+    job: offer
+    from: "library"
+    method: ["Bucket the orders by value", "Build a multipack ladder for a hero product", "Choose dollar off or percent off by price range", "Never offer free shipping on a very low-priced item without a basket-building tier", "Show the next reward in a cart progress bar"]
+    inputs: [performance_sheet, product_data!]
+    outputs: [offer, plan]
+    note: "Sets a free-shipping or gift threshold just above your current average order."
+  - name: "Bundle and quantity-break builder"
+    skill: bundle-and-quantity-break-builder
+    job: offer
+    from: "library"
+    method: ["Bundle the same product", "Frame with free where it fits", "Show price per serving, per bottle or per day", "Check which size repeats fastest", "Cost-check each tier"]
+    inputs: [product_data, offer!, performance_sheet!]
+    outputs: [offer]
+    note: "Builds bundles and quantity breaks that sit around that threshold."
+  - name: "After-sale offer planner"
+    skill: after-sale-offer-planner
+    job: strategy
+    from: "library"
+    method: ["Brand brain", "When they say go ahead,", "Make each easy to say yes to", "Test one offer at a time", "Check it"]
+    inputs: [product_data, offer, performance_sheet!]
+    outputs: [offer, plan]
+    note: "Adds an after-sale offer that follows the bundle the customer picked."
+  - name: "Offer profit-per-session checker"
+    skill: offer-profit-per-session-checker
+    job: offer
+    from: "library"
+    method: ["Know the numbers first and round costs up", "Model the shipping spread", "Flag the traps", "Note that creative also moves the numbers", "Score it"]
+    inputs: [offer, product_data, performance_sheet]
+    outputs: [audit_report]
+    note: "Checks the full set of offers earns more profit per visitor, not only more revenue."
+  - pause: "Run the new offers for two to four weeks and export orders and profit for the same period."
+  - name: "Store test verdict maker"
+    skill: store-test-verdict-maker
+    job: analysis
+    from: "library"
+    method: ["Check the split first", "Apply Twyman's law", "Turn it into money", "Only agreed splits count", "Write the log entry"]
+    inputs: [performance_sheet, plan!]
+    outputs: [audit_report]
+    note: "Reads the exported results against the plan and says keep, change or stop."

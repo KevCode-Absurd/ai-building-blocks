@@ -1,0 +1,125 @@
+new_slug: job-test-product-line-cutter
+name: "Job test product line cutter"
+summary: "List your SKUs and core job. Get each marked core, second or no job, a launch gate and a focus score."
+job: understand-customers
+thinking: medium
+thinking_why: "It sorts each SKU against one job sentence and then checks the numbers. A mid-range model does this well."
+
+headline: "Job test product line cutter"
+subhead: Paste your product list with units sold, margin and return rate, plus your job spec or avatar cards. It marks each SKU as core job, second job or no clear job, gives a keep, merge, cut or hold list with reasons, a rule for approving new launches, and a range focus score out of 100.
+
+explain: |
+  A range grows for easy reasons: current customers will buy more, or a rival has the product. Each new SKU makes the shop a little less clear about what it is for. When a shopper has to ask what the product is for, the range has stopped being clear about its job. Every extra job also puts you up against a rival that does only that job.
+
+  This skill adds a job test on top of the Product line cutter. You give it the core job in one sentence. It marks every SKU against that sentence. It then checks margin and repeat rate, because the job test never overrides cash. It ends with a launch gate: a new SKU needs a named job, a named avatar, quoted evidence and a statement of what it makes the old range stop doing.
+
+when:
+  - Your range has grown and shoppers or ads no longer say clearly what you sell.
+  - You are about to launch a new SKU because a rival has it, or because current buyers would probably buy it.
+  - You want a rule for approving launches that is not a hunch.
+
+you_give:
+  - Your product list with units sold, margin and return rate
+  - Your job spec or avatar cards (required, since SKUs are judged against the core job)
+  - Repeat purchase rate by SKU (optional)
+  - Product page text (optional, to count the jobs each page tries to do)
+you_get:
+  - "Each SKU marked: core job, second job or no clear job"
+  - A keep, merge, cut or hold list, with the reason for each
+  - A rule for approving future launches
+  - A range focus score out of 100, with what it measures
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your job spec, or the avatar cards from the Job-based avatar builder. Without a job spec, the SKUs cannot be sorted.
+  - Paste the product list with units, margin and return rate. Add repeat rate if you have it.
+  - Look at the hold list first. Those are the SKUs the job test would cut but the numbers say to keep.
+  - Save the launch gate and ask for the sort again whenever you plan a new SKU.
+
+how_it_works:
+  - title: Writes the core job
+    text: States the core job in one situation sentence from your job spec. Every SKU is judged against it.
+  - title: Marks each SKU
+    text: Marks it as serving the core job, serving a second distinct job, or serving no job.
+  - title: Counts jobs per page
+    text: Counts the jobs each product page tries to do. Each extra job meets a rival that does only that job.
+  - title: Flags surface growth
+    text: Flags launches made because selling more to current buyers is cheap, or because a rival has the product.
+  - title: Checks for confusion
+    text: Asks whether the range makes a shopper wonder what the product is for.
+  - title: Checks the numbers
+    text: Keeps SKUs with no clear job only if margin and repeat rate justify it. The job test never overrides cash.
+  - title: Sets the launch gate
+    text: Requires a named job, a named avatar, quoted evidence and a statement of what the old range will stop doing.
+  - title: Scores focus
+    text: Scores how much of the range serves the core job, and sets a re-sort for every new SKU.
+
+output_shape: |
+  CORE JOB: When <circumstance>, I want to <verb + noun>, so I can <outcome>.   Source: <job spec | avatar card>
+
+  SKU SORT
+  <sku> | job: <core | second: <job> | none> | units <n> | margin <%> | returns <%> | repeat <% or MISSING>
+     pages jobs: <n> | surface-growth flag: <yes: why | no> | list: <keep | merge | cut | hold>
+     reason: <job test + numbers>
+
+  HOLD LIST (no clear job, but margin or repeat justify it)
+  <sku>: <why>   give it its own page and name
+
+  SECOND-JOB SKUs
+  <sku>: <job>   needs its own page and name
+
+  BRAND CONFUSION: <yes/no, what a shopper would ask>
+
+  LAUNCH GATE (all four needed)
+  1. a named job  2. a named avatar  3. quoted evidence  4. what it makes the old range stop doing
+
+  SCORE  <n>/100 (100 x (core SKUs + 0.5 x second-job SKUs) / all SKUs)
+         measures: how much of the range serves the core job; our own formula, not a book figure; says nothing about profit
+  MISSING: <job spec | units | margin | returns>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: Your job spec
+    how: The sort is only as good as the core job sentence. Paste it exactly. If you have several jobs, run it once per core job.
+  - what: Margin and repeat rate
+    how: The job test never overrides cash. Give margin and repeat for every SKU so the hold list is real, not a guess.
+  - what: Catalogue size
+    how: With under 10 SKUs, you may only need the launch gate. Say so and it skips the sort.
+  - what: A planned launch
+    how: Paste the idea with its job, avatar and quotes, and it runs the launch gate on it.
+
+judge:
+  - Every SKU has one mark, one list result and a reason that uses both the job test and the numbers.
+  - No SKU is cut on the job test alone.
+  - A second-job SKU with high margin stays, with its own page and name.
+  - The launch gate has all four parts.
+  - The score shows its sum and says it is our own formula, not from the book.
+
+test:
+  - Pick a SKU you know is a copy of a rival's item. It should be marked no clear job and show a surface-growth flag.
+  - Pick your best seller. It should be core job or a second job with margin that backs it.
+  - Run the launch gate on a product idea that has no quote behind it. It should fail on the evidence part.
+  - Run it twice. The core and cut marks should match.
+
+improve:
+  - Add your margin floor and return-rate limit to the skill file, so the numbers check uses your own lines and not guesses.
+  - Add your catalogue's families (sizes, colours, flavours) so it counts variants as one SKU when they do the same job.
+  - Save the launch gate in your brand file and run it for every new SKU.
+  - Pair it with the Job-based avatar builder for the job spec, and with the Product line cutter if you want the general keep-or-cut sort without the job test.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can sort a product list against a job sentence and check margin."}
+    - {name: "Shopify admin", why: "Its product and returns reports give units, returns and sales by SKU."}
+  inputs:
+    - "Repeat purchase rate by SKU, from your customer export"
+    - "Your product page text for each SKU, to count the jobs each page tries to do"
+    - "Your avatar cards, so a second-job SKU can be tied to a named buyer"
+
+terms:
+  - term: SKU
+    meaning: One product variant you stock and sell, such as a size or a flavour.
+  - term: Surface growth
+    meaning: Adding products because it is cheap to sell more to current buyers, not because a buyer needs a job done.
+  - term: Launch gate
+    meaning: A rule a new product must meet before you stock it.

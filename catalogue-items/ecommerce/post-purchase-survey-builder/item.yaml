@@ -1,0 +1,22 @@
+slug: post-purchase-survey-builder
+name: "Post-purchase survey builder"
+summary: "Say your store and customers. Get a post-purchase survey, a list survey and review-mining prompts."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: document}
+  - {type: objection_map}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Conversion Rate Optimization Framework Revealed - Step By Step Breakdown", by: "Ali Kenyon (Conversion Wise), hosted by Ezra Firestone", used: "The two post-purchase questions, a one-time survey for the list, customer calls, review mining and the sandal example"}
+  - {title: "eCommerce CRO Masterclass 2026: The Full System", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "Exporting all reviews to an AI to find a point of difference, and building FAQs from real objections"}
+  - {title: "HotJar vs Microsoft Clarity: Which is Better For Your Website?", by: "A conversion agency operator (video)", used: "Exit-intent questions for non-buyers versus post-purchase questions for buyers"}

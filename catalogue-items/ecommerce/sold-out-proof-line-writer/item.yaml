@@ -1,0 +1,19 @@
+slug: sold-out-proof-line-writer
+name: "Sold-out proof line writer"
+summary: "Give it your real sales, rank and restock facts. Get short proof lines and where each one goes."
+category: ecommerce
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: ad_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How Bloom Built the Playbook Every Founder Will Copy in 2026", by: "Greg, co-founder of Bloom (video)", used: "Validity lines: restock as proof that others bought, rank statements, real retailer wins and numbers you can defend"}

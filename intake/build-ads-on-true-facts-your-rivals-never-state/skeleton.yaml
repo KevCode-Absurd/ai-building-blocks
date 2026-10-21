@@ -1,0 +1,43 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md).
+id: build-ads-on-true-facts-your-rivals-never-state
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: build-ads-on-true-facts-your-rivals-never-state
+  name: "Build ads on true facts your rivals never state"
+  summary: "Give it your maker and test notes. Get claims no rival makes, headlines from them and an image ad plan."
+  when: "you make or source something with real care behind it and your ads sound like everyone else's."
+  job: write-ad-copy
+  level: intermediate
+steps:
+  - name: "Find the facts rivals never state"
+    skill: process-fact-finder
+    job: research
+    from: "skill: process-fact-finder"
+    method: ["Read the notes in full and list every step, check and standard", "Keep facts the buyer does not know and would find surprising", "Turn each into a number or something visible", "Mark each claim backed or unproven", "Pick the one anchor fact"]
+    inputs: [source_text, competitor_set!]
+    outputs: [angle_library]
+    note: "Starts from your maker, supplier and test notes."
+  - name: "Write headlines from the claims"
+    skill: typed-headline-batch-writer
+    job: copy
+    from: "skill: typed-headline-batch-writer"
+    method: ["Pull every real figure, time and count", "Write self-interest lines first", "Add news lines only if something is truly new", "Tie every curiosity line to a promise", "Cut and label each line"]
+    inputs: [angle_library, product_data!, offer!]
+    outputs: [hooks]
+    note: "Writes twenty or more headlines from the claims in the step before."
+  - name: "Pick the three best by cover test"
+    skill: headline-cover-test-ranker
+    job: copy
+    from: "skill: headline-cover-test-ranker"
+    method: ["Read each line alone with no picture", "Write what a stranger would think it offers", "Score five rules", "Cut the weak kinds", "Pick three that differ"]
+    inputs: [hooks, persona!]
+    outputs: [shortlist, audit_report]
+    note: "Reads the headline list and keeps three that can teach you something."
+  - name: "Plan the image ad around the anchor fact"
+    skill: single-image-ad-planner
+    job: ads
+    from: "skill: single-image-ad-planner"
+    method: ["Put the whole ad in one sentence", "Pick one claim your proof backs and rivals cannot copy", "Set the reading order and zones", "Write feed copy to the platform limits", "Hand over one image prompt"]
+    inputs: [product_data, angle_library!, brand_brain!, voc_reviews!, product_photos!]
+    outputs: [ad_copy, image_prompt]
+    note: "Reads the claims from step 1. Paste the top headline from step 3 as the line it should keep."

@@ -1,0 +1,78 @@
+new_slug: fix-your-landing-pages-top-problems-and-check-again
+name: Fix your landing page's top problems and check again
+summary: Give it your page. Get ranked problems, a fix-now list and a second check once you've fixed them.
+job: audit-landing-page
+thinking: medium
+thinking_why: The steps read a page and sort findings. A mid-size model does the job.
+headline: Fix what's wrong with your page, then check that it's gone
+subhead: Give it your landing page. It reads the page three ways, ranks what gets in a buyer's way, and sorts the list into fix now, investigate and test. You make the fixes. A separate 30-point check then tells you what's still wrong.
+explain: |
+  A review gives you a long list. Most people fix a few items, feel better and never check. Some items weren't problems, and some fixes cause new ones. And a list that mixes broken things with test ideas makes you test things you should just fix.
+
+  The first step reads your page as a glance, a skim and a doubt, rates each finding from 0 to 4 and scores the page out of 100. The second sorts every finding: tracking faults first, then clear fixes to make now, then causes to investigate, then ideas to test. Then it pauses. You make only the fix-now changes and save the page again. The last step runs 30 yes-or-no checks on the fixed page, quoting it for every no, and lists the first five fixes still left.
+when:
+  - Your page gets visits but few sales and you don't know where to start.
+  - You got a long list of page problems and need to know what to fix first.
+  - You fixed some things and want to know if the page is better.
+you_give:
+  - Your landing page as a link, text and screenshots
+  - The ad that sends traffic to it (optional)
+  - Your brand facts (optional)
+  - After the pause, the page again with the fix-now changes made
+you_get:
+  - Findings ranked by how much they hurt, quick wins first, with a page score out of 100
+  - Every issue sorted into fix now, investigate or test, with its proof
+  - "A second, separate check of the fixed page: 30 yes-or-no results with quotes"
+  - Five fixes still worth making and a second score
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it the page and, if you have it, the ad that sends traffic. Screenshots of the phone view help most.
+  - Make only the fix-now changes. Leave the test ideas for later, so you can tell what helped.
+  - Save the updated page and give it back for the last check.
+how_it_works:
+  - title: Audit the page
+    text: Names what the page is for, then reads it as a glance, a skim and a doubt. It rates each finding from 0 to 4, splits quick wins from tests and scores the page.
+  - title: Sort what to fix now
+    text: Numbers every issue with its proof. Tracking faults come first, then clear fixes to make now, then causes to look into, then ideas to test, ranked by gain and effort.
+  - title: Make the fixes
+    text: A pause. You make the fix-now changes and save the updated page text and screenshots.
+  - title: Check the fixed page
+    text: Runs 30 yes-or-no checks at the five stops a buyer makes. It quotes the page for every no, tags it a deal-breaker or a drag, and lists the first five fixes still left.
+output_shape: |-
+  STEP 1: AUDIT
+    Page job | findings rated 0 to 4 | quick wins | tests | score out of 100
+
+  STEP 2: SORTED ISSUES
+    Tracking faults | fix now | investigate | test ideas | ranked order
+
+  PAUSE: make the fix-now changes and save the updated page
+
+  STEP 3: SECOND CHECK
+    30 yes-or-no checks with quotes | deal-breakers and drags | five fixes | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The page's job
+    how: Say if the page is for a first sale, a lead or a bigger order. Every finding is judged against that job.
+  - what: The ad
+    how: Add the ad that sends traffic. It checks that the first screen carries the ad's words.
+  - what: Your phone view
+    how: Attach phone screenshots. Most visitors are on phones, and many problems only show there.
+  - what: How much you fix
+    how: Fix only the fix-now list. If you also change test ideas, the second check can't tell you what helped.
+judge:
+  - Each finding quotes the page or points to a screenshot.
+  - Every issue is in one bucket only, and tracking faults come before page fixes.
+  - The fix-now list holds only clear fixes with a clear cause.
+  - Each no in the second check has a quote and a one-line fix.
+  - The workflow says the two scores come from different checklists.
+test:
+  - Pick three findings from step 1. Open the page and check each one is really there.
+  - Compare the fix-now list with what you changed. Nothing else should have changed.
+  - Check that every deal-breaker from the first audit is gone or still listed in the second check.
+improve:
+  - Save the first audit so you can compare it with the next one.
+  - Take the test ideas into the page-problems workflow once you have enough traffic to test.
+  - Add the questions buyers keep asking to your brand facts.

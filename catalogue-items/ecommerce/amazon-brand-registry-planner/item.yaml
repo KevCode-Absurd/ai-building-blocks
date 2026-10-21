@@ -1,0 +1,20 @@
+slug: amazon-brand-registry-planner
+name: "Amazon brand registry planner"
+summary: "Give it your brand name and listing. Get a trademark choice, a registry pack and a list of tools to turn on."
+category: ecommerce
+type: skill
+role: make
+job: brand
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "A pending trademark being enough for registry, design versus word marks, checking the name first, the ASIN needed before applying, what registry opens up and the manufacturer agreement note"}

@@ -1,0 +1,21 @@
+slug: wrong-buyer-review-checker
+name: "Wrong-buyer review checker"
+summary: "Paste your low reviews. Get which came from wrong-job buyers, not-for lines and a promise-match score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: copy_draft, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [clayton-christensen]
+credits:
+  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)", used: "Reviews now punish buyers who hire a product for the wrong job, so sellers must say who it is not for; praise can draw the wrong buyer and bring bad reviews; describing the real experience honestly lets mismatched buyers opt out; shoppers trust reviews from people hiring for the same job"}

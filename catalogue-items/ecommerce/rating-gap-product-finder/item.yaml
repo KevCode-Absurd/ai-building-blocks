@@ -1,0 +1,20 @@
+slug: rating-gap-product-finder
+name: "Rating gap product finder"
+summary: "Name a category. Get pain points ranked by urgency and sub-categories with weak ratings but strong search."
+category: ecommerce
+type: skill
+role: source
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: voc_reviews}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Making $$ with Alibaba's NEW AI Agent (Full Demo)", by: "A startup podcast host and software founder (name not given)", used: "A prompt for ranked customer pain points, the idea that a low average rating with strong search means weak products, and searching for what people would pay more for"}

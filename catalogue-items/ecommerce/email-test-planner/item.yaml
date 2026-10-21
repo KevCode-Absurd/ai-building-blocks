@@ -1,0 +1,22 @@
+slug: email-test-planner
+name: "Email test planner"
+summary: "Give it your flows and send volumes. Get a ranked test queue with sample sizes and win rules."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder", used: "Hypothesis first, sample sizes, manual 50/50 campaign splits, the ranked flow tests and delay ranges"}
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (agency case results, not independent data)", used: "The six test types, reading a delay test, and picking the winner by revenue"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "One element at a time, the winning metric and flow test settings"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores", used: "Placed order rate as the metric and the send time test method"}

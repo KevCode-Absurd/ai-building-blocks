@@ -1,10 +1,17 @@
 # Plan what ads to test: AI Blocks
 
-> 24 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 40 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad angle multiplier](https://useaiblocks.com/skills/ad-angle-multiplier): Give it one winning ad idea. Get 10 to 15 different angles with hooks, ready to test side by side.
+- [Ad concept matrix builder](https://useaiblocks.com/skills/ad-concept-matrix-builder): Give it your product and buyer words. Get 30 to 40 personas with angles and offers in test order.
 - [Ad creative variation planner](https://useaiblocks.com/skills/ad-creative-variation-planner): Give it your offer and audience. Get hooks, formats and a testing plan that spots tired ads early.
 - [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer): Paste your brand file and results. Get three ideas, nine designer-ready versions and questions for the founder.
+- [Ad test budget calculator](https://useaiblocks.com/skills/ad-test-budget-calculator): Give it your target CPA and test days. Get a test budget, a keep or cut rule and a read window.
+- [Ad test sprint runner](https://useaiblocks.com/agents/ad-test-sprint-runner): Give it your brand file and results. It plans each test round, reads it when it ends and plans the next.
+- [Advertorial angle and format picker](https://useaiblocks.com/skills/advertorial-angle-and-format-picker): Give it your pain points and buyers. Get ranked angles, an awareness mix and a format for each.
+- [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer): Give it reviews and product facts. Get one problem, a one-line angle, a proof list and a brief.
+- [Creative portfolio mix planner](https://useaiblocks.com/skills/creative-portfolio-mix-planner): Give it your live ads. Get a target mix across sources, stages and formats.
+- [Creative volume planner](https://useaiblocks.com/skills/creative-volume-planner): Give it your spend, target and hit rate. Get ads needed per month and a weekly quota.
 - [Cross-over copy test planner](https://useaiblocks.com/skills/cross-over-copy-test-planner): Paste two versions and the different places they will run. Get a plan that swaps places halfway and compares cost per sale.
 - [Experiment designer](https://useaiblocks.com/skills/experiment-designer): Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result.
 - [Experiment tool picker](https://useaiblocks.com/skills/experiment-tool-picker): Describe your team and traffic. Get which testing tool fits, how to switch tools, and when to use more than one.
@@ -12,12 +19,21 @@
 - [Keyed headline test planner](https://useaiblocks.com/skills/keyed-headline-test-planner): Paste your offer and headline options. Get headlines sorted by appeal, a keyed small test and a rule for picking the winner.
 - [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/image-ad-test-learnings): Give it your brand details and photos. You get 50 image ads planned as a grid, so you can see what won.
 - [Main image A/B test planner](https://useaiblocks.com/skills/main-image-a-b-test-planner): Give it a product photo and selling points. Get test versions that change one thing each, plus a review sheet.
+- [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner): Give it your products, concepts and spend. Get a test campaign layout, ad pack names and scale rules.
 - [Paid campaign builder](https://useaiblocks.com/skills/paid-campaign-builder): Name your goal and budget. Get campaign structure, targeting, bids and a plan to scale across Google, Meta and LinkedIn.
 - [Paid media budget planner](https://useaiblocks.com/skills/paid-media-budget-planner): Give it your goal and budget. Get a plan with test ideas, channel picks, spend split, targeting and what not to buy.
+- [Plan a big sale's budget, offers and daily pacing](https://useaiblocks.com/workflows/plan-a-big-sales-budget-and-daily-pacing): Give it your margin, discount depth and last year's sale data. Get a cost-per-sale limit, an offer ladder and a pacing sheet.
+- [Plan a month of Meta ads and the budget](https://useaiblocks.com/workflows/plan-a-month-of-meta-ads-with-the-right-number-of-new-ads-and-budget): Give it your spend, results, reviews and product facts. Get an ad quota, a budget ranking and test-ready briefs.
+- [Plan ad tests, run them and keep what they teach](https://useaiblocks.com/workflows/plan-ad-tests-run-them-and-keep-what-they-teach): Give it your past ads. Get five untried ideas, a test campaign layout, and after the run, what the results taught.
 - [Plan image ad tests from the ads you already run](https://useaiblocks.com/workflows/image-ad-test-plan): Give it your running image ads. Get the gaps in them, a test brief, image ad copy and scored opening lines.
 - [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner): Paste your channels and budget. Get a plan that reaches more different people first and repeats only after.
+- [Retargeting objection ad planner](https://useaiblocks.com/skills/retargeting-objection-ad-planner): Give it your conversion rate and exit reasons. Get one retargeting ad per objection and a test order.
+- [Revive a hero ad that is slowing down](https://useaiblocks.com/workflows/revive-a-hero-ad-that-is-slowing-down): Give it your fading ad's results. Get the cause, scored new hooks and a read on what won.
+- [Sale creative volume planner](https://useaiblocks.com/skills/sale-creative-volume-planner): Give it last year's top ads and your sale target. Get winners needed, ad count and phases.
+- [Set your CAC limit and test what ads add](https://useaiblocks.com/workflows/set-your-cac-limit-and-test-what-ads-really-add): Give it your ad and order data. Get a CAC limit, a lift test and a budget split.
 - [Small launch test planner](https://useaiblocks.com/skills/small-launch-test-planner): Describe an idea you are not sure will sell. Get a small test in a few places and a rollout rule.
 - [Small test and rollout planner](https://useaiblocks.com/skills/small-test-and-rollout-planner): Paste your offer, price and costs. Get a small test, the numbers to hit and the rollout rule.
+- [Small-budget ad test planner](https://useaiblocks.com/skills/small-budget-ad-test-planner): Give it your price, product and test cash. Get a staged plan: image test, then video, then people.
 - [Split-run test planner](https://useaiblocks.com/skills/split-run-test-planner): Paste two versions to run together on matched halves of one audience. Get one change, a key on each, a winner rule.
 - [Story ad test planner](https://useaiblocks.com/skills/story-ad-test-planner): Paste your facts and reviews. Get a fit verdict, an honest narrator and four story tests.
 - [Test reply offer planner](https://useaiblocks.com/skills/test-reply-offer-planner): Paste your test plan and product. Get one reply offer, the same in both versions, that brings enough replies to count.

@@ -1,0 +1,20 @@
+slug: write-a-thinking-task-english-learners-can-do
+name: "Write a thinking task English learners can do"
+summary: "Give it a subject and a thinking skill. Get a task, a language check and a version with language help."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: copy_draft}
+uses: [critical-thinking-task-writer, task-language-demand-checker, ell-task-scaffolds]
+steps:
+  - {uses: critical-thinking-task-writer, note: "Makes the task students will work on, which the next two steps check and adapt."}
+  - {uses: task-language-demand-checker, note: "Reads the task from the step before and finds the words and sentences that may block students still learning English."}
+  - {uses: ell-task-scaffolds, note: "Adds language help to the task from step one, aimed at the blocks the check found."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-a-thinking-task-english-learners-can-do/skeleton.yaml

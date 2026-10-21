@@ -1,0 +1,76 @@
+new_slug: cut-risky-apps-and-scripts-from-your-store
+name: Cut risky apps and scripts from your store
+summary: Give it your app list. Get keep, swap or cut for each app, then the scripts left ranked by risk.
+job: protect-your-store
+thinking: medium
+thinking_why: It sorts lists and scores them with set rules. A mid-range model is enough.
+headline: Cut the apps that slow and expose your store, then rank what is left
+subhead: Give it your installed apps. It marks each one keep, swap or cut and scores the stack out of 100. After you cut, give it the scripts your pages still load. It ranks them by risk and writes a clean-up list.
+explain: |
+  Stores pick up apps over the years. Some are dead, some copy a free tool Shopify now gives you, and some load code on your checkout that nobody has looked at in years. Every script you load runs with the full power of your page.
+
+  The steps do it in two passes. First it checks each app against its cost, its use and the free built-in tools, then marks it keep, swap or cut and scores the stack. You pause to remove the cuts and save the list of scripts that each page still loads. Last it ranks those scripts and apps by risk, doubling the weight on pages with card or login fields, and writes what to remove, what keys to revoke and what widgets to move off checkout. The first step asks for your app list with monthly cost. The last step asks for the script list from the network tab or page source, and which pages take card or login details.
+when:
+  - You have years of installed apps and cannot say what each one does.
+  - You want to know which scripts can read what a customer types at checkout.
+  - A vendor was sold or an extension changed hands and you want to check what it can do now.
+you_give:
+  - Your installed apps with monthly cost and what each is used for
+  - Which pages take card, address or login details
+  - After the pause, the scripts each page loads, from the network tab or page source
+  - Staff browser extensions in use (optional)
+you_get:
+  - Keep, swap or cut for every app, with a score out of 100 and what to export before you cut
+  - Every script and app ranked High, Medium or Low risk, with a score out of 100
+  - A clean-up list of what to remove, which keys and seats to revoke and which widgets to move off checkout
+  - Notes for a developer on pinned versions and a content security policy
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Export your reviews and email flows before you cut a review or email app. Removing one can break both.
+  - After step 1, remove the cuts, then collect the script list for the pause.
+  - Never paste passwords or API keys. The steps do not need them.
+how_it_works:
+  - title: Sort your apps into keep, swap or cut
+    text: Lists each app with its cost and use, marks the dead ones, checks free built-in tools first, vets what stays and scores the stack out of 100.
+  - title: Pause to cut and collect scripts
+    text: You remove the apps marked cut, then save the list of scripts that load on your home, product, cart and account pages.
+  - title: Rank the scripts and apps that are left by risk
+    text: Records who runs each script and where it loads, flags plain http and unknown vendors, scores the set and writes the clean-up list.
+output_shape: |-
+  STEP 1: APP STACK
+    App | cost per month | used for | keep, swap or cut | reason
+    Free tools to try | export before you cut | install order | score out of 100
+
+  PAUSE
+    Remove the cuts. Save the script list for each page.
+
+  STEP 2: SCRIPT AND APP RISK
+    Item | owner | on checkout or account pages | risk | action
+    Score | clean-up list | notes for a developer
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Checkout platform
+    how: On Shopify, checkout scripts are limited by the platform. Say so, and step 2 focuses on theme code, pixels, apps and staff extensions.
+  - what: Custom builds
+    how: If your store is custom or headless, add the package list. Step 2 then adds the checks for look-alike package names.
+  - what: Reviews and email apps
+    how: Tell it which you rely on. Step 1 will tell you what to export before you swap them.
+  - what: Staff extensions
+    how: List any browser extensions your team uses on the admin. They can read the admin pages too.
+judge:
+  - Each app has a verdict and a reason, and none is cut without a note about what to export first.
+  - Every script has an owner, a purpose and a risk level, and none is left as unknown without a flag.
+  - Anything loaded on a page with card, address or login fields is scored higher.
+  - The clean-up list names what to remove, which keys to revoke and which widgets to move.
+  - Rules that depend on a platform are marked, so you can check them against the current Shopify admin.
+test:
+  - Check three apps marked cut against your admin. Are they really unused?
+  - Open your checkout page source and confirm that the scripts you pasted match what loads.
+  - After the clean-up, rerun step 2 on the new list. The score should go up.
+improve:
+  - Repeat the app check every quarter and when you add or lose a vendor.
+  - Keep the script list from this run so the next one only shows what changed.
+  - When you remove an app, delete its keys, webhooks and staff seats the same day.

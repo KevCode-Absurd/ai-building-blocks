@@ -1,0 +1,122 @@
+new_slug: browse-abandonment-flow-builder
+name: "Browse abandonment flow builder"
+summary: "Give it your best sellers and proof. Get a site-visit email and a browse flow that offers a discount last."
+job: write-emails
+thinking: medium
+thinking_why: "It follows set filters and timings, and writes short outlines. A mid-size model is enough."
+
+headline: "Browse abandonment flow builder"
+subhead: Give it your best sellers, categories, reviews and discount policy. It builds an email for visitors who browse and leave, and a flow for people who view a product and go no further. You get the triggers, exit filters, timing and an outline for each email.
+
+explain: |
+  A shopper who looks at a product but never adds it to the cart is still weighing you up. A discount on the first email gives margin away to people who would have bought anyway.
+
+  This skill builds two small flows. The first is one email for visitors who leave the site without viewing a product. The second follows people who viewed a product and did nothing else. It leads with a reminder of the exact item, then answers doubts, then offers a discount only near the end. Exit rules move shoppers who add to cart or start checkout into the cart and checkout flows, so nobody gets two flows at once.
+
+when:
+  - You have cart and checkout flows but nothing for people who only browse.
+  - Your browse flow opens well but few people click, and it sends a discount too early.
+  - You want to know how long to wait before the first browse email.
+
+you_give:
+  - Your best sellers and main categories
+  - Reviews, guarantee and shipping facts
+  - Your discount policy and whether a flash offer is allowed
+  - Your margin, so the discount email can be checked (optional)
+  - Your current browse flow results (optional)
+
+you_get:
+  - A site abandon spec and one email outline
+  - A browse abandon spec and four or five email outlines, with the discount last
+  - Exit filters that hand shoppers to the cart and checkout flows
+  - Delay tests and what to read after a month
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your best sellers, proof, guarantee and shipping facts and your discount rule.
+  - Check that your store sends product-viewed and active-on-site events to your email tool.
+  - Build the flows, save the product block once and reuse it in every email.
+  - Test the delay on email 1 first, then judge by revenue per recipient over a month.
+
+how_it_works:
+  - title: Builds the site abandon email
+    text: One email 2 to 4 hours after a visit with best sellers, a "need a hand" line and category buttons. Anyone who views a product, adds to cart, starts checkout or buys exits.
+  - title: Sets the browse filters
+    text: Trigger is viewed product. Added to cart, checkout started and placed order must all be zero, and the shopper is not in the flow in the last 30 days.
+  - title: Times the browse emails
+    text: Email 1 at about 45 minutes to 2 hours, then one to two days between the rest. Never a week.
+  - title: Builds trust before the offer
+    text: A reminder with the exact product, then risk reversals and reviews, then more proof. Browsing is mid-funnel, so trust matters more than urgency.
+  - title: Puts the discount last
+    text: A flash offer or bundle comes in email 3 to 5, depending on margin, with a real end time. The sources disagree on the exact email, so the skill gives the range.
+  - title: Tests the delay first
+    text: The delay is the cheapest thing to change, and one source saw it move orders more than anything else it tested.
+
+output_shape: |
+  BROWSE ABANDONMENT  <store>
+
+  SITE ABANDON
+  Trigger active on site | send <2 to 4 hours> | exits: <views product, adds to cart, starts checkout, orders, in flow last 30 days>
+  Email: <best sellers, "need a hand" line, category buttons, proof>
+
+  BROWSE ABANDON
+  Trigger viewed product | filters: <added to cart 0, checkout 0, ordered 0, not in flow 30 days>
+  1  <45 min to 2 hours> | reminder + product block + <4 recommended> + proof | no discount
+  2  <+1 day> | remove doubt: <risk reversals, reviews, why us>
+  3  <+1 day> | <proof or a margin-safe bundle>
+  4  <+1 day> | <flash offer, 48 hours, only if allowed> or <founder note>
+  5  <+1 day> | <last call, plain text>
+
+  SPLIT RULE   <no split | split because margin>
+  SMS          <one text, 60 minutes, consent>
+  TESTS        <delay first>
+  CHECKS MISSED: <none or the list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your margin
+    how: A healthy margin lets the flash offer sit in email 4. A thin one drops the discount and uses proof and bundles only.
+  - what: Whether you sell refills or bundles
+    how: Say so. Email 3 can push subscribe-and-save or a bundle, which protects margin better than a code.
+  - what: Your traffic
+    how: A small store may see a handful of entries a week. The skill tells you to judge by revenue per recipient over a month, not days.
+  - what: A real reason to buy from you
+    how: A cause or promise you can prove gives email 2 something stronger than a generic claim. Give only true ones.
+
+judge:
+  - The browse flow has an exit for add to cart and checkout, so nobody is in two flows.
+  - Email 1 has no discount and shows the exact viewed product.
+  - The discount appears no earlier than email 3 and has a real end time.
+  - The sources' different discount timings are shown with the condition for each.
+  - Links point to the viewed product page, not the home page.
+
+test:
+  - Give it a flow with a discount in email 1. It should move the discount later and say why.
+  - Check the filters in your email tool. Added to cart and checkout started must be set to zero times since the flow began.
+  - Send a test with a real profile. The product block must show the item that profile viewed.
+  - Run it twice on the same facts. The email order and filters should match.
+
+improve:
+  - Add your real review quotes and guarantee wording to the skill file, so proof lines are always true.
+  - Record which discount email timing worked for you and set it as the default.
+  - Save the product block as reusable content and note its name in the skill file.
+  - Pair it with the cart recovery flow builder and the email segment builder.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Viewed-product and active-on-site triggers, product feeds and dynamic blocks fit these steps."}
+    - {name: "Shopify", why: "Product views and cart events reach the email tool through its connection."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the skill from pasted facts."}
+  inputs:
+    - "A product feed for the recommended-products block"
+    - "Reviews written about your best sellers"
+    - "Your current browse flow's open and click rates"
+    - "Your bundle or subscribe-and-save terms"
+
+terms:
+  - term: Browse abandonment
+    meaning: A shopper looked at a product page and left without adding it to the cart.
+  - term: Site abandonment
+    meaning: A visitor was on the site and left without looking at any product.
+  - term: Re-entry block
+    meaning: A rule that stops the same person entering the flow again for a set time.

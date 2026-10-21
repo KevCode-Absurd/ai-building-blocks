@@ -1,0 +1,24 @@
+slug: email-campaign-calendar-planner
+name: "Email campaign calendar planner"
+summary: "Give it your launches and sales. Get a month of sends, mix checked."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: offer, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder", used: "The cadence rule, the idea buckets, the weekly variety rule and the two-week runway"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores", used: "The seven buckets, cadence by revenue and the discount ratio"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Two cadence tests, campaign types and resend rules"}
+  - {title: "Complete ecommerce email marketing strategy for 2026", by: "An agency founder who runs email for seven to nine figure brands", used: "Non-discount content buckets and microtopics"}
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (agency case results, not independent data)", used: "Frequency tests and the steps for building the calendar"}

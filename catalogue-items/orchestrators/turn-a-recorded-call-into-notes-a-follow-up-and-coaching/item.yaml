@@ -1,0 +1,20 @@
+slug: turn-a-recorded-call-into-notes-a-follow-up-and-coaching
+name: "Turn a recorded call into notes, a follow-up and coaching"
+summary: "Give it a call recording. Get notes with actions, a follow-up email draft and coaching on how the call went."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: audio, required: true}
+outputs:
+  - {type: feedback_notes}
+uses: [audio-meeting-notes-writer, call-follow-up-drafter, meeting-coaching-analyst]
+steps:
+  - {uses: audio-meeting-notes-writer, note: "Turns the recording into a transcript and notes."}
+  - {uses: call-follow-up-drafter, note: "Drafts the follow-up from the transcript. Nothing is sent until you approve."}
+  - {uses: meeting-coaching-analyst, note: "Coaches you on how the call went. Reads the transcript from the first step."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-a-recorded-call-into-notes-a-follow-up-and-coaching/skeleton.yaml

@@ -1,0 +1,21 @@
+slug: build-a-weekly-kpi-report-with-a-forecast-and-dashboard
+name: "Build a weekly KPI report with a forecast and dashboard"
+summary: "Describe the numbers you need each week. Get a report you can rerun, a trend and forecast, and a shareable dashboard."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: web_page}
+uses: [recurring-kpi-report-maker, trend-and-forecast-analyst, dashboard-builder]
+steps:
+  - {uses: recurring-kpi-report-maker, note: "Fixes the metric definitions once, so every later step reads the same numbers."}
+  - {uses: trend-and-forecast-analyst, note: "Reads the weekly series from the report and adds trend, seasons and a forecast table."}
+  - {uses: dashboard-builder, note: "Takes the report and forecast table from the steps before and shows them on one page."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-a-weekly-kpi-report-with-a-forecast-and-dashboard/skeleton.yaml

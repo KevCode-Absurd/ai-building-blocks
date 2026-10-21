@@ -1,0 +1,84 @@
+new_slug: repeat-one-product-photo-in-new-colours-as-ads
+name: Repeat one product photo in new colours as ads
+summary: Give it one product photo. Get matching image ads with exact words, checked, then sized up.
+job: make-image-ads
+thinking: medium
+thinking_why: Each step is short and well defined. A mid-size model handles it, but check the words in the prompts yourself.
+headline: One product photo becomes a set of matching image ads
+subhead: Give it one clean photo of your product. It plans a set where only the colour changes, writes an image prompt for each piece with every word spelled out, checks the set before you spend on images, then gets your picks to full size.
+explain: |
+  A set of ads that look like one family gets noticed and remembered. But most people make one ad at a time, so each looks different, the words drift, and the text inside the image comes out garbled. A full photo shoot for a set is slow and costs a lot.
+
+  The steps solve this with one photo. First it plans a set from that photo, with the same shape in each and only the colour changing. Next it turns each piece into a prompt with every word in quotes and a fix ready for each common fault. Then it checks the prompts against your proof and the platform rules. You make the images and pick the ones you like. Last, it sizes your picks up without changing them.
+when:
+  - You have one clean photo of your product and no budget for a shoot.
+  - You want ads that look like one family and are easy to add to later.
+  - Your last AI images had garbled words or a product that did not look like yours.
+you_give:
+  - One clear photo of your product (more angles help)
+  - The words each ad should carry, or your offer and price
+  - Your brand file or your colours and voice (optional)
+  - Product facts such as size and label text (optional)
+  - The size you need the final images (optional)
+you_get:
+  - A plan for the set that says what repeats, what changes and how many pieces
+  - A ready-to-paste image prompt for each piece, with exact words and a fix for each fault
+  - A check of the set against your proof and ad rules, with a verdict
+  - Upscale settings and a change check for the images you pick
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach your product photo and say what the ads must say.
+  - When it pauses, paste each prompt into your image tool, set the size and quality there, and pick the images you approve.
+  - Attach the picked images and ask for the last step.
+how_it_works:
+  - title: Plan the set
+    text: Picks what buyers already know on sight, uses your one photo as the only source and lays out the set so only the colour changes.
+  - title: Write the exact-text prompts
+    text: Turns each piece in the plan into a prompt. Every word is in quotes, in order, with the product facts repeated so it stays true.
+  - title: Check before you make them
+    text: Reads the prompts against your proof and the ad rules, checks that each version changes one thing and gives a verdict.
+  - title: Pause to make and pick images
+    text: You paste the prompts into your image tool, set size and quality there, and approve the images you want.
+  - title: Get the picks to full size
+    text: Sets a faithful upscale for your use, protects small words and logos, and checks that nothing changed.
+output_shape: |-
+  STEP 1: THE SET PLAN
+    What repeats | what changes | pieces and colours | method notes
+
+  STEP 2: PROMPTS
+    One prompt per piece | exact words | tool settings | fix for each fault
+
+  STEP 3: CHECK
+    Findings | versions that are too alike | verdict
+
+  PAUSE: make the images and approve your picks
+
+  STEP 4: UPSCALE
+    Settings | size needed | change check | score
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How many pieces
+    how: Say how many ads you want. The plan sizes the set to match, from three to a dozen.
+  - what: Your colours
+    how: Give hex codes or names. Without them the plan picks colours that read well on a feed.
+  - what: Where the ads run
+    how: Name the ad sizes. Step 3 checks shape and safe zones for each one.
+  - what: Print or screen
+    how: Give the final size in inches or pixels so step 4 picks the smallest upscale that works.
+judge:
+  - Only the colour changes between pieces, and the product shape is the same in all of them.
+  - Every word in a prompt appears once, in quotes, in reading order.
+  - The product facts in the prompts match your photo, including the label text.
+  - The check names any two ads that are the same idea instead of passing them.
+  - The upscaled image has the same words and logo as the one you approved.
+test:
+  - Make two pieces from the prompts and compare the product with your photo.
+  - Read every word on the finished images against the words you gave.
+  - Lay the original over the upscaled image and check that nothing moved.
+improve:
+  - Keep the plan and prompts as a template and run it again for the next product.
+  - Add the faults you hit to the lock lines so the next run avoids them.
+  - Run the best colour as a test against the others and repeat the winner.

@@ -1,0 +1,91 @@
+new_slug: cited-research-assistant
+name: Cited research assistant
+summary: Give it a question. Get a report where every claim has a source, or is marked unsourced after three rounds.
+job: research-topics
+thinking: high
+thinking_why: It searches, reads sources, compares them and decides which claims to keep. Give it your strongest model.
+headline: Cited research assistant
+subhead: Give it a question. It drafts a report, lists every claim that has no source, searches for each one and checks again. After three rounds you get a report where each claim has a source, and a short list of what it could not source.
+explain: |
+  A report that sounds sure is easy to get. A report where you can open the source for each claim is much harder. Most research tools write first and cite later, so some claims end up with a link that does not say what the sentence says.
+
+  This agent works the other way round. It drafts, then lists every claim that still needs support, and goes after those claims one at a time. A claim only counts as sourced when it holds a source that was opened and a short quote that matches. It keeps a ledger, so you can see what was found, what was dropped and what is still open. It stops after three rounds and tells you what it could not source, instead of hiding it.
+when:
+  - You need a report you can defend, and each claim must trace to a source.
+  - You have an AI draft and do not know which sentences are backed by anything.
+  - You are researching a topic over weeks and want each round to start from the last ledger.
+you_give:
+  - Your question, who the report is for, and the time period or place if it matters
+  - Papers, pages or notes you already have (optional)
+  - How strict to be, if you want something other than numbers, studies, quotes and named claims (optional)
+you_get:
+  - A report with a source after each claim
+  - A ledger of every claim, its source, a short quote and its status
+  - A "Not sourced" list for what could not be settled in three rounds
+  - Points where sources disagree, with both sides
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it your question.
+  - Give it the sources you already trust, so it starts there.
+  - Let it run. It will ask before it pays for access, logs in to a site or sends anything.
+  - Read the "Not sourced" list first. Decide which of those claims to cut and which to chase by hand.
+  - To update the report later, run it again on the same topic. It reads the ledger and starts from the open claims.
+how_it_works:
+  - title: Check for earlier work
+    text: Reads the topic's ledger if there is one, so a second run starts from the open claims.
+  - title: Draft the report
+    text: Runs the deep research skill to get a first cross-checked report with its sources.
+  - title: List the open claims
+    text: Runs the claim spotter. Each claim goes in the ledger, and counts as sourced only with an opened source and a matching quote.
+  - title: Choose a path for each claim
+    text: Science and health claims go to the paper search. A claim that rests on one study goes to the study checker. The rest get a narrow search.
+  - title: Update and loop
+    text: Adds sources, shows disagreement, rewrites or drops what has none, then checks again. It stops after three rounds.
+  - title: Hand back
+    text: Gives the report, the ledger counts, the Not sourced list and where sources disagree.
+output_shape: |-
+  REPORT
+    <sections, with a source after each claim>
+
+  LEDGER SUMMARY
+    Claims <n> | Sourced <n> | Dropped <n> | Still open <n> | Rounds <1 to 3>
+
+  NOT SOURCED
+    1. <claim> | why open: <reason> | what would settle it: <kind of source>
+
+  WHERE SOURCES DISAGREE
+    <point>: <source A says> vs <source B says>
+
+  FILES AND MISSING
+    <ledger and round files> | MISSING: <every line>
+tweaks:
+  - what: Your question
+    how: Name the period, place and audience. A narrow question gives claims that can be sourced. A wide one gives claims that cannot.
+  - what: Sources you give it
+    how: Papers and pages you trust are used first, and every claim is checked against them before it searches elsewhere.
+  - what: How strict it is
+    how: Raise it for health, money or legal topics. Ask for every claim to be sourced, not only the risky ones.
+  - what: Rounds
+    how: Three is the cap. Lower it to two for a quick look. Do not raise it, because open claims after three rounds are usually not findable.
+judge:
+  - Every sourced claim has a source that was opened and a quote that says the same thing.
+  - The counts in the ledger summary match the ledger rows.
+  - No more than three rounds ran.
+  - Claims it could not source are listed, not left in the report as fact.
+  - Nothing was paid for, published or sent without your yes.
+test:
+  - Give it a question where you already know two or three facts. Check that it finds them with the right sources.
+  - Put one false claim in a draft you give it. See whether it ends up in the Not sourced list.
+  - Open five sources from the ledger by hand. Check each quote is really there.
+improve:
+  - Add the sources you trust most to the start, such as official pages or journals in your field.
+  - Set your own rule for a weak study, such as a minimum sample size, and name it in step 4.
+  - Keep one ledger per topic, so a later run on the same topic only works on what changed.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the research folder and ledger between runs and open sources as files.
+    - name: A web search tool
+      why: Without search access it can only list the claims and the kind of source each one needs.
+  inputs:
+    - Papers or pages you already trust on the topic
+    - A note on who will read the report and what they will do with it

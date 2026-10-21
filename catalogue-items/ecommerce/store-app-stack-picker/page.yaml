@@ -1,0 +1,118 @@
+new_slug: store-app-stack-picker
+name: "Store app stack picker"
+summary: "List your apps. Get keep, swap or cut for each, a vetting list and a score."
+job: set-up-store
+thinking: medium
+thinking_why: "It compares each app against clear rules, so a mid-size model is enough."
+
+headline: "Store app stack picker"
+subhead: List the apps on your Shopify store, what each costs and what it is for. It marks each one keep, swap for a free built-in tool, or cut, gives you an install order and a vetting list for new apps, and scores how light and safe your stack is out of 100.
+
+explain: |
+  Every app you install adds code to your store, and a slow store loses shoppers. Many stores carry apps they switched off, never turned on, or pay for tools that Shopify now gives away: filters, search, chat, bundles, email.
+
+  This skill goes through your list one app at a time. It asks what the app is for, whether a free built-in tool does the same job, and whether the app is used at all. It marks each app keep, swap or cut. It also gives you a vetting checklist for the next app you consider, and a score for the stack. It is written for Shopify. For WooCommerce, the rules still help but the plugin names are not covered.
+
+when:
+  - Your store feels slow and you have a long list of apps.
+  - You are about to add an app and want to check it first.
+  - You pay for several apps each month and want to know which ones earn their cost.
+
+you_give:
+  - Every installed app, with its monthly cost and what you use it for
+  - Speed numbers or bounce rate, if you have them (optional)
+  - What you sell, and what you plan to add (optional)
+  - A screenshot of your app list or theme speed rating (optional)
+
+you_get:
+  - Keep, swap or cut for each app, with the reason
+  - A free built-in replacement where one exists
+  - An install order, what to switch on in the theme, and speed check points
+  - A vetting checklist for future apps and a score out of 100 for the stack
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List each app with its monthly cost and one line on what it does for you.
+  - Add your speed rating or bounce rate if you know it.
+  - Before you cut a review or email app, export your reviews and email flows.
+  - Remove or swap one app at a time, and check speed after each change.
+
+how_it_works:
+  - title: Starts from three needs
+    text: Reviews, email and tracking come first. Anything else must show why it is needed.
+  - title: Finds dead weight
+    text: Flags every app that is disabled, never turned on, or no longer used.
+  - title: Looks for free built-ins
+    text: Checks if Shopify's own tools cover the job, such as search and filters, two free languages, bundles, subscriptions, chat and email.
+  - title: Vets what stays
+    text: Checks ratings, review count, recent complaints, the developer's other apps and the Built for Shopify badge.
+  - title: Plans the order and the switch-on
+    text: One app at a time, with the theme app embed turned on, and a speed check after each.
+  - title: Adds the speed points
+    text: Image size, click-to-play video, and a bounce rate check.
+  - title: Scores the stack
+    text: Takes points off for dead apps, paid apps with a free built-in, and apps below the vetting bar. It shows the sum.
+
+output_shape: |
+  APP STACK for <store>
+  APP | cost/month | used for | verdict (KEEP / SWAP / CUT) | reason
+  (one line per app)
+
+  FREE BUILT-INS TO TRY  <app to remove> -> <Shopify tool>
+  BEFORE YOU CUT        <export: reviews, email flows>
+  INSTALL ORDER         <1..n, one at a time, speed check after each>
+  SWITCH ON             <theme app embeds to enable>
+  SPEED CHECKS          <what to measure and when>
+  VETTING LIST          <rating, reviews, recent complaints, developer, badge>
+
+  SCORE  <n>/100 (100 - 10 x <dead apps> - 10 x <swappable> - 5 x <below the bar> - <other> = <n>)
+  NOT RUN  <check, and what is needed>
+  MISSING: <what you need to give>
+
+tweaks:
+  - what: Monthly cost for each app
+    how: Give it. Without costs, it can still rank by use but cannot say what you save.
+  - what: What each app is used for
+    how: One plain line each. "We use it for review emails" lets it check the free built-ins against the real job.
+  - what: Your speed numbers
+    how: Paste your theme speed rating, PageSpeed result or bounce rate. A bounce rate above 60 percent points to a speed problem.
+  - what: Your niche
+    how: Say what you sell. Subscriptions suit goods bought again and again, such as supplements, food or coffee, not one-off electronics.
+
+judge:
+  - Every app on your list has a verdict and a reason.
+  - A swap names the specific free tool, not just "use a free one".
+  - Review and email apps come with an export warning before any cut.
+  - Prices and app names are not stated as facts that will not change.
+  - The score shows its sum.
+
+test:
+  - Include an app you switched off months ago. It should be marked CUT.
+  - Include a paid filter app. It should suggest trying the free search and filter tool first.
+  - Run it twice on the same list. Verdicts should match.
+  - After you act on one verdict, check your speed rating before and after.
+
+improve:
+  - Add the apps you have already tested and approved to the skill file, so they are not flagged again.
+  - Change the vetting bar (4 stars, 100 reviews) if your niche has fewer apps.
+  - Add your own must-have apps, such as a tool your accountant needs.
+  - Pair it with the skills that speed up a store, which go further than apps.
+
+works_best_with:
+  tools:
+    - {name: "Shopify admin", why: "The apps list, the theme speed rating and the app embeds all live here."}
+    - {name: "Google PageSpeed Insights", why: "Free speed test for a page, to check after each change."}
+    - {name: "Any good chat AI", why: "Any current chat AI can compare your list against the rules."}
+  inputs:
+    - "Screenshot of your installed apps page"
+    - "Your theme speed rating from Online Store, Themes"
+    - "A PageSpeed Insights result for your home and one product page"
+    - "Your last three months of bounce rate"
+
+terms:
+  - term: App embed
+    meaning: A switch in the theme editor that makes an installed app show on your store. If it is off, the app does nothing.
+  - term: Built for Shopify
+    meaning: A badge Shopify gives to apps that meet its quality bar.
+  - term: Bounce rate
+    meaning: The share of visitors who leave after seeing one page.

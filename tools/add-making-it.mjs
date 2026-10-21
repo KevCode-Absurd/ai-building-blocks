@@ -33,7 +33,17 @@ const SECTION = {
 };
 
 const blocks = JSON.parse(fs.readFileSync("site/public/data/blocks.json", "utf8")).blocks;
-const dirOf = (slug) => ["general", "ecommerce", "orchestrators"].map((c) => path.join("catalogue-items", c, slug)).find((d) => fs.existsSync(path.join(d, "SKILL.md")));
+// blocks.json keeps ports short ("brief", "photos?"); turn them back into {type, required}.
+const port = (p) => (typeof p === "string" ? { type: p.replace(/\?$/, ""), required: !p.endsWith("?") } : p);
+// It also leaves out default values and sends a passed test as tested: 1; put those back the way lib/data.ts does.
+const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops", level: "intermediate", thinking: "medium", origin: "own", version: "1.0.0" };
+for (const b of blocks) {
+  for (const [k, d] of Object.entries(DEFAULTS)) b[k] ??= d;
+  b.inputs = (b.inputs ?? []).map(port); b.outputs = (b.outputs ?? []).map(port);
+  if (b.tested === 1) b.tested = { result: "pass" };
+  if (typeof b.usedIn === "number") b.usedIn = Array(b.usedIn).fill("");
+}
+const dirOf = (slug) => ["general", "ecommerce", "orchestrators", "agents"].map((c) => path.join("catalogue-items", c, slug)).find((d) => fs.existsSync(path.join(d, "SKILL.md")));
 let changed = 0, kinds = { image: 0, video: 0 };
 for (const b of blocks) {
   const kind = rendersOf(b.outputs);

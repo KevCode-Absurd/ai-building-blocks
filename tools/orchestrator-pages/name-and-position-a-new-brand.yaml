@@ -1,0 +1,87 @@
+new_slug: name-and-position-a-new-brand
+name: Name and position a new brand
+summary: Give it your category and rivals. Get a position to own, a tested name and a check that it fits later.
+job: brand-file
+thinking: high
+thinking_why: Five skills run in a row, and the name steps weigh many ideas against each other. Give it your strongest model.
+headline: Pick a name and a position that stand apart from rivals
+subhead: Give it your product, price, who it is for and five to ten rivals. It maps rivals to find a corner you can own, writes your one-line position, generates and cuts names, scores your best names out of 100, and checks the name still fits when your range grows.
+explain: |
+  A name chosen first and a position chosen later rarely fit. A name that sounds like every rival leaves nothing to remember, and a position that tries to say everything says nothing. Both are slow and costly to change once you have a site and packaging.
+
+  The steps decide the position first and let it shape the name. It lists every real alternative a shopper has and plots them on axes shoppers feel, to find a corner no one owns. Then it writes the position as one plain line and a short brief. The name generator writes hundreds of raw names without judging them, then cuts to a shortlist of ten to fifteen. The tester scores your best names and shows each one in five places. Last, it checks the name still works if you add a new range.
+when:
+  - You are launching a store and have not settled the name or what you stand for.
+  - You are renaming because buyers cannot say what you stand for, or a rival leads your category.
+  - You have a name you like and want to test it, or check it will survive a bigger range.
+you_give:
+  - What you sell, its price and who it is for
+  - Five to ten rivals shoppers really compare you with, with links to their sites or ads
+  - What shoppers say they care about, from reviews or support emails (optional)
+  - The countries and languages the name will be used in
+  - Any names you already like or dislike, and what a new range might include (optional)
+you_get:
+  - A rival map and the one corner to own, with a claim, three proof actions and a 30-day check
+  - A one-line position and a short brief
+  - A shortlist of 10 to 15 names with reasons and a clearance to-do list
+  - Scores out of 100 for your best names, a keep, fix or drop call, and a stretch verdict for a new range
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it at least five real alternatives. Include doing nothing if that is what shoppers do.
+  - Pick your two to five best names from the shortlist when it asks. Say all the countries you will sell in.
+  - Check domain and trademark availability yourself before you commit to a name.
+how_it_works:
+  - title: Map your rivals
+    text: Lists every real alternative, plots them on two axes shoppers feel, scans for gaps and picks one corner to own.
+  - title: Write your position
+    text: Names what each rival owns, picks one attribute for you to own and writes it as one plain line with a short brief.
+  - title: Generate names
+    text: Asks four strategy questions, writes hundreds of raw names in three frames without judging, then cuts to 10 to 15.
+  - title: Test the names
+    text: Scores each name out of 100 on spelling, surprise and clearance from rivals, and shows it in five places a shopper will see it.
+  - title: Check the name stretches
+    text: Tests whether the winning name still means something if the range grows, and makes one call to use it, rename or skip.
+output_shape: |-
+  STEP 1: RIVAL MAP
+    Alternatives | maps | gaps tested | corner to own with claim, three proofs and a 30-day check
+
+  STEP 2: POSITION
+    Categories and leaders | what each rival owns | the one-line position | short brief
+
+  STEP 3: NAMES
+    Four strategy answers | shortlist of 10 to 15 with reasons | clearance to-do list
+
+  STEP 4: NAME TEST
+    Score out of 100 per name | name type | meaning by market | five-place preview | keep, fix or drop
+
+  STEP 5: STRETCH CHECK
+    What the name means to buyers | new product on its own | stretch score | use, rename or skip
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your list of rivals
+    how: At least five real alternatives, with links. A short or vague list gives a weak map.
+  - what: Markets and languages
+    how: List every country and language. The tester checks meaning in each one.
+  - what: Brand feeling
+    how: Say the feeling the name must carry, such as fast, trusted or soft. The shortlist and tests use it.
+  - what: Your new range
+    how: Describe a product you might add in two years. The stretch check needs a real example.
+judge:
+  - The position is one plain line a stranger understands without help.
+  - The corner you own is one that rivals do not already hold.
+  - Every name shows why it was kept, and the scores show how they were worked out.
+  - The name test says it is a risk check, not a trademark clearance.
+  - The stretch verdict gives a reason, not just a score.
+test:
+  - Read the position line to three people in your market and ask them to say it back.
+  - Say each shortlisted name aloud to five people, then ask them to write it down.
+  - Search each top name on Google, your marketplaces and social handles.
+  - Run step 4 again on the same names. The order should match.
+improve:
+  - Save the position and brief in your brand file, so every later skill starts with them.
+  - Re-run the rival map each year or when a rival moves.
+  - Add your real clearance results back, so the name test starts from facts.
+  - Pair it with a store promise writer and a brand guide builder once the name is picked.

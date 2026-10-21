@@ -1,0 +1,48 @@
+# Workflow skeleton built from AI Blocks library skills (docs/INTAKE.md). Our words.
+id: revive-a-hero-ad-that-is-slowing-down
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: revive-a-hero-ad-that-is-slowing-down
+  name: "Revive a hero ad that is slowing down"
+  summary: "Give it your slowing ad's results. Get the cause, new opening hooks scored, and a read on whether the revival worked."
+  when: "your best ad is getting expensive and you want to bring it back without starting over."
+  job: plan-ad-tests
+  level: intermediate
+steps:
+  - name: "Fatigued ad reviver"
+    skill: fatigued-ad-reviver
+    job: ads
+    from: "library"
+    method: ["Read the life of the ad and call the cause","Rank the revival moves","Keep the body that works","Write ten or more new opening hooks"]
+    inputs: [performance_sheet, transcript!, hooks!]
+    outputs: [plan, hooks]
+    note: "Starts with the slowing ad and gives back a revival plan and new hooks."
+  - name: "Video hook scorer"
+    skill: video-hook-scorer
+    job: ads
+    from: "library"
+    method: ["Split each hook into layers","Rate clarity, relevance and novelty","Check who it attracts","Pick what to film and how to test it"]
+    inputs: [hooks, persona, script!]
+    outputs: [audit_report, hooks]
+    note: "Scores the new hooks from the revival plan and picks which to film."
+  - pause: "Film the top hooks on the old body and run them for about a week."
+  - name: "Creative hit rate planner"
+    skill: creative-hit-rate-planner
+    job: analysis
+    from: "library"
+    method: ["Set the return line","Count the hits and mark high spenders against the line","Keep every concept that clears the line","Plan the next iterations"]
+    inputs: [performance_sheet, ad_breakdowns!]
+    outputs: [audit_report, plan]
+    note: "Reads how the new hooks did against the return line."
+  - name: "Winning hook rubric builder"
+    skill: winning-hook-rubric-builder
+    job: ads
+    from: "library"
+    method: ["Take the top hooks","Find what the winners share against the losers","Write each winning hook as a template with blanks","Save the rubric"]
+    inputs: [transcript, performance_sheet, hooks!]
+    outputs: [ad_style_dna, hooks]
+    note: "Saves what won as a rubric so the next revival starts from it."

@@ -1,0 +1,124 @@
+new_slug: subscription-churn-audit
+name: "Subscription churn audit"
+summary: "Give it your subscription data. Get a score out of 100 for where subscribers leave."
+job: keep-customers
+thinking: high
+thinking_why: "It reads your numbers, finds spikes and scores four parts, so a stronger model makes fewer arithmetic and reading mistakes."
+
+headline: "Subscription churn audit"
+subhead: Give it your cancels with dates and order numbers, your first-order subscription flag, the emails you sent to subscribers and your save rate. It finds the days subscribers leave and why. You get a score out of 100, a cancels-by-day chart and the top three fixes.
+
+explain: |
+  Overall churn hides where the problem is. Subscribers leave at set points: right after signing up, when the first box arrives, when the billing reminder lands, when the first rebill goes through, and after campaigns you send. Each one has its own fix. In one audited store, the biggest cancel day was the day of the first rebill, when a plain receipt went out, about double the day of the reminder.
+
+  This skill charts cancels by days since the first order and labels the spikes. It then scores four parts, 25 points each: how much of the first-order subscription value gap you capture, how many cancels follow the billing reminder and confirmation, how many cancels follow your campaigns, and your save rate. It shows every threshold and how each number was worked out. It reads data only and changes nothing in your subscription app.
+
+when:
+  - Your churn is higher than you want and you do not know which moment causes it.
+  - You send campaigns to subscribers and want to know if they cause cancels.
+  - You want one list of fixes, each pointing to the skill that handles it.
+
+you_give:
+  - Cancels with date, order number and reason
+  - A first-order subscription flag and revenue per customer by month
+  - Emails you sent to subscribers, with cancels after each send
+  - Your save rate from your portal
+you_get:
+  - A score out of 100 and the four numbers behind it
+  - A chart of cancels by days since sign-up, with spikes labelled
+  - A list of emails that caused more cancels than starts
+  - The top three fixes, each pointing to the right skill
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach an export of cancels with dates, order numbers and reasons, plus your subscribers and revenue by month.
+  - Add your email sends with cancels and starts after each, and your save rate.
+  - Read the score, then the spikes. Fix the biggest spike first.
+  - Run it again after the fix, on the next cohort, to see if the spike shrank.
+
+how_it_works:
+  - title: Charts cancels by day
+    text: Counts cancels by days since the first order and labels the spikes at day 0 to 1, days 7 to 14, around day 28, the first rebill and days 31 to 45.
+  - title: Measures the value gap
+    text: Compares month-6 and month-12 value for customers whose first order was a subscription against everyone else.
+  - title: Checks the reminder
+    text: Counts cancels per 100 billing reminders sent and looks at the first rebill day.
+  - title: Checks campaigns
+    text: Counts cancels within a few days of each send and flags any send where cancels exceed starts.
+  - title: Checks the save rate
+    text: Reads the portal save rate against the 15 and 10 percent lines.
+  - title: Scores four parts
+    text: 25 points each, with the thresholds and the working shown.
+  - title: Routes the fixes
+    text: Each finding points to the skill that fixes it.
+
+output_shape: |
+  SCORE <n>/100  (what it measures: where subscribers leave, four parts of 25)
+  A Value gap captured        <pts>/25  first-order subscription share <x%>, gap <y%>
+  B Reminder and receipt      <pts>/25  <cancels per 100 reminders>, first rebill day <spike?>
+  C Campaign cancels          <pts>/25  <number of sends with cancels over starts>
+  D Save rate                 <pts>/25  <x%>
+
+  CANCELS BY DAY SINCE FIRST ORDER
+  day 0-1: <n> | days 2-6: <n> | days 7-14: <n> | around 28: <n> | first rebill: <n> | days 31-45: <n>
+  Spikes: <label and likely cause>
+
+  SENDS WITH MORE CANCELS THAN STARTS
+  <date, email, cancels, starts>
+
+  MONTHLY CHURN: <x%> (not scored; the line to act at is yours to set)
+
+  TOP THREE FIXES
+  1. <fix> -> <skill that handles it>
+
+  THRESHOLDS USED: <every band and where it came from>
+  NOT RUN: <part, and what is needed>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Order numbers on cancels
+    how: Include the order number at cancel. Without it, the first-rebill spike is a guess from dates.
+  - what: Send-by-send cancels
+    how: Give cancels and starts for each email sent to subscribers. Part C needs this.
+  - what: Your own history
+    how: Say what your numbers were last quarter. The benchmarks come from daily supplement and drink style products, so your own trend is the better baseline.
+  - what: First-order subscription flag
+    how: Give a column that marks whether each customer's first order was a subscription. Part A needs it.
+
+judge:
+  - The score shows its four parts and the working behind each.
+  - Every threshold is listed, and our own thresholds are marked as such.
+  - The chart labels each spike with a likely cause, not a certainty.
+  - Parts it could not score are named and left out of the total with a note.
+  - Each fix points to a real next skill.
+
+test:
+  - Check one spike by hand in your export. The count on the chart should match.
+  - Check the cancels per 100 reminders against your email platform's numbers.
+  - Run it on two cohorts. The spikes should be in the same places if the cause is steady.
+  - After you fix the top issue, run it again on the next cohort and compare.
+
+improve:
+  - Change the thresholds in the skill file to match your own history once you have a year of data.
+  - Add your product's real delivery time, so the first-delivery window moves to the right days.
+  - Add a part for failed payments if they are a big share of your cancels.
+  - Pair it with Subscription unit economics for lifetime value and cost to win, and with Customer churn risk scorer for per-customer risk.
+
+works_best_with:
+  tools:
+    - {name: "Skio or Recharge", why: "Their exports give cancel dates, order numbers and reasons."}
+    - {name: "Klaviyo", why: "It gives sends and the cancels that follow each one when you connect your subscription app."}
+    - {name: "Any good chat AI", why: "Any current chat AI that reads a spreadsheet can run the audit."}
+  inputs:
+    - "Failed-payment cancels, split from chosen cancels"
+    - "Delivery dates by order"
+    - "Your cancel reasons"
+    - "Revenue per customer by month for subscription-first and other customers"
+
+terms:
+  - term: Save rate
+    meaning: The share of customers who start to cancel and then stay.
+  - term: Rebill
+    meaning: A repeat charge on a subscription after the first order.
+  - term: Cohort
+    meaning: A group of customers who started in the same period.

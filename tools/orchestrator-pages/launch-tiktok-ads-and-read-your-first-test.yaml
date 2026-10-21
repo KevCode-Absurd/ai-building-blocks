@@ -1,0 +1,82 @@
+new_slug: launch-tiktok-ads-and-read-your-first-test
+name: Launch TikTok ads and read your first test
+summary: Give it store screenshots, videos and results. Get a setup score, a starter campaign, ad verdicts and Spark picks.
+job: launch-and-scale-ads
+thinking: high
+thinking_why: Four skills run in a row, and the test step makes a call on every ad. Give it your strongest model.
+headline: Launch TikTok ads and know which test ads to keep
+subhead: Give it screenshots of your TikTok and store setup, three to five videos and your test results. It scores your setup, builds a starter campaign, gives each test ad a keep, fix or cut call, and picks which posts to boost as Spark ads.
+explain: |
+  A first TikTok test often fails for dull reasons. The pixel is not firing, billing is not finished, the campaign is set up for scale instead of learning, or the test is read too early. Then the money is gone and you do not know whether the videos or the setup were the problem.
+
+  The steps remove those causes in order. First it scores your account setup out of 100 and lists what to fix before you spend. It pauses while you fix those and choose three to five videos. Then it builds a starter campaign with a four-week plan. It pauses while the ads run for at least three days. The test reader checks each ad and tells you whether the problem is the creative or the audience. Last, it picks your best organic and creator posts to boost, once you have stats on them.
+when:
+  - You have never run TikTok ads, or your last start went nowhere and you do not know why.
+  - You have three or more finished videos and a daily budget you can spend for at least a week.
+  - You have organic or creator posts that did well and want to know which to put money behind.
+you_give:
+  - Screenshots of your Business Center, billing, Events Manager and the Pixel Helper check
+  - Your daily budget and the most you can pay for one sale
+  - Three to five finished video ads, or their scripts
+  - Your test results, with spend, views, click rate, watch time and cost per sale for each ad
+  - Stats on your organic and creator posts, and what each creator agreed to (optional)
+you_get:
+  - A setup score out of 100 with a do-first list in order
+  - A starter campaign layout with budget per ad group, audiences and a four-week ladder
+  - A keep, fix or cut call and a score for each test ad, and a next test of hooks, angles and calls to action
+  - A Spark ad shortlist, a draft message to creators and a test against your best current ad
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach screenshots of your account setup. The AI can read images, so you do not need to type it out.
+  - When it pauses, do the fixes, run the ads for at least three days and export the results before you continue.
+  - Pull stats on your organic and creator posts for the last step.
+how_it_works:
+  - title: Check the setup
+    text: Scores accounts, billing, security, the pixel and its five events, and defaults. Lists what to fix before spending.
+  - title: Build the starter campaign
+    text: Pauses while you fix and pick videos. Then lays out the campaign, ad groups, budget math, audiences and a four-week ladder.
+  - title: Read the test
+    text: Pauses while the ads run. Then reads each ad at 24 hours and day 3, finds creative or audience problems and gives a call for each ad.
+  - title: Pick Spark ads
+    text: Pauses for post stats. Then ranks your posts, checks creator permission, drafts the request and sets a test against your best ad.
+output_shape: |-
+  STEP 1: SETUP CHECK
+    Setup score out of 100 | accounts and links | billing | team security | pixel and five events | do-first list
+
+  STEP 2: STARTER CAMPAIGN
+    Launch status | structure | budget math | audiences | four-week ladder | cost expectations
+
+  STEP 3: TEST READ
+    One block per ad with calls and score | test score | what to kill, back and retest | next test plan
+
+  STEP 4: SPARK PICKS
+    Shortlist of posts | posts held back and why | creator request | steps in Ads Manager | test against your best ad
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your target cost per sale
+    how: Without it, the test reader uses a $30 line from its source, which may not suit your margin. Give your real break-even.
+  - what: Number of videos
+    how: The plan needs at least three. More gives the test more to learn from, but splits the same budget.
+  - what: Your daily budget
+    how: A small budget means fewer ad groups. The plan tells you how many purchases to expect in a week.
+  - what: Days before you read
+    how: Wait at least three days. The reader marks an ad too early to judge rather than guessing.
+judge:
+  - The setup score says what it measured, and pixel events are marked fired, not fired or not tested.
+  - Each ad has a clear call and a cause, which is creative, audience or page.
+  - The reader says too early when the data is too thin.
+  - Creator posts are only picked if the creator gave permission.
+  - Menu names are treated as logic to match on screen, not exact clicks.
+test:
+  - Check the pixel events yourself with the Pixel Helper. They should match the report.
+  - Look at your worst ad and see if the call (fix hook, fix audience or kill) fits what you saw.
+  - Compare the budget math with your daily budget. It should add up.
+  - Run the test reader on the same numbers twice. The calls should match.
+improve:
+  - Keep the ad names it gives you, so later reads line up with this plan.
+  - Save the winning hooks in your brand file for your next batch of videos.
+  - Re-run the setup check after any change to your store or pixel.
+  - Pair it with a video ad script writer to make the next three to five videos.

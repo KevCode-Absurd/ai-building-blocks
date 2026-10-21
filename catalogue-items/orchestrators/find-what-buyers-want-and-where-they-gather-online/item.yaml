@@ -1,0 +1,22 @@
+slug: find-what-buyers-want-and-where-they-gather-online
+name: "Find what buyers want and where they gather online"
+summary: "Give it a topic. Get posts in a table, ranked buying reasons, a buyer profile and where to reach them."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: [reddit-thread-collector, customer-buying-reasons-finder, ideal-customer-profile-writer, audience-hangout-finder]
+steps:
+  - {uses: reddit-thread-collector, note: "Starts the chain: collects what people say about your topic into a table of their own words."}
+  - {uses: customer-buying-reasons-finder, note: "Reads the collected posts and ranks why people buy, in their exact words."}
+  - {uses: ideal-customer-profile-writer, note: "Builds a buyer profile from the same posts, with the reasons found in the step before."}
+  - {uses: audience-hangout-finder, note: "Takes the buyer profile and the posts and ranks the places to show up first."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/find-what-buyers-want-and-where-they-gather-online/skeleton.yaml

@@ -1,0 +1,112 @@
+id: name-and-position-a-new-brand
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: name-and-position-a-new-brand
+  name: Name and position a new brand
+  summary: Give it your category and rivals. Get a position to own, a tested name and a check that it fits later.
+  when: you are launching or renaming a store and want a name and position that stand apart from rivals.
+  job: brand-file
+  level: intermediate
+steps:
+  - name: Positioning grid builder
+    skill: positioning-grid-builder
+    job: brand
+    from: library
+    method:
+      - List every real alternative
+      - Plot each alternative
+      - Voice and look maps (if asked)
+      - Scan for gap types
+      - Pick one corner
+      - Check it can be read in a few seconds
+      - Re-run each year, or when a rival moves
+    inputs:
+      - question
+      - competitor_set!
+      - voc_reviews!
+      - brand_brain!
+    outputs:
+      - competitor_set
+    note: Maps your rivals on two extreme axes and picks the corner to own.
+  - name: Positioning statement writer
+    skill: positioning-statement-writer
+    job: strategy
+    from: library
+    method:
+      - List the categories a buyer would put you in, and who sits at the top of each
+      - Name what each rival owns
+      - If you cannot be first in a category, define a new one you can lead
+      - Pick one attribute to own and drop the rest
+      - Write the position as one plain line and test it
+      - Write a short brief
+      - Check the result before you hand it on
+    inputs:
+      - competitor_set
+      - question
+    outputs:
+      - plan
+      - brief
+    note: Writes the one-line position and a brief from the corner you picked. Reads the grid from the step before.
+  - name: Store name generator
+    skill: store-name-generator
+    job: brand
+    from: library
+    method:
+      - Ask the four strategy questions
+      - Climb the benefit ladder
+      - Use three frames, each with fresh eyes
+      - Split generating from judging
+      - Place each idea in a zone
+      - Cut to 10 to 15
+      - Write the clearance to-do list
+    inputs:
+      - brief
+      - competitor_set!
+      - brand_brain!
+    outputs:
+      - shortlist
+    note: Generates and cuts names against the brief and the rivals' naming patterns. Reads the brief from the step before.
+  - name: Store name tester
+    skill: store-name-tester
+    job: brand
+    from: library
+    method:
+      - Spell and search (20 points)
+      - Surprise (20 points)
+      - Clear of rivals (20 points)
+      - Aim for almost, but not quite, generic (not scored)
+      - Run the seven qualities (not scored)
+      - Show each name in five places
+      - Write the hand-off
+    inputs:
+      - shortlist
+      - competitor_set!
+      - brand_brain!
+    outputs:
+      - audit_report
+    note: Tests the shortlist for sound, spelling, meaning and fit. Reads the shortlist from the step before.
+  - name: Brand name stretch checker
+    skill: brand-name-stretch-checker
+    job: analysis
+    from: library
+    method:
+      - Say what the name means in the buyer's mind
+      - Describe the new product and what it would mean on its own
+      - Check if the market is splitting into narrower specialists
+      - If the new branch needs its own meaning, plan a new name
+      - If it stays under the old name, set the limit
+      - Score and make the call
+      - Check the result before you hand it on
+    inputs:
+      - brand_brain
+      - product_data
+      - plan!
+      - competitor_set!
+    outputs:
+      - plan
+      - audit_report
+    note: Checks the winning name still works when the range grows. Reads the position plan and rivals from earlier steps.

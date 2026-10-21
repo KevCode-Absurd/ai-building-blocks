@@ -1,6 +1,6 @@
 # Make product photos: AI Blocks
 
-> 29 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 32 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A full product photoshoot from your phone photos](https://useaiblocks.com/workflows/phone-product-photoshoot): Give it your product photos and brand look. You get 8 to 12 photos, each with a job and its own light.
 - [A product gallery that answers shoppers' doubts](https://useaiblocks.com/workflows/product-gallery-answers): Give it your product, photos, reviews and current gallery. You get a checked set of images, ready to upload.
@@ -13,6 +13,7 @@
 - [Get product photos in three looks from phone photos](https://useaiblocks.com/workflows/three-look-product-photos): Give it your website and product photos. Get a styled photo set, flash snapshots and a copy of a look you like.
 - [Ghost mannequin photo maker](https://useaiblocks.com/skills/ghost-mannequin-photo-maker): Give it a clothing flat lay. Get a photo shaped as if worn by an invisible model. Your image model draws it.
 - [Main product image designer](https://useaiblocks.com/skills/main-product-image-designer): Give it a product photo and selling points. Get a main image with the copy laid on. Your image model draws it.
+- [Make matching photos for a product sheet and check them](https://useaiblocks.com/workflows/make-matching-photos-for-a-product-sheet-and-check-them): Give it a product sheet. Get matching photos, a faults report and a marketplace rules check.
 - [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker): Give it a product photo. Get a pass or reject check for Amazon, TikTok Shop, Temu and Shopee rules, and a fix.
 - [Missing product image finder](https://useaiblocks.com/skills/missing-product-image-finder): Get products and variants with no image or too few images, so no page goes live looking bare.
 - [Model and scene swapper](https://useaiblocks.com/skills/model-and-scene-swapper): Give it a model photo. Get versions with other models and backgrounds, same clothes. Your image model draws them.
@@ -25,9 +26,11 @@
 - [Product photo batch maker](https://useaiblocks.com/skills/product-photo-batch-maker): Give it a spreadsheet of products. Get one matching photo per product, with a cost limit. Your image model draws them.
 - [Product photo retoucher](https://useaiblocks.com/skills/product-photo-retoucher): Give it a phone photo of a product. Get a cleaner listing photo with fewer wrinkles. Your image model edits it.
 - [Product photo set builder](https://useaiblocks.com/skills/product-photo-set-builder): Give it one product photo. Get a full set of new angles and scenes. Your image model draws them.
+- [Product photo set maker](https://useaiblocks.com/agents/product-photo-set-maker): Give it photos of one real product. Get a planned photo set, checked frame by frame, with every failed frame redone.
 - [Product photo shoot planner](https://useaiblocks.com/skills/product-photo-shoot-planner): Attach your product photos and colours. Get a style sheet and 9 matching photo prompts.
 - [Product shoot brief writer](https://useaiblocks.com/skills/product-shoot-brief-writer): Tell it your product. Get a shot list for photos and video, with a reason for each shot.
 - [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos): Attach your product and a photo you like. Get a matching prompt and ranked pictures.
 - [Social post photo maker](https://useaiblocks.com/skills/social-post-photo-maker): Give it an outfit photo. Get lifestyle shots with new models, scenes and poses for social posts. Your image model draws them.
+- [Turn a clothing flat lay into marketplace-ready photos](https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos): Give it a garment phone photo. Get a clean photo, a worn-shape photo, fabric close-ups and a rules check.
 - [Turn real photos into a product page gallery](https://useaiblocks.com/workflows/photo-product-gallery): Give it your product photos and facts. You get about 8 checked images that each answer a shopper question.
 - [Virtual try-on photo maker](https://useaiblocks.com/skills/virtual-try-on-photo-maker): Give it a clothing flat lay and a pose photo. Get a model-wearing shot. Your image model draws it, not Claude.

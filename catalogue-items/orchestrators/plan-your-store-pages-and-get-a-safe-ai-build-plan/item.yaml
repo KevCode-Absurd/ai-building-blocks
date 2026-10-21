@@ -1,0 +1,25 @@
+slug: plan-your-store-pages-and-get-a-safe-ai-build-plan
+name: "Plan store pages and get a safe AI build plan"
+summary: "Give it your products. Get variant tables, menus, page sections and a Claude Code build prompt."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: objection_map, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: reference_set, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: plan}
+uses: [product-and-variant-setup-planner, collections-and-menu-planner, product-page-section-planner, ai-store-build-planner]
+steps:
+  - {uses: product-and-variant-setup-planner, note: "Starts from your product list and makes the clean product facts every later step reads."}
+  - {uses: collections-and-menu-planner, note: "Reads the product facts from step 1 and groups them into collections, filters and a menu."}
+  - {uses: product-page-section-planner, note: "Takes the product facts from step 1 and plans the page that answers each buyer doubt."}
+  - {uses: ai-store-build-planner, note: "Uses the product facts from step 1 and tells the build to follow the menu and page sections from steps 2 and 3."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-your-store-pages-and-get-a-safe-ai-build-plan/skeleton.yaml

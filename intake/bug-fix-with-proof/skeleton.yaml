@@ -1,0 +1,43 @@
+id: bug-fix-with-proof
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: fix-a-bug-with-proof-and-a-clear-pull-request
+  name: "Fix a bug with proof and a clear pull request"
+  summary: "Give it the bug. Get the cause proven before any fix, a minimal fix, test gaps closed and a pull request."
+  when: "a bug keeps coming back, or your AI keeps fixing the wrong thing."
+  job: test-and-fix-code
+  level: intermediate
+steps:
+  - name: "Prove the cause, then fix"
+    skill: bug-root-cause-finder
+    job: ops
+    from: "skill: bug-root-cause-finder"
+    method: ["Reproduce the failure and capture the exact error", "Narrow it down with temporary debug lines only", "State the cause and wait for your yes", "Make the smallest fix, then rerun the failing test"]
+    inputs: [codebase, brief]
+    outputs: [code_change]
+    note: "Finds and proves the cause, then makes a minimal fix once you agree."
+  - name: "Find the missing tests"
+    skill: test-gap-finder
+    job: ops
+    from: "skill: test-gap-finder"
+    method: ["List what the fix changes in behaviour", "Check each against the tests that exist", "Mark each covered, not covered or unknown", "Propose a test that would have caught the bug"]
+    inputs: [code_change, codebase]
+    outputs: [test_report]
+    note: "Reads the fix and says which behaviour no test would catch if it broke again."
+  - pause: "Add the tests it proposes, starting with one that fails on the old code, and run them."
+  - name: "Review the fix"
+    skill: code-change-reviewer
+    job: ops
+    from: "skill: code-change-reviewer"
+    method: ["Pin the point to compare from", "Find the spec or issue behind the change", "Check the code against your written standards", "Report standards and spec findings side by side"]
+    inputs: [code_change]
+    outputs: [audit_report]
+    note: "Reviews the fix and its tests against your standards and the bug report."
+  - name: "Write the pull request"
+    skill: pull-request-writer
+    job: ops
+    from: "skill: pull-request-writer"
+    method: ["Sketch what changed in the smallest clear view", "Show the failing run before and the passing run after", "Say how hard the change is to undo and what it could touch", "Keep the prose short"]
+    inputs: [code_change]
+    outputs: [document]
+    note: "Describes the fix with the cause and the before and after proof."

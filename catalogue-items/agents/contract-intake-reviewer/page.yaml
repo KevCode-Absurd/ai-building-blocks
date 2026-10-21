@@ -1,0 +1,97 @@
+new_slug: contract-intake-reviewer
+name: Contract intake reviewer
+summary: Give it each new contract. Get a risk rating, clauses to question and questions to ask. A lawyer still checks.
+job: check-contracts
+thinking: high
+thinking_why: It sorts the document, picks the right checks, compares clauses with your rules and rates the risk. Give it your strongest model.
+headline: Contract intake reviewer
+subhead: Give it each new contract. It works out what kind it is, runs the right first check, compares the clauses with your own rules, and hands back a rating, the clauses to question and questions to ask. A first check only. Check with a qualified lawyer before you sign.
+explain: |
+  Contracts arrive one at a time and get read in a hurry. The renewal trap on page nine, the clause that gives away your work and the notice period that is too long are easy to miss when you are rushed to sign.
+
+  This agent gives each new contract the same first look. It works out the type and runs the check made for that type: NDA, software subscription, data agreement, AI vendor or other. It compares what it finds with your own rules. It rates the contract green, yellow or red and names the clause that decided the rating. For each worry it drafts a plain question for the other side. It adds the contract to your register with the dates that matter, so renewals do not catch you out. It does not sign, accept or send anything, and it is not legal advice. Check with a qualified lawyer before you sign.
+when:
+  - A new contract, NDA, subscription terms or amendment has arrived and you need a first read.
+  - You want every contract checked against the same rules, not the mood of the day.
+  - You lose track of renewal and notice dates.
+you_give:
+  - The full contract, and any attached terms or amendment
+  - Which side you are on, and the country or state if the contract names one
+  - Your own rules, such as no automatic renewal or you keep ownership of your work (the first time)
+  - The price, the length and when you must sign (optional)
+you_get:
+  - The type, a green, yellow or red rating and the clause that set it
+  - The clauses to question, in plain words, with what each could cost you
+  - Draft questions and edit requests for the other side, not sent
+  - The dates that matter in a register you keep
+  - A two-minute summary for any yellow or red contract
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the contract.
+  - The first time, give it your rules. It saves them and uses them every time.
+  - Read the rating and the clauses to question. Send the questions you agree with yourself.
+  - Take anything yellow or red to a qualified lawyer, with the agent's notes.
+  - Run it on every new contract. It keeps the register up to date.
+how_it_works:
+  - title: Check the register
+    text: Looks for the other party in your register. An amendment to a listed contract gets a change trace first.
+  - title: Sort the document
+    text: Names the type, with the words that decided it.
+  - title: Run the first check
+    text: NDAs, software subscriptions, data agreements and AI tools each get their own skill. Anything else gets the general risk reviewer.
+  - title: Choose extra checks
+    text: If the contract touches who owns the work or data, it also checks the ownership, licence and indemnity clauses.
+  - title: Compare with your rules
+    text: Marks each flagged clause as meeting your rules, breaking them or not covered.
+  - title: Rate and draft questions
+    text: Rates green, yellow or red, names the deciding clause and drafts a plain question for each worry.
+  - title: Update the register
+    text: Adds the dates that matter, such as renewal and notice, and the questions drafted.
+output_shape: |-
+  TYPE AND RATING
+    <NDA | software subscription | data agreement | AI vendor | other> | <green | yellow | red> | set by: <clause>
+
+  CLAUSES TO QUESTION (most serious first)
+    1. <clause number> | what it says: <plain words> | could cost you: <effect> | your rules: <meets | breaks | not covered>
+
+  QUESTIONS FOR THE OTHER SIDE (not sent)
+    1. <question or edit request>
+
+  DATES THAT MATTER
+    Start <date> | End <date> | Renewal <date> | Notice <period> | Sign by <date>
+
+  REGISTER AND FILES
+    <row added> | MISSING: <every line>
+
+  Reminder: a first check, not legal advice. Check with a qualified lawyer before you sign.
+tweaks:
+  - what: Your rules
+    how: List what you always ask for and never accept. A rule with a number, such as notice of 30 days at most, is checked best.
+  - what: Which side you are on
+    how: The same clause helps one side and hurts the other. Say if you are the customer, the vendor, the employer or the contractor.
+  - what: What was left out
+    how: Attach linked terms, schedules and policies. A clause that points to a document you did not give it cannot be reviewed.
+  - what: How soon you must sign
+    how: Tell it the deadline. It will put the questions that must be answered first at the top.
+judge:
+  - The type is named with the words in the contract that decided it.
+  - The rating names the clause that set it.
+  - Each flagged clause points to its number or quotes it.
+  - Your rules were applied, and clauses they do not cover are marked.
+  - Nothing was signed, accepted or sent, and the lawyer reminder is there.
+test:
+  - Give it a contract you already had a lawyer review. Check that it flags the same main clauses.
+  - Give it an NDA with an odd clause added. See if it is found.
+  - Give it an amendment to a contract in the register. It should show only what changed.
+improve:
+  - Add a rule each time a lawyer finds something it missed, so the next review catches it.
+  - Add your usual deal terms, such as price range and length, so it can spot odd ones.
+  - Keep the register in a shared folder so your team can see what is signed and when it renews.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the contracts folder, your rules and the register between runs.
+    - name: A qualified lawyer
+      why: The agent is a first check. A lawyer checks anything you sign.
+  inputs:
+    - Your own rules in a short list
+    - The other attached terms the contract links to

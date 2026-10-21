@@ -1,0 +1,99 @@
+new_slug: new-hire-onboarding-keeper
+name: New hire onboarding keeper
+summary: Give it a name, role and start date. Get the plan, then a weekly check on progress and what to fix.
+job: lead-people
+thinking: medium
+thinking_why: It reads short weekly notes against a plan and picks one of three paths. A mid-size model does this well. Use your strongest one if a note mentions a complaint.
+headline: New hire onboarding keeper
+subhead: Give it the new hire's role and start date once. Each Friday, give it your check-in notes. It tells you whether the first weeks are on track, behind or blocked, fixes the company-side causes first, and hands you three actions.
+explain: |
+  A new hire's first weeks go wrong in quiet ways. Access arrives late, nobody has time to be the buddy, the first task is vague. By the time the manager notices, a month has gone and the new person feels lost.
+
+  This agent builds the plan once: the pre-start list, day one, week one, and goals for days 30, 60 and 90. Then each Friday it reads your notes against that plan and picks a path. On track, it keeps it short. Behind, it looks for causes on the company's side before anything else. Blocked or worried, it puts that first. It never judges the person, and anything about safety, health or a complaint goes to a qualified person, not to the agent. You send, book and decide.
+when:
+  - Someone is starting soon and you want the first 90 days planned and followed.
+  - You are a manager who wants a short, steady check each week instead of a plan that sits in a folder.
+  - You want to catch missing access or unclear asks while they are still easy to fix.
+you_give:
+  - The new hire's role, team, start date, manager and buddy
+  - The three to five things the role should do well by day 90
+  - Your check-in notes each Friday, with what is done, late or blocked
+  - The new hire's answers to the weekly check-in questions
+you_get:
+  - A pre-start list, a first-week plan and goals for days 30, 60 and 90
+  - A short set of weekly check-in questions
+  - Each week, a call of on track, behind or blocked, with the reason from your notes
+  - Up to three actions for you, and any fix on the company's side
+  - A draft check-in message that you send yourself
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the hire's details.
+  - Read the plan and the check-in questions, change what does not fit, and approve it.
+  - Each Friday, write a few lines on how the week went and give them to the agent.
+  - Read the hand-back and do the actions yourself. Say yes to any single action you want the agent to take.
+  - Run it again next Friday. It reads the log and says if the same cause came up again.
+how_it_works:
+  - title: Build the plan once
+    text: Makes the pre-start list, day one and week one, then the goals for days 30, 60 and 90. You approve it first.
+  - title: Set the check-in questions
+    text: Writes five short questions you ask the new hire each week, such as what is unclear and what is blocking.
+  - title: Read this week
+    text: Marks each planned item done, late or blocked from your notes and works out the share done.
+  - title: Choose the path
+    text: On track keeps it short. Behind looks first at access, buddy time and unclear priorities. Blocked or worried goes to the top.
+  - title: Update the log
+    text: Adds one line per week, so next week it can tell whether the same cause came up again.
+  - title: Hand back three actions
+    text: Gives you at most three things to do this week, plus a draft message you send yourself.
+output_shape: |-
+  THIS WEEK
+    Week <n> | path <on track | behind | blocked> | done <x of y> (<share>)
+
+  WHY THIS PATH
+    done: <items> | late: <items> | blocked: <items> | from your notes: "<words that decided it>"
+
+  DO THIS WEEK
+    1. <action> | owner: <name> | by: <day>
+
+  FIX ON OUR SIDE
+    <missing access, doc, buddy time or unclear priority>
+
+  DRAFT CHECK-IN MESSAGE (not sent)
+    <text>
+
+  WATCH NEXT WEEK
+    <1 or 2 items>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: What counts as on track
+    how: The starting point is four in five planned items done. Raise it for a role with a fast ramp, or lower it for a role with long waits on others.
+  - what: Your role goals
+    how: The clearer the day 90 goals, the better the weekly read. Write them as things the person does, not feelings you hope for.
+  - what: Remote or in person
+    how: Say which. The first-week plan and the check-in questions change a lot when the new person is on their own at home.
+  - what: Your country
+    how: Rules on probation, records and notes about staff differ. Check with a qualified person before anything goes in a file.
+judge:
+  - The path came from your notes and the plan, with the sums shown.
+  - Company-side causes were listed before any note about the person.
+  - It never judged the person's ability or fit.
+  - Anything about safety, health or a complaint was passed to a person.
+  - Nothing was sent, booked, ordered or changed without your yes.
+test:
+  - Run it on a hire you onboarded last year, with the notes you remember. See whether it finds the problems you hit.
+  - Give it a week of notes that mention a complaint. It should put that first and tell you to involve HR or a qualified person.
+  - Run the same week twice. The path should match.
+improve:
+  - Keep the log from each hire. Compare them to see which causes come up again and fix those in your process.
+  - Add your real tools and who owns each access request, so the fixes name a person.
+  - After day 90, ask the new hire what helped most and change the plan for the next one.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the onboarding folder and the log, and run the Friday check on a timer.
+    - name: Google Calendar
+      why: Put the Friday check-in on the calendar so the notes are fresh. Booking stays with you.
+  inputs:
+    - Your standard list of accounts and equipment for the role
+    - A description of the team and who the buddy is

@@ -1,0 +1,21 @@
+slug: cart-and-checkout-upsell-planner
+name: "Cart and checkout upsell planner"
+summary: "Give it products and margins. Get cart and checkout offers, ranked by profit added per order."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How 8 and 9 Figure Brands Build Offers Without Discounting", by: "Blue Sense Digital (public masterclass)", used: "The five in-cart rules, the incremental profit formula, the checkout add-on, the post-purchase slot and the three-stage exit offers"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency (public long-form masterclass)", used: "The take rate times value times margin formula, the checkout add-on take rate and revenue per visit"}
+  - {title: "$10,000,000 per year on Shopify: Insane Offer and Conversion Rate Strategy", by: "Jordan Hayes (agency owner)", used: "The cart layout: progress bar, one-click add-ons, subscribe upgrade and sticky checkout button"}

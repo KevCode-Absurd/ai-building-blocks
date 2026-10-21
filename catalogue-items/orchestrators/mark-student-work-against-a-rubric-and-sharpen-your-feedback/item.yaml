@@ -1,0 +1,21 @@
+slug: mark-student-work-against-a-rubric-and-sharpen-your-feedback
+name: "Mark student work against a rubric and sharpen your feedback"
+summary: "Give it a learning goal and student work. Get a rubric, the gaps, the causes and checked feedback."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: audit_report}
+uses: [single-point-rubric-builder, student-work-gap-finder, student-mistake-analyser, written-feedback-checker]
+steps:
+  - {uses: single-point-rubric-builder, note: "Makes the criterion every later step marks against."}
+  - {uses: student-work-gap-finder, note: "Marks the student work you pasted against the rubric from step one."}
+  - {uses: student-mistake-analyser, note: "Takes the gaps found against the rubric and traces each to a cause with a fix."}
+  - {uses: written-feedback-checker, note: "Checks the comments you wrote from the analysis, and rewrites the weak ones."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/mark-student-work-against-a-rubric-and-sharpen-your-feedback/skeleton.yaml

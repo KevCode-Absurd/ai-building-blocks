@@ -1,0 +1,20 @@
+slug: heavy-feature-trimmer
+name: "Heavy feature trimmer"
+summary: "Give it your homepage and collection page. Get each slider, popup and video judged, and a score."
+category: ecommerce
+type: skill
+role: check
+job: page
+level: beginner
+inputs:
+  - {type: store_capture, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Website Speed Optimization Tips for Shopify Stores", by: "Shopify Plus blog, quoting agency owners", used: "The cost of quick view, hero sliders, popups, video embeds and redirects, and a simpler theme"}
+  - {title: "Shopify speed and image optimization (a video series on images, app scripts, layout shift, largest content and store audits)", by: "Christian, a Shopify developer (YouTube channel)", used: "Choosing a simple theme, a small test of a newer against an older default theme, and avoiding animations"}

@@ -1,0 +1,122 @@
+new_slug: sample-approval-gatekeeper
+name: "Sample approval gatekeeper"
+summary: "Give it a sample and your tech pack. Get line-by-line pass or fail, scored out of 100."
+job: plan-supply-chain
+thinking: high
+thinking_why: "It compares many small facts line by line and must not wave a sample through, so a stronger model catches more mismatches."
+
+headline: "Sample approval gatekeeper"
+subhead: "Give it your tech pack and what you measured or photographed on the sample, plus the stage. It checks the sample line by line, says pass or fail on each, and scores it out of 100. You get what to fix, a go or hold on bulk, and a return watch."
+
+explain: |
+  A sample that looks fine on the table can still be wrong: a different gray, a lighter fabric, a smaller size. Once bulk is made, the only fix is a refund or a rework. Founders in the sources lost money by moving a whole order to a cheaper factory, or by letting a production sample drift from the one they approved.
+
+  This skill holds each sample to your tech pack, one line at a time. It knows three stages: a small test for materials and prints, a pre-production sample that becomes your gold standard, and a production sample built just before the run. It tells you what to fix before the next stage, whether to go or hold, and which sample to keep in two places. After a supplier change, it sets a 90 day watch on returns, because savings show at once and returns show up a quarter later.
+
+when:
+  - A factory sent a sample and you need to decide if it can go to the next stage.
+  - A cheaper supplier looks good on paper and you want to test it without risking your stock.
+  - Bulk is about to start and you want to confirm the production sample matches the gold standard.
+
+you_give:
+  - Your tech pack
+  - Photos, measures, weights and color codes from the sample
+  - "The stage: strike-off, pre-production, production, or test batch"
+  - The defect and return rate on your current supplier (optional)
+you_get:
+  - A pass or fail for every line of the tech pack
+  - A score out of 100 and how it was worked out
+  - What to fix before the next stage, and a go or hold on bulk
+  - Which sample to keep as the gold standard, a test batch plan and a 90 day return watch
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste or attach your tech pack and say which stage this sample is.
+  - Measure the sample against the pack and attach photos. List weights and color codes.
+  - Read the fails, send the fixes to the factory, and ask for a new sample if any critical line failed.
+  - Log the result, then keep one approved sample at home and send one to the factory.
+
+how_it_works:
+  - title: Names the stage
+    text: Strike-off or small test, pre-production sample, production sample, or a test batch with a new supplier.
+  - title: Checks line by line
+    text: Compares each tech pack line with your measure, weight, color code or photo and marks pass, fail or not checked.
+  - title: Adds size grading
+    text: For apparel, asks for several pre-production samples to check that sizes scale across small, medium and large.
+  - title: Scores it
+    text: Weighs critical lines more than cosmetic ones and shows the sum.
+  - title: Decides go or hold
+    text: Holds if any critical line fails, or if the production sample does not match the pre-production standard.
+  - title: Sets the gold standard
+    text: Keeps one approved sample at home and one at the factory, and compares bulk against it.
+  - title: Plans a test batch
+    text: Orders a small batch from a new supplier, counts defects, and keeps the old supplier until both pass.
+  - title: Starts the return watch
+    text: Gates every supplier change on approval, then watches returns for 90 days before moving the next order.
+
+output_shape: |
+  SAMPLE CHECK  <product>  stage <...>  supplier <...>  pack v<n>  <date>
+  <pack line> | critical / normal / cosmetic | spec <...> | found <...> | PASS / FAIL / NOT CHECKED
+  (one line per tech pack line)
+
+  SCORE  <n>/100  = 100 x <weight passed> / <weight checked>  (critical 3, normal 2, cosmetic 1)
+  Lines not checked: <n>  (the score covers checked lines only)
+  DECISION  <go / hold>  because <...>
+
+  FIX BEFORE NEXT STAGE
+  <line> -> <what to change>
+
+  GOLD STANDARD  keep <sample id> at home and <sample id> at the factory
+  TEST BATCH PLAN  <units> from <supplier>, count defects, keep <old supplier> until both pass
+  90 DAY RETURN WATCH  start <date>, review <date>, compare return rate with <current rate>
+  LOG  supplier | date | pack version | stage | result
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: The stage
+    how: Say which one it is. A strike-off checks materials and prints. A pre-production sample must match the whole pack. A production sample must match the pre-production standard.
+  - what: Which lines are critical
+    how: Tell it what harms customers or breaks the product, such as size, material, safety and legal labels. Those weigh the most.
+  - what: Your current return rate
+    how: Give it. The 90 day watch compares the new supplier's returns with it.
+  - what: Several samples
+    how: For apparel, attach three sizes. The skill checks grading across them.
+
+judge:
+  - Every pack line has a pass, fail or not checked, with the spec and the finding side by side.
+  - Not checked lines are counted and the score says it covers checked lines only.
+  - Any critical fail forces a hold, whatever the score.
+  - A production sample that does not match the standard is a hold.
+  - The log names supplier, date, pack version and result.
+
+test:
+  - Give it a sample with one known fault, such as a wrong color code. The line must fail and force a hold if it is critical.
+  - Run the same sample twice. Pass and fail on each line should match.
+  - Check one fail by measuring the sample yourself.
+  - Compare the first sample with the next one. The skill should show which lines changed.
+
+improve:
+  - Mark your own critical lines in the skill file so they always weigh 3.
+  - Add your return rate by product so the 90 day watch uses real numbers.
+  - Add the size grading rules for your category.
+  - Pair it with the pre-shipment inspection brief writer, which checks the real goods against the gold standard.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI that reads images can check photos against your pack. Attach every angle."}
+    - {name: "A kitchen scale and a tape measure", why: "Give real weights and lengths. The AI cannot measure what you did not."}
+  inputs:
+    - "Pantone chips to check color by eye"
+    - "A fabric swatch kept from the first approval"
+    - "Photos of earlier samples from the same supplier"
+    - "Your return rate by product"
+
+terms:
+  - term: Strike-off
+    meaning: A small test sample of a material or print, made to check it before anything else.
+  - term: Pre-production sample
+    meaning: A sample that must match your tech pack exactly. It becomes the standard bulk is judged against.
+  - term: Gold standard
+    meaning: The approved sample you keep to compare every later batch against.
+  - term: Grading
+    meaning: How the measures grow from one size to the next.

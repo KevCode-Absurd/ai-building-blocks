@@ -1,0 +1,130 @@
+new_slug: hero-image-loading-fixer
+name: "Hero image loading fixer"
+summary: "Give it your slow-LCP page and theme. Get the hero image set to load first, with code."
+job: speed-up-store
+thinking: medium
+thinking_why: "It edits a small amount of theme code with clear rules. A mid-size model handles it well when it can see the section file."
+
+headline: "Hero image loading fixer"
+subhead: "Give it the PageSpeed result for a slow page and the theme code for its hero or product gallery. It finds the image that loads late and writes the edited image tag, the Liquid loop fix, the preload line and the size targets. Use a duplicate of your theme."
+
+explain: |
+  On most store pages the largest thing in the first screen is the hero banner or the main product image. If that picture is lazy loaded, fades in, or waits for a gallery script, shoppers see a blank space while the rest of the page loads. Google measures this as Largest Contentful Paint (LCP), and it should be 2.5 seconds or less.
+
+  This skill reads the LCP element from your lab report, then fixes how that one image loads. It sets the first-screen image to load at once with high priority, keeps lazy loading for everything below the fold, removes fade-ins and placeholders, adds a preload line to the head, and writes a Liquid loop so only the first slide in a slider loads first. It also sets size targets, so the file itself is not the delay. A slow server can still hold you back.
+
+when:
+  - "PageSpeed shows LCP above 2.5 seconds."
+  - "The first product image appears late or after a slideshow loads."
+  - "Your hero is lazy loaded or fades in."
+
+you_give:
+  - "The PageSpeed LCP element and the page address"
+  - "The section code for the hero or product gallery"
+  - "The image file, or its size and format (optional, attach it)"
+
+you_get:
+  - "The edited image tag and section code, with eager loading and high priority"
+  - "A Liquid loop that loads only the first item eagerly"
+  - "A preload line for the head, per template"
+  - "Compression and size targets for that image, and a test list"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Duplicate your theme first: Online Store, Themes, the three dots, Duplicate. Edit only the copy."
+  - "Paste the PageSpeed LCP element, the section file for the hero or gallery, and attach the image."
+  - "Apply the edits on the copy, then test on slow 3G and slow 4G with the cache switched off in your browser."
+  - "Run PageSpeed three times and compare LCP with before."
+
+how_it_works:
+  - title: Reads the LCP element
+    text: Finds the largest first-screen item in the lab diagnostics. It is usually the hero on the homepage and the main image on a product page.
+  - title: Sets first-screen images eager
+    text: Hero, first slide, logo and first product image get loading eager and fetchpriority high. Everything below the fold stays lazy.
+  - title: Fixes slider loops
+    text: Writes Liquid so only the first item in the loop is eager and the rest are lazy.
+  - title: Removes effects
+    text: Takes out fade-ins, slide-ins and placeholder loaders on that image, since they load extra code first.
+  - title: Adds a preload
+    text: Writes a preload line for the head with Liquid, so each page picks its own image.
+  - title: Checks the gallery
+    text: If a gallery plugin needs JavaScript before showing the first image, renders it in plain HTML first.
+  - title: Sets size targets
+    text: Resizes and compresses the hero, and serves widths that fit the screen.
+  - title: Writes the tests
+    text: Slow-network checks with the cache off, and a three-run average.
+
+output_shape: |
+  HERO LOADING FIX  <store>, <page>, theme copy
+  LCP element: <what> | current LCP <s> | target 2.5 s or less
+  Cause: <lazy loaded | fade-in | gallery script | file too big | slow server>
+
+  CODE CHANGES
+  File: <file> | Find: <original> | Replace with: <new code>
+  Why: <reason>
+
+  LIQUID LOOP (sliders and lists)
+  <code with forloop.index equals 1 eager, rest lazy>
+
+  PRELOAD LINE FOR THE HEAD
+  <code, per template>
+
+  IMAGE TARGETS
+  Width: <px max> | Format: <jpeg | webp> | Size: <KB target> | Sizes served: <widths>
+
+  TEST LIST
+  <slow 3G, slow 4G, cache off, three runs, mobile and desktop>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what>
+
+tweaks:
+  - what: Which template
+    how: Say if this is the homepage, a collection banner or a product page. The LCP element and the preload change for each.
+  - what: The section file
+    how: Paste the real section code. Without it the skill writes a generic pattern and marks the exact lines as not checked.
+  - what: Slider or single image
+    how: For a slider, only the first slide is eager. Say how many slides you have and consider one strong hero instead.
+  - what: Server speed
+    how: Add the server response time. If it is over 0.8 seconds, images alone will not fix a slow LCP.
+
+judge:
+  - "Nothing in the first screen is lazy loaded."
+  - "Only the first item in a loop is eager, and the rest are lazy."
+  - "Fade-ins and placeholders on that image are removed."
+  - "The size targets match the numbers in the image prep checker."
+  - "Images below the fold are not made eager."
+  - "It says to edit a duplicate theme and to test on a slow network."
+
+test:
+  - "Run PageSpeed on the page three times before and after. LCP should drop, or the cause was not the image."
+  - "In Chrome DevTools, throttle to slow 3G with the cache off. The hero should appear first."
+  - "Scroll down on a phone. Images below the fold should still load lazily."
+  - "Check a product with many images. Only the first should be eager."
+
+improve:
+  - "Write your theme name and its hero section file name into the skill so the edits match your code."
+  - "Add your own image size rules, such as '1,600 px for banners', if they differ from the defaults."
+  - "Save the final tag pattern in your brand file for any developer who works on your theme."
+  - "Pair it with the store image prep checker, which sizes and renames the image itself."
+
+works_best_with:
+  tools:
+    - {name: "Google PageSpeed Insights", why: "Names the LCP element and lets you measure the fix with three runs."}
+    - {name: "Chrome DevTools", why: "Throttle to slow 3G and 4G, switch the cache off and watch the image arrive."}
+    - {name: "Shopify theme editor", why: "Duplicate a theme, edit the copy and preview it before you publish."}
+  inputs:
+    - "The output of the store speed report reader"
+    - "The hero image file at full size"
+    - "Your server response time from the PageSpeed report"
+    - "The product gallery section if the slow image is on a product page"
+
+terms:
+  - term: LCP
+    meaning: Largest Contentful Paint. How long the biggest thing in the first screen takes to appear.
+  - term: Lazy loading
+    meaning: Loading an image only when the shopper scrolls near it. Good below the fold, bad for the first screen.
+  - term: Preload
+    meaning: A line in the page head that tells the browser to start fetching an image early.
+  - term: Above the fold
+    meaning: What shows on screen before the shopper scrolls.

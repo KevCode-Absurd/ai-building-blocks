@@ -1,0 +1,90 @@
+new_slug: plan-a-sale-across-email-and-sms
+name: Plan a sale across email and SMS
+summary: Give it your offer and list. Get a text plan, a send calendar, a written email, checked texts and a results read.
+job: write-emails
+thinking: high
+thinking_why: It runs six skills in a row, with cost and scoring sums. Give it your strongest model.
+headline: Run a sale where email and texts work together
+subhead: Give it your offer, your dates and your results history. It plans which moments earn a text, builds the email calendar around them, writes the sale email, checks the text copy and cost, and after the sale reads the results by channel.
+explain: |
+  Email and SMS often run as two separate plans. The same message goes out twice, texts go to people who never click, and nobody checks what a text costs until the bill arrives. After the sale, the numbers sit in two dashboards and nothing says what to repeat.
+
+  The steps keep the two channels in one plan. First it decides which moments earn a text and prices the month. Then it places the emails around those texts so they do not repeat each other. It pauses and asks you for a one-paragraph brief: the offer, the deadline and the audience. It writes the sale email, then checks the text copy for length, cost and rules. You send the sale, export the results and pause again. Last it reads email and SMS results together and names what to repeat and what to rework.
+when:
+  - You have a sale, a drop or a launch coming and want email and text to support each other.
+  - Your texts cost more each month and you are not sure they pay back.
+  - You ran a sale last month and cannot tell which channel did the work.
+you_give:
+  - Your offer, with dates and terms
+  - Your product facts (optional)
+  - Past email and SMS results, such as sends, clicks, orders and unsubscribes (optional)
+  - Your brand file and customer reviews (optional)
+  - A one-paragraph brief for the sale email, which it asks you for halfway through
+  - An export of results after the sale, which it asks for at the end
+you_get:
+  - A text plan with dates, send times, audience, exclusions and the cost of the month
+  - A hold-out test to find out how often your list wants texts
+  - An email calendar placed around the texts, with the mix of email types checked
+  - The sale email, with subject options, a plain-text version and two A/B variants
+  - A text check with character count, billed parts, cost and a readiness score out of 100
+  - A results review with ranked causes, what to repeat, what to rework and a channel health score out of 100
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Start with your offer, your dates and how people opted in to texts. It will not plan texts without clear consent.
+  - When it pauses, write the one-paragraph brief for the sale email.
+  - Send the emails and texts, then export results for the sale window and give them to the last step.
+how_it_works:
+  - title: Plan the texts
+    text: SMS send planner decides which launches, sales and restocks deserve a text, sets dates and send windows, pairs each with an email and prices the month. It also sets up a hold-out test for how often to text.
+  - title: Place the emails
+    text: Email campaign calendar planner builds the email calendar around the text plan. Fixed dates go first, and the mix of email types is checked so the two channels do not repeat each other.
+  - title: Write the sale email
+    text: Campaign email writer takes your brief and writes the email block by block. You get subject and preview options, a plain-text version and two A/B variants, with every claim checked against your facts.
+  - title: Check the texts
+    text: SMS send checker counts characters and billed parts, prices the send, tests whether an image pays for itself and asks if the news is urgent. It flags opt-in, send-hour and flow-rule problems and scores readiness out of 100.
+  - title: Read the results
+    text: Email and SMS performance reader checks nothing is broken, then reads list growth, campaigns, flows, deliverability and SMS. It ranks causes and scores channel health out of 100.
+output_shape: |-
+  STEP 1: TEXT PLAN
+    Consent and quiet hours | dated sends with purpose and email pairing | exclusions | cost | frequency test
+
+  STEP 2: EMAIL CALENDAR
+    Pace | dated sends with angle | mix check | production schedule
+
+  STEP 3: SALE EMAIL
+    Subject and preview options | email blocks | plain-text version | A/B variants | claims check
+
+  STEP 4: TEXT CHECK
+    Characters and parts | cost | image break-even | rule flags | urgent or not | score out of 100
+
+  STEP 5: RESULTS READ
+    Ranked causes | list growth | campaigns | flows | deliverability | SMS | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How your list opted in to texts
+    how: Say where and how people agreed. The plan states the consent line and will not plan texts without one.
+  - what: Your cost per text
+    how: Give your real rate. Without it the cost sums use a stated guess.
+  - what: Your region
+    how: Quiet hours and text rules differ by country and state. Name yours so the checker flags the right rules.
+  - what: How much of the sale is urgent
+    how: Tell it which dates are real deadlines or restocks. Only urgent news earns a text and the rest moves to email.
+judge:
+  - Every text is tied to a real event or a true restock, and nothing is sent outside quiet hours.
+  - The text cost shows its sum, list size times cost per text.
+  - The email calendar does not repeat the same message the texts already carry.
+  - Every claim in the email matches a fact you gave, and no timer or stock limit is made up.
+  - The results read quotes numbers from your data and treats opens as a weak signal.
+test:
+  - Count the characters of one text yourself and compare with the checker's number and billed parts.
+  - Redo the text cost sum by hand from your own rate and list size.
+  - Send the first text to a small test group of your own team and read it on a phone.
+  - After the sale, ask which of the ranked causes you can confirm in your own store data.
+improve:
+  - Keep the text plan's exclusion rule in your brand file, so people who never click stop getting texts.
+  - Run the frequency hold-out test for at least one cycle and write the winner into the plan.
+  - Save your cost per text and quiet-hours rule in the planner skill, so you do not repeat them.
+  - Keep the results review each month and compare it with the one before.

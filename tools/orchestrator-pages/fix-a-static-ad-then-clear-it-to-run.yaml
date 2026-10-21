@@ -1,0 +1,78 @@
+new_slug: fix-a-static-ad-then-clear-it-to-run
+name: Fix a static ad's pitch and clear it to run
+summary: Give it a static ad and its copy. Get a scored critique, a rewrite that fits the buyer and a ship call.
+job: check-ads
+thinking: medium
+thinking_why: Each step reviews one short ad against clear checks. A mid-size model is enough.
+headline: Fix a static ad before it spends your money
+subhead: Give it a finished image ad and its copy. It scores the ad and writes two rewrites, matches the pitch to how much the buyer already knows, checks the five jobs every ad has, then runs a last stop-ship check.
+explain: |
+  A static ad has one glance to work. When it fails, the cause is usually one of a few: the picture and headline do not make one idea, the pitch is for a buyer who is not looking, the proof is missing, or a claim breaks a platform rule. Spending a week of budget to find that out is the slow way.
+
+  The steps look at the ad from four sides, each reading the copy from the one before. First it scores the ad on the eye path, the picture and headline pair and the phone view, and writes two rewrites. Then it checks the pitch fits the buyer's awareness stage and keeps to it. Then it checks the ad has attention, gain, proof, a case and a clear ask. Last it runs a stop-ship check on claims, brand details and sizes.
+when:
+  - You have an image ad ready and want it checked before launch.
+  - An image ad is getting clicks but few sales and you suspect the pitch.
+  - You have several drafts and need to pick one to fix.
+you_give:
+  - Your static ad image
+  - Its copy (headline, primary text and call to action)
+  - The page it sends people to (optional)
+  - Your product facts and brand file (optional)
+you_get:
+  - A score out of 100 with fixes and two rewrites
+  - The ad's awareness stage, where it does not fit the buyer, and a rewrite for each mismatch
+  - A pass or fail on attention, gain, proof, case and ask, with fixes in order
+  - A stop-ship verdict with each fix and a score
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach the final image, not a sketch, and paste the exact copy.
+  - Give only facts you can prove. The rewrites never add numbers you did not supply.
+how_it_works:
+  - title: Critique the ad
+    text: Picks a side, traces the eye path, swaps the picture or headline to test the pair, checks the phone view, scores it and writes two rewrites.
+  - title: Match it to the buyer's awareness
+    text: Classifies the hook, the picture and the copy by awareness stage, checks they agree and keep to one stage, and writes a rewrite for each mismatch.
+  - title: Check the five jobs of the ad
+    text: Quotes where attention, gain, proof, case and ask sit, scores each for 20 points and ranks the fixes with the earliest failing part first.
+  - title: Run the stop-ship check
+    text: Checks claims, brand details, sizes and platform rules on the fixed ad, then gives each fix, a verdict and a score.
+output_shape: |-
+  STEP 1: CRITIQUE
+    Side chosen | eye path | pair test | phone view | score out of 100 | two rewrites
+
+  STEP 2: AWARENESS FIT
+    Stage of hook, picture and copy | mismatches | score | rewrites
+
+  STEP 3: FIVE JOBS
+    Attention, gain, proof, case, ask | pass or fail | fixes in order
+
+  STEP 4: STOP-SHIP CHECK
+    Mistakes | fixes | verdict | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who sees it
+    how: Say if the audience is cold or warm. Step 2 judges the pitch against that stage.
+  - what: Where it goes
+    how: Add the landing page. Step 1 checks the ad and the page tell one story.
+  - what: Your proof
+    how: Paste real reviews, test results or numbers. Step 3 uses them in the proof fixes.
+  - what: Your platform
+    how: Name it, so the last check applies the right rules and sizes.
+judge:
+  - Each score comes with the reasons behind it, not only a number.
+  - Rewrites use only facts you gave.
+  - The stage named in step 2 matches the buyer you described.
+  - The fixes in step 3 are ordered, earliest failing part first.
+  - The verdict in step 4 follows from the mistakes listed.
+test:
+  - Show the rewrite and the original to three people and ask which they would click.
+  - Cover the headline and check the picture still gives a reason to look.
+  - Check every claim in the final copy against your own facts.
+improve:
+  - Run the best rewrite against the original in a small test.
+  - Keep the fixes that repeat as rules for the next ad.
+  - Re-run the checks on each new ad before it goes live.

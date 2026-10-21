@@ -1,0 +1,122 @@
+new_slug: bundle-and-quantity-break-builder
+name: "Bundle and quantity-break builder"
+summary: "Give it a hero product, cost and price. Get bundle tiers, a default, gifts and price lines."
+job: make-offer
+thinking: medium
+thinking_why: "It prices tiers and writes lines from your numbers. A mid-size model is enough; check the sums yourself."
+
+headline: "Bundle and quantity-break builder"
+subhead: Give it your hero product, its cost, price and shipping weight. It builds a tier table such as 1, 3 and 6, picks the default tier, scales the gifts with quantity and writes the price lines, with each tier priced against your margin.
+
+explain: |
+  A quantity break is a price ladder: the more a shopper buys, the less each unit costs. Done well, it lifts order value and uses your shipping savings to pay for the discount. Done badly, it gives away margin and confuses shoppers.
+
+  This skill bundles the same product in more units, flavors, sizes or colors, because mixed bundles tend to fail when buyers only want two of the three items. It picks a middle tier as the star and pre-selects it, ties each tier to a real use, shows the price per unit and the money saved, and scales gifts with quantity. It counts the shipping you save in bigger packs, so the discount is funded, not guessed. It also finds your entry offer and the pack size that brings buyers back sooner. It works for products used in more than one unit, not for one-off items like a chair.
+
+when:
+  - You sell one product at one price and want a bigger first order.
+  - You want to add a 3-pack or 6-pack but do not know what to charge.
+  - Your bundles exist but buyers pick the cheapest tier every time.
+
+you_give:
+  - Your hero product, price, cost and shipping weight
+  - How a buyer uses it, per day, per room or per person
+  - Current AOV and unit split (optional)
+  - Gift candidates with what each costs you (optional)
+  - Repeat timing by product and the channels you run (optional)
+
+you_get:
+  - A tier table (for example 1, 3, 6) with price, per-unit price and savings
+  - The pre-selected tier and why, plus a gift for each tier
+  - Price lines per unit, per day or per serving, and a one-line reason for each tier
+  - An entry offer and a list of checks it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the price, cost, shipping cost and how buyers use the product.
+  - List any gifts and what each costs you, and any repeat data by pack size.
+  - Run each tier through the Offer profit-per-session checker before launch.
+  - Build the tiers in your bundle app or theme and test one change at a time.
+
+how_it_works:
+  - title: Bundles the same product
+    text: More units, flavors, sizes or colors of the same item, not mixed products.
+  - title: Picks the middle tier
+    text: The middle option is the star and is pre-selected, priced against the single unit. The biggest tier is never the default.
+  - title: Writes the price lines
+    text: Per-unit price, total saved and, when true, price per day or per serving.
+  - title: Frames with free
+    text: It compares "buy two get one free" with "33% off three" and "buy three get two free".
+  - title: Ties tiers to use
+    text: Each tier gets a reason from real use, such as one kit for 700 sq ft and two for 1,400.
+  - title: Counts the shipping saving
+    text: It uses shipping, pick-pack and fee savings to fund the discount.
+  - title: Scales the gifts
+    text: One gift at one unit, three gifts at three, chosen to help use the product and cost little.
+  - title: Finds the entry offer
+    text: It picks the starter product and the pack size that brings buyers back soonest, from your data.
+
+output_shape: |
+  BUNDLE PLAN  <product>  single price <amount>  cost <amount>
+  TIER TABLE
+  <units> | <price> | <per unit> | <saved vs single> | <shipping per unit> | <gross margin> | <gift>
+  DEFAULT: <tier> because <reason>
+  TIER REASONS
+  <tier>: <real use, one line>
+  PRICE LINES
+  <tier>: <per unit / per day / per serving, only if true> | You save <amount>
+  FRAMING TEST: <free-item version vs percent version>
+  ENTRY OFFER: <product and pack>
+  REPEAT NOTE: <which size repeats fastest, or "no data">
+  FLASH PAGE (optional): <real end time, real stock count>
+  CHECKS MISSED: <list, or none>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: How buyers use it
+    how: Give a real unit, such as per day, per room or per person. Tier reasons and price lines come from this.
+  - what: Shipping cost per pack size
+    how: Give quotes for one, three and six units. The skill uses them to fund the discount.
+  - what: Gift costs
+    how: Give landed cost. Cheap gifts that help use the product rank first.
+  - what: Repeat timing
+    how: Give days to reorder by pack size. It moves the default tier toward the size that repeats soonest.
+
+judge:
+  - Every tier is the same product in more units, flavors, sizes or colors.
+  - The default is a middle tier, not the biggest.
+  - Each tier shows margin after discount, shipping and gift costs.
+  - Price per day or per serving appears only if the product really is used that way.
+  - Any flash page uses a real end time and a real claimed count.
+
+test:
+  - Give it a product with no shipping weight. It should ask for it or mark shipping as missing.
+  - Check one tier by hand. Check the price, per-unit price, saved amount and margin.
+  - Ask for a single durable item such as a chair. It should say bundles of units do not fit and suggest accessories or a set.
+  - Build the default tier on your page and check that it is pre-selected on a phone.
+
+improve:
+  - Add your shipping rates by weight to the skill file so tier costs are exact.
+  - Add your bundle app's limits, such as the number of tiers it supports.
+  - Add your own rule for the lowest margin a tier may have.
+  - Pair it with the Gift-with-purchase planner for gifts and the Offer profit-per-session checker before launch.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the tier maths and writes the lines from the numbers you paste."}
+    - {name: "Shopify", why: "Shopify has bundle features, and apps add quantity breaks and pack builders. Check what your theme supports."}
+  inputs:
+    - "Real shipping quotes for one, three and six units"
+    - "Order history showing which units people buy together"
+    - "Days between reorders by pack size"
+    - "Photos of what is in each tier"
+
+terms:
+  - term: Quantity break
+    meaning: A lower price per unit when a shopper buys more.
+  - term: Pre-selected tier
+    meaning: The option already chosen when the page loads, which most shoppers keep.
+  - term: Entry offer
+    meaning: The first offer a new buyer sees, built to win a first order.
+  - term: Pack builder
+    meaning: A page where the shopper picks which items go into a pack.

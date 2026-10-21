@@ -1,0 +1,28 @@
+slug: write-a-short-pitch-and-fix-it-after-every-no
+name: "Write a short pitch and fix it after every no"
+summary: "Give it your idea and who must back it. Get an honest pitch, hard objections answered and a rewrite after each no."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: objection_map, required: false}
+  - {type: plan, required: false}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: lessons_register}
+uses: [why-first-message-writer, honest-persuasion-editor, hardest-objections-answer-writer, pitch-revision-log]
+steps:
+  - {uses: why-first-message-writer, note: "Writes the first short pitch, starting from what you believe."}
+  - {uses: honest-persuasion-editor, note: "Reads the pitch from the step before and strips out anything you cannot back up."}
+  - {uses: hardest-objections-answer-writer, note: "Takes the honest pitch and builds the hardest objections and answers into it."}
+  - {uses: pitch-revision-log, note: "Takes the pitch from before and the nos you collected, and rewrites it around the doubts heard most."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-a-short-pitch-and-fix-it-after-every-no/skeleton.yaml

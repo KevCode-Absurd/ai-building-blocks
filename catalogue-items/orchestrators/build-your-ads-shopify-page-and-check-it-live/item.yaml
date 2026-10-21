@@ -1,0 +1,26 @@
+slug: build-your-ads-shopify-page-and-check-it-live
+name: "Build your ad's Shopify page and check it live"
+summary: "Give it your ad, offer and brand facts. Get page copy, Shopify files to upload and a check of the live page."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+  - {type: store_capture, required: true}
+  - {type: ad_copy, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: [ad-matched-landing-page-writer, shopify-landing-page-builder, product-page-screenshot-auditor]
+steps:
+  - {uses: ad-matched-landing-page-writer, note: "Starts from your ad, offer and brand facts. It writes the page so it picks up where the ad stops."}
+  - {uses: shopify-landing-page-builder, note: "Loads the page copy from step 1 into a Shopify section you can upload, with install steps."}
+  - {uses: product-page-screenshot-auditor, note: "Reads your screenshots of the built page and lists what still blocks a buyer."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-your-ads-shopify-page-and-check-it-live/skeleton.yaml

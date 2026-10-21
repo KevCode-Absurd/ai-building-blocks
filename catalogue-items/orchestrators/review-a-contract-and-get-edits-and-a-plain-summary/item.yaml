@@ -1,0 +1,20 @@
+slug: review-a-contract-and-get-edits-and-a-plain-summary
+name: "Review a contract and get edits and a plain summary"
+summary: "Give it a contract and your side. Get a clause review with edits, an IP check and a summary for your lawyer."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: document, required: true}
+outputs:
+  - {type: document}
+uses: [contract-reviewer, ip-clause-checker, contract-plain-summary]
+steps:
+  - {uses: contract-reviewer, note: "Starts from the contract and your rules. Makes the flagged clauses and suggested edits the next steps work from."}
+  - {uses: ip-clause-checker, note: "Reads the reviewed contract and its edits, and looks hardest at the clauses that are slowest to fix later: who owns the work and what each side may use."}
+  - {uses: contract-plain-summary, note: "Turns the reviewed contract into two minutes of reading for the person who has to sign or approve it."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/review-a-contract-and-get-edits-and-a-plain-summary/skeleton.yaml

@@ -1,0 +1,20 @@
+slug: tiktok-shop-breakout-finder
+name: "TikTok Shop breakout finder"
+summary: "Attach TikTok Shop product graphs. Get a score out of 100 for each, and test or drop."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: store_capture, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "This Product Research Method Made Me $2.3M Dropshipping (LIVE HUNTING)", by: "Ben, dropshipping YouTuber", url: "https://www.youtube.com/watch?v=sCUEN4htx-0", used: "The filters, how to read the 30 and 180 day graphs, video age and spread, the price and language flags, the cross-checks, and the hook-plus-body test idea"}
+  - {title: "Full Product Research Course for Dropshipping (Find Winning Products FAST)", by: "A dropshipping YouTuber (name not given in the source)", url: "https://www.youtube.com/watch?v=cRQripx7qXM", used: "The daily shortlist routine"}

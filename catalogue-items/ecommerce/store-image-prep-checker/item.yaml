@@ -1,0 +1,23 @@
+slug: store-image-prep-checker
+name: "Store image prep checker"
+summary: "Give it your image files and sizes. Get what to resize and rename, alt text and a score."
+category: ecommerce
+type: skill
+role: check
+job: image
+level: beginner
+inputs:
+  - {type: product_photos, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: gallery_plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify speed and image optimization (a video series on images, app scripts, layout shift, largest content and store audits)", by: "Christian, a Shopify developer (YouTube channel)", used: "Image size and file weight ceilings, upload format, bulk resizing against hand cropping, three to five images per product, file names and alt text, and auditing the Files list"}
+  - {title: "Website Speed Optimization Tips for Shopify Stores", by: "Shopify Plus blog, quoting agency owners", used: "Images as a large share of page weight and Shopify's image size options"}
+  - {title: "WordPress Speed Optimization (step by step)", by: "Elijah (video)", used: "Making an image about twice the size it shows on a sharp screen"}
+  - {title: "Ecommerce Site Speed Optimization: Complete Guide for 2026", by: "Jakub Rusniok (article)", used: "File weight targets for product and hero images"}

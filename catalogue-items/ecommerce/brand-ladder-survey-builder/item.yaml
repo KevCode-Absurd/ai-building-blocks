@@ -1,0 +1,22 @@
+slug: brand-ladder-survey-builder
+name: "Brand ladder survey builder"
+summary: "Give it your category and rivals. Get a short buyer survey that shows where you rank."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: persona, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: document}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [al-ries, jack-trout]
+credits:
+  - {title: "Positioning: The Battle for Your Mind", by: "Al Ries and Jack Trout (book)", used: "The ladder idea and the seven-brand limit, rating brands 1 to 10 on attributes (semantic differential), the bank case that led with the position buyers already gave it, the two-theme test with awareness before and after, and repeating the same survey later"}

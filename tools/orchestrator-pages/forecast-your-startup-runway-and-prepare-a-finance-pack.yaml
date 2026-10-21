@@ -1,0 +1,75 @@
+new_slug: forecast-your-startup-runway-and-prepare-a-finance-pack
+name: Forecast your startup runway and prepare a finance pack
+summary: Give it your plan. Get a cash model, a cash-out date with ranges and a board finance plan.
+job: money-and-investing
+thinking: high
+thinking_why: The model and the forecast must agree month by month. Give it your strongest model.
+headline: Know the month your cash runs out and what to do about it
+subhead: Give it your plan and numbers. It builds a monthly model with three cases, turns the cash into a range of likely cash-out dates, and sets the levels at which you cut or raise. It ends with a finance plan for your board.
+explain: |
+  A single runway number, cash divided by last month's spend, is nearly always wrong. It ignores hiring, the months when bills cluster, and the time it takes to raise money. By the time the number looks bad, the choices left are poor ones.
+
+  The steps replace it with a range. First it builds a monthly model from your plan: revenue from customers won and kept, the cost of making and selling, team and fixed costs, and cash flow in a best, base and worst case. Next it reads that cash and your real bank history, separates trend from season, adjusts for hiring, and finds the likely month cash reaches zero as a range, with the window in which to raise. The last step asks the hard questions, such as what happens if a raise takes twice as long, sets the cash levels at which you cut or raise, and assembles a pack for the board. It does not give legal or investment advice.
+when:
+  - You are raising money in the next year and need to know when you must start.
+  - You are hiring and need to see what it does to the cash-out date.
+  - A board or investor asks for a finance pack and you have only a spreadsheet of guesses.
+you_give:
+  - Your plan, with prices, how many customers you expect and how long they stay
+  - Your team plan and fixed costs
+  - Your bank balance and 12 or more months of real monthly cash (optional but much better)
+  - Planned hires, big purchases and any money already promised
+you_get:
+  - A monthly model with revenue, costs and cash in three cases
+  - A cash-out month shown as a range, with the window to raise
+  - Unit economics and payback by group of customers
+  - Cash levels at which to cut or raise, set in advance
+  - A finance plan for your board
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give your plan in plain words and your honest numbers. Say which are guesses.
+  - Add your real monthly bank history before step 2 if you have it.
+  - Treat the pack as a draft. Have your accountant or adviser review it before it goes to anyone outside.
+how_it_works:
+  - title: Build the model
+    text: Sets revenue from customers won and kept by group, adds the cost of making and selling, team and fixed costs, rolls it into cash flow, and lists every assumption.
+  - title: Forecast the runway
+    text: Takes the model's monthly cash with your real history, splits trend and season, adjusts for hiring, and finds the cash-out month as a range.
+  - title: Prepare the finance pack
+    text: Asks the hard questions, works out unit economics and payback, sets the cash levels at which to cut or raise, lays out the raise steps and assembles the board pack.
+output_shape: |-
+  STEP 1: MODEL
+    Revenue | costs | team | cash flow in three cases | assumptions list
+
+  STEP 2: RUNWAY
+    Monthly burn | cash-out month as a range | window to raise | what changes it most
+
+  STEP 3: FINANCE PACK
+    Hard questions answered | unit economics | cut and raise triggers | raise steps and dilution | board pack
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your hiring plan
+    how: Give the start month and cost of each hire. Hires move the cash-out date more than almost anything else.
+  - what: Time to raise
+    how: Say how long a raise took you or similar companies. The pack uses it to set the date by which you must start.
+  - what: Your cases
+    how: Define worst as "growth half of plan, one big customer lost". A named worst case is more useful than a percentage.
+  - what: Audience
+    how: Say if the pack is for a board, an investor or yourself. Detail and tone change.
+judge:
+  - Every assumption sits beside its number and is marked known or guessed.
+  - The cash-out month is a range and not a single date.
+  - The levels to cut or raise are written as cash balances or months, not feelings.
+  - The model, the forecast and the pack use the same numbers.
+  - The pack states that it is not legal or investment advice.
+test:
+  - Change one assumption, like the price, and see that the cash-out range moves the way you expect.
+  - Compare the model's first three months with your real bank balance.
+  - Ask the pack "what if the raise takes twice as long" and check that the answer matches the worst case.
+improve:
+  - Replace guesses with real numbers every month and rerun step 2.
+  - Rerun after every hire or big contract.
+  - Not worth running before you have a rough plan for revenue. Spend a week on that first.

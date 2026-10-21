@@ -1,0 +1,126 @@
+new_slug: store-sign-in-security-checker
+name: "Sign-in security checker"
+summary: "Describe how staff and customers sign in. Get gaps ranked, a score out of 100 and a password and second-step policy."
+job: protect-your-store
+thinking: medium
+thinking_why: "It compares your sign-in setup with a fixed rule set and ranks the gaps. A mid-size model handles this well."
+
+headline: "Sign-in security checker"
+subhead: Describe how your staff and your customers sign in, and what happens when someone forgets a password. It finds the gaps, ranks them, scores your setup out of 100 and writes a one-page password and second-step policy.
+
+explain: |
+  A store has two sets of logins. Staff accounts reach your admin, email, ad accounts and domain registrar. Customer accounts hold addresses, order history and sometimes saved cards. Old advice such as "change it every three months" and "add a symbol" makes people pick weaker passwords. The weakest point is often account recovery, where one email reset link opens everything.
+
+  This skill checks your setup against current password rules, a ranking of second-step methods, recovery, re-asking for the password before risky changes, and sessions and logs for custom builds. On Shopify, the platform handles password storage and sessions, so the checker skips those and focuses on staff accounts, apps and any custom login. It ends with a policy you can paste into your team notes or hand to a developer.
+
+when:
+  - You want to know whether your staff accounts are protected well enough before you add more people.
+  - You run WooCommerce, a headless build or a custom login and want a developer-ready list of fixes.
+  - You are deciding whether to ask customers for a second step, and want to avoid slowing checkout.
+
+you_give:
+  - "How people sign in today: password, email link, social login or passkey"
+  - Who has admin or staff accounts and which second step each uses
+  - "Your current password rules: length, symbols, expiry, whether pasting is allowed"
+  - What happens on forgot-password and account recovery
+  - Your platform (Shopify, WooCommerce or custom), so the check skips what the platform owns
+you_get:
+  - Gaps ranked by risk, each with a fix
+  - A score out of 100 with how it was counted
+  - A one-page password and second-step policy for your team or developer
+  - A list of checks that did not apply to your platform
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say which platform you use and how staff and customers sign in.
+  - Paste your current password rules and describe the forgot-password steps.
+  - List your staff accounts and the second step each one uses.
+  - Fix the Critical gaps first, then paste the policy into your team notes.
+
+how_it_works:
+  - title: Sorts what applies
+    text: Marks which checks belong to your platform and which belong to you, so a Shopify store is not told to hash passwords.
+  - title: Checks password rules
+    text: Length floor of 8 and no ceiling below 64, any character allowed, paste allowed, no forced symbols or rotation, and breach-list checks where saved cards or subscriptions exist.
+  - title: Ranks second steps
+    text: Security key or passkey first, then authenticator app, then push approval, then text message. Required for admin, staff, registrar, email and ad accounts.
+  - title: Checks recovery
+    text: Looks at what an attacker could do with one email inbox or a support call, and asks for two keys or backup codes.
+  - title: Checks risky changes
+    text: Looks for a password prompt before changes to email, password, address, payout details, staff users or API keys.
+  - title: Checks custom builds
+    text: For custom login only, checks storage, session and log rules.
+  - title: Scores and writes the policy
+    text: Deducts points per gap and drafts the one-page policy from what you decided.
+
+output_shape: |
+  WHAT APPLIES
+  Platform owns: <list>
+  You own: <list>
+
+  GAPS (ranked)
+  <nn> <Critical / High / Medium / Low> | <area> | <what was found>
+     fix: <one change>
+
+  SCORE  <n>/100 (100 - 20 x <Critical> - 10 x <High> - 5 x <Medium> - 2 x <Low> = <n>)
+         <n>/100 after the fixes
+
+  POLICY (one page)
+  Passwords: <rules>
+  Second step: <who, which method>
+  Recovery: <rules>
+  Risky changes: <rules>
+  Customers: <when to ask for a second step>
+
+  NOT RUN
+  <check, and what is needed>
+  MISSING: <sign-in methods | staff list | recovery steps | platform>
+
+tweaks:
+  - what: Your platform
+    how: Name it. On Shopify the storage, hashing and session items are left out. On WooCommerce, headless or custom builds they apply in full and need a developer.
+  - what: Whether you hold saved cards or subscriptions
+    how: If you do, the breach-list check on customer accounts moves up. A low-stakes store can mark it optional.
+  - what: Which accounts count as staff
+    how: Include email, ad accounts, domain registrar and social accounts, not only the store admin. One stolen email inbox can reset the rest.
+  - what: Customer second step
+    how: Say if checkout speed matters most. The policy then asks for a second step only on a new device, new country or flagged address.
+
+judge:
+  - Every gap names the area, the risk level and a single fix.
+  - It does not ask for forced symbols, forced rotation or a maximum length cap.
+  - Second steps are ranked in the order key or passkey, app, push, text message.
+  - Customer second-step advice is by risk, not for everyone.
+  - Items owned by your platform are marked as skipped, not scored.
+
+test:
+  - Tell it staff use text-message codes and a shared admin login. It should rank both near the top.
+  - Tell it your forgot-password link goes to a shared inbox. It should flag recovery.
+  - Run it twice on the same description. The ranking order should match.
+  - Compare its policy with your current rules. Anything you disagree with should be a rule you can name.
+
+improve:
+  - Put your platform and the list of staff accounts in the skill file so you do not retype them.
+  - Add the second step you can really support, such as "security keys for 3 owners", and have it check against that.
+  - Add any rule your insurer or payment provider sets as an extra check.
+  - Keep the policy page in your brand file and refresh it when staff change.
+  - Pair it with the Staff phishing rules briefer, which makes the rules easy to follow.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run this from a written description of your sign-in setup."}
+    - {name: "Have I Been Pwned", why: "A free breach lookup. It shows whether staff email addresses appear in known breaches."}
+  inputs:
+    - "A list of every staff email address, so the breach check can run on each"
+    - "The text of your current forgot-password email"
+    - "Screenshots of your admin security settings page"
+
+terms:
+  - term: Second step
+    meaning: A second proof after your password, such as a code from an app, a security key or a passkey.
+  - term: Passkey
+    meaning: A sign-in method that uses your device instead of a typed password. It cannot be used on a fake site.
+  - term: Breach list
+    meaning: A list of passwords already leaked from other sites. A password on it is unsafe even if it looks strong.
+  - term: Credential stuffing
+    meaning: Trying stolen email and password pairs from another site on yours.

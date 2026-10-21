@@ -1,0 +1,123 @@
+new_slug: journalist-query-answer-writer
+name: "Journalist query answer writer"
+summary: "Give it journalist requests and your expertise. Get ranked picks, expert answers and a win-rate sheet."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It ranks requests and writes short answers from facts you give it, so a mid-size model is enough."
+
+headline: "Journalist query answer writer"
+subhead: Paste open requests from journalists and tell it what you have really done. It ranks the requests worth your time, drafts a skimmable expert answer for each from your own experience, adds your bio, and gives you a tracker so you learn your win rate.
+
+explain: |
+  Journalists post requests for expert sources every day. A quote from you in an article can bring a link from a site your customers read, and it costs nothing but time. Most owners never try, or send long generic answers that do not get picked.
+
+  This skill sorts the requests and drafts answers that a journalist can use at a glance. It ranks each request for fit, date and the outlet's authority, and skips the ones you cannot answer from real experience. Where your own detail belongs, it leaves a clear gap for you to fill. It never makes up a story, number or credential. It also sets up a tracker, because win rates differ by niche: one source saw 2 hits in 20 answers, another expects about 1 in 100.
+
+when:
+  - You want links and mentions from news and industry sites without paying for them.
+  - You have 15 minutes a day, or once a month, to answer journalists.
+  - You sell in a niche where journalists often ask about your topic, such as health, home or food.
+
+you_give:
+  - Your category and the things you have really done, with numbers and stories
+  - Open journalist requests copied from a request service
+  - A short bio (optional)
+  - Past pitches and results (optional)
+you_get:
+  - Requests ranked by fit, date and outlet authority, with the ones to skip
+  - A draft answer for each, built from your real experience with gaps for your detail
+  - A tracker with sent, positive reply and link won, and your win rate
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Sign up as an expert on a journalist-query service and paste in the requests that match your topic.
+  - Tell it what you have really done on each topic, with numbers and stories.
+  - Fill in every EXPERIENCE NEEDED gap in your own words, then send before the deadline.
+  - Keep the tracker and look at your win rate each month.
+
+how_it_works:
+  - title: Filters the requests
+    text: Keeps recent ones on your topic, because older requests have probably been answered.
+  - title: Ranks fit
+    text: Checks your real experience, the date and the outlet's authority. Very small sites are skipped unless the topic fits.
+  - title: Asks for your detail
+    text: Asks what you did and what happened. No experience on a topic means you skip that request.
+  - title: Drafts the answer
+    text: Answers the exact question first, with bold key phrases and short bullets so it is quick to read.
+  - title: Adds your bio
+    text: One or two paragraphs showing why you can speak on the topic, from facts you gave.
+  - title: Checks for care
+    text: Health, money and legal advice gets a line to check with a qualified person.
+  - title: Tracks results
+    text: Logs each pitch, any positive reply and any link won, then works out your win rate.
+
+output_shape: |
+  RANKED QUERIES
+  1. <outlet> | <topic> | posted <date> | deadline <date>
+     authority <n> | fit: <high | medium | low> | answer: <yes | skip: reason>
+
+  ANSWER DRAFTS
+  Query: <...>
+  <answer with bold key phrases and bullets>
+  EXPERIENCE NEEDED: <what you must add>
+  Bio: <1 to 2 paragraphs>
+
+  TRACKER
+  query | outlet | sent | positive reply | link won | notes
+
+  WIN RATE
+  <link won / sent>; <what to do next>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Your real experience
+    how: Give numbers, dates and what you saw. Specific detail is what a search cannot give, and it is what gets chosen.
+  - what: Your routine
+    how: Say if you have 15 minutes a day or one session a month. The ranking and the volume of drafts fit that.
+  - what: Outlet authority
+    how: Paste a free authority check for outlets you care about. Very small sites are skipped unless the topic fits.
+  - what: Your bio
+    how: Paste your own. It uses yours and does not add credentials you did not give.
+  - what: Topics you can speak on
+    how: List related topics too, such as interior design for a curtain brand. It widens the requests that qualify.
+
+judge:
+  - Every answer uses only experience you gave it.
+  - Each answer starts by answering the exact question.
+  - Every request is ranked with a reason, and skipped ones say why.
+  - Gaps for your own detail are marked clearly.
+  - The tracker has a column for sent, positive reply and link won.
+
+test:
+  - Give it a request on a topic you know nothing about. It should skip it.
+  - Give it a thin answer with no personal detail. It should mark where your experience belongs.
+  - Send ten answers and log the results. The sources report anything from 2 hits in 20 answers to about 1 in 100, so use your own count.
+  - Ask it for a credential you do not have. It should refuse.
+
+improve:
+  - Save your real stories and numbers in the skill file so every answer can pull from them.
+  - Add your approved bio and the topics you will never speak on.
+  - Add your outlets list, so it knows which sites matter for your category.
+  - Pair it with the Store link gap planner, which sets how many links you need each month.
+
+works_best_with:
+  tools:
+    - {name: "Connectively", why: "The service that replaced HARO. Journalists post requests, and experts answer them."}
+    - {name: "Featured", why: "A journalist-query service with a free plan limited to a few answers a month."}
+    - {name: "Source of Sources", why: "A free journalist-query service started by HARO's founder."}
+    - {name: "Any good chat AI", why: "Ranks requests and drafts skimmable answers from your facts."}
+  inputs:
+    - "Your best customer stories and test results"
+    - "A short bio with real credentials"
+    - "Photos you are free to share"
+    - "Your tracker from past pitches"
+
+terms:
+  - term: Journalist query
+    meaning: A request from a journalist asking experts for a quote or advice for a story.
+  - term: Authority score
+    meaning: A tool's rating of how strong a website is. Each tool scores it differently.
+  - term: Win rate
+    meaning: The share of your answers that end in a published mention or link.

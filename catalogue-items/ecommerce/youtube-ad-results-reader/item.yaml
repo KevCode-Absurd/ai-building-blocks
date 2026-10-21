@@ -1,0 +1,19 @@
+slug: youtube-ad-results-reader
+name: "YouTube ad results reader"
+summary: "Give it your YouTube ad results. Get a scale, keep or pause call per ad, with a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: video_ads, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads Free Course (4+ Hours) | Google & Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given in the video)", used: "View rate, click-through rate and conversion rate benchmarks, the new-customer CPA rule and the scale, keep or pause decision rule"}

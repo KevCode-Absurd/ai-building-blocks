@@ -1,0 +1,97 @@
+new_slug: brand-voice-reviewer
+name: Brand voice reviewer
+summary: Give it each draft before it goes out. Get it checked against your voice, fixed and re-checked, with repeat slips tracked.
+job: brand-file
+thinking: medium
+thinking_why: It checks, rewrites flagged lines and checks again, up to three rounds. A mid-size model works. Use a stronger one for long pages.
+headline: Brand voice reviewer
+subhead: Give it any draft before it goes out, with your brand file. It checks the draft against your voice, rewrites only the lines that fail, checks again until it passes or three rounds are done, and tracks the slips that keep coming back.
+explain: |
+  A brand voice slips when many people write and no one checks. Copy goes out that sounds like a different company, or makes a claim you do not make. A single check helps, but a fix can add new slips, and nobody notices the same mistake coming back every month.
+
+  This agent checks each draft against your voice guide and ranks what it finds. It rewrites only the flagged lines, never changes a fact, price or claim, and checks again. It stops after three rounds and gives a person what is left. It also counts which slips repeat across drafts, and when one shows up three times, it suggests a rule for your guide. It never publishes or sends anything.
+when:
+  - Several people or tools write your copy and it does not always sound like you.
+  - You want every ad, email or page checked before it ships, the same way each time.
+  - The same voice mistakes keep showing up and you want to fix the cause.
+you_give:
+  - The draft, and where it will be used
+  - Your brand file, with voice, claims and what you do not say
+  - Your voice guide, if you have one (optional)
+  - Proof for any claims in the draft (optional)
+you_get:
+  - A pass or not-passed result, and how many rounds it took
+  - The final draft with changed lines marked, and the slip each fixed
+  - Any flag left for a person, including claim and legal flags
+  - A count of repeat slips across drafts
+  - A suggested guide rule when a slip repeats three times
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to review a draft.
+  - Give it the draft and your brand file. The first time, give it your voice guide, or let it build one and approve it.
+  - Read the final draft and the open flags. Fix what is left yourself.
+  - Say yes to any guide rule you want added.
+  - Run it on every draft. It keeps the slip count in a review folder.
+how_it_works:
+  - title: Get the guide
+    text: Uses your voice guide, or builds one from your brand file once and waits for your approval.
+  - title: Check the draft
+    text: Ranks every deviation from your voice by severity, with a before and after fix for each.
+  - title: Choose the path
+    text: No major deviation and three or fewer minor ones means a pass. Otherwise it goes to a rewrite.
+  - title: Fix the flagged lines
+    text: Rewrites only the flagged lines in your voice. Facts, numbers and claims are never changed.
+  - title: Check again
+    text: Checks the new draft. It repeats up to three rounds, then hands back what is left for a person.
+  - title: Track repeat slips
+    text: Counts each kind of slip across drafts and suggests a guide rule when one appears three times.
+output_shape: |-
+  RESULT
+    <passed | not passed> in <n> rounds | guide used: <approved | draft>
+
+  FINAL DRAFT
+    <the draft, changed lines marked>
+
+  WHAT CHANGED
+    <line> | slip fixed: <slip> | round: <n>
+
+  STILL OPEN
+    <flag> | needs: <a person | a qualified person for a claim or legal check>   (or: none)
+
+  REPEAT SLIPS
+    <slip> | drafts: <n> | suggested guide rule: <rule>
+
+  FILES AND MISSING
+    <each round's file> | MISSING: <every line>
+tweaks:
+  - what: Your voice guide
+    how: A real guide with examples gives much better checks than a short list of adjectives. Build one once and keep it.
+  - what: Your pass bar
+    how: The starting bar is no major deviation and three or fewer minor ones. Tighten it for ads, loosen it for quick social posts.
+  - what: Where the draft will be used
+    how: Tell it if the draft is an ad, an email or a page. Tone changes by place, and the check uses it.
+  - what: Your claims proof
+    how: Give it the facts behind any claim. Without them, it marks claims unchecked and leaves them alone.
+judge:
+  - No fact, number, price, date or claim changed in the rewrite.
+  - Lines that passed were kept word for word.
+  - The final draft was checked after the last rewrite.
+  - It stopped within three rounds and listed what was left.
+  - Nothing was published, sent or added to your guide without your clear yes.
+test:
+  - Give it a draft you know is off-voice. See whether it flags the lines you would flag.
+  - Give it a draft that already sounds right. It should pass in one round and change nothing.
+  - Run the same draft twice. The flags should match, apart from wording.
+improve:
+  - Add your best past copy to the guide as examples, so the checks and rewrites follow it.
+  - Set your own pass bar for each place, such as strict for ads and looser for posts.
+  - Keep the approved guide rules in the review folder, so the count restarts after each rule.
+  - Run your last ten drafts through it once to see which slips repeat before you set rules.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the review folder, read the slip count and check every new draft the same way.
+    - name: Your writing tools
+      why: Paste the draft from your email tool, page editor or ad manager, and say where it will run.
+  inputs:
+    - Your five best past pieces of copy as examples
+    - A list of claims you may and may not make

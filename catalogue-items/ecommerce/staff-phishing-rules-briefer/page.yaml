@@ -1,0 +1,120 @@
+new_slug: staff-phishing-rules-briefer
+name: "Staff phishing rules briefer"
+summary: "Give it your tools and team size. Get a one-page phishing rule sheet and a ten-minute drill with answers."
+job: protect-your-store
+thinking: low
+thinking_why: "It turns a short list of tools and rules into a clear sheet and quiz. A small, fast model can do this."
+
+headline: "Staff phishing rules briefer"
+subhead: Tell it which accounts matter, how big your team is and whether you use a password manager or security keys. It writes a one-page rule sheet in plain words and a ten-minute drill with ten sample cases and answers.
+
+explain: |
+  A phishing page copies a login screen and waits for someone to type their password. One staff member on a fake admin page can hand over your store, your email or your ad account. Telling people to "be careful" does not work. Specific habits do: let the password manager be the alarm, use keys that refuse fake sites, read the address from the right place, and never sign in from a link.
+
+  This skill builds a one-page sheet from those habits, fitted to the tools you actually use. It then writes a drill of ten sample cases, each with an answer, to run with your team in ten minutes. The rules only work if the tools behind them are in place, so run the Sign-in security checker first if your team shares logins or has no second step. Repeat the drill when staff change and after any near miss.
+
+when:
+  - You are onboarding staff, a contractor or an agency who will touch your store or ad accounts.
+  - Someone nearly fell for a fake login, invoice or "urgent" message.
+  - You want a short team session on security that people will remember.
+
+you_give:
+  - "The accounts that matter: store admin, email, ad accounts, payments, domain registrar, social"
+  - Team size and who uses shared logins
+  - Whether a password manager or security keys are in use
+you_get:
+  - A one-page "how we avoid fake login pages" sheet in plain words
+  - A drill with ten sample cases and answers
+  - Notes on how to run the drill in ten minutes
+  - A list of the tools that must be in place for the rules to work
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your key accounts, team size and whether you use a password manager or security keys.
+  - Print or pin the sheet where your team works.
+  - "Run the drill in a team call: show each case, ask safe or unsafe, then discuss the answer."
+  - Run it again when staff change and after any near miss.
+
+how_it_works:
+  - title: Fits your tools
+    text: Writes rules around the password manager and security keys you really use, or says what to set up first.
+  - title: Teaches addresses
+    text: Shows how to find the real site in an address and why left-hand parts can be faked.
+  - title: Sets the habits
+    text: Never sign in from a link, close pop-up sign-ins, never paste text a message tells you to, and ignore the padlock as proof.
+  - title: Covers warnings and offers
+    text: Never click through browser warnings, and route offers to buy your app, domain or access to the owner.
+  - title: Builds the drill
+    text: Ten cases covering real, lookalike, long subdomain, fake pop-up, paste scam and urgent invoice.
+  - title: Writes the answers
+    text: Gives a short reason for each answer so the team talk has something to discuss.
+
+output_shape: |
+  HOW WE AVOID FAKE LOGIN PAGES (one page)
+  1. <rule about the password manager>
+  2. <rule about keys or passkeys for key accounts>
+  3. <rule: never sign in from a link, use a bookmark or type the address>
+  4. <how to read an address>
+  5. <rule about pop-up sign-ins>
+  6. <rule about pasting text because a message says so>
+  7. <rule about the padlock and warnings>
+  8. <rule about offers to buy your app, domain or access>
+  Who to tell: <name or channel>
+
+  DRILL (10 minutes)
+  Case 1 <description of link or screen> | answer: <safe / unsafe> | why: <one line>
+  ...
+  Case 10
+
+  TOOLS THE RULES NEED
+  <what must be in place first>
+
+  MISSING: <accounts | team size | password manager or keys>
+
+tweaks:
+  - what: Your key accounts
+    how: List store admin, email, ad accounts, payments, domain registrar and social. The sheet names them so people know which logins matter most.
+  - what: Your tools
+    how: Say if you use a password manager or security keys. The sheet's first two rules rest on these, and the skill lists what to set up if you have neither.
+  - what: Team size and shared logins
+    how: Say who shares logins. The skill tells you to fix that first, since no rule helps when ten people use one password.
+  - what: Your drill cases
+    how: Add one or two real messages your team has received, with names removed. Real cases make the drill stick.
+
+judge:
+  - The sheet fits on one page and uses plain words.
+  - The first rule is "if the password manager does not offer to fill, stop".
+  - The sheet says never to sign in from a link in a message.
+  - The drill has ten cases with a safe or unsafe answer and a one-line reason for each.
+  - Drill cases use made-up example domains, never a real company's login page.
+
+test:
+  - Show the sheet to someone new on your team. Ask them to say the top three rules from memory.
+  - Run the drill with two people. They should disagree on at least one case, and the answers should settle it.
+  - "Check each drill case: the address in it should match its answer."
+  - Run it again after three months and swap in new cases.
+
+improve:
+  - Add your real tools and names to the sheet, such as your password manager's name.
+  - Add the one place to report a suspicious message, such as a named person or channel.
+  - Add a line for any account where staff must call back to confirm payment changes.
+  - Add examples from your own near misses.
+  - Pair it with the Sign-in security checker so the tools behind the rules are in place.
+
+works_best_with:
+  tools:
+    - {name: "A password manager such as Bitwarden or 1Password", why: "It only fills a password on the real site, so it works as the team's phishing alarm."}
+    - {name: "Security keys or passkeys", why: "They refuse to sign in on a fake site. Use them for email, store admin, ad accounts and your registrar."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the sheet and drill from your short list."}
+  inputs:
+    - "Two or three real suspicious messages your team received, with names removed"
+    - "The name of the person staff should tell about a suspicious message"
+    - "Your team list and which accounts each person uses"
+
+terms:
+  - term: Phishing
+    meaning: A fake message or page made to look real, to get someone to hand over a password or payment.
+  - term: Security key
+    meaning: A small device or built-in phone feature that proves it is you. It will not work on a fake site.
+  - term: Lookalike address
+    meaning: A web address that reads like a real one but is spelled a little differently or uses similar-looking letters.

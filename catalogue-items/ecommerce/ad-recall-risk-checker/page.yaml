@@ -1,0 +1,124 @@
+new_slug: ad-recall-risk-checker
+name: "Ad recall risk checker"
+summary: "Paste your ad or creator brief. Get a brand-recall score out of 100 and fixes."
+job: check-ads
+thinking: medium
+thinking_why: "It judges an ad against twenty yes or no questions and writes fixes, so a mid-size model works and a stronger one reads visuals more closely."
+
+headline: "Ad recall risk checker"
+subhead: Paste your ad script, creator brief or finished ad. It tests whether viewers will remember the brand, across five areas. You get a brand-recall score out of 100 with the sum shown, what pulls attention from the product, fixes for weak areas, and one cheap test.
+
+explain: |
+  An ad can be watched, liked and shared, and still leave the viewer unable to say who it was for. A famous face, a big joke or a stunt can pull the eye away from the product. A product that sits in a corner, or only shows up on the last frame, gets forgotten.
+
+  This skill checks five things: what the product does in the story, whether it fits the scene, what distracts from it, whether a normal customer would see themselves in the ad, and whether the brand cues show early, late and when the hook lands. Each area has four yes or no questions worth 5 points. The score is for brand recall judged from the ad itself, not for sales. The lab figures behind the method come from small studies, so treat them as prompts to test. Run the cheap recall test before you scale spend.
+
+when:
+  - You are about to spend on a new ad or brief and want to know if the brand will be remembered.
+  - Your ads get views and likes, but branded search and add-to-cart do not move.
+  - A creator or agency sent a script and you want a clear list of what to change.
+
+you_give:
+  - Your ad script, storyboard, creator brief or finished ad (attach the file or link)
+  - Your product and brand name, logo and colour rules
+  - Your audience and the platform it will run on
+  - Past results for the ad (optional)
+you_get:
+  - A brand-recall score out of 100, with the five section scores and the sum
+  - A list of attention thieves, such as a model, a celebrity, a joke or a stunt
+  - Fixes for each section under 12, the smallest change that raises it
+  - One cheap test to run before you scale
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the script or brief, or attach the finished ad, and add your brand rules and platform.
+  - Read the sections under 12 first and make the smallest change for each.
+  - Run the checker again on the fixed version.
+  - Run the cheap test before you scale spend.
+
+how_it_works:
+  - title: Checks the story role
+    text: Does the product do something in the plot, or just sit in a corner or on a logo card?
+  - title: Checks the fit
+    text: Is the product used for its real job in a scene where customers use it?
+  - title: Looks for distractions
+    text: Famous faces, very attractive models, sexual content, big jokes and stunts that pull the eye from the product.
+  - title: Checks identification
+    text: Would a normal customer say that person is like me? Real customers and ordinary settings do best.
+  - title: Checks brand cues
+    text: Name, product shape or colour early, at the end, and in frame when the hook lands. Compared with five rival ads.
+  - title: Marks controversy
+    text: Shock needs a link to the product and an owner sign-off. It is also checked against platform policy.
+  - title: Scores and shows the sum
+    text: Five sections of 20. Four yes or no questions each, worth 5 points.
+  - title: Sets a cheap test
+    text: Ask ten people next day which brand it was for, or run it against your current ad and watch branded search and add-to-cart.
+
+output_shape: |
+  AD: <name> | format: <video | static | creator brief | email> | platform: <...>
+  Checked from: <script | finished ad seen | description only>
+
+  SCORE <n>/100 brand recall (higher = brand more likely to be remembered)
+  Story role      <n>/20  (a) <Y/N> (b) <Y/N> (c) <Y/N> (d) <Y/N>
+  Fit             <n>/20
+  Distraction     <n>/20
+  Identification  <n>/20
+  Brand cues      <n>/20
+  Sum: <n> + <n> + <n> + <n> + <n> = <n>
+  <n>/100 after the fixes (on the checks run)
+
+  ATTENTION THIEVES: <element | where | what it pulls away from>
+  SAME-AS-EVERYONE: <pass | fail, with the one big change>
+  CONTROVERSY RISK: <none | element, owner sign-off needed>
+  FIXES: <section>: <smallest change>
+  CHEAP TEST: <ten-person poll next day | head to head>
+  NOT RUN: <check, and what is needed>
+
+tweaks:
+  - what: Whether you gave the finished ad
+    how: Attach the video or image, not only a description. The distraction and brand-cue checks need to see what is on screen.
+  - what: Your brand rules
+    how: Give the logo, product shape and colour rules. The brand-cue check looks for exactly these, and without them it can only guess.
+  - what: The platform
+    how: Say where it runs, such as Meta, TikTok or YouTube. The checks on early cues and policy depend on how the ad is shown.
+  - what: Who is in the ad
+    how: Say whether people are real customers, creators or actors. The identification check scores real customers and ordinary settings highest.
+  - what: Rival ads
+    how: Paste or attach five rival ads. The same-as-everyone test needs them side by side with the logos hidden.
+
+judge:
+  - Every section shows its four answers and a score, and the five scores add up to the total.
+  - The score is described as brand recall judged from the ad itself and not as sales.
+  - Each attention thief names the element and the place it appears.
+  - Every section under 12 has a fix that changes one thing.
+  - The study figures are labelled as small lab studies to test.
+
+test:
+  - Check an ad you know the brand was forgotten in. Its score should be low in story role or brand cues.
+  - Check an ad that sells well and is remembered. It should score higher than the forgotten one.
+  - Run it twice on the same ad. The section scores should be close, within a point or two of each other.
+  - Run the ten-person poll on the old and new versions. Ask the next day which brand it was for. The new one should be named by more people.
+
+improve:
+  - Add your own brand cues, such as a signature colour or pack shape, to the brand-cue step so every run looks for them.
+  - Add your platform's ad rules to the controversy step, and update them when the rules change.
+  - Keep the poll results for each ad in your lessons file, so you can see which fixes lifted recall.
+  - Pair it with the Meta ads compliance checker for policy, and with the Ad sameness checker to see if your live ads repeat the same idea.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images and video links can run the checks. Attach the ad."}
+    - {name: "Google Forms", why: "A one-question form for the next-day poll: which brand was the ad for?"}
+  inputs:
+    - "The finished ad file or a link, not only the script"
+    - "Five rival ads for the same product type"
+    - "Your branded search and add-to-cart numbers before the ad runs"
+    - "A short note on who appears in the ad and whether they are real customers"
+
+terms:
+  - term: Recall
+    meaning: Whether a viewer can name the brand after seeing the ad.
+  - term: Attention thief
+    meaning: Something in the ad that pulls the eye away from the product and brand name.
+  - term: Branded search
+    meaning: People searching for your store or product name, which often rises when an ad is remembered.

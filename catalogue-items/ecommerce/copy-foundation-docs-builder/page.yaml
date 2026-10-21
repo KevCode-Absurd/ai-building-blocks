@@ -1,0 +1,123 @@
+new_slug: copy-foundation-docs-builder
+name: "Copy foundation docs builder"
+summary: "Give it your product page. Get a research doc, avatar sheet, offer brief and belief list to reuse."
+job: understand-customers
+thinking: medium
+thinking_why: "It organises research into four documents by clear rules, so a mid-size model is enough. The deep-research step runs in your AI's own research mode."
+
+headline: "Copy foundation docs builder"
+subhead: Give it your product page. It has an AI with deep research collect what your buyers say online, then builds four documents. You get a research doc, an avatar sheet with quotes, an offer brief and a list of at most six beliefs a buyer must hold to buy.
+
+explain: |
+  Copy written without research sounds like every rival. Copy written from real customer words sounds like the buyer's own thoughts. Most owners skip the research because it takes days.
+
+  This skill hands the research to an AI with deep research or web access. The AI first writes its own research prompt from your product page, then runs it. It collects what buyers say on forums, in video comments and in reviews, plus the fixes they tried before. From that it builds four short documents you can reuse for every page, ad and script: the research itself, an avatar sheet, an offer brief and a list of beliefs the buyer needs. It also pulls four to six buyer archetypes. You save them once as PDFs and upload them each time you write.
+
+when:
+  - You are about to write a product page, ad or advertorial and have no written research to work from.
+  - Your copy sounds generic and you want it grounded in what buyers say.
+  - You want an AI to write for you and need to give it the same facts every time.
+
+you_give:
+  - Your product page saved as a PDF without images
+  - Product, price, what it replaces and who buys it
+  - Reviews, support emails or survey answers (optional)
+  - Existing advertorials (optional)
+
+you_get:
+  - A research document of 20 to 60 pages with customer quotes and their sources
+  - An avatar sheet with pains, goals, drivers and a quote bank
+  - An offer brief with awareness level, sophistication stage, big idea, mechanism and name
+  - A list of at most six beliefs a buyer must hold to buy, plus four to six buyer archetypes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your product page as a PDF without images, and say who buys and what it replaces.
+  - Let the AI write its own research prompt, then run it with deep research on. Answer its questions and wait 8 to 20 minutes.
+  - Check every study, name and number it found before you use any of it.
+  - Save the four documents as PDFs and upload them every time you write a page, ad or script.
+
+how_it_works:
+  - title: Sets the AI up
+    text: Gives it the product page and asks it to explain what you sell and who it is for.
+  - title: Writes the research prompt
+    text: Has the AI write its own deep-research prompt, then runs it and answers its questions.
+  - title: Saves the research
+    text: A 20 to 60 page document with customer words and the fixes buyers tried before.
+  - title: Builds the avatar sheet
+    text: Demographics, pains, goals, emotional drivers and a quote bank.
+  - title: Builds the offer brief
+    text: Awareness level, sophistication stage, big idea, mechanism and product name.
+  - title: Builds the beliefs list
+    text: At most six lines starting "I believe that", usually four to six.
+  - title: Finds archetypes
+    text: Four to six buyer types, so each ad can speak to one.
+  - title: Checks and saves
+    text: Runs a gap check, you verify every claim, then you save the documents as PDFs to reuse.
+
+output_shape: |
+  1 RESEARCH DOC (<n> pages; full file saved)
+    Customer words: <quote> | source | date
+    Earlier solutions tried: <solution> | why it failed
+    Gaps: <what is thin>
+
+  2 AVATAR SHEET
+    Demographics / Pains / Goals / Emotional drivers
+    Quote bank: <quote> | source
+
+  3 OFFER BRIEF
+    Awareness level: <...>  Sophistication stage: <...>
+    Big idea: <...>  Mechanism: <why this works / why others failed>
+    Product name: <...>
+
+  4 NECESSARY BELIEFS (at most six)
+    I believe that <...>
+
+  ARCHETYPES (4 to 6): <name> | pain | wants
+  CLAIMS TO CHECK: <item> | checked: <yes / no>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Quality of the product page PDF
+    how: Include all text, with hidden sections opened. The AI builds the research prompt from it.
+  - what: Your own reviews
+    how: Add them. They are the best source of customer words and the research doc gets stronger with them.
+  - what: Thin or new markets
+    how: Add interviews and surveys. Forum text alone is not enough there.
+  - what: Number of archetypes
+    how: Ask for four to six. Fewer is better when you have a narrow product.
+
+judge:
+  - Every customer quote has a source and a date.
+  - The beliefs list has six items or fewer, each starting "I believe that".
+  - The offer brief names all five parts (awareness level, sophistication stage, big idea, mechanism, name).
+  - The research names fixes buyers tried before and why they failed.
+  - No study, doctor or number is used without a checked mark.
+
+test:
+  - Open five quotes from the research and find them at their source. All five should exist.
+  - Ask a friend who fits the avatar if the pains and quotes sound like them.
+  - Write one ad headline from the documents and one without. Read both to a buyer and ask which sounds more like them.
+  - Run the research twice and compare the top pains. They should overlap.
+
+improve:
+  - Add your own interview notes to the research doc after each customer call.
+  - Edit the beliefs list whenever a page test shows buyers still doubt something.
+  - Save the finished set into your brand file, with the date, and redo it each year.
+  - Pair it with the Big idea and mechanism builder to sharpen the offer brief.
+
+works_best_with:
+  tools:
+    - {name: "ChatGPT, Claude or Gemini with deep research", why: "Each can run a long web research pass and collect customer words from forums and comments."}
+  inputs:
+    - "Your last 100 reviews and support emails"
+    - "Any past surveys or customer call notes"
+    - "Rival product pages, so the offer brief can place your big idea"
+
+terms:
+  - term: Avatar sheet
+    meaning: A one-page profile of a typical buyer, with their pains, goals and real quotes.
+  - term: Sophistication stage
+    meaning: How many similar claims the buyer has already heard. A buyer who has heard many needs a new reason to believe.
+  - term: Deep research
+    meaning: An AI mode that searches the web for many minutes and writes a long, sourced report.

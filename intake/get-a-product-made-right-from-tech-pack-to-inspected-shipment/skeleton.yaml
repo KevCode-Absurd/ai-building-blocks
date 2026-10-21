@@ -1,0 +1,57 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Our words.
+id: get-a-product-made-right-from-tech-pack-to-inspected-shipment
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: get-a-product-made-right-from-tech-pack-to-inspected-shipment
+  name: "Get a product made right, from tech pack to inspected shipment"
+  summary: "Give it your product photos. Get a tech pack, a vetted factory, the landed cost, a sample check and an inspection brief."
+  when: "you are ordering a physical product from a factory and want the spec, the price and the quality settled before you pay the balance."
+  job: plan-supply-chain
+  level: intermediate
+steps:
+  - name: "Product tech pack writer"
+    skill: product-tech-pack-writer
+    job: ops
+    from: "skill: product-tech-pack-writer"
+    method: ["Write the six sections of the pack", "Replace every vague word with a number", "Keep the decisions the owner must make out of the factory's hands", "List the measures a quality check can compare", "Write the quote request in a fixed shape"]
+    inputs: [product_photos, product_data]
+    outputs: [document]
+    note: "Starts the flow. Turns your photos and ideas into the one spec every factory quotes against."
+  - name: "Supplier shortlist vetter"
+    skill: factory-shortlist-vetter
+    job: ops
+    from: "skill: factory-shortlist-vetter"
+    method: ["Size the factory list and message them all alike", "Video call each finalist and note red flags", "Check documents and certificates", "Score each factory out of 100", "Plan a backup supplier"]
+    inputs: [document, product_data!]
+    outputs: [audit_report, shortlist]
+    note: "Judges factories by how they answer the tech pack from the step before."
+  - pause: "Send the tech pack and the same quote request to your shortlisted factories. Collect their quotes and order samples from your finalists."
+  - name: "Landed cost calculator"
+    skill: landed-cost-calculator
+    job: analysis
+    from: "skill: landed-cost-calculator"
+    method: ["List every cost layer a quote leaves out", "Work freight, duty and storage per unit", "Divide by the units that pass inspection", "Compare air and sea on the whole bill", "Score the margin and say go or no-go"]
+    inputs: [product_data, document, spreadsheet!]
+    outputs: [audit_report]
+    note: "Prices the quotes you collected, checked against the tech pack, down to cost per sellable unit and margin."
+  - name: "Sample approval gatekeeper"
+    skill: sample-approval-gatekeeper
+    job: ops
+    from: "skill: sample-approval-gatekeeper"
+    method: ["Name the sample stage", "Check every tech pack line pass, fail or not checked", "Keep one approved sample as the gold standard", "Hold the order if a critical line fails"]
+    inputs: [document, product_photos, spreadsheet!]
+    outputs: [audit_report]
+    note: "Judges the samples line by line against the tech pack from the first step."
+  - pause: "Approve one sample, place the order and wait for production to finish. Keep the approved sample as the gold standard."
+  - name: "Pre-shipment inspection brief writer"
+    skill: pre-shipment-inspection-brief-writer
+    job: ops
+    from: "skill: pre-shipment-inspection-brief-writer"
+    method: ["Book the check before the container leaves", "Write what the inspector tests", "Judge the goods against the approved sample", "Set the pass, rework and reject rule before the report", "Tie the balance payment to the report"]
+    inputs: [document, spreadsheet, product_photos!]
+    outputs: [brief]
+    note: "Gives the inspector the tech pack and the gold standard to check bulk goods against, and ties payment to the result."

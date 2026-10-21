@@ -1,0 +1,20 @@
+slug: channel-budget-mix-planner
+name: "Channel budget mix planner"
+summary: "Give it spend by channel and margin. Get a target split, small-channel caps and holdout tests."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge", used: "A large store's channel split, the branded search cap, the next best dollar rule, judging the whole business on blended results and the tools budget"}
+  - {title: "How He Hit $100M in Under a Year (And Why You Won't)", by: "Danny Young, founder of IM8", used: "A second store's split, one main channel while it still scales, and the order new channels were added"}

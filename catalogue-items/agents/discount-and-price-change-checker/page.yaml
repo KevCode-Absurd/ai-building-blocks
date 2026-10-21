@@ -1,0 +1,102 @@
+new_slug: discount-and-price-change-checker
+name: Discount and price change checker
+summary: Give it a planned sale or price change. Get the deepest discount your margin allows and the wording to use.
+job: set-prices
+thinking: high
+thinking_why: It loops on discount depth with margin sums, picks a path by job and prepares live price changes. Give it your strongest model.
+headline: Discount and price change checker
+subhead: Tell it the sale or price change you plan. It tests your real margin, cuts the discount in steps until the margin holds, sizes the stock, words the offer, and hands back a previewed price list for you to approve.
+explain: |
+  A discount that looks like 30 percent off can take half your profit. Many sales are planned from the number that looks big, and the margin is checked after the emails are out. A price rise rolled out to every product at once can't be undone. Old strikethrough prices stay on pages long after the sale, and they can mislead your customers.
+
+  This agent checks the plan first. It works out your margin at the sale price, cuts the discount five points at a time until your margin floor holds, and tells you the deepest cut that is safe. For a clearance it plans the cuts in stages. For a price rise it builds the price from the bottom up and sets a test you can undo. Once a month it lists strikethrough prices that no longer show a real discount. It never changes a live price. You approve a previewed list.
+when:
+  - You plan a sale, a discount code or a clearance and want to know it still pays.
+  - You want to raise prices and need a test you can undo.
+  - You think old strikethrough prices are sitting on your product pages.
+you_give:
+  - Your plan, with the products, the change, how long it runs and why
+  - Selling price, unit cost, freight, shipping out, fees and your 90-day refund rate, the first time
+  - Your margin floor for sale prices
+  - Stock levels and past promotion results (optional)
+you_get:
+  - Margin and break-even ROAS for each product, at the current and planned price
+  - The deepest discount that keeps your floor, or a plain "no discount fits"
+  - Stock to have ready, or clearance stages with dates
+  - Sale wording, and a previewed price list to approve
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it your plan.
+  - The first time, give it your product costs and your margin floor. It saves them.
+  - Read the margin table and the depth that holds. Change the plan if you want a deeper cut and accept the lower margin yourself.
+  - Approve the price list in clear words if you want it to make the change. Otherwise, change prices yourself.
+  - After the sale, tell it the result so the log can use it next time.
+how_it_works:
+  - title: Name the job
+    text: Decides if this is a sale, a clearance, a price rise or the monthly clean-up of old strikethrough prices.
+  - title: Test the margin
+    text: Checks gross margin and break-even ROAS at the current price and at the planned price, against your floor.
+  - title: Loop on depth
+    text: If the margin fails, it cuts the discount by five points and checks again, up to three rounds. It stops at the first depth that holds.
+  - title: Choose by job
+    text: A sale gets a stock check. A clearance gets staged cuts. A price rise gets a lowest viable price and an undoable test.
+  - title: Word it
+    text: Sets the percent or amount form, the sale price display and the banner text, without promising a deeper cut than the plan allows.
+  - title: Hand back a preview
+    text: Gives you the plan and a previewed price list. It changes live prices only after your yes.
+output_shape: |-
+  JOB AND VERDICT
+    <sale | clearance | price rise | clean-up> | <go | fix | no-go>
+
+  MARGIN
+    <product> | now: <gross margin %> | planned: <gross margin %> | floor <%> | break-even ROAS <x>
+
+  DEPTH THAT HOLDS
+    <deepest discount that keeps the floor> after <n> rounds | or: no discount fits, other levers: <list>
+
+  STOCK AND TIMING
+    <extra stock | clearance stages> | start <date> | end <date>
+
+  WORDING
+    <form | sale price display | banner text>
+
+  PRICE LIST TO APPROVE
+    <product> | old <price> | new <price>
+
+  TELL ME LATER
+    <units, margin, ad spend after the sale>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your margin floor
+    how: Set the lowest gross margin you'll accept on a sale. If you give no floor, the agent shows the margin at each depth and asks you to pick.
+  - what: Your real costs
+    how: Use real shipping and warehouse quotes and your own last 90 days of refunds and discounts. Guesses make a sale look safer than it is.
+  - what: Past promotions
+    how: Give it the results of your last sales, with dates and depth. It sizes stock from them.
+  - what: How many products
+    how: Check your best sellers first. A price list for hundreds of products is easier to approve in batches.
+judge:
+  - Margin is checked at the planned price for every product, not only at the current one.
+  - The plan's depth is at or under the deepest depth that holds your floor, or the plan says it fails.
+  - A price rise comes with a test you can undo.
+  - The strikethrough list is a preview, and nothing live changed without your clear yes.
+  - Wording does not promise more than the plan gives.
+test:
+  - Run it on a sale you ran before and know the profit of. See if the margin it finds matches your books.
+  - Run it twice on the same plan. The depth that holds should be the same.
+  - Compare its clearance stages with what you did, and look at where they differ.
+improve:
+  - Add your own step size for the discount loop if five points is too big or too small for your prices.
+  - Keep the log up to date after each sale, so the agent can point to what your last sale did.
+  - If you never run clearance, remove that path from the run.
+  - Add the rules on sale claims for your country, so wording checks follow them.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the pricing folder, read your log and run the monthly clean-up on a schedule.
+    - name: Your store platform
+      why: Export product prices, compare-at prices and stock levels. Connect it only if you want the agent to make a change you approve.
+  inputs:
+    - Shipping and warehouse quotes per order
+    - The results of your last two or three sales

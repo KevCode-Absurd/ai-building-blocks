@@ -1,0 +1,97 @@
+new_slug: monthly-customer-voice-keeper
+name: Monthly customer voice keeper
+summary: Give it this month's new reviews. Get new buyer words, new doubts and wrong-fit buyers, as changes to approve.
+job: understand-customers
+thinking: medium
+thinking_why: It reads a batch of reviews, compares it with last month and picks its own path. A mid-size model does this well. Use a stronger one if you feed it thousands of reviews.
+headline: Monthly customer voice keeper
+subhead: Give it the reviews, tickets and survey answers that came in this month, and your brand file. It finds the buyer words and doubts that are new, checks for wrong-fit buyers when low reviews rise, and hands back brand file changes for you to approve.
+explain: |
+  What customers say changes. A new reason to buy shows up, a doubt gets louder, a group of wrong-fit buyers starts leaving low reviews. Most stores read reviews when something goes wrong, and the brand file stays as it was on the day it was written.
+
+  This agent reads each month's new customer words and compares them with what your brand file already says. It counts separate people, not loud ones. New phrases and doubts need at least three people before it proposes a change, and one-off comments go on a watch list. If low reviews rose, it checks whether they came from buyers who wanted something else. It never edits your brand file. You get exact lines to approve, each with the customer words behind it.
+when:
+  - You have a brand file and want it to keep up with what customers say now.
+  - New reviews arrive every month and nobody has time to read them closely.
+  - Low reviews went up and you want to know if the product or the promise is the cause.
+you_give:
+  - This month's new reviews, tickets or survey answers, with dates and star ratings
+  - Your brand file, at least the buyers, claims and doubts files
+  - Your current page or ad headline and main claims (optional)
+  - Return or refund notes (optional)
+you_get:
+  - A count of reasons that are known, growing and new, in customers' exact words
+  - Brand file changes to approve, each with source IDs and the number of people
+  - New doubts with the proof that settles each one
+  - Wrong-fit buyer groups with a not-for line, when low reviews rose
+  - A watch list to count again next month
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's review.
+  - Put your brand file and this month's new customer words in one folder, or attach them in the chat.
+  - The first run builds the base in a voice folder and compares nothing. The second run is the first real comparison.
+  - Read the change list. Approve the lines you want, and ask it to make only those in the brand file.
+  - Run it again next month. It reads the voice folder for last month's reasons and doubts.
+how_it_works:
+  - title: Count the batch
+    text: Counts reviews, separate people and the low-star share. A thin batch is logged but changes nothing.
+  - title: Find the buying reasons
+    text: Pulls the reasons people bought, in their own words, and marks each as known, growing or new.
+  - title: Choose the path for low reviews
+    text: If the low-star share rose or five or more low reviews came in, it checks for buyers who wanted a different job. If not, it skips this.
+  - title: Look for a new kind of buyer
+    text: Every third month, or on a big batch, it checks whether a new self-described group is showing up.
+  - title: Check new doubts
+    text: A doubt raised by at least three people is checked against your current message, with the proof that would settle it.
+  - title: Hand back changes to approve
+    text: Lists exact lines for the brand file with the words behind them. Single comments go on a watch list.
+output_shape: |-
+  THIS MONTH
+    Reviews <n> from <n> people | low-star share <x%> vs <x%> last month | reasons: <n> known, <n> growing, <n> new
+
+  BRAND FILE CHANGES TO APPROVE (most people first)
+    1. <add or replace> in <file>: "<exact line>" | words: "<customer quote>" (<source ID>) | people: <n>
+
+  NEW DOUBTS
+    <doubt> | people: <n> | answered by current message: <yes or no> | proof that settles it: <proof>
+
+  WRONG-FIT BUYERS
+    <group> | drawn by: <claim> | not-for line: <line>   (or: none this month)
+
+  WATCH LIST
+    <phrase or doubt> | seen: <n times>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: How many new reviews you give it
+    how: Under about 20 a month is too few to act on. Give it a quarter at once, or let thin months pile up in the voice folder.
+  - what: Star ratings and dates
+    how: Without ratings it cannot tell if low reviews rose. Without dates it cannot tell a new phrase from an old one.
+  - what: Your people bar
+    how: It asks for three separate people before proposing a change. Raise this if you get many reviews, lower it if you get few.
+  - what: Your current message
+    how: Give it the headline and main claims of the page or ad. Then it can tell you which new doubts your message already answers.
+judge:
+  - Every proposed line has customer words and source IDs behind it.
+  - No change rests on fewer than three separate people.
+  - A thin batch changed nothing.
+  - Your brand file was not edited without your clear yes.
+  - Customer quotes are exact.
+test:
+  - Run it on last month's reviews, then this month's. Check that what it calls new really was not in the file.
+  - Run it twice on the same batch. The proposed changes should match, apart from wording.
+  - Pick one phrase it proposes and search the reviews yourself. Count the separate people.
+improve:
+  - Set your own low-star rise that triggers the wrong-fit check, to suit your review volume.
+  - Add the claims you never change to your brand file, so it does not propose lines against them.
+  - Keep the approved lines in the voice folder, so the next run can check whether new reviews now use those words.
+  - If you sell several products, run it once per product with its own voice folder.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the voice folder, read last month's files and edit the brand file once you approve.
+    - name: Your review app
+      why: Export the month's reviews with dates, star ratings and the reviewer's name or ID.
+  inputs:
+    - Support tickets and survey answers from the same month
+    - Return reasons from your store

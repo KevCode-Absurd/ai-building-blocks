@@ -1,0 +1,125 @@
+new_slug: meta-account-structure-planner
+name: "Meta account structure planner"
+summary: "Give your spend, products and margins. Get a Meta campaign and ad set layout with budgets and KPIs."
+job: launch-and-scale-ads
+thinking: high
+thinking_why: "It weighs spend, margins, regions and creative output against each other, so a stronger model makes better trade-offs."
+
+headline: "Meta account structure planner"
+subhead: "Give it your monthly Meta spend, product categories with margins, buyer groups, countries and how many new ads you can make. It asks five questions, then hands back a campaign and ad set map with budgets, a KPI and read window per level, a spend cap per concept and the settings to switch off."
+
+explain: |
+  Most Meta accounts have too many campaigns. Each campaign learns on its own, so splitting 100 monthly sales across four campaigns leaves 25 each and starves all four. The opposite mistake is one pile of ads where you cannot tell what works.
+
+  This skill starts from one consolidated campaign and adds a layer only when it has a reason: different margins, different buyer groups, separate stock by country, or a very high order value with few orders a day. It sizes the layout to your spend tier, groups ads by concept (buyer group + angle + offer), caps how much one concept can take, and lists the settings that hide your data. The rules come from agencies running large stores, so the plan scales them down for a small one.
+
+when:
+  - You are setting up Meta ads for a store, or you inherited an account with campaigns nobody can explain.
+  - Your spend is growing and you need to know when to add a campaign and when to leave the layout alone.
+  - You sell in several countries or at several margin levels and don't know how much to split.
+
+you_give:
+  - Monthly Meta spend and your current campaigns
+  - Product categories with gross margin, plus orders per day and average order value
+  - Your buyer groups, your countries and where stock sits
+  - How many new ads you can make each month
+  - Your brand file (optional)
+you_get:
+  - A campaign and ad set map with a budget for each
+  - A KPI for each level and how long to wait before you read it
+  - A spend cap for each concept
+  - The settings to switch off and a naming rule for ad sets
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your monthly spend, your current campaign list and your categories with gross margin.
+  - Add your buyer groups, countries, stock locations, orders per day, average order value and how many new ads you can make each month.
+  - Read the layout against the five questions it lists, and build only the tier that matches your spend.
+  - Check the Meta setting names in your own account, because Meta renames them often.
+
+how_it_works:
+  - title: Asks five questions
+    text: How many product categories, how wide the margin spread, how many separate buyer groups, how many countries, and how many new ads a month.
+  - title: Starts from one campaign
+    text: Every extra campaign must earn its place. Performance tends to improve once a campaign has 100 to 200 sales a month.
+  - title: Splits for a reason
+    text: Different margins, different buyer groups, separate stock by country, or very high order value with very few orders. Group by margin band, not by category.
+  - title: Groups ads by concept
+    text: A concept is buyer group + angle + offer. One concept per ad set, with 3 to 5 ads under $50k a month and more as you grow.
+  - title: Picks the spend tier layout
+    text: Under $50k a month, $50k to $250k, and above $250k each get their own layout.
+  - title: Caps the winner
+    text: About 20 percent of concepts take 80 percent of spend. It sets a cap, such as 40 percent, and keeps new concepts rotating in.
+  - title: Lists settings to switch off
+    text: Flexible ads, automatic creative enhancements and one-day view reporting. It also checks that existing customers stay excluded.
+  - title: Runs a final check
+    text: Can you explain how each layer gives clean data, and does it fit your category budgets and customer value?
+
+output_shape: |
+  TIER: <under $50k | $50k to $250k | $250k+ a month>
+  FIVE QUESTIONS: <categories> | <margin spread> | <buyer groups> | <countries> | <ads per month>
+
+  CAMPAIGN MAP
+  <campaign>: <purpose in one line> | <ABO or CBO> | <budget> | <why it exists>
+    <ad set = persona + angle + offer>: <ads: n> | <daily budget>
+
+  KPI AND READ WINDOW
+  <level>: <KPI, such as CPA or ROAS target> | <read after N days, on 7-day click>
+
+  SPEND CAP PER CONCEPT: <max share> | <what to do after one month>
+  SETTINGS TO SWITCH OFF: <list>
+  NAMING RULE: <persona | angle | offer | format | launch date>
+  PAGE CAP PLAN: <only if you launch many ads>
+  WHEN TO REVISIT: <the spend or sales level that adds the next layer>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: Monthly spend
+    how: It sets the tier. Under $50k a month you get one testing campaign. Give your real number, not your goal.
+  - what: Gross margin by category
+    how: A wide spread (for example 70 percent and 30 percent) can justify a split. A narrow one rarely does.
+  - what: Ads you can make per month
+    how: A plan for 100 or more new ads needs a team or agency. Say what you can really make and it scales the plan down.
+  - what: Countries and stock
+    how: One warehouse serving several countries means one campaign. Separate stock with its own targets means separate campaigns.
+  - what: Experience level
+    how: A first-year buyer does better with CBO (Meta divides the budget) and fewer controls. ABO (you set each ad set budget) suits an experienced buyer.
+
+judge:
+  - Every campaign in the map has a one-line reason, and no reason says "to keep things tidy".
+  - The number of ad sets fits the budget, so each one can plausibly get several sales a week.
+  - Under $50k a month the plan is one testing campaign, not four.
+  - Every ad set is one concept, and the name shows buyer group, angle and offer.
+  - The settings list and the existing-customer exclusion are both in the plan.
+
+test:
+  - Give it a store you know well and see if it asks the five questions or skips them. A plan that skips them is guessing.
+  - Give a tiny budget, such as $100 a day, and ask for 20 ad sets. It should push back and cut the number.
+  - Run it twice on the same facts. The campaign count should match both times.
+  - Compare the plan with your current account. For each extra campaign you have today, check that the plan names a reason or drops it.
+
+improve:
+  - Save your five answers (categories, margins, buyer groups, countries, ads per month) in your brand file so you don't retype them.
+  - Add your own KPI targets once you know your break-even numbers, so the KPI lines use your figures.
+  - Add your naming rule to the skill file if your team already has one.
+  - Pair it with the Meta campaign purpose checker to audit an account that already exists, and the Meta scaling campaign planner for the step after testing.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It only works on text and numbers you paste, so any current chat AI will do."}
+    - {name: "Meta Ads Manager", why: "Its audience segment breakdown shows how much you already spend on existing customers."}
+  inputs:
+    - "Meta Ads Manager export of the last 30 days by campaign"
+    - "Gross margin by product category from your store"
+    - "Stock location and revenue target for each country"
+    - "Your break-even ROAS or CPA, so each KPI line is real"
+
+terms:
+  - term: ABO and CBO
+    meaning: ABO means you set the budget on each ad set. CBO means you set one budget for the campaign and Meta divides it.
+  - term: Concept
+    meaning: A buyer group, an angle and an offer taken together. Change one and you have a new concept.
+  - term: DPA
+    meaning: A dynamic product ad. Meta shows each shopper the products they looked at.
+  - term: Pareto pattern
+    meaning: About 20 percent of the items take 80 percent of the result.

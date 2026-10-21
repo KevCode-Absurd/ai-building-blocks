@@ -1,0 +1,21 @@
+slug: speed-fix-ranker
+name: "Speed fix ranker"
+summary: "Give it your speed problems and store numbers. Get fixes ranked by orders gained per hour of work."
+category: ecommerce
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Site Speed Optimization: Complete Guide for 2026", by: "Jakub Rusniok (article)", used: "The order to fix things in (images, then scripts and apps, then hosting) and putting traffic-heavy pages first"}
+  - {title: "Website Speed Optimization Tips for Shopify Stores", by: "Shopify Plus blog, quoting agency owners", used: "An example of turning a page delay into daily revenue, shown as a rough rate and not a forecast"}
+  - {title: "93 powerful statistics that show why your ecommerce site speed matters in 2026", by: "Queue-it (article)", used: "The range of published conversion effects per second saved, shown as low and high"}

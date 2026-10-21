@@ -1,0 +1,25 @@
+slug: store-friction-checker
+name: "Store friction checker"
+summary: "Attach screenshots of your store pages. Get a ranked cut list and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: page
+level: intermediate
+inputs:
+  - {type: store_capture, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Increase your conversion rate instantly with this CRO concept", by: "CRO agency owner", used: "The cognitive friction checklist, image navigation, bundle counts, badges, infographic images, headlines and the cart drawer"}
+  - {title: "This is how a t-shirt brand outsmarted the entire industry", by: "Ryan Bartlett, co-founder of True Classic, podcast interview", used: "Short homepage, zero-based design, the breadcrumbs test and changing one thing at a time"}
+  - {title: "The new way to run Meta ads in 2025", by: "Nick Shackleford, podcast interview", used: "First image advice, homepage for few or many products, frequently bought together and mobile first"}
+  - {title: "I studied 1,000 landing pages: what stops them making money", by: "CRO agency founder", used: "The seven item menu limit, image navigation and the homepage's one job"}
+  - {title: "The best conversion rate optimization tutorial for ecommerce", by: "Arsh, CRO agency founder (as named in the talk)", used: "Menu click data, category tiles and best-selling categories first"}
+  - {title: "11 landing page tricks to get more sales", by: "CRO agency founder", used: "Fewer choices on the page and the paradox of choice"}

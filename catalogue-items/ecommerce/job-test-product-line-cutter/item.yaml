@@ -1,0 +1,20 @@
+slug: job-test-product-line-cutter
+name: "Job test product line cutter"
+summary: "List your SKUs and core job. Get each marked core, second or no job, a launch gate and a focus score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: persona, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [clayton-christensen]
+credits:
+  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan (2016)", used: "Selling more to current customers can pull a range away from its core job; each extra job meets a rival that does only that job; a crowded line of variants blurs what a product is for"}

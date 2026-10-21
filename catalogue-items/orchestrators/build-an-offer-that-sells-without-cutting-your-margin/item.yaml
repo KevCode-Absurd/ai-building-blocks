@@ -1,0 +1,25 @@
+slug: build-an-offer-that-sells-without-cutting-your-margin
+name: "Build an offer that sells without cutting your margin"
+summary: "Give it your product, buyer and costs. Get a priced offer with a gift or tier, and the ad return it needs."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: offer
+level: intermediate
+inputs:
+  - {type: persona, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [offer-builder, gift-with-purchase-planner, store-guarantee-planner, discount-impact-checker, offer-profit-per-session-checker]
+steps:
+  - {uses: offer-builder, note: "Builds a first offer that answers the buyer's biggest doubts."}
+  - {uses: gift-with-purchase-planner, note: "Adds a gift or tier to the offer and works out what each tier costs you."}
+  - {uses: store-guarantee-planner, note: "Adds a guarantee to the offer and counts what refunds would cost."}
+  - {uses: discount-impact-checker, note: "Tests the offer against a plain discount and shows the return on ad spend it must hit."}
+  - {uses: offer-profit-per-session-checker, note: "Compares the offer's profit per visitor with your current one before you launch it."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/build-an-offer-that-sells-without-cutting-your-margin/skeleton.yaml

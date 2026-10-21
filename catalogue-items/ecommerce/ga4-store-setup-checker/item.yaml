@@ -1,0 +1,19 @@
+slug: ga4-store-setup-checker
+name: "GA4 store setup checker"
+summary: "Describe your GA4 setup. Get missing day-one settings, store events to add and a setup score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Google Analytics 4 tutorial for beginners (2026)", by: "Julius, Analytics Mania", used: "The day-one settings (data retention, domains, internal traffic, session timeout, engagement time, Google signals), the 24 to 48 hour processing wait, and the fact that store events are not tracked out of the box"}
+  - {title: "Google Analytics Tutorial For Beginners (2026 Update)", by: "Loves Data", used: "Making a thank-you page a key event with Create event, and why page_view itself must not be a key event"}

@@ -1,6 +1,6 @@
 # Think it through and decide: AI Blocks
 
-> 119 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 121 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Adaptive tutor](https://useaiblocks.com/skills/adaptive-tutor): Name a topic. It checks your level, then teaches in small steps with practice and feedback.
 - [Advice skin-in-the-game checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker): Paste advice or a pitch. Get who pays if it is wrong, who gains, and how far to trust it.
@@ -25,6 +25,8 @@
 - [Contrary evidence log keeper](https://useaiblocks.com/skills/contrary-evidence-log-keeper): Describe the belief you are building. Get a log of every fact against it, plus a weekly review.
 - [Copy-or-skip lesson writer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer): Paste why something worked. Get what carries over to your case, what was luck, and a small test of each idea.
 - [Daily news digest writer](https://useaiblocks.com/skills/daily-news-digest-writer): Give it a list of news sites. Get a daily report of the best items. Collects data from websites.
+- [Decide whether to drop a rule and trial it safely](https://useaiblocks.com/workflows/decide-whether-to-drop-a-rule-and-trial-it-safely): Give it a rule nobody can explain. Get where it came from, what it quietly does and a small trial.
+- [Decide whether to quit and set the evidence bar](https://useaiblocks.com/workflows/decide-whether-to-quit-a-project-and-set-the-evidence-bar): Give it the project you want to quit. Get a push, change or stop call that survived an attack.
 - [Decision bias pile-up checker](https://useaiblocks.com/skills/decision-bias-pileup-checker): Describe a decision you are about to make. Get the pressures bending your judgment, and a calmer version of the choice.
 - [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder): Paste your mistake log. Get a one-page checklist of up to twelve questions, each with a pass or fail line.
 - [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner): Paste your checklist and a decision. Get each item answered with evidence, a pass, fail or unknown, and a clear call.

@@ -1,0 +1,123 @@
+new_slug: store-ltv-payback-reader
+name: "Store LTV and payback reader"
+summary: "Give it first-order cohorts by month. Get repeat rate, LTV and true CAC payback, scored out of 100."
+job: track-numbers
+thinking: high
+thinking_why: "It reads a cohort table and several formulas that are easy to misapply, so a stronger model avoids wrong payback dates."
+
+headline: "Store LTV and payback reader"
+subhead: Give it your customers grouped by the month of their first order, with later orders and your margin and CAC. It works out retention, lifetime value per customer by month, and the real month your CAC pays back. You get a score out of 100.
+
+explain: |
+  Lifetime value (LTV) is the profit one customer brings you over their time with the store. Most stores work out payback by dividing CAC by one month's gross profit. That ignores customers who stop buying. In the source's example, CAC of $90 and $28 of profit a month gave 3.2 months on paper, and the cohort took about 8 months. The source says errors of 20% to 100%, and up to 200%, are common. That is one lecture's claim.
+
+  This skill groups customers by first-purchase month (a cohort). It divides each later month by the cohort's starting count to get retention, builds running revenue per customer, multiplies by margin to get LTV, and finds the month cumulative profit passes CAC. It also gives a lifetime-order estimate for stores with no subscription. It extends a subscription-focused unit economics skill with that second path and the payback error check.
+
+when:
+  - Your payback estimate says three months but the cash says longer.
+  - You want to know how much you can afford to pay for a customer.
+  - You are making a subscription or repeat-purchase offer and want to value it.
+
+you_give:
+  - Orders by first-purchase month, for each following month (a cohort table)
+  - Contribution or gross margin per order, and your CAC
+  - Monthly churn, if you sell subscriptions (optional)
+  - Product type, and how many months of data you have
+
+you_get:
+  - A retention table and LTV per customer by month
+  - The cohort payback month beside the naive estimate
+  - LTV to CAC and the highest CAC you can afford
+  - A lifetime-order estimate for non-subscription customers, and a score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste or attach your cohort table, with month 0 as the first purchase.
+  - Add your margin per order and your CAC, and say whether any customers are on subscription.
+  - Read the payback month first, then the naive estimate beside it.
+  - Re-run it every month with a new cohort row.
+
+how_it_works:
+  - title: Builds the cohorts
+    text: Customers are grouped by first-purchase month. Month 0 is the first purchase.
+  - title: Reads retention
+    text: Each later month is divided by the cohort's starting count. Reading diagonally gives one calendar month.
+  - title: Builds running revenue
+    text: Cumulative revenue per customer is the cohort's running total divided by its starting customers.
+  - title: Turns it into LTV
+    text: Running revenue times margin gives LTV per customer, and the window ends where cumulative revenue stops growing.
+  - title: Finds true payback
+    text: It finds the month cumulative profit per customer passes CAC and compares it to the naive CAC divided by monthly profit.
+  - title: Estimates lifetime orders
+    text: For subscriptions, 1 divided by monthly churn. For everyone else, 1 divided by (1 minus annual retention).
+  - title: Tests sensitivity
+    text: It shows how payback and LTV move if CAC or churn change, and scores the result.
+
+output_shape: |
+  COHORTS  <n> months of data | margin <%> | CAC <$>
+  window ends at month <n> because <cumulative revenue stops growing>
+
+  RETENTION (share of starting customers still buying)
+  month 0 100% | month 1 <%> | month 3 <%> | month 6 <%> | month 12 <%>
+
+  LTV PER CUSTOMER
+  month 3 <$> | month 6 <$> | month 12 <$>   (revenue x margin)
+  LTV:CAC <x> | highest affordable CAC <$>
+
+  PAYBACK  cohort <month> | naive (CAC / monthly profit) <month> | error <%>
+  sensitivity: CAC <$> pays back in <month>; CAC <$> in <month>
+
+  LIFETIME ORDERS  <n>   (method: <churn | annual retention>)
+
+  SCORE <n>/100 now: <what was measured>
+  payback <n>/40 | LTV:CAC <n>/30 | data <n>/20 | retention trend <n>/10
+
+  NEXT <first change>
+  MISSING: <input>
+
+tweaks:
+  - what: How many months of data
+    how: Three or more months of cohorts are needed. With fewer, the skill uses stated assumptions and marks every number as an estimate.
+  - what: Subscription or not
+    how: Say which. Subscriptions use churn to estimate lifetime. Other stores use annual retention. Both are rough once real cohorts exist.
+  - what: Margin used
+    how: Use contribution or gross margin per order, not revenue. LTV counts profit.
+  - what: Skips and pauses
+    how: For physical goods on subscription, track payback in orders, not months, since customers skip or ship every second month.
+
+judge:
+  - LTV is built from profit (margin times revenue), never revenue alone.
+  - Payback is shown by cohort and by the naive estimate, with the gap named.
+  - Churn is cancellations divided by the prior month's subscribers, not the same month's.
+  - The lifetime window is capped where cumulative revenue stops growing.
+  - The score shows its sum and says what it measures.
+
+test:
+  - Use one past cohort where you know the real payback date. The reading should match.
+  - Compare its naive estimate with its cohort estimate. If they are the same, check that churn or drop-off is in the data.
+  - Raise CAC by 50% and check the payback month moves later.
+  - Run it on your newest cohort and your oldest. Does repeat buying look better or worse?
+
+improve:
+  - Set your own usual lifetime window, such as 12 months, once you know where your cohorts flatten.
+  - Add your retention levers to the skill file, such as skip or pause instead of cancel, email, upsell tiers or lower unit cost at volume.
+  - Add your real margin by product, so LTV follows what customers buy.
+  - Pair it with the CAC payback checker for the scale or fix call.
+  - Money figures are planning numbers. Check them with your accountant.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its customer cohort report gives first-order month and repeat purchases."}
+    - {name: "Google Sheets", why: "Cohort tables and running totals are easy to build and check there."}
+  inputs:
+    - "A cohort table with at least three months, ideally twelve"
+    - "Margin per order by product, not one average"
+    - "Your churn rate by month if you run subscriptions"
+
+terms:
+  - term: Cohort
+    meaning: A group of customers who first bought in the same month.
+  - term: Churn
+    meaning: The share of subscribers who cancel in a month.
+  - term: LTV
+    meaning: Lifetime value. The profit one customer brings over their time with you.

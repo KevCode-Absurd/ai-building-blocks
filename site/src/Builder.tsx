@@ -157,7 +157,7 @@ function Palette({ c, anchor, inFlow, onAdd, onTemplate, onPlan, showGoal }: {
   const list = useMemo(() => {
     const words = dq.toLowerCase().split(/\s+/).filter(Boolean);
     const kitSlugs = new Set(userKits.flatMap((k) => k.slugs));
-    return c.blocks.filter((b) => b.category !== "orchestrator" &&
+    return c.blocks.filter((b) => b.category !== "orchestrator" && b.type !== "agent" &&
       (cat !== "kits" || kitSlugs.has(b.slug)) &&
       words.every((w) => hays.get(b.slug)!.includes(w)));
   }, [c, dq, cat, userKits, hays]);

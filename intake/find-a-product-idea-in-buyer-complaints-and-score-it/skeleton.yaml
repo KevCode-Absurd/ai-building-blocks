@@ -1,0 +1,45 @@
+# Workflow skeleton: chains library skills (docs/INTAKE.md). Our words.
+id: find-a-product-idea-in-buyer-complaints-and-score-it
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+minds: []
+workflow:
+  slug: find-a-product-idea-in-buyer-complaints-and-score-it
+  name: "Find a product idea in buyer complaints and score it"
+  summary: "Give it a category. Get complaints that sell, the gap in it and a score out of 100."
+  when: "you are picking a product and want the idea to come from what buyers complain about."
+  job: find-products
+  level: beginner
+steps:
+  - name: "Rating gap product finder"
+    skill: rating-gap-product-finder
+    job: research
+    from: "skill: rating-gap-product-finder"
+    method: ["List the top unmet pain points with proof", "Look for people saying they would pay more", "Find sub-categories with weak ratings but strong search", "Keep only gaps two kinds of evidence agree on"]
+    inputs: [question, voc_reviews!]
+    outputs: [shortlist, voc_reviews]
+    note: "Starts the chain: ranked complaints and the review lines behind them."
+  - name: "Pain point niche finder"
+    skill: pain-point-niche-finder
+    job: research
+    from: "skill: pain-point-niche-finder"
+    method: ["Confirm the market has a clear before and after", "Write 30 buyer problems", "Rank and pick five", "List who already sells to each and choose a product"]
+    inputs: [question, voc_reviews!]
+    outputs: [shortlist, competitor_set]
+    note: "Uses the complaints from the step before to pick the best five problems and the brands already selling to them."
+  - name: "Crowded category white space finder"
+    skill: crowded-category-white-space-finder
+    job: research
+    from: "skill: crowded-category-white-space-finder"
+    method: ["Check the category is big and still growing", "Compare leaders on price, where sold, quality and buyer", "Change exactly one big thing", "Rank the gaps and set a short test"]
+    inputs: [competitor_set, voc_reviews!, product_data!]
+    outputs: [shortlist, plan]
+    note: "Reads the rival brands and review lines from the steps before and finds the one gap to own."
+  - pause: "Pick one product for the top gap. Write down its cost, shipping cost and the price you would charge."
+  - name: "Winning product scorer"
+    skill: winning-product-scorer
+    job: analysis
+    from: "skill: winning-product-scorer"
+    method: ["Do the margin sums first", "Mark each of eleven rules pass, warn or fail", "Bend a soft rule only with proof", "Add the score, give a go or no-go and name the one fix"]
+    inputs: [product_data, store_capture!]
+    outputs: [audit_report]
+    note: "Scores the product you chose for the gap, using your costs."

@@ -1,0 +1,88 @@
+new_slug: plan-a-month-of-meta-ads-with-the-right-number-of-new-ads-and-budget
+name: "Plan a month of Meta ads and the budget"
+summary: Give it your spend, results, reviews and product facts. Get an ad quota, a budget ranking and test-ready briefs.
+job: plan-ad-tests
+thinking: high
+thinking_why: It runs five skills in a row and does budget sums along the way. Give it your strongest model.
+headline: Know how many new ads to make this month and where the money goes
+subhead: Give it your ad spend and results, plus your reviews and product facts. It works out a monthly quota of new ads, ranks where the next dollars go, builds ranked ad concepts, writes briefs for the best ones and lays out the Meta test.
+explain: |
+  Most stores guess how many new ads to make. Too few and the same ads tire out. Too many and the team burns time on ads that say the same thing. The budget gets the same guesswork: money sits where the platform report looks good, not where new customers come from.
+
+  The steps replace the guesses with numbers you can check. First it sizes the quota from your spend, your hit rate and the winners you lost last month. Then it ranks channels by new-customer revenue per extra $10,000. It pauses and asks you to gather reviews, support emails and product facts. It turns those into ranked concepts, then pauses again so you can pick the top two or three. It writes a brief for each and fits them into a Meta test layout.
+when:
+  - You are about to plan next month's ads and do not know how many new ones you need.
+  - Your ads have gone stale and you want fresh ideas that come from what buyers say, not from a guess.
+  - You can add budget and want to know which channel should get it.
+you_give:
+  - A sheet of your ad spend and results by channel and month
+  - The question you want answered, such as how many ads you need at this spend
+  - Your product facts, such as price, what it does and what it costs you
+  - Customer reviews, support emails or survey answers
+you_get:
+  - A monthly quota of new ads with a low and high range, a start number and a weekly split
+  - A ranking of channels by what the next $10,000 brings in, with a stop point and a loss limit
+  - A matrix of 30 to 40 ad concepts with a test order and a name for each ad set
+  - A brief for each chosen concept with one problem, one angle and a proof shot for every claim
+  - A Meta test layout with packs, minimum spend, naming and rules for adding ads
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your spend and results export first. Say which month and which channels it covers.
+  - When it pauses, add your reviews, support emails and product facts in one place.
+  - When it pauses again, pick two or three concepts from the matrix. Choose ones that tackle different problems.
+  - Check the budget numbers against your own books before you move any money.
+how_it_works:
+  - title: Size the monthly quota
+    text: Creative volume planner works out how many new ads you need three ways and gives a range with a start number. It splits the quota by format and by week, and checks the plan does not lean on one concept.
+  - title: Rank where the money goes
+    text: Next-dollar budget allocator ranks each channel by new-customer revenue per extra $10,000. It grades the evidence, finds each stop point and names the test that would settle the ranking.
+  - title: Build the concept matrix
+    text: Ad concept matrix builder reads your reviews and facts and writes buyers as a problem in a situation. Each gets an angle, an offer, a first line and a place in the test order.
+  - title: Write the briefs
+    text: Creative brief writer takes each chosen concept and picks one problem and a one-sentence angle. It picks the format, names the shot that proves each claim and writes two versions that change one thing.
+  - title: Lay out the Meta test
+    text: Meta test campaign planner sizes the campaigns to your budget, groups ads into packs, sets minimum spend and names every ad so you can compare results later.
+output_shape: |-
+  STEP 1: AD QUOTA
+    Three ways to count | range and start number | creative budget | weekly quota
+
+  STEP 2: BUDGET RANKING
+    Channels ranked by next $10,000 | stop points | test plan | loss limit and fallback
+
+  STEP 3: CONCEPT MATRIX
+    30 to 40 concepts with persona, angle, offer and first line | test order | policy watch
+
+  STEP 4: BRIEFS
+    Research summary | one problem and angle | format choice | proof list | two versions
+
+  STEP 5: META TEST PLAN
+    Structure | budget split | packs | minimum spend | settings checklist | naming | rules
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How far back your results go
+    how: The quota uses your hit rate and lost winners. Three months of data gives firmer numbers than one.
+  - what: How many reviews you give it
+    how: Concepts trace to buyer lines. With few reviews many concepts are marked as guesses.
+  - what: Your budget per month
+    how: A small account gets a small test layout. State your real daily budget so the structure fits it.
+  - what: Which concepts you pick at the pause
+    how: Pick concepts that solve different problems. Three ads for the same problem teach you little.
+judge:
+  - The quota shows all three ways of counting, with each sum, and the weekly numbers multiply out to the monthly one.
+  - Each channel is ranked on new-customer revenue, and says what evidence stands behind it.
+  - Every concept traces to a buyer line or is marked as a guess.
+  - Every claim in a brief has a named shot that proves it.
+  - Every pack has one angle and one avatar, and no ads are added into a winning ad set.
+test:
+  - Compare the quota with how many ads you made last month and how many survived.
+  - Take the top-ranked channel and check its number against your store's new-customer revenue, not the platform's report.
+  - Read five concepts against your reviews and confirm each one starts from something a buyer said.
+  - Run the same inputs twice and see if the quota and the top channel stay close.
+improve:
+  - Save the concept matrix in your brand file and reuse it next month. Only add new reviews.
+  - Edit the budget skill's loss limit to a number you are comfortable with.
+  - Add your ad naming rule to the test planner so every month follows one pattern.
+  - After the month, feed results back in and ask the quota step to recalculate your hit rate.

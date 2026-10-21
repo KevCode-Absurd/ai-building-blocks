@@ -1,0 +1,127 @@
+new_slug: existing-customer-ad-budget-sizer
+name: "Existing customer ad budget sizer"
+summary: "Give customer count, CPM and frequency. Get a monthly dollar cap and a test to prove it."
+job: launch-and-scale-ads
+thinking: medium
+thinking_why: "It is a formula plus judgement about category, so a mid-size model is enough."
+
+headline: "Existing customer ad budget sizer"
+subhead: "Give it your customer list size, the CPM you pay on existing customers, and your current frequency and spend. It sets a monthly dollar cap, flags what to cut, sets a lower CPA ceiling for past buyers and plans a spend-cut and lift test to prove the cap. The savings go to finding new customers."
+
+explain: |
+  Ads to people who already bought are the easiest place to overspend. Meta credits these buyers with sales they might have made anyway, so the numbers look great while the money buys little new growth. Many audits find past buyers seeing 20 to 100 ads in 30 days. About 10 is reasonable.
+
+  This skill sizes the budget in dollars, not as a share of spend, because a percentage moves every time your new-customer spend moves. The formula is customers x target monthly frequency x CPM / 1,000. It then sets a lower CPA ceiling than for new buyers, plans a test where you cut spend about 30 percent and watch sales, and proposes a proper lift test. It treats retargeting as a capped support layer and bends the advice for categories like fashion, where past buyers do come back.
+
+when:
+  - Your reports show strong ROAS and you suspect past buyers are flattering it.
+  - A large share of your Meta spend goes to retargeting or existing customers.
+  - You have a customer list of a few thousand buyers or more and don't know what to spend on it.
+
+you_give:
+  - How many existing customers are synced to Meta
+  - Your CPM on existing customers, from the audience segment breakdown
+  - Target and current monthly frequency
+  - Current daily spend and sales on existing customers
+  - Your category and how long buyers take to reorder
+you_get:
+  - A monthly dollar cap
+  - A frequency check and what to cut
+  - A CPA ceiling for existing customers
+  - A spend-cut and lift test setup, and the money freed for new customers
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Turn on audience segment reporting in your Meta advertiser settings, then paste your customer list size, existing-customer CPM, frequency and spend.
+  - Say what you sell and how long buyers usually wait before they reorder.
+  - Set the cap it gives you as a ceiling and run the 30 percent cut test for a week or more.
+  - Run a conversion lift test on the existing-customer campaign for 30 days to prove the number.
+
+how_it_works:
+  - title: Sizes the budget in dollars
+    text: Customers x target monthly frequency x CPM / 1,000. For example 300,000 customers x 3 x $2.50 CPM is $2,250 a month.
+  - title: Checks frequency
+    text: Sources give 4 to 7 on a 30-day window, under 7 or under 8 on a 7-day window, or 3 to 6 impressions a month. It shows each with its window.
+  - title: Sets a lower CPA target
+    text: Existing customers should cost less per sale than new ones. The source example is $40 for new and $20 or lower for existing.
+  - title: Plans the overspend test
+    text: Cut spend about 30 percent and watch sales. In the example, $1,000 a day gave 50 sales and $700 gave 47, so the last $300 bought 3 sales at about $100 each.
+  - title: Plans a lift test
+    text: A 30-day conversion lift test on the existing-customer campaign. The source says results are usually far lower than expected.
+  - title: Fits the category
+    text: Rarely repeated goods get near zero. Repeat goods get a small controlled campaign. Fashion and fast drops may keep a new-arrivals budget.
+  - title: Checks DPAs and email
+    text: DPAs under about 70 percent of spend, email revenue as a trend, and the customer-list sync between email tool and Meta.
+  - title: Moves the savings
+    text: Any spend freed goes into finding new customers.
+
+output_shape: |
+  BUDGET CAP
+  <customers> x <frequency> x <CPM> / 1,000 = <$ a month>
+  Current spend: <$ a month> | Gap: <$>
+
+  FREQUENCY CHECK
+  Your number: <n> on a <7 | 30>-day window | Source range: <range> | Verdict: <ok | cut>
+  What to cut first: <action>
+
+  CPA CEILING FOR EXISTING CUSTOMERS: <$> (new-customer CPA: <$>)
+
+  CATEGORY CALL: <near zero | small controlled campaign | dedicated new-arrivals budget>
+
+  TESTS
+  1. Cut <$> (about 30 percent) for <days>; compare sales
+  2. Conversion lift test, 30 days, existing-customer campaign only
+
+  MONEY FREED FOR NEW CUSTOMERS: <$ a month>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: Customer list size
+    how: Use only people synced to Meta, not total past buyers. A broken email-to-Meta sync changes the answer.
+  - what: Your own CPM
+    how: Pull it from the audience segment breakdown. The $2.50 in the example is far lower than most real CPMs.
+  - what: Category
+    how: Furniture with a five-year reorder gets close to zero. Supplements and fashion get a small controlled campaign.
+  - what: Window for frequency
+    how: Say if your frequency is for 7 or 30 days. The sources use different windows and the limits differ.
+  - what: Followers who never bought
+    how: List them separately. They are more incremental than past buyers and less than cold buyers.
+
+judge:
+  - The cap is a dollar figure with the formula shown, not a percent of spend.
+  - Each frequency limit is shown with its window.
+  - The existing-customer CPA ceiling is lower than the new-customer one.
+  - The category call matches what you sell.
+  - The plan includes a test that could show the cap is too high or too low.
+  - Existing-customer spend sits in its own campaign, not inside a cold one.
+
+test:
+  - Check the arithmetic by hand with your own customer count and CPM.
+  - Give it a furniture store and a fashion store with the same numbers. The category calls should differ.
+  - Run the 30 percent cut test for a week. If sales barely move, the cap was right or still too high.
+  - Run it twice on the same inputs. The cap should match both times.
+
+improve:
+  - Save your CPM and frequency numbers each month in your brand file, so the cap updates in a minute.
+  - Add your reorder time and category notes so the category call is yours, not generic.
+  - Set a lower CPA ceiling rule in the skill file if you know your repeat margin.
+  - Pair it with the retargeting ad sequence planner for what to show, and the platform ROAS reality check for the wider picture.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It works from numbers you paste, so any current chat AI will do."}
+    - {name: "Meta Ads Manager", why: "Its audience segment breakdown shows existing-customer spend, CPM and frequency, and its Experiments tab runs the lift test."}
+  inputs:
+    - "Audience segment breakdown for the last 30 days"
+    - "Your customer list sync status between your email tool and Meta"
+    - "Repeat purchase rate and typical reorder time"
+
+terms:
+  - term: CPM
+    meaning: The cost to show your ad 1,000 times.
+  - term: Frequency
+    meaning: The number of times the average person saw your ad in a set period.
+  - term: Conversion lift test
+    meaning: A Meta test that hides your ads from a small group and compares their purchases with a group that saw them.
+  - term: DPA
+    meaning: A dynamic product ad. Meta shows each shopper the products they looked at.

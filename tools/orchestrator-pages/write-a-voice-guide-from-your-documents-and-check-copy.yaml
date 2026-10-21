@@ -1,0 +1,80 @@
+new_slug: write-a-voice-guide-from-your-documents-and-check-copy
+name: Write a voice guide from your documents and check copy
+summary: Give it your documents. Get a voice guide, new copy in that voice and a ranked check.
+job: brand-file
+thinking: medium
+thinking_why: It runs three skills, and the first reads long documents. A mid-size model with a long reading window is enough.
+headline: Get a voice guide from your own writing, and a way to check new copy
+subhead: Give it the documents, decks or call notes where you already sound like yourself. It writes a voice guide with rules and open questions, writes a new piece in that voice, and ranks every place a draft drifts from it.
+explain: |
+  When several people write for you, or you write on different days, the voice slips. One page is warm, the next is stiff. Telling a writer "be on brand" does not help, because no one has written down what that means.
+
+  The steps write it down from what you already have. First it reads your documents and call notes, sorts what they say about voice, tone and words, and rates how sure it is of each rule. It lists the questions your team has not settled. You answer those, because only you can. Then it writes a real email, post or pitch in the settled voice, with a note on each choice. Last it checks a draft against the guide and ranks each gap, with a before and after for the fix.
+when:
+  - Your pages, emails and posts sound like different people wrote them.
+  - You hire writers or use AI to write and want a guide they can follow.
+  - You have great old documents or call recordings and want the voice in them written down.
+you_give:
+  - Documents, decks, posts or call notes where the brand sounds right
+  - Customer words, such as reviews or call notes (optional)
+  - What you want written next, as a short brief (after the guide is settled)
+  - A draft to check, if you have one (optional)
+you_get:
+  - A voice guide with rules, examples and a confidence rating for each
+  - A list of open questions for your team
+  - A new email, post or pitch written in that voice, with notes on each choice
+  - A ranked list of where the draft drifts, each with a before and after fix
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach or paste your best documents and call notes. Step 1 stops with the guide and its open questions.
+  - Answer the open questions with whoever owns the brand, then paste the updated guide back.
+  - Give the brief for the new piece. Then paste a draft to check, or use the one it just wrote.
+how_it_works:
+  - title: Write the voice guide
+    text: Sorts your documents by type, pulls out what they say about voice, tone and words, rates each rule by how many sources back it, and lists the open questions.
+  - title: Settle the open questions
+    text: This step is yours. Decide each open question with your team and update the guide.
+  - title: Write in the voice
+    text: Loads the settled guide, reads what the piece is for and who reads it, keeps the voice fixed, adjusts the tone, and explains each choice.
+  - title: Check a draft
+    text: Compares the draft with the voice and style rules, ranks each gap by how much it matters, and writes a before and after for each fix.
+output_shape: |-
+  STEP 1: VOICE GUIDE
+    Voice and tone | rules | examples | confidence per rule | open questions
+
+  (YOU: SETTLE THE OPEN QUESTIONS AND UPDATE THE GUIDE)
+
+  STEP 2: NEW COPY
+    The piece in your voice | a note on each voice choice
+
+  STEP 3: DRAFT CHECK
+    Gaps ranked by weight | before and after for each | claims that need proof
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Which documents you give it
+    how: Give writing you are proud of, not just the most recent. Mixed or off-brand documents produce a muddy guide. Step 1 flags conflicts.
+  - what: Your answers to the open questions
+    how: Answer each one in a line. The settled guide is the one every later step uses, so unanswered questions stay weak.
+  - what: The kind of piece in step 2
+    how: Name the reader and the goal, such as "a cold email to a buyer who has not heard of us". Tone changes by situation, voice does not.
+  - what: Whether you bring a draft to step 3
+    how: A real older draft shows the gaps better than the piece step 2 wrote. Bring both.
+judge:
+  - Every rule in the guide shows how many sources back it, and low-confidence rules are marked.
+  - Voice (always true) and tone (changes by situation) are kept apart.
+  - The new piece uses the guide's words and keeps its claims to facts you gave.
+  - The draft check ranks gaps, and every gap has a before and after.
+  - Unsupported claims are flagged, not silently kept.
+test:
+  - Hide the brand name and give the new piece to someone who knows your writing. Ask if it sounds like you.
+  - Run the checker on a draft you know is off-brand. It should find the gap you already see.
+  - Run it on a piece you love. It should find little.
+  - Re-run step 3 on the fixed draft. The ranked list should shrink.
+improve:
+  - Save the settled guide in your brand file so every tool reads the same one.
+  - Add your own before and after examples to the guide as you fix drafts.
+  - Update the guide every few months with new writing you are proud of.
+  - Give the guide to every new writer and tell them to run the checker before sending anything.

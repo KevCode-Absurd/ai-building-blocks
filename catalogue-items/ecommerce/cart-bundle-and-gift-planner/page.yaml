@@ -1,0 +1,115 @@
+new_slug: cart-bundle-and-gift-planner
+name: "Cart bundle and gift planner"
+summary: "Give it products, margins and shipping costs. Get a cart bundle, gift and shipping line that hold margin."
+job: make-offer
+thinking: medium
+thinking_why: "It does margin sums and writes a layout from clear rules, so a mid-size model is enough. Check the numbers."
+
+headline: "Cart bundle and gift planner"
+subhead: Give it your products with prices, costs and shipping costs, plus your current order value. It plans a routine-style bundle, a low-cost gift, a free-shipping line, a cart upgrade and a post-purchase offer, with the margin sums shown, and a test plan judged on gross profit per visitor.
+
+explain: |
+  Most stores raise order value by cutting the price. That lifts sales and shrinks profit, and it teaches shoppers to wait for the next sale. A better route is to sell a set that helps the buyer reach the result, and to pay for the discount with money you already save.
+
+  This skill prices the bundle from the shipping and fulfilment you save by sending items together, so margin stays flat. It picks a gift that costs you little and is worth a lot to the buyer, and sets the gift and free-shipping lines so a bigger basket unlocks them. It writes the cart slide-out in words, adds a relevant one-click offer after payment, and checks each step against your margin. The example figures come from one operator. Test them in your store.
+
+when:
+  - Your average order value is stuck and you want to raise it without discounting.
+  - You offer free shipping to everyone and wonder if a line would pay.
+  - You have products that go together but sell them one at a time.
+
+you_give:
+  - Each product with price, cost of goods, and shipping and fulfilment cost per unit
+  - Your average order value, free-shipping line and discount habits
+  - A possible gift and what it costs you delivered
+  - Monthly orders and traffic (optional)
+
+you_get:
+  - A bundle price, gift line and shipping line with a margin check for each
+  - The cart slide-out layout in words, top to bottom
+  - A post-purchase one-click offer
+  - A test plan judged on gross profit per visitor
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your products with price, cost of goods and shipping cost per unit.
+  - Add your average order value, your current free-shipping line and any gift you have in mind.
+  - Check every margin line against your own numbers before you build anything.
+  - Run one test per page at a time, starting with the cart slide-out.
+
+how_it_works:
+  - title: Checks the products fit
+    text: Bundles need items that belong together. Single-item stores get multi-packs or a build-your-own set instead.
+  - title: Frames a routine
+    text: Each item is a step toward the result, so the set is a better way to buy, not a discount.
+  - title: Prices from shipping saved
+    text: The discount equals the shipping and fulfilment saved by sending items together, so margin stays flat.
+  - title: Picks the gift
+    text: Low cost to you, high real value to the buyer, with a line the bundle clears and the single item misses.
+  - title: Sets the shipping line
+    text: Two or three candidate lines above your order value, each checked for margin, then tested in order.
+  - title: Writes the cart slide-out
+    text: A one-click upgrade to the full set that shows the gift, the shipping and the saving it unlocks.
+  - title: Adds a post-purchase offer
+    text: A relevant item right after payment, at a real discount, with only real time limits.
+  - title: Plans the test
+    text: Gross profit per visitor as the main number, with order value, margin, returns and gift cost as guardrails.
+
+output_shape: |
+  BUNDLE      items: <...> | separate price: <$> | shipping and fulfilment saved: <$> | discount: <$> | bundle price: <$>
+              margin per order: bundle <$> / <x%> vs separate <$> / <x%>
+  GIFT        item: <...> | landed cost: <$> | real value: <$> | line: <$> | cost per qualifying order: <$>
+  SHIPPING    candidate lines: <$>, <$>, <$> | margin check at each: <...> | test order: <...>
+  CART SLIDE-OUT   <layout in words, top to bottom>
+  POST-PURCHASE    <item> | price: <$> | normal price: <$ (real)> | why relevant: <...> | time limit: <only if real>
+  TEST PLAN   metric: gross profit per visitor | guardrails: <...> | order: <...> | size: <readiness checker>
+  NOTES       <single-operator figures, local rule checks>
+  MISSING: <what was not given>
+  CHECKS MISSED: <one line each, or none>
+
+tweaks:
+  - what: Shipping cost per unit
+    how: Use your real cost per unit, not an average. The bundle discount can only be as big as the shipping you save.
+  - what: Gift cost
+    how: Give the landed cost, with shipping in. A cheap gift that costs a lot to ship is not cheap.
+  - what: Current order value
+    how: Tell it your average order value. The shipping line must sit above it to lift baskets.
+  - what: Product fit
+    how: Say which products belong together. The routine is only as good as the pairing.
+
+judge:
+  - The bundle discount does not exceed the shipping and fulfilment saved.
+  - Margin per order is shown for the bundle and for the same items bought separately.
+  - The gift's real value is honest and its cost per order is shown.
+  - Every 'normal price' is a real price and every time limit is real.
+  - The main metric is gross profit per visitor, not conversion rate.
+
+test:
+  - "Check the bundle sum by hand: the sum of separate shipping costs, minus the shipping for one parcel."
+  - Ask it for a 30 percent off everything offer. It should explain the margin cost and offer a set or gift instead.
+  - Run it twice on the same products. The bundle price and gift line should match.
+  - Show the cart layout to a friend. They should see the saving and what it unlocks in a few seconds.
+
+improve:
+  - Add your real shipping costs by weight to the skill file, so the savings are exact.
+  - Add the gift items you can source and their landed cost, so it picks from real options.
+  - Add rules for words like free and save, to match the laws where you sell.
+  - Pair it with the store test readiness checker and verdict maker to run and read each test, and with a promotion idea planner for what to run in the sale months.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its discounts, automatic gifts and cart settings run the bundle, gift and shipping line."}
+    - {name: "A cart or upsell app", why: "Shows the slide-out upgrade and the one-click offer after payment. Check what your plan supports."}
+  inputs:
+    - "Shipping costs per parcel by weight"
+    - "Gross margin by product"
+    - "Your best-selling product pairs"
+    - "Your last 90 days of average order value"
+
+terms:
+  - term: Landed cost
+    meaning: What an item costs you once it is delivered to you, shipping and duties included.
+  - term: Average order value
+    meaning: Total sales divided by the number of orders.
+  - term: Slide-out cart
+    meaning: A cart panel that opens from the side of the page when a shopper adds an item.

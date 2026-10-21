@@ -1,6 +1,6 @@
 # Make your own skills: AI Blocks
 
-> 17 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 18 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent procedure writer](https://useaiblocks.com/skills/agent-procedure-writer): Describe a repeatable job. Get a step-by-step procedure file for your AI, with firm rules and a format check.
 - [AI instruction writer](https://useaiblocks.com/skills/ai-instruction-writer): Say which skill or instruction file you are writing. Get it written so your AI follows it well.
@@ -19,3 +19,4 @@
 - [Skill writer and reviewer](https://useaiblocks.com/skills/skill-writer-and-reviewer): Describe a skill or paste one. Get a well-built version with clear triggers and safety notes.
 - [Skill-making guide](https://useaiblocks.com/skills/skill-making-guide): Describe a task you repeat. Get a step-by-step guide to turning it into your own skill that triggers reliably.
 - [Workflow spec interviewer](https://useaiblocks.com/skills/workflow-spec-interviewer): Tell it the workflows you want to build. Get grilled with questions until each one is clear.
+- [Write a skill and check it is safe to share](https://useaiblocks.com/workflows/write-a-skill-and-check-it-is-safe-to-share): Give it a job you repeat. Get a written skill that is scored, tested for triggering and checked for risk.

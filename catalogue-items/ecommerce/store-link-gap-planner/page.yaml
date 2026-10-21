@@ -1,0 +1,133 @@
+new_slug: store-link-gap-planner
+name: "Store link gap planner"
+summary: "Give it your site and rivals. Get a link gap, monthly quota, earned-link targets and pitch emails."
+job: get-found-in-search
+thinking: high
+thinking_why: "It does maths, vets sites and writes outreach, and mistakes here can cost rankings, so a stronger model is safer."
+
+headline: "Store link gap planner"
+subhead: Give it your referring-domain count, your search rivals and the pages you want to rank. It works out how many more linking sites you need, sets a monthly quota, picks sites worth approaching, and drafts pitch emails for earned links only. It plans no paid links.
+
+explain: |
+  Links from other sites are one of the strongest ranking signals, and a store with far fewer than its rivals will struggle to rank. Many stores close the gap by buying links. Google's published spam policy says links bought to pass ranking value can be treated as spam, and the damage can be a drop in rankings.
+
+  This skill closes the gap by earning links. It counts the referring domains your search rivals have against yours and sets a monthly quota. It splits the links between your homepage and the collections near page one. It vets each site, then picks an angle that deserves a link, such as a guest article, a data story, a useful tool or an expert quote. It drafts the emails and a safe sending plan. Results take 3 to 6 months.
+
+when:
+  - Your collections sit around positions 4 to 10 and rivals have many more linking sites.
+  - You want a monthly link target based on numbers, not a guess.
+  - Someone has offered you cheap links and you want a safe plan instead.
+
+you_give:
+  - Your list of linking sites (follow links, authority 30 or more)
+  - Three to five rivals who win the searches you want
+  - The pages you most want to push (optional)
+  - Your monthly time and budget (optional)
+  - Expertise or data you can share (optional)
+you_get:
+  - The gap in linking sites against your rivals and a monthly quota
+  - A split of links between homepage and collections, and a vetting checklist
+  - A target list and pitch emails with a sending plan
+  - An anchor mix and a do-not-do list
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your referring-domain count and the counts for three to five rivals, from a link tool.
+  - Name the collections you want to rank, and say how many hours and dollars a month you can spend.
+  - Vet each site on its list yourself before you send anything.
+  - Send in small batches, track replies, and rerun the gap every few months.
+
+how_it_works:
+  - title: Checks readiness
+    text: Money pages must exist. Results take 3 to 6 months. With a small budget it starts with the free routes.
+  - title: Sizes the gap
+    text: Counts follow links from sites with authority 30 or more, averages your rivals, and subtracts yours.
+  - title: Sets the quota
+    text: Spreads the gap over 24 months, and raises it to keep pace with rivals who keep gaining links.
+  - title: Splits the targets
+    text: About 50 to 75 percent to the homepage and the rest to collections at positions 4 to 10 for the first 3 months.
+  - title: Vets each site
+    text: It must be real, relevant, steady in traffic, not a link seller and not a repurposed domain.
+  - title: Picks an earned angle
+    text: A guest article, a data story, a resource page, a quote or an honest review. Never payment for a link.
+  - title: Writes and sends
+    text: Short pitch emails to named people, with a warm-up and a slow send plan.
+
+output_shape: |
+  GAP
+  Your referring domains (follow, authority 30+): <n>
+  Rival averages: <rival: n> average <n>
+  Gap: <n> | quota: <n> a month (<arithmetic>)
+
+  TARGET SPLIT (first 3 months)
+  Homepage <n>% | collections <n>% (<pages>)
+
+  VETTING CHECKLIST
+  <real | relevant | not a link seller | traffic stable | not repurposed>
+
+  TARGET LIST
+  <site> | authority <n> | visits <n> | angle: <guest article | data | resource | quote | review>
+    contact: <name> | status: <...>
+
+  PITCH EMAILS
+  Subject: <...>
+  <short body>
+
+  SEND PLAN, ANCHOR MIX, DO NOT DO
+  <...>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Which rivals
+    how: Pick the brands winning your results pages, not just direct competitors. Skip giants that sell everything.
+  - what: Your link tool
+    how: Name it, since the authority scale differs by tool. The thresholds are for one common tool's scale.
+  - what: Monthly budget and hours
+    how: Under about $1,000 a month, it leads with free routes such as foundational links, journalist requests and a useful tool.
+  - what: Pages to push
+    how: List collections at positions 4 to 10. They get the collection share of links first.
+  - what: What you can offer
+    how: Share data, a study, a tool or real expertise. A pitch with something to give gets replies.
+
+judge:
+  - The gap shows your count, each rival's count, the average and the quota arithmetic.
+  - No step plans, prices or suggests a paid link.
+  - Every target site has a reason it passed the vetting checklist.
+  - Pitch emails offer something to the reader and mention no fees.
+  - Honest limits are stated, including the 3 to 6 months it takes.
+
+test:
+  - Ask it for cheap links. It should refuse and explain the spam policy risk.
+  - Give it a rival count lower than yours. It should say you have no gap and move on to other work.
+  - Check three of its target sites yourself against the vetting list.
+  - Send the first batch of 20 emails and compare replies to what you expected.
+
+improve:
+  - Add your own vetting rules to the skill file, such as sites you will never approach.
+  - Add your best data and stories so every pitch has something to offer.
+  - Save your reply tracker and give it back each month so it learns which angles worked.
+  - Pair it with the Journalist query answer writer for quotes, and the Store blog plan builder for posts worth linking to.
+
+works_best_with:
+  tools:
+    - {name: "Semrush", why: "Shows referring domains, authority filters, a backlink gap against rivals and lost links."}
+    - {name: "Ahrefs", why: "Shows referring domains and domain rating, and a free tool checks a site's authority."}
+    - {name: "Google Search Console", why: "Free. Its Links report shows who links to you and which pages."}
+    - {name: "Any good chat AI", why: "Drafts short, personal pitch emails from your data and angle."}
+  inputs:
+    - "Your referring-domain list for the last 12 months"
+    - "Referring-domain counts for three to five rivals"
+    - "A data point, study or free tool others would link to"
+    - "A short bio for guest articles"
+
+terms:
+  - term: Referring domain
+    meaning: A separate website that links to yours. Ten links from one site count as one.
+  - term: Follow link
+    meaning: A link that passes ranking value, as opposed to a nofollow link.
+  - term: Anchor text
+    meaning: The clickable words of a link.
+  - term: Link spam
+    meaning: Links made to manipulate rankings, such as bought links, which Google may penalise.

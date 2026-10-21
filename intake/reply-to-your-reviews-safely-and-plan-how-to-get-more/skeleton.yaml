@@ -1,0 +1,40 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md). Our words.
+id: reply-to-your-reviews-safely-and-plan-how-to-get-more
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: reply-to-your-reviews-safely-and-plan-how-to-get-more
+  name: "Reply to reviews safely and plan how to get more"
+  summary: "Give it your reviews. Get themes, replies checked so they promise nothing you cannot keep, and a plan to get more reviews."
+  when: "reviews pile up unanswered, or you fear a reply to an angry customer will make things worse."
+  job: help-customers
+  level: beginner
+steps:
+  - name: "Read the reviews and draft a reply to each"
+    skill: customer-review-reply-writer
+    job: ops
+    from: "skill: customer-review-reply-writer"
+    method: ["Gather the reviews, complaints and tickets from the last 90 days", "Group them into three to five themes with word-for-word quotes", "Draft a reply to every review in your voice", "Flag the customers who look ready to leave"]
+    inputs: [voc_reviews!]
+    outputs: [voc_reviews, copy_draft]
+    note: "Starts from your reviews and makes the themes and the draft replies the next step checks."
+  - name: "Check the angry replies before you post"
+    skill: angry-customer-reply-checker
+    job: ops
+    from: "skill: angry-customer-reply-checker"
+    method: ["Take each draft reply with the complaint it answers and your refund and replacement rules", "List what the customer asked and mark each as answered, partly or missed", "Check every promise against your rules, plus the facts and the tone", "Give a repaired draft with the open decisions marked"]
+    inputs: [copy_draft, voc_reviews]
+    outputs: [copy_draft, feedback_notes]
+    note: "Reads the drafts and the reviews from step 1 and repairs any reply that promises too much or sounds defensive."
+  - pause: "Post the checked replies, and make the decisions the checker marked for you."
+  - name: "Plan how to ask for more reviews"
+    skill: review-request-and-reply-planner
+    job: ops
+    from: "skill: review-request-and-reply-planner"
+    method: ["Set when to ask, based on how long the product takes to judge", "Open with a question about what they liked before any rating", "Give every customer the same path, never only the happy ones", "Write reply templates for public complaints"]
+    inputs: [voc_reviews!, question]
+    outputs: [plan]
+    note: "Uses the themes from step 1 and the tone settled in step 2 to set the ask and the reply templates."

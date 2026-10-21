@@ -1,0 +1,20 @@
+slug: subscription-churn-audit
+name: "Subscription churn audit"
+summary: "Give it your subscription data. Get a score out of 100 for where subscribers leave."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The $100M Subscription Brand Playbook", by: "An email and retention agency founder (name not given)", used: "Reading cancels by day since the first order, the first-order subscription value gap, cancels per billing reminder, cancels after each campaign, and the save-rate bands"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, head of retention at a drinks brand", used: "The three churn peaks (day 1, day 28, days 31 to 45) and what a 24 percent monthly churn looked like"}

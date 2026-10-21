@@ -1,0 +1,21 @@
+slug: stop-fake-orders-card-testing-and-bot-abuse
+name: "Stop fake orders, card testing and bot abuse"
+summary: "Give it your orders and payment setup. Get fraud rules, a review routine and a bot and AI agent access plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: [fraud-rules-setter, bot-and-ai-agent-access-planner]
+steps:
+  - {uses: fraud-rules-setter, note: "Starts the flow. Sets the rules for orders that look risky and a review routine for held ones."}
+  - {uses: bot-and-ai-agent-access-planner, note: "Uses the results of the fraud rules to separate people, bots and AI agents and set what each may do."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/stop-fake-orders-card-testing-and-bot-abuse/skeleton.yaml

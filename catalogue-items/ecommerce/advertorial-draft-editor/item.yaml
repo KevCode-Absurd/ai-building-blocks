@@ -1,0 +1,20 @@
+slug: advertorial-draft-editor
+name: "Advertorial draft editor"
+summary: "Paste your advertorial draft. Get it fixed for AI-sounding lines, weak openings, hard words and loose proof."
+category: ecommerce
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brief, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Most Valuable 60 Minutes on Advertorials You'll Ever Watch", by: "A direct-response copy teacher reviewing a viewer's advertorial", used: "The opening mix instead of leading with pain, one curiosity element in the headline, permission words, the subheadline method, one identity per page, and turning raw study numbers into an exact plain claim"}

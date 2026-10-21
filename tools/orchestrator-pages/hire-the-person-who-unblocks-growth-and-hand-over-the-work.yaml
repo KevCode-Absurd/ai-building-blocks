@@ -1,0 +1,77 @@
+new_slug: hire-the-person-who-unblocks-growth-and-hand-over-the-work
+name: "Hire the person who unblocks growth and hand over"
+summary: Give it your numbers and skills. Get the one hire to make, a written results agreement and a one-on-one plan.
+job: hire-people
+thinking: high
+thinking_why: It judges what limits growth and writes the agreements that follow. Give it your strongest model.
+headline: Hire the one person who unblocks growth, and hand the work over for good
+subhead: Give it your revenue, your margin and an honest rating of your own skills. It finds the single hire that removes the limit, writes the 90-day result and pay options, then a one-page results agreement and a one-on-one meeting plan.
+explain: |
+  When revenue stalls, most owners think they need another hire, then hire someone who does a little of everything. A year later they are still on every decision. Often the real limit is not people at all. It may be traffic, conversion, margin or cash.
+
+  The steps check that first. It separates a traffic problem from a conversion problem and maps your skills against the core jobs. It names the one gap, sizes the prize before you pay, and writes the 90-day result in numbers. Then it turns that result and the pay into a one-page agreement, so you hand over the result and not the instructions. Last, it plans a one-on-one rhythm so the work does not slide back to you. It will not fix a problem that hiring cannot fix.
+when:
+  - Revenue is stuck, you are on every decision, and you think another hire is the answer.
+  - You are about to write a job ad and cannot say what result the person must deliver.
+  - You hired before, handed over too little, and ended up doing the job yourself.
+you_give:
+  - Your revenue, net margin and growth target with a time frame
+  - An honest rating of your skills (strong, ok or weak) in sourcing, paid ads, site conversion, brand, email and operations
+  - What you think is limiting growth
+  - Traffic sources, conversion rate and monthly sessions (optional)
+  - What you can offer, such as cash per month, a share of profit or equity, or stock
+you_get:
+  - The one hire to make, a check that this is a hiring problem, the size of the prize and a readiness score out of 100
+  - A hire brief with the 90-day result in numbers and the pay options you can afford
+  - A one-page results agreement with five parts, ready to hand over
+  - A one-on-one meeting plan with how often, what they bring, the notes rules and your weekly hours
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Rate your own skills honestly. A kind rating gives you the wrong hire.
+  - Say how experienced the new person will be at the exact task. It sets how often you meet.
+  - Read the agreement and meeting plan aloud before you offer the role.
+how_it_works:
+  - title: Find the hire gap
+    text: Checks the limit is a hiring problem, maps the core jobs against your skills, sizes the prize before you pay, and writes the 90-day result in numbers before any interview.
+  - title: Write the results agreement
+    text: Turns the 90-day result and pay into a one-page agreement with the results wanted, guidelines, help on offer, how progress is judged, and what follows good and poor results.
+  - title: Plan the one-on-ones
+    text: Judges their experience at the task, sets how often and how long to meet, has them write the outline and bring numbers, and totals your weekly hours.
+output_shape: |-
+  STEP 1: HIRE GAP
+    Limit and whether hiring fixes it | core jobs against your skills | the one hire | prize and pay options | 90-day result | readiness score out of 100
+
+  STEP 2: RESULTS AGREEMENT
+    Results wanted | guidelines | help on offer | how and when progress is judged | what follows good and poor results | say-it-back card
+
+  STEP 3: ONE-ON-ONE PLAN
+    How often and how long | their outline and numbers | warning signs | note rules | follow-up actions | your weekly hours
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your honest skill ratings
+    how: The hire is the gap in your own skills. Rate yourself weak where you are, not where you wish you were.
+  - what: What you can pay
+    how: Cash, a share of profit, equity and stock give different pay options. Say what you can really offer.
+  - what: The person's experience at this exact task
+    how: Someone new to the task needs more frequent meetings. Someone who has done it many times needs fewer.
+  - what: Traffic and conversion numbers
+    how: With them it can tell a traffic problem from a conversion problem. Without them it says so and is less sure.
+judge:
+  - It checks that hiring is the answer before it names a hire.
+  - The 90-day result is a number with a date, not a task list.
+  - The agreement names the results and leaves how to do the work to them.
+  - The pay options fit the cash and profit you said you have.
+  - Missing facts are marked MISSING, not guessed.
+test:
+  - Give the hire brief to a friend in the trade and ask if they would take the job.
+  - Check the 90-day result against your own numbers. Is it big enough to pay for the hire?
+  - Read the agreement and ask whether it tells the person how to work. If so, take that line out.
+  - Run it again with your skill ratings changed. The hire should change too.
+improve:
+  - Add your pay limits and your equity rules to the first skill so it never suggests what you cannot give.
+  - Keep each signed agreement in your brand file as a model for the next hire.
+  - Edit the meeting skill to add the numbers this role should bring each week.
+  - Review the agreement at 30, 60 and 90 days and write what changed back into the skill.

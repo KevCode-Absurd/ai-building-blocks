@@ -1,0 +1,23 @@
+slug: new-customer-profit-dashboard-builder
+name: "New-customer profit dashboard builder"
+summary: "Give it Shopify and ad exports. Get a daily sheet of new-customer MER, CAC and profit."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital public masterclass)", used: "Lifetime gross profit to CAC bands and windows, and pairing CAC with gross profit on the first purchase"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "Acquisition MER and its worked example, profit contribution, the action list by revenue band, and tagging cost of goods"}
+  - {title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, agency founder, interviewed on a business podcast", used: "New-customer acquisition efficiency and customer-level metrics"}
+  - {title: "The #1 bottleneck in 80% of ecommerce audits (data integrity)", by: "An agency founder who has run over 1,000 audits on 7 to 9 figure brands (name not given)", used: "MER against new-customer MER, the profit contribution formula, and tagging cost of goods"}
+  - {title: "5 ecommerce myths keeping you stuck", by: "Two paid media and email operators", used: "Indexing every metric to new customers and not total revenue"}

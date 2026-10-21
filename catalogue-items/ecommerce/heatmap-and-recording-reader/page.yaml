@@ -1,0 +1,120 @@
+new_slug: heatmap-and-recording-reader
+name: "Heatmap and recording reader"
+summary: "Paste your heatmap and recording notes. Get the friction found, a test idea for each, and a friction score."
+job: test-store-changes
+thinking: medium
+thinking_why: "It reads data and screenshots and ranks what it finds, so a mid-size model works. Use a stronger one for many pages."
+
+headline: "Heatmap and recording reader"
+subhead: Paste your heatmap numbers, scroll depth and notes from session recordings, or attach screenshots. It finds where shoppers get stuck, ranks each problem by page and money at stake, writes a test idea for each, and plans which recordings to watch. You also get a friction score out of 100.
+
+explain: |
+  Heatmaps and session recordings show what shoppers do, but most owners look at a few colorful screenshots and move on. Rage clicks, dead clicks and pages people leave at once point to real problems, such as a chat widget sitting over the add-to-cart button, or a banner that looks like a button but is not one.
+
+  This skill reads the dashboard first, then the click maps and scroll depth for each page, mobile before desktop. It weights what it finds by the money at stake, not raw clicks. For each problem it writes a hypothesis and a test idea, or marks it as a repair to fix right away. It also tells you which recordings to watch, how many, and when to stop, and suggests a free-first research setup for your store.
+
+when:
+  - You installed a free heatmap tool and do not know what to look for.
+  - Your product page gets traffic but few people add to cart.
+  - You want test ideas that come from what shoppers do on your site, not from guesses.
+
+you_give:
+  - Dashboard numbers for rage clicks, dead clicks, excessive scrolling and quick backs
+  - Click maps and scroll depth for your top 3 pages, on mobile and desktop (screenshots work)
+  - Notes or timestamps from recordings you watched (optional)
+  - Traffic, conversion rate and gross profit per order for each page (optional)
+
+you_get:
+  - A friction list ranked by page and money at stake
+  - A hypothesis and a test idea for each problem, and a fix list for repairs
+  - "A watch plan for recordings: which, how many and when to stop"
+  - A friction score out of 100, now and after the fixes, with the sum shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your dashboard numbers and attach the heatmap and scroll screenshots for your top pages.
+  - Add any recording notes, and your traffic and margin per page if you have them.
+  - Fix the repairs first, then send the test ideas to the test idea ranker.
+  - Watch the recordings it picks, then run it again with your notes.
+
+how_it_works:
+  - title: Reads the dashboard
+    text: Rage clicks, dead clicks, excessive scrolling and quick backs over a 3 to 6 month window.
+  - title: Matches the screenshots
+    text: It checks the heatmap shows what shoppers actually saw, such as open popups and menus, and reads mobile first.
+  - title: Reads area and scroll maps
+    text: Share of clicks per element, reach per element, and the drops at the 25, 50 and 75 percent marks.
+  - title: Weighs by money
+    text: Click maps are weighted by revenue per click, so a quiet page with money at stake ranks high.
+  - title: Plans the recordings
+    text: Sort by most and fewest clicks, watch checkout, product and home pages, and stop when the pattern repeats.
+  - title: Joins what with why
+    text: Names the survey or call you still need to learn why shoppers did it.
+  - title: Writes the friction list
+    text: Page, finding, severity, money, hypothesis and test idea. Repairs go on a fix list.
+  - title: Scores the friction
+    text: Out of 100, with points off for each Blocker, Big and Small problem.
+
+output_shape: |
+  FRICTION LIST (highest first)
+   1. <page> | <finding> | evidence: <kind> | severity: <Blocker / Big / Small> | money at stake: <...>
+      why we think so: <...> | hypothesis: because we saw <...>, we believe <...> | test idea: <...>
+   2. ...
+  FIX LIST     <repairs, not tests>
+  WATCH PLAN   pages: <...> | sort: <...> | how many: <start n, stop when the pattern repeats> | time: <hours>
+               the "why" to find: <...>
+  RESEARCH STACK  <by job, free first, price notes dated>
+  SCORE   <n>/100 (100 - 20 x <Blockers> - 10 x <Big> - 3 x <Small> = <n>)
+          <n>/100 after the fixes
+  NOT RUN  <what could not be read, and what is needed>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Mobile screenshots
+    how: Attach mobile maps first. Most store traffic is on phones, and a blended view hides mobile problems.
+  - what: The date window
+    how: Give 3 to 6 months of data, or at least about 90 days. Short windows show noise.
+  - what: Money per page
+    how: Add traffic and gross profit per order for each page so it ranks by money, not clicks.
+  - what: Open popups and menus
+    how: Change the screenshot so the heatmap shows what shoppers saw, such as a popup or an open menu.
+
+judge:
+  - Each finding names the page, what happened and the kind of evidence.
+  - Single-source figures are labelled as ideas, not benchmarks.
+  - Mobile is read before desktop.
+  - Repairs sit on the fix list, not in the test list.
+  - The watch plan says how many recordings to start with and when to stop.
+
+test:
+  - Give it a known problem, such as a chat widget over your add-to-cart button. It should call it a Blocker and a repair.
+  - Give it a dead click on a press logo. It should rank it Small, not Big.
+  - Run it twice on the same data. The top three problems should match.
+  - Watch ten recordings yourself and compare. The patterns should be the ones it named.
+
+improve:
+  - Add your own healthy ranges for rage and dead clicks to the skill file once you have a few months of data.
+  - Add the pages that matter most, so it always reads them first.
+  - Save each friction list with the date, and compare after your fixes.
+  - Pair it with the post-purchase survey builder for the why, and the test idea ranker for what to test first.
+
+works_best_with:
+  tools:
+    - {name: "Microsoft Clarity", why: "Free heatmaps, area maps and recordings with the rage and dead click insights this skill reads."}
+    - {name: "GA4", why: "Free funnels in the Explore tab, and sessions with fewer bots than platform dashboards."}
+    - {name: "A store survey app", why: "Gives you the 'why' behind what the heatmap shows, tied to order data."}
+  inputs:
+    - "Screenshots of the same page on mobile and desktop"
+    - "A funnel showing where shoppers drop off"
+    - "Post-purchase survey answers"
+    - "Gross profit per order by page"
+
+terms:
+  - term: Rage click
+    meaning: Fast repeat clicks in one spot, often on a popup or a widget that is in the way.
+  - term: Dead click
+    meaning: A click on something that looks clickable but is not.
+  - term: Area map
+    meaning: A view showing the share of all clicks that land on each element of a page.
+  - term: Quick back
+    meaning: A shopper opens a page and goes straight back, often because the page lacked what they expected.

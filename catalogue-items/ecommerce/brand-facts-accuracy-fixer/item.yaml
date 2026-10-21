@@ -1,0 +1,21 @@
+slug: brand-facts-accuracy-fixer
+name: "Brand facts accuracy fixer"
+summary: "Paste what AI says about your store. Get wrong facts, the fix for each and a fact accuracy score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: brand
+level: beginner
+inputs:
+  - {type: document, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Ultimate AI Visibility Checklist (AEO/GEO for 2026)", by: "An agency owner running an AI visibility community", used: "Asking AI what it knows and what it looks for when recommending, then editing listings and keeping name, address and phone consistent"}
+  - {title: "Generative Engine Optimization: Is It Safe and How to Do It the Right Way", by: "Harpreet Singh, SEO practitioner, interviewed on a daily SEO show", used: "A wrong time-to-start claim corrected across the site, social and third parties, and review site fixes"}
+  - {title: "AI SEO Course for Beginners: Complete AEO Tutorial", by: "Sam Oh", used: "The planted misinformation test and the fix of specific official content"}

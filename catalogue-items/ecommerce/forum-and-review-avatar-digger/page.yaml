@@ -1,0 +1,132 @@
+new_slug: forum-and-review-avatar-digger
+name: "Forum and review avatar digger"
+summary: "Give it your product and top buyer group. Get a 60-minute plan, quote file and buyer sketch."
+job: understand-customers
+thinking: medium
+thinking_why: "It mostly plans, marks up text you paste and keeps every line tied to a quote. A mid-size model does that well."
+
+headline: "Forum and review avatar digger"
+subhead: Give it your product and the buyer group your biggest rival sells to. It writes search phrases in the way buyers type them, sets a one-hour plan for forums and Amazon reviews, marks up the quotes you paste and writes a one-page sketch of a real buyer.
+
+explain: |
+  Most store owners describe their buyer as "women 45 and up". That is an age and a gender. It does not say what the buyer fears, what she has already tried, or how she would describe the problem to a friend. Ads written from a demographic sound like all the others.
+
+  This skill sends you to read what buyers write in public. For 60 minutes you act as the buyer: you type the problem the way she would, read forum posts and Amazon reviews word for word, and paste the best lines into one document. The skill gives you the search phrases and the clock, then marks the feelings, the fixes already tried and the situation. It ends with a one-page buyer sketch where every line rests on a real quote. A line with no quote is marked as a guess. You read by hand, because summaries lose the feeling.
+
+when:
+  - You sell a product and your ads or page sound generic, and you cannot say who the buyer is in 30 seconds.
+  - You are about to write ads, a product page or an email flow and want the buyer's own words first.
+  - Your first ads did not sell and you suspect you are talking to the wrong person, or in the wrong way.
+
+you_give:
+  - Your product and the problem it solves
+  - The age range and gender of your biggest competitor's buyers (optional, it can help you find it)
+  - The forum posts and Amazon reviews you read and paste in, with names removed
+  - An order export, if you already sell (optional)
+you_get:
+  - Ten search phrases written the way a buyer would type them
+  - A quote file with the feelings, named fixes tried and situation marked
+  - A one-page buyer sketch with ten phrases in their own words
+  - A list of gaps, each marked as a guess until you find a quote
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it your product, the problem it solves and your biggest competitor's top buyer group. If you don't know the group, ask it how to find a rough one.
+  - Set a timer for 60 minutes. Spend 30 on public forums such as Reddit and 30 on Amazon reviews, using the search phrases it gives you.
+  - Read each post word for word. Paste the strongest lines into the chat with no usernames, then ask it to mark them up.
+  - Ask for the one-page sketch. Check that every line has a quote, then hold it next to your current ads and page.
+
+how_it_works:
+  - title: Warms up with five questions
+    text: It asks who, what, when, where and why, and splits "what" into the buyer's wants and the buyer's fears.
+  - title: Picks a starting group
+    text: It uses your biggest competitor's top buyers as a place to start looking, never as the answer.
+  - title: Runs the 30-second test
+    text: If you cannot say who the buyer is, what they hope for and what they would wish for in 30 seconds, you need the research.
+  - title: Writes buyer-voice searches
+    text: It gives ten phrases typed the way a buyer would, ending in Reddit or a niche forum name.
+  - title: Marks up your pasted quotes
+    text: It bolds the feelings, the fixes already tried by name and the situation, and notes the mind state.
+  - title: Moves to Amazon reviews
+    text: The second 30 minutes uses reviews of the same and similar products, pasted and marked the same way.
+  - title: Writes the buyer sketch
+    text: One page with who they are, what happened, what they tried, what they fear, what they would wish for and ten phrases.
+  - title: Compares it to your copy
+    text: It lists every line in your current ads and page that the buyer would not say that way.
+
+output_shape: |
+  SEARCH PHRASES
+  1. <phrase as the buyer would type it>
+  ...10
+
+  QUOTE FILE  (no names, no links)
+  Group: <tag only>
+  "<exact words>" | from: <forum or review site>
+    | FEELING: <word> | TRIED: <named fix> | SITUATION: <detail>
+
+  BUYER SKETCH  (one page)
+  Starting group: <age range, gender> [checked | guess]
+  Who they are:         <person-level, not only age and gender>
+  What happened:        <their story>
+  What they tried:      <named fixes>
+  What they fear:       <the deepest one first>
+  Mind state:           <frustration | fear | shame | depression>
+  What they'd wish for: <the snap-your-fingers outcome>
+  10 phrases in their words:
+  1. "<phrase>"
+  Gaps (guess until quoted): <what still has no quote>
+  NEXT: <one next step>
+
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: The starting group
+    how: A wrong starting group sends you to the wrong forums. Check it against your rival's ads and your own best customers before you start, or run the hour twice with two groups.
+  - what: How specific the problem phrase is
+    how: "Search the situation, not the product. 'Hair loss making me less attractive' finds feelings. 'Best hair serum' finds shoppers comparing products."
+  - what: Where you read
+    how: Reddit first, then a niche forum for your product, then Amazon reviews of the same and similar products. Confession forums carry the strongest feelings.
+  - what: How much you paste
+    how: Paste whole posts, not summaries. The skill can only mark what it can see, and the feeling lives in the exact words.
+  - what: Your current copy
+    how: Paste your live ad and product page at the end. The gap check is the most useful part when you already have copy.
+
+judge:
+  - Every line of the sketch has a quote behind it, or says guess.
+  - Fixes already tried are named, such as a product or treatment, not grouped as "other things".
+  - You could not swap in a different product's buyer and have it still fit.
+  - The ten phrases sound like a person talking, not like a marketer.
+  - The quote file has no usernames, links or photos.
+
+test:
+  - Pick one phrase from the sketch and search for it. You should find real posts that say the same thing.
+  - Show the sketch to a customer who fits it. Ask what feels wrong. A real one rarely gets more than a small correction.
+  - Read your current ad aloud, then read the ten phrases. If the ad sounds like a different person, rewrite from the phrases.
+  - Run the hour twice on two groups. The two sketches should differ in fear, fixes and wording, not only in age.
+
+improve:
+  - Save the sketch to your brand file as the buyer description, with the quote file beside it as proof.
+  - Add your own forums and communities to the skill file so every run starts in the right places.
+  - Add a line to the skill that names the claims your product may never make, so the sketch never drifts into health or money promises.
+  - Repeat the hour each quarter. Buyers change how they talk. Replace old quotes with new ones.
+  - Pair it with the Avatar fit checker to test your ads and page against the sketch, and with the Untapped avatar finder when rivals already sell to your first group.
+
+works_best_with:
+  tools:
+    - {name: "Reddit search", why: "The largest library of buyers describing their problems in their own words, with comments that add detail."}
+    - {name: "Amazon reviews", why: "Buyers tell their whole story after buying, and long reviews with photos usually hold the most."}
+    - {name: "Meta Ad Library", why: "Shows what rivals say and who they seem to talk to, which helps you choose the starting group."}
+    - {name: "Any good chat AI", why: "Keeps the clock, writes the search phrases and marks up the quotes you paste."}
+  inputs:
+    - "An order export, so you can find your best 20 percent of customers and see what they share"
+    - "Your current ads and product page, to find lines the buyer would not say"
+    - "Notes from any customer calls you have had"
+    - "A list of niche forums and groups that you already know"
+
+terms:
+  - term: Avatar
+    meaning: A real buyer described by their situation, fears, fixes tried and words, not just their age and gender.
+  - term: Mind state
+    meaning: How the buyer feels about the problem, such as frustration, fear, shame or sadness. Each one needs different copy.
+  - term: Miracles and miseries
+    meaning: Miracles are what buyers want. Miseries are what they fear and want to get away from.

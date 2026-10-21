@@ -1,0 +1,21 @@
+slug: check-your-strategy-then-turn-it-into-a-90-day-plan
+name: "Check your strategy, then turn it into a 90-day plan"
+summary: "Give it your strategy. Get what is hollow, a marketing plan built on what holds and a 90-day plan with owners."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: [real-strategy-checker, marketing-plan-writer, 90-day-plan-builder]
+steps:
+  - {uses: real-strategy-checker, note: "Starts from your strategy and returns a diagnosis, a policy and the actions that hold up."}
+  - {uses: marketing-plan-writer, note: "Builds the plan from the fixed strategy brief you wrote after the check."}
+  - {uses: 90-day-plan-builder, note: "Takes the marketing plan from the step before and breaks it into weekly steps, owners and check-ins."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/check-your-strategy-then-turn-it-into-a-90-day-plan/skeleton.yaml

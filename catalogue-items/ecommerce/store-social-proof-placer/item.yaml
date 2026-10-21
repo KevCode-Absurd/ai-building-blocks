@@ -1,0 +1,26 @@
+slug: store-social-proof-placer
+name: "Store social proof placer"
+summary: "Give it buyer doubts and reviews. Get which proof to show, from whom and where."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: persona, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: objection_map}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [robert-cialdini]
+credits:
+  - {title: "The Only Landing Page Guide You'll Ever Need", by: "An agency owner who builds landing pages", used: "The open review grid with a headline, name and source on each review, and why carousels get little engagement"}
+  - {title: "I Studied 1000 Landing Pages, Here's What Works in 2025", by: "The same agency owner", used: "Adding a real quote to each press logo, and what makes a review believable"}
+  - {title: "Claude Code Website Masterclass: How I Got 20% Conversions", by: "A service-business owner who sold his lead-gen company", used: "Short video testimonials, a rating between 4.7 and 4.9, and case studies with specifics"}
+  - {title: "11 landing page tricks to get more sales", by: "A CRO agency founder (same speaker as the 1,000 landing pages talk)", used: "Matching each testimonial to the buyer's exact pain, near the button"}
+  - {title: "The new way of landing pages: offer first, design second, test always", by: "A CRO agency founder", used: "The proof headline and the review wall"}
+  - {title: "Influence: The Psychology of Persuasion (revised edition)", by: "Robert B. Cialdini", used: "Proof works most under uncertainty, similar people persuade more, a spread of examples beats one, how to judge an expert, owning a small drawback to earn belief on the big claim, and why staged testimonials backfire"}

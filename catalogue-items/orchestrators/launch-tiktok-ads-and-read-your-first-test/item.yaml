@@ -1,0 +1,25 @@
+slug: launch-tiktok-ads-and-read-your-first-test
+name: "Launch TikTok ads and read your first test"
+summary: "Give it your store and videos. Get a setup fix list, a starter campaign, a test verdict and Spark ad picks."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: beginner
+inputs:
+  - {type: store_capture, required: true}
+  - {type: question, required: true}
+  - {type: video_ads, required: true}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+uses: [tiktok-ads-account-setup-checker, tiktok-starter-campaign-builder, tiktok-ad-test-reader, tiktok-spark-ad-picker]
+steps:
+  - {uses: tiktok-ads-account-setup-checker, note: "Starts by finding what is broken in the account before any money is spent."}
+  - {uses: tiktok-starter-campaign-builder, note: "Builds the starter campaign around the videos you picked."}
+  - {uses: tiktok-ad-test-reader, note: "Reads the first results against the plan and decides each ad."}
+  - {uses: tiktok-spark-ad-picker, note: "Picks which posts to boost, using what the test read showed works."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/launch-tiktok-ads-and-read-your-first-test/skeleton.yaml

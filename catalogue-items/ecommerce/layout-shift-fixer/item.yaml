@@ -1,0 +1,22 @@
+slug: layout-shift-fixer
+name: "Layout shift fixer"
+summary: "Give it your CLS report and page. Get the shifting element found and the fix for each cause."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: theme_files, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: code_change}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Shopify speed and image optimization (a video series on images, app scripts, layout shift, largest content and store audits)", by: "Christian, a Shopify developer (YouTube channel)", used: "Finding the shifting element, app-injected bars, clashing style rules, reserving space, and rebuilding critical styles per template"}
+  - {title: "Google PageSpeed Insights: Step-by-Step tutorial to Boost Site Speed", by: "Jack, Rank Math (video)", used: "Reserving space for injected content and the layout shift bands"}

@@ -1,0 +1,22 @@
+slug: store-pl-builder
+name: "Store P&L builder"
+summary: "Give it your sales and costs. Get a four-bucket P&L with targets and the line to fix first."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Finance for e-commerce: a set of finance lectures and Excel walk-throughs", by: "Eric, startup finance educator", used: "The four-margin layout, per-order breakdown, the CAC definition and comparing CAC with contribution margin"}
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, Blue Sense Digital masterclass", used: "The gross-to-net revenue bridge, what belongs in cost of delivery, loan interest below operating profit, and fixing a missed target from the lines above it"}
+  - {title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, interviewed on a business podcast", used: "The four-bucket P&L, the marketing bucket rule and reference ranges for each bucket"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency (public masterclass)", used: "Net revenue levers, working back from a net profit target to a contribution margin target, and preferring profit to revenue growth"}

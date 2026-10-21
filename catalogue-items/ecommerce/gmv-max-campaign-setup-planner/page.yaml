@@ -1,0 +1,133 @@
+new_slug: gmv-max-campaign-setup-planner
+name: "GMV Max campaign setup planner"
+summary: "Give top products and target cost per order. Get GMV Max settings, an ROI target and creator offers."
+job: launch-and-scale-ads
+thinking: medium
+thinking_why: "It does margin math and sets several linked numbers, so a mid-size model is enough."
+
+headline: "GMV Max campaign setup planner"
+subhead: Give it your top TikTok Shop products, your target cost per order and your margins. It checks the setup, picks the products, sets the ROI target, budget and promotion-day settings, and plans your creator commission offers.
+
+explain: |
+  GMV Max is TikTok's automatic ad type for shop products. You pick the products, the return you want and the budget, and TikTok picks the videos and the people. A few settings can cost you money if you leave them on default: a return target below break-even, a promotion-day rule that raises your budget, and creator commissions that eat your margin.
+
+  This skill works out your break-even return first. Then it checks your prerequisites, picks your top 20 percent of products, and sets the ROI target, daily budget and promotion-day control. It plans two creator offers: open collaboration, which pays a commission only when a sale happens, and target collaboration, which sends custom rates to creators you choose. Each offer is checked against your margin before you send it.
+
+when:
+  - You sell in TikTok Shop and want to start GMV Max ads without wasting the first week.
+  - TikTok suggests a return target and you can't tell if it makes you money.
+  - You want creators to make videos for your products and need to set commissions that leave you a margin.
+
+you_give:
+  - Your top products with orders, price and unit cost
+  - Your target cost per order
+  - Your shipping, payment fees and returns rate
+  - The state of your Seller Center, Business Center and Ads Manager links (optional)
+  - How many creators you can send samples to (optional)
+you_get:
+  - Your break-even return, with the math
+  - The products to launch on, and listing fixes first
+  - The ROI target, daily budget and promotion-day settings
+  - Open and target creator offers, checked against margin
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your top products with orders, price, cost, shipping and fees, and your target cost per order.
+  - Check that your shop is eligible. GMV Max is open only in some countries, and some product types can't be sold.
+  - Set the campaign as the plan says. Check impressions after a few days, and read the creatives tab each week.
+
+how_it_works:
+  - title: Checks the setup
+    text: Seller Center, Business Center and Ads Manager linked, the shop linked with GMV Max allowed, and admin access.
+  - title: Cleans the products
+    text: It syncs from Shopify with the official app, and fixes listing errors and low quality scores.
+  - title: Finds break-even
+    text: One divided by your margin after product cost, shipping, fees, returns and commission.
+  - title: Plans creator offers
+    text: Open collaboration at about 20 percent paid only on sales, with hand-approved samples. Target invites at custom rates, with a lower shop ads commission.
+  - title: Picks the products
+    text: The top 20 percent by orders. One GMV Max campaign per product.
+  - title: Sets the ROI target
+    text: TikTok's suggestion plus 1, checked against break-even, and lowered if there are no impressions after a few days.
+  - title: Sets budget and promotion days
+    text: Two times target cost per order a day. It lowers the promotion-day budget rise to 50 percent and 1 time, or turns it off.
+  - title: Plans the review
+    text: Leave creative on auto, boost a strong video, and read the creatives tab to see which creators earn.
+
+output_shape: |
+  GMV MAX SETUP PLAN
+  Eligible: <yes | no: why> | prerequisites: <list with Done / Missing>
+
+  BREAK-EVEN
+  Price <$> | cost + shipping + fees + returns <$> | commission <%> | contribution margin <%>
+  Break-even ROAS = 1 / <margin> = <x>
+
+  PRODUCTS
+  Launch on: <top 20 percent list> | note: one GMV Max campaign per product
+  Fix first: <listing errors / quality scores>
+
+  CAMPAIGN SETTINGS
+  ROI target: <TikTok suggestion + 1 = x> (compare with break-even <x>) | if no impressions: <lower by ...>
+  Daily budget: 2 x CPA = <$> | promotion days: <50 percent, 1 time | off>
+  Creative: auto select | creative boost: <$10+ a day, end date>
+
+  CREATOR OFFERS
+  Open collaboration: <commission %> | samples: <approval, thresholds>
+  Target collaboration: <creators, rate %> | shop ads commission: <%>
+  Margin check after commission and ads: <pass | fail: change>
+
+  AFTER LAUNCH
+  Day 3 to 5: <impressions check>
+  Weekly: <creatives tab review>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <product costs | setup state | target CPA>
+
+tweaks:
+  - what: Product costs
+    how: Give the unit cost, shipping, fees and returns rate for each product. Without them the break-even can't be worked out and the commission check is left blank.
+  - what: Target cost per order
+    how: Use your real break-even or a number you can afford. The daily budget is set at two times this figure.
+  - what: Creator budget
+    how: Say how many samples you can send. It sets approval thresholds, such as a follower floor, so requests match what you can ship.
+  - what: ROI target start
+    how: Say if impressions stay at zero after a few days. It lowers the target. Say if you want more volume and it lowers it toward break-even.
+
+judge:
+  - Break-even ROAS is shown with its sum from your numbers.
+  - The ROI target is not below break-even unless you chose it.
+  - Every commission has a margin check after commission and ads.
+  - The promotion-day setting is dealt with and not left on default.
+  - The operator's numbers are labelled as one operator's habit.
+
+test:
+  - Give it a product with a thin margin and ask for a 25 percent commission. It should warn you if the margin goes below break-even.
+  - Give it no product costs. It should leave break-even blank and mark them missing.
+  - Run it twice on the same products. The product list and settings should match.
+  - Check break-even by hand. One divided by your margin as a decimal should match the plan.
+
+improve:
+  - Add your real shipping, fees and returns rate to the skill file so the margin check uses your numbers.
+  - Change the sample thresholds to match your sample budget and how many creators you want.
+  - Save the creators who drove revenue to your brand file, with their rates, to reuse in target invites.
+  - Pair it with the TikTok Shop ad planner for the wider plan, and the TikTok ad test reader for videos you test outside GMV Max.
+
+works_best_with:
+  tools:
+    - {name: "TikTok Shop Seller Center", why: "Holds listing quality scores, the affiliate center for collaborations and the shop link."}
+    - {name: "TikTok Ads Manager", why: "Where GMV Max is created, and where the creatives tab shows each video and creator."}
+    - {name: "Shopify", why: "The official TikTok app syncs products to your shop."}
+  inputs:
+    - "Your unit cost sheet with shipping and fees by product"
+    - "A list of creators you already work with, with their rates"
+    - "A screenshot of TikTok's suggested ROI for your products"
+
+terms:
+  - term: GMV Max
+    meaning: TikTok's automatic ad type for shop products. TikTok picks the videos and the audience.
+  - term: ROI target
+    meaning: The return you ask for. Set too high, ads stop showing.
+  - term: Open collaboration
+    meaning: An offer any creator can take, paid as a commission only when a sale happens.
+  - term: Target collaboration
+    meaning: An invite sent to creators you pick, with a rate you set for each.

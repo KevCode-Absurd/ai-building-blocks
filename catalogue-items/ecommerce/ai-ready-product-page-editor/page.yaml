@@ -1,0 +1,129 @@
+new_slug: ai-ready-product-page-editor
+name: "AI-ready product page editor"
+summary: "Give it a product or collection page. Get the facts, spec table, FAQs and markup checklist AI tools can use."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It rewrites a page from your facts and keeps every claim true. A mid-level model is enough. Check the facts it uses against your own."
+
+headline: "AI-ready product page editor"
+subhead: Give it a product or collection page, your product facts and your shoppers' questions. It returns a prioritised change list, a spec table and FAQ draft, a title, H1 and meta description, and a checklist for product and review markup, all built from facts you supplied.
+
+explain: |
+  AI assistants answer shopping questions from your page and from other sites. If your page hides the price, the shipping window or the size, a model may borrow a figure from a review site or make one up. If your page opens with a tagline, a shopper and a machine both have to guess what it sells.
+
+  This skill edits one page at a time. It puts plain facts in the first screen, adds a short FAQ of specific questions, gives collection pages a "best for a use" title and heading, and checks review and product markup. It works from your facts only. It is the answer layer on top of normal product page SEO. It does not create thousands of near-identical pages, and it will not help a store whose product text is copied from a supplier and has nothing unique to offer.
+
+when:
+  - A product page ranks or sells well and you want AI assistants to quote it correctly.
+  - AI tools state a wrong price, size or shipping time for your product.
+  - You want a collection page to answer a "best X for Y" question.
+
+you_give:
+  - The product or collection page address and its text
+  - "Product facts: specs with units, materials, sizing, price, shipping, returns"
+  - Reviews and customer questions (optional)
+  - Shopper questions from the shopper question mapper (optional)
+
+you_get:
+  - A page change list in priority order
+  - A spec table and FAQ draft
+  - A title, H1 and meta description draft
+  - A markup checklist for product, offer and review
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the page text and your product facts. Add your reviews and customer questions.
+  - Read the change list. Do the top three first.
+  - Publish the spec table and FAQ. Check the markup in a free validator.
+  - Check the page loads its key content with JavaScript turned off.
+
+how_it_works:
+  - title: Applies the 2-second rule
+    text: Within 2 seconds a visitor knows what it is, who it is for or where it ships, and what to do next.
+  - title: Keeps one page to one thing
+    text: One page per product or service, and one H1 per page.
+  - title: Puts facts in the first screen
+    text: Price or a from price, key spec, shipping window and return terms.
+  - title: Adds a short FAQ
+    text: "About 5 specific questions on a buy page: does it fit, work with, last how long, what is in it, who is it not for."
+  - title: Shapes collection pages
+    text: A "best product for a use" title and H1 over a product grid works without a list article.
+  - title: Shows the proof
+    text: Review count and rating on the page and in markup. Real photos and your own use cases.
+  - title: Checks the markup
+    text: Product, offer and review schema, validated.
+  - title: Links and keeps facts true
+    text: Links to related pages and guides, one source of truth for facts, and a check without JavaScript.
+
+output_shape: |
+  PAGE  <address> | TYPE  <product | collection>
+
+  CHANGE LIST (priority order)
+  1. <change> | why: <reason> | where: <section>
+
+  FIRST SCREEN
+  What it is: <...> | who for / where it ships: <...> | next step: <...>
+  Facts shown: <price> | <key spec> | <shipping window> | <return terms>
+
+  SPEC TABLE
+  <attribute> | <value with unit> | <source: your facts>
+
+  FAQ (about 5)
+  Q: <specific question>  A: <answer from your facts>
+
+  TITLE / H1 / META
+  Title: <...> | H1: <...> | Meta: <...>
+
+  MARKUP CHECKLIST
+  <product | offer | review | availability> | <present or add> | validated: <yes / no>
+
+  LINKS  <related product pages and guide>
+  CHECKS MISSED: <none or list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your product facts
+    how: Paste exact figures with units. The page can only be as true as the facts you give. Anything missing is marked MISSING and never filled in.
+  - what: Shopper questions
+    how: Give the real questions from the mapper, reviews or support emails. The FAQ is built from them.
+  - what: Page type
+    how: Say product or collection. A collection page gets a best-for-a-use title and H1.
+  - what: Your price rules
+    how: If you cannot show an exact price, give a from price or a range. The skill uses that over saying nothing.
+
+judge:
+  - The first screen says what it is, who it is for or where it ships, and the next step.
+  - Price or a from price, the key spec, shipping and returns are in the first screen.
+  - Every FAQ answer comes from the facts you gave.
+  - There is one H1 and the page is about one thing.
+  - No review, rating or claim is made up.
+
+test:
+  - Show the first screen to someone for 2 seconds. Ask what the page sells and what to do next.
+  - Turn JavaScript off and check price, reviews and FAQ still show.
+  - Ask an AI assistant about your product's price and shipping after the page is live. Check the answer matches the page.
+  - Run the markup through a free validator and fix what it flags.
+
+improve:
+  - Add your fixed facts to the skill file, such as sizing and returns, so every page uses the same wording.
+  - Add your brand voice rules and a banned words list.
+  - Save your approved spec table format in your brand file.
+  - Pair it with the product page SEO builder (the classic search layout) and the shopper question mapper.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Product and collection templates hold the title, H1, spec table and FAQ. Themes often make the logo the home page H1, so check section level."}
+    - {name: "A schema validator", why: "Free tools show if product, offer and review markup is valid."}
+    - {name: "Google Search Console", why: "Shows if the page is indexed and which queries it gets."}
+  inputs:
+    - "Your real product photos and use-case photos"
+    - "Your review export with counts"
+    - "Your size chart and care notes"
+
+terms:
+  - term: H1
+    meaning: The main heading of a page. Each page should have one.
+  - term: Schema
+    meaning: Code that tells machines a page's product name, price, availability and reviews.
+  - term: Shoppable card
+    meaning: A box in an AI answer that shows a product, seller, price and rating a shopper can click.

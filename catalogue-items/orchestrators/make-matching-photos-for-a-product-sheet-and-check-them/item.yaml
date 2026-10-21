@@ -1,0 +1,21 @@
+slug: make-matching-photos-for-a-product-sheet-and-check-them
+name: "Make matching photos for a product sheet and check them"
+summary: "Give it a sheet of products. Get one matching photo per product, a faults report, and a marketplace rules check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: product_photos, required: true}
+outputs:
+  - {type: audit_report}
+uses: [product-photo-batch-maker, ai-product-photo-inspector, marketplace-photo-rule-checker]
+steps:
+  - {uses: product-photo-batch-maker, note: "Starts the chain: one matching photo per row of your sheet."}
+  - {uses: ai-product-photo-inspector, note: "Checks the saved batch for AI faults and says which to redo."}
+  - {uses: marketplace-photo-rule-checker, note: "Checks the photos that passed against the rules of the shop you list on."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-photos-for-every-product-in-a-sheet/skeleton.yaml

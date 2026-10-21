@@ -1,0 +1,73 @@
+new_slug: speed-up-a-woocommerce-store-and-keep-it-fast
+name: Speed up a WooCommerce store and keep it fast
+summary: Give it your PageSpeed report and setup. Get speed fixes in order and a budget that keeps the store fast.
+job: speed-up-store
+thinking: medium
+thinking_why: Three steps that read a report and write a plan. A mid-size model does the job.
+headline: Make your WooCommerce store load faster and stay that way
+subhead: Paste your PageSpeed report and describe your setup. It reads which pages are slow and why, puts hosting, caching, plugin and image fixes in the order to do them, and sets a speed budget and a test routine so the store doesn't slow down again.
+explain: |
+  A slow WooCommerce store usually has many small causes: big images, plugins that load on every page, no caching, fonts fetched from other sites. A speed report lists dozens of warnings, and it's hard to know which ones matter. Stores also get fast, then slow down again as new plugins and promotions pile up.
+
+  The first step splits the report into real-user data and the lab test, reads mobile first, and names what is causing the slow parts. The second puts the fixes in the order to do them: a baseline, images, plugins, extra scripts, fonts, compression and caching, a CDN, and only then questions for your host. The third sets limits for page weight, mobile score and outside scripts, a test routine, and a checklist before a big sale.
+when:
+  - Your WooCommerce store feels slow and PageSpeed shows red.
+  - You don't know which of a long list of speed warnings to fix first.
+  - You have a sale coming and want the store to hold up.
+you_give:
+  - Your PageSpeed report for the homepage, a product page and a collection page, pasted as text
+  - "Your setup: theme, plugins, hosting, caching and whether you use a CDN"
+  - Your sale date, if you have one (optional)
+you_get:
+  - A field score out of 100, each page read, and the three biggest causes
+  - Fixes in order, from images and plugins to caching and what to ask your host
+  - "A speed budget: page weight, mobile score and a cap on outside scripts"
+  - A test routine and a checklist for before a big sale
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Run PageSpeed on mobile for three pages, three times each, and paste the results. List your plugins and host.
+  - Make the fixes on a staging copy first, and run the report again after each change.
+  - Put the budget somewhere your team will see it, and test after every new plugin.
+how_it_works:
+  - title: Read the speed report
+    text: Splits real-user data from the lab test, compares each measure with its band starting with mobile, names what causes the slow parts and gives a score out of 100 and three fixes.
+  - title: Order the WooCommerce fixes
+    text: Starts with a baseline and a change log, then images, plugins, extra scripts and fonts, then compression, caching and a CDN. It saves host questions for last.
+  - title: Set a speed budget
+    text: Sets limits for page weight, mobile score and outside scripts, picks the pages to test and how often, and writes a checklist for before a sale, including a freeze on changes.
+output_shape: |-
+  STEP 1: SPEED REPORT
+    Real-user data vs lab | each page read | what causes the slow parts | score out of 100 | three fixes
+
+  STEP 2: FIX ORDER
+    Baseline | images | plugins | extra scripts | fonts | compression and caching | CDN | questions for your host
+
+  STEP 3: SPEED BUDGET
+    Limits | test routine | pages to test | pre-sale checklist | change freeze
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your report
+    how: Paste the mobile report for three pages, with three runs each. One run can swing a lot.
+  - what: Your plugin list
+    how: Give the plugin names and what each earns you. The plugin audit starts from the ones nobody can justify.
+  - what: Your host
+    how: Say which host and plan you are on. It decides which caching and server questions are worth asking.
+  - what: Your sale date
+    how: Give it the date, so the checklist counts back from it and the change freeze starts on time.
+judge:
+  - The report is split into real-user data and lab data, and mobile comes first.
+  - Fixes come in order, and images and plugins come before server changes.
+  - Each fix names which measure it should improve.
+  - The budget has a number for page weight, mobile score and outside scripts.
+  - The routine says when to test, including after each new plugin.
+test:
+  - Apply the first fix on a staging copy and run PageSpeed again. The measure it names should move.
+  - Disable one plugin it flags as doubtful on staging. The store should still work.
+  - Check that every limit in the budget is a number you can measure.
+improve:
+  - Save your baseline scores so next month's run shows the trend.
+  - Cut a plugin when you add one, so the budget holds.
+  - If real-user data is missing because traffic is low, rely on lab runs and tell the workflow.

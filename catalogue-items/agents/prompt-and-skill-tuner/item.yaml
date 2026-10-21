@@ -1,0 +1,31 @@
+slug: prompt-and-skill-tuner
+name: "Prompt and skill tuner"
+summary: "Give it a prompt or skill and test cases. It tests, fixes and re-tests until the checks pass, within four rounds."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+  - {type: skill_files, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: copy_draft}
+  - {type: skill_files}
+uses: [prompt-tester-and-tuner, prompt-fixer, marketing-prompt-tester, skill-file-validator, skill-quality-tester, skill-trigger-auditor, skill-writer-and-reviewer, skill-safety-checker]
+steps:
+  - {uses: prompt-tester-and-tuner, note: "Prompts: sets the baseline score on your test cases, and scores every round after."}
+  - {uses: marketing-prompt-tester, note: "Only for prompts that write ads, emails, pages or posts: compares versions on the test cases and keeps the version history."}
+  - {uses: prompt-fixer, note: "Prompts, each round the checks fail: one change at a time to the prompt."}
+  - {uses: skill-file-validator, note: "Skills, first and each round: structure, wording and naming problems, scored out of 100."}
+  - {uses: skill-quality-tester, note: "Skills, after the validator has no critical problems: a quality score and the fix list."}
+  - {uses: skill-trigger-auditor, note: "Skills, when it has a description: whether the skill fires when it should and whether another skill blocks it."}
+  - {uses: skill-writer-and-reviewer, note: "Skills, each round the checks fail: one change at a time to the skill."}
+  - {uses: skill-safety-checker, note: "Skills, once, on the final version before you keep or share it: risky code, data leaks and hidden payloads."}
+schedule: "Each time the prompt or skill is changed, and before you share it"
+asks_before: [overwriting your original prompt or skill file, sharing or publishing a skill, adding a tuned prompt or skill to a live tool or a customer-facing flow, running test cases through a paid API key, running scripts that come with a skill you did not write]
+origin: own
+version: 1.0.0
+example_pending: true

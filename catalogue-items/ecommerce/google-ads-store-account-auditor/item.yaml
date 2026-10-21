@@ -1,0 +1,22 @@
+slug: google-ads-store-account-auditor
+name: "Google Ads store account auditor"
+summary: "Give it your exports and settings. Get brand leakage, a score out of 100 and a 90-day fix order."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Only Google Ads Strategy You Need for 2026", by: "Agency founder who works with mid to large e-commerce brands (name not given in the video)", used: "The common mistakes list, the PMax order of importance, the structure rules and the 90-day fix order"}
+  - {title: "Ecommerce Google Ads Free Course (4+ Hours) | Google & Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given in the video)", used: "The brand leakage check and the brand spend and impression share targets"}
+  - {title: "Google Ads for Ecommerce: The Complete Architecture & Operations Manual (2026 Edition)", by: "Compiled written guide, author not named", used: "Quality Score parts, Performance Max asset counts and the learning phase rule"}
+  - {title: "Full Ecom Google Ads Course 2026 (100% FREE)", by: "Max, agency owner who runs Google Ads for online stores", used: "The campaign settings traps, structure traps and naming"}

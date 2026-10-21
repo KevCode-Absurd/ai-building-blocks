@@ -1,0 +1,36 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md).
+id: find-where-new-users-leave-and-prove-the-fix-works
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: find-where-new-users-leave-and-prove-the-fix-works
+  name: "Find where new users leave and prove the fix works"
+  summary: "Give it visits, sign-ups and 30-day users. Get the biggest leak, a one-morning test of the fix and a result check."
+  when: "sign-ups look fine but few people are still around a month later, and you want to fix the first visit before building a feature."
+  job: build-product
+  level: intermediate
+steps:
+  - name: "New user drop-off finder"
+    skill: new-user-drop-off-finder
+    job: analysis
+    from: "skill: new-user-drop-off-finder"
+    method: ["Lay out visits, sign-ups and active users with the share kept at each step", "Rank the drops and name the biggest one", "Read the first visit for the step a new person is missing", "Name the few actions that make someone active", "Plan one change for new users with a measure, a target and a date"]
+    inputs: [performance_sheet]
+    outputs: [audit_report, plan]
+    note: "Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers."
+  - name: "Small usability test planner"
+    skill: small-usability-test-planner
+    job: research
+    from: "skill: small-usability-test-planner"
+    method: ["Pick three to five tasks at the leak", "Plan three testers plus one outsider", "Write a read-aloud script that tests the product, not the person", "Set watcher rules and a note sheet", "Build a short fix list from the worst problems seen"]
+    inputs: [audit_report, question, persona!, web_page!]
+    outputs: [plan]
+    note: "Plans a one-morning test of the leak the finder named. Reads the audit report from the step before."
+  - pause: "Run the test with three people and one outsider, ship the first-visit fix, then wait two weeks and export the same numbers again."
+  - name: "Product metrics review writer"
+    skill: product-metrics-review-writer
+    job: ops
+    from: "skill: product-metrics-review-writer"
+    method: ["Gather the new numbers for the same period length", "Set them against the old numbers and the target", "Explain what moved and why it likely moved", "List bright spots and concerns", "Recommend what to do next"]
+    inputs: [performance_sheet]
+    outputs: [audit_report]
+    note: "Checks whether the fix moved the numbers. Reads the fresh export from after the wait."

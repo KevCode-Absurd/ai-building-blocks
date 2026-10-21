@@ -1,0 +1,82 @@
+new_slug: find-a-product-idea-in-buyer-complaints-and-score-it
+name: Find a product idea in buyer complaints and score it
+summary: Give it a category. Get complaints that sell, the gap to own and a score out of 100.
+job: find-products
+thinking: medium
+thinking_why: It runs four skills in a row, and most of the work is reading and ranking. A mid-size model with web search is enough.
+headline: A product idea built on what buyers complain about, scored before you spend
+subhead: Give it a category. It finds the complaints buyers keep making, picks the best problems and who already sells to them, finds the one gap rivals leave open, then scores the product you choose on your own costs.
+explain: |
+  Most people pick a product by what looks hot, then hunt for a reason it will sell. Complaints are a better start. A low-rated sub-category with strong search tells you buyers want something and nobody is serving them well. The risk is the opposite: a loud forum post is not a market, and a good problem with thin margins is still a bad product.
+
+  The steps move from complaints to a costed score. First it lists unmet pain points with proof and keeps only gaps that two kinds of evidence agree on. Next it turns them into 30 buyer problems, picks the best five and lists the brands already selling to each. Then it compares those rivals on price, where they sell, quality and buyer, and finds the one thing to change. You then pick a product for that gap and write down its costs. The last step scores it against eleven rules and gives a go or no-go.
+when:
+  - You have a category in mind and no product yet.
+  - You have a product idea and want to check that buyers actually complain about the gap.
+  - You want a go or no-go with the margin sums before you order stock.
+you_give:
+  - A category or a market you want to sell in
+  - Who you are, your budget and your country
+  - Reviews or forum posts from the category (optional)
+  - A product cost, shipping cost and planned price, once you have picked a product
+you_get:
+  - Ranked buyer complaints with proof, and sub-categories with weak ratings but strong search
+  - Thirty buyer problems, your best five and the brands already selling to each
+  - A ranked list of gaps, a one-line position for the top one and a short test
+  - A score out of 100 for your chosen product, a go or no-go and the one thing to fix first
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Turn on web search if your AI has it. Without it, paste reviews in yourself.
+  - When it pauses, choose one product for the top gap and write down its costs and price.
+how_it_works:
+  - title: Find the complaints
+    text: Lists the top unmet pain points with proof, looks for people saying they would pay more, and finds sub-categories with weak ratings but strong search. Keeps only gaps that two kinds of evidence agree on.
+  - title: Pick the best problems
+    text: Takes the complaints and the review lines. Writes 30 buyer problems, ranks five, and lists the brands that already sell to each.
+  - title: Find the gap rivals leave open
+    text: Takes the rival brands from the step before and compares them on price, where they sell, quality and buyer. Changes exactly one big thing and ranks the gaps.
+  - title: Pause and choose a product
+    text: You pick one product for the top gap and write its cost, shipping cost and the price you would charge.
+  - title: Score the product
+    text: Does the margin sums first, marks eleven rules pass, warn or fail, and gives a score out of 100 with a go or no-go and the one fix to make first.
+output_shape: |-
+  STEP 1: COMPLAINTS
+    Pain points with proof | willingness to pay | rating gaps | gaps kept and dropped
+
+  STEP 2: BEST PROBLEMS
+    Thirty problems | top five | brands selling to each | product options
+
+  STEP 3: THE GAP
+    Category checks | rival comparison | ranked gaps | position for the top one | short test
+
+  PAUSE: choose one product and write down its costs and price
+
+  STEP 4: SCORE
+    Margin sums | eleven rules | score out of 100 | go or no-go | first fix
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Category size
+    how: Name a narrow category. A broad one gives generic gaps.
+  - what: Ad spy tool
+    how: Connect one if you have it. Without it, step 2 gives search terms and an empty table, not invented brands.
+  - what: Health, safety or legal categories
+    how: Say so. The steps flag claims and rules to check with a qualified person.
+  - what: Your budget
+    how: Give it. The score and the test size depend on it.
+judge:
+  - Every kept gap has two kinds of evidence behind it.
+  - No brand name or ad count appears that did not come from a tool or from you.
+  - The gap changes one big thing, not three.
+  - The score shows the sum, rule by rule, and the margin sums come first.
+  - Any rule marked missing says what to find, not a guess.
+test:
+  - Check two of the kept complaints against real reviews yourself.
+  - Redo the price-to-cost ratio for your chosen product by hand.
+  - Run the short test from step 3 before you order stock.
+improve:
+  - Re-run the first two steps each quarter and compare the ranked complaints.
+  - Keep the dropped gaps. One may come back with better evidence.
+  - Score two or three products for the same gap and compare.

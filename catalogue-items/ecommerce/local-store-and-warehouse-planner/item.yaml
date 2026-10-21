@@ -1,0 +1,20 @@
+slug: local-store-and-warehouse-planner
+name: "Local store and warehouse planner"
+summary: "Give it sales by country. Get the order to open local stores and warehouses, with triggers."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge", used: "Market order, revenue triggers for local warehouses, payment cost comparison, why some markets wait, which countries buy in English"}
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic, in a podcast interview", used: "The mistake of switching on every country at once, the market list, native-language site and ads, local actors, testing the shipping partner"}

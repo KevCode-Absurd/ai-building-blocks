@@ -1,0 +1,21 @@
+slug: product-tech-pack-writer
+name: "Product tech pack writer"
+summary: "Give it your product photos and ideas. Get a factory-ready tech pack with exact measures."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: product_photos, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Ultimate Guide To Product Sourcing In 2026", by: "Founder of a heated-hoodie and blanket brand (video guide)", used: "What a tech pack holds, the cost of leaving the spec open, and asking every factory to quote in the same shape"}
+  - {title: "How He Makes Millions Sourcing Products From China", by: "Isaac, sourcing agency founder, interviewed on a business podcast", used: "Exact measures instead of words like centered, and shipping a reference sample for a factory to match"}
+  - {title: "Complete E-commerce Operations Guide", by: "Operations video guide", used: "The six sections of a tech pack, reference photos of every sample, weighing fabric to prove a swap, and the freelancer route"}

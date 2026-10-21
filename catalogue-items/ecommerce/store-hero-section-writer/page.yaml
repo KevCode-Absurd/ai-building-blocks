@@ -1,0 +1,129 @@
+new_slug: store-hero-section-writer
+name: "Store hero section writer"
+summary: "Give it your offer and proof. Get five headlines, a subhead, button, proof and a test plan."
+job: write-landing-page
+thinking: medium
+thinking_why: "It writes a short section by formula and plans tests by simple rules, so a mid-size model is enough."
+
+headline: "Store hero section writer"
+subhead: Give it your offer, price, guarantee, proof and the ad that sends traffic. It writes the top screen of your page. You get five headline options with a pick, a subhead, two proof elements, a button with doubt-reducers, an image brief and a test calendar.
+
+explain: |
+  The hero section is the top screen of a page, before anyone scrolls. In one source, about 60% of visitors never scroll past it. So the headline, proof, button and image there carry most of the sale.
+
+  This skill is the store version of the general Conversion page writer. It writes the headline from one big benefit, using a so-that chain to find the deepest useful link, and matches it to the ad's promise. It adds a subhead, at least two kinds of real proof, a benefit-led button and doubt-reducers like returns and shipping. It maps the value equation (outcome, likelihood, time, effort) to the page and scores each part. Then it plans tests sized to your traffic. Lift numbers in the sources come from agencies and single cases, so they show what is possible, not what you will get.
+
+when:
+  - Your product page gets clicks but few buyers, and you suspect the first screen.
+  - You are launching a page for a new ad and want the top screen to match it.
+  - You have a list of things to test and want a plan for the top of the page first.
+
+you_give:
+  - Your offer, price and guarantee
+  - The buyer and the main thing they want
+  - Proof you hold, such as reviews, press and counts (optional)
+  - The traffic source and the ad (optional)
+  - Page URL or screenshot, and weekly visits (optional)
+
+you_get:
+  - Five headline options with one pick and the reason
+  - A subhead, two proof elements, a button label and the doubt-reducers beneath it
+  - An image or video brief and a value-equation table with scores
+  - A headline and hero-image test calendar sized to your visits
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer, price, guarantee and the ad text. Attach a screenshot of the current page if you have one.
+  - Add your real proof, such as ratings with counts, press quotes and numbers sold.
+  - Give your weekly visits so the test calendar fits.
+  - Build the top screen, then test one change at a time.
+
+how_it_works:
+  - title: Finds the headline
+    text: Builds a so-that chain from the offer and uses the deepest useful link as the headline, matched to the ad.
+  - title: Writes five options
+    text: Five ways to state the benefit, with one pick and the reason.
+  - title: Writes the subhead
+    text: Names the pain to stop, then gives two or three reasons it works.
+  - title: Places proof
+    text: At least two kinds of real proof on the first screen.
+  - title: Writes the button
+    text: Big, contrasting and benefit-led, repeated in each key section.
+  - title: Adds doubt-reducers
+    text: Guarantee, returns, secure checkout, shipping time and price, placed beneath the button.
+  - title: Maps the value equation
+    text: Outcome, likelihood, time and effort, each scored 1 to 10 with the weakest fixed first.
+  - title: Sets layout rules
+    text: Headline 3 to 4 times body size, no nav and footer on ad pages, a pinned mobile button.
+  - title: Plans the tests
+    text: Top of page first, one change per test, sized to your visits.
+
+output_shape: |
+  HEADLINE OPTIONS (5)
+  1 <...> 2 <...> 3 <...> 4 <...> 5 <...>
+  PICK: <n> because <reason>   So-that chain: <X -> Y -> Z>
+  SUBHEAD: stop <X>, no more <Y>; <our way> gives <A>, <B>, <C>
+  TOP-SCREEN PROOF (2): <kind> | <real source>
+  BUTTON: <label>   UNDER IT: <guarantee, returns, shipping, price>
+  IMAGE OR VIDEO BRIEF: <what it shows>
+
+  VALUE EQUATION
+  Dream outcome | headline | <1-10> | <fix>
+  Likelihood | under button | <1-10> | <fix>
+  Time delay | <where> | <1-10> | <fix>
+  Effort | <where> | <1-10> | <fix>
+
+  LAYOUT NOTES: <size ratio, nav removed, pinned button>
+  TEST CALENDAR (<visits> a week)
+  Week | change | variants | read by
+  CLAIMS TO CHECK: <...>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: The ad you give it
+    how: Paste the ad text. The headline then repeats its promise word for word.
+  - what: Real proof
+    how: List ratings with counts, press quotes and numbers sold. Two kinds are needed on the first screen.
+  - what: Weekly visits
+    how: Give the real number. Under about 1,000 visits a week it plans before and after checks, not weekly split tests.
+  - what: Guarantee, returns and shipping
+    how: Give the real terms. They fill the doubt-reducers under the button.
+
+judge:
+  - The picked headline repeats the ad's promise and names the benefit, not the brand.
+  - Two kinds of real proof sit on the first screen.
+  - Every number, time and guarantee in the copy is one you gave it.
+  - The value equation table has a score and a fix for each of the four parts.
+  - The test calendar matches your traffic.
+
+test:
+  - Show the first screen for five seconds to someone outside the business. Ask who it is for, what it offers and what is in it for them.
+  - Blur the page. The button should still stand out.
+  - Check each doubt-reducer against your real policy. All should match.
+  - Run the first test it lists on the page with a before and after check, or a split test if you have the visits.
+
+improve:
+  - Add your exact return, shipping and guarantee terms to the skill file, so they are always worded the same.
+  - Add your brand's banned claims to the Checks.
+  - Record each test result in your brand file and double down on the winning hypothesis.
+  - Pair it with the Store social proof placer for proof below the first screen and the Page type and layout planner for the section order.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can review a screenshot of your top screen."}
+    - {name: "Shopify", why: "Its theme editor lets you change the first section of a page without code."}
+    - {name: "Microsoft Clarity", why: "Free recordings and heatmaps show whether visitors stop at the top screen."}
+  inputs:
+    - "A screenshot of your current top screen on a phone"
+    - "Your last 30 days of visits and orders by page"
+    - "Real customer photos you have permission to use"
+
+terms:
+  - term: Hero section
+    meaning: The top screen of a page, seen before any scrolling.
+  - term: Doubt-reducer
+    meaning: A short line near the button that calms a worry, such as a guarantee or free returns.
+  - term: Value equation
+    meaning: Four parts of an offer, which are the outcome, the chance it works, the wait and the effort.
+  - term: Above the fold
+    meaning: What shows on screen before the visitor scrolls.

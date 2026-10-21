@@ -1,0 +1,122 @@
+new_slug: store-script-and-app-risk-auditor
+name: "Store script and app risk auditor"
+summary: "List the scripts, apps and packages your store loads. Get risky ones ranked, a score out of 100 and what to remove."
+job: protect-your-store
+thinking: high
+thinking_why: "It judges risk for each script from partial facts, so a stronger model is less likely to pass a bad one."
+
+headline: "Store script and app risk auditor"
+subhead: List the scripts, apps, pixels and browser extensions your store loads and who runs each one. It ranks them by risk, says what each can see, scores the set out of 100 and gives a clean-up list with the keys and access to revoke.
+
+explain: |
+  Every script on your pages runs with the full power of your page. It can read what is on screen and, if cookies are not locked down, read them too. That includes chat widgets, review apps, pixels, tag managers and the browser extensions your staff use. Owners often cannot say who runs half of them.
+
+  This skill treats each one as code you wrote. It builds an inventory with the owner, the reason, whether it loads securely and whether it appears on checkout or account pages. It flags the risky ones: plain http, unknown or expired domains, a vendor with no updates or no security contact, or a recent change of owner. On Shopify, checkout scripts are limited by the platform, so the main exposure is theme code, pixels, apps and staff extensions. Headless, WooCommerce and custom stores have the full surface.
+
+when:
+  - You have added apps and pixels for years and cannot say what each one does.
+  - A vendor or extension you rely on was sold, or changed hands, and you want to know if it is still safe.
+  - You are about to hire a developer for custom code and want a clean starting list.
+
+you_give:
+  - Every script seen on your home, product, cart, checkout and account pages (from the browser's network tab or page source)
+  - Installed apps and browser extensions used by staff, with who owns each vendor
+  - Which pages handle card, address or login fields
+  - For custom builds, your package list or lock file (optional)
+you_get:
+  - "One row per script or app: owner, purpose, risk level, what it can see and the action"
+  - A score out of 100 with how it was counted
+  - A removal list that includes keys, webhooks and staff seats to revoke
+  - A list of scripts the skill could not judge and why
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Open your site in a browser, open the network tab and copy the list of scripts for each key page. A developer can do this in minutes.
+  - Paste your installed apps and staff extensions, with the vendor for each.
+  - Note which pages hold card, address or login fields.
+  - Remove the high-risk items first, then revoke their keys and access.
+
+how_it_works:
+  - title: Builds the inventory
+    text: Records who runs each script, why it is there, whether it loads over HTTPS and whether it appears on checkout or account pages.
+  - title: Removes the unused
+    text: Marks duplicates and unused items for removal and names one owner for the tag manager.
+  - title: Flags high risk
+    text: Looks for plain http loading, unknown or expired domains, no recent updates and no security contact.
+  - title: Watches ownership
+    text: Notes when a vendor, extension or package changed hands, since new owners can add hidden code.
+  - title: Checks names and versions
+    text: For custom builds, checks for look-alike package names and recommends exact version pinning.
+  - title: Protects key pages
+    text: Keeps checkout and account pages nearly script-free and suggests a content security policy.
+  - title: Scores and cleans up
+    text: Deducts points by risk, with more weight for pages with card or login fields, and lists keys to revoke.
+
+output_shape: |
+  INVENTORY
+  <script or app> | owner/vendor | purpose | HTTPS yes/no | on checkout or account pages yes/no
+     can see: <what> | risk: <High / Medium / Low> | action: <keep / replace / remove / isolate>
+
+  SCORE  <n>/100 (100 - 15 x <High> - 6 x <Medium> - 2 x <Low>, points doubled on pages with card, address or login fields = <n>)
+         <n>/100 after the actions
+
+  CLEAN-UP LIST
+  Remove: <items>
+  Revoke: <API keys, webhooks, staff seats>
+  Move off checkout and account pages: <widgets>
+
+  FOR A DEVELOPER (custom builds only)
+  <pin versions, throwaway install space, content security policy>
+
+  NOT RUN
+  <check, and what is needed>
+  MISSING: <script list | app list | vendor owners | page types>
+
+tweaks:
+  - what: Your platform
+    how: Say Shopify, WooCommerce, headless or custom. Shopify checkout scripts are limited by the platform, so the skill focuses on theme code, pixels, apps and staff extensions.
+  - what: The page each script appears on
+    how: Say which pages hold card, address or login fields. Scripts there are scored harder.
+  - what: Vendor owner and last update
+    how: Add who runs each vendor and when it was last updated. Without them the skill marks the item "unknown" and treats it as higher risk.
+  - what: Custom builds
+    how: Paste your package list. The skill then checks names and versions, and your developer gets a separate list.
+
+judge:
+  - Every row has an owner, a purpose, a risk level and one action.
+  - Scripts on checkout and account pages are scored with more weight.
+  - Anything loading over plain http is rated High.
+  - The removal list includes keys, webhooks and staff seats, not just the app.
+  - Scripts it could not see are listed, not guessed.
+
+test:
+  - Add a made-up script that loads over plain http on the checkout page. It should rate High.
+  - Add an app you know is unused. It should be marked remove.
+  - Run it twice on the same list. The risk levels should match.
+  - Check one flagged script yourself in the network tab. The source it names should be there.
+
+improve:
+  - Add your approved vendor list to the skill file so new items are checked against it.
+  - Add a rule such as "no chat widget on checkout" and have it flag breaches.
+  - Add your last audit date and results so it shows what changed.
+  - Save the final list to your brand file and refresh it each quarter.
+  - Pair it with the Store security checkup, which owns the quarterly app review.
+
+works_best_with:
+  tools:
+    - {name: "Browser developer tools (network tab)", why: "Free in Chrome, Firefox and Safari. It lists every script a page loads, including ones that load other scripts."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the inventory and rank risk from pasted lists."}
+  inputs:
+    - "A saved copy of the network tab list for each key page"
+    - "Your tag manager's list of tags and who can publish changes"
+    - "The date each app was last updated, from its listing"
+
+terms:
+  - term: Tag manager
+    meaning: A tool that lets people add scripts to your site without editing its code. Whoever can publish there can change what runs on your pages.
+  - term: Content security policy
+    meaning: A rule your site sends to browsers listing which sources of scripts are allowed. Anything else is blocked.
+  - term: Version pinning
+    meaning: Locking a package to one exact version so a later, changed version cannot slip in.
+  - term: Look-alike package names
+    meaning: Fake packages with names close to real ones, hoping someone types the wrong name.

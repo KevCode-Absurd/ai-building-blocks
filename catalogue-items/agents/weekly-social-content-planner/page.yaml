@@ -1,0 +1,102 @@
+new_slug: weekly-social-content-planner
+name: Weekly social content planner
+summary: Give it last week's post numbers. Get next week's posts planned from what worked, with hooks checked.
+job: grow-social
+thinking: medium
+thinking_why: It reads numbers, keeps a lessons file and rewrites weak posts for up to two rounds. A mid-size model does it well. Use a stronger one for the monthly format review.
+headline: Weekly social content planner
+subhead: Give it last week's post numbers each week. It learns what worked and what flopped, plans next week's posts from that, checks each post for reasons to share, and rewrites the weak ones. You post them yourself.
+explain: |
+  Most social plans are made once and then ignored. The posts that did well are forgotten, the ones that flopped get repeated, and the week's plan is built from a blank page. That wastes the one thing you have for free: your own results.
+
+  This agent keeps a log of every post and a short file of lessons. Each week it reads last week's numbers, finds the best and worst posts, and works out why the worst ones failed. Once you have 20 posts, it also reviews which formats to keep, change or drop. Then it plans next week from those lessons, writes the hooks for video posts, and scores every post for reasons people share it. Weak posts are rewritten up to two times. It never posts or replies. You get a week of posts to approve and post.
+when:
+  - You post to one platform by hand and want a plan that gets better each week.
+  - You have posted for a while and never looked back at which posts worked.
+  - You keep running out of ideas and want next week built from your own results.
+you_give:
+  - Last week's posts with format, hook, date and numbers
+  - Your brand file with voice and what you may claim
+  - Your platform and your goal this month, growth or sales
+  - How many hours a week you can give
+  - Launches, sales or news coming up (optional)
+you_get:
+  - Last week's best and worst posts against your own average
+  - Up to three lessons, each with the posts behind it
+  - A week of posts with day, format, topic and first line
+  - A score out of 30 for each post, with weak ones reworked
+  - A note on any post worth showing to your ads team
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to plan next week.
+  - The first time, give it your brand file, your platform and your goal. It saves them.
+  - Each week, paste or attach last week's post numbers from your platform's analytics.
+  - Read the week's plan. Post the pieces you agree with yourself, or in your scheduler.
+  - Run it again next week. It adds the numbers to its log and keeps learning.
+how_it_works:
+  - title: Log last week
+    text: Adds last week's posts and numbers to its running file and reads the saved lessons.
+  - title: Read the week
+    text: Finds the best and worst posts against your own average, not only the platform's.
+  - title: Choose how to learn
+    text: Reviews formats once you have 20 posts and it is the first week of the month. Otherwise it reuses the saved calls.
+  - title: Diagnose the flops
+    text: For the worst one or two posts on X or LinkedIn, finds out if nobody saw it, people skipped it or people ignored it.
+  - title: Plan the week
+    text: Builds a base plan the first time. After that it extends your calendar by one week using the lessons.
+  - title: Write and check hooks
+    text: Writes hooks for video posts, then scores every post out of 30 and rewrites weak ones, up to two rounds.
+  - title: Flag the outliers
+    text: Marks any post that far beat your usual views for the ads team. It never boosts.
+  - title: Save and hand back
+    text: Updates the lessons file and stops for your yes.
+output_shape: |-
+  LAST WEEK
+    Best: <post> | Worst: <post> | engagement <rate> vs your average <rate>
+
+  WHAT WE LEARNED
+    1. <lesson> | from: <posts>
+
+  NEXT WEEK'S POSTS
+    <day> | <format> | <topic> | first line: <line> | score <n>/30 | <ready | reworked | weak, post last>
+
+  FOR THE ADS TEAM
+    <post> | <run as is | reshoot the hook> | or "none"
+
+  PACE
+    <posts a week> | about <hours> hours
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your own average
+    how: Keep the log running for four weeks or more. The agent judges posts against your own history, which is fairer than a platform average.
+  - what: Hold or watch-time numbers
+    how: Include them if your platform gives them. They show whether the hook or the middle failed.
+  - what: Your real pace
+    how: Tell it how many posts you actually kept up last week. It plans to that pace, not to the pace you hoped for.
+  - what: One platform
+    how: Pick one. A plan for four platforms at once makes the lessons too thin to use.
+judge:
+  - Every lesson names the posts it comes from.
+  - No format was dropped on fewer than 20 posts.
+  - Every planned post has a score out of 30, and weak ones were reworked at most twice.
+  - The number of posts matches the pace you kept last week.
+  - Nothing was posted, sent or paid for without your clear yes.
+test:
+  - Run it on a past week where one post clearly flopped. See if it finds the cause you suspected.
+  - Run it twice on the same numbers. The lessons should be the same, apart from wording.
+  - Give it only two posts for the week. It should say the read is thin and carry old lessons forward.
+improve:
+  - Set your own score a post needs to be ready, to suit how picky you want to be.
+  - Add your voice rules and words to avoid to the brand file, so hooks follow them.
+  - Save the posts you changed by hand each week, so it learns your edits.
+  - Raise or lower the views multiple that counts as an outlier, to suit your account.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the social folder, read the running log and run on a weekly schedule.
+    - name: Your platform's analytics
+      why: Export last week's posts with views, shares, saves, comments and follows.
+  inputs:
+    - A screenshot of each post's retention or watch-time chart
+    - A note of anything that changed on your account last week, such as a new bio or a collaboration

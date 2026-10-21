@@ -1,0 +1,24 @@
+slug: launch-a-subscription-offer-you-can-afford-to-fund
+name: "Launch a subscription offer you can afford to fund"
+summary: "Give it your product and order data. Get a subscription offer, its payback time and a cancel flow that saves sign-ups."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: offer
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: store_capture, required: true}
+outputs:
+  - {type: audit_report}
+uses: [subscription-offer-designer, subscription-payback-checker, subscription-cancel-flow-builder, subscription-page-take-rate-checker]
+steps:
+  - {uses: subscription-offer-designer, note: "Designs the subscription offer: discount, cadence and first-order deal."}
+  - {uses: subscription-payback-checker, note: "Tests the designed offer for payback time and the most you can pay to win a subscriber."}
+  - {uses: subscription-cancel-flow-builder, note: "Builds the cancel and pause steps for the same offer, so churn does not undo the payback."}
+  - {uses: subscription-page-take-rate-checker, note: "Checks the live page shows the offer clearly and that enough first orders choose it."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/launch-a-subscription-offer-you-can-afford-to-fund/skeleton.yaml

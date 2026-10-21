@@ -1,0 +1,110 @@
+new_slug: comparison-page-set-planner
+name: "Comparison page set planner"
+summary: "Name your category and rivals. Get the best-of, review, alternative and versus pages to build, in order."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It sorts many page ideas into a build order, which needs steady reasoning but not deep analysis."
+
+headline: "Comparison page set planner"
+subhead: Name your category and your main rivals, and add your real differences. It lists the best-of, review, alternatives and versus pages worth building, shows which searches are open, and hands back a build order sized to your team.
+
+explain: |
+  Shoppers compare before they buy. If you don't publish the comparison, they read someone else's. The trouble is knowing which comparison pages to build, because each rival can bring five different searches, and a full set can run to dozens of pages.
+
+  This skill lists the five page types for each rival: a "best X for [use case]" list that includes you, a review of the rival, "[Rival] alternatives", "[Rival] vs [Rival]" and "[You] vs [Rival]". It also uses the "A vs B vs You" idea: take a versus search people already make and add your brand. Then it checks which versus searches rivals own and which are open, orders the pages in batches, and keeps every page fair and factual.
+
+when:
+  - You know your top rivals and want to publish comparison pages, but not which ones first.
+  - Search Console shows searches that mention your rivals and you want a plan for them.
+  - You want a build order that a small team can finish, starting with the five most useful pages.
+
+you_give:
+  - Your category and 5 to 10 main rivals
+  - Your real differences from each, with proof
+  - Search Console searches that mention rivals (optional)
+  - Who will write the pages and how many a month they can finish (optional)
+you_get:
+  - "A table of page types by rival: the search, what the shopper wants and the page or channel"
+  - A build order and batch size
+  - Fairness and legal reminders for every page
+  - A way to add new rival searches as pages go live
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name your category and rivals, and paste your differences with the proof for each.
+  - Paste Search Console searches that mention rivals, if you have them.
+  - Pick your first batch from the top of the list, and check the legal rules for naming rivals where you sell.
+  - Hand each page to the best-of page writer or your own writer.
+
+how_it_works:
+  - title: Picks the rivals
+    text: Chooses 5 to 10 competitors that show up across many different searches in this one category.
+  - title: Lists five page types
+    text: Best-of list that includes you, rival review, rival alternatives, rival versus rival, and you versus rival.
+  - title: Adds the "plus you" idea
+    text: Takes a versus search that people already make and adds your brand, so the page stays relevant to the search.
+  - title: Checks which searches are open
+    text: Looks in Search Console or Google for versus searches that rivals own, and starts with the open ones.
+  - title: Counts the work
+    text: Totals the pages, then cuts to a batch your team can finish. A solo founder starts with the top 5 intents.
+  - title: Sets fairness rules
+    text: Only objective differences, and you don't put yourself first in a use case where you aren't the best.
+  - title: Plans the next batch
+    text: New rival searches appear in Search Console as pages go live, and feed the next batch.
+
+output_shape: |
+  CATEGORY  <category>   RIVALS  <5 to 10>
+  PAGE TABLE
+  <rival> | <page type> | <search> | <what the shopper wants> | <open or owned> | <page or channel>
+  BUILD ORDER
+  Batch 1 (<n> pages): <list>   Batch 2: <list>
+  FAIRNESS RULES FOR EVERY PAGE
+  <objective differences only, where we lose, date facts checked>
+  LEGAL CHECK  <naming rivals and claims where we sell: owner to confirm>
+  NEXT BATCH TRIGGER  <how to find new rival searches>
+  CHECKS MISSED: <none, or list>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: Which rivals
+    how: Choose rivals shoppers really compare you with. Too many rivals makes a plan nobody can finish.
+  - what: Team size
+    how: Say pages per month. A solo founder gets the top 5 intents first, not the whole table.
+  - what: Your proof
+    how: Give provable differences such as how it is made, form, price and ingredients. Claims you can't prove are left out.
+  - what: Search Console data
+    how: Paste searches that mention rivals so the table marks which are open and which are owned.
+
+judge:
+  - Each rival has the page types that fit it, and every page names the search it targets.
+  - Open and owned searches are marked, with the check used.
+  - Differences are objective and provable, with none that insult a rival.
+  - The first batch is small enough for the time you gave.
+  - A legal reminder about naming rivals and claims is present.
+
+test:
+  - Pick one rival and type the planned searches into Google. Each should be a real search with a clear shopper goal.
+  - Check one "open" search yourself in Search Console or Google to see if the plan was right.
+  - Run it twice and compare the first batch. It should stay the same or very close.
+  - Read one planned page title to a friend and ask what they expect to find.
+
+improve:
+  - Add your fairness rules, such as "always state the rival's best feature first".
+  - Keep a facts sheet per rival with the date each fact was checked, and give it to the skill each quarter.
+  - Add the countries you sell in, so the legal reminder matches your rules.
+  - Pair it with the best-of page writer for each page and the AI citation source finder for third-party lists.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "Shows which searches that name rivals already bring you impressions, and which versus searches are open."}
+    - {name: "Any good chat AI", why: "It builds the table once you give it your rivals and your proof."}
+  inputs:
+    - "The rival list from the AI citation source finder"
+    - "A facts sheet per rival with the date each fact was checked"
+    - "Search Console searches that mention rivals"
+
+terms:
+  - term: Search intent
+    meaning: What the person typing a search wants to do, such as compare, buy or learn.
+  - term: Comparison page
+    meaning: A page that sets two or more products side by side so a shopper can choose.

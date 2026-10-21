@@ -1,0 +1,82 @@
+new_slug: tighten-a-video-ad-script-before-you-film-it
+name: Tighten a video ad script before you film it
+summary: Give it your video ad script. Get a tighter script, a sound-off check, a viewer test and a ship call.
+job: check-ads
+thinking: medium
+thinking_why: Each check is a clear pass or fail on a short script. A mid-size model is enough.
+headline: Know your video script works before you shoot it
+subhead: Give it your video ad script. It checks the pacing and the lead into the pitch, tests whether the picture alone sells, counts what ten viewers heard, then runs a last stop-ship check.
+explain: |
+  A script can read well and still fail on screen. The viewer scrolls past a slow start, the claim only lives in the voice-over, or a second joke steals the point. Finding that out after the shoot costs the whole shoot.
+
+  The steps catch the problems in the order they cost the least to fix. First it marks each line as hook, bridge, body, proof or call to action, checks when the product enters and writes a tighter script. Then it plays the ad with the sound off and checks the claim shows on screen. Then you pause: fix the script, show it to ten people and write down what each says the ad said. The next step counts how many heard your claim and what took the rest. The last step is a stop-ship check on claims, sizes and brand details.
+when:
+  - You have a script and a shoot booked, and want one more check before it is too late.
+  - Your last video ad ran and people could not say what it sold.
+  - A creator or agency sent a script and you need to judge it.
+you_give:
+  - Your video ad script, with shots or on-screen text if you have them
+  - Who the ad is for and your product facts (optional)
+  - Your brand file (optional)
+  - Ten people's answers to "What did that ad say?" (you collect these halfway)
+you_get:
+  - A bridge and pacing score with a tighter script
+  - A pass or fail on whether it sells with the sound off, with fixes
+  - A playback count of how many viewers repeated your claim, and what took the rest
+  - Stop-ship mistakes, each with a fix, a verdict and a score out of 100
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - At the pause, apply the fixes, then show the script or a rough cut to ten people who fit your buyer. Ask only "What did that ad say?" and write down their words.
+  - Come back and paste their answers. Do not tell them your claim first.
+how_it_works:
+  - title: Check the bridge and the pacing
+    text: Marks every line by job, plots how much the viewer feels sold to, checks when the product enters, and writes a tighter script.
+  - title: Check it sells with the sound off
+    text: Lists only what is seen, writes what a silent viewer learns, and checks the claim, the first shot, the product and the brand show on screen.
+  - title: Pause. Fix it and ask ten viewers
+    text: You apply the fixes, show the script to ten people and write down what each says the ad said.
+  - title: Count what viewers heard
+    text: Fixes your one claim first, scores each answer, counts the playback and names what took attention away, with cuts.
+  - title: Run the stop-ship check
+    text: Checks safe zones, claims and brand details against platform rules, then gives each fix, a verdict and a score.
+output_shape: |-
+  STEP 1: BRIDGE AND PACING
+    Sections marked | awareness curve | product entry | benefit before feature | tighter script
+
+  STEP 2: SOUND-OFF CHECK
+    What a silent viewer learns | pass or fail on claim, opening, product, brand | fixes
+
+  PAUSE: ten viewers answer "What did that ad say?"
+
+  STEP 3: PLAYBACK COUNT
+    Your one claim | scored answers | playback % | what took attention | cuts
+
+  STEP 4: STOP-SHIP CHECK
+    Mistakes | fixes | verdict | score out of 100
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Where it will run
+    how: Say Reels, feed or TikTok, so safe zones and length rules match.
+  - what: Your one claim
+    how: Write it in one sentence before the run. The playback count only means something against a claim you fixed first.
+  - what: Who watches
+    how: Pick viewers who match your buyer. Friends who know your product will give the wrong answers.
+  - what: Your rules
+    how: Add any claims you may not make, so the last check flags them.
+judge:
+  - Every line of the script has a job and nothing sits between the hook and the claim that does no work.
+  - The main claim appears on screen as a picture, a demo or text, not only in the voice.
+  - The playback score is worked out from ten real answers, with the claim set first.
+  - Every cut or fix names the line it changes.
+  - The final verdict follows from the mistakes listed.
+test:
+  - Mute the rough cut and watch it. You should be able to say the claim.
+  - Count the playback yourself from the ten answers and compare.
+  - Check that each fix in the tighter script keeps the facts you gave.
+improve:
+  - Keep the playback score for each ad and compare scripts over time.
+  - Save the cuts that worked as rules for the next script.
+  - Test the winner against a version with a different hook.

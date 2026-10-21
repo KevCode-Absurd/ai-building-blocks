@@ -1,0 +1,21 @@
+slug: decide-whether-to-quit-a-project-and-set-the-evidence-bar
+name: "Decide whether to quit and set the evidence bar"
+summary: "Give it the project you want to quit. Get a push, change or stop call and a date to decide."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [dip-or-dead-end-checker, case-against-writer, ruin-risk-stress-tester, decision-evidence-bar-setter]
+steps:
+  - {uses: dip-or-dead-end-checker, note: "Starts with a push, change or stop call and the step that goes with it"}
+  - {uses: case-against-writer, note: "Tests the call from step one against its strongest opponent"}
+  - {uses: ruin-risk-stress-tester, note: "Looks for the loss that would end you under the call that survived the argument"}
+  - {uses: decision-evidence-bar-setter, note: "Takes the capped plan and says what you must see, and by when, to stay or leave"}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/decide-whether-to-quit-a-project-and-set-the-evidence-bar/skeleton.yaml

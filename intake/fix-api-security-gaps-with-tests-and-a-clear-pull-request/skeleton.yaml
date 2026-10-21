@@ -1,0 +1,48 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: fix-api-security-gaps-with-tests-and-a-clear-pull-request
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: fix-api-security-gaps-with-tests-and-a-clear-pull-request
+  name: "Fix API security gaps with tests and a pull request"
+  summary: "Give it your API code. Get its sign-in, access and input gaps fixed, tests for each fix and a reviewed pull request."
+  when: "you need to close security gaps in an API and merge the fixes with proof, not a promise."
+  job: secure-code
+  level: advanced
+steps:
+  - name: "API security checker"
+    skill: api-security-checker
+    job: ops
+    from: "library"
+    method: ["Map each route and who may call it", "Check sign-in, access rules and input handling on every route", "Rank the gaps by how easy they are to use", "Write a fix for each gap"]
+    inputs: [codebase]
+    outputs: [security_report, code_change]
+    note: "Finds the gaps in your API routes and writes a fix for each one."
+  - name: "Test gap finder"
+    skill: test-gap-finder
+    job: ops
+    from: "library"
+    method: ["List each behaviour the security fixes add or change", "Search your tests for one that would fail if that behaviour broke", "Mark each behaviour covered, not covered or unknown", "Write a test case for each gap, riskiest first"]
+    inputs: [code_change, codebase]
+    outputs: [test_report]
+    note: "Reads the fixes from the step before and lists the ones no test would catch, with the tests to add."
+  - pause: "Add the tests it proposes, run your whole test suite and fix any failure before you go on."
+  - name: "Pull request risk reviewer"
+    skill: pull-request-risk-reviewer
+    job: ops
+    from: "library"
+    method: ["Read the full change, fixes and new tests together", "Check blast radius, breaking changes and security slips", "Rank issues by severity", "Write review comments a person can act on"]
+    inputs: [code_change]
+    outputs: [feedback_notes]
+    note: "Reviews the finished change, fixes plus tests, for harm the fixes could cause."
+  - name: "Pull request writer"
+    skill: pull-request-writer
+    job: ops
+    from: "library"
+    method: ["Sum up the change in a picture or a short outline", "Show before and after evidence", "Mark whether the merge can be undone", "State what else could be affected"]
+    inputs: [code_change]
+    outputs: [document]
+    note: "Turns the fixes into a pull request a reviewer can follow, with the security gaps as the story."

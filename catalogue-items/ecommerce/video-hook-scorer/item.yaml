@@ -1,0 +1,26 @@
+slug: video-hook-scorer
+name: "Video hook scorer"
+summary: "Paste your video hooks and who sees them. Get each scored out of 100, with rewrites."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: beginner
+inputs:
+  - {type: hooks, required: true}
+  - {type: persona, required: true}
+  - {type: script, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: hooks}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to write ad hooks that scale", by: "Agency lead (name not given in the video)", used: "A hook's job, the three layers, hook types, the template and the order of scoring"}
+  - {title: "Creative strategy for Meta in 2026 (long masterclass)", by: "Media buyer and agency lead with about 8 years on Meta (name not given in the video)", used: "Problem agitation over persona call-outs, and 15 hooks on 2 bodies over 2 hooks on 5 bodies"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands", used: "The hook grading idea (clarity, relevance, novelty) and testing hooks as trial reels"}
+  - {title: "Creative strategy is easy actually", by: "Community founder and creative strategist (name not given in the video)", used: "Making an idea sharper by isolating it and adding contrast, stakes and an open loop"}
+  - {title: "How To Make A Winner Meta Video Ad", by: "Australian creative strategist (name not given in the video)", used: "Hooks must pull in relevant viewers; gimmick hooks fail; product-first hooks suit ready-to-buy viewers"}
+  - {title: "Why These 3 Ads Crushed It (And Why The Others Burned Money)", by: "Australian creative strategist (name not given in the video)", used: "Confusing hooks, high-stakes warning hooks and the share of viewers who reach the second half"}

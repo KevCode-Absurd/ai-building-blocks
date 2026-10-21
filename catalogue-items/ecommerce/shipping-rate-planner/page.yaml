@@ -1,0 +1,127 @@
+new_slug: shipping-rate-planner
+name: "Shipping rate planner"
+summary: "Give it your parcels, costs and countries. Get shipping zones, rates and a free-shipping line to enter."
+job: set-up-store
+thinking: medium
+thinking_why: "It does sums and keeps several rules in view at once, so a middle model is enough. Use a stronger one for many zones."
+
+headline: "Shipping rate planner"
+subhead: Give it your countries, parcel sizes, real carrier costs and average order value. It plans one zone per region, a rate for each, a free-shipping line and the carts to test. You get a rate table, the settings to enter and the wording for checkout.
+
+explain: |
+  Shipping set up in a hurry loses money quietly. Rates that are too low eat your margin on every order. A default free-shipping method makes every cart look free. Price brackets that overlap charge more as the cart grows. Rates that are too complicated make buyers leave at checkout.
+
+  This skill plans your shipping before you enter it. It starts with the few places you can serve well, picks a rate model, sets a free-shipping line above your average order value, and checks that the price you charge covers the real cost. It also gives you the carts to test at each line, including the exact boundary. The sources show how to set shipping up, not how to find a profitable price, so you bring your real costs and margin. Example amounts in the sources are not benchmarks.
+
+when:
+  - You are setting up shipping for a new store and do not know where to start.
+  - Your shipping looks like it loses money, or every cart shows free shipping.
+  - You are adding a second country or a free-shipping line and want it to lift order value, not cut margin.
+
+you_give:
+  - The countries or states you will ship to, and where each ships from
+  - Your real shipping cost per country or weight band (or your supplier's cost if you dropship)
+  - Product weights, packed box sizes and the empty-box weight
+  - Your average order value, typical basket and margin
+  - Your platform (Shopify or WooCommerce), and which items are bulky (optional)
+you_get:
+  - A zone-by-zone rate table (flat, free over a line, or calculated)
+  - A free-shipping line for each zone, with the reason
+  - Package and class settings to enter, and click-by-click steps for your platform
+  - Delivery-time and announcement-bar wording, plus carts to test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your countries, parcel sizes, real carrier costs, average order value and margin.
+  - Say your platform and whether you ship from one place or several.
+  - Enter the rates it gives you, then place the test carts it lists and tell it what you saw.
+  - Check the price you charge against your real carrier bill after your first week of orders.
+
+how_it_works:
+  - title: Starts narrow
+    text: Picks the one or two places you can serve well first. More zones come later, one at a time.
+  - title: Picks a rate model
+    text: Flat rate, free over a line, carrier-calculated, or shipping built into the price, with the reason.
+  - title: Sets the free-shipping line
+    text: Puts it just above your average order value, then checks your margin can carry it.
+  - title: Builds the zones
+    text: One zone per region with its own rate and fulfilment location, and no country in two zones.
+  - title: Sets packages and classes
+    text: A default package with the empty-box weight, and classes for heavy items.
+  - title: Fixes the traps
+    text: Removes the default free method, orders free shipping above flat on WooCommerce, and keeps brackets from overlapping.
+  - title: Writes the tests
+    text: Carts that cross each line and the exact boundary, in each zone, with the price you should see.
+
+output_shape: |
+  ZONES
+  <zone> | ships from <location> | method <flat | free over | calculated> | price <amount> | free over <amount>
+
+  FREE-SHIPPING LINE
+  <zone>: <amount> because <average order value, margin check>
+
+  MARGIN CHECK
+  <typical parcel>: carrier cost <amount> vs charged <amount> -> <covers | loses money>
+
+  SETTINGS TO ENTER (<platform>)
+  <step> -> <value>
+
+  CHECKOUT WORDING
+  <delivery-time text> | <announcement bar text> | <left-for-free-shipping notice>
+
+  TEST CARTS
+  <cart value, country> -> expect <carrier, price>
+
+  NOT COVERED
+  <countries left without a rate, weight-based rates>
+  MISSING: <carrier costs | parcel sizes | average order value>
+
+tweaks:
+  - what: Average order value
+    how: Give your real figure. The free-shipping line is set just above it. If you do not know it, the plan marks the line as a guess.
+  - what: Real carrier costs
+    how: Paste what a carrier quotes for your usual parcel in each country. The sources give example rates, not benchmarks, so your own numbers matter most.
+  - what: Platform
+    how: Shopify uses shipping profiles. WooCommerce uses zones, classes and, for brackets, a plugin. Say which so the steps fit.
+  - what: Dropshipping or print on demand
+    how: Add your supplier's shipping cost to each region so international orders do not lose money.
+
+judge:
+  - Each zone has one method, one price and a fulfilment location.
+  - The free-shipping line is above your average order value, with the reason.
+  - The margin check compares real carrier cost with the price you charge.
+  - Price brackets do not overlap, and the top bracket ends just below the free line.
+  - The test carts include the exact boundary value.
+
+test:
+  - Give it an average order value of 62 and ask for a free-shipping line. It should suggest a value a little above 62, such as 75, and say it is a guess to test.
+  - Give it costs that exceed the rate you want to charge. It should say you would lose money, not enter the rate.
+  - Place its test carts in your store and compare the price shown with the price it predicted.
+  - Run it twice with the same inputs. The zones and lines should match.
+
+improve:
+  - Save your carrier costs per country in the skill file so each run starts with real numbers.
+  - Add your margin rule, such as the lowest margin you accept after shipping.
+  - Add the countries you refuse to ship to, so they stay out of the plan.
+  - Pair it with a cost-of-goods or margin check so the free line is tested against profit.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Shipping profiles, saved packages and zones are built in, with a free-shipping minimum in each zone."}
+    - {name: "WooCommerce", why: "Shipping zones and classes are built in. Table-rate brackets need a plugin."}
+    - {name: "Any good chat AI", why: "Any current chat AI can do the sums and write the test carts."}
+  inputs:
+    - "Your last 30 days of orders, to find your real average order value"
+    - "A quote from your carrier for your usual parcel in each country"
+    - "Your supplier's shipping price list, if you dropship"
+    - "Your margin per product"
+
+terms:
+  - term: Flat rate
+    meaning: One fixed shipping price, whatever is in the cart.
+  - term: Free-shipping threshold
+    meaning: The cart value above which shipping costs the buyer nothing.
+  - term: Shipping class
+    meaning: A group of products, such as heavy items, that share a shipping price.
+  - term: Fulfilment location
+    meaning: The place an order is packed and sent from.

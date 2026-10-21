@@ -1,0 +1,89 @@
+new_slug: build-a-monthly-p-and-l-and-know-your-real-margin
+name: Build a monthly P&L and know your real margin
+summary: Give it your invoices and sales. Get true unit costs, a monthly P&L, a new versus returning split and a daily margin.
+job: track-numbers
+thinking: high
+thinking_why: It runs five skills in a row and every step does money sums that feed the next. Give it your strongest model.
+headline: Know your real margin, every month and every day
+subhead: Give it your supplier, freight and duty invoices and your sales export. It works out what each product really costs, sorts every cost line, builds a monthly P&L, splits it by new and returning buyers, and sets up a daily margin sheet.
+explain: |
+  A profit report can look fine while cash runs short. The usual cause is cost that never reaches the product: freight and duty booked as one lump, shipping and fees mixed with product cost, and ad spend that hides how first orders really pay back. So the margin you think you have is higher than the one you earn.
+
+  The steps fix this in order. First each lump invoice is spread across the products on a stated basis, giving true landed cost per unit. Then every cost line is sorted into cost of goods or expense by one rule, and the sort is scored out of 100. Next it builds the monthly P&L, then splits it into first-time and returning buyers, and scores acquisition health out of 100. Last it sets up a daily margin sheet. It does not pause. Bring the invoices and exports up front.
+when:
+  - Your profit report looks fine but cash is tight, and you do not trust the margin it shows.
+  - You import stock in shipments and cannot say what freight and duty add to each product.
+  - You want to know whether your first orders pay for themselves or only your repeat buyers make money.
+you_give:
+  - Supplier, freight, duty and other import invoices, with the purchase order lines
+  - Your sales export with discounts, refunds and shipping charged
+  - Your cost lines, with where they sit now in your books
+  - Marketing spend by channel and your running costs
+  - Orders marked first-time or returning, and your return rate
+  - A profit target (optional)
+you_get:
+  - Landed cost per unit with every layer shown, margin per unit and a late-cost checklist
+  - Every cost line sorted into cost of goods or expense, with gross margin and a score out of 100
+  - A monthly P&L in dollars, percent of sales and per order, with the line to fix first
+  - A first-time and a returning P&L, and an acquisition health score out of 100
+  - A daily margin sheet with returns set aside each day and checked against the month
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Gather the invoices and exports first. Tell it your sales model, such as own stock, dropship or 3PL, and who pays shipping.
+  - Say what profit you aim for, so the P&L can work back to the margin you need.
+  - Check each number it shows against your books before you rely on the next step.
+how_it_works:
+  - title: Work out true unit cost
+    text: Ties each invoice to its purchase and spreads each lump on a stated basis, never evenly. Divides by units received and shows margin per unit.
+  - title: Sort the cost lines
+    text: Applies one rule for what counts as cost of goods. Splits packaging, shipping, fees, discounts and returns, and scores the sort out of 100.
+  - title: Build the monthly P&L
+    text: Bridges gross to net sales, sorts costs into delivery, marketing and running buckets, and shows each line in dollars, percent and per order.
+  - title: Split new and returning
+    text: Puts ad spend on first-time buyers, splits shared costs by a rule you approve, and scores acquisition health out of 100.
+  - title: Set up the daily margin
+    text: Builds a daily sheet with returns set aside on each day's sales, checked against the month, and ranks the numbers worth showing.
+output_shape: |-
+  STEP 1: UNIT COSTS
+    Each product: purchase price | freight | duty | other | landed cost | margin per unit | late-cost checklist
+
+  STEP 2: COST SORT
+    Each line: cost of goods or expense | why | split lines | gross margin before and after | score out of 100
+
+  STEP 3: MONTHLY P&L
+    Gross to net sales | cost of goods | delivery | marketing | running costs | per order view | margin needed for target | line to fix first
+
+  STEP 4: NEW AND RETURNING
+    Two P&Ls | rule for shared costs | who subsidises whom | trend | score out of 100
+
+  STEP 5: DAILY MARGIN
+    Daily formula | returns set aside | month check | goal | metrics to show
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your sales model
+    how: Own stock, dropship, 3PL and Amazon all sort costs differently. Say which in step 2.
+  - what: How you want lump costs spread
+    how: By weight, volume or value. The basis changes each product's cost, so the skill states the one it used.
+  - what: Whether shipping is charged or built into the price
+    how: This moves a large cost line between revenue and cost of delivery.
+  - what: A bookkeeper
+    how: The P&L is best built with someone who can tag costs in your accounts. Share their tags and the skill follows them.
+  - what: Earlier months
+    how: The new versus returning step reads trend only if it has more than one month.
+judge:
+  - Each lump invoice is tied to a purchase, and the spread basis is stated.
+  - One rule decides cost of goods, and mixed invoices are split, not forced into one side.
+  - The P&L reconciles to your sales export, and the new and returning P&Ls add up to the whole.
+  - Every score says what it measures and how it was worked out.
+  - Missing figures are listed, not filled with guesses.
+test:
+  - Pick one product and work out landed cost by hand. It should match step 1.
+  - Add the two customer P&Ls. They should equal the monthly P&L.
+  - Compare step 5's month check with your own count of returns, then adjust the return rate if it drifts.
+improve:
+  - Add your own cost categories to the sorter, using the same names as your accounts.
+  - Save the unit costs and cost rule in your brand file, so future runs skip step 1 for old stock.
+  - Re-run after every shipment, and every month for the P&L steps.

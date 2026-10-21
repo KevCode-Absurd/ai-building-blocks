@@ -1,0 +1,23 @@
+slug: plan-a-big-sales-budget-and-daily-pacing
+name: "Plan a big sale's budget, offers and daily pacing"
+summary: "Give it your margin, discount depth and last year's sale data. Get a CAC limit, an offer ladder and a pacing sheet."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: [sale-break-even-and-cac-allowance-modeler, sale-offer-ladder-planner, sale-season-pacing-sheet-builder, weekly-store-ad-pulse-checker]
+steps:
+  - {uses: sale-break-even-and-cac-allowance-modeler, note: "Starts with what the discount leaves, so every later choice stays inside a CAC limit."}
+  - {uses: sale-offer-ladder-planner, note: "With the discount and CAC limit agreed, plans the main offer, the backups and when to switch."}
+  - {uses: sale-season-pacing-sheet-builder, note: "Reads the offer ladder to set spend by day, with scale, hold and cut rules."}
+  - {uses: weekly-store-ad-pulse-checker, note: "Reads the week against the pacing sheet to say what to pull or push next."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-a-big-sales-budget-and-daily-pacing/skeleton.yaml

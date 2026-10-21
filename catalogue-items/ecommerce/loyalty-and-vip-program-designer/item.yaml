@@ -1,0 +1,24 @@
+slug: loyalty-and-vip-program-designer
+name: "Loyalty and VIP program designer"
+summary: "Give it your spend tiers and margins. Get a loyalty design with non-discount perks and a test."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Nathan (paid media and finance) and Angus Cowan (email and SMS retention), video", used: "The VIP share benchmark, VIP flows and campaigns, and when VIP revenue is not the constraint"}
+  - {title: "Engineering Customer Delight Across the E-Commerce Journey (deep research)", by: "Research write-up (author not named)", used: "Experience-based rewards over points, and redeemer versus non-redeemer repeat rates"}
+  - {title: "Customer delight across the e-commerce journey: a retention playbook", by: "Research write-up (author not named)", used: "Build loyalty tiers only after delivery, returns and support are reliable, and a tiered-program example"}
+  - {title: "Wild bets folder: unconventional offer, retention and CX plays for e-commerce owners", by: "Compiled research write-up (author not named)", used: "The invite-only club for the top 1 percent, early access with single-use links, and the 90-day check against non-VIPs"}
+  - {title: "Strategic Unorthodoxy: a framework for wild bets and unscalable actions in e-commerce", by: "Research report (author not named)", used: "The paid loyalty tier idea"}

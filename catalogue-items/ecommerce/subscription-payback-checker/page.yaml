@@ -1,0 +1,125 @@
+new_slug: subscription-payback-checker
+name: "Subscription payback checker"
+summary: "Give it LTV, margin, CAC and cash. Get max CAC, a score out of 100 and a call."
+job: make-offer
+thinking: high
+thinking_why: "It chains several sums and weighs cash risk, so a stronger model is less likely to slip on a step."
+
+headline: "Subscription payback checker"
+subhead: Give it your subscriber value, margin, CAC, monthly ad spend and cash. It works out the most you can pay per subscriber, the loss on order one, the cash you need until payback and how safe it is on a score out of 100, then says go, slow down or switch to bundles.
+
+explain: |
+  A subscription can look great on paper and still empty your bank account. You pay to win the customer today and get your money back over many months. Until then, every new subscriber is a cash gap. If you grow faster than your cash allows, you run out before the cohorts pay back. Prepaid and quarterly plans add a second risk. They raise AOV, but if your CAC rises as much, you are no better off.
+
+  This skill is the store version of a subscription economics check. It works out lifetime value at month 3 and 6, the most you can pay per subscriber, the first-order loss and the cash needed across your payback window. It compares monthly, quarterly and annual plans on first-order profit against CAC. It scores how safe the plan is and gives a call you can act on. It needs real cohort data.
+
+when:
+  - You are about to push a subscription, and want to know how much you can pay per subscriber.
+  - You are thinking of a quarterly or prepaid plan and need to know if it really beats the monthly one.
+  - You are scaling ad spend on subscriptions and want to see if your cash will last until the cohorts pay back.
+
+you_give:
+  - Value of subscribers and non-subscribers at month 3 and 6
+  - Gross margin, monthly price and subscription discount
+  - Current CAC, monthly ad spend and cash balance
+  - Take rate of any multi-month plan you already have (optional)
+you_get:
+  - Max CAC at a 3 to 1 ratio and at your own ratio
+  - The loss per customer on order one, and the cash needed to reach payback
+  - First-order gross profit and break-even CAC for each plan
+  - "A score out of 100 with its reasons, and a call: go, slow down or switch to bundles"
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your month-3 and month-6 value for subscribers and non-subscribers, your margin and your current CAC.
+  - Paste your monthly ad spend and the cash you can put toward payback.
+  - If you offer or plan a quarterly or prepaid plan, add its price and take rate.
+  - Read the cash needed first, then the score and the call.
+
+how_it_works:
+  - title: Work out value at month 3 and 6
+    text: Calculates lifetime value for subscribers and one-time buyers from your cohorts.
+  - title: Set the CAC ceiling
+    text: Divides lifetime value by your payback ratio to give the most you can pay per subscriber.
+  - title: Find the first-order loss
+    text: Takes first-order gross profit from CAC, then multiplies by how many customers you win during the payback window.
+  - title: Compare plans
+    text: Puts first-order gross profit next to CAC for monthly, quarterly and annual plans.
+  - title: Test the prepay arbitrage
+    text: Checks that AOV rises faster than CAC on the longer plan, with a side-by-side test.
+  - title: Check the offer and the charge
+    text: Looks at what is stacked on the first purchase, and that the real charge is shown.
+  - title: Watch the trend
+    text: Tracks six-month gross profit to CAC by cohort as volume grows.
+  - title: Score and call it
+    text: Scores how safe the plan is out of 100, then says go, slow down or switch to bundles.
+
+output_shape: |
+  VALUE  month 3: subscriber <$> / non-subscriber <$> | month 6: <$> / <$>
+  MAX CAC  <$> at 3:1 | <$> at your ratio <x>
+  FIRST ORDER  gross profit <$> | CAC <$> | loss per customer <$> | ratio <x>
+  CASH NEEDED  <loss> x <customers in the window> = <$> | cash on hand <$> | covers <%>
+
+  PLANS
+  monthly: first-order gross profit <$> | break-even CAC <$>
+  quarterly: first-order gross profit <$> | break-even CAC <$> | AOV <+%> vs CAC <+%>
+  annual: ...
+
+  CHECKS  real charge shown <yes / no> | cohort trend <rising / flat / sliding> | financing assumed <yes / no>
+
+  SCORE <n>/100 now: <what was measured>
+  penalties: <each with points>
+  <n>/100 after <the suggested change>
+
+  CALL  <go | slow down | switch to bundles that pay on order one>
+  NEXT  <one step>
+  MISSING: <cohort data | margin | cash | CAC>
+
+tweaks:
+  - what: Cohort data
+    how: Use real month-3 and month-6 numbers. Without them, the skill refuses to score and says what to pull.
+  - what: Payback ratio
+    how: Give your own target ratio. It runs 3 to 1 as the starting point and also your own.
+  - what: Spend growth
+    how: Give the monthly spend you plan to reach. Cash needed grows with it.
+  - what: Plan prices
+    how: Give each plan's price and take rate so the arbitrage test uses your real numbers.
+
+judge:
+  - Each figure is shown with its sum and its source in your input.
+  - Max CAC, first-order loss and cash needed are all there, with the customers-in-window count.
+  - Each plan has first-order gross profit and break-even CAC.
+  - The score names its penalties and says what it measures.
+  - The call fits the score and is never "go" when cash does not cover the gap.
+
+test:
+  - Work out the first-order loss by hand. It should match.
+  - Cut the cash figure in half and run it again. The cash covers figure and the score should fall.
+  - Double the quarterly AOV and triple the CAC in the input. The skill should say the quarterly plan is worse.
+  - Run the same input twice. The call should match.
+
+improve:
+  - Save your cohort table in your brand file so you can update it monthly.
+  - Add your own payback ratio and your own cash buffer to the skill file.
+  - Add each new cohort's six-month ratio so the trend check has history.
+  - Pair it with the subscription offer designer, and with a cancel-flow skill once you have subscribers.
+
+works_best_with:
+  tools:
+    - {name: "Recharge", why: "Its reports show subscriber retention and revenue by cohort."}
+    - {name: "Shopify", why: "Order and customer reports give first-order value and repeat orders."}
+    - {name: "Google Sheets", why: "A simple cohort table with months across the top works well."}
+  inputs:
+    - "A cohort table by first-order month, with revenue and gross profit by month"
+    - "A cash forecast for the next six months"
+    - "Your financing terms, if any, so the cash gap is realistic"
+
+terms:
+  - term: LTV
+    meaning: Lifetime value, the total gross profit a customer brings over time.
+  - term: Payback ratio
+    meaning: Lifetime value divided by the cost of winning the customer. A 3 to 1 ratio means you earn three times what you spent.
+  - term: Cohort
+    meaning: A group of customers who first bought in the same month.
+  - term: Prepay plan
+    meaning: A plan where the customer pays for several months in one go.

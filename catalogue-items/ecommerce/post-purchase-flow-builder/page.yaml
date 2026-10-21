@@ -1,0 +1,119 @@
+new_slug: post-purchase-flow-builder
+name: "Post-purchase flow builder"
+summary: "Give it your products and delivery times. Get a six-email flow: thank-you, add-on, how-to, social ask and check-in."
+job: write-emails
+thinking: medium
+thinking_why: "It follows a set order of emails and fills in product facts. A mid-size model is enough."
+
+headline: "Post-purchase flow builder"
+subhead: Give it your products, what pairs with each, your delivery time, and how-to steps. It builds the emails sent after someone orders. You get the trigger and filters, a split by order count, six email outlines with subject ideas, and a list of campaign winners to add later.
+
+explain: |
+  After the order, shoppers can feel excited, then doubtful. A store that goes quiet leaves them alone with that doubt. Doubt leads to returns and to buyers who never come back. The window just after a purchase is also when buyers are most open to adding something.
+
+  This skill builds the flow that runs after every order. It starts with a plain-text thank-you from the founder, followed by an add-on email, an on-its-way email, a how-to for what they bought, one social ask and a check-in after the product arrives. Wording changes for first, second and later orders. The first goal is easing buyer's remorse, not selling.
+
+when:
+  - Your only email after an order is the shop's own order confirmation.
+  - Customers write in asking how to use the product, or return it for avoidable reasons.
+  - You want more second orders and don't know where to start.
+
+you_give:
+  - Your products or categories, and what pairs with each
+  - Your estimated delivery time
+  - A mission line, a support address and the one social platform to ask for
+  - How-to steps or tips for each product
+  - Your review app, if you use one (optional)
+
+you_get:
+  - A flow spec with trigger, filters and a split by number of past orders
+  - Six email outlines with subject line ideas
+  - Timing for each email and a rule for when to move it
+  - A list of campaign winners to copy into the flow later
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your products, delivery time, how-to tips and mission line.
+  - Check that your email tool can split by number of orders and that smart sending is off.
+  - Build email 1 first and send it as plain text from the founder.
+  - After a month, compare repeat orders inside 30 days with the month before.
+
+how_it_works:
+  - title: Sets the trigger
+    text: Placed order. A second order starts a new run, and cancelled orders stay out.
+  - title: Splits by order count
+    text: First-time, second, third and fourth-plus buyers get different wording in the first email.
+  - title: Thanks before selling
+    text: Email 1 is a plain-text founder note that tells buyers what happens next and offers support. Its goal is to ease buyer's remorse.
+  - title: Adds the add-on and the wait
+    text: A day later comes an add-on email, then a note that the order is on its way, using estimated time, not shipping events.
+  - title: Teaches and asks once
+    text: A how-to by product, then one ask to follow on a single social platform.
+  - title: Checks in after arrival
+    text: A founder check-in asks how it went, offers help and links to a review or another purchase.
+
+output_shape: |
+  POST-PURCHASE FLOW  <store>
+  TRIGGER  placed order | filters: <placed order 0 times since start, cancelled 0> | smart sending off
+  SPLIT    <first | second | third | fourth and more>
+
+  1  <0 to 30 min> | founder thank-you, plain text | <next steps, support, P.S.>
+  2  <~24 hours> | add more | <block: best sellers or matched items>
+  3  <~3 days> | on its way | <few products>
+  4  <+3 days> | how to get the most from <product> | <steps, tips, recommended block>
+  5  <+7 days> | follow us on <one platform> | one ask only
+  6  <after arrival> | founder check-in | <how did it go, support, review or reorder link>
+
+  SUBJECT IDEAS   <per email>
+  CAMPAIGN WINNERS TO ADD   <list>
+  FIRST TESTS     <email 1 timing, then the split>
+  CHECKS MISSED: <none or the list>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Your delivery time
+    how: Give the real range. The skill times the check-in off the ship date plus the typical delivery window when there is no delivery event.
+  - what: Your product type
+    how: Apparel shrinks the how-to to care notes and skips the category split. Technical products get the most detail.
+  - what: Your review app
+    how: If it has its own review request flow, the skill leaves the review ask to that flow and avoids a double ask.
+  - what: Your margin
+    how: A thank-you code in the review email also works as a cross-sell, but may not suit low-margin or subscription products.
+
+judge:
+  - Email 1 is plain text from the founder with a clear "what happens next" and no discount.
+  - The first email has wording for first, second, third and later orders.
+  - The how-to email says nothing the product cannot truthfully do.
+  - Email 5 makes one ask only.
+  - Time-based claims (open rates, repeat spend) are left out or marked as numbers to check.
+
+test:
+  - Place a test order and watch the flow. Email 1 should arrive after your shop's own confirmation.
+  - Give it an apparel store and a technical product. The how-to email should differ in depth.
+  - Check that a customer who orders twice is not stuck in two runs at once.
+  - Run it twice on the same facts. The email order and filters should match.
+
+improve:
+  - Add your real how-to steps and care notes to the skill file, one set per product.
+  - Add your mission line and the exact wording you use to offer support.
+  - Add campaigns that have worked, such as a proof email, and list when to copy each into the flow.
+  - Pair it with the reorder and second-order planner and the win-back flow builder.
+
+works_best_with:
+  tools:
+    - {name: "Klaviyo", why: "Placed-order triggers, order-count splits and flow filters fit the steps."}
+    - {name: "Shopify", why: "Order, shipping and cancelled-order data drive the filters."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the skill from your pasted product facts."}
+  inputs:
+    - "Your typical days between order and delivery"
+    - "A support inbox export of the most common how-to questions"
+    - "Return reasons from the last quarter"
+    - "A list of your best-performing campaigns"
+
+terms:
+  - term: Buyer's remorse
+    meaning: Doubt a person feels soon after buying, such as wondering if they chose well.
+  - term: Plain-text email
+    meaning: An email with no design, written like a note from a person.
+  - term: Smart sending
+    meaning: A setting that skips anyone who got another email recently. Turn it off for flows.

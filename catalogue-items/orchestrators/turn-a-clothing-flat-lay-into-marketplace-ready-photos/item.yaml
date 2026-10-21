@@ -1,0 +1,22 @@
+slug: turn-a-clothing-flat-lay-into-marketplace-ready-photos
+name: "Turn a clothing flat lay into marketplace-ready photos"
+summary: "Give it a phone photo of a garment. Get a cleaned photo, a worn-shape photo, fabric close-ups and a rules check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: product_photos, required: true}
+outputs:
+  - {type: audit_report}
+uses: [product-photo-retoucher, ghost-mannequin-photo-maker, fabric-close-up-maker, ai-product-photo-inspector, marketplace-photo-rule-checker]
+steps:
+  - {uses: product-photo-retoucher, note: "Starts the chain: a cleaner flat-lay photo."}
+  - {uses: ghost-mannequin-photo-maker, note: "Reads the retouched photo you chose and shapes it as if worn."}
+  - {uses: fabric-close-up-maker, note: "Zooms into the fabric of the worn-shape photo you saved."}
+  - {uses: ai-product-photo-inspector, note: "Looks over the pictures you gathered for AI faults."}
+  - {uses: marketplace-photo-rule-checker, note: "Checks the pictures that passed the last step against marketplace rules."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-clothing-photos-for-a-listing/skeleton.yaml

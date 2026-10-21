@@ -1,0 +1,118 @@
+new_slug: google-ads-purchase-tracking-checker
+name: "Google Ads purchase tracking checker"
+summary: "Paste your conversion actions. Get a pass or fail on double counting, a score out of 100 and the fix for each."
+job: run-google-ads
+thinking: low
+thinking_why: "It applies three clear rules to a list, so a fast model is enough."
+
+headline: "Google Ads purchase tracking checker"
+subhead: Paste your list of Google Ads conversion actions, or a screenshot of it. It checks three common mistakes that double count sales or starve Google of data, names which action should be primary and gives the fixes in order, with a score out of 100.
+
+explain: |
+  Google Ads bids on whatever you tell it counts as a sale. If two actions both count a purchase, your reported revenue and ROAS are inflated, and you scale the wrong things. If the main action is a GA4 import, Google may get less data to learn from. If add to cart is set as primary, Google fills your account with cheap non-sales.
+
+  This skill checks your list against three rules: one primary purchase only, no GA4 import as primary, and everything else secondary. It also compares Google purchases with store orders to see if the totals agree. This is a quick check, not the full build. If you need to build the tracking, use the Shopify Google tracking builder.
+
+when:
+  - Google shows more revenue than your store does.
+  - You linked GA4 to Google Ads and want to be sure nothing is double counted.
+  - You are about to scale spend and want to trust the numbers first.
+
+you_give:
+  - Your conversion actions, with source, goal, primary or secondary and counted value
+  - Your platform (Shopify, WooCommerce or other)
+  - Monthly ad spend
+  - Google purchases and store orders for the same dates (optional)
+you_get:
+  - Pass or fail on the three common mistakes
+  - Which action should be the only primary one
+  - Fix steps in order
+  - A score out of 100 and how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - In Google Ads, open Goals, then Conversions, and copy the list or take a screenshot. Include source, goal, primary or secondary and counted value.
+  - Say your platform and your monthly ad spend.
+  - Add Google purchases and store orders for the same dates, counted by conversion time, if you can.
+  - Do the fixes in the order given, then run the check again.
+
+how_it_works:
+  - title: Counts primary purchases
+    text: Only one purchase action may be primary. Two primary purchases double the reported revenue and ROAS.
+  - title: Checks the GA4 import
+    text: A GA4 import must not be the primary purchase. It is secondary from the moment you link it.
+  - title: Checks other actions
+    text: Add to cart, begin checkout and page view must be secondary. It checks account and campaign goals.
+  - title: Names the right primary
+    text: For Shopify, the action from the store app with enhanced conversions on, or a Tag Manager purchase with real order value.
+  - title: Reconciles the totals
+    text: Compares Google purchases and revenue with store orders. A gap beyond about 20 to 30 percent needs a look.
+  - title: Notes micro-conversion bidding
+    text: Add to cart as a bid goal is only for rare cases, such as high-ticket items with 8 to 20 purchases a month.
+  - title: Scores and fixes
+    text: Points per rule, a total out of 100 and the fixes in order.
+
+output_shape: |
+  PLATFORM  <Shopify | WooCommerce | other>   SPEND  <$ a month>
+  RULE 1  one primary purchase only: <PASS | FAIL>  <actions found>
+  RULE 2  GA4 import not primary: <PASS | FAIL | no import found>
+  RULE 3  other actions secondary: <PASS | FAIL>  <account and campaign goals>
+  RECONCILE  Google <n> orders / <$>  Store <n> orders / <$>  gap <%>: <ok | look>
+  PRIMARY SHOULD BE  <the one action>
+  FIX STEPS  1. <action> ... (in order)
+  LATER  <server-side or developer work, only if spend is above about $50,000 a month>
+  SCORE  <n>/100  (rule 1 <n>/40, rule 2 <n>/25, rule 3 <n>/25, reconcile <n>/10)
+  NOT RUN  <check | what is needed>
+  MISSING: <what would sharpen it>
+
+tweaks:
+  - what: Account and campaign goals
+    how: Check both. A campaign can use its own goals that differ from the account defaults.
+  - what: Platform
+    how: Say Shopify, WooCommerce or other. The simplest correct setup differs by platform.
+  - what: Monthly ad spend
+    how: Above about $50,000 a month, server-side tagging is the default in one manual. Below it, it is rarely worth the cost.
+  - what: Dates for reconciliation
+    how: Use the same dates in both places and count by conversion time, not click time.
+  - what: Conversion value
+    how: Say if the value is a fixed number or the real order value. It should be the real order value.
+
+judge:
+  - It names each action it found, with its source and whether it is primary.
+  - Rule 1 is judged first, because double counting is the worst error.
+  - Any imported GA4 action is flagged until it is switched to secondary.
+  - Fix steps come in order, with one change per step.
+  - It states the 20 to 30 percent gap as one speaker's rule.
+  - The score shows the points for each rule.
+
+test:
+  - Give it two primary purchase actions. It should fail rule 1 and put it first.
+  - Give it a GA4 import set to primary. It should fail rule 2 and say to switch it to secondary.
+  - Give it a clean list. It should pass all three rules and say what it could not check.
+  - Run it twice on the same list. The verdicts should match.
+  - Check one fix yourself in Google Ads, then paste the new list and see if the score rises.
+
+improve:
+  - Add your own tolerance for the gap between Google and store orders if you have tested one.
+  - Add the names of your actions so it can tell the store app, the tag and the import apart.
+  - Add any other platform you run, so its purchases are not counted twice.
+  - Save the date of each check to your brand file, and run it after every tracking change.
+  - Pair it with the Shopify Google tracking builder for the full setup.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "The Goals and Conversions page lists every action with its settings."}
+    - {name: "Google Tag Manager", why: "Shows which tags fire and which values they pass."}
+    - {name: "Shopify", why: "Gives the order count and revenue to reconcile with."}
+  inputs:
+    - "A screenshot of the conversion goals page"
+    - "A Shopify order report for the same dates"
+    - "A list of every tool that sends purchases to Google"
+
+terms:
+  - term: Primary action
+    meaning: A conversion that Google uses to decide how to bid.
+  - term: Secondary action
+    meaning: A conversion that Google records but does not bid on.
+  - term: GA4 import
+    meaning: Conversions copied from Google Analytics into Google Ads. They arrive as primary unless you change them.

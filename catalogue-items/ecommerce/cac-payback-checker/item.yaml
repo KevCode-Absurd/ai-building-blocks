@@ -1,0 +1,27 @@
+slug: cac-payback-checker
+name: "CAC payback checker"
+summary: "Give it CAC, margins and cohort profit. Get profit to CAC ratios, a scale-or-fix call, scored out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Finance for e-commerce (finance lectures and spreadsheet walk-throughs)", by: "Eric, startup finance educator", used: "The goal that each new customer is more profitable than the last, contribution margin to CAC on the first order, the stage-by-stage good and bad paths, and LTV as lifetime contribution margin"}
+  - {title: "Everything You Need to Know About Finance in eCommerce", by: "Nathan, agency founder (Blue Sense Digital public masterclass)", used: "Lifetime gross profit to CAC bands, the time windows, and pairing CAC with gross profit on the first purchase"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass)", used: "The 180-day benchmark bands, why the ratio compares across stores, and the CAC needed to reach the 2x zone"}
+  - {title: "The $3B E-Commerce Strategist: The Playbook That's Making Everyone Else Rich", by: "Taylor Holiday, agency founder, interviewed on a business podcast", used: "Customer-level metrics and judging acquisition on new customers"}
+  - {title: "How We Audit 8 and 9 Figure Ad Accounts (Full Process)", by: "A performance agency operator who audits 8 and 9 figure accounts (name not given)", used: "The monthly cohort table, first-order profit to CAC bands, and the first-time-only profit and loss"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, agency founder and head of retention at a drinks brand, on a podcast", used: "Target, ceiling and bad-month CAC, and the first-order profit rule"}
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Nathan (paid media and finance) and Angus Cowan (email and SMS retention agency)", used: "The CAC target formula, the choice of window, the floor from CPC and conversion rate, and keeping refunds in profit and not in CAC"}
+  - {title: "How He Hit $100M in Under a Year (And Why You Won't)", by: "A founder interviewed on a business podcast (name not given)", used: "Payback grades and the 24-month subscription horizon"}

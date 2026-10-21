@@ -1,0 +1,26 @@
+slug: customer-wow-budget-planner
+name: "Customer wow budget planner"
+summary: "Give it your weekly cash and support cases. Get a wow budget and delight-versus-fix rules."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [matthew-dixon, daniel-kahneman, chip-heath]
+credits:
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of an apparel brand, podcast interview", used: "A fixed weekly amount for fixing angry customers and surprising high-value ones, and the word-of-mouth payoff"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, podcast interview", used: "A discount budget versus a surprise-and-delight budget the support team spends at its own discretion, and the damaged-item example"}
+  - {title: "Strategic Unorthodoxy: a framework for wild bets and unscalable actions in e-commerce", by: "Research report (author not named)", used: "When to delight and when to remove effort, with the large study behind it"}
+  - {title: "Wild bets folder: unconventional offer, retention and CX plays for e-commerce owners", by: "Compiled research write-up (author not named)", used: "A small no-approval budget for support and when to use it"}
+  - {title: "Customer delight across the e-commerce journey: a retention playbook", by: "Research write-up (author not named)", used: "Fix effort first then add peaks, the peak-end idea, and the move-on order"}
+  - {title: "Strategic Orchestration of Customer Delight in E-Commerce", by: "Academic-style write-up (author not named)", used: "Why a delighter becomes a baseline over time"}
+  - {title: "Stop Trying to Delight Your Customers", by: "Matthew Dixon, Karen Freeman and Nicholas Toman, Harvard Business Review", used: "Low effort builds loyalty more than exceeding expectations in service"}

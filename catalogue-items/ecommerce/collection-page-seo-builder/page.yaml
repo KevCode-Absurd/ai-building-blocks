@@ -1,0 +1,135 @@
+new_slug: collection-page-seo-builder
+name: "Collection page SEO builder"
+summary: "Give it a collection and keyword. Get the title, H1, URL, two-part copy, FAQ and links."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It writes copy within fixed limits from facts you give it, so a mid-size model is enough."
+
+headline: "Collection page SEO builder"
+subhead: Give it a collection, its products and one target keyword. It builds the title, H1, address, search listing, a short intro above the products, a longer description below them, an FAQ, three real reviews to feature and the links, with notes for Shopify.
+
+explain: |
+  Most collection pages are a name and a grid of products. Google has little to read, so it cannot tell what the page is about, and a competitor's page with more useful content ranks first. Stuffing the page with keywords or pasting raw AI text makes it worse.
+
+  This skill builds the search side of one collection page. The keyword goes where Google looks first: the title, the H1 and the address. A two-line intro sits above the products so phone shoppers reach them fast. The longer description, FAQ and three hand-picked real reviews sit below the grid. It adds links to sub-collections and related pages. Every claim comes from your product facts. Where sources disagree, such as description length, it shows the options and explains its choice.
+
+when:
+  - You are launching a collection and want the search setup right the first time.
+  - A collection has only a name and a grid, and ranks poorly.
+  - You are working through collections one by one after planning the set.
+
+you_give:
+  - The collection name and its main keyword
+  - The products in it and their key features
+  - One or two supporting keywords (optional)
+  - Customer questions or People Also Ask questions (optional)
+  - Three real reviews that mention the products (optional)
+you_get:
+  - Title tag, H1 and address, plus a search listing written to win the click
+  - A short description for above the grid and a long one for below it
+  - An FAQ, three featured reviews and a link plan
+  - Notes for splitting the description in Shopify
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the collection name, the main keyword, the product list and what is true about the products.
+  - Add real reviews and the questions customers ask, if you have them.
+  - Edit the copy so it sounds like you, then paste each part into the right Shopify field.
+  - Back up your theme before splitting the description, and check the page on a phone.
+
+how_it_works:
+  - title: Sets the key fields
+    text: Keyword first in a title of about 60 characters, exactly one H1 with the keyword, and a short address.
+  - title: Writes the listing
+    text: A search listing of 150 to 160 characters with a reason to click. It matters for clicks, not ranking.
+  - title: Splits the copy
+    text: Two lines above the grid, and a longer description below. It shows the length options and picks one.
+  - title: Adds FAQ and reviews
+    text: Questions answered from your product facts, and three real reviews you choose by hand.
+  - title: Plans the links
+    text: Three to five internal links and two to three outside links, with short link text that describes the page.
+  - title: Sets the grid rules
+    text: A grid that loads without JavaScript, 36 to 48 products per page and numbered pages.
+  - title: Checks the claims
+    text: Every statement traces back to your product facts, and health or legal claims are marked for review.
+
+output_shape: |
+  FIELDS
+  Title tag: <...> (<n> characters)
+  H1: <...>
+  URL handle: <...> | redirect: <yes | n/a>
+  Search listing: <...> (<n> characters)
+
+  ABOVE THE GRID (2 lines)
+  <short description>
+
+  BELOW THE GRID (<n> words, because <reason>)
+  <long description with [link: text -> page]>
+
+  FAQ
+  Q: <...> A: <...>
+
+  FEATURED REVIEWS (real ones only)
+  <review 1> | <review 2> | <review 3>
+
+  LINKS, GRID AND IMAGES
+  <sub-collections, internal and outside links, grid, alt text>
+
+  THEME NOTES
+  <how to split the description; back up first>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Description length
+    how: Say how much a shopper needs to decide. The sources range from 100 to 400 words up to 500 to 1,000. A simple range needs less.
+  - what: Supporting keywords
+    how: Give one or two. Each gets a short paragraph in the long description.
+  - what: Real reviews
+    how: Paste three real ones that name the product. It features them as they are and never writes one.
+  - what: Your theme
+    how: Name it. The notes for splitting the description depend on the theme, and the code differs.
+  - what: Store size
+    how: Under about 50 products, collections matter less. Start with the pages Search Console already shows.
+
+judge:
+  - Title is about 60 characters or fewer with the keyword first.
+  - The page has exactly one H1.
+  - The short description fits two lines and the long one sits below the grid.
+  - Every claim is in your product facts, and reviews are real.
+  - The length choice has a reason.
+  - No keyword is repeated to the point of sounding odd.
+
+test:
+  - Leave out the reviews. It should leave the block empty and say so, not write one.
+  - Give it a claim that is not in your product facts. It should flag it.
+  - Count the characters in the title and listing yourself and compare.
+  - Publish one page and compare its impressions in Search Console to a similar page you left alone.
+
+improve:
+  - Add your tone and banned phrases to the skill file, so the copy sounds like your brand.
+  - Add your theme's description-splitting code once it works, so every run gives the same notes.
+  - Save a finished page as the example, so new pages follow the same shape.
+  - Pair it with the Collection page planner before, and the Collection page fixer (the conversion version) after the page is live.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Handles, redirects on rename, metafields for reviews and the Search and Discovery app for the grid are built in."}
+    - {name: "Google Search Console", why: "Free. Shows how the page performs in search after it goes live."}
+    - {name: "Any good chat AI", why: "Drafts the copy from your product facts and helps with the description-splitting code."}
+  inputs:
+    - "People Also Ask questions for your keyword"
+    - "Three real reviews that name the product"
+    - "Certifications or test results you can prove"
+    - "Your theme's collection template"
+
+terms:
+  - term: Title tag
+    meaning: The headline of your page in search results.
+  - term: H1
+    meaning: The main heading shown at the top of the page.
+  - term: Handle
+    meaning: The last part of a page's web address.
+  - term: FAQ markup
+    meaning: Hidden code that tells Google a block holds questions and answers.

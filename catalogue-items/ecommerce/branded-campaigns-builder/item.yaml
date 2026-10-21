@@ -1,0 +1,23 @@
+slug: branded-campaigns-builder
+name: "Branded Search and Shopping builder"
+summary: "Give it your brand name and offer. Get branded Search and Shopping campaigns with settings, keywords and ads."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+  - {type: ad_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given)", used: "The five reasons for branded Search, impression share bidding with a max CPC cap, the branded Shopping setup and excluding existing customers"}
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "Exact-match branded keywords, pinned headlines, advertiser verification and branded budgets"}
+  - {title: "Complete Google Ads architecture and operations manual (2026 edition)", by: "Compiled written guide, author not named", used: "When standard Search fits: head terms and tight control of copy and landing page"}

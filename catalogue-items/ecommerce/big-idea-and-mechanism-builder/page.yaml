@@ -1,0 +1,128 @@
+new_slug: big-idea-and-mechanism-builder
+name: "Big idea and mechanism builder"
+summary: "Give it your product and buyer. Get a big idea, root cause, named mechanism and why-now line."
+job: write-ad-copy
+thinking: high
+thinking_why: "It has to connect product facts, buyer pain and market in a way that stays true, and a stronger model holds all three together."
+
+headline: "Big idea and mechanism builder"
+subhead: Give it your product facts, customer reviews and rival claims. It finds the one idea your page stands on. You get ranked pain points, a root cause the buyer already pictures, a mechanism that matches it, a why-now line and the claims that still need proof.
+
+explain: |
+  Most store pages list features. A buyer who has tried three other fixes does not care about a fourth feature list. They read on when the page gives a new reason their problem never went away, and a product that fits that reason.
+
+  This skill builds that reason from your real facts. It asks why every part of the product is the way it is, ranks the buyer's pains by how urgent, how common and how close to your product they are, and turns the top one into a root cause the buyer can already picture, such as a clogged filter. Then it builds a mechanism that matches the cause one to one, and names it. It also checks the idea against the market and lists every claim you must prove before use. A mechanism is the reason the product works. The naming step itself lives in the Mechanism namer skill.
+
+when:
+  - You are about to write a long product page, an ad campaign or an advertorial and don't yet know what idea it stands on.
+  - Your product looks like every rival's and you need a true reason it is different.
+  - Your page lists features but visitors don't buy, and reviews show they have tried other fixes first.
+
+you_give:
+  - Product facts (parts or materials, form, how it is used)
+  - Customer words from reviews or tickets
+  - Three to five rival products and the claims they make (optional)
+  - Proof you hold, such as studies, test results and review counts (optional)
+
+you_get:
+  - Ranked pain points, with the one to lead with
+  - A one-line big idea and a root cause as a picture the buyer already holds
+  - A mechanism name, how it works in two lines, and the specs behind it
+  - A why-now line and a list of claims that still need proof
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts and a batch of real reviews (a few dozen is plenty).
+  - Add the rivals and what each claims, and any proof you hold.
+  - Read the claims list first. Get proof for each claim, or cut it.
+  - Take the mechanism to the Mechanism namer if you want more name options, then use the idea in your page, ads and advertorial.
+
+how_it_works:
+  - title: Finds what is unique
+    text: Lists what only your product has, or a unique mix of common parts, or the origin story. Writes the idea as product, market and buyer.
+  - title: Asks why for each part
+    text: Forces a true reason for every part, form and shape. No true reason means no claim.
+  - title: Reads the market
+    text: Notes the arguments, the experts and the rival claims, and places the idea on the adoption curve.
+  - title: Ranks the pains
+    text: Scores each pain on urgency, how many people have it and closeness to the product. Leads with the top one or two.
+  - title: Builds the root cause
+    text: Uses the closest picture the buyer already holds, then tests that the metaphor verb fits what the product does.
+  - title: Matches and names the mechanism
+    text: Maps cause to fix one to one, then names it short and specific, with specs behind it.
+  - title: Adds why-now and levers
+    text: Writes what changed in the world, then checks the idea against seven levers and the market stage.
+  - title: Lists claims to prove
+    text: Every fact, result and health, body or money claim goes on a list with the proof needed.
+
+output_shape: |
+  PAIN POINTS (ranked)
+  1 <pain>  urgency <h/m/l>  reach <h/m/l>  closeness <h/m/l>
+  2 <pain>  ...
+  SIDE IDEA (optional): <idea> -> opens <pain>
+
+  BIG IDEA (product x market x buyer)
+  <one line>
+  UNIQUE: <what only this product has>
+
+  ROOT CAUSE
+  <picture the buyer already holds>  Verb check: <fits / changed>
+
+  MECHANISM
+  Name: <short name>  How it works: <two lines>  Specs: <numbers>
+  Maps to the root cause: <cause part -> fix part>
+
+  WHY NOW
+  <one true line>
+
+  SEVEN LEVERS: <present or absent>
+  MARKET STAGE: <clueless / curious / saturated> -> <opening>
+
+  CLAIMS TO PROVE
+  <claim> | <proof needed> | <held / MISSING>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: Quality of the customer words
+    how: Paste raw reviews, not a summary. The pain ranking and the root cause picture come from the buyer's own wording.
+  - what: Rival claims
+    how: Paste what three to five rivals say on their pages. The skill steers the root cause away from one they already own.
+  - what: Proof you hold
+    how: List studies, test results and review counts exactly. Without them, the claims list stays full of MISSING lines.
+  - what: Crowded niche
+    how: Say so. The skill then pushes you to a narrow buyer group, since a broad idea gets lost among rivals.
+
+judge:
+  - Every part of the big idea traces to a fact you gave it.
+  - The root cause is a picture a stranger would get in one read.
+  - The metaphor verb fits what the product does (a flush pulls out, a mop polishes).
+  - The mechanism matches the cause part for part.
+  - Nothing in the idea states a study, number or expert you did not supply.
+
+test:
+  - Read the root cause to someone outside the business. Ask them to say it back. If they can't, the picture is too fancy.
+  - Run it twice on the same input. The top pain and the root cause should be much the same. If they flip, your customer words are too thin.
+  - Take each line on the claims list and find its proof. If you can't, cut the line from your page.
+  - Put the idea in two ads and see which pain leads. Judge by clicks and cost per purchase, not by taste.
+
+improve:
+  - Add your brand's banned claims to the Checks list, so health or income lines are flagged as cuts, not as proof needed.
+  - Add a note on who your trusted experts really are, so the market step names real ones.
+  - Save the finished idea, root cause and mechanism into your brand file, so every page and ad starts from it.
+  - Pair it with the Mechanism namer for more name options, and the Advertorial angle and format picker to decide which angle to test first.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the steps. One that can read many reviews at once helps with the pain ranking."}
+  inputs:
+    - "A set of 50 or more real reviews, so the pain ranking rests on enough wording"
+    - "Screenshots of three to five rival product pages with their claims"
+    - "Your test results or lab report, so the proof column can be filled in"
+
+terms:
+  - term: Mechanism
+    meaning: The reason the product works, told as a short story the buyer can repeat to a friend.
+  - term: Root cause
+    meaning: The reason the buyer's problem keeps coming back, shown as a picture they already know.
+  - term: Adoption curve
+    meaning: How far an idea has spread, from early fans to the late majority.

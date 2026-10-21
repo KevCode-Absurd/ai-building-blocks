@@ -1,0 +1,80 @@
+new_slug: turn-a-spec-into-a-tested-service-with-api-docs
+name: Turn a spec into a tested service with API docs
+summary: Give it a spec. Get a project, a working service, route tests and an API spec.
+job: build-software
+thinking: high
+thinking_why: It builds a service and its tests across many files. Give it your strongest model.
+headline: Get a first working service from your spec, with every route tested and documented
+subhead: Give it what the service must do. It starts the project, builds the routes and the database, tests every route and writes the API spec that other developers can use.
+explain: |
+  A written spec is not a service yet. The gap between them is the project setup, the routes, the database and the tests. If an AI fills it in one pass, you get code with no tests and documentation that does not match the routes.
+
+  The steps close the gap in order. The first reads your spec, says back what it understood so you can correct it, and generates the project with setup steps. The second builds the routes, the database and the sign-in checks, and load tests the busiest route. The third finds every route in the code and writes tests for sign-in, bad input and error codes. The last reads the finished routes and writes the API spec, so the documents match what was built.
+when:
+  - You have a spec or a feature list for a service and no code yet.
+  - You want tests and API docs that match the code, not written from memory.
+  - A new project needs a sound first version before the team builds on it.
+you_give:
+  - A written spec that says what the service does, who uses it and what data it keeps
+  - Your preferred language and database, or let it choose
+  - How sign-in should work (optional)
+  - Where it will run (optional)
+you_get:
+  - A project folder with the structure and setup steps
+  - Routes, database design and sign-in checks
+  - Tests for every route, with sample data
+  - A complete API spec file you can share
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Open an empty folder in Claude Code, give it the pack and say "Follow HANDOFF.md".
+  - Paste your spec. Check the plain-words summary it gives back and fix anything it got wrong.
+  - After the build, run the service and the tests yourself.
+  - Open the API spec in a viewer and compare it with a few real requests.
+how_it_works:
+  - title: Start the project
+    text: Reads your spec, says back what it means, picks the stack, lists every file, generates the project and checks that it runs.
+  - title: Build the service
+    text: Designs the routes and database, writes the routes with checks on input and sign-in, adds migrations that can be undone and load tests the busiest route.
+  - title: Test every route
+    text: Finds each route in the code and writes tests for sign-in, bad input, error codes, paging and uploads, then runs them.
+  - title: Write the API spec
+    text: Pulls the endpoints from the finished code and writes a complete spec with data shapes and an example for each response.
+output_shape: |-
+  STEP 1: PROJECT
+    Spec as understood (your corrections) | stack | file list | setup steps
+
+  STEP 2: SERVICE
+    Routes | database design | sign-in checks | migrations | load test result
+
+  STEP 3: ROUTE TESTS
+    Route map | tests written | results | gaps
+
+  STEP 4: API SPEC
+    Endpoints | data shapes | sign-in scheme | examples
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your stack
+    how: Name the language, framework and database if you have a preference. Otherwise step 1 picks from what the spec says and tells you why.
+  - what: Sign-in
+    how: Say how users should sign in and who can do what. Step 2 turns it into checks on each route and step 3 tests them.
+  - what: Load
+    how: Give the number of users or requests you expect. Step 2 uses it for the load test.
+  - what: Spec format
+    how: Choose OpenAPI 3 or Swagger 2 and YAML or JSON for the last step.
+judge:
+  - The summary in step 1 matches what you meant, or you have corrected it.
+  - Every route in the spec exists in the code.
+  - Every route has tests for sign-in, bad input and at least one error code.
+  - The API spec has no empty placeholders and matches the routes.
+  - Tests pass from a clean checkout.
+test:
+  - Make five real requests and compare them with the API spec.
+  - Remove a sign-in check on purpose. A test should fail.
+  - Run the tests twice from a clean checkout and compare results.
+  - Load the API spec into a viewer. It should open without errors.
+improve:
+  - Keep the spec as the source of truth and re-run steps 3 and 4 after each change.
+  - Add the cases it lists as not covered.
+  - Not worth running if you already have a mature service. Use the bug or review workflows instead.

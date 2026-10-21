@@ -1,0 +1,126 @@
+new_slug: category-and-trend-risk-checker
+name: "Category and trend risk checker"
+summary: "Name a category to enter. Get a score out of 100 on market size, trend risk and fit."
+job: find-products
+thinking: medium
+thinking_why: "It follows a scoring sheet, but it must read trend data with care and avoid false certainty."
+
+headline: "Category and trend risk checker"
+subhead: Name a category or product you want to enter, with the price and margin you expect. It checks fit, market size and trend risk. You get a score out of 100 with the weak spots named, a trend note, and a go, hold or drop call.
+
+explain: |
+  Two things sink new products: a market that is too small or too hard to hold, and a trend that fades. A fast fade can look like growth right up to the last month. A copy that any rival can make in weeks can wipe out your gap.
+
+  This skill scores your category on fit, demand and trend health, using quick free checks. Fit uses a seven-point list from one founder: a product people buy again, with repeat value, few products, a large market, a path to big retail, a high margin and a health or looks pull. Trend checks look at the exact product term, the shape over years, seasonality, size and where buyers live. The result is a signal, not a forecast.
+
+when:
+  - You are about to choose a category and want to know if it is worth entering.
+  - A product is trending and you need to know if it is a fad before you buy stock.
+  - You sell one hot product and want to know how to widen your range.
+
+you_give:
+  - The category or product idea, and the exact product term people search
+  - The price and margin you expect
+  - Whether people buy it again and again
+  - Your target country
+  - Search trend and best-seller data (optional)
+you_get:
+  - A score out of 100 with the weak spots named
+  - "A trend note: fad, steady or growing, and a seasonality note"
+  - Demand size and where buyers are
+  - Go, hold or drop, and a way to widen your range if you need one
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give the category, the exact product term, your price, margin and country.
+  - "Paste what you can: the 12-month and five-year Google Trends view, monthly search volume, and Amazon best-seller ranks."
+  - Read the score and the weak spots. Check the numbers you can with your own search.
+  - Act on go, hold or drop, and run the product-level checks next.
+
+how_it_works:
+  - title: Scores the fit
+    text: Runs the owner's seven-point list. Higher marks go to repeat-buy products, few products, a big market, a path to big retail, a high margin and a health or looks pull.
+  - title: Checks rival speed
+    text: Marks down categories where a new rival can appear in weeks. One brand moved away from supplements partly because a new brand could copy it in about 60 days.
+  - title: Checks one-trend risk
+    text: Looks at whether the brand rests on one trend. A core identity that can change products is safer than a single claim.
+  - title: Reads the exact term
+    text: Searches the exact product term, not only the parent topic. A parent trend at its peak does not mean the sub-product is rising.
+  - title: Reads the shape and season
+    text: Multi-year growth is good. One-month spikes are fads. A several-year view shows seasonality for cash planning.
+  - title: Sizes demand and buyers
+    text: Uses monthly search volume and daily social mentions, then estimates where buyers live and whether you can ship there.
+  - title: Scores and calls it
+    text: Adds up the score, shows the sum, names the weak spots and gives go, hold or drop.
+
+output_shape: |
+  CATEGORY: <category>   EXACT TERM: <term>   COUNTRY: <country>
+
+  FIT (35 points)
+  consumable or repeat buy        <pts>/5  <...>
+  strong repeat value             <pts>/5  <...>
+  few products                    <pts>/5  <...>
+  large market                    <pts>/5  <...>
+  path to big retail              <pts>/5  <...>
+  margin about 75% or more        <pts>/5  <...>
+  health or looks pull            <pts>/5  <...>
+
+  DEMAND (25 points): <pts>   search volume <...>, social mentions <...>, buyers in <...>
+  TREND HEALTH (25 points): <pts>   12 months <...>; years <...>; seasonality <...>
+  COPY AND ONE-TREND RISK (15 points): <pts>   <...>
+
+  SCORE <n>/100 (<fit> + <demand> + <trend> + <risk> = <n>, on the checks run)
+  WEAK SPOTS: <list>
+  CALL: <GO | HOLD | DROP>, because <reason>
+  WIDEN YOUR RANGE: <how>
+  NOT CHECKED: <...>
+  MISSING: <exact term | margin | trend data | country>
+
+tweaks:
+  - what: The exact product term
+    how: Give the real search words, not the parent topic. This is the biggest swing in the trend read.
+  - what: Your margin
+    how: Give margin after shipping and fees. The 75% target is a target for consumables, not a rule, and many stores will not reach it.
+  - what: Years of data
+    how: Paste the five-year view if you can. It separates a fad from steady growth and shows seasonality.
+  - what: Your country
+    how: Say where you sell. Demand and buyer location change by country.
+
+judge:
+  - The score shows its sum and the checks it covers.
+  - Each weak spot is named and tied to a number or fact.
+  - The trend note is based on the exact term, not only the parent topic.
+  - It says plainly that trend checks are signals, not forecasts.
+  - Nothing is invented. Missing data is marked.
+
+test:
+  - Run it on a category you know did well and one that faded. Check that the trend note reflects it.
+  - Give only the parent topic and then the exact term. The result should change if the terms differ.
+  - Run it twice on the same data. The call and the score should match.
+  - Look up one of its numbers yourself, such as the search volume. It should match.
+
+improve:
+  - Change the fit list in the skill file for your kind of business. A service or a made-to-order product will fail some items for good reasons.
+  - Set the margin target to your own number after you have run the store profit margin calculator.
+  - Add the fads you have seen in your niche so it knows what a spike looks like.
+  - Pair it with the new product line checker and the rising trend spotter.
+  - Save each call in your brand file with the date.
+
+works_best_with:
+  tools:
+    - {name: "Google Trends", why: "Free. Shows a 24-hour and a multi-year view, and compares terms."}
+    - {name: "Amazon best-seller lists", why: "Free. Check ranks daily to see what is rising now."}
+    - {name: "Any good chat AI", why: "Any current chat AI can run the checks if you paste the data in."}
+  inputs:
+    - "Google Trends for the exact term over five years"
+    - "Monthly search volume from a free keyword tool"
+    - "Your margin per unit after shipping and fees"
+    - "The names of three rivals and when they started"
+
+terms:
+  - term: Trend surface area
+    meaning: How many different trends your product's pack and messaging can follow.
+  - term: Fad
+    meaning: A short spike in interest that falls fast.
+  - term: Consumable
+    meaning: A product that gets used up, so people buy it again.

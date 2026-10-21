@@ -1,0 +1,124 @@
+new_slug: waterfall-price-setter
+name: "Waterfall price setter"
+summary: "Give it your targets, CAC and costs. Get the lowest viable price, or a call to drop it."
+job: set-prices
+thinking: medium
+thinking_why: "It solves one equation and compares it to the market, which a mid-size model does well when it shows each step."
+
+headline: "Waterfall price setter"
+subhead: Give it your profit target, your expected CAC, your costs and what competitors charge. It builds the price from the bottom up and shows the lowest price that still earns your target. You get a price table at low, mid and high CAC and a keep, reprice, reposition or cut call.
+
+explain: |
+  Most stores price by doubling the unit cost, or by applying a fixed markup of three, four or five times. Both ignore delivery, returns, ads and overhead, so the price can look fine and still lose money. The source behind this skill calls doubling the cost the worst common way to price.
+
+  This skill starts at the bottom of the page and works up. First the profit you want to keep, then the ad cost to win a customer, the allowance for returns and discounts, shipping and fulfilment, and the unit cost. It solves for the price that leaves exactly your contribution target. Then it compares that price with what the market pays. If the market pays $30 to $40 and the maths needs $70, you either sit in a gap nobody serves, or you drop the product.
+
+when:
+  - You are pricing a new product and want a floor, not a guess.
+  - A product sells but never makes money, and you suspect the price is too low.
+  - A supplier offers a big order and you want to know what price it needs before you commit.
+
+you_give:
+  - Your net profit target and operating expense share, as percents of price
+  - Expected CAC for this product
+  - Return and discount allowance, as a percent of price
+  - Shipping and fulfilment per order, and unit cost
+  - The price range competitors charge (optional)
+
+you_get:
+  - The lowest viable price
+  - A bottom-to-top price table at low, mid and high CAC
+  - A keep, reprice, reposition or cut call, with the reason
+  - A list of checks it could not finish
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your profit and overhead targets, your CAC guess, your costs and, if you have them, competitor prices.
+  - For CAC, use your account's recent CAC on similar products. A new product's CAC is a guess, so the skill shows three.
+  - Check the price it gives against the product margin checker before you set it live.
+  - Test the price with a pre-order or a small batch before a large order.
+
+how_it_works:
+  - title: Sets the target
+    text: Net profit target plus operating expense share gives the contribution margin the price must leave. For example, 10% net plus 10% overhead is 20%.
+  - title: Layers the costs
+    text: Expected CAC, then the return and discount allowance, then shipping and fulfilment, then unit cost.
+  - title: Solves for price
+    text: It finds the price at which everything left over equals the contribution target, and shows the sum.
+  - title: Runs three CAC cases
+    text: Low, mid and high CAC, because CAC for a new product is a guess. The result is marked a hypothesis.
+  - title: Checks the market
+    text: It compares the viable price with what competitors charge and says whether the product fits.
+  - title: Makes the call
+    text: Keep, reprice, reposition into a gap nobody serves, or cut.
+  - title: Plans the test
+    text: A pre-order or small batch to see if the price clears, before a big order.
+
+output_shape: |
+  TARGET  net profit <%> + overhead <%> = contribution target <%> of price
+  ALLOWANCE  returns <%> + discounts <%> = <%> of price
+
+  WATERFALL (per order, at <mid CAC>)
+  price                      <$>
+  - contribution target      <$>  (<%>)
+  - returns and discounts    <$>  (<%>)
+  - CAC                      <$>
+  - shipping and fulfilment  <$>
+  - unit cost                <$>
+  = left over                <$>  (should be 0 at the viable price)
+
+  VIABLE PRICE
+  low CAC <$> | mid CAC <$> | high CAC <$>   (hypothesis: CAC is a guess)
+
+  MARKET  competitors charge <range>
+  CALL  <keep | reprice | reposition | cut> because <reason>
+  TEST  <pre-order or small batch, what result passes>
+  CHECKS MISSED: <none or list>
+  MISSING: <input>
+
+tweaks:
+  - what: The CAC you give
+    how: Use the account's recent CAC on similar products, not a hope. The price moves a lot with CAC, so look at the three-case table.
+  - what: Net profit and overhead targets
+    how: Take the overhead share from your own profit and loss report. If you raise the targets, the viable price rises with them.
+  - what: Units per order
+    how: For a bundle, give shipping, unit cost and CAC per order, not per unit. The skill does not price subscriptions.
+  - what: Competitor range
+    how: Give prices for products that are really comparable. A cheap look-alike makes a premium price look wrong when it is not.
+
+judge:
+  - The waterfall sums to the price, with the leftover equal to the contribution target.
+  - The price is shown at low, mid and high CAC and called a hypothesis.
+  - The call (keep, reprice, reposition, cut) comes with a reason tied to the market range.
+  - Doubling the cost and fixed markups are not used anywhere.
+  - Anything it could not check is listed under CHECKS MISSED.
+
+test:
+  - Use a product you already sell. Does the viable price match what your profit and loss says you needed to charge?
+  - Change CAC by $10 and see that the price moves by the amount the formula says.
+  - Run it with and without competitor prices. The price should not change, only the call.
+  - Run a pre-order or a small batch at the viable price before you place a large order.
+
+improve:
+  - Put your real overhead and profit targets in the skill file so you never retype them.
+  - Add your usual return and discount allowance by product type.
+  - Add a rule for when you will accept a thinner margin, such as clearing old stock, and the limit.
+  - Pair it with the product margin checker, which checks the margin at the price you pick, and with a value-based test price planner.
+  - Money figures are planning numbers. Check them with your accountant.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It only needs to solve one equation and compare the answer with the market."}
+    - {name: "Google Sheets", why: "Put the waterfall in a sheet so you can change CAC and see the price move."}
+  inputs:
+    - "Your account's CAC on your last three launches"
+    - "A real quote for shipping and fulfilment, not an estimate"
+    - "Photos or links of the competitor products you are comparing with"
+
+terms:
+  - term: Contribution margin
+    meaning: What is left of the price after product, delivery and marketing costs, before overhead.
+  - term: Keystone pricing
+    meaning: Setting the price at double the unit cost.
+  - term: Shrink allowance
+    meaning: A share of the price set aside for returns and discounts.

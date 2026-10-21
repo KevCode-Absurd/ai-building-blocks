@@ -1,0 +1,130 @@
+new_slug: collections-and-menu-planner
+name: "Collections and menu planner"
+summary: "Give it your products. Get collections, filters, a menu and search settings so shoppers find things fast."
+job: set-up-store
+thinking: low
+thinking_why: "It sorts a list into groups with fixed rules, so a fast, cheap model is enough."
+
+headline: "Collections and menu planner"
+subhead: Give it your product list with type, material, colour, size and price, plus how shoppers search and a couple of competitor menus. It plans a tag list, collections with the rule for each, filters, a menu up to three levels, and search settings.
+
+explain: |
+  Shoppers who cannot find a product leave. A store with "legging" on one product and "leggings" on another gets two filter values. A menu with every default link stalls buyers. A collection built by hand goes out of date every time you add a product.
+
+  This skill plans the structure before you build it. It sets one spelling for each product type and tag, makes tags drive smart collections, picks filters by what big competitors use and what shoppers ask, and builds a short menu around the different ways people look: by product type, by use and by gender. It checks that any product is reachable in two to three clicks and sets up search with synonyms. It is written for Shopify. The logic carries to other platforms, but the names change.
+
+when:
+  - You are setting up a new store and have products but no collections or menu yet.
+  - Your menu has grown messy, or shoppers tell you they cannot find things.
+  - You have 30 or more products and need filters that work.
+
+you_give:
+  - A product list with type, material, colour, size, price and audience
+  - How shoppers search for your products
+  - Two or three competitor store menus (optional)
+  - Your catalogue size, platform and theme
+  - Your current menu and collections, if any (optional)
+you_get:
+  - A tag and product type list to use everywhere
+  - Collections with the type (manual or smart) and the rule for each
+  - A filter list, in order of importance
+  - A menu tree up to three levels, a click-depth check and search settings
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product list and say how many products you have.
+  - Add two or three competitor menus if you can, and how shoppers describe what they want.
+  - Fix the tags and types in your store first, in the bulk editor, then build the collections.
+  - Count the clicks from the homepage to a few products, and tell it if any take more than three.
+
+how_it_works:
+  - title: Fixes names
+    text: One spelling for every product type and tag, so filters do not split into two values.
+  - title: Plans collections
+    text: Tags drive smart collections with the rule "tag equals X". Manual or smart is decided before creating, since one source says it cannot change later.
+  - title: Adds other rules
+    text: Brand pages by vendor, a gift guide by price, a sale by inventory, and a best sellers collection.
+  - title: Chooses filters
+    text: Based on competitors and what shoppers ask, in order of importance, not alphabetical.
+  - title: Builds the menu
+    text: Short, in plain words, around the ways people look, with no more than three levels.
+  - title: Checks click depth
+    text: Any product within two to three clicks of the homepage.
+  - title: Sets search
+    text: Predictive search, synonyms for alternate words, and a search icon phones can reach.
+
+output_shape: |
+  TAGS AND TYPES
+  <product type> (one spelling) | tags: <...>
+
+  COLLECTIONS
+  <name> | <manual | smart> | rule: <tag equals X | vendor | price | inventory | any condition>
+
+  HOMEPAGE
+  collection list: <...> | featured collection: <new arrivals> | best sellers: <...>
+
+  FILTERS (in order)
+  <filter> -> needs product data: <field>
+
+  MENU
+  <top item> > <child> > <grandchild>
+
+  CLICK-DEPTH CHECK
+  <product> -> <n> clicks via <path>
+
+  SEARCH
+  predictive: <on> | synonyms: <pair> | icon: <where>
+
+  GAPS
+  <product data to fill before filters work>
+  MISSING: <product list | catalogue size | platform>
+
+tweaks:
+  - what: Catalogue size
+    how: Under about 15 products, collections and a short menu are enough. Filters pay off from about 30 products (our reading of the sources, which say large catalogues need them most).
+  - what: Competitor menus
+    how: Paste two or three. Filters and menu names then follow what shoppers already know.
+  - what: Platform
+    how: Say Shopify or WooCommerce. WooCommerce uses product categories with an optional parent.
+  - what: How shoppers search
+    how: Give the words they use. They become synonyms and plain menu names.
+
+judge:
+  - Each product type and tag has one spelling.
+  - Every collection says whether it is manual or smart and gives its rule.
+  - Filters are in order of importance, with the product data each needs.
+  - The menu is short, in plain words, and no more than three levels.
+  - Any product is within two to three clicks of the homepage.
+
+test:
+  - Give it "legging" and "leggings" on two products. It should pick one spelling and tell you to fix the other.
+  - Give it a two-product store. It should say you need no sub-menus.
+  - Count the clicks from the homepage to three of your products and compare them with its table.
+  - Ask for filters on a store with half its products missing a colour. It should list the data gap first.
+
+improve:
+  - Save your tag and type list in the skill file, so every new product follows it.
+  - Add your own collection rules, such as a seasonal collection and its end date.
+  - Add the words shoppers use in your reviews and searches to the synonym list.
+  - Pair it with a product page planner and a completeness checker for the product data.
+
+works_best_with:
+  tools:
+    - {name: "Shopify Search & Discovery", why: "A free Shopify app for filters and synonyms, with filters you can order by importance."}
+    - {name: "Shopify", why: "Smart collections, nested menus and a bulk editor for tags and types are built in."}
+    - {name: "Any good chat AI", why: "Any current chat AI can sort a product list into tags and collections."}
+  inputs:
+    - "An export of your product list"
+    - "Screenshots of two or three competitor menus"
+    - "Your site search terms from analytics"
+    - "Your best sellers list"
+
+terms:
+  - term: Smart collection
+    meaning: A collection that fills itself using a rule, such as every product with a certain tag.
+  - term: Mega menu
+    meaning: A large drop-down menu that shows many links at once.
+  - term: Breadcrumbs
+    meaning: A line of links at the top of a page showing where you are, such as Women > Leggings.
+  - term: Predictive search
+    meaning: Search that shows matching products as you type.

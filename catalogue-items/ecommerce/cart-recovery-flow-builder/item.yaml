@@ -1,0 +1,24 @@
+slug: cart-recovery-flow-builder
+name: "Cart recovery flow builder"
+summary: "Give it your margin, shipping terms and proof. Get cart and checkout recovery flows with filters, timing and a code rule."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "The trigger check for a missing cart flow, the added-to-cart test, the two-flow split, different blocks per trigger and the new-versus-returning buyer split"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "Cloning the cart flow into a checkout flow, the filter change, and holding the discount back to protect margin"}
+  - {title: "Klaviyo Email Marketing full course 2025", by: "An email agency operator for DTC stores (name not given)", used: "The cart email order, discount timing, and trying free shipping when a shipping fee is the likely reason"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Trigger, filters, timing and branches for the checkout flow, and the add-to-cart filter fix"}
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "The one-text-per-abandonment rule and the 48-hour limit"}

@@ -1,0 +1,21 @@
+slug: expert-content-format-planner
+name: "Expert content format planner"
+summary: "Give it your products and what you know. Get a positioning line, 2 to 3 formats and a 4-week schedule."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to start brand social media from scratch in 2026", by: "Creative strategist for large brands", used: "The four expert formats, student versus expert stance, 4 to 6 posts a week for a month before judging, batching, and the set and lighting advice"}
+  - {title: "the ONLY way to BEAT the Instagram algorithm in 2026", by: "Instagram growth coach", used: "The one-sentence positioning line, the stranger test, the research sheet, 20 one-line ideas, the light setup and batching"}
+  - {title: "Social Media Isn't Hard. It's Misunderstood.", by: "Creator with over a million followers", used: "Aiming at one narrow viewer and keeping to one topic"}

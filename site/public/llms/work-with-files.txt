@@ -1,6 +1,6 @@
 # Make documents, sheets and slides: AI Blocks
 
-> 51 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 52 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Article formatter](https://useaiblocks.com/skills/article-formatter): Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
 - [Chart maker](https://useaiblocks.com/skills/chart-maker): Give it your data. Get clear charts and dashboards made with matplotlib, seaborn or plotly.
@@ -50,6 +50,7 @@
 - [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker): Give it a spreadsheet. Get it cleaned, reconciled and analysed with formulas and formatting kept intact.
 - [Spreadsheet formula auditor](https://useaiblocks.com/skills/spreadsheet-formula-auditor): Give it a spreadsheet. Get formula errors, broken links and model checks such as balance sheet tie-out listed.
 - [Technical doc proofreader](https://useaiblocks.com/skills/technical-doc-proofreader): Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites.
+- [Turn a messy spreadsheet into a clean slide deck](https://useaiblocks.com/workflows/turn-a-messy-spreadsheet-into-a-clean-slide-deck): Give it a messy data file. Get clean, checked data, a written story and slides built from it.
 - [Web page data extractor](https://useaiblocks.com/skills/web-page-data-extractor): Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
 - [Web page to clean text converter](https://useaiblocks.com/skills/web-page-to-clean-text-converter): Give it a web page link. Get the article as clean text without clutter. Collects data from websites.
 - [X post reader](https://useaiblocks.com/skills/x-post-reader): Give it an X post link. Get the text, author and numbers as clean data. Collects data from websites.

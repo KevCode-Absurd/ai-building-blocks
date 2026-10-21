@@ -1,0 +1,98 @@
+new_slug: weekly-dependency-and-security-sweep
+name: Weekly dependency and security sweep
+summary: Run it weekly on your project. Get what is new, open or fixed since last week, plus an upgrade order.
+job: secure-code
+thinking: high
+thinking_why: It runs up to eight checks, picks which ones this week needs and compares with last week's findings. Give it your strongest model.
+headline: Weekly dependency and security sweep
+subhead: Run it once a week on a project you own. It looks for leaked keys first, scans your packages, runs deeper checks only when this week calls for them, and tells you what is new, still open and fixed, with a safe upgrade order.
+explain: |
+  Packages get new warnings every week. A key can slip into the code on any day. Most teams check once, then not again until something breaks. A long list of findings with no history is also hard to act on, because you cannot tell what is new.
+
+  This agent runs the same sweep every week and keeps last week's list. It checks for leaked keys first, because a live key outranks everything else. It scans the packages and sorts each finding as new, still open or fixed. It runs deeper checks only when needed: a named advisory, changed build workflows, a live site, or newly added packages. It never upgrades or rotates anything on its own. You get a short list to approve, with the safest order to upgrade.
+when:
+  - You ship software and want the same security checks every week.
+  - You heard of a package breach and want to know if you are hit.
+  - You want to know what changed since the last scan, not another long list.
+you_give:
+  - Your project folder with its package files and lock files
+  - A link to a live site you own (optional)
+  - The name of any breach or package warning you heard about (optional)
+  - Findings you have decided to accept, and why (optional)
+you_get:
+  - New, still open and fixed findings since last week, by severity
+  - Anything urgent at the top, such as a live key to replace now
+  - A safe order to upgrade packages
+  - A list of accepted risks that are due for another look
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's sweep.
+  - Give it the project folder. Add a live site link only if you own the site.
+  - Read the Do first section. If it says to replace a key, do that before anything else.
+  - Approve the upgrades you want. It makes only those, on a branch, and runs your tests.
+  - Run it again next week. It compares with the saved list.
+how_it_works:
+  - title: Read its memory
+    text: Opens last week's findings and the risks you decided to accept.
+  - title: Check for exposed secrets
+    text: Looks for leaked keys first. If one looks live, it triages the incident before anything else.
+  - title: Scan the packages
+    text: Finds known weak spots and sorts each as new, still open or fixed.
+  - title: Choose the deeper checks
+    text: Checks a named advisory, changed build workflows, a live site or new packages, only when that applies.
+  - title: Order the upgrades
+    text: For new high or critical findings, works out a safe order to upgrade.
+  - title: Apply the memory rules
+    text: Moves long-open serious findings to the top, flags accepted risks that are due for review, and saves this week's list.
+output_shape: |-
+  THIS WEEK
+    new <n> | still open <n> | fixed <n> | by severity: <critical, high, medium, low>
+
+  DO FIRST
+    <live key to replace, critical finding, or "nothing urgent">
+
+  NEW FINDINGS
+    1. <package or file> | <severity> | fix: <fix> | risk of breaking: <low, medium, high>
+
+  STILL OPEN
+    <finding> | open for <n> weeks
+
+  UPGRADE ORDER
+    <group 1, group 2, ...>
+
+  ACCEPTED RISKS DUE FOR REVIEW
+    <finding> | accepted <date>
+
+  SKIPPED AND MISSING
+    <checks skipped and why> | MISSING: <every line>
+tweaks:
+  - what: Lock files
+    how: Include them. Without exact versions the package scan can only guess, and it will say so.
+  - what: How old an accepted risk can get
+    how: It asks you to confirm again after 90 days. Set your own number.
+  - what: Which findings count as urgent
+    how: By default a live key or a critical finding. Tell it what is critical for your product, such as anything that touches payments.
+  - what: A live site to check
+    how: Add the link only for a site you own. It then checks for keys and private files anyone can fetch.
+judge:
+  - Each finding is marked new, still open, fixed or accepted.
+  - A possible live key is at the top with the steps in order.
+  - Nothing was upgraded, rotated or changed without your yes.
+  - Only code and sites you own were checked.
+  - The saved list was updated for next week.
+test:
+  - Run it on a project where you know an old package is weak. See if it finds it and marks it new.
+  - Run it twice in a row. The second run should show no new findings.
+  - Plant a fake key in a test branch. See if it goes to the top.
+improve:
+  - Write down every risk you accept, with a reason. The list stays short and honest.
+  - Add the packages that must never be upgraded without a test run.
+  - After a month, look at the findings open longest. Decide to fix them or accept them on purpose.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your lock files, keep the sweep folder and run on a schedule.
+    - name: GitHub
+      why: It reads your build workflows and, with your yes, opens upgrade branches.
+  inputs:
+    - Your package files and lock files
+    - A note of anything you changed in build workflows

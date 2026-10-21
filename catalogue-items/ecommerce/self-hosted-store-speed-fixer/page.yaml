@@ -1,0 +1,131 @@
+new_slug: self-hosted-store-speed-fixer
+name: "Self-hosted store speed fixer"
+summary: "Give it your WooCommerce setup. Get hosting, caching, plugin and image fixes in order."
+job: speed-up-store
+thinking: high
+thinking_why: "Caching rules for carts and checkouts are easy to get wrong, and a mistake can lose orders. A stronger model is more careful."
+
+headline: "Self-hosted store speed fixer"
+subhead: "Give it your hosting plan, plugin list and speed report for a WooCommerce or other self-hosted store. It puts hosting, caching, plugin, image and font fixes in the right order, says what to cache and what never to cache, and gives a staging test plan."
+
+explain: |
+  A store you host yourself carries work that Shopify does for you: the server, caching, compression and updates. A slow WooCommerce store often has big images, too many plugins, scripts loading on every page and no caching. Many owners start by paying for a bigger host, when the cheaper fixes should come first.
+
+  This skill follows a fixed order. It takes a baseline, fixes images, audits plugins, unloads files from pages that don't need them, checks compression and caching, adds a CDN, and only then asks your host for server upgrades. It spells out what must never be cached, such as the cart, checkout and account pages, because a wrong cache rule can show one customer another's cart. It is for self-hosted stores only; on a hosted platform the host handles most of this.
+
+when:
+  - "Your store runs on WooCommerce or another self-hosted system."
+  - "Your server response time (TTFB) is over 0.8 seconds."
+  - "You pass about 100 orders a month and are still on shared hosting."
+
+you_give:
+  - "Your hosting plan, PHP version, and any caching and CDN you use"
+  - "Your plugin list and your theme or page builder"
+  - "A speed report with server response time and the waterfall"
+  - "Whether you have a staging site (a private copy of your store)"
+
+you_get:
+  - "An ordered fix list for images, plugins, assets, fonts, caching, CDN and hosting"
+  - "What to cache and what never to cache"
+  - "A staging test plan"
+  - "Questions for your host, only after the cheaper steps are done"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Run PageSpeed on mobile and desktop and note LCP and the score. This is your baseline; keep a dated log."
+  - "Paste your hosting details, plugin list and the speed report with the waterfall."
+  - "Make every plugin or setting change on a staging site first, one at a time."
+  - "Test in an incognito window with throttling and the cache off, then with the cache on."
+
+how_it_works:
+  - title: Sets a baseline
+    text: Mobile and desktop scores and LCP, with every change logged and dated.
+  - title: Fixes images first
+    text: WebP or AVIF, sized to twice the displayed size. Images can be over 60% of page weight.
+  - title: Audits plugins
+    text: Asks how each earns money, disables doubtful ones on staging, then deletes the unused ones.
+  - title: Unloads assets
+    text: Removes jQuery for visitors who aren't logged in if the theme doesn't use it, and unloads shop styles and scripts on pages that aren't cart or shop pages.
+  - title: Hosts fonts locally
+    text: Serves fonts as WOFF2 from your own site and drops outside font calls.
+  - title: Checks caching
+    text: Confirms compression and cache headers are working, and sets cache rules that never cache the cart, checkout or account.
+  - title: Adds a CDN
+    text: Starts with static files, watches the hit rate, and purges when products or code change.
+  - title: Then asks the host
+    text: PHP version, HTTP/3 and server page caching, only after the earlier steps.
+
+output_shape: |
+  SELF-HOSTED SPEED PLAN  <store>, <date>
+  Baseline: mobile <score>, LCP <s>, TTFB <s>, desktop <score>
+
+  ORDER OF WORK
+  1. Images: <actions>
+  2. Plugins: <keep | disable on staging | delete>
+  3. Assets to unload: <where, which files>
+  4. Fonts: <local WOFF2 plan>
+  5. Compression and cache check: <what to look for>
+  6. Caching rules: <what to cache, how long>
+  7. CDN: <static files first, hit rate, purge rules>
+  8. Ask the host: <PHP, HTTP/3, server cache>
+
+  NEVER CACHE
+  Cart | Checkout | Account | <others>
+  Session: <created only on first add to cart or login>
+
+  HOSTING BY SIZE: <plan> against <orders a month> -> <advice>
+  STAGING TEST PLAN: <one change, clear cache, test in incognito, undo if broken>
+
+  CHECKS MISSED: <none or list>
+  MISSING: <what>
+
+tweaks:
+  - what: Order volume
+    how: Give your orders per month. Shared hosting is fine while very small, but around 100 or more orders a month the plan changes.
+  - what: Plugin list
+    how: Paste the full list with what each does. The skill asks for the revenue link of each.
+  - what: Staging
+    how: Say if you have a staging site. Without one, the skill limits its advice to safe, reversible steps and tells you to get one.
+  - what: The waterfall
+    how: Paste the PageSpeed waterfall or the network tab. It shows which files and which server response are slow.
+
+judge:
+  - "The order is baseline, images, plugins, assets, caching, CDN, then the host."
+  - "Cart, checkout and account pages are never cached."
+  - "Every plugin change is made on staging first."
+  - "Minify, combine and delay settings are changed one at a time."
+  - "Hosting prices are called one source's figures and marked to re-check."
+  - "It says this is for self-hosted stores only."
+
+test:
+  - "Run it on a store with large images and 40 plugins. Images and plugins should come first."
+  - "Ask it to cache the checkout. It should refuse."
+  - "Make one change on staging, clear the cache, and test in incognito. The cart should still work."
+  - "Compare PageSpeed before and after on the same pages with three runs."
+
+improve:
+  - "Write your host, PHP version and plugin list into the skill so you don't paste them each time."
+  - "Add your staging site address and a standard test list for your cart and checkout."
+  - "Add the plugins you must keep (payments, shipping) so they are never marked for removal."
+  - "Pair it with the speed fix ranker to put the fixes in order of money."
+
+works_best_with:
+  tools:
+    - {name: "Google PageSpeed Insights", why: "Gives the baseline, server response time and the waterfall."}
+    - {name: "Chrome DevTools network tab", why: "Shows content-encoding and cache headers, so you can see if compression and caching work."}
+    - {name: "A staging site from your host", why: "Lets you test plugin and cache changes safely before they reach real orders."}
+  inputs:
+    - "Your host's name and plan, including PHP version"
+    - "Your orders per month"
+    - "The names of your caching plugin and CDN, if any"
+    - "A list of your plugins with what each does"
+
+terms:
+  - term: Staging site
+    meaning: A private copy of your store where you can test changes without risking real orders.
+  - term: TTFB
+    meaning: Time to first byte. How long the server takes to start answering. 0.8 seconds or less is good.
+  - term: CDN
+    meaning: A network of servers that keeps copies of your files close to visitors so they arrive faster.
+  - term: Cache hit rate
+    meaning: The share of requests answered from the cache. Over 80% is a common target.

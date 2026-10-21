@@ -1,0 +1,23 @@
+slug: store-tax-setup-planner
+name: "Store tax setup planner"
+summary: "Say where and what you sell. Get tax settings, rate rows to enter and a test plan."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "WooCommerce Tutorial 2026: Complete MasterClass for Beginners", by: "Tim Nishad", used: "Price entry choice, four-decimal rate rows, state rows, the priority rule, the shipping tax switch and testing with a changed address"}
+  - {title: "How To Start an Online Store That Runs on Autopilot (WooCommerce Tutorial)", by: "Ferdy", used: "The inclusive versus exclusive trap, three tax classes and manual versus automated tax"}
+  - {title: "The Official Shopify 2026 Tutorial (four-part series)", by: "Kylie Maher, Learn with Shopify", used: "The physical presence rule of thumb, the Shopify path, duties and tax-inclusive pricing by market"}
+  - {title: "WooCommerce Tutorial for Beginners 2026", by: "Daryl Wilson", used: "Origin versus destination, manual rows, the automated tax plugin and the reduced rate class"}
+  - {title: "Shopify Tutorial for Beginners 2026 - Full Store Setup Guide", by: "Simon", used: "Using automatic tax calculation and asking a professional"}

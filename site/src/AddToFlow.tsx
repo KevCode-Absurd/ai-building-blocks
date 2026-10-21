@@ -117,7 +117,7 @@ function Editor({ c, slug, draft, setDraft, onSave }: { c: Catalogue; slug: stri
   const found = useMemo(() => {
     const words = q.toLowerCase().split(/\s+/).filter(Boolean);
     if (!words.length) return [];
-    return c.blocks.filter((x) => x.category !== "orchestrator" && !inFlow.has(x.slug) &&
+    return c.blocks.filter((x) => x.category !== "orchestrator" && x.type !== "agent" && !inFlow.has(x.slug) &&
       words.every((w) => `${x.name} ${x.summary} ${x.headline} ${taskOf(x).name}`.toLowerCase().includes(w))).slice(0, 6);
   }, [c, q, inFlow]);
   // Which step feeds which, using the same rule as the builder: a step takes the latest result it can use.

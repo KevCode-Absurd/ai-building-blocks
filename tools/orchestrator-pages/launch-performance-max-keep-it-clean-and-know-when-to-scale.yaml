@@ -1,0 +1,77 @@
+new_slug: launch-performance-max-keep-it-clean-and-know-when-to-scale
+name: Launch Performance Max, keep it clean, know when to scale
+summary: Give it your catalogue and break-even numbers. Get a Performance Max build, a clean-up list and a scaling call.
+job: run-google-ads
+thinking: high
+thinking_why: It runs three skills in a row and does budget and break-even sums. Give it your strongest model.
+headline: Launch Performance Max without letting it waste your budget
+subhead: Give it your catalogue, budget and break-even numbers. It says whether Performance Max fits yet, plans the build, then reads the live reports for waste and tells you if it is safe to raise spend.
+explain: |
+  Performance Max is easy to switch on and hard to keep honest. It spreads money across products, pages and placements you never chose, and it likes to claim sales from people who would have bought anyway. Many stores launch it, watch the in-platform return look great, and then raise the budget on a number that was never real.
+
+  The steps slow that down. First it tests whether your budget and conversions fit, then plans asset groups, brand exclusions and bidding. It pauses while you build it and leave it alone for three to four weeks, then asks for the asset group, product, search term and placement reports. The second step finds what spends without selling and gives you an exclude or replace list. The last step checks five gates and your return against break-even, then says go or wait on raising spend in small steps.
+when:
+  - You run steady Shopping and Search and want to add Performance Max without handing it the whole budget.
+  - Performance Max looks great in Google but your store sales are flat.
+  - You want a rule for when to raise the budget and by how much.
+you_give:
+  - Your products with prices and margins, and which ones sell best
+  - Your daily budget, conversions per month and average cost per sale on non-brand search
+  - Whether your feed and purchase tracking are working
+  - After the pause, the asset group, product, search term and placement reports
+you_get:
+  - A go or wait verdict, with the budget floor worked out for your numbers
+  - Asset groups, brand exclusions, bidding and a review rhythm
+  - A list of products, pages, placements and search terms to exclude or replace, with a waste score
+  - A pass or fail on five scaling gates and a safe step size for raising spend
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your real break-even numbers. If you do not have them, say so and it will mark the gap.
+  - When it pauses, build the campaign, leave the big settings alone for three to four weeks, then export the reports.
+  - Raise the budget only in the steps it gives you.
+how_it_works:
+  - title: Check the fit and plan the build
+    text: Works out the budget floor from two rules, says go or wait, then plans asset groups, brand exclusions, signals and bidding. If the answer is wait, it names what to build first.
+  - title: Clean it after the first weeks
+    text: Pauses while you build and run the campaign for three to four weeks and export the reports. Then it finds products, pages, placements and search terms that spend without selling, applies a budget rule and scores the waste.
+  - title: Decide whether to scale
+    text: Checks feed, tracking, structure, creative and bid readiness, compares your return with break-even and calls go or wait, with a step size and days between steps.
+output_shape: |-
+  STEP 1: LAUNCH PLAN
+    Fit verdict | budget floor | asset groups | brand exclusions | bidding | review rhythm
+
+  PAUSE: build it, run three to four weeks, export the reports
+
+  STEP 2: CLEAN-UP
+    Findings by day, week and month | exclude or replace list | reality check | waste score
+
+  STEP 3: SCALE CHECK
+    Five gates | return against break-even | stepped plan check | score | go or wait
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your Performance Max budget share
+    how: Tell it how much of your Google budget you can spare. Step 1 keeps it to a share, not the whole.
+  - what: Feed-only setup
+    how: If you only want Performance Max to show your products, say so. Step 3 skips the asset count for that setup.
+  - what: Your margin
+    how: Give real margin after shipping and fees. A guess moves the break-even and the final call.
+  - what: Brand names and terms
+    how: List your brand words so step 1 can exclude them and step 2 can catch brand sales.
+judge:
+  - The fit verdict uses your numbers and says wait if you fall short.
+  - Brand is excluded, or the plan says why it is not.
+  - Every exclusion in step 2 names the product, page or term and the spend behind it.
+  - The scale call compares your return with break-even, not with Google's number alone.
+  - Any budget rise is in small steps with days between them.
+test:
+  - Check the budget floor against your own daily budget and cost per sale.
+  - Pick three products on the exclude list and confirm in Google that they spent without selling.
+  - Compare the return it reports with your store's sales for the same dates.
+improve:
+  - Keep each week's exclude list so you can see what keeps coming back.
+  - Re-run steps 2 and 3 every four weeks while you scale.
+  - Add your best converting search terms as themes after the first month.
+  - Skip this if you are under the budget floor. Run Shopping and Search first.

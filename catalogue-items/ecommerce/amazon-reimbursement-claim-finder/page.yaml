@@ -1,0 +1,126 @@
+new_slug: amazon-reimbursement-claim-finder
+name: "Amazon reimbursement claim finder"
+summary: "Give it shipment and fee reports. Get a claim-readiness score and the claims to file."
+job: sell-on-amazon
+thinking: medium
+thinking_why: "It compares counts and fee lines across reports, which needs care with the numbers but follows a fixed list."
+
+headline: "Amazon reimbursement claim finder"
+subhead: Give it your shipment summaries, receipts, fee and returns reports for the last 90 days, and your product sizes. It checks six places where Amazon can owe you money. You get a score out of 100 for how ready your claims are, the claims to file with proof, and a monthly routine.
+
+explain: |
+  Amazon sometimes receives fewer units than you sent, puts a product in a higher fee size tier than it should be in, or loses or damages stock. Many sellers never check. The seller in the source lost about 3,000 dollars to fee overcharges he did not catch. Prompt claims get paid, and late ones may not.
+
+  This skill goes through your reports against a fixed list: units sent against units received, size tier against real dimensions, fee lines, damaged and lost stock, returns and storage, and the seller feedback page. It lists each claim with the proof to attach. The score is ours: it measures how much of the check you could run and how many findings have proof ready, and the money found is listed beside it. Small sellers may find little, and claim time limits change, so check Amazon's current rules.
+
+when:
+  - You have closed shipments and want to check Amazon received every unit you sent.
+  - You think your fees are higher than your product's size should cost.
+  - You want a monthly routine to catch Amazon's errors before the claim window ends.
+
+you_give:
+  - Shipment summaries with sent and received counts
+  - Receipts, packing lists and bills of lading
+  - Fee and returns reports for the last 90 days
+  - Your product dimensions and weight
+you_get:
+  - A claim-readiness score out of 100, with each part shown
+  - A list of claims to file, with the proof for each and the amount at stake
+  - A monthly check routine and a claim log
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Download your shipment, fee, returns and damaged or lost inventory reports from Seller Central and paste or attach them.
+  - Paste your receipts and bills of lading, and your real product sizes and weights.
+  - File the claims it lists, starting with the largest, and attach the proof it names.
+  - Run it once a month and keep the log of claims filed, paid and rejected.
+
+how_it_works:
+  - title: Compares sent and received
+    text: Lists every closed shipment where received is lower than sent, with the proof to attach.
+  - title: Checks size tiers
+    text: Compares each product's tier with its real dimensions and weight, and flags a higher tier than it should be in.
+  - title: Reviews fee lines
+    text: Checks fee lines for overcharges each month.
+  - title: Checks damaged and lost stock
+    text: Reads the damaged and lost reports, because Amazon refunds the price when it loses or damages stock.
+  - title: Checks returns and storage
+    text: Compares returns that went back to stock with those disposed, and reads the monthly storage line.
+  - title: Checks seller feedback
+    text: Finds product reviews wrongly left as seller feedback that can be removed within 30 days.
+  - title: Scores readiness
+    text: Adds six areas to 100, based on what was checked and what has proof.
+  - title: Sets the routine
+    text: Writes a monthly routine and a log of claims filed, paid and rejected.
+
+output_shape: |
+  CLAIM READINESS SCORE <n>/100
+  Measures: how much of the six-part check was run, and how many findings have proof ready. Sum: <a + b + c + d + e + f = n>
+  Money found: <amount> (<% of 90-day Amazon sales, if given>)
+
+  CLAIMS TO FILE (largest first)
+  1. <type> | <shipment or product> | amount: <...> | proof: <receipt, bill of lading, packing list, report line> | deadline: <check current limit>
+
+  CHECKS
+  Sent vs received (<n>/25): <result>
+  Size tier (<n>/20): <result>
+  Fee lines (<n>/20): <result>
+  Damaged and lost (<n>/15): <result>
+  Returns and storage (<n>/10): <result>
+  Seller feedback (<n>/10): <result>
+
+  MONTHLY ROUTINE
+  <steps and a log: filed, paid, rejected, reason>
+
+  NOT RUN: <check and the report it needs>
+  MISSING: <report or proof>
+  CHECK: <current claim windows in Seller Central>
+
+tweaks:
+  - what: Reports for the last 90 days
+    how: Attach shipment, fee, returns, damaged and lost, and storage reports. Each missing report means a part not run.
+  - what: Proof for each shipment
+    how: Receipts, packing lists and bills of lading. Without proof of what you sent, a missing-units claim cannot be made.
+  - what: Real dimensions
+    how: Measure the packed unit. Size tier checks only work against real measurements.
+  - what: Order of work
+    how: Say if you want the biggest amounts first or the oldest first, since claim windows run out.
+
+judge:
+  - Every claim names the shipment or product, the amount and the proof to attach.
+  - The score parts add to the total, and the score says what it measures.
+  - A part with no report is listed as not run, not scored as clean.
+  - The time limit for claims is flagged to check, not stated as fact.
+  - No paid claim tool is recommended.
+
+test:
+  - Pick one closed shipment and compare sent and received by hand. The skill's line should match.
+  - Check one flagged size tier against the product's real dimensions and Amazon's current tier rules.
+  - File one small claim and see what Amazon asks for, then add it to your proof list.
+  - Run it again next month and check the log shows what was filed, paid and rejected.
+
+improve:
+  - Add your regular reports and where to download them to the skill file so each month is quick.
+  - Add the claim time limits you confirm in Seller Central, with the date.
+  - Add a column to the log for the reason a claim was rejected, to spot patterns in Amazon errors.
+  - Pair it with the Amazon inbound stock planner for the proof you keep when you ship, and the Amazon fee and margin checker for expected fees.
+
+works_best_with:
+  tools:
+    - {name: "Seller Central reports", why: "Where the shipment, fee, returns, damaged and lost, and storage reports come from. Check which are available to you."}
+    - {name: "A spreadsheet", why: "Keeps the claim log with dates, amounts and results."}
+  inputs:
+    - "A bill of lading and packing list for each shipment"
+    - "Your product's measured size and weight"
+    - "Your last claim log, so repeated errors show up"
+    - "Your 90-day Amazon sales, to show the money found as a share"
+
+terms:
+  - term: Reimbursement
+    meaning: Money Amazon pays you back when it loses or damages your stock or charges you too much.
+  - term: Size tier
+    meaning: The size and weight band Amazon puts your product in, which sets the fulfilment fee.
+  - term: Bill of lading
+    meaning: The carrier's paper that shows what was sent. It is proof for a missing-units claim.
+  - term: Seller feedback
+    meaning: Ratings about your service as a seller. Product reviews do not belong here.

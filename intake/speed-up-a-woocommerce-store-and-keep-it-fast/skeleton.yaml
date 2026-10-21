@@ -1,0 +1,34 @@
+id: speed-up-a-woocommerce-store-and-keep-it-fast
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: speed-up-a-woocommerce-store-and-keep-it-fast
+  name: "Speed up a WooCommerce store and keep it fast"
+  summary: "Give it your PageSpeed report and setup. Get ordered speed fixes and a budget that keeps the store fast."
+  when: "your WooCommerce store loads slowly and you want ordered fixes and a way to keep it fast."
+  job: speed-up-store
+  level: intermediate
+steps:
+  - name: Read the speed report
+    skill: store-speed-report-reader
+    job: analysis
+    from: "skill: store-speed-report-reader"
+    method: ["Split real-user data from the lab test", "Compare each measure with its band, mobile first", "Name what causes the slow parts", "Give a score out of 100 and three fixes"]
+    inputs: [source_text, question!]
+    outputs: [audit_report]
+    note: "Reads your pasted PageSpeed report and names what is slow and why."
+  - name: Order the WooCommerce fixes
+    skill: self-hosted-store-speed-fixer
+    job: ops
+    from: "skill: self-hosted-store-speed-fixer"
+    method: ["Take a baseline and log every change", "Fix images first", "Audit plugins, fonts and extra assets", "Check compression and caching, then talk to your host"]
+    inputs: [audit_report, question]
+    outputs: [plan]
+    note: "Uses the report from step 1 to put hosting, caching, plugin and image fixes in order."
+  - name: Set a speed budget
+    skill: speed-budget-and-sale-check
+    job: ops
+    from: "skill: speed-budget-and-sale-check"
+    method: ["Set limits for page weight, mobile score and third-party scripts", "Set a test routine and the pages to test", "Build a pre-sale checklist", "Freeze changes before big events"]
+    inputs: [audit_report, question]
+    outputs: [plan]
+    note: "Sets limits from the step 1 numbers so the store stays as fast as the fixes make it."

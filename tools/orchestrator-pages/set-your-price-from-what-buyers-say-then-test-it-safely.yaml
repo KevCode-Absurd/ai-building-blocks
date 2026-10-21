@@ -1,0 +1,78 @@
+new_slug: set-your-price-from-what-buyers-say-then-test-it-safely
+name: Set your price from what buyers say, then test it
+summary: Give it your product. Get a pricing survey, a price model with tiers and an undoable price test.
+job: set-prices
+thinking: high
+thinking_why: The survey sums and the test cases must be exact. Use your strongest model.
+headline: Set a price buyers have told you they will pay
+subhead: Give it your product. It writes a pricing survey, turns the answers into a price model with tiers, then plans a price test on one product that you can undo.
+explain: |
+  Most prices are a guess, or a copy of a rival. Ask buyers "what would you pay?" and the answers run high. Change the price on your whole range at once and you cannot undo it if sales drop.
+
+  The steps ask better and test small. The first step writes two survey questions with the same product text and gives the sums that correct the open answers. The first pause asks you to send the survey to at least 30 people per price and put the answers in a sheet. The second step reads the answers, picks a pricing model that fits and packages good, better and best tiers. The second pause asks for your last 90 days of sales and your costs per product. The last step models the candidate prices, checks the cost floor and plans a controlled test with a rule to roll back.
+when:
+  - You are about to launch and have no real price evidence.
+  - You suspect you charge too little but fear losing sales.
+  - You want tiers, not one flat price.
+you_give:
+  - Your product facts and what it does for buyers
+  - People you can send a short survey to
+  - Your last 90 days of sales
+  - Your cost for each product
+  - Your rivals' prices (optional)
+you_get:
+  - Two survey questions to send, with the sums to read the answers
+  - A pricing model with price points and good, better and best tiers
+  - A price to try, three outcome cases and a floor below which you lose money
+  - A controlled test with a rule to roll back
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - At the first pause, send the survey and collect at least 30 answers per price. Fewer will mislead you.
+  - At the second pause, export 90 days of sales and your cost for each product.
+how_it_works:
+  - title: Plan the pricing survey
+    text: Builds a ladder of seven prices, writes an open question and a price-ladder question, sets the sample size and gives the sums.
+  - title: Collect the answers (your step)
+    text: You send the survey to at least 30 people per price and put the answers in a sheet.
+  - title: Design the price model and tiers
+    text: Reads the answers, picks a model that fits, finds the range that feels fair and packages good, better and best tiers.
+  - title: Pull sales and costs (your step)
+    text: You export 90 days of sales and your cost for each product, and pick the product to test first.
+  - title: Plan a price test you can undo
+    text: Checks your data, works out unit costs, models candidate prices and plans a controlled test with a roll-back rule.
+output_shape: |-
+  STEP 1: PRICING SURVEY
+    Price ladder | open question | ladder question | sample size | sums
+
+  STEP 2: PRICE MODEL
+    Model | fair price range | price points | good, better and best tiers
+
+  STEP 3: PRICE TEST
+    Data check | costs and floor | candidate prices | three outcome cases | test and roll-back rule
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Number of tiers
+    how: Say one price or three. Step 2 packages to match.
+  - what: Your goal
+    how: Say profit, growth or premium. The price you test first follows it.
+  - what: Survey channel
+    how: Name where you will send it, such as email or a post. The wording fits that channel.
+  - what: Rival prices
+    how: Add them so the test price does not sit far outside the market.
+judge:
+  - The survey shows the same product text to every person.
+  - The model uses the survey answers and not just a rival's price.
+  - Tiers differ on something buyers care about, not only on size.
+  - The test price stays above your cost floor.
+  - The test has a stop rule and a way back to the old price.
+test:
+  - Send the survey to five people first and ask if anything was unclear.
+  - Redo the sums by hand on ten answers and compare.
+  - Check the cost floor against your own books.
+improve:
+  - Repeat the survey each year or when your product changes.
+  - Log every price test and its result in one sheet.
+  - Test one product at a time and apply wins to the next.

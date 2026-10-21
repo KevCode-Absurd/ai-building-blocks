@@ -1,0 +1,20 @@
+slug: subscription-page-take-rate-checker
+name: "Subscription page take-rate checker"
+summary: "Give it your product page and pop-up. Get a score out of 100 for selling subscription."
+category: ecommerce
+type: skill
+role: check
+job: page
+level: intermediate
+inputs:
+  - {type: store_capture, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The $100M Subscription Brand Playbook", by: "An email and retention agency founder (name not given)", used: "Subscription pre-selected on load, the best discount on subscription only, the three-option rule, and keeping the pop-up and the page on the same offer"}
+  - {title: "$10,000,000 per year on Shopify: Insane Offer and Conversion Rate Strategy", by: "Jordan Hayes, agency owner", used: "Letting a buyer upgrade a one-time item to a subscribe-and-save offer inside the side cart"}

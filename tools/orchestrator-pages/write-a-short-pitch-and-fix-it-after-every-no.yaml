@@ -1,0 +1,80 @@
+new_slug: write-a-short-pitch-and-fix-it-after-every-no
+name: Write a short pitch and fix it after every no
+summary: Give it your idea and who must back it. Get an honest pitch that learns from each no.
+job: speak-and-persuade
+thinking: high
+thinking_why: It runs four skills in a row, and the objection step needs real argument. Give it your strongest model.
+headline: Write a pitch you can defend and sharpen it with every no
+subhead: Give it your idea and the people who must back it. It writes a short pitch that starts from what you believe, strips out claims you cannot prove, answers the hardest objections, then rewrites the pitch from the nos you hear.
+explain: |
+  A first pitch usually opens with the product and stretches the truth a little. People say no, and you do not learn why. You change slides at random, or you give up after the fifth meeting.
+
+  The steps work in an order that fixes this. First it writes a short pitch that starts from your belief, then how you act on it, then what you make. Next it marks each line by the kind of persuasion it uses and cuts what you cannot back up. Then it lists at least eight objections, answers the strongest, and says what your evidence cannot show. After that you pause and pitch it to about five people who can say no, writing down each no in their words. The last step sorts those doubts, keeps what survived and rewrites the opening around the doubt heard most.
+when:
+  - You are pitching an idea, a business or a cause to investors, a boss, a board or a group.
+  - You have pitched a few times, heard no, and cannot tell what to change.
+  - You want to persuade without pressure tricks or claims you cannot prove.
+you_give:
+  - Your idea or cause and who you want to reach
+  - Facts you can prove, numbers with sources, results, quotes you may use
+  - Why you started, in your own words
+  - Your brand file or buyer profile (optional)
+  - After the pause, each no you heard, who said it and their words
+you_get:
+  - A short pitch from belief to method to what you make
+  - A line-by-line check of which persuasion is true, unproven or fake, and a cleaner rewrite
+  - The hardest objections with fair answers, the fact that would sink your case and what your evidence cannot show
+  - A doubt log sorted by problem, market, team and place, a rewritten pitch and one advice question for the next meeting
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it facts you can prove. Anything it cannot check is cut or marked as missing proof.
+  - When it reaches the pause, pitch to about five people who can say no. Open each meeting by asking what they would change first, and write down each no as they said it.
+  - Come back with the notes and it finishes the rewrite.
+how_it_works:
+  - title: Write the why-first pitch
+    text: Writes your usual pitch as a baseline, finds the belief behind the work and rebuilds the message from belief to how to what you make.
+  - title: Strip out what you cannot prove
+    text: Marks the persuasion lever behind each line, checks it against your facts, removes fake ones and keeps at most two true ones.
+  - title: Answer the hardest objections
+    text: Lists the objections, including silly ones, answers the strongest fairly, names the fact that would sink the case and says what your evidence cannot show.
+  - title: Pause and pitch to five people
+    text: You give the pitch to people who can say no and write each no in their words, with who said it.
+  - title: Revise from the nos
+    text: Logs the real doubt behind each no, sorts and counts them, rewrites the opening around the problem and market size, and keeps what survived.
+output_shape: |-
+  STEP 1: THE PITCH
+    Baseline | belief | how | what you make | skeptic test
+
+  STEP 2: THE HONEST EDIT
+    Lines marked by lever | true, unproven or fake | clean rewrite | change list
+
+  STEP 3: THE HARD QUESTIONS
+    Objections ranked | answers | sinking fact | what the evidence cannot show | rebuilt pitch
+
+  STEP 4: AFTER YOUR NOS
+    Doubt log | doubts by group | fix now or later | new opening | what to keep | next advice question
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your audience
+    how: Say if you pitch to investors, a boss or a community. The belief and the proof it leads with change.
+  - what: Your proof
+    how: Give numbers with sources. Every number it cannot source is cut or marked missing.
+  - what: Pitch length
+    how: Say if it is a one-minute pitch, a script or a slide deck.
+judge:
+  - Every claim in the pitch is backed by a fact you gave it, or is marked as missing proof.
+  - At most two persuasion levers are left on the page, and both are true.
+  - The objections include ones you did not want to hear.
+  - Each no in the log is written in the speaker's words, with who said it.
+  - The new opening states the problem and the size of the market, using only figures you supplied.
+test:
+  - Hand step 2's changes to a friend. They should be able to tell which lines were cut and why.
+  - Read the objection answers to someone who disagrees with you. They should say it is fair.
+  - Count repeats in the doubt log. A doubt heard twice should rank above a one-off.
+improve:
+  - Keep the doubt log across all your pitches. It is a record of what people keep asking.
+  - Run the last step again after every five meetings.
+  - Save the opening that survived as your standard first minute.

@@ -1,0 +1,26 @@
+slug: store-link-gap-planner
+name: "Store link gap planner"
+summary: "Give it your site and rivals. Get a link gap, monthly quota, earned-link targets and pitch emails."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: advanced
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: competitor_set, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two co-founders of a Shopify SEO agency", used: "The referring-domain gap maths, the target split, prospecting filters, vetting a site, anchor mix, foundational links and the outreach steps. Its advice to pay for links is left out"}
+  - {title: "Complete SEO Course (3 Hours): Rank in AI Search", by: "An SEO consultant who runs a paid community", used: "Quality over quantity, and the red flags of sudden link spikes, cheap packages and irrelevant sites"}
+  - {title: "$40,000,000 Worth of Ecommerce SEO Advice in 11 Minutes", by: "An e-commerce SEO agency owner", used: "Aiming for roughly 10 to 20 right links, not thousands, and the cost of digital PR"}
+  - {title: "Semrush Tutorial 2026 - Master SEO & AEO with Semrush One", by: "A presenter in a tutorial sponsored by the tool maker", used: "The backlink gap with an authority filter, and lost and vital links"}
+  - {title: "Learn Everything About SEO & AI SEO in 50 Minutes!", by: "An SEO educator from an SEO software company's channel", used: "Journalist queries in 15 minutes a day and linkable assets"}
+  - {title: "Claude Code + SEO Masterclass", by: "An AI-automation freelancer and community owner", used: "Warnings about link farms, private blog networks and cheap packages, and swapping broken links"}

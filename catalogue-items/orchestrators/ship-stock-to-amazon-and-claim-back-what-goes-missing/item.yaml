@@ -1,0 +1,20 @@
+slug: ship-stock-to-amazon-and-claim-back-what-goes-missing
+name: "Ship stock to Amazon and claim back what goes missing"
+summary: "Give it your sales and product facts. Get a shipment plan and checklist, then the claims to file."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: audit_report}
+uses: [amazon-inbound-stock-planner, amazon-reimbursement-claim-finder]
+steps:
+  - {uses: amazon-inbound-stock-planner, note: "Starts the chain: how much to send, when, and a shipment checklist with the proof to keep."}
+  - {uses: amazon-reimbursement-claim-finder, note: "Reads the shipment checklist and proof from the step before and the closed reports to find what Amazon owes."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/ship-stock-to-amazon-and-claim-back-what-goes-missing/skeleton.yaml

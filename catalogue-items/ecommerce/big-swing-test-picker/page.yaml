@@ -1,0 +1,115 @@
+new_slug: big-swing-test-picker
+name: "Big swing test picker"
+summary: "Give it your store size and page data. Get five bold tests your traffic can prove, in order."
+job: test-store-changes
+thinking: low
+thinking_why: "It picks from a fixed idea bank using your numbers, so a fast model is enough."
+
+headline: "Big swing test picker"
+subhead: Give it your monthly sessions, orders, order value and where your ads send traffic. It picks five bold tests your traffic can prove, puts them in order with the reason, metric and risk for each, says what not to test at your size, and lays out a month-by-month plan.
+
+explain: |
+  Button colors and headline tweaks need hundreds of thousands of visitors to show a result. Most small stores never get there, so they run test after test and learn nothing. A store with modest traffic does better with big changes that could move sales by 20 percent or more: a new landing page between the ad and the store, a bundle, a free gift prompt in the cart, or a rebuilt product page.
+
+  This skill checks where your store sits, then picks five bold tests from a bank of ideas that agencies have run, in the order your evidence and build time allow. It tells you what to skip, such as small tweaks and tests on several things at once, and it is honest about the odds: most tests lose. The dollar gains in its idea bank are one agency's claims, so you test them, you do not bank them.
+
+when:
+  - You have under about 300,000 sessions a month and keep running small tests with no clear winners.
+  - You want a first set of tests for your store and do not know where to start.
+  - You want a plan for the next three months that fits one person's time.
+
+you_give:
+  - Monthly sessions, orders and average order value
+  - "Where your ads send traffic today: product page, home page, collection page or a landing page"
+  - Survey and recording findings, if you have any (optional)
+  - "Who builds the changes: you, a freelancer or a team (optional)"
+
+you_get:
+  - Five bold tests in order, each with the reason, main metric, guardrails and risk
+  - What not to test at your size
+  - A month-by-month plan
+  - A reminder to size each test before you run it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give it your sessions, orders, order value and where your ads land.
+  - Add anything you learned from surveys or recordings.
+  - Take test number one to the store test readiness checker to size it.
+  - Run one test at a time, log the result, and move to the next.
+
+how_it_works:
+  - title: Places your store
+    text: Under about 300,000 sessions a month it picks bold swings. Over it, with enough orders, it adds fuller testing.
+  - title: Looks at the bold areas
+    text: Landing pages, product page redesigns, offers, cart order value, post-purchase upsells and message match.
+  - title: Checks the idea bank
+    text: Menu, product page, cart and collection ideas, with each dollar figure marked as an agency claim.
+  - title: Chooses five
+    text: Ranked by evidence, page traffic, size of the possible gain, build effort and risk.
+  - title: Names metrics and guardrails
+    text: A main metric for your stage, plus order value, margin and returns as guardrails.
+  - title: Says what to skip
+    text: Small tweaks, three-way tests, and several tests on one page at once.
+  - title: Lays out the months
+    text: One test per page at a time, checked twice before launch.
+  - title: Keeps expectations honest
+    text: Most tests lose, so each one gets logged and learned from.
+
+output_shape: |
+  STAGE     sessions <n> | orders <n> | AOV <$> | approach: <bold swings / fuller testing / research and fixes>
+  FIVE BOLD TESTS
+   1. <test> | reason: <evidence> | main metric: <...> | guardrails: <...> | build effort: <...> | risk: <...>
+   2. ...
+  NOT AT YOUR SIZE   <what to skip and why>
+  MONTH BY MONTH     month 1: <...> | month 2: <...> | month 3: <...>
+  SIZE EACH TEST     run the store test readiness checker on #1 first
+  EXPECT   most tests lose; keep a log
+  MISSING: <what was not given>
+  CHECKS MISSED: <one line each, or none>
+
+tweaks:
+  - what: Where ads land
+    how: Say it exactly. If ads go straight to a product page, a landing page test usually comes first.
+  - what: Your findings
+    how: Add survey answers and recording notes. Ideas with proof go to the top.
+  - what: Who builds
+    how: A solo founder can build about one new landing page a month. The plan fits your time.
+  - what: Order value
+    how: Give your average order value. Cart threshold and bundle tests depend on it.
+
+judge:
+  - You get five tests, in order, each with a reason, metric, guardrails and risk.
+  - None is a small tweak.
+  - Dollar results are called agency claims.
+  - Only one test runs per page at a time.
+  - Landing pages use true claims and real proof.
+
+test:
+  - Give it 20 orders a month. It should say tests are not valid yet and give fixes and research.
+  - Give it ads that land on the home page. A landing page test should rank high.
+  - Ask it for a button color test. It should refuse and say why.
+  - Check its month plan against your real hours. Cut anything you cannot build.
+
+improve:
+  - Add your own past test results to the skill file, so it learns which ideas worked for you.
+  - Add pages you cannot change, such as legal or checkout pages, so it skips them.
+  - Add your margins so the cart threshold and bundle picks are safe.
+  - Pair it with the test idea ranker once you have more ideas than time, and the cart bundle and gift planner for the margin sums.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It picks and orders the tests from your numbers and findings."}
+    - {name: "GA4", why: "Sessions and landing page traffic without most bot traffic."}
+  inputs:
+    - "Output from the heatmap and recording reader"
+    - "Post-purchase survey answers"
+    - "Your three top landing pages and their traffic"
+    - "Your gross margin and shipping costs"
+
+terms:
+  - term: Advertorial
+    meaning: An ad written like an article. It must stay honest and follow ad rules.
+  - term: Listicle
+    meaning: A page built as a list, such as five reasons shoppers like a product.
+  - term: Guardrail
+    meaning: A number that must not get worse, such as order value or margin, even if the main number improves.

@@ -1,0 +1,123 @@
+new_slug: meta-test-campaign-planner
+name: "Meta test campaign planner"
+summary: "Give it your products, concepts and spend. Get a test campaign layout, ad pack names and scale rules."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It follows a set method and fills in your numbers, so a mid-size model does it well."
+
+headline: "Meta test campaign planner"
+subhead: Give it your concepts, target cost per sale, daily budget and stock. It lays out your test campaign, puts new ads in named packs, sets a seven-day minimum spend and writes rules for adding ads and scaling. You get a pack plan, settings checklist and naming guide.
+
+explain: |
+  New ads often get no spend. The old ones take the budget, a new batch is added to a working ad set and it disturbs what was working, or the ads are launched so loosely that nobody can tell later which hook or concept earned the sale.
+
+  This skill plans the structure first. It sizes the account to your store, since a $10,000 a month store does not need twenty campaigns. It puts each batch of three to eight ads in its own pack, sets a short minimum spend equal to your target cost per sale so new ads get a fair run, and says when to remove it. It explains the CBO or ABO trade-off in plain words, splits budget by funnel stage, and names every ad by concept, hook, first frame and edit so you can compare results.
+
+when:
+  - You are about to launch your first batch of tests and don't want to set it up wrong.
+  - Your new ads never get spend because old winners take the whole budget.
+  - Your account has grown messy and you can't tell which concept or hook earned a sale.
+
+you_give:
+  - Your concepts, and for each ad the avatar, angle and whether it is top or bottom of the funnel
+  - Your target cost per sale
+  - Your daily budget for this campaign
+  - Your monthly spend, stock position and cash cycle (optional)
+  - Your current campaigns and results by ad (optional)
+you_get:
+  - A campaign and ad set layout sized to your store
+  - A pack plan with ad names, minimum spend and removal date
+  - A CBO or ABO call with the trade-off written out
+  - A settings checklist, naming guide and rules for adding ads and scaling
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your concept list, with the avatar and angle of each new ad, plus your target cost per sale and daily budget.
+  - Add your stock position and any campaigns already running.
+  - Build the packs in Ads Manager, checking each setting against the live menu, and set a calendar reminder for day 7.
+  - On day 7, remove the minimum spend, then read results with the creative test reader.
+
+how_it_works:
+  - title: Sizes the account
+    text: Matches the number of campaigns to the size and complexity of your store.
+  - title: Picks the base layout
+    text: A testing campaign, an optional scaling campaign and a retargeting campaign that keeps existing customers apart.
+  - title: Builds the packs
+    text: Each batch becomes a new ad set of three to eight ads, grouped by avatar and angle, named and marked top or bottom funnel.
+  - title: Protects winners
+    text: New ads for a winning concept go in a new pack. Scaling means raising budget, never relaunching.
+  - title: Chooses CBO or ABO
+    text: Writes the risk and return trade-off, plus when to look again.
+  - title: Splits the budget
+    text: Gives rough ranges for top, middle and bottom of funnel, shown mostly through the mix of ads you make.
+  - title: Sets the minimum spend
+    text: Equal to one target cost per sale per day, capped at 20% of daily budget, removed within 7 days.
+  - title: Names the ads
+    text: Concept, hook, first frame and edit in every name, so results can be compared later.
+
+output_shape: |
+  STRUCTURE  <campaigns and what each is for>, because <business size and spend>
+  CBO OR ABO <choice>: <trade-off in two lines> | review on <date or season>
+  BUDGET SPLIT  top <..>% | middle <..>% | bottom <..>%   (rough ranges)
+
+  PACK PLAN
+  Pack <n> | <avatar> | <angle> | <top | bottom> | ads: <list, 3 to 8> | minimum spend <$>
+
+  MINIMUM SPEND  1x CPA = <$>; cap 20% of daily budget = <$>; remove by <date>
+  SETTINGS CHECKLIST  <objective> | <conversion event> | <goal> | <attribution> | <exclusions> | <placements>
+  NAMING  <concept>_<hook>_<first frame>_<edit>   example: <...>
+  RULES  add ads: <new pack> | scale: <raise budget> | winner share over 50%: <replacement plan>
+
+  CHECKS MISSED: <none | list>
+  MISSING: <what would sharpen this plan>
+
+tweaks:
+  - what: Your target cost per sale
+    how: Give your real number. The minimum spend is one target cost per sale a day, so a wrong target sets a wrong minimum.
+  - what: Daily budget
+    how: If the minimum is over 20% of your daily budget, the skill caps it and suggests fewer ads per pack.
+  - what: Stock and cash cycle
+    how: Tell it how fast you can restock. It changes the CBO or ABO call and how hard to push a winner.
+  - what: Avatar and angle per ad
+    how: Label every ad before you paste. Packs are grouped by these two, and mixed packs make results unreadable.
+  - what: Naming depth
+    how: Start with three tags (format, theme, hook) and add first frame and edit when you run enough ads to compare.
+
+judge:
+  - Every pack has three to eight ads, one avatar and one angle.
+  - No plan adds ads to a winning ad set.
+  - The minimum spend is in dollars, capped at 20% of daily budget, with a removal date.
+  - The CBO or ABO choice names both the gain and the risk.
+  - Settings carry a note to confirm them in the live menu.
+
+test:
+  - Give it a tiny budget under one target cost per sale. It should warn you and cut the plan to fewer ads per pack.
+  - Ask it to add ads to a winning ad set. It should refuse and offer a new pack with a linked name.
+  - Build one pack in Ads Manager from its settings list and check every setting exists under the same label.
+  - Run it again for a second batch of ads. The names should line up with the first batch.
+
+improve:
+  - Save your target cost per sale and daily budget in the skill file so the minimum spend is always right.
+  - Add your own naming tags to the naming step, such as product line or offer.
+  - Add a rule for how many packs you can run at once with your budget.
+  - Pair it with the creative test reader to read each pack at day 7, and the fatigued ad reviver when a winner fades.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "It holds the ad set spending limits, the exclusions and the campaign settings the plan is built around."}
+    - {name: "Any good chat AI", why: "Any current chat AI can build the plan from your numbers. Check each setting against the live menu."}
+  inputs:
+    - "A list of customers who bought in the last 180 days"
+    - "A spreadsheet of past ad names and results"
+    - "Your stock levels by product"
+    - "Your break-even cost per sale"
+
+terms:
+  - term: Pack
+    meaning: One ad set holding a new batch of ads for one buyer type and one angle.
+  - term: CBO
+    meaning: Campaign budget optimization, where Meta decides how to share one budget between ad sets.
+  - term: ABO
+    meaning: Ad set budget optimization, where you set the budget on each ad set yourself.
+  - term: Minimum spend
+    meaning: A daily floor you put on an ad set so a new batch gets enough budget to be tested.

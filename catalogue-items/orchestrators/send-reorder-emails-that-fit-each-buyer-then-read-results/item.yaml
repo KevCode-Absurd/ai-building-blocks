@@ -1,0 +1,24 @@
+slug: send-reorder-emails-that-fit-each-buyer-then-read-results
+name: "Send reorder emails that fit each buyer, then read results"
+summary: "Give it your products and how long they last. Get timed reorder emails split by buyer type, then a read of results."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: offer, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [reorder-and-second-order-planner, customer-stage-flow-mapper, dynamic-email-block-planner, email-and-sms-performance-reader]
+steps:
+  - {uses: reorder-and-second-order-planner, note: "Starts from your products and how long they last and writes the timed reorder messages."}
+  - {uses: customer-stage-flow-mapper, note: "Takes the reorder messages and gives new, returning and loyal buyers their own paths."}
+  - {uses: dynamic-email-block-planner, note: "Reads the staged flow and turns the splits into show and hide rules and product blocks."}
+  - {uses: email-and-sms-performance-reader, note: "Reads the results next to the flow you built, so you see which branch earned and which to fix."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/send-reorder-emails-that-fit-each-buyer-then-read-results/skeleton.yaml

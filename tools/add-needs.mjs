@@ -17,6 +17,16 @@ const CHECK = process.argv.includes("--check");
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "site/public/data/blocks.json"), "utf8"));
 const all = data.blocks;
+// blocks.json keeps ports short ("brief", "photos?"); turn them back into {type, required}.
+const port = (p) => (typeof p === "string" ? { type: p.replace(/\?$/, ""), required: !p.endsWith("?") } : p);
+// It also leaves out default values and sends a passed test as tested: 1; put those back the way lib/data.ts does.
+const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops", level: "intermediate", thinking: "medium", origin: "own", version: "1.0.0" };
+for (const b of all) {
+  for (const [k, d] of Object.entries(DEFAULTS)) b[k] ??= d;
+  b.inputs = (b.inputs ?? []).map(port); b.outputs = (b.outputs ?? []).map(port);
+  if (b.tested === 1) b.tested = { result: "pass" };
+  if (typeof b.usedIn === "number") b.usedIn = Array(b.usedIn).fill("");
+}
 const bySlug = Object.fromEntries(all.map((b) => [b.slug, b]));
 const types = YAML.parse(fs.readFileSync(path.join(ROOT, "catalogue-items/_types.yaml"), "utf8"));
 const desc = {};
@@ -69,8 +79,9 @@ function insertAfter(text, nl, block, heading) {
 }
 
 let changed = 0, withBefore = 0, withAfter = 0;
-for (const category of ["general", "ecommerce", "orchestrators"]) {
+for (const category of ["general", "ecommerce", "orchestrators", "agents"]) {
   const dir = path.join(ROOT, "catalogue-items", category);
+  if (!fs.existsSync(dir)) continue;
   for (const slug of fs.readdirSync(dir)) {
     const file = path.join(dir, slug, "SKILL.md");
     const b = bySlug[slug];

@@ -1,0 +1,80 @@
+new_slug: find-what-buyers-want-and-where-they-gather-online
+name: Find what buyers want and where they gather online
+summary: Give it a topic. Get ranked buying reasons in buyers' words, a buyer profile and where to reach them.
+job: understand-customers
+thinking: medium
+thinking_why: It runs four skills in a row on a table of posts. A mid-size model is enough. Check the quotes yourself.
+headline: Find what buyers want and where to reach them, with no interviews
+subhead: Give it a topic or a rival. It gathers public posts and comments into a table, ranks the reasons people buy in their exact words, builds a buyer profile from them, and lists the places to show up first.
+explain: |
+  When you have no customers yet, or no reviews, you guess who buys and why. Interviews fix that but take weeks. Meanwhile thousands of people have already said what they want, in public, in their own words, with no one asking.
+
+  The steps turn those posts into a plan. First it collects posts and comments about your topic from Reddit into a table. Then it keeps every line that gives a reason, copies the phrases exactly with their source, and ranks the reasons. It writes a buyer profile from the same table, then maps the sites, shows, accounts and groups that buyer uses, with the few places to start. The first step uses an Apify account and can cost money, so it shows the settings and the cost before it runs.
+when:
+  - You are starting out and have no customers, reviews or survey answers to read.
+  - You want to learn what buyers of a rival or a category say before you write your message.
+  - You need to know where to show up first, not just who the buyer is.
+you_give:
+  - A topic, a rival or a product category, and who you think buys it
+  - An Apify account, free for small runs (Reddit collection runs there)
+  - Your product facts or brand file (optional)
+you_get:
+  - A table of public posts and comments about your topic
+  - Buying reasons ranked by how many people say them, in their exact words
+  - A buyer profile with goals, frustrations, triggers and the words they use
+  - A ranked list of places to reach them and what to share there
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give your topic. Check the search terms and the cost it shows in step 1 before it runs.
+  - Look at the table. If it holds mostly off-topic posts, change the terms and run step 1 again.
+  - Read the ranked reasons and the profile, then use the hangout list for your first week of posting.
+how_it_works:
+  - title: Collect public posts
+    text: Turns your topic into short search terms, shows the settings and the cost, then saves posts and comments to a table.
+  - title: Rank the buying reasons
+    text: Keeps each line that gives a reason, copies the phrases word for word with their source, tags what pushes and what holds people back, and scores each reason.
+  - title: Write the buyer profile
+    text: Builds the buyer's world, goals, frustrations and triggers from the same posts, with the words they use and who the product is not for.
+  - title: Find where they gather
+    text: Lists the sites, shows, accounts and groups the buyer uses, marks where they show up more than most people, and ranks the few places to start.
+output_shape: |-
+  STEP 1: POST TABLE
+    Search terms | settings and cost | posts and comments with dates and sources
+
+  STEP 2: BUYING REASONS
+    Reasons ranked | exact quotes with source | what pushes, pulls, holds back | score
+
+  STEP 3: BUYER PROFILE
+    Overview | profile and personas | their words | who it is not for | what it means for your message
+
+  STEP 4: WHERE THEY GATHER
+    Places by type | more-than-average marks | topics now | the three to five to start with
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The search terms
+    how: Use short phrases a buyer would type, such as "switching from" plus a rival. A whole sentence returns nothing, because Reddit search matches words literally.
+  - what: Posts from comments or only the post text
+    how: Comments hold the detail but multiply the count and the cost. Start with posts, then add comments for the best threads.
+  - what: The time window
+    how: Name the dates you want. Recent posts show what people want now. A year back shows what stays true.
+  - what: Your brand file
+    how: Add it if you have one. Step 3 uses it to say who the product is not for.
+judge:
+  - Every quote in the ranked reasons appears word for word in the table, with its source.
+  - Reasons are counted by separate people, not by repeat posts from one person.
+  - The profile names a trigger, the moment someone starts looking.
+  - The hangout list marks where buyers show up more than most, and says which are guesses.
+  - No step used a name, handle or link that points to one person.
+test:
+  - Pick two quotes from the ranked reasons and search for them in the table. Both should be there.
+  - Run step 1 with a different set of search terms and compare the top three reasons. They should mostly agree.
+  - Show the profile to someone who buys this kind of thing. Ask which line is wrong.
+  - Try one place from the hangout list for a week and note if people answer.
+improve:
+  - Add the best quotes to your brand file so ad and page copy uses buyer words.
+  - Re-run the table every quarter. New reasons show where the market is moving.
+  - Add your own reviews to step 2 when you have them. They should outrank public posts.
+  - Pair it with the Customer interview coach to test the top reason in a real talk.

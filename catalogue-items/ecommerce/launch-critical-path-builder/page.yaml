@@ -1,0 +1,118 @@
+new_slug: launch-critical-path-builder
+name: "Launch critical path builder"
+summary: "Name your product and launch date. Get every step from samples to warehouse, dated, with owners and warnings."
+job: plan-supply-chain
+thinking: medium
+thinking_why: "It sorts steps and counts dates backward, which a mid-range model does well if you check the dates."
+
+headline: "Launch critical path builder"
+subhead: Name your product, your launch date and your supplier's lead times. It lists every step from samples to the warehouse, works the dates back from launch, marks where steps overlap and where there is slack, and assigns an owner to each. You get a dated plan and alerts to set.
+
+explain: |
+  A late sample can cost a whole season. In one operations talk, a missed sample date meant missing the peak trade period and holding stock into January or February.
+
+  A critical path fixes this by making every step visible. You list each step, put them in order, and give each a real duration. Then you count back from your launch date to set a date for every step. The chain with no slack is the one that moves the launch if it slips. Each step gets one owner, and one person owns the whole plan. The supplier reports changes in your chat, and you update the plan, so no one edits dates behind your back.
+
+when:
+  - You are launching a product with a fixed date, such as a holiday peak.
+  - You have several products in development and lose track of what is late.
+  - A sample came late last time and you do not want it to happen again.
+
+you_give:
+  - Product type and the date you want it on sale
+  - Supplier lead times and sample shipping times
+  - Who owns each step (optional)
+  - Hard cut-offs, such as holiday shipping dates or warehouse booking windows (optional)
+you_get:
+  - A step list in order, each with duration, owner and date
+  - The latest start date for each step, worked back from launch
+  - Notes on overlap and slack, and which delay moves the launch
+  - Alerts to set in your project tool
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give the product, the launch date and each lead time your supplier told you.
+  - Name who owns each step, and who owns the whole plan.
+  - Set the alerts in any tool you use, such as a sheet, Notion or Asana.
+  - Name one person to check the plan every day while the launch is live.
+
+how_it_works:
+  - title: Defines every step
+    text: Strike-offs, prints, first sample, final sample, tech pack sign-off, quality check, purchase order, production, freight and receiving.
+  - title: Puts them in order
+    text: Each step gets a real duration, including small ones such as a courier sample.
+  - title: Works back from launch
+    text: Counts backward from your date to set a latest start and finish for each step.
+  - title: Finds overlap and slack
+    text: Shows which steps can run together and the chain with no slack that moves the launch.
+  - title: Assigns owners
+    text: One person per step and one for the whole plan, with alerts for overdue steps.
+  - title: Keeps the plan yours
+    text: The supplier reports in your chat. You update the plan, so changes never happen unseen.
+  - title: Sets a daily check
+    text: Someone looks at it every day while the launch is live.
+
+output_shape: |
+  LAUNCH DATE: <date>   PLAN OWNER: <name>   CLOSEST CUT-OFF: <date>
+
+  CRITICAL PATH: <step -> step -> step>
+
+  STEP | Duration | Owner | Latest start | Latest finish | Slack | Overlaps with
+
+  WHICH DELAY MOVES THE LAUNCH
+  <step>: <effect>
+
+  ALERTS TO SET
+  - <step> overdue by 1 day -> notify <owner>
+
+  RULES
+  - Supplier changes come through <channel>; <plan owner> edits the plan.
+
+  CHECKS MISSED: <none or list>
+
+tweaks:
+  - what: Real durations
+    how: Use the supplier's own lead times and a courier quote. A guess makes the whole plan a guess.
+  - what: Hard cut-offs
+    how: Give holiday shipping dates and warehouse booking windows. The plan flags the one closest to your path.
+  - what: Number of products
+    how: List all products in development. With several, the path shows which one clashes for a shared step.
+  - what: Plan owner
+    how: Name one person. A plan with no daily updater gives false comfort.
+
+judge:
+  - Every step has a duration, an owner and two dates.
+  - The dates add up from launch when you count back by hand.
+  - The no-slack chain is named.
+  - The supplier cannot edit the plan.
+  - A named person checks it each day.
+  - Guesses are marked as guesses.
+
+test:
+  - Count back from the launch date by hand for three steps. The dates should match.
+  - Move one sample date later by a week. See if the plan shows which dates move.
+  - Ask your supplier to confirm the durations before you rely on them.
+  - Run it twice on the same input. The step order should not change.
+
+improve:
+  - Save the step list as your template, with typical durations for your product.
+  - Add steps your product needs that the base list leaves out, such as testing or packaging proofs.
+  - Add your warehouse's booking window as a standing cut-off.
+  - Pair it with the supplier quote comparer, the tech pack writer and the inbound shipment tracker builder.
+
+works_best_with:
+  tools:
+    - {name: "Asana, Monday or Notion", why: "They can set overdue alerts and show who owns each step."}
+    - {name: "Google Sheets", why: "A plain sheet works if one person updates it every day."}
+  inputs:
+    - "Your supplier's written lead times for each stage"
+    - "A courier quote for sample shipping"
+    - "Your warehouse's booking and receiving windows"
+
+terms:
+  - term: Critical path
+    meaning: The chain of steps that has no spare time. A delay on it moves your launch date.
+  - term: Slack
+    meaning: Spare days a step can slip before it delays anything else.
+  - term: Strike-off
+    meaning: A small trial piece of a material, print or colour, made to check it before full production.

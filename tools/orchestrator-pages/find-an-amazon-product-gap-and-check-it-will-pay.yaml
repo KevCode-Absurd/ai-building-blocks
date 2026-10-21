@@ -1,0 +1,75 @@
+new_slug: find-an-amazon-product-gap-and-check-it-will-pay
+name: Find an Amazon product gap and check it will pay
+summary: Give it a category. Get product ideas page 1 misses, a score out of 100 and a go or no-go.
+job: sell-on-amazon
+thinking: high
+thinking_why: The second step does margin and cash sums that decide a stock order. Give it your strongest model.
+headline: Find an Amazon product worth stocking, before you pay for stock
+subhead: Give it a hobby, problem or category. It finds phrases buyers search where page 1 has nothing made for them, then scores the idea you pick out of 100 on margin, competition and cash, and ends with a go, test first or no-go.
+explain: |
+  Most first Amazon products fail for one of two reasons. The idea was crowded, so ads and reviews ate the margin. Or the idea looked good until the sums were done on landed cost, fees and the cash needed for the first order. Both are cheap to find out before you buy stock and expensive to find out after.
+
+  The first step looks for gaps: phrases real buyers search where page 1 has no product built for them. It drops crowded niches and picks three to check. Then it pauses and asks you to choose one and get a supplier quote with cost, size, weight and your selling price. The second step runs five hard stops and ten scored tests on that product, names the weakest test, sizes the first order against your cash and gives a go, test first or no-go. Search volumes are tool estimates, so the second step treats them as clues, not promises.
+when:
+  - You want to sell on Amazon but only have an interest or a category, and need a product to start from.
+  - You have a supplier quote in hand and want to know whether the margin and the competition still make sense.
+  - You are about to pay for a first order and want a second opinion on whether your cash can carry it.
+you_give:
+  - A hobby, problem or Amazon category, and whether you will make the product or only brand it
+  - How much cash you can put into a first order
+  - A keyword tool export with monthly searches (optional)
+  - A paste of what page 1 shows for your ideas, such as prices, ratings and review counts (optional)
+  - After the pause, a supplier quote with unit cost, size, weight and your selling price
+you_get:
+  - Five to ten gap ideas ranked, each with what page 1 shows now and how yours would be better
+  - The three ideas worth a full check, and the ones dropped with reasons
+  - A score out of 100 for the idea you pick, built from ten tests, with the weakest test named
+  - A go, test first or no-go call, a first order size matched to your cash and the cheapest next test
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Tell it what you can make or brand and how much cash you have. Add a keyword export if you have one.
+  - When it pauses, pick one idea from the shortlist and get a supplier quote. Write down cost, size, weight and the price you would charge.
+  - Give it the quote. Read the weakest test before you read the verdict.
+how_it_works:
+  - title: Find the search gaps
+    text: Notes what you can make and what cash you have, reads your keyword and page 1 data, drops crowded niches and ranks the gaps. It names three to check and lists what to verify by hand on Amazon.
+  - title: Pick one and get a quote
+    text: A pause. You choose the best idea from the shortlist and get a supplier quote with its cost, size, weight and your selling price.
+  - title: Score the idea
+    text: Applies five hard stops that end an idea, then scores ten tests, including price band, margin, page 1 weakness, brand giants and shipping. It sizes the first order to your cash and gives a go, test first or no-go.
+output_shape: |-
+  STEP 1: PRODUCT GAPS
+    Ranked ideas (phrase, searches, what page 1 shows, the gap, how you'd be better) | top 3 to check | dropped ideas | what to verify by hand
+
+  PAUSE: pick one idea and get a supplier quote (cost, size, weight, price)
+
+  STEP 2: VIABILITY SCORE
+    Verdict and score out of 100 | weakest test | hard stops | ten test scores with the sum | first order sized to cash | cheapest next test
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your cash and what you can make
+    how: This changes which gaps rank first. Low cash favours small, light products. A skill you already have favours ideas you can make or brand with a story.
+  - what: A keyword tool export
+    how: Without one, the search numbers are guesses and are marked MISSING. Free tiers cap lookups, so the first step runs your best phrases first.
+  - what: A real supplier quote
+    how: The margin test and the landed cost check use your actual cost, size and weight. A rough quote gives a rough score.
+  - what: Page 1 data for your idea
+    how: Prices, ratings and complaints from the top results feed the weak-page-1 and brand-giant tests. Paste them in rather than describing them.
+judge:
+  - Each gap names a phrase buyers type and says what page 1 lacks for it.
+  - Dropped ideas come with a reason, such as crowded, seasonal or restricted.
+  - The score shows its sum and each of the ten tests has a reason beside it.
+  - The weakest test is named, and the cheapest next test matches it.
+  - Search numbers are labelled as estimates, and nothing says a gap means buyers will convert.
+test:
+  - Run step 1 on a category you know well. Check that the top gap really has a weak page 1 when you type the phrase into Amazon.
+  - Give step 2 a product you already sell. The score should match how that product has actually done.
+  - Run step 2 twice on the same quote. The verdict and the weakest test should match, even if the wording differs.
+improve:
+  - Add your price floor, margin floor and cash limit to your brand file, so the hard stops use your rules.
+  - Edit the scoring weights in the scorer skill if your category needs different ones, such as a higher floor on margin.
+  - Keep a list of ideas you dropped and why, and feed it in next time so the same dead ends are skipped.
+  - Pair it with a listing or launch plan once you get a go.

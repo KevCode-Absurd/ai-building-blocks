@@ -1,0 +1,27 @@
+slug: write-a-narrated-video-ad-the-pictures-can-carry
+name: "Write a narrated video ad the pictures can carry"
+summary: "Give it your brief and brand file. Get a narrated script trimmed of lines the pictures say, plus clip prompts."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: video
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: shot_list}
+  - {type: image_prompt}
+  - {type: video_prompt}
+  - {type: edit_plan}
+uses: [long-form-video-ad-script-writer, voice-over-stripping-test, ad-script-read-aloud-editor, video-ad-shot-list-maker]
+steps:
+  - {uses: long-form-video-ad-script-writer, note: "Starts the chain: a narrated script with a picture for each line."}
+  - {uses: voice-over-stripping-test, note: "Tests the narration from the step before and cuts lines the pictures already say."}
+  - {uses: ad-script-read-aloud-editor, note: "Takes the trimmed script and makes each remaining line easy to say."}
+  - {uses: video-ad-shot-list-maker, note: "Turns the final script into timed shots and clip prompts."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-narrated-video-ad-the-pictures-can-carry/skeleton.yaml

@@ -1,0 +1,22 @@
+slug: self-hosted-store-speed-fixer
+name: "Self-hosted store speed fixer"
+summary: "Give it your WooCommerce setup. Get hosting, caching, plugin and image fixes in order."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Site Speed Optimization: Complete Guide for 2026", by: "Jakub Rusniok (article)", used: "What not to cache, when to create a session, CDN hit rate, and hosting by order volume"}
+  - {title: "Page speed guide for ecommerce store operators: diagnosis and actions", by: "Vendor article, author not named", used: "The order of work: baseline, images, plugins, and only then the host"}
+  - {title: "WordPress Speed Optimization (step by step)", by: "Elijah (video)", used: "Unloading jQuery and shop assets on pages that don't need them, local fonts, and header checks"}
+  - {title: "Google PageSpeed Insights: Step-by-Step tutorial to Boost Site Speed", by: "Jack, Rank Math (video)", used: "Changing one setting at a time when minifying, combining and delaying scripts"}

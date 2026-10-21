@@ -1,0 +1,20 @@
+slug: price-a-product-so-it-pays-after-delivery-ads-and-discounts
+name: "Price a product so it pays after every cost"
+summary: "Give it a price and every cost. Get the true margin, three test prices and the discount depth that keeps profit."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+outputs:
+  - {type: audit_report}
+uses: [product-margin-checker, pricing-decision-planner, discount-impact-checker]
+steps:
+  - {uses: product-margin-checker, note: "Starts with what the product really keeps after delivery and how much ad cost it can carry."}
+  - {uses: pricing-decision-planner, note: "Uses the margin and marketing room to set three test prices and pick the most profitable."}
+  - {uses: discount-impact-checker, note: "Takes the chosen price as the offer and shows how deep any discount can go."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/price-a-product-so-it-pays-after-delivery-ads-and-discounts/skeleton.yaml

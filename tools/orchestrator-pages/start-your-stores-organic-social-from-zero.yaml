@@ -1,0 +1,83 @@
+new_slug: start-your-stores-organic-social-from-zero
+name: Start your store's organic social from zero
+summary: Give it your accounts and product. Get a setup score, formats and hooks to film, then a verdict.
+job: grow-social
+thinking: high
+thinking_why: It runs four skills in a row and reads your own post data at the end. Give it your strongest model.
+headline: Get your store's social posts seen
+subhead: Give it your social accounts and your product. It checks how the accounts are set up, picks the short video formats to film, scores the hooks, and after you post, tells you which formats to keep, change or drop.
+explain: |
+  A new store posts a few videos, gets almost no views and gives up. Often the cause is not the videos. The account is the wrong type, set up in the wrong country, posting about five topics, or sending people to other platforms. Then the videos are filmed without a plan for what to say in the first seconds.
+
+  These steps fix the base first. It checks your accounts against eight setup rules and orders the fixes. You fix them and decide who goes on camera. Then it picks the formats that fit your product and your people, writes an outline for each and ten hooks, and scores the hooks. You post by hand over three weeks. It reads your numbers in groups, gives each format a verdict and sets the next test.
+when:
+  - You are starting social for your store and want a plan before you film.
+  - Your posts get almost no views and you do not know if it is the account or the videos.
+  - You have posted at least 20 videos and want to know which formats to keep.
+you_give:
+  - A list of your accounts with type, country and how you publish
+  - The topics of your last 20 posts, one line each, if you have them
+  - Your product, price and key benefit
+  - Who can be on camera, and what props you have
+  - Who you serve, in a line or two
+  - After posting, a list of your posts with format, hook, topic, date and views (and watch rate, shares, saves and follows if you have them)
+you_get:
+  - A setup score out of 100 for your accounts, with fixes in order and the one platform to keep for six months
+  - Format picks that fit your product and your people, each with a script outline
+  - Ten hooks across formats, each scored out of 100, with rewrites for the weak ones
+  - After posting, a keep, change or drop verdict for each format and hook type, and one test to run next
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - List your accounts and say how each one posts. Make the fixes, starting with the biggest, and decide who will be on camera.
+  - Film the formats it picks. Post your best 10 to 15 videos by hand over three weeks, and keep posting until you have at least 20.
+  - Export views and watch time for every post and bring them back. With fewer than 20 posts it tells you to keep posting.
+how_it_works:
+  - title: Check the account setup
+    text: "Checks eight setup rules: account type, country, posting method, platforms, one hero platform, topic, outbound links and on-target ideas. It scores them and orders the fixes."
+  - title: Pick the formats
+    text: Checks what you can film with your people and props, picks the formats that fit, writes a script outline for each and ten hooks.
+  - title: Score the hooks
+    text: Rates each hook for clarity and relevance, checks who it attracts, and rewrites the weak ones so you film the best first.
+  - title: Read what worked
+    text: Reads your posts in groups, makes lists of hits, flat posts and flops, gives each format a verdict and sets the next test loop.
+output_shape: |-
+  STEP 1: ACCOUNT CHECK
+    Eight rules with pass or fix | score out of 100 with the sum | fixes in order | the one platform to keep
+
+  STEP 2: FORMATS
+    Format picks with why they fit | script outline for each | ten hooks | tutorial shot plan
+
+  STEP 3: HOOK SCORES
+    Each hook out of 100 with its sum | who it attracts | rewrites | the ones to film
+
+  STEP 4: WHAT WORKED
+    Top posts by views, followers and comments | flops | verdict by format and hook type | next test
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your goal this month
+    how: Say growth or sales. Step 4 judges formats by the goal, so views and followers read differently from clicks and DMs.
+  - what: Who is on camera
+    how: A founder, a team member or a creator changes which formats work. Faces matter more than the founder being in every video.
+  - what: Your main market
+    how: Give the country where customers live. The setup rules treat a mismatch as a fix.
+  - what: How you post
+    how: Say if you post by hand or with a scheduler. One team's test says hand posting works better, so try it on one account first.
+judge:
+  - Each of the eight rules says pass, fix or not checked, with a reason tied to your accounts.
+  - The score shows its sum, and the fixes are in order of points.
+  - Every format pick says why it fits the people and props you have.
+  - No hook invents a result, a person or a claim.
+  - The verdicts cite your own post numbers, and say too early where posts are too few.
+test:
+  - Check the setup answers against your accounts. Is each type and country right?
+  - Film the format ranked first and one ranked last. See if the order holds in your views.
+  - Count how many of your last 20 posts share one topic. Compare it with its count.
+  - Run step 4 on a month you already know. Does it find the same winners you see?
+improve:
+  - Keep the setup rules as a checklist, and re-run step 1 before you add any new account.
+  - Add the formats that won to your brand file, so the next round starts from them.
+  - Edit the topic rule if your product has two real buyer groups.
+  - Pair it with a founder series planner once one format wins.

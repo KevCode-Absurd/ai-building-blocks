@@ -1,0 +1,32 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Our words.
+id: stop-fake-orders-card-testing-and-bot-abuse
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: stop-fake-orders-card-testing-and-bot-abuse
+  name: "Stop fake orders, card testing and bot abuse"
+  summary: "Give it your orders and payment setup. Get fraud rules, a review routine and a bot and AI agent access plan."
+  when: "you see fraud chargebacks, repeated small card charges, fake sign-ups or odd traffic and want rules in place before they cost you."
+  job: protect-your-store
+  level: intermediate
+steps:
+  - name: "Fraud rules setter"
+    skill: fraud-rules-setter
+    job: ops
+    from: "skill: fraud-rules-setter"
+    method: ["Check you have enough orders to tune rules", "Set a chargeback watch line", "Write flow rules by order risk rating", "Use 3D Secure for higher-risk payments only", "Write a manual review checklist and a monthly loop"]
+    inputs: [question, performance_sheet!]
+    outputs: [plan, document]
+    note: "Starts the flow. Sets the rules for orders that look risky and a review routine for held ones."
+  - pause: "Turn the rules on and run them for two to four weeks. Export blocked, held and disputed orders, failed sign-ins and repeated small card charges."
+  - name: "Bot and AI agent access planner"
+    skill: bot-and-ai-agent-access-planner
+    job: ops
+    from: "skill: bot-and-ai-agent-access-planner"
+    method: ["Name the attack: brute force, stuffing or card testing", "Set alerts on simple signals", "List which bots and agents visit each page", "Write an allow, check or block policy for each", "Add rate limits and bot protection at the edge"]
+    inputs: [question, performance_sheet!]
+    outputs: [plan, document]
+    note: "Uses the results of the fraud rules to separate people, bots and AI agents and set what each may do."

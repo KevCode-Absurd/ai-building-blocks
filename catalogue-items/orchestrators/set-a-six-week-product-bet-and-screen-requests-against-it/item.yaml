@@ -1,0 +1,23 @@
+slug: set-a-six-week-product-bet-and-screen-requests-against-it
+name: "Set a six-week product bet and screen requests against it"
+summary: "Give it your plan and requests. Get a six-week bet, a no list and a yes, later or no on each request."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: copy_draft}
+uses: [project-kickoff-brief-writer, lean-product-shaping-coach, feature-request-screener]
+steps:
+  - {uses: project-kickoff-brief-writer, note: "Puts the plan on one page with a goal, an audience and limits."}
+  - {uses: lean-product-shaping-coach, note: "Shrinks the brief to a six-week bet and a no list. Reads the brief from the step before."}
+  - {uses: feature-request-screener, note: "Screens your request list against the bet. Reads the plan from the step before."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/set-a-six-week-product-bet-and-screen-requests-against-it/skeleton.yaml

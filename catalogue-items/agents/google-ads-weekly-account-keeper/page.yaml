@@ -1,0 +1,96 @@
+new_slug: google-ads-weekly-account-keeper
+name: Google Ads weekly account keeper
+summary: Give it your weekly Google Ads exports. Get waste cut, a scale-or-hold call and a change list to approve.
+job: run-google-ads
+thinking: high
+thinking_why: It runs up to six skills, picks its own path from the numbers and does budget sums. Give it your strongest model.
+headline: Google Ads weekly account keeper
+subhead: Give it this week's Google Ads exports and your margin. It checks the week against break-even, looks into any sharp drop first, cuts wasted search terms and products, checks the scale gates, and hands back one change list for you to approve.
+explain: |
+  A Google Ads account needs the same checks every week: which search terms waste money, which products to cut or fund, whether a drop is real, and whether it is safe to spend more. Most owners skip weeks, or change things before they know why results moved. Small leaks add up, and a budget raised in a bad week is hard to undo.
+
+  This agent runs those checks for you once a week, in the right order. It works out your break-even numbers once and measures every week against them. If sales fell sharply, it looks for the cause before it cuts anything. If nothing is broken, it cleans up search terms, Shopping and Performance Max, then checks the gates before any budget goes up. It never touches your account on its own. You get one list of changes to approve.
+when:
+  - You run Google Ads for your store and want the weekly checks done the same way every Monday.
+  - Results dropped this week and you want to know why before you change anything.
+  - You want to raise your budget, but only when the numbers say it is safe.
+you_give:
+  - Campaign results for the last two weeks, with cost, conversions and conversion value
+  - Search terms reports, and a Shopping product report if you run Shopping
+  - Your average order value and gross margin, the first time
+  - What changed this week, such as a sale, new products or stock running out (optional)
+you_get:
+  - This week against last week and against your break-even, with the sums
+  - One ranked list of changes to approve, each with its size and reason
+  - A raise, hold or cut call on budget, with the gate that decided it
+  - The numbers to watch next week
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's check.
+  - Put this week's exports in one folder, or attach them in the chat.
+  - The first time, give it your average order value and margin. It saves the break-even numbers and reuses them.
+  - Read the change list. Make the changes you agree with in Google Ads, or say yes to each one and let it make only those if it is connected.
+  - Run it again next Monday. It compares against last week's files.
+how_it_works:
+  - title: Get the base numbers
+    text: Works out break-even ROAS and CPA from your price and margin once, then reuses them every week.
+  - title: Compare the two weeks
+    text: Sets this week's spend, sales, ROAS and CPA against last week and shows the change in each.
+  - title: Choose the path
+    text: If results fell sharply, it runs the dip investigator first. If that says wait, it holds back new cuts this week.
+  - title: Clean up waste
+    text: Sorts search terms into winners and negatives, then tunes Shopping products and Performance Max if you run them.
+  - title: Check before scaling
+    text: Only when nothing is broken does it run the scale gate check. A pass means it may propose a budget raise.
+  - title: Hand back one list
+    text: Merges every proposed change, removes repeats, keeps the more careful call when steps disagree, and stops for your yes.
+output_shape: |-
+  THIS WEEK
+    Spend <amount> | Sales <amount> | ROAS <x> vs break-even <x> | CPA <amount> vs break-even <amount> | change vs last week
+
+  PATH TAKEN
+    <dip investigation | clean-up only | clean-up and scale check>: <why>
+
+  CHANGES TO APPROVE (most important first)
+    1. <change> | where: <campaign or list> | size: <amount> | from: <step> | why: <reason>
+
+  SCALE CALL
+    <raise | hold | cut> | gates: <pass or fail, which gate>
+
+  WATCH NEXT WEEK
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Two full weeks of data
+    how: The path depends on the change from last week. With one week alone it cannot tell a real dip from normal ups and downs.
+  - what: Your real margin
+    how: Use gross margin after product cost, shipping and payment fees. A margin that is too high makes every week look better than it is.
+  - what: What changed this week
+    how: A sale, a stock-out or a site change explains many drops. Tell it, and it checks that first.
+  - what: How many changes you approve
+    how: Make a few changes a week. Too many at once and next week cannot show which one worked.
+judge:
+  - Every call is measured against your break-even numbers, and the sums are shown.
+  - A sharp drop was looked into before any cut was proposed.
+  - No budget raise is proposed unless the scale gates passed.
+  - Each change says which step proposed it and why.
+  - Nothing in your account was changed without your clear yes.
+test:
+  - Run it on a past week you know well, where you remember what went wrong. See if it finds the same cause.
+  - Run it twice on the same exports. The change list should be the same, apart from wording.
+  - Compare its change list with what you or your agency did that week, and look at where they differ.
+improve:
+  - Set your own size of drop that counts as sharp in step 3, to suit how much your account moves week to week.
+  - Add your brand names and the products you never cut to your brand brain, so search terms and product calls follow them.
+  - If you only run Search, remove the Shopping and Performance Max steps so the run is shorter.
+  - Save the changes you approved in the keeper folder each week, so the next run can check whether they worked.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the keeper folder, read last week's files and run every step on a schedule.
+    - name: Google Ads
+      why: Export the campaign, search terms and product reports here, with cost, conversions and conversion value.
+  inputs:
+    - A note of every change you made in the account last week
+    - Stock levels for the products you advertise most

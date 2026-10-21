@@ -1,0 +1,84 @@
+new_slug: draft-a-paper-review-it-and-fit-your-journals-rules
+name: Draft a paper, review it and fit your journal's rules
+summary: Name your topic and bring your results. Get sources, a draft, a fair review and a paper fitted to the journal.
+job: research-topics
+thinking: high
+thinking_why: A paper draft must not invent a source or a number, so every step needs your strongest model.
+headline: Get from results to a draft that cites real sources and meets the journal's rules
+subhead: Name your topic and bring your results. It gathers current sources, drafts the manuscript only from those sources and your results, reviews the draft as a fair reviewer would, and after you fix it, fits the paper to the journal's current rules.
+explain: |
+  A first draft is slow, and the risk is a citation that does not exist or a number that is not in your data. Journals also change their rules each year, so a paper formatted from memory can be sent back before anyone reads it.
+
+  The workflow collects current papers, competing findings and background, each with a link. It drafts each section from those sources and the results you give it, tracks where each claim came from and flags gaps against reporting guidelines. A review step lists what is strong, what is weak and what to fix. Then a pause: fix the draft and choose your journal. The last step opens the official author instructions, records the date checked and fits the paper to them. You stay the author and must check every claim and reference yourself.
+when:
+  - You have results and need a first manuscript fast.
+  - Your draft has claims with no sources behind them.
+  - You are about to submit and are unsure of the journal's rules.
+you_give:
+  - Your topic and the claims you want to support
+  - Your results or data tables (optional)
+  - Your notes on methods
+  - The journal or conference you aim for, after the review
+you_get:
+  - A packet of current sources with links, competing findings and gaps
+  - A manuscript draft with the source of each claim tracked
+  - A fair review of what is strong, what is weak and what to fix next
+  - The paper fitted to the journal's current limits, sections and style, with the date checked
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the topic, your results and your methods notes. Do not paste data you may not share.
+  - After the review, fix the weak parts and rerun any analysis it asks for.
+  - Name the journal, the year and the article type for the last step.
+how_it_works:
+  - title: Gather the sources
+    text: Collects current papers, competing findings and background for your topic, keeps the link for each and notes the gaps in the search.
+  - title: Draft the manuscript
+    text: Writes each section from the sources and your results only. It tracks the source of each claim, flags gaps against reporting guidelines and checks the references.
+  - title: Review the draft
+    text: Reads the draft as a fair reviewer would. Lists what is strong, what is weak and what to fix next, with comments about the work and not the author.
+  - title: Fix the draft and pick the journal
+    text: Fix what the review found and rerun your analysis where it asks. Then name the journal or conference and bring the revised paper back.
+  - title: Fit the paper to the journal
+    text: Opens the official author instructions, records the date checked, then checks page limits, required sections, anonymity and citation style and fits the paper to them.
+output_shape: |-
+  STEP 1: SOURCE PACKET
+    Sources with links | competing findings | background | gaps in the search
+
+  STEP 2: MANUSCRIPT DRAFT
+    Sections | source for each claim | guideline gaps | reference check
+
+  STEP 3: REVIEW
+    Strengths | weaknesses | what to fix next
+
+  PAUSE
+    Fix the draft. Choose the journal.
+
+  STEP 4: JOURNAL FIT
+    Rules checked and date | paper fitted to template | items still to fix
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Article type
+    how: Say if it is a research article, a short report or a review. Sections and limits differ.
+  - what: Source count
+    how: Set how many sources you want. More sources take longer to verify.
+  - what: Confidential data
+    how: Tell it which data cannot leave your computer, so it works from summaries.
+  - what: Review focus
+    how: Say if you want the review to look hardest at method, claims or writing.
+judge:
+  - Every citation in the draft opens, and says what the draft says it does.
+  - No number appears that is not in your results.
+  - The review points to the section it is about and gives a reason.
+  - The last step cites the author instructions it used and the date.
+  - You, not the tool, are named as the author, and you check every claim.
+test:
+  - Open ten references. Check the source, the year and the claim it supports.
+  - Compare every result in the draft with your data table.
+  - Read the journal's author page yourself and compare it with the format check.
+improve:
+  - Keep the source packet. Reuse it for the next paper in the same field.
+  - Rerun the review after fixing, to see which weak points remain.
+  - Do not paste unpublished data into a tool your journal or funder does not allow.

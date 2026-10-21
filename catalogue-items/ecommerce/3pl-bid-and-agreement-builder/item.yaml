@@ -1,0 +1,20 @@
+slug: 3pl-bid-and-agreement-builder
+name: "3PL bid and agreement builder"
+summary: "Give it forecasts and product sizes. Get a request for pricing and agreement terms to demand."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: document}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Complete E-commerce Operations Guide", by: "Davey, founder of a large blanket-hoodie brand (YouTube talk)", used: "The request for pricing, the warehouse visit, barcode scanning, splitting price by cost type, a pick-on-time promise with a penalty, twice-yearly stock counts and choosing fit over lowest price"}

@@ -1,0 +1,22 @@
+slug: cut-risky-apps-and-scripts-from-your-store
+name: "Cut risky apps and scripts from your store"
+summary: "Give it your app list. Get keep, swap or cut for each app, then the scripts left ranked by risk."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: store_capture, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [store-app-stack-picker, store-script-and-app-risk-auditor]
+steps:
+  - {uses: store-app-stack-picker, note: "Starts from your app list and makes the verdict on each app and the list of what to export before you cut."}
+  - {uses: store-script-and-app-risk-auditor, note: "Works on what is left after the cuts in step 1, using the saved script list and the keep list from the app check."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/cut-risky-apps-and-scripts-from-your-store/skeleton.yaml

@@ -1,0 +1,21 @@
+slug: write-a-post-that-beats-the-pages-ranking-today
+name: "Write a post that beats the pages ranking today"
+summary: "Give it a keyword and the pages that rank. Get a brief, a full post and fixes for its page."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: web_page, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: copy_draft}
+uses: [search-page-brief-writer, search-blog-post-writer, on-page-seo-tuner]
+steps:
+  - {uses: search-page-brief-writer, note: "Starts the chain: reads the top pages for your keyword and writes a brief with the gaps to fill."}
+  - {uses: search-blog-post-writer, note: "Writes the full post from the brief's outline, questions and gaps."}
+  - {uses: on-page-seo-tuner, note: "Checks the published draft against the keyword and gives the last fixes before it goes live."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-a-post-that-beats-the-pages-ranking-today/skeleton.yaml

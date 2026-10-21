@@ -1,0 +1,118 @@
+new_slug: store-guarantee-planner
+name: "Store guarantee planner"
+summary: "Give it sales, refund rate and product type. Get guarantee settings, a net-sales test and placement."
+job: make-offer
+thinking: medium
+thinking_why: "It runs a few sums and writes wording from your numbers. A mid-size model is enough; read any legal line with care."
+
+headline: "Store guarantee planner"
+subhead: Give it your sales, refund rate, margin and product type. It tests whether a stronger guarantee raises net sales, sets its length, conditions, coverage and start, names it, and plans where to show it on the page, cart and ads.
+
+explain: |
+  Buyers worry most about risk: will this work for me, and what if it does not? A clear guarantee answers that. Many owners fear it will only bring more refunds. The right test is net sales, not refunds. If a stronger guarantee wins enough extra buyers, you can have more refunds and still make more.
+
+  The general Guarantee designer runs refund sums and picks a name. This store version adds a net-profit test for physical goods, with return shipping and lost stock counted in. It adds the four settings of a guarantee, the keep-the-bonus idea for digital items, and a try-before-you-pay second layer. It also covers where to show the guarantee in a shop. It needs a refund rate you can afford. Check consumer law before you publish any wording.
+
+when:
+  - Shoppers hesitate at checkout and you think a guarantee would help.
+  - You want to extend your return window and need to know if you can afford it.
+  - Your guarantee is buried in a policy page and nobody sees it.
+
+you_give:
+  - Your current sales and refund rate
+  - The sales lift you expect from a stronger guarantee
+  - Product type, margin, and the cost to take back a return
+  - Your current policy and return window
+  - Your payment setup, if you want a try-before-you-pay option (optional)
+
+you_get:
+  - A net-sales and net-profit comparison for the old and new guarantee
+  - A guarantee type and settings (length, conditions, coverage and start)
+  - A name and wording, and a placement plan for page, cart and ads
+  - An optional second layer, and a list of checks it missed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your sales, refund rate, margin and what a return costs you in shipping and lost stock.
+  - Say how much extra sales you expect, or ask it to show a few cases.
+  - Check the wording against consumer law in your market before you publish.
+  - Show the guarantee in a visible box on the page, in the cart and in your ads.
+
+how_it_works:
+  - title: Tests net sales
+    text: It compares net sales and net profit under the old and new guarantee, so you can see if extra refunds cancel the gain.
+  - title: Adds the real refund cost
+    text: For physical goods it counts return shipping, lost stock and fees you do not get back.
+  - title: Sets the four settings
+    text: Length, conditions, coverage and activation, each with a reason for your product type.
+  - title: Picks the guarantee type
+    text: Broad and simple for low-ticket goods, conditional for costly ones, all-sales-final only with a believable reason.
+  - title: Names it
+    text: A vivid, plain name for the guarantee.
+  - title: Plans placement
+    text: A visible box on the page, cart and ads, not fine print.
+  - title: Adds a second layer
+    text: An optional try-before-you-pay window, if your payment setup allows it.
+
+output_shape: |
+  GUARANTEE PLAN  <store>  <product type>
+  NET TEST (physical goods include return shipping and lost stock)
+  Today: <sales> sales, <refund %> refunds = <net sales>; net profit <amount>
+  Stronger guarantee: <sales> sales, <refund %> refunds = <net sales>; net profit <amount>
+  Verdict: <worth it | not worth it | needs a test>, because <reason>
+  SETTINGS
+  Length: <days> | Conditions: <...> | Coverage: <...> | Starts: <delivery> + <claim steps>
+  Type: <unconditional | conditional | all sales final, with reason>
+  NAME: <...>
+  WORDING: <plain text to publish, after a legal check>
+  PLACEMENT: <page | cart | ads | headline>
+  SECOND LAYER (optional): <try first, pay later>
+  CHECKS MISSED: <list, or none>
+  MISSING: <what was not given>
+
+tweaks:
+  - what: Expected sales lift
+    how: Give a range. The net test shows the lift where a stronger guarantee stops paying.
+  - what: Cost of a return
+    how: Include return shipping, lost stock and fees. Physical goods can turn a good-looking test into a loss.
+  - what: Product price
+    how: Low-ticket goods suit simple, broad guarantees. Costly goods need conditions.
+  - what: Payment setup
+    how: Say if you can hold a card and charge later. The try-before-you-pay layer needs it.
+
+judge:
+  - The net test shows both old and new sales, refunds and net sales.
+  - Physical goods show return shipping and lost stock in the cost.
+  - All four settings are set, each with a reason.
+  - The wording is plain and sits in a visible box, not fine print.
+  - There is a line telling you to check consumer law before publishing.
+
+test:
+  - Give it 100 sales at 5 percent refunds, then a 30 percent lift with 10 percent refunds. The new net sales should be about 117, against 95.
+  - Add a return cost to those same sums. Net profit should show whether the gain still holds.
+  - Ask for an all-sales-final guarantee on a non-consumable. It should push back for lack of a believable reason.
+  - Compare the wording with your return policy page for clashes.
+
+improve:
+  - Add your return policy rules and carrier costs to the skill file so each test is exact.
+  - Add the legal limits for your market, such as minimum return periods.
+  - Add your product groups, so each gets its own length and conditions.
+  - Pair it with the General guarantee designer for naming ideas and the Offer profit-per-session checker for results.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It runs the net-sales sums and writes the guarantee wording."}
+    - {name: "Shopify", why: "Return and refund reports show your real refund rate and refund cost."}
+  inputs:
+    - "Refund rate and reasons by product for the last 12 months"
+    - "Return shipping cost and the share of returns you can resell"
+    - "Your current return policy page"
+    - "Reviews that mention risk or doubt before buying"
+
+terms:
+  - term: Net sales
+    meaning: Sales after refunds are taken off.
+  - term: Risk reversal
+    meaning: Taking the risk off the buyer, such as with a money-back guarantee.
+  - term: Activation
+    meaning: The point when the guarantee period starts and how the buyer claims it.

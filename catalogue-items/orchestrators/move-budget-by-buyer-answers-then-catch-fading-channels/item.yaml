@@ -1,0 +1,24 @@
+slug: move-budget-by-buyer-answers-then-catch-fading-channels
+name: "Move budget by buyer answers, then catch fading channels"
+summary: "Give it survey answers and spend by channel. Get over-credited channels, a budget move and a check on fading channels."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: advanced
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [post-purchase-survey-reader, next-dollar-budget-allocator, channel-decay-checker]
+steps:
+  - {uses: post-purchase-survey-reader, note: "Shows which channels the platforms over-credit and which budget move to test."}
+  - {uses: next-dollar-budget-allocator, note: "Takes the survey's budget move and ranks it against the other channels."}
+  - {uses: channel-decay-checker, note: "Shows whether the moved budget helped and which channels are wearing out."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/move-budget-by-buyer-answers-then-catch-fading-channels/skeleton.yaml

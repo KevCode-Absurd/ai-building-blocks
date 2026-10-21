@@ -1,0 +1,21 @@
+slug: harden-an-ai-app-against-hijacked-instructions-and-runaway-bills
+name: "Harden an AI app against hijacked prompts and runaway bills"
+summary: "Give it your AI app's code. Get defences against hidden instructions, tests for them, spending caps and a fresh attack test."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: codebase, required: true}
+outputs:
+  - {type: security_report}
+uses: [ai-app-injection-defender, test-gap-finder, ai-spend-limit-checker, ai-system-attack-tester]
+steps:
+  - {uses: ai-app-injection-defender, note: "Finds where hidden instructions can get in and adds layered defences."}
+  - {uses: test-gap-finder, note: "Checks that the new defences are covered by tests, so a later edit cannot quietly remove them."}
+  - {uses: ai-spend-limit-checker, note: "Adds spending caps to the hardened code so one bad loop cannot run up a bill."}
+  - {uses: ai-system-attack-tester, note: "Attacks the hardened app to show which defences hold and what is still open."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/harden-an-ai-app-against-hijacked-instructions-and-runaway-bills/skeleton.yaml

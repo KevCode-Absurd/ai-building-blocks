@@ -1,0 +1,27 @@
+slug: pre-launch-store-checker
+name: "Pre-launch store checker"
+summary: "Tell it your store setup. It checks go-live, re-checks after each fix, and stops at a clear go or a no-go."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [store-go-live-checker, payments-and-checkout-settings-checker, shipping-rate-planner, store-tax-setup-planner, store-security-checkup]
+steps:
+  - {uses: store-go-live-checker, note: "Every round: the blockers, warnings, score and test orders. This is the check the loop runs until it says GO."}
+  - {uses: payments-and-checkout-settings-checker, note: "Round one, and again only if a payment or checkout item is a blocker: payout verification, capture, consent boxes and checkout fields."}
+  - {uses: shipping-rate-planner, note: "Only when the go-live check shows a shipping or rates blocker: zones, rates and a free-shipping line."}
+  - {uses: store-tax-setup-planner, note: "Only when the go-live check shows a tax blocker: tax settings, rate rows and a test plan."}
+  - {uses: store-security-checkup, note: "Once, in the round after the blockers are clear and before the real-money orders: staff sign-in, apps and the admin team."}
+schedule: "Each time you say you have fixed items on the list, up to four rounds"
+asks_before: [switching payments from test to live, removing the storefront password, placing real-money test orders, changing payment, tax or shipping settings, entering or pasting any payment key or card number]
+origin: own
+version: 1.0.0
+example_pending: true

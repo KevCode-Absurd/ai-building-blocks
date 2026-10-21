@@ -1,0 +1,123 @@
+new_slug: pre-shipment-inspection-brief-writer
+name: "Pre-shipment inspection brief writer"
+summary: "Give it your order and tech pack. Get an inspector's brief, a pass rule and payment release terms."
+job: plan-supply-chain
+thinking: low
+thinking_why: "It turns your order and pack into a checklist and a rule. A fast model is enough, and you review the brief before you send it."
+
+headline: "Pre-shipment inspection brief writer"
+subhead: "Give it your purchase order, tech pack and payment terms. It writes the brief for a third-party inspector, a pass, rework or reject rule, and a plan that pays the balance only after the report passes."
+
+explain: |
+  Once a container is on the water, you cannot fix what is inside. A final inspection by an outside company happens before the goods leave the factory. The source guide puts the cost near $200 against thousands in damage. That price is one speaker's figure and varies by country and order size, so ask for quotes.
+
+  This skill writes the inspector's instructions from your order and tech pack: how many random units to open, what to measure, which packaging, labels and carton weights to check, and which photos to take. It sets a rule for what counts as pass, rework or reject before the report arrives, and ties the balance payment to it. If you decide to skip inspection, it gives the spare-units rule instead.
+
+when:
+  - Your order is nearly finished and you are about to pay the balance.
+  - You are about to ship from a new factory and have never seen the goods.
+  - You are weighing whether an inspection is worth the cost for a small order.
+
+you_give:
+  - Your purchase order with quantities and cartons
+  - Your tech pack and the approved sample
+  - "Your payment terms: deposit and balance"
+  - The inspection company's price quote (optional)
+you_get:
+  - "An inspection brief: sample size, measurements, packaging, labels, carton weights and photos required"
+  - A pass, rework or reject rule, written before the report arrives
+  - A payment release plan where the balance is paid only on a pass
+  - The spare-units rule, if inspection is not booked
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your purchase order and tech pack, and say what the deposit and balance are.
+  - Ask two or three inspection companies for quotes and their sampling standard.
+  - Send the brief to the inspector and agree the pass rule with the factory before the check.
+  - When the report arrives, follow the rule. Release the balance only on a pass, and save the report.
+
+how_it_works:
+  - title: Sets the timing
+    text: Books the check before the container leaves the factory, when problems can still be fixed.
+  - title: Writes the checks
+    text: Random units opened, measurements, packaging, labels, carton weights and photos of everything.
+  - title: Uses the gold standard
+    text: Compares measures, weights, color codes and labels to your approved sample and tech pack, not to opinion.
+  - title: Writes the decision rule
+    text: Pass releases the balance, rework means fix and re-inspect at the supplier's cost, reject means no shipment and a talk about the deposit.
+  - title: Ties payment to the report
+    text: A common split is 30 percent deposit and 70 percent balance before shipping. The balance waits for the pass.
+  - title: Covers the skip case
+    text: With no inspection, orders at least 10 percent more than you need.
+  - title: Keeps the record
+    text: Files the report and photos in the supplier record for the next negotiation.
+
+output_shape: |
+  INSPECTION BRIEF  <product>  PO <no>  <date>
+  Where and when: <factory, date, before the container leaves>
+  Units: <total>  cartons: <n>
+  Sample: ask the inspection company which standard and sample size they use for this order: <their answer>
+  CHECK EACH SAMPLED UNIT
+  <measure> | target <value> | allowed gap <...>
+  <weight, color code, label text, hardware> | target <...>
+  CHECK PACKAGING AND CARTONS
+  <packaging, labels, carton weight, carton count, barcodes>
+  PHOTOS REQUIRED  <list>
+
+  DECISION RULE (written before the report)
+  PASS: <...> -> release the balance
+  REWORK: <...> -> fix and re-inspect at the supplier's cost
+  REJECT: <...> -> no shipment; talk about the deposit
+
+  PAYMENT PLAN  deposit <%> now, balance <%> when the report passes
+  PAYMENT ROUTE  <view A> / <view B>, you decide
+  IF YOU SKIP INSPECTION  order <10%> more: <units>
+  MISSING: <what you did not give>
+  CHECKS MISSED: <none, or which>
+
+tweaks:
+  - what: Order size and value
+    how: Give both. A large order justifies more units checked, and a tiny one may not justify an inspection at all.
+  - what: Critical measures
+    how: Name the lines that matter most, such as size or fill weight. The rule treats a miss on those as rework or reject.
+  - what: Payment route
+    how: Say if you pay by trade platform, wire or other. The skill lays out both views on payment protection and leaves the choice to you.
+  - what: Approved sample
+    how: Attach photos and measures of it. The inspector compares the goods to the sample as well as to the pack.
+
+judge:
+  - The brief has numbers and targets, not words like "good quality".
+  - The pass, rework and reject rule is written before any report exists.
+  - The balance is tied to the report.
+  - Photo requirements are specific.
+  - The inspection company, not the AI, sets the sample size and standard.
+
+test:
+  - Hand the brief to someone who does not know the product. Can they tell what to measure?
+  - Compare the brief with your tech pack. Every critical pack line should appear.
+  - Ask two inspection companies to quote from the same brief. If their quotes differ widely, the brief left something open.
+  - Dry-run the decision rule on an imagined report with 3 defects. The rule should say what happens.
+
+improve:
+  - Save your standard pass rule in the skill file once you and the factory agree it.
+  - Add your product's most common faults as extra checks.
+  - Keep the reports and add past defect rates, so the rule uses real numbers.
+  - Pair it with the sample approval gatekeeper, whose gold standard is what the inspector compares against.
+
+works_best_with:
+  tools:
+    - {name: "A third-party inspection company", why: "Sends someone to open random units, measure and photograph them. Ask which sampling standard they use."}
+    - {name: "Any good chat AI", why: "Any chat AI can turn your order and pack into the brief."}
+  inputs:
+    - "A written quote from the inspection company"
+    - "Your approved sample's photos and measures"
+    - "The factory's packing list"
+    - "Past inspection reports from this factory"
+
+terms:
+  - term: Pre-shipment inspection
+    meaning: A check by an outside inspector on finished goods, before they leave the factory.
+  - term: Purchase order
+    meaning: Your written order to the factory, with units, prices and cartons.
+  - term: Rework
+    meaning: The factory fixes the faulty units, and they are checked again.

@@ -1,0 +1,83 @@
+new_slug: turn-a-raw-dataset-into-a-checked-brief-of-top-insights
+name: Turn a dataset into a checked brief of top insights
+summary: Give it a data file and a question. Get a checked analysis and a ranked insight brief.
+job: track-numbers
+thinking: high
+thinking_why: The analysis and the check both do real maths on your data. Give it your strongest model.
+headline: Turn a data file into a short brief of insights you can trust
+subhead: Give it a file and one question. It first shows what is wrong with the data. After you fix that, it answers your question, checks its own method and sums, and ranks what it found by impact, confidence and ease of acting.
+explain: |
+  Raw data hides its own faults. Blank cells, repeated rows and odd values sit quietly in the file, and an analysis built on them looks fine until someone asks where a number came from. Even a clean analysis often ends as twenty findings and no clear next move.
+
+  The steps fix that in order. First it profiles the table and lists what is broken. You then fix those columns and write the one question you want answered. It answers that question with trends, tests and outliers. A separate check goes over the method and the sums before anyone sees it. The last step turns the checked findings into three to five insights, each with why it matters, the likely cause, the size of the impact and what to do.
+when:
+  - You have an export or a spreadsheet and a question, and nobody has looked at the file yet.
+  - You are about to share an analysis and want it checked first.
+  - You have a pile of findings and need to say which ones to act on.
+you_give:
+  - A data file such as a CSV or spreadsheet
+  - The one question you want the data to answer
+  - Your goals and who will read the brief (optional)
+you_get:
+  - A profile of the file with blanks, repeats, odd entries and the columns worth using
+  - An analysis that answers your question with the numbers and the limits
+  - A check of the method, the sums and any bias, with fixes to make
+  - A brief of the top three to five insights, ranked, each with a next action
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Attach your data file. Step 1 reports on it and stops.
+  - Pause. Fix or drop the columns the profile flagged, then write your one question in plain words.
+  - Tell it who will read the brief. The last step ranks insights for that reader.
+how_it_works:
+  - title: Profile the file
+    text: Finds the shape and the one-row-per-what of the table, sorts the columns by kind, counts blanks and repeats, and names the columns worth analyzing.
+  - title: Fix the data and set the question
+    text: Pause. You fix or drop the flagged columns and write the one question. The profile tells you where to look.
+  - title: Answer the question
+    text: Works out the summary numbers, trends, group differences and outliers, runs the tests that fit, and writes the findings with their limits.
+  - title: Check the analysis
+    text: Reviews the question, the population, the joins and the sums, recalculates a few key numbers by hand, and rates how far the result can be trusted.
+  - title: Write the insight brief
+    text: Turns each finding into what it means, why it happened and what to do, sizes the impact, and ranks by impact, confidence and ease of acting. Lower confidence where the check found doubt.
+output_shape: |-
+  STEP 1: PROFILE
+    Shape and grain | column types | blanks, repeats, odd values | columns worth analyzing
+
+  PAUSE: fix the data, write the question
+
+  STEP 2: ANALYSIS
+    Summary numbers | trends and groups | tests | outliers | limits
+
+  STEP 3: CHECK
+    Method review | sums recalculated | pitfalls found | trust rating
+
+  STEP 4: INSIGHT BRIEF
+    Top insights: finding | why it matters | likely cause | impact | action | confidence
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your question
+    how: A narrow question gets a sharper answer. "Why did repeat orders fall in March?" beats "What is in this data?"
+  - what: Your goals and priorities
+    how: Give them to the last step so it ranks insights against what you are trying to do, not by size alone.
+  - what: Your reader
+    how: Name their role and what they can decide. The brief stays short and points at actions they can take.
+  - what: How sure you need to be
+    how: For a board or a client, tell step 3 to be strict and to list every number it could not recompute.
+judge:
+  - Step 1 names real problems in your file, with counts, not general advice about clean data.
+  - The analysis answers your question and states what it could not tell.
+  - The check recalculates numbers and names at least one risk or says clearly that it found none.
+  - Every insight in the brief carries a size, a cause and an action.
+  - An insight the check doubted shows lower confidence in the brief.
+test:
+  - Pick two numbers in the analysis and recompute them in your own spreadsheet.
+  - Compare the profile's blank and repeat counts with a quick filter on the file.
+  - Ask a colleague to act on the top insight from the brief alone. They should know what to do first.
+improve:
+  - Keep the cleaned file and the question. Rerun the same steps on next month's data.
+  - Add what the check found to your list of checks for the next analysis.
+  - If the file is a database table, ask step 1 which columns to keep out of next time's export.
+  - Not worth running on a file with a few dozen rows. Look at them by eye instead.

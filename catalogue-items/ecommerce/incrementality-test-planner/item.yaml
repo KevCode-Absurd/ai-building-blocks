@@ -1,0 +1,24 @@
+slug: incrementality-test-planner
+name: "Incrementality test planner"
+summary: "Tell it your spend and regions. Get a lift test sized to you and how to read it."
+category: ecommerce
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public long-form masterclass, about 9.5 hours)", used: "Geo lift design with matched regions, the worked example, the causal impact fallback and platform minimum spend for lift tests"}
+  - {title: "The #1 bottleneck in 80% of ecommerce audits (data integrity)", by: "An agency founder who has run 1,000+ audits on 7 to 9 figure brands (name not stated)", used: "The plan by revenue tier, the in-platform lift example and the before-and-after model"}
+  - {title: "Black Friday 2026 strategy: spend, creative, offers, pacing", by: "An agency head of paid media (first name Nathan)", used: "The post-test window for delayed lift"}
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge (9-figure wallet and accessories brand, bootstrapped, spends over $100K a day on ads)", used: "What a holdout test is, when to start, why to test Google automated campaigns, and budgeting for tests"}
+  - {title: "How We Audit 8 and 9 Figure Ad Accounts (Full Process)", by: "A performance agency operator who audits 8 and 9 figure brands (name not stated)", used: "The 25-day geo lift default and the brand-term holdout"}
+  - {title: "How To Scale Meta TOF Campaigns", by: "An agency operator (name not stated)", used: "How a platform conversion lift test differs from the incremental attribution column"}

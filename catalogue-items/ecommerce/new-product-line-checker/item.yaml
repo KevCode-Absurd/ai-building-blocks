@@ -1,0 +1,21 @@
+slug: new-product-line-checker
+name: "New product line checker"
+summary: "Name a product to add. Get CAC or LTV, a score out of 100, a test cap."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "E-Commerce Masterclass: How to Build, Scale & Win in 2026", by: "Sean Frank, founder of Ridge, in an interview", url: "https://www.youtube.com/watch?v=2eGds8kLszE", used: "Splitting new products into those that win new customers and those that sell to existing ones, the price and market floor for the first kind, a launch cost cap, a small test, and running each line as its own unit"}
+  - {title: "Premium Isn't About Price, It's About Positioning", by: "Founder of a drinks brand, in an interview", used: "Holding the production order until a retailer commits, earning the right to add products, and keeping new products at the same maker"}

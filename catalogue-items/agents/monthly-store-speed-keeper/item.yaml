@@ -1,0 +1,33 @@
+slug: monthly-store-speed-keeper
+name: "Monthly store speed keeper"
+summary: "Give it this month's speed reports and app list. It compares with last month, flags new app scripts, and ranks the fixes."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: source_text, required: true}
+  - {type: store_capture, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: theme_files, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [store-speed-report-reader, app-script-auditor, leftover-app-code-finder, heavy-feature-trimmer, speed-fix-ranker, hero-image-loading-fixer, layout-shift-fixer, theme-script-and-style-loader, speed-budget-and-sale-check]
+steps:
+  - {uses: store-speed-report-reader, note: "Every month: the field score, each page read, and the first three fixes."}
+  - {uses: app-script-auditor, note: "Only when an app is new since last month, or the field score fell: keep, remove, delay or one page only for each app."}
+  - {uses: leftover-app-code-finder, note: "Only when an app was removed since last month: the code it left behind and the lines to delete on a duplicate theme."}
+  - {uses: heavy-feature-trimmer, note: "Only when the homepage or a collection page fails and sliders, videos or popups are the likely cause."}
+  - {uses: hero-image-loading-fixer, note: "Only when LCP fails and the largest element is an image, and theme files are given."}
+  - {uses: layout-shift-fixer, note: "Only when CLS fails, and theme files are given."}
+  - {uses: theme-script-and-style-loader, note: "Only when blocking time or INP fails after the app check, and theme files are given."}
+  - {uses: speed-fix-ranker, note: "Whenever anything fails or a new app was found: prices each fix in orders a month and ranks them."}
+  - {uses: speed-budget-and-sale-check, note: "Only when a sale or big campaign is within 30 days: a speed budget and a pre-sale checklist."}
+schedule: "First week of every month, after 28 days of field data have built up"
+asks_before: [uninstalling or switching off an app, editing or publishing a theme, deleting theme code, changing hosting or a plan, turning off a store feature]
+origin: own
+version: 1.0.0
+example_pending: true

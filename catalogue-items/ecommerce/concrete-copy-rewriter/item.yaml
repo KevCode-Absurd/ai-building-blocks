@@ -1,0 +1,22 @@
+slug: concrete-copy-rewriter
+name: "Concrete copy rewriter"
+summary: "Paste a line or product copy. Get pass or fail on three tests and a true, picturable rewrite."
+category: ecommerce
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: product_data, required: true}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [claude-hopkins]
+credits:
+  - {title: "Learn Copywriting in 76 Minutes", by: "Harry Dry (interview on a writing podcast)", used: "The three tests (can you picture it, can it be proved true or false, can nobody else say it), the abstract-to-concrete ladder and the two-second read"}
+  - {title: "Scientific Advertising", by: "Claude C. Hopkins (book)", used: "Specific claims are believed and general ones are discounted, and a claim that reaches few people costs more per customer"}
+  - {title: "Cashvertising", by: "Drew Eric Whitman (book)", used: "Mental movies, powerful visual adjectives and saying what rivals leave unsaid"}

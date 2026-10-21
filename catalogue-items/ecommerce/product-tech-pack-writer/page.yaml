@@ -1,0 +1,125 @@
+new_slug: product-tech-pack-writer
+name: "Product tech pack writer"
+summary: "Give it your product photos and ideas. Get a factory-ready tech pack with exact measures."
+job: plan-supply-chain
+thinking: medium
+thinking_why: "It turns your photos and notes into a structured document and catches vague words. A mid-level model does this well, and it must read your images."
+
+headline: "Product tech pack writer"
+subhead: "Give it photos of your product from every angle, plus your materials, sizes, colors and packaging. It writes a tech pack a factory can build from, rewrites every vague word as a measurement, and drafts one quote request for every factory."
+
+explain: |
+  Factories build what the paper says. When it says nothing, they choose whatever is easiest. One founder in the source opened a first big shipment of blankets to find three different shades of gray and different weights under one product code. The factory had not made a mistake. The founder had never sent a spec.
+
+  A tech pack (a technical pack) is the blueprint for your product. It holds drawings, materials with weights and finishes, hardware, measurements for every size, color codes, labels, packaging and care text, with a name, version and date on every page. This skill writes it from your photos and notes, finds every word that left a decision open, such as "centered" or "thick", and rewrites it as a number. It also gives you the quote request, so every factory answers the same questions.
+
+when:
+  - You are about to ask factories for quotes and have only photos and a description.
+  - A batch came back different from the sample and you need a spec to hold the factory to.
+  - You want to move to a new factory and need a pack that works the same way anywhere.
+
+you_give:
+  - Photos of your product from every angle, or a reference sample you like
+  - Materials, sizes, colors and packaging you want
+  - Label and care text, and your logo files
+  - Past defects or complaints (optional)
+you_get:
+  - "A tech pack: drawing or photo callouts, materials with weights and finishes, hardware and trims, measurements for every size, color codes, labels, packaging and care text"
+  - Name, version and date on every page
+  - A list of every word that left a decision open, rewritten as a measurement
+  - One quote request that asks every factory for the same answers
+  - A list of measures and weights your quality checks can use
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach photos from every angle, or describe a sample you will ship to the factory.
+  - Paste your materials, sizes, colors, label text and care text.
+  - Read the list of vague words and answer each with a number.
+  - Keep the finished pack in a shared document you control, and send the same file and quote request to two or three factories.
+
+how_it_works:
+  - title: Reads the product
+    text: Reads your photos and notes and lists what the pack must show, including every part and every angle.
+  - title: Writes the six sections
+    text: Drawing, materials, measurements, graphics, hardware, and labels with packaging.
+  - title: Finds vague words
+    text: Spots words like "centered", "thick" or "soft" and asks for a number, such as 4 inches from the top and 2 from the side.
+  - title: Keeps the decisions yours
+    text: Sets drawstring length, folds, thickness, box and insert so the factory does not choose.
+  - title: Adds checks for later
+    text: Lists the weights and measures a quality check can compare, including fabric weight you can test on a delivered unit.
+  - title: Writes the quote request
+    text: Asks for unit price per variant, minimum order, lead time, packaging details and payment terms.
+  - title: Stamps it
+    text: Puts name, version and date on every page, with a note on where the original files live.
+
+output_shape: |
+  TECH PACK  <product>  v<n>  <date>  page <n> of <n>
+  1 DRAWING     <view>: <what it shows, print placement and size>
+  2 MATERIALS   <part> | <material> | weight <GSM or g> | finish <...> | swatch kept: <yes/no>
+  3 MEASUREMENTS  <size> | <measure> | <value + tolerance>   (grading from smallest to largest)
+  4 GRAPHICS    <print or logo> | <file> | <position and size> | <color code>
+  5 HARDWARE    <zip, pocket, fixing> | <spec> | <position>
+  6 LABELS AND PACKAGING  <label text> | <position> | <packaging, fold, insert, carton>
+  COLORS        <name> | Pantone <code>
+  CARE TEXT     <text>
+
+  VAGUE WORDS REWRITTEN
+  "<word>" in <place> -> <measurement>
+
+  QC CHECK LIST  <measure or weight> | target <value> | how to check
+
+  QUOTE REQUEST
+  Send to <factory>: unit price per variant, minimum order, lead time, packaging details, payment terms
+  MISSING: <what you did not give>
+  CHECKS MISSED: <none, or which>
+
+tweaks:
+  - what: A reference sample
+    how: If you have a sample you like that costs too much, say so. The skill tells you to ship it to the factory and ask them to match it and quote.
+  - what: Product type
+    how: Say if it is apparel, a soft good, home goods, packaging, or hard goods. Hard goods and moulded parts need more detail than the skill can give, and it says when you need an engineer.
+  - what: Where you sell
+    how: Name the countries. Label rules differ by region and the skill reminds you to check them.
+  - what: Known defects
+    how: List past problems, such as thin fabric or wrong shade. The pack adds a line that locks each one down.
+
+judge:
+  - Every measurement is a number with a unit, not a word.
+  - Every size has its own measures and the grading is stated.
+  - Color is a code, not a name like "gray".
+  - The pack has a name, version and date, and the quote request asks the same questions of every factory.
+  - Gaps are marked MISSING and not filled with a guess.
+
+test:
+  - Give the pack to a friend who does not know the product and ask them to sketch it. If they cannot, a factory cannot either.
+  - Search the pack for words like centered, thick, soft, standard and similar. There should be none left.
+  - Compare the pack with a sample you already have. Every line should be checkable on the sample.
+  - Ask two factories to quote from it. If their questions differ, the quote request left something open.
+
+improve:
+  - Save your standard sections (care text, label wording, packaging folds) in the skill file so each new pack starts from them.
+  - Add the weight and finish of each material you reuse, so the same fabric is always described the same way.
+  - "Add your past defects as standing lines, such as \"gray: Pantone code only\"."
+  - Pair it with the sample approval gatekeeper, which judges each sample against this pack.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI that reads images can draft the pack from your photos."}
+    - {name: "Figma, Canva or Notion", why: "Hold the drawings and specs in one shared place with a version history."}
+    - {name: "A freelance designer", why: "A freelance product designer can draw it up. The source puts the price near $200, which you should re-check for your product."}
+  inputs:
+    - "A physical sample, or a fabric swatch with its weight"
+    - "Your logo and artwork files"
+    - "Pantone chips for your colors"
+    - "Photos of past defects"
+
+terms:
+  - term: Tech pack
+    meaning: The document that tells a factory exactly how to build your product, from materials to packaging.
+  - term: GSM
+    meaning: Grams per square metre. It sets how thick and dense a fabric is.
+  - term: Pantone code
+    meaning: A number from a standard color chart, so everyone sees the same shade.
+  - term: Grading
+    meaning: How the measures grow from one size to the next, such as small to extra large.

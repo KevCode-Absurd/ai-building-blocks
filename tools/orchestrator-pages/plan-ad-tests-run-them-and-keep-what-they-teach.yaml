@@ -1,0 +1,77 @@
+new_slug: plan-ad-tests-run-them-and-keep-what-they-teach
+name: Plan ad tests, run them and keep what they teach
+summary: Give it your past ads. Get five untried ideas, a test campaign layout, and after the run, what the results taught.
+job: plan-ad-tests
+thinking: high
+thinking_why: It compares many past ads across five lenses, then reads results after the test. Give it your strongest model.
+headline: Plan ad tests that teach you something
+subhead: Give it your past ads and brand file. It finds five ideas you have not tried, lays out a test campaign, and after the test reads the results and writes down what the winners share.
+explain: |
+  Most accounts make new ads by guessing. A new colour or crop is not a test, and when a round ends nobody can say why one ad won. The next round starts from nothing.
+
+  The steps close that loop. First it records every past ad by moment, value, buyer knowledge, opening and format, and finds the five biggest gaps. Each idea gets a question it will answer if it wins. Then it lays out a test campaign: packs of four to eight ads, a budget split and the scale rules. Then you pause. Launch it, leave it alone for the read window and export the results. The last step ranks the ads, finds what the winners share and writes it as a rule to test next.
+when:
+  - You have months of ads and no record of what they taught.
+  - You are about to brief a new round of ads and want ideas that differ from past ones.
+  - A test ended and you cannot say why the winner won.
+you_give:
+  - Your brand file
+  - Your past ads and their results (spend, sales or replies)
+  - Your budget and the number of products to test (for the layout)
+  - After the run, the export of results for the test (you add this at the pause)
+you_get:
+  - A gap map and five untried ideas, each with a test question
+  - A test campaign layout with pack names, budget split and scale rules
+  - A ranked list of the test ads and what the winners share
+  - A lesson written as a rule to test next, with how strong the evidence is
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Export your past ads with dates, spend and results for the first step.
+  - At the pause, launch the pack and do not change it until the read window ends. Then export results and come back.
+how_it_works:
+  - title: Find the ideas you have not tried
+    text: Records each past ad, looks for gaps across moment, value, buyer knowledge, opening and form, ranks the five biggest and writes one idea per gap.
+  - title: Lay out the test campaign
+    text: Reads the ideas, groups the new ads in packs, picks the budget type, splits budget by stage and writes the keep, cut and scale rules.
+  - title: Pause. Launch and wait
+    text: You run the test without changes for the read window, then export the results.
+  - title: Learn from the winners and losers
+    text: Puts a number on each ad, ranks them, fills a checklist for each, finds what winners share, checks it is not a place effect and writes the rule.
+output_shape: |-
+  STEP 1: UNTRIED IDEAS
+    Evidence grade | gap map by lens | five ranked gaps | five ideas with a test question each
+
+  STEP 2: TEST CAMPAIGN
+    Structure | packs | budget split | CBO or ABO | keep, cut and scale rules
+
+  PAUSE: launch, wait, export results
+
+  STEP 3: LESSONS
+    Ads ranked | checklist per ad | what winners share | rule to test | strength of evidence
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your past ads
+    how: Give at least ten with results. With fewer, the gap map is a guess and says so.
+  - what: Your budget
+    how: Give your test money per day. Step 2 sets the number of packs to fit it.
+  - what: Your read window
+    how: Say how many days you will wait. The keep and cut rules are tied to it.
+  - what: Rival ads
+    how: Add an Ad Library export. Step 1 then marks what others lean on.
+judge:
+  - Each idea differs from the others on at least two lenses and names what you learn if it wins.
+  - Past results are graded as measured, reported or observed.
+  - The layout fits your budget and never adds ads to a winning set.
+  - The lesson names how many ads it rests on and calls it a hint if under ten.
+  - The rule to test next is one sentence with its evidence.
+test:
+  - Check three past ads against the record, line by line.
+  - Check the layout adds up to your daily budget.
+  - After the run, rank two ads by hand and compare with step 3.
+improve:
+  - Keep every lesson in one file and add the new rule after each round.
+  - Test the rule next round and mark it confirmed, rejected or unclear.
+  - Re-run step 1 each quarter, since gaps change as you test.

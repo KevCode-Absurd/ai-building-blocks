@@ -1,6 +1,6 @@
 # Teach and train people: AI Blocks
 
-> 133 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 136 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessible lesson auditor](https://useaiblocks.com/skills/accessible-lesson-auditor): Paste a lesson. Get a check against Universal Design for Learning, with fixes ranked by impact.
 - [AI answer critique activity builder](https://useaiblocks.com/skills/ai-answer-critique-lesson): Give it a subject. Get a worksheet that has students judge an AI answer on clarity, evidence and fairness.
@@ -72,6 +72,7 @@
 - [Local nature inquiry unit planner](https://useaiblocks.com/skills/nature-inquiry-unit): Name a nearby garden, pond or hedge. Get a unit that teaches your science or geography goals through it.
 - [Local place lesson planner](https://useaiblocks.com/skills/local-place-lesson-planner): Name a place near your learners. Get lessons that tie your content to that place, its community and its heritage.
 - [Low-motivation task redesigner](https://useaiblocks.com/skills/low-motivation-task-redesigner): Give it a task students resist. Get why it drains motivation and a redesign built on choice, success and connection.
+- [Mark student work against a rubric and sharpen your feedback](https://useaiblocks.com/workflows/mark-student-work-against-a-rubric-and-sharpen-your-feedback): Give it a learning goal and student work. Get a rubric, the gaps, the causes and checked feedback.
 - [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer): Describe the task and its goal. Get a rubric with clear descriptions for each level of work.
 - [Media literacy lesson builder](https://useaiblocks.com/skills/media-literacy-lesson-builder): Give it an ad, news item or post. Get a lesson that helps learners see persuasion, bias and who is shown.
 - [Mixed practice unit planner](https://useaiblocks.com/skills/mixed-practice-unit-planner): Paste a topic order. Get a plan that mixes related topics through the unit for stronger recall.
@@ -81,6 +82,7 @@
 - [Outdoor lesson sequence planner](https://useaiblocks.com/skills/outdoor-lesson-sequence-planner): Describe your outdoor space and goals. Get a run of outdoor lessons that cover your curriculum.
 - [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker): Paste a task or handout. Get the places that overload learners, with changes that lighten it.
 - [Perspective-taking activity builder](https://useaiblocks.com/skills/perspective-taking-activity): Give it a topic in history, social science or literature. Get an activity that builds real understanding of other views.
+- [Plan a unit from its end goal and schedule revision](https://useaiblocks.com/workflows/plan-a-unit-from-the-end-goal-and-schedule-the-revision): Give it your standards. Get a unit planned backwards, practice mixed through it and a revision calendar.
 - [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer): Give it a skill. Get practice problems that rise in difficulty and vary just enough, for worksheets or homework.
 - [Primary source history lesson planner](https://useaiblocks.com/skills/primary-source-lesson): Give it a topic and sources. Get a full lesson where learners investigate a historical question from documents.
 - [Project-based unit brief writer](https://useaiblocks.com/skills/project-based-unit-brief-writer): Give it a topic. Get a project brief with a driving question, milestones and marking criteria.
@@ -134,4 +136,5 @@
 - [Why and how question writer](https://useaiblocks.com/skills/why-and-how-question-writer): Give it your content. Get why and how questions that push learners past memorising to understanding.
 - [Words and picture explainer designer](https://useaiblocks.com/skills/word-picture-explainer): Paste an explanation. Get a plan for a diagram or visual that pairs with the words so it sticks.
 - [Worked example to practice sequence builder](https://useaiblocks.com/skills/worked-example-practice): Give it a procedure. Get a sequence from fully worked examples to solving it alone.
+- [Write a thinking task English learners can do](https://useaiblocks.com/workflows/write-a-thinking-task-english-learners-can-do): Give it a subject and skill. Get a task, a language check and a version with help.
 - [Written feedback checker](https://useaiblocks.com/skills/written-feedback-checker): Paste feedback given to learners. Get a check for how specific and useful it is, with better wording.

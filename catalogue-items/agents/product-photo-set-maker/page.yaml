@@ -1,0 +1,108 @@
+new_slug: product-photo-set-maker
+name: Product photo set maker
+summary: Give it photos of one real product. Get a planned photo set, checked frame by frame, with every failed frame redone.
+job: product-photos
+thinking: high
+thinking_why: It reads every picture against your real product, decides what to redo and loops until each frame passes. Give it your strongest model.
+headline: Product photo set maker
+subhead: Give it photos of your real product and say where the set will go. It writes what your product truly looks like, plans the set, checks every picture that comes back against it, and sends each failed frame back with the exact fix.
+explain: |
+  AI product photos fail in small ways. The label changes, the pack grows a seam, a hand has six fingers. One bad picture on a product page costs more trust than ten good ones earn. Checking them by eye, one at a time, is slow and easy to skip.
+
+  This agent writes a truth sheet from your real photos once and reuses it. It plans a set for where the photos will go: a product page, a marketplace, or ads and social. When the pictures come back, it checks each one against the truth sheet and the plan. A failed frame goes back with the line that fixes it, and is checked again. After two tries it drops the frame and tells you to take a real photo. A fault that hits three frames gets fixed at the source.
+
+  It writes prompts and reads pictures. It cannot draw, so it tells you how the pictures get made and asks before anything uses credits.
+when:
+  - You are making product photos with AI and need them to match the real product.
+  - You need a matching set for a product page, a marketplace listing, or ads and social.
+  - Your last AI set had a wrong label, a warped pack or odd hands, and you do not want that again.
+you_give:
+  - Clear photos of the exact product, from more than one side
+  - The product's facts, such as size, variant and what is in the box
+  - Your brand brain (colours, photo style, what you never show)
+  - "Where the set goes, such as a product page, a marketplace, or ads, social and email"
+  - Customer reviews, to help choose the product page frames (optional)
+you_get:
+  - A truth sheet and lock lines, saved and reused for this product
+  - A planned set with one prompt per frame
+  - A pass or fail for every picture that comes back, with the smallest fix
+  - Failed frames redone, or dropped with a note to take a real photo
+  - A list of faults to add to your prompts next time
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask for a photo set.
+  - Attach the product photos and say where the set goes.
+  - Read the plan. For a product page, say yes before it writes the prompts.
+  - Make the pictures with the tool you choose. The agent asks before it uses any credits. Attach the pictures back.
+  - Read the results. Redo what it sends back, or take a real photo for frames it drops.
+how_it_works:
+  - title: Get the truth sheet
+    text: Writes what your product really looks like from your photos, with the lock lines every prompt repeats. Reuses it next time. Lists the shots it cannot make yet.
+  - title: Read the mistakes list
+    text: Opens faults from earlier sets and puts the lines that fixed them into every prompt from the start.
+  - title: Choose the path
+    text: For ads, social or email, it plans a matching shoot. For a product page, it plans about 8 frames that answer shopper questions.
+  - title: Hand over the prompts
+    text: Gives you each prompt, says how the pictures get made and asks before any credits are used.
+  - title: Check every picture
+    text: Reads each picture against the truth sheet and the plan. Checks people and hands too, and marketplace rules for the main image, if you say yes to the cost.
+  - title: Redo the failures
+    text: Adds the exact fix to the prompt and checks the new picture. Two rounds at most, then it drops the frame.
+  - title: Fix a pattern at the source
+    text: If one fault hits three frames, it fixes the lock line or style sheet first, then redoes them together.
+output_shape: |-
+  TRUTH SHEET
+    <reused | new> | lock lines: <3 to 5 phrases> | photos still missing: <list>
+
+  THE SET (upload order)
+    01 <job> | <pass> | words on it: <words or none>
+    02 <job> | <pass after 1 redo> | fault fixed: <fault>
+
+  REDONE
+    <frame>: <fault> | fix line: <line> | rounds: <1 or 2>
+
+  DROPPED
+    <frame>: <fault> | take this with a real camera
+
+  PATTERN FOUND
+    <fault on 3 or more frames> | lock line change: <change>
+
+  MARKETPLACE
+    <pass | reject, which rule>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your real photos
+    how: Send full-size photos of the exact variant. A small or filtered photo gives a wrong truth sheet, and every check after it is wrong too.
+  - what: Where the set goes
+    how: A product page and a social feed need different frames. Name the destination before the plan is made.
+  - what: Words on pictures
+    how: Keep them to the words you have on file. A picture with a claim you cannot prove can cost you a listing or a refund.
+  - what: Your lock lines
+    how: Read them against the pack. If they are wrong, the whole set will be wrong in the same way.
+judge:
+  - Every picture in the set passed the check, or is listed as dropped.
+  - Every prompt repeats the lock lines word for word.
+  - No picture shows a part, colour or word that is not on the truth sheet.
+  - No frame was made that the truth sheet said was blocked.
+  - Nothing was made, checked with a paid tool or published without your yes.
+test:
+  - Give it one blurry photo. It should say what it cannot tell and ask for a better one.
+  - Send back a picture with a changed label on purpose. The check should fail it and name the fault.
+  - Run it twice on the same product. The second run should reuse the truth sheet and the mistakes list.
+improve:
+  - Add each fault that came up to the mistakes list, with the line that fixed it.
+  - Add a photo for every shot the truth sheet lists as blocked, then run it again.
+  - Keep one photo set folder per product so the truth sheet is never made twice.
+  - For clothing, add the fabric and fit photos the checks ask for.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the photo-set folder, read the pictures you save there and keep the mistakes list.
+    - name: ChatGPT or Gemini
+      why: Paste a prompt into either one to get the picture. Free plans have tight daily limits.
+    - name: Higgsfield
+      why: Paste a prompt into its image tool, or connect it so the agent can make the pictures after you say yes.
+  inputs:
+    - A photo of the product in a hand, for scale
+    - The listing rules of the marketplace you sell on

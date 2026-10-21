@@ -1,0 +1,129 @@
+new_slug: domain-and-certificate-watch-checker
+name: "Domain and certificate watch checker"
+summary: "List your domains and subdomains. Get leftover records and weak registrar access flagged, a score out of 100 and fixes."
+job: protect-your-store
+thinking: medium
+thinking_why: "It goes through a list of records against fixed rules. A mid-size model is accurate enough."
+
+headline: "Domain and certificate watch checker"
+subhead: List your domains and subdomains, where each points, and who can log in to your registrar and DNS host. It flags leftover records and weak access, scores the set out of 100 and gives a DNS clean-up list and a registrar checklist.
+
+explain: |
+  Your domain decides where your customers land. If someone else controls it, they can send your traffic to their page and even get a valid padlock for your name. Two gaps cause most of the risk. One is an old subdomain that still points to a hosting or shop service you stopped using, which someone else may be able to claim. The other is a registrar or DNS login with a weak password and no second step.
+
+  This skill goes through every domain and subdomain you list, one row each: where it points, whether you still need it, the risk and the action. It checks registrar and DNS access, certificate rules and monitoring, and lookalike domains. It ends with owners, renewal dates and auto-renew, so nothing expires by accident. It does not stop an attacker who already holds your DNS login, so locking that login comes first.
+
+when:
+  - You have several domains or old subdomains for past campaigns, landing pages or test stores.
+  - A developer or agency set up your DNS and you do not know who can log in to it.
+  - You see a lookalike of your store name and want to know what to protect.
+
+you_give:
+  - Every domain and subdomain you know of, with where each points
+  - Who can log in to the registrar and the DNS host, and how they sign in
+  - Your current certificate provider
+  - Renewal dates and who is notified (optional)
+you_get:
+  - "One row per domain or subdomain: points to, still needed, risk, action"
+  - A score out of 100 with how it was counted
+  - A DNS clean-up list and a registrar access checklist
+  - A short list of lookalike domains worth registering or watching
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Export or copy your DNS records from your DNS host and paste them in.
+  - Say who has registrar and DNS logins and how each signs in.
+  - Delete records that point to services you no longer use, after a developer confirms.
+  - Set up a free alert for new certificates on your domain, and run the checker again in six months.
+
+how_it_works:
+  - title: Lists every record
+    text: Records each subdomain and what its record points to, and whether you still need it.
+  - title: Finds leftover records
+    text: Flags records that point to hosting, CDN or shop services you no longer use, since someone else may be able to claim them.
+  - title: Checks account access
+    text: Looks for a unique password, a security key or authenticator, the fewest possible users and the registrar's transfer lock.
+  - title: Checks certificate rules
+    text: Looks for records that name your allowed certificate providers and for an alert on new certificates for your domain.
+  - title: Checks lookalikes
+    text: Notes typo, lookalike-letter and long-subdomain tricks and picks the few worth registering.
+  - title: Records ownership
+    text: Notes the owner of each domain, renewal date, auto-renew and who is notified.
+  - title: Scores and fixes
+    text: Deducts points by severity and writes the clean-up and access lists.
+
+output_shape: |
+  DOMAINS AND SUBDOMAINS
+  <name> | points to: <target> | still needed: <yes/no/unknown> | risk: <Critical / High / Medium / Low>
+     action: <one change>
+
+  ACCOUNT ACCESS
+  Registrar: <who, how they sign in, transfer lock yes/no>
+  DNS host: <who, how they sign in>
+
+  CERTIFICATES
+  Allowed providers record: <yes/no>   New-certificate alert: <yes/no>
+
+  SCORE  <n>/100 (100 - 25 x <Critical> - 12 x <High> - 6 x <Medium> - 2 x <Low> = <n>)
+         <n>/100 after the fixes
+
+  DNS CLEAN-UP LIST
+  <records to delete or change>
+  REGISTRAR CHECKLIST
+  <access, second step, transfer lock, auto-renew>
+  OWNERS AND RENEWALS
+  <domain | owner | renewal date | auto-renew | who is notified>
+
+  NOT RUN
+  <check, and what is needed>
+  MISSING: <domain list | record targets | who has access | certificate provider>
+
+tweaks:
+  - what: How many domains you hold
+    how: With one domain on one platform, the registrar and subdomain checks still apply but the list is short.
+  - what: Where each record points
+    how: Paste the full record, not just the name. A target is needed to spot a service you no longer use.
+  - what: Who can log in
+    how: List every person and agency with registrar or DNS access, and how they sign in. Shared logins and no second step are rated Critical.
+  - what: Lookalike domains
+    how: Say how big your brand is and your budget. The skill suggests only the few closest typos, since each costs money every year.
+
+judge:
+  - Every row says where the record points and whether it is still needed.
+  - A record pointing to an unused service is rated Critical or High.
+  - Registrar access without a second step is rated Critical.
+  - Certificate monitoring and allowed-provider records are described as limited helpers.
+  - Typo-domain advice names a few domains, not all of them.
+
+test:
+  - Add a made-up subdomain pointing to a hosting service you closed. It should rate it Critical or High and say to delete it.
+  - Tell it two people share the registrar login with no second step. It should rate that Critical.
+  - Run it twice. The risk ratings should match.
+  - Look up one flagged record in your DNS host yourself. The target should be as listed.
+
+improve:
+  - Add your list of approved services to the skill file, so anything else is flagged.
+  - Add your renewal calendar so the skill checks dates too.
+  - Add the certificate providers you actually use to name in the allowed-providers record.
+  - Save the final owners and renewals table to your brand file.
+  - Pair it with the Domain and DNS planner for layout and redirects, and the Staff phishing rules briefer for lookalike address rules.
+
+works_best_with:
+  tools:
+    - {name: "Your DNS host's record export", why: "Copying the full list of records gives the checker the real targets."}
+    - {name: "crt.sh", why: "A free search of public certificate logs. It shows every certificate issued for your domain."}
+    - {name: "Any good chat AI", why: "Any current chat AI can check the list from pasted records."}
+  inputs:
+    - "A full export of DNS records from every DNS host you use"
+    - "A list of staff and agencies with registrar access"
+    - "Your registrar's renewal and auto-renew settings page"
+
+terms:
+  - term: Subdomain
+    meaning: A name added in front of your domain, such as shop.yourstore.com or sale.yourstore.com.
+  - term: DNS
+    meaning: The directory that tells browsers where your domain's pages live.
+  - term: CAA record
+    meaning: A DNS record that names which providers may issue certificates for your domain. It is advice that providers follow.
+  - term: Certificate transparency log
+    meaning: A public list of every certificate issued. Owners watch it to spot ones they did not ask for.

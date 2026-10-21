@@ -1,0 +1,77 @@
+new_slug: decide-whether-to-drop-a-rule-and-trial-it-safely
+name: Decide whether to drop a rule and trial it safely
+summary: Give it a rule nobody can explain. Get where it came from, what it quietly does and a small trial.
+job: think-and-decide
+thinking: medium
+thinking_why: Each step is short text work. A mid-range model is enough.
+headline: Drop a rule without breaking what it quietly protects
+subhead: Give it a rule, step or habit nobody can explain. It finds who first needed it, what it does that nobody wrote down, what dropping it would set off, then plans a small trial with a loss cap and a rule for stopping.
+explain: |
+  Old rules often look pointless, and some are. Others hold up something you cannot see, such as a check that catches errors or a signal that tells customers you care. Cut one of those and the damage shows up months later, with no link back to the cause.
+
+  The steps go from the rule's past to a safe test. First the rule is quoted as people state it, its first reason is found and the people it helps and costs today are listed. Next the rule is looked at as a job: what else does it do, and what would break without it. Then the change is followed through its reactions, including how people might game the new situation. The last step plans a trial you can undo, with a limit on what you can lose, a small owner and a date to drop it or go bigger.
+when:
+  - A team follows a rule and the only answer to why is "we always have".
+  - You want to cut a process or approval step to save time.
+  - You are about to automate something and have not checked what it also does.
+you_give:
+  - The rule, step or habit, worded the way people state it
+  - Who follows it and who it affects
+  - What you hope to gain by dropping it
+  - How much you can afford to lose in a trial
+you_get:
+  - Where the rule came from, who gains and who pays today, and a keep, change or drop call
+  - A list of what the rule quietly does, priced as a range
+  - What dropping it would set off, and how people might game the change
+  - A small trial with a loss cap, an owner, a measure, a date and a drop rule
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Quote the rule exactly. If people word it differently, give each version.
+  - Ask the longest-serving person why it exists, and paste what they say.
+  - Choose a small area or team for the trial, not the whole company.
+how_it_works:
+  - title: Trace where the rule came from
+    text: Quotes the rule, finds who first needed it and why, takes a newcomer's view, lists who gains and who pays now and makes a keep, change or drop call.
+  - title: Find what it quietly does
+    text: Names the job in one sentence, lists unseen effects and who gains from each, asks what would break and prices the hidden value before deciding to cut, keep or replace.
+  - title: Trace what dropping it would cause
+    text: States the change and the result you expect, follows the reactions of customers, staff and rivals, looks for ways to game the new setup and revises the plan.
+  - title: Plan a small trial with a drop rule
+    text: Sets a loss cap you can survive, names one small owner, lists cheap tests and fixes the measure, the date and the rule for dropping or going bigger.
+output_shape: |-
+  STEP 1: RULE ORIGIN
+    The rule quoted | first reason | newcomer view | who gains and pays | still needed? | call | small test
+
+  STEP 2: HIDDEN VALUE
+    The job named | unseen effects | who gains | what breaks | priced as a range | cut, keep or replace
+
+  STEP 3: WHAT IT SETS OFF
+    First effects | reactions | second and third effects | flow-through | gaming risks | revised plan
+
+  STEP 4: THE TRIAL
+    Loss cap | owner | cheap tests | what failure would teach | measure and date | drop rule
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How long the rule has existed
+    how: Give the date if you know it. Step 2 treats an old rule with more care.
+  - what: Who might game the change
+    how: Name the people who can gain from a loophole. Step 3 looks at their moves first.
+  - what: Trial size
+    how: Say how many people or weeks you can try it on. Step 4 sets the cap to fit.
+judge:
+  - The rule is quoted as people state it, not reworded.
+  - At least one hidden effect is something nobody had written down.
+  - The cost of losing each hidden effect is a range with a stated basis.
+  - The trial can be undone and has a loss cap, a date and a drop rule.
+  - The result is allowed to be keep. A good run can end with the rule staying.
+test:
+  - Ask two people who follow the rule what it is for. Compare their answers with step 1.
+  - Check one hidden effect by asking who would notice first if it stopped.
+  - Read the drop rule and ask whether you would really stop at that number.
+improve:
+  - Keep a short list of rules you have traced and what each one did, so the next review is faster.
+  - Re-run step 3 once the trial has results, with the actual reactions in place of guesses.
+  - Make "who first needed it" a question you ask whenever you add a new rule.

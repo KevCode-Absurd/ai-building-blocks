@@ -1,0 +1,79 @@
+new_slug: plan-what-to-make-each-week-from-your-past-sales
+name: Plan what to make each week from your past sales
+summary: Give it past sales and your capacity. Get a forecast, a weekly make plan and a meeting agenda.
+job: plan-supply-chain
+thinking: high
+thinking_why: It runs four skills in a row, and the forecast feeds every later step. Give it your strongest model.
+headline: Know what to make each week, from your own sales history
+subhead: Give it two years of sales and what you can make in a week. It forecasts demand, shows the weeks you cannot keep up, sets a make quantity for each week and writes the agenda for a monthly meeting.
+explain: |
+  Many small makers set production by feel. They make a lot after a stockout and too little before a rush. The mistake shows up late, as dead stock or empty shelves.
+
+  The steps put numbers in the same order every month. First it reads your sales history and builds a forecast, and tests it on months it did not see. Then it checks that forecast against what you can make and marks the weeks that run over. It turns both into a make quantity for each week, with the near weeks fixed. Last it writes a monthly meeting agenda from the gaps, with an owner on each decision. The first step asks for past sales. The last step asks for the people and the day of your meeting.
+when:
+  - You make, bake, sew or pack your own products and set the batch by feel.
+  - A busy season is coming and you want to know which weeks you cannot keep up.
+  - Sales, the shop floor and the money side each hold a different number and never meet.
+you_give:
+  - Past sales by product and by week or month, ideally two years
+  - What you can make in a week, in units, hours or people
+  - Stock on hand and orders already booked
+  - Who joins your monthly planning meeting (optional)
+you_get:
+  - A forecast by period, the method chosen and how far off it was on held-back months
+  - A list of the weeks and steps where demand beats what you can make, with ways to close each gap
+  - A week-by-week make plan, with near weeks fixed and far weeks open
+  - A monthly meeting agenda, the gaps to settle and an owner for each decision
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your sales history first. Say if a past stockout or sale distorted a month, so the forecast does not copy it.
+  - Give your real weekly capacity. A guess here makes every plan after it wrong.
+  - Check the forecast and the gap list yourself before you act on the make plan.
+how_it_works:
+  - title: Forecast demand
+    text: Reads your sales history, picks a method to match the pattern, tests it on months it did not see and gives a forecast with its likely miss.
+  - title: Check what you can make
+    text: Sets your weekly capacity against the forecast and lists the periods and steps that run over, with options to close each gap.
+  - title: Build the weekly make plan
+    text: Takes the forecast, booked orders and stock on hand, and sets what to make each week without passing capacity.
+  - title: Run the monthly demand and supply meeting
+    text: Puts the forecast, make plan and gaps on one page and writes an agenda with a decision and an owner for each mismatch.
+output_shape: |-
+  STEP 1: FORECAST
+    Pattern found | method chosen | forecast by period | miss on held-back months
+
+  STEP 2: CAPACITY CHECK
+    Capacity | periods over | slowest step | ways to close each gap
+
+  STEP 3: WEEKLY MAKE PLAN
+    Week | quantity | stock after | fixed or open
+
+  STEP 4: MONTHLY MEETING
+    Agenda | gaps to settle | decisions with owners | next month's rhythm
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How much history you have
+    how: Two years shows seasons. With under a year, say so, and step 1 will use a simple method and warn you about the gap.
+  - what: Made to stock or made to order
+    how: Tell step 3 which one you are. Made to order plans from booked orders first, made to stock from the forecast.
+  - what: Number of products
+    how: Start with your top five by sales. Plan the long tail by group, not one by one.
+  - what: Stock you want to keep spare
+    how: Give a number of weeks of cover. Step 3 adds it to the plan instead of guessing.
+judge:
+  - The forecast was tested on months the method did not see, and the miss is stated.
+  - Every week in the make plan is at or under your capacity, or is flagged as over.
+  - Booked orders and stock on hand are subtracted before the make quantity is set.
+  - The meeting agenda lists real gaps from steps 2 and 3, each with an owner and a date.
+  - No number appears that you did not give or the steps did not work out.
+test:
+  - Pick one week in the plan and redo its sum by hand. Take the forecast, subtract stock and booked orders, and add spare stock.
+  - Check the capacity figure against what your team really made last week.
+  - Hide your last three months of sales, run step 1 and compare its forecast with what happened.
+improve:
+  - Track the forecast miss every month. If it stays high, tell step 1 what you did differently, such as a sale.
+  - Keep the agenda from each meeting and bring last month's decisions to the next one.
+  - Add promotions and launch dates to step 1 once you have a year of clean history.

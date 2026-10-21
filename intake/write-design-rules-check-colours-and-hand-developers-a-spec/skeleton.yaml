@@ -1,0 +1,43 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md).
+id: write-design-rules-check-colours-and-hand-developers-a-spec
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: write-design-rules-check-colours-and-hand-developers-a-spec
+  name: "Write design rules, check colours and hand developers a spec"
+  summary: "Give it your brand or event brief. Get firm design rules, colours checked for reading, design tokens and a developer spec."
+  when: "you have a feeling and a brief but no rules, and a developer is waiting to build from them."
+  job: design-work
+  level: intermediate
+steps:
+  - name: "Visual system rules writer"
+    skill: visual-system-rules-writer
+    job: design
+    from: "skill: visual-system-rules-writer"
+    method: ["Write the feeling first, then what it must not look like", "Pick the fewest colours and say what each means", "Fix colour, type, page format and grid", "Keep the rules short and mark where play is allowed"]
+    inputs: [brief, brand_brain!]
+    outputs: [design_direction, brand_guide]
+    note: "Sets the feeling, colours, type and grid as short rules."
+  - name: "Colour contrast checker"
+    skill: colour-contrast-checker
+    job: ops
+    from: "skill: colour-contrast-checker"
+    method: ["Pair each text colour with its background", "Measure the contrast ratio for light and dark themes", "Mark each pair pass or fail", "Suggest the closest passing colour"]
+    inputs: [design_direction]
+    outputs: [audit_report]
+    note: "Checks the colours from the rules for readability. Reads the design direction from the step before."
+  - name: "Design token builder"
+    skill: design-token-builder
+    job: ops
+    from: "skill: design-token-builder"
+    method: ["Take the brand colours and fonts, with any colour that failed swapped for its fix", "Generate colour, type, spacing and shadow tokens", "Add component notes and responsive sizes", "Export as CSS, SCSS or JSON"]
+    inputs: [brand_guide!, brief]
+    outputs: [design_file]
+    note: "Builds tokens from the brand guide, using the colours that passed the check."
+  - name: "Developer handoff spec writer"
+    skill: developer-handoff-spec-writer
+    job: ops
+    from: "skill: developer-handoff-spec-writer"
+    method: ["List layout, tokens and breakpoints", "Specify components, variants and every state", "Cover empty, loading and error cases", "Add accessibility notes"]
+    inputs: [design_file]
+    outputs: [document]
+    note: "Writes the spec a developer builds from. Reads the tokens from the step before."

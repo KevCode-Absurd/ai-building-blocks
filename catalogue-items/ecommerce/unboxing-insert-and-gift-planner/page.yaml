@@ -1,0 +1,125 @@
+new_slug: unboxing-insert-and-gift-planner
+name: "Unboxing insert and gift planner"
+summary: "Give it order value and margin. Get a costed unboxing plan with insert card, note and gift rules."
+job: keep-customers
+thinking: low
+thinking_why: "The sums are simple and the writing is short, so a small fast model is enough if you give it real costs."
+
+headline: "Unboxing insert and gift planner"
+subhead: Give it your average order value, margin, packaging cost and order volume. It plans what goes in the box for all orders, big orders and VIPs, costs each tier per order, and checks how many extra repeat orders you need to cover the cost.
+
+explain: |
+  The box is the one moment a customer holds your brand in their hands. Many stores either ship it bare or add cards, tissue and freebies with no idea what they cost or what they bring back. At 2,000 orders a month, an insert stack of 60 to 80 cents per order adds up to $1,200 to $1,600.
+
+  This skill sets a tier for each kind of order, with a cost per order and a payback check. Every order gets a card with a thank-you, a link to a short setup video and one next step. Big orders and VIPs get a note that names the item they bought. Gifts are small, relevant and given with no strings. It first checks that delivery and returns work, since a note in a late parcel feels wrong, and it never asks for a review in return for a gift.
+
+when:
+  - You ship orders in plain boxes and want a reason for customers to come back.
+  - You already add inserts or freebies and do not know what they cost or return.
+  - You want a plan for your best customers that stays inside a per-order budget.
+
+you_give:
+  - Average order value and gross margin per order
+  - Your packaging cost per order now, and orders per month
+  - Repeat rate and cost to win a customer (CAC)
+  - Product type and brand voice
+you_get:
+  - A tiered plan for all orders, high-value orders and VIPs, with the cost per order for each
+  - An insert card spec and note and gift rules
+  - A payback check showing the extra repeat orders needed to cover the cost
+  - What to measure, with a test group
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your average order value, margin, packaging cost, monthly orders and repeat rate.
+  - Say what you sell and how your brand sounds, with a sample of how you write to customers.
+  - Start with the card and one tier. Hold back a few orders as a test group so you can see what the plan really changes.
+  - Check that delivery is on time and returns are easy before you add anything more.
+
+how_it_works:
+  - title: Fixes effort first
+    text: It checks delivery and returns are working. A note in a late parcel creates unease, not loyalty.
+  - title: Sets cost bands
+    text: It uses typical costs, such as a sticker at 4 to 5 cents and a card near 10 cents, then asks for your real quotes.
+  - title: Does the volume math
+    text: It multiplies the insert stack by your monthly orders, so the cost is clear.
+  - title: Designs the card
+    text: A thank-you, a link or QR code to a 60-second how-to video, and one next step.
+  - title: Sets the note rule
+    text: High-value orders and VIPs get a hand-signed note that names the item they bought.
+  - title: Sets the gift rule
+    text: A small gift that matches what they bought, with no strings and no review ask.
+  - title: Picks the packaging feel
+    text: Heavier, firmer boxes and matte or raw finishes read as quality, so spend where the customer touches first.
+  - title: Checks payback
+    text: It works out how many extra repeat orders per 100 customers cover the cost.
+
+output_shape: |
+  FIT CHECK  delivery on time: <yes | no>   returns easy: <yes | no>   AOV: <$>   plan fits: <yes | trim to card and sticker>
+
+  TIERS
+    All orders: <items> = <$ per order>
+    High-value orders (over <$>): <items> = <$ per order>
+    VIPs: <items> = <$ per order>
+
+  VOLUME MATH   <$ per order> x <orders per month> = <$ per month>  (<% of product cost>)
+
+  INSERT CARD   thank-you: <line>  link or QR: <60-second how-to>  next step: <loyalty sign-up | next-order offer>
+
+  NOTE RULE   <who gets one, what it names>
+  GIFT RULE   <what, for whom, no strings, no review ask>
+
+  PAYBACK   extra repeat orders per 100 customers = 100 x <$ per order> / <gross profit per repeat order> = <n>
+
+  MEASURE   repeat rate, tagged unboxing posts, cost per order, by test and holdout group
+  CHECKS MISSED: <none | list>
+  MISSING: <what was needed>
+
+tweaks:
+  - what: Your average order value
+    how: Under about $30, the plan keeps to a card and a sticker, since a premium set will not pay back. Give the real number.
+  - what: Real quotes
+    how: Replace the typical cost bands with quotes from your printer and packer, so the cost per order is yours.
+  - what: Product type
+    how: A sample or gift must match what they bought. Say which products pair well, and note any allergen or safety rules for samples.
+  - what: Your voice
+    how: Paste a few lines you have written to customers, so the card and note sound like a person.
+
+judge:
+  - Every tier shows a cost per order and a monthly cost at your volume.
+  - The payback check shows its sum and uses your gross profit per repeat order.
+  - Notes name the actual item. There is no form letter dressed as handwriting.
+  - Gifts have no strings and no review or post asked in return.
+  - Vendor lift figures are called ideas to test, not forecasts.
+
+test:
+  - Give it a store with a $25 average order. It should keep to a card and a sticker and say why.
+  - Run it twice on the same numbers. The costs and the payback sum should match.
+  - Send the plan to ten new orders and ten without it. Compare repeat orders after 90 days.
+  - Open a finished box yourself. Check the card, the QR link and the note work as planned.
+
+improve:
+  - Add your real packaging costs and supplier quotes to the skill file.
+  - Add your brand voice rules and a sample note, so each note sounds like you.
+  - Add the insert rules of any marketplace you sell on, since some limit what goes in the box.
+  - Save the winning card and gift to your brand file once the test group shows a gain.
+  - Pair it with the packaging brief writer, which turns the plan into a designer brief.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can do the cost sums and write the card and note."}
+    - {name: "Handwrytten", why: "A service that writes real notes with a pen machine from a customer list. Check cost and volume limits."}
+    - {name: "Klaviyo", why: "It can mark VIP and high-value orders, so the right tier is picked for each box."}
+  inputs:
+    - "Quotes from your printer and packer"
+    - "A list of your VIP and high-value customers"
+    - "A sample of how you write to customers"
+    - "Your repeat rate by first-order month"
+
+terms:
+  - term: Insert card
+    meaning: A printed card placed in the box, usually with a thank-you and a next step.
+  - term: Payback check
+    meaning: How many extra repeat orders you need for the extra cost to pay for itself.
+  - term: Holdout group
+    meaning: A few orders that do not get the new item, so you can compare.

@@ -1,0 +1,124 @@
+new_slug: sensory-unboxing-planner
+name: "Sensory unboxing planner"
+summary: "Describe your product and pack. Get matched sense cues with costs and an unboxing script."
+job: brand-file
+thinking: medium
+thinking_why: "It matches sense cues to a brand feeling and adds cost lines, so a mid-size model works and a stronger one finds tighter matches."
+
+headline: "Sensory unboxing planner"
+subhead: Describe your product, pack and the brand feeling in three words. It plans one matched cue for weight, colour, sound, smell and feel, flags any that clash, adds each cue's cost per order, and writes the first 30 seconds of an unboxing with a test of two versions.
+
+explain: |
+  A box can look right and still feel wrong. A cheap-feeling insert, a loud rattle or a scent that does not fit the brand sends mixed signals. Lab studies reported in one book found that matched cues were rated more pleasant and remembered better than clashing ones, and that a lighter remote was judged as broken even when it worked.
+
+  This skill starts with your brand feeling in three words, then picks one cue for each sense that supports those words. It gives a cost per order for each, flags the ones that clash, and picks the best two to start with. It adds an unboxing script that is easy to film, and a test of two versions. It also keeps the claims honest: the studies were short lab tests, so expect better reviews and more shared photos, not a guaranteed sales jump.
+
+when:
+  - You are redoing your box, tissue or insert and want every part to say the same thing.
+  - Customers say the product feels cheap, or your box looks nicer than it feels.
+  - You want unboxing videos from customers and creators and need a moment worth filming.
+
+you_give:
+  - Your product, its price and the brand feeling in three words
+  - Photos of your current box, insert and wrapping, and the product's weight
+  - Your packaging budget per order
+  - Your shipping rates by weight (optional)
+you_get:
+  - A sense-by-sense plan with one cue per sense, why it fits and its cost per order
+  - A clash list and the best two cues to start with
+  - An unboxing script for the first 30 seconds, with filming notes for creators
+  - A two-version test and honest expectations
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give the three words for your brand, then attach photos of your box and product, and paste your weight and budget.
+  - Read the clash list first and fix what clashes before you add anything.
+  - Make the two cheapest, best-fitting changes first, and send creators the filming notes.
+  - Run the two-version test and compare repeat orders or the words in reviews.
+
+how_it_works:
+  - title: Sets the feeling
+    text: Three words that every cue must support.
+  - title: Plans weight and colour
+    text: Extra weight only if shipping allows, and one owned colour on box, tissue and product.
+  - title: Chooses a sound
+    text: A lid click, seal pop or crunch, checked so it is pleasant and not annoying.
+  - title: Considers smell with care
+    text: A light matching scent only after an allergy and rules check. Start with weight, colour and order if unsure.
+  - title: Checks the match
+    text: Puts all cues against the three words and lists any that clash. One good cue beats three that clash.
+  - title: Scripts the unboxing
+    text: A clear reveal order for the first 30 seconds, with simple filming notes so it is easy and nice to film.
+  - title: Adds costs
+    text: A cost per order for each cue, and the best two by price and effect.
+  - title: Plans the test
+    text: Two versions compared on repeat orders, or on review wording and shared photos.
+
+output_shape: |
+  SENSORY PLAN: <product> at <price> | feeling: <word 1>, <word 2>, <word 3>
+
+  SENSE | CUE | WHY IT MATCHES | COST PER ORDER | SAFETY / RULES
+  Weight | <...> | <...> | <...> | <shipping effect>
+  Colour | <...>
+  Sound | <...>
+  Smell | <...> or "skip for now" | | | <allergy and rules check>
+  Feel / shape | <...>
+
+  CLASH LIST: <cue that conflicts with a word, and the fix>
+  BEST TWO TO START: <cue>, <cue> | total cost per order <n>
+
+  UNBOXING SCRIPT (first 30 seconds)
+  0 to 5s: <what they see>
+  5 to 15s: <what they hear and hold>
+  15 to 30s: <the reveal and the ritual>
+  CREATOR FILMING NOTES: <surface, light, first look, what to say honestly>
+
+  TEST: version A <...> vs version B <...> | measure <...> | run for <...>
+  CHECKS MISSED: <none | list>
+
+tweaks:
+  - what: The three words
+    how: Pick words customers would use, such as warm, solid, fresh. Each cue is judged against them, so vague words such as "nice" produce vague cues.
+  - what: Your packaging budget per order
+    how: Give a real figure per order. The plan picks the best two cues that fit it and shows the cost of each.
+  - what: Your shipping rates
+    how: Give rates by weight. Added weight or a solid base can push an order into a higher rate, and the plan shows that cost.
+  - what: What you sell
+    how: Say if it is food, skincare, a pet product or a gift. Smell and some materials need a safety check for these, and the plan flags them.
+  - what: The measure you will test on
+    how: Say whether you will compare repeat orders, review wording or shared photos. With few orders, review wording and photos show a difference sooner.
+
+judge:
+  - Each cue links back to one of your three words.
+  - Every cue shows a cost per order.
+  - Any weight change shows its shipping effect.
+  - Smell has an allergy and rules note, or is clearly skipped.
+  - The plan promises better reviews and photos, and does not promise a sales jump.
+
+test:
+  - Show your current box and the planned changes to five customers, and ask which three words each brings to mind. They should match your three words.
+  - Send the new box to a small share of orders for a set period and compare review wording, shared photos and repeat orders with the old box.
+  - Open an order yourself on camera with the script and look for any step that feels awkward or slow.
+  - Ask a friend with allergies or sensitive skin to look over any scent or material choice before you ship it.
+
+improve:
+  - Add your own bans, such as no plastic filler or no strong scent, to the checks so they apply on every run.
+  - Add your real packaging costs and supplier names to the cost step, so the plan uses your numbers.
+  - Save the chosen cues and the three words to your brand file, so every new product pack follows them.
+  - Pair it with the Brand ritual designer for the gesture and the Unboxing insert and gift planner for the card and extras.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI that reads images can look at your box photos and match cues to your words."}
+    - {name: "Your packaging supplier's sample kit", why: "Real swatches of paper, tissue and box finishes let you check weight and feel before you order."}
+  inputs:
+    - "Photos of your current box, insert, tissue and the product in hand"
+    - "Quotes from your packaging supplier for each cue"
+    - "Reviews that mention the box, the feel or the first impression"
+    - "Your shipping rate table by weight"
+
+terms:
+  - term: Unboxing
+    meaning: The moment a customer opens an order, often filmed and shared.
+  - term: Cue
+    meaning: One thing a customer sees, hears, smells or feels that says something about the brand.

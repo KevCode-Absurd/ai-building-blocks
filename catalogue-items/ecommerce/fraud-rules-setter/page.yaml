@@ -1,0 +1,132 @@
+new_slug: fraud-rules-setter
+name: "Fraud rules setter"
+summary: "Give it your order volume and payment setup. Get fraud rules, a review routine and a chargeback watch line."
+job: protect-your-store
+thinking: medium
+thinking_why: "It turns your numbers into a short rule set with clear limits. A mid-size model is enough."
+
+headline: "Fraud rules setter"
+subhead: Give it your monthly orders, average order value, chargeback count and payment setup. It writes an order-handling rule set, a daily review routine for held orders and a chargeback watch line, matched to how many hours you can spend.
+
+explain: |
+  Fraud costs a store the sale, the product and a dispute fee. Too many chargebacks is worse: processors flag accounts above 0.9 percent and can stop taking cards above 1 percent (check the exact figures with your processor). But rules that are too tight hold up real buyers, so you lose sales too.
+
+  This skill uses the order risk rating your platform already gives each order, and sets what happens at each level: take payment on low risk, send a notice on medium, hold high for review. It also covers extra card checks, protection cover you may qualify for, a checklist for held orders and a monthly loop to loosen or tighten. It fits your volume and your review time, so you never hold orders nobody will look at.
+
+when:
+  - You get chargebacks and want rules instead of checking every order by hand.
+  - You are on Shopify Payments and have never set up Flow rules for risky orders.
+  - Real buyers complain about declined cards and you suspect your checks are too tight.
+
+you_give:
+  - Monthly orders and average order value
+  - Chargeback count and rate over the last 3 months
+  - Your payment setup (Shopify Payments or a third-party gateway)
+  - Who can review orders and how many hours a week
+  - Recent false declines or complaints from real buyers (optional)
+you_get:
+  - A rule set by risk level, ready to build in your platform
+  - A manual review checklist and a 24-hour release-or-cancel routine
+  - A chargeback watch line with a warning level before the processor's limit
+  - A monthly loop to tune the rules, and a list of checks it could not make
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your order volume, average order value and chargeback numbers.
+  - Say who can review orders each day, and for how many hours a week.
+  - Build the rules in your platform, using its templates where it has them.
+  - After 30 days, bring the counts of blocked, held, released and disputed orders back to the skill.
+
+how_it_works:
+  - title: Sets the watch line
+    text: Uses the processor's 0.9 percent flag and 1 percent stop levels, and adds a warning at 0.5 percent so you have a buffer.
+  - title: Uses the risk rating
+    text: Builds on the platform's low, medium and high order rating instead of a home-made scoring system.
+  - title: Writes the flow rules
+    text: Takes payment on low risk, sends a notice on medium, holds high for review, and cancels only on patterns you have confirmed.
+  - title: Sets extra card checks
+    text: Keeps dynamic 3D Secure on for higher-risk payments and reads reports for 30 days before changing the address check.
+  - title: Checks cover
+    text: Notes whether Shopify Protect applies and tells you to read its exclusions.
+  - title: Writes the review routine
+    text: Gives a checklist for held orders and a 24-hour release or cancel rule.
+  - title: Sets the monthly loop
+    text: Counts blocked, held, released and disputed orders, then loosens or tightens the right rule.
+
+output_shape: |
+  INPUTS READ
+  <orders a month, AOV, chargebacks, payment setup, review hours>
+
+  WATCH LINE
+  Chargeback rate now: <n>%  | warning at 0.5% | processor flag 0.9% | stop risk 1%
+
+  RULES (in order)
+  1. Low risk: <action>
+  2. Medium risk: <action>
+  3. High risk: <action>
+  4. Cancel only if: <pattern you confirmed>
+
+  EXTRA CHECKS
+  3D Secure: <setting and why>
+  Address check: <setting and when to review>
+  Cover: <Shopify Protect or other, with limits>
+
+  REVIEW ROUTINE
+  Who: <name or role>  When: <time>
+  Checklist: <5 items>
+  Release or cancel within 24 hours: <how>
+
+  MONTHLY LOOP
+  Count: blocked, held, released, disputed
+  If <false holds high>: <loosen which rule>
+  If <disputes rise>: <tighten which rule>
+
+  CHECKS MISSED: <list or none>
+  MISSING: <order volume | chargeback data | payment setup | reviewer>
+
+tweaks:
+  - what: Your monthly order volume
+    how: Under 100 orders a month, there is too little data to tune. The skill then keeps the platform's default fraud analysis and 3D Secure and skips custom rules.
+  - what: Review hours
+    how: Tell it how many hours a week someone can look at held orders. If nobody can check daily, the skill flags orders instead of holding them.
+  - what: Your payment gateway
+    how: Name it. Rules for third-party gateways differ, so the skill gives a pattern, not exact menu steps.
+  - what: Average order value
+    how: A higher average order value raises the cost of a missed fraud order, so the skill leans toward holding more high-risk orders.
+
+judge:
+  - The watch line states 0.5, 0.9 and 1 percent, and says which one is your own warning level.
+  - Each rule names a risk level and one action.
+  - Orders are only held if someone can review them every day.
+  - The checklist and the 24-hour rule are included for held orders.
+  - The monthly loop says which rule to change for which result.
+
+test:
+  - Tell it you get 40 orders a month. It should say you have too little data and keep defaults.
+  - Tell it nobody can review daily. It should flag, not hold.
+  - Compare its rules with your platform's own fraud templates. They should match in order and meaning.
+  - After a month, give it the counts. It should name one rule to change, not several.
+
+improve:
+  - Add the order patterns that burned you before, such as a repeat address, and have it use them for the cancel rule.
+  - Put your exact order risk menu names in the skill file so the steps match your admin.
+  - Add your reviewer's name and hours so the routine is ready to use.
+  - Add the product types most targeted by fraud in your store so the checklist can name them.
+  - Pair it with the Bot and AI agent access planner for card testing, and with a fraud review queue builder if you need a list of risky orders.
+
+works_best_with:
+  tools:
+    - {name: "Shopify Flow", why: "It runs the rules above on the order risk rating, using free fraud templates you can edit."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the rule set from your numbers."}
+  inputs:
+    - "Your order risk reports from the last 30 days"
+    - "A list of your last 10 chargebacks, with the reason each one gave"
+    - "Your platform's current fraud settings page"
+
+terms:
+  - term: Chargeback
+    meaning: A bank takes the money back after a customer disputes a payment. You lose the sale, the product and a fee.
+  - term: 3D Secure
+    meaning: An extra check, such as a code, on risky card payments. When a buyer passes it, the card issuer carries fraud liability for that payment.
+  - term: Order risk rating
+    meaning: A low, medium or high mark your platform gives each order from address, card code, IP and pattern checks.

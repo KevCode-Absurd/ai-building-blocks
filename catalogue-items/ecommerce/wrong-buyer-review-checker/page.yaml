@@ -1,0 +1,122 @@
+new_slug: wrong-buyer-review-checker
+name: "Wrong-buyer review checker"
+summary: "Paste your low reviews. Get which came from wrong-job buyers, not-for lines and a promise-match score."
+job: understand-customers
+thinking: medium
+thinking_why: "It tags many reviews against a short list of causes and traces each back to a claim. A mid-range model does this well."
+
+headline: "Wrong-buyer review checker"
+subhead: Paste your 1 to 3 star reviews and return notes, plus your page headline, ad angles and main claims. It tags each review as product failure, wrong job, expectation you set, or delivery, traces wrong-job reviews to the claim that drew them, and writes not-for lines. It gives a promise-match score out of 100.
+
+explain: |
+  Not every bad review means a bad product. Some come from a buyer who wanted something your product was never built to do. A claim, a photo or an ad angle drew that buyer in, the product did what it was built to do, and the review was still one star. Reviews work like a report card on every promise made before the purchase.
+
+  This skill reads your low reviews for that mismatch. It asks one question of each: did the product fail the job it was built for, or was it hired for a different job? It counts the groups, sends only real failures to your product list, and traces the rest back to the claim that promised something else. Then it writes not-for lines, honest descriptions of the real experience, and a list of same-job reviews to pin on your page.
+
+when:
+  - Your star rating is lower than your product deserves, and the complaints do not match what the product is.
+  - Returns come from buyers who say "I thought it would".
+  - You are about to change a headline or an ad angle and want to know which claims draw the wrong buyer.
+
+you_give:
+  - 1 to 3 star reviews, return reasons and refund notes, pasted (30 or more)
+  - Your current page headline, ad angles and main claims
+  - Your avatar cards or job spec (optional)
+you_get:
+  - "Each low review tagged: product failure, wrong job, expectation set by your page or ad, or delivery"
+  - The page or ad claim that drew each wrong-job group
+  - Not-for lines and claim edits, with where each goes (near the buy button, in the ad, in the FAQ)
+  - A short list of same-job reviews to pin, and a promise-match score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the low reviews and return notes as they are, with the date and the product. Remove reviewer names first.
+  - Paste your headline, ad angles and main claims, as they run today.
+  - Start with the product-failure list if it is more than half of the lows. Fix the product before the copy.
+  - Test one new not-for line on one ad set or one page first, and run it again in 30 days.
+
+how_it_works:
+  - title: Pulls the lows
+    text: Takes the low reviews and return reasons for a window with at least 30 of them.
+  - title: Asks one question
+    text: For each review, asks whether the product failed its job or was hired for a different one.
+  - title: Tags and counts
+    text: Tags every review as product failure, wrong job, expectation we set, or delivery and service, then counts each group.
+  - title: Traces the cause
+    text: Matches each wrong-job group to the claim, photo or ad angle that promised something else.
+  - title: Writes not-for lines
+    text: Writes "this is not for you if" in the buyer's circumstance, and honest lines about size, noise, effort and what it does not do.
+  - title: Fixes the claims
+    text: Cuts or softens claims that attract the wrong job, after checking them against product facts.
+  - title: Surfaces same-job reviews
+    text: Tags reviews by use case and picks 3 to 5 per use case to pin.
+  - title: Scores promise match
+    text: Scores how few of your lows came from the promise and not the product, and sets a 30-day re-measure.
+
+output_shape: |
+  REVIEWS READ: <n> lows, <window>   (30 or more needed)
+  TAGS
+  product failure: <n> | wrong job: <n> | expectation we set: <n> | delivery or service: <n>
+  If product failure is over half: FIX THE PRODUCT FIRST (list below)
+
+  PRODUCT FAILURES (to the product list)
+  - <failure>: <n> reviews  "<quote>" (<date>)
+
+  WRONG-JOB GROUPS
+  1. They hired it for: <job> | drew them: <claim, photo or ad angle> | <n> reviews
+     "<quote>" (<date>) | real job it does: <job>
+     not-for line: "This is not for you if <situation>."   put it: <near buy button | ad | FAQ>
+     claim edit: <old> > <new, matched to product fact>
+
+  SAME-JOB REVIEWS TO PIN
+  <use case>: "<quote>" x3 to 5
+
+  SCORE  <n>/100 (100 - 100 x (<wrong job> + <expectation we set>) / <all tagged>)
+         measures: share of lows NOT traced to the promise; not product quality
+  RE-MEASURE IN 30 DAYS: return rate and average stars by ad angle; keep a narrower promise if returns fall and net profit after returns rises
+  MISSING: <reviews | page claims | ad angles>
+  CHECKS MISSED: <list or none>
+
+tweaks:
+  - what: How many lows you paste
+    how: Thirty is a working default, not a rule from the book. With fewer, it tells you to read them one by one.
+  - what: Your claims
+    how: Paste the headline, ad angles and top claims as they run today. The trace step can only point to claims it can see.
+  - what: Avatar cards
+    how: If you have a job spec or avatar cards, it checks each wrong-job group against them and names the job they hired it for.
+  - what: Where reviews display
+    how: Say if your reviews appear on your store, on a marketplace, or both. The pin step follows the platform's rules on how reviews can be shown.
+
+judge:
+  - Every review has exactly one tag, and the counts add up to the number read.
+  - Real defects are tagged product failure and are not blamed on the buyer.
+  - Each wrong-job group names the exact claim, photo or ad angle that drew it.
+  - Not-for lines describe a situation, not a type of person.
+  - Nothing in the output suggests hiding, deleting or editing a review.
+
+test:
+  - Take five reviews you know the story behind. Check that each is tagged the way you would tag it.
+  - Run it on the same reviews twice. The counts should match or differ by one or two at most.
+  - Change the headline on one landing page to the new narrower promise and send the same ad to it. Compare returns and net profit after returns over 30 days.
+  - Read each not-for line aloud. If a real buyer would be put off who should buy, soften it.
+
+improve:
+  - Add your product's real limits (size, noise, effort, what it does not do) to the skill file, so the honest-description lines start from facts.
+  - Add your platform's review rules, and check them before pinning or surfacing reviews.
+  - Add your return reason codes, so tags match your helpdesk.
+  - Pair it with the Job-based avatar builder for the job each group hired for, and with the Star-rating review miner for competitor reviews.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can tag reviews and trace them to claims. Paste the text with dates."}
+    - {name: "Shopify admin", why: "Its returns report gives reasons and counts to read beside the reviews."}
+  inputs:
+    - "Return reason codes next to each review"
+    - "Your ads and landing page text from the weeks the low reviews were bought"
+    - "Photos from the page, so claims shown only in images can be traced too"
+
+terms:
+  - term: Wrong job
+    meaning: The buyer wanted the product for a purpose it was not built for.
+  - term: Not-for line
+    meaning: A sentence that says who should not buy, such as "This is not for you if you need it in under a day".

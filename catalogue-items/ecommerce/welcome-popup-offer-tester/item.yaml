@@ -1,0 +1,21 @@
+slug: welcome-popup-offer-tester
+name: "Welcome pop-up offer tester"
+summary: "Give it AOV, margin and site offers. Get four to eight pop-up offers to test, ranked by cost."
+category: ecommerce
+type: skill
+role: make
+job: offer
+level: beginner
+inputs:
+  - {type: offer, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "I Studied Every $100M Ecommerce Offer So You Don't Have To", by: "An email and retention agency founder (public video)", used: "The eight-form pop-up test, offer types worth testing, dollar off versus percent off by order value, and stacking the offer already on the site"}
+  - {title: "I Studied Every Ecommerce Offer So You Don't Have To", by: "A DTC offer consultant (public video)", used: "Opt-in baselines, the mystery mechanic and a model of extra email revenue"}

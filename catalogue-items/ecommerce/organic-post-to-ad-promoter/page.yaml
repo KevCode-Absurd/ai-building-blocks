@@ -1,0 +1,122 @@
+new_slug: organic-post-to-ad-promoter
+name: "Organic post to ad promoter"
+summary: "Give it your posts and views. Get outliers ranked and each marked run-as-is or reshoot the hook."
+job: grow-social
+thinking: low
+thinking_why: "It compares numbers to a baseline and sorts posts into two groups, which a small model does well."
+
+headline: "Organic post to ad promoter"
+subhead: Give it your recent posts with views, your normal views and who owns each account. It ranks the posts that beat your baseline and marks each one run as is, or keep the hook and reshoot the rest. You also get a promo back-half script.
+
+explain: |
+  Most stores post, see one video do far better than the rest, and do nothing with it. A post that people already chose to watch is a cheap thing to test as an ad, because you have proof that the opening works.
+
+  This skill works out your baseline, which is how many views a typical post gets, and finds the posts well above it. For each one it picks a route. If the post talks about your product, run it as an ad as it is, with its comments. If people liked the hook but the topic did not sell, keep the hook and make the second half a promo. It does not promise that a post with many views will sell. It tells you to test.
+
+when:
+  - One of your posts got several times your usual views and you wonder what to do with it.
+  - You post often but run ads with videos made from scratch.
+  - A team member or creator has a post that took off and you want to use it as an ad.
+
+you_give:
+  - A list of your posts with their views and dates
+  - Your normal views per post (a baseline), or enough posts to work it out
+  - Who owns each account that posted
+  - Your product and your current offer
+you_get:
+  - Posts ranked against your baseline, with the reason each one stands out
+  - "A decision for each: run as is, or reshoot the hook"
+  - A promo back-half script for each reshoot
+  - "A note on who must agree before a post runs as an ad"
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your posts with views, or attach your analytics export.
+  - Say who owns each account, and whether the owner has agreed to the post being used as an ad.
+  - Tell it your product and offer so it can write the promo half.
+  - Test the top picks as ads with a small budget, and bring back the results.
+
+how_it_works:
+  - title: Finds your baseline
+    text: It works out the usual views per post from your list, so an outlier means a post well above your own normal.
+  - title: Ranks the outliers
+    text: Posts are sorted by how far they beat the baseline, with the format, hook and topic of each.
+  - title: Checks the topic
+    text: It asks if the post touches your product at all. That decides the route.
+  - title: Picks the route
+    text: Posts that talk about the product run as is, with comments. Posts where only the hook worked get the hook kept and the back half rewritten as a promo.
+  - title: Checks sentiment
+    text: Views and likes are enough when you are early. It reads comments for tone only if the content is edgy.
+  - title: Checks permission and rules
+    text: Posts from a team member or creator need their consent, a paid label and rights to any sound or music.
+  - title: Writes the promo half
+    text: For each reshoot it writes a short back half that links the hook to your product, with only claims you can back up.
+
+output_shape: |
+  BASELINE  Typical views: <n> (from <n> posts)   Example outlier line: <n> views
+
+  OUTLIERS, RANKED
+  1. <post> | <views> | <x times baseline> | format: <> | hook: <> | topic: <>
+     Touches the product: <yes | no>
+     DECISION: <RUN AS IS | RESHOOT THE HOOK>
+     Why: <reason>   Owner and consent: <who, agreed or not>
+     Rules to clear: <paid label, music rights, claims>
+
+  PROMO BACK HALF (for each reshoot)
+  Hook (kept): <first line or shot>
+  Turn: <line that links the hook to the product>
+  Offer and call to action: <from your brand file>
+
+  TEST PLAN  Budget <$>  Compare to: <your usual ad>  Judge by: <sales, not views>
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: The baseline
+    how: Paste at least a few weeks of posts. A baseline from three posts is a guess and is labelled that way.
+  - what: Account owner
+    how: Say whose account each post is on. A post from someone else's account needs that person's consent before it runs as an ad.
+  - what: Your offer
+    how: Paste your current offer and claims. The promo half uses only what you can back up.
+  - what: Stage of the store
+    how: At zero to one, views and engagement are enough. Say if you are further on and want sentiment checked too.
+  - what: Platform
+    how: Name where the post lives and where the ad will run, so the paid-label and music rules match.
+
+judge:
+  - The baseline is shown with how many posts it came from.
+  - Each outlier shows how many times above the baseline it is.
+  - Each decision says whether the post touches the product.
+  - Each post from another person's account names who must agree.
+  - Every promo half uses only claims that come from your offer or brand file.
+  - It says that views do not guarantee sales and asks for a test.
+
+test:
+  - Give it ten posts where one has about five times the views of the rest. It should name that post as the top outlier.
+  - Make that post about something unrelated to your product. It should choose the reshoot route.
+  - Say the post is on a creator's account. It should ask for the creator's consent and a paid label.
+  - Run it twice. The ranking and decisions should match.
+
+improve:
+  - Add your usual line for what counts as an outlier once you have seen enough posts.
+  - Add your approved claims, so the promo half never goes beyond them.
+  - Add your ad account's rules for sound and music so the check is exact.
+  - Pair it with the outlier post finder for posts from other accounts.
+
+works_best_with:
+  tools:
+    - {name: "Meta Ads Manager", why: "It lets you load an existing Instagram or Facebook post as an ad and keep its comments."}
+    - {name: "TikTok Ads Manager", why: "It can run an existing post as a Spark Ad with the creator's authorisation code."}
+    - {name: "Any good chat AI", why: "It ranks the posts and writes the promo half from a pasted list."}
+  inputs:
+    - "Your analytics export for the last 60 days"
+    - "Your current offer and approved claims"
+    - "Comments on the top posts"
+
+terms:
+  - term: Baseline
+    meaning: The number of views a typical post of yours gets.
+  - term: Outlier
+    meaning: A post that gets far more views than your baseline.
+  - term: Whitelisting
+    meaning: Running a post as an ad from the poster's account, with their permission.

@@ -1,0 +1,41 @@
+# Run Google Ads: AI Blocks
+
+> 37 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [Add YouTube and Demand Gen and check they pay](https://useaiblocks.com/workflows/add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays): Give it your Google data and best video ads. Get a yes or wait, a cold campaign, an ad scorecard and remarketing.
+- [Bestseller Shopping campaign builder](https://useaiblocks.com/skills/bestseller-shopping-campaign-builder): Give it your bestsellers and brand name. Get Shopping settings, product group steps and brand negatives.
+- [Brand and non-brand splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter): Give it your campaigns and brand terms. Get the brand leaks, your true non-brand ROAS, a split plan and a score.
+- [Branded Search and Shopping builder](https://useaiblocks.com/skills/branded-campaigns-builder): Give it your brand name and offer. Get branded Search and Shopping campaigns with settings, keywords and ads.
+- [Break-even ROAS and CPA calculator](https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator): Give it price and margin. Get break-even ROAS and CPA for Meta or Google, and a score.
+- [Build Google remarketing lists and campaigns, then read the results](https://useaiblocks.com/workflows/build-google-remarketing-lists-and-campaigns-then-read-the-results): Give it your traffic, customer list and offer. Get lists to build, remarketing campaigns and a read of results.
+- [Build Shopping by margin, tune it weekly and fix titles](https://useaiblocks.com/workflows/build-shopping-by-margin-tune-it-weekly-and-fix-titles): Give it your products with margins. Get Shopping tiers with targets, weekly product calls and search-led titles.
+- [Demand Gen cold traffic builder](https://useaiblocks.com/skills/demand-gen-cold-campaign-builder): Give it your winning videos, page and budget. Get Demand Gen settings, ad groups and a creative brief.
+- [Feed-only Performance Max builder](https://useaiblocks.com/skills/feed-only-performance-max-builder): Give it your Shopping setup. Get feed-only Performance Max settings that retarget shoppers without wasted spend.
+- [Find your real Google ROAS and decide on spend](https://useaiblocks.com/workflows/find-your-honest-google-roas-and-decide-whether-to-raise-spend): Give it your margins and 30 days of Google data. Get break-even targets, true non-brand ROAS and a go or wait call.
+- [Google Ads audience builder](https://useaiblocks.com/skills/google-ads-audience-builder): Give it your site traffic and customer list. Get remarketing lists, exclusions and custom segments to build.
+- [Google Ads campaign structure planner](https://useaiblocks.com/skills/google-ads-campaign-structure-planner): Give it your catalogue and markets. Get the fewest campaigns, each with a reason, and a rollout.
+- [Google Ads dip investigator](https://useaiblocks.com/skills/google-ads-dip-investigator): Give it your results and recent changes. Get the likely cause and a fix-or-wait call.
+- [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner): Give it your store, budget and sales so far. Get the launch order, campaign settings and budget split.
+- [Google Ads purchase tracking checker](https://useaiblocks.com/skills/google-ads-purchase-tracking-checker): Paste your conversion actions. Get a pass or fail on double counting, a score out of 100 and the fix for each.
+- [Google Ads scale gate checker](https://useaiblocks.com/skills/google-ads-scale-gate-checker): Give it your account facts. Get pass or fail on five gates and a score out of 100.
+- [Google Ads store account auditor](https://useaiblocks.com/skills/google-ads-store-account-auditor): Give it your exports and settings. Get brand leakage, a score out of 100 and a 90-day fix order.
+- [Google Ads weekly account keeper](https://useaiblocks.com/agents/google-ads-weekly-account-keeper): Give it your weekly Google Ads exports. Get waste cut, a scale-or-hold call and a change list to approve.
+- [Google bid strategy chooser](https://useaiblocks.com/skills/google-bid-strategy-chooser): Give it campaign results and targets. Get the right bid strategy, a target, a ROAS spiral check and a score.
+- [Google ratings and store badge planner](https://useaiblocks.com/skills/google-ratings-and-store-badge-planner): Tell it your reviews and policies. Get a score and a plan for star ratings and the top store badge.
+- [Google remarketing campaign builder](https://useaiblocks.com/skills/google-remarketing-campaign-builder): Give it your audiences and offer. Get remarketing setups with budgets, caps and five doubt-led ad concepts.
+- [Launch Google Ads with trusted tracking and a clean feed](https://useaiblocks.com/workflows/launch-google-ads-with-trusted-tracking-and-a-clean-feed): Give it your Shopify setup and Merchant Center issues. Get tracking proof, ranked feed fixes and a launch order.
+- [Launch Performance Max, keep it clean, know when to scale](https://useaiblocks.com/workflows/launch-performance-max-keep-it-clean-and-know-when-to-scale): Give it your catalogue and break-even numbers. Get a Performance Max build, a clean-up list and a scaling call.
+- [Margin-tier Shopping builder](https://useaiblocks.com/skills/margin-tier-shopping-builder): Give it products with margin and ROAS history. Get a Shopping structure and a target for each tier.
+- [Merchant Center feed health checker](https://useaiblocks.com/skills/merchant-center-feed-health-checker): Give it your Merchant Center diagnostics. Get problems ranked by lost sales and a score out of 100.
+- [Merchant Center suspension checker](https://useaiblocks.com/skills/merchant-center-suspension-checker): Walk through your Merchant Center and store. Get a pass or fail list by suspension risk and a score out of 100.
+- [Non-brand Search campaign builder](https://useaiblocks.com/skills/non-brand-search-campaign-builder): Give it your products and search terms. Get themed ad groups, keywords, ad copy and extensions.
+- [Performance Max launch planner](https://useaiblocks.com/skills/performance-max-launch-planner): Give it your catalogue, budget and break-even numbers. Get a fit verdict and a Performance Max build.
+- [Performance Max routine keeper](https://useaiblocks.com/skills/performance-max-routine-keeper): Give it your Performance Max exports. Get this week's checks, exclusions, a budget move and a waste score.
+- [Problem-aware Search campaign builder](https://useaiblocks.com/skills/problem-aware-search-campaign-builder): Give it your product and the problem it solves. Get a problem-led Search campaign with matched ads.
+- [Search term sorter](https://useaiblocks.com/skills/search-term-sorter): Paste your search terms reports. Get winners to promote, negatives to add, where each goes and a waste score.
+- [Shopify Google tracking builder](https://useaiblocks.com/skills/shopify-google-conversion-tracking-builder): Give it your Shopify and Tag Manager access. Get a build checklist for purchase tracking and enhanced conversions.
+- [Shopping campaign tuner](https://useaiblocks.com/skills/shopping-campaign-tuner): Paste a weekly Shopping export. Get which products to cut, feed, bid up or fund, with a waste score.
+- [Shopping feed title writer](https://useaiblocks.com/skills/shopping-feed-title-writer): Give it your products and converting search terms. Get search-led titles, descriptions and image fixes.
+- [Turn converting searches into Search campaigns and matching pages](https://useaiblocks.com/workflows/turn-converting-searches-into-search-campaigns-and-matching-pages): Give it your Google search terms and products. Get winners and negatives sorted, new Search campaigns with ads, and page plans.
+- [YouTube ad results reader](https://useaiblocks.com/skills/youtube-ad-results-reader): Give it your YouTube ad results. Get a scale, keep or pause call per ad, with a score out of 100.
+- [YouTube readiness checker](https://useaiblocks.com/skills/youtube-readiness-checker): Tell it your AOV, ad stack and Meta winners. Get a yes or wait on YouTube, with a score out of 100.

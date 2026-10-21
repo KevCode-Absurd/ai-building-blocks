@@ -1,0 +1,48 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Our words.
+id: cut-your-product-cost-and-turn-supplier-terms-into-cash
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: cut-your-product-cost-and-turn-supplier-terms-into-cash
+  name: "Cut your product cost and turn supplier terms into cash"
+  summary: "Give it your product and quote. Get a cost sheet by part, terms to ask for, a negotiation plan and cash check."
+  when: "you buy stock from a factory, your cost per unit is too high, or stock eats your cash before it sells."
+  job: plan-supply-chain
+  level: intermediate
+steps:
+  - name: "Product bill of materials builder"
+    skill: product-bill-of-materials-builder
+    job: ops
+    from: "skill: product-bill-of-materials-builder"
+    method: ["Split the unit into the rows the factory sees", "Give each row cost, maker, origin and lead time", "Add rows for freight, insurance and financing", "Ask a price-break question for every row", "Check the total against the quote"]
+    inputs: [product_data, product_photos!]
+    outputs: [spreadsheet]
+    note: "Starts the flow. Shows where each dollar of the quote goes."
+  - name: "Supplier terms and float planner"
+    skill: supplier-payment-terms-planner
+    job: ops
+    from: "skill: supplier-payment-terms-planner"
+    method: ["Work out your float: payment terms minus days to your warehouse", "Build a ladder of terms from easy to hard", "Plan to share the factory's credit cost", "Show cash by month with and without the new terms"]
+    inputs: [spreadsheet, question!]
+    outputs: [plan]
+    note: "Reads the cost sheet and your order cycle to find terms worth asking for."
+  - name: "Factory price-break negotiator"
+    skill: factory-price-break-negotiator
+    job: ops
+    from: "skill: factory-price-break-negotiator"
+    method: ["Check how much bargaining power your volume gives you", "Open with a partnership, not a cut", "Ask for price breaks line by line", "Decide what you can give back", "Set a fallback factory"]
+    inputs: [spreadsheet, plan, document!]
+    outputs: [plan]
+    note: "Uses the cost sheet and the terms ladder to write the asks, the give-backs and the fallback."
+  - pause: "Run the talks with the factory. Write down the new prices, price breaks and payment terms they agree to."
+  - name: "Growth cash limit checker"
+    skill: growth-cash-limit-checker
+    job: analysis
+    from: "skill: growth-cash-limit-checker"
+    method: ["Separate profit from cash", "Work out the cash conversion cycle", "Test for stockouts and for growth you cannot fund", "Grade stock fast to slow", "Say whether cash, ads, both or neither limit growth"]
+    inputs: [spreadsheet, plan, performance_sheet!]
+    outputs: [audit_report]
+    note: "Tests whether the new prices and terms free enough cash to grow, using the cost sheet and the negotiation plan."

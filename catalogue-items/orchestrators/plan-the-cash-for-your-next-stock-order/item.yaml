@@ -1,0 +1,26 @@
+slug: plan-the-cash-for-your-next-stock-order
+name: "Plan the cash for your next stock order"
+summary: "Give it your supplier invoices and lead times. Get true unit costs, the cash you need, better terms and a verdict."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: document, required: false}
+  - {type: product_data, required: false}
+  - {type: question, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: [landed-cost-allocator, inventory-cash-planner, supplier-payment-terms-planner, growth-cash-limit-checker, cash-lever-ranker]
+steps:
+  - {uses: landed-cost-allocator, note: "Starts with what each unit really costs once it is on your shelf."}
+  - {uses: inventory-cash-planner, note: "Uses the landed costs to time each order and show the cash it needs."}
+  - {uses: supplier-payment-terms-planner, note: "Takes the cash gap from the stock plan and shows which supplier terms would close it."}
+  - {uses: growth-cash-limit-checker, note: "Reads the stock plan and terms to tell you if cash or ads limit your growth."}
+  - {uses: cash-lever-ranker, note: "If cash is still the limit, ranks the levers by cash freed, starting from the same cost sheet."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-the-cash-for-your-next-stock-order/skeleton.yaml

@@ -1,0 +1,78 @@
+new_slug: turn-a-recorded-call-into-notes-a-follow-up-and-coaching
+name: Turn a recorded call into notes, a follow-up and coaching
+summary: Give it a call recording. Get notes, a follow-up draft and coaching on how the call went.
+job: work-with-audio
+thinking: medium
+thinking_why: Each step reads one transcript and writes from it. A mid-level model is enough.
+headline: Finish a call with notes, a follow-up and coaching ready
+subhead: Give it the recording. It writes the transcript and notes with decisions and actions, drafts the follow-up email from what was agreed, and after you send it, coaches you on how the call went with quotes.
+explain: |
+  After a call the work piles up. Someone has to write notes, someone has to send the follow-up, and the lessons from how you ran it fade by the next call. Most people do the first badly and skip the last.
+
+  The first step transcribes the recording, labels each speaker and writes a short summary with decisions and actions. The second step reads the transcript and drafts the follow-up email and a team summary, and lists any updates for you to approve. Then you pause, check the draft and send it yourself. The last step reads the same transcript for who spoke, how long, and habits like interrupting, and gives coaching backed by quotes.
+when:
+  - You finish customer, sales or team calls and the follow-up always waits.
+  - You want honest feedback on how you run calls.
+  - You need notes that name an owner and a date for each action.
+you_give:
+  - The call recording, as an audio or video file
+  - Who was on the call and which voice is yours
+  - What the call was for
+  - Your usual follow-up style (optional)
+you_get:
+  - A transcript with each speaker labelled
+  - Short notes with decisions and actions, each with an owner and a date
+  - A follow-up email draft and a team summary, with updates for you to approve
+  - Coaching on speaking time, habits that hurt and what to change, with quotes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Point it at the recording and say which speaker is you.
+  - Stop after step 2. Check the draft, fix any wrong detail and send it yourself.
+  - Run step 3 for the coaching.
+how_it_works:
+  - title: Write the notes
+    text: Transcribes the recording, labels each speaker, writes a short summary and lists decisions and actions.
+  - title: Draft the follow-up
+    text: Reads the transcript for what was agreed. Drafts a follow-up email and a team summary. Lists any updates for you to approve before anything is sent.
+  - title: Pause and send
+    text: You check the draft, fix any wrong detail and send it yourself. Nothing is sent for you.
+  - title: Coach the call
+    text: Counts who spoke and for how long. Finds habits like interrupting or long answers. Backs each point with a quote and a change to try.
+output_shape: |-
+  STEP 1: NOTES
+    Transcript with speakers | summary | decisions | actions with owner and date
+
+  STEP 2: FOLLOW-UP
+    Email draft | team summary | updates to approve
+
+  PAUSE: check the draft and send it yourself
+
+  STEP 3: COACHING
+    Speaking share | habits with quotes | what to change next call
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Who you are on the call
+    how: Say which speaker is you. Coaching is about your part.
+  - what: Type of call
+    how: Say sales, support, interview or team. Notes and coaching change with it.
+  - what: Follow-up tone
+    how: Paste one past email you liked. The draft matches it.
+  - what: Several calls
+    how: Run the coaching on a few transcripts for patterns. One call gives one view.
+judge:
+  - Every action has an owner and a date, or is marked missing.
+  - The follow-up states only what was agreed on the call.
+  - Coaching points each have a quote from the transcript.
+  - Nothing is sent or logged without your clear yes.
+  - Speaker labels are right where you can check them.
+test:
+  - Listen to two minutes of the recording and compare it with the transcript.
+  - Check each action against what you remember agreeing.
+  - Check one coaching quote in the transcript. It should be there word for word.
+improve:
+  - Save your best follow-ups as examples for next time.
+  - Pick one coaching point per week and watch it on the next call.
+  - Ask for the same coaching on three calls and compare.

@@ -1,0 +1,132 @@
+new_slug: store-security-checkup
+name: "Store security checkup"
+summary: "Describe your admin team and apps. Get a ranked security fix list, a score out of 100 and a quarterly routine."
+job: protect-your-store
+thinking: medium
+thinking_why: "It weighs many small facts about people and apps, then ranks the fixes. A mid-size model does this well."
+
+headline: "Store security checkup"
+subhead: Tell it who has admin access, which apps are installed and how you back up. It checks your store against 8 security basics, scores it out of 100 and ranks the fixes into today, this month and this quarter.
+
+explain: |
+  Most store break-ins start with a weak login, a leaver who still has access or an app nobody remembers installing. On a hosted store such as Shopify, the platform secures the servers, checkout and card data. You secure the logins, the apps, your staff and how you handle customer data. Many owners never write that list down.
+
+  This skill splits the job that way first. Then it checks 8 basics: two-step sign-in, who has access, apps, card data handling, backups, phishing habits, password habits and code changes. Each check earns full, half or no points. Checks that do not apply to your store are left out, and the score is worked out on the rest. You get the fixes in order, plus a short routine to repeat every quarter.
+
+when:
+  - You run a store with up to 20 people in admin and have never reviewed who can do what.
+  - Someone just left the team or an agency just finished a project, and you want to be sure their access is gone.
+  - You installed a lot of apps over the years and want to know which ones to remove.
+
+you_give:
+  - Your platform (Shopify or another hosted platform, or a self-hosted store)
+  - Each person with admin access, their role and whether they are staff or a contractor
+  - Your installed apps with the permissions each one has (copy them from the apps page)
+  - Whether a developer works on your theme or custom code, and whether it is in version control (optional)
+  - Where backups of your products, customers and theme live (optional)
+you_get:
+  - A score out of 100 with the points listed for each of the 8 checks
+  - Fixes ranked into do today, this month and this quarter
+  - A list of what your platform already covers, so you do not buy what you do not need
+  - A one-page routine to repeat every quarter
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your platform, your admin list with roles, and your app list with permissions.
+  - Say who works on your code and where backups live, if you know.
+  - Do the "today" fixes straight away, then book the "this month" and "this quarter" ones.
+  - Run it again in three months and compare the score.
+
+how_it_works:
+  - title: Splits the job
+    text: Lists what your platform secures and what you secure. On a self-hosted store it adds certificates, patching and card-standard work.
+  - title: Checks sign-in
+    text: Looks for two-step sign-in on every admin account, not only the ones that touch payments, and passkeys where offered.
+  - title: Checks access
+    text: Lists each person's role, trims it to what the job needs, sets an end date for contractors and removes leavers the same day.
+  - title: Audits apps
+    text: Lists each app and the data it can read, flags unused ones, and applies the rules for new apps.
+  - title: Checks data habits
+    text: Confirms card numbers never sit in order notes, emails or sheets, and that backups exist in three places and have been restored once.
+  - title: Checks people and code
+    text: Looks at phishing habits, password habits and, if you have a developer, review of code changes.
+  - title: Scores and ranks
+    text: Adds up the points on the checks that apply and orders the fixes by how fast you can do them.
+
+output_shape: |
+  PLATFORM SPLIT
+  Your platform covers: <list>
+  You cover: <list>
+
+  CHECKS (points earned / points possible)
+  C1 Two-step sign-in    <n>/20  <what was found>
+  C2 Access and leavers  <n>/20  <what was found>
+  C3 Apps                <n>/15  <what was found>
+  C4 Card data           <n>/10  <what was found>
+  C5 Backups             <n>/10  <what was found>
+  C6 Phishing habits     <n>/10  <what was found>
+  C7 Password habits     <n>/10  <what was found>
+  C8 Code changes        <n>/5   <what was found, or not applicable>
+
+  SCORE  <n>/100 (<points earned> of <points possible on the checks that apply>, scaled to 100)
+
+  DO TODAY
+  1. <fix> | check <C#> | time <minutes>
+  DO THIS MONTH
+  1. <fix> | check <C#>
+  DO THIS QUARTER
+  1. <fix> | check <C#>
+
+  QUARTERLY ROUTINE
+  <5 to 8 lines>
+
+  CHECKS NOT RUN
+  <check, and what is needed>
+  MISSING: <admin list | app list | platform | backups>
+
+tweaks:
+  - what: Your platform
+    how: Say "Shopify", "other hosted" or "self-hosted". A hosted store skips firewall and server advice. A self-hosted store gets certificates, patching and card-standard work added.
+  - what: The permissions on each app
+    how: Paste the permissions text from your apps page, not only the app names. The app check rests on what each app can read.
+  - what: Your team size
+    how: Give every person with admin access, including agencies and freelancers. Old contractor accounts are the most common gap.
+  - what: Whether you have a developer
+    how: If nobody edits your theme code, the code-changes check is left out and the score is worked out on the other seven.
+
+judge:
+  - The first section says what the platform covers and what you cover, in that order.
+  - Every fix names the check it comes from and who does it.
+  - The score shows the points for each check and the sum, so you can recount it.
+  - Checks that do not fit your store are marked "not applicable", not scored zero.
+  - Nothing on the list asks you to buy a firewall or malware scanner for a hosted store.
+
+test:
+  - Give it a made-up team with one ex-contractor still listed as an admin. It should put that at the top of "do today".
+  - Run it twice on the same input. The score should match within a few points. A big swing means your input was vague.
+  - Open your own apps page and check one flagged app yourself. The permission it names should be there.
+  - Do the "today" fixes, then run it again. The score should rise by the points those fixes were worth.
+
+improve:
+  - Add the names of your real staff roles to the skill file, so it can say which role each person should have.
+  - Add your own rule for contractors, such as "access ends on the project end date", and have it check that rule.
+  - If you keep a list of approved apps, paste it in and have the skill flag anything not on it.
+  - Save the score and date to your brand file each quarter, so you can see the trend.
+  - Pair it with the Sign-in security checker for a deeper look at logins, and the Staff phishing rules briefer for the team sheet.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can run the checkup. Paste your admin list and app permissions as text."}
+    - {name: "A password manager such as Bitwarden or 1Password", why: "It covers the password check, and most teams can share one vault with roles."}
+  inputs:
+    - "A screenshot or copy of your Shopify staff and apps pages, so the list matches what is really set"
+    - "The date each contractor's work ends"
+    - "Your last backup date and where it is stored"
+
+terms:
+  - term: Two-step sign-in
+    meaning: A second proof after your password, such as a code from an app or a passkey, so a stolen password alone is not enough.
+  - term: Least privilege
+    meaning: Giving each person only the access their job needs, and no more.
+  - term: Passkey
+    meaning: A sign-in method that uses your phone or device instead of a typed password. It only works on your real site.

@@ -1,0 +1,69 @@
+# Workflow skeleton: chain of existing library skills (docs/INTAKE.md).
+id: lib-cut-caption-and-check-a-video-ad
+source:
+  title: AI Blocks library
+  by: AI Blocks
+  kind: other
+  rights: ours
+workflow:
+  slug: cut-caption-and-check-a-video-ad-before-launch
+  name: Cut, caption and check a video ad before launch
+  summary: Give it your clips and script. Get a timed cut list, brand-font captions, and a launch check with fixes.
+  when: your clips are made and the ad is not yet cut, captioned or checked.
+  job: make-video-ads
+  level: intermediate
+steps:
+  - name: Video ad edit planner
+    skill: video-ad-edit-planner
+    job: video
+    from: "skill: video-ad-edit-planner"
+    method:
+      - Sort the footage by job
+      - Open on a clean first frame
+      - Time every shot to the real footage
+      - Plan captions and sound
+      - Set the exports
+    inputs:
+      - footage
+      - script
+      - offer!
+    outputs:
+      - edit_plan
+    note: "Starts the chain: the cut list for your clips."
+  - pause: Cut the video to the cut list in your editor and export it.
+  - name: Video caption maker in your brand font
+    skill: branded-video-captions
+    job: video
+    from: "skill: branded-video-captions"
+    method:
+      - Lock the words to the script
+      - Split them into caption groups
+      - Time each group to the speech
+      - Set the look with your real font
+      - Place captions clear of the app buttons
+      - Export clean, captioned and subtitle files
+    inputs:
+      - video_ads
+      - script
+      - brand_brain!
+    outputs:
+      - video_ads
+    note: Reads the cut you exported and the script, and adds timed captions.
+  - name: Pre-launch ad checker
+    skill: pre-launch-ad-checker
+    job: ads
+    task: check-ads
+    from: "skill: pre-launch-ad-checker"
+    method:
+      - Check the facts and claims
+      - Check the format and safe zones
+      - List stop-ship mistakes first
+      - Give each fix and a verdict
+      - Score out of 100
+    inputs:
+      - video_ads
+      - script!
+      - brand_brain!
+    outputs:
+      - audit_report
+    note: Checks the captioned video from the step before and gives a ship or fix verdict.

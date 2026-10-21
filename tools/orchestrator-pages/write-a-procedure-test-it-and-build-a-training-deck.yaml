@@ -1,0 +1,83 @@
+new_slug: write-a-procedure-test-it-and-build-a-training-deck
+name: Write a procedure, test it and build a training deck
+summary: Describe how a job gets done. Get a written procedure, a gap check and a deck to train new people.
+job: document-work
+thinking: medium
+thinking_why: The steps are clear and short. A mid-size model works, but use a stronger one for a long process.
+headline: Turn a job in someone's head into a procedure anyone can follow
+subhead: Describe how a job gets done. It writes the procedure, checks it for the gaps a new person would hit, then after you test it on someone new, proofreads it and builds a training deck.
+explain: |
+  Many jobs live in one person's head. When that person is away, work stalls. A written procedure fixes that only if a stranger can follow it. Most procedures skip owners, skip what to do when something goes wrong and use three names for the same thing.
+
+  The workflow writes the procedure with owners, steps, edge cases and measures. It checks it for missing owners, vague steps and no rollback. Then comes a pause: fix the gaps and ask someone who has never done the job to follow it while you watch. Bring the updated version back. It proofreads for slips and mixed-up terms, then builds a training deck from it. If the job changes weekly, a deck will go stale. Stop after the pause.
+when:
+  - Only one person knows how a job is done and you need a back-up.
+  - You are about to hire or hand work to someone new.
+  - Mistakes keep happening because each person does the job a different way.
+you_give:
+  - A description of the job, in your own words or from rough notes
+  - Who does each step today (optional)
+  - What a new starter should be able to do afterwards (optional)
+you_get:
+  - A written procedure with purpose, owners, steps and edge cases
+  - A list of gaps ranked by what to fix first
+  - A proofread list of slips and mixed-up terms
+  - A training deck with speaker notes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the job step by step, or paste notes. Answer the questions it asks about owners and edge cases.
+  - After the gap check, ask someone new to follow the procedure while you watch. Write down where they stall.
+  - Bring the updated procedure back for the proofread and the deck.
+how_it_works:
+  - title: Write the procedure
+    text: Asks who does each step and what starts it, then writes the purpose, scope, owners, steps in order, edge cases and how to measure that it worked.
+  - title: Check it for gaps
+    text: Reads the procedure and flags missing owners, steps with no way to tell if they worked, no rollback and cases the happy path skips. Fixes come in order of importance.
+  - title: Test it on someone new
+    text: Fix the gaps, then ask someone who has never done the job to follow the procedure while you watch. Note every place they stall and update the text.
+  - title: Proofread the fixed procedure
+    text: Checks typos, grammar and punctuation, and lists terms used for the same thing so you can pick one. It flags facts that look wrong and does not rewrite.
+  - title: Build the training deck
+    text: Turns the procedure into slides with one stage per slide, speaker notes and the edge cases on their own slides.
+output_shape: |-
+  STEP 1: PROCEDURE
+    Purpose | scope | owners | steps in order | edge cases | measures
+
+  STEP 2: GAP CHECK
+    Missing owners | steps with no check | no rollback | cases skipped | fixes ranked
+
+  PAUSE
+    Fix the gaps. Ask someone new to follow it. Note where they stall.
+
+  STEP 3: PROOFREAD
+    Typos and grammar | term clashes | facts to check
+
+  STEP 4: TRAINING DECK
+    Slides by stage | speaker notes | edge case slides
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Detail level
+    how: Say if the reader is new to the field or only new to your team. A new starter needs more explanation per step.
+  - what: Slide format
+    how: Pick Marp, reveal.js or PowerPoint for the deck, depending on where you will present it.
+  - what: Review date
+    how: Set how often the procedure should be rechecked, such as every quarter, so it does not go stale.
+  - what: Risky steps
+    how: Name the steps where a mistake costs money or trust. The gap check looks hardest there.
+judge:
+  - Every step has one owner and a way to tell it worked.
+  - A person new to the job could do it from the text alone.
+  - The edge cases include what to do when a step fails and how to undo it.
+  - One name is used for each thing across the procedure and the deck.
+  - The deck follows the procedure and adds nothing the procedure does not say.
+test:
+  - Give the procedure to someone who has never done the job. Count the questions they ask.
+  - Ask the new person to explain a step back to you. It should match the text.
+  - Look for steps in the deck that are missing from the procedure.
+improve:
+  - Add each question from the test to the procedure as a note.
+  - Set a date to recheck it, and update the deck after each change.
+  - Do not build a deck for a job that changes every week. Keep the procedure short instead.

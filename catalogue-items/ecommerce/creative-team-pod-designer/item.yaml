@@ -1,0 +1,20 @@
+slug: creative-team-pod-designer
+name: "Creative team pod designer"
+summary: "Give it your team and review process. Get a two-person pod design, review rules and a fast-trend budget."
+category: ecommerce
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Every Level of Marketing", by: "Orin, creator and marketing consultant", used: "Two-person pods, the cost of crowded creative reviews, letting the doer decide when it can be measured, a pre-approved trend budget and a two-tier review"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford", used: "Merging media buying with creative strategy in one person who sees the profit and loss"}
+  - {title: "This Is How a T-Shirt Brand Outsmarted the Entire Industry", by: "Ryan Bartlett, co-founder of True Classic", used: "A company-wide ideas channel and an internal quality bar before launch"}

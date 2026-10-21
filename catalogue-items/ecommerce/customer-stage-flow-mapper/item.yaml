@@ -1,0 +1,26 @@
+slug: customer-stage-flow-mapper
+name: "Customer stage flow mapper"
+summary: "Describe your flows. Get each split into new, returning and loyal paths with their own goals."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: email_flow, required: true}
+  - {type: offer, required: false}
+  - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Complete E-Commerce Retention Masterclass", by: "Nathan (paid media and finance) and Angus Cowan (email and SMS retention agency)", used: "The split into new, returning and loyal customers at the top of every flow, the tone and incentive rule for each, and the lifecycle cohorts with and without a subscription"}
+  - {title: "Engineering Customer Delight Across the E-Commerce Journey", by: "A research write-up with brand case studies (author not given)", used: "The post-purchase focus for first-time buyers, repeat buyers and VIPs"}
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Win-back timing from the median and average days between purchases"}
+  - {title: "How to create an SMS marketing strategy for $10M Shopify brands", by: "An agency founder who runs SMS for eight and nine figure brands", used: "The twice-the-gap rule for SMS win-back timing"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "The browse flow filters, the four-email structure and the view that browse flows are not split by new and returning unless margins are tight"}
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "Sending the discount email in cart flows only to people who have never bought"}

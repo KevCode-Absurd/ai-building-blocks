@@ -1,9 +1,11 @@
 # Study competitor ads: AI Blocks
 
-> 32 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 39 free AI skills and workflows for this job. Each page links its SKILL.md.
 
+- [Ad library teardown counter](https://useaiblocks.com/skills/ad-library-teardown-counter): Paste an Ad Library export. Get ad counts by format, age, page and awareness stage, plus content gaps.
 - [Ad library teardown writer](https://useaiblocks.com/skills/ad-library-teardown-writer): Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
 - [Amazon market researcher](https://useaiblocks.com/skills/amazon-market-researcher): Give it a product or category. Get Amazon sales rank, reviews and seller data in a report. Collects data from websites.
+- [Brand playbook fit checker](https://useaiblocks.com/skills/brand-playbook-fit-checker): Name a big brand and its tactic. Get a fit score out of 100, a verdict per tactic and a small test.
 - [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder): Paste competitor ads from the Ad Library. Get the gaps, briefs and a score out of 100.
 - [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): Paste ads from Meta's Ad Library. Get them sorted into 9 types, with what to study in each.
 - [Competitor ad teardown writer](https://useaiblocks.com/skills/competitor-ad-teardown-writer): Name your rivals. Get a report on their public ads and landing pages, with proof apart from guesses. Collects data from websites.
@@ -22,6 +24,8 @@
 - [Creator profile teardown writer](https://useaiblocks.com/skills/creator-profile-teardown-writer): Give it a social account. Get its positioning, content themes, top posts and what to test. Collects data from websites.
 - [Disruption risk checker](https://useaiblocks.com/skills/disruption-risk-checker): List a cheaper rival and your best customers. Get a check of whether it is a nuisance or a real threat.
 - [Facebook ad library collector](https://useaiblocks.com/skills/facebook-ad-library-collector): Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. Collects data from websites.
+- [Map your rivals and write a message they cannot answer](https://useaiblocks.com/workflows/map-your-rivals-and-write-a-message-they-cannot-answer): Give it your product and rivals. Get a position map, the words nobody owns and a message you can defend.
+- [Monthly competitor watcher](https://useaiblocks.com/agents/monthly-competitor-watcher): Give it this month's rival ads and pages. Get what changed since last month and the one or two moves worth answering.
 - [Owned word mapper](https://useaiblocks.com/skills/owned-word-mapper): Paste your rivals and what buyers say. Get the word each rival owns, words nobody can own and the open ones.
 - [Patent prior-art searcher](https://useaiblocks.com/skills/patent-prior-art-searcher): Describe your invention or rival. Get patents found for novelty, freedom to operate or a landscape view.
 - [Rival keyword gap finder](https://useaiblocks.com/skills/rival-keyword-gap-finder): Connect Ahrefs and name rivals. Get keywords they rank for that you do not, ranked by opportunity into quick wins.
@@ -33,4 +37,7 @@
 - [Store product data collector](https://useaiblocks.com/skills/store-product-data-collector): Give it a product search or store link. Get prices, reviews and seller details in a table. Collects data from websites.
 - [Turn competitor ads into a script of your own](https://useaiblocks.com/workflows/competitor-ad-to-script): Give it competitor ads and your reviews. You get an original script that borrows one idea, checked against ad rules.
 - [Turn competitor gaps into image ad copy that passes Meta](https://useaiblocks.com/workflows/competitor-gap-image-ads): Give it competitor ads. Get their gaps, image ad copy for each gap, and a Meta rules check.
+- [Turn rival ads into test briefs and a campaign layout](https://useaiblocks.com/workflows/turn-rival-ads-into-ranked-test-briefs): Give it a rival's Ad Library ads. Get the gaps they leave, test briefs and a campaign layout.
 - [Video script writer from a competitor ad idea](https://useaiblocks.com/skills/competitor-idea-video-script): Paste an admired ad and facts. Get a script on one idea, checked so nothing is copied.
+- [Winning ad DNA mapper](https://useaiblocks.com/skills/winning-ad-dna-mapper): Paste winning ads, yours or rivals'. Get each split into message and look, plus one-part swaps to test.
+- [Write a rival alternative page that wins on a gap](https://useaiblocks.com/workflows/write-a-rival-alternative-page-that-wins-on-a-real-gap): Give it your rivals. Get their message gaps, a fair alternative page and a review of it.

@@ -1,0 +1,22 @@
+slug: find-the-store-change-most-worth-testing
+name: "Find the store change most worth testing"
+summary: "Give it your store numbers and what shoppers do on key pages. Get a profit baseline and a ranked list of tests."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: store_capture, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+uses: [store-profit-per-visitor-calculator, heatmap-and-recording-reader, test-idea-ranker]
+steps:
+  - {uses: store-profit-per-visitor-calculator, note: "Sets the baseline you will judge every change by."}
+  - {uses: heatmap-and-recording-reader, note: "Turns what you watched into a list of friction, each with a test idea."}
+  - {uses: test-idea-ranker, note: "Ranks the friction findings by evidence and profit, using the baseline to size the gain."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/find-the-store-change-most-worth-testing/skeleton.yaml

@@ -1,0 +1,21 @@
+slug: ai-store-build-planner
+name: "AI store build planner"
+summary: "Give it your products and sections you like. Get a Claude Code kickoff prompt and safe build plan."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: reference_set, required: false}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to Build a Full Shopify Store using AI (Claude Code)", by: "Video author (name not given)", used: "Real products first, the inspiration folder, the kickoff prompt, one section at a time, local preview, polish pass, pushing as an unpublished theme"}
+  - {title: "Claude Just Changed Shopify Forever", by: "Video author (name not given)", used: "Duplicating the live theme and working only on the copy, usage limits, fewer instructions per prompt, installing the Shopify CLI with npm"}

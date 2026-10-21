@@ -20,7 +20,7 @@ const CAT = path.join(ROOT, "catalogue-items");
 const INTAKE = path.join(ROOT, "intake");
 const PAGES = path.join(ROOT, "tools/orchestrator-pages");
 
-const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai", "think-with-minds", "test-an-idea", "plan-strategy", "build-product", "build-software", "sell-and-negotiate", "lead-people", "speak-and-persuade", "write-and-tell-stories", "design-work", "think-and-decide", "money-and-investing"];
+const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai", "think-with-minds", "test-an-idea", "plan-strategy", "build-product", "build-software", "sell-and-negotiate", "lead-people", "speak-and-persuade", "write-and-tell-stories", "design-work", "think-and-decide", "money-and-investing", "work-with-files", "build-websites", "test-and-fix-code", "ship-and-host", "secure-code", "connect-tools", "make-skills", "make-images", "organise-work", "work-with-audio", "run-your-store", "get-found-in-search", "write-emails", "set-prices", "help-customers", "hire-people", "check-contracts", "track-numbers", "document-work", "research-topics", "teach-and-train", "plan-supply-chain", "find-products", "set-up-store", "speed-up-store", "test-store-changes", "run-google-ads", "launch-and-scale-ads", "keep-customers", "sell-on-amazon", "protect-your-store"];
 const KINDS = ["book", "blog", "video", "talk", "podcast", "letter", "course", "paper", "other"];
 const RIGHTS = ["public-domain", "open-licence", "ideas-only", "ours"];
 
@@ -31,7 +31,7 @@ const roster = new Set(YAML.parse(fs.readFileSync(path.join(CAT, "minds/_roster.
 // Every skill in the library, read from its own item.yaml so new ones count before the site index is rebuilt.
 function skills() {
   const out = {};
-  for (const cat of ["general", "ecommerce"]) {
+  for (const cat of ["general", "ecommerce", "imported"]) {
     const dir = path.join(CAT, cat);
     if (!fs.existsSync(dir)) continue;
     for (const s of fs.readdirSync(dir)) {

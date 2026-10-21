@@ -1,0 +1,20 @@
+slug: test-your-ideas-riskiest-risk-and-decide-what-next
+name: "Test your idea's riskiest risk and decide what next"
+summary: "Give it your product idea. Get four risks scored, the smallest test for the worst one and a keep or change call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: [product-idea-risk-checker, smallest-test-picker, pivot-or-persevere-decider]
+steps:
+  - {uses: product-idea-risk-checker, note: "Starts from your idea and names the risk with the weakest evidence"}
+  - {uses: smallest-test-picker, note: "Takes the test for the riskiest risk and shrinks it to something you can run this week"}
+  - {uses: pivot-or-persevere-decider, note: "Reads the risk scores and the test plan, then judges your real results against them"}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/test-your-ideas-riskiest-risk-and-decide-what-next/skeleton.yaml

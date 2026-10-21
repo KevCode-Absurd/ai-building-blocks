@@ -1,0 +1,79 @@
+new_slug: turn-a-messy-spreadsheet-into-a-clean-slide-deck
+name: Turn a messy spreadsheet into a clean slide deck
+summary: Give it a messy data file. Get clean, checked data, a written story and slides built from it.
+job: work-with-files
+thinking: medium
+thinking_why: The steps are clear and checkable. A mid-size model works, and a stronger one helps on large files.
+headline: Go from a messy data file to slides you can stand behind
+subhead: Give it a raw spreadsheet. It cleans it, checks the clean copy for what is still wrong, writes the story the numbers support and builds the slide deck from that story.
+explain: |
+  Raw data is rarely ready to show. It has blanks, repeats, text that should be numbers and dates in three formats. Slides built on it carry the errors into the room, where they are hard to explain.
+
+  The workflow cleans the file first, with the original kept safe. It then audits the clean copy and gives a quality score with a list of what is still weak, so you know which figures to trust. The story step names the point the data proves and orders it as context, problem, proof and next step, checking each figure against the cleaned file. The deck comes last, one point per slide with speaker notes. If the audit shows the data is too weak, fix it before you present.
+when:
+  - You have an export or survey file and a meeting to present it in.
+  - The same file passes through several hands and no one trusts it.
+  - You need slides fast but cannot afford a wrong number on one.
+you_give:
+  - The data file, as CSV or Excel
+  - Who the audience is and what decision they must make
+  - The format you will present in, such as PowerPoint (optional)
+  - Notes on what the columns mean (optional)
+you_get:
+  - A cleaned copy of the data, with the original kept
+  - A quality score and a list of what is still weak
+  - A written story with the point, the proof and the next step
+  - A slide deck with speaker notes
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it the file and keep a copy of the original.
+  - Read the quality report before the story is written, and tell it which columns to trust.
+  - Say who the audience is and what they must decide.
+how_it_works:
+  - title: Clean the data
+    text: Profiles the file, fills or flags blanks, removes repeats, fixes types and formats and treats outliers. The original stays untouched.
+  - title: Check the cleaned data
+    text: Reads the clean copy for size, types, gaps, outliers and clashes between columns, then gives a quality score and a list of what to fix first.
+  - title: Write the story the numbers tell
+    text: Finds the one point the data proves for your audience and orders it as context, problem, proof and next step. Every figure is checked against the cleaned file.
+  - title: Build the slide deck
+    text: Turns the story into slides with one point each, speaker notes and the proof figures on the slide that needs them.
+output_shape: |-
+  STEP 1: CLEAN DATA
+    Clean file | list of changes made | original kept
+
+  STEP 2: QUALITY CHECK
+    Score | gaps left | outliers | clashes | what to fix first
+
+  STEP 3: STORY
+    The point | context | problem | proof | next step
+
+  STEP 4: SLIDE DECK
+    One point per slide | speaker notes | figures with sources
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Missing values
+    how: Say how to treat blanks in the columns that matter, such as leave blank, fill with a typical value or drop the row.
+  - what: Audience
+    how: Name the room, such as leaders or customers. The story picks the point and the depth to match.
+  - what: Format
+    how: Pick Marp, reveal.js or PowerPoint for the deck.
+  - what: Known errors
+    how: Tell it what you already know is wrong, so it does not present those figures as fact.
+judge:
+  - Every change in the cleaning is listed, and the original is untouched.
+  - The quality report names the columns and rows it doubts.
+  - Each figure in the story matches the cleaned file.
+  - The story leaves out any claim the quality check said the data cannot support.
+  - Each slide makes one point you could say in a sentence.
+test:
+  - Pick five figures on the slides and find each in the cleaned file.
+  - Compare row counts before and after cleaning. Any gap should be explained in the change list.
+  - Show the deck to someone who has not seen the data and ask them to state the main point.
+improve:
+  - Save your cleaning rules so the next export is cleaned the same way.
+  - Fix the source of repeated errors, such as a form that allows free text.
+  - Do not present a figure the audit flagged. Replace it or say it is rough.

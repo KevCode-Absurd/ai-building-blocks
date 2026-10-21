@@ -1,0 +1,40 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: find-your-honest-google-roas-and-decide-whether-to-raise-spend
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: find-your-honest-google-roas-and-decide-whether-to-raise-spend
+  name: "Find your honest Google ROAS and decide whether to raise spend"
+  summary: "Give it your margins and 30 days of Google data. Get break-even targets, true non-brand ROAS, and a go or wait call."
+  when: "Google shows a good ROAS but sales are flat, or you are thinking of raising the budget."
+  job: run-google-ads
+  level: intermediate
+steps:
+  - name: "Break-even ROAS and CPA calculator"
+    skill: break-even-roas-and-cpa-calculator
+    job: analysis
+    from: "library"
+    method: ["Check price, cost and margin inputs", "Work out break-even ROAS and CPA", "Give separate targets where margins differ", "Say what the numbers mean on Google"]
+    inputs: [product_data, performance_sheet!]
+    outputs: [audit_report]
+    note: "Sets the line every later number is judged against."
+  - pause: "Export the last 30 days from Google Ads with campaigns, search terms and conversions, and mark which terms are your brand."
+  - name: "Brand and non-brand splitter"
+    skill: brand-and-non-brand-splitter
+    job: analysis
+    from: "library"
+    method: ["Measure how much brand traffic flatters ROAS", "Work out non-brand ROAS on its own", "List the leaks in Search, Shopping and Performance Max", "Set different targets for brand and non-brand"]
+    inputs: [performance_sheet, brand_brain!]
+    outputs: [audit_report, plan]
+    note: "Splits brand from new-customer traffic and compares true non-brand ROAS with the break-even line from step one."
+  - name: "Google Ads scale gate checker"
+    skill: google-ads-scale-gate-checker
+    job: analysis
+    from: "library"
+    method: ["Check feed, tracking, structure and creative gates", "Check bid maturity", "Run the profit check against break-even", "Make the go or wait call with a stepped plan"]
+    inputs: [performance_sheet, audit_report!]
+    outputs: [audit_report]
+    note: "Reads the split report and decides whether it is safe to raise spend, and by how much."

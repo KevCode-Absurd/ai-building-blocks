@@ -1,0 +1,123 @@
+new_slug: founder-ad-script-builder
+name: "Founder ad script builder"
+summary: "Give it your founder story and proof. Get a claim-first script, 2 to 4 hooks and narrator-swap versions."
+job: make-video-ads
+thinking: medium
+thinking_why: "It shapes a true story into a set order, so a mid-size model works, and a stronger one writes smoother lines."
+
+headline: "Founder ad script builder"
+subhead: Give it your true founder story, your mechanism and your proof. It builds a founder video script in the order that performed best in one account, with 2 to 4 hooks that fit the body. You also get versions told by a customer, an interviewer or a reader.
+
+explain: |
+  Most viewers do not care about the founder. They care about their own problem. A founder ad works when it presents the founder's argument, with the founder's story as the proof. Footage of a founder talking about the brand rarely does that.
+
+  This skill builds the script in the order one agency saw in an account's top 15 founder ads: a bold claim, proof of the claim, the unique mechanism tied to the founder story, proof of the mechanism, then the call to action with the offer and social proof. A claim with no proof did not perform. It then changes who tells the story (the maker, a witness, an interviewer or a reader) to give you new concepts from one true story. It never invents a story. If you already have a general founder script writer that builds from one real decision, this store version adds the claim-first order, the narrator roles and the involvement ladder.
+
+when:
+  - You have a real origin story and proof, and want a video ad where you or your founder speak.
+  - A founder ad worked once and you want more versions that feel different.
+  - The founder is not at ease with a teleprompter, and needs an outline to speak from.
+
+you_give:
+  - "Your origin story: why it started, true and in your words"
+  - The unique mechanism and who can credibly explain it
+  - Proof items such as lab certificates, tests, factory photos and reviews
+  - Competitor comparisons with evidence (optional)
+  - The buyer and how much they already know (optional)
+you_get:
+  - A script in the order claim, proof, mechanism, proof, call to action
+  - 2 to 4 hooks that fit the body
+  - Versions told by a witness, an interviewer or a reader
+  - A plan for the same story as face and voice, voice only, evidence, proxy or animation
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your story, mechanism and proof exactly as true. Mark anything you cannot back up.
+  - Say who the viewer is and what problem they have today.
+  - Check every claim and comparison against your proof before you film.
+  - If you do not read well from a teleprompter, ask for the sentence-by-sentence outline and speak in your own words.
+
+how_it_works:
+  - title: Opens with the viewer's problem
+    text: Starts from the problem the buyer has had. The founder story is the proof, not the point.
+  - title: Picks the claim
+    text: Chooses a bold claim from your story that you can prove. A claim with no proof is cut.
+  - title: Orders the script
+    text: Claim, proof of the claim, mechanism tied to your story, proof of the mechanism, then the call to action with offer and social proof.
+  - title: Uses what only you can say
+    text: Keeps the origin, the mechanism (or a credentialed expert) and the competitor teardown for the founder. Customer experience goes to customers.
+  - title: Writes 2 to 4 hooks
+    text: Writes hooks that make sense with the body. It goes up to 8, but test budget thins beyond that.
+  - title: Swaps the narrator
+    text: Rewrites it as the maker (I built this), a witness (a customer emailed me), an interviewer (I asked our lab why) or a reader (reading a one-star review aloud).
+  - title: Plans the involvement
+    text: Offers face and voice, voice only over footage, founder evidence, a proxy such as an employee or expert, or an absent founder with animation.
+  - title: Checks the facts
+    text: Checks that every line rests on a true story or a proof item, and flags claims that need a policy or legal check.
+
+output_shape: |
+  VIEWER PROBLEM: <one line>
+  CLAIM: <claim you can prove>
+
+  SCRIPT (maker version)
+  1 Claim: <lines>
+  2 Proof of claim: <lines + the proof item>
+  3 Mechanism tied to the story: <lines>
+  4 Proof of mechanism: <lines + the proof item>
+  5 Call to action: <offer + social proof>
+
+  HOOKS (2 to 4): <h1> <h2> <h3>
+  NARRATOR SWAPS: witness <...> | interviewer <...> | reader <...>
+  INVOLVEMENT PLAN: <face | voice | evidence | proxy | absent> with what to vary
+  OUTLINE FOR SPEAKING: <sentence-by-sentence, if asked>
+  CLAIMS TO CHECK: <...>
+  CHECKS MISSED: <none, or list>
+  MISSING: <what, if anything>
+
+tweaks:
+  - what: Your proof
+    how: Paste each proof item with what it shows. Every claim in the script is tied to one, and claims without proof are cut.
+  - what: Who tells it
+    how: Choose a narrator role. The same story told by a witness or an interviewer gives you a new concept.
+  - what: How much the founder appears
+    how: Tell it if the founder will be on camera, voice only or not at all. The script and shot plan change with the answer.
+  - what: How many hooks
+    how: Start with 2 to 4. Ask for up to 8 only if you have the test budget.
+
+judge:
+  - The script follows the order claim, proof, mechanism, proof, call to action.
+  - Every claim is tied to a proof item you gave.
+  - The story is yours, with no invented founder details or customers.
+  - The first lines name the viewer's problem.
+  - The hooks all make sense when placed before the body.
+
+test:
+  - Read the script aloud. Cut any line you would not say yourself.
+  - Check each claim against its proof, and remove any that you cannot show.
+  - Show the script to someone outside the business and ask what they would say the problem was.
+  - Film a hook with two bodies and see which holds viewers longer.
+
+improve:
+  - Add your own story facts to the skill file, so every run starts from the same true version.
+  - Add your proof library, with what each item shows and where it came from.
+  - Add the claims you may not make, so the script avoids them.
+  - Save which narrator role worked best to your brand file.
+  - Pair it with the founder ad shoot planner to film many ads in one day.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can build and swap the script."}
+    - {name: "Meta Ads Manager", why: "Run each narrator version as its own ad and read the results."}
+  inputs:
+    - "Photos or footage of your lab, factory or team"
+    - "Real customer emails and one-star reviews"
+    - "A short list of competitor claims with evidence"
+    - "Your buyer persona and awareness stage"
+
+terms:
+  - term: Mechanism
+    meaning: How your product works, or why it works better than what came before it.
+  - term: Involvement ladder
+    meaning: The ways a founder can appear, from face and voice to not at all.
+  - term: Proxy
+    meaning: Someone else, such as an employee or expert, who tells the story for the founder.

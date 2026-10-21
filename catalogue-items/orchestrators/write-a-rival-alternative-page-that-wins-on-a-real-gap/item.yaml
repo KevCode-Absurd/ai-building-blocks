@@ -1,0 +1,25 @@
+slug: write-a-rival-alternative-page-that-wins-on-a-real-gap
+name: "Write a rival alternative page that wins on a gap"
+summary: "Give it your rivals. Get how their messages differ, the gap worth owning, a fair alternative page and a review of it."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: competitor_set, required: false}
+  - {type: question, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: [competitor-messaging-comparer, competitor-white-space-mapper, alternative-page-writer, landing-page-auditor]
+steps:
+  - {uses: competitor-messaging-comparer, note: "Starts from rival names and writes down how each one pitches."}
+  - {uses: competitor-white-space-mapper, note: "Reads the rival set from the step before and shows which gap you can honestly own."}
+  - {uses: alternative-page-writer, note: "Builds the page on the rival set and leads with the gap the map found."}
+  - {uses: landing-page-auditor, note: "Reads the alternative page and ranks what to fix first."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-a-rival-alternative-page-that-wins-on-a-real-gap/skeleton.yaml

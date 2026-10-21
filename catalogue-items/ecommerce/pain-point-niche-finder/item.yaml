@@ -1,0 +1,20 @@
+slug: pain-point-niche-finder
+name: "Pain point niche finder"
+summary: "Pick a market. Get 30 buyer problems, your best 5 and the brands already selling to them."
+category: ecommerce
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: competitor_set}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "I asked Claude to find me a $1k/day product", by: "Mark, e-commerce YouTuber", url: "https://www.youtube.com/watch?v=1KrsOagtWgM", used: "The order of work (market, problem, product, check, game plan), the 30 emotional sub-niches prompt, and listing brands by ads, product, pain point and page type"}

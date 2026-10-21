@@ -1,0 +1,115 @@
+new_slug: test-idea-ranker
+name: "Test idea ranker"
+summary: "Paste your research findings. Get each test written as a hypothesis and ranked by evidence and profit."
+job: test-store-changes
+thinking: medium
+thinking_why: "It sorts ideas by clear rules and does simple sums, so a mid-size model is enough."
+
+headline: "Test idea ranker"
+subhead: Paste your test ideas with the research behind each one, plus page traffic and margin. It writes each as a hypothesis, drops ideas with too little evidence, ranks the rest by evidence and expected profit, and names the one or two to run first.
+
+explain: |
+  Most stores keep a list of test ideas ranked by whoever speaks loudest. Everything scores nine out of ten, and the team tests button colors. Worse, the idea with the best proof often sits at the bottom because it is hard to build.
+
+  This skill ranks by evidence first. Each idea must have at least two kinds of proof, such as a heatmap and a survey answer. Then it scores yes or no questions (is it above the fold, on a busy page, noticeable in five seconds, easy to build), and finally weighs the top ideas by what they could earn in gross profit. Broken things go to a fix list, because you repair them instead of testing them. You end with one or two tests to run and a reason for each idea that waits.
+
+when:
+  - You finished your research and have more ideas than traffic to test them.
+  - Your team argues about what to test next and nobody has numbers.
+  - You want your test list to rest on proof, not on opinions.
+
+you_give:
+  - Your ideas or problems, each with the evidence behind it (recording, heatmap, survey line, funnel drop)
+  - Traffic, conversion rate and gross profit per order for the page each idea touches
+  - Build effort for each idea, in hours or as low, medium or high
+  - Your monthly orders (optional)
+
+you_get:
+  - Each idea written as a hypothesis with a main metric and a smallest lift worth shipping
+  - A ranked leaderboard with evidence points and a profit estimate
+  - The one or two tests to run first, and the rest parked with a reason
+  - A fix list for anything broken
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your ideas. Next to each, write what you saw that points to it.
+  - Add traffic, conversion rate and gross profit per order for each page, and rough build effort.
+  - Read the leaderboard, then run the top test through the readiness checker to size it.
+  - Move parked ideas up when new evidence arrives.
+
+how_it_works:
+  - title: Splits fixes from tests
+    text: Anything broken goes on a fix list and is not tested.
+  - title: Writes the hypothesis
+    text: Because we saw this, we believe that change will cause this effect for this group, measured by this number.
+  - title: Counts the evidence
+    text: One point per kind of proof. Ideas with fewer than two points do not enter the list.
+  - title: Scores yes or no
+    text: Above the fold, noticeable in five seconds, busy page, easy to build, plus the evidence points.
+  - title: Weighs by profit
+    text: Chance of winning, times the lift, times the extra orders it brings, times gross profit per order, minus the build cost.
+  - title: Uses honest win rates
+    text: A range, from about 10 to 20 percent for well-run tests up to the higher rates of teams that research first.
+  - title: Orders the top
+    text: Survey blockers first, then what recordings show is broken, then the busiest page.
+  - title: Picks and parks
+    text: One or two to run now. The rest wait, with what would move them up.
+
+output_shape: |
+  FIX LIST  <broken items, not tests>
+  LEADERBOARD
+   # | idea (hypothesis in one line) | evidence points (kinds) | yes/no points | effort | total | value per 12 months (range)
+  RUN FIRST   <idea>: because we saw <...>, we believe <...> will cause <...> for <segment>,
+              measured by <metric>; worked if it moves by <smallest lift>
+  RUN NEXT    <idea, or none>
+  PARKED      <idea>: <reason>, <what would move it up>
+  ASSUMPTIONS <win chance used, horizon, traffic and margin figures>
+  MISSING: <what was not given>
+  CHECKS MISSED: <one line each, or none>
+
+tweaks:
+  - what: Evidence behind each idea
+    how: Name the kind of proof, such as a survey answer or a funnel drop. Vague proof earns no points.
+  - what: Gross profit per order
+    how: Give it per page. It decides which ideas are worth the build.
+  - what: Your order volume
+    how: Under about 300 orders a month the list keeps bold changes only. Say your number.
+  - what: Win chance
+    how: Tell it how often your past tests won. It uses your rate instead of the general range.
+
+judge:
+  - Every ranked idea has a full hypothesis, a metric and a smallest lift.
+  - No ranked idea has fewer than two kinds of evidence.
+  - Nothing broken appears on the test list.
+  - The value column states its horizon, win chance and margin.
+  - The top picks suit your order volume.
+
+test:
+  - Add an idea with no proof, such as 'change the button color'. It should stay out and say what research it needs.
+  - Add something broken, such as a failing add-to-cart. It should land on the fix list.
+  - Run it twice on the same list. The top three should stay the same.
+  - Check one value estimate by hand. The sums should match what it shows.
+
+improve:
+  - Add your past test results to the skill file, so the win chance reflects your own record.
+  - Add the factors that matter in your store, such as 'on mobile', as extra yes or no points.
+  - Save the leaderboard each month and compare, so you see which kinds of proof predict wins.
+  - Pair it with the heatmap and recording reader and the post-purchase survey builder, which make the findings it ranks.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It writes hypotheses and does the profit sums from your pasted findings."}
+    - {name: "A spreadsheet", why: "Keep the leaderboard there so you can re-sort it when new proof comes in."}
+  inputs:
+    - "Output from the heatmap and recording reader"
+    - "Survey answers from your post-purchase survey"
+    - "Gross profit per order by product"
+    - "Your last ten test results"
+
+terms:
+  - term: Hypothesis
+    meaning: A test idea written with its reason, its expected effect and the number that will show if it worked.
+  - term: Evidence points
+    meaning: One point for each different kind of proof behind an idea, such as a heatmap, a recording, a survey or a funnel drop.
+  - term: Gross profit per conversion
+    meaning: What you keep from one order after the cost of the goods, shipping and fees.

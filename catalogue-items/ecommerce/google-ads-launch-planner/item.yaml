@@ -1,0 +1,25 @@
+slug: google-ads-launch-planner
+name: "Google Ads launch planner"
+summary: "Give it your store, budget and sales so far. Get the launch order, campaign settings and budget split."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "The three-stage launch order, timing, budget shares, and the Search and Shopping settings"}
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "An agency owner who runs Google Ads for Shopify brands (name not given)", used: "Funnel roles for each campaign type, the three stages of growth and the share of spend that brand should take"}
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "An agency co-founder who runs Google and YouTube ads for direct-to-consumer brands (name not given)", used: "The launch order, the bidding ladder with its thresholds, and location and partner settings"}
+  - {title: "Google Ads for ecommerce: 9 keys to success", by: "Ben, Google Ads agency founder", used: "Start with Search and Shopping, add Performance Max after about 100 purchases, and push hero products to cold traffic"}
+  - {title: "Complete Google Ads architecture and operations manual (2026 edition)", by: "A compiled written guide (author not named)", used: "The five scaling gates, target ROAS step sizes and the four-layer model for larger accounts"}
+  - {title: "The only Google Ads strategy you need for 2026", by: "An Australian agency founder who works with mid to large stores (name not given)", used: "Start from one campaign and add another only for a clear reason"}

@@ -1,0 +1,23 @@
+slug: demand-gen-cold-campaign-builder
+name: "Demand Gen cold traffic builder"
+summary: "Give it your winning videos, page and budget. Get Demand Gen settings, ad groups and a creative brief."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: video_ads, required: true}
+  - {type: landing_page, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Full Ecom Google Ads Course 2026 (100% FREE)", by: "Max, agency owner who runs Google Ads for online stores", used: "When to start Demand Gen, the budget share, audiences, ad group themes and settings"}
+  - {title: "Google Ads for Ecommerce: The Complete Architecture & Operations Manual (2026 Edition)", by: "Compiled written guide, author not named", used: "The bidding path, the 30-day run, creative speed and keeping remarketing separate"}
+  - {title: "Ecommerce Google Ads Free Course (4+ Hours) | Google & Shopify", by: "Agency owner who runs Google Ads for Shopify brands (name not given in the video)", used: "Placement choices, campaign settings, ad structure with a 5-second hook, text limits and the scale order"}

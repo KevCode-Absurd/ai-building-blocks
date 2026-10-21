@@ -1,0 +1,19 @@
+slug: 3pl-bill-auditor
+name: "3PL bill auditor"
+summary: "Paste your 3PL invoice, rate card and orders. Get overcharges found, a score out of 100 and a dispute note."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: document, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Complete E-commerce Operations Guide", by: "Davey, founder of a large blanket-hoodie brand (YouTube talk)", used: "Rebuild the expected bill from your own order data each month, line by line, check delivered-on-time, and claim the penalties the agreement allows"}

@@ -1,0 +1,35 @@
+id: build-your-ads-shopify-page-and-check-it-live
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: build-your-ads-shopify-page-and-check-it-live
+  name: "Build your ad's Shopify page and check it live"
+  summary: "Give it your ad, offer and brand facts. Get page copy, Shopify files to upload and a check of the live page."
+  when: "you have an ad that sends traffic to a store and need its page built in Shopify, then checked on a phone."
+  job: write-landing-page
+  level: intermediate
+steps:
+  - name: Write the page from the ad
+    skill: ad-matched-landing-page-writer
+    job: page
+    from: "skill: ad-matched-landing-page-writer"
+    method: ["Pin one buyer, one reason and one offer", "Build the first screen from the ad", "Write one section per buyer doubt, answer first", "State the full cost before the last button"]
+    inputs: [brand_brain, offer, ad_copy!, voc_reviews!, persona!]
+    outputs: [landing_page]
+    note: "Starts from your ad, offer and brand facts. It writes the page so it picks up where the ad stops."
+  - name: Turn the copy into Shopify files
+    skill: shopify-landing-page-builder
+    job: page
+    from: "skill: shopify-landing-page-builder"
+    method: ["Plan the section and template files", "Put the words in settings, not in the code", "Read prices and policies from the store", "Write install steps"]
+    inputs: [landing_page, product_data!]
+    outputs: [theme_files]
+    note: "Loads the page copy from step 1 into a Shopify section you can upload, with install steps."
+  - pause: "Upload the files to your theme, open the page on your phone and a computer, and save screenshots of each."
+  - name: Check the live page
+    skill: product-page-screenshot-auditor
+    job: analysis
+    from: "skill: product-page-screenshot-auditor"
+    method: ["Look at the smallest part of the page that answers the shopper's question", "Record only what you see in each screenshot", "Link each finding to a change to test", "Score how clearly the page lets a shopper act"]
+    inputs: [store_capture, brand_brain!]
+    outputs: [audit_report]
+    note: "Reads your screenshots of the built page and lists what still blocks a buyer."

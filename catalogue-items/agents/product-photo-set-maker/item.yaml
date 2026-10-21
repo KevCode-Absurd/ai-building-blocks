@@ -1,0 +1,30 @@
+slug: product-photo-set-maker
+name: "Product photo set maker"
+summary: "Give it photos of one real product. Get a planned photo set, checked frame by frame, with every failed frame redone."
+category: agent
+type: agent
+role: orchestrate
+job: image
+level: advanced
+inputs:
+  - {type: product_photos, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: photo_set}
+  - {type: truth_sheet}
+  - {type: audit_report}
+uses: [product-image-spec-writer, product-photo-shoot-planner, product-page-gallery-planner, product-gallery-answers, product-page-image-checker, ai-product-photo-inspector, marketplace-photo-rule-checker]
+steps:
+  - {uses: product-image-spec-writer, note: "Once per product, then reused: the truth sheet and lock lines every prompt repeats, and the shots that cannot be made until a missing photo arrives."}
+  - {uses: product-photo-shoot-planner, note: "Only when the set is for ads, social or email: a style sheet and 6 to 12 matching frames."}
+  - {uses: product-page-gallery-planner, note: "Only when the set is for a product page: about 8 frames, each answering one shopper question."}
+  - {uses: product-gallery-answers, note: "Only on the product page path: the prompts and words for each planned frame, after the owner approves the plan."}
+  - {uses: product-page-image-checker, note: "For every picture that comes back: pass or fail with the smallest fix. Failed frames are redone and checked again, two rounds at most."}
+  - {uses: ai-product-photo-inspector, note: "Only when a frame shows a person, hands or a worn product: eight AI-flaw checks. Spends credits, so it asks first."}
+  - {uses: marketplace-photo-rule-checker, note: "Only when the main image is for Amazon, TikTok Shop, Temu or Shopee: pass or reject against that site's rules."}
+asks_before: [making pictures with an image tool that bills credits, running a checker that bills credits, uploading or publishing any image, putting any word, price or claim on a picture that is not on file]
+origin: own
+version: 1.0.0
+example_pending: true

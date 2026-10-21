@@ -1,0 +1,57 @@
+# Workflow skeleton chaining skills already in the AI Blocks library (docs/INTAKE.md).
+id: fix-inbox-placement-and-win-back-your-opens
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: fix-inbox-placement-and-win-back-your-opens
+  name: "Fix inbox placement and win back your opens"
+  summary: "Give it your sending setup and results. Get a recovery plan, a wider engaged list and a sunset flow."
+  when: "your emails are going to spam, or open rates have been falling."
+  job: write-emails
+  level: intermediate
+steps:
+  - name: "Email setup health checker"
+    skill: email-setup-health-checker
+    job: email
+    from: "library"
+    method: ["Sending domain", "DMARC", "Smart sending", "Attribution", "Tracking and UTM", "Opt-in, lists and pages"]
+    inputs: [document, store_capture!]
+    outputs: [audit_report]
+    note: "Finds the setup problems that push mail to spam."
+  - pause: "Fix the setup problems the check found, then export your last 60 days of campaign results."
+  - name: "Inbox placement recovery planner"
+    skill: inbox-placement-recovery-planner
+    job: email
+    from: "library"
+    method: ["Diagnose first", "Check the technical set-up", "Score inbox health", "Build the engaged segments", "Plan the ramp", "Improve the emails"]
+    inputs: [performance_sheet, email_flow!]
+    outputs: [audit_report, plan]
+    note: "Turns your results into a recovery plan with a send pause and a restart order."
+  - name: "Engaged list expander"
+    skill: engaged-list-expander
+    job: email
+    from: "library"
+    method: ["Check it is safe to start", "Define engaged", "Size it", "Split the sends", "Plan the drip", "Add the safety valves"]
+    inputs: [performance_sheet, plan!]
+    outputs: [plan]
+    note: "Widens the engaged group step by step, following the restart order from the recovery plan."
+  - pause: "Send to the engaged group only for two weeks, then export the quiet subscribers and their open history."
+  - name: "Sunset flow and list cleaner"
+    skill: sunset-flow-and-list-cleaner
+    job: email
+    from: "library"
+    method: ["Define unengaged", "Guard against false signals", "Sending rules", "Sunset flow", "Be true to the notice", "End of flow"]
+    inputs: [performance_sheet, offer!]
+    outputs: [email_flow, plan]
+    note: "Writes the sunset flow and the clean-out rule for the people who stayed quiet."
+  - name: "Email and SMS performance reader"
+    skill: email-and-sms-performance-reader
+    job: analysis
+    from: "library"
+    method: ["Check nothing is broken", "List growth", "Campaigns", "Flows", "Deliverability", "Other reads"]
+    inputs: [performance_sheet, email_flow!]
+    outputs: [audit_report]
+    note: "Reads the sunset flow results to see if opens and revenue per send recovered."

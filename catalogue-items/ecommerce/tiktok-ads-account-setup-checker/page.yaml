@@ -1,0 +1,119 @@
+new_slug: tiktok-ads-account-setup-checker
+name: "TikTok ads account setup checker"
+summary: "Say what you set up on TikTok. Get missing steps and a score out of 100."
+job: launch-and-scale-ads
+thinking: low
+thinking_why: "It walks a fixed checklist, so a fast model handles it well."
+
+headline: "TikTok ads account setup checker"
+subhead: Tell it what you have set up on TikTok and attach screenshots. It checks your accounts, billing, team security and Shopify pixel, marks each item done or missing, and gives you the steps to fix, in order, with a setup score out of 100.
+
+explain: |
+  A TikTok ads account has several parts that must be linked: the ad account, a business center, your TikTok profile and your store. Skip one and your ads can be refused, your organic posts can't run as ads, or your store can't tell TikTok when someone buys. The most costly gap is a purchase event that doesn't fire, because then TikTok can't find buyers for you.
+
+  This skill goes through a fixed checklist. It checks the accounts and their links, billing and documents, who has access, the pixel and each event it should send, and the default settings. Each item is marked done, missing or not sure, with one fix per gap. You get a readiness score out of 100 and a plain launch or don't launch call.
+
+when:
+  - You are about to run your first TikTok ad and want to know nothing is missing.
+  - Your TikTok ads won't deliver, or your purchases don't show in TikTok.
+  - A freelancer set up the account and you want a second pair of eyes before you add budget.
+
+you_give:
+  - "Which accounts you have: Ads Manager, Business Center, TikTok business profile, TikTok Shop"
+  - Screenshots of your Business Center assets, payment page and Events Manager (optional)
+  - A TikTok Pixel Helper result from a test visit to your store (optional)
+  - Your store platform, such as Shopify
+you_get:
+  - Each checklist item marked done, missing or not sure
+  - One fix for each gap, with the first things to do listed in order
+  - A pixel event table showing which events fire
+  - A setup readiness score out of 100 and a launch call
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List what you have set up, and attach screenshots of your payment page and Events Manager.
+  - Test your store with TikTok Pixel Helper while you add a product to the cart, then paste what it shows.
+  - Do the fixes in the order it lists, then run the check again before you add budget.
+
+how_it_works:
+  - title: Checks accounts and links
+    text: Ads Manager, Business Center, your TikTok profile and your shop, and whether each is linked to the others.
+  - title: Checks billing
+    text: Address, documents, a card as the main method, a backup method, and automatic payment.
+  - title: Checks access and security
+    text: Smallest role per person, two-step sign-in and a company email domain limit.
+  - title: Checks the pixel
+    text: The official Shopify app, the right accounts picked, a data sharing choice and each event tested.
+  - title: Checks defaults
+    text: Location, minimum age, brand safety and account health.
+  - title: Checks each ad habit
+    text: Ad library box off, music sharing off and music rights held.
+  - title: Scores readiness
+    text: Weighted points by area, with half points for items you are not sure of. A missing purchase event means do not launch.
+
+output_shape: |
+  SETUP READINESS  <n>/100   LAUNCH: <ready | not yet: <Stop items>>
+
+  ACCOUNTS AND LINKS  <points>/25
+    <item> | Done / Missing / Not sure | fix: <one step>
+
+  BILLING AND DOCUMENTS  <points>/20
+  TEAM AND SECURITY  <points>/10
+  PIXEL AND EVENTS  <points>/30
+    page view | view content | add to cart | initiate checkout | purchase: <fired / not fired / not tested>
+  DEFAULTS AND PER-AD SETTINGS  <points>/15
+
+  DO FIRST (in order)
+  1 <step>
+  2 <step>
+
+  NOT CHECKED
+  <item, and what to send to check it>
+  MISSING: <screenshot | store platform | ...>
+
+tweaks:
+  - what: Screenshots
+    how: Attach images of the Business Center assets page and Events Manager. Items it can see are marked done or missing. Items it can't see stay Not sure.
+  - what: Your store platform
+    how: The pixel steps are written for Shopify. Say if you use another platform and it will check for a partner integration or a manual setup.
+  - what: Pixel Helper result
+    how: Paste the events Pixel Helper shows as you view a product, add to cart and reach checkout. The pixel score depends on this test.
+  - what: Team size
+    how: List who needs access and their jobs. It will check each has the smallest role they need.
+
+judge:
+  - Every checklist item has a status, with none skipped.
+  - A missing purchase event is called out as a reason not to launch.
+  - Nothing is marked done unless you said so or showed it.
+  - Each gap has one fix you can do today.
+  - The score shows its points for each area.
+
+test:
+  - Tell it you have not set up a payment method. It should mark billing missing and put it near the top of the list.
+  - Show it a Pixel Helper result without the purchase event. It should say do not launch.
+  - Run it twice on the same description. The items marked done should match.
+  - Check one fix against what TikTok shows you today. Menu names change, so see if the step still makes sense.
+
+improve:
+  - Add your own company email domain and your team list to the skill file, so the access check is specific.
+  - Add your privacy policy rules for data sharing, so the pixel step uses your own wording.
+  - Add any item your agency or lawyer asks for, as an extra line in the list.
+  - Pair it with the TikTok starter campaign builder for your first campaign, and the TikTok ads account auditor once ads have run.
+
+works_best_with:
+  tools:
+    - {name: "TikTok Pixel Helper", why: "A Chrome add-on that shows which events fire as you walk through your store."}
+    - {name: "TikTok Events Manager", why: "Shows pixel status and each event's count, and has a test events tool."}
+    - {name: "Shopify", why: "The official TikTok app installs the pixel and sends purchase events."}
+  inputs:
+    - "A screenshot of your TikTok account health page"
+    - "Your privacy policy text, so the data sharing choice matches what you tell buyers"
+    - "A list of everyone who has access, with their roles"
+
+terms:
+  - term: Business Center
+    meaning: A TikTok account that holds your ad accounts, profiles, pixels and team in one place.
+  - term: Pixel
+    meaning: A small piece of code on your store that tells TikTok when someone views a product, adds to cart or buys.
+  - term: Event
+    meaning: One action the pixel reports, such as a page view or a purchase.

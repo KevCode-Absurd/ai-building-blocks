@@ -1,0 +1,24 @@
+slug: find-a-buyer-group-your-rivals-miss-and-brief-ads-for-it
+name: "Find a buyer group rivals miss and brief ads"
+summary: "Give it your product and rivals. Get an overlooked buyer group, their real words and ad angles built on them."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief}
+uses: [untapped-avatar-finder, forum-and-review-avatar-digger, buyer-brief-writer, ad-angle-planner]
+steps:
+  - {uses: untapped-avatar-finder, note: "Finds outlier buyer groups in reviews and rival ads that the category leaders ignore."}
+  - {uses: forum-and-review-avatar-digger, note: "Pulls the group's own words and worries from what you saved. Starts from the group chosen in the step before."}
+  - {uses: buyer-brief-writer, note: "Writes the half-page brief from those words. Reads the quotes from the step before."}
+  - {uses: ad-angle-planner, note: "Turns the brief into angles to test. Reads the brief from the step before."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/find-a-buyer-group-your-rivals-miss-and-brief-ads-for-it/skeleton.yaml

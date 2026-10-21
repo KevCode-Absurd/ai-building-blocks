@@ -1,0 +1,37 @@
+# Workflow skeleton: chains library skills (docs/INTAKE.md). Our words.
+id: turn-a-free-checker-into-leads-and-a-paid-first-step
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+minds: []
+workflow:
+  slug: turn-a-free-checker-into-leads-and-a-paid-first-step
+  name: "Turn a free checker into leads and a first sale"
+  summary: "Give it your business and buyer. Get a free checker, a cost-per-lead rule and a paid first step."
+  when: "you sell a service and want leads from a free score, then a cheap first piece that leads to your main offer."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: "Free diagnostic tool planner"
+    skill: free-diagnostic-tool-planner
+    job: strategy
+    from: "skill: free-diagnostic-tool-planner"
+    method: ["Name the problem the buyer may not know they have", "Cut the questions to five or fewer", "Write the score and what each band says", "Ask for the email after the score and tie each band to your service"]
+    inputs: [brand_brain!, question]
+    outputs: [plan]
+    note: "Starts the chain: the free checker, its score and the sign-up step."
+  - pause: "Build the checker and send ads or posts to it for one to two weeks. Note your spend, sign-ups and how many fit your buyer."
+  - name: "Lead cost and friction planner"
+    skill: lead-cost-and-friction-planner
+    job: ops
+    from: "skill: lead-cost-and-friction-planner"
+    method: ["Work out cost per qualified lead", "Say which campaign wins and why", "Add friction one lever at a time", "Set the stop rule and the qualifier line"]
+    inputs: [plan, performance_sheet!]
+    outputs: [plan]
+    note: "Reads the checker plan from the first step and your campaign numbers, then sets the cost rule."
+  - name: "Paid first step planner"
+    skill: paid-first-step-planner
+    job: strategy
+    from: "skill: paid-first-step-planner"
+    method: ["Check a deep discount fits your buyers", "Pick a part of the main offer that is useful alone", "Set a low price, once per person", "Plan the booked second meeting and the upsell"]
+    inputs: [plan, offer]
+    outputs: [offer]
+    note: "Takes the lead plan from the step before and turns those leads into a paid first piece and a booked second meeting."

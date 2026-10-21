@@ -1,0 +1,40 @@
+# Workflow skeleton built from the AI Blocks library (docs/INTAKE.md). Skills run in order, each reading what the one before made.
+id: build-google-remarketing-lists-and-campaigns-then-read-the-results
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: build-google-remarketing-lists-and-campaigns-then-read-the-results
+  name: "Build Google remarketing lists and campaigns, then read the results"
+  summary: "Give it your traffic, customer list and offer. Get audiences to build, remarketing campaigns with caps and a read of results."
+  when: "visitors leave without buying and you want to win them back on Google without retargeting buyers."
+  job: run-google-ads
+  level: intermediate
+steps:
+  - name: "Google Ads audience builder"
+    skill: google-ads-audience-builder
+    job: ads
+    from: "library"
+    method: ["Check each list is big enough to use", "Plan cart abandoner and customer lists", "Set exclusions so buyers are not retargeted", "Define custom segments from search terms"]
+    inputs: [performance_sheet, spreadsheet!]
+    outputs: [plan]
+    note: "Decides which lists exist and how big they are."
+  - name: "Google remarketing campaign builder"
+    skill: google-remarketing-campaign-builder
+    job: ads
+    from: "library"
+    method: ["Check list sizes against readiness", "Set up video first or Demand Gen", "Set budgets and frequency caps", "Write one ad concept for each reason a visitor leaves"]
+    inputs: [plan, offer, video_ads!]
+    outputs: [plan, brief]
+    note: "Builds the campaigns on the lists the audience plan made."
+  - pause: "Build the lists and campaigns, then run the five ads for three to four weeks. Export the Google Ads report by campaign and ad."
+  - name: "Google Ads report auditor"
+    skill: google-ads-report-auditor
+    job: ads
+    from: "library"
+    method: ["Check the export matches the report you meant to read", "Review results against your target", "Rank findings by money at stake", "Hand back the changes worth making and a score"]
+    inputs: [performance_sheet]
+    outputs: [audit_report]
+    note: "Reads the first results so you know which doubt-led ad to keep."

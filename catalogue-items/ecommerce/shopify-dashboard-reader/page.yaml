@@ -1,0 +1,130 @@
+new_slug: shopify-dashboard-reader
+name: "Shopify dashboard reader"
+summary: "Paste your Shopify analytics numbers. Get which tiles to trust, your cash collected and a score out of 100."
+job: track-numbers
+thinking: medium
+thinking_why: "It applies a fixed set of rules to your numbers and does a little arithmetic. A mid-level model is enough; check the cash collected sum yourself once."
+
+headline: "Shopify dashboard reader"
+subhead: "Paste the numbers from your Shopify Analytics page. It tells you which tiles to trust and which to ignore, works out your real cash collected, and checks your funnel and sessions. You get a verdict per tile and a score out of 100."
+
+explain: |
+  The default Shopify dashboard mixes useful numbers with misleading ones. Total sales includes tax, which you pass on to the government. Gross sales ignores discounts and returns. Returning customer rate rises when you stop buying ads and falls when you scale, so it says little about loyalty. The attribution tiles, such as sales by social referral, point your spending the wrong way.
+
+  This skill goes through the tiles one by one and gives each a verdict: use, use with care, or ignore. It works out cash collected (net sales plus shipping charges), adds shipping back into average order value, and flags returns that distort a month. It compares Shopify sessions with GA4 sessions to catch bot traffic, and reads your funnel against a common ratio. The score shows how safely your current reading of the dashboard holds up.
+
+when:
+  - You make decisions from the Shopify dashboard and want to know which numbers are safe to use.
+  - Your conversion rate or sessions jumped and you suspect bot traffic.
+  - You need one revenue figure to put into a profit sheet or to share with an ad partner.
+
+you_give:
+  - Gross sales, discounts, returns, net sales, shipping charges and taxes for one period
+  - Orders, AOV, sessions and conversion rate from Shopify
+  - Add to cart, reached checkout and purchase counts
+  - GA4 sessions for the same dates (optional)
+  - Your sales channel split, and which tiles you use today (optional)
+you_get:
+  - Cash collected, with the sum shown
+  - "A verdict per tile: use, use with care, or ignore"
+  - Returns shown apart from the period they distort
+  - A bot-traffic check and a funnel ratio, with a score out of 100 and how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Open Shopify Analytics, set a date range, and paste the numbers from the tiles. Add the funnel counts and, if you can, GA4 sessions for the same dates.
+  - Tell it which tiles you look at when you make decisions.
+  - Read the verdicts and use the cash collected figure as your revenue line.
+  - If sessions differ a lot from GA4, follow its steps to check sessions by city.
+
+how_it_works:
+  - title: Works out cash collected
+    text: Net sales plus shipping charges. Tax and gross sales are left out, and it shows the sum.
+  - title: Handles returns apart
+    text: Refunds land on the day they are processed, so a big ad month is followed by a fake dip. It reports returns separately when your return rate is high.
+  - title: Fixes AOV
+    text: Shopify AOV leaves out shipping. It adds shipping back and warns against acting on AOV alone, since it is an average.
+  - title: Rules out misleading tiles
+    text: Returning customer rate and every attribution tile get an ignore verdict, with the reason.
+  - title: Checks the channel filter
+    text: Reports should be filtered to the online store, so point of sale, draft orders and the Shop app do not blur the result.
+  - title: Compares sessions with GA4
+    text: Shopify keeps bot visits that GA4 filters. A gap, or a spike from one city, is flagged.
+  - title: Reads the funnel
+    text: Compares add to cart, checkout and purchase counts to the 4:2:1 ratio, and to 2:1:1 for low-ticket stores.
+  - title: Scores the reading
+    text: Ten checks, ten points each, with the sum shown.
+
+output_shape: |
+  SHOPIFY DASHBOARD  <store>  <date range>
+
+  CASH COLLECTED
+  <net sales> + <shipping charges> = <cash collected>
+  (tax <amount> and gross sales left out, because <reason>)
+
+  TILES
+  <tile> | <use / use with care / ignore> | <reason in one line>
+
+  RETURNS
+  <returns this period> | <from earlier sales: yes / no / unknown>
+  <what to report apart>
+
+  AOV  Shopify <n>  with shipping added back <n>
+
+  SESSIONS  Shopify <n>  GA4 <n>  gap <n>%
+  <cities to inspect, if any>
+
+  FUNNEL  add to cart <a> : checkout <b> : purchase <c>  = <a/c> : <b/c> : 1
+  <the step with the biggest unexpected drop>
+
+  SCORE  <n>/100  (<points earned> of <points possible>, checks run only)
+  C1 <pass/partial/fail> ... C10 <pass/partial/fail>
+
+  CHECKS NOT RUN
+  MISSING: <what>
+
+tweaks:
+  - what: Your store type
+    how: Say if you sell low-ticket or fast-moving goods. The 2:1:1 funnel target is meant for those, not for high-ticket stores.
+  - what: Your return rate
+    how: Give the return rate or the returns amount. With high returns, such as fashion, the skill reports them apart so they do not fake a dip.
+  - what: GA4 sessions for the same dates
+    how: Without them the bot check cannot run and the score only covers the checks that did.
+  - what: Which tiles you use
+    how: Name the tiles you make decisions from. The score then reflects your real habits, not the whole page.
+
+judge:
+  - The cash collected sum can be redone by hand from the numbers you pasted.
+  - Every tile verdict has a one-line reason.
+  - Returns are shown apart, not folded into daily or weekly ROAS.
+  - The 2:1:1 target is given only for low-ticket or fast-moving stores.
+  - The score lists the checks run and the points for each.
+
+test:
+  - Run it with two periods you know. Redo net sales plus shipping yourself and compare.
+  - Paste a month that followed a big sale month and check that it flags returns timing, not weak ads.
+  - Leave out the GA4 sessions and confirm it lists the bot check as not run, not as passed.
+  - Run it twice on the same numbers. The verdicts should match.
+
+improve:
+  - Add your own return rate and refund policy to the skill file so the returns step knows when to split them out.
+  - Add the tiles your team looks at each week, so the score covers them first.
+  - Save the cash collected definition to your brand file so every report uses one revenue line.
+  - Pair it with the store sales drop splitter when sales fall, and the GA4 store setup checker if the session gap is large.
+
+works_best_with:
+  tools:
+    - {name: "Shopify Analytics", why: "Source of every number the skill reads. Open the full cohort report, not the summary tile."}
+    - {name: "Google Analytics 4", why: "Gives the second session count used for the bot check."}
+  inputs:
+    - "A screenshot of the funnel tile and of sessions by location"
+    - "Your last three months of net sales, so a single month is not read alone"
+    - "Your return rate by product type"
+
+terms:
+  - term: Cash collected
+    meaning: Net sales plus shipping charges. The money that came in at checkout, without tax.
+  - term: AOV
+    meaning: Average order value. The mean order size, so a few big orders can pull it up.
+  - term: Cohort
+    meaning: A group of customers who first bought in the same month, followed over time.

@@ -1,0 +1,29 @@
+slug: weekly-dependency-and-security-sweep
+name: "Weekly dependency and security sweep"
+summary: "Run it weekly on your project. Get what is new, open or fixed since last week, plus an upgrade order."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: codebase, required: true}
+  - {type: deploy_url, required: false}
+outputs:
+  - {type: security_report}
+  - {type: plan}
+uses: [dependency-risk-scanner, secrets-hygiene-checker, security-incident-triager, advisory-exposure-checker, github-actions-attack-finder, exposed-secrets-finder, open-source-license-checker, dependency-risk-auditor]
+steps:
+  - {uses: secrets-hygiene-checker, note: "Every week, first: leaked keys and unsafe env files, because a live key outranks everything else."}
+  - {uses: security-incident-triager, note: "Only when a real key or credential is found exposed: severity, who to tell and what to do first, before the rest of the sweep."}
+  - {uses: dependency-risk-scanner, note: "Every week: known weak spots in packages, compared with last week's list."}
+  - {uses: advisory-exposure-checker, note: "Only when you name a fresh breach or package advisory: a read-only check of whether you are hit."}
+  - {uses: github-actions-attack-finder, note: "Only on the first run, or when build workflows changed since last week."}
+  - {uses: exposed-secrets-finder, note: "Only when you give a live site you own: keys and private files that anyone can fetch."}
+  - {uses: open-source-license-checker, note: "Only when packages were added since last week."}
+  - {uses: dependency-risk-auditor, note: "Only when there are new high or critical findings: a safe order to upgrade."}
+schedule: "Every Monday morning"
+asks_before: [upgrading or removing packages, rotating or revoking keys, committing or opening pull requests, scanning a site or account you do not own, changing build workflows]
+origin: own
+version: 1.0.0
+example_pending: true

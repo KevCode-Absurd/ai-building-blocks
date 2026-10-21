@@ -1,0 +1,121 @@
+new_slug: shopify-markets-setup-planner
+name: "Shopify Markets setup planner"
+summary: "Give it your countries and gateway. Get market groups, currency rules, catalogs, languages and tax settings."
+job: set-up-store
+thinking: high
+thinking_why: "Tax, currency and plan limits interact, so a stronger model keeps the rules straight and flags what needs a professional."
+
+headline: "Shopify Markets setup planner"
+subhead: Give it your countries, where your business is registered, your payment gateway and your warehouses. It gives you market groups, a currency and rounding choice, price and catalog changes per market, language settings and tax settings to review with an adviser.
+
+explain: |
+  Shopify Markets lets one store sell to many countries. The settings interact. Local currency at checkout needs Shopify Payments, which needs a registered business and is not offered in every country. Without it, a currency app shows local prices on the store but checkout charges in the store currency. Group the wrong countries and shoppers see surprise tax or the wrong shipping.
+
+  This skill takes your country list and gateway and works out how to group markets, which currency to use as the base, how to round converted prices, which products and prices change per market, which languages to add, and how to set tax. It does not give tax advice. Cross-border tax and duties need a qualified person, and plan and country availability change, so check them first.
+
+when:
+  - You want to sell to shoppers outside your home country on one Shopify store.
+  - You turned on a market and prices or checkout look wrong.
+  - You are not sure whether you need Shopify Payments to show local currency.
+
+you_give:
+  - The countries you want to sell to
+  - Where your business is registered
+  - Your payment gateway
+  - Your warehouses by country and your Shopify plan (optional)
+
+you_get:
+  - Market groups, with the reason for each group
+  - A currency and rounding choice
+  - Price and catalog changes per market
+  - Language and tax settings, with a list of questions for an adviser
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your countries, where you are registered, your gateway and your warehouses.
+  - Say your Shopify plan, because theme changes per market need a plan above Basic.
+  - Check each group with Shopify's current country and plan list before you set it up.
+  - Take the tax questions to an accountant or tax adviser.
+
+how_it_works:
+  - title: Groups the countries
+    text: Puts countries together only when they share tax rules and shipping. A non-EU country such as Switzerland is not grouped with EU countries.
+  - title: Checks the currency path
+    text: Local currency at checkout needs Shopify Payments. Without it, picks a base currency buyers know, such as USD or EUR.
+  - title: Sets rounding
+    text: Rounds converted prices to a natural ending such as .95.
+  - title: Plans catalogs
+    text: Removes products or changes prices by market, for example to absorb duties, with a compare-at price where needed.
+  - title: Plans theme and languages
+    text: Banner, holiday and shipping message per market, plus languages added with a free translation app, with key text fixed by hand.
+  - title: Sets tax display
+    text: Prefers tax-inclusive prices for consumers. Where tax must be added, sets rules per market for an adviser to check.
+  - title: Maps warehouses and rates
+    text: Assigns each location to the markets it serves and sets rates for each country, with a plain note on duties.
+
+output_shape: |
+  MARKETS PLAN for <store>, registered in <country>, gateway <name>, plan <plan>
+
+  MARKET GROUPS
+  <group> | <countries> | <why grouped>
+
+  CURRENCY   <base currency> | <local currency at checkout: yes/no, why>
+  ROUNDING   <rule, for example nearest .95>
+  CATALOGS   <market> | <products removed or price change> | <compare-at price>
+  THEME      <market> | <banner, holiday, shipping message> (needs a plan above Basic)
+  LANGUAGES  <language> | <market> | <key text fixed by hand>
+  TAX        <market> | <tax-inclusive or added> | <ask your adviser>
+  SHIPPING   <warehouse> -> <markets served> | <rate per country>
+  DUTIES     <plain-words note for the page>
+
+  VERIFY     <plan and country availability>
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you need to give>
+
+tweaks:
+  - what: Your gateway
+    how: Name it. The plan changes completely with and without Shopify Payments.
+  - what: Where you are registered
+    how: Give the country. Local currency at checkout depends on it.
+  - what: Your Shopify plan
+    how: Say which one. A theme change per market needs a plan above Basic.
+  - what: Your warehouses
+    how: List them by country. Each is assigned to the markets it serves.
+
+judge:
+  - No non-EU country is grouped with EU countries.
+  - The plan says clearly whether local currency at checkout is possible with your gateway.
+  - Converted prices have a rounding rule.
+  - Tax points are written as questions for an adviser, not as advice.
+  - It tells you to check plan and country availability.
+
+test:
+  - Give it a list with Switzerland and Germany. They should land in different groups.
+  - Give it a gateway that is not Shopify Payments. The plan should say checkout stays in the store currency.
+  - Compare one market's settings with Shopify's current market setup screen.
+  - Show the tax section to an accountant and ask what they would change.
+
+improve:
+  - Add your own rounding rule and base currency to the skill file.
+  - Add the countries where your warehouse gives you the best rates.
+  - Add a duties line in the words your customers use, to put on shipping pages.
+  - Pair it with the planner that orders which countries to open first, and the one for local stores and warehouses.
+
+works_best_with:
+  tools:
+    - {name: "Shopify Markets", why: "Where market groups, catalogs and per-market settings are set."}
+    - {name: "Shopify Payments", why: "Needed for local currency at checkout, in countries where it is offered."}
+    - {name: "Translate and Adapt", why: "The free Shopify app for adding languages; it offers two free."}
+  inputs:
+    - "Sales and traffic by country from analytics"
+    - "Your shipping rates by country"
+    - "Your refund and return rules for each market"
+    - "An accountant's notes on where you must charge tax"
+
+terms:
+  - term: Catalog
+    meaning: A set of products and prices you assign to a market.
+  - term: Compare-at price
+    meaning: The higher "was" price shown crossed out beside the sale price.
+  - term: Tax-inclusive price
+    meaning: A price that already includes tax, so the buyer sees no extra amount at checkout.

@@ -1,0 +1,82 @@
+new_slug: build-a-quiz-funnel-that-sells-and-feeds-your-ads
+name: Build a quiz funnel that sells and feeds your ads
+summary: Give it your product and offer. Get a quiz that sorts buyers, then ranked ad angles from their answers.
+job: write-landing-page
+thinking: high
+thinking_why: It runs four skills in a row and reads buyer answers for patterns. Give it your strongest model.
+headline: A quiz that sells, and ad angles from its answers
+subhead: Give it your product, offer and customer words. It writes the buyer research, builds the quiz with its result pages and email step, then reads the answers you export and ranks the ad angles worth testing. Last, it turns the top angles into a brief for your next ads.
+explain: |
+  When you pay for cold traffic in a niche where buyers need help choosing, a plain product page loses people who are not sure what suits them. A quiz guides them to the right product. It also tells you what they struggle with, in their own words, which most stores never use.
+
+  The steps build both halves. First it writes the buyer research and offer brief. Then it builds the quiz: questions that each have a job, result pages, a buy box and an email step. You send paid traffic through it for a week or two and export the answers and drop-off. It reads them for common problems, past fixes and words, ranks the ad angles, and writes a brief for the next round of ads. It needs about 100 answers to be worth reading.
+when:
+  - You pay for cold traffic in a niche where buyers need guiding to the right choice.
+  - Your product page loses visitors who are unsure which version fits them.
+  - You want ad ideas based on what buyers say they struggle with, not on what you guess.
+you_give:
+  - Your product page text, price and what it replaces
+  - Your offer, with terms
+  - Reviews, tickets or survey answers (optional)
+  - Your product list and who each suits
+  - Screenshots of a good quiz in your niche (optional)
+  - After launch, your exported answers and drop-off by question
+  - Your brand file (optional)
+you_get:
+  - Buyer research, an offer brief and four to six buyer types
+  - A quiz with a job for every question, result pages by answer, a buy box and an email brief
+  - A ranked list of ad angles from the answers, with a data score out of 100
+  - A campaign brief that sets the shape of your next ads by how aware the buyer is
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your product page, your offer and any customer words. Attach screenshots of a quiz you like for the structure only.
+  - When it pauses, send paid traffic through the quiz for a week or two, then export every answer and the drop-off by question.
+  - Bring the export back. Check the finish rate against the 30% target before you change the quiz.
+how_it_works:
+  - title: Write the buyer research
+    text: Takes your product page and customer words and writes the research, an offer brief and the beliefs a buyer must hold. Adds four to six buyer types.
+  - title: Build the quiz
+    text: Writes the questions, info cards, result pages, buy box and email step, with routes by answer. Protects the buyer's data and avoids copying a rival's questions.
+  - title: Read the answers
+    text: Counts ages, pains, goals and past fixes from your export. Reads how aware buyers are and ranks the ad angles to test.
+  - title: Plan the next ads
+    text: Takes the top angles and sets the first words, when the product enters, how firmly to ask and the length.
+output_shape: |-
+  STEP 1: BUYER RESEARCH
+    Research document | offer brief | beliefs to hold | four to six buyer types
+
+  STEP 2: QUIZ
+    Questions with their job | info cards | loading step | result pages by answer | buy box | email brief
+
+  STEP 3: ANGLE REPORT
+    Sample check | counts by question | awareness | ranked angles and frames | quiz and offer changes | data score out of 100
+
+  STEP 4: AD BRIEF
+    Awareness level | first words | when the product enters | the ask | length | checks missed
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Customer words you give step 1
+    how: Real reviews and tickets make better research than web searches alone.
+  - what: An example quiz from your niche
+    how: Step 2 learns the structure from it, never the questions. Attach screenshots of every step.
+  - what: Your quiz tool and email platform
+    how: You need per-question numbers and an email tool. Name them so the build fits.
+  - what: How many answers you export
+    how: Under about 100, step 3 gives hints, not rankings, and says so.
+judge:
+  - Every quiz question has a stated job, such as sorting, belief or objection.
+  - No question is copied from a rival's quiz.
+  - The quiz asks only for the data it needs, and the email step says why.
+  - Counts in the angle report match your export, and each angle cites the answers behind it.
+  - The ad brief uses an angle from the report, not a new one.
+test:
+  - Take the quiz yourself and check you land on the product that suits you.
+  - Check the finish rate after a week. The 30% target is a guide, not a rule for every niche.
+  - Count one answer by hand in the export and compare it with step 3.
+improve:
+  - Add your real expert, certificate or proof to your brand file so the angles can use them.
+  - Re-run steps 3 and 4 each month with new answers, and drop the questions with the worst drop-off.
+  - Pair the angles with your ad copy and video skills.

@@ -1,0 +1,132 @@
+new_slug: creator-pay-planner
+name: "Creator pay planner"
+summary: "Give it a creator's views, audience mix and your Meta CPM. Get a flat fee or floor offer."
+job: grow-social
+thinking: medium
+thinking_why: "It does fee math and writes offer terms, which a mid-size model handles well."
+
+headline: "Creator pay planner"
+subhead: Give it a creator's last 10 video views, their audience split and your own Meta CPM. It works out a flat fee, or a floor-or-commission offer for shop sales, and tells you go or no-go. You also get what to ask for in return.
+
+explain: |
+  Most stores guess what to pay a creator, then find out later that one post cost far more per view than their ads. CPM means the cost for every 1,000 views. If you know what your Meta ads cost per 1,000 views, you can work backwards to a fair price for a creator.
+
+  This skill sets the creator's target at half your Meta CPM, multiplies it by the views their last 10 videos usually get, and cuts the fee for any part of the audience you cannot sell to. Shipped product counts as part of the cost. If you sell through a shop, it can write a floor-or-commission offer instead. It tells you to walk away when the quote is above your ceiling.
+
+when:
+  - A creator sent you a price and you cannot tell if it is fair.
+  - You want to make offers to many small creators and need one simple rule.
+  - You sell through a shop and want an offer that pays creators more when they sell more.
+
+you_give:
+  - Your current Meta CPM, or any paid view price you know
+  - The creator's last 10 videos with view counts
+  - The creator's audience split by gender and country
+  - Your hero product, margin and where you sell
+  - The creator's size and your budget (optional)
+you_get:
+  - A fee range with the target CPM, expected views, audience discount and flat fee
+  - Floor-or-commission terms, or a go or no-go on their quote
+  - What to ask for in return, such as number of posts and usage rights
+  - Volume targets and a plan for posting the content again
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your Meta CPM and the creator's last 10 videos with views. Ask the creator for their audience split by country and gender.
+  - Say where you sell and what shipping the product costs.
+  - Read the go or no-go first, then the offer terms.
+  - Send the offer in writing, with the disclosure rule, before the creator posts.
+
+how_it_works:
+  - title: Sets the target CPM
+    text: Half of your Meta CPM, so a $20 Meta CPM gives a $10 target. With no Meta ads it uses a paid view price you state.
+  - title: Finds expected views
+    text: The average of the creator's last 10 videos, never the best one.
+  - title: Cuts for the wrong audience
+    text: It reduces the fee by the share of followers you cannot sell to, by gender or by a country you do not ship to.
+  - title: Counts the product
+    text: Shipped product and postage are part of the total cost, so the cash fee is smaller.
+  - title: Writes the offer
+    text: A flat fee agreed before posting, or for shop sales a floor or commission, whichever is higher, with posts and rights listed.
+  - title: Gives go or no-go
+    text: If the quote is above your ceiling, it says so and gives a counter-offer.
+  - title: Plans volume and reuse
+    text: How many posts to ask for, how to review them, and where to repost with the creator's name.
+  - title: Checks it worked
+    text: It tells you to check orders and branded search in the week a video lands before trusting the CPM.
+
+output_shape: |
+  FEE
+  Meta CPM <$>  ->  target CPM <$> (half)
+  Expected views <n> (average of last 10: <list>)
+  Base fee = <views> / 1,000 x <target CPM> = <$>
+  Off-target cut: <gender share>, <country share> -> <$>
+  Less product and postage <$> -> cash fee <$>
+  Quote received <$>  GO | NO-GO | COUNTER <$>
+
+  OFFER
+  <flat fee agreed before posting | floor of <$> a month or <15 to 20%> commission, whichever is higher>
+  Posts: <n>  Usage and ad rights: <terms>
+  Disclosure: posts carry #ad or the platform's paid-partnership label
+
+  RECRUITING LADDER
+  <micro-creator> -> <commission only when earnings pass the move-up line> -> <recruiter>
+
+  VOLUME AND REPOSTING
+  <posts per week>  Review owner: <name>  Repost to: <platforms>, commission <rule>
+
+  CHECK AFTER POSTING: orders and branded search in the week the video lands
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+
+tweaks:
+  - what: Your Meta CPM
+    how: Use a recent figure for the same country and product. A stale CPM moves every fee.
+  - what: Audience split
+    how: Ask for a screenshot of the creator's audience tab. Without it the skill marks the discount as unknown and gives a range.
+  - what: Where you sell
+    how: Say if you sell on your own site only. Then it keeps codes or links in the offer, since flat fees with no tracking are a harder bet.
+  - what: Creator size
+    how: With a small budget it keeps to about 5,000 to 50,000 followers and says so.
+  - what: Cash you can hold
+    how: Floor payments need cash for 90 days. Give your limit and the offer is cut to fit.
+
+judge:
+  - The fee shows its sum with each number you gave it.
+  - It used the average of the last 10 videos, not the best video.
+  - The audience cut matches the split the creator showed.
+  - Shipped product is counted in the cost.
+  - Every offer says the post must carry #ad or the platform's paid-partnership label.
+  - It states that one creator tells you little, and treats the program as many small bets.
+
+test:
+  - Give it a creator whose last 10 videos you know and a CPM of $20. The fee should be the average views divided by 1,000, times $10.
+  - Add a 25 percent male audience for a women-only product. The fee should drop by 25 percent.
+  - Paste a quote far above the ceiling. It should say no-go and give a counter.
+  - Run it twice on the same creator. The fee should match.
+
+improve:
+  - Replace the quarterly check with your own review rhythm, and add your current shop commission rules.
+  - Add your standard contract lines for usage rights, ad rights and posting dates.
+  - Save your agreed CPM ceiling in your brand file, so every offer starts from it.
+  - Keep a list of fees paid and the orders in the following week, to see if your half-of-Meta rule holds.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does the sums and writes the offer. Paste the views and your CPM as plain text."}
+    - {name: "Meta Ads Manager", why: "It shows your own cost per 1,000 impressions, the number the fee starts from."}
+    - {name: "TikTok Shop", why: "If you sell through the shop, its seller centre shows commission rules and orders per creator."}
+  inputs:
+    - "A screenshot of the creator's audience tab"
+    - "Your landed cost and margin for the hero product"
+    - "Branded search and order counts for the weeks around each past post"
+
+terms:
+  - term: CPM
+    meaning: The cost for every 1,000 views.
+  - term: Flat fee
+    meaning: One price agreed before the creator posts, however the post does.
+  - term: Floor or commission
+    meaning: A minimum payment each month, or a share of sales, whichever is higher.
+  - term: Usage rights
+    meaning: What you may do with the creator's video, such as run it as an ad.

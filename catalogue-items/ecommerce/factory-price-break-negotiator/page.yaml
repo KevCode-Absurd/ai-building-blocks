@@ -1,0 +1,124 @@
+new_slug: factory-price-break-negotiator
+name: "Factory price-break negotiator"
+summary: "Give it your bill of materials and volume plan. Get asks, give-backs and a fallback."
+job: plan-supply-chain
+thinking: high
+thinking_why: "It weighs what you can offer against what the factory can give, and plans a fallback. A stronger model keeps the trade-offs straight."
+
+headline: "Factory price-break negotiator"
+subhead: "Give it your bill of materials, landed cost, this year's units and next year's plan. It writes the opening call, asks line by line for price breaks, what you give back, and a fallback factory plan. You get a script and a margin range to aim inside."
+
+explain: |
+  Asking a factory for "a better price" gets a small answer. Asking about cotton, labor and zippers one at a time, with a volume plan behind each, gets a real one. Factories get credits from their own suppliers when you buy more, and those pass to you only if you ask for them by line.
+
+  This skill uses your cost sheet to plan the first call. It opens with a partnership, not a cut: your growth in units, and what you will do with the savings. It lists asks by line, what you can offer back, and the factory's usual margin so you aim inside it. It tells you what to do if the factory will not move, and warns against squeezing too hard, since a pressured factory makes up the difference with cheaper materials or skipped checks.
+
+when:
+  - You have a bill of materials and want lower unit costs at your next order.
+  - Your volume is growing and you want the factory to share the gain.
+  - A factory raised prices, or tariffs changed, and you need to see who can carry what.
+
+you_give:
+  - Your bill of materials and landed cost
+  - This year's units and your plan for the next 12 months
+  - Quotes from other factories, if you have them (optional)
+  - Your profit and loss in rough shares (optional)
+you_get:
+  - "A script for the first call: your plan in units and what you will do with the savings"
+  - "Asks by line: price break volume, labor and overhead, payment terms"
+  - "What you can offer back: forecast, on-time payment, a longer commitment"
+  - "A fallback: a second factory and how to open that talk, plus a margin range to aim inside"
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your cost sheet and volume plan. Add any other quotes.
+  - Say how much you buy a year. If it is a small number, the skill leans on the second supplier and your tech pack instead.
+  - Read the script and the ask list. Change anything you cannot offer.
+  - Hold the call, then paste the answers back for a revised plan.
+
+how_it_works:
+  - title: Opens as a partner
+    text: Shows your growth plan in units and says the savings go into marketing that grows both sides.
+  - title: Asks line by line
+    text: For each part and for labor, asks when it gets cheaper. The factory's own suppliers give volume credits that reach you only when you ask.
+  - title: Looks at the factory's line
+    text: Asks how much of a dedicated assembly line your orders use, and how you can raise that.
+  - title: Finds the margin range
+    text: Gets the factory's normal margin for your category and plans to aim inside it.
+  - title: Plans what you give back
+    text: Offers forecast sharing, on-time payment, a longer commitment.
+  - title: Sets the limit
+    text: Avoids squeezing to the bone, because a pressured factory cuts quality elsewhere.
+  - title: Builds the fallback
+    text: Lines up 5 or 6 other factories and a bill of materials from the new one.
+  - title: Handles tariff changes
+    text: Uses the cost sheet to see what each side can carry if duties move.
+
+output_shape: |
+  OPENING CALL SCRIPT
+  <your plan in units; what you will do with the savings; what you want to build together>
+
+  ASKS BY LINE
+  <part or cost> | now <$> | ask at <volume> -> <$> | give-back <...>
+  Labor and overhead: <ask>   Payment terms: <ask>
+
+  WHAT YOU OFFER BACK  <forecast | on-time payment | longer commitment>
+  FACTORY MARGIN RANGE  <low to high %> for <category>, source <...>, aim inside it
+  EARLY-RUN RULE  <how much more per unit to accept now, and until when>
+
+  FALLBACK
+  <factory> | what you will ask for | how to open that talk
+  IF THEY WILL NOT MOVE  <steps>
+  IF TARIFFS CHANGE  <what each side can carry>
+  OPTION WITH RISK  <prefunded stock, with the warning>
+  CHECKS MISSED: <none, or which>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Your volume
+    how: Give units, not sales. A small buyer has little to trade, so the skill leans on a second supplier and a clear tech pack.
+  - what: Your category
+    how: The 5 to 9 percent factory margin in the source is for jewelry. Find your own category's range and say so, or the skill will ask.
+  - what: Other quotes
+    how: Paste them. The skill lets the factory see that you hold options without making threats.
+  - what: What you can give back
+    how: Be honest about forecasts and payment speed. The skill only offers what you can deliver.
+
+judge:
+  - Every ask is tied to a row of your cost sheet and a volume.
+  - The script is about partnership and units, not a demand for a cut.
+  - Every give-back is something you can really deliver.
+  - A fallback exists and says how to open it.
+  - The skill warns against squeezing the factory too hard.
+
+test:
+  - Read the script aloud as if you were the factory. Does it sound fair?
+  - Check each ask against your cost sheet. The numbers should match.
+  - Try the opening on one friendly supplier first and watch what they say about the line-by-line asks.
+  - Compare the ask list with your last quote. Every ask should be something you did not already get.
+
+improve:
+  - Add your category's margin range once you have found it, with the date and where it came from.
+  - Add your real forecast rhythm (monthly, quarterly), so the give-back is concrete.
+  - Add the lines where you have already pushed, so the skill does not ask for them again.
+  - Pair it with the supplier terms and float planner for payment terms, and the landed cost calculator to see the gain per line.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can plan the asks and draft the script. Paste your cost sheet."}
+    - {name: "A former buyer in your category", why: "The source paid former procurement heads for an hour of advice to find the factory margin range. Ask for current figures."}
+  inputs:
+    - "Your cost sheet with the factory's own part prices"
+    - "Quotes from other factories"
+    - "Your volume plan by quarter"
+    - "A record of your on-time payments"
+
+terms:
+  - term: Price break
+    meaning: A lower price you get once you buy past a set volume.
+  - term: Bill of materials
+    meaning: A list of every part and cost in one unit of your product.
+  - term: Factory margin
+    meaning: The profit a factory keeps on what it sells you.
+  - term: Prefunded stock
+    meaning: A backer pays for a large run up front and sells it to you as you use it.

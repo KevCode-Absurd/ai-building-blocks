@@ -1,0 +1,84 @@
+new_slug: reorder-stock-before-you-run-out-and-track-the-shipment
+name: Reorder stock before you run out and track the shipment
+summary: Connect your store. Get days of stock left, restock rules, draft purchase orders and a shipment tracker.
+job: run-your-store
+thinking: high
+thinking_why: It runs four skills in a row and works on live store data. Give it your strongest model.
+headline: Reorder in time, and know where every shipment is
+subhead: Connect your store. It shows how many days of stock each product has left, sets a restock rule for each group, drafts purchase orders, and builds the shared tracker that follows each order to your door.
+explain: |
+  You find out a best seller is gone when orders stop. By then a reorder takes weeks, so you lose sales while it travels. After that, nobody can say when the stock lands, so marketing runs ads for a product that is not there.
+
+  The steps fix both halves. First it reads your live store and works out days of stock left for each product and location. It groups products by how fast they sell and how long the supplier takes, then sets a restock rule for each group. It then drafts purchase orders from that, with a date each product runs out. You place the orders yourself. The last step then builds one shared tracker for them, with the warehouse notice and a same-day check for short shipments. You pause after the drafts to place the orders, and the tracker needs the purchase order numbers and freight details from that.
+when:
+  - You reorder when you notice a gap on the shelf, not before.
+  - A best seller sold out and you found out from a customer.
+  - Orders are on the water and marketing, support and the warehouse each hold a different arrival date.
+you_give:
+  - Your store connected, so it can read stock and sales
+  - Supplier lead times and minimum orders
+  - How many days of cover you want to keep spare
+  - After the pause, purchase order numbers, freight details and ship dates
+you_get:
+  - Days of stock left for every product and location, lowest first
+  - A restock rule for each product group, with the trigger level and the order size
+  - Draft purchase orders, and a list of slow movers to clear instead of reorder
+  - A shared shipment tracker, a notice for the warehouse and a rule for who updates it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Connect your store with read access first. Steps 1 to 3 only read. Nothing is ordered for you.
+  - After step 3, check the drafts with each supplier and place the orders yourself.
+  - Come back with the purchase order numbers and freight details to build the tracker.
+how_it_works:
+  - title: See how long each product will last
+    text: Reads stock and sales for each product and location, works out how fast each sells and how many days are left, and lists the low ones first.
+  - title: Set a restock rule for each product group
+    text: Groups products by sales speed and supplier lead time, picks a rule such as min-max or a fixed cycle for each group, and sets the trigger and order size.
+  - title: Draft the purchase orders
+    text: Projects the day each product runs out on the careful side, sizes each reorder to cover lead time plus spare stock and drafts the orders and the slow movers to clear.
+  - title: Pause to place the orders
+    text: You check the drafts with each supplier, place the orders and note the purchase order numbers, freight details and ship dates.
+  - title: Build the shipment tracker
+    text: Builds one shared sheet beside your accounting record, with a row for each order, the update rule, a warehouse notice and a same-day check for short shipments.
+output_shape: |-
+  STEP 1: DAYS OF STOCK
+    Product | location | sales per day | days left | low first
+
+  STEP 2: RESTOCK RULES
+    Group | rule | trigger level | order size | check rhythm | owner
+
+  STEP 3: DRAFT PURCHASE ORDERS
+    Supplier | product | quantity | run-out date | slow movers to clear
+
+  PAUSE
+    Place the orders. Note PO numbers, freight details and ship dates.
+
+  STEP 4: SHIPMENT TRACKER
+    Columns | update rule and owner | warehouse notice | short-ship check
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Lead times
+    how: Give the real number of days for each supplier, from order to your door. A wrong lead time breaks every rule.
+  - what: Sea or air freight
+    how: Say which each order uses. Step 4 builds different columns for each.
+  - what: Cover you want to keep
+    how: Give it in days. Fast sellers usually need more than slow ones, and step 2 can set it by group.
+  - what: Locations
+    how: Name each warehouse or shop. The days left can be different at each one.
+judge:
+  - Days left comes from real sales speed and stock, per location.
+  - Each restock rule fits how fast that group sells and how long its supplier takes.
+  - Draft orders cover lead time plus spare stock, and slow movers are not reordered.
+  - Nothing is ordered, sent or changed in the store without your yes.
+  - The tracker has one owner, one update rhythm and a warehouse notice.
+test:
+  - Pick three products and redo days left by hand. Divide stock by sales per day.
+  - Check one draft order. Its quantity should cover lead time plus the cushion you set.
+  - After the next order lands, compare the tracker's arrival date with the real one and the received count with what you ordered.
+improve:
+  - Rerun steps 1 and 3 every week or two, and keep the rules from step 2 until a lead time changes.
+  - Record real lead times from each order so the next run uses them.
+  - Share the tracker with marketing and support, so they plan around the arrival date.

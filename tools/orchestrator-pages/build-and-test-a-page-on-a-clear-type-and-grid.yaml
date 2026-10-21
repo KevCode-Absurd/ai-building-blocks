@@ -1,0 +1,81 @@
+new_slug: build-and-test-a-page-on-a-clear-type-and-grid
+name: Build a page on a clear grid and test it
+summary: Describe your site. Get fonts and a grid, a page that follows them and a browser test.
+job: build-websites
+thinking: medium
+thinking_why: Each step is a focused design or build task. A mid-size model does it well.
+headline: Build a page that looks designed and clicks through without breaking
+subhead: Describe your site. It picks fonts and sizes, sets a grid and page layout around them, builds the page to follow those choices, then opens it in a real browser and clicks through to find what breaks.
+explain: |
+  Pages built straight from a prompt tend to look like every other template. The fonts are the default, the spacing is random and nothing sits on a grid. Then nobody clicks through it, so a broken menu or form ships with the page.
+
+  The steps fix the look first, then build. It picks fonts that suit what the site says and who reads it, and sets sizes and line spacing. Next it builds a grid and layout around those fonts. You add the type, grid and layout to your page brief. Then the art director builds the page to follow it and checks it at phone and desktop width. Last it opens the page in a real browser, clicks through links, forms and menus and reports what failed.
+when:
+  - You are starting a new page or site and want it to look chosen, not templated.
+  - Your last AI-built page had random spacing or mismatched type.
+  - You want the page clicked through before you show it to anyone.
+you_give:
+  - A plain description of the site, covering what it says, who reads it and what they should do
+  - The words and images you have (optional)
+  - Any brand fonts or colours you must keep (optional)
+you_get:
+  - Font pairs, sizes and line spacing for each screen
+  - A grid, margins and a layout for each page, with white space planned
+  - A built page that follows the type and grid, checked at phone and desktop width
+  - A test report from a real browser with failures, screenshots and console errors
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your real words and images ready. The grid is only as good as the content it holds.
+  - Your step is to copy the type list, grid and layout into the page brief before the build.
+how_it_works:
+  - title: Pick the fonts
+    text: Asks what the site says and who reads it, chooses a typeface for the tone, pairs a second one by contrast and sets sizes, line spacing and a scale for each screen.
+  - title: Set the grid and layout
+    text: Keeps the fonts from step 1, sets margins, columns and gutters for your content, orders things with big type against small and plans the white space.
+  - title: Add the type and grid to your brief
+    text: This one is yours. Copy the type list, the grid and the page layout into your brief, with your words and images.
+  - title: Build the page
+    text: Writes the page's main point in one line, picks a direction and one strong idea, builds the page and checks it in a real browser at phone and desktop width.
+  - title: Click through it
+    text: Starts the page on a local server, opens it in a real browser, clicks through links, forms and menus and reports what failed.
+output_shape: |-
+  STEP 1: FONTS
+    Typeface and pairing | sizes | line spacing | scale per screen
+
+  STEP 2: GRID AND LAYOUT
+    Margins | columns and gutters | order of type | white space | layout per page
+
+  YOUR STEP: add type, grid and layout to the brief
+
+  STEP 3: THE PAGE
+    Main point | direction | built page | phone and desktop check
+
+  STEP 4: BROWSER TEST
+    What passed | what failed | screenshots | console errors
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Brand fonts
+    how: Name them in step 1 so it builds around them instead of picking new ones.
+  - what: Number of pages
+    how: Say how many pages in step 2 so the grid and type hold across all of them.
+  - what: Mood
+    how: Give three words for the feel, such as calm, sharp and warm. The margins and type follow.
+  - what: What to click
+    how: Tell step 4 the key task a visitor must finish, such as sending the form, so that path is tested first.
+judge:
+  - Only one or two type families are used, and few sizes.
+  - Every element on the page sits on the grid.
+  - The page follows the fonts and layout you added, and says where it did not.
+  - It was checked at phone and desktop width.
+  - Failures in the test are listed with where they are, not described in general.
+test:
+  - Squint at the page. The most important thing should still stand out.
+  - Resize the window from phone width to wide. Nothing should overlap or run off the screen.
+  - Do the one key task, such as sending the form, yourself.
+improve:
+  - Save the type list and grid as your site's design file for the next page.
+  - Fix what the test found and run step 4 again.
+  - Add your real content and check the grid again, since longer text can break it.

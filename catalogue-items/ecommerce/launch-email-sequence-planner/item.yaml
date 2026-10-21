@@ -1,0 +1,24 @@
+slug: launch-email-sequence-planner
+name: "Launch email sequence planner"
+summary: "Give it your product, list and close date. Get a 10-email launch plan with resends and a triple close."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+minds: [claude-hopkins]
+credits:
+  - {title: "Secrets of a seven-figure copywriter (copywriting 101 talk)", by: "Jamie, marketing consultant (conference talk)", used: "The 10-email launch in three phases, the resend to unopened emails, the triple close on the last day and the outline-first email template"}
+  - {title: "Scientific Advertising", by: "Claude C. Hopkins (book)", used: "Giving a real limit or deadline to get a prompt decision"}
+  - {title: "8 Hour Copywriting Course For Beginners", by: "A freelance copywriting YouTuber (name not given)", used: "The promo and deadline sequence logic of value first, then the offer, then a real deadline"}

@@ -1,0 +1,20 @@
+slug: gmv-max-campaign-setup-planner
+name: "GMV Max campaign setup planner"
+summary: "Give top products and target cost per order. Get GMV Max settings, an ROI target and creator offers."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The BEST TikTok Ads Course For Beginners in 2026 (free full course)", by: "Corbin, Zoco Marketing", used: "The GMV Max prerequisites, picking the top 20 percent of products, the ROI target rule, the daily budget rule, the promotion day setting, open and target collaboration commissions and sample rules, and the creatives tab"}

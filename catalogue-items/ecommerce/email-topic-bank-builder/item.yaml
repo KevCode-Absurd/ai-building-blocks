@@ -1,0 +1,21 @@
+slug: email-topic-bank-builder
+name: "Email topic bank builder"
+summary: "Give it your product and customer questions. Get 10 topics, 100 one-point email ideas and formats."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "One email, one topic, one takeaway, the 10 broad topics with 10 narrow ones under each, the list of email formats and the future-framing rule for trending emails"}
+  - {title: "8 Hour Copywriting Course For Beginners", by: "A freelance copywriting YouTuber (name not given)", used: "The compile, ideate, structure and polish steps, the compile sheet and the timings"}

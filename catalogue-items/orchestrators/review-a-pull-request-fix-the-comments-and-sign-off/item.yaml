@@ -1,0 +1,21 @@
+slug: review-a-pull-request-fix-the-comments-and-sign-off
+name: "Review a pull request, fix the comments and sign off"
+summary: "Give it a pull request. Get risks ranked, the comments fixed in code and a one-page sign-off with proof."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: code_change, required: true}
+  - {type: codebase, required: true}
+outputs:
+  - {type: audit_report}
+uses: [pull-request-risk-reviewer, review-comment-fixer, human-review-gate]
+steps:
+  - {uses: pull-request-risk-reviewer, note: "Reads the change and ranks the issues a reviewer should raise."}
+  - {uses: review-comment-fixer, note: "Works through the comments you posted from the review and updates the code."}
+  - {uses: human-review-gate, note: "Takes the fixed change and holds it until a named person has reviewed it and no blocker is open."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/pull-request-review-loop/skeleton.yaml

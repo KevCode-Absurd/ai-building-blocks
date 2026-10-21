@@ -1,0 +1,36 @@
+# Workflow skeleton chaining library skills (docs/INTAKE.md).
+id: make-a-voiceover-and-ship-it-in-other-languages
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: make-a-voiceover-and-ship-it-in-other-languages
+  name: "Make a voiceover and ship it in other languages"
+  summary: "Give it your script. Get a spoken voiceover, dubbed versions that keep the voice, and subtitles for each."
+  when: "you have a script for a video, lesson or ad and want it ready for more than one language."
+  job: work-with-audio
+  level: intermediate
+steps:
+  - name: "Voiceover maker"
+    skill: voiceover-maker
+    job: ops
+    from: "skill: voiceover-maker"
+    method: ["Collect the exact text, voice and delivery style", "Generate the spoken clip", "Check clarity, pace and pronunciation", "Change one thing at a time and save the final"]
+    inputs: [copy_draft]
+    outputs: [audio]
+    note: "Turns your script into a voiceover file."
+  - name: "Video dubbing editor"
+    skill: video-dubbing-editor
+    job: ops
+    from: "skill: video-dubbing-editor"
+    method: ["Create a dubbing project from the voiceover", "Check the source transcript", "Add one language at a time", "Download each language and refine weak lines"]
+    inputs: [audio]
+    outputs: [audio, transcript]
+    note: "Makes a version per language. Reads the voiceover from the step before."
+  - pause: "Have a native speaker for each language listen and mark wrong words, names or tone, then regenerate the lines they flag."
+  - name: "Subtitle and transcript maker"
+    skill: subtitle-and-transcript-maker
+    job: ops
+    from: "skill: subtitle-and-transcript-maker"
+    method: ["Transcribe each corrected language file", "Keep word timing", "Label speakers", "Export subtitles for each language"]
+    inputs: [audio]
+    outputs: [transcript]
+    note: "Makes subtitles for each corrected version. Reads the dubbed audio from the step before."

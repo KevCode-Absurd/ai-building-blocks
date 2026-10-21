@@ -1,0 +1,123 @@
+new_slug: sku-ad-money-planner
+name: "SKU ad money planner"
+summary: "Give it sales, stock days and costs per SKU. Get each one's grade, ad target and clearance plan."
+job: launch-and-scale-ads
+thinking: medium
+thinking_why: "The work is sorting and sums on your product list, so a mid-level model is enough. Check the grades of two products by hand."
+
+headline: "SKU ad money planner"
+subhead: "Give it stock, days of stock, price, cost and ad spend for each product. It grades stock A to D, sets a ROAS target per grade, shows which product earns most per sale, sorts SKUs into four roles, and plans a clearance funnel for slow stock."
+
+explain: |
+  Most ad targets treat every product the same. But a SKU (one product in one size and color) with 400 days of stock needs a different target from one that sells out next week. Cutting ads on slow stock because ROAS is low leaves cash sitting on the shelf. Pushing ads on a product about to sell out wastes your best batch.
+
+  This skill grades stock A to D by days of stock and sets an ad target for each grade. It finds which products earn the most per sale after ad cost, since the one with the lowest cost per sale is not always the best. It sorts SKUs into champions, hidden gems, growth drivers and underperformers, each with an action. For slow stock it plans a separate clearance funnel with a real discount, aimed away from existing customers. It ends with a weekly stock-and-ads agenda.
+
+when:
+  - You have stock that is not moving and cash is tight.
+  - One product keeps eating the ad budget but another earns more per sale.
+  - A bestseller is close to selling out and your ads still run at full speed.
+
+you_give:
+  - Stock by SKU and days of stock at current sales
+  - Re-order lead time and unit cost
+  - Price, units sold, revenue and ad spend for each SKU
+  - Your target ROAS for good stock, and your break-even ROAS
+  - The owner's own grade cut-offs (optional)
+you_get:
+  - A grade A to D for each SKU, and a flag where stock will run out before a re-order lands
+  - An ad target for each grade, and contribution per sale by product
+  - A role and an action for each SKU
+  - A clearance funnel plan and a weekly stock-and-ads agenda
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your stock, sales and ad spend by SKU. Rough ad spend by SKU is fine.
+  - Give your target ROAS and your break-even ROAS. Say how you want to set the grade cut-offs, or let it use its starting rule.
+  - Read the scarce-stock list first, then the clearance plan. Check the offer is a real price.
+  - Hold the weekly agenda with whoever buys stock, watches cash and runs the ads.
+
+how_it_works:
+  - title: Grades the stock
+    text: A fast, B medium, C slow, D not moving, by days of stock against re-order lead time.
+  - title: Sets targets by grade
+    text: Lower ROAS for slow stock you want to clear, higher for scarce stock. Break-even sits beside each.
+  - title: Protects scarce stock
+    text: Slows or pauses ads where days of stock are below the lead time.
+  - title: Plans the clearance funnel
+    text: An unlisted page, a real discount only through the ad, existing customers left out, kept off the main site.
+  - title: Finds the real earners
+    text: Contribution per sale after CAC, so a low cost per sale does not hide a low profit.
+  - title: Splits campaigns
+    text: Separate groups by product economics, because "maximize conversions" feeds the cheapest sale.
+  - title: Sorts roles
+    text: Champions, hidden gems, growth drivers and underperformers, each with an action.
+  - title: Sets the weekly agenda
+    text: Days of stock on top SKUs, spend by SKU, what runs out next.
+
+output_shape: |
+  SKU AD MONEY PLAN  <store>  <date>
+  GRADES  SKU | stock | days of stock | lead time | grade A/B/C/D | flag
+  TARGETS  grade A: ROAS <x> | B: <x> | C: <x> | D: <x>   (break-even ROAS <x>)
+  PER SALE  product | price | cost | delivery | CAC | contribution per sale
+  ROLES  SKU | role | action | spend share vs volume share
+  SCARCE STOCK  <SKUs to slow or pause, days left vs lead time>
+  CLEARANCE FUNNEL  <SKUs> | page | real offer price | existing customers out | target ROAS | stop rule
+  CAMPAIGN SPLIT  <groups>
+  WEEKLY AGENDA  <days of stock; spend by SKU; what runs out; clearance progress>
+  Cash effect: <cash freed vs margin given up>. Check this with your accountant.
+  CHECKS MISSED: <none or list>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: Grade cut-offs
+    how: The skill uses a starting rule tied to lead time. Replace it with Shopify's own rank or with cut-offs that suit your range.
+  - what: Targets for slow stock
+    how: Set how much margin you will give up, and in which market. A target at or below break-even turns stock into cash and costs profit.
+  - what: Ad spend by SKU
+    how: Rough numbers are enough. Better data changes the roles and the campaign split.
+  - what: The market for clearance
+    how: Say if you would clear stock in your home market or a different one. The skill flags the brand risk of discounting at home.
+  - what: Lead time
+    how: A longer lead time puts more SKUs on the scarce list. Use the real one.
+
+judge:
+  - Every SKU has a grade and a role, with the rule used.
+  - Targets are your numbers, with break-even beside them.
+  - Scarce stock is checked against lead time.
+  - The clearance offer uses a price you really charge and leaves out existing customers.
+  - Contribution per sale takes CAC off.
+  - The cash effect and brand risk are stated.
+
+test:
+  - Pick two products you know well, one fast and one slow, and check their grades against what you see in the warehouse.
+  - Run it twice with the same inputs. The grades and roles should match.
+  - Change the lead time and see that the scarce-stock list moves the way you expect.
+  - Check contribution per sale for one product by hand, as price minus costs minus CAC.
+
+improve:
+  - Save your lead times, unit costs and grade cut-offs in the skill file.
+  - Add the markets and pages you can really use for clearance, with any limits.
+  - Add a rule for the lowest ROAS you will accept on slow stock.
+  - Pair it with the Inventory cash planner for the cash view and the Discount impact checker before a flat discount.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any chat AI can sort SKUs and do the sums. Check two grades by hand."}
+    - {name: "Shopify", why: "Its Products area ranks stock by sell-through, and its reports give units sold by SKU."}
+    - {name: "Meta Ads Manager or Google Ads", why: "Gives spend and results by product group, so you can split campaigns by product."}
+  inputs:
+    - "Sell-through and days of stock by SKU from Shopify"
+    - "Your supplier's lead times"
+    - "A list of what each product costs to deliver"
+    - "Ad spend by campaign and product group"
+
+terms:
+  - term: SKU
+    meaning: A single product in one size and color, as you count it in stock.
+  - term: Days of stock
+    meaning: How many days your current stock would last at today's sales rate.
+  - term: Liquidation funnel
+    meaning: A separate page and ad set up to sell slow stock at a discount, kept off your main store.
+  - term: Contribution per sale
+    meaning: What is left from one sale after product cost, delivery cost and the ad cost of winning that customer.

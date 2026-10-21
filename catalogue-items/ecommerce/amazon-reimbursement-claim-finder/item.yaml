@@ -1,0 +1,20 @@
+slug: amazon-reimbursement-claim-finder
+name: "Amazon reimbursement claim finder"
+summary: "Give it shipment and fee reports. Get a claim-readiness score and the claims to file."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: document, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Free Amazon FBA course, 12 hour step by step tutorial", by: "An Amazon seller and course host (name not given in the source)", url: "https://www.youtube.com/watch?v=LegZUuOVZ9Y", used: "Comparing units sent with units received, wrong size tier and fee overcharges, damaged and lost stock, and keeping proof for claims"}

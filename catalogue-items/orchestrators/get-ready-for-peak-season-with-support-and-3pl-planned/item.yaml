@@ -1,0 +1,24 @@
+slug: get-ready-for-peak-season-with-support-and-3pl-planned
+name: "Get support and stock ready for peak season"
+summary: "Give it past sales and your peak target. Get hire dates for support, 3PL terms, an inbound tracker and a bill audit."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: [store-revenue-forecast-builder, support-capacity-planner, 3pl-bid-and-agreement-builder, inbound-shipment-tracker-builder, 3pl-bill-auditor]
+steps:
+  - {uses: store-revenue-forecast-builder, note: "Starts with a daily forecast of peak orders that every later step plans for."}
+  - {uses: support-capacity-planner, note: "Turns forecast orders into expected tickets and the dates support staff must start."}
+  - {uses: 3pl-bid-and-agreement-builder, note: "Sends the forecast volumes to 3PLs so bids and terms rest on peak, not an average month."}
+  - {uses: inbound-shipment-tracker-builder, note: "Tracks every stock order against the forecast so the warehouse knows what lands and when."}
+  - {uses: 3pl-bill-auditor, note: "Checks the invoice against the agreement terms from the bid step."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/get-ready-for-peak-season-with-support-and-3pl-planned/skeleton.yaml

@@ -1,0 +1,81 @@
+new_slug: find-a-buyer-group-your-rivals-miss-and-brief-ads-for-it
+name: "Find a buyer group rivals miss and brief ads"
+summary: Give it your product and rivals. Get a buyer group they ignore, their own words and ad angles to test.
+job: understand-customers
+thinking: high
+thinking_why: It runs four skills in a row and reads your pasted quotes for patterns. Give it your strongest model.
+headline: Sell to the buyers your rivals ignore
+subhead: Give it your product and three to five rivals. It finds buyer groups they leave out, helps you pick one, pulls that group's own words from forums and reviews, and turns them into a half-page brief and ad angles to test.
+explain: |
+  When your product looks like everyone else's, you end up fighting for the same obvious buyer with the same promises. Ads blur together and you can only compete on price. The way out is often not a new claim but a new buyer: a group the leaders ignore, who still have the problem.
+
+  The steps find that group. First it maps who your rivals sell to, finds three or four groups nobody serves from review stories, and checks how big each is. You pick one. Then you spend an hour in the forums and review threads where that group talks, and save the posts. It mines them for their words, writes a half-page brief, and turns the brief into ad angles. It will not stretch a claim to fit a group, so a product that cannot truly help them is ruled out.
+when:
+  - Your product looks like everyone else's and you need a group of buyers of your own before you write ads.
+  - You sell in a crowded category and every rival's ad sounds the same.
+  - You want a new market for an existing product, but have no proof it works for them.
+you_give:
+  - Your product and the problem it solves
+  - Three to five rivals, as names or Meta Ad Library links
+  - Amazon links to the top-reviewed rival product
+  - Who buys from you now, and their order values (optional)
+  - Your brand file (optional)
+  - The posts and reviews you save in the forum hour
+you_get:
+  - Three or four overlooked buyer groups, how big each is, and one picked and sharpened into layers to test
+  - A one-page sketch of the chosen group in their own words, with search phrases
+  - A half-page brief on how aware they are and which force to work on
+  - Ad angles to test, with the first words, length and ask for each
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste ad notes, review stories and forum threads when it asks. It uses only what you paste, and says where each claim comes from.
+  - When it pauses, spend an hour in the forums and review threads where the chosen group talks, and save the posts. Leave out usernames and links.
+  - Check the group is one your product can truly help before you write ads.
+how_it_works:
+  - title: Find the overlooked group
+    text: Maps who your rivals sell to, finds groups nobody serves from review stories, checks their size on Reddit and picks one to sharpen.
+  - title: Dig for their words
+    text: Writes the search phrases, keeps a timed hour and marks up the quotes you save. Writes a one-page sketch of the buyer.
+  - title: Write the buyer brief
+    text: Places the group's awareness, picks the force to work on and boils the quotes to a half-page brief.
+  - title: Plan the ad angles
+    text: Takes the brief and sets the first words, when the product enters, how firmly to ask, the length and how to argue.
+output_shape: |-
+  STEP 1: OVERLOOKED GROUPS
+    Who rivals sell to | three or four groups with their review stories | size check | pick | layers to test
+
+  STEP 2: BUYER SKETCH
+    Search phrases | marked-up quotes | one-page sketch in their words
+
+  STEP 3: BUYER BRIEF
+    Awareness | forces | the one to work on | quotes | job line
+
+  STEP 4: AD ANGLES
+    Per angle: first words | when the product enters | the ask | length | how to argue | checks missed
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your rivals
+    how: Name the ones winning today, with their Ad Library links. Weak rivals show weak groups.
+  - what: The product you pick the group for
+    how: If the product cannot truly help a group, it is skipped. Say the real limits.
+  - what: Your customer data
+    how: If you already sell, who buys now and their order values help check size and fit.
+  - what: How many posts you save
+    how: More threads give more quotes. A thin hour gives a thin sketch, and the brief says so.
+judge:
+  - Each group comes from review stories you pasted, with sources shown.
+  - Group size is checked, not assumed.
+  - The product does not claim more than it can do for the group.
+  - No usernames, links or photos from forums are kept.
+  - Each angle can be traced back to a quote in the sketch.
+test:
+  - Read the sketch aloud to someone in the group. Ask if it sounds like them.
+  - Search for the phrases from step 2 and see if real posts come up.
+  - Write one ad from one angle and show it to the group, before you spend on more.
+improve:
+  - Repeat the forum hour for the next group on your list.
+  - Save the chosen group and brief in your brand file so ad and page skills start from them.
+  - Add your own rule for which groups you will never target to the finder skill.

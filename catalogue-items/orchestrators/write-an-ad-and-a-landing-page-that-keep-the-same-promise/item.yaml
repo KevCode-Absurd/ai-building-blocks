@@ -1,0 +1,29 @@
+slug: write-an-ad-and-a-landing-page-that-keep-the-same-promise
+name: "Write an ad and a page with the same promise"
+summary: "Give it your product facts and reviews. Get an ad and a matching page that repeat the promise, each checked for truth."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brief, required: false}
+  - {type: persona, required: false}
+  - {type: design_direction, required: false}
+outputs:
+  - {type: audit_report}
+uses: [pain-point-ad-builder, five-part-ad-checker, ad-matched-landing-page-writer, store-social-proof-placer, landing-page-30-point-checker]
+steps:
+  - {uses: pain-point-ad-builder, note: "Writes the ad around the real customer problem found in your reviews."}
+  - {uses: five-part-ad-checker, note: "Checks the ad has all five parts and keeps one idea, and fixes weak lines."}
+  - {uses: ad-matched-landing-page-writer, note: "Writes a page that repeats the ad's promise in its first screen, using the checked ad copy."}
+  - {uses: store-social-proof-placer, note: "Places reviews on the page where they answer the doubts its copy raises."}
+  - {uses: landing-page-30-point-checker, note: "Scores the finished page on 30 points before the ad and page go live together."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-an-ad-and-a-landing-page-that-keep-the-same-promise/skeleton.yaml

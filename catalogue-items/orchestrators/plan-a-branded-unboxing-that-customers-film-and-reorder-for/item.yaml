@@ -1,0 +1,24 @@
+slug: plan-a-branded-unboxing-that-customers-film-and-reorder-for
+name: "Plan a branded unboxing that customers film and reorder for"
+summary: "Give it your store link and order data. Get a customer ritual, an unboxing plan and the inserts that carry it."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: brand
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+uses: [website-brand-brain-builder, brand-ritual-designer, sensory-unboxing-planner, unboxing-insert-and-gift-planner]
+steps:
+  - {uses: website-brand-brain-builder, note: "Reads your store and reviews into a brand file the later steps work from."}
+  - {uses: brand-ritual-designer, note: "Designs one customer ritual around the product. Reads the brand file from the step before."}
+  - {uses: sensory-unboxing-planner, note: "Matches weight, colour, sound and smell to the ritual. Reads the brand file from the first step."}
+  - {uses: unboxing-insert-and-gift-planner, note: "Chooses the inserts and gifts that carry the plan, within your margin. Reads the brand file from the first step."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/plan-a-branded-unboxing-that-customers-film-and-reorder-for/skeleton.yaml

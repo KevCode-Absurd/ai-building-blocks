@@ -1,0 +1,19 @@
+slug: ad-and-page-match-checker
+name: "Ad and page match checker"
+summary: "Attach your ad and its page. Get a match score out of 100, ranked mismatches and fixes."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: beginner
+inputs:
+  - {type: static_ads, required: true}
+  - {type: web_page, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Secrets of a seven-figure copywriter (copywriting 101 talk)", by: "Jamie, a marketing consultant (conference talk)", used: "Message match from ad to page: the same promise, look, offer and next step, with a worked example of a bad match"}

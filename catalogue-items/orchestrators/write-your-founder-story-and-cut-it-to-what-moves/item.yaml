@@ -1,0 +1,23 @@
+slug: write-your-founder-story-and-cut-it-to-what-moves
+name: "Write your founder story and cut it to what moves"
+summary: "Give it the true facts of how you started. Get a mapped story, its shape checked, a 10% cut and plain wording."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: feedback_notes}
+uses: [hero-story-mapper, story-shape-mapper, ten-percent-cutter, plain-english-editor]
+steps:
+  - {uses: hero-story-mapper, note: "Maps your facts to the stages of the story and drafts it without inventing anything."}
+  - {uses: story-shape-mapper, note: "Reads the draft from the step before and shows where the story goes flat."}
+  - {uses: ten-percent-cutter, note: "Cuts your reworked draft by a tenth and keeps a log of what went. It can use the story map from step one."}
+  - {uses: plain-english-editor, note: "Takes the cut draft and puts it in words you would say out loud."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/write-your-founder-story-and-cut-it-to-what-moves/skeleton.yaml

@@ -1,0 +1,102 @@
+new_slug: store-quiz-funnel-builder
+name: "Store quiz funnel builder"
+summary: "Give it your customer research and offer. Get a quiz, info cards, summary page and a drop-off check."
+job: write-landing-page
+thinking: high
+thinking_why: "Each question has a job and the summary page has to match the answers, so a stronger model holds the whole funnel together."
+headline: "Store quiz funnel builder"
+subhead: "Give it your offer, your buyer and the beliefs and doubts they hold. It builds the quiz questions with a job for each, the info cards between them, the summary page, the email step and a route for each answer. After launch it reads your drop-off numbers."
+explain: |
+  A quiz funnel sends ad traffic into a short quiz instead of a product page. Shoppers answer questions about themselves, then see a page built from their answers. People who finish are more committed. The answers also tell you what they want and what worries them.
+  This skill is the store version of the general quiz funnel builder. It adds the store details: product routing, a summary page with a buy box, email capture and a follow-up email sequence by answer. Every question must do one job, a small commitment, a belief the buyer needs, or an objection to head off. The skill also gives the rule for length, two sources disagree on it, and a drop-off check once the quiz is live. The numbers come from operators' health-niche quizzes. Health and weight loss quizzes need extra care with claims.
+when:
+  - Your ads send people to a product page and few buy.
+  - You sell several products and want each buyer sent to the one that suits them.
+  - You want to learn what your buyers want and fear before you write more ads.
+you_give:
+  - "Customer research: your offer, buyer, the beliefs they must hold, their objections and what they tried before"
+  - Screenshots of every step of a quiz from your niche that works
+  - Your products and who each suits
+  - Per-question starts and drop-off, after launch (optional)
+you_get:
+  - A question list with format, answer options and the job of each question
+  - Info cards that reframe a belief or answer a doubt
+  - A summary page layout, an email capture step and a landing route for each answer
+  - A brief for answer-based email segments and a finish rate check against the 30% target
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your customer research and offer. Attach screenshots of a quiz that works in your niche.
+  - Review the question list. Cut any question the skill cannot give a job.
+  - Build it in your quiz tool, with per-question analytics switched on, and an email platform.
+  - After a few hundred starts, paste the per-question numbers and run the drop-off check.
+how_it_works:
+  - title: Sends traffic to the quiz
+    text: Most paid traffic goes into the quiz, not a product page. The ad button says take the quiz, not shop now.
+  - title: Gives every question a job
+    text: Each question is a small commitment, a belief the buyer needs, or an objection to head off. A question with none of these is cut.
+  - title: Builds from research
+    text: It loads your offer, buyer, beliefs and research first, then reads the screenshots, then drafts. Drafting with AI keeps your own beliefs from skewing the questions.
+  - title: Sets length and order
+    text: Most stores, 8 to 12 questions. App or subscription offers, 15 to 25. The first question is easy and not personal. The first three are tested, since they are the hook.
+  - title: Mixes formats and cards
+    text: Buttons, numbers, sliders and like or dislike, no more than two or three of one type in a row. An info card every 3 to 5 questions.
+  - title: Builds the summary and email step
+    text: A loading step, then the summary, which repeats their answers, then proof, offer and buy box. The email step trades some conversion for a list.
+  - title: Routes and follows up
+    text: Each main pain point goes to a matching page and offer. A 5 to 7 email sequence follows, varied by answer.
+  - title: Reads the drop-off
+    text: After launch, drop-off per question. A normal question loses 1 to 3%. A spike means ask it later, make it a tap, make it less personal or cut it.
+output_shape: |
+  QUIZ FOR <offer> / <buyer>
+  LENGTH: <n questions> (reason: <store type and price point>)
+  Q1 <question> | format <buttons / number / slider / like-dislike> | job <commitment / belief / objection> | options <...>
+  ...
+  INFO CARD after Q<n>: <fact / reassurance / short plan> | uses answer: <which>
+  LOADING STEP: "<text>"
+  SUMMARY PAGE: <their inputs, current vs goal with timeline> -> proof -> offer and buy box -> guarantee -> <timer only if real>
+  EMAIL STEP: <where, what it asks, trade-off note>
+  ROUTES: <pain point -> page and offer>
+  EMAIL SEGMENTS BRIEF: <5 to 7 emails, how each segment differs>
+  DROP-OFF CHECK (after launch): <question | starts | drop % | normal 1 to 3% | action>
+  FINISH RATE: <starters reaching the offer> vs 30% target (25% still good)
+  CLAIMS NOTE: <anything needing a qualified person>
+  CHECKS MISSED: <none or list>
+tweaks:
+  - what: Store type and price
+    how: Say if it is a physical product or a subscription or app. It changes the length from 8 to 12 up to 15 to 25 questions.
+  - what: Beliefs and objections
+    how: List the beliefs buyers must hold and the objections they raise. The questions are built to seed the first and head off the second.
+  - what: Example quiz
+    how: Attach every step of a quiz that works in your niche. The skill reads its structure and gives you its own questions, not a copy.
+  - what: Email trade-off
+    how: Say if a list matters more than front-end conversion. A subscription may accept a lower front-end rate for the list.
+judge:
+  - Every question has a stated job. None is there only for data.
+  - The first question is easy and not personal. Intrusive items such as age or weight come later.
+  - No more than two or three questions of one format in a row.
+  - The summary page repeats the buyer's own answers.
+  - Nothing in the funnel claims a result, health effect or timeline you cannot support.
+test:
+  - Read the questions as a buyer. Mark any question where you would hesitate to answer. That is a likely drop-off.
+  - Send the first version to 5 people who fit your buyer and ask them where they got bored.
+  - After a few hundred starts, compute drop-off per question and compare with the 1 to 3% normal range.
+  - Test two versions of the first three questions against each other. They are the hook.
+improve:
+  - Add your own claims rules so the summary page and cards cannot say anything you cannot back.
+  - Add your product line and who each suits, so the routing is exact.
+  - Save the drop-off numbers from each version in your brand file, so the next quiz starts from them.
+  - Pair it with the quiz answers to ad angles reader to turn answers into ads.
+works_best_with:
+  tools:
+    - {name: "Heyflow", why: "A quiz and funnel builder with per-question analytics. The source describes the tool as Heyflow-type."}
+    - {name: "Klaviyo", why: "Email platform for the follow-up sequence by answer."}
+    - {name: "Shopify", why: "Where the products and the buy box live."}
+  inputs:
+    - Reviews and customer words to ground the questions
+    - Screenshots of a quiz from a brand in your niche
+    - A guarantee and proof you can really show
+    - Your product list and who each product suits
+terms:
+  - {term: "Micro-commitment", meaning: "A small yes early on that makes a bigger yes more likely later."}
+  - {term: "Info card", meaning: "A screen between questions that gives a fact, a reassurance or a short plan."}
+  - {term: "Buy box", meaning: "The part of the page with the price, options and buy button."}

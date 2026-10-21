@@ -1,0 +1,29 @@
+# Workflow skeleton: chains library skills (docs/INTAKE.md). Our words.
+id: ship-stock-to-amazon-and-claim-back-what-goes-missing
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+minds: []
+workflow:
+  slug: ship-stock-to-amazon-and-claim-back-what-goes-missing
+  name: "Ship stock to Amazon and claim back what goes missing"
+  summary: "Give it your sales and product facts. Get a shipment plan and checklist, then the claims to file."
+  when: "you are sending stock to Amazon and want proof kept so lost or damaged units are paid back."
+  job: sell-on-amazon
+  level: intermediate
+steps:
+  - name: "Amazon inbound stock planner"
+    skill: amazon-inbound-stock-planner
+    job: ops
+    from: "skill: amazon-inbound-stock-planner"
+    method: ["Size the first order at three to six months of sales", "Split the shipment and allow for slow check-in", "Check barcodes, prep, case limits and box labels", "Keep every receipt and packing list as proof"]
+    inputs: [spreadsheet, product_data]
+    outputs: [plan, document]
+    note: "Starts the chain: how much to send, when, and a shipment checklist with the proof to keep."
+  - pause: "Ship it, keep the proof, and wait until the shipments close. Then export the shipment, fee, damaged and lost reports."
+  - name: "Amazon reimbursement claim finder"
+    skill: amazon-reimbursement-claim-finder
+    job: analysis
+    from: "skill: amazon-reimbursement-claim-finder"
+    method: ["Compare units sent with units received on each shipment", "Check size tiers and fee lines for overcharges", "Check damaged, lost and returned stock", "Score how much was checked and list the claims to file"]
+    inputs: [spreadsheet, document!, product_data!]
+    outputs: [audit_report]
+    note: "Reads the shipment checklist and proof from the step before and the closed reports to find what Amazon owes."

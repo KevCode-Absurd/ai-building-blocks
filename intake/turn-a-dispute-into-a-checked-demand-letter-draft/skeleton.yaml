@@ -1,0 +1,40 @@
+# Workflow skeleton built from existing AI Blocks library skills (docs/INTAKE.md).
+id: turn-a-dispute-into-a-checked-demand-letter-draft
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: turn-a-dispute-into-a-checked-demand-letter-draft
+  name: "Turn a dispute into a checked demand letter draft"
+  summary: "Answer questions about a dispute. Get a fact sheet, a dated timeline from your emails and a demand letter draft."
+  when: "someone owes you money or has broken a deal and you want a letter ready for a lawyer to review."
+  job: check-contracts
+  level: intermediate
+steps:
+  - name: "Gather the facts of the dispute"
+    skill: demand-letter-fact-gatherer
+    job: ops
+    from: library
+    method: ["Pick the kind of demand: payment, breach, cease and desist or other", "Set the tone, the reply window and who signs", "Record the parties, what was agreed and what went wrong", "Note what you want, what you would accept and what you will do if ignored", "Write it all into one fact sheet"]
+    inputs: [question]
+    outputs: [document]
+    note: "Starts from your answers. Makes the fact sheet the next steps check and write from."
+  - name: "Build a dated timeline from your emails"
+    skill: dispute-timeline-builder
+    job: ops
+    from: library
+    method: ["Gather the emails, contracts and invoices, and check you may use them", "Pull out each dated event and merge repeats", "Mark the events that matter most to your claim", "List gaps where a document is missing or a date is unclear"]
+    inputs: [document]
+    outputs: [document]
+    note: "Checks the fact sheet against your records. Every date and amount in the letter should match this timeline."
+  - name: "Draft the demand letter"
+    skill: demand-letter-drafter
+    job: ops
+    from: library
+    method: ["Check the fact sheet is complete before writing anything", "Run the pre-send gate: privileged facts, admissions, settlement marking and tone", "Write the letter in the right form for the demand type", "Quote only words you have in front of you, and flag anything to verify", "Add a checklist for what to do after sending"]
+    inputs: [document]
+    outputs: [copy_draft]
+    note: "Writes the letter from the fact sheet and the timeline, and flags any quote or date it cannot match."
+  - pause: "Have a qualified lawyer read the letter before it goes out. Letters like this can affect your rights, and this workflow gives a first draft, not legal advice."

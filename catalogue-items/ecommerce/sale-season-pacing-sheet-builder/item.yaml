@@ -1,0 +1,21 @@
+slug: sale-season-pacing-sheet-builder
+name: "Sale season pacing sheet builder"
+summary: "Give it last year's sale data and margin. Get a pacing sheet with scale, hold and cut rules."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: spreadsheet}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Black Friday 2026 strategy: spend, creative, offers, pacing", by: "Nathan, head of paid media at an ecommerce ad agency", used: "Marginal over average results, the contribution margin 3 scale rule, the click-window lag gap, pre-sale spend share, hourly lag, base and stretch plans, Google prep and the sale calendar"}

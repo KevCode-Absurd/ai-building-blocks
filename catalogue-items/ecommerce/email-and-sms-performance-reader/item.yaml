@@ -1,0 +1,21 @@
+slug: email-and-sms-performance-reader
+name: "Email and SMS performance reader"
+summary: "Paste last month's numbers. Get what broke, what to repeat and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: email_flow, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "The monthly review of campaigns, flows, list growth and deliverability, and the open and click floors"}
+  - {title: "The only ecommerce SMS marketing video you'll ever need", by: "An agency owner who runs SMS for ecommerce clients", used: "The SMS click, unsubscribe and delivery ranges and how to fix each"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "Exporting campaign and flow data, asking a chat AI for ten observations, and reading the revenue split across flows"}

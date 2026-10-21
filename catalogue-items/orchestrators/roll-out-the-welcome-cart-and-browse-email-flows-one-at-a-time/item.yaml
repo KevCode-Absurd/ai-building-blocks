@@ -1,0 +1,27 @@
+slug: roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time
+name: "Roll out the welcome, cart and browse email flows one at a time"
+summary: "Give it your store setup and offer. Get a safe sending setup, three live flows and the gaps left."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: email
+level: intermediate
+inputs:
+  - {type: document, required: true}
+  - {type: brand_brain, required: true}
+  - {type: offer, required: true}
+  - {type: product_data, required: true}
+  - {type: store_capture, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+uses: [email-setup-health-checker, welcome-flow-builder, cart-recovery-flow-builder, browse-abandonment-flow-builder, email-flow-gap-checker]
+steps:
+  - {uses: email-setup-health-checker, note: "Scores the sending setup first, so the fixes come before any flow goes out."}
+  - {uses: welcome-flow-builder, note: "Builds the first flow on a setup that is safe to send from."}
+  - {uses: cart-recovery-flow-builder, note: "Adds cart recovery in the same voice and offer rules as the welcome flow. This skill does not take the welcome flow as an input, so paste in the welcome flow's offer, code rule and voice lines."}
+  - {uses: browse-abandonment-flow-builder, note: "Adds browse recovery so it does not collide with the cart emails. This skill does not take the welcome flow as an input, so paste in the welcome offer and voice lines, and the cart exit rules."}
+  - {uses: email-flow-gap-checker, note: "Checks the flows you built for gaps and overlaps, and ranks what to add next."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time/skeleton.yaml

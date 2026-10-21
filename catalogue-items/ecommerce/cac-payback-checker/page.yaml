@@ -1,0 +1,126 @@
+new_slug: cac-payback-checker
+name: "CAC payback checker"
+summary: "Give it CAC, margins and cohort profit. Get profit to CAC ratios, a scale-or-fix call, scored out of 100."
+job: track-numbers
+thinking: high
+thinking_why: "It mixes several time windows and two rule sets that disagree, so a stronger model keeps them apart and avoids false calls."
+
+headline: "CAC payback checker"
+subhead: Give it your CAC, order margins and the gross profit your customers bring in over 30, 90 and 180 days. It checks the first order, rates the profit to CAC ratio on each window, sets a target, ceiling and floor CAC, and calls scale, hold or fix. You get a score out of 100.
+
+explain: |
+  CAC is what you pay to win a customer: total ad spend divided by new customers. Payback asks whether the profit from that customer covers the cost, and how fast. Two checks answer different questions. The first order check asks if each new customer is paid back at once. The window ratio (lifetime gross profit divided by CAC over 30, 90 or 180 days) asks how quickly.
+
+  This skill runs both. It uses gross profit, not revenue, over a fixed window, never "lifetime" without an end. It rates the ratio in bands, and it keeps the bands for different windows apart because two sources use different ones. It sets a target CAC, a ceiling and a bad-month ceiling, a floor from your CPC and conversion rate, and says if each new customer is more or less profitable than the last. It links to the lifetime gross profit to CAC checker for deeper cohort reading.
+
+when:
+  - Ad spend is rising and you do not know if you can keep scaling.
+  - You want a CAC number to give your media buyer.
+  - You lose money on the first order on purpose and need to know how long payback takes.
+
+you_give:
+  - CAC, average order value after refunds, product cost and fulfilment per order
+  - Gross profit per customer at 30, 90 and 180 days
+  - Lifetime orders from your oldest cohort
+  - Product type (one-off, consumable or subscription)
+  - Cash you can use to fund payback, and CPC and conversion rate (both optional)
+
+you_get:
+  - Contribution per order and the first order ratio
+  - The profit to CAC ratio on each window, with its band
+  - A target, ceiling and floor CAC, and payback in days or months
+  - Whether each new customer is more or less profitable than the last
+  - A scale, hold or fix call and a score out of 100 for payback safety
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your monthly ad spend and new customers, your order margins and your cohort gross profit.
+  - Say what type of store you run, how much cash you have to wait for payback, and your stage.
+  - Read the first order check first, then the ratio on your chosen window.
+  - Act on the CAC figure it says to hit, and run it again next month.
+
+how_it_works:
+  - title: Counts true CAC
+    text: Total ad spend divided by new customers, never the CPA shown in an ad platform.
+  - title: Checks the first order
+    text: Contribution margin divided by CAC on the first order should be at least 1. Stores that lose money here need big repeat buying to cover it.
+  - title: Picks the window
+    text: 30 days by default, 90 for consumables or fashion with proven repeat, 180 only with working capital. Never an unlimited lifetime.
+  - title: Rates the ratio
+    text: It places the profit to CAC ratio in its band for that window and keeps the 30 and 90 day bands apart from the 180 day bands.
+  - title: Sets three CAC numbers
+    text: Target, ceiling and a bad-month ceiling, plus a floor from CPC divided by conversion rate.
+  - title: Reads the trend
+    text: Month by month, is CAC rising, is volume rising with it, and is each new customer worth more or less than the last.
+  - title: Scores and calls
+    text: A score out of 100 for payback safety, then scale, hold or fix with the CAC figure to hit.
+
+output_shape: |
+  CAC  <ad spend> / <new customers> = <$>   (7-day click, not platform CPA)
+  FIRST ORDER  net AOV <$> - costs <$> = contribution <$> | CM/CAC <x>  <pass / fail>
+
+  WINDOW  <30 | 90 | 180> days, because <reason>
+  gross profit per customer <$> | LTGP:CAC <x> | band <name>
+  other windows: <window, ratio, band>   (windows are never mixed)
+
+  CAC NUMBERS
+  target <$> | ceiling <$> | bad-month ceiling <$> | floor <$> (CPC / conversion rate)
+  payback <days or months> | grade <...>
+
+  TREND (last <n> months)
+  CAC <up/flat/down> | new customers <up/flat/down> | CM/CAC <up/flat/down>
+  each new customer is <more / less> profitable than the last
+
+  SCORE <n>/100 now: <what was measured>
+  first order <n>/30 | window ratio <n>/40 | cash cover <n>/20 | trend <n>/10
+
+  CALL <scale | hold | fix>   CAC to hit: <$>
+  NEXT <first change>
+  MISSING: <input>
+
+tweaks:
+  - what: The time window
+    how: Under about 15 to 20 million a year, start with 30 days. Use 90 only if repeat buying is proven, and 180 only if you can fund the wait. Do not compare numbers from different windows.
+  - what: Product type
+    how: Say one-off, consumable or subscription. Consumables and subscriptions can lose a little on order one. One-off buys cannot.
+  - what: Cash you can spend while waiting
+    how: Give the cash you could put into ads for 90 days. Without it the cash part of the score is half marks and flagged.
+  - what: CPC and conversion rate
+    how: Give the CPC you would accept and the best conversion rate you could reach. It uses them for a floor CAC below which you should not plan.
+
+judge:
+  - CAC is total ad spend divided by new customers, with the platform CPA left out.
+  - Both the first order check and the window ratio are shown, not just one.
+  - Each ratio shows its window and the bands for that window only.
+  - The score shows its sum and says what it measures.
+  - A one-off buy store that loses on order one is never told it is fine.
+
+test:
+  - Use your own last month. Work CAC by hand and check the skill gets the same number.
+  - Give it a store you know has weak repeat buying. It should insist on a first order pass.
+  - Run it at 30 days and at 90 days. The ratios and bands should differ and be labelled by window.
+  - Change CAC by 20% and see the call move the way you expect.
+
+improve:
+  - Put your usual product type and window in the skill file so it never has to ask.
+  - Add your own target ratio once you have a year of data.
+  - Save the monthly output to your brand file and let the trend step compare it each month.
+  - Add your real cash limit, so the cash part of the score is yours.
+  - Pair it with the lifetime gross profit to CAC checker for cohort reading. Money figures are planning numbers, so check them with your accountant.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It needs only your numbers and a clear table. Check one month by hand first."}
+    - {name: "Shopify", why: "Its cohort and customer reports give you first order and repeat order counts by month."}
+  inputs:
+    - "Gross profit by monthly cohort at 30, 90 and 180 days"
+    - "Your last 12 months of ad spend and new customers"
+    - "A note of big changes with dates, such as a price change or a new product"
+
+terms:
+  - term: LTGP:CAC
+    meaning: The gross profit a customer brings in over a set window, divided by what it cost to win them.
+  - term: CM/CAC
+    meaning: The contribution margin on the first order divided by CAC.
+  - term: Payback
+    meaning: The time until a customer's gross profit has covered what you paid to win them.

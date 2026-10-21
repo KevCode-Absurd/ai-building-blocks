@@ -1,0 +1,122 @@
+new_slug: problem-aware-search-campaign-builder
+name: "Problem-aware Search campaign builder"
+summary: "Give it your product and the problem it solves. Get a problem-led Search campaign with matched ads."
+job: run-google-ads
+thinking: high
+thinking_why: "It must match settings, keywords, ad copy and pages to a cold buyer's search, and keep every claim within policy, so a stronger model is safer."
+
+headline: "Problem-aware Search campaign builder"
+subhead: Give it your product and the problem it solves. It builds a Search campaign for people who type the problem, not your product name. You get campaign settings, ad groups by search theme, ads that echo the search, and a page test plan.
+
+explain: |
+  Some buyers search for the problem long before they know a product exists. They type "how to stop squeaky floorboards", not the name of your fix. A normal product ad shows them a buy box too early, and they leave.
+
+  This skill builds a campaign for those searches. It sets up Search for cold traffic with brand excluded, mixes exact and broad keywords, and writes ads whose first words repeat what the shopper typed. It sends clicks to a page that teaches first, such as an advertorial, then tests two pages per ad group over 30 to 60 days. It works for products with a clear problem and real search demand. It is a poor fit for impulse items nobody searches for. The click-through and conversion figures in the source are one vendor's case study, so treat them as an example, not a target.
+
+when:
+  - Your product solves a problem people search for in plain words.
+  - Your Shopping and brand campaigns work and you want to reach people earlier in their search.
+  - You have an advertorial or education page and no Search campaign sending traffic to it.
+
+you_give:
+  - Your product and the problem it solves
+  - A list of problem-led search terms, or your converting queries
+  - Your advertorial or landing pages, if you have them
+  - Your break-even CPA and daily budget
+you_get:
+  - Campaign settings for cold Search
+  - Ad groups of 10 to 20 related terms, with exact and broad keywords
+  - Ads with a keyword insertion headline and matched descriptions
+  - A page test plan for each top query
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, the problem it solves and the search terms people use.
+  - Add your break-even CPA and the pages you have. If a claim touches health or money, tell it what is allowed.
+  - Check every ad against Google's ad policy before you submit it.
+  - Build it, then review the search terms report and prune every week.
+
+how_it_works:
+  - title: Sets cold settings
+    text: Google search network only, purchase goal, max conversions to start (or max clicks to test fit), presence-only location, brand excluded, a start budget near $125 a day.
+  - title: Plans keywords
+    text: Problem-aware terms in exact and broad match, never phrase. Exact is added only for terms that show conversions in the search terms report.
+  - title: Groups by topic
+    text: Ad groups of 10 to 20 related terms, not single keywords, with Display off.
+  - title: Writes matched ads
+    text: A pinned keyword insertion headline, with safe default text, so the first words match what was typed.
+  - title: Picks the page
+    text: Cold traffic goes to an educational page. Then the final URL changes per top query to a page that answers it.
+  - title: Plans page tests
+    text: Two pages per ad group over 30 to 60 days. Keep the better one and test again.
+  - title: Prunes and adds assets
+    text: Removes terms with clicks and no sales. Adds price, snippets, callouts, sitelinks and logo.
+
+output_shape: |
+  PROBLEM-AWARE SEARCH PLAN  <product>, <problem>
+  SETTINGS  network: Google search only | goal: purchase | bid: <max conversions / max clicks>
+            location: presence | brand: excluded | budget: <$ a day> | display: off
+  AD GROUP <n>: <problem theme>   (10 to 20 related terms)
+    exact: <...>   broad: <...>   (no phrase match)
+    ad: pinned headline: keyword insertion, default "<safe text>"
+        other headlines: <...>   descriptions: <...>
+    page: <educational page>  then <page per top query>
+  PAGE TEST  A: <page>  B: <page>  length: 30 to 60 days  winner by: <conversion rate>
+  PRUNE RULE  remove terms with clicks and no sales; compare cost per click and cost per sale
+  ASSETS  price | snippets | callouts | sitelinks | logo
+  POLICY NOTES  <claims to avoid; check with a qualified person if health or money>
+  CHECKS MISSED: <none, or list>
+  MISSING: <item>
+
+tweaks:
+  - what: Bid strategy
+    how: Max conversions suits a store with purchase data. Use max clicks for a short time if you only want to test whether people click the idea.
+  - what: Start budget
+    how: The source used about $125 a day. A smaller store can start lower, but each ad group then gets less data.
+  - what: The problem words
+    how: Paste the real phrases from reviews and support emails. Buyers name their problem in different words from your product page.
+  - what: Page type
+    how: Educational advertorial for cold clicks. Switch to a product page only after a test shows it converts at least as well.
+  - what: Claims
+    how: Tell it which claims you can prove. Anything about health, income or safety must stay inside Google policy.
+
+judge:
+  - Keywords are exact or broad only. No phrase match.
+  - Each ad group has a clear problem theme with 10 to 20 related terms.
+  - The keyword insertion headline has default text that reads well on its own.
+  - No ad makes a health, money or result claim that the store cannot back up.
+  - Every top query has a page that answers it, and the plan runs a two-page test for 30 to 60 days.
+
+test:
+  - Pick one problem term. Search it and check the ad's first words would match what you typed.
+  - Run the skill twice. The ad group themes should match.
+  - After two weeks, open the search terms report. Count terms with clicks and no sales and compare with the prune rule.
+  - Run the two-page test for the full 30 days before picking a winner.
+
+improve:
+  - Add your own policy list to the skill file, such as words you may not use, so every ad stays inside it.
+  - Add the problem phrases from your reviews as a standing list of seed terms.
+  - Write your usual advertorial structure in the skill, so the page advice matches your pages.
+  - Save winning pages and headlines in your brand file.
+  - Pair it with the break-even calculator, so pruning uses your real cost per sale.
+
+works_best_with:
+  tools:
+    - {name: "Google Ads", why: "The search terms report shows which problem searches turn into sales."}
+    - {name: "Google Keyword Planner", why: "It shows volume for problem phrases and related searches."}
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini can group terms and write matched ads."}
+  inputs:
+    - "A list of the questions customers ask before buying"
+    - "Your best advertorial, sales page or quiz"
+    - "Your break-even CPA"
+    - "Your ad policy limits, written down"
+
+terms:
+  - term: Problem-aware
+    meaning: A buyer who knows they have a problem but does not yet know your product exists.
+  - term: Keyword insertion
+    meaning: A feature that puts the shopper's own search words into your ad headline.
+  - term: Advertorial
+    meaning: A page that reads like an article and leads the reader towards a product.
+  - term: Presence
+    meaning: A location setting that shows ads only to people who are in your chosen country, not just interested in it.

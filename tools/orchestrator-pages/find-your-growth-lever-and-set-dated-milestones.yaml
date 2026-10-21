@@ -1,0 +1,72 @@
+new_slug: find-your-growth-lever-and-set-dated-milestones
+name: Find your growth lever and set dated milestones
+summary: Give it your sales numbers. Get the lever to pull, ranked ideas with tests, and dated milestones.
+job: plan-strategy
+thinking: medium
+thinking_why: The sums are small and the steps are short. A mid-range model is enough.
+headline: Find the growth lever worth pulling and date your milestones
+subhead: Give it your buyers, orders and repeat rate. It sizes new buyers, bigger orders and repeat orders, picks the cheapest one, ranks ideas for it with a test each and sets dated milestones with a predicted figure for every one.
+explain: |
+  When growth stalls, people try everything at once. New ads, new products, a loyalty scheme. Nothing is measured against a starting figure, so after three months nobody can say what worked.
+
+  The steps narrow it down. First your own numbers show which of three levers gains the most for the least work: more buyers, bigger orders or more repeat orders. Then every idea for that lever is scored for impact, confidence and ease, and the top few get a test with a measure and a stop date. Last, the hoped-for result is written as a chain of rates, each test gets a starting figure and three dated milestones are set, with your predicted figure written down before you look.
+when:
+  - Your cost to win a buyer keeps rising and you do not know what else to try.
+  - You have a long list of growth ideas and no way to pick.
+  - You want to show a partner or team a dated plan with numbers.
+you_give:
+  - Your buyer count, orders, revenue, average sale and repeat rate for a period
+  - Product facts (optional)
+  - Your list of growth ideas, or let it suggest some
+  - Your goal in your own words (optional)
+you_get:
+  - The three growth levers sized, the weakest steps marked and the cheapest lever picked
+  - Every idea scored out of 10, with a test, a measure and a stop date for the top few
+  - A chain of rates with a starting figure for each
+  - Three dated milestones with your predicted figure for each
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste one clean period of numbers, such as the last three months. Say what the period was.
+  - Add every growth idea you have heard, even odd ones. Step 2 scores them all.
+  - Write your predicted figure for each milestone before you check results.
+how_it_works:
+  - title: Size the three growth levers
+    text: Lists your numbers, models the same small gain in each lever, maps each step from lead to repeat buyer, finds the weakest steps and picks the cheapest lever and one test.
+  - title: Rank the ideas for that lever
+    text: Puts every idea on one list, scores impact, confidence and ease from 1 to 10, sorts them, flags long builds and writes one test per top idea with a measure and stop date.
+  - title: Set dated milestones with predictions
+    text: Writes the hoped-for result as a chain of rates, plans the test that gives each starting figure, ties each change to one rate and sets three dated milestones with predictions.
+output_shape: |-
+  STEP 1: GROWTH LEVERS
+    Your numbers | gain in each lever | money map | weakest steps | cheapest lever | one test
+
+  STEP 2: RANKED IDEAS
+    Scored list | long builds flagged | one test per top idea | order to run | re-score table
+
+  STEP 3: MILESTONES
+    Chain of rates | starting figures | changes tied to rates | three dated milestones | predictions | report plan
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The size of the gain
+    how: Say 5 or 10 percent, or what you think is realistic. Step 1 uses the same gain for all three levers.
+  - what: Your ideas
+    how: Include who suggested each. Step 2 scores them without favouring anyone.
+  - what: Your reporting rhythm
+    how: Tell it weekly or monthly so step 3 sets milestones you can actually review.
+judge:
+  - All three levers use the same size of gain, so the comparison is fair.
+  - Every idea has three scores and a reason, not a single guess.
+  - Every top idea has a measure and a stop date.
+  - Each milestone has a predicted figure written before the data.
+  - The starting figures come from a real test or count, not a guess.
+test:
+  - Redo the lever sums with your own calculator for one lever.
+  - Pick the top idea and say what result would make you stop it early.
+  - Check one milestone date against your calendar and campaign plans.
+improve:
+  - After each milestone, feed the results back to step 2 so it re-scores the list.
+  - Keep the predictions. Over time they show whether your guesses are too bold or too safe.
+  - Add cohort data when you have it, so step 3 can set rates for each group of buyers.

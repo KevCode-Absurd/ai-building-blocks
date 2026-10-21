@@ -1,0 +1,22 @@
+slug: dynamic-email-block-planner
+name: "Dynamic email block planner"
+summary: "Give it your customer data and apps. Get show-hide rules, product feeds and app-triggered flows."
+category: ecommerce
+type: skill
+role: make
+job: email
+level: advanced
+inputs:
+  - {type: email_flow, required: true}
+  - {type: product_data, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: email_flow}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Klaviyo email marketing full course (3+ hours)", by: "An agency founder who has set up email for 30+ seven and eight figure stores", used: "Show and hide blocks, product feeds, app events as triggers and predictive data for win-back timing and offer tiers"}
+  - {title: "Ecommerce Email Marketing 2025", by: "An email agency founder for Shopify and Klaviyo brands (name not given)", used: "Separate dynamic blocks for cart and checkout flows, testing the added-to-cart event, the site abandon filters, the 45-minute browse reminder and a discount only for people who have not bought"}
+  - {title: "Klaviyo email marketing course for e-commerce", by: "An e-commerce email agency founder (name not given)", used: "The browse flow filters and four-email structure, with trust before discounts"}

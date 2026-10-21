@@ -1,0 +1,78 @@
+new_slug: make-a-voiceover-and-ship-it-in-other-languages
+name: Make a voiceover and ship it in other languages
+summary: Give it your script. Get a spoken voiceover, dubbed versions that keep the voice and subtitles for each.
+job: work-with-audio
+thinking: medium
+thinking_why: Each step runs a tool with set options and checks the result. A mid-level model is enough.
+headline: Turn a script into a voiceover in every language you need
+subhead: Give it your script. It makes a spoken voiceover and dubs it into other languages that keep the speaker's voice. After a native speaker checks each one, it writes subtitles for every version.
+explain: |
+  A voiceover in one language is a day's work. Doing it again in four languages usually means four vendors and four rounds of changes. The subtitles often do not match what is said.
+
+  The first step turns your script into a spoken file in the voice and style you pick. The second step dubs that file into each language, keeping the voice, and gives you a transcript you can correct. Then you pause: a native speaker for each language listens and marks wrong words, names or tone, and you regenerate those lines. The last step makes subtitles from each corrected file, so the words on screen match the words spoken.
+when:
+  - You have a script for a video, lesson or ad and need more than one language.
+  - You want one voice across languages.
+  - You need subtitles that match the final audio exactly.
+you_give:
+  - Your script, exactly as it should be spoken
+  - The voice and delivery style you want
+  - The languages you need
+  - A native speaker for each language to check the result
+  - An OpenAI key for the voiceover and an ElevenLabs key for dubbing and subtitles
+you_get:
+  - A spoken voiceover file from your script
+  - A dubbed version in each language, with a transcript you can correct
+  - Subtitles for each corrected version, with timing
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the final script. Change it now, not after dubbing.
+  - Stop after step 2 and send each language to a native speaker.
+  - Give back their fixes, then run step 3 for the subtitles.
+how_it_works:
+  - title: Make the voiceover
+    text: Takes your exact text, voice and style, generates the spoken file, and checks clarity, pace and pronunciation before it saves the final.
+  - title: Dub into other languages
+    text: Creates a dubbing project from the voiceover, checks the source transcript and adds one language at a time, keeping the voice.
+  - title: Pause for native speakers
+    text: A native speaker for each language listens, marks wrong words, names or tone, and you regenerate the lines they flag.
+  - title: Write the subtitles
+    text: Transcribes each corrected file with word timing and exports subtitles for every language.
+output_shape: |-
+  STEP 1: VOICEOVER
+    Spoken file | text used | voice and style | checks
+
+  STEP 2: DUBBED VERSIONS
+    One audio file per language | transcript per language | lines to refine
+
+  PAUSE: native speakers check each language, you regenerate flagged lines
+
+  STEP 3: SUBTITLES
+    Subtitle file per language with timing
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Voice and delivery
+    how: Describe the pace and mood, such as warm and calm. Step 1 builds the style from it.
+  - what: Languages
+    how: Start with one or two. Add more once the first ones pass the native check.
+  - what: Names and terms
+    how: List product names and words that must stay as they are. Native speakers check these first.
+  - what: Script length
+    how: Break a long script into sections so you can fix one without redoing all.
+judge:
+  - The spoken text matches your script word for word.
+  - Every dubbed language has been checked by a native speaker.
+  - Names and product terms are right in each language.
+  - Subtitles match the corrected audio, not the first dub.
+  - You have the right to use the voice you chose.
+test:
+  - Listen to the voiceover once against the script for missed or added words.
+  - Ask each native speaker for a yes, or a list of fixes, before you ship.
+  - Play a version with subtitles on and check they match the speech.
+improve:
+  - Keep a glossary of names and terms for every language.
+  - Reuse the voice and style settings that worked.
+  - Change the script, not the dub, when a line is hard to say in other languages.

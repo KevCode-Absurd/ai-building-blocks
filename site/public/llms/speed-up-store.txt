@@ -1,0 +1,19 @@
+# Make your store load fast: AI Blocks
+
+> 15 free AI skills and workflows for this job. Each page links its SKILL.md.
+
+- [App script auditor](https://useaiblocks.com/skills/app-script-auditor): Give it your apps and speed report. Get each app marked keep, remove or delay, and a score.
+- [Fix what slows your Shopify store, biggest wins first](https://useaiblocks.com/workflows/fix-what-slows-your-shopify-store-in-the-order-that-pays-back): Give it your PageSpeed report and theme. Get speed fixes ranked by orders gained per hour, then applied.
+- [Get your store ready for a big sale day](https://useaiblocks.com/workflows/get-your-store-ready-for-a-big-sale-day): Give it your homepage and collection page. Get heavy features and apps cut, plus a speed budget and sale-day checklist.
+- [Heavy feature trimmer](https://useaiblocks.com/skills/heavy-feature-trimmer): Give it your homepage and collection page. Get each slider, popup and video judged, and a score.
+- [Hero image loading fixer](https://useaiblocks.com/skills/hero-image-loading-fixer): Give it your slow-LCP page and theme. Get the hero image set to load first, with code.
+- [Layout shift fixer](https://useaiblocks.com/skills/layout-shift-fixer): Give it your CLS report and page. Get the shifting element found and the fix for each cause.
+- [Leftover app code finder](https://useaiblocks.com/skills/leftover-app-code-finder): Give it your theme files and removed apps. Get each leftover script found and the lines to delete.
+- [Monthly store speed keeper](https://useaiblocks.com/agents/monthly-store-speed-keeper): Give it this month's speed reports and app list. It compares with last month, flags new app scripts, and ranks the fixes.
+- [Self-hosted store speed fixer](https://useaiblocks.com/skills/self-hosted-store-speed-fixer): Give it your WooCommerce setup. Get hosting, caching, plugin and image fixes in order.
+- [Speed budget and sale check](https://useaiblocks.com/skills/speed-budget-and-sale-check): Give it your store and sale date. Get a speed budget, test routine and pre-sale checklist.
+- [Speed fix ranker](https://useaiblocks.com/skills/speed-fix-ranker): Give it your speed problems and store numbers. Get fixes ranked by orders gained per hour of work.
+- [Speed up a WooCommerce store and keep it fast](https://useaiblocks.com/workflows/speed-up-a-woocommerce-store-and-keep-it-fast): Give it your PageSpeed report and setup. Get speed fixes in order and a budget that keeps the store fast.
+- [Store image prep checker](https://useaiblocks.com/skills/store-image-prep-checker): Give it your image files and sizes. Get what to resize and rename, alt text and a score.
+- [Store speed report reader](https://useaiblocks.com/skills/store-speed-report-reader): Paste your PageSpeed report. Get a field score out of 100, each page read, three fixes.
+- [Theme script and style loader](https://useaiblocks.com/skills/theme-script-and-style-loader): Give it your theme.liquid, apps and fonts. Get scripts delayed or deferred, styles unblocked and fonts set safely.

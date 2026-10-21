@@ -1,0 +1,89 @@
+new_slug: roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time
+name: "Roll out your welcome, cart and browse emails"
+summary: Give it your email setup and offer. Get a setup score, three flows and what is still missing.
+job: write-emails
+thinking: high
+thinking_why: It runs five skills in a row, and the later flows must match the offer and voice of the first. Give it your strongest model.
+headline: Get your welcome, cart and browse emails live, one flow at a time
+subhead: Give it your email tool settings, your brand file and your offer. It scores your sending setup, then plans the welcome, cart and browse flows email by email. It ends by scoring all your flows and ranking what is still missing.
+explain: |
+  Most stores lose sales in their email setup before a single email is written. The sending domain is not set up, spam filters catch the mail, or the cart flow fires on the wrong event so people who only add to cart are never emailed. Then the flows are built in a rush, and each one repeats the others.
+
+  These steps go in the order that avoids that. First it scores your setup, so the red items get fixed before anything goes out. Then it plans the welcome, cart and browse flows, each with triggers, exit rules, timing and an outline for every email. You build and switch on one flow, then move to the next. The last step scores the whole set and ranks what to add.
+when:
+  - You are setting up email for a new store and want the three flows that earn the most live first.
+  - Your flows are thin, or your cart flow is one email, and you want to fix the basics before adding extras.
+  - You see spam placement or odd revenue numbers in your email tool and need to know where the setup is wrong.
+you_give:
+  - Your sending domain, its DNS records and your DMARC record
+  - Your email tool settings, such as smart sending, attribution and tracking (screenshots or notes)
+  - Your brand file (story, founder details, guarantees and what you can claim)
+  - Your welcome offer, what it costs you and when it really ends
+  - Your best sellers, reviews and shipping and returns facts
+  - Revenue per flow for the last 90 days (optional)
+you_get:
+  - A setup score out of 100 with every fix and the exact DMARC record to add
+  - A welcome flow with its trigger, filters, timing and an outline for each email
+  - A cart recovery plan with two flows, one for added to cart and one for checkout started, so no one gets both
+  - A browse flow with one site email and a short viewed-product sequence
+  - A flow score out of 100 and a ranked list of the flows still missing
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your email settings and DNS records. Never paste a password or an API key.
+  - Fix the red items from the setup check, then build the welcome flow in your email tool and switch it on.
+  - Come back for the cart flow and build it the same way. Then do the browse flow, and let it check the full set.
+how_it_works:
+  - title: Check the sending setup
+    text: Scores your sending domain, DMARC, smart sending, attribution, tracking and opt-in settings. It lists each fix before any flow goes out.
+  - title: Plan the welcome flow
+    text: Sets the trigger and filters so past buyers never get the new-customer code. Times the emails over the first three days and outlines each one with a single job.
+  - title: Plan the cart flow
+    text: Checks which event your cart flow uses and builds two flows from the same emails. The first email carries no discount, and any code comes late with a real deadline.
+  - title: Plan the browse flow
+    text: Builds a one-email site flow and a viewed-product flow that exits on add to cart. Trust and doubt come first, and any discount comes last. You then build it and switch it on before the final check.
+  - title: Check the whole set
+    text: Scores your flows against the core list, ranks the gaps by likely revenue and gives a build order.
+output_shape: |-
+  STEP 1: SETUP CHECK
+    Score out of 100 with the sum | failed checks with fixes | DMARC record | settings table
+
+  STEP 2: WELCOME FLOW
+    Offer and margin check | trigger and filters | each email's job, timing and subject ideas | first three tests
+
+  STEP 3: CART RECOVERY
+    Current trigger | two flows | email outlines | code rule | first three tests
+
+  STEP 4: BROWSE FLOW
+    Site abandon email | viewed-product emails | split rule | delay test
+
+  STEP 5: FLOW GAP CHECK
+    Score out of 100 | missing flows ranked | trigger errors | build order
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your offer and margin
+    how: The welcome code is checked against your margin. Give your real margin, and say if you want no discount at all.
+  - what: Team size
+    how: A team of one builds the first, founder-note and last emails of each flow first. Say how many hours you have, so the plan fits.
+  - what: Your email tool
+    how: The steps use Klaviyo and Shopify names. Say your tool, and it keeps the logic and changes the menu names.
+  - what: Consent for texts
+    how: Say whether people agreed to texts. If not, the text plans are left out.
+judge:
+  - Every fix in the setup check can be done in one sitting, and no DNS value is invented.
+  - The first cart email goes out within 15 to 60 minutes and has no discount.
+  - The cart flow and checkout flow have different triggers, so no one is in both.
+  - Any deadline in an email matches a code that really expires.
+  - Every proof line, such as a review or guarantee, comes from facts you gave it.
+test:
+  - Check the DMARC record against what your email tool shows. The tool is right if they differ.
+  - Preview each email with a real profile in your email tool. Product blocks must show the right item.
+  - Walk one test profile through the filters. A past buyer should not get the welcome code.
+  - Read the flow score against your own list of live flows. Does it find the same gaps you see?
+improve:
+  - Save your brand voice and offer rules in your brand file, so each flow starts from the same facts.
+  - Edit the welcome skill's default order of emails if your products need showing before the story.
+  - Test the delay on the first cart email before any other change. It is the cheapest lever.
+  - Pair it with a win-back flow builder once the three flows earn.

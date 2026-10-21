@@ -1,0 +1,93 @@
+new_slug: sales-call-prep-assistant
+name: Sales call prep assistant
+summary: Name the deal before a call. Get a one-page plan built on your last call notes, and a follow-up draft after.
+job: sell-and-negotiate
+thinking: medium
+thinking_why: It reads notes, picks the right prep for the stage and merges the results onto one page. A mid-tier model does this well.
+headline: Sales call prep assistant
+subhead: Tell it which deal and when the call is. It reads your notes from the last call, checks what was promised, works out where the deal really stands, and gives you a one-page plan. After the call it saves your notes and drafts the follow-up.
+explain: |
+  Most calls are prepped from memory. The notes from the last call sit in a folder, and the same objection comes up a second time with no good answer ready. A quiet deal gets another cheerful check-in instead of a new reason to talk.
+
+  This agent keeps one log per deal. Before each call it compares today with last time: what each side promised, what changed, which objections are still open. It picks the prep from the stage the notes show. A quiet deal gets a look at whether the buyer doubts you or fears a mistake. A deal with price on the table gets a negotiation plan. A deal where the problem is not yet clear gets the next questions to ask. You get one page. After the call it adds to the log and drafts a follow-up, but it never sends anything.
+when:
+  - You have a call coming up on a deal you have talked about before.
+  - A deal has gone quiet and you do not know what to say next.
+  - Price or terms are on the table and you want a plan before you talk.
+you_give:
+  - The prospect, what you sell them, the price or terms so far and the call date
+  - Your notes or transcript from the last call
+  - What you know about the buyer, such as role, concerns and other options (optional)
+  - What you can move on in price and terms (optional)
+you_get:
+  - Where the deal stands against the last call, with promises kept or missed, what changed and open objections
+  - A one-page plan with your goal, questions or lines in order, replies to open objections and a walk-away line
+  - The next step to ask for, with a date
+  - After the call, a log entry and a follow-up email draft that is not sent
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then name the deal and the call date.
+  - Give it the notes from the last call, or point it to the deal's folder.
+  - Read the one-page plan before the call. Change any line that does not sound like you.
+  - After the call, give it your notes or the transcript. It saves them and drafts the follow-up.
+  - Read the follow-up, change it and send it yourself.
+how_it_works:
+  - title: Read the file
+    text: Reads the deal's call log. With no log, it treats this as a first call and says nothing was compared.
+  - title: Compare with last time
+    text: Writes three lines on what was promised, what changed and which objections are still open.
+  - title: Find the stage
+    text: Picks from the notes. A quiet deal gets the stalled-deal check. An unclear problem gets the question planner. Price or terms get a negotiation plan.
+  - title: Prepare for objections
+    text: Runs the objection reply skill on each objection from the last call that is still open.
+  - title: Merge into one page
+    text: Builds the plan, the walk-away line and the next step to ask for.
+  - title: After the call
+    text: Saves the new notes to the log and drafts the follow-up. It never sends it.
+output_shape: |-
+  WHERE THE DEAL STANDS
+    Promises: <kept or missed, by whom> | Changed: <what> | Open objections: <list>
+
+  ONE-PAGE PLAN
+    Goal: <one line>
+    Say or ask, in order: <3 to 5 lines>
+    Replies to open objections: <objection> -> <reply>
+    Walk-away line: <what you will not accept>
+    Next step to ask for: <step> by <date>
+
+  WATCH FOR
+    <one thing that would change the plan>
+
+  AFTER THE CALL
+    Log entry saved | follow-up draft (not sent) | MISSING: <every line>
+tweaks:
+  - what: Your notes
+    how: Write down who said what, what was promised and the exact words of any objection. The plan is only as good as the notes.
+  - what: What you can move on
+    how: Tell it your floor on price and terms before the call. Without it the walk-away line is a guess.
+  - what: What counts as quiet
+    how: The starting point is two weeks with no contact. Set your own, to match how long your sales usually take.
+  - what: How many deals
+    how: Run it for each deal that matters this week. Skip the ones where a short script is enough.
+judge:
+  - Every promise from the last call is accounted for.
+  - The stage was chosen from your notes, and it says which note.
+  - The plan fits on one page.
+  - Nothing is stated as fact about the buyer that your notes do not show.
+  - Nothing was sent, booked or changed without your yes.
+test:
+  - Run it on a call you already had, using the notes from the call before it. Check that the plan covers what you wish you had prepared.
+  - Give it notes with a missed promise on your side. It should name it.
+  - Run it with no notes. It should say it cannot compare with last time.
+improve:
+  - Add your usual objections and the replies that worked to a file the agent can read.
+  - Add the questions you always ask in a first call, so the plan includes them.
+  - Keep each deal's log in your CRM notes as well, so your team can read it.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the deal folders and call logs between runs.
+    - name: A call recorder
+      why: A transcript gives it exact words, which makes objection replies better.
+  inputs:
+    - Notes or a transcript from the last call
+    - Any email thread with the buyer since then

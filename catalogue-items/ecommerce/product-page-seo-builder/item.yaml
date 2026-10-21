@@ -1,0 +1,22 @@
+slug: product-page-seo-builder
+name: "Product page SEO builder"
+summary: "Give it a product and target term. Get page layout, copy, image names, markup and an index call."
+category: ecommerce
+type: skill
+role: make
+job: page
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: pdp_copy}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Beginners Guide to Shopify SEO - Full Course", by: "Two co-founders of a Shopify SEO agency", used: "The product page template, spec table, FAQ, image SEO, review and markup types, the rank-or-not decision and out-of-stock and discontinued handling"}
+  - {title: "Shopify SEO Optimization Guide for Beginners 2026", by: "Christian, a Shopify consultant", used: "Renaming supplier-style titles, a 160-character listing, descriptive handles with a redirect, and a shorter description length"}
+  - {title: "Shopify speed and image optimization (about 15 videos in one file)", by: "Christian, a Shopify developer", used: "One main and two supporting keywords per page, image naming and not lazy-loading the main image"}

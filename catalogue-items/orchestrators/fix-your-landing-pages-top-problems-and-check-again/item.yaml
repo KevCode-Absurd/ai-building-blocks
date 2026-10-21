@@ -1,0 +1,21 @@
+slug: fix-your-landing-pages-top-problems-and-check-again
+name: "Fix your landing page's top problems and check again"
+summary: "Give it your page. Get ranked problems, a fix-now list and, after you fix them, a second 30-point check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: page
+level: intermediate
+inputs:
+  - {type: landing_page, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+uses: [landing-page-auditor, page-issue-sorter, landing-page-30-point-checker]
+steps:
+  - {uses: landing-page-auditor, note: "Reads your page and ranks what gets in a buyer's way."}
+  - {uses: page-issue-sorter, note: "Takes the audit from step 1 and sorts it into fix now, investigate and test."}
+  - {uses: landing-page-30-point-checker, note: "A second, separate check on the fixed page. Compare it with the fix-now list from step 2."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/fix-your-landing-pages-top-problems-and-check-again/skeleton.yaml

@@ -1,0 +1,20 @@
+slug: meta-campaign-purpose-checker
+name: "Meta campaign purpose checker"
+summary: "List your Meta campaigns. Get each kept or cut, setup errors and a score out of 100."
+category: ecommerce
+type: skill
+role: check
+job: ads
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: store_capture, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How We Audit 8 and 9 Figure Ad Accounts (Full Process)", by: "Performance agency operator who audits 8 and 9 figure brands (name not given)", used: "Writing one purpose per campaign, rolling up what cannot be defended, and the list of setup errors"}
+  - {title: "The Only Video You Need On Meta Ads In 2026", by: "Agency operator who runs Meta for large online stores (name not given)", used: "The settings to switch off: flexible ads, automatic creative enhancements, one-day view, and the audience sync"}

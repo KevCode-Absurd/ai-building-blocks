@@ -1,0 +1,74 @@
+new_slug: catch-up-on-your-week-close-loops-and-plan-tomorrow
+name: Catch up on your week, close loops and plan tomorrow
+summary: Connect your chat, email and files. Get what you missed, open loops closed and a protected day planned.
+job: organise-work
+thinking: medium
+thinking_why: The steps are light, but the digest depends on what your tools return. A mid-size model works.
+headline: Know what you missed, close what is open and start tomorrow with a plan
+subhead: It scans your connected chat, email, tasks and files, writes a digest of mentions, decisions and action items, runs your weekly review on them, then plans one day with protected hours for deep work.
+explain: |
+  After a busy week or time away, you open everything and cannot tell what matters. Mentions pile up, decisions hide in threads and half-finished jobs sit in your head. You answer what is loudest, not what is most important.
+
+  The workflow starts with a digest from your connected tools: mentions, action items and decisions grouped by topic. The weekly review then uses that digest to sort every open loop into a next action, a waiting-for, a someday or the bin, and checks for stalled projects. Last, it builds one day around that list: deep tasks in the earliest long blocks, shallow work batched and a cap on deep hours. It needs at least one tool connected, such as chat or email. Without one, skip the first step.
+when:
+  - You were away or heads-down and need to see what you missed.
+  - It is Friday or Monday and your task list is a mess.
+  - You want tomorrow planned around your most important work.
+you_give:
+  - At least one connected tool, such as chat, email, tasks or files
+  - The time window to cover, such as a day, a week or a start date
+  - Your calendar and task list for tomorrow
+  - Your goals for the week (optional)
+you_get:
+  - A digest of mentions, decisions and action items by topic
+  - Open loops sorted into next actions, waiting for, someday or dropped
+  - A list of stalled projects and a plan for next week
+  - A time-blocked day with deep work first and shallow work batched
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Connect the tools you use, then say how far back to look.
+  - Answer its questions during the weekly review. Say what you will drop.
+  - Give it tomorrow's tasks and meetings for the day plan.
+how_it_works:
+  - title: Get a digest of what you missed
+    text: Scans mentions, messages, tasks and recent documents in each connected tool, groups them by topic and pulls out decisions and action items.
+  - title: Run the weekly review
+    text: Takes the digest as the list of loose ends. Sorts every open loop into next action, waiting for, someday or dropped, reviews stalled projects and the calendar ahead, and writes next week's plan.
+  - title: Plan one protected day
+    text: Takes tomorrow's tasks from the digest and the weekly plan, marks each deep or shallow, puts deep work in the earliest blocks of 90 minutes or more and batches shallow work into two windows.
+output_shape: |-
+  STEP 1: DIGEST
+    Mentions | decisions | action items | all grouped by topic
+
+  STEP 2: WEEKLY REVIEW
+    Open loops sorted | stalled projects | plan for next week
+
+  STEP 3: PROTECTED DAY
+    Deep blocks | shallow windows | buffers | what was cut
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Time window
+    how: Use a day for a normal catch-up and a week after time away. A longer window gets long and thin.
+  - what: Sources
+    how: Pick the tools that matter and leave the rest out. Fewer sources give a sharper digest.
+  - what: Deep work cap
+    how: The default caps deep work at four hours a day. Set your own if your work needs more or less.
+  - what: Meetings
+    how: Give your fixed meetings with times so the day plan puts deep blocks around them.
+judge:
+  - Every action item in the digest names the thread or document it came from.
+  - Each open loop lands in one list, and nothing is left floating.
+  - The day plan has no more deep work than you can really do.
+  - Tasks from the digest that matter most appear in the first deep block.
+  - You can say what was dropped and why.
+test:
+  - Check three items in the digest against the original messages. Names and asks should match.
+  - Add up the hours in the day plan against your calendar. They should fit.
+  - Run it again next week and see if the old loops are gone.
+improve:
+  - Run it on the same day each week so loops do not pile up.
+  - Keep a short list of recurring tasks to batch into the shallow windows.
+  - Skip the digest when you have nothing connected. Start with the weekly review.

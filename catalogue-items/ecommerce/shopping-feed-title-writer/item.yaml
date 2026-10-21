@@ -1,0 +1,27 @@
+slug: shopping-feed-title-writer
+name: "Shopping feed title writer"
+summary: "Give it your products and converting search terms. Get search-led titles, descriptions and image fixes."
+category: ecommerce
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads free course (4+ hours): Google and Shopify", by: "An agency owner who runs Google Ads for Shopify brands (name not given)", used: "Title length and the order of title parts"}
+  - {title: "The only Google Ads strategy you need for 2026", by: "An Australian agency founder who works with mid to large stores (name not given)", used: "Brand name pushed back or dropped, keyword-first titles from search term data, one feed per currency and variant titles"}
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "An agency co-founder who runs Google and YouTube ads for direct-to-consumer brands (name not given)", used: "The first 70 characters rule, brand last, niche examples, image and price tips"}
+  - {title: "Complete Google Ads architecture and operations manual (2026 edition)", by: "A compiled written guide (author not named)", used: "A fixed attribute order, supplemental feeds, custom labels, the 60 to 150 character length and update frequency"}
+  - {title: "The best e-commerce Google Ads strategy for 2026", by: "An agency founder who says he has run Google ads for 12 years (name not given)", used: "Titles and images as core Shopping levers"}
+  - {title: "The whole Google Ads algorithm explained in 24 minutes", by: "A store operator and agency owner (name not given)", used: "Keyword-rich title pattern, the Keyword Planner workflow and long descriptions"}
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "Fill every field, brand at the end, true attributes only and a long description"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public masterclass)", used: "Title structure, the 4x5 image ratio and one feed per currency"}

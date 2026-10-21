@@ -1,0 +1,24 @@
+slug: turn-the-first-weeks-after-an-order-into-repeat-buyers
+name: "Turn the first weeks after an order into repeat buyers"
+summary: "Give it your products and order data. Get a post-purchase flow, delivery updates, a stage map and a test plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: email
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: plan}
+uses: [post-purchase-flow-builder, delivery-update-flow-builder, customer-stage-flow-mapper, email-test-planner]
+steps:
+  - {uses: post-purchase-flow-builder, note: "Builds the flow that follows a first order."}
+  - {uses: delivery-update-flow-builder, note: "Adds the delivery messages, reusing the post-purchase flow so nothing is sent twice."}
+  - {uses: customer-stage-flow-mapper, note: "Maps the flows by customer stage so a buyer is in one place at a time."}
+  - {uses: email-test-planner, note: "Plans the first test on the mapped flows, one change at a time."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/turn-the-first-weeks-after-an-order-into-repeat-buyers/skeleton.yaml

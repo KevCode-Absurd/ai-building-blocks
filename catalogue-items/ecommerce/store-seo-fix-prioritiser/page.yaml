@@ -1,0 +1,112 @@
+new_slug: store-seo-fix-prioritiser
+name: "Store SEO fix prioritiser"
+summary: "Paste a crawl report. Get the fixes that matter, an ignore list and a score out of 100."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It ranks many findings by what they cost the store, which needs steady judgment but not deep analysis."
+
+headline: "Store SEO fix prioritiser"
+subhead: Paste a crawl report and your Search Console indexing reasons, and name your top revenue pages. It keeps the few fixes that matter, ranked by sales at risk, puts the rest on an ignore list with reasons, and gives a setup checklist and a score out of 100 for the four basics.
+
+explain: |
+  A crawl report can list hundreds of warnings, and most of them don't affect your sales. Owners lose weeks on meta descriptions and minor notices while a product page sits out of the index. Four things decide most of the outcome: pages can be crawled and indexed, there are no broken links, the mobile and desktop experience is good, and the page hierarchy is clear.
+
+  This skill reads your crawl and Search Console reports with those four in mind. It sorts errors before warnings before notices, works out which "not indexed" pages are fine on purpose (thank-you pages, internal search, filtered collections) and which are real problems, and ranks the rest by revenue at risk. You get 5 to 10 fixes with page, issue, fix and effort, and an ignore list. This is a triage for typical stores, not a full technical audit.
+
+when:
+  - You ran a crawler or site audit and don't know where to start.
+  - Search Console shows hundreds of pages "not indexed" and you don't know which matter.
+  - You are setting up a Shopify store and want the first-week search checklist.
+
+you_give:
+  - A crawl export (a free crawler covers up to 500 pages) or a site audit report
+  - Your Search Console pages report, grouped by indexing reason
+  - Your top revenue pages
+  - Whether you have admin or developer access
+you_get:
+  - 5 to 10 fixes ranked by revenue at risk, each with page, issue, fix and effort
+  - "An ignore list with reasons, and groups: fix now, ignore and developer"
+  - A setup checklist for the primary domain, sitemap and robots file
+  - A score out of 100 for the four basics, with the working shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the crawl report errors and warnings, and the indexing reasons from Search Console.
+  - List your top revenue pages and say whether you have developer help.
+  - Do the fix-now group first, hand the developer group to your developer, and leave the ignore list alone.
+  - Run it again after the fixes with a new crawl.
+
+how_it_works:
+  - title: Checks the four basics
+    text: Crawl and index, broken links, mobile and desktop experience, and page hierarchy. Everything else is noise until these pass.
+  - title: Sorts by severity
+    text: Errors first, then warnings, then notices.
+  - title: Fixes the common faults
+    text: Sends 404s to the nearest relevant collection or product, corrects canonicals that point at a redirect, links orphan pages, and fixes secure pages that link to insecure ones.
+  - title: Reads indexing reasons
+    text: Tells apart pages Google knows but hasn't crawled, pages crawled but not indexed, and pages left out on purpose.
+  - title: Checks setup
+    text: Primary domain first, then the sitemap in Search Console and the robots file, and that key pages aren't blocked.
+  - title: Treats speed as a tie-breaker
+    text: Fixes only large problems that hurt real shoppers, such as oversized images.
+  - title: Ranks by revenue
+    text: A fix on a page that earns sales comes before a fix on a policy page.
+  - title: Scores the basics
+    text: Starts at 100 and takes points off for each unfixed problem, showing the sum.
+
+output_shape: |
+  FOUR BASICS  crawl and index: <ok/issue> | broken links: <...> | mobile and desktop: <...> | hierarchy: <...>
+  FIX NOW (ranked by revenue at risk)
+  <page> | <issue> | <fix> | <effort> | revenue page? <yes/no>
+  DEVELOPER GROUP  <fix needing theme or server work>
+  IGNORE LIST  <item> | <why it's fine: left out on purpose / minor / no sales effect>
+  SETUP CHECKLIST  primary domain <ok/todo> | sitemap submitted <ok/todo> | robots file <ok/todo> | key pages not blocked <ok/todo>
+  SCORE  <n>/100  measures: the four basics   100 - 15 x <fix-now on revenue pages> - 8 x <other fix-now> - 3 x <other issues> = <n>
+  NOT RUN  <check, why>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: Your top revenue pages
+    how: Name them. Fixes on those pages go to the top of the list.
+  - what: Indexing reasons
+    how: Paste the reasons from Search Console grouped by status, so the skill can tell on-purpose exclusions from real problems.
+  - what: Developer access
+    how: Say whether you can edit the theme, so fixes are split into fix now and developer.
+  - what: Store size
+    how: A store with thousands of pages or filter navigation needs more than this triage. Say so and it will flag it.
+
+judge:
+  - The list has 5 to 10 fixes, each with page, issue, fix and effort.
+  - Every fix is ranked by revenue at risk, not by the crawl tool's colours.
+  - The ignore list gives a reason for each item.
+  - Pages left out on purpose are not called errors.
+  - The score shows its sum and says it measures the four basics.
+
+test:
+  - Pick one fix and check the page yourself. The issue should be real.
+  - Pick one ignore-list item and confirm it is a page you meant to leave out of search.
+  - Run it twice on the same report. The top five fixes should match.
+  - After you fix the top items, crawl again. The error count should fall.
+
+improve:
+  - Add your list of pages you leave out on purpose, such as landing pages for ads.
+  - Add your effort scale, such as "5 minutes, an hour, needs a developer".
+  - Save your top revenue pages to your brand file so you don't retype them.
+  - Pair it with the Shopify duplicate page fixer for theme-level duplicates, and the Search Console quick-win finder once the basics are clean.
+
+works_best_with:
+  tools:
+    - {name: "Google Search Console", why: "Shows the indexing reasons and the page inspection tool, and where you submit the sitemap."}
+    - {name: "A site crawler", why: "A free crawler covers up to 500 pages and lists 404s, missing headings, titles, canonicals and redirects."}
+  inputs:
+    - "Your list of top revenue pages"
+    - "The list of 404 pages from the crawl, for the developer"
+    - "A PageSpeed report for your main collection and product pages"
+
+terms:
+  - term: Canonical
+    meaning: A tag that tells Google which version of a page is the main one.
+  - term: Orphan page
+    meaning: A page no other page on your site links to, so it is hard to find.
+  - term: Noindex
+    meaning: A tag that asks Google to keep a page out of search results.

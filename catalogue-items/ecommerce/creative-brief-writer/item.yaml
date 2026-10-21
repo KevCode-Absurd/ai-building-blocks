@@ -1,0 +1,22 @@
+slug: creative-brief-writer
+name: "Creative brief writer"
+summary: "Give it reviews and product facts. Get one problem, a one-line angle, a proof list and a brief."
+category: ecommerce
+type: skill
+role: make
+job: ads
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: lessons_register, required: false}
+outputs:
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "How to create killer ad creatives (to blow up your business)", by: "Agency media buyer who has run paid ads for 500+ ecommerce brands", used: "Reading customers first for what they want, what stops them and what they tried; one problem and one angle per ad; a shot that proves each claim; two versions that change one thing; matching test volume to budget"}
+  - {title: "How to make Meta Ad Creatives (in 2026)", by: "Jared Robinson, creative agency founder", used: "Doing the research by hand in a notes document, and the brief template: concept, creative type, angle, headline, CTA, visual direction"}
+  - {title: "How to Scale an eCommerce Brand Profitably in 2026: The Full System", by: "Nathan, founder of a performance marketing agency for 8 and 9 figure brands (public masterclass)", url: "https://www.youtube.com/watch?v=LSFsNbsDL3E", used: "The five questions that pick a format, and the cost of making an ad against what it earns"}

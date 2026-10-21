@@ -1,0 +1,131 @@
+new_slug: store-name-generator
+name: "Store name generator"
+summary: "Give it your brief and rivals. Get 200 raw names, a shortlist of 15 and a clearance list."
+job: brand-file
+thinking: medium
+thinking_why: "It has to produce a lot of varied names and then judge them, which a mid-size model does well. Use a stronger one if the shortlist feels flat."
+
+headline: "Store name generator"
+subhead: Give it your store brief, your rivals and the markets you sell in. It asks four strategy questions, writes 200 or more raw names in three separate frames, then cuts them to a shortlist of 10 to 15 with reasons and a to-do list for checking that each name is free to use.
+
+explain: |
+  Most store names are picked in an afternoon from a short list of safe words. The name then does its work every day for years: on the pack, in search, in ads and in every order email. A name nobody can spell, or one that sounds like every rival, costs you traffic quietly.
+
+  This skill copies the way a naming agency works, in a size a small store can run. It starts with four questions about what winning means, so the names have a job. It maps what rivals' names look like so you know what to avoid. Then it writes a big pile of raw names in three frames, each with fresh eyes, and only after that does it judge. You get a shortlist you can hand to the Store name tester. It cannot clear a trademark or check a domain. You do that yourself, and a lawyer should check trademarks.
+
+when:
+  - You are about to open a store, or launch a new product line, and need a name that fits the market.
+  - You have a short list of names that all feel the same and want a wider pool to pick from.
+  - Your current name is hard to spell or search, and you want ideas before you decide to rename.
+
+you_give:
+  - Your brand brief, or a few lines on what you sell, who it is for and what makes it better
+  - Your three to five closest rivals and their names
+  - The markets and languages you sell in
+  - Any names you already like or dislike (optional)
+  - Your brand file (optional)
+
+you_get:
+  - 200 or more raw names across three frames, kept apart and not judged
+  - A shortlist of 10 to 15 with the reason each one made it
+  - A list of ideas placed in a zone, with the bold ones kept alive
+  - A clearance to-do list for trademark, domains, handles and meaning checks
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brief, your rivals and your markets. If two people own the decision, give one agreed answer to each strategy question.
+  - Let it finish the raw pass before you react. Do not ask it to remove names in the first round.
+  - Read the shortlist, then run the Store name tester on the names you like.
+  - Do the clearance list yourself before you spend money on a logo or a domain.
+
+how_it_works:
+  - title: Asks four questions
+    text: How do we define winning, what do we have to win, what do we need to win, and what do we need to say. It writes one agreed answer.
+  - title: Maps rival names
+    text: It lists the patterns rivals use and marks the ones to stay away from.
+  - title: Climbs the benefit ladder
+    text: From product facts to the customer need to the ultimate benefit, because the best names often point at the benefit.
+  - title: Writes raw names
+    text: At least 200, from word roots, myths, the periodic table and word lists on the benefit. No judging yet.
+  - title: Runs three frames
+    text: One that knows the product, one with an extra trait added, one that ignores the product and uses an unrelated theme.
+  - title: Judges on a later pass
+    text: Names land in a zone (invisible, tension or too wild). Rejections are rewritten as problems to solve.
+  - title: Cuts to a shortlist
+    text: 10 to 15 names, each with its reason and the one rule to pass, which is whether it is believable.
+  - title: Writes the clearance list
+    text: Trademark by market, domains, social handles, marketplace names and native-speaker meaning checks, for you to do.
+
+output_shape: |
+  FOUR QUESTIONS (one agreed answer each)
+  Winning: <...>  Must win: <...>  Need to win: <...>  Need to say: <...>
+
+  RIVAL NAME PATTERNS TO AVOID
+  <pattern> | <examples>
+
+  BENEFIT LADDER
+  <product fact> > <customer need> > <ultimate benefit>
+
+  RAW NAMES (not judged)
+  Frame A, knows the product: <name>, <name>, ... (<n> names)
+  Frame B, product plus <extra trait>: <...> (<n> names)
+  Frame C, unrelated theme <theme>: <...> (<n> names)
+
+  ZONES
+  Invisible: <names>  Tension: <names>  Too wild: <names>
+  Rewritten reactions: <rejection> > <problem to solve>
+
+  SHORTLIST (10 to 15)
+  <name> | <frame> | <why it fits the benefit> | <believable? yes/no>
+
+  CLEARANCE TO-DO (you do these)
+  Trademark by market, domain, social handles, marketplace names, native-speaker check
+  CHECKS MISSED: <none, or list>
+
+tweaks:
+  - what: How well you answer the four questions
+    how: Vague answers give vague names. Write what winning means in one sentence, such as "first choice for gift buyers in my country", before you start.
+  - what: The third frame's theme
+    how: Pick a theme that has nothing to do with your product, such as sport or weather. It gives the most surprising names, so choose one you find interesting.
+  - what: The feeling the name must carry
+    how: Say if it should feel fast, calm, trusted or bold. The shortlist uses it to pick between close names.
+  - what: Markets and languages
+    how: Name every country you sell in. The clearance list is only as complete as this list.
+  - what: People who judge
+    how: Run the judging pass with a second person who has not seen the brief. Two people judging apart avoids peer pressure.
+
+judge:
+  - The raw list has at least 200 names, split across the three frames.
+  - Nothing was removed or ranked in the raw pass.
+  - Every shortlisted name has a reason tied to the benefit, not just "sounds nice".
+  - Several names would split a room, with some people loving them and some disliking them.
+  - The clearance list names your markets, and the skill does not claim any name is free to use.
+
+test:
+  - Run it on a store you already know the name of. Count how many raw names look like the rival patterns it said to avoid. There should be few.
+  - Run it twice with the same brief. The shortlists will differ, but the ideas in each should be of the same kind.
+  - Show the shortlist to three people outside the business and ask which they could spell after hearing it once.
+  - Pick one shortlisted name and do the clearance list for it before you decide anything.
+
+improve:
+  - Keep a list of old names under themes, such as small things, so a name from an earlier project can be reused. Paste it in each time.
+  - Add rival name patterns from your own category to the skill file so the avoid list starts full.
+  - Add the countries and languages you sell in to the skill file so the clearance list always covers them.
+  - Pair it with the Store name tester for scoring, and with the Store brand architecture planner if you have more than one range.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can write the raw pass. Ask for the three frames in separate messages so each starts fresh."}
+    - {name: "Your country's trademark office search", why: "For example the USPTO search in the US or TMview from EUIPO in Europe. Use it, and a lawyer, to check trademarks."}
+  inputs:
+    - "A list of your rivals' names with a note on what each reminds you of"
+    - "Customer words about the main benefit, so the ladder uses their language"
+    - "A native speaker for each language you sell in"
+
+terms:
+  - term: Benefit ladder
+    meaning: Starting from what the product is, going up to what the customer needs, then to the feeling they want in the end.
+  - term: Invisible zone
+    meaning: Names everyone likes because they are familiar, which also means nobody remembers them.
+  - term: Clearance
+    meaning: Checking that a name is free to use, in trademarks, domains, handles and meaning.

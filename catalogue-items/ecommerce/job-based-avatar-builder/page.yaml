@@ -1,0 +1,125 @@
+new_slug: job-based-avatar-builder
+name: "Job-based avatar builder"
+summary: "Paste buyer stories and reviews. Get avatar cards built on a job, a trigger and quoted proof."
+job: understand-customers
+thinking: medium
+thinking_why: "It sorts many stories into groups and checks each card against a fixed list of parts. A mid-range model does this well."
+
+headline: "Job-based avatar builder"
+subhead: Paste 5 to 8 recent buyer stories, long reviews or support emails, plus your product link and price. It groups them by the struggle behind the purchase and writes one avatar card per group, with a job, a trigger moment, the four forces and quotes as proof.
+
+explain: |
+  Most store avatars are a list of age, gender and income. Two buyers with the same profile can buy your product for different reasons, and two very different people can buy it for the same one. The reason is the job: the progress the buyer wants in a certain moment, such as "when I get home late and the kids are hungry, I want a dinner on the table fast, so I can stop feeling like I am failing them".
+
+  This skill starts from whole stories, not from segments. It groups stories with a similar struggle, writes each group's job in a plain sentence, and tests that the job is at the right level. Then it adds what pushed the buyer, what pulled them, what habit held them back, what worried them, and what they stopped using to buy from you. Every card needs quotes. No quotes, no card.
+
+  For a deeper look at one buying decision, use the Switch story mapper. To write one job in full, use the Job spec writer. This skill is the fast version: one card per group, ready to hand to ad and page writers.
+
+when:
+  - Your avatar is a demographic list and your ads still miss.
+  - You have a pile of reviews, support emails and survey answers, and no clear picture of why people buy.
+  - You are about to brief a writer or a designer and want every claim about the buyer backed by a quote.
+
+you_give:
+  - 5 to 8 recent buyer stories, such as interview notes, long reviews, support emails or post-purchase survey answers
+  - Your product link and price
+  - A job spec (optional)
+  - Order data, such as dates and items bought together (optional)
+  - Competitor reviews, if you have no buyers yet (optional, and the cards are marked low confidence)
+you_get:
+  - One avatar card per job group, with the job in one situation sentence and the circumstance it happens in
+  - Practical, emotional and social sides of the job, the trigger moment and the buying timeline
+  - The four forces for each avatar, what they stop using to buy, and their own words, each with a quote
+  - A "not for" line per avatar and a list of claims in the quotes that need proof
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste each buyer story as it is, with the date and where it came from. Leave out names and contact details.
+  - Add your product link and price. Add order data if you have it.
+  - Read each card's quotes first. If a card rests on one story, treat it as a lead and go find more stories.
+  - Hand the cards to your ad or page writer, or run the Job test product line cutter to sort your range.
+
+how_it_works:
+  - title: Groups stories by struggle
+    text: Reads each story whole and groups the ones with a similar struggle. It does not split by age, gender, income or customer type.
+  - title: Writes the job
+    text: States each group's job as "when, I want to, so I can", in verbs and nouns. Adjectives like convenient or premium are rewritten.
+  - title: Tests the level
+    text: Names three things the buyer could hire instead. If all are your product type, the job is too narrow, so it goes up a level.
+  - title: Pins the circumstance
+    text: Records where, when, who is with them, what came before and after, and the life stage and money situation.
+  - title: Splits the three sides
+    text: Separates what must get done, what they want to feel or avoid feeling, and who is watching.
+  - title: Marks the four forces
+    text: Lists the push, the pull, the habit of the present and the anxiety of the new, and which anxieties will decide the sale.
+  - title: Names what they stop using
+    text: Lists the old product, workaround or "do nothing" they drop to buy from you, including rivals from other aisles.
+  - title: Adds proof and limits
+    text: Attaches at least three quotes with source and date, writes a "not for" line and flags claims that need proof.
+
+output_shape: |
+  AVATAR <n>: <short tag, not a name>   Confidence: <high | medium | low>
+  Job: When <circumstance>, I want to <verb + noun progress>, so I can <outcome>.
+  Level test: could hire instead: <1>, <2>, <3>   Level: <right | go up | go down>
+  Circumstance: <where, when, with whom, before, after, life stage, money>
+  Sides: Practical: <...> | Emotional: <...> | Social: <...>
+  Four forces: Push: <...> | Pull: <...> | Habit: <...> | Anxiety: <...>
+  Deciding anxieties: <the ones to answer on the page>
+  Stops using to buy us: <old product, workaround or nothing> | Other-aisle rivals: <...>
+  Timeline: first thought <when> > research <how long> > decision day <what happened> > first use <what>
+  Words they use: "<quote>" (<source type>, <date>), 3 or more
+  Not for: <the circumstance where this product disappoints>
+  Claims to prove: <claims in the quotes that need evidence>
+
+  (one card per job group)
+
+  NOT ENOUGH TO CALL AN AVATAR
+  <stories that fit no group, and what to collect>
+  MISSING: <stories | product link | price | dates>
+
+tweaks:
+  - what: How many stories
+    how: Five is the least that gives patterns. Below five it hands back hypotheses, marked on each card. More stories add a new card only when a new story shows a different job, not just a different person.
+  - what: Recency of the stories
+    how: Stories from the last few weeks hold detail. Old reviews give thinner timelines, so the trigger and timeline lines will show MISSING more often.
+  - what: Order data
+    how: Dates and items bought together help it write the timeline and spot a purchase that came at the end of a long shopping trip.
+  - what: Competitor reviews
+    how: Use them only when you have no buyers yet. Every card then carries low confidence until your own buyers confirm it.
+
+judge:
+  - Every card has at least three quotes, each with a source type and a date, and no reviewer names.
+  - Each job reads as a situation with verbs and nouns, not as a word like "easy" or "premium".
+  - The three "could hire instead" options come from different product types, not three versions of yours.
+  - A card built on one story says so and is marked low confidence.
+  - Each card has a "not for" line that you could put on your page.
+
+test:
+  - Pick two cards and find the quotes in your original stories. Each quote should be word for word and sit where the card says.
+  - Ask the skill to build cards from half of your stories, then from the other half. The same jobs should show up in both. If they do not, collect more stories.
+  - Show a card to someone who works in your support inbox. Ask if they can name a real buyer who fits it.
+  - Read the "not for" line and check it against your lowest reviews. It should explain some of them.
+
+improve:
+  - Add your product's real facts and claims to the skill file, so the "claims to prove" list checks against them.
+  - Add your own list of non-category rivals, such as the workarounds your buyers mention, so the "other aisle" step starts from real ones.
+  - Save the finished cards in your brand file so every ad and page writer starts from the same buyers.
+  - Pair it with the Switch story mapper for one buyer's whole decision, and with the Job spec writer when you want one job in full.
+  - Re-run it every few months with fresh stories. A job that stops appearing is worth knowing about.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Any current chat AI can group stories and write the cards. Paste the stories as plain text, with dates."}
+    - {name: "Shopify admin", why: "Its order export gives you dates and items bought together, which sharpen the timeline."}
+  inputs:
+    - "Answers from a post-purchase survey that asks what the buyer was struggling with before they bought"
+    - "Support emails from the first two weeks after delivery, which hold the first-use story"
+    - "Notes from a short call with a recent buyer, with their consent"
+
+terms:
+  - term: Job
+    meaning: The progress a buyer wants to make in a certain moment, written as a situation.
+  - term: Four forces
+    meaning: Push (what made them act), pull (what the new product promises), habit (how they cope now) and anxiety (what if it is not better).
+  - term: Trigger moment
+    meaning: The day or event that turned a long wish into a purchase.

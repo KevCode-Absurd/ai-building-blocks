@@ -1,0 +1,94 @@
+new_slug: launch-a-subscription-and-keep-your-subscribers
+name: Launch a subscription and keep your subscribers
+summary: Give it your products and orders. Get a priced offer, cancel flow, billing emails and a retention calendar.
+job: keep-customers
+thinking: high
+thinking_why: It runs payback sums and writes email flows across six skills. Give it your strongest model.
+headline: Launch a subscription that pays back, and keep the people who join
+subhead: Give it your product costs, order data and reviews. It designs the offer, checks the payback and the cash you need, builds the cancel flow and billing emails, then after 60 days finds where subscribers leave and schedules what keeps them.
+explain: |
+  A subscription can lose money on the first order, and then lose the subscriber before it earns that money back. Owners set a discount that feels right, add a cancel button and hope. Many only learn where people leave after months of lost orders.
+
+  The steps put the sums first. It designs the discount, gifts and plans from your costs, then checks how much you can pay per subscriber and how much cash you need until payback. It builds the cancel flow with one save offer per reason, and the billing emails that sit beside it. After about 60 days you give it your cancel data. It finds where in the subscriber's life people leave and schedules gifts and messages before those points. The cancel flow keeps cancelling easy and legal.
+when:
+  - You sell something people use up and reorder, and want to add subscriptions that pay back.
+  - You already have subscribers but too many cancel after the second or third order.
+  - You are unsure how big a first-order discount you can afford.
+you_give:
+  - Price, product cost, landed cost and shipping by pack size
+  - How long one unit lasts and your cash available
+  - Month-3 and month-6 value of subscribers and one-time buyers
+  - Reviews or the reasons customers give for cancelling
+  - Your email platform, subscription app and Shopify plan
+  - After about 60 days, your cancels with dates, order numbers and reasons
+you_get:
+  - A subscription offer with first-order and repeat discounts, bulk tiers, gifts and a prepaid plan, and the most you can pay to win a subscriber
+  - A payback check with the loss on order one, the cash needed, a score out of 100 and a go, slow down or bundles call
+  - A cancel flow with one save per reason, a pause, win-back and failed-payment emails
+  - Billing reminder and order confirmation emails for each rebill number, with an A/B test plan
+  - A churn audit scored out of 100, and a monthly retention calendar with gifts placed before each lapse point
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it real cohort numbers for month 3 and month 6. Without them the payback check will not score the plan.
+  - At the first pause, put the subscription live and let it run for about 60 days. Then export subscriber and cancel data.
+  - At the second pause, pick the lapse points the audit flagged and export the orders of subscribers around those dates.
+how_it_works:
+  - title: Design the offer
+    text: Checks your cash first, then designs the first-order and repeat discounts, bulk tiers, gifts and a prepaid plan, and models the margin.
+  - title: Check the payback
+    text: Works out the most you can pay per subscriber, the loss on order one and the cash needed, scores the plan out of 100, and calls go, slow down or bundles.
+  - title: Build the cancel flow
+    text: Writes the start screen, a branch with one save for each cancel reason, a pause, win-back emails and a failed-payment flow.
+  - title: Write the billing emails
+    text: Writes a reminder for each rebill number and a confirmation for first, rebill and one-time orders, and plans an A/B test.
+  - title: Audit the churn
+    text: Charts cancels by days since the first order, checks the billing reminder and the save rate, and scores four parts out of 100.
+  - title: Schedule retention
+    text: Places low-cost gifts at the orders where people leave, caps subscriber messages, keeps subscribers out of sales and plans a subscriber-only offer.
+output_shape: |-
+  STEP 1: SUBSCRIPTION OFFER
+    Discounts | bulk tiers | gifts | prepaid plan | margin | most you can pay per subscriber
+
+  STEP 2: PAYBACK CHECK
+    Loss on order one | cash until payback | safety score out of 100 | go, slow down or bundles
+
+  STEP 3: CANCEL FLOW
+    Start screen | reason branches with one save each | pause | win-back and failed-payment emails | save-rate sheet
+
+  STEP 4: BILLING EMAILS
+    Reminder for each rebill number | confirmations | links | A/B test plan
+
+  STEP 5: CHURN AUDIT
+    Cancels by day since first order | value gap | reminder and save-rate checks | score out of 100 for four parts | fix routing
+
+  STEP 6: RETENTION CALENDAR
+    Lapse points | gift timing | send limits | subscriber-only sale offer | monthly calendar
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Month-3 and month-6 cohort values
+    how: The payback check needs real numbers. It will not score a plan without them.
+  - what: Cash you can spare and the months you can wait
+    how: This sets the discount size. A smaller cash pot means a smaller first-order deal.
+  - what: What your subscription app can do
+    how: Skip, delay, swap and branching differ by app. Tell the cancel step what yours supports.
+  - what: Margin room for a save discount
+    how: Give the biggest discount that still pays. The cancel flow keeps its save offers inside it.
+judge:
+  - Cash is checked before any discount is set.
+  - The payback check shows the loss on order one and the cash needed, with the numbers it used.
+  - Every cancel reason has its own save, and cancelling stays easy.
+  - Billing emails use only real benefits and testimonials.
+  - The churn audit has at least a few hundred subscribers behind it, or it says the chart is too thin.
+test:
+  - Redo the payback sum by hand for one pack size. It should match.
+  - Cancel a test subscription through the new flow and note every screen.
+  - Send the billing reminder to a small group first and count cancels per 100 sent.
+  - Compare the churn audit's lapse points with your own cancel list.
+improve:
+  - Add your discount limits and the gifts you can afford to the offer skill.
+  - Write your save-rate by reason into your brand file and aim to beat it.
+  - Re-run the churn audit every quarter and keep each result.
+  - Edit the email skills to match your voice and add real testimonials.

@@ -1,0 +1,22 @@
+slug: clipper-program-planner
+name: "Clipper program planner"
+summary: "Give it a brief and budget cap. Get pay-on-approval terms, a review checklist and a seeding plan."
+category: ecommerce
+type: skill
+role: make
+job: organic
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief, required: false}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford (agency founder and head of retention at Breeze, a drinks brand), in a podcast interview", used: "Paying clippers only on approval with a total cap and a target CPM in the offer, a brief with the creative, and aiming at impressions and traffic rather than followers"}
+  - {title: "Every Level of Marketing", by: "Orin (creator and marketing consultant, first name only as stated), in a conversation with a host", used: "Seeding product to many creators, sharing winners so others can remake them, and multiplying a winning script by audience"}

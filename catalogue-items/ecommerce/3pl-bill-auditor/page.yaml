@@ -1,0 +1,121 @@
+new_slug: 3pl-bill-auditor
+name: "3PL bill auditor"
+summary: "Paste your 3PL invoice, rate card and orders. Get overcharges found, a score out of 100 and a dispute note."
+job: run-your-store
+thinking: high
+thinking_why: "It does sums on every line and compares them with your orders, so a stronger model makes fewer slips."
+
+headline: "3PL bill auditor"
+subhead: Paste your warehouse invoice, your rate card and your Shopify orders for the same month. It rebuilds what the bill should be, compares every line, and lists overcharges with amounts. You get a match score out of 100, service checks and a dispute note to send.
+
+explain: |
+  Most store owners read the warehouse total, see it is close, and pay. But a bill is built from rates times your own volumes, so you can rebuild it. One operator said 30 to 40 percent of the brands he works with had been overcharged by couriers or their 3PL. That is his own estimate, not a study, but it is a good reason to check.
+
+  This skill rebuilds each line: pick and pack from your orders, outbound from your parcels by weight and zone, inbound from units received, and storage from pallets or bins. It flags lines above your tolerance, checks delivered-on-time and pick time, and compares the cost per order with last month. The score is the share of lines that match, with the formula shown.
+
+when:
+  - Your 3PL invoice arrives each month and you pay it without checking.
+  - Your cost per order crept up and nobody changed a rate.
+  - Orders were late and you want to claim the penalty your agreement allows.
+
+you_give:
+  - The 3PL invoice with its charge lines
+  - The rate card from your agreement
+  - Your Shopify orders and units for the same period
+  - A courier invoice, and your agreed pick time and penalty (optional)
+you_get:
+  - Expected cost for each line against the billed cost, with the working
+  - A list of overcharges with amounts
+  - A match score out of 100, with the formula shown
+  - A dispute note for you to send
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the invoice lines, your rate card and your Shopify orders for the same dates.
+  - Set the tolerance you accept, such as 2 percent.
+  - Read the overcharge list. Check any returns or split parcels it asks about.
+  - Send the dispute note yourself if the lines hold up.
+
+how_it_works:
+  - title: Rebuilds each line
+    text: Pick and pack from orders, outbound from parcels, inbound from units received, storage from pallets or bins, each times the agreed rate.
+  - title: Compares line by line
+    text: Each line is matched, over, under or could not be checked. Anything over your tolerance is flagged.
+  - title: Checks the small lines
+    text: Storage even if it is small, and inbound fees tied to late unloading.
+  - title: Checks service
+    text: Delivered-on-time rate, and whether picks met the agreed time. Under 95 percent, it splits pick delay from courier delay.
+  - title: Claims penalties
+    text: If the agreement allows a discount or free pick for late picks, it names the clause and the amount.
+  - title: Compares months
+    text: A cost per order that creeps up with no rate change is the first thing to query.
+  - title: Drafts the dispute and scores
+    text: A short note for you to send. The match score is matched lines over lines checked.
+
+output_shape: |
+  AUDIT <period> <3PL>
+  MATCH SCORE <n>/100 (<matched> matched / <checked> checked x 100 = <n>)
+  Tolerance: <n>%  Billed: <total>  Expected: <total>  Gap: <amount>
+
+  LINE | Billed | Expected (working) | Difference | Status
+
+  OVERCHARGES
+  1 <line>: billed <x>, expected <y>, over by <z>
+
+  SERVICE CHECKS
+  Delivered on time / Pick time vs agreement / Penalty to claim
+
+  MONTH ON MONTH
+  Cost per order this month vs last month
+
+  DISPUTE NOTE (draft for you to send)
+  NOT RUN / MISSING: <...>
+
+tweaks:
+  - what: Your tolerance
+    how: Set the gap you accept, such as 2 percent. The starting value is an example. A tighter number flags more lines.
+  - what: The rate card
+    how: Paste the real agreed rates. Without it the skill can only compare months, not prove a line is wrong.
+  - what: Order data detail
+    how: Include weights, destinations and returns. Outbound is the line most likely to differ.
+  - what: Last month's audit
+    how: Paste it. The skill then compares cost per order and spots creep.
+
+judge:
+  - Every invoice line has a status.
+  - Each expected figure shows its working.
+  - The match score shows the counts and the formula.
+  - Returns and split parcels are asked about before a gap is called an overcharge.
+  - The dispute note is a draft for you to send.
+  - The 30 to 40 percent figure is not stated as a fact.
+
+test:
+  - Check one expected line by hand from your orders and rate. It should match the skill's working.
+  - Change one rate on purpose in the invoice you paste. It should flag that line.
+  - Run it on last month's invoice too. The score and the gap should make sense.
+  - Ask your 3PL about one flagged line before you send the full note.
+
+improve:
+  - Add your agreed rates and tolerance to the skill file so you do not retype them.
+  - Add the extra charges your 3PL uses, such as special handling, as lines to check.
+  - Save each month's audit in one folder to catch creep.
+  - Pair it with the 3PL bid and agreement builder and the landed cost calculator.
+
+works_best_with:
+  tools:
+    - {name: "Shopify", why: "Its order export gives orders, items and shipping destinations for the same dates as the invoice."}
+    - {name: "Google Sheets", why: "A sheet keeps each month's audit so you can see creep."}
+  inputs:
+    - "Your courier invoice for the same period"
+    - "The pick-time clause from your agreement"
+    - "A list of returns and split parcels for the period"
+
+terms:
+  - term: Pick and pack
+    meaning: Taking the items for an order from the shelf and packing them.
+  - term: Inbound
+    meaning: Unloading stock that arrives and putting it away.
+  - term: Outbound
+    meaning: Shipping orders to customers. Priced by weight and zone.
+  - term: Rate card
+    meaning: The list of agreed prices in your contract.

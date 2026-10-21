@@ -1,0 +1,23 @@
+slug: shopping-campaign-tuner
+name: "Shopping campaign tuner"
+summary: "Paste a weekly Shopping export. Get which products to cut, feed, bid up or fund, with a waste score."
+category: ecommerce
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "Ecommerce Google Ads 2026 Free Course", by: "Agency co-founder who runs Google and YouTube ads for DTC brands (name not given)", used: "The Shopping tuning order, negatives, lost impression share logic and click share"}
+  - {title: "How To Fix An Underperforming Google Ads Account", by: "Performance agency lead (name not given)", used: "Pausing a product when a rival discounts it deeply instead of matching the discount"}
+  - {title: "The whole Google Ads algorithm explained in 24 minutes", by: "Store operator and agency owner (name not given)", used: "The weekly Sunday edit routine and the standard Shopping layer at high spend"}
+  - {title: "Full ecommerce Google Ads course (about 60 minutes, module by module)", by: "Max, agency owner who runs Google Ads for online stores", used: "Excluding low performing products and reading products after the first spend"}

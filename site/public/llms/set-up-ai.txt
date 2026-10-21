@@ -1,6 +1,6 @@
 # Set up AI to work for you: AI Blocks
 
-> 46 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 49 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent context setter](https://useaiblocks.com/skills/agent-context-setter): Describe your project. Get the right rules and files loaded so your AI stays accurate through long sessions.
 - [Agent goal writer](https://useaiblocks.com/skills/agent-goal-writer): Give it a vague job. Get a goal an AI agent can finish, with proof of done, limits and stop rules.
@@ -20,6 +20,7 @@
 - [Focus-friendly answer style setter](https://useaiblocks.com/skills/focus-friendly-answers): Turn it on once. Get every reply with the next action first, short numbered steps and time estimates.
 - [Folder guide writer](https://useaiblocks.com/skills/folder-guide-writer): Pick a folder. Get a short CLAUDE.md that tells future AI helpers how that folder works.
 - [Full answer enforcer](https://useaiblocks.com/skills/full-answer-enforcer): Ask for a full file or list. Get every line, with no placeholders, skipped parts or half answers.
+- [Give AI tasks and keep what the job quietly does](https://useaiblocks.com/workflows/hand-tasks-to-ai-without-losing-what-the-job-quietly-does): Give it a job. Get the tasks AI takes on, what each hides, safe handoffs and a failure check.
 - [Goal-to-task loop runner](https://useaiblocks.com/skills/goal-to-task-loop-runner): Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
 - [Local AI model setup](https://useaiblocks.com/skills/local-ai-model-setup): Say what hardware you have. Get Ollama and Open WebUI running local models, tuned for your graphics card.
 - [Long chat failure diagnoser](https://useaiblocks.com/skills/long-chat-failure-diagnoser): Describe how your AI gets worse in long chats. Get the likely cause and a fix to try.
@@ -33,6 +34,7 @@
 - [Parallel work coordinator](https://useaiblocks.com/skills/parallel-work-coordinator): Give it a large task. Get it split across helper agents with clear ownership, then merged into one checked result.
 - [Project memory builder](https://useaiblocks.com/skills/project-memory-builder): Give it a bloated project notes file. Get a lean version, plus a way for your AI to save lasting facts.
 - [Project memory organizer](https://useaiblocks.com/skills/project-memory-organizer): Point it at your project. Get small context files per folder so your AI reads less and costs less.
+- [Prompt and skill tuner](https://useaiblocks.com/agents/prompt-and-skill-tuner): Give it a prompt or skill and test cases. It tests, fixes and re-tests until the checks pass, within four rounds.
 - [Prompt change manager](https://useaiblocks.com/skills/prompt-change-manager): Keep prompts in production. Get versioning, tests of changes, a registry and safe rollbacks.
 - [Prompt fixer](https://useaiblocks.com/skills/prompt-fixer): Give it a prompt that gives weak or uneven answers. Get a tighter version that works more reliably.
 - [Prompt improver](https://useaiblocks.com/skills/prompt-improver): Give it a rough prompt. Get it rebuilt into a clear, structured prompt using a fitting framework.
@@ -46,5 +48,6 @@
 - [Task automation builder](https://useaiblocks.com/skills/task-automation-builder): Name a repetitive task. Get a script, schedule or trigger that does it for you.
 - [Task handoff writer](https://useaiblocks.com/skills/task-handoff-writer): Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.
 - [Token saver for coding agents](https://useaiblocks.com/skills/token-saver-for-coding-agents): Turn it on for coding sessions. Get fewer wasted tokens from big reads, noisy logs and repeat reads.
+- [Tune a prompt with real tests, then keep versions](https://useaiblocks.com/workflows/tune-a-prompt-with-real-tests-then-ship-it-with-versions): Give it a rough prompt. Get a clear version, scores on your tests and safe rules for changing it.
 - [Workflow builder from a long source](https://useaiblocks.com/skills/long-source-to-workflow): Paste a long article, transcript or book notes. Get the method as a workflow, with a skill for every step.
 - [Workplace shorthand memory builder](https://useaiblocks.com/skills/workplace-shorthand-memory): Share your nicknames and codes. Get a memory so Claude knows who and what you mean in short requests.

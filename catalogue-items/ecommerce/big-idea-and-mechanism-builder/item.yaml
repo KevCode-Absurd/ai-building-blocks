@@ -1,0 +1,23 @@
+slug: big-idea-and-mechanism-builder
+name: "Big idea and mechanism builder"
+summary: "Give it your product and buyer. Get a big idea, root cause, named mechanism and why-now line."
+category: ecommerce
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief}
+uses: []
+origin: rebuilt
+example_pending: true
+version: 1.0.0
+credits:
+  - {title: "The Most Valuable 60 Minutes on Advertorials You'll Ever Watch", by: "A direct-response copy teacher reviewing a viewer's advertorial", used: "The big idea as product, market and buyer together, a true reason for every part, side ideas that open bigger pains, the adoption curve, and picking a metaphor that matches what the product does"}
+  - {title: "Guide: $100k/day with Advertorials", by: "An advertorial funnel consultant", used: "Owning the root cause that rivals don't name, and making the mechanism match it one to one"}
+  - {title: "Psychological Tricks I Used To Sell $1 Billion in Products Online", by: "Craig Clemens, guest on a business podcast", used: "The seven levers to check an idea against, and the three market stages"}

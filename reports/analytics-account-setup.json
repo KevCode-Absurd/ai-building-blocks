@@ -1,0 +1,37 @@
+{
+  "checkedOn": "2026-10-22",
+  "domain": "useaiblocks.com",
+  "owner": "hello@useaiblocks.com",
+  "googleAnalytics": {
+    "accountId": "412932697",
+    "propertyId": "560121048",
+    "webStreamId": "16181145317",
+    "measurementId": "G-FLLHB8ZGN7",
+    "enhancedMeasurement": false,
+    "searchConsoleLinked": true
+  },
+  "searchConsole": {
+    "property": "sc-domain:useaiblocks.com",
+    "verified": true,
+    "verification": "existing DNS ownership",
+    "sitemap": "https://useaiblocks.com/sitemap.xml",
+    "status": "Success",
+    "discoveredPages": 4545
+  },
+  "clarity": {
+    "projectId": "z1oj0rgzrv",
+    "masking": "Strict",
+    "cookiesDefault": false,
+    "botDetection": true
+  },
+  "validation": {
+    "nodeTests": 9,
+    "mockedBrowserTests": 2,
+    "realVendorCanary": "pass: Google204 and Clarity204",
+    "publicDeployment": "pending combined release"
+  },
+  "sourceFreeze": {
+    "site/public/analytics.js": "48800d01533f63588c85597c7037c7f74b40df07334d56f3c7c2a8f6425278df",
+    "site/public/analytics-privacy.html": "24091c907f112857c5f7fe0ca6834b44544287312d2bc6edb5476a6189713c98"
+  }
+}

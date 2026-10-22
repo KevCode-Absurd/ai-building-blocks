@@ -1,0 +1,51 @@
+slug: prepare-a-design-system-migration
+name: Prepare a design system migration
+summary: Share the source files. Get a change inventory, replacement rules and a staged migration brief.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: design_file
+    required: false
+  - type: codebase
+    required: false
+outputs:
+  - type: audit_report
+  - type: design_direction
+  - type: plan
+  - type: document
+uses:
+  - design-system-auditor
+  - design-rules-file-writer
+  - change-rollout-planner
+steps:
+  - uses: design-system-auditor
+    note: Inventory inconsistent components and distinguish deliberate exceptions from accidental drift.
+  - uses: design-rules-file-writer
+    note: Document the agreed target patterns and replacement rules from actual components without silently removing variants.
+  - uses: change-rollout-planner
+    note: Plan adoption of the approved patterns, with training, owners and acceptance checks. Keep implementation dependencies from the audit visible.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Design system auditor
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills/design-system
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Design rules file writer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/write-design-md
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Change rollout planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/change-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

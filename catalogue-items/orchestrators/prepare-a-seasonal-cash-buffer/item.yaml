@@ -1,0 +1,48 @@
+slug: prepare-a-seasonal-cash-buffer
+name: Prepare a seasonal cash buffer
+summary: Share the source files. Get a dated cash forecast, downside case and actions for review.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: plan
+  - type: document
+uses:
+  - budget-and-forecast-builder
+  - spreadsheet-checker
+  - department-budget-planner
+steps:
+  - uses: budget-and-forecast-builder
+    note: Use its cash timing and scenario methods to map dated receipts and payments. Label base and downside assumptions and show opening cash plus flows without claiming a statistical confidence band.
+  - uses: spreadsheet-checker
+    note: Reconcile forecast cash to opening cash and dated flows, check scenario formulas and state which future receipts remain assumptions.
+  - uses: department-budget-planner
+    note: Draft budget responses aligned to the cash forecast and owner limits, distinguishing payment timing from true cost reductions.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Budget and forecast builder
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/budget-forecast
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Department budget planner
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/finance-and-accounting/budget-planning
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,50 @@
+slug: extract-a-scanned-document-and-verify-key-facts
+name: Extract a scanned document and verify key facts
+summary: Share the source files. Get extracted text, a page-linked fact table and uncertain readings.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: source_text
+  - type: document
+  - type: spreadsheet
+uses:
+  - scanned-pdf-text-reader
+  - pdf-maker-and-reader
+  - spreadsheet-checker
+steps:
+  - uses: scanned-pdf-text-reader
+    note: Extract the relevant text while keeping page references and uncertain readings.
+  - uses: pdf-maker-and-reader
+    note: Inspect the original pages around each important fact rather than trusting extraction alone.
+  - uses: spreadsheet-checker
+    note: Check the field table for missing records, inconsistent formats and arithmetic issues.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Scanned PDF text reader
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/liteparse
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: PDF maker and reader
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/pdf
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

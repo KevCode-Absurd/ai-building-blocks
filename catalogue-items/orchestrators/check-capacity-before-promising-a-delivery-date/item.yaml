@@ -1,0 +1,47 @@
+slug: check-capacity-before-promising-a-delivery-date
+name: Check capacity before promising a delivery date
+summary: Share the source files. Get a capacity view, delivery options and a draft commitment to review.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - team-capacity-planner
+  - project-risk-portfolio
+  - stakeholder-update-writer
+steps:
+  - uses: team-capacity-planner
+    note: Calculate available capacity from actual staffing and commitments in the requested window.
+  - uses: project-risk-portfolio
+    note: Compare the new work with existing priorities and flag shared dependencies and schedule risks.
+  - uses: stakeholder-update-writer
+    note: Draft feasible timing options and explain the trade-offs before anyone promises a date.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Team capacity planner
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Project risk and portfolio manager
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/senior-pm
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

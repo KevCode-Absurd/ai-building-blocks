@@ -1,0 +1,77 @@
+new_slug: monthly-subscription-renewal-decision-assistant
+name: Monthly subscription renewal decision assistant
+headline: Monthly subscription renewal decision assistant
+summary: A changed-only renewal brief with notice deadlines, options and proposed owner actions.
+job: track-numbers
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: A changed-only renewal brief with notice deadlines, options and proposed owner actions. Share subscription bills, usage evidence, contract dates and the prior renewal register. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  A changed-only renewal brief with notice deadlines, options and proposed owner actions.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Dates and savings respect contract terms; missing usage never means unused. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need a changed-only renewal brief with notice deadlines, options and proposed owner actions.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You need to compare new evidence with the last review and choose the next action.
+you_give:
+  - Subscription bills, usage evidence, contract dates and the prior renewal register.
+  - The intended reader, deadline and limits on what may be changed.
+  - The last review and current evidence, if this is a repeat run.
+you_get:
+  - A changed-only renewal brief with notice deadlines, options and proposed owner actions.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Read scope and prior state
+    text: Keep subscription ID, term, notice date, owner, usage evidence date, decision and source references. Establish a baseline on the first run.
+  - title: Check the trigger
+    text: A renewal enters the owner chosen decision window, a quote changes or usage materially changes.
+  - title: Choose the next step
+    text: Run the renewal workflow for affected subscriptions. If notice terms or usage are missing, run vendor-agreement-status-checker and produce evidence requests before recommending cancellation.
+  - title: Check and save evidence
+    text: Dates and savings respect contract terms; missing usage never means unused. Save source versions, branch reasons, outputs and unresolved checks.
+output_shape: |-
+  Scope and source coverage
+  A changed-only renewal brief with notice deadlines, options and proposed owner actions.
+  Step files and evidence references
+  Changes since the last review and branches taken
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: Dates and savings respect contract terms; missing usage never means unused.
+judge:
+  - Dates and savings respect contract terms; missing usage never means unused.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: A capable chat AI with file support
+      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

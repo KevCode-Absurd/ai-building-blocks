@@ -1,0 +1,53 @@
+slug: check-a-prototype-before-user-testing
+name: Check a prototype before user testing
+summary: Share the source files. Get a review of test blockers, neutral tasks and a session plan.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: design_file
+    required: false
+  - type: web_page
+    required: false
+  - type: codebase
+    required: false
+outputs:
+  - type: audit_report
+  - type: code_change
+  - type: plan
+  - type: document
+uses:
+  - everyday-usability-reviewer
+  - accessibility-checker
+  - usability-test-runner
+steps:
+  - uses: everyday-usability-reviewer
+    note: Walk through the key tasks and record confusing controls, wording and missing states.
+  - uses: accessibility-checker
+    note: Check available accessibility evidence and identify barriers that could invalidate the test.
+  - uses: usability-test-runner
+    note: Prepare and, when participants and consent are available, run neutral sessions around the research question.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Everyday usability reviewer
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/design-everyday-things
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Accessibility checker
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/accesslint-audit
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Usability test runner
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/usability-testing
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

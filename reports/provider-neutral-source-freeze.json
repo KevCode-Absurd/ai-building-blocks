@@ -1,0 +1,122 @@
+{
+  "status": "source-frozen",
+  "createdAt": "2026-10-22T11:25:07.028Z",
+  "typecheck": "pass",
+  "tests": {
+    "focusedCases": 3,
+    "status": "pass-cumulative",
+    "initial": "reports/provider-neutral-e2e-initial.json",
+    "rerun": "reports/provider-neutral-e2e.json",
+    "note": "Initial valid browser run: starter and workflow pass, skill case stale old path assertion fixed; skill rerun passed. Earlier sandbox blocked localhost; no test reached the app in that attempt."
+  },
+  "minds": {
+    "status": "pass-in-final-responsive-candidate",
+    "evidence": "reports/responsive-app-final/checks.json",
+    "responsiveCasesPassed": 412,
+    "failed": 0,
+    "note": "Publisher removed mobile face-wall clipping. Minds routes passed at seven widths with selected light-mode checks. Primary inspected actual 390px Minds screenshot: face wall is visible without disclosure; card identity integration belongs to expansion chat.",
+    "visualInspection": [
+      "reports/responsive-app-final/390-minds.png",
+      "reports/responsive-app-final/390-compose.png",
+      "reports/responsive-app-final/320-home.png"
+    ],
+    "historicalFailure": "Earlier source test exposed the old mobile max-height 144px/overflow hidden rule; publisher corrected it before final responsive pass."
+  },
+  "renamed": {
+    "from": "app-starter/CLAUDE.md",
+    "to": "app-starter/BUILD-RULES.md"
+  },
+  "files": [
+    {
+      "path": "site/src/MindsPage.tsx",
+      "sha256": "49d12c161ae06c5d47723eb67244f8c75907996d5b91b672f123d1ff8fc73b0b"
+    },
+    {
+      "path": "site/src/Install.tsx",
+      "sha256": "0e4cf9f6c26b22b26203c984194d4f7d35bce5f4d34c22314febae3a34db2b1a"
+    },
+    {
+      "path": "site/src/DownloadDialog.tsx",
+      "sha256": "a9baea3ef597afe88562ed65f7a2c7aa5554354092dc878a10fa2a28470c226a"
+    },
+    {
+      "path": "site/src/HowItWorks.tsx",
+      "sha256": "2dad232d7bf776a911894acdd12d5c0740fddb3a71f48ed6057a99116c5c9fde"
+    },
+    {
+      "path": "site/src/IntakePage.tsx",
+      "sha256": "e2c537d8ca655b4d4f2c1068c2ce8b9a29f7f0242e1bd2642596ca6d617fdeac"
+    },
+    {
+      "path": "site/src/apps/AppsPage.tsx",
+      "sha256": "f10ec9ae425465d20fde394f21bc41c85f1515ff859c75cb0f58deb246c21197"
+    },
+    {
+      "path": "site/src/apps/starter.ts",
+      "sha256": "33c73243799d478773ed4f48c4a1279dfb14bb830ac00f14ebf40209eac5b216"
+    },
+    {
+      "path": "site/src/lib/handoff.ts",
+      "sha256": "3c79abe2a6858e41ac95947f1df76f33bd2fa17b48228ae4a871ec9f0574ae49"
+    },
+    {
+      "path": "site/src/lib/intake.ts",
+      "sha256": "b2986232b1a852c40a7bbf368b59737e07753dba08422c4a7cad3cf3620cd3ca"
+    },
+    {
+      "path": "app-starter/BUILD-RULES.md",
+      "sha256": "748844e9717dff642a35aa7021850cabee32945cb91f96871acd83a56f302abc"
+    },
+    {
+      "path": "app-starter/README.md",
+      "sha256": "4b922b33e0eb539cac896b17bd1d56443ffd84dadfa3e1efd46d0c113b2324a7"
+    },
+    {
+      "path": "app-starter/START-HERE.md",
+      "sha256": "7470ff239a1b3b6609635263010acdc065d096cc2b0f22ae34b0491330910748"
+    },
+    {
+      "path": "app-starter/templates/APP-BRIEF.md",
+      "sha256": "89f225323fce14ae1906c37e9d5b705ab4daa4ec6379f29d45979229083b7871"
+    },
+    {
+      "path": "app-starter/templates/DATA-MODEL.md",
+      "sha256": "e6391c6adf78dca202a88a2044e90e657d9481fe3af705d1bb540a2a93dfaf42"
+    },
+    {
+      "path": "site/e2e/site.spec.ts",
+      "sha256": "25a1d48f4fe8caeac9ef004bc1ac1240bcd9ea5f0aee3776fb25217ea479437d"
+    },
+    {
+      "path": "site/e2e/apps.spec.ts",
+      "sha256": "8d739b7ceaebfb14bdd1afb15da80545bd84095c59346efd37217813ece453e0"
+    }
+  ],
+  "generatorFollowup": {
+    "frozenAt": "2026-10-22T11:47:22.819Z",
+    "status": "pass",
+    "typecheck": "pass",
+    "syntax": "pass",
+    "guideAndCapabilityCasesPassed": 68,
+    "focusedExistingUnitPassed": 68,
+    "note": "Source copy and two existing expected-label arrays only. Final publisher must regenerate all exports and validate final package hashes. Actual model identities and licensed attribution preserved.",
+    "files": [
+      {
+        "path": "mini-tools/skill.mjs",
+        "sha256": "3cc80636f689f148c0c5cf8bef09b0de66fd14dee42824749944644cfc50212d"
+      },
+      {
+        "path": "tools/lib/needs.mjs",
+        "sha256": "e4156577cd5e843af8fdb46b83a866fc3587d55b7fe8655512a917da9067e8a5"
+      },
+      {
+        "path": "mini-tools/test/mini-tools.test.mjs",
+        "sha256": "cfd32aa8d58f3942fecc9692e1541f9cc4bba4fe338186b2053bf38dde18720f"
+      },
+      {
+        "path": "site/e2e/tools.spec.ts",
+        "sha256": "13c16862f50c23f57bebfe489fdff027e2eee885c52959b1e7498f317c15e84a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+slug: build-a-practical-manager-training-session
+name: Build a practical manager training session
+summary: Share the source files. Get a session plan, practice activity and evidence of learning to collect.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - leadership-program-designer
+  - training-program-builder
+  - role-skills-framework-builder
+steps:
+  - uses: leadership-program-designer
+    note: Set an observable outcome and choose the management situations the session should address.
+  - uses: training-program-builder
+    note: Build the session around short explanation, realistic practice and discussion.
+  - uses: role-skills-framework-builder
+    note: Define observable behavior and work evidence for checking the trained management skill.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Leadership program designer
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-leadership-development
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Training program builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-training-development
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Role skills framework builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-competency-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

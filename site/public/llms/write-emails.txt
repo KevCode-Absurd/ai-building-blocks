@@ -1,6 +1,6 @@
 # Write emails that get read: AI Blocks
 
-> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 68 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Name a company or contact. Get an email, call script and LinkedIn message built from real signals.
 - [Browse abandonment flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Give it your best sellers and proof. Get a site-visit email and a browse flow that offers a discount last.
@@ -49,7 +49,10 @@
 - [Own-voice outreach writer](https://useaiblocks.com/skills/own-voice-outreach-writer): Give it your prospects. Get emails and follow-ups that sound like you, each tied to something specific about them.
 - [Plan a month of campaign emails that sell without discounts](https://useaiblocks.com/workflows/plan-a-month-of-campaign-emails-that-sell-without-discounts): Give it your products and brand file. Get 100 email ideas, a month calendar, a written email and a layout brief.
 - [Plan a sale across email and SMS](https://useaiblocks.com/workflows/plan-a-sale-across-email-and-sms): Give it your offer and list. Get a text plan, a send calendar, a written email, checked texts and a results read.
+- [Plan an event follow up that earns a reply](https://useaiblocks.com/workflows/plan-an-event-follow-up-that-earns-a-reply): Share the source files. Get segmented follow-up drafts with sources and pending commitments.
 - [Post-purchase flow builder](https://useaiblocks.com/skills/post-purchase-flow-builder): Give it your products and delivery times. Get a six-email flow: thank-you, add-on, how-to, social ask and check-in.
+- [Prepare a partner launch announcement pack](https://useaiblocks.com/workflows/prepare-a-partner-launch-announcement-pack): Share the source files. Get a shared message brief, announcement drafts and an approval tracker.
+- [Prepare a useful customer newsletter issue](https://useaiblocks.com/workflows/prepare-a-useful-customer-newsletter-issue): Share the source files. Get a sourced newsletter draft, subject options and a review checklist.
 - [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner): Give it your products and how long they last. Get reorder, refill and second-order messages with timing and an offer cap.
 - [Roll out your welcome, cart and browse emails](https://useaiblocks.com/workflows/roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time): Give it your email setup and offer. Get a setup score, three flows and what is still missing.
 - [Signup popup builder](https://useaiblocks.com/skills/signup-popup-builder): Give it your offer and order value. Get desktop and mobile popup specs, copy and tests.

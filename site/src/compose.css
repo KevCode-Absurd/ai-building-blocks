@@ -50,3 +50,12 @@
 .compose-step-buttons{flex-wrap:wrap}.compose-step-buttons button[aria-label^="Replace"]{font-size:11px;width:auto;padding:0 6px}
 .compose-account { margin: 12px 0; padding: 12px 16px; border: 1px solid var(--line, currentColor); border-radius: 10px; }
 .compose-account p { margin: 0 0 8px; }
+@media (max-width: 600px) {
+  .compose-form, .compose-result { padding: 20px; }
+  .compose-examples { gap: 10px; }
+  .compose-examples button { min-height: 44px; padding: 9px 12px; font-size: 12px; }
+  .compose-step-head { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; }
+  .compose-step-buttons { grid-column: 2; justify-content: start; gap: 8px; }
+  .compose-step-buttons button { min-width: 44px; min-height: 44px; }
+  .compose-actions { gap: 12px; }
+}

@@ -1,0 +1,49 @@
+slug: find-duplicate-and-unused-business-subscriptions
+name: Find duplicate and unused business subscriptions
+summary: Share the source files. Get a subscription register, savings scenarios and a renewal action list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - spend-savings-finder
+  - vendor-agreement-status-checker
+  - vendor-comparison-writer
+steps:
+  - uses: spend-savings-finder
+    note: Identify duplicate spend and possible unused services using the supplied usage evidence.
+  - uses: vendor-agreement-status-checker
+    note: Check contract terms and create dated renewal decisions for the supported candidates.
+  - uses: vendor-comparison-writer
+    note: Compare keep, consolidate and replace options with migration effort and recurring cost.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Spend savings finder
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/spend-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Vendor agreement status checker
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/vendor-check
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

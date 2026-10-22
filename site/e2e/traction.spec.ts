@@ -13,9 +13,11 @@ test("a product URL downloads all 19 complete skills and an honest AI handoff", 
   await page.goto("/traction");
   await expect(page.getByTestId("traction-channel")).toHaveCount(19);
   expect(requests.some((r) => r.includes("/data/blocks.json")), "catalogue waits until the download is needed").toBe(false);
-  await page.getByTestId("traction-download").click();
+  await page.getByTestId("traction-prepare").click();
   await expect(page.getByTestId("traction-error")).toContainText("URL");
   await page.getByTestId("traction-url").fill("https://signaldesk.example");
+  await page.getByTestId("traction-prepare").click();
+  await expect(page.getByTestId("traction-result")).toContainText("Any business");
   await page.getByTestId("traction-copy").click();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toContain("Explore all 19");
   const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("traction-download").click()]);
@@ -23,27 +25,29 @@ test("a product URL downloads all 19 complete skills and an honest AI handoff", 
   const files = unzipSync(fs.readFileSync(file));
   expect(strFromU8(files["HANDOFF.md"])).toContain("https://signaldesk.example/");
   expect(strFromU8(files["HANDOFF.md"])).toContain("Withhold a scale verdict");
-  expect(files["skills/find-your-saas-growth-channel/SKILL.md"]).toBeTruthy();
+  expect(files["skills/find-your-business-growth-channel/SKILL.md"]).toBeTruthy();
   for (const id of CHANNEL_IDS) {
     const root = `skills/traction-${id}`;
     for (const name of ["SKILL.md", "references/measurement.md", "references/general-mode.md", "references/source-notes.md"]) expect(files[`${root}/${name}`], `${id}/${name}`).toBeTruthy();
   }
-  await expect(page.getByTestId("traction-status")).toContainText("advice is produced in your AI");
+  await expect(page.getByTestId("traction-status")).toContainText("Pack downloaded");
   expect(requests.some((r) => r.includes("signaldesk.example"))).toBe(false);
   expect(errors).toEqual([]);
 });
 
-test("general-business mode and a standalone channel survive into the downloaded pack", async ({ page }, info) => {
+test("a local business without a website and a standalone channel survive into the downloaded pack", async ({ page }, info) => {
   await page.goto("/traction");
-  await page.getByTestId("traction-url").fill("https://service.example");
+  await page.getByTestId("traction-business").fill("A local bakery taking custom birthday cake bookings");
   await page.getByTestId("traction-mode").click();
-  await page.getByRole("option", { name: "General business", exact: true }).click();
+  await page.getByRole("option", { name: "Local business", exact: true }).click();
   await page.getByTestId("traction-scope").click();
   await page.getByRole("option", { name: "Sales", exact: true }).click();
+  await page.getByTestId("traction-prepare").click();
   const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("traction-download").click()]);
   const file = info.outputPath(dl.suggestedFilename()); await dl.saveAs(file);
   const files = unzipSync(fs.readFileSync(file));
-  expect(strFromU8(files["HANDOFF.md"])).toContain("General business");
+  expect(strFromU8(files["HANDOFF.md"])).toContain("Local business");
+  expect(strFromU8(files["HANDOFF.md"])).toContain("appointments, visits or paid orders");
   expect(Object.keys(files).filter((n) => n.endsWith("/SKILL.md"))).toEqual(["skills/traction-sales/SKILL.md"]);
   expect(files["skills/traction-sales/references/general-mode.md"]).toBeTruthy();
 });
@@ -51,6 +55,7 @@ test("general-business mode and a standalone channel survive into the downloaded
 test("an unavailable reference pack produces an error instead of an incomplete download", async ({ page }) => {
   await page.goto("/traction");
   await page.getByTestId("traction-url").fill("https://signaldesk.example");
+  await page.getByTestId("traction-prepare").click();
   await page.route("**/skills/traction-sales.zip", (r) => r.fulfill({ status: 503, body: "unavailable" }));
   let downloads = 0; page.on("download", () => downloads++);
   await page.getByTestId("traction-download").click();
@@ -74,9 +79,22 @@ test("the growth hub works on a phone with all 19 channel links @mobile", async 
   await page.goto("/traction");
   await expect(page.getByTestId("traction-channel")).toHaveCount(19);
   await page.getByTestId("traction-url").fill("javascript:alert(1)");
-  await page.getByTestId("traction-download").click();
+  await page.getByTestId("traction-prepare").click();
   await expect(page.getByTestId("traction-error")).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByTestId("traction-channel").last().click();
   await expect(page.getByTestId("block-page")).toHaveAttribute("data-slug", "traction-community-building");
+});
+
+test("editing a prepared business clears stale exports and delivery copy has breathing room @mobile", async ({ page }) => {
+  await page.goto("/traction");
+  await page.getByTestId("traction-business").fill("A community arts nonprofit raising donations for workshops");
+  await page.getByTestId("traction-prepare").click();
+  await expect(page.getByTestId("traction-result")).toBeVisible();
+  expect(await page.locator(".traction-delivery > p").evaluate(el => parseFloat(getComputedStyle(el).marginTop))).toBeGreaterThanOrEqual(20);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.getByTestId("traction-business").fill("An independent online shop selling handmade ceramics");
+  await expect(page.getByTestId("traction-result")).toHaveCount(0);
+  await page.getByTestId("traction-prepare").click();
+  await expect(page.getByTestId("traction-result")).toContainText("handmade ceramics");
 });

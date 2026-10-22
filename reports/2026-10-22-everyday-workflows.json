@@ -1,0 +1,1220 @@
+{
+  "date": "2026-10-22",
+  "generated_from": "tools/everyday-workflows-data.mjs",
+  "workflows": 69,
+  "agents": 10,
+  "files": 237,
+  "jobs": [
+    "check-contracts",
+    "design-work",
+    "document-work",
+    "find-a-job",
+    "help-customers",
+    "hire-people",
+    "lead-people",
+    "money-and-investing",
+    "organise-work",
+    "plan-strategy",
+    "plan-supply-chain",
+    "set-prices",
+    "set-up-ai",
+    "speak-and-persuade",
+    "study-and-practice",
+    "teach-and-train",
+    "think-and-decide",
+    "track-numbers",
+    "understand-customers",
+    "work-with-files",
+    "write-and-tell-stories",
+    "write-emails"
+  ],
+  "deferred": [
+    {
+      "slug": "build-a-habit-around-a-real-constraint",
+      "reason": "The existing habit-plan-builder already supplies cue, friction, fallback, tracking and restart. Adding unrelated student or weekly planning components reduced usefulness."
+    },
+    {
+      "slug": "prepare-a-privacy-impact-review",
+      "reason": "The source method requires private legal-practice configuration and a house PIA seed that this portable pack cannot supply."
+    },
+    {
+      "slug": "check-an-ai-vendor-before-sharing-data",
+      "reason": "The source AI policy and impact methods require private governance and legal-practice configuration; retain for a future properly scoped expert pack."
+    },
+    {
+      "slug": "check-policy-wording-against-real-data-use",
+      "reason": "The source drift method relies on a saved private PIA and policy-monitoring workspace; not a portable everyday workflow yet."
+    }
+  ],
+  "validation": "Source-level structural checks only. No end-to-end model execution or finished business outcome is claimed.",
+  "items": [
+    {
+      "slug": "make-a-long-form-easier-to-finish",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "web-form-designer",
+        "multi-step-form-designer",
+        "small-usability-test-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/make-a-long-form-easier-to-finish/item.yaml",
+        "catalogue-items/orchestrators/make-a-long-form-easier-to-finish/SKILL.md",
+        "catalogue-items/orchestrators/make-a-long-form-easier-to-finish/page.yaml"
+      ]
+    },
+    {
+      "slug": "write-helpful-error-and-empty-states",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "screen-states-designer",
+        "plain-error-message-writer",
+        "small-interface-details-designer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/write-helpful-error-and-empty-states/item.yaml",
+        "catalogue-items/orchestrators/write-helpful-error-and-empty-states/SKILL.md",
+        "catalogue-items/orchestrators/write-helpful-error-and-empty-states/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-a-design-review-into-fixes",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "everyday-usability-reviewer",
+        "design-feedback-giver",
+        "small-usability-test-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-a-design-review-into-fixes/item.yaml",
+        "catalogue-items/orchestrators/turn-a-design-review-into-fixes/SKILL.md",
+        "catalogue-items/orchestrators/turn-a-design-review-into-fixes/page.yaml"
+      ]
+    },
+    {
+      "slug": "make-a-readable-event-poster",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "type-led-poster-planner",
+        "poster-designer",
+        "colour-contrast-checker"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/make-a-readable-event-poster/item.yaml",
+        "catalogue-items/orchestrators/make-a-readable-event-poster/SKILL.md",
+        "catalogue-items/orchestrators/make-a-readable-event-poster/page.yaml"
+      ]
+    },
+    {
+      "slug": "give-developers-a-complete-component-brief",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "design-system-auditor",
+        "screen-states-designer",
+        "design-token-builder"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/give-developers-a-complete-component-brief/item.yaml",
+        "catalogue-items/orchestrators/give-developers-a-complete-component-brief/SKILL.md",
+        "catalogue-items/orchestrators/give-developers-a-complete-component-brief/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-a-prototype-before-user-testing",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "everyday-usability-reviewer",
+        "accessibility-checker",
+        "usability-test-runner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-a-prototype-before-user-testing/item.yaml",
+        "catalogue-items/orchestrators/check-a-prototype-before-user-testing/SKILL.md",
+        "catalogue-items/orchestrators/check-a-prototype-before-user-testing/page.yaml"
+      ]
+    },
+    {
+      "slug": "make-onboarding-instructions-match-the-product",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "first-use-onboarding-designer",
+        "plain-words-interface-rewriter",
+        "in-app-tour-designer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/make-onboarding-instructions-match-the-product/item.yaml",
+        "catalogue-items/orchestrators/make-onboarding-instructions-match-the-product/SKILL.md",
+        "catalogue-items/orchestrators/make-onboarding-instructions-match-the-product/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-design-system-migration",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "design-system-auditor",
+        "design-rules-file-writer",
+        "change-rollout-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-design-system-migration/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-design-system-migration/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-design-system-migration/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-a-translated-interface-still-makes-sense",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "plain-words-interface-rewriter",
+        "translator",
+        "screen-states-designer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-a-translated-interface-still-makes-sense/item.yaml",
+        "catalogue-items/orchestrators/check-a-translated-interface-still-makes-sense/SKILL.md",
+        "catalogue-items/orchestrators/check-a-translated-interface-still-makes-sense/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-user-complaints-into-design-questions",
+      "type": "workflow",
+      "job": "design-work",
+      "dependencies": [
+        "feedback-theme-finder",
+        "hypothesis-first-design-planner",
+        "interview-and-research-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-user-complaints-into-design-questions/item.yaml",
+        "catalogue-items/orchestrators/turn-user-complaints-into-design-questions/SKILL.md",
+        "catalogue-items/orchestrators/turn-user-complaints-into-design-questions/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-fair-promotion-discussion",
+      "type": "workflow",
+      "job": "lead-people",
+      "dependencies": [
+        "role-skills-framework-builder",
+        "career-ladder-plan",
+        "feedback-conversation-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-fair-promotion-discussion/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-fair-promotion-discussion/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-fair-promotion-discussion/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-employee-feedback-into-owned-actions",
+      "type": "workflow",
+      "job": "lead-people",
+      "dependencies": [
+        "employee-survey-designer",
+        "people-risk-register-builder",
+        "stakeholder-update-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-employee-feedback-into-owned-actions/item.yaml",
+        "catalogue-items/orchestrators/turn-employee-feedback-into-owned-actions/SKILL.md",
+        "catalogue-items/orchestrators/turn-employee-feedback-into-owned-actions/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-team-absence-handover",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "team-capacity-planner",
+        "handover-note-writer",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-team-absence-handover/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-team-absence-handover/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-team-absence-handover/page.yaml"
+      ]
+    },
+    {
+      "slug": "build-a-practical-manager-training-session",
+      "type": "workflow",
+      "job": "teach-and-train",
+      "dependencies": [
+        "leadership-program-designer",
+        "training-program-builder",
+        "role-skills-framework-builder"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/build-a-practical-manager-training-session/item.yaml",
+        "catalogue-items/orchestrators/build-a-practical-manager-training-session/SKILL.md",
+        "catalogue-items/orchestrators/build-a-practical-manager-training-session/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-workplace-accommodation-conversation",
+      "type": "workflow",
+      "job": "hire-people",
+      "dependencies": [
+        "accommodation-process",
+        "people-risk-register-builder",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-workplace-accommodation-conversation/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-workplace-accommodation-conversation/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-workplace-accommodation-conversation/page.yaml"
+      ]
+    },
+    {
+      "slug": "compare-hr-software-before-buying",
+      "type": "workflow",
+      "job": "hire-people",
+      "dependencies": [
+        "hr-vendor-selection-planner",
+        "hr-ai-tool-vendor-checker",
+        "vendor-comparison-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/compare-hr-software-before-buying/item.yaml",
+        "catalogue-items/orchestrators/compare-hr-software-before-buying/SKILL.md",
+        "catalogue-items/orchestrators/compare-hr-software-before-buying/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-confidential-conflict-discussion",
+      "type": "workflow",
+      "job": "lead-people",
+      "dependencies": [
+        "conflict-mediation-guide",
+        "feedback-conversation-planner",
+        "meeting-minutes-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-confidential-conflict-discussion/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-confidential-conflict-discussion/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-confidential-conflict-discussion/page.yaml"
+      ]
+    },
+    {
+      "slug": "make-a-new-policy-understandable-to-staff",
+      "type": "workflow",
+      "job": "document-work",
+      "dependencies": [
+        "company-policy-explainer",
+        "stakeholder-update-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/make-a-new-policy-understandable-to-staff/item.yaml",
+        "catalogue-items/orchestrators/make-a-new-policy-understandable-to-staff/SKILL.md",
+        "catalogue-items/orchestrators/make-a-new-policy-understandable-to-staff/page.yaml"
+      ]
+    },
+    {
+      "slug": "plan-coverage-for-a-critical-role",
+      "type": "workflow",
+      "job": "lead-people",
+      "dependencies": [
+        "succession-plan-builder",
+        "role-skills-framework-builder",
+        "training-program-builder"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/plan-coverage-for-a-critical-role/item.yaml",
+        "catalogue-items/orchestrators/plan-coverage-for-a-critical-role/SKILL.md",
+        "catalogue-items/orchestrators/plan-coverage-for-a-critical-role/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-payroll-inputs-before-the-cut-off",
+      "type": "workflow",
+      "job": "track-numbers",
+      "dependencies": [
+        "payroll-timesheet-checker",
+        "spreadsheet-checker",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-payroll-inputs-before-the-cut-off/item.yaml",
+        "catalogue-items/orchestrators/check-payroll-inputs-before-the-cut-off/SKILL.md",
+        "catalogue-items/orchestrators/check-payroll-inputs-before-the-cut-off/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-supplier-invoices-before-approval",
+      "type": "workflow",
+      "job": "track-numbers",
+      "dependencies": [
+        "invoice-checker",
+        "invoice-totals-checker",
+        "spreadsheet-checker"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-supplier-invoices-before-approval/item.yaml",
+        "catalogue-items/orchestrators/check-supplier-invoices-before-approval/SKILL.md",
+        "catalogue-items/orchestrators/check-supplier-invoices-before-approval/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-expenses-for-your-bookkeeper",
+      "type": "workflow",
+      "job": "track-numbers",
+      "dependencies": [
+        "spreadsheet-checker",
+        "account-reconciler"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-expenses-for-your-bookkeeper/item.yaml",
+        "catalogue-items/orchestrators/prepare-expenses-for-your-bookkeeper/SKILL.md",
+        "catalogue-items/orchestrators/prepare-expenses-for-your-bookkeeper/page.yaml"
+      ]
+    },
+    {
+      "slug": "explain-a-department-budget-overrun",
+      "type": "workflow",
+      "job": "track-numbers",
+      "dependencies": [
+        "budget-variance-explainer",
+        "department-budget-planner",
+        "stakeholder-update-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/explain-a-department-budget-overrun/item.yaml",
+        "catalogue-items/orchestrators/explain-a-department-budget-overrun/SKILL.md",
+        "catalogue-items/orchestrators/explain-a-department-budget-overrun/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-seasonal-cash-buffer",
+      "type": "workflow",
+      "job": "track-numbers",
+      "dependencies": [
+        "budget-and-forecast-builder",
+        "spreadsheet-checker",
+        "department-budget-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-seasonal-cash-buffer/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-seasonal-cash-buffer/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-seasonal-cash-buffer/page.yaml"
+      ]
+    },
+    {
+      "slug": "find-duplicate-and-unused-business-subscriptions",
+      "type": "workflow",
+      "job": "track-numbers",
+      "dependencies": [
+        "spend-savings-finder",
+        "vendor-agreement-status-checker",
+        "vendor-comparison-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/find-duplicate-and-unused-business-subscriptions/item.yaml",
+        "catalogue-items/orchestrators/find-duplicate-and-unused-business-subscriptions/SKILL.md",
+        "catalogue-items/orchestrators/find-duplicate-and-unused-business-subscriptions/page.yaml"
+      ]
+    },
+    {
+      "slug": "compare-supplier-prices-on-the-same-basis",
+      "type": "workflow",
+      "job": "plan-supply-chain",
+      "dependencies": [
+        "supplier-quote-comparer",
+        "supplier-risk-scorecard-builder"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/compare-supplier-prices-on-the-same-basis/item.yaml",
+        "catalogue-items/orchestrators/compare-supplier-prices-on-the-same-basis/SKILL.md",
+        "catalogue-items/orchestrators/compare-supplier-prices-on-the-same-basis/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-your-first-freelance-project-quote",
+      "type": "workflow",
+      "job": "set-prices",
+      "dependencies": [
+        "web-project-scoper",
+        "contract-and-proposal-drafter",
+        "contract-risk-reviewer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-your-first-freelance-project-quote/item.yaml",
+        "catalogue-items/orchestrators/prepare-your-first-freelance-project-quote/SKILL.md",
+        "catalogue-items/orchestrators/prepare-your-first-freelance-project-quote/page.yaml"
+      ]
+    },
+    {
+      "slug": "trace-why-work-keeps-missing-deadlines",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "process-bottleneck-finder",
+        "outside-view-timeline-estimator",
+        "change-rollout-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/trace-why-work-keeps-missing-deadlines/item.yaml",
+        "catalogue-items/orchestrators/trace-why-work-keeps-missing-deadlines/SKILL.md",
+        "catalogue-items/orchestrators/trace-why-work-keeps-missing-deadlines/page.yaml"
+      ]
+    },
+    {
+      "slug": "build-a-backup-recovery-rehearsal",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "backup-and-recovery-planner",
+        "incident-runbook-writer",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/build-a-backup-recovery-rehearsal/item.yaml",
+        "catalogue-items/orchestrators/build-a-backup-recovery-rehearsal/SKILL.md",
+        "catalogue-items/orchestrators/build-a-backup-recovery-rehearsal/page.yaml"
+      ]
+    },
+    {
+      "slug": "make-a-recurring-process-easier-to-hand-over",
+      "type": "workflow",
+      "job": "document-work",
+      "dependencies": [
+        "process-and-sop-writer",
+        "handover-note-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/make-a-recurring-process-easier-to-hand-over/item.yaml",
+        "catalogue-items/orchestrators/make-a-recurring-process-easier-to-hand-over/SKILL.md",
+        "catalogue-items/orchestrators/make-a-recurring-process-easier-to-hand-over/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-capacity-before-promising-a-delivery-date",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "team-capacity-planner",
+        "project-risk-portfolio",
+        "stakeholder-update-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-capacity-before-promising-a-delivery-date/item.yaml",
+        "catalogue-items/orchestrators/check-capacity-before-promising-a-delivery-date/SKILL.md",
+        "catalogue-items/orchestrators/check-capacity-before-promising-a-delivery-date/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-clear-client-project-kickoff",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "project-kickoff-brief-writer",
+        "meeting-agenda-and-cost-planner",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-clear-client-project-kickoff/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-clear-client-project-kickoff/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-clear-client-project-kickoff/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-an-incident-into-a-safer-procedure",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "incident-postmortem-writer",
+        "process-and-sop-writer",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-an-incident-into-a-safer-procedure/item.yaml",
+        "catalogue-items/orchestrators/turn-an-incident-into-a-safer-procedure/SKILL.md",
+        "catalogue-items/orchestrators/turn-an-incident-into-a-safer-procedure/page.yaml"
+      ]
+    },
+    {
+      "slug": "plan-a-vendor-change-without-losing-work",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "vendor-comparison-writer",
+        "project-risk-portfolio",
+        "change-rollout-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/plan-a-vendor-change-without-losing-work/item.yaml",
+        "catalogue-items/orchestrators/plan-a-vendor-change-without-losing-work/SKILL.md",
+        "catalogue-items/orchestrators/plan-a-vendor-change-without-losing-work/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-small-team-offsite",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "executive-meeting-brief",
+        "meeting-agenda-and-cost-planner",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-small-team-offsite/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-small-team-offsite/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-small-team-offsite/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-service-outage-communication-pack",
+      "type": "workflow",
+      "job": "help-customers",
+      "dependencies": [
+        "incident-runbook-writer",
+        "stakeholder-update-writer",
+        "plain-english-editor"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-service-outage-communication-pack/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-service-outage-communication-pack/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-service-outage-communication-pack/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-a-new-automation-before-relying-on-it",
+      "type": "workflow",
+      "job": "set-up-ai",
+      "dependencies": [
+        "repeatable-ai-loop-designer",
+        "process-and-sop-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-a-new-automation-before-relying-on-it/item.yaml",
+        "catalogue-items/orchestrators/check-a-new-automation-before-relying-on-it/SKILL.md",
+        "catalogue-items/orchestrators/check-a-new-automation-before-relying-on-it/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-evidence-for-a-compliance-review",
+      "type": "workflow",
+      "job": "check-contracts",
+      "dependencies": [
+        "compliance-checklist",
+        "spreadsheet-checker",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-evidence-for-a-compliance-review/item.yaml",
+        "catalogue-items/orchestrators/prepare-evidence-for-a-compliance-review/SKILL.md",
+        "catalogue-items/orchestrators/prepare-evidence-for-a-compliance-review/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-contract-amendment-for-review",
+      "type": "workflow",
+      "job": "check-contracts",
+      "dependencies": [
+        "contract-risk-reviewer",
+        "plain-words-contract-summary"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-contract-amendment-for-review/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-contract-amendment-for-review/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-contract-amendment-for-review/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-vendor-security-questionnaire-response",
+      "type": "workflow",
+      "job": "check-contracts",
+      "dependencies": [
+        "compliance-checklist",
+        "spreadsheet-checker",
+        "plain-english-editor"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-vendor-security-questionnaire-response/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-vendor-security-questionnaire-response/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-vendor-security-questionnaire-response/page.yaml"
+      ]
+    },
+    {
+      "slug": "review-employee-data-access-before-a-change",
+      "type": "workflow",
+      "job": "check-contracts",
+      "dependencies": [
+        "employee-data-privacy-checker",
+        "people-risk-register-builder",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/review-employee-data-access-before-a-change/item.yaml",
+        "catalogue-items/orchestrators/review-employee-data-access-before-a-change/SKILL.md",
+        "catalogue-items/orchestrators/review-employee-data-access-before-a-change/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-contract-renewal-negotiation",
+      "type": "workflow",
+      "job": "check-contracts",
+      "dependencies": [
+        "vendor-agreement-status-checker",
+        "contract-risk-reviewer",
+        "vendor-comparison-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-contract-renewal-negotiation/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-contract-renewal-negotiation/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-contract-renewal-negotiation/page.yaml"
+      ]
+    },
+    {
+      "slug": "tailor-a-job-application-to-real-evidence",
+      "type": "workflow",
+      "job": "find-a-job",
+      "dependencies": [
+        "resume-job-application-builder",
+        "plain-english-editor",
+        "proofreader"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/tailor-a-job-application-to-real-evidence/item.yaml",
+        "catalogue-items/orchestrators/tailor-a-job-application-to-real-evidence/SKILL.md",
+        "catalogue-items/orchestrators/tailor-a-job-application-to-real-evidence/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-work-examples-for-a-job-interview",
+      "type": "workflow",
+      "job": "find-a-job",
+      "dependencies": [
+        "role-skills-framework-builder",
+        "resume-job-application-builder",
+        "interview-question-set-maker"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-work-examples-for-a-job-interview/item.yaml",
+        "catalogue-items/orchestrators/prepare-work-examples-for-a-job-interview/SKILL.md",
+        "catalogue-items/orchestrators/prepare-work-examples-for-a-job-interview/page.yaml"
+      ]
+    },
+    {
+      "slug": "make-a-realistic-plan-for-a-busy-week",
+      "type": "workflow",
+      "job": "organise-work",
+      "dependencies": [
+        "weekly-time-audit-planner",
+        "week-priority-picker",
+        "executive-daily-digest"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/make-a-realistic-plan-for-a-busy-week/item.yaml",
+        "catalogue-items/orchestrators/make-a-realistic-plan-for-a-busy-week/SKILL.md",
+        "catalogue-items/orchestrators/make-a-realistic-plan-for-a-busy-week/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-saved-reading-into-notes-you-can-use",
+      "type": "workflow",
+      "job": "study-and-practice",
+      "dependencies": [
+        "source-note-summariser",
+        "notes-wiki-builder",
+        "recall-first-study-tutor"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-saved-reading-into-notes-you-can-use/item.yaml",
+        "catalogue-items/orchestrators/turn-saved-reading-into-notes-you-can-use/SKILL.md",
+        "catalogue-items/orchestrators/turn-saved-reading-into-notes-you-can-use/page.yaml"
+      ]
+    },
+    {
+      "slug": "plan-a-purchase-around-your-real-budget",
+      "type": "workflow",
+      "job": "money-and-investing",
+      "dependencies": [
+        "personal-budget-builder",
+        "vendor-comparison-writer",
+        "decision-checklist-runner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/plan-a-purchase-around-your-real-budget/item.yaml",
+        "catalogue-items/orchestrators/plan-a-purchase-around-your-real-budget/SKILL.md",
+        "catalogue-items/orchestrators/plan-a-purchase-around-your-real-budget/page.yaml"
+      ]
+    },
+    {
+      "slug": "choose-a-study-plan-you-can-keep",
+      "type": "workflow",
+      "job": "study-and-practice",
+      "dependencies": [
+        "topic-learning-roadmap",
+        "study-strategy-picker",
+        "study-session-planner-and-review"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/choose-a-study-plan-you-can-keep/item.yaml",
+        "catalogue-items/orchestrators/choose-a-study-plan-you-can-keep/SKILL.md",
+        "catalogue-items/orchestrators/choose-a-study-plan-you-can-keep/page.yaml"
+      ]
+    },
+    {
+      "slug": "plan-a-difficult-feedback-conversation",
+      "type": "workflow",
+      "job": "think-and-decide",
+      "dependencies": [
+        "feedback-conversation-planner",
+        "hard-feedback-message-writer",
+        "plain-english-editor"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/plan-a-difficult-feedback-conversation/item.yaml",
+        "catalogue-items/orchestrators/plan-a-difficult-feedback-conversation/SKILL.md",
+        "catalogue-items/orchestrators/plan-a-difficult-feedback-conversation/page.yaml"
+      ]
+    },
+    {
+      "slug": "help-learners-spot-weak-online-evidence",
+      "type": "workflow",
+      "job": "teach-and-train",
+      "dependencies": [
+        "online-source-check-lesson",
+        "media-literacy-lesson-builder",
+        "marking-rubric-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/help-learners-spot-weak-online-evidence/item.yaml",
+        "catalogue-items/orchestrators/help-learners-spot-weak-online-evidence/SKILL.md",
+        "catalogue-items/orchestrators/help-learners-spot-weak-online-evidence/page.yaml"
+      ]
+    },
+    {
+      "slug": "adapt-a-lesson-for-different-access-needs",
+      "type": "workflow",
+      "job": "teach-and-train",
+      "dependencies": [
+        "accessible-lesson-auditor",
+        "learning-options-designer",
+        "lesson-understanding-check"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/adapt-a-lesson-for-different-access-needs/item.yaml",
+        "catalogue-items/orchestrators/adapt-a-lesson-for-different-access-needs/SKILL.md",
+        "catalogue-items/orchestrators/adapt-a-lesson-for-different-access-needs/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-a-worked-example-into-independent-practice",
+      "type": "workflow",
+      "job": "teach-and-train",
+      "dependencies": [
+        "worked-example-practice",
+        "practice-problem-set-writer",
+        "study-understanding-check"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-a-worked-example-into-independent-practice/item.yaml",
+        "catalogue-items/orchestrators/turn-a-worked-example-into-independent-practice/SKILL.md",
+        "catalogue-items/orchestrators/turn-a-worked-example-into-independent-practice/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-feedback-students-can-act-on",
+      "type": "workflow",
+      "job": "teach-and-train",
+      "dependencies": [
+        "single-point-rubric-builder",
+        "written-feedback-checker",
+        "practice-problem-set-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-feedback-students-can-act-on/item.yaml",
+        "catalogue-items/orchestrators/prepare-feedback-students-can-act-on/SKILL.md",
+        "catalogue-items/orchestrators/prepare-feedback-students-can-act-on/page.yaml"
+      ]
+    },
+    {
+      "slug": "build-a-community-project-with-clear-learning",
+      "type": "workflow",
+      "job": "teach-and-train",
+      "dependencies": [
+        "community-project-unit-planner",
+        "project-based-unit-brief-writer",
+        "learning-documentation-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/build-a-community-project-with-clear-learning/item.yaml",
+        "catalogue-items/orchestrators/build-a-community-project-with-clear-learning/SKILL.md",
+        "catalogue-items/orchestrators/build-a-community-project-with-clear-learning/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-a-lesson-before-teaching-it",
+      "type": "workflow",
+      "job": "teach-and-train",
+      "dependencies": [
+        "overloaded-lesson-checker",
+        "lesson-barrier-spotter",
+        "lesson-understanding-check"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-a-lesson-before-teaching-it/item.yaml",
+        "catalogue-items/orchestrators/check-a-lesson-before-teaching-it/SKILL.md",
+        "catalogue-items/orchestrators/check-a-lesson-before-teaching-it/page.yaml"
+      ]
+    },
+    {
+      "slug": "plan-a-peer-feedback-session-that-helps",
+      "type": "workflow",
+      "job": "teach-and-train",
+      "dependencies": [
+        "peer-feedback-session-planner",
+        "honest-draft-feedback-giver",
+        "reader-feedback-sorter"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/plan-a-peer-feedback-session-that-helps/item.yaml",
+        "catalogue-items/orchestrators/plan-a-peer-feedback-session-that-helps/SKILL.md",
+        "catalogue-items/orchestrators/plan-a-peer-feedback-session-that-helps/page.yaml"
+      ]
+    },
+    {
+      "slug": "build-a-practice-plan-from-common-mistakes",
+      "type": "workflow",
+      "job": "study-and-practice",
+      "dependencies": [
+        "study-understanding-check",
+        "flawed-example-writer",
+        "mixed-practice-unit-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/build-a-practice-plan-from-common-mistakes/item.yaml",
+        "catalogue-items/orchestrators/build-a-practice-plan-from-common-mistakes/SKILL.md",
+        "catalogue-items/orchestrators/build-a-practice-plan-from-common-mistakes/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-webinar-people-can-follow",
+      "type": "workflow",
+      "job": "speak-and-persuade",
+      "dependencies": [
+        "presentation-builder",
+        "editable-slide-deck-builder",
+        "webinar-promotion-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-webinar-people-can-follow/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-webinar-people-can-follow/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-webinar-people-can-follow/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-a-customer-interview-into-a-case-outline",
+      "type": "workflow",
+      "job": "write-and-tell-stories",
+      "dependencies": [
+        "customer-interview-synthesizer",
+        "case-first-story-builder",
+        "draft-proofreader"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-a-customer-interview-into-a-case-outline/item.yaml",
+        "catalogue-items/orchestrators/turn-a-customer-interview-into-a-case-outline/SKILL.md",
+        "catalogue-items/orchestrators/turn-a-customer-interview-into-a-case-outline/page.yaml"
+      ]
+    },
+    {
+      "slug": "plan-an-event-follow-up-that-earns-a-reply",
+      "type": "workflow",
+      "job": "write-emails",
+      "dependencies": [
+        "event-marketing-planner",
+        "executive-action-register",
+        "executive-due-task-drafts"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/plan-an-event-follow-up-that-earns-a-reply/item.yaml",
+        "catalogue-items/orchestrators/plan-an-event-follow-up-that-earns-a-reply/SKILL.md",
+        "catalogue-items/orchestrators/plan-an-event-follow-up-that-earns-a-reply/page.yaml"
+      ]
+    },
+    {
+      "slug": "make-a-research-report-easier-to-share",
+      "type": "workflow",
+      "job": "work-with-files",
+      "dependencies": [
+        "plain-english-editor",
+        "presentation-builder",
+        "proofreader"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/make-a-research-report-easier-to-share/item.yaml",
+        "catalogue-items/orchestrators/make-a-research-report-easier-to-share/SKILL.md",
+        "catalogue-items/orchestrators/make-a-research-report-easier-to-share/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-useful-customer-newsletter-issue",
+      "type": "workflow",
+      "job": "write-emails",
+      "dependencies": [
+        "feedback-theme-finder",
+        "campaign-email-writer",
+        "brand-voice-editor"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-useful-customer-newsletter-issue/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-useful-customer-newsletter-issue/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-useful-customer-newsletter-issue/page.yaml"
+      ]
+    },
+    {
+      "slug": "prepare-a-partner-launch-announcement-pack",
+      "type": "workflow",
+      "job": "write-emails",
+      "dependencies": [
+        "stakeholder-map-builder",
+        "stakeholder-update-writer",
+        "brand-voice-editor"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/prepare-a-partner-launch-announcement-pack/item.yaml",
+        "catalogue-items/orchestrators/prepare-a-partner-launch-announcement-pack/SKILL.md",
+        "catalogue-items/orchestrators/prepare-a-partner-launch-announcement-pack/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-a-marketing-survey-before-sending-it",
+      "type": "workflow",
+      "job": "understand-customers",
+      "dependencies": [
+        "market-size-and-survey-planner",
+        "interview-and-research-planner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-a-marketing-survey-before-sending-it/item.yaml",
+        "catalogue-items/orchestrators/check-a-marketing-survey-before-sending-it/SKILL.md",
+        "catalogue-items/orchestrators/check-a-marketing-survey-before-sending-it/page.yaml"
+      ]
+    },
+    {
+      "slug": "build-a-clear-sponsorship-decision-brief",
+      "type": "workflow",
+      "job": "plan-strategy",
+      "dependencies": [
+        "vendor-comparison-writer",
+        "event-marketing-planner",
+        "decision-checklist-runner"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/build-a-clear-sponsorship-decision-brief/item.yaml",
+        "catalogue-items/orchestrators/build-a-clear-sponsorship-decision-brief/SKILL.md",
+        "catalogue-items/orchestrators/build-a-clear-sponsorship-decision-brief/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-rough-notes-into-a-checked-word-handout",
+      "type": "workflow",
+      "job": "work-with-files",
+      "dependencies": [
+        "plain-english-editor",
+        "document-file-generator",
+        "libreoffice-document-builder",
+        "pdf-maker-and-reader"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-rough-notes-into-a-checked-word-handout/item.yaml",
+        "catalogue-items/orchestrators/turn-rough-notes-into-a-checked-word-handout/SKILL.md",
+        "catalogue-items/orchestrators/turn-rough-notes-into-a-checked-word-handout/page.yaml"
+      ]
+    },
+    {
+      "slug": "extract-a-scanned-document-and-verify-key-facts",
+      "type": "workflow",
+      "job": "work-with-files",
+      "dependencies": [
+        "scanned-pdf-text-reader",
+        "pdf-maker-and-reader",
+        "spreadsheet-checker"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/extract-a-scanned-document-and-verify-key-facts/item.yaml",
+        "catalogue-items/orchestrators/extract-a-scanned-document-and-verify-key-facts/SKILL.md",
+        "catalogue-items/orchestrators/extract-a-scanned-document-and-verify-key-facts/page.yaml"
+      ]
+    },
+    {
+      "slug": "check-a-spreadsheet-before-sharing-the-results",
+      "type": "workflow",
+      "job": "work-with-files",
+      "dependencies": [
+        "spreadsheet-checker",
+        "figures-to-plain-pictures-writer"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/check-a-spreadsheet-before-sharing-the-results/item.yaml",
+        "catalogue-items/orchestrators/check-a-spreadsheet-before-sharing-the-results/SKILL.md",
+        "catalogue-items/orchestrators/check-a-spreadsheet-before-sharing-the-results/page.yaml"
+      ]
+    },
+    {
+      "slug": "turn-a-report-into-an-editable-briefing-deck",
+      "type": "workflow",
+      "job": "work-with-files",
+      "dependencies": [
+        "presentation-builder",
+        "proofreader",
+        "editable-slide-deck-builder"
+      ],
+      "files": [
+        "catalogue-items/orchestrators/turn-a-report-into-an-editable-briefing-deck/item.yaml",
+        "catalogue-items/orchestrators/turn-a-report-into-an-editable-briefing-deck/SKILL.md",
+        "catalogue-items/orchestrators/turn-a-report-into-an-editable-briefing-deck/page.yaml"
+      ]
+    },
+    {
+      "slug": "monthly-subscription-renewal-decision-assistant",
+      "type": "agent",
+      "job": "track-numbers",
+      "dependencies": [
+        "find-duplicate-and-unused-business-subscriptions",
+        "vendor-agreement-status-checker"
+      ],
+      "files": [
+        "catalogue-items/agents/monthly-subscription-renewal-decision-assistant/item.yaml",
+        "catalogue-items/agents/monthly-subscription-renewal-decision-assistant/SKILL.md",
+        "catalogue-items/agents/monthly-subscription-renewal-decision-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "weekly-team-coverage-review-assistant",
+      "type": "agent",
+      "job": "organise-work",
+      "dependencies": [
+        "prepare-a-team-absence-handover",
+        "team-capacity-planner"
+      ],
+      "files": [
+        "catalogue-items/agents/weekly-team-coverage-review-assistant/item.yaml",
+        "catalogue-items/agents/weekly-team-coverage-review-assistant/SKILL.md",
+        "catalogue-items/agents/weekly-team-coverage-review-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "employee-feedback-action-review-assistant",
+      "type": "agent",
+      "job": "lead-people",
+      "dependencies": [
+        "turn-employee-feedback-into-owned-actions",
+        "executive-action-register"
+      ],
+      "files": [
+        "catalogue-items/agents/employee-feedback-action-review-assistant/item.yaml",
+        "catalogue-items/agents/employee-feedback-action-review-assistant/SKILL.md",
+        "catalogue-items/agents/employee-feedback-action-review-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "design-handoff-completeness-assistant",
+      "type": "agent",
+      "job": "design-work",
+      "dependencies": [
+        "give-developers-a-complete-component-brief",
+        "screen-states-designer"
+      ],
+      "files": [
+        "catalogue-items/agents/design-handoff-completeness-assistant/item.yaml",
+        "catalogue-items/agents/design-handoff-completeness-assistant/SKILL.md",
+        "catalogue-items/agents/design-handoff-completeness-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "recovery-rehearsal-evidence-assistant",
+      "type": "agent",
+      "job": "organise-work",
+      "dependencies": [
+        "build-a-backup-recovery-rehearsal",
+        "incident-postmortem-writer"
+      ],
+      "files": [
+        "catalogue-items/agents/recovery-rehearsal-evidence-assistant/item.yaml",
+        "catalogue-items/agents/recovery-rehearsal-evidence-assistant/SKILL.md",
+        "catalogue-items/agents/recovery-rehearsal-evidence-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "weekly-project-delay-evidence-assistant",
+      "type": "agent",
+      "job": "organise-work",
+      "dependencies": [
+        "trace-why-work-keeps-missing-deadlines",
+        "project-risk-portfolio"
+      ],
+      "files": [
+        "catalogue-items/agents/weekly-project-delay-evidence-assistant/item.yaml",
+        "catalogue-items/agents/weekly-project-delay-evidence-assistant/SKILL.md",
+        "catalogue-items/agents/weekly-project-delay-evidence-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "job-application-evidence-review-assistant",
+      "type": "agent",
+      "job": "find-a-job",
+      "dependencies": [
+        "tailor-a-job-application-to-real-evidence",
+        "proofreader"
+      ],
+      "files": [
+        "catalogue-items/agents/job-application-evidence-review-assistant/item.yaml",
+        "catalogue-items/agents/job-application-evidence-review-assistant/SKILL.md",
+        "catalogue-items/agents/job-application-evidence-review-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "study-plan-progress-review-assistant",
+      "type": "agent",
+      "job": "study-and-practice",
+      "dependencies": [
+        "choose-a-study-plan-you-can-keep",
+        "study-understanding-check"
+      ],
+      "files": [
+        "catalogue-items/agents/study-plan-progress-review-assistant/item.yaml",
+        "catalogue-items/agents/study-plan-progress-review-assistant/SKILL.md",
+        "catalogue-items/agents/study-plan-progress-review-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "compliance-evidence-request-assistant",
+      "type": "agent",
+      "job": "check-contracts",
+      "dependencies": [
+        "prepare-evidence-for-a-compliance-review",
+        "spreadsheet-checker"
+      ],
+      "files": [
+        "catalogue-items/agents/compliance-evidence-request-assistant/item.yaml",
+        "catalogue-items/agents/compliance-evidence-request-assistant/SKILL.md",
+        "catalogue-items/agents/compliance-evidence-request-assistant/page.yaml"
+      ]
+    },
+    {
+      "slug": "recurring-invoice-exception-review-assistant",
+      "type": "agent",
+      "job": "track-numbers",
+      "dependencies": [
+        "check-supplier-invoices-before-approval",
+        "invoice-totals-checker"
+      ],
+      "files": [
+        "catalogue-items/agents/recurring-invoice-exception-review-assistant/item.yaml",
+        "catalogue-items/agents/recurring-invoice-exception-review-assistant/SKILL.md",
+        "catalogue-items/agents/recurring-invoice-exception-review-assistant/page.yaml"
+      ]
+    }
+  ]
+}

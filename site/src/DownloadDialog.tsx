@@ -7,36 +7,30 @@ import { openBusiness } from "./Business";
 export const FIRST_MESSAGE = "Follow HANDOFF.md step by step. Start with “Before you start”, and ask me for anything that's missing.";
 
 const AIS = [
-  { id: "claude", name: "Claude" },
-  { id: "code", name: "Claude Code" },
-  { id: "chatgpt", name: "ChatGPT" },
-  { id: "other", name: "Any other AI" },
+  { id: "chat", name: "Chat" },
+  { id: "code", name: "Coding assistant" },
+  { id: "saved", name: "Reusable instructions" },
 ] as const;
 type Ai = (typeof AIS)[number]["id"];
-const KEY = "abb:install-tab"; // the same choice as on skill pages: pick your AI once
+const KEY = "abb:install-tab"; // shared with the portable skill setup instructions
 
 function steps(ai: Ai, zip: string, biz: boolean): ReactNode[] {
   const files = <><b>HANDOFF.md</b>{biz && <>, <b>about-me.md</b></>} and the SKILL.md files in the <b>skills</b> folder</>;
   switch (ai) {
-    case "claude": return [
-      <>Unzip <b>{zip}</b>.</>,
-      <>In Claude, start a new chat and attach {files}. Running it often? Make a <b>Project</b> and add the files to its knowledge, so you only do this once.</>,
-      <>Paste the first message below and send it.</>,
-    ];
     case "code": return [
       <>Unzip <b>{zip}</b> into a new folder.</>,
-      <>Open a terminal in that folder and type <code>claude</code>.</>,
-      <>Paste the first message below. Each step saves its result in the <b>outputs</b> folder.</>,
+      <>Open that folder in your AI coding assistant and ask it to read HANDOFF.md.</>,
+      <>Paste the first message below. With file access, each step saves its result in the <b>outputs</b> folder.</>,
     ];
-    case "chatgpt": return [
+    case "saved": return [
       <>Unzip <b>{zip}</b>.</>,
-      <>In ChatGPT, start a new chat and attach {files}. Running it often? Make a <b>Project</b> and add the files to it.</>,
-      <>Paste the first message below and send it.</>,
+      <>Add {files} to a project or reusable assistant that supports files and instructions.</>,
+      <>Open that project or assistant and paste the first message below.</>,
     ];
     default: return [
       <>Unzip <b>{zip}</b>.</>,
-      <>Give your AI {files}, any way it takes files: attach them, or add them to a project or its knowledge.</>,
-      <>Paste the first message below and send it.</>,
+      <>In a new chat, attach {files}. If your AI cannot read attachments, paste their contents.</>,
+      <>Paste the first message below. Ask for each output as a file or a code block you can save.</>,
     ];
   }
 }
@@ -50,7 +44,7 @@ export function DownloadDialog({ name, zip, needs, finals, onDownload, onClose, 
   const [got, setGot] = useState<Set<string>>(new Set());
   const [done, setDone] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [ai, setAi] = useState<Ai>(() => { try { const t = localStorage.getItem(KEY); return AIS.some((x) => x.id === t) ? (t as Ai) : t === "gemini" ? "other" : "claude"; } catch { return "claude"; } });
+  const [ai, setAi] = useState<Ai>(() => { try { const t = localStorage.getItem(KEY); return AIS.some((x) => x.id === t) ? (t as Ai) : "chat"; } catch { return "chat"; } });
   const biz = hasBusiness(useBusiness());
   useEffect(() => { const d = ref.current; if (d && !d.open) d.showModal(); }, []);
   const close = () => ref.current?.close();

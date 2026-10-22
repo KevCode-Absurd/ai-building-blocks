@@ -1,6 +1,6 @@
 # Hire and look after your people: AI Blocks
 
-> 106 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 108 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner): Tell it the role and team. Get a 30, 60 and 90 day plan for a new hire.
 - [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder): Give it the job and the resumes. Get a ranked shortlist scored only on the job needs, with replies drafted.
@@ -13,6 +13,7 @@
 - [Candidate sourcing planner](https://useaiblocks.com/skills/candidate-sourcing-planner): Give it a role and candidate profile. Get the best places to look, target companies and a week-by-week plan.
 - [Career ladder and growth plan writer](https://useaiblocks.com/skills/career-ladder-plan): Name a job family. Get career levels, growth plans and a manager guide for career talks.
 - [Company policy explainer](https://useaiblocks.com/skills/company-policy-explainer): Ask about leave, travel or expenses. Get the rule in plain words from your handbook. Check with HR for big decisions.
+- [Compare HR software before buying](https://useaiblocks.com/workflows/compare-hr-software-before-buying): Share the source files. Get a vendor comparison, privacy questions and a recommendation to review.
 - [Contractor program setup guide](https://useaiblocks.com/skills/contractor-program-setup-guide): Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice.
 - [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker): Name the AI tool using staff data. Get a privacy review, a shorter data list and a notice. Not legal advice.
 - [Employee experience map builder](https://useaiblocks.com/skills/employee-experience-map-builder): Pick a stage, like first week or exit. Get a map of key moments, pain points and fixes.
@@ -87,6 +88,7 @@
 - [Performance review helper](https://useaiblocks.com/skills/performance-review-helper): Pick your review cycle. Get a self-review template, a manager review draft and calibration prep with specific examples.
 - [Plain job post drafter](https://useaiblocks.com/prompts/plain-job-post-drafter): Paste the role and what it needs. Get a clear job post with real requirements.
 - [Plan a year of hiring and what it will cost](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost): Give it past headcount and goals. Get a forecast, a hiring plan and a monthly cost budget.
+- [Prepare a workplace accommodation conversation](https://useaiblocks.com/workflows/prepare-a-workplace-accommodation-conversation): Share the source files. Get a confidential discussion guide, possible adjustments and a review plan.
 - [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer): Share your resume and target job. Get ten resume checks, specific fixes and a draft suited to the role.
 - [Quarterly hiring plan review](https://useaiblocks.com/agents/quarterly-headcount-plan-keeper): Give it each quarter's people numbers. Get the plan checked against what happened, the scenario to follow and the budget gap.
 - [Reference check question writer](https://useaiblocks.com/skills/reference-check-question-writer): Give it a role. Get fair reference questions, a call script and a sheet to record answers. Check local rules first.

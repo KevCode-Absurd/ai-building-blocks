@@ -1,6 +1,6 @@
 # Set your prices: AI Blocks
 
-> 38 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 39 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Bulk price changer](https://useaiblocks.com/skills/bulk-price-changer): Pick products and a percent or amount. Get every price changed at once, within limits. Changes live prices, so preview first.
 - [Clearance discount planner](https://useaiblocks.com/skills/clearance-discount-planner): Give it your slow stock and past sales. Get when and how much to cut prices to sell out.
@@ -15,6 +15,7 @@
 - [Hotel room pricing planner](https://useaiblocks.com/skills/hotel-room-pricing-planner): Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
 - [Membership plan pricer](https://useaiblocks.com/skills/membership-plan-pricer): Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades.
 - [Minimum viable price calculator](https://useaiblocks.com/skills/waterfall-price-setter): Share costs, sales targets and acquisition spend. Calculate the lowest viable price or identify a product that cannot pay.
+- [Prepare your first freelance project quote](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote): Share the source files. Get a scoped proposal draft, price assumptions and a contract review list.
 - [Price a course or ebook and write its launch emails](https://useaiblocks.com/workflows/price-a-course-or-ebook-and-write-its-launch-emails): Give it your course or ebook. Get a price, honest discount wording and the launch email sequence.
 - [Price a product so it pays after every cost](https://useaiblocks.com/workflows/price-a-product-so-it-pays-after-delivery-ads-and-discounts): Give it a price and every cost. Get your true margin, three test prices and how deep a discount can go.
 - [Price digits and placement planner](https://useaiblocks.com/skills/price-display-planner): Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it.

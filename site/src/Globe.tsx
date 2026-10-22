@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { LAND, LAND_H, LAND_W } from "./landmask";
+import "./globe.css";
 
 // The world, drawn in 0s and 1s, turning slowly behind the hero.
 // Land is digits, sea is faint dots. Point at it and the digits near the cursor light up in colour and scramble;
@@ -42,13 +43,13 @@ export default function Globe() {
       const lat = (Math.asin(y) * 180) / Math.PI, lon = (Math.atan2(x, z) * 180) / Math.PI;
       const isLand = land(lat, lon);
       if (!isLand && i % 2) continue; // half the sea is enough to show the outline
-      pts.push({ x, y, z, land: isLand, hue: (lon + 180 + lat * 0.8 + 360) % 360, c: Math.random() < 0.5 ? "0" : "1", glow: 0 });
+      pts.push({ x, y, z, land: isLand, hue: (lon + 180 + lat * 0.8 + 360) % 360, c: Math.random() < 0.5 ? "0" : "1", glow: !still && isLand && Math.random() < 0.04 ? 0.4 + Math.random() * 0.6 : 0 });
     }
 
     let w = 0, h = 0, dpr = 1, angle = -1.4, tilt = 0.42, spin = 0, last = performance.now(), raf = 0, visible = true;
     let rgb = "0,0,0", font = "monospace", dark = false;
     let px = -9999, py = -9999, hov = 0, hovTarget = 0, tapFade = 0;
-    let drag: { x: number; y: number; t: number } | null = null;
+    let drag: { x: number; y: number; t: number; pointerId: number; touch: boolean } | null = null;
     const sprites = new Map<string, HTMLCanvasElement>();
 
     const SIZES = [8, 10.5, 13, 15.5];
@@ -117,7 +118,7 @@ export default function Globe() {
         }
         if (k > 0.02 && Math.random() < k * 0.12 * dt * 60) { p.c = p.c === "0" ? "1" : "0"; p.glow = Math.max(p.glow, 0.6); }
         const band = Math.min(3, Math.floor(z * 4));
-        const colour = hov * 0.7 + k > 0.18 || (touch && !still && p.glow > 0.8);
+        const colour = hov * 0.7 + k > 0.18 || (!still && p.glow > 0.2);
         const s = sprite(p.c, band, colour ? Math.floor(((p.hue + shift) % 360) / 15) : -1);
         const scale = 1 + 0.7 * k;
         ctx.globalAlpha = Math.min(0.95, 0.06 + 0.46 * z * z + p.glow * 0.45 + k * 0.6 + (colour ? hov * 0.12 : 0));
@@ -145,7 +146,7 @@ export default function Globe() {
       for (const p of pts) {
         if (!p.land) continue;
         if (p.glow > 0) p.glow = Math.max(0, p.glow - dt * 0.9);
-        else if (!still && Math.random() < 0.0009) { p.c = p.c === "0" ? "1" : "0"; p.glow = 1; }
+        else if (!still && Math.random() < 1 - Math.exp(-dt * 0.2)) { p.c = p.c === "0" ? "1" : "0"; p.glow = 1; }
       }
       draw(dt);
       const busy = !still || drag || spin || Math.abs(hovTarget - hov) > 0.01 || px > -9000 || tapFade > 0;
@@ -156,16 +157,17 @@ export default function Globe() {
     // Pointing and dragging. The globe sits behind the words, so listen on the hero and leave links and text alone.
     const local = (e: PointerEvent) => { const b = canvas.getBoundingClientRect(); return { x: e.clientX - b.left, y: e.clientY - b.top }; };
     const onTheGlobe = (x: number, y: number) => { const { R, cx, cy } = geom(); return Math.hypot(x - cx, y - cy) < R * 1.04; };
-    const blocked = (t: EventTarget | null) => !!(t as Element | null)?.closest?.("a, button, input, h1, .lede");
+    const blocked = (e: PointerEvent) => !!(e.target as Element | null)?.closest?.(e.pointerType === "mouse" ? "a, button, input, h1, .lede" : "a, button, input");
     const dragMove = (e: PointerEvent) => {
-      if (!drag) return;
+      if (!drag || drag.pointerId !== e.pointerId) return;
       const p = local(e);
       {
         const { R } = geom();
         const dx = p.x - drag.x, dy = p.y - drag.y, dtm = Math.max(1, e.timeStamp - drag.t);
         angle += dx / R; tilt = Math.max(-0.2, Math.min(0.9, tilt + dy / R));
-        spin = ((dx / R) * 1000) / dtm;
-        drag = { x: p.x, y: p.y, t: e.timeStamp };
+        spin = Math.max(-6, Math.min(6, ((dx / R) * 1000) / dtm));
+        drag = { ...drag, x: p.x, y: p.y, t: e.timeStamp };
+        if (drag.touch) { px = p.x; py = p.y; tapFade = 1; }
       }
       start();
     };
@@ -177,15 +179,25 @@ export default function Globe() {
     const leave = () => { px = py = -9999; hovTarget = 0; host.classList.remove("globe-hot"); start(); };
     const down = (e: PointerEvent) => {
       const p = local(e);
-      if (e.button !== 0 || blocked(e.target) || !onTheGlobe(p.x, p.y)) return;
-      if (e.pointerType !== "mouse") { px = p.x; py = p.y; tapFade = 1; hovTarget = 1; setTimeout(() => { if (!drag) { hovTarget = 0; } }, 1200); start(); return; }
-      drag = { x: p.x, y: p.y, t: e.timeStamp }; spin = 0;
+      if (drag || !e.isPrimary || e.button !== 0 || blocked(e) || !onTheGlobe(p.x, p.y)) return;
+      const isTouch = e.pointerType !== "mouse";
+      drag = { x: p.x, y: p.y, t: e.timeStamp, pointerId: e.pointerId, touch: isTouch }; spin = 0;
+      if (isTouch) { px = p.x; py = p.y; tapFade = 1; hovTarget = 0.3; }
+      host.setPointerCapture(e.pointerId);
       host.classList.add("globe-drag");
       document.body.classList.add("globe-dragging"); // no text gets selected while spinning
       window.getSelection()?.removeAllRanges();
-      e.preventDefault();
+      if (!isTouch) e.preventDefault();
+      start();
     };
-    const up = () => { if (drag) { drag = null; host.classList.remove("globe-drag"); document.body.classList.remove("globe-dragging"); start(); } };
+    const up = (e: PointerEvent) => {
+      if (!drag || drag.pointerId !== e.pointerId) return;
+      const ended = drag; drag = null;
+      if (host.hasPointerCapture(ended.pointerId)) host.releasePointerCapture(ended.pointerId);
+      if (ended.touch) { px = py = -9999; hovTarget = 0; }
+      if (e.type === "pointercancel" || e.type === "lostpointercapture") spin = 0;
+      host.classList.remove("globe-drag"); document.body.classList.remove("globe-dragging"); start();
+    };
     const noSelect = (e: Event) => { if (drag) e.preventDefault(); };
 
     readTheme(); resize(); draw(0);
@@ -201,6 +213,8 @@ export default function Globe() {
     host.addEventListener("pointerleave", leave);
     host.addEventListener("pointerdown", down);
     window.addEventListener("pointerup", up);
+    window.addEventListener("pointercancel", up);
+    host.addEventListener("lostpointercapture", up);
     window.addEventListener("pointermove", dragMove);
     document.addEventListener("selectstart", noSelect);
     document.fonts?.ready.then(() => { sprites.clear(); draw(0); });
@@ -210,6 +224,7 @@ export default function Globe() {
       document.removeEventListener("visibilitychange", onVis);
       host.removeEventListener("pointermove", move); host.removeEventListener("pointerleave", leave); host.removeEventListener("pointerdown", down);
       window.removeEventListener("pointerup", up); window.removeEventListener("pointermove", dragMove);
+      window.removeEventListener("pointercancel", up); host.removeEventListener("lostpointercapture", up);
       document.removeEventListener("selectstart", noSelect); document.body.classList.remove("globe-dragging");
     };
   }, []);

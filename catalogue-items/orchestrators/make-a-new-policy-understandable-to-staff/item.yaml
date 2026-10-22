@@ -1,0 +1,39 @@
+slug: make-a-new-policy-understandable-to-staff
+name: Make a new policy understandable to staff
+summary: Share the source files. Get a plain explanation, staff FAQ and rollout action list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+uses:
+  - company-policy-explainer
+  - stakeholder-update-writer
+steps:
+  - uses: company-policy-explainer
+    note: Explain the approved changes with practical examples drawn only from the policy.
+  - uses: stakeholder-update-writer
+    note: Draft a clear announcement and list acknowledgments or training still requiring an owner.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Company policy explainer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources/skills/policy-lookup
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,50 @@
+slug: prepare-a-workplace-accommodation-conversation
+name: Prepare a workplace accommodation conversation
+summary: Share the source files. Get a confidential discussion guide, possible adjustments and a review plan.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: plan
+  - type: document
+  - type: audit_report
+uses:
+  - accommodation-process
+  - people-risk-register-builder
+  - executive-action-register
+steps:
+  - uses: accommodation-process
+    note: Identify the work barriers and a respectful process for considering adjustments.
+  - uses: people-risk-register-builder
+    note: Record practical delivery and privacy risks without inferring health conditions.
+  - uses: executive-action-register
+    note: Prepare a restricted action plan with agreed owners, review dates and unanswered questions.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Workplace accommodation process builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-accessibility-accommodation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: People risk register builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-risk-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

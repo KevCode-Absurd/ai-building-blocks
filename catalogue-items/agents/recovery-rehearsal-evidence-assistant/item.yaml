@@ -1,0 +1,57 @@
+slug: recovery-rehearsal-evidence-assistant
+name: Recovery rehearsal evidence assistant
+summary: A recovery evidence review, changed rehearsal plan and open remediation actions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+  - type: meeting_notes
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - build-a-backup-recovery-rehearsal
+  - incident-postmortem-writer
+steps:
+  - uses: build-a-backup-recovery-rehearsal
+    note: "Run when: A restore test is due, its evidence is missing or the protected system changed."
+  - uses: incident-postmortem-writer
+    note: Run the rehearsal planning workflow when due or changed. If test evidence exists, run incident-postmortem-writer on failed or missed targets and prepare remediation owners; never execute a restore without the approved test scope.
+schedule: At the owner agreed rehearsal interval and after significant system changes.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Backup and recovery planner
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/backup-and-disaster-recovery
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Incident runbook writer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/incident-runbook-templates
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Incident postmortem writer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/postmortem-writing
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,8 +1,9 @@
 # Teach and train people: AI Blocks
 
-> 148 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 156 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessible lesson auditor](https://useaiblocks.com/skills/accessible-lesson-auditor): Paste a lesson plan. Get the barriers it creates for some learners, with fixes ranked by impact.
+- [Adapt a lesson for different access needs](https://useaiblocks.com/workflows/adapt-a-lesson-for-different-access-needs): Share the source files. Get a barrier review, adapted activities and a check of the unchanged learning goal.
 - [AI answer critique activity builder](https://useaiblocks.com/skills/ai-answer-critique-lesson): Give it a subject. Get a worksheet that has students judge an AI answer on clarity, evidence and fairness.
 - [AI feedback quality checker](https://useaiblocks.com/skills/ai-feedback-quality-checker): Paste the feedback your tool gives students. Get a check of its timing and wording, plus a better version.
 - [AI questioning sequence planner](https://useaiblocks.com/skills/ai-questioning-sequence-planner): Give it a topic. Get rounds of questions students put to a chatbot, to see if it gives in or truly updates.
@@ -11,8 +12,11 @@
 - [Assessment fit and fairness checker](https://useaiblocks.com/skills/assessment-fairness-check): Paste a quiz or task and its goals. Get a check that it tests the right things and marks fairly.
 - [Assignment AI-use boundary mapper](https://useaiblocks.com/skills/assignment-ai-boundaries): Give it an assignment. Get which parts AI can help with and which parts it would ruin, plus a clear rule.
 - [Backwards unit planner](https://useaiblocks.com/skills/backwards-unit-planner): Give it your standards. Get a unit planned from the end result, then the proof of learning, then the activities.
+- [Build a community project with clear learning](https://useaiblocks.com/workflows/build-a-community-project-with-clear-learning): Share the source files. Get a project brief, learning sequence and evidence collection plan.
 - [Build a lesson from explanation to practice and a quiz](https://useaiblocks.com/workflows/build-a-lesson-from-explanation-to-practice-and-a-quiz): Give it the topic and learners. Get a lesson plan, worked examples, a practice set and a quiz.
+- [Build a practical manager training session](https://useaiblocks.com/workflows/build-a-practical-manager-training-session): Share the source files. Get a session plan, practice activity and evidence of learning to collect.
 - [Character and habits assessment planner](https://useaiblocks.com/skills/character-assessment-plan): Name a trait like curiosity. Get a plan to gather evidence from several people. Not medical advice.
+- [Check a lesson before teaching it](https://useaiblocks.com/workflows/check-a-lesson-before-teaching-it): Share the source files. Get a lesson review, revised sequence and short checks of understanding.
 - [Check who wrote it lesson builder](https://useaiblocks.com/skills/who-wrote-it-lesson): Give it a history source. Get a lesson series that teaches learners to ask who wrote it, when and why.
 - [Check-for-understanding question writer](https://useaiblocks.com/skills/understanding-check-questions): Give it a lesson point. Get a quick question that shows who understands and who needs more help.
 - [Child-led project planner](https://useaiblocks.com/skills/child-led-project-planner): Describe what young children keep asking about. Get a project plan that follows their interests into deeper inquiry.
@@ -52,6 +56,7 @@
 - [Group knowledge-building task designer](https://useaiblocks.com/skills/group-knowledge-task): Give it a topic. Get a group task where learners build knowledge together and share responsibility for the result.
 - [Group work task planner](https://useaiblocks.com/skills/group-work-task-planner): Tell it where group work goes wrong. Get a task with roles and prompts that share the work.
 - [Hard topic teaching guide](https://useaiblocks.com/skills/hard-topic-teaching-guide): Name a topic you find hard to teach. Get common learner mistakes and the examples that clear them up.
+- [Help learners spot weak online evidence](https://useaiblocks.com/workflows/help-learners-spot-weak-online-evidence): Share the source files. Get a source-checking activity, discussion prompts and an assessment task.
 - [Hidden belief mapper](https://useaiblocks.com/skills/hidden-belief-mapper): Give it a topic or system. Get the beliefs, stories and values that shape it, each checked against evidence.
 - [Historical context lesson builder](https://useaiblocks.com/skills/historical-context-lesson): Give it a source and its period. Get a lesson series that teaches learners to use the time and place as evidence.
 - [History inquiry question checker](https://useaiblocks.com/skills/history-inquiry-question-checker): Paste your main history question. Get a verdict on whether it drives real inquiry, with sharper rewrites.
@@ -87,8 +92,10 @@
 - [Outdoor lesson sequence planner](https://useaiblocks.com/skills/outdoor-lesson-sequence-planner): Describe your outdoor space and goals. Get a run of outdoor lessons that cover your curriculum.
 - [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker): Paste a task or handout. Get the places that overload learners, with changes that lighten it.
 - [Perspective-taking activity builder](https://useaiblocks.com/skills/perspective-taking-activity): Give it a topic in history, social science or literature. Get an activity that builds real understanding of other views.
+- [Plan a peer feedback session that helps](https://useaiblocks.com/workflows/plan-a-peer-feedback-session-that-helps): Share the source files. Get a session guide, feedback prompts and a revision record.
 - [Plan a unit from its end goal and schedule revision](https://useaiblocks.com/workflows/plan-a-unit-from-the-end-goal-and-schedule-the-revision): Give it your standards. Get a unit planned backwards, practice mixed through it and a revision calendar.
 - [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer): Give it a skill. Get practice problems that rise in difficulty and vary just enough, for worksheets or homework.
+- [Prepare feedback students can act on](https://useaiblocks.com/workflows/prepare-feedback-students-can-act-on): Share the source files. Get criterion-linked feedback, a revision task and a teacher review list.
 - [Primary source history lesson planner](https://useaiblocks.com/skills/primary-source-lesson): Give it a topic and sources. Get a full lesson where learners investigate a historical question from documents.
 - [Project-based unit brief writer](https://useaiblocks.com/skills/project-based-unit-brief-writer): Give it a topic. Get a project brief with a driving question, milestones and marking criteria.
 - [Prompt quality lesson planner](https://useaiblocks.com/skills/prompt-quality-lesson-planner): Give it a task. Get lessons where students compare vague and clear prompts and see why detail changes the result.
@@ -141,6 +148,7 @@
 - [Timed practice session planner](https://useaiblocks.com/prompts/practice-session-minute-planner): Paste the skill, the group and the time. Get a session planned minute by minute with one thing to fix.
 - [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer): Paste your session notes or slides. Get a one-page handout people can use at their desk a month later.
 - [Try-first problem tutor](https://useaiblocks.com/skills/try-first-problem-tutor): Try a hard problem two ways before any teaching. Your AI then builds the lesson from your attempts.
+- [Turn a worked example into independent practice](https://useaiblocks.com/workflows/turn-a-worked-example-into-independent-practice): Share the source files. Get a staged practice sequence and a short understanding check.
 - [Tutor chat script writer](https://useaiblocks.com/skills/tutor-chat-script-writer): Give it a topic and where students get stuck. Get a back-and-forth tutoring script with replies for each difficulty.
 - [Understanding check picker](https://useaiblocks.com/skills/understanding-check-picker): Describe the lesson moment and age group. Get the best quick check to use and how to run it.
 - [Vocabulary tier sorter](https://useaiblocks.com/skills/vocabulary-tier-sorter): Paste a text or topic. Get its words sorted into everyday, school and subject words, with what to teach first.

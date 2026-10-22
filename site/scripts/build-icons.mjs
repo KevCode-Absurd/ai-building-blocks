@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
+const root = new URL('../public/', import.meta.url);
+const source = await fs.readFile(new URL('favicon.svg', root));
+for (const [name, size] of [['favicon-96.png', 96], ['apple-touch-icon.png', 180], ['icon-192.png', 192], ['icon-512.png', 512]]) await sharp(source).resize(size, size).png().toFile(fileURLToPath(new URL(name, root)));
+const images = await Promise.all([16, 32, 48, 96].map(async size => ({ size, bytes: await sharp(source).resize(size, size).png().toBuffer() })));
+const header = Buffer.alloc(6 + images.length * 16); header.writeUInt16LE(1, 2); header.writeUInt16LE(images.length, 4);
+let offset = header.length;
+images.forEach(({ size, bytes }, i) => { const p = 6 + i * 16; header[p] = size; header[p + 1] = size; header.writeUInt16LE(1, p + 4); header.writeUInt16LE(32, p + 6); header.writeUInt32LE(bytes.length, p + 8); header.writeUInt32LE(offset, p + 12); offset += bytes.length; });
+await fs.writeFile(new URL('favicon.ico', root), Buffer.concat([header, ...images.map(i => i.bytes)]));
+await fs.writeFile(new URL('site.webmanifest', root), JSON.stringify({ name: 'AI Blocks', short_name: 'AI Blocks', start_url: '/', display: 'browser', background_color: '#0a0a0a', theme_color: '#0a0a0a', icons: [{ src: '/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }] }, null, 2) + '\n');
+console.log('Built square brand favicons, Apple touch icon and manifest icons.');

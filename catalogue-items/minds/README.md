@@ -1,6 +1,6 @@
 # Minds: how one is built
 
-Spec and reasons: `docs/MINDS-PRD.md`. The 150 people and their suggested seats: `_roster.yaml`.
+Spec and reasons: `docs/MINDS-PRD.md`. The 305 people and their suggested seats: `_roster.yaml`.
 
 **What a mind is for:** you hire them. Someone brings a real problem from their business, work or life ("hire Ratan Tata to fix my manufacturing", "hire Claude Hopkins to write my sales page", "I'm a video editor: how would Paula Scher look at my cut?") and gets that person's way of thinking, method and voice applied to it. Facts about the person matter only as far as they show how the person thinks. Spend effort on the method, the questions, the push-back and the voice, not on more dates.
 
@@ -11,6 +11,7 @@ One folder per person: `minds/<slug>/` holding `mind.yaml`, `playbook.md`, `know
 ```yaml
 slug: jeff-bezos
 name: "Jeff Bezos"
+identity: "Amazon founder"       # 2 to 4 words explaining who they are, from the sourced biography
 area: business                 # one of the ten areas in _roster.yaml
 also: [leadership]             # other areas, optional
 years: "1964–"                 # "1564–1616", "c. 544–496 BC"

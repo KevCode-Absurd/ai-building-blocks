@@ -7,8 +7,8 @@ import { Link, setSearch, useLocation } from "../lib/router";
 import { PRICING, matches, shortPrice, useAiTools, type AiTools, type Tool } from "./data";
 import AiToolPage from "./AiToolPage";
 
-const TITLE = "AI Blocks · Use AI like the top 1%";
-const HOME_DESC = "Turn hours of work into minutes. Free prompts, skills, workflows, mini tools and example apps that save you hours every week.";
+const TITLE = "Free AI Skills & Custom Workflow Builder | AI Blocks";
+const HOME_DESC = "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.";
 /** Sets the tab title and the description search engines show, and puts the home page's back when the page closes. */
 export function usePageMeta(title: string, description: string) {
   useEffect(() => {

@@ -1,0 +1,50 @@
+slug: plan-a-peer-feedback-session-that-helps
+name: Plan a peer feedback session that helps
+summary: Share the source files. Get a session guide, feedback prompts and a revision record.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: plan
+  - type: feedback_notes
+  - type: document
+uses:
+  - peer-feedback-session-planner
+  - honest-draft-feedback-giver
+  - reader-feedback-sorter
+steps:
+  - uses: peer-feedback-session-planner
+    note: Plan a structured exchange with clear roles, time limits and boundaries.
+  - uses: honest-draft-feedback-giver
+    note: Model specific, evidence-based feedback on a permitted example.
+  - uses: reader-feedback-sorter
+    note: Only after real comments arrive, sort them into corrections, choices and questions. Before that, prepare the collection template and mark the sorting step not run.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Peer feedback session planner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/peer-feedback-session-planner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Honest draft feedback giver
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/honest-draft-feedback-giver
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Reader feedback sorter
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/reader-feedback-sorter
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

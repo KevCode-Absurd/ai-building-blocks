@@ -20,7 +20,7 @@ for (const task of fixture.cases) test(`real Haiku output exports a complete pac
 test("free composition edits, exports, restores and downloads a complete runnable pack without model calls", async ({ page }, info) => {
   let paidCalls = 0; page.on("request", req => { if (req.method() === "POST" && req.url().includes("/api/compose")) paidCalls++; });
   await page.goto("/compose");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("Get a workflow");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Build a custom workflow");
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch and deliver source code");
   await page.getByTestId("compose-submit").click();
   await expect(page.getByTestId("compose-steps")).toContainText("React landing page builder");

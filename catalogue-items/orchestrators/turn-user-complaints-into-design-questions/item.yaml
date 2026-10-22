@@ -1,0 +1,49 @@
+slug: turn-user-complaints-into-design-questions
+name: Turn user complaints into design questions
+summary: Share the source files. Get a theme map, ranked design questions and a small research plan.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: question
+  - type: document
+uses:
+  - feedback-theme-finder
+  - hypothesis-first-design-planner
+  - interview-and-research-planner
+steps:
+  - uses: feedback-theme-finder
+    note: Group the complaints by user task and preserve sources and conflicting accounts.
+  - uses: hypothesis-first-design-planner
+    note: Turn the strongest themes into testable explanations and small design options.
+  - uses: interview-and-research-planner
+    note: Choose research tasks that distinguish those explanations before a redesign is approved.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Feedback theme finder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/customer-feedback-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Hypothesis-first design planner
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/lean-ux
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Interview and research planner
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/ux-research
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

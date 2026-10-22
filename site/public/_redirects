@@ -764,6 +764,5 @@
 /workflows/work-back-from-a-low-price-to-a-cheaper-way-of-making-it /workflows/target-cost-production 301
 
 # App pages with no page file of their own.
-/space / 200
-/people / 200
+/traction /tools/growth-channel-planner 301
 /s/* /shared-space-shell 200

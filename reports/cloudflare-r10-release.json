@@ -1,0 +1,77 @@
+{
+  "checkedOn": "2026-10-22T12:14:00.140Z",
+  "status": "ready-for-production",
+  "origin": "https://useaiblocks.com",
+  "frozenReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
+  "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+  "runtimeBackendChanged": false,
+  "files": 23841,
+  "catalogueEntries": 4438,
+  "sourceHashes": {
+    "site/src/styles.css": "d50c9178b1556266c01915064c0faefe0e60379b82153aeff6078d6e8200553c",
+    "site/src/compose.css": "f0a59129e179aa4fb0913367ad75c0c7fab273b6627cb6a2263f5be37c83d854",
+    "site/src/App.tsx": "0cc4a17f86b5a86d2e93cee3085040c58c4a0b6d74c901a75e7fa7a80a585557",
+    "site/src/ui.tsx": "5154d4aca48b2b20afd26ad5d8999131f5a652fc668dc53c596416595dd5569d",
+    "site/src/lib/page-metadata.ts": "01af8bc2137143cb3bcf7ba758094d8ba96bd907e6360ec55a923aa4021bf518",
+    "site/index.html": "fc69ebf21089f2cd7185b1390fd4cae1e4b6de35bc888187dd4f4537979a103c",
+    "site/scripts/build-index.mjs": "68d8004c4bf12af90b7163fe084ec7044bc414f3fd26f459b67d5a6e3b317755",
+    "site/scripts/prerender.mjs": "a81d9b555bb4c2b91a10cb2119d444a6aa9bc2a5daf3710c53417ee42c8db8b8",
+    "site/public/analytics.js": "48800d01533f63588c85597c7037c7f74b40df07334d56f3c7c2a8f6425278df",
+    "site/src/lib/site-info.mjs": "bccf86f1a64095a139a0565f04a01160c931f6c12de9fe2d0db93e2ca67cfb68",
+    "tools/build-everyday-workflows.mjs": "ac1826697ecb8a81eef5e257a67299526489396eadd2148fba857bd02b0e2a7c"
+  },
+  "verification": {
+    "unitTests": 120,
+    "calculatorTests": 483,
+    "responsive": {
+      "passed": 412,
+      "routes": 39,
+      "widths": [
+        320,
+        390,
+        600,
+        768,
+        1024,
+        1440,
+        1920
+      ],
+      "report": "reports/responsive-app-final/checks.json"
+    },
+    "seo": {
+      "crawlablePages": 4670,
+      "uniqueTitles": 4670,
+      "browserTransitions": 16,
+      "privatePagesNoindex": true,
+      "faviconSizes": [
+        96,
+        180,
+        192,
+        512
+      ],
+      "socialImage": [
+        1200,
+        630
+      ],
+      "report": "reports/seo-contract.json"
+    },
+    "startupChecks": 12,
+    "toolBrowserCases": 83,
+    "toolBrowserMethod": "83 unique browser checks passed:82 passed in full run; one assertion was corrected to look up the explicitly opened discount calculator instead of assuming index0, then passed in focused rerun. No product source changed. Original failed assertion and sandbox network-denied attempts are preserved separately.",
+    "completeNewPacks": 79,
+    "mindIdentities": 305,
+    "finalRebuildParity": "pass",
+    "credentialScans": "pass",
+    "providerCallsByReleaseChecks": 0
+  },
+  "staging": {
+    "status": "pass",
+    "versionId": "4cd70873-0f3b-43a4-907b-d57dc118da53",
+    "bindingsPreserved": 21,
+    "exactAssetAndHeaderChecks": 24
+  },
+  "production": {
+    "status": "pending",
+    "sourceCommitBeforeDeployment": null
+  },
+  "limits": "New workflow methods and complete downloads were reviewed and checked. These checks do not claim execution of all business outcomes. The earlier successful real Google/Turnstile AI workflow canary remains recorded separately; no additional paid AI calls were made for this frontend/content release."
+}

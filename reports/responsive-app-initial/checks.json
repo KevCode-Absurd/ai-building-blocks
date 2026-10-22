@@ -1,0 +1,976 @@
+{
+  "checkedOn": "2026-10-22T11:29:26.347Z",
+  "origin": "http://127.0.0.1:5182",
+  "status": "fail",
+  "widths": [
+    320,
+    390,
+    600,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "routeTemplates": 25,
+  "passed": 186,
+  "failed": 4,
+  "blockedWrites": 0,
+  "providerCalls": 0,
+  "apiFixtures": "read-only auth/security/comments/spaces responses; no real account or D1 mutations",
+  "results": [
+    {
+      "name": "320px /",
+      "status": "pass",
+      "ms": 793
+    },
+    {
+      "name": "320px /#build",
+      "status": "fail",
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     kind: 'control-outside-viewport',\n+     left: 272,\n+     right: 415,\n+     tag: 'BUTTON',\n+     text: 'Lay out the steps'\n+   }\n+ ]\n- []\n",
+      "ms": 69
+    },
+    {
+      "name": "320px /how-it-works",
+      "status": "pass",
+      "ms": 405
+    },
+    {
+      "name": "320px /compose",
+      "status": "pass",
+      "ms": 429
+    },
+    {
+      "name": "320px /from-a-source",
+      "status": "pass",
+      "ms": 417
+    },
+    {
+      "name": "320px /minds",
+      "status": "pass",
+      "ms": 855
+    },
+    {
+      "name": "320px /minds/charlie-munger",
+      "status": "pass",
+      "ms": 505
+    },
+    {
+      "name": "320px /tools",
+      "status": "pass",
+      "ms": 508
+    },
+    {
+      "name": "320px /ai-tools",
+      "status": "pass",
+      "ms": 350
+    },
+    {
+      "name": "320px /ai-tools/chatgpt",
+      "status": "pass",
+      "ms": 340
+    },
+    {
+      "name": "320px /apps",
+      "status": "pass",
+      "ms": 379
+    },
+    {
+      "name": "320px /apps/starter-pack",
+      "status": "pass",
+      "ms": 421
+    },
+    {
+      "name": "320px /traction",
+      "status": "pass",
+      "ms": 358
+    },
+    {
+      "name": "320px /space",
+      "status": "pass",
+      "ms": 422
+    },
+    {
+      "name": "320px /people",
+      "status": "pass",
+      "ms": 422
+    },
+    {
+      "name": "320px /s/responsive-unissued-link",
+      "status": "pass",
+      "ms": 432
+    },
+    {
+      "name": "320px /skills/website-brand-brain-builder",
+      "status": "pass",
+      "ms": 429
+    },
+    {
+      "name": "320px /prompts/fact-based-ad-copy-writer",
+      "status": "pass",
+      "ms": 529
+    },
+    {
+      "name": "320px /workflows/review-image-ads",
+      "status": "pass",
+      "ms": 660
+    },
+    {
+      "name": "320px /support",
+      "status": "pass",
+      "ms": 591
+    },
+    {
+      "name": "320px /about",
+      "status": "pass",
+      "ms": 445
+    },
+    {
+      "name": "320px /privacy",
+      "status": "pass",
+      "ms": 415
+    },
+    {
+      "name": "320px /terms",
+      "status": "pass",
+      "ms": 423
+    },
+    {
+      "name": "320px /cookies",
+      "status": "pass",
+      "ms": 455
+    },
+    {
+      "name": "320px /refunds",
+      "status": "pass",
+      "ms": 427
+    },
+    {
+      "name": "320px navigation and context drawer",
+      "status": "fail",
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     kind: 'control-outside-viewport',\n+     left: 272,\n+     right: 415,\n+     tag: 'BUTTON',\n+     text: 'Lay out the steps'\n+   }\n+ ]\n- []\n",
+      "ms": 513
+    },
+    {
+      "name": "320px free workflow result and editable steps",
+      "status": "pass",
+      "ms": 763
+    },
+    {
+      "name": "390px /",
+      "status": "pass",
+      "ms": 413
+    },
+    {
+      "name": "390px /#build",
+      "status": "fail",
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     kind: 'control-outside-viewport',\n+     left: 272,\n+     right: 415,\n+     tag: 'BUTTON',\n+     text: 'Lay out the steps'\n+   }\n+ ]\n- []\n",
+      "ms": 134
+    },
+    {
+      "name": "390px /how-it-works",
+      "status": "pass",
+      "ms": 442
+    },
+    {
+      "name": "390px /compose",
+      "status": "pass",
+      "ms": 466
+    },
+    {
+      "name": "390px /from-a-source",
+      "status": "pass",
+      "ms": 442
+    },
+    {
+      "name": "390px /minds",
+      "status": "pass",
+      "ms": 1112
+    },
+    {
+      "name": "390px /minds/charlie-munger",
+      "status": "pass",
+      "ms": 436
+    },
+    {
+      "name": "390px /tools",
+      "status": "pass",
+      "ms": 527
+    },
+    {
+      "name": "390px /ai-tools",
+      "status": "pass",
+      "ms": 404
+    },
+    {
+      "name": "390px /ai-tools/chatgpt",
+      "status": "pass",
+      "ms": 376
+    },
+    {
+      "name": "390px /apps",
+      "status": "pass",
+      "ms": 385
+    },
+    {
+      "name": "390px /apps/starter-pack",
+      "status": "pass",
+      "ms": 375
+    },
+    {
+      "name": "390px /traction",
+      "status": "pass",
+      "ms": 352
+    },
+    {
+      "name": "390px /space",
+      "status": "pass",
+      "ms": 363
+    },
+    {
+      "name": "390px /people",
+      "status": "pass",
+      "ms": 447
+    },
+    {
+      "name": "390px /s/responsive-unissued-link",
+      "status": "pass",
+      "ms": 340
+    },
+    {
+      "name": "390px /skills/website-brand-brain-builder",
+      "status": "pass",
+      "ms": 396
+    },
+    {
+      "name": "390px /prompts/fact-based-ad-copy-writer",
+      "status": "pass",
+      "ms": 415
+    },
+    {
+      "name": "390px /workflows/review-image-ads",
+      "status": "pass",
+      "ms": 436
+    },
+    {
+      "name": "390px /support",
+      "status": "pass",
+      "ms": 343
+    },
+    {
+      "name": "390px /about",
+      "status": "pass",
+      "ms": 304
+    },
+    {
+      "name": "390px /privacy",
+      "status": "pass",
+      "ms": 301
+    },
+    {
+      "name": "390px /terms",
+      "status": "pass",
+      "ms": 312
+    },
+    {
+      "name": "390px /cookies",
+      "status": "pass",
+      "ms": 332
+    },
+    {
+      "name": "390px /refunds",
+      "status": "pass",
+      "ms": 392
+    },
+    {
+      "name": "390px navigation and context drawer",
+      "status": "fail",
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     kind: 'control-outside-viewport',\n+     left: 272,\n+     right: 415,\n+     tag: 'BUTTON',\n+     text: 'Lay out the steps'\n+   }\n+ ]\n- []\n",
+      "ms": 389
+    },
+    {
+      "name": "390px free workflow result and editable steps",
+      "status": "pass",
+      "ms": 621
+    },
+    {
+      "name": "600px /",
+      "status": "pass",
+      "ms": 452
+    },
+    {
+      "name": "600px /#build",
+      "status": "pass",
+      "ms": 49
+    },
+    {
+      "name": "600px /how-it-works",
+      "status": "pass",
+      "ms": 415
+    },
+    {
+      "name": "600px /compose",
+      "status": "pass",
+      "ms": 407
+    },
+    {
+      "name": "600px /from-a-source",
+      "status": "pass",
+      "ms": 413
+    },
+    {
+      "name": "600px /minds",
+      "status": "pass",
+      "ms": 742
+    },
+    {
+      "name": "600px /minds/charlie-munger",
+      "status": "pass",
+      "ms": 470
+    },
+    {
+      "name": "600px /tools",
+      "status": "pass",
+      "ms": 413
+    },
+    {
+      "name": "600px /ai-tools",
+      "status": "pass",
+      "ms": 336
+    },
+    {
+      "name": "600px /ai-tools/chatgpt",
+      "status": "pass",
+      "ms": 336
+    },
+    {
+      "name": "600px /apps",
+      "status": "pass",
+      "ms": 381
+    },
+    {
+      "name": "600px /apps/starter-pack",
+      "status": "pass",
+      "ms": 387
+    },
+    {
+      "name": "600px /traction",
+      "status": "pass",
+      "ms": 322
+    },
+    {
+      "name": "600px /space",
+      "status": "pass",
+      "ms": 428
+    },
+    {
+      "name": "600px /people",
+      "status": "pass",
+      "ms": 445
+    },
+    {
+      "name": "600px /s/responsive-unissued-link",
+      "status": "pass",
+      "ms": 368
+    },
+    {
+      "name": "600px /skills/website-brand-brain-builder",
+      "status": "pass",
+      "ms": 449
+    },
+    {
+      "name": "600px /prompts/fact-based-ad-copy-writer",
+      "status": "pass",
+      "ms": 404
+    },
+    {
+      "name": "600px /workflows/review-image-ads",
+      "status": "pass",
+      "ms": 402
+    },
+    {
+      "name": "600px /support",
+      "status": "pass",
+      "ms": 360
+    },
+    {
+      "name": "600px /about",
+      "status": "pass",
+      "ms": 338
+    },
+    {
+      "name": "600px /privacy",
+      "status": "pass",
+      "ms": 326
+    },
+    {
+      "name": "600px /terms",
+      "status": "pass",
+      "ms": 318
+    },
+    {
+      "name": "600px /cookies",
+      "status": "pass",
+      "ms": 347
+    },
+    {
+      "name": "600px /refunds",
+      "status": "pass",
+      "ms": 324
+    },
+    {
+      "name": "600px navigation and context drawer",
+      "status": "pass",
+      "ms": 555
+    },
+    {
+      "name": "600px free workflow result and editable steps",
+      "status": "pass",
+      "ms": 488
+    },
+    {
+      "name": "768px /",
+      "status": "pass",
+      "ms": 432
+    },
+    {
+      "name": "768px /#build",
+      "status": "pass",
+      "ms": 33
+    },
+    {
+      "name": "768px /how-it-works",
+      "status": "pass",
+      "ms": 379
+    },
+    {
+      "name": "768px /compose",
+      "status": "pass",
+      "ms": 395
+    },
+    {
+      "name": "768px /from-a-source",
+      "status": "pass",
+      "ms": 419
+    },
+    {
+      "name": "768px /minds",
+      "status": "pass",
+      "ms": 882
+    },
+    {
+      "name": "768px /minds/charlie-munger",
+      "status": "pass",
+      "ms": 453
+    },
+    {
+      "name": "768px /tools",
+      "status": "pass",
+      "ms": 416
+    },
+    {
+      "name": "768px /ai-tools",
+      "status": "pass",
+      "ms": 375
+    },
+    {
+      "name": "768px /ai-tools/chatgpt",
+      "status": "pass",
+      "ms": 329
+    },
+    {
+      "name": "768px /apps",
+      "status": "pass",
+      "ms": 391
+    },
+    {
+      "name": "768px /apps/starter-pack",
+      "status": "pass",
+      "ms": 377
+    },
+    {
+      "name": "768px /traction",
+      "status": "pass",
+      "ms": 363
+    },
+    {
+      "name": "768px /space",
+      "status": "pass",
+      "ms": 440
+    },
+    {
+      "name": "768px /people",
+      "status": "pass",
+      "ms": 349
+    },
+    {
+      "name": "768px /s/responsive-unissued-link",
+      "status": "pass",
+      "ms": 396
+    },
+    {
+      "name": "768px /skills/website-brand-brain-builder",
+      "status": "pass",
+      "ms": 422
+    },
+    {
+      "name": "768px /prompts/fact-based-ad-copy-writer",
+      "status": "pass",
+      "ms": 450
+    },
+    {
+      "name": "768px /workflows/review-image-ads",
+      "status": "pass",
+      "ms": 420
+    },
+    {
+      "name": "768px /support",
+      "status": "pass",
+      "ms": 358
+    },
+    {
+      "name": "768px /about",
+      "status": "pass",
+      "ms": 343
+    },
+    {
+      "name": "768px /privacy",
+      "status": "pass",
+      "ms": 346
+    },
+    {
+      "name": "768px /terms",
+      "status": "pass",
+      "ms": 336
+    },
+    {
+      "name": "768px /cookies",
+      "status": "pass",
+      "ms": 356
+    },
+    {
+      "name": "768px /refunds",
+      "status": "pass",
+      "ms": 759
+    },
+    {
+      "name": "768px navigation and context drawer",
+      "status": "pass",
+      "ms": 632
+    },
+    {
+      "name": "768px free workflow result and editable steps",
+      "status": "pass",
+      "ms": 498
+    },
+    {
+      "name": "1024px /",
+      "status": "pass",
+      "ms": 405
+    },
+    {
+      "name": "1024px /#build",
+      "status": "pass",
+      "ms": 41
+    },
+    {
+      "name": "1024px /how-it-works",
+      "status": "pass",
+      "ms": 376
+    },
+    {
+      "name": "1024px /compose",
+      "status": "pass",
+      "ms": 404
+    },
+    {
+      "name": "1024px /from-a-source",
+      "status": "pass",
+      "ms": 339
+    },
+    {
+      "name": "1024px /minds",
+      "status": "pass",
+      "ms": 742
+    },
+    {
+      "name": "1024px /minds/charlie-munger",
+      "status": "pass",
+      "ms": 505
+    },
+    {
+      "name": "1024px /tools",
+      "status": "pass",
+      "ms": 390
+    },
+    {
+      "name": "1024px /ai-tools",
+      "status": "pass",
+      "ms": 341
+    },
+    {
+      "name": "1024px /ai-tools/chatgpt",
+      "status": "pass",
+      "ms": 325
+    },
+    {
+      "name": "1024px /apps",
+      "status": "pass",
+      "ms": 395
+    },
+    {
+      "name": "1024px /apps/starter-pack",
+      "status": "pass",
+      "ms": 392
+    },
+    {
+      "name": "1024px /traction",
+      "status": "pass",
+      "ms": 335
+    },
+    {
+      "name": "1024px /space",
+      "status": "pass",
+      "ms": 358
+    },
+    {
+      "name": "1024px /people",
+      "status": "pass",
+      "ms": 411
+    },
+    {
+      "name": "1024px /s/responsive-unissued-link",
+      "status": "pass",
+      "ms": 421
+    },
+    {
+      "name": "1024px /skills/website-brand-brain-builder",
+      "status": "pass",
+      "ms": 408
+    },
+    {
+      "name": "1024px /prompts/fact-based-ad-copy-writer",
+      "status": "pass",
+      "ms": 412
+    },
+    {
+      "name": "1024px /workflows/review-image-ads",
+      "status": "pass",
+      "ms": 430
+    },
+    {
+      "name": "1024px /support",
+      "status": "pass",
+      "ms": 337
+    },
+    {
+      "name": "1024px /about",
+      "status": "pass",
+      "ms": 324
+    },
+    {
+      "name": "1024px /privacy",
+      "status": "pass",
+      "ms": 329
+    },
+    {
+      "name": "1024px /terms",
+      "status": "pass",
+      "ms": 338
+    },
+    {
+      "name": "1024px /cookies",
+      "status": "pass",
+      "ms": 318
+    },
+    {
+      "name": "1024px /refunds",
+      "status": "pass",
+      "ms": 367
+    },
+    {
+      "name": "1024px navigation and context drawer",
+      "status": "pass",
+      "ms": 678
+    },
+    {
+      "name": "1024px free workflow result and editable steps",
+      "status": "pass",
+      "ms": 555
+    },
+    {
+      "name": "1440px /",
+      "status": "pass",
+      "ms": 486
+    },
+    {
+      "name": "1440px /#build",
+      "status": "pass",
+      "ms": 42
+    },
+    {
+      "name": "1440px /how-it-works",
+      "status": "pass",
+      "ms": 385
+    },
+    {
+      "name": "1440px /compose",
+      "status": "pass",
+      "ms": 398
+    },
+    {
+      "name": "1440px /from-a-source",
+      "status": "pass",
+      "ms": 436
+    },
+    {
+      "name": "1440px /minds",
+      "status": "pass",
+      "ms": 934
+    },
+    {
+      "name": "1440px /minds/charlie-munger",
+      "status": "pass",
+      "ms": 483
+    },
+    {
+      "name": "1440px /tools",
+      "status": "pass",
+      "ms": 569
+    },
+    {
+      "name": "1440px /ai-tools",
+      "status": "pass",
+      "ms": 378
+    },
+    {
+      "name": "1440px /ai-tools/chatgpt",
+      "status": "pass",
+      "ms": 371
+    },
+    {
+      "name": "1440px /apps",
+      "status": "pass",
+      "ms": 387
+    },
+    {
+      "name": "1440px /apps/starter-pack",
+      "status": "pass",
+      "ms": 389
+    },
+    {
+      "name": "1440px /traction",
+      "status": "pass",
+      "ms": 398
+    },
+    {
+      "name": "1440px /space",
+      "status": "pass",
+      "ms": 409
+    },
+    {
+      "name": "1440px /people",
+      "status": "pass",
+      "ms": 372
+    },
+    {
+      "name": "1440px /s/responsive-unissued-link",
+      "status": "pass",
+      "ms": 420
+    },
+    {
+      "name": "1440px /skills/website-brand-brain-builder",
+      "status": "pass",
+      "ms": 446
+    },
+    {
+      "name": "1440px /prompts/fact-based-ad-copy-writer",
+      "status": "pass",
+      "ms": 460
+    },
+    {
+      "name": "1440px /workflows/review-image-ads",
+      "status": "pass",
+      "ms": 439
+    },
+    {
+      "name": "1440px /support",
+      "status": "pass",
+      "ms": 351
+    },
+    {
+      "name": "1440px /about",
+      "status": "pass",
+      "ms": 327
+    },
+    {
+      "name": "1440px /privacy",
+      "status": "pass",
+      "ms": 355
+    },
+    {
+      "name": "1440px /terms",
+      "status": "pass",
+      "ms": 329
+    },
+    {
+      "name": "1440px /cookies",
+      "status": "pass",
+      "ms": 317
+    },
+    {
+      "name": "1440px /refunds",
+      "status": "pass",
+      "ms": 323
+    },
+    {
+      "name": "1440px navigation and context drawer",
+      "status": "pass",
+      "ms": 585
+    },
+    {
+      "name": "1440px free workflow result and editable steps",
+      "status": "pass",
+      "ms": 528
+    },
+    {
+      "name": "Hero CTA pointer survives the interactive globe hover",
+      "status": "pass",
+      "ms": 408
+    },
+    {
+      "name": "1920px /",
+      "status": "pass",
+      "ms": 376
+    },
+    {
+      "name": "1920px /#build",
+      "status": "pass",
+      "ms": 30
+    },
+    {
+      "name": "1920px /how-it-works",
+      "status": "pass",
+      "ms": 401
+    },
+    {
+      "name": "1920px /compose",
+      "status": "pass",
+      "ms": 401
+    },
+    {
+      "name": "1920px /from-a-source",
+      "status": "pass",
+      "ms": 334
+    },
+    {
+      "name": "1920px /minds",
+      "status": "pass",
+      "ms": 739
+    },
+    {
+      "name": "1920px /minds/charlie-munger",
+      "status": "pass",
+      "ms": 496
+    },
+    {
+      "name": "1920px /tools",
+      "status": "pass",
+      "ms": 409
+    },
+    {
+      "name": "1920px /ai-tools",
+      "status": "pass",
+      "ms": 353
+    },
+    {
+      "name": "1920px /ai-tools/chatgpt",
+      "status": "pass",
+      "ms": 346
+    },
+    {
+      "name": "1920px /apps",
+      "status": "pass",
+      "ms": 368
+    },
+    {
+      "name": "1920px /apps/starter-pack",
+      "status": "pass",
+      "ms": 392
+    },
+    {
+      "name": "1920px /traction",
+      "status": "pass",
+      "ms": 324
+    },
+    {
+      "name": "1920px /space",
+      "status": "pass",
+      "ms": 342
+    },
+    {
+      "name": "1920px /people",
+      "status": "pass",
+      "ms": 378
+    },
+    {
+      "name": "1920px /s/responsive-unissued-link",
+      "status": "pass",
+      "ms": 402
+    },
+    {
+      "name": "1920px /skills/website-brand-brain-builder",
+      "status": "pass",
+      "ms": 402
+    },
+    {
+      "name": "1920px /prompts/fact-based-ad-copy-writer",
+      "status": "pass",
+      "ms": 406
+    },
+    {
+      "name": "1920px /workflows/review-image-ads",
+      "status": "pass",
+      "ms": 415
+    },
+    {
+      "name": "1920px /support",
+      "status": "pass",
+      "ms": 327
+    },
+    {
+      "name": "1920px /about",
+      "status": "pass",
+      "ms": 323
+    },
+    {
+      "name": "1920px /privacy",
+      "status": "pass",
+      "ms": 349
+    },
+    {
+      "name": "1920px /terms",
+      "status": "pass",
+      "ms": 339
+    },
+    {
+      "name": "1920px /cookies",
+      "status": "pass",
+      "ms": 324
+    },
+    {
+      "name": "1920px /refunds",
+      "status": "pass",
+      "ms": 314
+    },
+    {
+      "name": "1920px navigation and context drawer",
+      "status": "pass",
+      "ms": 514
+    },
+    {
+      "name": "1920px free workflow result and editable steps",
+      "status": "pass",
+      "ms": 443
+    }
+  ]
+}

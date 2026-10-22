@@ -1,6 +1,6 @@
 # Handle money and investing: AI Blocks
 
-> 165 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 166 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter): Give it the period's expenses and accrual policy. Get a schedule with each entry, its support and a draft journal entry.
 - [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence checklist, valuation checks, red flags and an integration plan.
@@ -123,6 +123,7 @@
 - [Personal budget builder](https://useaiblocks.com/skills/personal-budget-builder): List your income and spending. Get a budget plan, such as zero-based or 50/30/20, and where money leaks.
 - [Pick a few big bets and sit still](https://useaiblocks.com/workflows/few-big-bets): List your bets. Get which have the odds in your favour, how big each should be and rules for holding.
 - [Pipeline and forecast checker](https://useaiblocks.com/skills/pipeline-and-forecast-checker): Give it your deals and quota. Get pipeline cover, forecast accuracy and sales cost numbers.
+- [Plan a purchase around your real budget](https://useaiblocks.com/workflows/plan-a-purchase-around-your-real-budget): Share the source files. Get a total-cost comparison and a decision brief that respects your cash limit.
 - [Portfolio company tracker](https://useaiblocks.com/skills/portfolio-company-tracker): Give it monthly or quarterly reports. Get KPIs pulled out, variances to budget flagged and a summary dashboard.
 - [Portfolio mix optimizer](https://useaiblocks.com/skills/portfolio-mix-optimizer): Give it asset returns. Get the best mix by risk and return, with an efficient frontier chart.
 - [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker): Paste what you would get and what it costs. Get a value range, a walk-away price and the best alternative to beat.

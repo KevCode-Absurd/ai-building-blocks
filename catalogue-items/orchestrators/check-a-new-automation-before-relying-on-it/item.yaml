@@ -1,0 +1,40 @@
+slug: check-a-new-automation-before-relying-on-it
+name: Check a new automation before relying on it
+summary: Share the source files. Get a process map, failure checks and a reviewable operating procedure.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - repeatable-ai-loop-designer
+  - process-and-sop-writer
+steps:
+  - uses: repeatable-ai-loop-designer
+    note: Use Audit or LoopDoctor mode on the supplied automation. Check trigger, scope, inputs, exceptions, state, duplicate protection, retries, approval points and stopping rules without live catalogue search.
+  - uses: process-and-sop-writer
+    note: Write the operating procedure, test checklist and recovery steps for the agreed design.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Repeatable AI loop designer
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/loop-library
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Process and SOP writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

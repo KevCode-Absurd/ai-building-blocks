@@ -1,0 +1,43 @@
+slug: check-a-spreadsheet-before-sharing-the-results
+name: Check a spreadsheet before sharing the results
+summary: Share the source files. Get a formula issue list, corrected presentation plan and sharing checklist.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: copy_draft
+  - type: document
+uses:
+  - spreadsheet-checker
+  - figures-to-plain-pictures-writer
+steps:
+  - uses: spreadsheet-checker
+    note: Trace key outputs to inputs and check formulas, ranges, error handling, totals, dates, currencies, duplicates and displayed results.
+  - uses: figures-to-plain-pictures-writer
+    note: Explain the verified findings in plain words with the units, periods and limitations intact.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Figures to plain pictures writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/figures-to-plain-pictures-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

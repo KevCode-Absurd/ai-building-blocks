@@ -17,12 +17,12 @@
     "0004_composer.sql",
     "0005_composer_accounts.sql"
   ],
-  "files": 18614,
+  "files": 23841,
   "fileLimit": 100000,
   "freeFileLimit": 20000,
   "buildBuffer": 95000,
-  "remainingBeforeBuffer": 76386,
-  "totalBytes": 453259921,
+  "remainingBeforeBuffer": 71159,
+  "totalBytes": 490623301,
   "largestFiles": [
     {
       "path": "example-app/costs/other/other.html",
@@ -45,7 +45,7 @@
       "bytes": 2965180
     }
   ],
-  "publishedEntries": 4359,
+  "publishedEntries": 4438,
   "checks": {
     "requiredFiles": true,
     "exampleSameOrigin": true,
@@ -60,15 +60,15 @@
   "criticalAssets": [
     {
       "path": "index.html",
-      "sha256": "d6c22cd8404b6aa546fa09abc4b0d7211c9e2a116b75b751ee941c7dc7acafd7"
+      "sha256": "28398580b453e761cf35367885b2a84ea31bb0a86c7f05f42e3f72ed993262c3"
     },
     {
       "path": "_redirects",
-      "sha256": "9da7b04268f59d9a9e6103f1f8a3b822d3c15353e4eb67313c41972c39a86ec6"
+      "sha256": "363f710d0fc4d583490e4e54c01a5a721976e3064616c39ab734daa632b386a6"
     },
     {
       "path": "_headers",
-      "sha256": "b659bbb35b90a7c5024d1a968e3a068563b5642436f2f90eb75d3e8229a009be"
+      "sha256": "323f1db6b05e54c8afd8fea1a5a666269b6d0265fe560f90855525a4651a9fda"
     },
     {
       "path": ".assetsignore",
@@ -76,7 +76,7 @@
     },
     {
       "path": "data/blocks.json",
-      "sha256": "19674ea4e09bcf7e47d62714e4d2059644c228b7e4ca442df992095b728b2a97"
+      "sha256": "a10e0eb52877f31a97323b083f1469811e9efc2286b71974cfdc5824125c8791"
     },
     {
       "path": "example-app/index.html",

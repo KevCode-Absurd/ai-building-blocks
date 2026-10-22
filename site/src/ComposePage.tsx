@@ -41,7 +41,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
   const resultRef = useRef<HTMLElement>(null);
   const requestRef = useRef(0);
   useEffect(() => {
-    document.title = "Get a workflow for your request | AI Blocks";
+    document.title = "Build a custom workflow | AI Blocks";
     let live = true;
     fetch("/api/compose").then(r => { if (!r.ok) throw Error(); return r.json(); }).then(d => { if (live) setAvailable(d.enabled === true); }).catch(() => {}).finally(() => { if (live) setConnecting(false); });
     try { const saved = JSON.parse(localStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); setCustomSkills(custom); setGoal(saved.goal.slice(0, LIMITS.request)); setChoices(validateChoices(saved.choices ?? {})); setContext(saved.context ?? ""); setResult({ plan, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setRestored(true); } } catch { /* old or damaged drafts do not block composing */ }
@@ -110,7 +110,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
   const questions = questionsFor(goal, choices);
   const possibleQuestions = [...new Set([...questions, ...Object.keys(choices)])].filter(id => Object.hasOwn(QUESTIONS, id));
   return <main className="wrap compose-page" data-testid="compose-page">
-    <div className="compose-intro"><span className="mono small">YOUR REQUEST → YOUR WORKFLOW</span><h1 className="h2">Get a workflow for the job you have in mind</h1><p className="lede">Describe the result. Get connected skills, checks and a folder you can edit and run in your own AI.</p></div>
+    <div className="compose-intro"><span className="mono small">YOUR GOAL → YOUR WORKFLOW</span><h1 className="h2">Build a custom workflow</h1><p className="lede">Describe what you want to achieve. Get a step-by-step workflow with connected skills and checks, ready to edit, download and run in your own AI.</p></div>
     <div className="compose-layout">
       <section className="compose-form" aria-label="Your request">
         <div className="compose-tabs" role="tablist" aria-label="How to create your workflow"><button role="tab" disabled={busy} aria-selected={mode === "free"} onClick={() => setMode("free")}>Free assembly</button><button role="tab" disabled={busy} aria-selected={mode === "ai"} onClick={() => setMode("ai")}>AI composition</button></div>
@@ -122,6 +122,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
           {account.state === "signed-out" && <><p className="small">Sign in to create your free AI workflow.</p><div className="compose-actions"><button className="btn btn-dark btn-sm" onClick={() => void signIn()}>Sign in</button><button className="link-btn" onClick={() => void signIn(true)}>Create a free account</button></div></>}
           {account.state === "signed-in" && <><p className="small">Signed in · Free access{account.usage ? ` · ${account.usage.completed} workflows created · ${Math.max(0, account.usage.dailyAttemptLimit - account.usage.attemptsToday)} attempts left today` : ""}</p><button className="link-btn" disabled={busy} onClick={() => void account.signOut()?.catch(() => setError("Sign-out could not finish. Please try again."))}>Sign out</button></>}
         </div>}
+        {mode === "ai" && <p className="small compose-policy-note">Account creation and AI submissions are for adults aged 18 or older. Read our <Link to="/terms">Terms of service</Link> and <Link to="/privacy">Privacy policy</Link> before continuing.</p>}
         <form onSubmit={e => { e.preventDefault(); void compose(); }}>
           <label htmlFor="compose-goal">What would you like to get done?</label><textarea id="compose-goal" data-testid="compose-goal" value={goal} onChange={e => changeGoal(e.currentTarget.value)} maxLength={LIMITS.request} rows={5} placeholder="Build a landing page, check it and give me the source code" required disabled={busy || dictating} />
           <div className="compose-voice-count small">{goal.length.toLocaleString()} / 10,000 characters</div><VoiceRequest value={goal} onChange={changeGoal} disabled={busy} onListeningChange={setDictating} />
@@ -129,6 +130,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
           {possibleQuestions.length > 0 && <fieldset><legend>Choices that shape the workflow</legend>{possibleQuestions.map(id => { const q = QUESTIONS[id as keyof typeof QUESTIONS]; return <label key={id} className="compose-choice">{q.text}<select aria-label={q.text} value={choices[id as keyof Choices] ?? ""} disabled={busy} onChange={e => { const value = e.currentTarget.value; reset(); setChoices(v => { const next = { ...v }; if (value) next[id as keyof Choices] = value; else delete next[id as keyof Choices]; return next; }); }}><option value="">Use a sensible starting point</option>{q.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>; })}</fieldset>}
           <details className="compose-context"><summary>Add context and constraints</summary><label htmlFor="compose-context">Audience, offer, available inputs and limits</label><textarea id="compose-context" rows={4} value={context} maxLength={LIMITS.context} onChange={e => { reset(); setContext(e.currentTarget.value); }} disabled={busy} /><label className="compose-check"><input type="checkbox" checked={useContext} onChange={e => { reset(); setUseContext(e.currentTarget.checked); }} disabled={busy} /> Include my saved context</label></details>
           {mode === "ai" && <p className="small">{connecting ? "Checking service availability…" : "Your request, added context and relevant skill descriptions go to our AI provider. The service selects the model and enforces usage limits."}</p>}
+          {mode === "ai" && <p className="small compose-policy-note">Generated results and usage records are stored by the service. Share only information you are authorised to provide. <Link to="/privacy#server">How your data is handled</Link>.</p>}
           <button className="btn btn-primary" type="submit" data-testid="compose-submit" disabled={busy || dictating || !goal.trim() || mode === "ai" && (!available || connecting || account.state !== "signed-in")}>{busy ? "Connecting your workflow…" : mode === "free" ? "Assemble my workflow" : "Create my workflow"}</button>
           {busy && <p role="status" className="small">This can take up to two minutes. You can keep this page open.</p>}
         </form>

@@ -1,6 +1,6 @@
 # Think it through and decide: AI Blocks
 
-> 130 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 131 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Adaptive tutor](https://useaiblocks.com/skills/adaptive-tutor): Name a topic and your goal. Get a level check, then short lessons with practice and feedback.
 - [Advice credibility checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker): Paste advice or a pitch. Get who loses if it is wrong, who gains, and a trust level.
@@ -90,6 +90,7 @@
 - [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement): Paste your roles, goals and values. Get a mission statement in three lengths, and a one-line version you can say from memory.
 - [Phone overheating diagnoser](https://useaiblocks.com/skills/phone-overheating-diagnoser): Describe the heat or battery drain. Get safe, read-only checks run and the likely cause named.
 - [Plain message re-pitcher](https://useaiblocks.com/skills/plain-message-re-pitcher): Say you are lost. Get the last message said again in simple words, with a little context.
+- [Plan a difficult feedback conversation](https://useaiblocks.com/workflows/plan-a-difficult-feedback-conversation): Share the source files. Get a feedback conversation plan, opening lines and listening prompts.
 - [Plan failure risk review](https://useaiblocks.com/prompts/plan-inversion-checker): Paste a plan. Get every way it fails, ranked, with the guard for each and the ones you cannot guard.
 - [Plan pre-mortem runner](https://useaiblocks.com/skills/plan-pre-mortem-runner): Give it a plan. Imagine it failed in a year and get the hidden assumptions and risks found now.
 - [Plan stress-tester](https://useaiblocks.com/skills/plan-stress-tester): Give it a plan or idea. Get a tough round of questions with a suggested answer to each.

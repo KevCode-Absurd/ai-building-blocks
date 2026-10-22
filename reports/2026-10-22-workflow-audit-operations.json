@@ -1,0 +1,1210 @@
+{
+  "audit": "Full-source semantic review of design, operations and marketing workflow components",
+  "reviewer": "everyday_tools",
+  "date": "2026-10-22",
+  "scope": [
+    "design-work",
+    "organise-work",
+    "document-work",
+    "help-customers",
+    "set-up-ai",
+    "speak-and-persuade",
+    "write-and-tell-stories",
+    "write-emails",
+    "understand-customers",
+    "plan-strategy"
+  ],
+  "method": "Read complete local SKILL.md text, including scope exclusions, prerequisites, methods, output contracts, examples and limits. Compare actual task and step handoffs. This is semantic review, not an execution test. All proposed spec edits were sent to the workflow author; this reviewer edits no specs or licensed component sources.",
+  "release_status": "Semantic review complete for exported domain workflows and agent branch dependencies. No open component-scope mismatches. Runtime inputs, tools, authorizations and missing-evidence rules remain explicit prerequisites; this audit does not certify executed outputs.",
+  "reviewed_components": [
+    {
+      "slug": "web-form-designer",
+      "reviewed_path": "catalogue-items/imported/web-form-designer/SKILL.md",
+      "sha256": "b9848e4c2121bcc5ce8e62dcf37ef0196facf74d23604b4e34528e9aff444bec",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits form field reduction, labels, validation and downstream behavior. Needs purpose/current fields, actual performance where used, downstream destination and business context. A field inventory cannot prove conversion lift; tool/submission checks require actual access or explicit missing coverage.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a long form easier to finish",
+          "steps": [
+            "Map required information, remove needless fields and define labels and validation rules."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "multi-step-form-designer",
+      "reviewed_path": "catalogue-items/imported/multi-step-form-designer/SKILL.md",
+      "sha256": "226b880ba7891799f62dfc84b24c5c4b00e30379d9ef2718d596b55539ae4972",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits deciding step architecture, honest progress, conditional logic and save/resume. Must FIRST decide whether stages earn their complexity; 4–6-field/simple forms may remain single-page. Current flow originally assumed steps after cutting fields; author notified. No platform implementation or deep accessibility audit is bundled.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a long form easier to finish",
+          "steps": [
+            "Decide whether the retained form warrants multiple steps; keep a short simple form on one page, otherwise plan step order, saved progress and final review."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "small-usability-test-planner",
+      "reviewed_path": "catalogue-items/general/small-usability-test-planner/SKILL.md",
+      "sha256": "bd4580616c06701476e8fbfdfcc92eeb139f69d312cea6dc2ad387577f883637",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits a task-based study plan and script from the goal and known-problem list. Produces recruitment/script/note sheet/fix-list template and next-round plan, not real test results. Its three target testers plus outsider are this method's design; never invent participant observations.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a long form easier to finish",
+          "steps": [
+            "Test whether a person can finish the revised flow, recover from an error and understand what happens next."
+          ]
+        },
+        {
+          "name": "Turn a design review into fixes",
+          "steps": [
+            "Write task-based checks for the changes, with neutral prompts and observable success criteria."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "screen-states-designer",
+      "reviewed_path": "catalogue-items/imported/screen-states-designer/SKILL.md",
+      "sha256": "bd2e2e2aa9b92fd32a7af2680d8d2153a92eda43607291177ea6dbf11dabf746",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits first-use/empty/loading/partial/error/offline/validation/permission/success/edge/busy state inventory and behavior. Build-and-check claims need source/browser/mocks and phone/desktop checks; without tools state verification is missing. Optional UXKIN is not a prerequisite and must not be connected automatically.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Write helpful error and empty states",
+          "steps": [
+            "List the states and user actions for each supplied screen, including retry and interrupted work."
+          ]
+        },
+        {
+          "name": "Give developers a complete component brief",
+          "steps": [
+            "Define each needed state and transition, including interruption and recovery."
+          ]
+        },
+        {
+          "name": "Check a translated interface still makes sense",
+          "steps": [
+            "Check that translated strings cover all states and identify layouts requiring visual review."
+          ]
+        }
+      ],
+      "agent_branch_uses": [
+        "Design handoff completeness assistant"
+      ],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "plain-error-message-writer",
+      "reviewed_path": "catalogue-items/general/plain-error-message-writer/SKILL.md",
+      "sha256": "44ac856cb47e19f88fb05775f3fa3438448732bc42d38534d5b13cfd4eb393ac",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits rewriting exact error text plus trigger into plain explanations, one real recovery action, prevention and severity ordering. Requires the exact messages; an unknown trigger remains MISSING. It does not invent backend recovery capabilities.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Write helpful error and empty states",
+          "steps": [
+            "Write a plain message for every failure state using only recovery actions the product supports."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "small-interface-details-designer",
+      "reviewed_path": "catalogue-items/imported/small-interface-details-designer/SKILL.md",
+      "sha256": "cf181b74a9d05789748cba9fda4ba4f68d4c8e4a5591a363d7ec40a794729ede",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits error/empty-state interaction handoff via trigger, rules, feedback and loops/modes. Covers zero/max/repeated/interrupted triggers and honest feedback. Its diagnostic score concerns microinteraction quality, not measured usability success.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Write helpful error and empty states",
+          "steps": [
+            "Specify focus, buttons and transitions so each message can be implemented and checked."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "design-feedback-giver",
+      "reviewed_path": "catalogue-items/imported/design-feedback-giver/SKILL.md",
+      "sha256": "4b51de88442cd8a0b7ca5c8c7583b28c65277c09466df2ab23457d57bf03aa23",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits evidence-linked UI critique from Figma, screenshot or detailed description plus audience/stage. Outputs usability/hierarchy/consistency/accessibility findings and recommendations. Figma connector optional if screenshot/description supplied. Heuristic critique is not a participant test or numerical contrast measurement.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn a design review into fixes",
+          "steps": [
+            "Turn the agreed issues into specific changes, keeping observations separate from preferences."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "type-led-poster-planner",
+      "reviewed_path": "catalogue-items/general/type-led-poster-planner/SKILL.md",
+      "sha256": "6c141246fade6f9d9dda4cf2529f00ed29193fcb983955705baf0c8acd6f4239",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits event-poster words, type hierarchy, swap points and far-away test plan. Requires event/date/place, where viewed/distance and mood; missing mood or distance triggers clarification. Physical readability is unverified until print-at-size test happens.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a readable event poster",
+          "steps": [
+            "Set a clear reading order for the event name, essential details and next action."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "poster-designer",
+      "reviewed_path": "catalogue-items/imported/poster-designer/SKILL.md",
+      "sha256": "7bebc4a2cf108c55c1e52bb96b1050dc1ab2f9492e9c2d43f1fe57f826728f4d",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits producing an original static poster as PDF/PNG plus design-philosophy MD, using canvas/font tooling. Original source prioritizes visual art/minimal text; workflow's confirmed facts and required hierarchy must remain hard constraints. Only MD/PDF/PNG outputs; no editable design-file promise. Requires artifact creation and visual inspection for final export claims.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a readable event poster",
+          "steps": [
+            "Build the poster from that hierarchy and the confirmed event facts."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "colour-contrast-checker",
+      "reviewed_path": "catalogue-items/imported/colour-contrast-checker/SKILL.md",
+      "sha256": "7a6618b89dce76b04c4a88f4887ac26f1f105a15154f35f3ec32eb8bc16ed1b9",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Original poster mismatch: source measures CSS custom-property tokens with a bundled Node18+ checker and explicit text/background pair JSON, not a PDF/PNG directly. Must extract real palette into scratch tokens and verify rendered gradient/image/opacity regions separately. Never claim passing contrast from an unmeasured screenshot. Author notified to adapt or replace.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a readable event poster",
+          "steps": [
+            "Extract actual text and background colors into temporary CSS tokens and explicit pair data for the supplied checker. Check those pairs, then visually inspect image, gradient and opacity areas; mark any color or rendering evidence that is unavailable."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "design-system-auditor",
+      "reviewed_path": "catalogue-items/imported/design-system-auditor/SKILL.md",
+      "sha256": "87e9759397bc5b1c1c4a2e84e1a884d13ea2a445eb6c17722f47f9c10f6ad2f2",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits existing system audit/document/extend, token coverage, variants, state completeness, keyboard/ARIA notes and migration needs. Uses actual component source or provided design; Figma optional. Audit counts and scores require reviewed evidence, not template placeholders.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Give developers a complete component brief",
+          "steps": [
+            "Identify existing patterns and gaps so the component reuses the current system."
+          ]
+        },
+        {
+          "name": "Prepare a design system migration",
+          "steps": [
+            "Inventory inconsistent components and distinguish deliberate exceptions from accidental drift."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "design-token-builder",
+      "reviewed_path": "catalogue-items/imported/design-token-builder/SKILL.md",
+      "sha256": "ee2260a62ed41cc199072355db58a0530cfffd76ae412b294043781ea78cd81b",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits component-to-token mapping and developer handoff in the source's explicit workflows2/4. Default workflow1 generates a new palette from brand hex; original handoff recipe must select mapping/handoff mode and preserve existing approved values rather than silently regenerating the system. Python generator/runtime required when invoked.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Give developers a complete component brief",
+          "steps": [
+            "Use component mapping and developer handoff modes with the existing approved values. Preserve those values instead of generating a replacement palette."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "everyday-usability-reviewer",
+      "reviewed_path": "catalogue-items/imported/everyday-usability-reviewer/SKILL.md",
+      "sha256": "49c0358644b2b74c5baa28b417d4de587095887b784d83a2803c09d3e908264a",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits heuristic task walkthrough: discoverability, feedback, recovery, mapping and constraints. Suitable replacement for generic panel. Its 5-row diagnostic is expert review; observations and scores must not be presented as actual participant findings or full accessibility conformance.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn a design review into fixes",
+          "steps": [
+            "Review the supplied screen for discoverability, mapping, errors and feedback; label the findings as a heuristic review rather than real user test results."
+          ]
+        },
+        {
+          "name": "Check a prototype before user testing",
+          "steps": [
+            "Walk through the key tasks and record confusing controls, wording and missing states."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "accessibility-checker",
+      "reviewed_path": "catalogue-items/imported/accessibility-checker/SKILL.md",
+      "sha256": "aa70bb03ffbbadf751829e7a4db8e53c6db8aa9bdf69df8089765e70dcd73454",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits prototype/page report-mode accessibility review where DOM/HTML and approved AccessLint tools exist. Engine/browser are NOT bundled. Discover actual installed engine/session, prefer live DOM, otherwise scope static/manual coverage; automated checks are partial WCAG coverage, not certification. Report mode does not edit files.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Check a prototype before user testing",
+          "steps": [
+            "Check available accessibility evidence and identify barriers that could invalidate the test."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "usability-test-runner",
+      "reviewed_path": "catalogue-items/imported/usability-test-runner/SKILL.md",
+      "sha256": "98350aa232686167b8ada86f5d40432fb149613f45dde5477536bcd00ded38bd",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits functional/near-functional prototype tasks, recruitment, neutral scripts, moderation and actual findings. Requires target users/testing infrastructure and consent; absent participants means plan/script, not fabricated sessions. Discovery and pure quantitative conversion analysis are explicitly out of scope.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Check a prototype before user testing",
+          "steps": [
+            "Prepare and, when participants and consent are available, run neutral sessions around the research question."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "first-use-onboarding-designer",
+      "reviewed_path": "catalogue-items/imported/first-use-onboarding-designer/SKILL.md",
+      "sha256": "784b06fa00da9a3ae92022e8eff8b722db69e2f12fe3336cf1aaddafdf7b92eb",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits defining first meaningful win, reducing setup, meaningful user action and supportive cue. Needs target human/JTBD/objective/ethical constraints; asks if first win unclear. Source says psychographic/JTBD/persuasion prerequisites should be completed: collect supplied equivalent briefs or mark missing, never pretend those dependencies ran. No addiction/streak pressure.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make onboarding instructions match the product",
+          "steps": [
+            "Use supplied user tasks, the first useful result and ethical constraints to choose the smallest onboarding path. Mark missing audience evidence before proposing behavioral changes."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "plain-words-interface-rewriter",
+      "reviewed_path": "catalogue-items/general/plain-words-interface-rewriter/SKILL.md",
+      "sha256": "5b8271bbddf6c2cf11b16641f8861a5f533f95bf0c275c4446bf6b59ba8556b7",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits exact UI/source wording rewrite while keeping every required step, with real user vocabulary and swap table. Needs groups and evidence of their words; missing wording is a proposed suggestion, not a user quote. Preserve legal/safety meaning, variables and count/order evidence.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make onboarding instructions match the product",
+          "steps": [
+            "Rewrite the selected screens and prompts using the product vocabulary people already understand."
+          ]
+        },
+        {
+          "name": "Check a translated interface still makes sense",
+          "steps": [
+            "Clarify the original labels and preserve the meaning and variables in each string."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "in-app-tour-designer",
+      "reviewed_path": "catalogue-items/imported/in-app-tour-designer/SKILL.md",
+      "sha256": "becd45906aef2ea0f3fc42a540686ec61b66c0c55690edb15eda87b6432f4077",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits optional contextual help decision, event/state/time triggers, dismiss/resume/retrigger and completion tracking. Explicitly not the first-run wizard implementation or provider configuration. May recommend docs/no tour; cannot promise actual engineering or adoption lift.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make onboarding instructions match the product",
+          "steps": [
+            "Plan optional guidance for the revised flow, with skip, resume and completion behavior."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "design-rules-file-writer",
+      "reviewed_path": "catalogue-items/imported/design-rules-file-writer/SKILL.md",
+      "sha256": "de8b98ad27c61aedde9b61ef9b5414f503567b4a446446590ad24d2c7f0fbd2d",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits deriving DESIGN.md from existing CSS/theme/components and checking two screens. Does NOT design a new target brand. Needs actual source code; near-duplicates stay questions. Existing file overwrite and new instruction files require consent. Migration use must document approved existing target patterns, not invent future token values.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a design system migration",
+          "steps": [
+            "Document the agreed target patterns and replacement rules from actual components without silently removing variants."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "project-kickoff-brief-writer",
+      "reviewed_path": "catalogue-items/imported/project-kickoff-brief-writer/SKILL.md",
+      "sha256": "6391b3f973ed4b0b38e2fa6d16fcf96b86fd0ee7c032101c01877a0abcded198",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Mismatch in operational migrations/deadline changes: actual Creative Brief requires audience, key message, voice, visuals, inspiration, scope and approvals; explicitly not PRD/dev ticket. Fits website/app/brand/campaign kickoff only. Author notified to replace operational plan uses with real change planning and constrain retained client kickoff to creative project scope.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a clear client project kickoff",
+          "steps": [
+            "Summarize scope, outcomes, responsibilities, milestones and unresolved assumptions."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "translator",
+      "reviewed_path": "catalogue-items/imported/translator/SKILL.md",
+      "sha256": "ce685aac47df6c23f79d77a27ca7b9cd3136f3137cf79bfd97146f2cd49d6d55",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits source/target UI semantic review and translation with preserved JSON keys/HTML/Markdown/placeholders, glossary, plural forms, locale/register and RTL notes. Missing language competence needs qualified review. Does not validate actual rendered truncation without visible layouts or amend product promises.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Check a translated interface still makes sense",
+          "steps": [
+            "Compare the source and target UI strings for meaning, glossary consistency, placeholders and plural rules; flag languages you cannot assess."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "feedback-theme-finder",
+      "reviewed_path": "catalogue-items/imported/feedback-theme-finder/SKILL.md",
+      "sha256": "dbe6231e1216dd050ccff2d330ad671667a718a5b62d46520d270e203e8fa2a1",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits consented feedback excerpts into sourced task/product themes. Needs actual ratings/periods/cohorts for numerical NPS/trend/significance claims. No rating from qualitative-only complaints; missing sample denominator remains unknown. External follow-ups mentioned in source are not authorized by analysis.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn user complaints into design questions",
+          "steps": [
+            "Group the complaints by user task and preserve sources and conflicting accounts."
+          ]
+        },
+        {
+          "name": "Prepare a useful customer newsletter issue",
+          "steps": [
+            "Find a useful customer question in the provided feedback and preserve the sample limits. A small or single-customer sample does not establish a wider trend."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "hypothesis-first-design-planner",
+      "reviewed_path": "catalogue-items/imported/hypothesis-first-design-planner/SKILL.md",
+      "sha256": "bccb6d8fcf35ac297cc15b5f6a6af5221f5998accc107bb1192bde85ea9fec1d",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits complaint themes into declared assumptions, testable hypotheses and lowest-fidelity learning experiment. Precommit observable signal; no fabricated validation or heavy redesign before evidence. Its process diagnostic score does not measure product outcomes.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn user complaints into design questions",
+          "steps": [
+            "Turn the strongest themes into testable explanations and small design options."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "interview-and-research-planner",
+      "reviewed_path": "catalogue-items/imported/interview-and-research-planner/SKILL.md",
+      "sha256": "cfe62ac93bcc7b94ce22bf0c522b0cf7000d73880d5ccfb3ae69bbe43b919df5",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits discovery question, qualitative method, recruit, consented interview guide and analysis plan. Requires decision, target users, timeline/budget; unavailable users yields plan/gap. Explicitly not testing an existing prototype, quantitative measurement or live conversion testing. Marketing survey use must not substitute qualitative interview planning for statistical survey design.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn user complaints into design questions",
+          "steps": [
+            "Choose research tasks that distinguish those explanations before a redesign is approved."
+          ]
+        },
+        {
+          "name": "Check a marketing survey before sending it",
+          "steps": [
+            "Plan qualitative wording and cognitive pretests with appropriate respondents. Keep statistical sample design and quantitative analysis with the earlier survey method."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "team-capacity-planner",
+      "reviewed_path": "catalogue-items/imported/team-capacity-planner/SKILL.md",
+      "sha256": "2ae470d9ff3f13425fd05f36c99182f16938ca824fbf54f4eb8410769f1b7957",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits actual staffing/skills/current commitments/leave and period capacity scenarios for absence and delivery commitments. Source utilization targets are heuristics, not actual staffing facts. Includes all work, uncertainty and dependency constraints; no automatic hire/reallocation approval.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a team absence handover",
+          "steps": [
+            "Compare the commitments with the actual capacity and cover available during the absence."
+          ]
+        },
+        {
+          "name": "Check capacity before promising a delivery date",
+          "steps": [
+            "Calculate available capacity from actual staffing and commitments in the requested window."
+          ]
+        }
+      ],
+      "agent_branch_uses": [
+        "Weekly team coverage review assistant"
+      ],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "handover-note-writer",
+      "reviewed_path": "catalogue-items/general/handover-note-writer/SKILL.md",
+      "sha256": "e16e31f084a8419a9a4e66737dad723ae95c288917712930f0c15f919885bd3e",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits real active-work dump to time bombs, due window, status/next action/source/access map, people, leave-alone and escalation notes. Needs taker-over and dates; never invent acceptance or passwords. Notes alone do not prove replacement owner has practiced or accepted cover.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a team absence handover",
+          "steps": [
+            "Write task-level handovers with source links, current state and the next action."
+          ]
+        },
+        {
+          "name": "Make a recurring process easier to hand over",
+          "steps": [
+            "Prepare the current-state handover and list the practice tasks the replacement should complete."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "executive-action-register",
+      "reviewed_path": "catalogue-items/general/executive-action-register/SKILL.md",
+      "sha256": "8e53a013f94bb494d04eed6567b9bb9796fbcc7ff05ed8b56d3251f59091a0a8",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits extracting real commitments from supplied notes/threads, stable IDs, owner/date/dependency/source/status and proposed task changes. New actions/owners may be proposed but are not accepted commitments; missing evidence stays unknown. No task-system writes without authorization and readback.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a team absence handover",
+          "steps": [
+            "Create a coverage action list with owners, dates, dependencies and unresolved acceptance."
+          ]
+        },
+        {
+          "name": "Build a backup recovery rehearsal",
+          "steps": [
+            "Track the rehearsal tasks, evidence to collect, owners and unresolved recovery gaps."
+          ]
+        },
+        {
+          "name": "Prepare a clear client project kickoff",
+          "steps": [
+            "Convert confirmed commitments into a sourced action list; keep proposed owners unconfirmed."
+          ]
+        },
+        {
+          "name": "Turn an incident into a safer procedure",
+          "steps": [
+            "Track prevention actions with owners, evidence of completion and a review date."
+          ]
+        },
+        {
+          "name": "Prepare a small team offsite",
+          "steps": [
+            "Create a register for decisions and commitments to capture during the event and review afterward."
+          ]
+        },
+        {
+          "name": "Plan an event follow up that earns a reply",
+          "steps": [
+            "Extract promised resources, introductions and follow-up actions with source evidence."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "company-policy-explainer",
+      "reviewed_path": "catalogue-items/imported/company-policy-explainer/SKILL.md",
+      "sha256": "f95b667ed526b3c040bd2f3519ff7fb5af4e2891642dbab2322d2994996a3596",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits employee handbook/policy questions standalone from pasted policy text, quoted sections, exceptions and contact. Knowledge-base/HRIS are optional. No invented company rule, employee-specific balance or legal meaning.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a new policy understandable to staff",
+          "steps": [
+            "Explain the approved changes with practical examples drawn only from the policy."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "stakeholder-update-writer",
+      "reviewed_path": "catalogue-items/imported/stakeholder-update-writer/SKILL.md",
+      "sha256": "359bcb8354fd59938068c15d7d982bbf803c74e566e77415db9328c5609642cb",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits audience/cadence-specific staff/partner/customer/project/outage draft updates using supplied progress/decisions/risks. Can work without connectors from given facts. Preserve uncertainty and internal/external disclosure boundaries; template color/status and timelines require evidence. Sending is separately authorized.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a new policy understandable to staff",
+          "steps": [
+            "Draft a clear announcement and list acknowledgments or training still requiring an owner."
+          ]
+        },
+        {
+          "name": "Check capacity before promising a delivery date",
+          "steps": [
+            "Draft feasible timing options and explain the trade-offs before anyone promises a date."
+          ]
+        },
+        {
+          "name": "Prepare a service outage communication pack",
+          "steps": [
+            "Draft audience-appropriate updates using the confirmed impact and current recovery state."
+          ]
+        },
+        {
+          "name": "Prepare a partner launch announcement pack",
+          "steps": [
+            "Draft the core announcement and audience variants using the agreed facts."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "process-bottleneck-finder",
+      "reviewed_path": "catalogue-items/imported/process-bottleneck-finder/SKILL.md",
+      "sha256": "cf7181ef9f28fa2c163ef75d6fb90e278d78171583eb035c7cfbd7efdec5c308",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Material original mismatch: actual deterministic process-mapper requires repeatable internal business process with stage owners/types/P50/P90 times and scripts. Explicitly not one-off project tracking; without stage cycle-time data instrument first, not map. Single run or generic completion dates cannot substantiate P50/P90/bottleneck ranking. Author notified to add proper repeat-process inputs or replace documentation-only use.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Trace why work keeps missing deadlines",
+          "steps": [
+            "Map where the supplied work waited and which dependencies repeatedly delayed completion."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "outside-view-timeline-estimator",
+      "reviewed_path": "catalogue-items/general/outside-view-timeline-estimator/SKILL.md",
+      "sha256": "9b7a444ee0641482a66c9d49e8c4ba9505a99f069c798b69438995293c6e9972",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits comparable project/task reference-class estimate vs actual ratios, median/range and explicit differences. Needs comparable history; source permits labelled GUESS when unavailable, but governing evidence rules should retain provisional status and avoid measured-estimate claims. Same units/periods and small-sample limits required.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Trace why work keeps missing deadlines",
+          "steps": [
+            "Compare estimates with similar completed work and show the range and sample limits."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "backup-and-recovery-planner",
+      "reviewed_path": "catalogue-items/imported/backup-and-recovery-planner/SKILL.md",
+      "sha256": "ac0e58600d3332a87b64d06f91f13385eb74a599242a2c3634517479dff5dbd9",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits systems inventory, actual hosting/backup coverage, owner-chosen RPO/RTO, restore runbook and approved rehearsal plan. Tabletop/partial/full drills are different evidence levels. Planning does not execute a restore, schedule drills or prove recoverability; only real restore checks can do that. Sample retention/frequency is not user policy.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Build a backup recovery rehearsal",
+          "steps": [
+            "Map what must be restored, dependencies, responsible people and the stated recovery targets."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "incident-runbook-writer",
+      "reviewed_path": "catalogue-items/imported/incident-runbook-writer/SKILL.md",
+      "sha256": "9fb7b3c7bdad10e7a17d2993923339da3475c41141f5f74cd7ac55cd843b3c14",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits service-specific recovery procedure adaptation only with bound service/env/namespace/database/owners/authority/rollback evidence. Commands and impact thresholds in templates are illustrative. Recovery rehearsal is restricted to approved test scope. Outage communication use must choose comm templates only, never execute generic kubectl/SQL commands or repeat sample incident figures.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Build a backup recovery rehearsal",
+          "steps": [
+            "Write a safe restore rehearsal with prerequisites, stop points and rollback steps."
+          ]
+        },
+        {
+          "name": "Prepare a service outage communication pack",
+          "steps": [
+            "Use only communication templates for the named service and incident. Identify owners, update checkpoints and verified facts; never execute template commands or copy illustrative figures."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "process-and-sop-writer",
+      "reviewed_path": "catalogue-items/imported/process-and-sop-writer/SKILL.md",
+      "sha256": "8fbf1d56f287b10536b902963456944346411aaa0c5951aa2d1748bff4947a2f",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits standalone process description to purpose/scope/RACI/steps/exceptions/metrics/source documents. Suitable for qualitative as-is handover without fabricated timing metrics. External wiki/task writes mentioned only when separately authorized.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a recurring process easier to hand over",
+          "steps": [
+            "Write the procedure with inputs, checks, exceptions and the final definition of done."
+          ]
+        },
+        {
+          "name": "Turn an incident into a safer procedure",
+          "steps": [
+            "Draft the procedural changes justified by the report and preserve controls that still worked."
+          ]
+        },
+        {
+          "name": "Check a new automation before relying on it",
+          "steps": [
+            "Write the operating procedure, test checklist and recovery steps for the agreed design."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "project-risk-portfolio",
+      "reviewed_path": "catalogue-items/imported/project-risk-portfolio/SKILL.md",
+      "sha256": "b93e9f04a5e41c7d493a961a657f42c6e1f467ee3de934e5817e1512d7fff580",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits technology project dependencies, capacity and risk but is enterprise Senior PM with quantitative scripts, required fields and STOP/escalation thresholds. Sparse small-team data supports only grounded relevant submethods; no invented health scores, ROI, probabilities or default financial targets. Charter/risk templates can structure actual evidence.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Check capacity before promising a delivery date",
+          "steps": [
+            "Compare the new work with existing priorities and flag shared dependencies and schedule risks."
+          ]
+        },
+        {
+          "name": "Plan a vendor change without losing work",
+          "steps": [
+            "Map migration dependencies, data risks, overlap costs and fallback options."
+          ]
+        }
+      ],
+      "agent_branch_uses": [
+        "Weekly project delay evidence assistant"
+      ],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "meeting-agenda-and-cost-planner",
+      "reviewed_path": "catalogue-items/imported/meeting-agenda-and-cost-planner/SKILL.md",
+      "sha256": "944075f23e54c2e52878c35a90eeddc7487a0d99e355fed81d42dcc2baf0c29d",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Material original prerequisite gap: MUST run cost/readiness gate first; no decision=>ASYNC, missing agenda/owner=>NOT-READY; agenda only after MEET. Requires actual attendees/minutes/hourly-rate for price, desired outcome per topic and mandatory5-minute closing recap. General team-building-only offsite cannot bypass decision gate. Author notified.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a clear client project kickoff",
+          "steps": [
+            "Run its ASYNC, NOT-READY or MEET gate. Use supplied attendee, duration and cost assumptions; only a MEET result gets an agenda with the required action recap."
+          ]
+        },
+        {
+          "name": "Prepare a small team offsite",
+          "steps": [
+            "Run the ASYNC, NOT-READY or MEET gate. When a meeting is justified, use actual duration, attendee count and cost assumptions to plan decision sessions, breaks and an action recap."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "incident-postmortem-writer",
+      "reviewed_path": "catalogue-items/imported/incident-postmortem-writer/SKILL.md",
+      "sha256": "69ca71dc5449bcd139ceec289f13714d37a0e75c72ee2313a0c4e947ac154846",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits post-incident/failed-rehearsal evidence, timeline, impact, contributing conditions, blameless learning and follow-up. Preserve hypotheses and gaps; sample dates, root causes, costs and severity are examples, not observed outcomes. Not live mitigation authority.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn an incident into a safer procedure",
+          "steps": [
+            "Reconstruct the timeline, impact and contributing factors without assigning unsupported blame."
+          ]
+        }
+      ],
+      "agent_branch_uses": [
+        "Recovery rehearsal evidence assistant"
+      ],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "vendor-comparison-writer",
+      "reviewed_path": "catalogue-items/imported/vendor-comparison-writer/SKILL.md",
+      "sha256": "2233be4b53da05999bbf1f75e2be9287d5c1f3ed3e3530d845a9acdb3d1fb9d2",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits broad supplied quote/contract/performance comparison with TCO, risks, lock-in, migration/training/exit costs and recommendation. Suitable for vendor replacement and sponsorship alternatives on same scope/currency/term. No assumed supplier financial/security evidence or authorization to buy/cancel.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Plan a vendor change without losing work",
+          "steps": [
+            "Compare the replacement options using the required tasks, costs and actual supplied evidence."
+          ]
+        },
+        {
+          "name": "Build a clear sponsorship decision brief",
+          "steps": [
+            "Normalize the proposal deliverables and costs against available alternatives."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "plain-english-editor",
+      "reviewed_path": "catalogue-items/general/plain-english-editor/SKILL.md",
+      "sha256": "7cf9fbc967945a283b6b4f193ccaff8c0481577a53520e6f405dbb08964188ef",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits supplied draft readability edit preserving meaning, voice, caveats and exact sourced facts. Outputs edited draft/change log/questions. Not a factual verification engine or a first-draft author from notes; when handed rough notes, ensure a coherent actual draft exists first or include explicit composing step.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a service outage communication pack",
+          "steps": [
+            "Edit the messages for clarity while preserving uncertainty, conditions and promises."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "repeatable-ai-loop-designer",
+      "reviewed_path": "catalogue-items/imported/repeatable-ai-loop-designer/SKILL.md",
+      "sha256": "4899dac3fc741e30e67e68210430c285a93a94fe2d7c3e5faa67f4ccb0cb1a9c",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits supplied-loop Audit/LoopDoctor for triggers, scope, verification, record/state and terminal outcomes. Needs references/audit.md from bundled pack. No catalog lookup needed for auditing exact provided loop; discovery/find uses live catalog and cannot invent published matches. No schedule activation from design; success/no-op/blocked/approval/no-progress states distinct.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Check a new automation before relying on it",
+          "steps": [
+            "Use Audit or LoopDoctor mode on the supplied automation. Check trigger, scope, inputs, exceptions, state, duplicate protection, retries, approval points and stopping rules without live catalogue search."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "weekly-time-audit-planner",
+      "reviewed_path": "catalogue-items/general/weekly-time-audit-planner/SKILL.md",
+      "sha256": "fdb1782ac6416d0e4f451c4356b6ea8dad7a2dab8c66a1340f463bd2547ee84a",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits real calendar/task evidence to chosen/taken time, reconciled hours, fixed commitments and protected work block proposal. No assumptions about blank busy blocks or moved fixed commitments. Proposals are not actual calendar writes.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a realistic plan for a busy week",
+          "steps": [
+            "Audit last week actual time as evidence for realistic capacity, then compare it with the upcoming fixed commitments."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "week-priority-picker",
+      "reviewed_path": "catalogue-items/general/week-priority-picker/SKILL.md",
+      "sha256": "fae8e68db1faa0b570af4f0f94280e94824b1d2ea3901af6e225fa1c0ac00467",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits supplied open tasks/real available hours/month goal to effort sums, lever, exactly3 priorities and tomorrow plan. Missing effort remains unknown; source's60% normal-week fallback must be declared assumption and must not override supplied hours or falsely claim schedule feasibility.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a realistic plan for a busy week",
+          "steps": [
+            "Choose the work that best serves the stated goals and identify what must wait."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "executive-daily-digest",
+      "reviewed_path": "catalogue-items/general/executive-daily-digest/SKILL.md",
+      "sha256": "75151a44193d31fb3308d30a86957c542f081884d5711eb2daa3f6364e3efc80",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits dated/timezoned calendar/action/update brief and partial coverage, genuine conflicts, up to3 priorities and waiting-on work. Proposed durations labelled assumptions, no overfilled free time, no inferred completion, no schedule or delivery started implicitly.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Make a realistic plan for a busy week",
+          "steps": [
+            "Turn the chosen commitments into a dated brief and a manageable first day."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "presentation-builder",
+      "reviewed_path": "catalogue-items/imported/presentation-builder/SKILL.md",
+      "sha256": "de3ee1f26ac08b5142f6dc4a2309c8788c66a6a784115971c1007f6dab1891d7",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits source report/speaker notes to audience-specific narrative/slide outline, minimal text, visual suggestions and notes. Broad formats supported in principle but actual deck generation requires runtime/tooling. Example marketing metrics are fictional and must never leak into real output; only supplied source claims travel forward.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a webinar people can follow",
+          "steps": [
+            "Build a clear teaching sequence with examples and an audience-appropriate level of detail."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "editable-slide-deck-builder",
+      "reviewed_path": "catalogue-items/imported/editable-slide-deck-builder/SKILL.md",
+      "sha256": "1fe59215829a351ace27cef51566abcc23eb79bde1c05cefa377f05a58f04838",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits NEW editable PPTX from approved source/outline, explicit coordinate spec, native objects, source manifest, package audit and rendered QA. Requires user-selected narrative framework (or explicitly user-approved custom outline), approved build environment and actual compatible renderer for visual signoff; none bundled. Not template duplication/existing OOXML editing. External assets require provenance and authorization.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a webinar people can follow",
+          "steps": [
+            "Use the user-approved outline as the custom narrative framework, or ask when it is not approved. Build editable slides and notes in an approved environment and inspect every rendered slide; mark visual checks pending without a renderer."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "webinar-promotion-planner",
+      "reviewed_path": "catalogue-items/imported/webinar-promotion-planner/SKILL.md",
+      "sha256": "958eb338c7e66152fe6b97e92d2d7d7521b8411a0173a97dff82711dd6e647bd",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits confirmed virtual webinar promise/audience/date/platform/goal/runway to promotion drafts. No generic in-person logistics. Choose Promote mode; no sending, simulated-live deception or invented attendance metrics. Funnel assumptions and industry benchmarks must be identified as assumptions, not actual performance.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a webinar people can follow",
+          "steps": [
+            "Draft promotion that describes the real session and confirmed participation details."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "customer-interview-synthesizer",
+      "reviewed_path": "catalogue-items/imported/customer-interview-synthesizer/SKILL.md",
+      "sha256": "9b8117216f510e167d3183860f2c3b8ef0d023c0819164e8e66def9dde150c2b",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Original semantic fit concern: actual Discovery Research Synthesis is discrete research batch tagging/clustering to PM product decisions, not a single customer case-study narrative or newsletter writer. Single-case facts may be extracted but no cross-customer pattern claim. Thin/contradictory evidence remains tentative. Author notified to select a better case/newsletter component or narrow task.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn a customer interview into a case outline",
+          "steps": [
+            "Separate the problem, actions and observed outcomes while preserving source references. One interview is one case, not evidence of a repeated customer pattern."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "case-first-story-builder",
+      "reviewed_path": "catalogue-items/general/case-first-story-builder/SKILL.md",
+      "sha256": "86e126e13a58f520689c82a3bb6f09407dd2d3e870c8d81b9367fffa37add50b",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Material original output mismatch: creates selected case, competing explanations/disconfirming case, research questions and STORY OUTLINE only; not full case-study draft. Follow-on proofreader cannot expand it. Needs source case and reader/length; unsupported opposite case remains missing. Author notified to add actual drafting or change promise.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn a customer interview into a case outline",
+          "steps": [
+            "Build the case around the actual decision and change, marking unsupported outcomes."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "draft-proofreader",
+      "reviewed_path": "catalogue-items/imported/draft-proofreader/SKILL.md",
+      "sha256": "33ac0babbb034e113cb13403c44981e94bef986c99f62ba6fcde9e8a6e0a2dc7",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Material original overclaim: Professional Proofreader checks grammar/spelling/punctuation/style/readability and preserves content, with inline/file modes. It does NOT perform sourced facts/quote/publication-permission audit and forbids content expansion. Can proofread a real case-study draft, not turn an outline into one or certify approval.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Turn a customer interview into a case outline",
+          "steps": [
+            "Edit the outline wording without inventing a finished case study. Preserve source locators and the separate factual and consent checks in the hand-back acceptance rules."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "event-marketing-planner",
+      "reviewed_path": "catalogue-items/imported/event-marketing-planner/SKILL.md",
+      "sha256": "12db5ee8bf232424730a3f3b1645fd6b96539f250a3cdc7b0cb6ada0634c7384",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits actual event role/goal/ICP/budget and post-event contextual follow-up, plus sponsorship comparison mode. Requires real conversations/promises rather than treating badge scans as intent. References contain sponsorship ROI; no causal sales attribution, outreach, CRM write or automatic sending without authority.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Plan an event follow up that earns a reply",
+          "steps": [
+            "Group follow-up needs around the actual event goal and what attendees requested."
+          ]
+        },
+        {
+          "name": "Build a clear sponsorship decision brief",
+          "steps": [
+            "Use sponsorship evaluation mode to plan a bounded pilot with tracking, caps and a decision date. Label observed responses as observational; do not imply randomized or causal proof."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "executive-due-task-drafts",
+      "reviewed_path": "catalogue-items/general/executive-due-task-drafts/SKILL.md",
+      "sha256": "fc6f918b7f6cecc8c73019e6f1f73af406ad7f30d95c030d43ae11c68f3574b9",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits due action-register tasks and real recipient/thread commitments to versioned follow-up drafts. Missing recipient/thread => outline/question; completed/cancelled excluded, unknown status explicit. Supports event promise follow-up after source extraction; never marks task finished because draft exists.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Plan an event follow up that earns a reply",
+          "steps": [
+            "Prepare relevant drafts for each supported commitment without sending them."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "brand-voice-editor",
+      "reviewed_path": "catalogue-items/general/brand-voice-editor/SKILL.md",
+      "sha256": "2b51afaa5f7f3428ce26a2e53776b3118969346a8b87b2d96ee31e3ce62de9f8",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits wording-only numbered marketing copy check after factual approval, against actual brand voice/customer words. Claims/numbers/offers/structure stay identical. Newsletter/partner use needs source voice rules/examples for each party; no invented brand sound or substitute factual verification.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a useful customer newsletter issue",
+          "steps": [
+            "Edit the draft to the supplied voice without adding facts, offers or promises."
+          ]
+        },
+        {
+          "name": "Prepare a partner launch announcement pack",
+          "steps": [
+            "Check each version against the appropriate voice while keeping joint claims consistent."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "stakeholder-map-builder",
+      "reviewed_path": "catalogue-items/imported/stakeholder-map-builder/SKILL.md",
+      "sha256": "2aa28863108e2e2fdff100034f85fd4ce0f48e295ee0dbace9a2401429d27cf5",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits audience/approval communication map from supplied partnership/stakeholder facts. Source allows inferred likely groups, but they must remain proposed, not actual confirmed approvers or private personal traits. Communication plan does not send or schedule anything.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a partner launch announcement pack",
+          "steps": [
+            "Map the audiences and the people who must check the announcement."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "market-size-and-survey-planner",
+      "reviewed_path": "catalogue-items/imported/market-size-and-survey-planner/SKILL.md",
+      "sha256": "1c886208f49aa246f66db5ac03946aef5859f300d57b41d147116d9e3d859cd4",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits survey sample-size methodology with actual population/confidence/MoE/expected proportion/segment floors and stdlib script. Choose relevant survey method rather than inventing TAM for a question-only task. Default assumptions must be labelled; no implied representativeness when recruitment is nonrandom. Onboarding/config and forcing-question gates cannot be silently claimed complete.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Check a marketing survey before sending it",
+          "steps": [
+            "Check whether the questions and sample can answer the actual business decision."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "decision-checklist-runner",
+      "reviewed_path": "catalogue-items/general/decision-checklist-runner/SKILL.md",
+      "sha256": "df1c84e927294c316145cbae3dfda7bf8911cddbc95b48a4f56d9262a7755a6b",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits running an EXISTING ordered user checklist/pass lines/stop items against actual decision evidence, preserving UNKNOWN=>FAIL and wait/no rules. Requires checklist; if absent STOP and point to builder. Cannot manufacture or change criteria mid-run. Sponsorship recipe must request actual ordered checklist, not vague goals alone.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Build a clear sponsorship decision brief",
+          "steps": [
+            "Check the pilot recommendation against the user supplied audience, cost and measurement requirements, marking unknown answers."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "change-rollout-planner",
+      "reviewed_path": "catalogue-items/imported/change-rollout-planner/SKILL.md",
+      "sha256": "b04a9679c8926574c4e2edac8f8afb8609223ff5776fe3329647c988e2b0e794",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Replacement candidate full-read: suitable ADKAR organization/process/tool-change adoption plan with awareness/desire/knowledge/ability/reinforcement, training, transition support and follow-up. Does not itself verify technical migration/rollback or prove adoption. Example timelines and old-tool deprecation are proposals, not authorization; supplement with technical checks and action register.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a design system migration",
+          "steps": [
+            "Plan adoption of the approved patterns, with training, owners and acceptance checks. Keep implementation dependencies from the audit visible."
+          ]
+        },
+        {
+          "name": "Trace why work keeps missing deadlines",
+          "steps": [
+            "Plan adoption of one bounded process change with an owner, measured baseline, review date and success check."
+          ]
+        },
+        {
+          "name": "Plan a vendor change without losing work",
+          "steps": [
+            "Plan tool-change adoption, practice, support and staged transition using the assessed dependencies. Keep a rollback option until acceptance is checked."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "executive-meeting-brief",
+      "reviewed_path": "catalogue-items/general/executive-meeting-brief/SKILL.md",
+      "sha256": "0b0a37fc15ee51063cc5b0efd60abd99a327b0f3591389f18b2c7583ad5a8e76",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Replacement candidate full-read: suitable standalone sourced invite/notes brief, exact event/time/timezone/attendees/goal/open decisions, duration-matched agenda and prep gaps. Supports pasted/exported sources; no mandatory Notion. No inferred calendar coverage, automatic delivery or event changes.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a small team offsite",
+          "steps": [
+            "Prepare a standalone brief of the decision, supported facts and questions participants need to consider."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    },
+    {
+      "slug": "campaign-email-writer",
+      "reviewed_path": "catalogue-items/ecommerce/campaign-email-writer/SKILL.md",
+      "sha256": "2521b79fba2d6f865f308d450a40359b535ec88ff63de1185289049f3e8b2bb2",
+      "review": "full SKILL.md",
+      "applicability_and_findings": "Fits one online-store value/newsletter campaign email with one core message, actual product/topic facts, buyer context, voice and consent. Supplies subjects/previews, block email, plain text, variants and a claim/fact check. Explicit online-store intake is required; no invented discount, stock, deadline, reviews or founder story. Source mentions split-test sending, but this workflow remains drafts-only unless separately authorized.",
+      "applicable_workflow_uses": [
+        {
+          "name": "Prepare a useful customer newsletter issue",
+          "steps": [
+            "Use value-email mode to draft one core message around the customer question and approved store news, with subject, preview and plain-text versions. Do not invent an offer or send a test."
+          ]
+        }
+      ],
+      "agent_branch_uses": [],
+      "finding_status": "Resolved in current exported recipe; required runtime evidence remains a prerequisite, not a measured result"
+    }
+  ],
+  "reviewed_count": 58,
+  "active_component_count": 58,
+  "active_workflow_count": 30,
+  "unreviewed_active_components": [],
+  "all_active_source_hashes_match": true,
+  "recipes_source_sha256": "c316438f8d3162c7b8b5ad7e83b5812a6b029ab091d996bf98878978ae0aea7a",
+  "pending_final_recipe_tweaks": [],
+  "historical_full_source_read_count": 69,
+  "active_agent_count": 4,
+  "open_findings": [],
+  "resolutions": [
+    "Mandatory multi-agent panel replaced with heuristic reviewer.",
+    "Form step allows single-page result after field reduction.",
+    "Poster palette explicitly adapted to CSS tokens and actual pair data; rendered-image limits preserved.",
+    "Token handoff selects existing component mapping rather than generating a replacement palette.",
+    "Operational creative-brief misuse replaced with ADKAR change planning; retained client kickoff restricted to website/creative scope.",
+    "Employment handbook plugin dependency removed from general policy explanation; approved policy-owner change list supplied.",
+    "Repeat-process stage timing now required; documentation-only handover no longer invokes deterministic bottleneck mapper.",
+    "Meeting gate, required time/cost assumptions and action recap preserved; Notion-only pre-read replaced by standalone meeting brief.",
+    "Workspace grilling-only interviewer removed; supplied-loop audit plus SOP remains.",
+    "Student-method generic habit recipe deferred and excluded from exported workflows.",
+    "Single customer case promise narrowed to sourced outline; proofreading never presented as factual/consent certification.",
+    "Newsletter reply drafter replaced with store value campaign email writer, explicit online-store facts, voice and drafting-only mode.",
+    "Pre-results trust scorer removed; discovery step limited to qualitative wording/cognitive pretest while sampling stays with market-survey method.",
+    "Sponsorship A/B mismatch replaced with event sponsorship evaluation and observational limitations; ordered existing decision checklist required.",
+    "Editable deck steps use user-approved custom framework or ask, approved environment, and actual renderer or pending visual QA."
+  ]
+}

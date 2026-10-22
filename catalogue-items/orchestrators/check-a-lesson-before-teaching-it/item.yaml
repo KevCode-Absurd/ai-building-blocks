@@ -1,0 +1,48 @@
+slug: check-a-lesson-before-teaching-it
+name: Check a lesson before teaching it
+summary: Share the source files. Get a lesson review, revised sequence and short checks of understanding.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - overloaded-lesson-checker
+  - lesson-barrier-spotter
+  - lesson-understanding-check
+steps:
+  - uses: overloaded-lesson-checker
+    note: Find avoidable load, missing prerequisites and activities that compete with the central goal.
+  - uses: lesson-barrier-spotter
+    note: Identify task and language barriers using the actual learner context.
+  - uses: lesson-understanding-check
+    note: Insert brief checks where their answers would change what the teacher does next.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Overloaded lesson checker
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/cognitive-load-analyser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Lesson barrier spotter
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/inclusive-design/udl-barrier-anticipator
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Lesson understanding check planner
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/checking-for-understanding-protocol-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

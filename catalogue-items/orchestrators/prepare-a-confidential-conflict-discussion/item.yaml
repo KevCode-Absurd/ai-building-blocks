@@ -1,0 +1,53 @@
+slug: prepare-a-confidential-conflict-discussion
+name: Prepare a confidential conflict discussion
+summary: Share the source files. Get a neutral issue map, discussion guide and draft agreements.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: copy_draft
+    required: false
+  - type: transcript
+    required: false
+outputs:
+  - type: plan
+  - type: script
+  - type: meeting_notes
+  - type: document
+uses:
+  - conflict-mediation-guide
+  - feedback-conversation-planner
+  - meeting-minutes-writer
+steps:
+  - uses: conflict-mediation-guide
+    note: Separate observed events, disputed accounts and needs; identify issues requiring a formal process.
+  - uses: feedback-conversation-planner
+    note: Prepare neutral questions and a discussion structure focused on work and future behavior.
+  - uses: meeting-minutes-writer
+    note: Draft a record that distinguishes proposed agreements from decisions actually accepted.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Workplace conflict mediation guide
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-conflict-resolution
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Feedback conversation planner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/feedback-conversation-planner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Meeting minutes writer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/meeting-notes
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

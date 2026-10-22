@@ -91,11 +91,11 @@ test("the starter pack downloads the same folder every time, with the prompt, th
   expect(Buffer.compare(a.bytes, b.bytes), "same pack, same bytes").toBe(0);
   const files = unzipSync(new Uint8Array(a.bytes));
   const names = Object.keys(files);
-  expect(names).toEqual(expect.arrayContaining(["app-starter/README.md", "app-starter/START-HERE.md", "app-starter/CLAUDE.md", "app-starter/QUESTIONS.md", "app-starter/stages/5-teams-and-roles.md", "app-starter/templates/APP-BRIEF.md", "app-starter/templates/LAUNCH-CHECKLIST.md"]));
+  expect(names).toEqual(expect.arrayContaining(["app-starter/README.md", "app-starter/START-HERE.md", "app-starter/BUILD-RULES.md", "app-starter/QUESTIONS.md", "app-starter/stages/5-teams-and-roles.md", "app-starter/templates/APP-BRIEF.md", "app-starter/templates/LAUNCH-CHECKLIST.md"]));
   expect(names.filter((n) => n.startsWith("app-starter/stages/"))).toHaveLength(9);
   // Each file in the zip is the file in the repo.
   for (const n of names) expect(strFromU8(files[n]), n).toBe(fs.readFileSync(`../${n}`, "utf8").replace(/\r\n/g, "\n"));
-  expect(strFromU8(files["app-starter/CLAUDE.md"])).toContain("mock mode");
+  expect(strFromU8(files["app-starter/BUILD-RULES.md"])).toContain("mock mode");
 });
 
 test("How it works has six kinds, with routines, and its app section leads to Apps", async ({ page }) => {

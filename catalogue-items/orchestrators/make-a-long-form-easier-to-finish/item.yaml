@@ -1,0 +1,53 @@
+slug: make-a-long-form-easier-to-finish
+name: Make a long form easier to finish
+summary: Share the source files. Get a shorter field list, a revised form flow and a test script.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: web_page
+    required: false
+  - type: audit_report
+    required: false
+  - type: question
+    required: false
+  - type: persona
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - web-form-designer
+  - multi-step-form-designer
+  - small-usability-test-planner
+steps:
+  - uses: web-form-designer
+    note: Map required information, remove needless fields and define labels and validation rules.
+  - uses: multi-step-form-designer
+    note: Decide whether the retained form warrants multiple steps; keep a short simple form on one page, otherwise plan step order, saved progress and final review.
+  - uses: small-usability-test-planner
+    note: Test whether a person can finish the revised flow, recover from an error and understand what happens next.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Web form designer
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/form-strategy
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Multi-step form designer
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/multi-step-form-design
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Small usability test planner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/small-usability-test-planner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

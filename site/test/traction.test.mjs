@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import YAML from "yaml";
 import { TRACTION_CHANNELS, tractionSlug } from "../../tools/lib/traction-channels.mjs";
-import { productUrl, tractionBrief } from "../src/lib/traction.ts";
+import { BUSINESS_TYPES, growthPlan, productUrl, tractionBrief } from "../src/lib/traction.ts";
 
 test("public product URLs preserve useful query data and reject executable or private inputs", () => {
   assert.equal(productUrl("example.com/product?plan=team#pricing"), "https://example.com/product?plan=team");
@@ -19,6 +19,25 @@ test("briefs honour mode, scope and supplied limits without claiming analysis wa
   assert.match(text, /Withhold a scale verdict/);
   assert.match(tractionBrief({ ...b, channel: "all", limits: "" }), /Explore all 19/);
   assert.match(tractionBrief({ ...b, limits: "" }), /propose small limits for approval/);
+});
+
+test("businesses without websites get a useful brief with their own conversion measures", () => {
+  const b = { url: "", business: "A neighbourhood bakery making custom birthday cakes", mode: "local", buyer: "Parents planning birthdays", market: "Pune, in-store and delivery", goal: "20 cake bookings in eight weeks", limits: "INR 5000 and 3 hours per week", stage: "Established", channel: "all" };
+  const text = tractionBrief(b);
+  assert.match(text, /Local business/);
+  assert.match(text, /Not supplied; work from the description/);
+  assert.match(text, /Pune, in-store and delivery/);
+  assert.match(text, /appointments, visits or paid orders/);
+  assert.match(text, /INR 5000 and 3 hours/);
+  assert.equal(growthPlan({ ...b, success: "Paid cake bookings" }).success, "Paid cake bookings");
+  for (const type of BUSINESS_TYPES) assert.ok(growthPlan({ ...b, mode: type.value }).success.length > 20);
+  assert.notEqual(growthPlan({ ...b, mode: "nonprofit" }).success, growthPlan({ ...b, mode: "saas" }).success);
+  assert.doesNotMatch(text, /Claude|OpenAI|ChatGPT|Gemini/);
+});
+
+test("incomplete business descriptions, unknown channels and excessive input are rejected", () => {
+  const b = { url: "", business: "An agency helping independent retailers", mode: "general", goal: "", limits: "", stage: "", channel: "all" };
+  for (const change of [{ business: "" }, { business: "short" }, { mode: "invented" }, { channel: "../outside" }, { buyer: "x".repeat(601) }, { business: "x".repeat(2001) }]) assert.throws(() => growthPlan({ ...b, ...change }));
 });
 
 test("19 distinct channels have complete standalone assets and a closed workflow dependency graph", () => {

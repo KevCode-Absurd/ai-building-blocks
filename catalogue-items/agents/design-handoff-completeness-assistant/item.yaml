@@ -1,0 +1,55 @@
+slug: design-handoff-completeness-assistant
+name: Design handoff completeness assistant
+summary: A handoff change list, missing states and an implementation review request.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: design_file
+    required: false
+  - type: codebase
+    required: false
+  - type: brand_guide
+    required: false
+outputs:
+  - type: audit_report
+  - type: code_change
+  - type: design_file
+  - type: document
+uses:
+  - give-developers-a-complete-component-brief
+  - screen-states-designer
+steps:
+  - uses: give-developers-a-complete-component-brief
+    note: "Run when: The component adds a variant, changes behavior or receives an implementation question."
+  - uses: screen-states-designer
+    note: Run the component handoff workflow. If required states or accessibility behavior are missing, run screen-states-designer again; allow at most two correction passes, then list unresolved blockers.
+schedule: When a component is proposed for implementation or its design changes.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Design system auditor
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills/design-system
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Screen states designer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ui-states
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Design token builder
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/ui-design-system
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

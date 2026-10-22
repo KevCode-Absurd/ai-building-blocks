@@ -1,0 +1,50 @@
+slug: trace-why-work-keeps-missing-deadlines
+name: Trace why work keeps missing deadlines
+summary: Share the source files. Get a delay map, evidence-backed cause hypotheses and a small improvement test.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: plan
+    required: false
+  - type: lessons_register
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - process-bottleneck-finder
+  - outside-view-timeline-estimator
+  - change-rollout-planner
+steps:
+  - uses: process-bottleneck-finder
+    note: Map where the supplied work waited and which dependencies repeatedly delayed completion.
+  - uses: outside-view-timeline-estimator
+    note: Compare estimates with similar completed work and show the range and sample limits.
+  - uses: change-rollout-planner
+    note: Plan adoption of one bounded process change with an owner, measured baseline, review date and success check.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Process bottleneck finder
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/process-mapper
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Outside view timeline estimator
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/outside-view-timeline-estimator
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Change rollout planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/change-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

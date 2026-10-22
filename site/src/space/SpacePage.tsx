@@ -12,7 +12,7 @@ import { KIND_NAMES, type Item, type Kind, type NewItem, type PublicItem, SpaceE
 import "./space.css";
 
 type Toast = (m: string) => void;
-const TITLE = "AI Blocks · Use AI like the top 1%";
+const TITLE = "Free AI Skills & Custom Workflow Builder | AI Blocks";
 const useTitle = (t: string) => useEffect(() => { document.title = `${t} · AI Blocks`; return () => { document.title = TITLE; }; }, [t]);
 const KINDS: Kind[] = ["skill", "prompt", "workflow", "kit", "agent"];
 const errText = (e: unknown) => (e instanceof SpaceError ? e.message : "That didn't work. Try again.");
@@ -218,7 +218,7 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
         <header className="wrap bp-hero">
           <p className="bp-kicker"><span className="kind">My space</span>Free</p>
           <h1 className="bp-h1">Keep your skills and workflows in one place, and share them with your team</h1>
-          <p className="bp-sub">Save your own skills, prompts, workflows, kits and agents. Share the whole space with one private link: your team sees everything, and nobody else can. Make any item public when you want everyone to find it.</p>
+          <p className="bp-sub">Save your own skills, prompts, workflows, kits and agents. Anyone with your share link can read every item in the space, including items marked private. Make an item public when you want everyone to find it.</p>
         </header>
         <div className="wrap ap-body"><MakeSpace toast={toast} /></div>
       </main>

@@ -9,7 +9,7 @@ import { AREAS, REPO, SETUP_STEPS, TOUR, type Area } from "./data";
 import { FILES, STAGES, START_PROMPT, starterZip } from "./starter";
 import "./apps.css";
 
-const TITLE = "AI Blocks · Use AI like the top 1%";
+const TITLE = "Free AI Skills & Custom Workflow Builder | AI Blocks";
 const useTitle = (t: string) => useEffect(() => { document.title = `${t} · AI Blocks`; return () => { document.title = TITLE; }; }, [t]);
 const Back = () => <Link to="/apps" className="back"><span aria-hidden="true">←</span> Apps</Link>;
 
@@ -57,7 +57,7 @@ function AppsIndex() {
           <div className="ap-areas">{AREAS.map((a) => <AreaCard key={a.id} a={a} />)}</div>
         </Section>
 
-        <Section id="starter" title="Build your own with the app starter pack" lead="A folder you give to Claude Code. It asks you ten questions, writes a one-page brief, then builds one small stage at a time." wide>
+        <Section id="starter" title="Build your own with the app starter pack" lead="A folder you give to your AI coding assistant. It asks you ten questions, writes a one-page brief, then builds one small stage at a time." wide>
           <StageList />
           <p><Link to="/apps/starter-pack" className="btn btn-primary" data-testid="starter-link">Get the starter pack <ArrowIcon /></Link></p>
         </Section>
@@ -86,9 +86,9 @@ function StarterPage({ toast }: { toast: (m: string) => void }) {
     <main className="bp ap" data-testid="starter-page">
       <header className="wrap bp-hero">
         <Back />
-        <p className="bp-kicker"><span className="kind">starter pack</span>{FILES.length} files · for Claude Code</p>
+        <p className="bp-kicker"><span className="kind">starter pack</span>{FILES.length} files · for your AI coding assistant</p>
         <h1 className="bp-h1">Turn your skills and workflows into an app your team signs in to</h1>
-        <p className="bp-sub">Give this folder to Claude Code. It asks you ten questions, writes a one-page brief, and waits for your OK. Then it builds one small stage at a time and stops after each, so you can try it. Sign-in, teams and roles come when you need them. Agents only if the job needs one.</p>
+        <p className="bp-sub">Open this folder in an AI coding assistant that can read and edit files. It asks you ten questions, writes a one-page brief, and waits for your OK. Then it builds one small stage at a time and stops after each, so you can try it. Sign-in, teams and roles come when you need them. Agents only if the job needs one.</p>
         <div className="bp-actions">
           <button className="btn btn-primary" onClick={get} data-testid="starter-download">Download the starter pack <ArrowIcon /></button>
           <a href="#prompt" className="btn btn-dark">Copy the prompt</a>
@@ -99,7 +99,7 @@ function StarterPage({ toast }: { toast: (m: string) => void }) {
         <div className="bp-main">
           <Section id="how" title="How to use it">
             <ol className="num-list">
-              {["Download the folder and unzip it next to your skills: any folder with SKILL.md files, or a workflow you downloaded from the builder.", "Open the folder in Claude Code. In a Claude Project, upload the folder instead.", "Paste the prompt below. Claude lists your skills and asks its questions in one message, each with a suggested answer.", "Read the brief it writes. Say yes, or change it. No code is written before you say yes.", "Try each stage when Claude stops. Say “next stage” when it works."].map((s, n) => <li key={n}><span className="n">{n + 1}</span><span>{s}</span></li>)}
+              {["Download the folder and unzip it next to your skills: any folder with SKILL.md files, or a workflow you downloaded from the builder.", "Open the folder in your AI coding assistant, or upload its files to a chat that supports attachments.", "Paste the prompt below. Your AI lists your skills and asks its questions in one message, each with a suggested answer.", "Read the brief it writes. Say yes, or change it. No code is written before you say yes.", "Try each stage when your AI stops. Say “next stage” when it works."].map((s, n) => <li key={n}><span className="n">{n + 1}</span><span>{s}</span></li>)}
             </ol>
           </Section>
           <Section id="stages" title="Nine stages. Stop at the one that does your job." lead="Many apps stop at stage 3. Stage 5 makes it multiplayer. Stage 7 is optional.">

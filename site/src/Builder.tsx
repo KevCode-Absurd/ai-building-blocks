@@ -7,6 +7,7 @@ import {
   type Connection, type Node, type NodeProps,
 } from "@xyflow/react";
 import "@xyflow/react/dist/base.css";
+import "./workflow-selection.css";
 import { SearchIcon } from "./ui";
 import { type Block, type Catalogue, KINDS, TASKS, kindOf, loadPage, portLabel, taskOf, wireSteps, workflowEntries } from "./lib/data";
 import PixelFace from "./PixelFace";
@@ -578,7 +579,7 @@ function Stage({ c: baseCatalogue, toast }: { c: Catalogue; toast: (m: string) =
                 </div>
               )}
               <button className="sl-end" onClick={() => setInspect(START)} data-testid="list-start"><b>Start</b><small>{ends.goal.trim() || "Tap to say what it's for"}{crewLine ? `. ${crewLine}` : ""}</small></button>
-              {nodes.length ? <StepList c={c} order={listOrder} leads={leads} run={run} live={run ? runStep : 0} samples={samples} onOpen={setInspect} onMove={moveStep} onRemove={actions.remove} /> : (
+              {nodes.length ? <StepList c={c} order={listOrder} selectedId={inspect} leads={leads} run={run} live={run ? runStep : 0} samples={samples} onOpen={setInspect} onMove={moveStep} onRemove={actions.remove} /> : (
                 <div className="list-empty"><GoalBox onPlan={planGoal} big /><p className="small">Or press + on a suggestion above, or pick a ready workflow.</p><button className="link-btn" onClick={() => setInspect(START)} data-testid="empty-team">Or hand the whole job to a team of minds</button></div>
               )}
               {showEnd && <button className="sl-end" onClick={() => setInspect(END)} data-testid="list-end"><b>End</b><small>{finalsNow.length ? `Hands back ${finalsNow.join(", ").toLowerCase()}` : "What you get"}</small></button>}

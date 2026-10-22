@@ -1,10 +1,10 @@
 # Start here
 
-Paste everything below the line into Claude Code (or a Claude Project with this folder uploaded).
+Open this folder in your AI coding assistant, or upload its files to a chat that supports attachments. Paste everything below the line. The assistant needs file-editing and command tools to build and test directly; in a chat, ask for files to save and commands you can run.
 
 ---
 
-You're helping me turn my skills and workflows into a small, working app. Read `CLAUDE.md` in this folder first and follow it the whole time.
+You're helping me turn my skills and workflows into a small, working app. Read `BUILD-RULES.md` in this folder first and follow it the whole time.
 
 Work in this order, and don't skip ahead:
 

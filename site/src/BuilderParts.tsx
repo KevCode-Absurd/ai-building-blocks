@@ -24,7 +24,7 @@ export function MindPick({ c, value, onPick, label, placeholder, exclude = [], t
     return (
       <div className="mind-picked" data-testid={`${testid}-picked`}>
         <PixelFace face={picked.face} area={picked.area} slug={picked.slug} size={28} />
-        <span><b>{mindName(c, picked.slug)}</b><small>{picked.seats?.[0] ?? ""}</small></span>
+        <span><b>{mindName(c, picked.slug)}</b><small>{picked.identity || picked.seats?.[0] || ""}</small></span>
         <button type="button" className="link-btn" onClick={() => onPick(null)} data-testid={`${testid}-clear`}>Remove</button>
       </div>
     );
@@ -36,7 +36,7 @@ export function MindPick({ c, value, onPick, label, placeholder, exclude = [], t
       <span>{label}</span>
       <input list={list} value={q} placeholder={placeholder} data-testid={testid}
         onChange={(e) => { const m = find(e.target.value); if (m) { onPick(m.slug); setQ(""); } else setQ(e.target.value); }} />
-      <datalist id={list}>{all.filter((m) => !exclude.includes(m.slug)).map((m) => <option key={m.slug} value={mindName(c, m.slug)} />)}</datalist>
+      <datalist id={list}>{all.filter((m) => !exclude.includes(m.slug)).map((m) => <option key={m.slug} value={mindName(c, m.slug)}>{m.identity}</option>)}</datalist>
     </label>
   );
 }
@@ -324,8 +324,8 @@ export function GoalBox({ onPlan, big }: { onPlan: (goal: string) => boolean; bi
 }
 
 /** Phones: the workflow as a numbered list, with arrows to reorder, instead of boxes to drag. */
-export function StepList({ c, order, leads = {}, run, live, samples, onOpen, onMove, onRemove }: {
-  c: Catalogue; order: Ordered[]; leads?: Record<number, Lead>; run: number; live: number; samples: Record<string, string>; onOpen: (id: string) => void; onMove: (from: number, to: number) => void; onRemove: (id: string) => void;
+export function StepList({ c, order, selectedId, leads = {}, run, live, samples, onOpen, onMove, onRemove }: {
+  c: Catalogue; order: Ordered[]; selectedId?: string | null; leads?: Record<number, Lead>; run: number; live: number; samples: Record<string, string>; onOpen: (id: string) => void; onMove: (from: number, to: number) => void; onRemove: (id: string) => void;
 }) {
   return (
     <ol className="step-list" data-testid="step-list">
@@ -341,9 +341,9 @@ export function StepList({ c, order, leads = {}, run, live, samples, onOpen, onM
                 {carry && <span className="sl-carry">{carry}</span>}
               </div>
             )}
-            <div className="sl-row">
+            <div className="sl-row" data-selected={selectedId === o.node.id ? "true" : undefined}>
               <span className="sl-n">{o.step}</span>
-              <button className="sl-txt" onClick={() => onOpen(o.node.id)} data-testid="step-open">
+              <button className="sl-txt" aria-pressed={selectedId === o.node.id} onClick={() => onOpen(o.node.id)} data-testid="step-open">
                 <b>{b?.name ?? o.node.slug}</b>
                 <small>{leads[o.step] ? `Done like ${mindName(c, leads[o.step].mind)}${o.node.role ? `, as ${o.node.role}` : ""}` : o.node.role ? `Role: ${o.node.role}` : b ? `${taskOf(b).name}. Tap to see what it needs or add notes` : "No longer in the library"}</small>
               </button>

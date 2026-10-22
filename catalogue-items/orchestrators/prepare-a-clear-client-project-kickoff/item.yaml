@@ -1,0 +1,47 @@
+slug: prepare-a-clear-client-project-kickoff
+name: Prepare a clear client project kickoff
+summary: Share the source files. Get a kickoff brief, meeting agenda and action register.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: brief
+  - type: meeting_notes
+  - type: plan
+  - type: document
+uses:
+  - project-kickoff-brief-writer
+  - meeting-agenda-and-cost-planner
+  - executive-action-register
+steps:
+  - uses: project-kickoff-brief-writer
+    note: Summarize scope, outcomes, responsibilities, milestones and unresolved assumptions.
+  - uses: meeting-agenda-and-cost-planner
+    note: Run its ASYNC, NOT-READY or MEET gate. Use supplied attendee, duration and cost assumptions; only a MEET result gets an agenda with the required action recap.
+  - uses: executive-action-register
+    note: Convert confirmed commitments into a sourced action list; keep proposed owners unconfirmed.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Project kickoff brief writer
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/creative-brief
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Meeting agenda and cost planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/meetings/skills/meetings
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

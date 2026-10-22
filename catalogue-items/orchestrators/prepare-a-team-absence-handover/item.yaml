@@ -1,0 +1,49 @@
+slug: prepare-a-team-absence-handover
+name: Prepare a team absence handover
+summary: Share the source files. Get a coverage map, handover notes and an escalation list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - team-capacity-planner
+  - handover-note-writer
+  - executive-action-register
+steps:
+  - uses: team-capacity-planner
+    note: Compare the commitments with the actual capacity and cover available during the absence.
+  - uses: handover-note-writer
+    note: Write task-level handovers with source links, current state and the next action.
+  - uses: executive-action-register
+    note: Create a coverage action list with owners, dates, dependencies and unresolved acceptance.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Team capacity planner
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Handover note writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/handover-note-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

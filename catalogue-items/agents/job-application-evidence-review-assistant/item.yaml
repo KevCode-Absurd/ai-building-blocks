@@ -1,0 +1,54 @@
+slug: job-application-evidence-review-assistant
+name: Job application evidence review assistant
+summary: A tailored application draft, unsupported claim list and submission checklist.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: document
+  - type: copy_draft
+  - type: feedback_notes
+uses:
+  - tailor-a-job-application-to-real-evidence
+  - proofreader
+steps:
+  - uses: tailor-a-job-application-to-real-evidence
+    note: "Run when: A new role is supplied or the resume draft changes."
+  - uses: proofreader
+    note: Run the application workflow. If an assertion lacks support, ask for the actual evidence or remove it; use proofreader for at most two revision passes, then list any remaining issues. Never submit the application from this review alone.
+schedule: For each new role or material application revision.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Resume and job application builder
+    by: João Vitor Amaral
+    url: https://github.com/artificialguybr/resume-ats-linkedin-optimizer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,0 +1,49 @@
+slug: build-a-backup-recovery-rehearsal
+name: Build a backup recovery rehearsal
+summary: Share the source files. Get a recovery plan, rehearsal checklist and evidence log template.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - backup-and-recovery-planner
+  - incident-runbook-writer
+  - executive-action-register
+steps:
+  - uses: backup-and-recovery-planner
+    note: Map what must be restored, dependencies, responsible people and the stated recovery targets.
+  - uses: incident-runbook-writer
+    note: Write a safe restore rehearsal with prerequisites, stop points and rollback steps.
+  - uses: executive-action-register
+    note: Track the rehearsal tasks, evidence to collect, owners and unresolved recovery gaps.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Backup and recovery planner
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/backup-and-disaster-recovery
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Incident runbook writer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/incident-runbook-templates
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

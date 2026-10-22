@@ -138,8 +138,8 @@ export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
     <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
       style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>
       <span className="meta"><span className="kind">{kind.name}</span>{b.thinking && <ThinkBars level={b.thinking} />}{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}{b.warnings?.includes("scrapes") && <span className="from warn" data-testid="scrapes-label" title="Collects data from websites">Scrapes sites</span>}{paidService(b) && <span className="from warn" data-testid="paid-label" title={`Needs a paid ${paidService(b)} account`}>Needs a paid account</span>}<span className="type">{fmt ? (fmt === "image" ? "Image ad" : "Video ad") : taskOf(b).name}</span></span>
-      <span className="nm">{b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={32} className="card-face" />}{b.name}</span>
-      <Peek text={b.summary} />
+      <span className="nm">{b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={32} className="card-face" />}{b.name}{b.type === "mind" && b.identity && <span className="mind-identity">{b.identity}</span>}</span>
+        <Peek text={b.summary} />
       <span className="view">{view}<ArrowIcon size={12} /></span>
     </Link>
   );

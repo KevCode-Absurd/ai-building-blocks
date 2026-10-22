@@ -10,7 +10,7 @@ inputs:
   - {type: source_text, required: true}
 outputs:
   - {type: edit_plan}
-  - {type: feedback_notes!}
+  - {type: feedback_notes}
 origin: rebuilt
 version: 1.0.0
 minds: [malcolm-gladwell]

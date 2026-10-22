@@ -1,0 +1,51 @@
+slug: check-payroll-inputs-before-the-cut-off
+name: Check payroll inputs before the cut off
+summary: Share the source files. Get an exception list, source reconciliation and payroll questions for review.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: audit_report
+  - type: spreadsheet
+  - type: plan
+  - type: document
+uses:
+  - payroll-timesheet-checker
+  - spreadsheet-checker
+  - executive-action-register
+steps:
+  - uses: payroll-timesheet-checker
+    note: Use the supplied export path and read-only review steps to find missing approvals, duplicated time and inconsistencies. Use only HR supplied pay rules; stop before resolving flags, staging payroll or posting journals.
+  - uses: spreadsheet-checker
+    note: Recheck period totals, identifiers and formulas in the exception working file.
+  - uses: executive-action-register
+    note: Assign the unresolved payroll questions to approved reviewers before the stated cutoff.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Payroll timesheet checker
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/payroll-prep
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

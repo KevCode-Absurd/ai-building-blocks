@@ -1,0 +1,54 @@
+slug: turn-a-customer-interview-into-a-case-outline
+name: Turn a customer interview into a case outline
+summary: Share the source files. Get a sourced case outline, evidence gaps and a customer approval checklist.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: voc_reviews
+    required: false
+  - type: question
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: audit_report
+  - type: brief
+  - type: copy_draft
+  - type: feedback_notes
+  - type: document
+uses:
+  - customer-interview-synthesizer
+  - case-first-story-builder
+  - draft-proofreader
+steps:
+  - uses: customer-interview-synthesizer
+    note: Separate the problem, actions and observed outcomes while preserving source references. One interview is one case, not evidence of a repeated customer pattern.
+  - uses: case-first-story-builder
+    note: Build the case around the actual decision and change, marking unsupported outcomes.
+  - uses: draft-proofreader
+    note: Edit the outline wording without inventing a finished case study. Preserve source locators and the separate factual and consent checks in the hand-back acceptance rules.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Customer interview synthesizer
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/discovery-research-synthesis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Case-first story builder
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/case-first-story-builder
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Draft proofreader
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/professional-proofreader
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

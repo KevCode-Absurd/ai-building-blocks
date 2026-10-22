@@ -14,7 +14,7 @@ export type Output = {
   none?: string; boards?: string[]; group?: string; row?: string; col?: string; helper?: boolean;
 };
 export type Tool = {
-  slug: string; name: string; short: string; headline: string; summary: string; question: string; shelf: string[]; version: string; updated: string;
+  category?: string; slug: string; name: string; short: string; headline: string; summary: string; question: string; shelf: string[]; version: string; updated: string;
   checked?: string; fixedCurrency?: string;
   presets: { id: string; label: string; values?: Record<string, number> }[];
   sections?: { id: string; label: string; closed?: boolean }[];

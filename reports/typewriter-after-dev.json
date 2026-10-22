@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-22T11:21:46.543Z",
+  "origin": "http://127.0.0.1:5182",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site",
+  "baselineMs": 7610.299999999814,
+  "afterMs": 2220.0999999996275,
+  "firstCharacterMs": 123,
+  "speedup": 3.4279086527638802,
+  "reducedMotionImmediate": true,
+  "fullScreenReaderTextPreserved": true,
+  "blockedWrites": 0,
+  "providerCalls": 0
+}

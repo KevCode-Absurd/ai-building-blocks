@@ -1,13 +1,17 @@
 import { spaceKey, spaces } from "./lib/space";
+import FeaturedTools, { FeaturedWorkflows } from "./tools/FeaturedTools";
+import { syncPageMetadata } from "./lib/page-metadata";
 import { Suspense, createContext, lazy, useCallback, useContext, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState, type ComponentType, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
 import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setPrefetch, setSearch, useLocation } from "./lib/router";
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
-import { TailorDrawer, openTailor, useTailorOpener } from "./Tailor";
+import { TailorDrawer, useTailorOpener } from "./Tailor";
 import { hasBusiness, useBusiness } from "./lib/business";
 import { STARTER_PATHS, isAudienceStarter, starterFor, starterTemplate } from "./lib/audience-starters";
+import { infoPage } from "./lib/site-info.mjs";
+import SiteFooter from "./SiteFooter";
 
 const Builder = lazy(() => import("./Builder")); // the canvas loads only when someone scrolls near it
 const Globe = lazy(() => import("./Globe")); // drawn behind the hero, so the text never waits for it
@@ -39,10 +43,13 @@ const PAGES = {
   builder: () => import("./Builder"),
   intake: () => import("./IntakePage"),
   compose: () => import("./ComposePage"),
+  info: () => import("./InfoPage"),
 };
 /** Which section's code a link opens, if it isn't the home page or a block. */
 function sectionOf(to: string): keyof typeof PAGES | null {
   const path = to.split(/[?#]/)[0];
+  if (path === "/tools/growth-channel-planner") return "traction";
+  if (infoPage(path)) return "info";
   if (path === "/tools" || path.startsWith("/tools/")) return "tools";
   if (path === "/ai-tools" || path.startsWith("/ai-tools/")) return "aitools";
   if (path === "/traction") return "traction";
@@ -73,6 +80,7 @@ const SpacePage = startupPage(PAGES.space);
 const MindsPage = startupPage(PAGES.minds);
 const IntakePage = startupPage(PAGES.intake);
 const ComposePage = startupPage(PAGES.compose);
+const InfoPage = startupPage(PAGES.info);
 /** Finish an anchor landing once. Any user scroll cancels the correction. */
 function useHashLanding() {
   useEffect(() => {
@@ -159,23 +167,24 @@ function Header({ onKits }: { onKits: () => void }) {
           <Link to="/how-it-works">How it works</Link>
           <Link to="/#library">Library</Link>
           <Link to="/#build">Builder</Link>
-          <Link to="/compose" data-testid="nav-compose">From a request</Link>
-          <Link to="/minds" data-testid="nav-minds">Minds</Link>
+          <Link to="/compose" data-testid="nav-compose">Compose workflow</Link>
           <Link to="/tools">Tools</Link>
           <Link to="/apps">Apps</Link>
           <span className={`nav-more${more ? " open" : ""}`} onClick={(e) => e.stopPropagation()}>
             <button type="button" className="nav-more-btn" aria-expanded={more} aria-controls="nav-more-list" onClick={() => setMore((m) => !m)} data-testid="nav-more">More <span aria-hidden="true">▾</span></button>
             <span className="nav-more-list" id="nav-more-list" onClick={() => { setMore(false); setMenu(false); }}>
               <Link to="/ai-tools" data-testid="nav-ai-tools">AI tools</Link>
-              <Link to="/traction">Growth channels</Link>
+              <Link to="/tools/growth-channel-planner">Growth planner</Link>
               <Link to="/from-a-source" data-testid="nav-intake">Create skills from content</Link>
               <Link to="/space" data-testid="nav-space">My space</Link>
+              <button type="button" className="link-btn" onClick={onKits} data-testid="open-kits">My kits{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
+              <Link to="/support">Help & contact</Link>
             </span>
           </span>
         </nav>
         <div className="header-end">
           <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span className="context-full">Your context</span><span className="context-short">Context</span>{biz && <span className="dot" aria-label="filled in" />}</button>
-          <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits"><span className="wide-only">My kits</span><span className="narrow-only">Kits</span>{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
+          <Link to="/minds" className="btn btn-ghost btn-sm" data-testid="nav-minds">Minds</Link>
           <ThemeToggle />
           <button className="btn btn-ghost btn-sm menu-btn" aria-expanded={menu} aria-controls="site-nav" onClick={() => setMenu((m) => !m)} data-testid="menu-btn">{menu ? "Close" : "Menu"}</button>
         </div>
@@ -359,10 +368,10 @@ function KitsDrawer({ c, onClose, toBuilder, toast }: { c: Catalogue; onClose: (
  *  and the untyped part holds its space so nothing moves. Reduced motion shows it at once. */
 function Typewriter({ text }: { text: string }) {
   const [n, setN] = useState(() => (matchMedia("(prefers-reduced-motion: reduce)").matches ? text.length : 0));
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (n >= text.length) return;
     const prev = text[n - 1];
-    const t = setTimeout(() => setN(n + 1), n === 0 ? 650 : prev === "." ? 420 : prev === "," ? 220 : 22 + Math.random() * 34);
+    const t = setTimeout(() => setN(n + 1), n === 0 ? 120 : prev === "." ? 140 : prev === "," ? 70 : 8 + Math.random() * 10);
     return () => clearTimeout(t);
   }, [n, text]);
   return (
@@ -374,6 +383,13 @@ function Typewriter({ text }: { text: string }) {
 }
 
 function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void }) {
+  useEffect(() => {
+    document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks";
+    const description = "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+    for (const selector of ['meta[property="og:title"]', 'meta[name="twitter:title"]']) document.querySelector(selector)?.setAttribute("content", document.title);
+    for (const selector of ['meta[property="og:description"]', 'meta[name="twitter:description"]']) document.querySelector(selector)?.setAttribute("content", description);
+  }, []);
   // A link like /#library opened fresh: jump there once the library has drawn.
   useEffect(() => {
     if (!c || !location.hash) return;
@@ -386,8 +402,8 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
       <section className="hero">
         <Suspense fallback={null}><Globe /></Suspense>
         <div className="wrap hero-in">
-          <h1 className="h1">Use AI like the top 1%</h1>
-          <Typewriter text="Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell)." />
+          <h1 className="h1">Build AI workflows for your work</h1>
+          <Typewriter text="Find a skill for your next task, or connect several into a workflow. Edit the steps, download the pack and run it in your own AI." />
           <div className="hero-actions">
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>
@@ -399,12 +415,14 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
 
       <section className="section wrap" id="build" aria-labelledby="build-h">
         <div className="sec-head">
-          <h2 className="h2" id="build-h">Line up skills once, and your AI does the whole job</h2>
-          <p className="lede">Add skills in the order they should run, or start from a ready workflow. Download one folder, upload it to Claude, ChatGPT or any AI that reads files, and it works through every step for you.</p>
+          <h2 className="h2" id="build-h">Connect skills into a workflow you can run</h2>
+          <p className="lede">Choose skills or start from a ready workflow. Review the steps, download one folder and give it to your AI to work through.</p>
         </div>
         <p className="builder-app-link">Want a screen your team can use? <Link to="/apps/starter-pack">Turn your workflow into an app <ArrowIcon size={12} /></Link> <Link to="/apps">See the Mercatura example</Link></p>
         <WhenNear id="build" fallback={<div className="builder" />}>{c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={toast} /></Suspense>}</WhenNear>
       </section>
+      <FeaturedTools />
+      {c && <FeaturedWorkflows c={c} />}
     </main>
   );
 }
@@ -423,7 +441,7 @@ export default function App() {
   useHashLanding();
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
-  const needsCatalogue = !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction"].some((p) => path === p || path.startsWith(`${p}/`));
+  const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction"].some((p) => path === p || path.startsWith(`${p}/`));
   const c = useCatalogue(needsCatalogue || kitsOpen);
   const [bizOpen, setBizOpen] = useState(false);
   const closeBiz = useCallback(() => setBizOpen(false), []);
@@ -442,7 +460,7 @@ export default function App() {
   const now = (s: string | null) => (c && s ? c.bySlug[s] ?? c.bySlug[c.renamed?.[s] ?? ""] : undefined);
   const old = now(search.get("block"));
   const here = now(pageSlug);
-  const redirectTo = old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null;
+  const redirectTo = path === "/traction" ? "/tools/growth-channel-planner" : old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null;
   // Optional library data must not delay the home hero or the space form.
   const waitingForCatalogue = !c && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)
     || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
@@ -450,14 +468,7 @@ export default function App() {
     if (redirectTo) navigate(redirectTo, { replace: true });
   }, [redirectTo]);
 
-  // One address per page for search engines and shared links.
-  useEffect(() => {
-    let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    if (!link) { link = document.createElement("link"); link.rel = "canonical"; document.head.appendChild(link); }
-    // No trailing slash: /skills/x and /skills/x/ are one page.
-    link.href = `https://useaiblocks.com${path.length > 1 ? path.replace(/\/+$/, "") : path}`;
-    document.querySelector('meta[property="og:url"]')?.setAttribute("content", link.href);
-  }, [path]);
+  useEffect(() => syncPageMetadata(path), [path]);
 
   const toBuilder = useCallback((slugs: string[], asNew?: string) => {
     queueForCanvas(slugs, asNew);
@@ -468,10 +479,14 @@ export default function App() {
 
   return (
     <>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Header onKits={() => setKitsOpen(true)} />
+      <div id="main-content" tabIndex={-1}>
       <StartupContext.Provider value={!redirectTo && !waitingForCatalogue}>
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}>
-          {path === "/traction" ? (
+          {infoPage(path) ? (
+            <InfoPage path={path} toast={setToast} />
+          ) : path === "/traction" || path === "/tools/growth-channel-planner" ? (
             <TractionPage />
           ) : path === "/tools" || path.startsWith("/tools/") ? (
             <ToolsPage path={path} toast={setToast} />
@@ -491,29 +506,15 @@ export default function App() {
             <HowItWorks toast={setToast} />
           ) : pageSlug ? (
             c ? <BlockPage c={c} slug={pageSlug} toast={setToast} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
-          ) : (
+          ) : path === "/" ? (
             <Home c={c} toast={setToast} />
+          ) : (
+            <main className="wrap bp-hero"><StartupReady /><h1 className="bp-h1">This page doesn't exist</h1><p className="lede">The address may have changed. Find a block in the library or ask us for help.</p><div className="hero-actions"><Link to="/#library" className="btn btn-primary">Browse the library</Link><Link to="/support" className="btn btn-dark">Get help</Link></div></main>
           )}
         </Suspense>
       </StartupContext.Provider>
-      <footer className="footer">
-        <div className="wrap footer-in">
-          <span>© 2026 AI Blocks · useaiblocks.com</span>
-          <nav aria-label="More">
-            <Link to="/tools">Mini tools</Link>
-            <Link to="/ai-tools">AI tools</Link>
-            <Link to="/traction">Growth channels</Link>
-            <Link to="/from-a-source">Create skills from content</Link>
-            <Link to="/compose">Workflow from a request</Link>
-            <Link to="/apps">Apps</Link>
-            <Link to="/apps/starter-pack">App starter pack</Link>
-            <Link to="/space">My space</Link>
-            <Link to="/people">From people</Link>
-            <Link to="/how-it-works">How it works</Link>
-            <button className="link-btn" onClick={() => openTailor()} data-testid="tailor-footer">Get a skill tailored for you</button>
-          </nav>
-        </div>
-      </footer>
+      </div>
+      <SiteFooter />
       {bizOpen && <BusinessDrawer onClose={closeBiz} toast={setToast} />}
       {tailor !== null && <TailorDrawer skill={tailor} onClose={closeTailor} toast={setToast} />}
       {c && kitsOpen && <KitsDrawer c={c} onClose={closeKits} toBuilder={toBuilder} toast={setToast} />}

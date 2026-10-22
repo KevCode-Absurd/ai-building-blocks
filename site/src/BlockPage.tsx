@@ -146,7 +146,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     loadSkillText(slug).then(setSkill);
     markViewed(slug);
   }, [slug]);
-  useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "AI Blocks · Use AI like the top 1%"; }; }, [b]);
+  useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks"; }; }, [b]);
 
   if (!b) {
     return (
@@ -233,6 +233,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         {b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={112} className="bp-face" />}
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
         <h1 className="bp-h1">{p?.headline || b.name}</h1>
+        {b.type === "mind" && b.identity && <p className="bp-identity" data-testid="mind-identity">{b.identity}</p>}
         <p className="bp-sub">{p?.subhead || b.summary}</p>
         {b.origin === "imported" && b.source && <Credit b={b} source={{ ...b.source, ...p?.source }} />}
         {b.warnings?.includes("scrapes") && (

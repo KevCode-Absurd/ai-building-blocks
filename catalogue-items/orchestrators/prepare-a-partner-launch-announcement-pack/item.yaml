@@ -1,0 +1,54 @@
+slug: prepare-a-partner-launch-announcement-pack
+name: Prepare a partner launch announcement pack
+summary: Share the source files. Get a shared message brief, announcement drafts and an approval tracker.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: script
+    required: false
+  - type: ad_copy
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: plan
+  - type: document
+  - type: audit_report
+uses:
+  - stakeholder-map-builder
+  - stakeholder-update-writer
+  - brand-voice-editor
+steps:
+  - uses: stakeholder-map-builder
+    note: Map the audiences and the people who must check the announcement.
+  - uses: stakeholder-update-writer
+    note: Draft the core announcement and audience variants using the agreed facts.
+  - uses: brand-voice-editor
+    note: Check each version against the appropriate voice while keeping joint claims consistent.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Stakeholder map builder
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/stakeholder-map
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Brand voice editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/brand-voice-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

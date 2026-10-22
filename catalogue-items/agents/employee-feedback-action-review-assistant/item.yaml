@@ -1,0 +1,56 @@
+slug: employee-feedback-action-review-assistant
+name: Employee feedback action review assistant
+summary: A progress brief, new themes and proposed updates to the employee response.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: document
+  - type: plan
+  - type: audit_report
+uses:
+  - turn-employee-feedback-into-owned-actions
+  - executive-action-register
+steps:
+  - uses: turn-employee-feedback-into-owned-actions
+    note: "Run when: New anonymized feedback arrives or an agreed action is overdue or blocked."
+  - uses: executive-action-register
+    note: Run the listening workflow for new themes. For existing actions, use executive-action-register to compare evidence with the agreed commitments and draft only the changed update.
+schedule: At the agreed review dates after an employee listening exercise.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Employee survey designer
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-employee-listening
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: People risk register builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-risk-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

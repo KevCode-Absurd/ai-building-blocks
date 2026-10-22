@@ -3,12 +3,14 @@
 // what you type is kept only in this browser. Loaded on demand, so the home page never waits for it.
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import "./tools.css";
+import BrowserTool from "./BrowserTool";
+import { BROWSER_TOOLS } from "./browser-tools.mjs";
 import { ArrowIcon, SearchIcon } from "../ui";
 import { Link, setSearch, useLocation } from "../lib/router";
 import { monthOf, pathOf, useCatalogue } from "../lib/data";
-import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, shelfLabel, type Input, type Line, type Tool } from "./registry";
+import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, type Input, type Line, type Tool } from "./registry";
 
-const TITLE = "AI Blocks · Use AI like the top 1%";
+const TITLE = "Free AI Skills & Custom Workflow Builder | AI Blocks";
 const store = {
   get<T>(key: string, fallback: T): T { try { const v = localStorage.getItem(key); return v ? (JSON.parse(v) as T) : fallback; } catch { return fallback; } },
   set(key: string, v: unknown) { try { localStorage.setItem(key, JSON.stringify(v)); } catch { /* private mode: still works for this visit */ } },
@@ -17,8 +19,8 @@ const asText = (d: Record<string, number>) => Object.fromEntries(Object.entries(
 const unitMark = (u: string, sym: string) => (u === "money" || u === "smallmoney" ? sym : u === "percent" ? "%" : u === "x" ? "x" : "");
 
 async function copy(text: string, toast: (m: string) => void, what: string) {
-  await navigator.clipboard.writeText(text).catch(() => {});
-  toast(`Copied the ${what}`);
+  try { await navigator.clipboard.writeText(text); toast(`Copied the ${what}`); }
+  catch { toast(`The ${what} could not be copied. Select it and copy manually, or use the download.`); }
 }
 function save(blob: Blob, name: string) {
   const url = URL.createObjectURL(blob);
@@ -238,7 +240,7 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
               <p className="mt-small">Google Sheets: File &gt; Import &gt; Upload, then pick the file.</p>
             </Way>
             <Way n={4} title="In your AI" testId="way-ai">
-              <p>A skill and a prompt for Claude, ChatGPT and Gemini. Your AI asks for your numbers, runs the sums as code and shows each line.</p>
+              <p>A skill and a prompt for an AI tool that can run code. It asks for your numbers, runs the sums and shows each line.</p>
               <div className="mt-btns">
                 <a className="btn btn-primary btn-sm" href={`${files}/${tool.slug}-skill.zip`} download data-testid="download-skill">Download the skill</a>
                 <button className="btn btn-dark btn-sm" disabled={!prompt} onClick={() => prompt && copy(prompt, toast, "prompt")} data-testid="copy-prompt">Copy the prompt</button>
@@ -277,56 +279,55 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
 function ToolsIndex() {
   const { search } = useLocation();
   const [q, setQ] = useState(() => search.get("q") ?? "");
-  const [category, setCategory] = useState("");
-  useEffect(() => { setSearch({ q }); }, [q]);
   const categories = [
-    { id: "", name: "All tools" },
-    { id: "ads", name: "Ads" },
-    { id: "pricing", name: "Profit and cash" },
-    { id: "customers", name: "Customers" },
-    { id: "work", name: "People and AI" },
+    { id: "", name: "All tools" }, { id: "personal", name: "Everyday life" },
+    { id: "growth", name: "Growth" },
+    { id: "design", name: "Design" }, { id: "hr", name: "HR and hiring" },
+    { id: "work", name: "Productivity and AI" }, { id: "finance", name: "Finance" }, { id: "pricing", name: "Business pricing" },
+    { id: "operations", name: "Operations" }, { id: "compliance", name: "Compliance planning" },
+    { id: "ads", name: "Marketing" }, { id: "customers", name: "Customers" },
   ];
+  const [category, setCategory] = useState(() => categories.some(c => c.id === search.get("topic")) ? search.get("topic")! : "");
+  useEffect(() => { setSearch({ q, topic: category }); }, [q, category]);
   const topics: Record<string, string[]> = {
     ads: ["creative-volume-planner", "page-test-calculator", "ad-budget-planner", "creator-deal-calculator", "ad-test-size", "launch-revenue-planner", "content-cost-per-piece", "agency-or-in-house"],
     customers: ["repeat-customer-profit", "customer-payback", "email-list-value", "subscription-revenue-forecast", "subscriber-lifetime-value", "email-frequency-planner"],
-    work: ["ai-run-cost", "hourly-rate", "meeting-cost", "hire-or-freelance", "new-hire-break-even", "hire-runway-cost", "ai-time-saved"],
+    work: ["ai-run-cost", "hourly-rate", "meeting-cost", "ai-time-saved"],
+    hr: ["hire-or-freelance", "new-hire-break-even", "hire-runway-cost"],
+    operations: ["reorder-point", "stock-weeks-of-cover"],
   };
-  const group = (t: Tool) => Object.keys(topics).find((key) => topics[key].includes(t.slug)) ?? "pricing";
+  const growth = { slug: "growth-channel-planner", short: "Growth channel planner", name: "Growth channel planner", headline: "Plan growth for any business", category: "growth", kind: "planner", summary: "Prepare a business brief, compare 19 channels and download a complete planning skill pack. No website required.", question: "Growth marketing customer acquisition planning for any business, local shop, nonprofit or ecommerce." };
+  const all = [growth, ...BROWSER_TOOLS, ...TOOLS];
+  const group = (t: typeof all[number]) => t.category || Object.keys(topics).find(key => topics[key].includes(t.slug)) || "pricing";
   const words = q.toLowerCase().replace(/[_-]/g, " ").split(/\s+/).filter(Boolean);
-  const shown = TOOLS.filter((t) => (!category || group(t) === category) && words.every((w) => `${t.name} ${t.summary} ${t.question} ${t.slug}`.toLowerCase().replace(/[_-]/g, " ").includes(w)));
-  useEffect(() => { document.title = "Free mini tools · AI Blocks"; return () => { document.title = TITLE; }; }, []);
-  return (
-    <main className="bp mt" data-testid="tools-index">
-      <header className="wrap bp-hero">
-        <Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
-        <p className="bp-kicker"><span className="kind">Mini tools</span>{TOOLS.length} free calculators</p>
-        <h1 className="bp-h1">Know your numbers before you spend money</h1>
-        <p className="bp-sub">Calculators for discounts, deals, ads, repeat customers, page tests, AI costs and your hourly rate. Type your numbers and see the answer and every line of the sum. No sign-up, and what you type stays in your browser.</p>
-      </header>
-      <div className="wrap mt-index">
-        <label className="search tools-search"><SearchIcon /><span className="visually-hidden">Find a calculator</span><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search tools by name or what you want to calculate" data-testid="tools-search" /></label>
-        <div className="tools-categories" role="group" aria-label="Calculator topic">{categories.map((x) => <button type="button" className="chip" key={x.id} aria-pressed={category === x.id} onClick={() => setCategory(x.id)}>{x.name}</button>)}</div>
-        <p className="result-line" role="status">{shown.length} tool{shown.length === 1 ? "" : "s"}{(q || category) && <button className="link-btn" onClick={() => { setQ(""); setCategory(""); }}>Clear filters</button>}</p>
-        {!shown.length && <p className="empty">No tools match. Try fewer words or choose another topic.</p>}
-        <div className="grid">
-          {shown.map((t) => (
-            <Link key={t.slug} to={`/tools/${t.slug}`} className="card mt-card" data-testid="tool-card" data-slug={t.slug}>
-              <span className="meta"><span className="kind">{t.short}</span><span className="type">{shelfLabel(t)}</span></span>
-              <span className="nm">{t.name}</span>
-              <span className="peek">{t.summary}</span>
-              <span className="view">Open the calculator <ArrowIcon size={12} /></span>
-            </Link>
-          ))}
-        </div>
-        <p className="bp-note mt-index-note">Every tool works five ways: on this site, as a download that works offline, as a spreadsheet, in your AI, and on your own website.</p>
-      </div>
-    </main>
-  );
+  const matches = all.filter(t => words.every(w => `${t.name} ${t.summary} ${t.question} ${t.slug} ${categories.find(c => c.id === group(t))?.name ?? ""}`.toLowerCase().replace(/[_-]/g, " ").includes(w)));
+  const shown = matches.filter(t => !category || group(t) === category);
+  useEffect(() => { document.title = "Free everyday tools · AI Blocks"; return () => { document.title = TITLE; }; }, []);
+  return <main className="bp mt" data-testid="tools-index">
+    <header className="wrap bp-hero"><Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
+      <p className="bp-kicker"><span className="kind">Everyday tools</span>{all.length} free tools</p>
+      <h1 className="bp-h1">Work out the numbers. Get the small jobs done.</h1>
+      <p className="bp-sub">Tools for design, money, hiring, everyday work and life. Clean text, compare options, convert data or plan your budget. Your input stays in your browser.</p>
+    </header>
+    <div className="wrap mt-index">
+      <label className="search tools-search"><SearchIcon /><span className="visually-hidden">Find a tool</span><input value={q} onChange={e => setQ(e.target.value)} placeholder="Search for a tool or a job to get done" data-testid="tools-search" /></label>
+      <div className="tools-categories" role="group" aria-label="Tool topic">{categories.map(x => <button type="button" className="chip" key={x.id} aria-pressed={category === x.id} onClick={() => setCategory(x.id)}>{x.name} <span className="small">{matches.filter(t => !x.id || group(t) === x.id).length}</span></button>)}</div>
+      <p className="result-line" role="status">{shown.length} tool{shown.length === 1 ? "" : "s"}{(q || category) && <button className="link-btn" onClick={() => { setQ(""); setCategory(""); }}>Clear filters</button>}</p>
+      {!shown.length && <p className="empty">No tools match this search. Try fewer words or clear the filters.</p>}
+      <div className="grid">{shown.map(t => <Link className="card mt-card" key={t.slug} to={`/tools/${t.slug}`} data-testid="tool-card" data-slug={t.slug}>
+        <span className="meta"><span className="kind">{t.slug === growth.slug ? "Planner" : "kind" in t ? "Browser tool" : "Calculator"}</span><span className="type">{categories.find(c => c.id === group(t))?.name}</span></span>
+        <span className="nm">{t.short}</span><span className="peek">{t.summary}</span><span className="view">Open {t.slug === growth.slug ? "planner" : "kind" in t ? "tool" : "calculator"} <ArrowIcon size={12} /></span>
+      </Link>)}</div>
+      <p className="bp-note mt-index-note">Calculators include offline, spreadsheet, AI and embed versions. Browser tools export their result. The growth planner prepares a brief and skill pack.</p>
+    </div>
+  </main>;
 }
 
 export default function ToolsPage({ path, toast }: { path: string; toast: (m: string) => void }) {
   const slug = path.split("/").filter(Boolean)[1];
   if (!slug) return <ToolsIndex />;
+  const browserTool = BROWSER_TOOLS.find(t => t.slug === slug);
+  if (browserTool) return <BrowserTool key={slug} tool={browserTool} toast={toast} />;
   const tool = TOOLS.find((t) => t.slug === slug);
   if (!tool) {
     return (

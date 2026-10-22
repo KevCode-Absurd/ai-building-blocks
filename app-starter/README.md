@@ -2,9 +2,9 @@
 
 Turn the skills and workflows you already use into an app your team can sign in to. From AI Blocks (useaiblocks.com/apps/starter-pack).
 
-1. Put this folder next to your skills (any folder with `SKILL.md` files) and open it in Claude Code, or upload it to a Claude Project.
+1. Put this folder next to your skills (any folder with `SKILL.md` files) and open it in an AI coding assistant that can read and edit files. In a chat, upload the files and save the code it returns.
 2. Paste the prompt in `START-HERE.md`.
-3. Answer the questions. Claude writes a one-page brief, waits for your OK, then builds one stage at a time.
+3. Answer the questions. Your AI writes a one-page brief, waits for your OK, then builds one stage at a time.
 
 You don't need every stage. Many apps stop at stage 3. Agents (stage 7) are optional.
 

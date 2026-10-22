@@ -1,0 +1,55 @@
+slug: plan-a-difficult-feedback-conversation
+name: Plan a difficult feedback conversation
+summary: Share the source files. Get a feedback conversation plan, opening lines and listening prompts.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: copy_draft
+    required: false
+  - type: feedback_notes
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+  - type: feedback_notes
+  - type: document
+uses:
+  - feedback-conversation-planner
+  - hard-feedback-message-writer
+  - plain-english-editor
+steps:
+  - uses: feedback-conversation-planner
+    note: Clarify the specific behavior or issue and the outcome you want from the conversation.
+  - uses: hard-feedback-message-writer
+    note: Draft a direct opening grounded in evidence and a clear, fair request.
+  - uses: plain-english-editor
+    note: Edit the opening and listening prompts for clarity, preserving supported observations and room for the other person to disagree.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Feedback conversation planner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/feedback-conversation-planner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Hard feedback message writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/hard-feedback-message-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -203,13 +203,12 @@ ${buildPython(tool, site)}\`\`\`
 /** How to keep it in your AI, so you don't paste it every time. Plain steps; the site shows the same ones. */
 export function saveSteps(tool) {
   return [
-    { ai: "Claude, as a skill", steps: [`Download the skill (${tool.slug}-skill.zip).`, "In Claude, open Settings, then Capabilities, and make sure Code execution and file creation is on.", "Under Skills, click Upload skill and pick the .zip.", `In any chat, ask Claude to "use the ${tool.slug} skill".`] },
-    { ai: "Claude, as a Project", steps: ["In Claude, create a new Project.", "Paste the prompt into the project's instructions.", "Start each chat inside that project and type your numbers."] },
-    { ai: "ChatGPT, as a custom GPT", steps: ["In ChatGPT, open GPTs, click Create, then Configure.", `Name it "${tool.short}" and paste the prompt into Instructions.`, "Under Capabilities, turn on Code Interpreter & Data Analysis, so it runs the sums as code.", "Click Create and keep it to Only me. Making a GPT needs a paid plan; on the free plan, paste the prompt into a Project instead."] },
-    { ai: "Gemini, as a Gem", steps: ["In Gemini, open Gems and click New Gem.", `Name it "${tool.short}" and paste the prompt into Instructions.`, "Click Save. Open the Gem whenever you need it, and check it runs the code before it answers."] },
+    { ai: "Chat assistant with code execution", steps: [`Download the skill (${tool.slug}-skill.zip) and unzip it.`, "Attach SKILL.md to a chat that can run Python, or paste its contents.", `Ask your AI to use the ${tool.slug} skill and supply your numbers.`, "If code execution is unavailable, use the browser calculator or spreadsheet instead."] },
+    { ai: "Coding assistant with file access", steps: ["Unzip the skill folder in your workspace, keeping its files together.", "Ask your assistant to read SKILL.md and run the included Python with your numbers.", "Check the printed answer and working before using the result."] },
+    { ai: "Reusable project or assistant", steps: [`Create a project or reusable assistant named "${tool.short}" in a tool that supports instructions and code execution.`, "Save the skill files or paste the prompt into its instructions, checking the tool's size limit.", "Start your requests there and supply your numbers. Check that it runs the code before answering."] },
   ];
 }
 
 export function buildGuide(tool) {
-  return `# Keep the ${tool.short.toLowerCase()} in your AI\n\nSave it once, then ask for it in any chat. The AI asks for your numbers, runs the sums as code and shows each line.\n\n${saveSteps(tool).map((s) => `## ${s.ai}\n${s.steps.map((x, i) => `${i + 1}. ${x}`).join("\n")}`).join("\n\n")}\n`;
+  return `# Keep the ${tool.short.toLowerCase()} in your AI\n\nChoose a chat, coding assistant or reusable project that can run Python. Give it the skill and your numbers; it runs the code and shows each line.\n\n${saveSteps(tool).map((s) => `## ${s.ai}\n${s.steps.map((x, i) => `${i + 1}. ${x}`).join("\n")}`).join("\n\n")}\n`;
 }

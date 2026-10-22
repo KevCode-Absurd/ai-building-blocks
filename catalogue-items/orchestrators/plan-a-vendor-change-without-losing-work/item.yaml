@@ -1,0 +1,48 @@
+slug: plan-a-vendor-change-without-losing-work
+name: Plan a vendor change without losing work
+summary: Share the source files. Get a vendor decision, migration plan and continuity checklist.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - vendor-comparison-writer
+  - project-risk-portfolio
+  - change-rollout-planner
+steps:
+  - uses: vendor-comparison-writer
+    note: Compare the replacement options using the required tasks, costs and actual supplied evidence.
+  - uses: project-risk-portfolio
+    note: Map migration dependencies, data risks, overlap costs and fallback options.
+  - uses: change-rollout-planner
+    note: Plan tool-change adoption, practice, support and staged transition using the assessed dependencies. Keep a rollback option until acceptance is checked.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Project risk and portfolio manager
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/senior-pm
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Change rollout planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/change-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

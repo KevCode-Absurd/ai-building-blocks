@@ -1,0 +1,46 @@
+slug: prepare-your-first-freelance-project-quote
+name: Prepare your first freelance project quote
+summary: Share the source files. Get a scoped proposal draft, price assumptions and a contract review list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+  - type: document
+  - type: audit_report
+uses:
+  - web-project-scoper
+  - contract-and-proposal-drafter
+  - contract-risk-reviewer
+steps:
+  - uses: web-project-scoper
+    note: Turn the request into bounded deliverables, dependencies, exclusions and acceptance criteria.
+  - uses: contract-and-proposal-drafter
+    note: Draft a proposal from the agreed scope and supplied price assumptions without inventing commitments.
+  - uses: contract-risk-reviewer
+    note: Flag unclear acceptance, payment, ownership and revision terms for the appropriate reviewer.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Web project scoper
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/web-project-brainstorming
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Contract and proposal drafter
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/contract-and-proposal-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Contract risk reviewer
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/legal-and-compliance/contract-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

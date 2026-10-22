@@ -1,0 +1,54 @@
+slug: study-plan-progress-review-assistant
+name: Study plan progress review assistant
+summary: A progress review, adjusted practice plan and the next understanding check.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: document
+  - type: feedback_notes
+uses:
+  - choose-a-study-plan-you-can-keep
+  - study-understanding-check
+steps:
+  - uses: choose-a-study-plan-you-can-keep
+    note: "Run when: A checkpoint arrives, practice reveals a new gap or available time changes."
+  - uses: study-understanding-check
+    note: Use study-understanding-check on the learner actual recent answers. When the learner is absent, review only supplied answers and prepare an unrun next check; never invent responses or mastery. Keep successful parts of the plan; rerun the study planning workflow only for missed prerequisites, persistent errors or changed time. Mark the review incomplete if no practice evidence is available.
+schedule: Weekly or at the learner agreed checkpoint.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Topic learning roadmap
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/topic-map
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Study strategy picker
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/self-regulated-learning/study-strategy-selector
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Study session planner and review
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/srl-session-wrapper
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Study understanding check
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/understanding-check
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

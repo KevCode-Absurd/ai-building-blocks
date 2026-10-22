@@ -1,0 +1,50 @@
+slug: prepare-feedback-students-can-act-on
+name: Prepare feedback students can act on
+summary: Share the source files. Get criterion-linked feedback, a revision task and a teacher review list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: feedback_notes
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+  - type: copy_draft
+uses:
+  - single-point-rubric-builder
+  - written-feedback-checker
+  - practice-problem-set-writer
+steps:
+  - uses: single-point-rubric-builder
+    note: Clarify the target standard and observable evidence for the supplied task.
+  - uses: written-feedback-checker
+    note: Check whether the draft feedback is specific, accurate and useful for the next revision.
+  - uses: practice-problem-set-writer
+    note: Create a short, checked revision task targeting the specific gap identified in the feedback.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Single-point rubric builder
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/original-frameworks/single-point-rubric-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Written feedback checker
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/feedback-quality-analyser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Practice problem set writer
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/practice-problem-sequence-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

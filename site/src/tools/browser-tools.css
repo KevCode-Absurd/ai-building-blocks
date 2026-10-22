@@ -1,0 +1,10 @@
+.browser-tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; margin-bottom: 64px; }
+.browser-tool-grid section { min-width: 0; }
+.browser-tool label { display: block; margin-bottom: 12px; font-size: 15px; }
+.browser-tool input, .browser-tool select, .browser-tool textarea { display: block; box-sizing: border-box; width: 100%; margin-top: 8px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; color: var(--text); background: var(--panel); font: inherit; }
+.browser-tool textarea { min-height: 320px; resize: vertical; font-family: var(--mono); font-size: 14px; }
+.browser-output { white-space: pre-wrap; overflow-wrap: anywhere; padding: 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); font: 14px/1.65 var(--mono); min-height: 160px; }
+.browser-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.browser-error { color: var(--text); padding: 20px; border: 1px solid currentColor; border-radius: 8px; overflow-wrap: anywhere; }
+.contrast-preview { padding: 30px; border: 1px solid var(--line); border-radius: 8px; font-size: 20px; }
+@media(max-width: 700px) { .browser-tool-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; } .browser-tool textarea { min-height: 220px; } }

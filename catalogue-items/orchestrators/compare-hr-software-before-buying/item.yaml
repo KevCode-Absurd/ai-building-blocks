@@ -1,0 +1,48 @@
+slug: compare-hr-software-before-buying
+name: Compare HR software before buying
+summary: Share the source files. Get a vendor comparison, privacy questions and a recommendation to review.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: audit_report
+  - type: plan
+uses:
+  - hr-vendor-selection-planner
+  - hr-ai-tool-vendor-checker
+  - vendor-comparison-writer
+steps:
+  - uses: hr-vendor-selection-planner
+    note: Define the must-have tasks and evaluate the supplied vendors against the same criteria.
+  - uses: hr-ai-tool-vendor-checker
+    note: Review AI features, employee data handling and evidence of controls for the shortlisted vendors.
+  - uses: vendor-comparison-writer
+    note: Combine price, fit, implementation effort and open questions into a decision brief.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: HR vendor selection planner
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-vendor-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: HR AI tool vendor checker
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-ai-evaluation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

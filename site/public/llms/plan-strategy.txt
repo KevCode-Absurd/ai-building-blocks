@@ -1,6 +1,6 @@
 # Plan your strategy: AI Blocks
 
-> 199 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 200 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [90-day plan builder](https://useaiblocks.com/skills/90-day-plan-builder): Give it a decision you made. Get a 12-week plan with owners, check-ins and risks.
 - [Affiliate experiment planner](https://useaiblocks.com/skills/traction-affiliate-programs): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
@@ -20,6 +20,7 @@
 - [Brand positioning sentence writer](https://useaiblocks.com/prompts/one-line-position-writer): Paste your product and rivals. Get the one word to own, one plain line and a stretch limit.
 - [Brand reach audit](https://useaiblocks.com/skills/brand-reach-audit): Paste your sales and what you know of your buyers. Get where you are hard to think of or hard to buy.
 - [Brand strategy report writer](https://useaiblocks.com/skills/brand-strategy-report-writer): Answer a set of brand questions. Get a full brand strategy report for your business or your client.
+- [Build a clear sponsorship decision brief](https://useaiblocks.com/workflows/build-a-clear-sponsorship-decision-brief): Share the source files. Get an audience fit review, cost comparison and a bounded pilot recommendation.
 - [Build a developer partner program](https://useaiblocks.com/workflows/build-a-developer-partner-program): Share your platform and partner goals. Get an adoption program, partner incentives and tests for shared growth.
 - [Business activity metric planner](https://useaiblocks.com/skills/input-metric-picker): Paste the numbers you report. Get the inputs you control, a proxy test for each and one output to check them.
 - [Business buyer trust builder](https://useaiblocks.com/skills/business-buyer-trust-builder): Say who buys from you. Get a plan for thought leadership and trust with slow, careful business buyers.

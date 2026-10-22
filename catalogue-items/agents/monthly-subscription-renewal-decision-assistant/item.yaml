@@ -1,0 +1,51 @@
+slug: monthly-subscription-renewal-decision-assistant
+name: Monthly subscription renewal decision assistant
+summary: A changed-only renewal brief with notice deadlines, options and proposed owner actions.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - find-duplicate-and-unused-business-subscriptions
+  - vendor-agreement-status-checker
+steps:
+  - uses: find-duplicate-and-unused-business-subscriptions
+    note: "Run when: A renewal enters the owner chosen decision window, a quote changes or usage materially changes."
+  - uses: vendor-agreement-status-checker
+    note: Run the renewal workflow for affected subscriptions. If notice terms or usage are missing, run vendor-agreement-status-checker and produce evidence requests before recommending cancellation.
+schedule: Monthly, or when a dated renewal notice arrives; configure a schedule separately if requested.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Spend savings finder
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/spend-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Vendor agreement status checker
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/vendor-check
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

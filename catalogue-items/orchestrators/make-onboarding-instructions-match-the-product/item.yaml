@@ -1,0 +1,50 @@
+slug: make-onboarding-instructions-match-the-product
+name: Make onboarding instructions match the product
+summary: Share the source files. Get a corrected first-use flow, revised labels and a walkthrough checklist.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: false
+  - type: persona
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+  - type: document
+uses:
+  - first-use-onboarding-designer
+  - plain-words-interface-rewriter
+  - in-app-tour-designer
+steps:
+  - uses: first-use-onboarding-designer
+    note: Use supplied user tasks, the first useful result and ethical constraints to choose the smallest onboarding path. Mark missing audience evidence before proposing behavioral changes.
+  - uses: plain-words-interface-rewriter
+    note: Rewrite the selected screens and prompts using the product vocabulary people already understand.
+  - uses: in-app-tour-designer
+    note: Plan optional guidance for the revised flow, with skip, resume and completion behavior.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: First-use onboarding designer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/onboarding-psychologist
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain words interface rewriter
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-words-interface-rewriter
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: In-app tour designer
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/interactive-product-tour
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

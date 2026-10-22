@@ -1,6 +1,6 @@
 # Write down how work gets done: AI Blocks
 
-> 32 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 34 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Analysis assumptions logger](https://useaiblocks.com/skills/analysis-assumptions-logger): Tell it about your analysis. Get every assumption logged with its risk, so reviewers see what could change the answer.
 - [Analysis write-up builder](https://useaiblocks.com/skills/analysis-write-up-builder): Give it your finished analysis. Get a write-up with the question, data, method, results and steps to rerun it.
@@ -17,6 +17,8 @@
 - [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer): Paste what you are handing over and to whom. Get a note the next person can run from on day one.
 - [Lab method validation planner](https://useaiblocks.com/skills/lab-method-validation-planner): Name the lab test method and rules. Get a validation plan, acceptance limits and a write-up ready for review.
 - [Lessons learned note writer](https://useaiblocks.com/prompts/lessons-learned-note-writer): Paste what happened on a finished project. Get a one-page note with what to repeat and what to change.
+- [Make a new policy understandable to staff](https://useaiblocks.com/workflows/make-a-new-policy-understandable-to-staff): Share the source files. Get a plain explanation, staff FAQ and rollout action list.
+- [Make a recurring process easier to hand over](https://useaiblocks.com/workflows/make-a-recurring-process-easier-to-hand-over): Share the source files. Get an evidence-based procedure, exception guide and handover checklist.
 - [Method explainer](https://useaiblocks.com/skills/method-explainer): Tell it how you did your analysis and who reads it. Get a plain how-we-did-this section with limits.
 - [Metric definition writer](https://useaiblocks.com/skills/metric-definition-writer): Tell it how a metric is worked out. Get one agreed definition as checked YAML your team can reuse.
 - [Monthly developer documentation review](https://useaiblocks.com/agents/monthly-developer-docs-keeper): Share your docs and recent changes. Get stale pages fixed, broken steps flagged and a clearer start guide.

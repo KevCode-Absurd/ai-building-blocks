@@ -1,0 +1,50 @@
+slug: turn-a-report-into-an-editable-briefing-deck
+name: Turn a report into an editable briefing deck
+summary: Share the source files. Get an editable briefing deck and a content and layout check.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: slide_deck
+  - type: copy_draft
+  - type: document
+uses:
+  - presentation-builder
+  - proofreader
+  - editable-slide-deck-builder
+steps:
+  - uses: presentation-builder
+    note: Choose the decision and supporting evidence the audience needs from the supplied report.
+  - uses: proofreader
+    note: Check the agreed slide text against the report, including numbers, periods, caveats and source references.
+  - uses: editable-slide-deck-builder
+    note: Use the user-approved outline as the custom narrative framework, or ask when it is not approved. Build editable slides and notes in an approved environment and inspect every rendered slide; mark visual checks pending without a renderer.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Presentation builder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/presentation-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Editable slide deck builder
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pptx-deck-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

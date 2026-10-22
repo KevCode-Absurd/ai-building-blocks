@@ -1,0 +1,51 @@
+slug: build-a-practice-plan-from-common-mistakes
+name: Build a practice plan from common mistakes
+summary: Share the source files. Get an error map, focused practice and a later recall check.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: plan
+    required: false
+outputs:
+  - type: feedback_notes
+  - type: copy_draft
+  - type: plan
+  - type: document
+uses:
+  - study-understanding-check
+  - flawed-example-writer
+  - mixed-practice-unit-planner
+steps:
+  - uses: study-understanding-check
+    note: Separate slips, missing prerequisites and misunderstood concepts using the actual answers.
+  - uses: flawed-example-writer
+    note: Start from a verified correct example, introduce exactly one realistic target error and keep the teacher key separate from the learner task.
+  - uses: mixed-practice-unit-planner
+    note: Use the prior taught topic and prerequisite order to mix corrected practice with earlier topics, then define a later retention check.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Study understanding check
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/understanding-check
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Flawed example writer
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-learning-science/erroneous-example-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Mixed practice unit planner
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/interleaving-unit-planner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

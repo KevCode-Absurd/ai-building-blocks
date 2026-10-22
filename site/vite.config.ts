@@ -112,6 +112,8 @@ function exampleApp(): Plugin {
 // Preact runs the same React code at a fraction of the size: react and react-dom are aliased to preact/compat.
 export default defineConfig(({ mode }) => ({
   plugins: [preact(), devSecurity(), devComments(), devSpaces(), devComposer(), exampleApp()],
+  // Only the app entry is source; immutable release snapshots must not be scanned.
+  optimizeDeps: { entries: ["index.html"] },
   server: { port: 5180, fs: { allow: [".."] }, ...(mode === "test" ? { hmr: false, watch: null } : {}) }, // tests use a stable snapshot while other tasks edit files
   build: { target: "es2020", modulePreload: { polyfill: false }, cssCodeSplit: true },
 }));

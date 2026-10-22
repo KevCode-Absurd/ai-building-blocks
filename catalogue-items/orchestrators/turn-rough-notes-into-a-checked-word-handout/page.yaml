@@ -1,0 +1,81 @@
+new_slug: turn-rough-notes-into-a-checked-word-handout
+name: Turn rough notes into a checked Word handout
+headline: Turn rough notes into a checked Word handout
+summary: Share the source files. Get an edited handout and a document quality review.
+job: work-with-files
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: An edited handout and a document quality review. Share source notes, the reader, intended action, required format and any approved reference document. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  An edited handout and a document quality review.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Claims trace to the notes; rendered pages have readable tables and no clipped text. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need an edited handout and a document quality review.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You want the work and its checks saved so another person can review it.
+you_give:
+  - Source notes, the reader, intended action, required format and any approved reference document.
+  - The intended reader, deadline and limits on what may be changed.
+  - Earlier work and approved examples, if available.
+  - "Available tools for the finished output: Node.js with PaperJSX; LibreOffice Writer; A PDF renderer and Python PDF tools."
+you_get:
+  - An edited handout and a document quality review.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - A hand-back summary and one practical next step.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Plain English editor
+    text: Organize the notes around what the reader needs to understand or do.
+  - title: Document file generator
+    text: Create a new Word handout using the approved content and reference style; preserve the source notes.
+  - title: LibreOffice document builder
+    text: Use the installed converter to export the actual Word handout to a new PDF review copy. Check the conversion result without overwriting the Word source.
+  - title: PDF maker and reader
+    text: Render and inspect every page of the converted review PDF, checking for missing text, tables, fonts and clipping; keep the actual Word and PDF linked by source version.
+output_shape: |-
+  Scope and source coverage
+  An edited handout and a document quality review.
+  Step files and evidence references
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: Claims trace to the notes; rendered pages have readable tables and no clipped text.
+judge:
+  - Claims trace to the notes; rendered pages have readable tables and no clipped text.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: Node.js with PaperJSX
+      why: The requested Word output needs its format-specific package and the bundled JSON schema.
+    - name: LibreOffice Writer
+      why: The actual Word file must be converted to a PDF review copy with an available converter.
+    - name: A PDF renderer and Python PDF tools
+      why: Render the supplied PDF and inspect actual page images; text extraction alone cannot verify layout.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

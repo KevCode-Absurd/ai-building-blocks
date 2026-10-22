@@ -1,0 +1,52 @@
+slug: recurring-invoice-exception-review-assistant
+name: Recurring invoice exception review assistant
+summary: New invoice exceptions, resolved items with evidence and an approval review list.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: audit_report
+  - type: document
+uses:
+  - check-supplier-invoices-before-approval
+  - invoice-totals-checker
+steps:
+  - uses: check-supplier-invoices-before-approval
+    note: "Run when: A new invoice ID appears, supporting evidence changes or an unresolved exception reaches its review date."
+  - uses: invoice-totals-checker
+    note: Run the invoice workflow for new or changed records. Use invoice-totals-checker to revisit arithmetic exceptions only. If source records conflict, leave the invoice blocked for the responsible reviewer; never release payment.
+schedule: When a new invoice batch is supplied or at the owner agreed review interval.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Invoice checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/finance-and-accounting/invoice-processing
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Invoice totals checker
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

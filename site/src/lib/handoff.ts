@@ -136,7 +136,7 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[], with
   }
 
   L.push("## Steps", "");
-  for (const g of parallelGroups(flow, order)) L.push(`Steps ${listSteps(g)} read the same inputs and don't depend on each other, so they can run at the same time (in Claude Code, one subagent each). Wait for all of them before the step that reads them.`, "");
+  for (const g of parallelGroups(flow, order)) L.push(`Steps ${listSteps(g)} read the same inputs and don't depend on each other, so they can run at the same time (use parallel agents only if your assistant supports them and you authorize it). Wait for all of them before the step that reads them.`, "");
   for (const o of order) {
     const b = blockOf(o);
     if (!b) { L.push(`### Step ${o.step}: ${o.node.slug}`, "", "This block isn't in the library any more. Skip it and tell the person.", ""); continue; }
@@ -232,7 +232,7 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   put("workflow.json", JSON.stringify(workflowJson(c, flow, order), null, 2) + "\n");
   put("README.txt", [
     `${flow.name}: a handoff pack from AI Blocks (useaiblocks.com).`,
-    "1. Upload this whole folder to your AI: Claude (a Project, Claude Code or Cowork), ChatGPT, or any AI agent that can read files.",
+    "1. Give this whole folder to your AI assistant using file attachments or a local workspace. Check that it can read the files and use the tools each step needs.",
     "2. Say: \"Follow HANDOFF.md step by step.\"",
     "3. Have the inputs listed under \"Before you start\" ready.",
     ...(about ? ["Your details are in about-me.md. Change that file to change what every step knows about you."] : []), "",
@@ -297,7 +297,7 @@ export function download(blob: Blob, filename: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-/** One skill as a folder Claude can install: <slug>/SKILL.md, plus its reference files. A skill with files comes as the
+/** One skill as a portable folder: <slug>/SKILL.md, plus its reference files. A skill with files comes as the
  *  zip built for it, byte for byte, so scripts, images and other binaries arrive exactly as they are in the library. */
 export async function buildSkillZip(slug: string, skill: string, hasFiles = false, business: Business = {}) {
   const built = hasFiles ? await loadSkillZip(slug) : null;
@@ -361,9 +361,9 @@ export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: 
     "",
     "## Add it to your AI",
     ...(businessText(business) ? ["Read about-me.md in this pack before starting any job. Use those user-provided facts and preferences in each step.", ""] : []),
-    "- **Claude:** in Settings, under Capabilities, upload each folder as a skill (zip the folder first).",
-    "- **Claude Code:** copy each folder into `~/.claude/skills/`, or into your project's `.claude/skills/`.",
-    `- **ChatGPT, Gemini or any chat AI:** paste \`${mindSlug}/SKILL.md\` first, then the skill you want to run.`,
+    "- **Chat:** attach the mind and skill files, or paste their contents if your assistant cannot read attachments.",
+    "- **Coding assistant:** open the folder in your workspace and ask the assistant to read the relevant SKILL.md files.",
+    `- **Reusable instructions:** save \`${mindSlug}/SKILL.md\` with the skill you want to run in a project or reusable assistant that supports files.`,
     "",
     "## Use them together",
     `Each skill does one job on its own. With the mind added as well, the skill is done the way ${first} would do it: their questions first, then their method, in their voice, with anything beyond their record marked.`,

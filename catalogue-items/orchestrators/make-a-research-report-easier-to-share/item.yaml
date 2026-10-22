@@ -1,0 +1,55 @@
+slug: make-a-research-report-easier-to-share
+name: Make a research report easier to share
+summary: Share the source files. Get an executive summary, slide brief and fact-check list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+  - type: document
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: copy_draft
+  - type: feedback_notes
+  - type: slide_deck
+  - type: document
+uses:
+  - plain-english-editor
+  - presentation-builder
+  - proofreader
+steps:
+  - uses: plain-english-editor
+    note: Edit the report for the intended reader while retaining uncertainty and material caveats.
+  - uses: presentation-builder
+    note: Turn the supported findings into a decision-focused slide outline.
+  - uses: proofreader
+    note: Check that figures, source references and conclusions agree across the report and slides.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Presentation builder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/presentation-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

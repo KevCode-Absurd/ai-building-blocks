@@ -1,0 +1,48 @@
+slug: turn-employee-feedback-into-owned-actions
+name: Turn employee feedback into owned actions
+summary: Share the source files. Get a theme summary, prioritized actions and a draft response to staff.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+  - type: plan
+  - type: audit_report
+uses:
+  - employee-survey-designer
+  - people-risk-register-builder
+  - stakeholder-update-writer
+steps:
+  - uses: employee-survey-designer
+    note: Read the supplied responses within their sample limits and separate recurring themes from isolated reports.
+  - uses: people-risk-register-builder
+    note: Turn supported themes into concrete risks, evidence gaps and proposed actions.
+  - uses: stakeholder-update-writer
+    note: Draft a staff update covering what was heard, what will be investigated and who owns the next steps.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Employee survey designer
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-employee-listening
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: People risk register builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-risk-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

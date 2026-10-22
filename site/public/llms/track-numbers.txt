@@ -1,6 +1,6 @@
 # Track your numbers: AI Blocks
 
-> 132 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 140 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test verdict maker](https://useaiblocks.com/skills/a-b-test-verdict-maker): Give it your A/B test data. Get a split check, results with confidence ranges and a ship call.
 - [Account reconciler](https://useaiblocks.com/skills/account-reconciler): Give it a ledger and a bank statement. Get matched items, the gaps sorted by type and a next step each.
@@ -23,6 +23,8 @@
 - [Campaign link tracker](https://useaiblocks.com/skills/campaign-link-tracker): Give it your campaign and channels. Get tagged links, Shopify match rules and an attribution pick.
 - [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker): Share your profit and loss figures and stock. Get six ways to free cash, ranked by potential impact.
 - [Cash forecast builder](https://useaiblocks.com/skills/cash-forecast-builder): Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day cash forecast with risks named.
+- [Check payroll inputs before the cut off](https://useaiblocks.com/workflows/check-payroll-inputs-before-the-cut-off): Share the source files. Get an exception list, source reconciliation and payroll questions for review.
+- [Check supplier invoices before approval](https://useaiblocks.com/workflows/check-supplier-invoices-before-approval): Share the source files. Get a matched invoice register and a list of amounts needing investigation.
 - [Control testing workpaper builder](https://useaiblocks.com/skills/control-testing-workpaper): Name a control area. Get a test sample, a workpaper and a rating for any gap. Not audit advice.
 - [Conversion funnel analyst](https://useaiblocks.com/skills/conversion-funnel-analyst): Give it an event log and your steps. Get conversion per step, drop-offs, time to convert and what to fix.
 - [Cost per funnel stage reporter](https://useaiblocks.com/skills/cost-per-funnel-stage-reporter): Give it your CRM stages and ad spend. Get a trusted funnel with the true cost of each stage.
@@ -40,6 +42,8 @@
 - [Dataset profiler](https://useaiblocks.com/skills/dataset-profiler): Give it a table or file. Get its shape, missing values, odd entries and which columns are worth analyzing.
 - [Event tracking planner](https://useaiblocks.com/skills/event-tracking-planner): Describe your product. Get an event list, naming rules, funnels, retention cohorts and one main metric to watch.
 - [Experiment result analyst](https://useaiblocks.com/skills/experiment-result-analyst): Give it test numbers. Get the right test, sample size and whether the result is real, in plain words.
+- [Explain a department budget overrun](https://useaiblocks.com/workflows/explain-a-department-budget-overrun): Share the source files. Get a reconciled variance report and options for the budget owner.
+- [Find duplicate and unused business subscriptions](https://useaiblocks.com/workflows/find-duplicate-and-unused-business-subscriptions): Share the source files. Get a subscription register, savings scenarios and a renewal action list.
 - [First-party tracking pixel builder](https://useaiblocks.com/skills/first-party-tracking-pixel): Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands.
 - [GA4 raw data analyst](https://useaiblocks.com/skills/ga4-raw-data-analyst): Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen.
 - [GA4 store setup checker](https://useaiblocks.com/skills/ga4-store-setup-checker): Describe your GA4 setup. Get missing day-one settings, store events to add and a setup score out of 100.
@@ -69,6 +73,7 @@
 - [Monthly budget variance review](https://useaiblocks.com/agents/monthly-budget-versus-actual-keeper): Give it the month's spend by team. Get what moved against budget, why, and cash levers if the year is off.
 - [Monthly freelancer books closer](https://useaiblocks.com/agents/monthly-freelancer-books-closer): Give it the month's transactions. Get them sorted, checked against your budget and a cash forecast with the tax set aside.
 - [Monthly profit close](https://useaiblocks.com/agents/monthly-profit-close): Give it the month's sales and costs. Get a P&L set against last month and what to fix first.
+- [Monthly subscription renewal decision assistant](https://useaiblocks.com/agents/monthly-subscription-renewal-decision-assistant): A changed-only renewal brief with notice deadlines, options and proposed owner actions.
 - [Multi-touch credit calculator](https://useaiblocks.com/skills/multi-touch-credit-calculator): Give it your touches and sales. Get credit split by first, last, linear or decay rules, plus cost per sale.
 - [New and returning P&L splitter](https://useaiblocks.com/skills/new-and-returning-pl-splitter): Paste your monthly P&L and order tags. Get one P&L for first-time and one for returning customers, scored.
 - [New dataset explorer](https://useaiblocks.com/skills/new-dataset-explorer): Give it a new dataset. Get its structure, spread, links and odd spots mapped before you use it.
@@ -81,12 +86,15 @@
 - [Per-order profit calculator](https://useaiblocks.com/prompts/per-order-profit-calculator): Paste your price and every cost per order. Get the profit per order, the break-even and what moves it most.
 - [Plain-words SQL writer](https://useaiblocks.com/skills/plain-words-sql-writer): Describe the data you need. Get a working SQL query for your database type, with a note on how it runs.
 - [Prediction driver explainer](https://useaiblocks.com/skills/prediction-driver-explainer): Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
+- [Prepare a seasonal cash buffer](https://useaiblocks.com/workflows/prepare-a-seasonal-cash-buffer): Share the source files. Get a dated cash forecast, downside case and actions for review.
+- [Prepare expenses for your bookkeeper](https://useaiblocks.com/workflows/prepare-expenses-for-your-bookkeeper): Share the source files. Get a categorized expense file, receipt gaps and a reconciliation summary.
 - [Product cost category organizer](https://useaiblocks.com/skills/cogs-line-sorter): Paste your cost lines. Get each sorted into COGS or expense, with the rule used, scored out of 100.
 - [Product margin checker](https://useaiblocks.com/skills/product-margin-checker): Give it a price and every cost. Get true margin, break-even ROAS and CAC, scored out of 100.
 - [Queue and process simulator](https://useaiblocks.com/skills/queue-and-process-simulator): Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
 - [Quick time series forecaster](https://useaiblocks.com/skills/quick-time-series-forecaster): Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
 - [Rates and economy dashboard builder](https://useaiblocks.com/skills/rates-economy-dashboard): Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle.
 - [Reconciliation break tracer](https://useaiblocks.com/skills/reconciliation-break-tracer): Give it a break from a reconciliation. Get it traced to its source entries on both sides, and what differs.
+- [Recurring invoice exception review assistant](https://useaiblocks.com/agents/recurring-invoice-exception-review-assistant): New invoice exceptions, resolved items with evidence and an approval review list.
 - [Recurring KPI report maker](https://useaiblocks.com/skills/recurring-kpi-report-maker): Describe the report you want in plain words. Get the numbers pulled, a workbook, and a saved report to rerun.
 - [Regression and forecast modeller](https://useaiblocks.com/skills/regression-and-forecast-modeller): Give it a data table. Get a fitted regression or time series model with checks and a plain read of the results.
 - [Research test picker and reporter](https://useaiblocks.com/skills/statistical-test-picker): Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style.

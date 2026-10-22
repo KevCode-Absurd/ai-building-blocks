@@ -1,0 +1,40 @@
+slug: prepare-a-contract-amendment-for-review
+name: Prepare a contract amendment for review
+summary: Share the source files. Get a change trace, issue list and plain summary for your legal reviewer.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - contract-risk-reviewer
+  - plain-words-contract-summary
+steps:
+  - uses: contract-risk-reviewer
+    note: Review the base and proposed wording separately, pair changed clauses by source and version, and assess their obligations, dates, payment, liability and dependencies. Proposed wording never becomes the controlling agreement.
+  - uses: plain-words-contract-summary
+    note: Summarize each version with its party duties and source sections, then explain the proposed differences and unresolved approval questions.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Contract risk reviewer
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/legal-and-compliance/contract-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain-words contract summary
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-words-contract-summary
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -1,6 +1,6 @@
 # Understand your customers: AI Blocks
 
-> 95 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 96 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad ideas from quiz answers](https://useaiblocks.com/skills/quiz-answers-to-ad-angles-reader): Paste your quiz answers. Get who buys, how aware they are and ranked ad angles.
 - [App stickiness guide](https://useaiblocks.com/skills/app-stickiness-guide): Describe your app. Get a retention plan with a habit loop, a better first run and one metric to watch.
@@ -22,6 +22,7 @@
 - [Buyer research from forums](https://useaiblocks.com/skills/forum-and-review-avatar-digger): Share your product and buyer group. Get a forum research plan, quote file and customer profile.
 - [Buyer research plan with survey](https://useaiblocks.com/skills/buyer-research-plan-with-survey): Give it your customer list and reward budget. Get a call plan, recruiting email and objection survey.
 - [Chat export need finder](https://useaiblocks.com/skills/chat-export-need-finder): Give it a Telegram group export. Get a ranked list of unmet needs, each backed by real quotes.
+- [Check a marketing survey before sending it](https://useaiblocks.com/workflows/check-a-marketing-survey-before-sending-it): Share the source files. Get a revised survey, bias review and analysis plan.
 - [Churn risk finder](https://useaiblocks.com/skills/churn-risk-finder): Give it usage, engagement and support data. Get at-risk accounts scored with ideas for how to step in.
 - [Comment mining analyst](https://useaiblocks.com/skills/comment-mining-analyst): Give it social posts. Get what people ask, complain about and want, in their own words. Collects data from websites.
 - [Competitor review insight finder](https://useaiblocks.com/skills/star-rating-review-miner): Share competitor reviews grouped by rating. Find unmet needs, trust problems and language that shows buying intent.

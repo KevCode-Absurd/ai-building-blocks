@@ -1,0 +1,54 @@
+slug: turn-a-design-review-into-fixes
+name: Turn a design review into fixes
+summary: Share the source files. Get an evidence-based issue list, a revised design brief and a usability test.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: design_file
+    required: false
+  - type: web_page
+    required: false
+  - type: question
+    required: false
+  - type: persona
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - everyday-usability-reviewer
+  - design-feedback-giver
+  - small-usability-test-planner
+steps:
+  - uses: everyday-usability-reviewer
+    note: Review the supplied screen for discoverability, mapping, errors and feedback; label the findings as a heuristic review rather than real user test results.
+  - uses: design-feedback-giver
+    note: Turn the agreed issues into specific changes, keeping observations separate from preferences.
+  - uses: small-usability-test-planner
+    note: Write task-based checks for the changes, with neutral prompts and observable success criteria.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Everyday usability reviewer
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/design-everyday-things
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Design feedback giver
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills/design-critique
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Small usability test planner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/small-usability-test-planner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

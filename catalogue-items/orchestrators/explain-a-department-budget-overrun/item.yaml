@@ -1,0 +1,50 @@
+slug: explain-a-department-budget-overrun
+name: Explain a department budget overrun
+summary: Share the source files. Get a reconciled variance report and options for the budget owner.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: spreadsheet
+  - type: document
+uses:
+  - budget-variance-explainer
+  - department-budget-planner
+  - stakeholder-update-writer
+steps:
+  - uses: budget-variance-explainer
+    note: Calculate the change by line and trace the largest movements to supplied evidence.
+  - uses: department-budget-planner
+    note: Prepare revised scenarios using explicit assumptions and the owner constraints.
+  - uses: stakeholder-update-writer
+    note: Draft a decision update with the variance, choices, consequences and facts still missing.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Budget variance explainer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/finance/skills/variance-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Department budget planner
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/finance-and-accounting/budget-planning
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Stakeholder update writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/stakeholder-update
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

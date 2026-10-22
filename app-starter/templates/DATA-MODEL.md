@@ -1,6 +1,6 @@
 # Data model
 
-Claude keeps this up to date as it adds tables. One row per table.
+Your AI keeps this up to date as it adds tables. One row per table.
 
 | Table | What one row is | Key fields | Belongs to | Who can read | Who can change |
 |---|---|---|---|---|---|

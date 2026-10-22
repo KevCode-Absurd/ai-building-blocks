@@ -1,0 +1,48 @@
+slug: help-learners-spot-weak-online-evidence
+name: Help learners spot weak online evidence
+summary: Share the source files. Get a source-checking activity, discussion prompts and an assessment task.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+  - type: document
+uses:
+  - online-source-check-lesson
+  - media-literacy-lesson-builder
+  - marking-rubric-writer
+steps:
+  - uses: online-source-check-lesson
+    note: Build an activity that checks authorship, evidence and corroboration using the supplied sources.
+  - uses: media-literacy-lesson-builder
+    note: Add examples of framing and missing context without assuming bad intent.
+  - uses: marking-rubric-writer
+    note: Define clear criteria for the reasoning students should demonstrate.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Online source checking lesson builder
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/literacy-critical-thinking/source-credibility-evaluation-protocol
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Media literacy lesson builder
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/literacy-critical-thinking/media-literacy-deconstruction-protocol
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Marking rubric writer
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/criterion-referenced-rubric-generator
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

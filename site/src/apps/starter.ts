@@ -10,7 +10,7 @@ export const FILES: [string, string][] = Object.entries(RAW)
   .map(([k, v]) => [k.replace(/^.*app-starter\//, ""), v] as [string, string])
   .sort(([a], [b]) => rank(a) - rank(b) || a.localeCompare(b));
 function rank(p: string) {
-  return ["README.md", "START-HERE.md", "CLAUDE.md", "QUESTIONS.md"].indexOf(p) + 1 || (p.startsWith("stages/") ? 10 : 20);
+  return ["README.md", "START-HERE.md", "BUILD-RULES.md", "QUESTIONS.md"].indexOf(p) + 1 || (p.startsWith("stages/") ? 10 : 20);
 }
 export const file = (p: string) => FILES.find(([k]) => k === p)?.[1] ?? "";
 

@@ -1,0 +1,70 @@
+{
+  "origin": "http://127.0.0.1:5184",
+  "blockedWrites": 0,
+  "results": [
+    {
+      "name": "320px light: Context + Minds, kits in menu, no overflow",
+      "status": "pass"
+    },
+    {
+      "name": "320px light: selected workflow has contrasting outline",
+      "status": "pass"
+    },
+    {
+      "name": "320px dark: Context + Minds, kits in menu, no overflow",
+      "status": "pass"
+    },
+    {
+      "name": "320px dark: selected workflow has contrasting outline",
+      "status": "pass"
+    },
+    {
+      "name": "390px light: Context + Minds, kits in menu, no overflow",
+      "status": "pass"
+    },
+    {
+      "name": "390px light: selected workflow has contrasting outline",
+      "status": "pass"
+    },
+    {
+      "name": "390px dark: Context + Minds, kits in menu, no overflow",
+      "status": "pass"
+    },
+    {
+      "name": "390px dark: selected workflow has contrasting outline",
+      "status": "pass"
+    },
+    {
+      "name": "1440px light: Context + Minds, kits in menu, no overflow",
+      "status": "pass"
+    },
+    {
+      "name": "1440px light: selected workflow has contrasting outline",
+      "status": "pass"
+    },
+    {
+      "name": "1440px dark: Context + Minds, kits in menu, no overflow",
+      "status": "pass"
+    },
+    {
+      "name": "1440px dark: selected workflow has contrasting outline",
+      "status": "pass"
+    },
+    {
+      "name": "globe reduce: simultaneous automatic highlights",
+      "status": "pass"
+    },
+    {
+      "name": "globe reduce: real horizontal touch drag and vertical page scroll",
+      "status": "pass"
+    },
+    {
+      "name": "globe no-preference: simultaneous automatic highlights",
+      "status": "pass"
+    },
+    {
+      "name": "globe no-preference: real horizontal touch drag and vertical page scroll",
+      "status": "pass"
+    }
+  ]
+}

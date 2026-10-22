@@ -1,6 +1,6 @@
 # Help your customers: AI Blocks
 
-> 30 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 31 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker): Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft.
 - [Angry customer reply writer](https://useaiblocks.com/prompts/angry-customer-reply-writer): Paste an angry message. Get a reply that names the feeling, fixes what you can and promises nothing false.
@@ -18,6 +18,7 @@
 - [Get a stuck customer issue unstuck and close the loop](https://useaiblocks.com/workflows/get-a-stuck-customer-issue-unstuck-and-close-the-loop): Give it the stuck issue. Get the facts, an escalation brief and a reply that keeps its promises.
 - [Help article writer from support tickets](https://useaiblocks.com/prompts/help-article-from-ticket-writer): Paste tickets about the same problem. Get a short help article in the customer's words, with its title.
 - [Monthly help centre review](https://useaiblocks.com/agents/monthly-help-centre-keeper): Share recent support tickets. Get drafts for missing help articles and updates for outdated ones.
+- [Prepare a service outage communication pack](https://useaiblocks.com/workflows/prepare-a-service-outage-communication-pack): Share the source files. Get draft initial, progress and recovery messages with a fact ledger.
 - [Public review reply assistant](https://useaiblocks.com/agents/public-review-reply-desk): Give it each new batch of public reviews. Get a checked reply for each, with risky ones held and repeat complaints flagged.
 - [Public review reply drafter](https://useaiblocks.com/skills/public-review-reply-drafter): Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised.
 - [Refund and reorder processor](https://useaiblocks.com/skills/refund-and-reorder-processor): Name the order and items. Get a full or partial refund, plus a replacement order if you want one. Moves real money.

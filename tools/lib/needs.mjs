@@ -2,7 +2,7 @@
 // block, so each skill, prompt and workflow says:
 //   - the steps before it, in order, each with a link to the block that does it and what to have ready,
 //   - which files of the brand brain to read for this task,
-//   - how to check for each thing (Claude Code: look for the file; a chat: ask for it) and what to do without it,
+//   - how to check for each thing (a coding assistant with file access: look for the file; a chat: ask for it) and what to do without it,
 //   - the tools that do the job best, and the next steps, with links.
 // Used by tools/add-needs.mjs (the "Before you start" and "After this" sections in each SKILL.md) and by
 // site/scripts/build-index.mjs (the same chain on each block page and in workflow packs).
@@ -258,10 +258,10 @@ export function beforeSection(plan, tools = [], nl = "\n") {
   if (brain) out.push(`**From the brand brain, read:** ${brain.files.map((f) => `\`${f}\``).join(", ")}. Take ${brain.note}. Source notes and rejected ideas never go into the result.`, "");
   out.push("How to start:");
   out.push(brain
-    ? "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name."
-    : "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.");
+    ? "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name."
+    : "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.");
   const ask = items.slice(0, 3).map((i) => (i.key === BRAND_BRAIN ? "your brand brain" : lower(i.label)));
-  out.push(`2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with ${ask.join(", ")}. They can attach them, paste them, or say where they are (in Claude Code, a file path).${items.some((i) => i.maker) || chain.length ? " Name the recommended steps above as a suggestion, with their links." : ""} Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.`);
+  out.push(`2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with ${ask.join(", ")}. They can attach them, paste them, or say where they are (a file path if your assistant can read the project).${items.some((i) => i.maker) || chain.length ? " Name the recommended steps above as a suggestion, with their links." : ""} Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.`);
   out.push("3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.");
   if (tools.length) out.push("", "**Tools that do this best:**", ...tools.map((t) => `- **${t.name}:** ${t.why}`));
   return out.join(nl);

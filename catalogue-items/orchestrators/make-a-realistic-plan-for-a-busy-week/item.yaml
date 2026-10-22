@@ -1,0 +1,50 @@
+slug: make-a-realistic-plan-for-a-busy-week
+name: Make a realistic plan for a busy week
+summary: Share the source files. Get a capacity-aware week plan with trade-offs and a review point.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: plan
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - weekly-time-audit-planner
+  - week-priority-picker
+  - executive-daily-digest
+steps:
+  - uses: weekly-time-audit-planner
+    note: Audit last week actual time as evidence for realistic capacity, then compare it with the upcoming fixed commitments.
+  - uses: week-priority-picker
+    note: Choose the work that best serves the stated goals and identify what must wait.
+  - uses: executive-daily-digest
+    note: Turn the chosen commitments into a dated brief and a manageable first day.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Weekly time audit planner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/weekly-time-audit-planner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Week priority picker
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/week-priority-picker
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive daily briefing writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-daily-digest
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

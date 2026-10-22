@@ -1,11 +1,12 @@
 # Make documents, sheets and slides: AI Blocks
 
-> 57 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 62 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Article draft editor](https://useaiblocks.com/prompts/rough-text-to-article-tidier): Paste rough text. Get a tidy article with a title, summary and headings, in your words.
 - [Article formatter](https://useaiblocks.com/skills/article-formatter): Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
 - [Case competition slide deck builder](https://useaiblocks.com/skills/case-competition-slide-deck-builder): Share your case, judging rules and analysis. Get a recommendation deck with source notes, financials and backup slides for questions.
 - [Chart maker](https://useaiblocks.com/skills/chart-maker): Give it your data. Get clear charts and dashboards made with matplotlib, seaborn or plotly.
+- [Check a spreadsheet before sharing the results](https://useaiblocks.com/workflows/check-a-spreadsheet-before-sharing-the-results): Share the source files. Get a formula issue list, corrected presentation plan and sharing checklist.
 - [Citation and BibTeX fixer](https://useaiblocks.com/skills/citation-and-bibtex-fixer): Give it DOIs, paper titles or a messy bibliography. Get clean, checked BibTeX entries with duplicates removed.
 - [Class roster file checker](https://useaiblocks.com/skills/class-roster-file-checker): Give it a OneRoster CSV set. Get broken links, bad encodings and manifest errors found, with fixes.
 - [Code review page maker](https://useaiblocks.com/skills/code-review-page-maker): Give it a markdown code review. Get one HTML page with severity tags and diffs that are easy to read.
@@ -21,6 +22,7 @@
 - [Editable slide deck builder](https://useaiblocks.com/skills/editable-slide-deck-builder): Give it your story and sources. Get a PowerPoint deck with real editable text, tables and charts, plus a quality check.
 - [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder): Give a confirmed field list. Get a formatted empty Excel or CSV file, with no invented rows.
 - [Excel and MATLAB bridge writer](https://useaiblocks.com/skills/excel-and-matlab-bridge-writer): Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results.
+- [Extract a scanned document and verify key facts](https://useaiblocks.com/workflows/extract-a-scanned-document-and-verify-key-facts): Share the source files. Get extracted text, a page-linked fact table and uncertain readings.
 - [Fast data table analyst](https://useaiblocks.com/skills/fast-data-table-analyst): Give it a large data file. Get fast cleaning, grouping and analysis with Polars code that you can rerun.
 - [Finance deck review for India](https://useaiblocks.com/skills/finance-deck-quality-checker): Share a finance deck. Find mismatched numbers, unclear wording and layout issues, using Indian fiscal years and units.
 - [HTML slide deck maker](https://useaiblocks.com/skills/html-slide-deck-maker): Describe your talk or share a PowerPoint. Get an animated slide deck in one HTML file that opens in any browser.
@@ -31,6 +33,7 @@
 - [LibreOffice document builder](https://useaiblocks.com/skills/libreoffice-document-builder): Describe the document. Get an ODT file, or a conversion to Word, PDF or HTML.
 - [LibreOffice slide builder](https://useaiblocks.com/skills/libreoffice-slide-builder): Describe the slides. Get an ODP deck, or a conversion to PowerPoint or PDF.
 - [LibreOffice spreadsheet builder](https://useaiblocks.com/skills/libreoffice-spreadsheet-builder): Describe the sheet. Get an ODS file with formulas and charts, or a conversion to Excel or CSV.
+- [Make a research report easier to share](https://useaiblocks.com/workflows/make-a-research-report-easier-to-share): Share the source files. Get an executive summary, slide brief and fact-check list.
 - [Markdown slide deck maker](https://useaiblocks.com/skills/markdown-slide-deck-maker): Give it a markdown outline. Get one HTML slide deck you present with arrow keys, with speaker notes.
 - [Markdown to web page maker](https://useaiblocks.com/skills/markdown-to-web-page-maker): Give it a long markdown file. Get one HTML page with a contents bar, search and light interactivity.
 - [MATLAB report builder](https://useaiblocks.com/skills/matlab-report-builder): Give it your results. Get a PDF, Word or HTML report built with titles, chapters, tables and charts.
@@ -56,6 +59,8 @@
 - [Storyboard to PowerPoint deck builder](https://useaiblocks.com/skills/storyboard-to-powerpoint-deck-builder): Share your content, sources and audience. Get a storyboard and PowerPoint deck for a business talk, lesson or report.
 - [Technical doc proofreader](https://useaiblocks.com/skills/technical-doc-proofreader): Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites.
 - [Turn a messy spreadsheet into a clean slide deck](https://useaiblocks.com/workflows/turn-a-messy-spreadsheet-into-a-clean-slide-deck): Give it a messy data file. Get clean, checked data, a written story and slides built from it.
+- [Turn a report into an editable briefing deck](https://useaiblocks.com/workflows/turn-a-report-into-an-editable-briefing-deck): Share the source files. Get an editable briefing deck and a content and layout check.
+- [Turn rough notes into a checked Word handout](https://useaiblocks.com/workflows/turn-rough-notes-into-a-checked-word-handout): Share the source files. Get an edited handout and a document quality review.
 - [Web page data extractor](https://useaiblocks.com/skills/web-page-data-extractor): Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
 - [Web page to clean text converter](https://useaiblocks.com/skills/web-page-to-clean-text-converter): Give it a web page link. Get the article as clean text without clutter. Collects data from websites.
 - [X post reader](https://useaiblocks.com/skills/x-post-reader): Give it an X post link. Get the text, author and numbers as clean data. Collects data from websites.

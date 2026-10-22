@@ -130,7 +130,7 @@ for (const tool of TOOLS) {
     assert.match(prompt, /Never do the sums in your head/);
     assert.ok(prompt.length < skill.length);
     const guide = built.files["save-it-in-your-ai.md"];
-    for (const name of ["Claude, as a Project", "ChatGPT, as a custom GPT", "Gemini, as a Gem"]) assert.ok(guide.includes(name));
+    for (const name of ["Chat assistant with code execution", "Coding assistant with file access", "Reusable project or assistant"]) assert.ok(guide.includes(name));
     const zip = fflate.unzipSync(built.files[`${tool.slug}-skill.zip`]);
     assert.deepEqual(Object.keys(zip), [`${tool.slug}/SKILL.md`]);
   });

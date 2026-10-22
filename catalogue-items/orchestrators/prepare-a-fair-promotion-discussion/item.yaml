@@ -1,0 +1,49 @@
+slug: prepare-a-fair-promotion-discussion
+name: Prepare a fair promotion discussion
+summary: Share the source files. Get an evidence map, development gaps and a promotion discussion brief.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: copy_draft
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses:
+  - role-skills-framework-builder
+  - career-ladder-plan
+  - feedback-conversation-planner
+steps:
+  - uses: role-skills-framework-builder
+    note: Translate the supplied promotion criteria into observable work and evidence requirements.
+  - uses: career-ladder-plan
+    note: Map the actual evidence to the target role and identify practical development work.
+  - uses: feedback-conversation-planner
+    note: Prepare a discussion that states the evidence, unresolved questions and next review point.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Role skills framework builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-competency-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Career ladder and growth plan writer
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-career-development
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Feedback conversation planner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/feedback-conversation-planner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

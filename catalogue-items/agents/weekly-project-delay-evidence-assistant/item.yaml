@@ -1,0 +1,56 @@
+slug: weekly-project-delay-evidence-assistant
+name: Weekly project delay evidence assistant
+summary: A delay trend brief and a recommendation to keep, revise or stop the current experiment.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: plan
+    required: false
+  - type: lessons_register
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - trace-why-work-keeps-missing-deadlines
+  - project-risk-portfolio
+steps:
+  - uses: trace-why-work-keeps-missing-deadlines
+    note: "Run when: New completions arrive or the experiment reaches its agreed review date."
+  - uses: project-risk-portfolio
+    note: Compare new waiting and active time with the saved baseline. Run the delay workflow only for new patterns; use project-risk-portfolio if shared dependencies moved. Keep the current test unchanged while evidence is too thin.
+schedule: Weekly while a deadline improvement experiment is active.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Process bottleneck finder
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/process-mapper
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Outside view timeline estimator
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/outside-view-timeline-estimator
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Change rollout planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/change-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Project risk and portfolio manager
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/senior-pm
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

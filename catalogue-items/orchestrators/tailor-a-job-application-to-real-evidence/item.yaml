@@ -1,0 +1,52 @@
+slug: tailor-a-job-application-to-real-evidence
+name: Tailor a job application to real evidence
+summary: Share the source files. Get an evidence-based resume draft, application answers and a final check.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: document
+  - type: copy_draft
+  - type: feedback_notes
+uses:
+  - resume-job-application-builder
+  - plain-english-editor
+  - proofreader
+steps:
+  - uses: resume-job-application-builder
+    note: Match the role requirements to actual experience and draft the requested application materials.
+  - uses: plain-english-editor
+    note: Make the writing specific and easy to scan while preserving the evidence and your voice.
+  - uses: proofreader
+    note: Check names, dates, consistency, requested format and any remaining unsupported claims.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Resume and job application builder
+    by: João Vitor Amaral
+    url: https://github.com/artificialguybr/resume-ats-linkedin-optimizer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Proofreader
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

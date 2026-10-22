@@ -1,6 +1,6 @@
 # Set up AI to work for you: AI Blocks
 
-> 71 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 72 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad prompt comparison review](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer): Paste old and new prompt ads. Get a blind test, a decision and a score out of 100.
 - [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Share a proposed agent action. Get its scope, risks and missing evidence checked before execution.
@@ -30,6 +30,7 @@
 - [AI workflow quality investigator](https://useaiblocks.com/skills/copilot-diagnose): Share a workflow that disappoints. Get its weak points ranked, with causes and practical fixes.
 - [AI writing workflow planner](https://useaiblocks.com/skills/ai-writing-workflow-planner): Describe how your team writes. Get what AI should draft, what people own, and rules that keep your voice.
 - [Backup and recovery planner](https://useaiblocks.com/skills/backup-and-recovery-planner): Describe your systems. Get how much loss you can take, a backup plan and a restore drill to run.
+- [Check a new automation before relying on it](https://useaiblocks.com/workflows/check-a-new-automation-before-relying-on-it): Share the source files. Get a process map, failure checks and a reviewable operating procedure.
 - [Check an AI app improvement](https://useaiblocks.com/workflows/check-an-ai-app-improvement): Share your AI app and proposed change. Get evaluation criteria, feedback loops and an evidence-based comparison plan.
 - [Claude memory curator](https://useaiblocks.com/skills/claude-memory-curator): Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut.
 - [Claude power-user coach](https://useaiblocks.com/skills/claude-power-user-coach): Tell it your work. Get lessons and exercises that make you faster with Claude, one step at a time.

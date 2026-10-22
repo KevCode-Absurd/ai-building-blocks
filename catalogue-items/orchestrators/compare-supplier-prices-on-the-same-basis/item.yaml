@@ -1,0 +1,44 @@
+slug: compare-supplier-prices-on-the-same-basis
+name: Compare supplier prices on the same basis
+summary: Share the source files. Get a normalized quote table and a decision brief with cost and delivery risks.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: product_data
+    required: false
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - supplier-quote-comparer
+  - supplier-risk-scorecard-builder
+steps:
+  - uses: supplier-quote-comparer
+    note: Compare the normalized quotes and flag exclusions, lead time and payment differences.
+  - uses: supplier-risk-scorecard-builder
+    note: Use only supplied financial, quality, capacity and delivery evidence to assess risk. Do not turn sample risk weights, stock buffers or example cost-reduction rates into the buyer facts.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Supplier quote comparer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/supplier-quote-comparer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Supplier risk scorecard builder
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/supplier-risk-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

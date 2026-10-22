@@ -1,0 +1,53 @@
+slug: write-helpful-error-and-empty-states
+name: Write helpful error and empty states
+summary: Share the source files. Get a state inventory, revised messages and a handoff for implementation.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+  - type: copy_draft
+    required: false
+  - type: design_file
+    required: false
+outputs:
+  - type: code_change
+  - type: copy_draft
+  - type: design_direction
+  - type: document
+uses:
+  - screen-states-designer
+  - plain-error-message-writer
+  - small-interface-details-designer
+steps:
+  - uses: screen-states-designer
+    note: List the states and user actions for each supplied screen, including retry and interrupted work.
+  - uses: plain-error-message-writer
+    note: Write a plain message for every failure state using only recovery actions the product supports.
+  - uses: small-interface-details-designer
+    note: Specify focus, buttons and transitions so each message can be implemented and checked.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Screen states designer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ui-states
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Plain error message writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-error-message-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Small interface details designer
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/microinteractions
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

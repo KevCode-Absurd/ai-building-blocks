@@ -10,6 +10,15 @@
 # The library, skills and pages change with each build: use the copy you have, check for a new one in the background.
 /data/*
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
+/metadata/*
+  Cache-Control: public, max-age=300, must-revalidate
+  X-Robots-Tag: noindex
+/mini-tools/*
+  X-Robots-Tag: noindex
+/space
+  X-Robots-Tag: noindex, nofollow
+/s/*
+  X-Robots-Tag: noindex, nofollow
 /skills/*
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
 

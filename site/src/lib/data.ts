@@ -36,6 +36,7 @@ export type Block = {
   face?: Face;
   /** For a mind: role labels from catalogue-items/minds/_labels.yaml, most defining first. */
   labels?: string[];
+  identity?: string;
   /** For a skill: the minds whose work it comes from, strongest first (item.yaml `minds`, docs/SOURCE-SKILLS-PRD.md). */
   minds?: string[];
   /** For a mind: the skills from their work, worked out from the skills' `minds` lists. */
@@ -109,7 +110,7 @@ export type Page = {
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string };
 };
-export type RosterMind = { slug: string; name: string; area: string; seat: string; living: boolean; built: boolean; face?: Face; labels?: string[] };
+export type RosterMind = { slug: string; name: string; identity?: string; area: string; seat: string; living: boolean; built: boolean; face?: Face; labels?: string[] };
 /** A block as blocks.json sends it: defaults and empty values left out (a headline equal to the name too), ports as "type" or "type?" (optional), steps as a slug or [slug, note]. */
 type Wire = Partial<Omit<Block, "inputs" | "outputs" | "steps" | "tested">> & { slug: string; inputs?: string[]; outputs?: string[]; steps?: (string | [string, string])[]; tested?: 1 };
 const port = (p: string): Port => (p.endsWith("?") ? { type: p.slice(0, -1), required: false } : { type: p, required: true });

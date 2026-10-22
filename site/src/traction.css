@@ -1,18 +1,66 @@
-.traction-page { padding-bottom: 72px; }
-.traction-page .bp-hero { padding-left: 0; padding-right: 0; }
-.traction-form { border: 1px solid var(--line); padding: clamp(20px, 4vw, 40px); max-width: 900px; box-shadow: 5px 5px 0 var(--line); }
-.traction-form h2 { margin-top: 0; }
-.traction-form label { display: block; margin: 20px 0 8px; font-weight: 600; }
-.traction-form input, .traction-form textarea { width: 100%; box-sizing: border-box; padding: 14px; background: var(--bg); color: var(--text); border: 1px solid var(--line); font: inherit; }
-.traction-form details { margin: 24px 0; }
-.traction-form summary { cursor: pointer; }
-.traction-options { display: flex; flex-wrap: wrap; gap: 16px; margin: 20px 0; }
+.traction-page { padding-bottom: 96px; }
+.traction-page .bp-hero { padding-inline: 0; max-width: 900px; }
+.traction-page .bp-sub { max-width: 42em; }
+.traction-form, .traction-result { max-width: 960px; padding: clamp(24px, 4vw, 48px); border: 1px solid var(--line-2); border-radius: 16px; background: var(--panel); }
+.traction-form h2, .traction-result h2 { margin: 0; font-size: clamp(23px, 3vw, 30px); line-height: 1.25; }
+.traction-form-intro { max-width: 62ch; margin: 16px 0 32px; color: var(--muted); }
+.traction-fields { display: grid; gap: 24px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.traction-options { display: flex; flex-wrap: wrap; gap: 16px; min-width: 0; }
 .traction-options .sel { max-width: 100%; }
-.traction-options .sel-list { max-height: 320px; overflow-y: auto; }
-.traction-form [role="alert"] { border-left: 3px solid currentColor; padding-left: 12px; }
-.traction-method { max-width: 900px; margin: 56px 0; line-height: 1.7; }
-.traction-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.traction-grid .card { min-width: 0; }
-.traction-grid .peek { display: block; }
+.traction-options .sel-btn { min-height: 48px; height: auto; max-width: 100%; padding-block: 12px; white-space: normal; }
+.traction-options .sel-value { min-width: 0; overflow-wrap: anywhere; text-align: left; }
+.traction-options .sel-label, .traction-options .sel-btn > svg { flex-shrink: 0; }
+.traction-options .sel-list { min-width: 0; width: 100%; max-width: 100%; max-height: 320px; overflow-y: auto; }
+.traction-options .sel-name { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+.traction-field { min-width: 0; }
+.traction-field label { display: block; margin: 0 0 10px; font-size: 15px; font-weight: 600; }
+.traction-field label span { color: var(--muted); font-size: 14px; font-weight: 400; }
+.traction-field input, .traction-field textarea { display: block; width: 100%; min-width: 0; min-height: 48px; box-sizing: border-box; padding: 13px 16px; background: var(--bg); color: var(--text); border: 1px solid var(--line-2); border-radius: 10px; font: 400 16px/1.6 var(--sans); }
+.traction-field textarea { resize: vertical; }
+.traction-field input::placeholder, .traction-field textarea::placeholder { color: var(--muted); opacity: 1; }
+.traction-field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.traction-constraints { padding: 8px 0 0; }
+.traction-page summary { min-height: 44px; padding-block: 10px; cursor: pointer; color: var(--text-2); }
+.traction-constraints[open] .traction-field { margin-top: 20px; }
+.traction-page .btn { min-height: 48px; height: auto; max-width: 100%; padding-block: 12px; white-space: normal; line-height: 1.45; text-align: center; }
+.traction-fields > .btn { justify-self: start; }
+.traction-privacy { margin: 28px 0 0; padding-top: 24px; border-top: 1px solid var(--line); max-width: 65ch; font-size: 14px; line-height: 1.75; color: var(--muted); }
+.traction-feedback { padding: 16px 18px; margin: 24px 0 0; border: 1px solid var(--line-2); border-radius: 8px; background: var(--bg); line-height: 1.65; overflow-wrap: anywhere; }
+.traction-page [role="alert"] { border-inline-start: 3px solid var(--warn); color: var(--text); }
+.traction-result { margin-top: 36px; scroll-margin-top: 104px; }
+.traction-result-heading > span { display: block; margin-bottom: 16px; }
+.traction-result-heading > p { max-width: 62ch; margin: 18px 0 0; color: var(--muted); }
+.traction-summary { margin: 28px 0 0; }
+.traction-summary > div { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.traction-summary dt { font-size: 14px; color: var(--muted); }
+.traction-summary dd { margin: 0; overflow-wrap: anywhere; }
+.traction-delivery { margin-top: 32px; padding-top: 8px; }
+.traction-delivery .bp-actions { margin: 0; gap: 12px; }
+.traction-delivery .btn-dark { border: 1px solid var(--line-2); }
+.traction-delivery > p { margin: 24px 0 0; max-width: 62ch; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.traction-brief { margin-top: 24px; }
+.traction-brief pre { margin: 12px 0 0; padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); font: 400 13px/1.8 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.traction-method { max-width: 960px; margin: 80px 0; }
+.traction-method h2 { margin: 0 0 28px; }
+.traction-method ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin: 0; padding: 0; list-style: none; }
+.traction-method li { line-height: 1.75; color: var(--muted); }
+.traction-method li b { display: block; margin-bottom: 10px; font-size: 17px; color: var(--text); }
+.traction-attribution { margin: 32px 0 0; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.traction-channel-heading { margin-bottom: 32px; }
+.traction-channel-heading h2 { margin: 0; }
+.traction-channel-heading p { margin: 12px 0 0; color: var(--muted); }
+.traction-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.traction-grid .card { min-width: 0; min-height: 180px; }
+.traction-grid .nm { margin: 18px 0 24px; line-height: 1.4; }
+.traction-grid .view { margin-top: auto; }
 @media (max-width: 850px) { .traction-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .traction-grid { grid-template-columns: minmax(0, 1fr); } .traction-options { display: grid; } .traction-form .bp-actions { display: grid; } }
+@media (max-width: 640px) {
+  .traction-field-grid, .traction-method ol { grid-template-columns: minmax(0, 1fr); }
+  .traction-method { margin-block: 56px; }
+  .traction-options { display: grid; }
+  .traction-summary > div { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .traction-delivery .bp-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .traction-delivery .btn, .traction-fields > .btn { width: 100%; }
+  .traction-grid { grid-template-columns: minmax(0, 1fr); }
+  .traction-brief pre { padding: 16px; }
+}

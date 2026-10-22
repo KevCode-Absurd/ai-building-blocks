@@ -23,7 +23,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
     } catch { return []; }
   });
   useEffect(() => { try { localStorage.setItem("aib-council-draft", JSON.stringify(seated)); } catch { /* private mode */ } }, [seated]);
-  useEffect(() => { document.title = "Minds · AI Blocks"; return () => { document.title = "AI Blocks · Use AI like the top 1%"; }; }, []);
+  useEffect(() => { document.title = "Minds · AI Blocks"; return () => { document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks"; }; }, []);
   const built = roster.filter((m) => m.built).length;
   const shown = useMemo(() => roster.filter((m) => (!area || m.area === area) && (!label || m.labels?.includes(label))), [roster, area, label]);
   const toggle = (slug: string) => setSeated((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length >= MAX ? s : [...s, slug]));
@@ -39,7 +39,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
         <h1 className="bp-h1">Borrow a great mind</h1>
         <p className="bp-sub">Ask Bezos about your operations, have Shakespeare write your toast, or put Munger, Hormozi and Jobs on a council and let them argue your decision. Each one is built from their public work, and they're AI voices, not the real people.</p>
         <p className="bp-file"><span>{built} of {roster.length} ready</span>{built < roster.length && <span>The rest are being built</span>}</p>
-        <details className="mind-face-preview"><summary>See all {roster.length} minds</summary><FaceWall roster={roster} /></details>
+        <FaceWall roster={roster} />
       </header>
 
       <section className="wrap minds-body">
@@ -99,6 +99,7 @@ function MindCard({ m, c, on, full, onToggle }: { m: RosterMind; c: Catalogue; o
         <PixelFace face={m.face} area={m.area} slug={m.slug} size={48} className="mind-face" />
         <div><span className="mind-area">{c.minds?.areas[m.area] ?? m.area}</span>
           {b ? <Link to={pathOf(b)} className="mind-name mind-profile-link">{m.name}<span className="mind-view" aria-hidden="true">View more <ArrowIcon size={11} /></span></Link> : <span className="mind-name">{m.name}</span>}
+          {(m.identity || b?.identity) && <span className="mind-identity" data-testid="mind-identity">{m.identity || b?.identity}</span>}
         </div>
       </div>
       <LabelBadges c={c} labels={m.labels} size="sm" />

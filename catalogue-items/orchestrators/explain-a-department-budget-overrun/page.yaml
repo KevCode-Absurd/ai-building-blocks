@@ -1,0 +1,74 @@
+new_slug: explain-a-department-budget-overrun
+name: Explain a department budget overrun
+headline: Explain a department budget overrun
+summary: Share the source files. Get a reconciled variance report and options for the budget owner.
+job: track-numbers
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: A reconciled variance report and options for the budget owner. Share approved budget, actual spending, reporting period, currency and known business changes. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  A reconciled variance report and options for the budget owner.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The variance bridges budget to actual; recurring drivers and one-off timing differences stay separate. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need a reconciled variance report and options for the budget owner.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You want the work and its checks saved so another person can review it.
+you_give:
+  - Approved budget, actual spending, reporting period, currency and known business changes.
+  - The intended reader, deadline and limits on what may be changed.
+  - Earlier work and approved examples, if available.
+you_get:
+  - A reconciled variance report and options for the budget owner.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - A hand-back summary and one practical next step.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Budget variance explainer
+    text: Calculate the change by line and trace the largest movements to supplied evidence.
+  - title: Department budget planner
+    text: Prepare revised scenarios using explicit assumptions and the owner constraints.
+  - title: Stakeholder update writer
+    text: Draft a decision update with the variance, choices, consequences and facts still missing.
+output_shape: |-
+  Scope and source coverage
+  A reconciled variance report and options for the budget owner.
+  Step files and evidence references
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: The variance bridges budget to actual; recurring drivers and one-off timing differences stay separate.
+judge:
+  - The variance bridges budget to actual; recurring drivers and one-off timing differences stay separate.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: A capable chat AI with file support
+      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

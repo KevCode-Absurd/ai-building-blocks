@@ -1,0 +1,48 @@
+slug: adapt-a-lesson-for-different-access-needs
+name: Adapt a lesson for different access needs
+summary: Share the source files. Get a barrier review, adapted activities and a check of the unchanged learning goal.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - accessible-lesson-auditor
+  - learning-options-designer
+  - lesson-understanding-check
+steps:
+  - uses: accessible-lesson-auditor
+    note: Identify barriers in the supplied materials and tasks using the stated access needs.
+  - uses: learning-options-designer
+    note: Offer different ways to access, practice and demonstrate the same learning.
+  - uses: lesson-understanding-check
+    note: Create checks that measure the learning goal without the identified access barrier.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Accessible lesson auditor
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/inclusive-design/udl-lesson-auditor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Learning options designer
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/inclusive-design/udl-options-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Lesson understanding check planner
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/checking-for-understanding-protocol-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

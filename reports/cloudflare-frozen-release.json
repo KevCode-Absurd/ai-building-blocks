@@ -1,23 +1,23 @@
 {
-  "frozenOn": "2026-10-22T10:50:10.640Z",
-  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4",
-  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4\\assets",
-  "worker": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4\\worker\\worker.js",
+  "frozenOn": "2026-10-22T12:06:17.529Z",
+  "root": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
+  "assets": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3\\assets",
+  "worker": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3\\worker\\worker.js",
   "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
-  "files": 18614,
-  "blocks": 4359,
+  "files": 23841,
+  "blocks": 4438,
   "criticalAssets": {
-    "index.html": "ae05cae9f1140e64fdb6796fe0f4a6abe2a2611e96f712b545396e821cef8f1e",
-    "compose.html": "065bb1fd746f78f424dcb6f28932e28fe7e21561e53a2b96ee98d3811a0e20b0",
-    "skills/loss-framing-writer.html": "5679cdd40566902fcce41cc7bd322ed876ac16cd83cc6bf79d07f18ed733bb60",
-    "data/blocks.json": "19674ea4e09bcf7e47d62714e4d2059644c228b7e4ca442df992095b728b2a97",
+    "index.html": "28398580b453e761cf35367885b2a84ea31bb0a86c7f05f42e3f72ed993262c3",
+    "compose.html": "3f96d166b178bbb661543073cf1ee79b373894b44d4fde8b97c21b470519bfc5",
+    "skills/loss-framing-writer.html": "4d4be574d81f1f86406691d502ffacda0d0475e7517786f9edc3f8cb94e9e257",
+    "data/blocks.json": "a10e0eb52877f31a97323b083f1469811e9efc2286b71974cfdc5824125c8791",
     "skills/storyboard-to-powerpoint-deck-builder.zip": "e42453c498209497795b4d5b1a96aabf885f75057e8682a625ebf8bccbc31d78",
     "skills/case-competition-slide-deck-builder.zip": "4f0082408e6c73038076adec275105a06029db7d771eda8286e8afdc1333e4bb",
     "skills/research-paper-writer.zip": "e33e0e564f333480b56d10d0d55e7e70a3b3279d390c83a25c58d048c1e541eb",
     "skills/equity-research-valuation-report-builder.zip": "40a5601a67953d73331de3f4b5b9603c07771329a923d0f7ef084a1f9bc07f6c"
   },
   "configs": {
-    "staging": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4\\wrangler.staging.jsonc",
-    "production": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r9-candidate4\\wrangler.production.jsonc"
+    "staging": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3\\wrangler.staging.jsonc",
+    "production": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3\\wrangler.production.jsonc"
   }
 }

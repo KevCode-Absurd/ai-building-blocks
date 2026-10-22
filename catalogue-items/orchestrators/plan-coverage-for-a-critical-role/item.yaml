@@ -1,0 +1,49 @@
+slug: plan-coverage-for-a-critical-role
+name: Plan coverage for a critical role
+summary: Share the source files. Get a role coverage map, development actions and a handover checklist.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses:
+  - succession-plan-builder
+  - role-skills-framework-builder
+  - training-program-builder
+steps:
+  - uses: succession-plan-builder
+    note: Identify continuity needs and possible cover using supplied skills and role evidence.
+  - uses: role-skills-framework-builder
+    note: Define the observable skills each proposed backup needs for the critical tasks.
+  - uses: training-program-builder
+    note: Create practice and review actions to close the specific gaps before cover is needed.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Succession plan builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-succession-planning
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Role skills framework builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-competency-management
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Training program builder
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-training-development
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

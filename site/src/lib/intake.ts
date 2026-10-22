@@ -174,7 +174,7 @@ You're turning a long source into a workflow someone can run again, with one ski
 - Nothing copies the source's wording beyond one short credited phrase per skill.
 - Every skill and the workflow credit the source.
 
-In Claude Code, write the files into this folder. In a chat, give each file in its own code block headed by its path, so it can be saved as is.
+In an AI coding assistant with file access, write the files into this folder. In a chat, give each file in its own code block headed by its path, so it can be saved as is.
 `;
 }
 
@@ -184,8 +184,8 @@ function readme(i: IntakeInput, slug: string) {
 From AI Blocks (useaiblocks.com/from-a-source). Your AI turns this source into a workflow, with a skill for every step it teaches.
 
 ## How to use it
-1. **Claude Code:** open this folder and say "Follow HANDOFF.md".
-2. **Claude, ChatGPT or Gemini in a chat:** upload the files (or zip the folder and upload it, or put them in a Project) and say "Follow HANDOFF.md".
+1. **Coding assistant with file access:** open this folder and say "Follow HANDOFF.md".
+2. **Chat assistant with file uploads:** upload the files (or zip the folder and upload it, or put them in a Project) and say "Follow HANDOFF.md".
 3. It shows you the steps it found and waits. Fix the order if it's wrong, then say go ahead.
 4. It writes one skill per step, then the workflow. Save each file it gives you, then add the folders to your AI as skills.
 

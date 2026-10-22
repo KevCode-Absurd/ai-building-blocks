@@ -1,0 +1,13 @@
+/* Keep selected steps distinct in both themes without changing their size. */
+.builder .react-flow__node.selected :is(.node, .terminal),
+.builder .sl-row[data-selected="true"] {
+  border-color: var(--text);
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+  box-shadow: 3px 3px 0 var(--text);
+}
+.builder .react-flow__node:focus-visible :is(.node, .terminal),
+.builder .sl-txt:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}

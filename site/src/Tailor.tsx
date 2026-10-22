@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Drawer } from "./ui";
+import { SUPPORT_EMAIL } from "./lib/site-info.mjs";
 
 // Every skill on the site is a base skill that works for anyone. People who want one shaped to their
 // industry ask here, and the request comes to us by email (the site has no server).
-export const TAILOR_EMAIL = "hello@useaiblocks.com";
+export const TAILOR_EMAIL = SUPPORT_EMAIL;
 export const INDUSTRIES = ["Online store", "Lead generation", "Software (SaaS)", "Agency or services", "Shop or local business", "Something else"];
 
 const OPEN = "abb:tailor-open";

@@ -1,0 +1,53 @@
+slug: compliance-evidence-request-assistant
+name: Compliance evidence request assistant
+summary: A changed evidence gap list and proposed requests for the responsible owners.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: audit_report
+  - type: spreadsheet
+  - type: plan
+  - type: document
+uses:
+  - prepare-evidence-for-a-compliance-review
+  - spreadsheet-checker
+steps:
+  - uses: prepare-evidence-for-a-compliance-review
+    note: "Run when: Evidence expires, a review requirement changes or a preparation action becomes due."
+  - uses: spreadsheet-checker
+    note: Check the evidence index against the saved requirements. Run the preparation workflow for changed requirements; use spreadsheet-checker for refreshed evidence. Keep gaps open until supporting evidence is reviewed, and prepare requests without sending them.
+schedule: At agreed preparation checkpoints before a compliance review.
+asks_before:
+  - Sending or submitting any message or form
+  - Changing a live account, calendar, task, permission or published document
+  - Spending money, releasing a payment or signing a contract
+  - Starting or changing any recurring schedule
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Compliance readiness checklist builder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/legal-and-compliance/compliance-checklist-generation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Spreadsheet checker
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

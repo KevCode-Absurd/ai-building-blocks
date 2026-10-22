@@ -1,0 +1,54 @@
+slug: prepare-a-useful-customer-newsletter-issue
+name: Prepare a useful customer newsletter issue
+summary: Share the source files. Get a sourced newsletter draft, subject options and a review checklist.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: voc_reviews
+    required: false
+  - type: brand_brain
+    required: false
+  - type: script
+    required: false
+  - type: ad_copy
+    required: false
+outputs:
+  - type: audit_report
+  - type: copy_draft
+  - type: document
+uses:
+  - feedback-theme-finder
+  - campaign-email-writer
+  - brand-voice-editor
+steps:
+  - uses: feedback-theme-finder
+    note: Find a useful customer question in the provided feedback and preserve the sample limits. A small or single-customer sample does not establish a wider trend.
+  - uses: campaign-email-writer
+    note: Use value-email mode to draft one core message around the customer question and approved store news, with subject, preview and plain-text versions. Do not invent an offer or send a test.
+  - uses: brand-voice-editor
+    note: Edit the draft to the supplied voice without adding facts, offers or promises.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Feedback theme finder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/customer-feedback-analysis
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Campaign email writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/campaign-email-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Brand voice editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/brand-voice-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

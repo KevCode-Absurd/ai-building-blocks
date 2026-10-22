@@ -25,8 +25,8 @@ const WORKFLOW = "review-image-ads";
 
 test("hero is the headline, the mono subhead, and two buttons, How it works a plain nav link, over the globe", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Use AI like the top 1%");
-  await expect(page.locator(".hero .lede")).toContainText("Turn hours of work into minutes");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Build AI workflows for your work");
+  await expect(page.locator(".hero .lede")).toContainText("Find a skill for your next task");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
   await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
   await expect(page.locator(".hero-in > *")).toHaveCount(3);
@@ -214,6 +214,7 @@ test("saving a block to a kit persists after a reload", async ({ page }) => {
   await page.getByRole("button", { name: "Create" }).click();
   await expect(page.getByRole("status")).toContainText("Saved to Launch checks");
   await page.goto("/");
+  await page.getByTestId("nav-more").click();
   await expect(page.getByTestId("open-kits")).toContainText("1");
   await page.getByTestId("open-kits").click();
   const kit = page.getByTestId("kit");
@@ -364,13 +365,13 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   expect(wf.steps.map((s: { skill: string }) => s.skill)[0]).toBe("website-brand-brain-builder");
 });
 
-test("a skill installs: the zip is a folder Claude can upload, and every AI has its steps", async ({ page }, info) => {
+test("a skill installs: the portable zip supports chat, coding assistants and reusable instructions", async ({ page }, info) => {
   await page.goto("/skills/video-ad-script-type-picker");
   const bp = page.getByTestId("block-page");
   await bp.getByTestId("add-to-ai").click();
   const box = bp.getByTestId("install");
   await expect(box).toBeInViewport();
-  await expect(box.getByRole("tab", { selected: true })).toHaveText("Claude");
+  await expect(box.getByRole("tab", { selected: true })).toHaveText("Chat");
   const [dl] = await Promise.all([page.waitForEvent("download"), box.getByTestId("install-zip").click()]);
   expect(dl.suggestedFilename()).toBe("video-ad-script-type-picker.zip");
   const path = info.outputPath(dl.suggestedFilename());
@@ -380,12 +381,12 @@ test("a skill installs: the zip is a folder Claude can upload, and every AI has 
   expect(skill).toMatch(/^---\nname: video-ad-script-type-picker\ndescription: /);
   expect(Object.keys(files)).toContain("video-ad-script-type-picker/references/types.md");
   await box.getByTestId("install-code").click();
-  await expect(box).toContainText("/video-ad-script-type-picker");
-  await box.getByTestId("install-chatgpt").click();
-  await expect(box).toContainText(/characters/);
+  await expect(box).toContainText("video-ad-script-type-picker/SKILL.md");
+  await box.getByTestId("install-saved").click();
+  await expect(box).toContainText("check its instruction limit");
   // The choice is remembered on the next skill.
   await page.goto(`/prompts/${MODEL}`);
-  await expect(page.getByTestId("install").getByRole("tab", { selected: true })).toHaveText("ChatGPT");
+  await expect(page.getByTestId("install").getByRole("tab", { selected: true })).toHaveText("Reusable instructions");
 });
 
 test("phone width: no sideways scroll on home, a block page or the guide @mobile", async ({ page }) => {
@@ -669,10 +670,10 @@ test("after the download: how to run it in your AI, the first message to paste, 
   await Promise.all([page.waitForEvent("download"), dlg.getByTestId("needs-download").click()]);
   const next = dlg.getByTestId("next-steps");
   await expect(next).toContainText("a-landing-page-for-my-best-ad-handoff.zip");
-  await expect(next.getByRole("tab", { selected: true })).toHaveText("Claude");
+  await expect(next.getByRole("tab", { selected: true })).toHaveText("Chat");
   await expect(next).toContainText("attach HANDOFF.md");
   await next.getByTestId("next-code").click();
-  await expect(next).toContainText("type claude");
+  await expect(next).toContainText("Open that folder in your AI coding assistant");
   await expect(next).toContainText("outputs");
   await next.getByTestId("copy-first-message").click();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe("Follow HANDOFF.md step by step. Start with “Before you start”, and ask me for anything that's missing.");
@@ -683,7 +684,7 @@ test("after the download: how to run it in your AI, the first message to paste, 
   await expect(dlg).toHaveCount(0);
   // The AI you picked is remembered, here and on skill pages.
   await page.goto(`/prompts/${MODEL}`);
-  await expect(page.getByTestId("install").getByRole("tab", { selected: true })).toHaveText("Claude Code");
+  await expect(page.getByTestId("install").getByRole("tab", { selected: true })).toHaveText("Coding assistant");
 });
 
 test("preview shows the first lines of what each step hands back, and the step panel shows more", async ({ page }) => {

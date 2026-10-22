@@ -1,0 +1,2 @@
+/* Horizontal swipes turn the globe; vertical swipes still scroll the page. */
+.hero { touch-action: pan-y pinch-zoom; }

@@ -1,12 +1,13 @@
 # Plan stock, shipping and suppliers: AI Blocks
 
-> 90 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 91 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3PL bid and agreement builder](https://useaiblocks.com/skills/3pl-bid-and-agreement-builder): Give it forecasts and product sizes. Get a request for pricing and agreement terms to demand.
 - [AI task scoper for supply chain](https://useaiblocks.com/skills/ai-task-scoper-for-supply-chain): Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
 - [Assembly line balancer](https://useaiblocks.com/skills/assembly-line-balancer): Give it your work steps and times. Get steps split across stations so none waits or overloads.
 - [Budget and space picker (knapsack)](https://useaiblocks.com/skills/budget-and-space-picker-knapsack): Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
 - [Co-packer picker](https://useaiblocks.com/skills/co-packer-picker): Tell it what you need made or packed. Get a way to pick a co-packer and a plan to manage the deal.
+- [Compare supplier prices on the same basis](https://useaiblocks.com/workflows/compare-supplier-prices-on-the-same-basis): Share the source files. Get a normalized quote table and a decision brief with cost and delivery risks.
 - [Cost per sellable unit finder](https://useaiblocks.com/prompts/cost-per-sellable-unit-finder): Paste a factory quote and your other costs. Get cost per sellable unit and a go or no-go.
 - [Cross-docking planner](https://useaiblocks.com/skills/cross-docking-planner): Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
 - [Cut your product cost and turn supplier terms into cash](https://useaiblocks.com/workflows/cut-your-product-cost-and-turn-supplier-terms-into-cash): Give it your product and quote. Get a cost sheet, terms to ask for, a talk plan and a cash check.

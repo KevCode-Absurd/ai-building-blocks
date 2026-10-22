@@ -1,0 +1,55 @@
+slug: check-a-translated-interface-still-makes-sense
+name: Check a translated interface still makes sense
+summary: Share the source files. Get a meaning check, revised wording and a layout review list.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: false
+  - type: persona
+    required: false
+  - type: source_text
+    required: false
+  - type: codebase
+    required: false
+outputs:
+  - type: copy_draft
+  - type: source_text
+  - type: code_change
+  - type: document
+uses:
+  - plain-words-interface-rewriter
+  - translator
+  - screen-states-designer
+steps:
+  - uses: plain-words-interface-rewriter
+    note: Clarify the original labels and preserve the meaning and variables in each string.
+  - uses: translator
+    note: Compare the source and target UI strings for meaning, glossary consistency, placeholders and plural rules; flag languages you cannot assess.
+  - uses: screen-states-designer
+    note: Check that translated strings cover all states and identify layouts requiring visual review.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Plain words interface rewriter
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-words-interface-rewriter
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Translator
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/translation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Screen states designer
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ui-states
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

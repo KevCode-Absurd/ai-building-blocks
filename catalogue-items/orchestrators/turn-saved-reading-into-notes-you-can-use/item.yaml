@@ -1,0 +1,47 @@
+slug: turn-saved-reading-into-notes-you-can-use
+name: Turn saved reading into notes you can use
+summary: Share the source files. Get linked notes, a sourced answer and a small recall exercise.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+  - type: feedback_notes
+uses:
+  - source-note-summariser
+  - notes-wiki-builder
+  - recall-first-study-tutor
+steps:
+  - uses: source-note-summariser
+    note: Extract claims, evidence, gaps and source locations relevant to the supplied question, separating the source from your interpretation.
+  - uses: notes-wiki-builder
+    note: Prepare linked note files or use an explicitly approved local notes folder. Connect genuine overlaps without erasing disagreements and do not silently persist private memory.
+  - uses: recall-first-study-tutor
+    note: Prepare recall prompts and require actual learner attempts and confidence before assessing understanding. Leave the check unrun when the learner has not answered.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Source note summariser
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/source-note-summariser
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Notes wiki builder
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/compile-knowledge
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Recall-first study tutor
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/retrieve-first-gate
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

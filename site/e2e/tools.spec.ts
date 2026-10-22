@@ -1,6 +1,7 @@
 import { expect, test, protectedGet, type Page } from "./fixtures/staging-aware-test";
 import { unzipSync, strFromU8 } from "fflate";
 import fs from "node:fs";
+import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import { execFileSync } from "node:child_process";
 
 // The tools and their worked examples, as plain data: tools/build-mini-tool.mjs writes this file on every `npm run dev` or build.
@@ -42,12 +43,12 @@ test("the Tools page lists every mini tool, and the header and footer lead to it
   await page.locator(".nav").getByRole("link", { name: "Tools" }).click();
   await expect(page).toHaveURL(/\/tools$/);
   const index = page.getByTestId("tools-index");
-  await expect(index.getByRole("heading", { level: 1 })).toHaveText("Know your numbers before you spend money");
-  await expect(index.getByTestId("tool-card")).toHaveCount(tools.length);
-  expect(await index.getByTestId("tool-card").evaluateAll((els) => els.map((e) => e.getAttribute("data-slug")))).toEqual(tools.map((t) => t.slug));
-  await index.getByTestId("tool-card").first().click();
+  await expect(index.getByRole("heading", { level: 1 })).toHaveText("Work out the numbers. Get the small jobs done.");
+  await expect(index.getByTestId("tool-card")).toHaveCount(tools.length + BROWSER_TOOLS.length + 1);
+  expect(await index.getByTestId("tool-card").evaluateAll((els) => els.map((e) => e.getAttribute("data-slug")))).toEqual(["growth-channel-planner", ...[...BROWSER_TOOLS, ...tools].map((t) => t.slug)]);
+  await index.locator('[data-slug="discount-calculator"]').click();
   await expect(page).toHaveURL(/\/tools\/discount-calculator$/);
-  await expect(page.getByTestId("tool-page").getByRole("heading", { level: 1 })).toHaveText(tools[0].headline);
+  await expect(page.getByTestId("tool-page").getByRole("heading", { level: 1 })).toHaveText(tools.find(t => t.slug === "discount-calculator")!.headline);
   await page.goto("/how-it-works");
   await page.locator(".footer").getByRole("link", { name: "Mini tools" }).click();
   await expect(page).toHaveURL(/\/tools$/);
@@ -194,7 +195,7 @@ test("in your AI: the skill, the prompt and the steps to keep it", async ({ page
   expect(prompt).toContain("Never do the sums in your head");
   expect(prompt).toContain("YOUR_NUMBERS");
   await ai.getByTestId("save-steps").locator("summary").click();
-  for (const name of ["Claude, as a Project", "ChatGPT, as a custom GPT", "Gemini, as a Gem"]) await expect(ai.getByTestId("save-steps")).toContainText(name);
+  for (const name of ["Chat assistant with code execution", "Coding assistant with file access", "Reusable project or assistant"]) await expect(ai.getByTestId("save-steps")).toContainText(name);
 });
 
 test("embed: a snippet with a credit link, and a small page that works inside it", async ({ page, context }) => {

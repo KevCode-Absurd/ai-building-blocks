@@ -88,8 +88,105 @@ import t_store_or_marketplace_ex from "./store-or-marketplace/examples.mjs";
 import t_stock_weeks_of_cover from "./stock-weeks-of-cover/tool.mjs";
 import t_stock_weeks_of_cover_ex from "./stock-weeks-of-cover/examples.mjs";
 
-export const TOOLS = [discount, deal, margin, repeat, volume, pageTest, aiCost, hourly, t_ad_budget_planner, t_customer_payback, t_price_increase_calculator, t_free_shipping_threshold, t_bundle_price_calculator, t_returns_cost_calculator, t_landed_cost, t_reorder_point, t_email_list_value, t_creator_deal_calculator, t_subscription_revenue_forecast, t_cash_runway, t_meeting_cost, t_hire_or_freelance, t_new_hire_break_even, t_hire_runway_cost, t_agency_or_in_house, t_subscriber_lifetime_value, t_launch_revenue_planner, t_three_tier_pricing, t_early_payment_discount, t_ad_test_size, t_email_frequency_planner, t_content_cost_per_piece, t_ai_time_saved, t_marketplace_unit_margin, t_store_or_marketplace, t_stock_weeks_of_cover];
+import everyday0 from "./print-image-size/tool.mjs";
+import everydayEx0 from "./print-image-size/examples.mjs";
+import everyday1 from "./image-crop-planner/tool.mjs";
+import everydayEx1 from "./image-crop-planner/examples.mjs";
+import everyday2 from "./layout-grid-calculator/tool.mjs";
+import everydayEx2 from "./layout-grid-calculator/examples.mjs";
+import everyday3 from "./video-file-size/tool.mjs";
+import everydayEx3 from "./video-file-size/examples.mjs";
+import everyday4 from "./reading-time/tool.mjs";
+import everydayEx4 from "./reading-time/examples.mjs";
+import everyday5 from "./interview-capacity/tool.mjs";
+import everydayEx5 from "./interview-capacity/examples.mjs";
+import everyday6 from "./leave-coverage/tool.mjs";
+import everydayEx6 from "./leave-coverage/examples.mjs";
+import everyday7 from "./training-budget/tool.mjs";
+import everydayEx7 from "./training-budget/examples.mjs";
+import everyday8 from "./employee-turnover-cost/tool.mjs";
+import everydayEx8 from "./employee-turnover-cost/examples.mjs";
+import everyday9 from "./hiring-funnel/tool.mjs";
+import everydayEx9 from "./hiring-funnel/examples.mjs";
+import everyday10 from "./emergency-fund/tool.mjs";
+import everydayEx10 from "./emergency-fund/examples.mjs";
+import everyday11 from "./savings-goal/tool.mjs";
+import everydayEx11 from "./savings-goal/examples.mjs";
+import everyday12 from "./loan-payment/tool.mjs";
+import everydayEx12 from "./loan-payment/examples.mjs";
+import everyday13 from "./monthly-budget/tool.mjs";
+import everydayEx13 from "./monthly-budget/examples.mjs";
+import everyday14 from "./split-bill/tool.mjs";
+import everydayEx14 from "./split-bill/examples.mjs";
+import everyday15 from "./subscription-savings/tool.mjs";
+import everydayEx15 from "./subscription-savings/examples.mjs";
+import everyday16 from "./focus-time/tool.mjs";
+import everydayEx16 from "./focus-time/examples.mjs";
+import everyday17 from "./task-time-buffer/tool.mjs";
+import everydayEx17 from "./task-time-buffer/examples.mjs";
+import everyday18 from "./study-plan/tool.mjs";
+import everydayEx18 from "./study-plan/examples.mjs";
+import everyday19 from "./trip-budget/tool.mjs";
+import everydayEx19 from "./trip-budget/examples.mjs";
+import everyday20 from "./commute-cost/tool.mjs";
+import everydayEx20 from "./commute-cost/examples.mjs";
+import everyday21 from "./support-staffing/tool.mjs";
+import everydayEx21 from "./support-staffing/examples.mjs";
+import everyday22 from "./project-capacity/tool.mjs";
+import everydayEx22 from "./project-capacity/examples.mjs";
+import everyday23 from "./event-break-even/tool.mjs";
+import everydayEx23 from "./event-break-even/examples.mjs";
+import everyday24 from "./document-review-capacity/tool.mjs";
+import everydayEx24 from "./document-review-capacity/examples.mjs";
+import everyday25 from "./data-retention-storage/tool.mjs";
+import everydayEx25 from "./data-retention-storage/examples.mjs";
+import everyday26 from "./supplier-quote-comparer/tool.mjs";
+import everydayEx26 from "./supplier-quote-comparer/examples.mjs";
+import everyday27 from "./file-transfer-time/tool.mjs";
+import everydayEx27 from "./file-transfer-time/examples.mjs";
+import everyday28 from "./workshop-materials/tool.mjs";
+import everydayEx28 from "./workshop-materials/examples.mjs";
+import everyday29 from "./backlog-clearance/tool.mjs";
+import everydayEx29 from "./backlog-clearance/examples.mjs";
+import everyday30 from "./invoice-payment-fees/tool.mjs";
+import everydayEx30 from "./invoice-payment-fees/examples.mjs";
+import everyday31 from "./electricity-running-cost/tool.mjs";
+import everydayEx31 from "./electricity-running-cost/examples.mjs";
+
+export const TOOLS = [everyday0, everyday1, everyday2, everyday3, everyday4, everyday5, everyday6, everyday7, everyday8, everyday9, everyday10, everyday11, everyday12, everyday13, everyday14, everyday15, everyday16, everyday17, everyday18, everyday19, everyday20, everyday21, everyday22, everyday23, everyday24, everyday25, everyday26, everyday27, everyday28, everyday29, everyday30, everyday31, discount, deal, margin, repeat, volume, pageTest, aiCost, hourly, t_ad_budget_planner, t_customer_payback, t_price_increase_calculator, t_free_shipping_threshold, t_bundle_price_calculator, t_returns_cost_calculator, t_landed_cost, t_reorder_point, t_email_list_value, t_creator_deal_calculator, t_subscription_revenue_forecast, t_cash_runway, t_meeting_cost, t_hire_or_freelance, t_new_hire_break_even, t_hire_runway_cost, t_agency_or_in_house, t_subscriber_lifetime_value, t_launch_revenue_planner, t_three_tier_pricing, t_early_payment_discount, t_ad_test_size, t_email_frequency_planner, t_content_cost_per_piece, t_ai_time_saved, t_marketplace_unit_margin, t_store_or_marketplace, t_stock_weeks_of_cover];
 export const EXAMPLES = {
+  [everyday0.slug]: everydayEx0,
+  [everyday1.slug]: everydayEx1,
+  [everyday2.slug]: everydayEx2,
+  [everyday3.slug]: everydayEx3,
+  [everyday4.slug]: everydayEx4,
+  [everyday5.slug]: everydayEx5,
+  [everyday6.slug]: everydayEx6,
+  [everyday7.slug]: everydayEx7,
+  [everyday8.slug]: everydayEx8,
+  [everyday9.slug]: everydayEx9,
+  [everyday10.slug]: everydayEx10,
+  [everyday11.slug]: everydayEx11,
+  [everyday12.slug]: everydayEx12,
+  [everyday13.slug]: everydayEx13,
+  [everyday14.slug]: everydayEx14,
+  [everyday15.slug]: everydayEx15,
+  [everyday16.slug]: everydayEx16,
+  [everyday17.slug]: everydayEx17,
+  [everyday18.slug]: everydayEx18,
+  [everyday19.slug]: everydayEx19,
+  [everyday20.slug]: everydayEx20,
+  [everyday21.slug]: everydayEx21,
+  [everyday22.slug]: everydayEx22,
+  [everyday23.slug]: everydayEx23,
+  [everyday24.slug]: everydayEx24,
+  [everyday25.slug]: everydayEx25,
+  [everyday26.slug]: everydayEx26,
+  [everyday27.slug]: everydayEx27,
+  [everyday28.slug]: everydayEx28,
+  [everyday29.slug]: everydayEx29,
+  [everyday30.slug]: everydayEx30,
+  [everyday31.slug]: everydayEx31,
   [discount.slug]: discountExamples,
   [deal.slug]: dealExamples,
   [margin.slug]: marginExamples,

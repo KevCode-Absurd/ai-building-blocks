@@ -1,6 +1,6 @@
 # App brief
 
-One page. Claude fills this in from your answers, and builds nothing until you say it's right.
+One page. Your AI fills this in from your answers, and builds nothing until you say it's right.
 
 **Name:**
 **The job, in one sentence:**

@@ -6,7 +6,7 @@
   "scripts": {
     "index": "node scripts/build-index.mjs && node scripts/build-ai-tools.mjs && node ../tools/build-mini-tool.mjs && node ../tools/check-masking.mjs",
     "dev": "npm run index && vite",
-    "build": "npm run index && tsc -b && vite build && node scripts/prerender.mjs",
+    "build": "npm run index && node scripts/build-icons.mjs && tsc -b && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "worker:local-config": "node scripts/worker-local-config.mjs",
     "worker:dev": "wrangler dev --config wrangler.local.jsonc --port 5183",
@@ -16,7 +16,7 @@
     "crawl": "node scripts/crawl.mjs",
     "seo": "node scripts/check-seo.mjs",
     "test:e2e": "playwright test",
-    "test:unit": "node --test test/comments.test.mjs test/spaces.test.mjs test/traction.test.mjs test/library-safety.test.mjs test/composer.test.mjs test/composer-auth.test.mjs test/audience-starters.test.mjs test/worker.test.mjs test/api-security.test.mjs test/preview-session.test.mjs"
+    "test:unit": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "@clerk/backend": "3.26.1",

@@ -1,0 +1,59 @@
+slug: turn-rough-notes-into-a-checked-word-handout
+name: Turn rough notes into a checked Word handout
+summary: Share the source files. Get an edited handout and a document quality review.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: copy_draft
+  - type: feedback_notes
+  - type: document
+  - type: slide_deck
+  - type: spreadsheet
+uses:
+  - plain-english-editor
+  - document-file-generator
+  - libreoffice-document-builder
+  - pdf-maker-and-reader
+steps:
+  - uses: plain-english-editor
+    note: Organize the notes around what the reader needs to understand or do.
+  - uses: document-file-generator
+    note: Create a new Word handout using the approved content and reference style; preserve the source notes.
+  - uses: libreoffice-document-builder
+    note: Use the installed converter to export the actual Word handout to a new PDF review copy. Check the conversion result without overwriting the Word source.
+  - uses: pdf-maker-and-reader
+    note: Render and inspect every page of the converted review PDF, checking for missing text, tables, fonts and clipping; keep the actual Word and PDF linked by source version.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Plain English editor
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/plain-english-editor
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Document file generator
+    by: Composio community
+    url: https://github.com/composio-community/awesome-codex-skills/tree/main/paperjsx
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: LibreOffice document builder
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/libreoffice/writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: PDF maker and reader
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/pdf
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

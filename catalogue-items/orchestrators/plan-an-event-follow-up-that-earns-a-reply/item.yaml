@@ -1,0 +1,48 @@
+slug: plan-an-event-follow-up-that-earns-a-reply
+name: Plan an event follow up that earns a reply
+summary: Share the source files. Get segmented follow-up drafts with sources and pending commitments.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+  - type: document
+uses:
+  - event-marketing-planner
+  - executive-action-register
+  - executive-due-task-drafts
+steps:
+  - uses: event-marketing-planner
+    note: Group follow-up needs around the actual event goal and what attendees requested.
+  - uses: executive-action-register
+    note: Extract promised resources, introductions and follow-up actions with source evidence.
+  - uses: executive-due-task-drafts
+    note: Prepare relevant drafts for each supported commitment without sending them.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Event marketing planner
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/events
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Due task follow up drafter
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-due-task-drafts
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

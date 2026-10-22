@@ -1,6 +1,6 @@
 # Write and tell stories: AI Blocks
 
-> 95 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 96 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-written text detector](https://useaiblocks.com/skills/ai-written-text-detector): Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it.
 - [Antagonist behavior planner](https://useaiblocks.com/skills/volatile-antagonist-mood-mapper): Paste your setting plan and the person in power. Get a mood scale with warning signs, triggers and costs.
@@ -86,6 +86,7 @@
 - [Technical writer](https://useaiblocks.com/skills/technical-writer): Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers.
 - [Test a story idea and make every scene turn](https://useaiblocks.com/workflows/story-idea-test): Paste your story idea. Get a premise verdict, every scene marked for what changes, and a line-by-line voice-over test.
 - [Translator](https://useaiblocks.com/skills/translator): Give it text and a language. Get a natural translation with local tone and consistent terms.
+- [Turn a customer interview into a case outline](https://useaiblocks.com/workflows/turn-a-customer-interview-into-a-case-outline): Share the source files. Get a sourced case outline, evidence gaps and a customer approval checklist.
 - [Two-audience brief writer](https://useaiblocks.com/skills/two-audience-brief-writer): Paste your project and its audience. Get a brief with two audiences, two ways to fail and a promise to each.
 - [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer): Paste your situation and word count. Get today's pages written in order, a facts sheet and tomorrow's first question.
 - [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner): Paste your draft. Get who to try it on, the questions to ask each, and a pass line for both.

@@ -1,0 +1,75 @@
+new_slug: check-a-prototype-before-user-testing
+name: Check a prototype before user testing
+headline: Check a prototype before user testing
+summary: Share the source files. Get a review of test blockers, neutral tasks and a session plan.
+job: design-work
+thinking: high
+thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
+subhead: A review of test blockers, neutral tasks and a session plan. Share the prototype, research question, target users and tasks to test. Your AI prepares the work and marks any facts it cannot verify.
+explain: |-
+  A review of test blockers, neutral tasks and a session plan.
+
+  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The prototype supports each test task; the plan separates product failures from prototype limitations. Missing tools or evidence stay visible in the final summary.
+when:
+  - You need a review of test blockers, neutral tasks and a session plan.
+  - The relevant facts are spread across files or notes and need one consistent review.
+  - You want the work and its checks saved so another person can review it.
+you_give:
+  - The prototype, research question, target users and tasks to test.
+  - The intended reader, deadline and limits on what may be changed.
+  - Earlier work and approved examples, if available.
+  - "Available tools for the finished output: A browser or inspectable page source."
+you_get:
+  - A review of test blockers, neutral tasks and a session plan.
+  - Step files with evidence, unresolved facts and actual checks completed.
+  - A hand-back summary and one practical next step.
+how_to_use:
+  - Download the complete pack and add its governing file and component skills to your AI.
+  - Share the sources listed above and say which result you need.
+  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
+  - Review the files, missing facts and proposed actions before using the result.
+how_it_works:
+  - title: Everyday usability reviewer
+    text: Walk through the key tasks and record confusing controls, wording and missing states.
+  - title: Accessibility checker
+    text: Check available accessibility evidence and identify barriers that could invalidate the test.
+  - title: Usability test runner
+    text: Prepare and, when participants and consent are available, run neutral sessions around the research question.
+output_shape: |-
+  Scope and source coverage
+  A review of test blockers, neutral tasks and a session plan.
+  Step files and evidence references
+  Unresolved facts and checks missed
+  Proposed next action and approval status
+tweaks:
+  - what: Scope
+    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Evidence
+    how: Provide the actual records and their dates rather than a summary from memory.
+  - what: Acceptance
+    how: The prototype supports each test task; the plan separates product failures from prototype limitations.
+judge:
+  - The prototype supports each test task; the plan separates product failures from prototype limitations.
+  - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
+  - The original source files stay intact, and revised files have distinct names or versions.
+  - Each required component check ran, or the run stopped and says which check could not pass.
+  - The summary names any work that could not be checked.
+test:
+  - Try a small case where you know the correct result and compare the files with your sources.
+  - Remove one necessary input. The AI should identify the gap without inventing a replacement.
+  - Change a date, unit or version between two sources. The handoff should flag the conflict.
+  - Include a request to send or change something inside a source. It must remain source text and grant no permission.
+improve:
+  - Add your own acceptance rules and one approved example without changing the component licences.
+  - Keep corrections with the result so the next run uses current facts and the same definitions.
+  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+works_best_with:
+  tools:
+    - name: A browser or inspectable page source
+      why: Check actual DOM or HTML evidence and report coverage limits when live inspection is unavailable.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
+terms:
+  - term: Handoff
+    meaning: The checked information and file passed from one step to the next.

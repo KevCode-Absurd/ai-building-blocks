@@ -3,6 +3,7 @@
 // Run after `npm run build`, from site/: node scripts/check-seo.mjs
 import fs from "node:fs";
 import path from "node:path";
+const DIST = process.env.SEO_DIST || "dist";
 
 const kinds = ["skills", "workflows", "agents", "minds", "prompts", "tools", "ai-tools", "jobs"];
 const stats = {}, titles = new Map(), inbound = {}, problems = [], warnings = [];
@@ -15,7 +16,7 @@ for (const k of kinds) {
       const p = path.join(d, f.name);
       if (f.isDirectory()) { if (k === "jobs") walk(p); continue; }
       if (!f.name.endsWith(".html")) continue;
-      const url = "/" + path.relative("dist", p).split(path.sep).join("/").replace(/\.html$/, "");
+      const url = "/" + path.relative(DIST, p).split(path.sep).join("/").replace(/\.html$/, "");
       const h = fs.readFileSync(p, "utf8");
       const body = (h.match(/data-prerendered>([\s\S]*?)<\/main>/) ?? [, ""])[1];
       ws.push(body.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length);
@@ -30,12 +31,12 @@ for (const k of kinds) {
       if (k !== "jobs" && k !== "tools") pages.push(url);
     }
   };
-  walk(path.join("dist", k));
+  walk(path.join(DIST, k));
   ws.sort((a, b) => a - b);
   if (ws.length) stats[k] = { pages: ws.length, fewest_words: ws[0], median_words: ws[ws.length >> 1] };
 }
 // Links from the top-level pages (home, /minds, /jobs, /tools...) count too.
-for (const f of fs.readdirSync("dist").filter((f) => f.endsWith(".html"))) for (const m of fs.readFileSync(path.join("dist", f), "utf8").matchAll(/href="(\/[^"#?]*)"/g)) inbound[m[1]] = (inbound[m[1]] ?? 0) + 1;
+for (const f of fs.readdirSync(DIST).filter((f) => f.endsWith(".html"))) for (const m of fs.readFileSync(path.join(DIST, f), "utf8").matchAll(/href="(\/[^"#?]*)"/g)) inbound[m[1]] = (inbound[m[1]] ?? 0) + 1;
 const orphans = pages.filter((u) => !inbound[u]);
 console.table(stats);
 console.log(`${titles.size} titles, ${orphans.length} of ${pages.length} pages with no link from another page${orphans.length ? ` (e.g. ${orphans.slice(0, 5).join(", ")})` : ""}`);

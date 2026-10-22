@@ -1,6 +1,7 @@
 // Reads catalogue-items/** and writes the site's data: one small index for the library,
 // plus each block's SKILL.md under public/skills/<slug>/ (fetched only when a block page opens), and a zip for a skill with extra files.
 import fs from "node:fs";
+import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import path from "node:path";
 import YAML from "yaml";
 import { markdown as md } from "./lib/safe-markdown.mjs";
@@ -8,6 +9,7 @@ import { zipSync } from "fflate";
 import { quarantineClosure } from "../../tools/lib/quarantine.mjs";
 import { applyDisplayCopy } from "../../tools/lib/display-copy.mjs";
 import { acquireBuildLock } from "./lib/build-lock.mjs";
+import { INFO_PAGES } from "../src/lib/site-info.mjs";
 await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
@@ -206,7 +208,7 @@ for (const r of roster.minds) {
     slug: r.slug, name: m.name, summary: m.summary, headline: m.name,
     task: "think-with-minds", category: "mind", boards: [], type: "mind", role: "make", job: "minds", level: "beginner",
     thinking: "medium", thinkingWhy: "It plays one voice from a written data set. Use your strongest model when the stakes are high.",
-    seats: m.seats.map((s) => s.seat), area: m.area, also: m.also ?? [], years: m.years ?? "", living: !!m.living, labels: labelsOf(r.slug), // the face comes from the roster (lib/data.ts), so it is sent once
+    seats: m.seats.map((s) => s.seat), area: m.area, also: m.also ?? [], years: m.years ?? "", living: !!m.living, identity: m.identity, labels: labelsOf(r.slug), // the face comes from the roster (lib/data.ts), so it is sent once
     inputs: [{ type: "question", required: true }], outputs: [{ type: "mind_view", required: true }],
     uses: [], steps: [], origin: "own", tested: null, version: String(m.version ?? "1.0.0"), words: skill.split(/\s+/).length,
     twin: null, files: mindFiles, minds: [], skills: [], flows: [], added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
@@ -291,7 +293,7 @@ const portTypes = Object.fromEntries([...usedTypes].sort().map((t) => [t, typeDe
 const renamedFile = path.join(ROOT, "renamed.json");
 const renamed = fs.existsSync(renamedFile) ? Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(renamedFile, "utf8"))).filter(([, to]) => blocks.some((b) => b.slug === to))) : {};
 // The whole roster goes too, so /minds can show who's coming before their files are built.
-const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug], face: faces[m.slug] ?? {}, labels: labelsOf(m.slug) })), labels: labelFile.labels ?? {} };
+const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, identity: bySlug[m.slug]?.identity ?? m.identity, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug], face: faces[m.slug] ?? {}, labels: labelsOf(m.slug) })), labels: labelFile.labels ?? {} };
 // blocks.json is loaded by every page, so each block is sent as small as it can be: fields the list, search, home page and
 // builder never read are left out, and a value equal to its default is left out too. loadCatalogue (lib/data.ts) puts them back.
 const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops", level: "intermediate", thinking: "medium", origin: "own", version: "1.0.0", usedIn: 0 };
@@ -313,12 +315,12 @@ fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new
 const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
-const urls = ["/", "/compose", "/how-it-works", "/minds", "/from-a-source", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+const urls = ["/", "/compose", "/how-it-works", "/minds", "/from-a-source", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed. No lastmod:
 // the only dates we have are file times, and a wrong date teaches search engines to ignore it.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs.
 const urlset = (us) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${us.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`;
-const SITEMAPS = { pages: [...urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), "/traction"], skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
+const SITEMAPS = { pages: [...urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), "/tools/growth-channel-planner"], skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
 const aiToolsRoot = path.join(ROOT, "ai-tools");
 if (fs.existsSync(aiToolsRoot)) SITEMAPS["ai-tools"] = ["/ai-tools", ...fs.readdirSync(aiToolsRoot).filter((f) => f.endsWith(".yaml") && !f.startsWith("_")).map((f) => `/ai-tools/${f.slice(0, -5)}`)];
 for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(f))) fs.rmSync(path.join("public", f));
@@ -348,7 +350,7 @@ const nSkills = paged.filter((b) => b.type !== "mind").length, nMinds = paged.fi
 const example = paged.find((b) => b.slug === "ad-angle-planner") ?? paged[0];
 const intro = [
   "# AI Blocks", "",
-  "> Free AI skills, workflows, prompts and minds for real work. Each skill is a SKILL.md for Claude, ChatGPT, Gemini or Codex.", "",
+  "> Free AI skills, workflows, prompts and minds for real work. Each skill is a reusable SKILL.md for an AI assistant that can read files.", "",
   "## Key facts", "",
   "- Free to use, no account needed.",
   `- ${nSkills} skills, workflows and prompts in ${tasksBySize.length} jobs, ${nMinds} minds and ${TOOLS.length} mini tools.`,
@@ -381,7 +383,7 @@ fs.writeFileSync("public/llms-full.txt", [...intro, "## Every job", "", ...[...t
 const redirects = Object.entries(renamed).map(([from, to]) => [from, bySlug[to]]).filter(([, b]) => b?.headline).map(([from, b]) => `/${kindPath(b)}/${from} /${kindPath(b)}/${b.slug} 301`);
 // Rewrite to canonical asset URLs: .html targets trigger Workers' HTML redirects
 // and would erase /space, /people or the shared token from the address bar.
-const appRoutes = ["/space / 200", "/people / 200", "/s/* /shared-space-shell 200"];
+const appRoutes = ["/traction /tools/growth-channel-planner 301", "/s/* /shared-space-shell 200"];
 fs.writeFileSync("public/_redirects", `# Old block names, moved to shorter ones (catalogue-items/renamed.json). Made by scripts/build-index.mjs.\n${redirects.join("\n")}\n\n# App pages with no page file of their own.\n${appRoutes.join("\n")}\n`);
 if (redirects.length + appRoutes.length > 2000) problems.push(`_redirects has ${redirects.length + appRoutes.length} rules; Cloudflare Pages allows 2,000`);
 console.log(`sitemap: ${urls.length} pages`);

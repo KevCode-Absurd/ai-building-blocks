@@ -1,0 +1,50 @@
+slug: build-a-community-project-with-clear-learning
+name: Build a community project with clear learning
+summary: Share the source files. Get a project brief, learning sequence and evidence collection plan.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+  - type: document
+uses:
+  - community-project-unit-planner
+  - project-based-unit-brief-writer
+  - learning-documentation-planner
+steps:
+  - uses: community-project-unit-planner
+    note: Frame an appropriate local problem and the learning students should demonstrate.
+  - uses: project-based-unit-brief-writer
+    note: Define deliverables, roles, milestones and realistic assessment criteria.
+  - uses: learning-documentation-planner
+    note: Plan observations of learner decisions for teacher planning. Keep this documentation distinct from the separate curriculum assessment.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Community project unit planner
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/environmental-experiential-learning/service-learning-project-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Project-based unit brief writer
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/curriculum-assessment/project-brief-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Learning documentation planner
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/global-cross-cultural-pedagogies/reggio-documentation-protocol
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

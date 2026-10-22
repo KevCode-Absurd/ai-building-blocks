@@ -63,7 +63,7 @@ export default function IntakePage({ c, toast }: { c: Catalogue; toast: (m: stri
           <button type="submit" className="btn btn-primary" disabled={!words || busy} data-testid="intake-download">{busy ? "Making the pack…" : "Download the pack"}</button>
           {words > 0 && <button type="button" className="btn btn-dark" onClick={() => setV(empty)}>Clear</button>}
         </div>
-        <p className="small">Your text stays in your browser and goes only into the zip. Then, in Claude Code, open the folder and say "Follow HANDOFF.md". In a chat, upload the files and say the same.</p>
+        <p className="small">Your text stays in your browser and goes only into the zip. Open the folder in your AI coding assistant and say "Follow HANDOFF.md". In a chat, upload the files and say the same.</p>
       </form>
     </main>
   );

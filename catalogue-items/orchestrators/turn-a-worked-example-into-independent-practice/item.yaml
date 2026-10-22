@@ -1,0 +1,49 @@
+slug: turn-a-worked-example-into-independent-practice
+name: Turn a worked example into independent practice
+summary: Share the source files. Get a staged practice sequence and a short understanding check.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+  - type: feedback_notes
+  - type: document
+uses:
+  - worked-example-practice
+  - practice-problem-set-writer
+  - study-understanding-check
+steps:
+  - uses: worked-example-practice
+    note: Break the example into explanation, partially completed practice and independent work.
+  - uses: practice-problem-set-writer
+    note: Create comparable problems and validate their answers and difficulty against the target skill.
+  - uses: study-understanding-check
+    note: Check the reasoning behind answers and use errors to choose the next practice.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Worked example to practice sequence builder
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/worked-example-fading-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Practice problem set writer
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/explicit-instruction/practice-problem-sequence-designer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Study understanding check
+    by: Jacquard Labs
+    url: https://github.com/jacquardlabs/study-skills/tree/main/skills/understanding-check
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

@@ -6,10 +6,20 @@
 // Checklists: the technical-seo-auditor, seo-site-auditor, ai-search-visibility-optimiser, structured-data-writer and
 // tool-pages-seo-fixer skills in our own library (catalogue-items/imported/).
 import fs from "node:fs";
+import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
+import { INFO_PAGES, OPERATOR, POLICY_DATE, SUPPORT_EMAIL, emailLink, infoPage } from "../src/lib/site-info.mjs";
 import path from "node:path";
 
 const DIST = process.env.PRERENDER_DIST || "dist";
 const SITE = "https://useaiblocks.com";
+const SEO_TITLES = {
+  "/workflows/build-google-remarketing-lists-and-campaigns-then-read-the-results": "Google Remarketing Campaigns and Results | AI Blocks",
+  "/workflows/job-based-product-design": "Customer Jobs to Be Done Design Workflow | AI Blocks",
+  "/tools/agency-or-in-house": "Agency vs In-House Cost Calculator | AI Blocks",
+  "/tools/ai-time-saved": "AI Time Savings Calculator | AI Blocks",
+  "/tools/launch-revenue-planner": "Launch Revenue Calculator | AI Blocks",
+  "/tools/stock-weeks-of-cover": "Stock Weeks of Cover Calculator | AI Blocks",
+};
 // The built index.html, as vite left it (a second run first strips what the last one added to the home page).
 const shell = fs.readFileSync(path.join(DIST, "index.html"), "utf8")
   .replace(/<script type="application\/ld\+json">.*?<\/script>\n  /s, "")
@@ -55,21 +65,21 @@ const byTask = {};
 for (const b of cat.blocks) if (hasPage(b) && b.type !== "mind" && b.task) (byTask[b.task] ??= []).push(b);
 for (const list of Object.values(byTask)) list.sort((a, b) => a.name.localeCompare(b.name));
 
-const ORG = { "@type": "Organization", "@id": `${SITE}/#org`, name: "AI Blocks", url: `${SITE}/`, logo: `${SITE}/og/logo.png` };
+const ORG = { "@type": "Organization", "@id": `${SITE}/#org`, name: "AI Blocks", url: `${SITE}/`, logo: `${SITE}/og/logo.png`, email: SUPPORT_EMAIL, contactPoint: { "@type": "ContactPoint", email: SUPPORT_EMAIL, contactType: "customer support" }, founder: { "@type": "Person", name: OPERATOR } };
 const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks", url: `${SITE}/`, inLanguage: "en", publisher: { "@id": `${SITE}/#org` }, description: "Free AI skills, workflows, prompts, minds and mini tools that do real work for you and your work." };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
 const NAV = [["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Mini tools"], ["/how-it-works", "How it works"], ["/from-a-source", "From a source"], ["/apps", "Apps"]];
 const header = `<header class="wrap small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a> · ${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")}</header>`;
-const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools. Every skill works in Claude, ChatGPT, Gemini and Codex, or pasted into any chat.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p></footer>`;
+const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p><p>${INFO_PAGES.map(page => `<a href="${page.path}">${esc(page.label)}</a>`).join(" · ")}</p><p><a href="${emailLink()}">${SUPPORT_EMAIL}</a> · ${OPERATOR}, India</p></footer>`;
 
 // Pages that aren't blocks: their title and the line a search result shows.
 const STATIC = {
-  "/compose": ["Get a workflow for your request", "Describe a result and assemble connected skills, checks and an editable workflow pack. Choose free assembly or AI composition."],
+  "/compose": ["Build a custom workflow", "Describe what you want to achieve. Get a step-by-step workflow with connected skills and checks, ready to edit, download and run in your own AI."],
   "/how-it-works": ["How AI Blocks works", "Start with one prompt, add skills, join them into a workflow and build up to your own AI app. Free, step by step."],
   "/minds": ["Minds: hire great thinkers to work on your problem", "Over 300 minds built from public sources. Bring a real problem and get their way of thinking, method and voice applied to it."],
-  "/from-a-source": ["Turn any link or file into skills", "Paste a video, article or course. Get its method as reusable AI skills and a workflow you can run again."],
-  "/tools": ["Free mini tools for your numbers", "Small calculators for prices, margins, discounts and AI costs, each with the formula, a spreadsheet and the AI code."],
+  "/from-a-source": ["Create AI skills from articles, transcripts and notes", "Paste source text and download a handoff pack. Your AI uses it to turn the source's method into reusable skills and a workflow you can review."],
+  "/tools": ["Free everyday tools for work and life", "Free tools for design, money, hiring, operations and personal effectiveness. Calculate, clean text, convert data and compare options in your browser."],
   "/apps": ["Example AI apps you can copy", "A real AI app to click through, and a starter pack to build your own from the same parts."],
   "/apps/starter-pack": ["AI app starter pack", "The files, prompts and steps to start your own AI app from the same parts as our example app."],
 };
@@ -78,9 +88,14 @@ const list = (items) => (items.length ? `<ul>${items.map((x) => `<li>${x}</li>`)
 const link = (b) => `<a href="${hrefOf(b)}">${esc(b.name)}</a>`;
 
 function pageFor(url) {
-  if (url === "/traction") return {
-    title: "Find your next growth channel", h1: "Find your next source of customers", collection: true,
-    desc: "Paste your product link and take a 19-channel Traction skill pack into your AI. Compare channels, plan small tests and review measured results. SaaS and general-business modes.",
+  const info = infoPage(url);
+  if (info) return {
+    title: info.title, h1: info.title, desc: info.description,
+    body: `<p class="bp-sub">${esc(info.description)}</p><p class="small">Effective and last updated ${POLICY_DATE}</p><nav aria-label="On this page">${list(info.sections.map(section => `<a href="#${section.id}">${esc(section.title)}</a>`))}</nav>${info.sections.map(section => `<section id="${section.id}"><h2>${esc(section.title)}</h2>${section.paragraphs.map(paragraph => `<p>${esc(paragraph)}</p>`).join("")}${list((section.items ?? []).map(esc))}${list((section.links ?? []).map(link => `<a href="${esc(link.href)}">${esc(link.label)}</a>`))}</section>`).join("")}`,
+  };
+  if (url === "/tools/growth-channel-planner") return {
+    title: "Growth channel planner", h1: "Plan growth for any business", collection: true,
+    desc: "Prepare a growth brief for any business. Compare 19 channels, define customer outcomes and download a complete planning skill pack. No website or sign-in required.",
     body: `<p class="bp-sub">19 standalone growth skills, SaaS and general-business workflows, and research and review agents. The site prepares your pack; your AI reads the product and writes the advice.</p><h2>Explore, test, then focus</h2><p>Read your business, compare every channel, prepare up to three affordable pilots, then choose a focus from observed customer quality and economics.</p>${list(tractionChannels.map((c) => `<a href="/skills/${tractionSlug(c.id)}">${esc(c.channel)}</a>: ${esc(c.decision)}`))}<p><a href="/workflows/find-your-saas-growth-channel">SaaS workflow</a> · <a href="/workflows/find-your-business-growth-channel">General-business workflow</a> · <a href="/agents/traction-research-agent">Research agent</a> · <a href="/agents/traction-experiment-keeper">Review agent</a></p>`,
   };
   if (url === "/ai-tools") return {
@@ -99,12 +114,14 @@ function pageFor(url) {
     const [t, d] = STATIC[url];
     let extra = "";
     // The minds and tools pages list every mind and tool, so each is linked from a page a crawler can read.
-    if (url === "/minds") extra = Object.entries(AREAS).map(([a, name]) => { const ms = cat.blocks.filter((b) => b.type === "mind" && b.area === a); return ms.length ? `<h2>${esc(name)}</h2>${list(ms.map((m) => `${link(m)}: ${esc(m.summary)}`))}` : ""; }).join("");
-    if (url === "/tools") extra = list(TOOLS.map((x) => `<a href="/tools/${x.slug}">${esc(x.name)}</a>: ${esc(x.summary)}`));
+    if (url === "/minds") extra = Object.entries(AREAS).map(([a, name]) => { const ms = cat.blocks.filter((b) => b.type === "mind" && b.area === a); return ms.length ? `<h2>${esc(name)}</h2>${list(ms.map((m) => `${link(m)}: ${esc(m.identity || "")} · ${esc(m.summary)}`))}` : ""; }).join("");
+    if (url === "/tools") extra = list([`<a href="/tools/growth-channel-planner">Growth channel planner</a>: Prepare a business brief and compare 19 growth channels.`, ...[...BROWSER_TOOLS, ...TOOLS].map((x) => `<a href="/tools/${x.slug}">${esc(x.name)}</a>: ${esc(x.summary)}`)]);
     return { title: t, desc: d, h1: t, crumbs: [], body: `<p class="bp-sub">${esc(d)}</p>${extra}`, ld: { "@type": "WebPage" } };
   }
   const [, kind, slug] = url.split("/");
   if (kind === "tools") {
+    const browserTool = BROWSER_TOOLS.find(x => x.slug === slug);
+    if (browserTool) return { title: browserTool.short, h1: browserTool.short, desc: browserTool.summary, crumbs: [["Tools", "/tools"]], body: `<p class="bp-sub">${esc(browserTool.summary)}</p><p>Use this free tool in your browser. Copy or download the result. Your input stays on your device.</p>` };
     const t = TOOLS.find((x) => x.slug === slug);
     if (!t) return null;
     return {
@@ -131,7 +148,7 @@ function pageFor(url) {
     return {
       title: `${b.name}: AI mind for ${area}`, desc: `An AI built from ${b.name}'s public work. ${b.summary}`, h1: b.name, crumbs: [["Minds", "/minds"]],
       body: [
-        `<p class="small">${esc(disclose)}</p>`, `<p class="bp-sub">${esc(b.summary)}</p>`,
+        `<p class="bp-identity">${esc(b.identity || "")}</p>`, `<p class="small">${esc(disclose)}</p>`, `<p class="bp-sub">${esc(b.summary)}</p>`,
         ideas.length ? `<h2>Big ideas</h2>${list(ideas.map((i) => `<b>${esc(i.title)}</b>: ${esc(words(text(i.text), 40))}`))}` : "",
         (page.hire?.jobs ?? []).length ? `<h2>Hire ${esc(b.name)} for</h2>${list(page.hire.jobs.slice(0, 8).map((j) => `<b>${esc(j.title)}</b>: ${esc(words(text(j.text), 30))}`))}` : "",
         skills.length ? `<h2>Skills from their work</h2>${list(skills.map(link))}` : "",
@@ -161,11 +178,11 @@ function pageFor(url) {
   const twin = b.twin && bySlug[b.twin] && hasPage(bySlug[b.twin]) ? bySlug[b.twin] : null;
   const explain = text(page.html?.explain);
   const when = Array.isArray(page.when) ? page.when : page.when ? [page.when] : [];
-  const lead = `${b.name} is a free ${noun}${job ? ` for the job "${job}"` : ""}. ${isFlow ? "It runs several skills in a row and hands each one's work to the next." : "Add it to Claude, ChatGPT, Gemini or Codex as a skill, or paste it into any chat."}`;
+  const lead = `${b.name} is a free ${noun}${job ? ` for the job "${job}"` : ""}. ${isFlow ? "It guides your AI through several skills in order, passing each step's output to the next." : "Give the instructions to an AI assistant that supports the required files and tools, then review its output."}`;
   const titleBase = `${b.name}: free ${noun}`;
   return {
     title: isFlow ? (`${b.name} · AI workflow`.length <= 60 ? `${b.name} · AI workflow` : b.name) : titleBase.length <= 60 ? titleBase : b.name,
-    desc: `${b.summary} Free for Claude, ChatGPT, Gemini and Codex.`, h1: b.headline || b.name,
+    desc: `${b.summary} Free reusable instructions for your AI assistant.`, h1: b.headline || b.name,
     crumbs: job ? [[job, jobHref(b.task)]] : [],
     body: [
       `<p class="bp-sub">${esc(b.summary)}</p>`, `<p>${esc(lead)}</p>`, `<p class="small">${facts.map(esc).join(" · ")}</p>`,
@@ -193,7 +210,7 @@ function pageFor(url) {
 function render(url, p, { plain = false, noindex = false } = {}) {
   const full = `${SITE}${url === "/" ? "/" : url}`;
   const suffixed = `${p.title} · AI Blocks`;
-  const title = suffixed.length <= 65 ? suffixed : p.title;
+  const title = p.documentTitle || SEO_TITLES[url] || (suffixed.length <= 65 ? suffixed : p.title);
   const desc = clip(p.desc);
   const crumbs = [["AI Blocks", "/"], ...(p.crumbs ?? []), [p.h1, url]];
   const graph = [ORG, WEBSITE,
@@ -202,22 +219,27 @@ function render(url, p, { plain = false, noindex = false } = {}) {
     { "@type": "BreadcrumbList", "@id": `${full}#crumbs`, itemListElement: crumbs.map(([n, u], i) => ({ "@type": "ListItem", position: i + 1, name: n, item: `${SITE}${u}` })) },
   ];
   const body = `<main class="wrap bp-hero" data-prerendered>${header}<p class="small">${crumbs.slice(0, -1).map(([n, u]) => `<a href="${u}">${esc(n)}</a>`).join(" › ")}</p><h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}${footer}</main>`;
+  const metadata = { title, description: desc, canonical: full, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, image: `${SITE}/og/default.png` };
+  const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
+  fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
+  fs.writeFileSync(metadataFile, JSON.stringify(metadata));
   const head = [
-    `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c")}</script>`,
+    noindex ? "" : `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c")}</script>`,
     p.markdown ? `<link rel="alternate" type="text/markdown" href="${p.markdown}" title="The skill file" />` : "",
-    noindex ? `<meta name="robots" content="noindex" />` : "",
+    `<meta name="robots" content="${metadata.robots}" />`,
   ].filter(Boolean).join("\n    ");
   return (plain ? plainShell : shell)
-    .replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
-    .replace(/(<meta name="description" content=")[^"]*/, `$1${esc(desc)}`)
-    .replace(/(<link rel="canonical" href=")[^"]*/, `$1${full}`)
-    .replace(/(<meta property="og:url" content=")[^"]*/, `$1${full}`)
-    .replace(/(<meta property="og:title" content=")[^"]*/, `$1${esc(title)}`)
-    .replace(/(<meta property="og:description" content=")[^"]*/, `$1${esc(desc)}`)
-    .replace(/(<meta name="twitter:title" content=")[^"]*/, `$1${esc(title)}`)
-    .replace(/(<meta name="twitter:description" content=")[^"]*/, `$1${esc(desc)}`)
-    .replace("</head>", `${head}\n  </head>`)
-    .replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+    .replace(/<meta name="robots"[^>]*>\s*/g, "")
+    .replace(/<title>[^<]*<\/title>/, () => `<title>${esc(title)}</title>`)
+    .replace(/(<meta name="description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
+    .replace(/(<link rel="canonical" href=")[^"]*/, (_, prefix) => prefix + full)
+    .replace(/(<meta property="og:url" content=")[^"]*/, (_, prefix) => prefix + full)
+    .replace(/(<meta property="og:title" content=")[^"]*/, (_, prefix) => prefix + esc(title))
+    .replace(/(<meta property="og:description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
+    .replace(/(<meta name="twitter:title" content=")[^"]*/, (_, prefix) => prefix + esc(title))
+    .replace(/(<meta name="twitter:description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
+    .replace("</head>", () => `${head}\n  </head>`)
+    .replace('<div id="root"></div>', () => `<div id="root">${body}</div>`);
 }
 const write = (url, html) => { const out = path.join(DIST, `${url.slice(1)}.html`); fs.mkdirSync(path.dirname(out), { recursive: true }); fs.writeFileSync(out, html); };
 
@@ -228,9 +250,10 @@ const titles = new Map(), problems = [];
 // The home page: the main sections and every job, so a crawler reaches the whole library in two steps.
 const tasks = Object.entries(byTask).sort((a, b) => b[1].length - a[1].length);
 fs.writeFileSync(path.join(DIST, "index.html"), render("/", {
-  title: "Free AI skills, workflows and minds", desc: "Turn hours of work into minutes. Free prompts, skills, workflows, mini tools and example apps that save you hours every week.", h1: "Use AI like the top 1%",
-  body: `<p class="bp-sub">Free AI skills, workflows, prompts, minds and mini tools that do real work for you and your work.</p><h2>Skills by job</h2>${list(tasks.map(([t, bs]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a> (${bs.length}): ${bs.slice(0, 3).map(link).join(", ")}`))}<h2>Minds</h2>${list(cat.blocks.filter((b) => b.type === "mind").slice(0, 24).map(link))}<p><a href="/minds">All minds</a></p>`,
-}).replace(/<title>[^<]*<\/title>/, "<title>AI Blocks · Use AI like the top 1%</title>"));
+  documentTitle: "Free AI Skills & Custom Workflow Builder | AI Blocks",
+  title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Build AI workflows for your work",
+  body: `<p class="bp-sub">Find a skill for your next task, or connect several into a workflow. Edit the steps, download the pack and run it in your own AI.</p><p><a href="/compose">Build a custom workflow</a> · <a href="/tools">Explore free browser tools</a></p><h2>Skills by job</h2>${list(tasks.map(([t, bs]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a> (${bs.length}): ${bs.slice(0, 3).map(link).join(", ")}`))}<h2>Minds</h2>${list(cat.blocks.filter((b) => b.type === "mind").slice(0, 24).map(link))}<p><a href="/minds">All minds</a></p>`,
+}).replace(/<title>[^<]*<\/title>/, "<title>Free AI Skills &amp; Custom Workflow Builder | AI Blocks</title>"));
 
 // Job hubs: /jobs lists every job; /jobs/<job> lists every page for it with its one line, 150 to a page.
 const PER = 150;
@@ -248,7 +271,7 @@ for (const [t, bs] of tasks) {
     const pages = Math.ceil(bs.length / PER);
     const nav = pages > 1 ? `<p>${Array.from({ length: pages }, (_, i) => (i === pg ? `<b>Page ${i + 1}</b>` : `<a href="${jobHref(t)}${i ? `/${i + 1}` : ""}">Page ${i + 1}</a>`)).join(" · ")}</p>` : "";
     write(url, render(url, {
-      title: `${name}: ${bs.length} free AI skills${pg ? `, page ${pg + 1}` : ""}`, desc: `Free AI skills and workflows to ${name.toLowerCase()}, such as ${items.slice(0, 3).map((x) => x.name).join(", ")}. Each works in Claude, ChatGPT, Gemini and Codex.`, h1: name + (pg ? `, page ${pg + 1}` : ""),
+      title: `${name}: ${bs.length} free AI skills${pg ? `, page ${pg + 1}` : ""}`, desc: `Free AI skills and workflows to ${name.toLowerCase()}, such as ${items.slice(0, 3).map((x) => x.name).join(", ")}. Run them in an AI assistant with the required tools.`, h1: name + (pg ? `, page ${pg + 1}` : ""),
       crumbs: [["All skills by job", "/jobs"]], collection: true,
       body: `<p class="bp-sub">${bs.length} free AI skills and workflows for this job.</p>${nav}${list(items.map((x) => `${link(x)}: ${esc(x.summary)}`))}${nav}`,
       main: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: pg * PER + i + 1, url: `${SITE}${hrefOf(x)}`, name: x.name })) },
@@ -270,6 +293,8 @@ for (const url of urls) {
 }
 
 // A dedicated shell avoids Pages' wildcard-to-index rewrite loop for shared links.
+write("/space", render("/space", { title: "My private space", desc: "Keep your own AI skills, prompts and workflows together. Manage your space using your private device link and choose what to share.", h1: "My private space", body: "<p>Your owner link controls access to this space. Keep it private.</p>" }, { noindex: true }));
+write("/people", render("/people", { title: "Skills and workflows from people", desc: "Explore public AI skills, prompts and workflows shared by the community. Open a shared item or add it to your own collection.", h1: "From people", body: "<p>Discover skills and workflows people have chosen to make public.</p>" }));
 write("/shared-space-shell", render("/shared-space-shell", { title: "Shared space", desc: "Read a shared collection of AI skills and workflows.", h1: "Shared space", body: "" }, { noindex: true }));
 // A real 404: Cloudflare Pages answers unknown addresses with it (and a 404 status) instead of the home page.
 fs.writeFileSync(path.join(DIST, "404.html"), render("/404", { title: "Page not found", desc: "This page doesn't exist. Find the skill you need by job.", h1: "This page doesn't exist",

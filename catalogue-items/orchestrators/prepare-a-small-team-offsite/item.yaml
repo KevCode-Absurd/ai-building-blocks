@@ -1,0 +1,48 @@
+slug: prepare-a-small-team-offsite
+name: Prepare a small team offsite
+summary: Share the source files. Get an outcome-led agenda, pre-read request and follow-up plan.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: meeting_notes
+    required: false
+outputs:
+  - type: meeting_notes
+  - type: plan
+  - type: document
+uses:
+  - executive-meeting-brief
+  - meeting-agenda-and-cost-planner
+  - executive-action-register
+steps:
+  - uses: executive-meeting-brief
+    note: Prepare a standalone brief of the decision, supported facts and questions participants need to consider.
+  - uses: meeting-agenda-and-cost-planner
+    note: Run the ASYNC, NOT-READY or MEET gate. When a meeting is justified, use actual duration, attendee count and cost assumptions to plan decision sessions, breaks and an action recap.
+  - uses: executive-action-register
+    note: Create a register for decisions and commitments to capture during the event and review afterward.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Executive meeting brief writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-meeting-brief
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Meeting agenda and cost planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/meetings/skills/meetings
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Executive action register keeper
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/executive-action-register
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

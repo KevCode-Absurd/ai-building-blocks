@@ -1,0 +1,48 @@
+slug: build-a-clear-sponsorship-decision-brief
+name: Build a clear sponsorship decision brief
+summary: Share the source files. Get an audience fit review, cost comparison and a bounded pilot recommendation.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+  - type: document
+uses:
+  - vendor-comparison-writer
+  - event-marketing-planner
+  - decision-checklist-runner
+steps:
+  - uses: vendor-comparison-writer
+    note: Normalize the proposal deliverables and costs against available alternatives.
+  - uses: event-marketing-planner
+    note: Use sponsorship evaluation mode to plan a bounded pilot with tracking, caps and a decision date. Label observed responses as observational; do not imply randomized or causal proof.
+  - uses: decision-checklist-runner
+    note: Check the pilot recommendation against the user supplied audience, cost and measurement requirements, marking unknown answers.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Event marketing planner
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/events
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Decision checklist runner
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/decision-checklist-runner
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

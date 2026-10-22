@@ -1,6 +1,6 @@
 # Lead and manage people: AI Blocks
 
-> 75 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 80 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad creative team planner](https://useaiblocks.com/skills/creative-team-pod-designer): Give it your team and review process. Get a two-person pod design, review rules and a fast-trend budget.
 - [Announce a change of direction and keep the team](https://useaiblocks.com/workflows/announce-a-change-of-direction-and-bring-the-team-with-you): Give it the change and why. Get the memo, a rollout plan, the announcement script and listening talks.
@@ -15,6 +15,7 @@
 - [Culture-fit hiring planner](https://useaiblocks.com/skills/culture-fit-hiring-planner): Paste your team's values and the role. Get hire-and-fire values, a two-part interview and a paid exit offer.
 - [Difficult conversation repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner): Describe a fight or hurt at work or home. Get a pause routine and a calm first message.
 - [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener): Paste raw comments on your work. Get each rewritten as a note on the problem, with fixes kept as examples.
+- [Employee feedback action review assistant](https://useaiblocks.com/agents/employee-feedback-action-review-assistant): A progress brief, new themes and proposed updates to the employee response.
 - [Employee feedback writer](https://useaiblocks.com/skills/behaviour-and-fix-notes-writer): Describe what keeps going wrong and who does it. Get one watchable behaviour, their likely reason, true strengths and a small fix.
 - [Executive update drafter](https://useaiblocks.com/skills/executive-update-drafter): Give it the news and who reads it. Get a status update, exec review or bad-news note pitched to that audience.
 - [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner): Describe the person and the problem. Get the conversation: what to praise, what to say and how to say it.
@@ -41,10 +42,13 @@
 - [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner): Name who reports to you and their job. Get a meeting plan with agenda rules, timing and follow-up.
 - [Ops capacity planner](https://useaiblocks.com/skills/ops-capacity-planner): Give it your demand and team size. Get staffing levels, overload risk and a 12-month hiring plan.
 - [Peer feedback session planner](https://useaiblocks.com/skills/peer-feedback-session-planner): Paste the stuck project and who could review it. Get a session plan with rules so notes stay honest.
+- [Plan coverage for a critical role](https://useaiblocks.com/workflows/plan-coverage-for-a-critical-role): Share the source files. Get a role coverage map, development actions and a handover checklist.
 - [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner): Name a policy you suspect is not working. Get a small, dated test to remove it and what to measure.
 - [Polite refusal writer](https://useaiblocks.com/prompts/word-for-word-no-writer): Paste the request you must turn down and why. Get a no you can say, with another way forward.
 - [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter): Paste a message full of orders. Get each turned into a question or request with their gain and an easy first step.
 - [Prepare a board decision brief](https://useaiblocks.com/workflows/prepare-a-board-decision-brief): Share company facts and decisions due. Get an evidence map, a board update and a review rhythm.
+- [Prepare a confidential conflict discussion](https://useaiblocks.com/workflows/prepare-a-confidential-conflict-discussion): Share the source files. Get a neutral issue map, discussion guide and draft agreements.
+- [Prepare a fair promotion discussion](https://useaiblocks.com/workflows/prepare-a-fair-promotion-discussion): Share the source files. Get an evidence map, development gaps and a promotion discussion brief.
 - [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner): Paste a chain of whys. Get a fix at each level, sized to the pain, with an owner, date and check.
 - [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer): Paste the problems found in your work. Get each traced to a likely cause, plus notes that may name the wrong spot.
 - [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner): List your regular meetings, approvals and reports. Get a keep, simplify or drop call on each.
@@ -73,6 +77,7 @@
 - [Team pipeline roll-up writer](https://useaiblocks.com/skills/team-pipeline-roll-up-writer): Ask for your team's pipeline. Get a view by rep and stage, at-risk deals and coaching points.
 - [Top-priority shift memo writer](https://useaiblocks.com/skills/top-priority-shift-memo-writer): Describe a change that breaks your plan. Get a one-page memo that resets the top priority and each person's next step.
 - [Tough feedback note drafter](https://useaiblocks.com/prompts/tough-feedback-note-drafter): Paste what went wrong and who needs to hear it. Get a note that changes the behaviour.
+- [Turn employee feedback into owned actions](https://useaiblocks.com/workflows/turn-employee-feedback-into-owned-actions): Share the source files. Get a theme summary, prioritized actions and a draft response to staff.
 - [Weekly one-on-one meeting planner](https://useaiblocks.com/agents/weekly-one-on-one-prep-keeper): Give it last week's notes on each person you manage. Get this week's agenda, the praise and the hard point to raise.
 - [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer): Describe a job to hand off or a deal to settle. Get a one-page agreement on results, limits, help, review and consequences.
 - [Write a culture memo your team lives by](https://useaiblocks.com/workflows/write-your-team-culture-memo-and-make-it-real-in-daily-habits): Give it how your team works. Get a culture memo, a standards sheet and a rule to drop.

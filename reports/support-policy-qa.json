@@ -1,0 +1,56 @@
+{
+  "checkedOn": "2026-10-22T11:14:14.5659334Z",
+  "scope": "Support, policies and related navigation",
+  "operator": "Kevin Mark, India",
+  "supportEmail": "hello@useaiblocks.com",
+  "routes": [
+    "/support",
+    "/about",
+    "/privacy",
+    "/terms",
+    "/cookies",
+    "/ai-disclaimer"
+  ],
+  "typecheck": "pass",
+  "sourceBrowserChecks": {
+    "status": "pass",
+    "passed": 4,
+    "browser": "installed Chrome",
+    "checks": [
+      "Six route transitions, head metadata, canonical URLs, active navigation and home return",
+      "Info pages avoid requesting the full catalogue",
+      "Clipboard denial produces manual fallback",
+      "Keyboard skip link moves focus to content",
+      "All six pages fit widths 320, 390 and 768 with visible footer policy links",
+      "Theme toggle retains visible support contact"
+    ]
+  },
+  "sourceSha256": {
+    "site/e2e/info-pages.spec.ts": "89d70e26a3f9c98bf23d8ff283872e7ca601f925eef8b4a51cc585acaa532832",
+    "site/src/info.css": "6b9455879e537e2250b146c6cba0b88b635f3e12e47676caca8596f390e9fa2c",
+    "site/src/lib/site-info.mjs": "bccf86f1a64095a139a0565f04a01160c931f6c12de9fe2d0db93e2ca67cfb68",
+    "site/src/SiteFooter.tsx": "6605eda97e7b94e71b1869e9bc78acd5ece8281a286aa97ae8fd668e697f130b",
+    "site/src/InfoPage.tsx": "8f069dcecbf0d4d65601d51d52bcdeff61c06f47c3b4dcc98170a8697f732ae3"
+  },
+  "productionBuild": "Delegated to sole combined release owner; my earlier build was stopped and must not be used",
+  "publicationOwnerThread": "01a16276-6e77-7c51-bd36-a283b29f6c47",
+  "publication": "pending combined release",
+  "operatingLimit": "Server-side records have no automatic expiry; policy explicitly describes manual deletion requests",
+  "researchReferences": [
+    "https://www.meity.gov.in/static/uploads/2024/02/Digital-Personal-Data-Protection-Act-2023.pdf",
+    "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/the-right-to-be-informed/what-privacy-information-should-we-provide/"
+  ],
+  "analyticsPolicyUpdate": {
+    "checkedOn": "2026-10-22T11:38:35.6710811Z",
+    "status": "source frozen",
+    "sourceSha256": "bccf86f1a64095a139a0565f04a01160c931f6c12de9fe2d0db93e2ca67cfb68",
+    "contract": "Release-owner-confirmed opt-in GA4 and Clarity; eligible public pages only, private flows excluded; text/input masking; sanitized Google page views; 180-day choice; GPC/DNT override; withdrawal and first-party cookie removal; no provider-retention deadline promised",
+    "checks": "Data import, unique section IDs, valid link URLs, required disclosures and preserved private-space access wording pass",
+    "finalBrowserAndBuild": "Owned by combined release publisher"
+  },
+  "homeAssertionUpdate": {
+    "finalRerun": "Owned by combined release publisher",
+    "checkedOn": "2026-10-22T11:48:14.6630673Z",
+    "change": "Updated only the two home-return assertions to the release-owner-confirmed final hero heading and title"
+  }
+}

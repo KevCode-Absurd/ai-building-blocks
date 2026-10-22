@@ -1,0 +1,39 @@
+slug: check-a-marketing-survey-before-sending-it
+name: Check a marketing survey before sending it
+summary: Share the source files. Get a revised survey, bias review and analysis plan.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+  - type: question
+  - type: document
+uses:
+  - market-size-and-survey-planner
+  - interview-and-research-planner
+steps:
+  - uses: market-size-and-survey-planner
+    note: Check whether the questions and sample can answer the actual business decision.
+  - uses: interview-and-research-planner
+    note: Plan qualitative wording and cognitive pretests with appropriate respondents. Keep statistical sample design and quantitative analysis with the earlier survey method.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Market size and survey planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/research-ops/skills/market-research
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Interview and research planner
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/ux-research
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

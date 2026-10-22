@@ -1,0 +1,49 @@
+slug: prepare-a-contract-renewal-negotiation
+name: Prepare a contract renewal negotiation
+summary: Share the source files. Get a renewal deadline plan, risk summary and negotiation brief.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: question
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: document
+uses:
+  - vendor-agreement-status-checker
+  - contract-risk-reviewer
+  - vendor-comparison-writer
+steps:
+  - uses: vendor-agreement-status-checker
+    note: Confirm renewal and notice dates and list what must be decided before each deadline.
+  - uses: contract-risk-reviewer
+    note: Review the commercial and operational effect of renewal, termination and proposed changes.
+  - uses: vendor-comparison-writer
+    note: Prepare keep, renegotiate and replace options with explicit costs and open questions.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Vendor agreement status checker
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/vendor-check
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Contract risk reviewer
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/legal-and-compliance/contract-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Vendor comparison writer
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

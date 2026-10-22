@@ -88,7 +88,7 @@ const TOC: [string, string][] = [
 ];
 
 export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
-  useEffect(() => { document.title = "How it works · AI Blocks"; return () => { document.title = "AI Blocks · Use AI like the top 1%"; }; }, []);
+  useEffect(() => { document.title = "How it works · AI Blocks"; return () => { document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks"; }; }, []);
   return (
     <main className="bp hiw" data-testid="how-it-works">
       <header className="wrap bp-hero">
@@ -126,7 +126,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <h3 className="sub-h">How to use one</h3>
             <Steps items={[
               "Open a prompt in the library and copy it.",
-              "Start a new chat in Claude, ChatGPT, Gemini or any other AI.",
+              "Start a new chat in your AI assistant.",
               "Paste it in. Fill in the parts in [square brackets] with your own details.",
               "Send it. Read the answer, then ask for changes in the same chat.",
             ]} />
@@ -145,12 +145,12 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <h3 className="sub-h">Add a skill to your AI</h3>
             <Steps items={[
               <>Open a skill and press <b>Add it to your AI</b>.</>,
-              "Pick the AI you use: Claude, Claude Code, ChatGPT, Gemini or another one. The steps are different for each.",
-              "Follow the steps shown. It takes about two minutes, and you only do it once.",
+              "Choose how you use your AI: a chat, a coding assistant or saved instructions.",
+              "Follow the steps shown. Reuse the saved instructions when your AI supports them.",
             ]} />
             <h3 className="sub-h">Use it</h3>
             <Steps items={[
-              <>Start a chat and ask for it by name, like “use the meta-ads-compliance-checker skill”. In Claude Code, type <code>/</code> and its name.</>,
+              <>Start a chat and ask for it by name, like “use the meta-ads-compliance-checker skill”. Attach its SKILL.md file if it is not already available.</>,
               "Paste in what it asks for. Each skill's page lists what to give it.",
               "Read what comes back. The skill has already checked it, but you're the final check.",
             ]} />
@@ -165,7 +165,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <h3 className="sub-h">Set one up</h3>
             <Steps items={[
               "Pick a skill or workflow that already works when you start it by hand.",
-              "Use your AI's scheduled tasks. Claude and ChatGPT both have them. In Claude Code, use a routine or your computer's scheduler.",
+              "Use your AI's scheduling feature if it has one, or a scheduler connected to your coding assistant.",
               "Say when it runs, what it reads and where the result goes.",
               "Read the first few results. Make the skill clearer before you stop checking.",
             ]} />
@@ -189,7 +189,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <>Open a ready workflow, or <Link to="/#build">build your own</Link>.</>,
               <>Press <b>Download the workflow</b>. You get one folder.</>,
               "Gather what the list asks for, like your reviews or a link to your website.",
-              "Upload the whole folder to your AI. Claude, ChatGPT or any AI that can read files will work.",
+              "Give the folder to an AI assistant that can read its files. Check that it has the tools each step needs.",
               "Say “Follow HANDOFF.md step by step.” Your AI runs each step in order. When something is missing, it writes MISSING or stops to ask you.",
             ]} />
             <section className="bp-sec terms hiw-terms" aria-label="What's in the folder">
@@ -204,8 +204,8 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <p>In a chat, you start each step and read each answer. An agent can run a whole workflow while you do something else. Some can start on their own, for example every Monday morning.</p>
             </div>
             <Box title="Try it with what's here" items={[
-              "Pick a ready-made agent from the library. Add it to Claude Code or Claude like a skill, then give it your goal and your files. It runs its workflows in order and decides what to do between them.",
-              "Any of our workflows works with an agent too. Give the downloaded folder to an AI that can read files and use tools, like Claude Code, and it can run every step.",
+              "Pick a ready-made agent from the library. Give its files to an AI assistant with the tools the job needs, then give it your goal and your files. It runs its workflows in order and decides what to do between them.",
+              "Any of our workflows works with an agent too. Give the downloaded folder to an AI that can read files and use the required tools, and it can run every step.",
               "Stay in charge. Our workflow files tell your AI to ask you before it publishes, sends, spends money or changes a live account.",
             ]} />
             <p className="hiw-now"><Status here /> <Link to="/?kind=agent#library">See the ready-made agents</Link>.</p>

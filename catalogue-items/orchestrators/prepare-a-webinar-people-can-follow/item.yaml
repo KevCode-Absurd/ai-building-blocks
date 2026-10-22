@@ -1,0 +1,50 @@
+slug: prepare-a-webinar-people-can-follow
+name: Prepare a webinar people can follow
+summary: Share the source files. Get a webinar outline, slide brief and promotion draft.
+category: orchestrator
+type: workflow
+role: orchestrate
+execution: coordinator
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: slide_deck
+  - type: plan
+  - type: document
+uses:
+  - presentation-builder
+  - editable-slide-deck-builder
+  - webinar-promotion-planner
+steps:
+  - uses: presentation-builder
+    note: Build a clear teaching sequence with examples and an audience-appropriate level of detail.
+  - uses: editable-slide-deck-builder
+    note: Use the user-approved outline as the custom narrative framework, or ask when it is not approved. Build editable slides and notes in an approved environment and inspect every rendered slide; mark visual checks pending without a renderer.
+  - uses: webinar-promotion-planner
+    note: Draft promotion that describes the real session and confirmed participation details.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-22
+generated_from: tools/everyday-workflows-data.mjs
+example_pending: true
+credits:
+  - title: Presentation builder
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/presentation-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Editable slide deck builder
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pptx-deck-creation
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Webinar promotion planner
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/webinar-marketing
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+warnings: []

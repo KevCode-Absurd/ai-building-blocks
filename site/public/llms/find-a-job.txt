@@ -1,5 +1,8 @@
 # Prepare job applications: AI Blocks
 
-> 1 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 4 free AI skills and workflows for this job. Each page links its SKILL.md.
 
+- [Job application evidence review assistant](https://useaiblocks.com/agents/job-application-evidence-review-assistant): A tailored application draft, unsupported claim list and submission checklist.
+- [Prepare work examples for a job interview](https://useaiblocks.com/workflows/prepare-work-examples-for-a-job-interview): Share the source files. Get a role evidence map, concise example answers and practice questions.
 - [Resume and job application builder](https://useaiblocks.com/skills/resume-job-application-builder): Share your real experience and a job description. Get a tailored resume, cover letter and a check for unsupported claims.
+- [Tailor a job application to real evidence](https://useaiblocks.com/workflows/tailor-a-job-application-to-real-evidence): Share the source files. Get an evidence-based resume draft, application answers and a final check.

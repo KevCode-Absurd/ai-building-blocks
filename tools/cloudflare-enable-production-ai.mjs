@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { loadWorkflowEnv } from './lib/workflow-env.mjs';
 const expected = process.argv[2];
 assert.equal(expected, '87a8bdfb-ee9a-4341-9fa0-66214986b3f1');
 const release = JSON.parse(await fs.readFile('reports/cloudflare-live-release.json', 'utf8'));
@@ -33,11 +34,16 @@ const currentVersion = async () => {
 assert.equal(await currentVersion(), expected, 'Concurrent production change; stop.');
 const before = await api('/settings');
 const names = before.bindings.map(binding => binding.name);
-for (const name of ['ASSETS', 'COMMENTS', 'SPACES', 'COMPOSER', 'API_READ_LIMITER', 'API_WRITE_LIMITER', 'AI_LIMITER', 'TURNSTILE_SITE_KEY', 'TURNSTILE_SECRET_KEY', 'CLERK_SECRET_KEY', 'OPENAI_API_KEY']) assert(names.includes(name), 'Missing required binding: ' + name);
+for (const name of ['ASSETS', 'COMMENTS', 'SPACES', 'COMPOSER', 'API_READ_LIMITER', 'API_WRITE_LIMITER', 'AI_LIMITER', 'TURNSTILE_SITE_KEY', 'TURNSTILE_SECRET_KEY', 'CLERK_SECRET_KEY', 'WORKFLOW_SALT']) assert(names.includes(name), 'Missing required binding: ' + name);
 assert.equal(before.bindings.find(b => b.name === 'WORKFLOW_COMPOSER_ENABLED')?.text, 'false');
 assert.equal(before.bindings.find(b => b.name === 'WORKFLOW_DAILY_CAP_USD')?.text, '2');
 const changed = { WORKFLOW_COMPOSER_ENABLED: 'true', WORKFLOW_DAILY_CAP_USD: '10' };
 const bindings = names.map(name => name in changed ? { name, type: 'plain_text', text: changed[name] } : { name, type: 'inherit' });
+if (!names.includes('OPENAI_API_KEY')) {
+  const key = loadWorkflowEnv(process.cwd()).OPENAI_API_KEY;
+  assert(key && key.length > 20, 'The approved default provider requires an existing OpenAI credential.');
+  bindings.push({ name: 'OPENAI_API_KEY', type: 'secret_text', text: key });
+}
 const form = new FormData();
 form.set('metadata', JSON.stringify({ main_module: 'worker.js', keep_assets: true, bindings, compatibility_date: before.compatibility_date, compatibility_flags: before.compatibility_flags, annotations: { 'workers/message': 'Owner-authorized free AI generation with global USD10/day reservation cap; identical R8 code/assets' } }));
 form.set('worker.js', new Blob([code], { type: 'application/javascript+module' }), 'worker.js');
@@ -46,7 +52,8 @@ const after = await api('/settings');
 const canonical = v => Array.isArray(v) ? v.map(canonical) : v && typeof v === 'object' ? Object.fromEntries(Object.keys(v).sort().map(k => [k, canonical(v[k])])) : v;
 const fingerprint = v => sha(JSON.stringify(canonical(v)) ?? 'null');
 assert.equal(fingerprint(after.assets), fingerprint(before.assets));
-assert.deepEqual(after.bindings.map(b => b.name).sort(), [...names].sort());
+assert.deepEqual(after.bindings.map(b => b.name).sort(), [...new Set([...names, 'OPENAI_API_KEY'])].sort());
+assert.equal(after.bindings.find(b => b.name === 'OPENAI_API_KEY')?.type, 'secret_text');
 for (const binding of before.bindings) {
   const actual = after.bindings.find(b => b.name === binding.name);
   if (binding.name in changed) assert.equal(actual.text, changed[binding.name]);
@@ -59,7 +66,7 @@ for (const file of ['site/wrangler.production.jsonc', frozen.configs.production,
   Object.assign(config.vars, changed);
   await fs.writeFile(file, JSON.stringify(config, null, 2) + '\n');
 }
-const report = { checkedOn: new Date().toISOString(), status: 'deployed; one authenticated workflow test pending', previousVersion: expected, versionId, workerSha256: sha(code), assetsRetained: true, otherBindingsPreserved: true, publicRoutesChanged: false, aiEnabled: true, dailyCapUSD: 10, customerPriceUSD: 0, budgetWindow: 'UTC day', generationRequestsByThisTool: 0, sourceCodeChanged: false };
+const report = { checkedOn: new Date().toISOString(), status: 'deployed; one authenticated workflow test pending', previousVersion: expected, versionId, workerSha256: sha(code), assetsRetained: true, otherBindingsPreserved: true, defaultProviderKeyConfiguredAsEncryptedSecret: true, publicRoutesChanged: false, aiEnabled: true, dailyCapUSD: 10, customerPriceUSD: 0, budgetWindow: 'UTC day', generationRequestsByThisTool: 0, sourceCodeChanged: false };
 await fs.writeFile('reports/cloudflare-production-ai-enable.json', JSON.stringify(report, null, 2) + '\n');
 Object.assign(release.production, { previousVersionId: expected, versionId, aiEnabled: true, dailyCapUSD: 10, status: 'public; owner-authorized free AI enabled; authenticated workflow verification pending' });
 release.clerk.aiGenerationEnabled = true;

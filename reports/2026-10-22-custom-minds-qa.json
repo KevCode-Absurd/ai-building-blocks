@@ -1,6 +1,6 @@
 {
   "checkedOn": "2026-10-22T13:28:21.232Z",
-  "status": "frozen-production-candidate-qa-pass",
+  "status": "production-verified",
   "scope": "Reusable personal minds, task councils, recommendations and portable downloads",
   "typecheck": "pass",
   "unitTests": {
@@ -150,5 +150,22 @@
       "reports/custom-minds-mobile.png"
     ],
     "manualDesktop": "CUA inspected guided creation fields on frozen preview; layout readable"
+  },
+  "production": {
+    "checkedOn": "2026-10-22T13:35:56.925Z",
+    "origin": "https://useaiblocks.com",
+    "version": "be7e9b44-c528-4748-a7ff-a910370c9925",
+    "sourceCommits": [
+      "9ebca3bf",
+      "47069311"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "log": "site/.wrangler/custom-minds-production-e2e.log",
+    "providerCalls": 0,
+    "externalWrites": 0,
+    "localSyntheticProfilesOnly": true,
+    "cuaLiveCheck": "Guided mind creation fields verified on live Compose; existing user draft preserved",
+    "screenshot": "C:/Users/kevin/.codex/visualizations/2026/10/22/01a1635b-4fd9-7692-a3f4-e47f76ebd586/custom-minds-live.png"
   }
 }

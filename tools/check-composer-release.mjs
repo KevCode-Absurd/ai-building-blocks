@@ -49,7 +49,8 @@ try {
   // The loading animation and API error UI are exercised with a fixture only.
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   await mockComposerAccount(page);
-  await page.route('**/api/security', route => route.fulfill({ json: { required: false } }));
+  await page.route('**/api/security', route => route.fulfill({ json: { required: true, sitekey: 'composer-release-fixture' } }));
+  await page.addInitScript(() => { window.turnstile = { render(_element, options) { queueMicrotask(() => options.callback('composer-release-fixture-token')); return 'fixture'; }, remove() {} }; });
   let release;
   await page.route('**/api/compose', async route => { if (route.request().method() === 'GET') return route.fulfill({ json: { enabled: true } }); await new Promise(resolve => release = resolve); return route.fulfill({ json: { plan: fixture.plan, model: 'fixture', cost: 0, latencyMs: 0 } }); });
   await page.goto(origin + '/compose');

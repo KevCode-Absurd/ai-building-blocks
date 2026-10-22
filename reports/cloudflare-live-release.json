@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22T13:16:25.493Z",
+  "checkedOn": "2026-10-22T13:38:44.968Z",
   "deadline": "2026-10-22 Asia/Kolkata",
   "accountAuthenticated": true,
   "workersPaid": {
@@ -14,7 +14,7 @@
     "canonicalURL": "https://useaiblocks.com/"
   },
   "staging": {
-    "status": "R10 exact frozen release verified:24 remote asset/header checks,21 bindings preserved; private preview and isolated Clerk test account retained",
+    "status": "R14 final artifact verified:24 exact remote checks and all21 bindings preserved",
     "worker": "ai-building-blocks-staging",
     "database": "ai-blocks-staging",
     "databaseId": "eeb9d0d4-cbed-4751-8df4-1aaf81fd6cb3",
@@ -38,13 +38,13 @@
     "turnstileConfigured": true,
     "assetsToUpload": 12252,
     "url": "https://ai-building-blocks-staging.kevinmark7498.workers.dev",
-    "versionId": "4cd70873-0f3b-43a4-907b-d57dc118da53",
+    "versionId": "b1581693-6ede-485d-9a93-4752dfe94ee3",
     "deployedOn": "2026-10-22T12:08:12.467Z",
     "uploadedAssets": 4500,
     "reusedAssets": 14110,
     "workerStartupMs": 5,
     "verified": true,
-    "previousVersionId": "6c556ca3-f730-4a30-b249-ac51328e342d",
+    "previousVersionId": "436e30dd-6517-4e77-a10e-69edba5d325c",
     "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
     "previousFunctionalChecks": {
       "versionId": "723795d5-403c-461a-a910-4088612a0022",
@@ -57,12 +57,12 @@
       "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
     },
     "clerkConfigured": true,
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r10-candidate3",
-    "verifiedOn": "2026-10-22T12:19:30.795Z"
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
+    "verifiedOn": "2026-10-22T13:30:12.565Z"
   },
   "production": {
-    "status": "Workflow matching fix published and verified: 12 desktop/mobile browser checks and 27 production smoke checks pass",
+    "status": "R14 final workflow release published and verified: Whisper voice, horizontal composer, editable graph, personal minds and councils, 100 new library items",
     "database": "ai-blocks",
     "databaseId": "a886eeae-4014-4da2-842f-a5bebc4d7f71",
     "migrations": [
@@ -87,7 +87,7 @@
       "blockSeconds": 10,
       "includedRule": true
     },
-    "versionId": "6b7d3b14-6b50-42a4-aa92-aa291eae405a",
+    "versionId": "be7e9b44-c528-4748-a7ff-a910370c9925",
     "workerSha256": "7c80c58bf03aedde56b3950d2671194915f1d18929ecadf7d935423e92d50bc5",
     "uploadedAssets": 4500,
     "reusedAssets": 14110,
@@ -95,11 +95,11 @@
     "workersDevEnabled": false,
     "previewUrlsEnabled": false,
     "clerkConfigured": true,
-    "previousVersionId": "69f5d138-a966-47c1-b0d7-69e33356a151",
-    "deployedOn": "2026-10-22T13:15:16.004Z",
-    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r13-workflow-matching-candidate2",
-    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r13-workflow-matching-candidate2",
-    "sourceCommit": "8fc1d3b2a00b25dc837770cbad3f25c58599fcba",
+    "previousVersionId": "6b7d3b14-6b50-42a4-aa92-aa291eae405a",
+    "deployedOn": "2026-10-22T13:34:18.251Z",
+    "releaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
+    "assetReleaseRoot": "C:\\Users\\kevin\\.codex\\visualizations\\2026\\10\\17\\01a148b6-318d-7fe1-be76-fb993ef415d6\\output\\handoff\\ai-workflow-platform-handoff\\ai-building-blocks\\site\\.wrangler\\releases\\release-2026-10-22-r14-final-workflows",
+    "sourceCommit": "47069311d5299e1171ed95added2afd1642fdb83",
     "publicVerified": true,
     "gitEvidenceBeforeActivation": "56269425",
     "aiEnabled": true,
@@ -108,7 +108,7 @@
     "defaultProviderKeyConfigured": true,
     "customerPriceUSD": 0,
     "pendingFrontendRelease": null,
-    "verifiedOn": "2026-10-22T13:16:25.493Z",
+    "verifiedOn": "2026-10-22T13:38:44.968Z",
     "manifestCache": {
       "entries": 23837,
       "algorithm": "Wrangler 4.151.3 BLAKE3/base64/extension"
@@ -130,7 +130,7 @@
       "failed": 0
     },
     "clientCredentialScan": "pass;4 provider secrets,2 Clerk secrets and development public key absent across21JS bundles",
-    "workerSha256": "892f4aaae4cfd8dc723acc5ddf17f714c59416ee66b3d932057e590f76410d2c",
+    "workerSha256": "7ef08a7fff1e7402559ab35cdb421bcc4e220ae2e77d2b60a5f601810d8eecd3",
     "frozenManifest": "reports/cloudflare-frozen-release.json",
     "workerDryRun": "pass; Worker-only delta 462.90 KiB /101.41 KiB gzip",
     "englishOnlyVoice": true,
@@ -164,7 +164,7 @@
     "toolBrowserChecks": 83,
     "completeNewWorkflowAndAgentPacks": 79,
     "calculatorUnitTests": 483,
-    "frontendRelease": "R11 original hero and cookie controls",
+    "frontendRelease": "R14 interactive composer, personal minds and100 additions",
     "runtimeBackendChanged": false
   },
   "accountOwnerActionPending": false,

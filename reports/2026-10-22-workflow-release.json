@@ -1,6 +1,6 @@
 {
-  "checkedOn": "2026-10-22T13:30:54.922Z",
-  "status": "final-candidate-qa-pass",
+  "checkedOn": "2026-10-22T13:38:44.968Z",
+  "status": "published-and-verified",
   "origin": "https://useaiblocks.com",
   "artifact": {
     "frozenOn": "2026-10-22T13:27:44.362Z",
@@ -60,7 +60,7 @@
   "customMinds": {
     "report": "reports/2026-10-22-custom-minds-qa.json",
     "builtBrowserChecks": 25,
-    "status": "frozen-production-candidate-qa-pass"
+    "status": "production-verified"
   },
   "seo": {
     "crawlablePages": 4770,
@@ -69,7 +69,28 @@
   "next100": {
     "items": 100,
     "packAssemblies": 75,
-    "report": "reports/2026-10-22-next-100-acceptance.json"
+    "report": "reports/2026-10-22-next-100-acceptance.json",
+    "status": "published-and-verified"
   },
-  "sourcePushBeforeProduction": "pending"
+  "sourcePushBeforeProduction": true,
+  "versionId": "be7e9b44-c528-4748-a7ff-a910370c9925",
+  "previousVersionId": "6b7d3b14-6b50-42a4-aa92-aa291eae405a",
+  "sourceCommitBeforeProduction": "47069311d5299e1171ed95added2afd1642fdb83",
+  "productionChecks": {
+    "exactFrozenAssetAndHeaderChecks": 23,
+    "applicationSmoke": 27,
+    "transcriptionProtection": 4,
+    "browserComposer": 7,
+    "originalHeroAndCookiesWidths": [
+      320,
+      390,
+      768,
+      1440,
+      1920
+    ],
+    "newPagesAndSkillsExactBytes": 176,
+    "newItemsLiveBrowserJourneys": 3,
+    "customMindsLiveBrowserChecks": 3
+  },
+  "bindingsPreserved": 20
 }
